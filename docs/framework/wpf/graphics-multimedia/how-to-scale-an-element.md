@@ -1,18 +1,18 @@
 ---
-title: Jak skalować element
+title: 'Instrukcje: Skaluj element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e95a5ed091621d27a462bc691e62a5f00bab49ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504317"
 ---
-# <a name="how-to-scale-an-element"></a>Jak skalować element
+# <a name="how-to-scale-an-element"></a>Instrukcje: Skaluj element
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.ScaleTransform> skalowania elementu.  
   
  Użyj <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> i <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> właściwości przez współczynnik określisz zmiany rozmiaru elementu. Na przykład <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> wartość 1.5 rozciąga elementu do 150 procent jego oryginalna szerokość. A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> wartość 0,5 zmniejsza wysokość elementu o 50%.  
@@ -37,8 +37,8 @@ Dwie operacje ScaleTransform — za pomocą identycznych wartości ScaleX i Scal
   
  Aby uzyskać pełny przykład, zobacz [przykładowych przekształceń 2-D](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.ScaleTransform>  
- [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.ScaleTransform>
+- [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

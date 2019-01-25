@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cad8b305de580ce7cf4876939b95cc05d0fd11f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f2dae147f8667a73036dbcf873e2082996b2755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666988"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach — Metoda
-Odłącza debugera z domeny proces lub aplikacji.  
+Odłącza debuger z domeny aplikacji lub procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,12 +34,12 @@ HRESULT Detach ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Domeny aplikacji lub proces kontynuuje wykonywanie, ale obiektu "ICorDebugProcess" lub "ICorDebugAppDomain" nie jest już prawidłowy i wystąpi nie dalsze wywołania zwrotne.  
+ Domeny aplikacji lub proces kontynuuje wykonywanie, ale obiekt "ICorDebugProcess" lub "ICorDebugAppDomain" nie jest już prawidłowy, a następnie żadnych dalszych wywołań zwrotnych będą naliczane.  
   
- W programie .NET Framework w wersji 2.0 Jeśli włączone jest debugowanie niezarządzane, ta metoda zakończy się niepowodzeniem ze względu na ograniczenia systemu operacyjnego.  
+ W programie .NET Framework 2.0 Jeśli włączone jest debugowanie niezarządzane, ta metoda zakończy się niepowodzeniem ze względu na ograniczenia systemu operacyjnego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -47,5 +47,5 @@ HRESULT Detach ();
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

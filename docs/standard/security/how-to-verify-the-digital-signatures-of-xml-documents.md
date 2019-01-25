@@ -1,5 +1,5 @@
 ---
-title: 'Porady: sprawdzanie podpisów cyfrowych w dokumentach XML'
+title: 'Instrukcje: Sprawdzanie podpisów cyfrowych w dokumentach XML'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670162"
 ---
-# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Porady: sprawdzanie podpisów cyfrowych w dokumentach XML
+# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Instrukcje: Sprawdzanie podpisów cyfrowych w dokumentach XML
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeń nazw w celu weryfikacji danych XML podpisany przy użyciu podpisu cyfrowego. Podpisy cyfrowe XML (XMLDSIG) pozwalają zweryfikować, że dane nie została zmodyfikowana po podpisaniu. Aby uzyskać więcej informacji na temat standardowych XMLDSIG, zobacz specyfikację World Wide Web Consortium (W3C) na <https://www.w3.org/TR/xmldsig-core/>.
   
  Przykład kodu w tej procedurze pokazano, jak sprawdzić podpis cyfrowy XML zawartych w <`Signature`> element.  Przykład pobiera klucz publiczny RSA z kontenera kluczy, a następnie używa klucza można zweryfikować podpisu.  
   
- Aby uzyskać informacje o tym, jak utworzyć podpis cyfrowy, który może zostać zweryfikowany przy użyciu tej metody, zobacz [jak: logowanie dokumentów XML za pomocą podpisów cyfrowych](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Aby uzyskać informacje o tym, jak utworzyć podpis cyfrowy, który może zostać zweryfikowany przy użyciu tej metody, zobacz [jak: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>Aby sprawdzić podpis cyfrowy dokumentu XML  
   
@@ -68,7 +68,7 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeń nazw w 
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie założono, że plik o nazwie `"test.xml"` istnieje w tym samym katalogu co skompilowanego programu.  `"test.xml"` Plik musi być podpisany za pomocą metod opisanych w [jak: logowanie dokumentów XML za pomocą podpisów cyfrowych](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ W tym przykładzie założono, że plik o nazwie `"test.xml"` istnieje w tym samym katalogu co skompilowanego programu.  `"test.xml"` Plik musi być podpisany za pomocą metod opisanych w [jak: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -86,5 +86,5 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeń nazw w 
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Instrukcje: podpisywanie dokumentów XML za pomocą podpisów cyfrowych](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Instrukcje: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

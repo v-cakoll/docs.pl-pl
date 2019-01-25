@@ -1,5 +1,5 @@
 ---
-title: '&lt;Prefercominsteadofmanagedremoting —&gt; — Element'
+title: '&lt;PreferComInsteadOfManagedRemoting&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 760eeeaaf82bf2014d70fa79ced2bb9166a8cb60
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9292a0973df100acbffa341d7c0ca2604455f7fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54522339"
 ---
-# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;Prefercominsteadofmanagedremoting —&gt; — Element
+# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; Element
 Określa, czy środowisko uruchomieniowe będzie używać usługa międzyoperacyjna modelu COM zamiast komunikację zdalną dla wszystkich wywołań poza granice domeny aplikacji.  
   
  \<Konfiguracja >  
 \<runtime>  
-\<Prefercominsteadofmanagedremoting — >  
+\<PreferComInsteadOfManagedRemoting>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -73,6 +73,6 @@ Określa, czy środowisko uruchomieniowe będzie używać usługa międzyoperacy
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

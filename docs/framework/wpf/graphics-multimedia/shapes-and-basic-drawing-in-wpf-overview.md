@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665906"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Przegląd Kształty i podstawowe rysowanie w WPF
 Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.Shapes.Shape> obiektów. A <xref:System.Windows.Shapes.Shape> jest typem <xref:System.Windows.UIElement> pozwala narysować kształt na ekranie. Ponieważ są one elementy interfejsu użytkownika <xref:System.Windows.Shapes.Shape> obiekty mogą być używane wewnątrz <xref:System.Windows.Controls.Panel> elementów i większości kontrolek.  
@@ -29,11 +29,11 @@ Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.S
 ## <a name="shape-objects"></a>Obiekty kształtów  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wiele gotowych do użycia <xref:System.Windows.Shapes.Shape> obiektów.  Wszystkie obiekty kształtów dziedziczyć <xref:System.Windows.Shapes.Shape> klasy. Kształt dostępne obiekty zawierają <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, i <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> obiekty mają następujące wspólne właściwości.  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: W tym artykule opisano sposób jest malowane kontur figury.  
+-   <xref:System.Windows.Shapes.Shape.Stroke%2A>: W tym artykule opisano, jak jest malowane kontur figury.  
   
 -   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: W tym artykule opisano Grubość konturu tego kształtu.  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: W tym artykule opisano sposób jest malowane wnętrze figury.  
+-   <xref:System.Windows.Shapes.Shape.Fill%2A>: W tym artykule opisano, jak jest malowane wnętrze figury.  
   
 -   Właściwości danych, aby określić współrzędne i wierzchołki, podawana w pikselach niezależnych od urządzenia.  
   
@@ -62,7 +62,7 @@ Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.S
   
  Na poniższej ilustracji przedstawiono przykład renderowanych <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Ilustracja przedstawiająca elipsę](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
+ ![Ellipse illustration](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
   
 <a name="paths"></a>   
 ## <a name="using-paths-and-geometries"></a>Przy użyciu ścieżek i geometrii  
@@ -155,13 +155,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Właściwości rozciągania ma jedną z następujących wartości:  
   
--   <xref:System.Windows.Media.Stretch.None><xref:System.Windows.Shapes.Shape> Zawartość obiektu nie jest rozciągana.  
+-   <xref:System.Windows.Media.Stretch.None>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu nie jest rozciągana.  
   
--   <xref:System.Windows.Media.Stretch.Fill><xref:System.Windows.Shapes.Shape> Konfiguracji zawartości obiektu do wypełnienia jego układu przestrzeni.  Współczynnik proporcji nie są zachowywane.  
+-   <xref:System.Windows.Media.Stretch.Fill>: <xref:System.Windows.Shapes.Shape> Konfiguracji zawartości obiektu do wypełnienia jego układu przestrzeni.  Współczynnik proporcji nie są zachowywane.  
   
--   <xref:System.Windows.Media.Stretch.Uniform><xref:System.Windows.Shapes.Shape> Zawartość obiektu konfiguracji jak najszerzej w celu wypełnienia jego układu przestrzeni, zachowując jego oryginalny współczynnik proporcji.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu konfiguracji jak najszerzej w celu wypełnienia jego układu przestrzeni, zachowując jego oryginalny współczynnik proporcji.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill><xref:System.Windows.Shapes.Shape> Zawartość obiektu konfiguracji Aby całkowicie wypełnić jego układu przestrzeni, zachowując jego oryginalny współczynnik proporcji.  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: <xref:System.Windows.Shapes.Shape> Zawartość obiektu konfiguracji Aby całkowicie wypełnić jego układu przestrzeni, zachowując jego oryginalny współczynnik proporcji.  
   
  Należy zauważyć, że gdy <xref:System.Windows.Shapes.Shape> konfiguracji zawartość obiektu <xref:System.Windows.Shapes.Shape> kontur obiektu jest malowane po rozciąganie.  
   
@@ -214,9 +214,9 @@ myPolygon.StrokeThickness = 2;
   
  W poprzednich przykładach przekształcenia pojedynczego została zastosowana do każdego obiektu kształtu. Aby zastosować wiele przekształceń do kształtu (lub innego elementu interfejsu użytkownika), należy użyć <xref:System.Windows.Media.TransformGroup>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

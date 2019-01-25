@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: fe1fbfbf76507f19905d1a9a3a836483a8dd3849
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564321"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Składnia zapytania i metody w technologii LINQ (C#)
 Większość zapytań w wprowadzające Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) dokumentacji są tworzone za pomocą składni deklaratywne zapytań LINQ. Jednak składnia zapytania muszą być przetłumaczone do wywołania metody dla platformy .NET środowisko uruchomieniowe języka wspólnego (CLR), gdy kod jest kompilowany. Te wywołania metody wywołania standardowych operatorów zapytań, które mają nazwy, takie jak `Where`, `Select`, `GroupBy`, `Join`, `Max`, i `Average`. Możesz je wywołać bezpośrednio przy użyciu składni metody zamiast składni zapytań.  
@@ -35,13 +35,13 @@ Większość zapytań w wprowadzające Language Integrated Query ([!INCLUDE[vbte
  Aby uzyskać więcej informacji dotyczących metod rozszerzających, zobacz [metody rozszerzenia](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Przegląd (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md). Niektóre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawców, takich jak [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], implementują własnych standardowych operatorów zapytań i metody dodatkowe rozszerzenia dla innych typów, oprócz <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ## <a name="lambda-expressions"></a>Wyrażenia lambda  
- W poprzednim przykładzie należy zauważyć, że wyrażenie warunkowe (`num % 2 == 0`) jest przekazywany jako argument w wierszu `Where` metoda: `Where(num => num % 2 == 0).` to wyrażenie wbudowane nosi nazwę wyrażenia lambda. Jest to wygodny sposób napisać kod, który mieliby ma zostać zapisany w postaci bardziej kłopotliwy jako metoda anonimowa lub delegatem ogólnym lub drzewo wyrażenia. W języku C# `=>` operatora lambda, który zostanie odczytany jako "zbliża się do". `num` Po lewej stronie operatora jest zmienna wejściowa, który odpowiada `num` w wyrażeniu zapytania. Kompilator może wywnioskować typ `num` ponieważ wie, że `numbers` jest rodzajowa <xref:System.Collections.Generic.IEnumerable%601> typu. Treść wyrażenia lambda jest w taki sam jak wyrażenia w składni zapytania lub inne wyrażenie języka C# lub instrukcji; może zawierać wywołania metody i innych złożonej logiki. "Wartość zwracana" jest tylko wynik wyrażenia.  
+ W poprzednim przykładzie należy zauważyć, że wyrażenie warunkowe (`num % 2 == 0`) jest przekazywany jako argument w wierszu `Where` metody: `Where(num => num % 2 == 0).` To wyrażenie wbudowane nosi nazwę wyrażenia lambda. Jest to wygodny sposób napisać kod, który mieliby ma zostać zapisany w postaci bardziej kłopotliwy jako metoda anonimowa lub delegatem ogólnym lub drzewo wyrażenia. W języku C# `=>` operatora lambda, który zostanie odczytany jako "zbliża się do". `num` Po lewej stronie operatora jest zmienna wejściowa, który odpowiada `num` w wyrażeniu zapytania. Kompilator może wywnioskować typ `num` ponieważ wie, że `numbers` jest rodzajowa <xref:System.Collections.Generic.IEnumerable%601> typu. Treść wyrażenia lambda jest w taki sam jak wyrażenia w składni zapytania lub inne wyrażenie języka C# lub instrukcji; może zawierać wywołania metody i innych złożonej logiki. "Wartość zwracana" jest tylko wynik wyrażenia.  
   
  Aby rozpocząć pracę, przy użyciu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], nie trzeba używać wyrażeń lambda często. Jednak niektóre zapytania tylko mogą być wyrażone w składni metody i niektóre z nich wymaga wyrażenia lambda. Po bardziej zapoznanie się z wyrażenia lambda można zauważyć, że są wydajne i elastyczne narzędzia w swojej [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przybornika. Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Możliwości tworzenia zapytań  
  W poprzednim przykładzie kodu należy pamiętać, że `OrderBy` metoda jest wywoływana za pomocą operatora kropki na wywołanie `Where`. `Where` Tworzy sekwencję filtrowane, a następnie `Orderby` działa w tej sekwencji przez posortowanie jej. Ponieważ zapytania zwracają `IEnumerable`, tworzysz je przy użyciu składni metody przez łączenie łańcuchowe wywołania metody. Jest to, jak kompilator działa w tle podczas pisania zapytań za pomocą składni zapytania. A ponieważ zmienna zapytania nie przechowuje wyników kwerendy, można go modyfikować lub używać go jako podstawy dla nowego zapytania w dowolnym momencie, nawet po zakończeniu zostało uruchomione.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do korzystania z LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

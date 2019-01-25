@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bec065e2a78551b85fe766f1b81590b18f4679d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516827"
 ---
 # <a name="impersonating-and-reverting"></a>Personifikacja i przywracanie
 Czasami może być konieczne do uzyskania tokenu konta Windows dokonać personifikacji konta Windows. Na przykład aplikacji opartych na programie ASP.NET może być konieczne działanie w imieniu kilku użytkowników w różnym czasie. Aplikację może akceptuje token, który reprezentuje administrator z Internet Information Services (IIS), personifikacji tego użytkownika, w trakcie operacji i powrócić do poprzedniej tożsamości. Następnie go może zaakceptować token za pomocą programu IIS, który reprezentuje użytkownika z prawami mniej, wykonać kilka operacji i przywrócić ponownie.  
@@ -62,7 +62,7 @@ Czasami może być konieczne do uzyskania tokenu konta Windows dokonać personif
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Security.Principal.WindowsIdentity>  
-- <xref:System.Security.Principal.WindowsImpersonationContext>  
-- [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)  
+- <xref:System.Security.Principal.WindowsIdentity>
+- <xref:System.Security.Principal.WindowsImpersonationContext>
+- [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)
 - [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)

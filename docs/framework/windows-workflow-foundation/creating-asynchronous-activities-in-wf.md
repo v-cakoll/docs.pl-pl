@@ -2,12 +2,12 @@
 title: Tworzenie działań asynchronicznych w WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650931"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Tworzenie działań asynchronicznych w WF
 <xref:System.Activities.AsyncCodeActivity> zawiera działanie autorzy klasę bazową do użycia, że umożliwia pochodne działania, aby zaimplementować logikę wykonanie asynchroniczne. Jest to przydatne dla działań niestandardowych, które należy wykonać pracę asynchroniczną bez przechowywania wątku harmonogramu przepływów pracy i zablokowanie wszelkich działań, które można uruchomić równolegle. Ten temat zawiera omówienie sposobu tworzenia niestandardowych działań asynchronicznych za pomocą <xref:System.Activities.AsyncCodeActivity>.  
@@ -44,9 +44,9 @@ ms.locfileid: "48266562"
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Planowanie akcji lub działania podrzędne przy użyciu AsyncCodeActivity  
- <xref:System.Activities.AsyncCodeActivity> pochodne działań niestandardowych udostępnia metody wykonywania pracy asynchronicznie w odniesieniu do wątku przepływu pracy, ale nie zapewniają możliwość zaplanowania działania podrzędne lub akcji. Jednak zachowanie asynchroniczne można włączyć za pomocą Planowanie ponownego szkolenia działania podrzędne dzięki kompozycji. Asynchroniczne działania można utworzyć, a następnie składającą się z <xref:System.Activities.Activity> lub <xref:System.Activities.NativeActivity> pochodne działania, aby zapewnić zachowanie asynchroniczne i Planowanie ponownego szkolenia działania podrzędne lub akcji. Na przykład można utworzyć działania pochodzącą z <xref:System.Activities.Activity>, a jako jego implementacja <xref:System.Activities.Statements.Sequence> zawierający asynchroniczne działania również innych działań, które implementują logikę działania. Więcej przykładów dotyczących tworzenia działań przy użyciu <xref:System.Activities.Activity> i <xref:System.Activities.NativeActivity>, zobacz [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) i [opcje tworzenia działań](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
+ <xref:System.Activities.AsyncCodeActivity> pochodne działań niestandardowych udostępnia metody wykonywania pracy asynchronicznie w odniesieniu do wątku przepływu pracy, ale nie zapewniają możliwość zaplanowania działania podrzędne lub akcji. Jednak zachowanie asynchroniczne można włączyć za pomocą Planowanie ponownego szkolenia działania podrzędne dzięki kompozycji. Asynchroniczne działania można utworzyć, a następnie składającą się z <xref:System.Activities.Activity> lub <xref:System.Activities.NativeActivity> pochodne działania, aby zapewnić zachowanie asynchroniczne i Planowanie ponownego szkolenia działania podrzędne lub akcji. Na przykład można utworzyć działania pochodzącą z <xref:System.Activities.Activity>, a jako jego implementacja <xref:System.Activities.Statements.Sequence> zawierający asynchroniczne działania również innych działań, które implementują logikę działania. Aby uzyskać więcej przykładów tworzenie działań przy użyciu <xref:System.Activities.Activity> i <xref:System.Activities.NativeActivity>, zobacz [jak: Utwórz działanie](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) i [działania opcje autorstwa](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

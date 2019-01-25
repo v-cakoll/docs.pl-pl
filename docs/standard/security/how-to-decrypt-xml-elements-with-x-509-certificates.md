@@ -1,5 +1,5 @@
 ---
-title: 'Porady: odszyfrowywanie elementów XML za pomocą certyfikatów X.509'
+title: 'Instrukcje: Odszyfrowywanie elementów XML za pomocą certyfikatów X.509'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72630fce122c2b0acadb074724ed41394695f2c6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5e58a463c38dc41e669cf554961124b893fb7406
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682141"
 ---
-# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Porady: odszyfrowywanie elementów XML za pomocą certyfikatów X.509
+# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Instrukcje: Odszyfrowywanie elementów XML za pomocą certyfikatów X.509
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do szyfrowania i odszyfrowywania elementu w dokumencie XML.  Szyfrowanie XML to standardowy sposób wymiany ani nie przechowują zaszyfrowane dane XML, nie martwiąc się o łatwo odczytywanych danych.  Aby uzyskać więcej informacji na temat standardowych szyfrowanie XML, zobacz specyfikację World Wide Web Consortium (W3C) dla szyfrowanie XML znajdujący się w <https://www.w3.org/TR/xmldsig-core/>.  
   
- W tym przykładzie odszyfrowuje element XML, która została zaszyfrowana przy użyciu metod opisanych w: [porady: szyfrowanie elementów XML za pomocą certyfikatów X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Znajdzie <`EncryptedData`> element, odszyfrowuje elementu i następnie zamienia element w oryginalnym elemencie XML zwykłego tekstu.  
+ W tym przykładzie odszyfrowuje element XML, która została zaszyfrowana przy użyciu metod opisanych w: [Instrukcje: Szyfrowanie elementów XML za pomocą certyfikatów X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Znajdzie <`EncryptedData`> element, odszyfrowuje elementu i następnie zamienia element w oryginalnym elemencie XML zwykłego tekstu.  
   
  Przykład kodu w tej procedurze odszyfrowuje — element XML przy użyciu certyfikatu X.509 z lokalnego magazynu certyfikatów bieżącego konta użytkownika.  W przykładzie użyto <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> metodę, aby automatycznie pobrać certyfikat X.509 i odszyfrować klucz przechowywany w sesji <`EncryptedKey`> elementu <`EncryptedData`> element.  <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> Metoda następnie automatycznie używa klucza sesji można odszyfrować XML element.  
   
@@ -79,5 +79,5 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Instrukcje: szyfrowanie elementów XML za pomocą certyfikatów X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Instrukcje: Szyfrowanie elementów XML za pomocą certyfikatów X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

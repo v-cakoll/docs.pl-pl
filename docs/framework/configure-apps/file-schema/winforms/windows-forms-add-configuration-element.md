@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155096"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507372"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms, Dodaj Element konfiguracji
 
@@ -109,6 +109,6 @@ Począwszy od programu .NET Framework 4.7 kontrolek formularzy Windows Forms pod
 Skalowanie w jednym lub wielu — dostęp próbny ma wpływ na postrzegany czas odpowiedzi interfejsu użytkownika i wygląd elementów interfejsu użytkownika, ponieważ są one skalowane. Począwszy od programu .NET Framework 4.7, formularze Windows używa skalowania w jednym przebiegu. W poprzednich wersjach programu .NET Framework skalowania została wykonana przy użyciu wielu przebiegów, które spowodowało niektóre formanty, które można skalować więcej niż było konieczne. Skalowanie z jednego przebiegu należy wyłączyć tylko wtedy, jeśli aplikacja jest zależna od starego zachowania.  
 
 ## <a name="see-also"></a>Zobacz także
- 
-[Sekcja konfiguracji programu Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[Obsługa wysokiej rozdzielczości w formularzach Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Sekcja konfiguracji programu Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [Obsługa wysokiej rozdzielczości w formularzach Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 55eb1d713c25314877fffd8a683ce5a8d9516d92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649404"
 ---
 # <a name="character-encoding-in-net"></a>Kodowanie znaków w .NET
 Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele różnych sposobów. Kodowanie znaków to system, który pary, każdy znak w obsługiwanych znaków, zestaw z jakąś wartość, która reprezentuje ten znak. Na przykład Morse'a jest znakiem kodowania tej pary każdego znaku w alfabetu łacińskiego z wzorcem kropki i łączniki, które są odpowiednie na potrzeby transmisji przez telegraficznego wierszy. Kodowanie znaków dla pary komputerów dla każdego znaku obsługiwany zestaw z wartością liczbową, który reprezentuje ten znak znaków. Kodowanie znaków ma dwa różne składniki:  
@@ -267,9 +267,9 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Text.Encoder>  
-- <xref:System.Text.Decoder>  
-- <xref:System.Text.DecoderFallback>  
-- <xref:System.Text.Encoding>  
-- <xref:System.Text.EncoderFallback>  
+- <xref:System.Text.Encoder>
+- <xref:System.Text.Decoder>
+- <xref:System.Text.DecoderFallback>
+- <xref:System.Text.Encoding>
+- <xref:System.Text.EncoderFallback>
 - [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)

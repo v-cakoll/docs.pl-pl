@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 3c2158e94f936dd2b28fe46310fd96df8dbc50fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: adda1bd1f16a43087d43382f9b7476856f4bc5c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692707"
 ---
 # <a name="handling-dataadapter-events"></a>Obsługa zdarzeń elementu DataAdapter
 ADO.NET <xref:System.Data.Common.DataAdapter> udostępnia trzy zdarzenia, które umożliwiają reagowanie na zmiany wprowadzone w danych w źródle danych. W poniższej tabeli przedstawiono `DataAdapter` zdarzenia.  
@@ -186,9 +186,9 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Obsługa zdarzeń elementu DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
- [Obsługa zdarzeń elementu DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [Zdarzenia](../../../../docs/standard/events/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Obsługa zdarzeń elementu DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [Obsługa zdarzeń elementu DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
+- [Zdarzenia](../../../../docs/standard/events/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

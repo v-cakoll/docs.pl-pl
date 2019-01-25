@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cea47f8300c57362abae0c10223559319ecb2469
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 901603da64502c994f625be609f5a6e21a1db1c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448846"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54519245"
 ---
 # <a name="imetadataimportenummethodswithname-method"></a>IMetaDataImport::EnumMethodsWithName — Metoda
-Wylicza metody tym, które są definiowane przez typ odwołuje się określony token TypeDef określonej nazwy.  
+Wylicza metod, które mają określoną nazwą i które są definiowane przez typ odwołuje się określony token TypeDef.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,16 +42,16 @@ HRESULT EnumMethodsWithName (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwsze wywołanie tej metody.  
+ [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
   
  `cl`  
- [in] TypeDef token reprezentujący typ, której metody wyliczania.  
+ [in] TypeDef token reprezentujący typ, którego metody wyliczania.  
   
  `szName`  
- [in] Nazwa, która ogranicza zakres wyliczenia.  
+ [in] Nazwa która ogranicza zakres wyliczenia.  
   
  `rMethods`  
- [out] Tablica używany do przechowywania tokenów MethodDef.  
+ [out] Tablica do przechowywania tokenów MethodDef.  
   
  `cMax`  
  [in] Maksymalny rozmiar `rMethods` tablicy.  
@@ -60,24 +60,24 @@ HRESULT EnumMethodsWithName (
  [out] Liczba tokenów MethodDef zwracane w `rMethods`.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda wylicza pól i metod, ale nie do właściwości lub zdarzenia. W odróżnieniu od [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` odrzuca wszystkie tokeny metody, które nie mają określonej nazwy.  
+ Ta metoda wylicza pola i metody, ale nie do właściwości lub zdarzenia. W odróżnieniu od [IMetaDataImport::EnumMethods](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummethods-method.md), `EnumMethodsWithName` odrzuca wszystkie tokeny metody, które nie mają określonej nazwy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodsWithName` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumMethodsWithName` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

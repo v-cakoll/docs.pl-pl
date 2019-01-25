@@ -1,5 +1,5 @@
 ---
-title: 'Porady: zmiana w formancie MonthCalendar formularzy Windows&#39;wygląd'
+title: 'Instrukcje: Zmiana w formancie MonthCalendar formularzy Windows&#39;wygląd'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 4f91363764099cabfa1a7939ff07e627aeb6c815
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5afee81d3db9452be352c875dbba0f7885592c02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43802018"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624355"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Porady: zmiana w formancie MonthCalendar formularzy Windows&#39;wygląd
+# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Instrukcje: Zmiana w formancie MonthCalendar formularzy Windows&#39;wygląd
 Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli umożliwia dostosowanie wyglądu kalendarza na wiele sposobów. Na przykład można ustawić schemat kolorów i wybierz opcję wyświetlić lub ukryć numery tygodni i bieżącą datą.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>Aby zmienić schemat kolorów kalendarza miesięcznego  
@@ -42,7 +42,7 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli umożliwia
     ```  
   
     > [!NOTE]
-    >  Uruchamianie, Windows Vista, jak i w zależności od motywu, ustawienie niektóre właściwości mogą pozostać bez zmian wyglądu kalendarza. Na przykład jeśli Windows jest ustawiony do korzystania z motywu Aero, ustawienie <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, lub <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> właściwości nie ma wpływu. Jest to spowodowane zaktualizowaną wersję kalendarz jest renderowany przy użyciu wrażenie, że jest tworzony w czasie wykonywania na podstawie bieżącego motywu systemu operacyjnego. Jeśli chcesz korzystać z tych właściwości i Włącz starszą wersję kalendarza można wyłączyć funkcji stylów wizualnych dla swojej aplikacji. Wyłączanie funkcji stylów wizualnych mogą mieć wpływ na wygląd i zachowanie innych kontrolek w aplikacji. Aby wyłączyć stylów wizualnych w języku Visual Basic, otwórz projektanta projektu i usuń zaznaczenie pola wyboru **style wizualne XP włącz** pole wyboru. Aby wyłączyć stylów wizualnych w języku C#, otwórz plik Program.cs i komentarz `Application.EnableVisualStyles();`. Aby uzyskać więcej informacji na temat funkcji stylów wizualnych zobacz [porady: Włączanie style wizualne XP Windows](https://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
+    >  Uruchamianie, Windows Vista, jak i w zależności od motywu, ustawienie niektóre właściwości mogą pozostać bez zmian wyglądu kalendarza. Na przykład jeśli Windows jest ustawiony do korzystania z motywu Aero, ustawienie <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, lub <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> właściwości nie ma wpływu. Jest to spowodowane zaktualizowaną wersję kalendarz jest renderowany przy użyciu wrażenie, że jest tworzony w czasie wykonywania na podstawie bieżącego motywu systemu operacyjnego. Jeśli chcesz korzystać z tych właściwości i Włącz starszą wersję kalendarza można wyłączyć funkcji stylów wizualnych dla swojej aplikacji. Wyłączanie funkcji stylów wizualnych mogą mieć wpływ na wygląd i zachowanie innych kontrolek w aplikacji. Aby wyłączyć stylów wizualnych w języku Visual Basic, otwórz projektanta projektu i usuń zaznaczenie pola wyboru **style wizualne XP włącz** pole wyboru. Aby wyłączyć stylów wizualnych w języku C#, otwórz plik Program.cs i komentarz `Application.EnableVisualStyles();`. Aby uzyskać więcej informacji na temat funkcji stylów wizualnych zobacz [jak: Włączyć style wizualne XP Windows](https://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Aby wyświetlić bieżącą datę w dolnej części kontrolki  
   
@@ -103,8 +103,8 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli umożliwia
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [MonthCalendar, kontrolka](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- [Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- [Instrukcje: wyświetlanie określonych dni pogrubioną czcionką za pomocą kontrolki MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
- [Instrukcje: wyświetlanie więcej niż jednego miesiąca w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+## <a name="see-also"></a>Zobacz także
+- [MonthCalendar, kontrolka](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+- [Instrukcje: Wybieranie zakresu dat w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Instrukcje: Wyświetlanie określonych dni pogrubioną czcionką za pomocą Windows formantu MonthCalendar formularzy](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Instrukcje: Wyświetl więcej niż jednego miesiąca w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)

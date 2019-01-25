@@ -1,5 +1,5 @@
 ---
-title: 'Porady: obracanie, odzwierciedlanie i pochylanie obrazów'
+title: 'Instrukcje: Obracanie, odzwierciedlanie i pochylanie obrazów'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,44 +9,44 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 7f580b4d3016f1ecedc33302fe57caeec5698aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2150e7797095b88227b499ec5481a3ce521270e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523458"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667914"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>Porady: obracanie, odzwierciedlanie i pochylanie obrazów
-Można obracanie, odzwierciedlanie i pochylanie obrazów, określając punkty docelowe narożników lewym górnym, prawym górnym i lewym dolnym oryginalnego obrazu. Punkty docelowe trzy określają affine — przekształcenia mapowanego oryginalnego obrazu prostokątne równoległobok.  
+# <a name="how-to-rotate-reflect-and-skew-images"></a>Instrukcje: Obracanie, odzwierciedlanie i pochylanie obrazów
+Można obracanie, odzwierciedlanie i pochylanie obrazów, określając docelowe punkty narożników lewym, prawym górnym rogu i lewym dolnym oryginalnego obrazu. Docelowe trzy punkty określają affine — przekształcenia, które mapuje równoległobok oryginalny obraz prostokątny.  
   
 ## <a name="example"></a>Przykład  
- Załóżmy na przykład, oryginalnego obrazu jest prostokąt z lewym górnym rogu na (0, 0), prawym górnym rogu na (100, 0) i lewym dolnym rogu na (0, 50). Teraz załóżmy, że możesz mapować te trzy wskazuje punkty docelowe w następujący sposób.  
+ Załóżmy, że oryginalny obraz jest prostokąt z lewego górnego rogu w (0, 0), w prawym górnym rogu w (100, 0) i lewego dolnego rogu w (0, 50). Teraz załóżmy, że możesz mapować te trzy wskazuje docelowe punkty w następujący sposób.  
   
-|Oryginalny punkt|Punkt docelowy|  
+|Oryginalny punkt|Docelowy punkt|  
 |--------------------|-----------------------|  
-|Lewej górnej (0, 0)|(200, 20)|  
-|Prawy górny (100, 0)|(110, 100)|  
-|Lewym dolnym (0, 50)|(250, 30)|  
+|Lewa górna (0, 0)|(200, 20)|  
+|W prawym górnym (100, 0)|(110, 100)|  
+|Lewej dolnej (0, 50)|(250, 30)|  
   
- Na poniższej ilustracji przedstawiono oryginalnego obrazu i mapowane na równoległobok obrazu. Oryginalny obraz ma został niesymetryczna, zostaną uwzględnione obracać i translacji. Oś x wzdłuż górnej krawędzi oryginalnego obrazu jest zamapowana na wiersz, który jest uruchamiany za pośrednictwem (200, 20) i (110, 100). Oś y wzdłuż lewej krawędzi oryginalnego obrazu jest zamapowana na wiersz, który jest uruchamiany za pośrednictwem (200, 20) i (250, 30).  
+ Na poniższej ilustracji pokazuje oryginalny obraz i obraz, który mapowany do równoległobok. Oryginalny obraz ma zostały nierówne, zostaną uwzględnione, obracać i translacji. Oś x wzdłuż górnej krawędzi oryginalny obraz jest mapowany na wierszu, który jest uruchamiany za pośrednictwem (200, 20) i (110, 100). Oś y wzdłuż lewej krawędzi oryginalny obraz jest mapowany na wierszu, który jest uruchamiany za pośrednictwem (200, 20) i (250, 30).  
   
  ![Rozkłada](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
   
- Na poniższej ilustracji przedstawiono transformację podobne do fotograficzne obrazu.  
+ Poniższa ilustracja przedstawia podobne przekształcenie zastosowane do obrazu fotograficznych.  
   
- ![Przekształcony obiekt Climber](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
+ ![Transformed Climber](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
   
- Na poniższej ilustracji przedstawiono transformację podobne dotyczą metaplik.  
+ Poniższa ilustracja przedstawia podobne przekształcenie zastosowane do metaplik.  
   
- ![Przekształcone metaplik](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")  
+ ![Przekształcono metaplik](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")  
   
- Poniższy przykład tworzy obrazy ilustracją pierwszy.  
+ Poniższy przykład tworzy obrazy z pierwszą ilustracją.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzy systemu Windows i wymaga <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.Control.Paint> obsługi zdarzeń. Upewnij się zastąpić `Stripes.bmp` ze ścieżką do obrazu, który jest prawidłowy w tym systemie.  
+ Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Upewnij się zastąpić `Stripes.bmp` ze ścieżką do obrazu, który jest prawidłowy w tym systemie.  
   
-## <a name="see-also"></a>Zobacz też  
- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Zobacz także
+- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

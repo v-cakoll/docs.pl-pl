@@ -2,35 +2,35 @@
 title: Rozpoznanie przeciążenia funkcji (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 517bdb682213deff90a37eafcf32946fef63921f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b8e2a4f26c0101141292b768ee5870db78c90b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625178"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Rozpoznanie przeciążenia funkcji (jednostka SQL)
 W tym temacie opisano sposób [!INCLUDE[esql](../../../../../../includes/esql-md.md)] funkcje zostaną rozwiązane.  
   
- Tak długo, jak długo mają unikatowe sygnatury można zdefiniować więcej niż jedna funkcja o tej samej nazwie.  
+ Tak długo, jak funkcje mają unikatowe podpisy, można zdefiniować więcej niż jednej funkcji o takiej samej nazwie.  
   
- W przypadku, należy zastosować następujące kryteria ustalenie funkcji odwołuje się do niego danego wyrażenia. Te kryteria są stosowane w kolejności. Pierwsze kryterium, która ma zastosowanie tylko do jednej funkcji jest funkcją rozwiązane.  
+ W przypadku następujących kryteriów musi można zastosować w taki sposób, aby ustalić, funkcja, która odwołuje się do podanego wyrażenia. Te kryteria są stosowane w kolejności. Kryterium, która dotyczy tylko jednej funkcji jest funkcją rozwiązania.  
   
-1.  **Liczba parametrów**. Funkcja ma taką samą liczbę parametrów w wyrażeniu.  
+1.  **Liczba parametrów**. Funkcja ma taką samą liczbę parametrów określonych w wyrażeniu.  
   
-2.  **Dokładnego dopasowania w typie**. Każdy typ argumentu funkcji dokładnie zgodny z typem parametru lub jest pusty literał.  
+2.  **Dokładne dopasowanie typu**. Każdy typ argumentu funkcji dokładnie zgodny z typem parametru lub jest literałem o wartości null.  
   
-3.  **Dopasować podtypu**. Każdy typ argumentu funkcji dokładnie odpowiada i jest podtypem typu parametru lub argument jest pusty literał. W przypadku, gdy kilka funkcji różnią się tylko w wymagana liczba podtyp konwersji, funkcja o najmniejszej Liczba konwersji podtyp jest rozwiązany funkcji.  
+3.  **Dopasować wybrany parametr podtypu**. Każdy typ argumentu funkcji dokładnie pasuje do lub jest podtyp typu parametru lub argument jest literał o wartości null. W przypadku, gdy kilka funkcji różnią się tylko w wymagana liczba podtyp konwersji, funkcja o najmniejszej liczby konwersje podtyp jest funkcją rozwiązania.  
   
-4.  **Odpowiednik typu lub podtypu podwyższania poziomu**. Każdy typ argumentu funkcji dokładnie odpowiada, jest podtyp o lub może być podwyższony do typu parametru lub argument jest pusty literał. Ponownie w zdarzeniu kilka funkcji różnią się jedynie liczby konwersje podtypem i promocjach, funkcja o najmniejszej liczby konwersje podtypem i promocji jest rozwiązany funkcji.  
+4.  **Dopasowanie w promocji typu lub podtypu**. Typ każdego argumentu funkcji dokładnie odpowiada, jest typem podrzędne lub może być podwyższony do typu parametru lub argument jest literał o wartości null. Ponownie w zdarzeniu, które kilka funkcji różnią się jedynie liczby konwersje podtyp i promocje, funkcja o najmniejszej liczby konwersje podtyp i promocji jest funkcją rozwiązania.  
   
- Jeśli żaden z tych kryteriów spowodować jednej funkcji wybierane wyrażenie wywołania funkcji jest niejednoznaczny.  
+ Jeśli żadne z tych kryteriów wynik w jednej funkcji jest zaznaczone, wyrażenie wywołania funkcji jest niejednoznaczny.  
   
- Nawet jeśli stosowanie tych reguł można wyodrębnić jednej funkcji, argumenty nadal mogą być niezgodne parametry. Błąd w tym przypadku.  
+ Nawet wtedy, gdy przy użyciu tych reguł można wyodrębnić jednej funkcji, argumenty nadal mogą być niezgodne parametry. Błąd w tym przypadku.  
   
- Funkcje zdefiniowane przez użytkownika definicji wbudowanej funkcji zapytania ma pierwszeństwo, nawet wtedy, gdy istnieje funkcję zdefiniowaną w modelu przy użyciu podpisu lepsze dopasowanie dla funkcji zdefiniowanej przez użytkownika.  
+ Funkcje zdefiniowane przez użytkownika definicji wbudowanej funkcji zapytanie ma pierwszeństwo, nawet wtedy, gdy istnieje funkcji definiowanych przez model, za pomocą podpisu, który lepiej pasuje do funkcji zdefiniowanej przez użytkownika.  
   
-## <a name="see-also"></a>Zobacz też  
- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
- [Funkcje](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
+## <a name="see-also"></a>Zobacz także
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Funkcje](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

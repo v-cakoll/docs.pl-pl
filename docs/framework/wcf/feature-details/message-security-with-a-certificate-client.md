@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a027577f5118f9a5b2f3eeaa29ddfde20851a8f2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130817"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530856"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Zabezpieczenia komunikatów z klientem dysponującym certyfikatem
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych używających trybu zabezpieczenia wiadomości. Zarówno klient, jak i usługi są uwierzytelniane przy użyciu certyfikatów. Aby uzyskać więcej informacji, zobacz [rozproszone zabezpieczenia aplikacji](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).  
@@ -27,7 +27,7 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 |Uwierzytelnianie (klient)|Za pomocą certyfikatu klienta|  
 |Integralność|Tak|  
 |Poufność|Tak|  
-|Transportu|HTTP|  
+|Transport|HTTP|  
 |Powiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Usługa  
@@ -143,8 +143,8 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

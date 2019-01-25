@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: c98e9434f78980ca0dd8156b3828734abb223a8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679516"
 ---
 # <a name="annotations-schema"></a>Schemat adnotacji
 W tym temacie opisano definicji schematu XML (XSD) używane przez Microsoft Framework adnotacje do zapisywania i pobierania danych adnotacji użytkownika.  
@@ -581,10 +581,10 @@ W tym temacie opisano definicji schematu XML (XSD) używane przez Microsoft Fram
 </anc:Annotations>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Annotations>  
- <xref:System.Windows.Annotations.Storage>  
- <xref:System.Windows.Annotations.Annotation>  
- <xref:System.Windows.Annotations.Storage.AnnotationStore>  
- <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
- [Przegląd adnotacji](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Annotations>
+- <xref:System.Windows.Annotations.Storage>
+- <xref:System.Windows.Annotations.Annotation>
+- <xref:System.Windows.Annotations.Storage.AnnotationStore>
+- <xref:System.Windows.Annotations.Storage.XmlStreamStore>
+- [Przegląd adnotacji](../../../../docs/framework/wpf/advanced/annotations-overview.md)

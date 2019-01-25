@@ -1,5 +1,5 @@
 ---
-title: 'Porady: deklarowanie stałej (Visual Basic)'
+title: 'Instrukcje: Deklarowanie stałej (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ce45e4df7f74cd68bde0fb2adba10197a11edb1b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394317"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678840"
 ---
-# <a name="how-to-declare-a-constant-visual-basic"></a>Porady: deklarowanie stałej (Visual Basic)
+# <a name="how-to-declare-a-constant-visual-basic"></a>Instrukcje: Deklarowanie stałej (Visual Basic)
 Możesz użyć `Const` instrukcję, aby zadeklarować stałą i określanie jego wartości. Wartość, przez zadeklarowanie stałą, przypisać znaczącą nazwę. Po zadeklarowaniu stałej nie można modyfikować ani przypisywana nowa wartość.  
   
  Możesz deklarować stałą w procedurze lub w sekcji deklaracji modułu, klasy lub struktury. Klasa lub stałe na poziomie struktury są `Private` domyślnie, ale może być także zadeklarowana jako `Public`, `Friend`, `Protected`, lub `Protected Friend` na odpowiedni poziom dostępu kodu.  
@@ -65,14 +65,25 @@ Możesz użyć `Const` instrukcję, aby zadeklarować stałą i określanie jego
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Const, instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)  
- [Typy danych Stała i Literał](constant-and-literal-data-types.md)  
- [Stałe — Przegląd](constants-overview.md) [porady: deklarowanie stałej](how-to-declare-a-constant.md) [stałe zdefiniowane przez użytkownika](user-defined-constants.md) [typy danych stała i literał](constant-and-literal-data-types.md) [jak: Grupa Powiązanych wartości stałych](how-to-group-related-constant-values-together.md) [Enumerations — Przegląd](enumerations-overview.md) [porady: deklarowanie wyliczeń](how-to-declare-enumerations.md) [jak: odnoszą się do elementu członkowskiego wyliczenia](how-to-refer-to-an-enumeration-member.md) [Wyliczenie i kwantyfikacja nazwy](enumerations-and-name-qualification.md) [porady: iterowanie za pomocą wyliczania](how-to-iterate-through-an-enumeration.md) [porady: Określanie ciągu skojarzonego z wartością wyliczenia](how-to-determine-the-string-associated-with-an-enumeration-value.md) [Kiedy stosować wyliczanie](when-to-use-an-enumeration.md)
+## <a name="see-also"></a>Zobacz także
+- [Const, instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Typy danych Stała i Literał](constant-and-literal-data-types.md)
+- [Stałe — przegląd](constants-overview.md)
+- [Instrukcje: Deklarowanie stałej](how-to-declare-a-constant.md)
+- [Stałe zdefiniowane przez użytkownika](user-defined-constants.md)
+- [Typy danych Stała i Literał](constant-and-literal-data-types.md)
+- [Instrukcje: Grupowanie powiązanych ze sobą wartości stałych](how-to-group-related-constant-values-together.md)
+- [Wyliczenia — przegląd](enumerations-overview.md)
+- [Instrukcje: Deklarowanie wyliczeń](how-to-declare-enumerations.md)
+- [Instrukcje: Odnoszą się do elementu członkowskiego wyliczenia](how-to-refer-to-an-enumeration-member.md)
+- [Wyliczenia i kwalifikacja nazw](enumerations-and-name-qualification.md)
+- [Instrukcje: Iterowanie za pomocą wyliczania](how-to-iterate-through-an-enumeration.md)
+- [Instrukcje: Określanie ciągu skojarzonego z wartością wyliczenia](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [Kiedy stosować wyliczanie](when-to-use-an-enumeration.md)
 
- [Wyliczenia — przegląd](enumerations-overview.md)  
- [Stałe — przegląd](constants-overview.md)  
- [Porady: deklarowanie wyliczeń](how-to-declare-enumerations.md)  
- [Wyliczenia i kwalifikacja nazw](enumerations-and-name-qualification.md)  
- [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Wyliczenia — przegląd](enumerations-overview.md)
+- [Stałe — przegląd](constants-overview.md)
+- [Instrukcje: Deklarowanie wyliczeń](how-to-declare-enumerations.md)
+- [Wyliczenia i kwalifikacja nazw](enumerations-and-name-qualification.md)
+- [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)

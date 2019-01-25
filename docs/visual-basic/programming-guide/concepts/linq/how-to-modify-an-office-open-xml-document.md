@@ -1,23 +1,23 @@
 ---
-title: 'Porady: modyfikowanie dokumentu pakietu Office Open XML (Visual Basic)'
+title: 'Instrukcje: Modyfikowanie dokumentu Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 333896eab6002a578b1cb53eb02f787bc9259123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753396"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670371"
 ---
-# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Porady: modyfikowanie dokumentu pakietu Office Open XML (Visual Basic)
-W tym temacie przedstawiono przykład otwiera dokumentu pakietu Office Open XML, modyfikuje go i zapisuje go.  
+# <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Instrukcje: Modyfikowanie dokumentu Office Open XML (Visual Basic)
+W tym temacie przedstawiono przykład, który spowoduje otwarcie dokumentu Office Open XML, modyfikuje je i zapisuje go.  
   
- Aby uzyskać więcej informacji dotyczących Office Open XML, zobacz [marek oficjalny Blog](http://www.ericwhite.com).  
+ Aby uzyskać więcej informacji na temat Office Open XML, zobacz [Eric oficjalny Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie znajduje pierwszy element akapitu w dokumencie. Go odczytuje tekst z akapitu, a następnie usuwa cały tekst jest uruchamiany w akapitu. Tworzy nowy tekst Uruchom składający się z pierwszym tekst akapitu, który został przekonwertowany na wielkie litery. Następnie serializuje zmienione XML w pakiecie Open XML i zamyka.  
+ W tym przykładzie wyszukuje pierwszy element akapitu w dokumencie. Pobiera tekst z akapitu, a następnie usuwa cały tekst jest uruchamiany w akapicie. Tworzy nowy tekst Uruchom składający się z pierwszym tekst akapitu, który został przekonwertowany na wielkie litery. Następnie wykonuje serializację zmienione XML do pakietów Open XML i zamyka te błędy.  
   
- W tym przykładzie użyto znaleziony w zestawie WindowsBase klasy. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie użyto klasy znalezione w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -135,13 +135,13 @@ Module Module1
 End Module  
 ```  
   
- Po otwarciu `SampleDoc.docx` po uruchomieniu tego programu, zobaczysz, że ten program przekonwertować akapitu w dokumencie wielkimi literami.  
+ Jeśli otworzysz `SampleDoc.docx` po uruchomieniu tego programu, możesz zobaczyć, że ten program przekonwertować pierwszego akapitu w dokumencie na wielkie litery.  
   
- Uruchomienia z przykładowy dokument Open XML opisanego w [tworzenie źródło dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), w tym przykładzie tworzy następujące dane wyjściowe:  
+ Uruchamiania przy użyciu przykładowy dokument Open XML opisanego w [tworzenie źródłowego dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), ten przykład generuje następujące wyniki:  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane techniki zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

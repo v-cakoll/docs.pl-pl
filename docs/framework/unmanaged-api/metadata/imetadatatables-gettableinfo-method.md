@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea617668a72413f3387a35fe009b37fa15d03354
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bf3e5d427698673576f71e290fde54275b75317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683459"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo — Metoda
-Pobiera nazwę, rozmiar wiersza, liczbę wierszy, liczby kolumn oraz kolumny klucza indeksu określonej tabeli.  
+Pobiera nazwę, rozmiar wiersza, liczba wierszy, liczba kolumn, a kolumny klucza indeksu w określonej tabeli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,7 +45,7 @@ HRESULT GetTableInfo (
  [in] Identyfikator tabeli, którego właściwości do zwrócenia.  
   
  `pcbRow`  
- [out] Wskaźnik do, w bajtach rozmiar wiersza tabeli.  
+ [out] Wskaźnik do rozmiaru, w bajtach wiersza tabeli.  
   
  `pcRows`  
  [out] Wskaźnik do liczby wierszy w tabeli.  
@@ -54,20 +54,20 @@ HRESULT GetTableInfo (
  [out] Wskaźnik do liczby kolumn w tabeli.  
   
  `piKey`  
- [out] Wskaźnik do indeks kolumny klucza, lub wartość -1, jeśli tabela nie ma kolumny klucza.  
+ [out] Wskaźnik do indeksu kolumny klucza lub wartość -1, jeśli tabela nie ma kolumny klucza.  
   
  `ppName`  
- [out] Wskaźnik na wskaźnik do nazwy tabeli.  
+ [out] Wskaźnik do wskaźnika do nazwy tabeli.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 474338ff1780ce9b442208cd06f8b14bc411be5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e806bae1911ea6ffc5bb6e9af76d99524636d39e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491154"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString — Metoda
-Pobiera ciąg literału reprezentowany przez token określonych metadanych.  
+Pobiera ciąg literału, reprezentowane przez token określonych metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,26 +40,26 @@ HRESULT GetUserString (
   
 #### <a name="parameters"></a>Parametry  
  `stk`  
- [in] Token ciągu do zwrócenia skojarzone ciąg.  
+ [in] Token ciągu do zwrócenia skojarzony ciąg.  
   
  `szString`  
  [out] Kopia żądanego ciągu.  
   
  `cchString`  
- [in] Maksymalny rozmiar w znaki dwubajtowe liczby żądanych `szString`.  
+ [in] Maksymalny rozmiar w znaki dwubajtowe dla żądanego `szString`.  
   
  `pchString`  
- [out] Rozmiar w znaki dwubajtowe zwróconego elementu `szString`.  
+ [out] Rozmiar w znaki dwubajtowe zwracanego `szString`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

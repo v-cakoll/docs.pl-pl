@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: c0c5019eb122f30ad25fa86164b4ead6db8c83c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261264"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715819"
 ---
 # <a name="bitmap-effects-overview"></a>Przegląd Efekty mapy bitowej
 Efekty mapy bitowej umożliwia projektantom i deweloperom stosowanie efektów wizualnych do renderowania zawartości Windows Presentation Foundation (WPF). Na przykład efektów mapy bitowej pozwalają łatwo zastosować <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efekt lub efekt rozmycie obrazu lub przycisku.  
@@ -60,12 +60,12 @@ Efekty mapy bitowej umożliwia projektantom i deweloperom stosowanie efektów wi
 ## <a name="creating-custom-effects"></a>Tworzenie niestandardowych efektów  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia również niezarządzane interfejsy do tworzenia niestandardowych efektów, które mogą być używane w zarządzanych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji. Aby uzyskać dodatkowe materiały źródłowe do tworzenia efektów niestandardowej mapy bitowej, zobacz [niezarządzanych efekt mapy bitowej WPF](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) dokumentacji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Effects.BitmapEffectGroup>  
- <xref:System.Windows.Media.Effects.BitmapEffectInput>  
- <xref:System.Windows.Media.Effects.BitmapEffectCollection>  
- [Efekt mapy bitowej niezarządzanych WPF](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)  
- [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Zabezpieczenia](../../../../docs/framework/wpf/security-wpf.md)  
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Effects.BitmapEffectGroup>
+- <xref:System.Windows.Media.Effects.BitmapEffectInput>
+- <xref:System.Windows.Media.Effects.BitmapEffectCollection>
+- [Efekt mapy bitowej niezarządzanych WPF](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
+- [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Zabezpieczenia](../../../../docs/framework/wpf/security-wpf.md)
+- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)

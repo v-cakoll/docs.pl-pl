@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085017"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700536"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Instrukcje: Używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła
 Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Windows Communication Foundation (WCF) używa Windows do weryfikowania nazwy użytkownika i hasła. Jednak WCF umożliwia niestandardowych użytkownika nazwy i hasła schematy uwierzytelniania, znany także jako *moduły weryfikacji*. Aby dołączyć moduł weryfikacji nazwy i hasła użytkownika niestandardowego, należy utworzyć klasę, która pochodzi od klasy <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , a następnie skonfigurować go.  
@@ -51,7 +51,7 @@ Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Win
   
     1.  W pliku konfiguracji w obszarze [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu Dodawanie [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu.  
   
-    2.  Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element w sekcji wiązania. Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) lub [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) element w sekcji wiązania. Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [jak: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Ustaw `mode` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) lub [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) do `Message`, `Transport`, lub `TransportWithMessageCredential`.  
   
@@ -64,7 +64,7 @@ Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Win
         > [!NOTE]
         >  Gdy usługa WCF jest hostowana w Internet Information Services (IIS) przy użyciu zabezpieczeń na poziomie transportu i <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, schemat uwierzytelniania niestandardowego korzysta z podzbioru uwierzytelniania Windows. To, ponieważ w tym scenariuszu IIS przeprowadza uwierzytelnianie Windows przed WCF, wywoływania niestandardowych wystawcy uwierzytelnienia.  
   
-     Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [porady: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [jak: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      Poniższy przykład pokazuje kod konfiguracji dla wiązania.  
   
@@ -117,7 +117,7 @@ Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Win
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>  
- [Instrukcje: użycie dostawcy członkostwa platformy ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
- [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
+- [Instrukcje: Użycie dostawcy członkostwa platformy ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

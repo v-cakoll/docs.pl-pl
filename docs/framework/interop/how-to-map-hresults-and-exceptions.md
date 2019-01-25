@@ -1,5 +1,5 @@
 ---
-title: 'Porady: mapowanie wyników HRESULT i wyjątków'
+title: 'Instrukcje: Mapa wyników HRESULT i wyjątków'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729239"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Porady: mapowanie wyników HRESULT i wyjątków
+# <a name="how-to-map-hresults-and-exceptions"></a>Instrukcje: Mapa wyników HRESULT i wyjątków
 Metody modelu COM, raportowanie błędów przez zwrócenie wartości HRESULT; metod .NET zgłoszenie ich przez zgłaszanie wyjątków. Środowisko wykonawcze obsługuje przejścia między nimi. Każda klasa wyjątków w programie .NET Framework jest mapowany na HRESULT.  
   
  Klasy wyjątków zdefiniowanych przez użytkownika można określić, niezależnie od rodzaju HRESULT jest odpowiednia. Te klasy wyjątku można dynamicznie zmieniać HRESULT zwracane, gdy wyjątek jest generowany przez ustawienie **HResult** pola obiektu wyjątku. Dodatkowe informacje o wyjątku jest udostępniany za pośrednictwem **IErrorInfo** interfejs, który jest zaimplementowany dla obiektu .NET w proces niezarządzany.  
@@ -59,17 +59,17 @@ CMyClass::MethodThatThrows
   
 |HRESULT|Wyjątek dla platformy .NET|  
 |-------------|--------------------|  
-|**MSEE_E_APPDOMAINUNLOADED**|**Appdomainunloadedexception —**|  
+|**MSEE_E_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
 |**COR_E_APPLICATION**|**Applicationexception —**|  
 |**COR_E_ARGUMENT lub E_INVALIDARG**|**ArgumentException**|  
 |**COR_E_ARGUMENTOUTOFRANGE**|**Trwa wyjątku ArgumentOutOfRangeException**|  
 |**COR_E_ARITHMETIC lub ERROR_ARITHMETIC_OVERFLOW**|**Arithmeticexception —**|  
-|**COR_E_ARRAYTYPEMISMATCH**|**Arraytypemismatchexception —**|  
+|**COR_E_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
 |**COR_E_BADIMAGEFORMAT lub ERROR_BAD_FORMAT**|**BadImageFormatException**|  
 |**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
 |**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
 |**COR_E_CORE**|**CoreException**|  
-|**NTE_FAIL**|**Cryptographicexception —**|  
+|**NTE_FAIL**|**CryptographicException**|  
 |**COR_E_DIRECTORYNOTFOUND lub ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
 |**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
@@ -77,29 +77,29 @@ CMyClass::MethodThatThrows
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
 |**COR_E_EXCEPTION**|**wyjątek**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
-|**COR_E_FIELDACCESS**|**Fieldaccessexception —**|  
+|**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND lub ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
 |**COR_E_FORMAT**|**FormatException**|  
 |**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
 |**COR_E_INVALIDCAST lub E_NOINTERFACE**|**InvalidCastException**|  
 |**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
 |**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
-|**COR_E_INVALIDOLEVARIANTTYPE**|**Invalidolevarianttypeexception —**|  
+|**COR_E_INVALIDOLEVARIANTTYPE**|**InvalidOleVariantTypeException**|  
 |**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
 |**COR_E_IO**|**IOException**|  
 |**COR_E_MEMBERACCESS**|**AccessException**|  
 |**COR_E_METHODACCESS**|**MethodAccessException**|  
 |**COR_E_MISSINGFIELD**|**MissingFieldException**|  
 |**COR_E_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
-|**COR_E_MISSINGMEMBER**|**Missingmemberexception —**|  
-|**COR_E_MISSINGMETHOD**|**(Wyjątek missingmethodexception)**|  
-|**COR_E_MULTICASTNOTSUPPORTED**|**Multicastnotsupportedexception —**|  
-|**COR_E_NOTFINITENUMBER**|**Notfinitenumberexception —**|  
+|**COR_E_MISSINGMEMBER**|**MissingMemberException**|  
+|**COR_E_MISSINGMETHOD**|**MissingMethodException**|  
+|**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
+|**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
 |**E_NOTIMPL**|**NotImplementedException**|  
-|**COR_E_NOTSUPPORTED**|**Notsupportedexception —**|  
-|**COR_E_NULLREFERENCE orE_POINTER**|**Obiektu NullReferenceException**|  
+|**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
+|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY lub**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
-|**COR_E_OVERFLOW**|**Overflowexception —**|  
+|**COR_E_OVERFLOW**|**OverflowException**|  
 |**COR_E_PATHTOOLONG lub ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
 |**COR_E_RANK**|**RankException**|  
 |**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
@@ -110,15 +110,15 @@ CMyClass::MethodThatThrows
 |**COR_E_STACKOVERFLOW orERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**Synchronizationlockexception —**|  
 |**COR_E_SYSTEM**|**SystemException**|  
-|**COR_E_TARGET**|**Targetexception —**|  
-|**COR_E_TARGETINVOCATION**|**Targetinvocationexception —**|  
-|**COR_E_TARGETPARAMCOUNT**|**Targetparametercountexception —**|  
+|**COR_E_TARGET**|**TargetException**|  
+|**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
+|**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
 |**COR_E_THREADABORTED**|**ThreadAbortException**|  
 |**COR_E_THREADINTERRUPTED**|**ThreadInterruptedException**|  
-|**COR_E_THREADSTATE**|**Threadstateexception —**|  
+|**COR_E_THREADSTATE**|**ThreadStateException**|  
 |**COR_E_THREADSTOP**|**ThreadStopException**|  
 |**COR_E_TYPELOAD**|**TypeLoadException**|  
-|**COR_E_TYPEINITIALIZATION**|**Typeinitializationexception —**|  
+|**COR_E_TYPEINITIALIZATION**|**TypeInitializationException**|  
 |**COR_E_VERIFICATION**|**Verificationexception —**|  
 |**COR_E_WEAKREFERENCE**|**WeakReferenceException**|  
 |**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
@@ -132,16 +132,16 @@ CMyClass::MethodThatThrows
   
 |Pole wyjątku|Źródło informacji z modelu COM|  
 |---------------------|------------------------------------|  
-|**Kod błędu**|HRESULT zwracane z wywołania.|  
+|**ErrorCode**|HRESULT zwracane z wywołania.|  
 |**HelpLink**|Jeśli **IErrorInfo -> helpcontext —** jest różna od zera, ciąg jest tworzona przez złączenie **IErrorInfo -> GetHelpFile** i "#" i **IErrorInfo -> GetHelpContext**. W przeciwnym razie zostanie zwrócony ciąg z **IErrorInfo -> GetHelpFile**.|  
 |**Wyjątek wewnętrzny**|Zawsze odwołanie o wartości null (**nic** w języku Visual Basic).|  
 |**Komunikat**|Ciąg zwracany z **IErrorInfo -> GetDescription**.|  
-|**Źródło**|Ciąg zwracany z **IErrorInfo -> GetSource**.|  
-|**Ślad stosu**|Ślad stosu.|  
+|**Element źródłowy**|Ciąg zwracany z **IErrorInfo -> GetSource**.|  
+|**StackTrace**|Ślad stosu.|  
 |**TargetSite**|Nazwa metody, która jest zwracana niepowodzenia HRESULT.|  
   
  Wyjątek pola, takie jak **komunikat**, **źródła**, i **ślad stosu** nie są dostępne dla **stackoverflowexception —**.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Wyjątki](../../standard/exceptions/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Wyjątki](../../standard/exceptions/index.md)

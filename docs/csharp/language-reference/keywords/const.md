@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 63fb86ed24dd4e30d3783d70e3249b9f8e5e20bd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f0b2b3632e767710bd31f5f6edaccaf0c2ef8c85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54526980"
 ---
 # <a name="const-c-reference"></a>const (odwołanie w C#)
 
@@ -65,8 +65,8 @@ W tym przykładzie przedstawiono sposób użycia stałych jako zmiennych lokalny
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)
 - [readonly](../../../csharp/language-reference/keywords/readonly.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540666"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takie jak pliki lub bazy danych. Te wskazówki pochodzą ponowne napisanie kompilatory C# i Visual Basic w kodzie zarządzanym, a w tym artykule przedstawiono kilka przykładów rzeczywistych z kompilatorem C#. 
@@ -447,7 +447,7 @@ class Compilation { /*...*/
   
  W sposób bezpieczny klas i struktur Obejmij kosztem klasycznego miejsca/godziny dostosowywania aplikacji. Klasy pociągnąć za sobą 12-bajtowy obciążenie x86 komputera, nawet jeśli mają one żadnych pól, ale są one niedrogie w celu przejścia wokół, ponieważ tylko pobiera wskaźnik do odwoływania się do wystąpienia klasy. Struktury pociągnąć za sobą nie alokacji sterty, jeśli nie są one zapakowany, ale podczas przekazywania dużych struktury jako argumenty funkcji lub zwracania wartości zajmuje trochę czasu procesora CPU niepodzielne skopiować wszystkie składowe danych struktury. Zwróć uwagę na wielokrotnego wywołania do właściwości, które zwracają struktur i wartości właściwości w zmiennej lokalnej, aby uniknąć nadmiernego kopiowania danych w pamięci podręcznej. 
   
- **Pamięci podręczne**  
+ **Caches**  
   
  Typowe wydajności jest do wyników z pamięci podręcznej. Jednak bez zasad zakończenia lub usuwania rozmiar pamięci podręcznej może być przeciek pamięci. Podczas przetwarzania dużych ilości danych, jeśli przytrzymasz dużej ilości pamięci w pamięci podręcznej, można wywołać wyrzucanie elementów bezużytecznych zastąpić korzyści wynikające z Twojej wyszukiwań w pamięci podręcznej. 
   
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Film wideo: prezentacja części tego tematu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [Profilowanie wydajności — przewodnik dla początkujących](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [Wydajność](../../../docs/framework/performance/index.md)  
-- [Wskazówki dotyczące wydajności .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Narzędzie do analizy wydajności Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [Znajdź wąskie gardła za pomocą programu Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [Channel 9 samouczki narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [Film wideo: prezentacja części tego tematu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [Profilowanie wydajności — przewodnik dla początkujących](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Wydajność](../../../docs/framework/performance/index.md)
+- [Wskazówki dotyczące wydajności .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Narzędzie do analizy wydajności Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)
+- [Znajdź wąskie gardła za pomocą programu Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Channel 9 samouczki narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Zestaw SDK platformy kompilatora .NET](../../csharp/roslyn-sdk/index.md)
 - [repozytorium DotNet/roslyn w witrynie GitHub](https://github.com/dotnet/roslyn)

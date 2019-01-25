@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 00cfda489feb468c7e3c140ab63369b408b09152
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 08b09a762a62e758c1c396b80b46648725b835b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54500567"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opcje kompilatora C#)
 Powoduje, że kompilator udostępnia informacje o typie modelu COM w określonych zestawach do projektu, który obecnie kompilacja.  
@@ -31,10 +31,10 @@ Powoduje, że kompilator udostępnia informacje o typie modelu COM w określonyc
   
 ## <a name="arguments"></a>Argumenty  
  `fileList`  
- Wymagane. Rozdzielana przecinkami lista nazw plików zestawu. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w znaki cudzysłowu.  
+ Wymagana. Rozdzielana przecinkami lista nazw plików zestawu. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w znaki cudzysłowu.  
   
 ## <a name="remarks"></a>Uwagi  
- `-link` Opcja służy do wdrażania aplikacji, która zawiera osadzone informacje o typie. Aplikacja następnie można użyć typów w zestawie środowiska uruchomieniowego, które implementują informacje o typie osadzony bez odwołania do zestawu środowiska wykonawczego. Jeśli różne wersje zestawów środowiska uruchomieniowego są publikowane, aplikacji, która zawiera informacje o typie osadzony pracować z różnymi wersjami bez konieczności zostać zrekompilowane. Aby uzyskać przykład, zobacz [wskazówki: osadzanie typów z zarządzanych zestawów](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
+ `-link` Opcja służy do wdrażania aplikacji, która zawiera osadzone informacje o typie. Aplikacja następnie można użyć typów w zestawie środowiska uruchomieniowego, które implementują informacje o typie osadzony bez odwołania do zestawu środowiska wykonawczego. Jeśli różne wersje zestawów środowiska uruchomieniowego są publikowane, aplikacji, która zawiera informacje o typie osadzony pracować z różnymi wersjami bez konieczności zostać zrekompilowane. Aby uzyskać przykład, zobacz [instruktażu: Osadzanie typów z zarządzanych zestawów](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
  Za pomocą `-link` opcja jest szczególnie przydatna w przypadku, gdy pracujesz za pomocą modelu COM. Można osadzić typów modelu COM, dzięki czemu aplikacja nie wymaga już podstawowego zestawu międzyoperacyjnego (PIA) na komputerze docelowym. `-link` Opcja nakazuje kompilatorowi osadzanie informacji o typie modelu COM z odwołania zestawu międzyoperacyjnego wynikowy kod skompilowany. Typ COM jest identyfikowany przez wartość identyfikatora CLSID (GUID). W rezultacie aplikację można uruchomić na komputerze docelowym, w której zainstalowano te same typy modelu COM za pomocą tych samych wartości identyfikatora CLSID. Aplikacje, które automatyzują Microsoft Office są dobrym przykładem. Ponieważ aplikacji, takich jak Office zwykle zachować tę samą wartość identyfikatora CLSID różnych wersji, aplikacja może używać typów modelu COM, jak długo, jak .NET Framework 4 lub nowszy jest zainstalowany na komputerze docelowym, a Twoja aplikacja używa metod, właściwości lub zdarzenia, które są zawarte w przywoływanych typów modelu COM.  
   
@@ -81,11 +81,11 @@ Powoduje, że kompilator udostępnia informacje o typie modelu COM w określonyc
 csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
-- [Przewodnik: osadzanie typów z zarządzanych zestawów](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
-- [— Odwołanie (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)  
-- [-noconfig (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)  
-- [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Przewodnik: Osadzanie typów z zarządzanych zestawów](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [— Odwołanie (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+- [-noconfig (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
+- [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Przegląd współdziałania](../../../csharp/programming-guide/interop/interoperability-overview.md)

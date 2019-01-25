@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetTypeProps — metoda
+title: ICorDebugSymbolProvider::GetTypeProps Method
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3398e01912309c057cd1e01e8fc0af6c62f976bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e21273506e91c5ab69b1b0b4a52d6c0f72692dab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712775"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps — metoda
-Zwraca informacje dotyczące typu właściwości, takie jak liczba podpisu jego parametry ogólne, podany wirtualny adres względny (RVA) w vtable.  
+# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps Method
+Zwraca informacje o właściwościach typu, takie jak liczba podpisu parametrami rodzajowymi, rozpoczynając od podanej względnych adresów wirtualnych (RVA) w vtable.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,25 +27,25 @@ HRESULT GetTypeProps(
   
 #### <a name="parameters"></a>Parametry  
  `tableRva`  
- [in] Wirtualny adres względny (RVA) w vtable.  
+ [in] Względny adres wirtualny (RVA) w vtable.  
   
  `cbSignature`  
- [in] Rozmiar `signature` tablicy. W sekcji uwag.  
+ [in] Rozmiar `signature` tablicy. Zobacz sekcję Uwagi.  
   
  `pcbSignature`  
- [out] [out] Wskaźnik do rozmiaru zwracana `signature` tablicy.  
+ [out] [out] Wskaźnik do rozmiaru zwracanego `signature` tablicy.  
   
  `signature`  
- [out] Buforu, który zawiera podpisy elementu typespec wszystkich parametrów ogólnych.  
+ [out] Buforu, który zawiera sygnatury elementu typespec wszystkich parametrów ogólnych.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać wymagany rozmiar typu `signature` tablicy, ustaw `cbSignature` argument 0 i `signature` do **null**. Gdy metoda zwróci wartość, `pcbSignature` będzie zawierać liczbę bajtów wymaganą dla `signature` tablicy.  
+ Aby uzyskać wymagany rozmiar typu `signature` tablicy, należy ustawić `cbSignature` argument 0 i `signature` do **o wartości null**. Po powrocie z metody `pcbSignature` będzie zawierać liczbę bajtów wymaganą dla `signature` tablicy.  
   
 > [!NOTE]
->  Ta metoda jest tylko dostępne z platformą .NET Native.  
+>  Ta metoda jest tylko dostępne z architekturą .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -53,7 +53,7 @@ HRESULT GetTypeProps(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [GetMethodProps, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)  
- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Zobacz także
+- [GetMethodProps, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
+- [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

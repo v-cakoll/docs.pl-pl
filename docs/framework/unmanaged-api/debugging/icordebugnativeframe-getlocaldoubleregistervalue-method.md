@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9de77f942a1b89b0ab11ef71229e491a5305cafc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e71930460c5db77950efdaaba3cead8c49697a97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696285"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue — Metoda
-Pobiera wartość argumentu lub zmiennej lokalnej, która jest przechowywana w dwóch rejestruje określony dla tej ramki natywnego.  
+Pobiera wartość argumentu lub zmiennej lokalnej, która jest przechowywana w dwóch rejestruje określony dla tej ramki natywne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +41,25 @@ HRESULT GetLocalDoubleRegisterValue (
   
 #### <a name="parameters"></a>Parametry  
  `highWordReg`  
- [in] Wartość określająca rejestru zawierającego słowo wysokiej wartości wyliczenia "CorDebugRegister".  
+ [in] Wartość wyliczenia "Cordebugregister —", określający rejestru zawierającego słowo wysokiej wartości.  
   
  `lowWordReg`  
- [in] Wartość `CorDebugRegister` wyliczenie określający zawierające słowo niskiej wartości rejestru.  
+ [in] Wartość `CorDebugRegister` wyliczenie, które określa rejestru zawierające niskich słowo wartości.  
   
  `cbSigBlob`  
- [in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niego `pvSigBlob` parametru.  
+ [in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niej `pvSigBlob` parametru.  
   
  `pvSigBlob`  
- [in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarnego typu wartości.  
+ [in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarny o typie wartości.  
   
  `ppValue`  
- [out] Wskaźnik do adresu "ICorDebugValue" obiekt reprezentujący pobrana wartość, która znajduje się w rejestrach określony.  
+ [out] Wskaźnik na adres "ICorDebugValue" obiekt reprezentujący pobrana wartość, która jest przechowywana w określonej rejestrów.  
   
 ## <a name="remarks"></a>Uwagi  
  `GetLocalDoubleRegisterValue` Metoda może być używana w ramka natywna lub just-in-time (JIT)-skompilowany ramki.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -67,5 +67,5 @@ HRESULT GetLocalDoubleRegisterValue (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- 
+## <a name="see-also"></a>Zobacz także
+

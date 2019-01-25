@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0d9b8a9a1014d98c51f1471f8203be07f7ff49c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08d27eb834c1a9a3a5d163bb2d3054f599ae1669
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719563"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK — Struktura
 Zawiera informacje, które jest używane do łączenia kodu natywnego.  
@@ -41,20 +41,20 @@ typedef struct
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`m_linkType`|Typ, które mają być łączone w kodzie natywnym. Ta wartość jest jednym z [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) wartości.|  
-|`m_flags`|Flagi używane przez konsolidator podczas łączenia kodu natywnego. Ta wartość jest jednym z [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) wartości.|  
-|`m_entryPoint`|Token metadanych elementu MemberRef, który reprezentuje punkt wejścia. Format jest `lib:entrypoint`.|  
+|`m_linkType`|Typ, które mają być łączone w kodzie natywnym. Ta wartość jest jednym z [cornativelinktype —](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md) wartości.|  
+|`m_flags`|Flagi używane przez konsolidator, podczas łączenia kodu natywnego. Ta wartość jest jednym z [cornativelinkflags —](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md) wartości.|  
+|`m_entryPoint`|Token metadanych MemberRef, który reprezentuje punkt wejścia. Format jest `lib:entrypoint`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [CorNativeLinkType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)  
- [CorNativeLinkFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [CorNativeLinkType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
+- [CorNativeLinkFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)

@@ -7,30 +7,30 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 53c3172e8518115d001c23be2430fbc87ae1b60f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d52df42b00abfa364762d97c162eb143e511f06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649495"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Słowa kluczowe jako nazwy elementów w Code (Visual Basic)
-Każdy element program — takie jak zmienna, klasa lub element członkowski — może mieć taką samą nazwę jak ograniczeniami — słowo kluczowe. Na przykład można utworzyć zmiennej o nazwie `Loop`. Jednak aby odwołać się do używanej wersji — który ma taką samą nazwę jak ograniczeniami `Loop` — słowo kluczowe — należy poprzedzić ciągu pełnej kwalifikacji lub została ujęta w nawiasy kwadratowe (`[ ]`), jak pokazano na poniższym przykładzie.  
+Dowolnego elementu programu — takie jak zmienna, klasy ani składowej — może mieć taką samą nazwę jak ograniczony — słowo kluczowe. Na przykład można utworzyć zmiennej o nazwie `Loop`. Jednak do odwoływania się do swoją wersję — która ma taką samą nazwę jak zastrzeżonego `Loop` — słowo kluczowe — należy poprzedzić go ukośnikiem ciągu pełnej kwalifikacji lub należy ją ująć w nawiasy kwadratowe (`[ ]`), jak pokazano w poniższym przykładzie.  
   
  [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
- Wykonaj jedną z nich, a następnie Visual Basic założono użycie wewnętrznej `Loop` — słowo kluczowe i tworzy błąd, jak w poniższym przykładzie:  
+ Wykonaj jedną z tych wersji, a następnie języka Visual Basic założono użycie wewnętrznego `Loop` — słowo kluczowe i generuje błąd, jak w poniższym przykładzie:  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- Podczas odwoływania się do formularzy i kontrolek i gdy służy nawiasy kwadratowe deklarowanie zmiennej lub definiujący procedurę o tej samej nazwie jako ograniczeniami — słowo kluczowe. Można go łatwo Pamiętaj, aby zakwalifikować nazwy lub obejmują nawiasów kwadratowych, w związku z tym spowodują one błędów w kodzie i utrudnić odczytu. Z tego powodu zalecamy nie używać ograniczeniami słowa kluczowe jako nazwy elementów programu. Jednak jeśli przyszłych wersjach programu Visual Basic definiuje new — słowo kluczowe powodujący konflikt z istniejącym formularzu lub nazwa formantu, następnie służy ta technika podczas aktualizowania kodu do pracy z nową wersją.  
+ Można użyć nawiasy kwadratowe przy odwoływaniu się do formularzy i kontrolek, a w przypadku deklarowania zmiennej lub definiowanie procedury o takiej samej nazwie jako ograniczeniami — słowo kluczowe. Można łatwo zapomnieć o kwalifikowania nazwy lub zawierać nawiasów kwadratowych, zatem wprowadzenie błędów w kodzie i utrudnić do odczytu. Z tego powodu zaleca się nie używać ograniczeniami słowa kluczowe jako nazwy elementów programu. Jednak jeśli przyszłych wersjach programu Visual Basic definiuje nowe słowo kluczowe powodującą konflikt z istniejącego formularza lub nazwa kontrolki, następnie służy ta technika podczas aktualizowania kodu do pracy z nową wersją.  
   
 > [!NOTE]
->  Program może również obejmować nazwy elementów udostępnione przez innych zestawów występujących w odwołaniach. Jeśli te nazwy w konflikcie z ograniczeniami słów kluczowych, następnie umieszczenie nawiasy kwadratowe wokół nich spowoduje Visual Basic zinterpretować je jako określonych elementów.  
+>  Program może również obejmować nazwy elementów dostarczane przez inne przywoływanych zestawach. Jeśli te nazwy są w konflikcie z ograniczeniami słowami kluczowymi, następnie umieszczenie nawiasami kwadratowymi wokół nich powoduje, że Visual Basic, aby zinterpretować je jako elementów zdefiniowanych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Visual Basic — konwencje nazewnictwa](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
- [Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Visual Basic — konwencje nazewnictwa](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 101cd6fa044e181cf6f993fbea642c9dffe04008
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 94c90ed264c40c99b0c139948578c85e8c9855d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696350"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Instrukcje: Użycie wywołania platformy do odtwarzania pliku Wave (C# Programming Guide)
 Poniższy przykład kodu C# ilustruje sposób użycia platform wywołania usług do odtwarzania pliku wave dźwięku w systemie operacyjnym Windows.  
@@ -44,9 +44,9 @@ Poniższy przykład kodu C# ilustruje sposób użycia platform wywołania usług
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Aby uzyskać więcej informacji, zobacz [zabezpieczeń na platformie .NET](../../../standard/security/index.md).  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Przegląd współdziałania](../../../csharp/programming-guide/interop/interoperability-overview.md)  
-- [Im bliżej wywołania platformy](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Przegląd współdziałania](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [Im bliżej wywołania platformy](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Marshaling danych w wywołaniu platformy](../../../framework/interop/marshaling-data-with-platform-invoke.md)

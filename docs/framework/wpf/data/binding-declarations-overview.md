@@ -12,121 +12,121 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: a8652648e1ac9da96a027f9aa56f0eee40cbaf09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704020"
 ---
 # <a name="binding-declarations-overview"></a>Przegląd Wiązanie deklaracji
-W tym temacie opisano różne sposoby, mogą zadeklarować powiązania.  
+W tym temacie omówiono różne sposoby, można zadeklarować powiązania.  
   
  
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Przed przeczytaniem tego tematu, ważne jest, że znasz koncepcji i użycie rozszerzenia znaczników. Aby uzyskać więcej informacji na temat rozszerzeń znaczników, zobacz [rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Przed odczytaniem w tym temacie, należy się zapoznać się z pojęciem i użycie rozszerzenia znaczników. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
- W tym temacie nie opisano pojęcia dotyczące powiązania danych. Omówienie pojęć powiązania danych, zobacz [omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ W tym temacie nie opisano pojęcia dotyczące powiązania danych. Omówienie koncepcji powiązań danych, zobacz [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
 <a name="BindinginXAML"></a>   
-## <a name="declaring-a-binding-in-xaml"></a>Deklarowanie powiązania w języku XAML  
- W tej sekcji omówiono sposób deklaruje powiązanie w języku XAML.  
+## <a name="declaring-a-binding-in-xaml"></a>Deklarowanie powiązania w XAML  
+ W tej sekcji omówiono sposób deklarowania powiązania w XAML.  
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>Użycie rozszerzenia znaczników  
- <xref:System.Windows.Data.Binding> to rozszerzenie znacznika. Gdy używasz rozszerzenia powiązania Aby zadeklarować powiązanie deklaracji składa się z serii klauzule po `Binding` — słowo kluczowe i oddzielonych przecinkami (,). Klauzule w deklaracji powiązanie mogą znajdować się w dowolnej kolejności i istnieje wiele możliwych kombinacji. Klauzule są *nazwa*=*wartość* pary where *nazwa* jest nazwą <xref:System.Windows.Data.Binding> właściwości i *wartość* jest wartość, która jest ustawienie dla właściwości.  
+ <xref:System.Windows.Data.Binding> jest rozszerzeniem znacznika. Podczas deklarowania powiązania za pomocą rozszerzenia powiązanie deklaracji składa się z szeregu następujące klauzule `Binding` — słowo kluczowe i oddzielone przecinkami (,). Klauzule w deklaracji powiązania mogą znajdować się w dowolnej kolejności, i istnieje wiele możliwych kombinacji. Klauzule są *nazwa*=*wartość* par gdzie *nazwa* nazywa się <xref:System.Windows.Data.Binding> właściwości i *wartość* jest wartość, która jest ustawienie dla właściwości.  
   
- Podczas tworzenia powiązania deklaracji ciągów w znaczniku, musi być dołączony do właściwości zależności określonego obiektu docelowego. Poniższy przykład przedstawia sposób powiązania <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> właściwości przy użyciu rozszerzenia powiązania, określając <xref:System.Windows.Data.Binding.Source%2A> i <xref:System.Windows.Data.Binding.Path%2A> właściwości.  
+ Podczas tworzenia powiązania deklaracji ciągów w znaczniku, musi być dołączony do konkretnej zależności własności obiektu docelowego. Poniższy przykład pokazuje jak powiązać <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> właściwości przy użyciu rozszerzenia powiązania, określając <xref:System.Windows.Data.Binding.Source%2A> i <xref:System.Windows.Data.Binding.Path%2A> właściwości.  
   
  [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- Można określić większość właściwości <xref:System.Windows.Data.Binding> klasy w ten sposób. Aby uzyskać więcej informacji o rozszerzeniu powiązanie również podobnie jak w przypadku listę <xref:System.Windows.Data.Binding> Zobacz właściwości, których nie można ustawić przy użyciu rozszerzenia powiązania [powiązania — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) omówienie.  
+ Można określić większość właściwości <xref:System.Windows.Data.Binding> klasy w ten sposób. Aby uzyskać więcej informacji o rozszerzeniu powiązania, jak również jak w przypadku listy <xref:System.Windows.Data.Binding> Zobacz właściwości, których nie można ustawić przy użyciu rozszerzenia powiązania [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) Przegląd.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Składnia elementu obiektu  
- Składnia elementu obiektu stanowi alternatywę dla tworzenia deklaracji powiązania. W większości przypadków nie ma żadnych danego zaletą używania rozszerzenie znaczników lub składni elementu obiektu. Jednak w przypadku których rozszerzenia znaczników nie obsługuje scenariusza, np. gdy wartość właściwości typu-ciąg dla typu nie istnieje konwersja, należy użyć składni elementu obiekt.  
+ Składnia elementu obiektu jest alternatywą dla tworzenia deklaracji powiązania. W większości przypadków jest szczególnie korzystne w za pośrednictwem rozszerzenia adiustacji lub składnia elementu obiektu. Jednak w przypadkach, których rozszerzenie znaczników nie obsługuje danego scenariusza, na przykład, gdy wartość właściwości jest typu niebędących ciągami, dla którego nie istnieje konwersja, należy użyć składni obiektów.  
   
- Poniżej przedstawiono przykład składni elementu obiektu i użycie rozszerzenia znaczników:  
+ Oto przykład składnia elementu obiektu i użycie rozszerzenia znaczników:  
   
  [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
- Przykład wiąże <xref:System.Windows.Controls.TextBlock.Foreground%2A> właściwości przez zadeklarowanie przy użyciu składni rozszerzenia powiązania. Deklaracja powiązania <xref:System.Windows.Controls.TextBlock.Text%2A> właściwość używa składni elementu obiekt.  
+ Przykład wiąże <xref:System.Windows.Controls.TextBlock.Foreground%2A> właściwości przez zadeklarowanie powiązania za pomocą składni rozszerzenia. Powiązanie deklaracji pod kątem <xref:System.Windows.Controls.TextBlock.Text%2A> właściwość jest używana składnia elementu obiektu.  
   
- Aby uzyskać więcej informacji o różnych warunków, zobacz [szczegółów w składni języka XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Aby uzyskać więcej informacji na temat różnych warunków, zobacz [składnia XAML w szczegółów](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding i PriorityBinding  
- <xref:System.Windows.Data.MultiBinding> i <xref:System.Windows.Data.PriorityBinding> nie obsługują składni rozszerzenia języka XAML. W związku z tym należy użyć składni elementu obiektu, jeśli są deklarowanie <xref:System.Windows.Data.MultiBinding> lub <xref:System.Windows.Data.PriorityBinding> w języku XAML.  
+ <xref:System.Windows.Data.MultiBinding> i <xref:System.Windows.Data.PriorityBinding> nie obsługują składni rozszerzenia XAML. W związku z tym, należy użyć składni elementu obiektu, jeśli użytkownik deklaruje <xref:System.Windows.Data.MultiBinding> lub <xref:System.Windows.Data.PriorityBinding> w XAML.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Tworzenie powiązania w kodzie  
- Innym sposobem Określanie powiązania jest można ustawić właściwości bezpośrednio na <xref:System.Windows.Data.Binding> obiektu w kodzie. Poniższy przykład przedstawia sposób tworzenia <xref:System.Windows.Data.Binding> obiektu i określić właściwości w kodzie.  W tym przykładzie `TheConverter` jest obiekt, który implementuje <xref:System.Windows.Data.IValueConverter> interfejsu.  
+ Innym sposobem określenia powiązania jest do ustawiania właściwości bezpośrednio na <xref:System.Windows.Data.Binding> obiektu w kodzie. Poniższy przykład pokazuje, jak utworzyć <xref:System.Windows.Data.Binding> obiektu, a następnie określ właściwości w kodzie.  W tym przykładzie `TheConverter` jest obiektem, który implementuje <xref:System.Windows.Data.IValueConverter> interfejsu.  
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- Jeśli obiekt jest powiązanie jest <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> można wywołać `SetBinding` metody dla obiekt bezpośrednio zamiast <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Na przykład zobacz [Utwórz powiązanie w kodzie](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ Jeśli obiekt, w której dokonywane jest wiązanie jest <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> może wywołać `SetBinding` metody na obiekcie bezpośrednio zamiast przy użyciu <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Aby uzyskać przykład, zobacz [Utwórz powiązanie w kodzie](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
   
 <a name="Path_Syntax"></a>   
-## <a name="binding-path-syntax"></a>Składnia ścieżki powiązania  
- Użyj <xref:System.Windows.Data.Binding.Path%2A> właściwości w celu określenia wartości źródła Aby powiązać:  
+## <a name="binding-path-syntax"></a>Składnia ścieżki wiązania  
+ Użyj <xref:System.Windows.Data.Binding.Path%2A> właściwości w celu określenia wartość źródła Aby powiązać:  
   
--   Ogólnie rzecz biorąc <xref:System.Windows.Data.Binding.Path%2A> wartość właściwości jest nazwa właściwości obiektu źródłowego do użycia dla powiązania, takich jak `Path=PropertyName`.  
+-   W najprostszym przypadku <xref:System.Windows.Data.Binding.Path%2A> wartość właściwości jest nazwą właściwości obiektu źródłowego na potrzeby powiązania, takich jak `Path=PropertyName`.  
   
--   Można określić właściwości podrzędne właściwości składniowym podobne jak w języku C#. Na przykład klauzuli `Path=ShoppingCart.Order` ustawia powiązanie podwłaściwości `Order` obiektu lub właściwości `ShoppingCart`.  
+-   Można określić właściwości podrzędnych właściwości według podobnej składni podobnie jak w C#. Na przykład, klauzula `Path=ShoppingCart.Order` ustawia powiązanie podwłaściwości `Order` obiektu lub właściwości `ShoppingCart`.  
   
--   Aby powiązać dołączona właściwość, umieść nawiasy dołączona właściwość. Na przykład, aby powiązać dołączona właściwość <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, składnia jest `Path=(DockPanel.Dock)`.  
+-   Aby powiązać z dołączoną właściwość, umieść nawiasy wokół dołączona właściwość. Na przykład, aby powiązać dołączonych właściwości <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>, składnia jest `Path=(DockPanel.Dock)`.  
   
--   Indeksatory właściwości można określić w nawiasach kwadratowych po nazwie właściwości, w których stosowane jest indeksatora. Na przykład klauzuli `Path=ShoppingCart[0]` ustawia powiązanie do indeksu, który odpowiada jak z właściwości wewnętrznego indeksowania obsługuje literału ciągu "0". Indeksatory zagnieżdżone są również obsługiwane.  
+-   Indeksatory właściwości może być określona wewnątrz nawiasów kwadratowych po nazwie właściwości, której stosowana jest indeksator. Na przykład, klauzula `Path=ShoppingCart[0]` ustawia powiązanie indeks, który odpowiada jak Twoja własność wewnętrznego indeksowania obsługuje ciągiem literału "0". Indeksatory zagnieżdżone są również obsługiwane.  
   
--   Indeksatory i właściwości mogą być wymieszane `Path` klauzuli, np. `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Indeksatory i właściwości podrzędnych, które mogą być mieszane `Path` klauzuli; na przykład `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
--   Wewnątrz indeksatory może mieć wiele parametrów indeksatora rozdzielonych przecinkami (,). Można określić typ każdego parametru w nawiasach. Na przykład można mieć `Path="[(sys:Int32)42,(sys:Int32)24]"`, gdzie `sys` jest mapowany na `System` przestrzeni nazw.  
+-   Wewnątrz indeksatory może mieć wiele parametrów indeksatora rozdzielonych przecinkami (,). Można określić typ każdego parametru za pomocą nawiasów. Na przykład można mieć `Path="[(sys:Int32)42,(sys:Int32)24]"`, gdzie `sys` jest mapowany na `System` przestrzeni nazw.  
   
--   Jeśli źródło jest widokiem kolekcji, z ukośnikiem (/) można określić bieżącego elementu. Na przykład klauzuli `Path=/` ustawia powiązanie do bieżącego elementu w widoku. Gdy źródło jest kolekcją, ta składnia określa bieżący element domyślny widok kolekcji.  
+-   Jeśli źródło jest widok kolekcji, można określić bieżącego elementu z ukośnika (/). Na przykład, klauzula `Path=/` ustawia powiązanie z aktualnym elementem w widoku. Gdy źródłem jest kolekcją, ta składnia określa, że bieżący element domyślny widok kolekcji.  
   
--   Nazwy właściwości i ukośniki można łączyć przechodzenia przez właściwości, które są kolekcjami. Na przykład `Path=/Offices/ManagerName` Określa bieżący element kolekcji źródłowej, który zawiera `Offices` właściwość, która również jest kolekcją. Jego bieżący element jest obiekt, który zawiera `ManagerName` właściwości.  
+-   Nazwy właściwości i ukośniki można łączyć na przechodzenie przez właściwości, które są kolekcjami. Na przykład `Path=/Offices/ManagerName` Określa bieżący element z kolekcji źródłowej, która zawiera `Offices` właściwość, która również jest kolekcją. Jego bieżący element jest obiektem, który zawiera `ManagerName` właściwości.  
   
 -   Opcjonalnie ścieżka kropki (.) można powiązać z bieżącego źródła. Na przykład `Text="{Binding}"` jest odpowiednikiem `Text="{Binding Path=.}"`.  
   
-### <a name="escaping-mechanism"></a>Anulowanie mechanizmu  
+### <a name="escaping-mechanism"></a>Mechanizm ucieczki  
   
--   Wewnątrz indeksatorów ([]) znaki daszek (^) specjalne następny znak.  
+-   Wewnątrz indeksatorów ([]) znak daszka (^) specjalne następny znak.  
   
--   Jeśli ustawisz <xref:System.Windows.Data.Binding.Path%2A> w języku XAML, należy również wprowadzić (przy użyciu jednostek XML) niektóre znaki specjalne do definicji języka XML:  
+-   Jeśli ustawisz <xref:System.Windows.Data.Binding.Path%2A> w XAML, należy również jako znak ucieczki dla (przy użyciu jednostki XML) niektórych znaków, które są specjalne do definicji języka XML:  
   
-    -   Użyj `&` Aby anulować znak "&".  
+    -   Użyj `&` jako znak ucieczki dla znaku "&".  
   
-    -   Użyj `>` ucieczki tag końcowy ">".  
+    -   Użyj `>` jako znak ucieczki dla tagu końcowego ">".  
   
--   Ponadto opisano cały powiązania w atrybucie przy użyciu składni rozszerzenia znaczników, należy wprowadzić (przy użyciu ukośnik odwrotny \\) znaki specjalne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] analizator kodu znaczników rozszerzenia:  
+-   Ponadto, jeśli możesz opisać całe powiązania w atrybucie za pomocą składni rozszerzenia znaczników, należy jako znak ucieczki dla (przy użyciu ukośnik odwrotny \\) znaki, które są charakterystyczne dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] analizatora składni rozszerzenia znaczników:  
   
     -   Ukośnik odwrotny (\\) jest sam znak ucieczki.  
   
-    -   Znak równości (=) oddziela nazwę właściwości od wartości właściwości.  
+    -   Znak równości (=) oddziela nazwy właściwości od wartości właściwości.  
   
-    -   Właściwości oddziela przecinka (,).  
+    -   Przecinek (,) oddziela właściwości.  
   
-    -   Prawy nawias klamrowy (}) jest zakończeniu rozszerzenia znacznika.  
+    -   Prawy nawias klamrowy (}) jest końcem rozszerzeniem znacznika.  
   
 <a name="Default"></a>   
-## <a name="default-behaviors"></a>Domyślne zachowania  
- Domyślnym zachowaniem jest następująca Jeśli nie zostanie określony w deklaracji.  
+## <a name="default-behaviors"></a>Zachowania domyślne  
+ Domyślne zachowanie jest następujący, jeśli nie określono w deklaracji.  
   
--   Konwerter domyślny jest tworzony, który próbuje przeprowadzić konwersji typu wartości źródła powiązanie z wartością docelową powiązania. Jeśli nie można dokonać konwersji, zwraca konwerter domyślne `null`.  
+-   Konwerter domyślny jest tworzony, który próbuje przeprowadzić konwersję typu wartości źródło powiązania z powiązania wartości docelowej. Jeśli konwersja nie została wykonana, zwraca konwerter domyślne `null`.  
   
--   Jeśli nie ustawisz <xref:System.Windows.Data.Binding.ConverterCulture%2A>, aparat wiązania używa `Language` właściwości powiązania obiektu docelowego. W języku XAML to wartością domyślną "en US" lub dziedziczy wartości z elementem głównym (lub dowolnego elementu) strony, jeśli został jawnie zdefiniowany.  
+-   Jeśli nie ustawisz <xref:System.Windows.Data.Binding.ConverterCulture%2A>, korzysta z aparatu powiązania `Language` właściwości powiązania obiektu docelowego. W XAML to wartością domyślną jest "en US" lub dziedziczy wartości elementu głównego (lub dowolnego elementu), strony, jeśli został jawnie zdefiniowany.  
   
--   Tak długo, jak powiązania ma już kontekstu danych (na przykład dziedziczone kontekstu danych przesyłanych przez element nadrzędny) i niezależnie od elementu lub kolekcji zwracanych przez tego kontekstu jest odpowiednia dla powiązania bez konieczności dalszej modyfikacji ścieżki, Powiązanie deklaracja może nie mieć żadnych klauzul w: `{Binding}` często jest to sposób określono powiązania style danych, której powiązanie wykonuje działania na kolekcję. Aby uzyskać więcej informacji, zobacz sekcję "Całego obiekty używane jako powiązania źródła" w [powiązanie Przegląd źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Tak długo, jak wiązanie ma już kontekstu danych (na przykład dziedziczone kontekstu danych pochodzących z elementu nadrzędnego) i niezależnie od element lub kolekcję, w zwracanym przez ten kontekst jest odpowiednia dla powiązania bez dalszych modyfikacji ścieżki, Powiązanie deklaracji może mieć wcale nie klauzule: `{Binding}` Często jest to sposób, w jaki określono wiązania danych style, której powiązanie podejmuje działania dotyczące kolekcji. Aby uzyskać więcej informacji, zobacz sekcję "Całe obiekty używane jako powiązania źródło" w [Przegląd wiązanie źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
   
--   Wartość domyślna <xref:System.Windows.Data.Binding.Mode%2A> różnie w przypadku jednokierunkowych i dwukierunkowych w zależności od właściwości zależności, jest powiązane. Zawsze można zadeklarować tryb wiązania jawnie, aby upewnić się, że Twoje powiązanie ma zachowanie. W właściwości formantu ogólne, można edytować użytkownika takich jak <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> i <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, domyślnie dwukierunkowego powiązania, podczas gdy inne właściwości domyślnie powiązania jednokierunkowe.  
+-   Wartość domyślna <xref:System.Windows.Data.Binding.Mode%2A> waha się między jednokierunkową i dwukierunkową, w zależności od właściwości zależności, który jest powiązany. Zawsze możesz zadeklarować tryb powiązania jawnie, aby upewnić się, że Twoje powiązanie żądane zachowanie. We właściwościach formantu ogólne, można edytować użytkownika takie jak <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> i <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, domyślnie powiązania dwukierunkowe, natomiast inne właściwości domyślnie powiązania jednokierunkowe.  
   
--   Wartość domyślna <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> wartości są różne <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> i <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> w zależności od tego, jak również właściwości zależności powiązane. Wartość domyślna dla większości właściwości zależności to <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, podczas gdy <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> właściwość ma wartość domyślną równą <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
+-   Wartość domyślna <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> wartości waha się między <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> i <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> zależności od tego, jak również właściwość zależności powiązane. Jest wartością domyślną dla większości właściwości zależności <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, podczas gdy <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> właściwość ma wartość domyślną <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
-## <a name="see-also"></a>Zobacz też  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [PropertyPath, składnia XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+## <a name="see-also"></a>Zobacz także
+- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [PropertyPath, składnia XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)

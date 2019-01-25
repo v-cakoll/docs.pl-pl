@@ -1,5 +1,5 @@
 ---
-title: 'Porady: łączenie wielu ciągów (Przewodnik C#)'
+title: 'Instrukcje: Łączenie wielu ciągów (C# przewodnik)'
 description: Istnieje wiele sposobów łączenia ciągów w języku C#. Poznaj opcje i powodów różne opcje.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710420"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Porady: łączenie wielu ciągów (Przewodnik C#)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Instrukcje: Łączenie wielu ciągów (C# przewodnik)
 
 *Łączenie* to proces dołączania jednego ciągu do końca ciągu w innym. Łączenie ciągów za pomocą `+` operatora. Literały ciągu i stałych ciągów łączenie wystąpi w czasie kompilacji; występuje, nie łączenia czasu wykonywania. W przypadku zmiennych ciągu łączenia jest wykonywane tylko w czasie wykonywania.
 
@@ -53,9 +53,9 @@ Ostatnio, możesz użyć [LINQ](../programming-guide/concepts/linq/index.md) i <
 
 Możesz wypróbować te przykłady, patrząc na kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać przykłady [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- <xref:System.String>  
-- <xref:System.Text.StringBuilder>  
-- [Przewodnik programowania w języku C#](../programming-guide/index.md)  
+- <xref:System.String>
+- <xref:System.Text.StringBuilder>
+- [Przewodnik programowania w języku C#](../programming-guide/index.md)
 - [Ciągi](../programming-guide/strings/index.md)

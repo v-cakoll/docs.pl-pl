@@ -3,20 +3,20 @@ title: '&lt;sessionSecurityTokenCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: b812673ac1c015adde357d3c0707d85643aad3e9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 024375cb114bb080c576ea033e5588526350ecdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510094"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
 Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji programu obsługi tokenów zabezpieczeń.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<pamięci podręczne >  
-\<sessionSecurityTokenCache >  
+\<caches>  
+\<sessionSecurityTokenCache>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji progra
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<pamięci podręczne >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Rejestruje pamięci podręcznych, używane przez usługę lub kolekcji programu obsługi tokenów zabezpieczeń.|  
+|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Rejestruje pamięci podręcznych, używane przez usługę lub kolekcji programu obsługi tokenów zabezpieczeń.|  
   
 ## <a name="example"></a>Przykład  
  Następujący kody XML pokazuje konfiguracji niestandardowej pamięci podręcznej do przechowywania tokenów zabezpieczających sesji (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). Konfiguracja jest pobierana z `ClaimsAwareWebFarm` próbki. Aby uzyskać więcej informacji na temat tego przykładu, zobacz [Indeks przykładów kodu programu WIF](../../../../../docs/framework/security/wif-code-sample-index.md).  
@@ -61,5 +61,5 @@ Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji progra
 </caches>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

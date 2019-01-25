@@ -2,21 +2,21 @@
 title: 'Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: e9158f91d8df74cc9fd871567d854d32353d16e1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653700"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy
 W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji konsoli przepływu pracy. To zależy od ukończenia [jak: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu. Mimo że w tym temacie opisano sposób wywoływania usługi przepływu pracy z poziomu aplikacji przepływu pracy, te same metody można wywołać dowolną usługę Windows Communication Foundation (WCF) z poziomu aplikacji przepływu pracy.
 
 ### <a name="create-a-workflow-console-application-project"></a>Utwórz projekt aplikacji konsoli przepływu pracy
 
-1.  Uruchom program Visual Studio 2012.
+1.  Start Visual Studio 2012.
 
-2.  Załaduj projekt MyWFService został utworzony w [porady: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu.
+2.  Załaduj projekt MyWFService został utworzony w [jak: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu.
 
 3.  Kliknij prawym przyciskiem myszy **MyWFService** rozwiązania **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy projekt**. Wybierz **przepływu pracy** w **zainstalowane szablony** i **Aplikacja konsoli przepływu pracy** z listy typów projektów. Nazwij projekt MyWFClient i użyj domyślnej lokalizacji, jak pokazano na poniższej ilustracji.
 
@@ -62,8 +62,8 @@ W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji 
 
 12. Naciśnij klawisze Ctrl + F5, aby uruchomić usługę i klienta. ASP.NET Development Server hostuje usługę, program Internet Explorer wyświetla programu WCF — strona pomocy, a aplikacja kliencka przepływu pracy jest uruchamiany w oknie konsoli i wyświetla ciąg zwracany przez usługę ("Hello, world").
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Instrukcje: tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Instrukcje: Tworzenie usługi przepływu pracy przy użyciu działań dotyczących komunikatów](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
 - [Korzystanie z usługi WCF z przepływu pracy w projekcie sieci Web](https://go.microsoft.com/fwlink/?LinkId=207725)

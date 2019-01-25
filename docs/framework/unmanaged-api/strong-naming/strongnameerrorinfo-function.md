@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a905840c471a268c6b106c5e25baca9c36f485d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731065"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo — Funkcja
 Pobiera kod ostatniego błędu, który został zgłoszony przez jedną z funkcji silnej nazwy.  
@@ -45,13 +45,13 @@ HRESULT StrongNameErrorInfo ();
  Większość metod silnej nazwy zwraca prostą `true` lub `false` wskazanie pomyślne zakończenie. Użyj `StrongNameErrorInfo` funkcję, aby pobrać wartość HRESULT określający ostatni błąd generowanych przez funkcje silnej nazwy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** StrongName.h  
   
- **Biblioteka:** dołączony jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Silnych nazw statycznych funkcji globalnych](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+## <a name="see-also"></a>Zobacz także
+- [Silnych nazw statycznych funkcji globalnych](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

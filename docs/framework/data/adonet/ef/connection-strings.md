@@ -2,17 +2,17 @@
 title: Parametry połączenia w programie ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497462"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Parametry połączenia w programie ADO.NET Entity Framework
 Parametry połączenia zawierają informacje inicjowania, który jest przekazywany jako parametr od dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a ciąg połączenia jest analizowany podczas próby otwarcia połączenia. Parametry połączenia używane przez program Entity Framework zawiera informacje używane do łączenia z podstawowego dostawcy danych ADO.NET, który obsługuje platformy Entity Framework. Zawierają one informacje o wymaganych modelu i mapowania plików.  
   
- Ciąg połączenia jest używany dostawca EntityClient podczas uzyskiwania dostępu do modelu i mapowania metadanych i nawiązania połączenia ze źródłem danych. Parametry połączenia można uzyskać dostępu do lub ustawić za pomocą <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> właściwość <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Klasa może być używana do programowego tworzenia lub dostęp do parametrów w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ Ciąg połączenia jest używany dostawca EntityClient podczas uzyskiwania dostępu do modelu i mapowania metadanych i nawiązania połączenia ze źródłem danych. Parametry połączenia można uzyskać dostępu do lub ustawić za pomocą <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> właściwość <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Klasa może być używana do programowego tworzenia lub dostęp do parametrów w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  [Narzędzia modelu Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) wygenerować parametry połączenia, które są przechowywane w pliku konfiguracji aplikacji. <xref:System.Data.Objects.ObjectContext> pobiera informacje o połączeniu automatycznie podczas tworzenia zapytań dotyczących obiektów. <xref:System.Data.EntityClient.EntityConnection> Posługują się <xref:System.Data.Objects.ObjectContext> wystąpienia jest możliwy z <xref:System.Data.Objects.ObjectContext.Connection%2A> właściwości. Aby uzyskać więcej informacji, zobacz [zarządzania połączeniami i transakcje](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
 
@@ -48,7 +48,7 @@ Metadata=res://<assemblyFullName>/<resourceName>.
   
 |Opcja|Opis|  
 |-|-|  
-|`assemblyFullName`|Pełna nazwa zestawu z zasobu osadzonego. Nazwa zawiera prosta nazwa, Nazwa wersji, kultury obsługiwanych i klucz publiczny w następujący sposób:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Zasoby można osadzić w każdym zestawie, który jest dostępny przez aplikację.<br /><br /> Jeśli określono symbolu wieloznacznego (\*) dla `assemblyFullName`, środowisko uruchomieniowe programu Entity Framework umożliwia wyszukiwanie zasobów w następujących lokalizacjach, w następującej kolejności:<br /><br /> 1.  Wywoływanego zestawu.<br />2.  Zestawy występujące w odwołaniach.<br />3.  Zestawy znajdujące się w katalogu bin aplikacji.<br /><br /> Jeśli pliki nie znajdują się w jednej z tych lokalizacji, zostanie zgłoszony wyjątek. **Uwaga:** użycie symbolu wieloznacznego (*), platformy Entity Framework musi przejrzeć wszystkie zestawy dla zasobów z poprawną nazwę. Aby zwiększyć wydajność, należy określić nazwę zestawu, zamiast symbolu wieloznacznego.|  
+|`assemblyFullName`|Pełna nazwa zestawu z zasobu osadzonego. Nazwa zawiera prosta nazwa, Nazwa wersji, kultury obsługiwanych i klucz publiczny w następujący sposób:<br /><br /> `ResourceLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null`<br /><br /> Zasoby można osadzić w każdym zestawie, który jest dostępny przez aplikację.<br /><br /> Jeśli określono symbolu wieloznacznego (\*) dla `assemblyFullName`, środowisko uruchomieniowe programu Entity Framework umożliwia wyszukiwanie zasobów w następujących lokalizacjach, w następującej kolejności:<br /><br /> 1.  Wywoływanego zestawu.<br />2.  Zestawy występujące w odwołaniach.<br />3.  Zestawy znajdujące się w katalogu bin aplikacji.<br /><br /> Jeśli pliki nie znajdują się w jednej z tych lokalizacji, zostanie zgłoszony wyjątek. **Uwaga:**  Użycie symbolu wieloznacznego (*), platformy Entity Framework musi przejrzeć wszystkie zestawy dla zasobów z poprawną nazwę. Aby zwiększyć wydajność, należy określić nazwę zestawu, zamiast symbolu wieloznacznego.|  
 |`resourceName`|Nazwa zasobu uwzględnione, na przykład AdvendtureWorksModel.csdl. Usługi metadanych tylko będzie szukać plików lub zasobów przy użyciu jednego z następujących rozszerzeń: .csdl, ssdl lub MSL albo identyfikatorem. Jeśli `resourceName` nie zostanie określony, zostaną załadowane wszystkie zasoby metadanych. Zasoby powinny mieć unikatowe nazwy w zestawie. Jeśli wiele plików o takiej samej nazwie są zdefiniowane w różnych katalogach w zestawie, `resourceName` mogą zawierać struktury folderów przed nazwą zasobu, na przykład FolderName.FileName.csdl.<br /><br /> `resourceName` nie jest wymagany po określeniu symbolu wieloznacznego (*) dla `assemblyFullName`.|  
   
 > [!NOTE]
@@ -108,8 +108,8 @@ Metadata=.\
   
  Rozdzielczość `DataDirectory` ciąg podstawienia i ~ operator jest cykliczna. Na przykład, gdy `DataDirectory` obejmuje `~` znaków, wystąpi wyjątek. Zapobiega to nieskończoną rekursję.  
   
-## <a name="see-also"></a>Zobacz też  
- [Praca z dostawcami danymi](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Zarządzania połączeniami i transakcji](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)
+## <a name="see-also"></a>Zobacz także
+- [Praca z dostawcami danymi](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
+- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Zarządzania połączeniami i transakcji](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)

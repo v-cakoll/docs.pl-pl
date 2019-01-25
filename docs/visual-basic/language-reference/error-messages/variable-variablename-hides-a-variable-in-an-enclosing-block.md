@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 58e09caeb477d6b1df7f3be17e0a8ee05be3551e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23ec659535b71ee9af189f5c4fec0dec2bb1cd8f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719433"
 ---
 # <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>Zmienna &#39; &lt;nazwa_zmiennej&gt; &#39; ukrywa zmienną w otaczającym bloku
 Zmienna ujęte w blok ma taką samą nazwę jak inny zmiennej lokalnej.  
@@ -21,7 +21,7 @@ Zmienna ujęte w blok ma taką samą nazwę jak inny zmiennej lokalnej.
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zmień nazwę zmiennej w bloku objętego tak, aby nie jest taka sama jak innych zmiennych lokalnych. Na przykład:  
+-   Zmień nazwę zmiennej w bloku ujęty, tak aby nie była taka sama jak inne zmienne lokalne. Na przykład:  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,10 +30,10 @@ Zmienna ujęte w blok ma taką samą nazwę jak inny zmiennej lokalnej.
     End If  
     ```  
   
--   Typową przyczyną tego błędu jest użycie `Catch e As Exception` wewnątrz obsługi zdarzeń. Jeśli jest to możliwe, nazwę `Catch` zmienna bloku `ex` zamiast `e`.  
+-   Typową przyczyną tego błędu jest użycie `Catch e As Exception` wewnątrz procedury obsługi zdarzeń. Jeśli jest to możliwe, nadaj nazwę `Catch` zmienna bloku `ex` zamiast `e`.  
   
--   Inne typowe źródło tego błędu jest próba dostępu zmienna lokalna zadeklarowana wewnątrz `Try` blok w oddzielnej `Catch` bloku. Aby rozwiązać ten problem, należy zadeklarować zmienną poza `Try...Catch...Finally` struktury.  
+-   Wspólne źródło innego wystąpienia tego błędu jest próba dostępu zmienna lokalna zadeklarowana wewnątrz `Try` blok w osobnym `Catch` bloku. Aby rozwiązać ten problem, należy zadeklarować zmiennej poza `Try...Catch...Finally` struktury.  
   
-## <a name="see-also"></a>Zobacz też  
- [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Deklaracja zmiennej](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Zobacz także
+- [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Deklaracja zmiennej](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

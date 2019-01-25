@@ -2,12 +2,12 @@
 title: Przepływy transakcji do i z usług przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: f53bfa3c745a0d487a8daf23f399c1420e36c8ec
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 4a5cde045c6c676c2efc694c67fd049b6eb611b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708639"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Przepływy transakcji do i z usług przepływu pracy
 Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operacji usługowej, które staną się częścią otoczenia transakcji, należy umieścić <xref:System.ServiceModel.Activities.Receive> działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Wywołania przez <xref:System.ServiceModel.Activities.Send> lub <xref:System.ServiceModel.Activities.SendReply> działanie <xref:System.ServiceModel.Activities.TransactedReceiveScope> również zostaną wprowadzone w ramach transakcji otoczenia. Aplikacja kliencka przepływu pracy można utworzyć otoczenia transakcji przy użyciu <xref:System.Activities.Statements.TransactionScope> działania i wywoływać operacje usługi, za pomocą otoczenia transakcji. Ten temat przeprowadzi Cię przez tworzenie usługi przepływu pracy i klienta przepływu pracy, który uczestniczyć w transakcji.  
@@ -117,8 +117,8 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
   
     |Działanie|Wartość|  
     |--------------|-----------|  
-    |WriteLine 1.|"Usługa: odbieranie ukończone"|  
-    |WriteLine 2|"Usługa: odebrano =" + requestMessage|  
+    |WriteLine 1.|"Usługa: Otrzymywać ukończone"|  
+    |WriteLine 2|"Usługa: Odebrano = "+ requestMessage|  
   
      Przepływ pracy powinien teraz wyglądać następująco:  
   
@@ -133,7 +133,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
     |Właściwość|Wartość|  
     |--------------|-----------|  
     |Zadanie|replyMessage|  
-    |Wartość|"Usługa: wysyłanie odpowiedzi."|  
+    |Wartość|"Usługa: Wysyłanie odpowiedzi."|  
   
 11. Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działanie po <xref:System.Activities.Statements.Assign> działania i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "usługi: Rozpocznij odpowiedzi."  
   
@@ -145,9 +145,9 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
   
      ![Ustawienia wiadomości odpowiedzi](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
-13. Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działanie po `SendReplyToReceive` działanie i zestaw ma <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "usługi: odpowiedź wysłana."  
+13. Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działanie po `SendReplyToReceive` działanie i zestaw ma <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "usługi: Odpowiedź wysłana".  
   
-14. Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działania w dolnej części przepływu pracy i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "usługi: przepływ pracy zostaje zakończona, naciśnij klawisz ENTER, aby zakończyć."  
+14. Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działania w dolnej części przepływu pracy i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "Service: Przepływ pracy zostaje zakończona, naciśnij klawisz ENTER, aby zakończyć pracę."  
   
      Przepływu pracy zakończonych usługi powinien wyglądać następująco:  
   
@@ -173,7 +173,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
   
 6.  Przeciąganie i upuszczanie `PrintTransactionInfo` działanie <xref:System.Activities.Statements.Sequence>  
   
-7.  Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działanie po `PrintTransactionInfo` działania i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "Klient: Wyślij początku". Przepływ pracy powinien teraz wyglądać następująco:  
+7.  Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działanie po `PrintTransactionInfo` działania i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "klienta: Rozpoczynanie wysyłania". Przepływ pracy powinien teraz wyglądać następująco:  
   
      ![Dodawanie działań](../../../../docs/framework/wcf/feature-details/media/clientaddcbswriteline.JPG "ClientAddCBSWriteLine")  
   
@@ -201,7 +201,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
   
 12. Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działania między <xref:System.ServiceModel.Activities.Send> i <xref:System.ServiceModel.Activities.ReceiveReply> działań i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "klienta: Wyślij pełne."  
   
-13. Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działanie po <xref:System.ServiceModel.Activities.ReceiveReply> działania i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "po stronie klienta: odebrano odpowiedzi na =" + replyMessage  
+13. Przeciąganie i upuszczanie <xref:System.Activities.Statements.WriteLine> działanie po <xref:System.ServiceModel.Activities.ReceiveReply> działania i ustaw jego <xref:System.Activities.Statements.WriteLine.Text%2A> właściwość "po stronie klienta: Otrzymana odpowiedź = "+ replyMessage  
   
 14. Przeciąganie i upuszczanie `PrintTransactionInfo` działanie po <xref:System.Activities.Statements.WriteLine> działania.  
   
@@ -312,7 +312,7 @@ Usługi przepływu pracy i klienci mogą uczestniczyć w transakcji.  Dla operac
         }  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+- [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Omówienie transakcji WCF (Windows Communication Foundation)](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

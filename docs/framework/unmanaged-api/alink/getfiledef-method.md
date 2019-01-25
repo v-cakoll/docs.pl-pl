@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b772ae37baed44b90e4f5420e0f7724201a56abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6a8a9aedc5c2b09c6e6f6014142bce44f3a8297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401814"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668603"
 ---
 # <a name="getfiledef-method"></a>GetFileDef — Metoda
-Pobiera rzeczywisty token FileDef używana w metadanych (w przeciwieństwie do tokenu przypisał ALink).  
+Pobiera rzeczywisty token FileDef używana w metadanych (w przeciwieństwie do tokenu przypisany przez ALink).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ HRESULT GetFileDef(
  Identyfikator zestawu.  
   
  `TargetFile`  
- Token dodany plik uzyskana z metody AddFile lub AddImport.  
+ Token dodany plik uzyskana z metody AddFile lub addimport — metoda.  
   
  `pScope`  
  Odbiera FileDef token.  
@@ -52,7 +52,7 @@ HRESULT GetFileDef(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

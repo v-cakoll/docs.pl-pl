@@ -1,5 +1,5 @@
 ---
-title: AddImport metoda1
+title: AddImport, metoda1
 ms.date: 03/30/2017
 api_name:
 - AddImport
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98fefc0240f6496a3e7bfb491e27a57e98cfea1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2daed0450e04137621788e830bbedb467bd57c0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706342"
 ---
-# <a name="addimport-method1"></a>AddImport metoda1
-Dodaje importów do zestawu.  
+# <a name="addimport-method1"></a>AddImport, metoda1
+Importy dodaje do zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +40,13 @@ HRESULT AddImport(
   
 #### <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Unikatowy identyfikator zestawu zostać rozszerzony.  
+ Unikatowy identyfikator zestawu, aby zostać rozszerzony.  
   
  `ImportToken`  
- Unikatowy identyfikator pobierany z [ImportFile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), pliku do zaimportowania.  
+ Unikatowy identyfikator, pobierane z [importfile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), pliku do zaimportowania.  
   
  `dwFlags`  
- COM + FileDef flagi, takich jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przekazywana do [DefineFile — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ COM + FileDef flagi, takich jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przekazywany do [definefile — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
  Wskaźnik do tokenu, który odbiera identyfikator wynikowy plik.  
@@ -57,7 +57,7 @@ HRESULT AddImport(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

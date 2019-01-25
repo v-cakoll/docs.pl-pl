@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
 author: KrzysztofCwalina
-ms.openlocfilehash: b577f42c98cb56fb367cb57a550cb094a8ef105e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 52d7a69a3f52c67ebff3f3db1daf0790e995913a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722019"
 ---
 # <a name="dependency-properties"></a>Właściwości zależności
 Właściwości zależności (DP) jest regularne właściwość, która przechowuje wartość w magazynie właściwości zamiast przechowywania go w zmiennej typu (pola), na przykład.  
@@ -99,5 +99,5 @@ public class Grid {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+- [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)
 - [Często używane wzorce projektowe](../../../docs/standard/design-guidelines/common-design-patterns.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 24bbbc304111b3735bc6e8f3965ef37e9374bda6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5bc4e6e43d346c1543cf43d9782fd22718b4fef4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701901"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Za pomocą asynchronicznego gniazda serwera
 Server asynchronicznego gniazda używają modelu programowania asynchronicznego środowiska .NET Framework do przetwarzania żądania usługi sieci. <xref:System.Net.Sockets.Socket> Klasy postępuje zgodnie ze standardowym .NET Framework asynchroniczny wzorzec nazewnictwa; na przykład synchronicznego <xref:System.Net.Sockets.Socket.Accept%2A> metody odpowiada asynchroniczną <xref:System.Net.Sockets.Socket.BeginAccept%2A> i <xref:System.Net.Sockets.Socket.EndAccept%2A> metody.  
@@ -268,8 +268,8 @@ public static void ReadCallback(IAsyncResult ar)
 }  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Przykład asynchronicznego gniazda serwera](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [Wątkowość](../../../docs/standard/threading/index.md)  
- [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)
+## <a name="see-also"></a>Zobacz także
+- [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [Przykład asynchronicznego gniazda serwera](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
+- [Wątkowość](../../../docs/standard/threading/index.md)
+- [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)

@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 7c9051b15f6d9cf37d7d0245f758905467d5bbc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e80ce58048bfa7f2fecc65e7167479df07bf57c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715091"
 ---
 # <a name="39class39-statement-must-end-with-a-matching-39end-class39"></a>&#39;Klasa&#39; instrukcja musi być zakończona odpowiadającą jej instrukcją &#39;End Class&#39;
-`Class` Służy do inicjowania `Class` zablokować; dlatego tylko może występować na początku bloku, z odpowiadającą jej instrukcją `End Class` instrukcji blok końcowy. Możesz mieć nadmiarowe `Class` instrukcji lub użytkownik nie zakończył Twojej `Class` zablokować z `End Class`.  
+`Class` Służy do inicjowania `Class` Blokuj; dlatego tylko może występować na początku bloku, odpowiadającą jej instrukcją `End Class` instrukcji blok końcowy. Albo masz nadmiarowe `Class` instrukcji lub użytkownik nie zakończył swojej `Class` blokowania z `End Class`.  
   
  **Identyfikator błędu:** BC30481  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zlokalizuj i usunąć niepotrzebne `Class` instrukcji.  
+-   Zlokalizuj i usuń niepotrzebne `Class` instrukcji.  
   
--   Zawierania `Class` bloku odpowiadającą jej instrukcją `End Class`.  
+-   Zawrzeć `Class` bloku odpowiadającą jej instrukcją `End Class`.  
   
-## <a name="see-also"></a>Zobacz też  
- [Końcowy \<— słowo kluczowe > — instrukcja](../../../visual-basic/language-reference/statements/end-keyword-statement.md)  
- [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Koniec \<— słowo kluczowe > — instrukcja](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)

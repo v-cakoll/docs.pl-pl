@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706329"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL — Metoda
 Zwraca adres URL (adres URL) dla tego dokumentu.  
@@ -38,16 +38,16 @@ HRESULT GetURL(
   
 #### <a name="parameters"></a>Parametry  
  `cchUrl`  
- [in] Rozmiar w znaków z `szURL` buforu.  
+ [in] Rozmiar, w postaci, z `szURL` buforu.  
   
  `pcchUrl`  
- [out] Wskaźnik do zmiennej, która odbiera rozmiaru adresu URL, takie jak zakończenie wartości null.  
+ [out] Wskaźnik do zmiennej, która odbiera rozmiar adresu URL, w tym zakończenia o wartości null.  
   
  `szUrl`  
- [out] Bufor zawierający adres URL.  
+ [out] Bufor zawierającego adres URL.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie kod błędu.  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

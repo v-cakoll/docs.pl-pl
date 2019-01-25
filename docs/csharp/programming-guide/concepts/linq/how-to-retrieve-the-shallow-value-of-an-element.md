@@ -1,15 +1,15 @@
 ---
-title: 'Porady: pobieranie płytkiej wartości elementu (C#)'
+title: 'Instrukcje: Pobieranie płytkiej wartości elementu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 2555b2f17120e4dce670a9fef9fc6a126a47e935
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 593fe1c22664f1e4e8322cb8816e58f4721c5bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672846"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Porady: pobieranie płytkiej wartości elementu (C#)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Instrukcje: Pobieranie płytkiej wartości elementu (C#)
 W tym temacie przedstawiono sposób pobieranie płytkiej wartości elementu. Płytkiej wartości jest wartość określonego elementu, w przeciwieństwie do głębokiego wartość, która zawiera wartości wszystkie elementy potomne połączonych w jeden ciąg.  
   
  Podczas pobierania wartości elementu przy użyciu obu rzutowania lub <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> właściwości pobrania głębokiego wartości. Aby pobieranie płytkiej wartości, można użyć `ShallowValue` metodę rozszerzenia, jak pokazano w poniższym przykładzie. Trwa pobieranie płytkiej wartości jest przydatne w przypadku, gdy chcesz wybrać elementy, na podstawie ich zawartości.  
@@ -79,6 +79,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [LINQ do XML osi (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

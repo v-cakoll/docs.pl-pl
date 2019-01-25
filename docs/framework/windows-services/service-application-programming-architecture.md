@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: fbe75d8ec4a677c47a98a5868c4e7e44c95f1d93
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028202"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714883"
 ---
 # <a name="service-application-programming-architecture"></a>Architektura programowania aplikacji usług
 Aplikacje usług Windows opierają się na klasę, która dziedziczy po elemencie <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> klasy. Przesłaniaj metody z tej klasy i zdefiniować funkcje dla nich określić sposób działania usługi.  
@@ -57,7 +57,7 @@ Aplikacje usług Windows opierają się na klasę, która dziedziczy po elemenci
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  Te przykłady skorzystaj z tablicy typu <xref:System.ServiceProcess.ServiceBase>, w którym można dodać usługę, każda aplikacja zawiera i następnie wszystkich usług mogą być uruchamiane jednocześnie. Jeśli tworzysz tylko jednej usługi, jednak może nie chcesz używać tablicy i po prostu Zadeklaruj nowy obiekt, który dziedziczy z <xref:System.ServiceProcess.ServiceBase> , a następnie uruchom go. Na przykład, zobacz [porady: pisanie usług programowo](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  Te przykłady skorzystaj z tablicy typu <xref:System.ServiceProcess.ServiceBase>, w którym można dodać usługę, każda aplikacja zawiera i następnie wszystkich usług mogą być uruchamiane jednocześnie. Jeśli tworzysz tylko jednej usługi, jednak może nie chcesz używać tablicy i po prostu Zadeklaruj nowy obiekt, który dziedziczy z <xref:System.ServiceProcess.ServiceBase> , a następnie uruchom go. Aby uzyskać przykład, zobacz [jak: Programowane pisanie usług](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
 -   Szereg właściwości <xref:System.ServiceProcess.ServiceBase> klasy. Te określają, jakie metody można wywołać w Twojej usłudze. Na przykład, gdy <xref:System.ServiceProcess.ServiceBase.CanStop%2A> właściwość jest ustawiona na `true`, <xref:System.ServiceProcess.ServiceBase.OnStop%2A> można wywołać metody dla Twojej usługi. Gdy <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> właściwość jest ustawiona na `true`, <xref:System.ServiceProcess.ServiceBase.OnPause%2A> i <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> można wywołać metody. Po ustawieniu jednej z tych właściwości, aby `true`, należy zastąpić i zdefiniować przetwarzanie skojarzone metod.  
   
@@ -66,6 +66,6 @@ Aplikacje usług Windows opierają się na klasę, która dziedziczy po elemenci
   
  Możesz również użyć składnik o nazwie <xref:System.ServiceProcess.ServiceController> komunikuje się z i kontrolowania zachowania istniejącej usługi.  
   
-## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Instrukcje: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)

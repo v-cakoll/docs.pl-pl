@@ -3,12 +3,12 @@ title: '&lt;system.identityModel&gt;'
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0a29b572b71cd714f41eafe35096450e27ea33f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491275"
 ---
 # <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
 Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF) w aplikacjach.  
@@ -32,7 +32,7 @@ Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -75,5 +75,5 @@ Udostępnia konfigurację dla Włączanie opcji Windows Identity Foundation (WIF
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

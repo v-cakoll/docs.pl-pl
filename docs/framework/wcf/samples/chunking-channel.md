@@ -2,12 +2,12 @@
 title: Kanał dzielący na fragmenty
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 660a20432b28f7db1c2933bd1a71bc6990a1d52a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 3e98e4be3c5ad9d6d18990feeae86369775972b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624251"
 ---
 # <a name="chunking-channel"></a>Kanał dzielący na fragmenty
 Podczas wysyłania dużych komunikatów za pomocą usługi Windows Communication Foundation (WCF), często jest pożądane, aby ograniczyć ilość pamięci używana do buforowania te komunikaty. Jedno z możliwych rozwiązań jest przesyłanie strumieniowe treść wiadomości (przy założeniu, że duża część danych znajduje się w treści). Jednak niektóre protokoły wymagają buforowanie cały komunikat. Niezawodna obsługa komunikatów i zabezpieczenia są dwa takie przykłady. Inne możliwe rozwiązanie jest dzielenia dużych wiadomość na mniejsze wiadomości o nazwie fragmentów, Wyślij jednym fragmencie tych fragmentów w danym momencie i odtworzenia dużych komunikatów po stronie odbierającej. Sama aplikacja może wykonać tego segmentu i cofnąć segmentu lub użyć niestandardowy kanał to zrobić. Segmentu przykład kanału pokazuje, jak niestandardowego protokołu lub warstwowej kanału może służyć do segmentu i cofnąć segmentu arbitralnie dużych komunikatów.  
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  Na następnym poziomie, `ChunkingChannel` opiera się na kilka składników, aby zaimplementować protokół segmentu. Na stronie wysyłania kanał używa niestandardowego `XmlDictionaryWriter` o nazwie `ChunkingWriter` wykonujący rzeczywiste segmentu. `ChunkingWriter` używa wewnętrznego kanału bezpośrednio, aby wysłać fragmenty. Za pomocą niestandardowego `XmlDictionaryWriter` pozwala nam wysyłanie fragmentów podczas zapisywania dużą porcję oryginalnej wiadomości. Oznacza to, że firma Microsoft nie Buforuj całego oryginalnej wiadomości.  
   
- ![Kanał dzielący na fragmenty](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![Chunking Channel](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
   
  Po stronie odbierającej `ChunkingChannel` baza danych ściąga wiadomości z kanału wewnętrzny i przekazuje je do niestandardowego `XmlDictionaryReader` o nazwie `ChunkingReader`, który reconstitutes oryginalnego komunikatu z przychodzącego fragmentów. `ChunkingChannel` to opakowuje `ChunkingReader` w niestandardowym `Message` wdrożenia o nazwie `ChunkingMessage` i zwraca ten komunikat do wyższej warstwie. Ta kombinacja `ChunkingReader` i `ChunkingMessage` pozwala nam cofnąć Podziel oryginalnego treści wiadomości, jak jest odczytywany przez warstwę powyżej, nie trzeba buforować całej treści oryginalnej wiadomości. `ChunkingReader` ma kolejki, gdzie buforuje przychodzących fragmentów maksymalnie można skonfigurować maksymalną liczbę buforowanych fragmentów. Po osiągnięciu tego limitu maksymalnej czytnik czeka na komunikaty, aby być opróżniane z kolejki przez w wyższej warstwie (oznacza to, odczytując tylko z oryginalnego treść wiadomości) lub dopóki nie otrzymywać maksymalną osiągnięciu limitu czasu.  
   
- ![Kanał dzielący na fragmenty](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![Chunking Channel](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
   
 ## <a name="chunking-programming-model"></a>Model programowania dzielący na fragmenty  
  Deweloperzy usług można określić wiadomości, które mają być podzielony przez zastosowanie `ChunkingBehavior` atrybutu do operacji w ramach umowy. Udostępnia atrybut `AppliesTo` właściwość, która umożliwia deweloperom określić, czy segmentu stosuje się do komunikatu wejściowego, komunikatu wyjściowego lub obu. W poniższym przykładzie pokazano użycie `ChunkingBehavior` atrybutu:  
@@ -378,4 +378,4 @@ Service started, press enter to exit
  > Sent chunk 10 of message 5b226ad5-c088-4988-b737-6a565e0563dd  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

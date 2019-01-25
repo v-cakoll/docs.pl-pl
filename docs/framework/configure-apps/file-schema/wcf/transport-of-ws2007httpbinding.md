@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; w &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: fe015fa308821519419a97a26bb5f57a6b4ab0cd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6f09a71a7ec7dbfae5eb6f1896f1fba68456973f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642597"
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; w &lt;ws2007HttpBinding&gt;
 Definiuje ustawienia uwierzytelniania dla protokołu HTTP.  
@@ -16,7 +16,7 @@ Definiuje ustawienia uwierzytelniania dla protokołu HTTP.
 \<powiązania >  
 \<ws2007HttpBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<transport>  
   
 ## <a name="syntax"></a>Składnia  
@@ -48,7 +48,7 @@ Definiuje ustawienia uwierzytelniania dla protokołu HTTP.
 |Brak|Zabezpieczenia są wyłączone.|  
 |Podstawowy|Korzysta z uwierzytelniania podstawowego.|  
 |Podsumowanie|Uwierzytelnianie szyfrowane używa.|  
-|Uwierzytelnianie NTLM|Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeną systemu Windows.|  
+|Ntlm|Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeną systemu Windows.|  
 |Windows|Używa zintegrowanego uwierzytelniania Windows.|  
 |Certyfikat|Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.|  
   
@@ -59,7 +59,7 @@ Definiuje ustawienia uwierzytelniania dla protokołu HTTP.
 |Brak|Zabezpieczenia są wyłączone.|  
 |Podstawowy|Korzysta z uwierzytelniania podstawowego.|  
 |Podsumowanie|Uwierzytelnianie szyfrowane używa.|  
-|Uwierzytelnianie NTLM|Wykorzystuje NTLM jako rezerwowe z domeną systemu Windows.|  
+|Ntlm|Wykorzystuje NTLM jako rezerwowe z domeną systemu Windows.|  
 |Windows|Używa zintegrowanego uwierzytelniania Windows.|  
 |Certyfikat|Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.|  
   
@@ -72,13 +72,13 @@ Definiuje ustawienia uwierzytelniania dla protokołu HTTP.
 |-------------|-----------------|  
 |[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Reprezentuje możliwości zabezpieczeń [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elementu.|  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

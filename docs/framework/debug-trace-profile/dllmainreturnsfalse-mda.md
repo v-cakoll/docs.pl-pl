@@ -9,30 +9,30 @@ helpviewer_keywords:
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4987b025450f2207a01a472a0c39fc6da2de0782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c513ba06ac79eb3da229605120c4f59ab8d32665
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554546"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
-`dllMainReturnsFalse` Zarządzany Asystent debugowania (MDA) jest włączone, jeśli zarządzanej `DllMain` funkcja zestawu użytkownika, wywołana z przyczyny DLL_PROCESS_ATTACH, zwraca wartość FALSE.  
+`dllMainReturnsFalse` Zarządzanego Asystenta debugowania (MDA) jest włączone, jeśli zarządzanej `DllMain` funkcja zestawu użytkownika o nazwie z powodu DLL_PROCESS_ATTACH, zwraca wartość FALSE.  
   
 ## <a name="symptoms"></a>Symptomy  
- `DllMain` Funkcja zwróciła wartość FALSE, wskazujący, że jej nie zostało wykonane prawidłowo. Ponieważ mogą powodować problemy nieokreślonej `DllMain` funkcje zwykle zawierają kod inicjujący ważne.  
+ `DllMain` Funkcja zwróciła wartość FALSE, wskazujący, że jej nie zostało wykonane prawidłowo. Może to spowodować problemy z nieokreślonej, ponieważ `DllMain` funkcje zwykle zawierają kod inicjujący ważne.  
   
 ## <a name="cause"></a>Przyczyna  
- `DllMain` Eval jest wywołana z przyczyny DLL_PROCESS_ATTACH inicjowania biblioteki DLL od obciążenia. Jeśli zwraca wartość FALSE, oznacza to, że nie można zainicjować biblioteki DLL.  
+ `DllMain` Funkcja jest wywoływana z przyczyną DLL_PROCESS_ATTACH Inicjowanie biblioteki DLL, podczas ładowania. Jeśli zostanie zwrócona wartość FALSE, oznacza to, że inicjowanie biblioteki DLL nie powiodło się.  
   
 ## <a name="resolution"></a>Rozwiązanie  
  Analizowanie kodu `DllMain` funkcji DLL nie powiodło się i zidentyfikować przyczynę niepowodzenia inicjowania.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
- To zdarzenie MDA nie ma wpływu na środowisko CLR. Tylko raporty danych o wartości zwracanej przez `DllMain`.  
+ To zdarzenie MDA nie ma wpływu na środowisko CLR. Informuje jedynie dane o wartości zwracanej przez `DllMain`.  
   
 ## <a name="output"></a>Dane wyjściowe  
- Komunikat wskazujący, że `DllMain` funkcji o nazwie przyczyny DLL_PROCESS_ATTACH, zwróciła wartość FALSE. Należy pamiętać, że to zdarzenie MDA jest włączona tylko wtedy, gdy `DllMain` zaimplementowano w kodzie zarządzanym.  
+ Komunikat wskazujący, że `DllMain` funkcja, o nazwie powodu DLL_PROCESS_ATTACH, zwróciła wartość FALSE. Należy pamiętać, że to zdarzenie MDA jest aktywowane tylko wtedy, gdy `DllMain` zaimplementowano w kodzie zarządzanym.  
   
 ## <a name="configuration"></a>Konfiguracja  
   
@@ -44,5 +44,5 @@ ms.locfileid: "33386496"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Zobacz także
+- [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

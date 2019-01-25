@@ -9,25 +9,25 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: bc83163a024bd50d3e256b4eb49861669f8c02c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656334"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495465"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Właściwości zaimplementowane automatycznie (Visual Basic)
-*Właściwości zaimplementowane automatycznie* można szybko określić właściwość klasy bez konieczności pisania kodu do `Get` i `Set` właściwości. Podczas pisania kodu dla właściwości zaimplementowane automatycznie kompilator Visual Basic automatycznie tworzy pole prywatne do przechowywania zmiennej właściwość oprócz tworzenia skojarzony `Get` i `Set` procedur.  
+*Właściwości zaimplementowane automatycznie* umożliwiają szybko określić właściwość klasy bez konieczności pisania kodu w celu `Get` i `Set` właściwości. Podczas pisania kodu dotyczący automatycznie implementowanej właściwości, kompilator Visual Basic automatycznie tworzy pole prywatne do przechowania zmiennej właściwość, oprócz tworzenia skojarzonego `Get` i `Set` procedur.  
   
- Właściwości zaimplementowane automatycznie właściwości, łącznie z wartości domyślnej, mogą być deklarowane w jednym wierszu. W poniższym przykładzie przedstawiono trzy deklaracje właściwości.  
+ Przy użyciu automatycznie implementowanych właściwości właściwość, łącznie z wartości domyślnej, może być zadeklarowana w jednym wierszu. Poniższy przykład przedstawia trzy deklaracje właściwości.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
   
- Właściwości zaimplementowane automatycznie odpowiada właściwości, dla których wartość właściwości jest przechowywana w pole prywatne. Poniższy przykład kodu pokazuje właściwości zaimplementowane automatycznie.  
+ Automatycznie implementowana właściwość jest równoważna z właściwością, dla których wartość właściwości jest przechowywana w pole prywatne. Poniższy przykład kodu pokazuje właściwości zaimplementowane automatycznie.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
   
- Poniższy przykład kodu zawiera kod odpowiednik w poprzednim przykładzie automatycznie implementowanej właściwości.  
+ Poniższy przykład kodu pokazuje równoważny kod w poprzednim przykładzie automatycznie implementowanej właściwości.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
   
@@ -45,58 +45,58 @@ Class Customer
 End Class  
 ```  
   
- Jak pokazano w przykładzie można przypisać do właściwości, za pomocą wyrażeń inicjowania lub można przypisać do właściwości w Konstruktorze typu zawierającego.  W dowolnym momencie można przypisać do pola zapasowy właściwości tylko do odczytu.  
+ Jak pokazano w przykładzie można przypisać właściwości za pomocą wyrażenia inicjowania lub można przypisać do właściwości w Konstruktorze typu zawierającego.  Można przypisać do pól zapasowy właściwości tylko do odczytu w dowolnym momencie.  
   
-## <a name="backing-field"></a>Pola zapasowego  
- Właściwości zaimplementowane automatycznie w deklaracji, Visual Basic automatycznie tworzy ukryte pole prywatnej o nazwie *pole zapasowe* zawiera wartość właściwości. Nazwa pola zapasowego jest nazwa właściwości zaimplementowane automatycznie poprzedzone znaku podkreślenia (_). Na przykład, jeśli zadeklarować automatycznie implementowana właściwość o nazwie `ID`, nosi nazwę pola zapasowego `_ID`. Jeśli dołączysz element członkowski klasy o nazwie `_ID`, tworzy konflikt nazw i Visual Basic zgłasza błąd kompilatora.  
+## <a name="backing-field"></a>Pole pomocnicze  
+ Kiedy Deklarujesz automatycznie implementowana właściwość, Visual Basic automatycznie tworzy ukryte pola prywatnego o nazwie *pole zapasowe* zawiera wartość właściwości. Nazwa pola zapasowego jest nazwą właściwości zaimplementowane automatycznie, poprzedzonej znakiem podkreślenia (_). Na przykład, jeśli zadeklarować automatycznie implementowana właściwość o nazwie `ID`, nosi nazwę pola pomocniczego `_ID`. Jeśli dołączysz składowej klasy, która jest również określany `_ID`, zostanie wyświetlony konflikt nazw i Visual Basic zgłasza błąd kompilatora.  
   
  Pole zapasowe ma również następujące cechy:  
   
--   Modyfikator dostępu do pola zapasowego jest zawsze `Private`nawet wtedy, gdy samej właściwości ma poziom dostępu do innego, takich jak `Public`.  
+-   Modyfikator dostępu dla pola pomocniczego jest zawsze `Private`nawet wtedy, gdy samej właściwości ma poziom dostępu do różnych, takich jak `Public`.  
   
--   Jeśli właściwość jest oznaczona jako `Shared`, pole zapasowe również jest udostępnione.  
+-   Jeśli właściwość jest oznaczona jako `Shared`, pole zapasowe również jest udostępniony.  
   
--   Pole zapasowe nie dotyczą atrybutów określonych dla właściwości.  
+-   Atrybuty określone dla właściwości nie dotyczą pola pomocniczego.  
   
--   Pole zapasowe są dostępne z kodu w klasie i debugowania narzędzi, takich jak okna czujki. Pole zapasowe nie są wyświetlane na liście uzupełniania IntelliSense programu word.  
+-   Pole zapasowe jest możliwy z kodu w klasie i narzędzia debugowania, takich jak okna czujki. Jednak pole zapasowe nie są wyświetlane na liście uzupełniania IntelliSense programu word.  
   
-## <a name="initializing-an-auto-implemented-property"></a>Inicjowanie właściwości zaimplementowane automatycznie  
- Dowolne wyrażenie, który może służyć do zainicjowania pola jest prawidłowa dla automatycznie implementowanej właściwości inicjowania. Podczas inicjowania właściwości zaimplementowane automatycznie wyrażenie jest obliczane i przekazane do `Set` procedury dla właściwości. W poniższych przykładach kodu pokazano niektóre automatycznie implementowane właściwości, które obejmują wartości początkowe.  
+## <a name="initializing-an-auto-implemented-property"></a>Inicjowanie automatycznie implementowana właściwość  
+ Dowolne wyrażenie, który może służyć do inicjowania pola jest prawidłowy dla automatycznie implementowanej właściwości inicjowania. Podczas inicjowania automatycznie implementowana właściwość wyrażenie jest obliczane i przekazywane do `Set` procedury dla właściwości. W poniższych przykładach kodu pokazano niektóre automatycznie implementowanych właściwości, które zawierają wartości początkowe.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
   
- Nie można zainicjować automatycznie implementowana właściwość, która jest elementem członkowskim `Interface`, lub oznaczona `MustOverride`.  
+ Nie można zainicjować automatycznie implementowana właściwość, która jest elementem członkowskim `Interface`, czy taki, który jest oznaczony jako `MustOverride`.  
   
- Gdy zadeklarować właściwości zaimplementowane automatycznie jako element członkowski `Structure`, automatycznie implementowane właściwości można zainicjować tylko, jeśli jest oznaczony jako `Shared`.  
+ Kiedy Deklarujesz automatycznie implementowana właściwość jako członek `Structure`, automatycznie implementowanej właściwości można zainicjować tylko, jeśli jest oznaczony jako `Shared`.  
   
- Przy deklarowaniu automatycznie implementowanej właściwości w postaci tablicy nie można określić granice tablicy jawnego. Jednak można podać wartość za pomocą inicjatora tablicy, jak pokazano w poniższych przykładach.  
+ Kiedy Deklarujesz automatycznie implementowanej właściwości w postaci tablicy, nie można określić granice tablicy jawnego. Jednakże można podać wartość za pomocą inicjatora tablicy, jak pokazano w poniższych przykładach.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Definicje właściwości, które wymagają standardowej składni  
- Właściwości zaimplementowane automatycznie wygodne i obsługuje wiele scenariuszy programowania. Istnieją jednak sytuacji, w których nie można używać właściwości zaimplementowane automatycznie i zamiast tego należy użyć standard, lub *rozwinięty*, składni właściwości.  
+ Właściwości zaimplementowane automatycznie to wygodne, które obsługują wiele scenariuszy programowania. Istnieją jednak sytuacje, w których nie można używać właściwości zaimplementowane automatycznie i zamiast tego należy użyć wzorca, lub *rozwinięte*, składnia właściwości.  
   
  Należy użyć składni definicji właściwości rozszerzonej, jeśli chcesz wykonać jedną z następujących czynności:  
   
--   Dodaj kod, aby `Get` lub `Set` procedury właściwości, takie jak kod do sprawdzania poprawności wartości przychodzących w `Set` procedury. Na przykład można sprawdzić, czy ciąg reprezentujący numer telefonu zawiera wymaganą liczbę cyfr przed ustawieniem wartości właściwości.  
+-   Dodaj kod, aby `Get` lub `Set` procedury właściwości, takie jak kod do sprawdzania poprawności wartości przychodzących w `Set` procedury. Na przykład możesz chcieć sprawdzić, czy ciąg, który reprezentuje numer telefonu zawiera wymaganą liczbę cyfr, przed ustawieniem właściwości.  
   
--   Określ inną ułatwień dostępu dla `Get` i `Set` procedury. Na przykład można wprowadzić `Set` procedury `Private` i `Get` procedury `Public`.  
+-   Określ inną ułatwienia dostępu dla `Get` i `Set` procedury. Na przykład możesz chcieć wprowadzić `Set` procedury `Private` i `Get` procedury `Public`.  
   
--   Utworzenie właściwości, które są `WriteOnly`.  
+-   Tworzenie właściwości, które są `WriteOnly`.  
   
--   Użyj właściwości parametrycznego (w tym `Default` właściwości). Musisz zadeklarować rozszerzonych właściwości w celu określenia parametru dla właściwości lub wymagają podania dodatkowych parametrów dla `Set` procedury.  
+-   Korzystanie z właściwości sparametryzowane (w tym `Default` właściwości). Należy zadeklarować właściwość rozszerzona w celu określenia parametru dla właściwości lub wymagają podania dodatkowych parametrów dla `Set` procedury.  
   
--   Umieść atrybut na pole zapasowe lub zmień poziom dostępu pola zapasowego.  
+-   Umieść atrybut na pole zapasowe lub zmień poziom dostępu do pola pomocniczego.  
   
--   Podaj komentarze XML dla pola zapasowego.  
+-   Podaj komentarze XML dla pola pomocniczego.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Rozszerzanie właściwości zaimplementowane automatycznie  
- Jeśli trzeba przekonwertować automatycznie implementowanej właściwości rozszerzonych właściwości, który zawiera `Get` lub `Set` procedury edytora kodu języka Visual Basic może automatycznie generować `Get` i `Set` procedury i `End Property`instrukcji dla właściwości. Kod jest generowany, gdy kursor zostanie umieszczony na pusty wiersz poniżej `Property` instrukcji, a typ `G` (dla `Get`) lub `S` (dla `Set`) i naciśnij klawisz ENTER. Edytor kodu języka Visual Basic automatycznie generuje `Get` lub `Set` procedury dla właściwości tylko do odczytu i tylko do zapisu, po naciśnięciu klawisza ENTER na końcu `Property` instrukcji.  
+ Jeśli trzeba przekonwertować automatycznie implementowana właściwość rozszerzona właściwość, która zawiera `Get` lub `Set` procedury, Edytor kodu Visual Basic automatycznie wygenerować `Get` i `Set` procedur i `End Property`instrukcji dla właściwości. Kod jest generowany, jeżeli umieścisz kursor w następującym pustym wierszu `Property` instrukcji, wpisz `G` (dla `Get`) lub `S` (dla `Set`) i naciśnij klawisz ENTER. Edytor kodu Visual Basic automatycznie generuje `Get` lub `Set` procedury dla właściwości tylko do odczytu i tylko do zapisu, po naciśnięciu klawisza ENTER na końcu `Property` instrukcji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic](./how-to-declare-and-call-a-default-property.md)  
- [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)  
- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)  
- [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
+- [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -2,12 +2,12 @@
 title: Projektowanie kodu XML w innym kształcie (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: fe6166a333988d4b0a4550900a9307f1c4951aec
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723787"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projektowanie kodu XML w innym kształcie (C#)
 W tym temacie przedstawiono przykład przewidywania XML, który jest w innym kształcie niż źródła XML.  
@@ -235,6 +235,6 @@ class Program
   
 -   [Wyszukiwanie tekstu w dokumentach programu Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6ba2103003e3976e51e82ad6b42315a881582f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d07c6de47038d5c52d76ad8ca8e0a5684551d59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54491470"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr — Wyliczenie
-Zawiera wartości, które opisują metadanych parametru metody.  
+Zawiera wartości, które opisują metadane parametrem metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,19 +49,19 @@ typedef enum CorParamAttr {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`pdIn`|Określa, że parametr jest przekazywany do wywołania metody.|  
-|`pdOut`|Określa, że parametr jest przekazywany z metody zwracany.|  
-|`pdOptional`|Określa, czy parametr jest opcjonalny.|  
+|`pdOut`|Określa, że parametr jest przekazywany z metody zwrotu.|  
+|`pdOptional`|Określa, że parametr jest opcjonalny.|  
 |`pdReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
 |`pdHasDefault`|Określa, że parametr ma wartość domyślną.|  
-|`pdHasFieldMarshal`|Określa, czy parametr zawiera informacje organizacyjne.|  
+|`pdHasFieldMarshal`|Określa, że parametr ma organizowanie informacji.|  
 |`pdUnused`|Nieużywane.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

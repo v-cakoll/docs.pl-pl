@@ -10,12 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147551"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717457"
 ---
 # <a name="deriving-from-webrequest"></a>Wyprowadzanie z elementu WebRequest
 <xref:System.Net.WebRequest> Klasa jest abstrakcyjna klasa bazowa, który zawiera podstawowe metody i właściwości dla tworzenia program obsługi żądania związane z protokołem, który pasuje do modelu podłączanego protokołu .NET Framework. Aplikacje, które używają **WebRequest** klasy mogą żądać danych za pomocą dowolnego obsługiwanego protokołu bez konieczności, aby określić protokół używany.  
@@ -27,7 +27,7 @@ ms.locfileid: "53147551"
 ## <a name="iwebrequest-create-method"></a>Metody Create, IWebRequest  
  <xref:System.Net.IWebRequestCreate.Create%2A> Metody jest odpowiedzialny za inicjowanie nowe wystąpienie klasy specyficzne dla protokołu. Gdy nowy **WebRequest** utworzeniu <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> metody pasuje do żądanego identyfikatora URI prefiksy URI zarejestrowane w usłudze **RegisterPrefix** metody. **Utwórz** metoda prawidłowego obiektu podrzędnego związane z protokołem wróć zainicjowane wystąpienie elementu potomnego może wykonać standardowe żądania/odpowiedzi transakcji dla protokołu bez żadnego pola charakterystyczne dla protokołu zmodyfikowane.  
   
-## <a name="connectiongroupname-property"></a>Właściwość ConnectionGroupName  
+## <a name="connectiongroupname-property"></a>ConnectionGroupName Property  
  <xref:System.Net.WebRequest.ConnectionGroupName%2A> Właściwość jest używany do nazywania grupy połączeń do zasobu, tak aby wiele żądań jest możliwe za pośrednictwem jednego połączenia. Aby zaimplementować Udostępnianie połączenia internetowego, należy użyć metody oparte na protokole, buforowanie i przypisywanie połączeń. Na przykład podana <xref:System.Net.ServicePointManager> klasa implementuje Udostępnianie połączenia dla <xref:System.Net.HttpWebRequest> klasy. **ServicePointManager —** tworzy klasę <xref:System.Net.ServicePoint> , umożliwia połączenie z określonego serwera dla każdej grupy połączeń.  
   
 ## <a name="contentlength-property"></a>Właściwość ContentLength  
@@ -88,9 +88,9 @@ ms.locfileid: "53147551"
   
  **Metody GetResponse** metoda jest odpowiedzialna za tworzenie odpowiednich **elementu WebResponse** podrzędnych zawiera przychodzącą odpowiedź.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.FileWebRequest>  
- [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Wyprowadzanie z elementu WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.FileWebRequest>
+- [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Wyprowadzanie z elementu WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)

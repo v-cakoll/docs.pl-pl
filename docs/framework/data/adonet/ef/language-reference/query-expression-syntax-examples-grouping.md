@@ -1,18 +1,18 @@
 ---
-title: 'Przykłady składni wyrażeń zapytania: grupowanie'
+title: 'Przykłady składni wyrażeń zapytania: Grupowanie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
-ms.openlocfilehash: 519f9073954e8f7710c9e73b61f40b4fcfefd25b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9d34b1c21ea627fdb8d307c3cda2e8393821c129
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44206969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54495594"
 ---
-# <a name="query-expression-syntax-examples-grouping"></a>Przykłady składni wyrażeń zapytania: grupowanie
+# <a name="query-expression-syntax-examples-grouping"></a>Przykłady składni wyrażeń zapytania: Grupowanie
 Przykłady w tym temacie prezentują sposób użycia `GroupBy` metody zapytania [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) przy użyciu składni wyrażeń zapytania. Model sprzedaży AdventureWorks używanego w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  
   
  Przykłady w tym temacie należy użyć następującego `using` / `Imports` instrukcji:  
@@ -38,5 +38,5 @@ Przykłady w tym temacie prezentują sposób użycia `GroupBy` metody zapytania 
  [!code-csharp[DP L2E Examples#GroupByCount](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupbycount)]
  [!code-vb[DP L2E Examples#GroupByCount](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Zobacz także
+- [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

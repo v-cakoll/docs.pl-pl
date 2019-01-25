@@ -2,21 +2,21 @@
 title: '&lt;message&gt; w &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 8c3519e2db12e34d9f2bd03689e0e9684c5792ae
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f4f50f0cf3010259677af2c8675cb2551c29ae42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497058"
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;message&gt; w &lt;basicHttpBinding&gt;
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
  \<system.ServiceModel>  
 \<powiązania >  
-\<basicHttpBinding >  
+\<basicHttpBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
+\<security>  
 \<message>  
   
 ## <a name="syntax"></a>Składnia  
@@ -119,13 +119,13 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<basicHttpBinding
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.BasicHttpMessageSecurity>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>  
- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.BasicHttpMessageSecurity>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.BasicHttpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.BasicHttpMessageSecurityElement>
+- [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Powiązania](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

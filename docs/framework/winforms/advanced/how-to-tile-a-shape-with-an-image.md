@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wypełnianie kafelków w obrębie kształtu obrazem'
+title: 'Instrukcje: Kafelek kształtu obrazem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,55 +10,55 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: 0905f29b0f74c72979e252cf94e677d1c7e0525d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2edde7e78f996d4a7bfbc636210f315c0718f6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693217"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>Porady: wypełnianie kafelków w obrębie kształtu obrazem
-Tak samo, jak kafelki mogą być umieszczone obok siebie, aby pokrywał piętra, prostokątne obrazów mogą być umieszczone obok siebie do wypełnienia kształtu (kafelka). Na kafelku wewnątrz kształtu, użyj pędzla tekstury. Podczas konstruowania <xref:System.Drawing.TextureBrush> obiektu, jeden z argumentów przekazać do konstruktora jest <xref:System.Drawing.Image> obiektu. Pędzel tekstury umożliwia malowanie wnętrza kształtu, kształt jest wypełniony powtarzane kopii tego obrazu.  
+# <a name="how-to-tile-a-shape-with-an-image"></a>Instrukcje: Kafelek kształtu obrazem
+Zgodnie z kafelków mogą być umieszczane obok siebie na pokrycie piętra, prostokątne obrazy mogą być umieszczone obok siebie do wypełnienia kształtu (fragment). Na kafelku wewnątrz kształtu, użyj pędzla tekstury. Podczas konstruowania <xref:System.Drawing.TextureBrush> obiektu w Argumenty przekazane do konstruktora jest <xref:System.Drawing.Image> obiektu. Malowanie wnętrza kształtu przy użyciu pędzli tekstury, kształt zostanie wypełniony powtarzających się kopii tego obrazu.  
   
- Właściwość tryb zawijania <xref:System.Drawing.TextureBrush> obiektu określa, jak obraz jest ustawiony jako jest powtarzany w siatce prostokątny. Możesz wprowadzić Kafelki w siatce, że tę samą orientację, można też obrazów Przerzucanie od położenia siatki co do następnego. Przerzucanie może być poziomo, pionowy lub oba. W poniższych przykładach pokazano kafelków z różnymi typami Przerzucanie.  
+ Właściwość tryb zawijania <xref:System.Drawing.TextureBrush> obiektu określa, jak obraz, który jest ustawiony jako jest powtarzany w siatce kartezjańskiej. Można tworzyć Kafelki w siatce, że ten sam orientacji, czy też mają być obrazu przerzucić od położenia na siatce co do następnego. Przerzucanie może być poziome, pionowe lub obu. W poniższych przykładach pokazano fragmentacji z różnymi typami Przerzucanie.  
   
 ### <a name="to-tile-an-image"></a>Na kafelku obrazu  
   
--   W tym przykładzie używane na poniższej ilustracji 75 x 75 na kafelku prostokąt 200 x 200.  
+-   W tym przykładzie używa na poniższej ilustracji 75 x 75 do kafelka prostokąt 200 x 200.  
   
- ![Kafelek 1](../../../../docs/framework/winforms/advanced/media/tile1.gif "tile1")  
+ ![Tile 1](../../../../docs/framework/winforms/advanced/media/tile1.gif "tile1")  
   
--   Na poniższej ilustracji przedstawiono sposób wypełniania prostokąt z obrazem. Należy zauważyć, że wszystkie Kafelki tę samą orientację; nie ma żadnych Przerzucanie.  
+-   Poniższa ilustracja przedstawia, jak prostokąta jest rozmieszczany przy użyciu obrazu. Należy pamiętać, że wszystkie Kafelki mają tę samą orientację; nie ma żadnych Przerzucanie.  
   
- ![Kafelek 2](../../../../docs/framework/winforms/advanced/media/tile2.gif "tile2")  
+ ![Tile 2](../../../../docs/framework/winforms/advanced/media/tile2.gif "tile2")  
   
  [!code-csharp[System.Drawing.UsingABrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
   
-### <a name="to-flip-an-image-horizontally-while-tiling"></a>Aby odwrócić obraz poziomo podczas kafelków  
+### <a name="to-flip-an-image-horizontally-while-tiling"></a>Aby przerzucić obraz w poziomie podczas fragmentacji  
   
--   W tym przykładzie ten sam obraz x 75 75 są używane do wypełnienia prostokąt 200 x 200. Tryb zawijania jest ustawiony na poziomie Przerzucanie obrazu. Na poniższej ilustracji przedstawiono sposób wypełniania prostokąt z obrazem. Należy pamiętać, że podczas przenoszenia z jednego fragmentu do następnego wiersza danego obrazu jest odwrócony poziomo.  
+-   W tym przykładzie używa tego samego obrazu 75 x 75 do wypełnienia prostokąt 200 x 200. Tryb zawijania jest ustawiony na przerzucić obraz w poziomie. Poniższa ilustracja przedstawia, jak prostokąta jest rozmieszczany przy użyciu obrazu. Należy pamiętać, że po przeniesieniu z jednym kafelkiem dalej w danym wierszu obrazu jest odwrócony poziomo.  
   
- ![Kafelek 3](../../../../docs/framework/winforms/advanced/media/tile3.gif "tile3")  
+ ![Tile 3](../../../../docs/framework/winforms/advanced/media/tile3.gif "tile3")  
   
  [!code-csharp[System.Drawing.UsingABrush#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
   
-### <a name="to-flip-an-image-vertically-while-tiling"></a>Aby odwrócić obraz w pionie podczas kafelków  
+### <a name="to-flip-an-image-vertically-while-tiling"></a>Aby przerzucić obraz w pionie podczas fragmentacji  
   
--   W tym przykładzie ten sam obraz x 75 75 są używane do wypełnienia prostokąt 200 x 200. Tryb zawijania jest ustawiony na Przerzuć obraz w pionie.  
+-   W tym przykładzie używa tego samego obrazu 75 x 75 do wypełnienia prostokąt 200 x 200. Tryb zawijania jest ustawiony na Przerzuć obraz w pionie.  
   
      [!code-csharp[System.Drawing.UsingABrush#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#33)]
      [!code-vb[System.Drawing.UsingABrush#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#33)]  
   
-### <a name="to-flip-an-image-horizontally-and-vertically-while-tiling"></a>Aby odwrócić obraz w poziomie i w pionie podczas kafelków  
+### <a name="to-flip-an-image-horizontally-and-vertically-while-tiling"></a>Aby przerzucić obraz w pionie i poziomie podczas fragmentacji  
   
--   W tym przykładzie używa tego samego obrazu x 75 75 na kafelku prostokąt 200 x 200. Tryb zawijania jest ustawiony na Przerzucanie obrazu w poziomie i w pionie. Na poniższej ilustracji przedstawiono sposób wypełniania prostokąt przez obraz. Należy pamiętać, że jak przejść z jednego fragmentu do drugiego w danym wierszu, obraz jest odwrócony poziomo i jak przenieść z jednego fragmentu do następnego w danej kolumnie, obraz jest odwrócony pionowo.  
+-   W tym przykładzie używa tego samego obrazu 75 x 75 do kafelka prostokąt 200 x 200. Tryb zawijania jest ustawiony na przerzucić obraz w poziomie i w pionie. Poniższa ilustracja przedstawia, jak prostokąta jest rozmieszczany przez obraz. Należy pamiętać, że po przeniesieniu z jednym kafelkiem dalej w danym wierszu obrazu jest odwrócony poziomo i jak przenieść z jednym kafelkiem dalej w danej kolumnie, obraz, który jest odwrócony w pionie.  
   
- ![Kafelek 5](../../../../docs/framework/winforms/advanced/media/tile5.gif "tile5")  
+ ![Tile 5](../../../../docs/framework/winforms/advanced/media/tile5.gif "tile5")  
   
  [!code-csharp[System.Drawing.UsingABrush#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Używanie pędzla do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a>Zobacz także
+- [Używanie pędzla do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

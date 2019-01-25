@@ -3,12 +3,12 @@ title: Wskazówki dotyczące migrowania aplikacji utworzonych za pomocą program
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d843f2d01072db8b848f4d6f26dba32b4e48f302
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696194"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Wskazówki dotyczące migrowania aplikacji utworzonych za pomocą programu WIF 3.5 do wersji WIF 4.5
 ## <a name="applies-to"></a>Dotyczy:  
@@ -91,10 +91,10 @@ ms.locfileid: "48582518"
   
  Aby uzyskać pełną listę elementów konfiguracji programu WIF 4.5, zobacz [schemat konfiguracji programu WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md).  
   
-### <a name="visual-studio-tooling-changes"></a>Zmiany narzędzi programu Visual Studio  
+### <a name="visual-studio-tooling-changes"></a>Visual Studio Tooling Changes  
  Zestawu SDK programu WIF 3.5 oferowane narzędziem autonomicznej Federacji FedUtil.exe (FedUtil), można użyć w celu oddelegowania procesów zarządzania tożsamościami w aplikacjach z obsługą programu WIF do usługi tokenu zabezpieczającego (STS). To narzędzie dodane ustawienia programu WIF do pliku konfiguracji aplikacji, aby umożliwić aplikacji w celu uzyskania tokenów zabezpieczających, przez co najmniej jeden usługi STS i został udostępnione w programie Visual Studio za pośrednictwem **Dodaj odwołanie do usługi STS** przycisku. FedUtil nie jest składnikiem programu WIF 4.5. Zamiast tego program WIF 4.5 obsługuje nowe rozszerzenie programu Visual Studio o nazwie narzędzie tożsamości i dostępu dla programu Visual Studio 2012, który służy do modyfikowania pliku konfiguracji aplikacji przy użyciu ustawień programu WIF, wymagane w celu oddelegowania procesów zarządzania tożsamości do usługi STS. Narzędzie tożsamość i dostęp implementuje również usługi tokenu Zabezpieczającego usług o nazwie lokalnej usługi STS, którego można użyć, aby testować swoje aplikacje z włączoną obsługą programu WIF. W wielu przypadkach ta funkcja zwalnia z obowiązku Tworzenie niestandardowych usług STS, które były często konieczne w WIF 3.5 to testowanie rozwiązań w fazie projektowania. Z tego powodu w szablonach usługi STS nie są już obsługiwane w programie Visual Studio 2012; jednak klasy obsługujące tworzenie usług STS, które są wciąż dostępne w WIF 4.5.  
   
- Możesz zainstalować narzędzie tożsamość i dostęp z rozszerzenia i aktualizacje Manager w programie Visual Studio lub można go pobrać z następującej strony w galerii kodów: [narzędzie tożsamości i dostępu dla programu Visual Studio 2012 w galerii kodów](https://go.microsoft.com/fwlink/?LinkID=245849). Zmiany narzędzi programu Visual Studio są podsumowywane na poniższej liście:  
+ Narzędzie tożsamość i dostęp można zainstalować rozszerzenia i aktualizacje Manager w programie Visual Studio lub można go pobrać z następującej strony w galerii kodów: [Narzędzie tożsamości i dostępu dla programu Visual Studio 2012 w galerii kodów](https://go.microsoft.com/fwlink/?LinkID=245849). Zmiany narzędzi programu Visual Studio są podsumowywane na poniższej liście:  
   
 -   Funkcje Dodaj odwołanie do usługi STS jest usuwany. Zastąpienie jest narzędzie tożsamość i dostęp.  
   
@@ -170,8 +170,8 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  Ponieważ wiele klas programu WIF 3.5 i WIF 4.5 mają takie same nazwy, podczas korzystania z programu WIF 3.5 i WIF 4.5 ze sobą, należy koniecznie Użyj nazwy klasy w pełni kwalifikowana lub użyj aliasy obszaru nazw do rozróżniania między klasami w WIF 3.5 i WIF 4.5.  
   
-## <a name="see-also"></a>Zobacz też  
- [Schemat konfiguracji programu WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Co nowego w programie Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
- [Narzędzie tożsamości i dostępu dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+## <a name="see-also"></a>Zobacz także
+- [Schemat konfiguracji programu WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)
+- [Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+- [Co nowego w programie Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)
+- [Narzędzie tożsamości i dostępu dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

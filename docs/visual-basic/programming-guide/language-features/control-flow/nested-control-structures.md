@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: ec3d4d477290480cdfa0f5b1c88aa82c81040d11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520467"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Zagnieżdżone struktury sterujące (Visual Basic)
-Możesz na przykład umieścić instrukcji sterowania wewnątrz innych instrukcji sterowania `If...Then...Else` zablokować w `For...Next` pętli. Instrukcji sterowania umieszczony wewnątrz innego instrukcji sterowania jest określany jako *zagnieżdżonych*.  
+Instrukcje kontroli wewnątrz innych instrukcji sterowania można umieścić na przykład `If...Then...Else` blokowania w ramach `For...Next` pętli. Instrukcją sterowania, umieszczone wewnątrz innej instrukcji sterowania jest nazywany *zagnieżdżonych*.  
   
 ## <a name="nesting-levels"></a>Poziomów zagnieżdżenia  
- Struktury sterujące w języku Visual Basic można zagnieżdżać dowolną liczbę poziomów. Jest powszechną praktyką było odczytywać struktury zagnieżdżone przez wcięcia treści każdego z nich. Edytor środowiska (IDE) zintegrowanego rozwoju automatycznie robi to.  
+ Mogą być zagnieżdżone struktury sterujące w języku Visual Basic na dowolną liczbę poziomów. Jest to powszechną praktyką, aby zagnieżdżone struktury przez wcięcia treść każdej z nich był bardziej czytelny. Edytor środowiska (IDE) zintegrowanego rozwoju wykonuje to automatycznie.  
   
- W poniższym przykładzie procedura `sumRows` dodaje razem dodatnią elementy każdego wiersza w macierzy.  
+ W poniższym przykładzie procedury `sumRows` dodaje razem dodatnią elementy każdy wiersz macierzy.  
   
 ```  
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- W powyższym przykładzie pierwszy `Next` instrukcji zamyka wewnętrzny `For` pętli oraz za ostatni `Next` instrukcji zamyka zewnętrznego `For` pętli.  
+ W powyższym przykładzie pierwsze `Next` instrukcji zamyka wewnętrzny `For` pętli, a ostatni `Next` instrukcji zamyka zewnętrzny `For` pętli.  
   
- Podobnie, w zagnieżdżonych `If` instrukcji `End If` instrukcje dotyczą automatycznie najbliższej przed `If` instrukcji. Zagnieżdżone `Do` pętle działa w podobny sposób, z najbardziej wewnętrzną funkcją `Loop` instrukcji dopasowania najbardziej wewnętrzną funkcją `Do` instrukcji.  
+ Podobnie, w zagnieżdżonych `If` instrukcji `End If` instrukcji automatyczne stosowanie do najbliższej przed `If` instrukcji. Zagnieżdżone `Do` pętli działają w podobny sposób, przy użyciu najbardziej wewnętrzną funkcją `Loop` instrukcji dopasowania najbardziej wewnętrzną funkcją `Do` instrukcji.  
   
 > [!NOTE]
->  Dla wielu struktur kontroli po kliknięciu słowem kluczowym wszystkich słów kluczowych w strukturze wyróżniono. Na przykład po kliknięciu `If` w `If...Then...Else` konstrukcji, wszystkie wystąpienia `If`, `Then`, `ElseIf`, `Else`, i `End If` są wyróżniane w konstrukcji. Aby przejść do następnej lub poprzedniej wyróżnione słowa kluczowego, naciśnij kombinację klawiszy CTRL + SHIFT + Strzałka w dół strzałkę lub CTRL + SHIFT + Strzałka w górę, strzałki.  
+>  Dla wielu struktur sterowania po kliknięciu słowem kluczowym wszystkich słów kluczowych w strukturze, zostały wyróżnione. Na przykład po kliknięciu `If` w `If...Then...Else` budowy, wszystkie wystąpienia elementu `If`, `Then`, `ElseIf`, `Else`, i `End If` w konstrukcji są wyróżnione. Aby przejść do następnego lub poprzedniego wyróżnionego słów kluczowych, naciśnij klawisz Strzałka CTRL + SHIFT + Strzałka w dół lub CTRL + SHIFT + Strzałka w górę Strzałka.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Zagnieżdżania różnego rodzaju struktury sterujące  
- Można zagnieżdżać jednego rodzaju Struktura kontroli w ramach innego rodzaju. W poniższym przykładzie użyto `With` zablokować wewnątrz `For Each` pętli i zagnieżdżone `If` bloki wewnątrz `With` bloku.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Różne rodzaje struktur sterujących zagnieżdżania  
+ Można zagnieżdżać jednego rodzaju strukturze kontroli w ramach innego rodzaju. W poniższym przykładzie użyto `With` block wewnątrz `For Each` pętli i zagnieżdżone `If` blokuje wewnątrz `With` bloku.  
   
 ```  
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -65,15 +65,15 @@ Next ctl
 ```  
   
 ## <a name="overlapping-control-structures"></a>Nakładające się struktury sterujące  
- Struktury sterujące nie mogą się nakładać. Oznacza to, wszystkie zagnieżdżone struktury musi być całkowicie zawarty w strukturze najbardziej dalej. Na przykład następujące rozmieszczenia jest nieprawidłowy ponieważ `For` pętli kończy się przed wewnętrzny `With` kończy bloku.  
+ Nie może nakładać się struktur sterujących. Oznacza to, dowolnej struktury zagnieżdżonej musi być całkowicie zawarty w ramach następnego najbardziej wewnętrznej struktury. Na przykład, poniższy rozmieszczenie jest nieprawidłowy ponieważ `For` pętli kończy się przed wewnętrzny `With` kończy blok.  
   
- ![Graficzny diagram nieprawidłowego zagnieżdżenia](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-Nieprawidłowy zagnieżdżanie do i z struktury  
+ ![Graficzny diagram nieprawidłowe zagnieżdżanie](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
+Nieprawidłowe zagnieżdżanie i z struktury  
   
- Kompilator Visual Basic wykrywa takie nakładające się struktury sterujące i sygnalizuje błąd kompilacji.  
+ Kompilator Visual Basic wykrywa takie nakładających się struktury sterujące i sygnalizuje błąd kompilacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  
- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+## <a name="see-also"></a>Zobacz także
+- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
+- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

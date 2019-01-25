@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 23d1a11bcee2a4faae40f2683d109d5820ee5f9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6d6a82331185060d6f08c3375dc5a628b65df1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506300"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39;&lt;membername&gt; &#39; jest niejednoznaczny w dziedziczonych interfejsach &#39; &lt;interfacename1&gt; &#39; i &#39; &lt;interfacename2&gt;&#39;
-Interfejs dziedziczy wiele interfejsów co najmniej dwa elementy członkowskie o tej samej nazwie.  
+Interfejs dziedziczy dwóch lub więcej elementów członkowskich o takiej samej nazwie z wielu interfejsów.  
   
  **Identyfikator błędu:** BC30685  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Rzutowanie wartości podstawowy interfejs, który ma zostać użyty. na przykład:  
+-   Rzutuj wartość interfejs podstawowy, który chcesz użyć. na przykład:  
   
     ```  
     Interface Left  
@@ -46,5 +46,5 @@ Interfejs dziedziczy wiele interfejsów co najmniej dwa elementy członkowskie o
     End Module  
     ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>Zobacz także
+- [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

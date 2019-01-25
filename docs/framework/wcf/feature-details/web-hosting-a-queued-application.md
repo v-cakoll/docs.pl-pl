@@ -2,12 +2,12 @@
 title: Sieć Web hostująca aplikację zakolejkowaną
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700211"
 ---
 # <a name="web-hosting-a-queued-application"></a>Sieć Web hostująca aplikację zakolejkowaną
 Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesów dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF do użycia protokołów HTTP i protokołów innych niż HTTP, na przykład net.msmq i msmq.formatname w środowisku macierzystym, który obsługuje aktywację w oparciu o wiadomości i oferuje możliwość hostowania wielu aplikacji na danym komputerze.  
@@ -41,6 +41,6 @@ Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia
 ### <a name="subqueue-and-system-queue-caveat"></a>Kolejki podrzędnej i zastrzeżenie System kolejki:  
  Aplikacja usługi hostowanej WAS nie można aktywować oparte na komunikatów w kolejce systemu, takich jak kolejki utraconych wiadomości całego systemu lub kolejki podrzędnej, takie jak zarządzanie skażonymi kolejki podrzędnej. Jest to ograniczenie dla tej wersji produktu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+## <a name="see-also"></a>Zobacz także
+- [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

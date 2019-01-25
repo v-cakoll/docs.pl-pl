@@ -1,5 +1,5 @@
 ---
-title: '&lt;codeBase&gt; — Element'
+title: '&lt;codeBase&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 7e52899a953644fc3cf7189bf557f5ade2863161
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 295b2c5dd3eb17ca9ba19e52d9f8e51cf108162d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613157"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683154"
 ---
-# <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; — Element
+# <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; Element
 Określa, gdzie znaleźć zestawu środowisko uruchomieniowe języka wspólnego.  
   
  \<Konfiguracja >  
 \<runtime>  
 \<assemblybinding — >  
-\<dependentAssembly >  
-\<codeBase >  
+\<dependentAssembly>  
+\<codeBase>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -89,8 +89,8 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Określanie lokalizacji zestawu](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Określanie lokalizacji zestawu](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

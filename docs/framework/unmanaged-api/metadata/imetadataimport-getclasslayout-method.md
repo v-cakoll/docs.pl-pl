@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b031fc35a4687a8535e3cb5e9ef2a53bab9fe376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52136426be9e8f220d8eb5fc93659f588f007498
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625120"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout — Metoda
 Pobiera informacje o układzie dla klasy odwołuje się określony element TypeDef token.  
@@ -42,7 +42,7 @@ HRESULT GetClassLayout  (
   
 #### <a name="parameters"></a>Parametry  
  `td`  
- [in] Token TypeDef dla klasy z układem do zwrócenia.  
+ [in] Token element TypeDef dla klasy z układem do zwrócenia.  
   
  `pdwPackSize`  
  [out] Jedna z wartości 1, 2, 4, 8 lub 16, reprezentujący rozmiaru pakietu klasy.  
@@ -54,20 +54,20 @@ HRESULT GetClassLayout  (
  [in] Maksymalny rozmiar `rFieldOffset` tablicy.  
   
  `pcFieldOffset`  
- [out] Liczba elementów zwracanych w `rFieldOffset`.  
+ [out] Liczba elementów zwróconych w `rFieldOffset`.  
   
  `pulClassSize`  
- [out] Rozmiar w bajtach klasy reprezentowany przez `td`.  
+ [out] Rozmiar w bajtach klasa przedstawiana przez `td`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

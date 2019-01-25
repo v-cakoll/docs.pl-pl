@@ -2,12 +2,12 @@
 title: Zmienna śledzenie argumentów i
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4e59a6838d93a57302f0c894445ab9da5d4252ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625214"
 ---
 # <a name="variable-and-argument-tracking"></a>Zmienna śledzenie argumentów i
 Podczas śledzenia wykonywania przepływu pracy, jest często przydatne w celu wyodrębnienia danych. Umożliwia to dodatkowy kontekst podczas uzyskiwania dostępu do śledzenia rekordów post wykonywania. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], można wyodrębnić wszystkie widoczne zmiennej lub argumentu w zakresie wszelkie działania w przepływie pracy przy użyciu śledzenia. Profile śledzenia ułatwiają do wyodrębniania danych.  
@@ -46,6 +46,6 @@ Podczas śledzenia wykonywania przepływu pracy, jest często przydatne w celu w
   
 3.  Dla uczestników śledzenia niestandardowego upewnij się, że kod WF nie ujawniają poufne informacje, które są przechowywane w zmiennych lub argumentów.  
   
-## <a name="see-also"></a>Zobacz też  
- [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Zobacz także
+- [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

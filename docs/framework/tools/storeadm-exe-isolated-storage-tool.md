@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29dd8ae38e2635f92c5be2b4d856f03a2e3e5767
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 80923d32bfefb53c41b6588b87bac679bb380811
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221521"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713417"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Narzędzie wydzielonej pamięci masowej)
 Narzędzie Isolated Storage obsługujące izolowane magazyny wyświetla lub usuwa wszystkie istniejące magazyny bieżącego użytkownika.  
@@ -38,7 +38,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 |**/ list**|Wyświetla wszystkie istniejące magazyny bieżącego użytkownika. W tym magazyny dla wszystkich aplikacji lub zespołów wykonanych przez tego użytkownika.|  
 |**/ machine**|Wybiera magazyn komputera. Użyj tej opcji z **/list** lub **/usunąć** opcję, aby określić, czy akcja ma mieć zastosowanie do magazynu komputera.<br /><br /> Nowość w programie .NET Framework 2.0|  
 |**/quiet**|Określa tryb cichy; pomija informacyjne dane wyjściowe, tak aby były wyświetlane tylko komunikaty o błędach.|  
-|**/ Remove**|Trwale usuwa wszystkie istniejące magazyny bieżącego użytkownika.|  
+|**/remove**|Trwale usuwa wszystkie istniejące magazyny bieżącego użytkownika.|  
 |**/ roaming**|Wybiera mobilny magazyn. Użyj tej opcji z **/list** lub **/usunąć** opcji, aby określić, czy akcja ma mieć zastosowanie do mobilnego magazynu.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
@@ -60,7 +60,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  To, czy roaming jest faktycznie włączony dla użytkownika, nie wpływa na administrację Storeadm.exe. Uruchomienie narzędzia bez żadnych opcji zastosuje wszystkie akcje do magazynu lokalnego. Uruchomienie narzędzia z **/ roaming** opcji zastosuje wszystkie akcje do magazynu który może korzystać z roamingu. Uruchomienie narzędzia z **/machine** opcji zastosuje wszystkie akcje do magazynu komputera.  
   
-## <a name="see-also"></a>Zobacz też  
- [Narzędzia](../../../docs/framework/tools/index.md)  
- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)  
- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Zobacz także
+- [Narzędzia](../../../docs/framework/tools/index.md)
+- [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)
+- [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

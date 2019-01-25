@@ -1,18 +1,18 @@
 ---
-title: 'Porady: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (Visual Basic)'
+title: 'Instrukcje: Stream XML fragmentów z dostępem do informacji w nagłówku (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 60ec63c33d20fa38bed32d9c46c4acfe649ecd15
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 26d1d2166aaf8eaa62ba3ef7b3ffa9ab104574e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245188"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657327"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Porady: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (Visual Basic)
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Instrukcje: Stream XML fragmentów z dostępem do informacji w nagłówku (Visual Basic)
 Czasami trzeba przeczytać arbitralnie dużych plików XML i zapisu aplikacji, tak aby zużycie pamięci aplikacji jest przewidywalne. Jeśli użytkownik podejmie próbę wypełnianie drzewa XML przy użyciu dużego pliku XML, wykorzystanie pamięci będzie proporcjonalny do rozmiaru pliku — oznacza to, że nadmierne. W związku z tym należy zamiast tego użyj technika przesyłania strumieniowego.  
   
- Jedną z opcji jest do zapisu w swojej aplikacji za pomocą <xref:System.Xml.XmlReader>. Jednakże, możesz chcieć użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy drzewa XML. Jeśli jest to możliwe, można napisać metodę niestandardowe osi. Aby uzyskać więcej informacji, zobacz [porady: pisanie LINQ do metody osi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
+ Jedną z opcji jest do zapisu w swojej aplikacji za pomocą <xref:System.Xml.XmlReader>. Jednakże, możesz chcieć użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy drzewa XML. Jeśli jest to możliwe, można napisać metodę niestandardowe osi. Aby uzyskać więcej informacji, zobacz [jak: Zapis LINQ do metody osi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md).  
   
  Aby napisać własne metody osi, zapisu małych metody, która używa <xref:System.Xml.XmlReader> odczytać węzły, aż do napotkania jednego z węzłów, w których interesuje Cię. Następnie wywołuje metodę <xref:System.Xml.Linq.XNode.ReadFrom%2A>, która odczytuje z <xref:System.Xml.XmlReader> i tworzy XML fragment. Następnie można pisać zapytania LINQ metodę niestandardowe osi.  
   
@@ -230,5 +230,5 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

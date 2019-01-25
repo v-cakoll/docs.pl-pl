@@ -1,5 +1,5 @@
 ---
-title: 'Porady: określanie trybu wykonywania w PLINQ'
+title: 'Instrukcje: Określanie trybu wykonywania w PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c85731b991399e92297d6109a3000c1e345e02f6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c67b23da6742af3cb65da6da49dbab982a0248bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694623"
 ---
-# <a name="how-to-specify-the-execution-mode-in-plinq"></a>Porady: określanie trybu wykonywania w PLINQ
+# <a name="how-to-specify-the-execution-mode-in-plinq"></a>Instrukcje: Określanie trybu wykonywania w PLINQ
 W tym przykładzie przedstawiono sposób wymusić PLINQ obejścia domyślnej heurystyki i równoległe przetwarzanie zapytania niezależnie od tego, w zapytaniu shape.  
   
 > [!WARNING]
@@ -34,5 +34,5 @@ W tym przykładzie przedstawiono sposób wymusić PLINQ obejścia domyślnej heu
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
+- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>
 - [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

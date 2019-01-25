@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6aaa334c83aff18886c0c2db4462d6baaa4cd70f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450707"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687417"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE — Wyliczenie
-Wskazuje wynik wyszukiwania funkcji pamięci podręcznej.  
+Wskazuje wynik wyszukiwania funkcję pamięci podręcznej.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` ma wartość zero, więc `COR_PRF_JIT_CACHE` nie można użyć jako Surogat Boolean.  
+>  `COR_PRF_CACHED_FUNCTION_FOUND` ma wartość zero, więc `COR_PRF_JIT_CACHE` nie można użyć jako logiczna zastępczy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,10 +43,10 @@ typedef enum {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`COR_PRF_FUNCTION_FOUND`|Nie można odnaleźć funkcji.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|Wyszukiwanie nie znaleziono funkcji.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Nie znaleziono funkcji wyszukiwania.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -54,5 +54,5 @@ typedef enum {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

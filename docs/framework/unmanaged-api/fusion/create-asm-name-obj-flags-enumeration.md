@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2997bb90f2d9034de398b901fcbd6265dcb59998
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4da0e064f507e2330aac27fc5c8bcd56b9d3c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716235"
 ---
 # <a name="createasmnameobjflags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS — Wyliczenie
-Określa atrybuty [IAssemblyName — interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu, gdy jest tworzony przez [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) funkcji.  
+Określa atrybuty elementu [iassemblyname — interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu, kiedy jest tworzony przez [createassemblynameobject —](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,19 +44,19 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|Wskazuje, że przekazany parametr jest tożsamości tekstowej.|  
+|`CANOF_PARSE_DISPLAY_NAME`|Wskazuje, że parametr przekazany jest tekstową tożsamości.|  
 |`CANOF_SET_DEFAULT_VALUES`|Ustawia kilka wartości domyślne.|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Sprawdza, czy reguła zestawu friend (tylko nazwa i klucz publiczny). Ten element członkowski jest tylko do użytku wewnętrznego.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Kombinację `CANOF_PARSE_DISPLAY_NAME` i `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flagi. Ten element członkowski jest tylko do użytku wewnętrznego.|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Sprawdza reguły zestawu friend (tylko nazwa i klucz publiczny). Ten element jest tylko do użytku wewnętrznego.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Kombinacji `CANOF_PARSE_DISPLAY_NAME` i `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flag. Ten element jest tylko do użytku wewnętrznego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Fusion.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [CreateAssemblyNameObject, funkcja](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [CreateAssemblyNameObject, funkcja](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
+- [Wyliczenia łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

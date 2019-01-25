@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: e21cf160d10f308990894d1a85c4f5d05b90f68d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f9201aa4b2aa9280b9b3a4e0a2badf25ea819088
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786612"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684752"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace — Operator (Visual Basic)
 Pobiera <xref:System.Xml.Linq.XNamespace> obiekt, który odpowiada określony prefiks przestrzeni nazw XML.  
@@ -45,6 +45,6 @@ GetXmlNamespace(xmlNamespacePrefix)
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>Zobacz też  
- [Imports, instrukcja (przestrzeń nazw XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)  
- [Uzyskiwanie dostępu do XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Imports, instrukcja (przestrzeń nazw XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [Uzyskiwanie dostępu do XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

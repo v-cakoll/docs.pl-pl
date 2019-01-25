@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ecc2f62a6bb8119b7fe06a82aea827a58d04ecb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a614ad1bd9738c993775667ccd261a089e8b57a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624266"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags — Wyliczenie
 Zawiera wartości, które opisują typ zdefiniowany w wywołaniu pliku [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
@@ -42,14 +42,14 @@ typedef enum CorFileFlags {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`ffContainsMetaData`|Wskazuje, że plik nie jest plikiem zasobów.|  
-|`ffContainsNoMetaData`|Wskazuje, że plik, być może plik zasobów, nie zawiera metadanych.|  
+|`ffContainsNoMetaData`|Wskazuje, czy plik, ewentualnie pliku zasobów, nie zawiera metadanych.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorHdr.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

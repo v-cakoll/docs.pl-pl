@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 7b5a91091a0902928eb2b72bdf69612f2e3f2f48
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704046"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurowanie powiązań dla usług WCF (Windows Communication Foundation)
 Podczas tworzenia aplikacji, często zachodzi potrzeba Odrocz decyzji dla administratora po wdrożeniu aplikacji. Na przykład często nie ma możliwości informacji z wyprzedzeniem o tym, jaki jest adres usługi lub identyfikator (URI), będzie. Zamiast kodować adresu, jest bardziej pożądane, aby umożliwić administratorowi to zrobić po utworzeniu usługi. Ta elastyczność odbywa się za pośrednictwem konfiguracji.  
@@ -161,8 +161,8 @@ Podczas tworzenia aplikacji, często zachodzi potrzeba Odrocz decyzji dla admini
 </bindings>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)  
- [Powiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md)  
- [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Zobacz także
+- [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)
+- [Powiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md)
+- [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

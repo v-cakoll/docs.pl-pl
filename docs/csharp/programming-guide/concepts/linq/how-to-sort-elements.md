@@ -1,19 +1,19 @@
 ---
-title: 'Porady: sortowanie elementów (C#)'
+title: 'Instrukcje: Sortowanie elementów (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 7548f183736ac9ed0ed09d3be775b3ffde6cb255
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 66a41fc018b2df64aa95c24d1d698b6c38fd189a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042611"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640787"
 ---
-# <a name="how-to-sort-elements-c"></a>Porady: sortowanie elementów (C#)
+# <a name="how-to-sort-elements-c"></a>Instrukcje: Sortowanie elementów (C#)
 W tym przykładzie pokazano, jak napisać zapytanie sortujące wyniki.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -41,7 +41,7 @@ foreach (decimal el in prices)
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje tego samego zapytania w formacie XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Praca z przestrzeniami nazw XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- W tym przykładzie użyto następujący dokument XML: [przykładowy plik XML: dane liczbowe w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Dane liczbowe w Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -67,7 +67,7 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Sortowanie danych (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+- [Sortowanie danych (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)
 - [Podstawowe zapytania (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

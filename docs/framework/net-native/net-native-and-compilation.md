@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152529"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744144"
 ---
 # <a name="net-native-and-compilation"></a>Architektura .NET Native i kompilacja
 Aplikacje Windows 8.1 i Windows Desktop aplikacji, przeznaczonych dla środowiska.NET Framework są zapisywane w danym języku programowania i kompilowane do języka pośredniego (IL). W czasie wykonywania kompilator just-in-time (JIT) jest odpowiedzialny za kompilowanie IL do kodu natywnego dla komputera lokalnego, po prostu, zanim metoda jest wykonywana po raz pierwszy. Z kolei łańcucha narzędzi .NET Native konwertuje kod źródłowy do kodu natywnego w czasie kompilacji. W tym temacie porównano .NET Native z innymi technologiami kompilacji dostępne dla aplikacji .NET Framework oraz również zawiera omówienie praktyczne jak .NET Native generuje kodu natywnego, które mogą ułatwić zrozumienie, dlaczego wyjątków, które występują w kodzie są kompilowane przy użyciu platformy .NET Natywne nie występują w kod kompilowany dokładnie na czas.  
   
-## <a name="net-native-generating-native-binaries"></a>Architektura .NET native: Generowanie natywnych plików binarnych  
+## <a name="net-native-generating-native-binaries"></a>.NET Native: Generowanie natywnych plików binarnych  
  Czy obiektów docelowych programu .NET Framework i nie jest kompilowany przy użyciu łańcucha narzędzi .NET Native aplikacji składa się z zestawu aplikacji, w którym znajdują się następujące:  
   
 -   [Metadane](../../../docs/standard/metadata-and-self-describing-components.md) opisujący zestaw, jego zależności, typów, zawiera i ich elementów członkowskich. Metadane są używane odbicia i dostęp z późnym wiązaniem i w niektórych przypadkach przez narzędzia kompilatora i tworzenia.  
@@ -100,8 +100,8 @@ Aplikacje Windows 8.1 i Windows Desktop aplikacji, przeznaczonych dla środowisk
   
 -   Zwykle obrazów NGEN za słabe. Na przykład poprawki lub zmiany zależność zwykle wymaga zestawów, które go używają również wystąpił ponownie. Dotyczy to zwłaszcza zestawów system w bibliotece klas programu .NET Framework. Z kolei .NET Native umożliwia aplikacjom, które ma zostać dostarczony niezależnie od siebie nawzajem.  
   
-## <a name="see-also"></a>Zobacz też  
- [Składniki samoopisujące się i metadane](../../../docs/standard/metadata-and-self-describing-components.md)  
- [W obrębie architektury .NET Native (wideo Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
- [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+## <a name="see-also"></a>Zobacz także
+- [Składniki samoopisujące się i metadane](../../../docs/standard/metadata-and-self-describing-components.md)
+- [W obrębie architektury .NET Native (wideo Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

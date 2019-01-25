@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662741"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 <a name="Introduction"></a> Program .NET Framework zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługuje rozszerzalność w dodatku. Ten dodatek model umożliwia tworzenie dodatków, które integrują się z oraz rozszerzanie funkcjonalności aplikacji. W niektórych przypadkach aplikacje wymagają także do wyświetlania interfejsu użytkownika, które są dostarczane przez dodatki. W tym temacie pokazano, jak WPF, rozszerzają model dodatku .NET Framework umożliwiają tych scenariuszy, architektura za go, jego zalety i jego pewne ograniczenia.  
@@ -282,10 +282,10 @@ ms.locfileid: "53397036"
 ## <a name="performance-optimization"></a>Optymalizacja wydajności  
  Domyślnie jeśli używanych jest wiele domen aplikacji, różnych zestawów .NET Framework, wymagane przez poszczególne aplikacje są wszystkie ładowane do domeny w tej aplikacji. W rezultacie czas wymagany do tworzenia nowych domen aplikacji i uruchamiania aplikacji w nich może wpłynąć na wydajność. Jednak .NET Framework umożliwia zmniejszenie czasu uruchomienia przez poinstruowanie aplikacjom udostępnianie zestawów w domenach aplikacji, jeśli są już załadowane. Możesz to zrobić przy użyciu <xref:System.LoaderOptimizationAttribute> atrybut, który należy zastosować do metody punktu wejścia (`Main`). W takim przypadku musisz podać tylko kod do implementacji definicji aplikacji (zobacz [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.LoaderOptimizationAttribute>  
- [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [Domeny aplikacji](../../../../docs/framework/app-domains/application-domains.md)  
- [Przegląd komunikacji zdalnej programu .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Tworzenie obiektów może być zastosowana zdalnie](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.LoaderOptimizationAttribute>
+- [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Domeny aplikacji](../../../../docs/framework/app-domains/application-domains.md)
+- [Przegląd komunikacji zdalnej programu .NET framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [Tworzenie obiektów może być zastosowana zdalnie](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/how-to-topics.md)

@@ -1,16 +1,16 @@
 ---
-title: 'Porady: liczenie wystąpień słowa w ciągu (LINQ) (Visual Basic)'
+title: 'Instrukcje: Liczba wystąpień wyrazu w ciągu (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: a2e7b59ee1d289fe794fb83705d42ac0e48fb4a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4d8349db0a1c5b0cc7b69cbae7d19dd1d9d10b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716807"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Porady: liczenie wystąpień słowa w ciągu (LINQ) (Visual Basic)
-Ten przykład przedstawia sposób użycia zliczania wystąpień określonego słowa w ciągu zapytania LINQ. Należy pamiętać, że przeprowadzić licznik <xref:System.String.Split%2A> — metoda jest wywoływana w celu utworzenia tablicy słów. Brak koszt wydajności <xref:System.String.Split%2A> metody. Jeśli działanie tylko na ciąg Zliczanie wyrazów, należy rozważyć użycie <xref:System.Text.RegularExpressions.Regex.Matches%2A> lub <xref:System.String.IndexOf%2A> metody zamiast tego. Jednak jeśli wydajność nie ma problem krytyczny lub już został rozdzielony zdanie w celu wykonywania innych typów kwerend nad nim, następnie warto na potrzeby zliczania słów ani fraz również LINQ.  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Instrukcje: Liczba wystąpień wyrazu w ciągu (LINQ) (Visual Basic)
+W tym przykładzie pokazano, jak korzystać z zapytania LINQ można zliczać wystąpienia określonego wyrazu w ciągu. Należy pamiętać, że przeprowadzenie liczba <xref:System.String.Split%2A> metoda jest wywoływana, aby utworzyć tablicę słów. Występuje spadek wydajności, aby <xref:System.String.Split%2A> metody. W przypadku operacji tylko na ciąg do zliczania wyrazów, należy rozważyć użycie <xref:System.Text.RegularExpressions.Regex.Matches%2A> lub <xref:System.String.IndexOf%2A> metody zamiast tego. Jednak jeśli wydajność nie jest to problem krytyczny lub ma już Podziel zdania w celu wykonywania innych typów kwerend nad nim, następnie dobrym pomysłem liczba słów lub fraz, a także przy użyciu LINQ.  
   
 ## <a name="example"></a>Przykład  
   
@@ -58,7 +58,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

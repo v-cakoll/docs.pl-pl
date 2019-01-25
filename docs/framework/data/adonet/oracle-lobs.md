@@ -1,22 +1,22 @@
 ---
-title: Oracle LOB
+title: Oracle LOBs
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 70928cdd1ff82e54fd8e45563bb14df6340e4a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748002"
 ---
-# <a name="oracle-lobs"></a>Oracle LOB
+# <a name="oracle-lobs"></a>Oracle LOBs
 .NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleLob> klasę, która zostanie użyta do pracy z bazą danych Oracle **LOB** typów danych.  
   
  **OracleLob** może być jednym z następujących <xref:System.Data.OracleClient.OracleType> typów danych:  
   
 |Typ danych|Opis|  
 |---------------|-----------------|  
-|**Blob**|Oracle **BLOB** typu danych, który zawiera dane binarne o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **tablicy** typu **bajt**.|  
+|**Obiekt blob**|Oracle **BLOB** typu danych, który zawiera dane binarne o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **tablicy** typu **bajt**.|  
 |**Clob**|Oracle **CLOB** na serwerze, o maksymalnym rozmiarze 4 gigabajty ustawić typ danych, która zawiera znak danych na podstawie domyślny znak. To jest mapowany **ciąg**.|  
 |**NClob**|Oracle **NCLOB** typu danych, który zawiera znak danych oparte na national zestawu znaków na serwerze o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **ciąg**.|  
   
@@ -247,6 +247,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

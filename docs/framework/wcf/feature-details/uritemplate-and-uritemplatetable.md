@@ -2,12 +2,12 @@
 title: Klasy UriTemplate i UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722611"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>Klasy UriTemplate i UriTemplateTable
 Deweloperzy sieci Web muszą mieć możliwość opisują kształt i układ identyfikatory URI, które ich usługom, odpowiadanie na. Windows Communication Foundation (WCF) dodano dwa nowe klasy oferuje deweloperom kontrolę nad ich identyfikatorów URI. <xref:System.UriTemplate> i <xref:System.UriTemplateTable> stanowią podstawę aparatu wysyłania na podstawie identyfikatora URI programu WCF. Te klasy można również na mechanizmie własnych, dzięki czemu deweloperzy mogą korzystać ze szablonów i identyfikatora URI mapowania bez implementacji usługi WCF.  
@@ -48,7 +48,7 @@ Deweloperzy sieci Web muszą mieć możliwość opisują kształt i układ ident
   
 - net.tcp://  
   
-- NET.pipe://  
+- net.pipe://  
   
 - sb://  
   
@@ -81,7 +81,7 @@ Deweloperzy sieci Web muszą mieć możliwość opisują kształt i układ ident
   
 - "{buta} / łodzi"  
   
-- "{buta} / {łodzi} /bed/ {patchworkowa}"  
+- "{shoe}/{boat}/bed/{quilt}"  
   
 - "uniesienia / {łodzi}"  
   
@@ -93,7 +93,7 @@ Deweloperzy sieci Web muszą mieć możliwość opisują kształt i układ ident
   
 - "uniesienia / {łodzi}? x = {bielizny} & y = poza pasmem"  
   
-- "? x = {buta}"  
+- "?x={shoe}"  
   
 - "buta? x = 3 & y = {var}  
   
@@ -129,7 +129,7 @@ Deweloperzy sieci Web muszą mieć możliwość opisują kształt i układ ident
 - / {uniesienia} {łodzi} — zmienne muszą być rozdzielone literału.  
   
 ### <a name="matching-and-compound-path-segments"></a>Zgodne i złożone segmenty ścieżki  
- Segmenty ścieżki złożonej umożliwiają definiowanie UriTemplate, który ma wiele zmiennych w segmencie pojedynczą ścieżkę. Na przykład w poniższym ciągu szablonu: "adresów / {state}. {Miasto} "w tym samym segmencie są zdefiniowane dwie zmienne (stanu i miasta). Ten szablon będzie odpowiadać takie jak adres URL `http://example.com/Washington.Redmond` , ale również pokaże adresu URL, takich jak `http://example.com/Washington.Redmond.Microsoft`. W tym ostatnim przypadku zmiennej stanu będzie zawierać "Waszyngton", a zmienna Miasto będzie zawierać "Redmond.Microsoft". W takim przypadku dowolny tekst (z wyjątkiem "/") będzie odpowiadał zmiennej {miasto}. Szablon, który nie będą zgodne z tekstem "dodatkowe", umieść zmienną w segmencie oddzielne szablonu, na przykład: "adresów / {state} / {miasto}.  
+ Segmenty ścieżki złożonej umożliwiają definiowanie UriTemplate, który ma wiele zmiennych w segmencie pojedynczą ścieżkę. Na przykład w następujący ciąg szablonu: "Adresów / {state}. {Miasto} "w tym samym segmencie są zdefiniowane dwie zmienne (stanu i miasta). Ten szablon będzie odpowiadać takie jak adres URL `http://example.com/Washington.Redmond` , ale również pokaże adresu URL, takich jak `http://example.com/Washington.Redmond.Microsoft`. W tym ostatnim przypadku zmiennej stanu będzie zawierać "Waszyngton", a zmienna Miasto będzie zawierać "Redmond.Microsoft". W takim przypadku dowolny tekst (z wyjątkiem "/") będzie odpowiadał zmiennej {miasto}. Szablon, który nie będą zgodne z tekstem "dodatkowe", umieść zmienną w segmencie oddzielne szablonu, na przykład: "Adresów / {state} / {miasto}.  
   
 ### <a name="named-wildcard-segments"></a>Segmenty nazwanych symboli wieloznacznych  
  Segment nazwanych symboli wieloznacznych jest żadnych zmiennych segmentu ścieżki którego nazwa zmiennej zaczyna się od znaku wieloznacznego "\*". Następujący ciąg szablonu zawiera nazwanych symboli wieloznacznych segment o nazwie "buta".  
@@ -239,7 +239,7 @@ Gdy zmienna ta otrzymuje wartość domyślną `null` istnieją pewne dodatkowe o
 ### <a name="default-values-and-matching"></a>Wartości domyślne i dopasowania  
  Podczas dopasowywania Release candidate identyfikatora URI za pomocą szablonu, który zawiera wartości domyślne, wartości domyślne są umieszczane w <xref:System.UriTemplateMatch.BoundVariables%2A> kolekcji, jeśli wartości nie są określone w identyfikatorze URI Release candidate.  
   
-### <a name="template-equivalence"></a>Równoważność szablonu  
+### <a name="template-equivalence"></a>Template Equivalence  
  Dwa szablony są określane jako *strukturalnie równoważne* kiedy wszystkie szablony literały odpowiadać i mają zmiennych w tej samej segmentów. Na przykład poniższe szablony są strukturalnie równoważne:  
   
 - b /b /a/ {var1} / {var2}? x = 1 & y = 2  
@@ -289,7 +289,7 @@ Gdy zmienna ta otrzymuje wartość domyślną `null` istnieją pewne dodatkowe o
   
 - ?  
   
-- ? x = {var}  
+- ? x={var}  
   
 - ?  
   
@@ -328,9 +328,9 @@ Gdy zmienna ta otrzymuje wartość domyślną `null` istnieją pewne dodatkowe o
 > [!NOTE]
 > Α znaków i Α są traktowane jako różne znaki pojawiających się jako część ścieżka identyfikatora URI lub <xref:System.UriTemplate> literał segmentu ścieżki (ale a znaków i A są traktowane jako taki sam). Α znaków i Α są uznawane za te same znaki pojawiających się jako część a <xref:System.UriTemplate> {variableName} lub ciąg zapytania (i a i A są również uważana za te same znaki).  
   
-## <a name="see-also"></a>Zobacz też  
- [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [Tabela UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [Dyspozytor tabeli UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Zobacz także
+- [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [Tabela UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [Dyspozytor tabeli UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

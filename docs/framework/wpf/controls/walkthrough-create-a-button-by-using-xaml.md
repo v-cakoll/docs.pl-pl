@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606786"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Przewodnik: Utwórz przyciska przy użyciu XAML
 Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do użycia w aplikacji Windows Presentation Foundation (WPF). W tym przewodniku używa szablonu i style w celu utworzenia zasobu dostosowany przycisk, który umożliwia oddzielenie logiki przycisk od deklaracji przycisku i ponowne użycie kodu. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -361,7 +361,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
      Naciśnij klawisz F5, aby uruchomić aplikację, a następnie kliknij jeden z przycisków. Zwróć uwagę, przycisk pozostaje wyróżniony, po kliknięciu ponieważ wciąż jest ustawiony fokus. Po kliknięciu przycisku inny przycisk Nowy przycisk uzyska fokus, gdy ostatnie traci go.  
   
-4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:**  Następnie dodamy niektórych animacji do wyzwalaczy. Dodaj następujący kod, dowolne miejsce wewnątrz elementu `ControlTemplate.Triggers` bloku.  
+4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** Następnie dodamy niektórych animacji do wyzwalaczy. Dodaj następujący kod, dowolne miejsce wewnątrz elementu `ControlTemplate.Triggers` bloku.  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -431,9 +431,9 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
 -   Dostosowywać zachowanie dla przycisków w odpowiedzi na działanie użytkownika (takie jak <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, i <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) które zawarte efektów animacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Efekty mapy bitowej — przegląd](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Efekty mapy bitowej — przegląd](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: 0fb435a35b928cb78511d8969f1dfce9f94869eb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b70a4ac99b90e5112c64d25ab517ae6ba819542f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709763"
 ---
 # <a name="access-modifiers-c-reference"></a>Modyfikatory dostępu (odwołanie w C#)
 Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowaną dostępność składowej lub typu. Ta sekcja wprowadza modyfikatory dostępu cztery:  
@@ -42,10 +42,10 @@ Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowa
   
 -   [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczenia dotyczące używania zadeklarowany poziomów ułatwień dostępu.  
   
-## <a name="see-also"></a>Zobacz też  
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)  
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
-- [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
-- [Słowa kluczowe dostępu](../../../csharp/language-reference/keywords/access-keywords.md)  
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
+- [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [Słowa kluczowe dostępu](../../../csharp/language-reference/keywords/access-keywords.md)
 - [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)

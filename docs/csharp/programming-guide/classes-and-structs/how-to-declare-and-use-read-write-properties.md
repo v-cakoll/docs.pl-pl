@@ -9,12 +9,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 348fcf6605030396095a2d94970ffe46e8d19357
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 792c3a8f1b02f36775edb84bdf7f1ff296630fea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725288"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Instrukcje: Deklarowanie i użycie właściwości odczyt/zapis (C# Programming Guide)
 Właściwości zapewniają wygodne publiczne elementy członkowskie danych bez ryzyka związane z niechronionych, niekontrolowane i niezweryfikowanych dostęp do danych obiektu. Jest to realizowane za pośrednictwem *Akcesory*: specjalne metody, które przypisać i pobierania wartości z bazowego elementu danych. [Ustaw](../../../csharp/language-reference/keywords/set.md) dostępu umożliwia członkom danych można przypisać i [uzyskać](../../../csharp/language-reference/keywords/get.md) akcesor pobiera wartości elementów członkowskich danych.  
@@ -55,8 +55,8 @@ person.SetAge(person.GetAge() + 1);
   
  Należy zauważyć, że `ToString` jawnie nie jest używany w programie. Jest wywoływana, domyślnie `WriteLine` wywołania.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
-- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
+- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)

@@ -2,12 +2,12 @@
 title: Kolejki utraconych komunikatów
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c6b3f059f1a1b11825b595346ed47f6a498078f1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721298"
 ---
 # <a name="dead-letter-queues"></a>Kolejki utraconych komunikatów
 W tym przykładzie pokazano, jak obsługiwać i przetwarzać komunikaty, które dostarczania nie powiodło się. Jest on oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W tym przykładzie użyto `netMsmqBinding` powiązania. Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.
@@ -26,11 +26,11 @@ W tym przykładzie pokazano, jak obsługiwać i przetwarzać komunikaty, które 
 
 -   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Właściwość wyrażenia rodzaju kolejki utraconych wiadomości wymagane przez klienta. To wyliczenie ma następujące wartości:
 
--   `None`: Brak kolejki utraconych wiadomości jest wymagane przez klienta.
+-   `None`: Kolejka utraconych wiadomości jest wymagane przez klienta.
 
--   `System`Kolejki utraconych wiadomości system służy do przechowywania utracone wiadomości. Kolejka utraconych wiadomości systemu jest współużytkowana przez wszystkie aplikacje uruchomione na komputerze.
+-   `System`: Kolejka utraconych wiadomości systemu jest używany do przechowywania utracone wiadomości. Kolejka utraconych wiadomości systemu jest współużytkowana przez wszystkie aplikacje uruchomione na komputerze.
 
--   `Custom`Niestandardowe kolejki utraconych wiadomości, które są określone za pomocą <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> właściwość jest używana do przechowywania utracone wiadomości. Ta funkcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Służy to, gdy aplikacja musi używać własnej kolejki utraconych wiadomości zamiast udostępnianie innym aplikacjom działającym na tym samym komputerze.
+-   `Custom`: Niestandardowe kolejki wiadomości utraconych określony za pomocą <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> właściwość jest używana do przechowywania utracone wiadomości. Ta funkcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Służy to, gdy aplikacja musi używać własnej kolejki utraconych wiadomości zamiast udostępnianie innym aplikacjom działającym na tym samym komputerze.
 
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Właściwość do określonej kolejki do użycia jako kolejki utraconych wiadomości express. Ta opcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
@@ -350,7 +350,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia `MsmqAuthenticationMode`, `MsmqProtectionLevel` i `Message` security `None`.
 
 ## <a name="comments"></a>Komentarze
- Domyślnie `netMsmqBinding` powiązania transportu, zabezpieczeń jest włączone. Dwie właściwości `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określić typ zabezpieczeń transportu. Domyślny tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i funkcji podpisywania należy do domeny. Po uruchomieniu tego przykładu na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący błąd: "Wiadomość użytkownika wewnętrzny certyfikat usługi kolejkowania nie istnieje".
+ Domyślnie `netMsmqBinding` powiązania transportu, zabezpieczeń jest włączone. Dwie właściwości `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określić typ zabezpieczeń transportu. Domyślny tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i funkcji podpisywania należy do domeny. Po uruchomieniu tego przykładu na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący błąd: "Użytkownika wewnętrznego kolejkowania certyfikatu nie istnieje".
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
@@ -361,4 +361,4 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także

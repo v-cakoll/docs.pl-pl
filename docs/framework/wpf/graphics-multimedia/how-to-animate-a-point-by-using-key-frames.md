@@ -1,5 +1,5 @@
 ---
-title: Jak animować punkt z wykorzystaniem klatek kluczowych
+title: 'Instrukcje: Animuj punkt z wykorzystaniem klatek kluczowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: c2fd8c6c6fd84bbfd6d56f573588d7204249f31d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9d976bca77629b85226da3d4e018a35cb522afef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738342"
 ---
-# <a name="how-to-animate-a-point-by-using-key-frames"></a>Jak animować punkt z wykorzystaniem klatek kluczowych
+# <a name="how-to-animate-a-point-by-using-key-frames"></a>Instrukcje: Animuj punkt z wykorzystaniem klatek kluczowych
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> klasy, aby animować <xref:System.Windows.Point>.  
   
 ## <a name="example"></a>Przykład  
@@ -36,9 +36,9 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.P
   
  Aby zachować spójność z innymi przykładami animacji, użyj wersji kodu w tym przykładzie <xref:System.Windows.Media.Animation.Storyboard> obiekt, aby zastosować <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>. Jednak podczas stosowania pojedynczej animacji w kodzie, jest łatwiejszy w obsłudze <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metody zamiast <xref:System.Windows.Media.Animation.Storyboard>. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>  
- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Media.EllipseGeometry>  
- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Klatki kluczowe — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>
+- <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Media.EllipseGeometry>
+- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Klatki kluczowe — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

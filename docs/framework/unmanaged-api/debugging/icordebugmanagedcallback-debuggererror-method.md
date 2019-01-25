@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436be84ad91bb20bfd88a51f2d6c2b760c4a4c3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31a554fc57611f4abd5322fdc0c147e5dc110fb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420140"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654948"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError — Metoda
-Powiadamia debugera wystąpił błąd podczas próby Obsługa zdarzenia z środowisko uruchomieniowe języka wspólnego (CLR).  
+Powiadamia debuger wystąpił błąd podczas próby obsłużyć zdarzenie z środowisko uruchomieniowe języka wspólnego (CLR).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,18 +42,18 @@ HRESULT DebuggerError (
  [in] Wskaźnik do obiektu "ICorDebugProcess", który reprezentuje proces, w którym wystąpiło zdarzenie.  
   
  `errorHR`  
- [in] Wartość HRESULT zwrócony przez program obsługi zdarzeń.  
+ [in] Wartość HRESULT, który został zwrócony z programu obsługi zdarzeń.  
   
  `errorCode`  
  [in] Liczba całkowita określająca błąd środowiska CLR.  
   
 ## <a name="remarks"></a>Uwagi  
- Proces może być umieszczona w trybie przekazujące, w zależności od charakteru błędu.  
+ Proces mógł być umieszczony w trybie przekazywania, w zależności od charakteru błędu.  
   
- `DebugError` Wywołania zwrotnego wskazuje, że usług debugowania zostały wyłączone z powodu błędu, więc debugery należy udostępnić komunikat o błędzie dla użytkownika. [ICorDebugProcess::GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) będzie bezpieczne połączenie, ale wszystkie inne metody, w tym [ICorDebug::Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), nie należy wywoływać. Do zakończenia procesów debuger należy używać systemu operacyjnego urządzenia.  
+ `DebugError` Wywołania zwrotnego wskazuje, że debugowania usługi zostały wyłączone z powodu błędu, dzięki czemu debugery powinny udostępniać komunikat o błędzie dla użytkownika. [ICorDebugProcess::GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) będzie bezpieczne połączenie, ale wszystkie inne metody, w tym [ICorDebug::Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), nie powinna być wywoływana. Debuger powinien użyć systemu operacyjnego urządzenia dla zakończenie procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -61,5 +61,5 @@ HRESULT DebuggerError (
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorDebugManagedCallback, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

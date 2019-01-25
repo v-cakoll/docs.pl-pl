@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: a9c5c5529e349eca2ba089ed6fb71da4bd48430a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d97bd3175de5d0c0587e27c375f2d2bae378a6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600408"
 ---
 # <a name="ltsourcesgt-element"></a>&lt;źródła&gt; — Element
 Określa źródła śledzenia, które inicjują komunikatów śledzenia.  
   
  \<Konfiguracja >  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<źródła >  
   
 ## <a name="syntax"></a>Składnia  
@@ -43,7 +43,7 @@ Określa źródła śledzenia, które inicjują komunikatów śledzenia.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Element wymagany.<br /><br /> Określa źródło śledzenia, który inicjuje komunikatów śledzenia.|  
+|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Element wymagany.<br /><br /> Określa źródło śledzenia, który inicjuje komunikatów śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -81,12 +81,12 @@ Określa źródła śledzenia, które inicjują komunikatów śledzenia.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Diagnostics.TraceListener>  
- <xref:System.Diagnostics.DefaultTraceListener>  
- <xref:System.Diagnostics.TextWriterTraceListener>  
- <xref:System.Diagnostics.ConsoleTraceListener>  
- <xref:System.Diagnostics.EventLogTraceListener>  
- <xref:System.Diagnostics.XmlWriterTraceListener>  
- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [\<źródło >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Diagnostics.TraceListener>
+- <xref:System.Diagnostics.DefaultTraceListener>
+- <xref:System.Diagnostics.TextWriterTraceListener>
+- <xref:System.Diagnostics.ConsoleTraceListener>
+- <xref:System.Diagnostics.EventLogTraceListener>
+- <xref:System.Diagnostics.XmlWriterTraceListener>
+- [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f716ff35ae0cd3d2a53c55756b8957e54fa355c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e26a90b6725d53774053293c04842b761da6ab12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431538"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717678"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE — Struktura
-Zawiera informacje o atrybutach metadane dotyczące [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) wystąpienia.  
+Zawiera informacje o atrybutach metadane dotyczące [idefinitionidentity —](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) wystąpienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,23 +40,23 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`pszNamespace`|Wskaźnik do ciąg znaków zakończony znakiem null, który zawiera przestrzeń nazw atrybutu jest w.|  
-|`pszName`|Wskaźnik do ciąg znaków zakończony znakiem null, który zawiera nazwę atrybutu.|  
-|`pszValue`|Wskaźnik na ciąg znaków zakończony znakiem null zawierającym wartość atrybutu.|  
+|`pszNamespace`|Wskaźnik do ciągu zakończonego znakiem null, zawierającą przestrzeń nazw atrybut jest.|  
+|`pszName`|Wskaźnik do ciągu zakończonego znakiem null, zawierający nazwę atrybutu.|  
+|`pszValue`|Wskaźnik do ciągu zakończonego znakiem null, zawierający wartość atrybutu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IDENTITY_ATTRIBUTE` Struktura zawiera trzy wskaźniki do ciągów znaków zakończony znakiem null. Te trzy ciągi opisano jeden atrybut.  
+ `IDENTITY_ATTRIBUTE` Struktura zawiera trzy wskaźnikami do ciągów znaków zakończony znakiem null. Te trzy ciągi opisują jeden atrybut.  
   
- Wystąpienie `IDENTITY_ATTRIBUTE` struktury jest skojarzony z wystąpieniem [identity_attribute_blob —](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) struktury. `IDENTITY_ATTRIBUTE` Struktura zawiera rzeczywiste ciągów i odpowiadający mu `IDENTITY_ATTRIBUTE_BLOB` przesunięcia na trzy ciągi, na liście wymieniono struktury `IDENTITY_ATTRIBUTE` struktury.  
+ Wystąpienie `IDENTITY_ATTRIBUTE` struktury jest skojarzony z wystąpieniem [identity_attribute_blob —](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md) struktury. `IDENTITY_ATTRIBUTE` Struktura zawiera rzeczywiste ciągów i odpowiedni `IDENTITY_ATTRIBUTE_BLOB` struktura zawiera listę przesunięć na trzy ciągi na liście `IDENTITY_ATTRIBUTE` struktury.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** Isolation.h  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IDefinitionIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
- [IDENTITY_ATTRIBUTE_BLOB, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>Zobacz także
+- [IDefinitionIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [IDENTITY_ATTRIBUTE_BLOB, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
+- [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

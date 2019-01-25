@@ -2,12 +2,12 @@
 title: Typy danych i funkcje
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520742"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711898"
 ---
 # <a name="data-types-and-functions"></a>Typy danych i funkcje
 Tematy wymienione w poniższej tabeli opisano LINQ do SQL działu pomocy technicznej dla członków, konstrukcje i rzutowania środowisko uruchomieniowe języka wspólnego (CLR). Obsługiwane elementy członkowskie i konstrukcje są dostępne do użycia w Twojej zapytania LINQ to SQL.  
@@ -31,7 +31,7 @@ Tematy wymienione w poniższej tabeli opisano LINQ do SQL działu pomocy technic
 |[Metody System.TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|W tym artykule opisano LINQ do SQL działu pomocy technicznej dla elementów członkowskich <xref:System.TimeSpan?displayProperty=nameWithType> struktury.|  
 |[Nieobsługiwana funkcja](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|W tym artykule opisano funkcje, które nie jest obsługiwana w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
   
-## <a name="see-also"></a>Zobacz też  
- [Niezgodność typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Biblioteka klas programu .NET framework w programie Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a>Zobacz także
+- [Niezgodność typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Biblioteka klas programu .NET framework w programie Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

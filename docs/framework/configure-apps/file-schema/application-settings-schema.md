@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701914"
 ---
 # <a name="application-settings-schema"></a>Schemat ustawień aplikacji
 
@@ -26,10 +26,10 @@ Ustawienia aplikacji definiuje następujące elementy w ramach plików konfigura
 
 | Element                    | Opis                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | Zawiera wszystkie  **\<Ustawienia >** tagi dotyczące tej aplikacji.                         |
-| **\<Ustawienia użytkownika >**        | Zawiera wszystkie  **\<Ustawienia >** tagi specyficzne dla bieżącego użytkownika.                        |
-| **\<Ustawienia >**             | Definiuje ustawienie. Element podrzędny elementu albo  **\<applicationSettings >** lub  **\<ustawienia użytkownika >**. |
-| **\<wartość >**               | Określa wartość tego ustawienia. Element podrzędny elementu  **\<Ustawienia >**.                                   |
+| **\<applicationSettings>** | Zawiera wszystkie  **\<Ustawienia >** tagi dotyczące tej aplikacji.                         |
+| **\<userSettings>**        | Zawiera wszystkie  **\<Ustawienia >** tagi specyficzne dla bieżącego użytkownika.                        |
+| **\<setting>**             | Definiuje ustawienie. Element podrzędny elementu albo  **\<applicationSettings >** lub  **\<ustawienia użytkownika >**. |
+| **\<value>**               | Określa wartość tego ustawienia. Element podrzędny elementu  **\<Ustawienia >**.                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > element
 
@@ -45,8 +45,8 @@ Ten element definiuje ustawienia. Ma następujące atrybuty.
 
 | Atrybut        | Opis |
 | ---------------- | ----------- |
-| **Nazwa**         | Wymagane. Unikatowy identyfikator ustawienia. Ustawień utworzonych za pomocą programu Visual Studio są zapisywane razem z nazwą `ProjectName.Properties.Settings`. |
-| **serializedAs** | Wymagane. Format używany do serializacji wartości do tekstu. Prawidłowe wartości to:<br><br>- `string`. Wartość jest serializowany jako ciąg za pośrednictwem <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Wartość jest serializowana, za pomocą serializacji XML.<br>- `binary`. Wartość jest serializowany jako dane binarne zakodowane w formacie tekstowym, za pomocą serializacji binarnej.<br />- `custom`. Dostawca ustawień ma nieodłącznej wiedzy o ustawienie serializuje i deserializuje go. |
+| **Nazwa**         | Wymagana. Unikatowy identyfikator ustawienia. Ustawień utworzonych za pomocą programu Visual Studio są zapisywane razem z nazwą `ProjectName.Properties.Settings`. |
+| **serializedAs** | Wymagana. Format używany do serializacji wartości do tekstu. Prawidłowe wartości to:<br><br>- `string`. Wartość jest serializowany jako ciąg za pośrednictwem <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Wartość jest serializowana, za pomocą serializacji XML.<br>- `binary`. Wartość jest serializowany jako dane binarne zakodowane w formacie tekstowym, za pomocą serializacji binarnej.<br />- `custom`. Dostawca ustawień ma nieodłącznej wiedzy o ustawienie serializuje i deserializuje go. |
 
 ## <a name="value-element"></a>\<wartość > element
 
@@ -92,5 +92,5 @@ Poniższy przykład pokazuje plik ustawień aplikacji, który definiuje dwa usta
 
 ## <a name="see-also"></a>Zobacz także
 
-[Przegląd ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[Architektura ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Przegląd ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [Architektura ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-architecture.md)

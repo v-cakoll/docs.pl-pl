@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Określanie poświadczeń klienta dla żądania usługi danych (WCF Data Services)'
+title: 'Instrukcje: Określanie poświadczeń klienta usługi danych żądania (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: d0fbf01de05a02c03782af9e392a79b6dd3e8bee
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 786d4deaa1b2e4dfacab6c89c7d3d5e734bd3ffd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718133"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Porady: Określanie poświadczeń klienta dla żądania usługi danych (WCF Data Services)
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Instrukcje: Określanie poświadczeń klienta usługi danych żądania (WCF Data Services)
 Domyślnie biblioteka klienta nie podaje poświadczeń, wysyłając żądanie do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi. Jednak można określić, że poświadczenia wysyłane do uwierzytelniania żądań do usługi danych przez przesłanie <xref:System.Net.NetworkCredential> dla <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> właściwość <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [zabezpieczania usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). W przykładzie w tym temacie przedstawiono sposób jawnie podać poświadczenia, które są używane przez [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta podczas żądania danych z usługi danych.  
   
  W przykładzie w tym temacie użyto Northwind przykładowe dane usługi i automatycznie wygenerowany klas usługi danych klienta. Ta usługa i klas danych klienta, są tworzone po ukończeniu [Szybki Start usług danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Można również użyć [Northwind przykładowe dane usługi](https://go.microsoft.com/fwlink/?LinkId=187426) opublikowaną w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] witryny sieci Web; te przykładowe dane usługi jest tylko do odczytu, a następnie próby zapisania zmiany zwraca błąd. Przykładowe dane usługi w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] witryny sieci Web umożliwia uwierzytelnianie anonimowe.  
@@ -52,6 +52,6 @@ Domyślnie biblioteka klienta nie podaje poświadczeń, wysyłając żądanie do
   
  Aby uzyskać więcej informacji, zobacz [zabezpieczania usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)  
- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+## <a name="see-also"></a>Zobacz także
+- [Zabezpieczanie usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -4,37 +4,37 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 2ec43254013df5444048b5197489c55217d5328a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648388"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737692"
 ---
 # <a name="constants-overview-visual-basic"></a>Stałe — Przegląd (Visual Basic)
-Stała jest znaczącą nazwę, która ma miejsce, liczby lub ciąg, który nie ulega zmianie. Stałe przechowywać wartości, które jak wskazuje nazwę, pozostają takie same w całej wykonywania aplikacji. Można znacznie poprawić czytelność kodu i ułatwić Obsługa za pomocą stałych. Korzystanie z nich kod, który zawiera wartości, które się ponownie lub to zależy od niektórych liczb, które są trudne do zapamiętania lub mieć znaczenia oczywiste.  
+Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, który nie jest zmieniany. Stałe przechowywać wartości, które jak wskazuje nazwa, pozostają takie same w całej wykonywania aplikacji. Można znacznie zwiększyć czytelność kodu i ułatwić obsługę przy użyciu stałych. Ich używać w kodzie, który zawiera wartości, które się ponownie lub zależy niektórych liczb, które są trudne do zapamiętania lub nie mają oczywiste znaczenia.  
   
-## <a name="how-to-create-and-use-constants"></a>Tworzenie i używanie stałych  
- Visual Basic zawiera szereg wstępnie zdefiniowanych stałe głównie przy użyciu drukowania i wyświetlania. Można również tworzyć własne stałe z `Const` instrukcji, korzystając z tego samego wskazówek, jak do tworzenia nazwy zmiennej. Jeśli `Option Strict` jest `On`, musisz jawnie zadeklarować typu stałej.  
+## <a name="how-to-create-and-use-constants"></a>Jak utworzyć i używać stałych  
+ Visual Basic zawiera szereg wstępnie zdefiniowanych stałych, głównie za pomocą drukowania i wyświetlania. Można również utworzyć własne stałych z `Const` instrukcję, używając te same wytyczne, jak w przypadku tworzenia nazwy zmiennej. Jeśli `Option Strict` jest `On`, należy jawnie deklarować typ stałej.  
   
- Stała zakresu, który jest zestaw wszystkich kod, który może odwoływać się do niego bez kwalifikujących się jego nazwa, jest taka sama jak zmiennej zadeklarowanej w tej samej lokalizacji. Aby utworzyć stałą, który istnieje w zakresie określona procedura, należy zadeklarować wewnątrz tej procedury. Aby utworzyć stałą, które są dostępne w całej aplikacji, Zadeklaruj ją przy użyciu `Public` — słowo kluczowe w sekcji deklaracji klasy.  
+ Stała zakresu, który jest zestawem cały kod, który może odwoływać się do niego bez kwalifikowania nazwy, jest taka sama, jak Zmienna zadeklarowana w tej samej lokalizacji. Aby utworzyć stałą, znajdującą się w zakresie określonej procedury, należy zadeklarować ją w ramach tej procedury. Aby utworzyć stałą, która jest dostępna w całej aplikacji, Zadeklaruj go przy użyciu `Public` — słowo kluczowe w sekcji deklaracji klasy.  
   
 > [!NOTE]
->  Chociaż stałe wyglądać nieco zmiennych, nie można ich modyfikować ani przypisać nowe wartości dla nich jak do zmiennych.  
+>  Mimo, że stałe nieco przypominają zmienne, nie można ich modyfikować ani przypisać do nich nowych wartości, jak to możliwe do zmiennych.  
   
- Stałe w kodzie użyto mogą zostać zdefiniowane przez model obiektów dla formantów lub elementów pracy z lub mogą być zdefiniowane przez użytkownika (czyli tych samodzielnie utworzony).  
+ Stałe, należy użyć w kodzie można zdefiniować przez model obiektów dla formantów lub składniki pracujesz z lub mogą być zdefiniowane przez użytkownika (czyli tych utworzonych samodzielnie).  
   
-## <a name="compile-time-and-run-time-constants"></a>Stałe kompilacji i środowiska wykonawczego  
- Stała kompilacji jest obliczana w czasie kompilowania kodu, gdy tylko można obliczyć stałą czasu wykonywania, gdy aplikacja jest uruchomiona. Stała kompilacji będzie mieć taką samą wartość każdym uruchomieniu aplikacji, gdy stałą czasu wykonywania mogą ulec zmianie w każdym. Stałe kompilacji są wymagane w przypadkach, takich jak granice tablicy, wyrażenia case lub inicjatory modułu wyliczającego.  
+## <a name="compile-time-and-run-time-constants"></a>Stałe w czasie kompilacji i czasu wykonywania  
+ Stałą czasu kompilacji jest obliczana w czasie, którego kod jest kompilowany, gdy tylko można obliczyć stałą czasu wykonywania, gdy aplikacja jest uruchomiona. Stałą czasu kompilacji będzie mieć taką samą wartość w każdym razem, gdy aplikacja jest uruchamiana, gdy stałą środowiska wykonawczego mogą ulec zmianie każdorazowo. Stałe kompilacji są wymagane w przypadkach, takich jak granice tablicy, wyrażeniami case lub inicjatory modułu wyliczającego.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Definicja|Termin|  
 |---|---|  
-|[Instrukcje: deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Wyjaśniono, jak używać `Const` instrukcji deklarowanie stałej i ustaw jej wartość; przez deklarowanie stałej, Przypisz nazwę opisową wartości.|  
-|[Stałe zdefiniowane przez użytkownika](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Opisuje, jak utworzyć własne stałe, w tym informacji na temat określania zakresu oraz uniknąć odwołań cyklicznych.|  
-|[Typy danych Stała i Literał](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Zawiera informacje na temat sposobu kompilator Visual Basic inicjuje stałe podczas `Option Explicit` jest wyłączona.|  
-|[Instrukcje: grupowanie powiązanych wartości stałych](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Pokazuje sposób grupowania stałe wartości, które są powiązane.|  
+|[Instrukcje: Deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Opis sposobu użycia `Const` instrukcję, aby zadeklarować stałą i określanie jego wartości; przez zadeklarowanie stałą, nazwę opisową przypisywania do wartości.|  
+|[Stałe zdefiniowane przez użytkownika](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Opisuje sposób tworzenia własnych stałych, włącznie z informacjami o zakresu oraz uniknąć odwołania cykliczne.|  
+|[Typy danych Stała i Literał](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Zawiera informacje na temat jak kompilator języka Visual Basic inicjuje stałe podczas `Option Explicit` jest wyłączona.|  
+|[Instrukcje: Grupowanie powiązanych ze sobą wartości stałych](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Pokazuje, jak należy zgrupować wartości stałych, które są ze sobą powiązane.|  
   
 ## <a name="reference"></a>Tematy pomocy  
   
@@ -44,6 +44,6 @@ Stała jest znaczącą nazwę, która ma miejsce, liczby lub ciąg, który nie u
 |[Const, instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)|W tym artykule opisano `Const` instrukcji i jego użycia.|  
 |[Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|W tym artykule opisano `Option Strict` instrukcji i jego użycia.|  
   
-## <a name="see-also"></a>Zobacz też  
- [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
- [Porady: inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+## <a name="see-also"></a>Zobacz także
+- [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Instrukcje: Inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

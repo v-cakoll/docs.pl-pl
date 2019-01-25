@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 42573304d6f3d6d145887fa7289f9b5ec019f521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148915"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701550"
 ---
 # <a name="listview-overview"></a>ListView — Przegląd
 <xref:System.Windows.Controls.ListView> Control oferuje infrastrukturę do wyświetlenia zbiór elementów danych w różnych układów lub widoków. Na przykład użytkownik może być do wyświetlenia elementów danych w tabeli, a także do sortowania kolumn.  
@@ -81,11 +81,11 @@ ms.locfileid: "53148915"
 ## <a name="creating-a-custom-view-mode"></a>Tworząc niestandardowy tryb widoku  
  Dostosowane widoki, takich jak <xref:System.Windows.Controls.GridView> są uzyskiwane z <xref:System.Windows.Controls.ViewBase> abstrakcyjnej klasy, która udostępnia narzędzia umożliwiające wyświetlanie elementów danych, które są reprezentowane jako <xref:System.Windows.Controls.ListViewItem> obiektów.    
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Controls.GridView>  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.ListViewItem>  
- <xref:System.Windows.Data.Binding>  
- [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [Kontrolki](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Controls.GridView>
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListViewItem>
+- <xref:System.Windows.Data.Binding>
+- [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Kontrolki](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

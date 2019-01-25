@@ -5,15 +5,15 @@ helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 3b3a5befb0edcb9bbabf601a16da6398dd2d9a2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d782539ca492946de4ebe7f8afcba25b72c9317
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626501"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>Operatory logiczne/bitowe (Visual Basic)
-Poniżej przedstawiono operatory logiczne/bitowe zdefiniowany w języku Visual Basic.  
+Dostępne są następujące operatory logiczne/bitowe zdefiniowany w języku Visual Basic.  
   
  [And, operator](../../../visual-basic/language-reference/operators/and-operator.md)  
   
@@ -31,6 +31,6 @@ Poniżej przedstawiono operatory logiczne/bitowe zdefiniowany w języku Visual B
   
  [IsTrue, operator](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a>Zobacz też  
- [Kolejność wykonywania w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Operatory logiczne i bitowe w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a>Zobacz także
+- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operatory logiczne i bitowe w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

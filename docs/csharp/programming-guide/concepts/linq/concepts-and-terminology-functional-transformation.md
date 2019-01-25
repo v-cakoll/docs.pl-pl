@@ -2,12 +2,12 @@
 title: Pojęcia i terminologia (Przekształcanie funkcjonalne) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: e42c14965ba3341c812811f6c27ece386c42d7c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583366"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Pojęcia i terminologia (Przekształcanie funkcjonalne) (C#)
 Ten temat wprowadza pojęcia i terminologia czystych przekształceń funkcjonalnych. Przekształcanie funkcjonalne podejście do przekształcania danych daje kod, który jest zwykle łatwiejsze do programu, bardziej ekspresyjnego i prostsze do debugowania i Obsługa programowania bardziej tradycyjny, imperatywnego.  
@@ -31,7 +31,7 @@ Ten temat wprowadza pojęcia i terminologia czystych przekształceń funkcjonaln
 ### <a name="functional-programming"></a>Programowanie funkcjonalne  
  *Programowanie funkcjonalne* jest strategii programowania, które bezpośrednio obsługuje czyste Przekształcanie funkcjonalne.  
   
- W przeszłości ogólnego przeznaczenia funkcjonalności języków programowania, takich jak uczenie Maszynowe, schemat, Haskell i F # zostały orientacyjnego akademickich społeczności. Mimo że zawsze było możliwe zapisać czystych przekształceń funkcjonalnych w języku C#, trudności spowoduje więc nie wprowadził go atrakcyjny możliwość Większość programistów. W nowszych wersjach języka C# jednak nowe konstrukcje językowe, takie jak wyrażenia lambda i wnioskowanie o typie ułatwiają programowanie funkcjonalne znacznie łatwiejsze i bardziej produktywne.  
+ W przeszłości ogólnego przeznaczenia funkcjonalności języków programowania, takich jak uczenie Maszynowe, schemat, Haskell, i F#, były przydatne głównie dla akademickich społeczności. Mimo że zawsze było możliwe zapisać czystych przekształceń funkcjonalnych w języku C#, trudności spowoduje więc nie wprowadził go atrakcyjny możliwość Większość programistów. W nowszych wersjach języka C# jednak nowe konstrukcje językowe, takie jak wyrażenia lambda i wnioskowanie o typie ułatwiają programowanie funkcjonalne znacznie łatwiejsze i bardziej produktywne.  
   
  Aby uzyskać więcej informacji na temat programowania funkcjonalnego, zobacz [programowania funkcyjnego programu vs. Programowanie imperatywne (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).  
   
@@ -71,7 +71,7 @@ Ten temat wprowadza pojęcia i terminologia czystych przekształceń funkcjonaln
   
  Te funkcje językowe, będzie używany w przykładach kodu w tej sekcji.  
   
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Wprowadzenie do czystych przekształceń funkcjonalnych (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Programowanie funkcjonalne a Programowanie imperatywne (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

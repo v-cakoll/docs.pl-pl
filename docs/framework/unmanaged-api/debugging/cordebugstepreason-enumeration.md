@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71dcc34fd3489fc71cec4050b168548927833082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b27bf19ec340c41cd990b7142450242ea6d6ea2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552245"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason — Wyliczenie
 Wskazuje wynik pojedynczego kroku.  
@@ -44,16 +44,16 @@ typedef enum CorDebugStepReason {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Wykonywanie krok po kroku zwykle zakończona w ramach tej samej funkcji.|  
-|`STEP_RETURN`|Wykonywanie krok po kroku nadal normalnie, po wartość zwrócona przez funkcję.|  
-|`STEP_CALL`|Wykonywanie krok po kroku nadal normalnie na początku nowo wywołanej funkcji.|  
-|`STEP_EXCEPTION_FILTER`|Wyjątek został wygenerowany i formant został przekazany do filtru wyjątków.|  
+|`STEP_NORMAL`|Przechodzenie krok po kroku zakończone normalnie w ramach tej samej funkcji.|  
+|`STEP_RETURN`|Przechodzenie krok po kroku nadal normalnie po wartość zwrócona przez funkcję.|  
+|`STEP_CALL`|Na początku nowo wywołana funkcja przechodzenie krok po kroku nadal normalnie.|  
+|`STEP_EXCEPTION_FILTER`|Wyjątek został wygenerowany i formant został przekazany do filtra wyjątku.|  
 |`STEP_EXCEPTION_HANDLER`|Wyjątek został wygenerowany i formant został przekazany do obsługi wyjątków.|  
-|`STEP_INTERCEPT`|Formant został przekazany do interceptora.|  
+|`STEP_INTERCEPT`|Formant został przekazany do interceptor.|  
 |`STEP_EXIT`|Wątek został zakończony przed ukończeniem kroku.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   
@@ -61,6 +61,6 @@ typedef enum CorDebugStepReason {
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [StepComplete, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)  
- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [StepComplete, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5e0a443f86848a446a7233a2c2e80f693cae9be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 16a6b497136b6cffabeb4151e54bec8d80928b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611415"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549122"
 ---
 # <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; — Element
 Na platformach 64-bitowych umożliwia tablic, które są większe niż 2 gigabajty (GB) w łącznym rozmiarze.  
   
  \<Konfiguracja > Element  
 \<środowisko uruchomieniowe > Element  
-\<gcAllowVeryLargeObjects > Element  
+\<gcAllowVeryLargeObjects> Element  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -77,6 +77,6 @@ Na platformach 64-bitowych umożliwia tablic, które są większe niż 2 gigabaj
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Zobacz także
+- [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

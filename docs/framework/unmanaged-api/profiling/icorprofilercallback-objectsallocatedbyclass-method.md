@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dde5c50666333c02c8c1a9a167e17af3f40341
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746638"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass — Metoda
-Powiadamia profilera o liczbę wystąpień każdej określonej klasy, które zostały utworzone od czasu ostatniego wyrzucanie elementów bezużytecznych.  
+Powiadamia program profilujący o liczbę wystąpień każdej określonej klasy, które zostały utworzone od najnowszych wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,20 +41,20 @@ HRESULT ObjectsAllocatedByClass(
  [in] Rozmiar `classIds` i `cObjects` tablic.  
   
  `classIds`  
- [in] Tablica klasy identyfikatorów, w którym każdy identyfikator Określa klasę z co najmniej jedno wystąpienie.  
+ [in] Tablica identyfikatorów, w którym każdy identyfikator Określa klasę z co najmniej jednego wystąpienia klasy.  
   
  `cObjects`  
- [in] Tablica liczb całkowitych, gdzie każdy całkowitą określa liczbę wystąpień odpowiedniej klasy w `classIds` tablicy.  
+ [in] Tablica liczb całkowitych, gdzie każda liczba całkowita określa liczbę wystąpień dla odpowiedniej klasy w `classIds` tablicy.  
   
 ## <a name="remarks"></a>Uwagi  
- `classIds` i `cObjects` tablice są tablice równoległych. Na przykład `classIds[i]` i `cObjects[i]` odwołania do tej samej klasy. Jeśli żadne wystąpienie klasy został utworzony od czasu poprzedniego wyrzucanie elementów bezużytecznych, klasa zostanie pominięty. `ObjectsAllocatedByClass` Wywołania zwrotnego nie zgłosi obiekty przydzielone na stercie dużego obiektu.  
+ `classIds` i `cObjects` tablic są tablicami równoległych. Na przykład `classIds[i]` i `cObjects[i]` odwoływać się do tej samej klasy. Jeśli żadne wystąpienie klasy został utworzony od czasu poprzedniego wyrzucania elementów bezużytecznych, klasa jest pomijana. `ObjectsAllocatedByClass` Wywołanie zwrotne nie będą zgłaszać obiekty przydzielone w stosie dużego obiektu.  
   
- Liczby zgłaszanych przez `ObjectsAllocatedByClass` są tylko oszacowania. Dokładne liczniki można użyć [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ Liczby zgłoszonych przez `ObjectsAllocatedByClass` są jedynie do oszacowania. Dokładna liczba użyć [icorprofilercallback::objectallocated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
   
- `classIds` Tablica może zawierać jeden lub więcej wpisów wartości null, jeśli odpowiednie `cObjects` tablica zawiera typy, które są zwalniane.  
+ `classIds` Macierzy może zawierać co najmniej jeden wpis o wartości null, jeśli odpowiedni `cObjects` tablica zawiera typy, które są zwalniane.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -62,5 +62,5 @@ HRESULT ObjectsAllocatedByClass(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

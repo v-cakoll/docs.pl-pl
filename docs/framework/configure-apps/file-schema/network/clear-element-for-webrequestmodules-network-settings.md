@@ -10,12 +10,12 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ccb9a19d4e6d79a84123014746b659a7168b2158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607007"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Wyczyść&gt; Element dla webRequestModules (ustawienia sieci)
 Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.  
@@ -23,7 +23,7 @@ Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.
  \<Konfiguracja >  
 \<system.net>  
 \<webRequestModules>  
-\<Wyczyść >  
+\<clear>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -69,6 +69,6 @@ Usuwa wszystkie zarejestrowane moduły żądania sieci Web z aplikacji.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
-- <xref:System.Net.WebRequest>  
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Net.WebRequest>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -2,12 +2,12 @@
 title: Publikowanie usług WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ca4a95b606f73800b11416627a27b8174e2bdda9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743009"
 ---
 # <a name="wcf-service-publishing"></a>Publikowanie usług WCF
 
@@ -25,7 +25,7 @@ Te szablony usług można znaleźć, wybierając **pliku** > **nowy projekt** > 
 
 Usługi mogą być publikowane w następujących lokalizacjach docelowych.
 
--   Lokalne usługi IIS.
+-   Local IIS.
 
 -   File System.
 
@@ -55,7 +55,7 @@ Jeśli zdecydujesz się wdrożyć aplikację do lokalnych usług IIS, mogą wyst
 ### <a name="assembly-files"></a>Pliki zestawu
  Po opublikowaniu usługi WCF za pomocą tego narzędzia, usługi jest automatycznie skompilowane na początku i pliki zestawu są generowane w projekcie usługi po kompilacji.
 
-### <a name="svc-file"></a>. Plik SVC
+### <a name="svc-file"></a>.SVC File
  Operację publikowania generuje plik *.svc dla każdej usługi WCF, czy plik istnieje lub nie, aby zapewnić ważność wersji. Istnieją dwa różne rodzaje plików svc: jeden dla biblioteki usługi WCF i Biblioteka usługi Syndication i inną sekwencyjnego i Biblioteka usługi przepływu pracy maszyny stanu. Wygenerowany \*.svc plik jest kopiowany do folderu głównego w lokalizacji docelowej.
 
 ### <a name="webconfig-file"></a>Plik Web.config
@@ -73,7 +73,7 @@ Jeśli zdecydujesz się wdrożyć aplikację do lokalnych usług IIS, mogą wyst
 ## <a name="security"></a>Zabezpieczenia
  Publikowanie lokalnych usług IIS wymaga uprawnień administratora, ponieważ wymaga usług IIS, uruchomiony na koncie administratora. Jeśli użytkownik bez uprawnień administratora otwiera publikowania usługi WCF, usług IIS nie jest dostępna jako lokalizacji docelowej. Publikowanie w systemie plików lub witryny FTP działa bez uprawnień administratora.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Szablony programu Visual Studio na potrzeby programu WCF](../../../docs/framework/wcf/wcf-vs-templates.md)
 - [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

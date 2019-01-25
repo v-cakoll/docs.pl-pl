@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 349324cabc999bac3bd0c247d3614dfc503b8b61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 32f9a5f92ae580839ce46476de9f9c7edcd54685
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573403"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generowanie kluczy szyfrowania i odszyfrowywania
 Tworzenie i zarządzanie kluczami jest ważną częścią procesu szyfrowania. Symetryczne algorytmy wymaga utworzenia klucza i wektor inicjowania (IV). Klucz musi trzymane w tajemnicy każdy, kto powinien nie odszyfrowania danych. IV nie muszą być wpisu tajnego, ale powinna zostać zmieniona dla każdej sesji. Asymetryczne algorytmy wymagają utworzenia klucza publicznego i prywatnego klucza. Klucz publiczny mogą być ujawniane dla każdego, kto, gdy klucz prywatny musi znane tylko przez strony, która spowoduje odszyfrowanie dane zaszyfrowane przy użyciu klucza publicznego. W tej sekcji opisano sposób generowania i zarządzania kluczami symetrycznego i asymetrycznych algorytmów.  
@@ -90,7 +90,7 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)  
-- [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)  
-- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)  
-- [Jak: Store kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)
+- [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)
+- [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)
+- [Instrukcje: Store kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

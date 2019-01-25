@@ -9,67 +9,67 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72131780744e08d820f0aa05fdedd36b5458fa84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733938"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Przegląd Malowanie jednolitymi kolorami i gradientami
-W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, i <xref:System.Windows.Media.RadialGradientBrush> obiektów namalować z kolorami, gradienty liniowe i gradientu promieniowego.  
+W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, i <xref:System.Windows.Media.RadialGradientBrush> obiektów malowanie jednolitymi kolorami, użyciu gradientów liniowych i użyciu gradientów promieniowych.  
   
 
   
 <a name="solidcolor"></a>   
 ## <a name="painting-an-area-with-a-solid-color"></a>Malowanie obszaru jednolitym kolorem  
- Jednym z najbardziej typowych operacji na dowolnej platformie jest namalować obszar o niezawodnej <xref:System.Windows.Media.Color>. Aby wykonać to zadanie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia <xref:System.Windows.Media.SolidColorBrush> klasy. W poniższych sekcjach opisano różne sposoby malować <xref:System.Windows.Media.SolidColorBrush>.  
+ Jednym z najbardziej typowych operacji, na dowolnej platformie jest Maluj obszar za pomocą niezawodnej <xref:System.Windows.Media.Color>. Aby wykonać to zadanie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia <xref:System.Windows.Media.SolidColorBrush> klasy. W poniższych sekcjach opisano różne sposoby malować <xref:System.Windows.Media.SolidColorBrush>.  
   
 <a name="solidcolorinxaml"></a>   
-### <a name="using-a-solidcolorbrush-in-xaml"></a>Przy użyciu obiektu SolidColorBrush w "XAML"  
- Namalować obszar jednolitym kolorem w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj jednej z następujących opcji.  
+### <a name="using-a-solidcolorbrush-in-xaml"></a>Za pomocą SolidColorBrush w "XAML"  
+ Można malować obszar jednolitym kolorem w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj jednej z następujących opcji.  
   
--   Wybierz pędzla pełnego koloru wstępnie zdefiniowanych według nazwy.  Na przykład można ustawić element button <xref:System.Windows.Controls.Control.Background%2A> "Red" lub "MediumBlue".  Dla innych listy wstępnie zdefiniowanych pędzle pełnego koloru, zobacz statycznej właściwości <xref:System.Windows.Media.Brushes> klasy. Poniżej przedstawiono przykład.  
+-   Wybierz wstępnie zdefiniowany jednolitego koloru pędzla według nazwy.  Na przykład można ustawić przycisku <xref:System.Windows.Controls.Control.Background%2A> "Red" lub "MediumBlue".  Aby uzyskać listę innych wstępnie zdefiniowanych pędzle pełnego koloru, zobacz statycznej właściwości <xref:System.Windows.Media.Brushes> klasy. Oto przykład.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   Wybierz kolor z palety kolorów 32-bitowy, określając ilości czerwony, zielony i niebieski można łączyć w jednej pełnego koloru.  Format służący do określania koloru z palety 32-bitowych jest "*#rrggbb*", gdzie *rr* jest dwóch szesnastkową wartością cyfrową określania względnych ilość czerwony, *gg* Określa kolor zielony, i *bb* określa ilość niebieski.  Ponadto można określić kolor jako "#*aarrggbb*" gdzie *aa* Określa *alfa* wartość lub Przezroczystość koloru. Ta metoda umożliwia utworzenie kolorów, które są częściowo przezroczysty.  W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> jest ustawiona na czerwony pełni nieprzezroczyste przy użyciu notacji szesnastkowej.  
+-   Wybierz kolor z palety kolorów 32-bitowych, określając ilości czerwony, zielony i niebieski, aby połączyć w jednym jednolitego koloru.  Określanie kolor z palety 32-bitowy format jest "*#rrggbb*", gdzie *rr* jest dwucyfrową liczbą szesnastkową, określając względna ilość czerwony, *gg* Określa kolor zielony, a *bb* określa ilość niebieski.  Ponadto można określić kolor jako "#*aarrggbb*" gdzie *aa* Określa *alfa* wartość lub Przezroczystość koloru. Takie podejście umożliwia tworzenie kolorów, które są częściowo przezroczyste.  W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> jest ustawiony na czerwony całkowicie nieprzezroczysty, przy użyciu notacji szesnastkowej.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   Użyj składni tagów właściwości do opisywania <xref:System.Windows.Media.SolidColorBrush>. Ta składnia jest na pełniejsze, ale można określić dodatkowe ustawienia, takie jak przezroczystość pędzla. W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> właściwości dwóch <xref:System.Windows.Controls.Button> elementy są ustawione na czerwono pełni nieprzezroczyste. Kolor pędzla pierwszy opisano przy użyciu nazwy kolor wstępnie zdefiniowane. Kolor pędzla drugi opisano przy użyciu notacji szesnastkowej.  
+-   Składnia znacznika właściwości można użyć do opisania <xref:System.Windows.Media.SolidColorBrush>. Ta składnia jest bardziej szczegółowy, ale można określić dodatkowe ustawienia, takie jak przezroczystość pędzla. W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> właściwości dwóch <xref:System.Windows.Controls.Button> elementy są ustawione na całkowicie nieprzezroczysty czerwony. Kolor pędzla pierwszy opisano przy użyciu nazwy wstępnie zdefiniowany kolor. Kolor pędzla drugi opisano przy użyciu notacji szesnastkowej.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
 <a name="solidcolorsincode"></a>   
-### <a name="painting-with-a-solidcolorbrush-in-code"></a>Malowanie SolidColorBrush w kodzie  
- Do malowania obszar jednolitym kolorem w kodzie, użyj jednej z następujących opcji.  
+### <a name="painting-with-a-solidcolorbrush-in-code"></a>Malowanie przy użyciu SolidColorBrush w kodzie  
+ Aby Maluj obszar jednolitym kolorem w kodzie, użyj jednego z następujących opcji.  
   
--   Użyj jednej z wstępnie zdefiniowanych pędzle pochodzącymi <xref:System.Windows.Media.Brushes> klasy. W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> ma ustawioną wartość <xref:System.Windows.Media.Brushes.Red%2A>.  
+-   Użyj jednej z wstępnie zdefiniowanych pędzle, dostarczone przez <xref:System.Windows.Media.Brushes> klasy. W poniższym przykładzie <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button> ustawiono <xref:System.Windows.Media.Brushes.Red%2A>.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   Utwórz <xref:System.Windows.Media.SolidColorBrush> i ustawić jej <xref:System.Windows.Media.SolidColorBrush.Color%2A> za pomocą właściwości <xref:System.Windows.Media.Color> struktury. Można użyć wstępnie zdefiniowanych koloru z <xref:System.Windows.Media.Colors> klasy albo można utworzyć <xref:System.Windows.Media.Color> przy użyciu statycznych <xref:System.Windows.Media.Color.FromArgb%2A> metody.  
+-   Tworzenie <xref:System.Windows.Media.SolidColorBrush> i ustaw jego <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość za pomocą <xref:System.Windows.Media.Color> struktury. Możesz użyć wstępnie zdefiniowany kolor na podstawie <xref:System.Windows.Media.Colors> klasy albo możesz utworzyć <xref:System.Windows.Media.Color> przy użyciu statycznych <xref:System.Windows.Media.Color.FromArgb%2A> metody.  
   
-     Poniższy przykład przedstawia sposób ustawiania <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość <xref:System.Windows.Media.SolidColorBrush> przy użyciu wstępnie zdefiniowanych koloru.  
+     Poniższy przykład pokazuje, jak ustawić <xref:System.Windows.Media.SolidColorBrush.Color%2A> właściwość <xref:System.Windows.Media.SolidColorBrush> przy użyciu wstępnie zdefiniowany kolor.  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedColor1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedcolor1csharp)]  
   
- Statycznych <xref:System.Windows.Media.Color.FromArgb%2A> umożliwia określenie wartości alfa, kolor czerwony, zielonemu i niebieskiemu. Typowy zakres dla każdej z tych wartości to 0 – 255. Na przykład alfa wartość 0 wskazuje, czy kolor jest całkowicie niewidoczne, gdy wartość 255 oznacza, że kolor jest całkowicie nieprzezroczysta. Podobnie red wartość 0 oznacza, że koloru ma nie czerwony, o podczas wartość 255 oznacza, że koloru ma maksymalną ilość czerwony możliwe.  W poniższym przykładzie opisano kolor pędzla, określając wartości alfa, czerwony, zielony i niebieski.  
+ Statyczne <xref:System.Windows.Media.Color.FromArgb%2A> umożliwia określenie wartości alfa, koloru czerwonego, zielonego i niebieskiego. Typowy zakres dla każdej z tych wartości to 0-255. Na przykład alfa wartość 0 oznacza kolor, który jest całkowicie przezroczysty, gdy wartość 255 wskazuje, że kolor jest całkowicie nieprzezroczysty. Podobnie czerwony wartość 0 wskazuje, że kolor, który ma nie czerwony, o podczas wartość 255 oznacza, że kolor, który ma maksymalną ilość red możliwe.  W poniższym przykładzie opisano kolor pędzla, określając wartości alfa, czerwony, zielony i niebieski.  
   
  [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushfromArgbExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushfromargbexample1csharp)]  
   
- Dodatkowe sposoby określić kolor, zobacz <xref:System.Windows.Media.Color> temat referencyjny.  
+ Aby poznać dodatkowe sposoby określić kolor, zobacz <xref:System.Windows.Media.Color> temat referencyjny.  
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>Malowanie obszaru gradientem  
- Pędzla gradientów do malowania obszar o wiele kolorów, które przejście do siebie, wzdłuż osi. Ich umożliwia utworzenie odcisków jasnym i w tle, podając formantów trójwymiarowy działania. Można także używać ich do symulowania awaryjne, chrome limitu górnego i innych smooth powierzchni.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Istnieją dwa rodzaje pędzle gradientów: <xref:System.Windows.Media.LinearGradientBrush> i <xref:System.Windows.Media.RadialGradientBrush>.  
+ Pędzel gradientów Malowanie obszaru za pomocą wielu kolorów, które mieszają do siebie, wzdłuż osi. Ich umożliwia tworzenie odcisków jasny i w tle, zapewniając kontrolkom trójwymiarowej działania. Umożliwia także je do symulacji szkła, chrome, wody i innych smooth powierzchni.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia dwa typy pędzle gradientów: <xref:System.Windows.Media.LinearGradientBrush> i <xref:System.Windows.Media.RadialGradientBrush>.  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>Gradienty liniowe  
- A <xref:System.Windows.Media.LinearGradientBrush> rysują obszaru gradientem definiowane wiersza, *oś*.  Określ kolorami gradientu i ich lokalizacji wzdłuż osi gradientu, przy użyciu <xref:System.Windows.Media.GradientStop> obiektów.  Może także modyfikować gradientu osi, która umożliwia tworzenie gradientów poziome i pionowe oraz aby odwrócić kierunek gradientu. Oś jest opisany w następnej sekcji. Domyślnie jest tworzony przekątnej gradientu.  
+ A <xref:System.Windows.Media.LinearGradientBrush> Malowanie obszaru gradientem zdefiniowane wzdłuż linii, *oś*.  Należy określić gradient kolorów i ich lokalizacji, wzdłuż osi gradientu, za pomocą <xref:System.Windows.Media.GradientStop> obiektów.  Może także modyfikować gradientu osi, która umożliwia tworzenie gradientów poziome i pionowe oraz Odwróć kierunek gradientu. Gradient osi jest opisane w następnej sekcji. Domyślnie jest tworzony po przekątnej gradientu.  
   
- Poniższy przykład przedstawia kod, który tworzy cztery kolorami gradientu liniowego.  
+ Poniższy przykład pokazuje kod, który tworzy cztery kolory gradientu liniowego.  
   
  [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
   
@@ -77,102 +77,102 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Media.SolidColorBrush
   
  Ten kod tworzy następujące gradientu:  
   
- ![Przekątnej gradientu liniowego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
+ ![Po przekątnej gradientu liniowego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diaglgradient-nolabel.jpg "wcpsdk_graphicsmm_diaglgradient_nolabel")  
   
- **Uwaga:** gradientu przykłady w tym temacie Korzystanie z systemu współrzędnych domyślne ustawienie punkty początkowy i końcowy. System współrzędnych domyślna jest określana względem obwiedni: 0 oznacza 0 procent obwiedni i 1 oznacza 100 procent obwiedni. Ten układ współrzędnych można zmienić, określając <xref:System.Windows.Media.GradientBrush.MappingMode%2A> na wartość <xref:System.Windows.Media.BrushMappingMode.Absolute>. Bezwzględny układ współrzędnych nie jest określana względem obwiedni. Wartości są interpretowane bezpośrednio w lokalnej przestrzeni.  
+ **Uwaga:** Gradientu przykładach w niniejszym temacie na użytek w układzie współrzędnych domyślne ustawienie punktach i punktów końcowych. System współrzędnych domyślne są określane względem obwiedni: 0 wskazuje, że wartość 0 procent obwiedni i 1 wskazuje obwiedni 100 procent. Ten układ współrzędnych można zmienić, określając <xref:System.Windows.Media.GradientBrush.MappingMode%2A> właściwości na wartość <xref:System.Windows.Media.BrushMappingMode.Absolute>. Bezwzględnych współrzędnych jest względem obwiedni. Wartości są interpretowane bezpośrednio w przestrzeni lokalnej.  
   
- <xref:System.Windows.Media.GradientStop> Jest podstawowym blokiem konstrukcyjnym pędzla gradientu.  Określa gradientu <xref:System.Windows.Media.GradientStop.Color%2A> na <xref:System.Windows.Media.GradientStop.Offset%2A> osi gradientu.  
+ <xref:System.Windows.Media.GradientStop> Jest podstawowym budulcem pędzla gradientu.  Określa gradientu <xref:System.Windows.Media.GradientStop.Color%2A> na <xref:System.Windows.Media.GradientStop.Offset%2A> wzdłuż osi gradientu.  
   
--   Ograniczniku gradientu <xref:System.Windows.Media.GradientStop.Color%2A> właściwość określa kolor gradientu. Kolor może ustawić przy użyciu wstępnie zdefiniowanych kolorów (dostarczonych przez <xref:System.Windows.Media.Colors> klasy) albo określając ScRGB lub ARGB wartości. W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], można także użyć szesnastkowym opisujący kolor. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.Color> struktury.  
+-   Zatrzymania gradientu <xref:System.Windows.Media.GradientStop.Color%2A> właściwość określa kolor zatrzymania gradientu. Kolor może ustawić przy użyciu wstępnie zdefiniowany kolor (dostarczonych przez <xref:System.Windows.Media.Colors> klasy) albo określając ScRGB lub ARGB wartości. W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz skorzystać z notacji szesnastkowej opisujący kolor. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.Color> struktury.  
   
--   Ograniczniku gradientu <xref:System.Windows.Media.GradientStop.Offset%2A> właściwość określa położenie kolor gradientu na osi gradientu. Przesunięcie jest <xref:System.Double> który zakresu od 0 do 1. Bliższe ograniczniku gradientu przesunięcia ma wartość 0, bliżej jest kolor początkowy gradientu. Bliższe gradientu przesunięcia ma wartość 1, bliżej jest kolor końcowy gradientu.  
+-   Zatrzymania gradientu <xref:System.Windows.Media.GradientStop.Offset%2A> właściwość określa położenie koloru zatrzymania gradientu na osi gradientu. Przesunięcie jest <xref:System.Double> , zakresu od 0 do 1. Im bliżej zatrzymania gradientu wartość przesunięcia jest 0, im bliżej kolor na początek gradientu. Im bliżej gradientu wartość przesunięcia jest 1, im bliżej jest kolor końcowy gradientu.  
   
- Kolor każdego punktu między gradientu jest liniowo interpolowane jako połączenie kolorów określonego przez dwie ograniczenia gradientu. Poniższa ilustracja wyróżnia gradientu w poprzednim przykładzie. Kółka Oznacz pozycja gradientu i linia przerywana, co przedstawiono gradientu osi.  
+ Kolor każdego punktu między ograniczniki gradientu jest liniowo interpolowane pod postacią połączenia kolor określony przy użyciu dwóch blokujących ograniczniki gradientu. Następująca ilustracja wyróżnia ograniczniki gradientu w poprzednim przykładzie. Okręgów oznaczyć położenie ograniczniki gradientu i linię przerywaną, co pokazuje gradientu osi.  
   
- ![Gradientu liniowego gradientu](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")  
+ ![Ograniczniki gradientu w gradientu liniowego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops.png "wcpsdk_graphicsmm_4gradientstops")  
   
- Pierwszy gradientu kolor żółty przy przesunięciu z `0.0`.  Drugi gradientu Określa kolor czerwony przy przesunięciu z `0.25`.  Punkty między tych dwóch zatrzymuje stopniowo zmienić z żółtym czerwony podczas przenoszenia od lewej do prawej osi gradientu.  Trzeci gradientu kolor niebieski przy przesunięciu z `0.75`.  Punkty między drugiego i trzeciego gradientu stopniowo zmienić kolor czerwony, niebieski. Czwarty gradientu określa wapna kolor zielony przy przesunięciu z `1.0`. Punkty między trzecim i czwartym gradientu stopniowo zmienić niebieski do Limonowy zielony.  
+ Pierwszy gradientu kolor żółty na przesunięcie `0.0`.  Drugi gradientu Określa kolor czerwony na przesunięcie `0.25`.  Punkty między tymi dwoma zatrzymuje stopniowo zmienia się z żółtym na czerwony po przeniesieniu od lewej do prawej osi gradientu.  Trzeci gradientu kolor niebieski na przesunięcie `0.75`.  Punkty między ograniczniki gradientu drugi i trzeci stopniowo zmienić kolor czerwony, niebieski. Czwarty gradientu określa zielono kolor na przesunięcie `1.0`. Punkty między ograniczniki gradientu trzecia i czwarta stopniowo zmienić niebieski do Limonowozielony.  
   
 <a name="gradientaxis"></a>   
 ### <a name="the-gradient-axis"></a>Oś gradientu  
- Jak wcześniej wspomniano pędzla gradientu liniowego gradientu są pozycjonowane wzdłuż linii osi gradientu. Możesz zmienić Orientacja i rozmiar wiersza przy użyciu pędzla <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> właściwości. Przez manipulowanie pędzla <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, można utworzyć poziome i pionowe gradienty odwrócić kierunek gradientu, zmniejszanie gradientu rozpowszechniania i inne.  
+ Jak wspomniano wcześniej ograniczniki gradientu liniowego pędzla gradientów firmy są pozycjonowane wzdłuż linii osi gradientu. Mogą ulec zmianie, orientacji i rozmiaru wiersza przy użyciu pędzli <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> właściwości. Przez operacje pędzla <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, można utworzyć poziome i pionowe gradientów Odwróć kierunek gradientu, zagęszczanie gradientu rozprzestrzeniania się i nie tylko.  
   
- Domyślnie pędzla gradientu liniowego w <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> są względem obszaru są rysowane. Punkt (0,0) reprezentuje lewego górnego rogu obszaru jest malowane i (1,1) reprezentuje prawym dolnym rogu obszaru są rysowane. Wartość domyślna <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> z <xref:System.Windows.Media.LinearGradientBrush> jest (0,0) i jego domyślne <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> jest (1,1), co powoduje przekątnej gradientu, zaczynając od lewego górnego rogu oraz w celu rozszerzenia w prawym dolnym rogu obszaru są rysowane. Na poniższej ilustracji przedstawiono osi gradientu liniowego pędzla gradientu z domyślnymi <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>.  
+ Domyślnie pędzel gradientów liniowych firmy <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> są względne wobec obszaru są rysowane. Punkt (0,0) reprezentuje lewego górnego rogu obszaru jest malowane i (1,1) reprezentuje prawym dolnym rogu obszaru są rysowane. Wartość domyślna <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> z <xref:System.Windows.Media.LinearGradientBrush> jest (0,0) i jego domyślne <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> jest (1,1) tworzy ukośne gradientu, zaczynając od lewego górnego rogu, a rozszerzenie do prawego dolnego rogu obszaru są rysowane. Poniższa ilustracja przedstawia oś gradientu pędzel gradientów liniowych z domyślną <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>.  
   
- ![Oś przekątnej gradientu liniowego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk_graphicsmm_diagonalgradientaxis")  
+ ![Oś ukośne gradientu liniowego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-diagonalgradientaxis.png "wcpsdk_graphicsmm_diagonalgradientaxis")  
   
- W poniższym przykładzie przedstawiono sposób tworzenia poziomym gradientu, określając pędzla <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>. Zwróć uwagę, że gradientu są takie same jak w poprzednich przykładach; po prostu zmieniając <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, na poziomie została zmieniona z przekątnej gradientu.  
+ Poniższy przykład pokazuje, jak utworzyć poziomej gradientu, określając pędzla <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>. Należy zauważyć, że ograniczniki gradientu są takie same jak w poprzednich przykładach; po prostu zmieniając <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> i <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A>, zmieniono gradientu pozycję z przekątnej na poziomie.  
   
  [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
   
- Na poniższej ilustracji przedstawiono gradientu, który jest tworzony. Oś jest oznaczonej jako linia przerywana, a gradientu są oznaczone ikoną koła.  
+ Poniższa ilustracja przedstawia gradientu, który zostanie utworzony. Gradient osi jest oznaczona za pomocą linię przerywaną, co i ograniczniki gradientu są oznaczone za pomocą kółka.  
   
  ![Oś pozioma gradientu liniowego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-horizontalgradient.jpg "wcpsdk_graphicsmm_horizontalgradient")  
   
- Kolejnym przykładzie pokazano, jak utworzyć pionowego.  
+ Następny przykład pokazuje, jak utworzyć gradient pionowy.  
   
  [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
   
- Na poniższej ilustracji przedstawiono gradientu, który jest tworzony. Oś jest oznaczonej jako linia przerywana, a gradientu są oznaczone ikoną koła.  
+ Poniższa ilustracja przedstawia gradientu, który zostanie utworzony. Gradient osi jest oznaczona za pomocą linię przerywaną, co i ograniczniki gradientu są oznaczone za pomocą kółka.  
   
- ![Oś gradientu pionowego](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")  
+ ![Oś pionowa gradientu](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-verticalgradient.jpg "wcpsdk_graphicsmm_verticalgradient")  
   
 <a name="radialgradients"></a>   
-## <a name="radial-gradients"></a>Gradientu promieniowego  
- Podobnie jak <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush> rysują obszar o kolorów, które razem blend wzdłuż osi. W poprzednich przykładach pokazano, jak osi pędzla gradientu liniowego jest prostą. Oś pędzla gradientu promieniowego jest definiowana za pomocą koło; jego kolorów "wysyłać" na zewnątrz ze swoją witryną źródłową.  
+## <a name="radial-gradients"></a>Gradienty promieniowe  
+ Podobnie jak <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush> Malowanie obszaru za pomocą kolorów, które mieszają się wzdłuż osi. W poprzednich przykładach pokazano, jak osi pędzla gradientu liniowego jest prostą. Klasa RadialGradientBrush firmy osi jest definiowany przez circle; jego kolorów "fale" na zewnątrz od ich pochodzenia.  
   
- W poniższym przykładzie pędzla gradientu promieniowego umożliwia malowanie wnętrza prostokąta.  
+ W poniższym przykładzie klasa RadialGradientBrush służy do wnętrza prostokąta.  
   
  [!code-xaml[GradientBrushExamples_snip#RadialGradient1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/RadialGradientBrushExample.xaml#radialgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#RadialGradient1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/RadialGradientBrushExample.cs#radialgradient1csharp)]  
   
- Na poniższej ilustracji przedstawiono utworzone w poprzednim przykładzie gradientu. Ma zostały wyróżnione pędzla gradientu. Należy zauważyć, że mimo że wyniki są różne, gradientu w tym przykładzie są identyczne z gradientu w poprzednich przykładach pędzla gradientu liniowego.  
+ Poniższa ilustracja przedstawia gradientu utworzony w poprzednim przykładzie. Podkreślono pędzla gradientu. Zwróć uwagę, że mimo że wyniki są różne, ograniczniki gradientu w tym przykładzie są identyczne z ograniczniki gradientu w poprzednich przykładach pędzel gradientów liniowych.  
   
- ![Gradientu promieniowego gradientu](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
+ ![Ograniczniki gradientu w gradient promieniowy](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
- <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> Określa punkt początkowy gradientu osi pędzla gradientu promieniowego. Oś wychodzącą z punktu początkowego gradientu do okręgu gradientu. Pędzel okręgu gradientu jest definiowana za pomocą jego <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, i <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> właściwości.  
+ <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A> Określa punkt początkowy gradientu osi pędzla gradientu promieniowego. Oś wychodzącą z punktu początkowego gradientu do okręgu gradientu. Pędzel gradientu okrąg jest definiowany przez jego <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, i <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> właściwości.  
   
- Na poniższej ilustracji przedstawiono kilka gradientu promieniowego z różnymi <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A>, <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, i <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> ustawienia.  
+ Na poniższej ilustracji przedstawiono kilka użyciu gradientów promieniowych z różnymi <xref:System.Windows.Media.RadialGradientBrush.GradientOrigin%2A>, <xref:System.Windows.Media.RadialGradientBrush.Center%2A>, <xref:System.Windows.Media.RadialGradientBrush.RadiusX%2A>, i <xref:System.Windows.Media.RadialGradientBrush.RadiusY%2A> ustawienia.  
   
- ![Ustawienia obiektu RadialGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii")  
-RadialGradientBrushes z różnymi ustawieniami GradientOrigin, Centrum RadiusX i RadiusY.  
+ ![RadialGradientBrush settings](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-originscirclesandradii.gif "wcpsdk_graphicsmm_originscirclesandradii")  
+RadialGradientBrushes z różnymi ustawieniami GradientOrigin, Centrum, RadiusX i RadiusY.  
   
 <a name="specifyinggradientcolors"></a>   
-## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>Określanie przezroczystego lub częściowo przezroczyste gradientu  
- Ponieważ gradientu nie udostępniają właściwości nieprzezroczystość, należy określić kanału alfa kolorów przy użyciu [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] szesnastkowym znaczników lub użyj <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metodę w celu utworzenia gradientu przezroczysty lub częściowo przezroczysty. W poniższych sekcjach opisano sposób tworzenia częściowo przezroczyste gradientu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kod.  
+## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>Określanie obszarów przezroczystych lub częściowo przejrzyste ograniczniki gradientu  
+ Ponieważ ograniczniki gradientu nie zostanie określona przez właściwość nieprzezroczystości, należy określić kanał alfa kolorów za pomocą [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] notacji szesnastkowej znaczników lub użyj <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> metodę w celu utworzenia ograniczniki gradientu, znajdujących się na kilka obszarów przezroczystych lub częściowo przezroczyste. W poniższych sekcjach opisano sposób tworzenia częściowo przejrzyste ograniczniki gradientu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kod.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Określanie Przezroczystość koloru w "XAML"  
- W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz użyć [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] szesnastkowym, aby określić przezroczystość poszczególnych kolorów. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] szesnastkowym używa następującej składni:  
+ W [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], możesz użyć [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji szesnastkowej określić krycie poszczególnych kolorów. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji szesnastkowej używa następującej składni:  
   
- `#` **AA** *rrggbb*  
+ `#` **aa** *rrggbb*  
   
- *Aa* w poprzednim wierszu reprezentuje wartość szesnastkowa dwucyfrowe używany do określenia Przezroczystość koloru. *Rr*, *gg*, i *bb* każdy reprezentuje wartość szesnastkowa dwóch cyfr używana do określania ilości czerwony, zielony i niebieski w kolor. Każdy szesnastkową wartością cyfrową może mieć wartość z zakresu od 0 – 9 lub A-F. najmniejsza wartość to 0, a F jest większa. Wartości alfa 00 Określa kolor, który jest całkowicie niewidoczne, gdy wartość alfa FF tworzy kolor jest całkowicie nieprzezroczyste.  W poniższym przykładzie szesnastkową [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji służy do określania dwóch kolorów. Pierwsza to częściowo przezroczyste (ma wartość alfa x20), podczas gdy druga jest całkowicie nieprzezroczysta.  
+ *Aa* w poprzednim wierszu reprezentuje wartość szesnastkową dwucyfrowy używany do określenia Przezroczystość koloru. *Rr*, *gg*, i *bb* każdy reprezentuje dwucyfrowa wartość szesnastkową, można określić ilość czerwony, zielony i niebieski w kolorze. Każdy cyfra szesnastkowa może mieć wartość z zakresu od 0 – 9 lub A – F. Usługa 0 jest najmniejsza wartość, a F jest większa. Wartości alfa 00 Określa, że kolor, który jest całkowicie przezroczysty, a wartość alfa FF tworzy kolor, który jest całkowicie nieprzezroczyste.  W poniższym przykładzie szesnastkowe [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] notacji służy do określania dwóch kolorów. Pierwszy jest częściowo przezroczyste (ma wartość alfa x20), podczas gdy druga jest całkowicie nieprzezroczysty.  
   
  [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   
 <a name="fromscrgbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-code"></a>Określanie Przezroczystość koloru w kodzie  
- Jeśli przy użyciu kodu, statycznych <xref:System.Windows.Media.Color.FromArgb%2A> metody umożliwia określenie wartości alfa podczas tworzenia koloru. Metoda przyjmuje cztery parametry typu <xref:System.Byte>. Pierwszy parametr określa kanału alfa koloru; trzy parametry Określ czerwony, zielonemu i niebieskiemu wartości koloru. Każdej wartości powinna należeć do zakresu od 0 do 255 włącznie. Wartości alfa 0 określa, czy kolor jest całkowicie niewidoczne, gdy wartość alfa 255 Określa, czy kolor jest całkowicie nieprzezroczysta. W poniższym przykładzie <xref:System.Windows.Media.Color.FromArgb%2A> metoda jest używana do tworzenia dwóch kolorów. Pierwszy kolor jest częściowo przezroczysty (ma wartość alfa 32), a drugą jest całkowicie nieprzezroczyste.  
+ Korzystając z kodu, statycznej <xref:System.Windows.Media.Color.FromArgb%2A> metody umożliwia określenie wartości alfa, po utworzeniu kolor. Ta metoda przyjmuje cztery parametry typu <xref:System.Byte>. Pierwszy parametr określa kanał alfa koloru; trzy parametry Określ czerwonego, zielonego i niebieskiego wartości koloru. Każda wartość powinna wynosić od 0 do 255. Alfa wartość 0 oznacza, że kolor jest całkowicie przezroczysty podczas, gdy wartość alfa 255 Określa, że kolor jest całkowicie nieprzezroczysty. W poniższym przykładzie <xref:System.Windows.Media.Color.FromArgb%2A> metoda jest używana do tworzenia dwóch kolorów. Pierwszy kolor jest częściowo przezroczyste (ma wartość alfa 32), podczas gdy druga jest całkowicie nieprzezroczyste.  
   
  [!code-csharp[GradientBrushExamples_snip#TransparentGradientStopExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/GradientStopsExample.cs#transparentgradientstopexample1csharp)]  
   
- Alternatywnie można użyć <xref:System.Windows.Media.Color.FromScRgb%2A> metodę, która pozwala na użycie wartości ScRGB, aby utworzyć kolor.  
+ Alternatywnie można użyć <xref:System.Windows.Media.Color.FromScRgb%2A> metody, która pozwala na użycie ScRGB wartości, aby utworzyć kolor.  
   
 <a name="otherbrushes"></a>   
-## <a name="painting-with-images-drawings-visuals-and-patterns"></a>Malowanie obrazów, rysunki elementów wizualnych i wzorce  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> klasy umożliwiają malowanie obszar o obrazy, rysunki lub elementów wizualnych. Informacje o malowanie obrazów, rysunki i wzorce, zobacz [malowanie obrazów, rysunki i elementy wizualne](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+## <a name="painting-with-images-drawings-visuals-and-patterns"></a>Malowanie przy użyciu obrazów, rysunki, wizualizacji i wzorce  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> klasy umożliwiają Maluj obszar za pomocą obrazów, rysunki lub wizualizacji. Aby uzyskać informacji na temat malowanie obrazami, rysunki i wzorców, zobacz [malowanie obrazami, rysowaniem i Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.SolidColorBrush>  
- <xref:System.Windows.Media.LinearGradientBrush>  
- <xref:System.Windows.Media.RadialGradientBrush>  
- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Przekształcanie pędzla — przegląd](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Warstwy renderowania grafiki](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.SolidColorBrush>
+- <xref:System.Windows.Media.LinearGradientBrush>
+- <xref:System.Windows.Media.RadialGradientBrush>
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Przekształcanie pędzla — przegląd](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)
+- [Warstwy renderowania grafiki](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)

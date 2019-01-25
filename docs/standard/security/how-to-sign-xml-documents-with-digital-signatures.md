@@ -1,5 +1,5 @@
 ---
-title: 'Porady: podpisywanie dokumentów XML za pomocą podpisów cyfrowych'
+title: 'Instrukcje: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622627"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Porady: podpisywanie dokumentów XML za pomocą podpisów cyfrowych
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Instrukcje: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby podpisać dokument XML lub części dokumentu XML przy użyciu podpisu cyfrowego.  Podpisy cyfrowe XML (XMLDSIG) pozwalają zweryfikować, że dane nie została zmodyfikowana po podpisaniu.  Aby uzyskać więcej informacji na temat standardowych XMLDSIG zobacz zalecenia konsorcjum World Wide Web Consortium (W3C) [składni podpisu XML i przetwarzanie](https://www.w3.org/TR/xmldsig-core/).  
   
  Przykład kodu w tej procedurze pokazano, jak cyfrowe podpisywanie całego dokumentu XML i Dołącz podpis do dokumentu w <`Signature`> element.  Przykład tworzy klucz podpisywania RSA, dodaje klucz do bezpiecznego kontenera kluczy, a następnie używa klucza do cyfrowego podpisywania dokumentu XML.  Klucz można pobrać można zweryfikować podpisu cyfrowego XML lub może być używany do podpisywania innego dokumentu XML.  
   
- Aby dowiedzieć się, jak sprawdzić podpis cyfrowy XML, który został utworzony przy użyciu tej procedury, zobacz [jak: Sprawdź podpisów cyfrowych z dokumentów XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
+ Aby dowiedzieć się, jak sprawdzić podpis cyfrowy XML, który został utworzony przy użyciu tej procedury, zobacz [jak: Sprawdzanie podpisów cyfrowych w dokumentach XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>Aby cyfrowo podpisać dokument XML  
   
@@ -120,5 +120,5 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Instrukcje: sprawdzanie podpisów cyfrowych w dokumentach XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Instrukcje: Sprawdzanie podpisów cyfrowych w dokumentach XML](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)

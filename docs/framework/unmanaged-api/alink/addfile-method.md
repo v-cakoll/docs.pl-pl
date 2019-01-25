@@ -1,5 +1,5 @@
 ---
-title: AddFile metoda1
+title: AddFile, metoda1
 ms.date: 03/30/2017
 api_name:
 - IALink.AddFile
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57a350fadfa77fdad545ca7ccf2f63d28607c2ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84b68638ed0f7a86156cf7e5fcc98d3c02cba18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662611"
 ---
-# <a name="addfile-method1"></a>AddFile metoda1
+# <a name="addfile-method1"></a>AddFile, metoda1
 Dodaje pliki do zestawu. Można również utworzyć niezwiązanego moduły.  
   
 ## <a name="syntax"></a>Składnia  
@@ -41,16 +41,16 @@ HRESULT AddFile(
   
 #### <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Unikatowy identyfikator zestawu zostać rozszerzony.  
+ Unikatowy identyfikator zestawie, który ma zostać rozszerzony.  
   
  `pszFilename`  
- Pełna nazwa pliku do dodania.  
+ W pełni kwalifikowana nazwa pliku ma zostać dodana.  
   
  `dwFlags`  
- COM + FileDef flagi, takich jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przekazywana do [DefineFile — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ COM + FileDef flagi, takich jak `ffContainsNoMetaData` i `ffWriteable`. `dwFlags` jest przekazywany do [definefile — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interfejs służący do emisji metadanych, w razie potrzeby.  
+ [IMetaDataEmit — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interfejs służący do emitowania metadanych, jeśli to konieczne.  
   
  `pFileToken`  
  Wskaźnik do przechowywania Unikatowy identyfikator dodany plik.  
@@ -61,7 +61,7 @@ HRESULT AddFile(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h.  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

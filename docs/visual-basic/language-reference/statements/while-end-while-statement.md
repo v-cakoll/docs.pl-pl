@@ -9,12 +9,12 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 9f46a6ec65faef4448bdd25e30a6cc0c605cd0f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72263ddb7930373ab2a4843ea08974cb08d1b42f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617334"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While — Instrukcja (Visual Basic)
 Uruchamia serię instrukcji tak długo, jak jest dany warunek `True`.  
@@ -35,57 +35,57 @@ End While
   
 |Termin|Definicja|  
 |---|---|  
-|`condition`|Wymagana. `Boolean` Wyrażenie. Jeśli `condition` jest `Nothing`, Visual Basic traktuje ją jako `False`.|  
-|`statements`|Opcjonalna. Jeden lub więcej następujących instrukcji `While`, uruchamiania zawsze `condition` jest `True`.|  
+|`condition`|Wymagana. `Boolean` wyrażenie. Jeśli `condition` jest `Nothing`, Visual Basic traktuje je jako `False`.|  
+|`statements`|Opcjonalna. Jeden lub więcej następujących instrukcji `While`, uruchamiania każdym `condition` jest `True`.|  
 |`Continue While`|Opcjonalna. Przekazuje sterowanie do następnej iteracji `While` bloku.|  
 |`Exit While`|Opcjonalna. Przekazuje sterowanie poza `While` bloku.|  
 |`End While`|Wymagana. Kończy definicję `While` bloku.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `While...End While` struktury, gdy ma zostać powtórzony zestaw instrukcji o nieograniczonej liczby godzin, warunek nie zostanie `True`. Jeśli chcesz bardziej elastyczne, z którym testować warunek lub to, co powoduje, należy przetestować go dla łączyli [czy... Pętla instrukcji](../../../visual-basic/language-reference/statements/do-loop-statement.md). Jeśli chcesz powtarzać instrukcje jest określona liczba razy, [dla... Następna instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md) jest zwykle lepszym rozwiązaniem.  
+ Użyj `While...End While` struktury, gdy chcesz powtórzyć zbiór instrukcji na nieokreśloną liczbę razy, tak długo, jak długo pozostaje warunek `True`. Jeśli chcesz, większą elastyczność, gdy test warunku lub co powoduje, możesz ją przetestować, aby możesz preferować [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md). Jeśli chcesz powtórzyć oświadczeń określona liczba razy, [dla... Następna instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md) zazwyczaj jest lepszym rozwiązaniem.  
   
 > [!NOTE]
->  `While` — Słowo kluczowe jest również używana w [czy... Pętla instrukcji](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Skip While — klauzula](../../../visual-basic/language-reference/queries/skip-while-clause.md) i [Take While — klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md).  
+>  `While` — Słowo kluczowe jest również używany w [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Skip While — klauzula](../../../visual-basic/language-reference/queries/skip-while-clause.md) i [Take While — klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md).  
   
- Jeśli `condition` jest `True`, wszystkie z `statements` do wykonywania `End While` napotkano instrukcji. Zwraca do kontrolowania `While` instrukcji i `condition` ponownie jest zaznaczony. Jeśli `condition` jest nadal `True`, proces jest powtarzany. Jeśli ma ona `False`, kontrola przechodzi do instrukcji następującej `End While` instrukcji.  
+ Jeśli `condition` jest `True`, wszystkie z `statements` wykonywania do momentu `End While` napotkania instrukcji. Następnie zwraca do kontrolowania `While` instrukcji i `condition` zaznaczono opcję ponownie. Jeśli `condition` jest nadal `True`, proces jest powtarzany. Jeśli ma on `False`, kontrola przechodzi do instrukcji następującej `End While` instrukcji.  
   
- `While` Przed uruchomieniem jej pętli instrukcji zawsze sprawdza warunek. Zapętlenie będzie nadal występować, gdy warunek jest `True`. Jeśli `condition` jest `False` podczas wpisywania pętli nie Uruchom jeszcze raz.  
+ `While` Instrukcja zawsze sprawdza warunek, zanim zacznie pętli. Tworzenie pętli będzie się powtarzać, gdy warunek jest `True`. Jeśli `condition` jest `False` podczas wpisywania pętli nie działa ona jeszcze raz.  
   
- `condition` Zazwyczaj wyniki porównania dwóch wartości, ale może być dowolne wyrażenie obliczane do [— typ danych logicznych](../../../visual-basic/language-reference/data-types/boolean-data-type.md) wartość (`True` lub `False`). Wyrażenie nie może zawierać wartości inny typ danych, takich jak typu liczbowego, który został przekonwertowany na `Boolean`.  
+ `condition` Zazwyczaj wynikiem porównania dwóch wartości, ale może być dowolne wyrażenie, które daje w wyniku [typ danych Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) wartość (`True` lub `False`). To wyrażenie może zawierać wartości innego typu danych, takich jak typ liczbowy, który został przekonwertowany na `Boolean`.  
   
- Można zagnieżdżać `While` pętle, umieszczając pętli w innym. Można zagnieżdżać w różnych rodzajów struktury sterujące wewnątrz innych. Aby uzyskać więcej informacji, zobacz [zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ Można zagnieżdżać `While` pętli przez umieszczenie pętli w innym. Można także zagnieżdżać różne rodzaje struktur sterujących w ramach siebie nawzajem. Aby uzyskać więcej informacji, zobacz [zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Zakończ podczas  
- [Wyjść, gdy](../../../visual-basic/language-reference/statements/exit-statement.md) instrukcji można podać inny sposób, aby zakończyć `While` pętli. `Exit While` natychmiast przenosi kontroli do instrukcji następującej `End While` instrukcji.  
+ [Wyjść, gdy](../../../visual-basic/language-reference/statements/exit-statement.md) instrukcji może zapewnić innym sposobem, aby zakończyć działanie `While` pętli. `Exit While` natychmiast przekazuje sterowanie do instrukcji następującej `End While` instrukcji.  
   
- Zazwyczaj używają `Exit While` po spełnienia określonego warunku jest obliczane (na przykład w `If...Then...Else` struktury). Możesz zamknąć pętlę Jeśli wykryć warunek, który ułatwia niepotrzebnych lub nie można kontynuować iteracja, takich jak Błędna wartość lub zakończenia żądania. Można użyć `Exit While` podczas testowania dla warunku, który może powodować *nieskończonej pętli*, która jest pętli, które można uruchomić bardzo duże lub nawet nieskończoną liczbę razy. Następnie można użyć `Exit While` wyjścia z pętli.  
+ Zazwyczaj używa się `Exit While` po ocenieniu jakiś warunek (na przykład w `If...Then...Else` struktury). Można zamknąć pętli, jeśli wykryje warunek, który sprawia, że niepotrzebnych lub niemożliwe kontynuować, iteracja, np. Błędna wartość lub żądanie zakończenia działania. Możesz użyć `Exit While` podczas testowania dla warunku, który może powodować *nieskończoną pętlę*, czyli pętlę, która może działać bardzo duże lub nawet nieskończona liczba prób. Następnie można użyć `Exit While` jako znak ucieczki dla pętli.  
   
- Może zawierać dowolną liczbę `Exit While` instrukcje w `While` pętli.  
+ Można umieścić dowolną liczbę `Exit While` instrukcji w `While` pętli.  
   
- Gdy jest używany w zagnieżdżonych `While` pętle, `Exit While` przekazuje sterowanie poza najbardziej pętli i do następnego wyższy poziom zagnieżdżenia.  
+ Gdy jest używana w ramach zagnieżdżonych `While` pętli, `Exit While` przenosi sterowanie na dostęp do najaktualniejszych najbardziej wewnętrznej i do następnego wyższy poziom zagnieżdżenia.  
   
- `Continue While` Instrukcji natychmiast przekazuje sterowanie do następnej iteracji pętli. Aby uzyskać więcej informacji, zobacz [kontynuować instrukcji](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ `Continue While` Instrukcji natychmiast przekazuje sterowanie do następnej iteracji pętli. Aby uzyskać więcej informacji, zobacz [nadal instrukcji](../../../visual-basic/language-reference/statements/continue-statement.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie instrukcje w pętli kontynuować do momentu zakończenia `index` zmiennej jest większa niż 10.  
+ W poniższym przykładzie instrukcje w pętli nadal działać do momentu `index` zmiennej jest większa niż 10.  
   
  [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie `Continue While` i `Exit While` instrukcje.  
+ Poniższy przykład ilustruje użycie `Continue While` i `Exit While` instrukcji.  
   
  [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład odczytuje wszystkie wiersze w pliku tekstowym. <xref:System.IO.File.OpenText%2A> Metoda otwiera plik i zwraca <xref:System.IO.StreamReader> które odczytuje znaki. W `While` warunku, <xref:System.IO.StreamReader.Peek%2A> metoda `StreamReader` Określa, czy plik zawiera dodatkowe znaki.  
+ Poniższy przykład odczytuje wszystkie wiersze w pliku tekstowym. <xref:System.IO.File.OpenText%2A> Metoda otwiera plik i zwraca <xref:System.IO.StreamReader> , odczytuje znaki. W `While` warunku <xref:System.IO.StreamReader.Peek%2A> metody `StreamReader` Określa, czy plik zawiera dodatkowe znaki.  
   
  [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Struktury pętli](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Do...Loop, instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Boolean, typ danych](../../../visual-basic/language-reference/data-types/boolean-data-type.md)  
- [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Continue, instrukcja](../../../visual-basic/language-reference/statements/continue-statement.md)
+## <a name="see-also"></a>Zobacz także
+- [Struktury pętli](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Do...Loop, instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Boolean, typ danych](../../../visual-basic/language-reference/data-types/boolean-data-type.md)
+- [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)
+- [Continue, instrukcja](../../../visual-basic/language-reference/statements/continue-statement.md)

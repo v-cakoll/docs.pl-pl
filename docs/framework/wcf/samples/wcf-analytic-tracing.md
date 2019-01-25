@@ -2,12 +2,12 @@
 title: Śledzenie danych analitycznych programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748145"
 ---
 # <a name="wcf-analytic-tracing"></a>Śledzenie danych analitycznych programu WCF
 W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia w strumieniu analityczne śladów, które zapisuje ETW w Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Śledzenie analityczne są przeznaczone do ułatwiają Uzyskaj wgląd w swoje usługi bez konieczności płacenia spadek wysokiej wydajności. Ten przykład ilustruje sposób używania <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsy API w celu zapisu zdarzenia, które integrują się z usługi WCF.  
@@ -24,11 +24,11 @@ W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia
   
 -   Jeśli aplikacja nie znajduje się w katalogu głównym.  
   
-     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<Nazwa_usługi >  
+     \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
 -   Jeśli aplikacja znajduje się w katalogu głównym.  
   
-     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<Nazwa_usługi >  
+     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
  Samodzielnie hostowany usług ślady analitycznych programu WCF na nie wypełnić pole "HostReference". `WCFUserEventProvider` Klasy, w tym przykładzie działa spójne, gdy jest używane przez usługę samodzielnie hostowanej.  
   
@@ -117,5 +117,5 @@ W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>Zobacz też  
- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Zobacz także
+- [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

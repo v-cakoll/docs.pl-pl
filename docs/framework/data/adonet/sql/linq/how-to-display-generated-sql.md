@@ -1,24 +1,24 @@
 ---
-title: 'Porady: wyświetlanie wygenerowany SQL'
+title: 'Instrukcje: Wyświetlanie wygenerowanego kodu SQL'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: edc0f8fea2768391a47e12940cbe083e41852f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c293757b642f0a945097c4ea4299d97cadddbcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361711"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725691"
 ---
-# <a name="how-to-display-generated-sql"></a>Porady: wyświetlanie wygenerowany SQL
-Możesz wyświetlić kod SQL wygenerowana dla zapytań i zmień przetwarzanie przy użyciu <xref:System.Data.Linq.DataContext.Log%2A> właściwości. Ta metoda może być przydatna do zrozumienia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funkcjonalność i debugowanie określonych problemów.  
+# <a name="how-to-display-generated-sql"></a>Instrukcje: Wyświetlanie wygenerowanego kodu SQL
+Można wyświetlić kodu SQL, generowany dla zapytań i przetwarzania przy użyciu zmiany <xref:System.Data.Linq.DataContext.Log%2A> właściwości. Takie podejście może być przydatne do zrozumienia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funkcjonalność i debugowania konkretnych problemów.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto <xref:System.Data.Linq.DataContext.Log%2A> właściwość, aby wyświetlić kod SQL w oknie konsoli, przed wykonaniem kodu.  Możesz używać tej właściwości zapytania, insert, update i usunąć poleceń.  
+ W poniższym przykładzie użyto <xref:System.Data.Linq.DataContext.Log%2A> właściwość, aby wyświetlić kod SQL w oknie konsoli, zanim kod zostanie wykonany.  Można używać tej właściwości przy użyciu zapytań, wstawiania, aktualizacji i usuwania poleceń.  
   
- Wiersze z okna konsoli są, zobacz podczas wykonywania kodu języka Visual Basic lub C#, znajdujący się.  
+ Wiersze z okna konsoli są, zobacz podczas wykonywania Visual Basic lub C# kod następujący po ciągu.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -42,5 +42,5 @@ SEVES
  [!code-csharp[DLinqDebuggingSupport#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#1)]
  [!code-vb[DLinqDebuggingSupport#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>Zobacz także
+- [Obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

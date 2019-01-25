@@ -4,54 +4,54 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710233"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami modelu COM
-Windows Communication Foundation (WCF) zapewnia dewelopera kodu zarządzanego przy użyciu bogate środowisko tworzenia połączonych aplikacji. Jednak jeśli masz znaczących inwestycji w niezarządzanym kodzie oparte na modelu COM i nie chcesz migrować, można nadal zintegrować usług sieci Web WCF bezpośrednio z istniejącego kodu za pomocą moniker usługi WCF. Krótka nazwa usługi może służyć w środowiskach programistycznych szeroki zakres modelu COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  
+Windows Communication Foundation (WCF) zapewnia dewelopera kodu zarządzanego przy użyciu bogate środowisko tworzenia połączonych aplikacji. Jednak jeśli masz znaczne inwestycje w niezarządzanym kodzie opartym na modelu COM i nie chcesz migrować, można nadal zintegrować usług sieci Web WCF bezpośrednio do istniejącego kodu przy użyciu monikera programu WCF. Moniker usługi może służyć w środowiskach programistycznych szeroki zakres COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  
   
 > [!NOTE]
->  Moniker usługi używa kanał komunikacyjny WCF dla całej komunikacji. Bezpieczeństwo i tożsamość mechanizmów dla tego kanału różnią się od używanych w standardowe COM i DCOM serwera proxy. Ponadto ponieważ moniker usługi używa kanał komunikacyjny WCF domyślny limit czasu jest jedną minutę na wszystkich wywołań.  
+>  Moniker usługi używa kanał komunikacyjny WCF dla całej komunikacji. Mechanizmy zabezpieczeń i tożsamości dla tego kanału różnią się od tych używanych w standardowych serwerów proxy modelu COM i DCOM. Ponadto ponieważ monikera programu używa kanał komunikacyjny WCF domyślny limit czasu jest jedną minutę na wszystkich wywołań.  
   
- Moniker usługi jest używany z `GetObject` funkcji niezarządzanej developer podejścia jednoznacznie, specyficzne dla modelu COM przy wywoływania usługi sieci Web WCF. Wymaga lokalnego, widoczny dla modelu COM definicja kontraktu usługi WCF w sieci Web i powiązania, który ma być używany. Podobnie jak innymi klientami WCF moniker usługi należy tworzyć typu kanału do usługi, chociaż tej konstrukcji kanału wykonywane w sposób przezroczysty dla programisty modelu COM przy pierwszym wywołaniu metody.  
+ Moniker usługi jest używana z `GetObject` funkcji niezarządzanych deweloperów dzięki podejściu silnie typizowane, specyficzne dla modelu COM do wywoływania usług sieci Web WCF. Wymaga to lokalne, widoczne dla modelu COM definicję kontraktu usługi WCF w sieci Web i powiązania, który ma być używany. Podobnie jak inni klienci WCF monikera programu należy tworzyć wpisane kanału do usługi, chociaż tej konstrukcji kanału wykonywane w sposób przezroczysty do programisty należy COM przy pierwszym wywołaniu metody.  
   
- Wspólne innych klienci WCF, korzystając z monikerem aplikacje Określ address, binding i contract do komunikowania się z usługą. Kontrakt można określić w jednym z następujących sposobów:  
+ Wspólnych innych WCF klientów, gdy używanie monikera programu aplikacje, określ adres, powiązania i umowy do komunikowania się z usługą. Kontrakt można określić w jednym z następujących sposobów:  
   
--   Typu kontraktu — jest zarejestrowany jako typ widoczne COM na komputerze klienckim.  
+-   Wpisane kontraktu — jest zarejestrowany jako typ widoczne COM na komputerze klienckim.  
   
--   Kontrakt WSDL — Umowa jest dostarczany w formie dokument WSDL.  
+-   WSDL kontraktu — jest dostarczany w formie dokumentu WSDL.  
   
 -   MEX kontraktu — są pobierane w czasie wykonywania z punktu końcowego metadanych programu Exchange (MEX).  
   
-## <a name="parameters-supported-by-the-service-moniker"></a>Parametry obsługiwane przez Moniker usługi  
- W poniższej tabeli przedstawiono parametry, które są obsługiwane przez moniker usługi.  
+## <a name="parameters-supported-by-the-service-moniker"></a>Parametrów obsługiwanych przez monikera usługi  
+ W poniższej tabeli przedstawiono parametry, które są obsługiwane przez monikera programu.  
   
 |Parametr|Opis|  
 |---------------|-----------------|  
-|`address`|Adres URL lokalizacji usługi.|  
-|`binding`|Nazwa sekcji powiązania z konfiguracji aplikacji.|  
-|`bindingConfiguration`|Nazwane wystąpienie obiektu binding z wewnątrz sekcji powiązania o nazwie.|  
-|`contract`|Identyfikator interfejsu (IID) reprezentujący kontrakt usługi lub Nazwa kontraktu (od MEX).|  
-|`wsdl`|Dokument WSDL, który zapewnia alternatywny definicję kontraktu.|  
-|`spnIdentity`|Tożsamość główna nazwa (usługi SPN) serwera używanego do komunikacji z usługą.|  
-|`upnIdentity`|Tożsamość główna nazwa (UPN) użytkownika ma być używany do komunikacji z usługą.|  
-|`dnsIdentity`|Tożsamość DNS ma być używany do komunikacji z usługą.|  
-|`mexAddress`|Adres URL lokalizacji punktu końcowego usługi wymiany metadanych (MEX).|  
-|`mexBinding`|Nazwa sekcji powiązania z konfigurację aplikacji, aby połączyć się z punktem końcowym MEX.|  
-|`mexBindingConfiguration`|Nazwane wystąpienie obiektu binding z wewnątrz sekcji powiązania o nazwie nawiązywania połączenia z punktem końcowym MEX.|  
-|`bindingNamespace`|Namespace nazwy sekcji powiązania z pobrane MEX.|  
+|`address`|Lokalizacja adresu URL usługi.|  
+|`binding`|Nazwa sekcji do powiązania z konfiguracji aplikacji.|  
+|`bindingConfiguration`|Nazwane wystąpienie obiektu binding z wewnątrz sekcji o nazwie powiązania.|  
+|`contract`|Identyfikator interfejsu (IID) reprezentujący kontraktu usługi lub Nazwa kontraktu (z MEX).|  
+|`wsdl`|Dokument WSDL, który dostarcza alternatywnej formy definicję kontraktu.|  
+|`spnIdentity`|Tożsamość główna nazwa (usługi SPN) serwera ma być używany do komunikacji z usługą.|  
+|`upnIdentity`|Tożsamość głównej nazwy (UPN) użytkownika, które ma być używany do komunikacji z usługą.|  
+|`dnsIdentity`|Tożsamość DNS, który ma być używany do komunikacji z usługą.|  
+|`mexAddress`|Lokalizacja adresu URL punktu końcowego metadanych programu Exchange (MEX) usługi.|  
+|`mexBinding`|Powiązania nazwy sekcji z konfiguracji aplikacji, aby połączyć się z punktem końcowym MEX.|  
+|`mexBindingConfiguration`|Nazwane wystąpienie obiektu binding z w ramach sekcji powiązania o nazwie, aby połączyć się z punktem końcowym MEX.|  
+|`bindingNamespace`|Namespace nazwa sekcji powiązania z pobrane MEX.|  
 |`contractNamespace`|Namespace umowy z pobrane MEX.|  
-|`mexSpnIdentity`|Tożsamość główna nazwa (usługi SPN) serwera, które ma być używany do komunikacji z punktem końcowym MEX.|  
-|`mexUpnIdentity`|Tożsamość główna nazwa (UPN) użytkownika ma być używany do komunikacji z punktem końcowym MEX.|  
-|`mexDnsIdentity`|Tożsamość DNS ma być używany do komunikacji z punktem końcowym MEX.|  
-|`serializer`|Określ użycie serializatora "xml" lub "datacontract".|  
+|`mexSpnIdentity`|Tożsamość główna nazwa (usługi SPN) serwera ma być używany do komunikowania się z punktem końcowym MEX.|  
+|`mexUpnIdentity`|Tożsamość głównej nazwy (UPN) użytkownika, które ma być używany do komunikowania się z punktem końcowym MEX.|  
+|`mexDnsIdentity`|Tożsamość DNS, który ma być używany do komunikowania się z punktem końcowym MEX.|  
+|`serializer`|Określ korzystanie z serializatora "xml" lub "schematu datacontract".|  
   
 > [!NOTE]
->  Nawet wtedy, gdy jest używany z klientami całkowicie oparty na modelu COM, moniker usługi wymaga WCF i obsługi .NET Framework 2.0, można zainstalować na komputerze klienckim. Jest również krytycznych, że aplikacje klienckie, które używają moniker usługi załadować odpowiednią wersję środowiska uruchomieniowego .NET Framework. Używając krótkiej nazwy w aplikacjach pakietu Office, aby upewnić się, że jest załadowany poprawne framework w wersji może wymagać pliku konfiguracji. Na przykład przy użyciu programu Excel, następujący tekst należy umieścić w pliku o nazwie Excel.exe.config w tym samym katalogu co plik Excel.exe:  
+>  Nawet wtedy, gdy jest używany z klientami w całości opartą na modelu COM, monikera programu wymaga usług WCF i pomocnicze systemu .NET Framework 2.0, należy zainstalować na komputerze klienckim. Jest również krytycznych, że aplikacje klienckie, które używają monikera programu ładować odpowiednią wersję środowiska uruchomieniowego .NET Framework. Korzystając z monikerem w aplikacjach pakietu Office, plik konfiguracji może być wymagane, aby zapewnić, że jest załadowany poprawną wersję. Na przykład za pomocą programu Excel, następujący tekst będzie umieszczona w pliku o nazwie Excel.exe.config w tym samym katalogu co plik Excel.exe:  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   
@@ -65,5 +65,5 @@ Windows Communication Foundation (WCF) zapewnia dewelopera kodu zarządzanego pr
 >   
 >  `</configuration>`  
   
-## <a name="see-also"></a>Zobacz też  
- [Instrukcje: rejestrowanie i konfigurowanie monikera usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>Zobacz także
+- [Instrukcje: Rejestrowanie i konfigurowanie monikera usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

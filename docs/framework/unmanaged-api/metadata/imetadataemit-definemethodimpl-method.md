@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2ab66fecfaa66b5c56690950f6b19ecfd7e85e33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a60d3bfc734480733f621c71a0141bb58a0eb71e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745319"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl — Metoda
-Tworzy definicję dla implementacji metody dziedziczone z interfejsem i zwraca token do tej definicji implementacji metody.  
+Tworzy definicję dla implementacji metody dziedziczone z interfejsu, a następnie zwraca token do tej definicji implementacji metody.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,23 +39,23 @@ HRESULT DefineMethodImpl (
   
 #### <a name="parameters"></a>Parametry  
  `td`  
- [in] `mdTypedef` Token klasy implementującej.  
+ [in] `mdTypedef` Tokenu dla klasy implementującej.  
   
  `tkBody`  
- [in] `mdMethodDef` Lub `mdMethodRef` token treści kodu.  
+ [in] `mdMethodDef` Lub `mdMethodRef` tokenu treści kodu.  
   
  `tkDecl`  
- [in] `mdMethodDef` Lub `mdMethodRef` token metody interfejsu implementowana.  
+ [in] `mdMethodDef` Lub `mdMethodRef` token metody interfejsu implementowanego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

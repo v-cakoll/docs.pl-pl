@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597635"
 ---
 # <a name="adonet-code-examples"></a>Przykłady kodu ADO.NET
 Zamieszczone w tym temacie pokazują, jak pobierać dane z bazy danych przy użyciu następujących technologii ADO.NET:
@@ -21,9 +21,9 @@ Zamieszczone w tym temacie pokazują, jak pobierać dane z bazy danych przy uży
 
   - [OleDb](#oledb) (`System.Data.OleDb`)
 
-  - [ODBC](#odbc) (`System.Data.Odbc`)
+  - [Odbc](#odbc) (`System.Data.Odbc`)
 
-  - [Programu OracleClient](#oracleclient) (`System.Data.OracleClient`)
+  - [OracleClient](#oracleclient) (`System.Data.OracleClient`)
 
 - ADO.NET Entity Framework:
 
@@ -44,7 +44,7 @@ W kodzie, w tym przykładzie założono, że można nawiązać `Northwind` przyk
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
 
-### <a name="oledb"></a>OLE DB
+### <a name="oledb"></a>OleDb
 Kod w tym przykładzie przyjęto założenie, że można połączyć się z przykładową bazą danych Northwind dostępu firmy Microsoft. Ten kod tworzy <xref:System.Data.OleDb.OleDbCommand> celu wybrania wierszy z tabeli Produkty Dodawanie <xref:System.Data.OleDb.OleDbParameter> związane z ograniczaniem wyników do wierszy za pomocą UnitPrice większa niż określona wartość parametru, w tym przypadku 5. <xref:System.Data.OleDb.OleDbConnection> Jest otwarty w `using` bloku, który gwarantuje, że zasoby są zamknięte i usuwane, gdy kończy działanie kodu. Kod wykonuje polecenie przy użyciu <xref:System.Data.OleDb.OleDbDataReader>i wyświetla wyniki w oknie konsoli.
 
  [!code-csharp[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/CS/source.cs#1)]
@@ -344,9 +344,9 @@ End Class
 ```
 
 ## <a name="see-also"></a>Zobacz także
- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Tworzenie aplikacji do danych](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [Wykonywanie zapytań z modelem EDM (Entity Framework zadania)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Jak: Wykonywanie zapytania, które zwraca obiekty typu anonimowego](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)  
+- [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Tworzenie aplikacji do danych](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
+- [Wykonywanie zapytań z modelem EDM (Entity Framework zadania)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
+- [Instrukcje: Wykonywanie zapytania, które zwraca obiekty typu anonimowego](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

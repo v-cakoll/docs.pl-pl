@@ -2,12 +2,12 @@
 title: Kolekcje (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 734eeba001c243fa3466ac608feb766d6d94c394
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698768"
 ---
 # <a name="collections-visual-basic"></a>Kolekcje (Visual Basic)
 W przypadku wielu aplikacji, dla których chcesz utworzyć grupy i zarządzać nimi powiązanych obiektów. Istnieją dwa sposoby grupowania obiektów: poprzez tworzenie tablic obiektów oraz poprzez tworzenie kolekcji obiektów.  
@@ -31,9 +31,9 @@ W przypadku wielu aplikacji, dla których chcesz utworzyć grupy i zarządzać n
   
     -   [System.Collections.Generic Classes](#BKMK_Generic)  
   
-    -   [Klasy System.Collections.Concurrent](#BKMK_Concurrent)  
+    -   [System.Collections.Concurrent Classes](#BKMK_Concurrent)  
   
-    -   [Klasy System.Collections](#BKMK_Collections)  
+    -   [System.Collections Classes](#BKMK_Collections)  
   
     -   [Klasa kolekcji Visual Basic](#BKMK_VisualBasic)  
   
@@ -210,7 +210,7 @@ End Class
  Niektóre klasy uwzględnione w <xref:System.Collections.Concurrent> nazw są <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, i <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
-### <a name="systemcollections-classes"></a>Klasy System.Collections    
+### <a name="systemcollections-classes"></a>System.Collections Classes    
  Klasy w <xref:System.Collections?displayProperty=nameWithType> przestrzeni nazw nie przechowują elementów jako specjalnie typowanych obiektów, ale jako obiekty typu `Object`.  
   
  Jeśli to możliwe, należy używać ogólnych kolekcji w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw lub <xref:System.Collections.Concurrent> przestrzeni nazw, zamiast typów odziedziczonych w `System.Collections` przestrzeni nazw.  
@@ -572,13 +572,13 @@ End Function
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
-- [Koncepcje programowania (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
-- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
-- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
-- [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
-- [Kolekcje i struktury danych](../../../standard/collections/index.md)  
-- [Tworzenie kolekcji i manipulowanie nimi](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
-- [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)  
-- [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
+- [Koncepcje programowania (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Kolekcje i struktury danych](../../../standard/collections/index.md)
+- [Tworzenie kolekcji i manipulowanie nimi](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
+- [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)
+- [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)

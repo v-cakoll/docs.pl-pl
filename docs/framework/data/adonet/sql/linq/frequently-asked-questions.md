@@ -5,63 +5,63 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 5f556c46823bd867709e8c53b59f7ac53201d242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365491"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679764"
 ---
 # <a name="frequently-asked-questions"></a>Często zadawane pytania
-Niektóre typowe problemy, które można napotkać podczas implementowania odpowiedzi na następujące sekcje [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+Poniższe sekcje odpowiedzi na niektóre typowe problemy, które można napotkać podczas implementowania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
  Dodatkowe problemy zostały rozwiązane w [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
-## <a name="cannot-connect"></a>Nie można połączyć z  
- Q. Nie można podłączyć do bazy danych.  
+## <a name="cannot-connect"></a>Nie można nawiązać połączenia  
+ PYTANIE: Nie można nawiązać połączenia bazy danych.  
   
- A. Upewnij się, parametry połączenia są poprawne i czy działa wystąpienia programu SQL Server. Należy zauważyć, że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wymaga włączenia protokołu potoków nazwanych. Aby uzyskać więcej informacji, zobacz [uczenia przez wskazówki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ A. Upewnij się, że parametry połączenia są poprawne, a wystąpienia programu SQL Server jest uruchomiona. Należy zauważyć, że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wymaga włączenia protokołu potoków nazwanych. Aby uzyskać więcej informacji, zobacz [nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
-## <a name="changes-to-database-lost"></a>Zmiany utracone w bazie danych  
- Q. Zmiany wprowadzone w danych w bazie danych, ale podczas I ponownie uruchomił aplikację, zmiany nie był już istnieje.  
+## <a name="changes-to-database-lost"></a>Zmiany do bazy danych, utracone  
+ PYTANIE: Zmiana dokonana w bazie danych, ale gdy I ponownie uruchomił aplikację, zmiany nie był już istnieje.  
   
- A. Upewnij się, że należy wywołać <xref:System.Data.Linq.DataContext.SubmitChanges%2A> być zapisane wyniki w bazie danych.  
+ A. Upewnij się, że wywołanie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> Aby zapisać wyniki w bazie danych.  
   
-## <a name="database-connection-open-how-long"></a>Połączenie z bazą danych: Otwórz czas?  
- Q. Jak długo połączenia z bazą danych pozostają otwarte?  
+## <a name="database-connection-open-how-long"></a>Połączenie z bazą danych: Jak długo otworzyć?  
+ PYTANIE: Jak długo połączenia z bazą danych pozostają otwarte?  
   
- A. Połączenie zazwyczaj pozostaje otwarty do momentu korzystać wyników zapytania. Jeśli chcesz wziąć czasu nie przetworzył wszystkich wyników i czy nie do wyników buforowania, zastosuj <xref:System.Linq.Enumerable.ToList%2A> do zapytania. W typowych scenariuszy, w których każdy obiekt jest przetwarzany tylko jeden raz, przesyłania strumieniowego model jest nadrzędny w obu `DataReader` i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+ A. Połączenie zazwyczaj pozostaje otwarty do momentu używać wyników zapytania. Jeśli spodziewasz się trwać do przetwarzania wyników i czy nie w przeciwieństwie do buforowania wyniki, zastosuj <xref:System.Linq.Enumerable.ToList%2A> do zapytania. W typowych scenariuszach, w których każdy obiekt jest przetwarzany tylko raz, model przesyłania strumieniowego jest najlepsza w obu `DataReader` i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- Dokładne szczegóły dotyczące użycia połączenia są zależne od następujących czynności:  
+ Szczegółowymi informacjami na temat użycia połączenia są zależne od następujących czynników:  
   
--   Stan połączenia Jeśli <xref:System.Data.Linq.DataContext> jest tworzony za pomocą obiektu połączenia.  
+-   Stan połączenia Jeśli <xref:System.Data.Linq.DataContext> jest zbudowany z obiektu połączenia.  
   
--   Ustawień parametrów połączenia (na przykład dzięki wielu aktywnych zestawów wyników (MARS). Aby uzyskać więcej informacji, zobacz [wielu aktywnych zestawów wyników (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+-   Ustawienia parametrów połączenia (na przykład, dzięki czemu wielu aktywnych zestawów wyników (MARS). Aby uzyskać więcej informacji, zobacz [wielu aktywnych zestawów wyników (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
-## <a name="updating-without-querying"></a>Aktualizowanie bez wykonywania zapytania  
- Q. Bez pierwszej kwerendy bazy danych można zaktualizować tabeli danych?  
+## <a name="updating-without-querying"></a>Aktualizowanie bez wykonywania zapytań  
+ PYTANIE: Czy mogę zaktualizować dane w tabeli bez zapytanie do bazy danych?  
   
- A. Mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie ma aktualizacji na podstawie zestawu poleceń, można użyć jednej z następujących metod można zaktualizować bez pierwszej kwerendy:  
+ A. Mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie ma aktualizacji na podstawie zestawu poleceń, używasz jednej z następujących metod można zaktualizować bez pierwszego zapytania:  
   
 -   Użyj <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> wysłać kod SQL.  
   
--   Utwórz nowe wystąpienie obiektu i zainicjuj wszystkie bieżące wartości (pól) wpływających na tę aktualizację. Następnie dołączyć obiekt, aby <xref:System.Data.Linq.DataContext> przy użyciu <xref:System.Data.Linq.Table%601.Attach%2A> i zmodyfikuj pola, które chcesz zmienić.  
+-   Utwórz nowe wystąpienie obiektu i zainicjuj wszystkie bieżące wartości (pola), które mają wpływ na aktualizację. Następnie Dołącz obiekt do <xref:System.Data.Linq.DataContext> przy użyciu <xref:System.Data.Linq.Table%601.Attach%2A> i modyfikować zawartości pola, które chcesz zmienić.  
   
 ## <a name="unexpected-query-results"></a>Nieoczekiwane wyniki  
- Q. Zwraca nieoczekiwane wyniki kwerendy. Jak sprawdzić, co ma miejsce?  
+ PYTANIE: Moje zapytanie zwraca nieoczekiwane wyniki. Jak sprawdzić, co się dzieje?  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zawiera różne narzędzia umożliwiające zapoznanie się z kodu SQL, który generuje. Jednym z najważniejszych jest <xref:System.Data.Linq.DataContext.Log%2A>. Aby uzyskać więcej informacji, zobacz [obsługi debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zawiera różne narzędzia umożliwiające zapoznanie się z kodu SQL, który generuje. Jednym z najważniejszych jest <xref:System.Data.Linq.DataContext.Log%2A>. Aby uzyskać więcej informacji, zobacz [obsługę debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
-## <a name="unexpected-stored-procedure-results"></a>Procedura składowana nieoczekiwane wyniki  
- Q. Mam procedury składowanej, którego wartość zwracana jest obliczana na podstawie `MAX()`. Gdy przeciągnąć procedurę składowaną do [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] powierzchni, zwracana wartość jest nieprawidłowy.  
+## <a name="unexpected-stored-procedure-results"></a>Procedury składowanej nieoczekiwane wyniki  
+ PYTANIE: Mam procedury składowanej, którego wartość zwracana jest obliczana na podstawie `MAX()`. Podczas przeciągania procedurę przechowywaną, aby [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] powierzchni, wartość zwracana nie jest prawidłowy.  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zawiera zwracane wartości generowanych przez bazę danych i procedur składowanych na dwa sposoby:  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Umożliwia zwracanie wartości wygenerowanych w bazie danych za pomocą procedur składowanych na dwa sposoby:  
   
--   Za pomocą nazw wynik danych wyjściowych.  
+-   Za pomocą nazw danych wyjściowych.  
   
 -   Jawnie określając parametr wyjściowy.  
   
- Oto przykład nieprawidłowych danych wyjściowych. Ponieważ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie może mapować wyniki, zawsze zwraca 0:  
+ Oto przykład nieprawidłowych danych wyjściowych. Ponieważ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie można zamapować te wyniki zawsze zwraca 0:  
   
  `create procedure proc2`  
   
@@ -73,7 +73,7 @@ Niektóre typowe problemy, które można napotkać podczas implementowania odpow
   
  `end`  
   
- Poniżej przedstawiono przykład danych wyjściowych poprawne za pomocą parametru wyjściowego:  
+ Oto przykład poprawne dane wyjściowe przy użyciu parametru wyjściowego:  
   
  `create procedure proc2`  
   
@@ -85,7 +85,7 @@ Niektóre typowe problemy, które można napotkać podczas implementowania odpow
   
  `go`  
   
- Poniżej przedstawiono przykład danych wyjściowych poprawne za pomocą nazw wynik danych wyjściowych:  
+ Oto przykład poprawne dane wyjściowe za pomocą nazw danych wyjściowych:  
   
  `create procedure proc2`  
   
@@ -97,27 +97,27 @@ Niektóre typowe problemy, które można napotkać podczas implementowania odpow
   
  `end`  
   
- Aby uzyskać więcej informacji, zobacz [Dostosowywanie operacji przez przy użyciu procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).  
+ Aby uzyskać więcej informacji, zobacz [Dostosowywanie operacje, przy użyciu procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).  
   
 ## <a name="serialization-errors"></a>Błędy serializacji  
- Q. Podczas serializacji, pojawia się następujący błąd: "typu 'System.Data.Linq.ChangeTracker+StandardChangeTracker'... nie jest oznaczony jako możliwy do serializacji."  
+ PYTANIE: Podczas próby serializacji, pojawia się następujący błąd: "Wpisz 'System.Data.Linq.ChangeTracker+StandardChangeTracker'... nie jest oznaczony jako możliwy do serializacji."  
   
- A. Generowanie w kodu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje <xref:System.Runtime.Serialization.DataContractSerializer> szeregowanie. Nie obsługuje <xref:System.Xml.Serialization.XmlSerializer> lub <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Aby uzyskać więcej informacji, zobacz [szeregowanie](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
+ A. Generowanie w kodu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje <xref:System.Runtime.Serialization.DataContractSerializer> serializacji. Nie obsługuje <xref:System.Xml.Serialization.XmlSerializer> lub <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Aby uzyskać więcej informacji, zobacz [serializacji](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
   
-## <a name="multiple-dbml-files"></a>Wiele plików DBML  
- Q. Mam wiele plików DBML, które mają wspólną niektóre tabele pojawia się błąd kompilatora.  
+## <a name="multiple-dbml-files"></a>Wiele DBML, pliki  
+ PYTANIE: Mam wiele DBML, pliki, które współużytkują wspólną niektórych tabel, pojawia się błąd kompilatora.  
   
- A. Ustaw **Namespace kontekstu** i **Namespace jednostki** właściwości z [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] różne wartości dla każdego pliku DBML. Takie podejście eliminuje kolizji nazw/przestrzeni nazw.  
+ A. Ustaw **Namespace kontekstu** i **Namespace jednostki** właściwości z [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] różne wartości dla każdego pliku DBML. To podejście pozwala wyeliminować kolizji nazw/obszaru nazw.  
   
-## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Unikanie jawne ustawienie wartości generowanych przez bazę danych na Insert lub Update  
- Q. Mam tabeli bazy danych z `DateCreated` kolumny, która domyślnie SQL `Getdate()`. Podczas próby wstawienia nowego rekordu przy użyciu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], pobiera wartość `NULL`. Czy powinien mieć ustawioną wartość domyślną bazy danych.  
+## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Unikanie jawne ustawienie wartości generowanych przez bazę danych na Insert nebo Update  
+ PYTANIE: Czy mogę mieć tabelę zawierającą bazy danych `DateCreated` kolumny, która domyślnie SQL `Getdate()`. Podczas próby wstawienia nowego rekordu przy użyciu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], pobiera wartość `NULL`. Czy powinien mieć wartość domyślne bazy danych.  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje tej sytuacji automatycznie dla tożsamości (automatycznego przyrostu) i rowguidcol (identyfikator GUID generowany przez bazę danych) i kolumn znaczników czasu. W innych przypadkach należy ręcznie ustawić <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` i <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> właściwości.  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje taką sytuację automatycznie dla tożsamości (automatycznego przyrostu) i rowguidcol (identyfikator GUID generowany przez bazy danych) i kolumn sygnatur czasowych. W innych przypadkach należy ręcznie ustawić <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` i <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> właściwości.  
   
-## <a name="multiple-dataloadoptions"></a>Wiele DataLoadOptions  
- Q. Opcje dodatkowe obciążenie można określić bez zastępowania pierwszy?  
+## <a name="multiple-dataloadoptions"></a>Multiple DataLoadOptions  
+ PYTANIE: Czy można określić opcje dodatkowe obciążenie, bez zastępowania pierwszy?  
   
- A. Tak. Pierwszy nie są zastępowane, jak w poniższym przykładzie:  
+ A. Tak. Pierwszy nie jest zastępowany, jak w poniższym przykładzie:  
   
 ```vb  
 Dim dlo As New DataLoadOptions()  
@@ -131,75 +131,75 @@ dlo.LoadWith<Order>(o => o.Customer);
 dlo.LoadWith<Order>(o => o.OrderDetails);  
 ```  
   
-## <a name="errors-using-sql-compact-35"></a>Błędy przy użyciu programu SQL Compact 3,5  
- Q. Błąd podczas przeciągania tabel z [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] bazy danych.  
+## <a name="errors-using-sql-compact-35"></a>Błędy przy użyciu języka SQL Compact 3.5  
+ PYTANIE: Otrzymuję komunikat o błędzie podczas przeciągania tabel z [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] bazy danych.  
   
- A. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Nie obsługuje [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)], mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest środowiska wykonawczego. W takiej sytuacji należy tworzenie własnych klas jednostki i dodaje odpowiednie atrybuty.  
+ A. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Nie obsługuje [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)], mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest środowiska wykonawczego. W takiej sytuacji należy tworzenia własnych klas jednostek i dodawanie odpowiednich atrybutów.  
   
-## <a name="errors-in-inheritance-relationships"></a>Błędy w relacji dziedziczenia  
- Q. Po użyciu przybornika dziedziczenia kształtu [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nawiązać dwie jednostki, ale wystąpiły błędy.  
+## <a name="errors-in-inheritance-relationships"></a>Błędy w relacjach dziedziczenia  
+ PYTANIE: Po użyciu kształtu dziedziczenia przybornika w [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] nawiązać dwie jednostki, ale występują błędy.  
   
- A. Tworzenie relacji jest niewystarczająca. Należy podać informacje, takie jak kolumna dyskryminatora, wartość dyskryminatora klasy podstawowej i wartość dyskryminatora klasy pochodnej.  
+ A. Tworzenie relacji jest niewystarczająca. Musisz podać informacje takie jak kolumna dyskryminatora, wartość dyskryminatora klasy bazowej i wartość dyskryminatora klasy pochodnej.  
   
 ## <a name="provider-model"></a>Dostawca modelu  
- Q. Model publiczny dostawca jest dostępny?  
+ PYTANIE: Model publiczny dostawca jest dostępny?  
   
- A. Żaden model publiczny dostawca jest dostępny. W tej chwili [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje program SQL Server i [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] tylko.  
+ A. Model nie publiczny dostawca jest dostępny. W tej chwili [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje program SQL Server i [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] tylko.  
   
-## <a name="sql-injection-attacks"></a>Ataki na wstrzyknięciu kodu SQL  
- Q. Jak jest [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chronione przed atakami iniekcja kodu SQL?  
+## <a name="sql-injection-attacks"></a>Ataki polegające na iniekcji SQL  
+ PYTANIE: Jak jest [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] chronione przed atakami polegającymi na iniekcji SQL?  
   
- A. Iniekcja kodu SQL została znaczące zagrożenie dla tradycyjnych zapytania SQL utworzone przez łączenie danych wejściowych użytkownika. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pozwala uniknąć takich iniekcji przy użyciu <xref:System.Data.SqlClient.SqlParameter> w zapytaniach. Dane wejściowe użytkownika jest włączona do wartości parametrów. Takie podejście uniemożliwia użycie z klienta w danych wejściowych polecenia złośliwe.  
+ A. Wstrzyknięcie kodu SQL została znaczne ryzyko dla tradycyjnych zapytania SQL, utworzone przez złączenie dane wejściowe użytkownika. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pozwala uniknąć takich iniekcji przy użyciu <xref:System.Data.SqlClient.SqlParameter> w zapytaniach. Dane wejściowe użytkownika jest przekształcane w wartości parametrów. To podejście zapobiega szkodliwe polecenia używana z klienta w danych wejściowych.  
   
 ## <a name="changing-read-only-flag-in-dbml-files"></a>Zmiana flagi tylko do odczytu w DBML, pliki  
- Q. Jak wyeliminować ustawiające z niektórych właściwości, podczas tworzenia modelu obiektów z pliku DBML?  
+ PYTANIE: Jak wyeliminować metod ustawiających z niektórych właściwości, podczas tworzenia modelu obiektu pliku DBML?  
   
- A. Wykonaj następujące czynności w tym scenariuszu zaawansowane:  
+ A. Wykonaj następujące kroki w tym scenariuszu zaawansowane:  
   
-1.  W pliku .dbml zmodyfikuj właściwość zmieniając <xref:System.Data.Linq.ITable.IsReadOnly%2A> flaga `True`.  
+1.  W pliku dbml, należy zmodyfikować właściwość, zmieniając <xref:System.Data.Linq.ITable.IsReadOnly%2A> flaga `True`.  
   
-2.  Dodawanie klasy częściowej. Utwórz konstruktora z parametrami dla członków tylko do odczytu.  
+2.  Dodaj klasę częściową. Utwórz konstruktora z parametrami dla członków z prawami tylko do odczytu.  
   
-3.  Przejrzyj domyślne <xref:System.Data.Linq.Mapping.UpdateCheck> wartość (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), aby ustalić, czy jest poprawny dla aplikacji.  
+3.  Przejrzyj domyślne <xref:System.Data.Linq.Mapping.UpdateCheck> wartość (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) aby określić, czy jest poprawny dla twojej aplikacji.  
   
     > [!CAUTION]
-    >  Jeśli używasz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] w programie Visual Studio, zmiany mogą zostać zastąpione.  
+    >  Jeśli używasz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] w programie Visual Studio, Twoje zmiany mogą być zastępowane.  
   
 ## <a name="aptca"></a>APTCA  
- Q. Jest System.Data.Linq oznaczona do użytku przez kod częściowo zaufany?  
+ PYTANIE: System.Data.Linq oznaczono do użycia przez częściowo zaufany kod?  
   
- A. Tak, to zestaw System.Data.Linq.dll między tymi [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] oznaczonej jako zestawy <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. Bez tego oznaczania, zestawy w [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] są przeznaczone do użytku tylko w pełni zaufanego kodu.  
+ A. Tak, to zestaw System.Data.Linq.dll między tymi [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] zestawy oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atrybutu. Bez tego oznaczania, zestawy w [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] są przeznaczone do użytku tylko przez w pełni zaufany kod.  
   
- Główna scenariusz w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dla stosowanie częściowo zaufane obiekty wywołujące jest umożliwienie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zestawu do będą uzyskiwać dostęp do aplikacji sieci Web, gdzie *zaufania* konfiguracji to średni.  
+ Główna scenariusza w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dla umożliwiając częściowo zaufanych obiektów wywołujących jest umożliwienie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zestawu można uzyskać dostęp z aplikacji sieci Web, gdzie *zaufania* konfiguracji to średni.  
   
 ## <a name="mapping-data-from-multiple-tables"></a>Mapowanie danych z wielu tabel  
- Q. Dane w mojej jednostki pochodzą z wielu tabel. Sposób mapowania go  
+ PYTANIE: Dane w jednostce Moje pochodzą z wielu tabel. Sposób mapowania go  
   
- A. Można utworzyć widok w bazie danych i mapowania jednostki do widoku. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generuje tego samego SQL dla widoków, jak w przypadku tabel.  
+ A. Można utworzyć widok w bazie danych i mapowania jednostki do widoku. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generuje ten sam SQL dla widoków, jak w przypadku tabel.  
   
 > [!NOTE]
->  Korzystanie z widoków w tym scenariuszu ma pewne ograniczenia. Ta metoda działa najbezpieczniejszy gdy operacje są wykonywane na <xref:System.Data.Linq.Table%601> są obsługiwane przez źródłowego widoku. Tylko wiesz, jakie operacje są przeznaczone. Na przykład większość aplikacji są tylko do odczytu i wykonywania inny numer znaczne obciążenie `Create` / `Update` / `Delete` operacje tylko przy użyciu przechowywanych procedur przed widoków.  
+>  Korzystanie z widoków, w tym scenariuszu ma ograniczenia. To podejście pozwala skutecznie najbezpieczniejszy, gdy operacje wykonywane na <xref:System.Data.Linq.Table%601> są obsługiwane w bazowym widoku. Tylko wiesz, jakie operacje są przeznaczone. Na przykład większość aplikacji są przeznaczone tylko do odczytu i wykonania innego znaczną liczbę `Create` / `Update` / `Delete` operacji tylko przy użyciu przechowywanych procedur w odniesieniu do widoków.  
   
 ## <a name="connection-pooling"></a>Pula połączeń  
- Q. Istnieje już konstrukcję, która może ułatwić <xref:System.Data.Linq.DataContext> buforowania?  
+ PYTANIE: Czy istnieje konstrukcja, która może ułatwić <xref:System.Data.Linq.DataContext> puli?  
   
- A. Nie należy próbować ponowne użycie wystąpienia <xref:System.Data.Linq.DataContext>. Każdy <xref:System.Data.Linq.DataContext> zachowuje swój stan, (łącznie z pamięci podręcznej tożsamości) dla jednej sesji edycji/kwerendy. Aby uzyskać nowe wystąpienia, w oparciu o bieżący stan bazy danych, użyj nowego <xref:System.Data.Linq.DataContext>.  
+ A. Nie próbuj ponownie użyć wystąpienia <xref:System.Data.Linq.DataContext>. Każdy <xref:System.Data.Linq.DataContext> obsługuje stan (łącznie z pamięci podręcznej tożsamości) dla jednej sesji edycji/kwerendy. Aby uzyskać nowe wystąpienia, w oparciu o bieżący stan bazy danych, użyj nowego <xref:System.Data.Linq.DataContext>.  
   
- Można nadal używać bazowy [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] puli połączeń. Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia buforowanie (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Można nadal używać bazowych [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] buforowania połączeń. Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia puli (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>Drugi element DataContext nie jest aktualizowana.  
- Q. Użycie jednego wystąpienia <xref:System.Data.Linq.DataContext> wartości mają być przechowywane w bazie danych. Jednak drugiej <xref:System.Data.Linq.DataContext> na tej samej bazy danych nie odzwierciedla zaktualizowane wartości. Drugi <xref:System.Data.Linq.DataContext> wystąpienia wydaje się, aby zwrócić wartości pamięci podręcznej.  
+ PYTANIE: Czy mogę używać jedno wystąpienie <xref:System.Data.Linq.DataContext> do przechowywania wartości w bazie danych. Jednak sekundy <xref:System.Data.Linq.DataContext> na tej samej bazy danych nie będzie odzwierciedlał zaktualizowanymi wartościami. Drugi <xref:System.Data.Linq.DataContext> wystąpienia wydaje się, że zwracane wartości pamięci podręcznej.  
   
- A. To zachowanie jest celowe. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w dalszym ciągu zwrócić tego samego wystąpienia/wartości, które widać w pierwszej kolejności. Po dokonaniu aktualizacji, możesz użyć optymistycznej współbieżności. Oryginalnych danych służy do sprawdzania z bieżącym stanem bazy danych do potwierdzenia, że w rzeczywistości nadal jest bez zmian. Jeśli została ona zmieniona występuje konflikt, a aplikacji należy go rozwiązać. Jedną z opcji aplikacji jest, aby przywrócić oryginalny stan bieżący stan bazy danych i spróbuj ponownie przeprowadzić aktualizację. Aby uzyskać więcej informacji, zobacz [porady: Zarządzanie konfliktów zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ A. To zachowanie jest celowe. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w dalszym ciągu zwracane tego samego wystąpienia/wartości, które widać w pierwszej kolejności. Po wprowadzeniu aktualizacji, możesz użyć optymistycznej współbieżności. Oryginalnych danych służy do sprawdzania z bieżącym stanem bazy danych do potwierdzenia, że w rzeczywistości nadal jest bez zmian. Jeśli została ona zmieniona występuje konflikt, i aplikacji należy go rozwiązać. Jedną z opcji aplikacji jest, aby przywrócić oryginalny stan bieżący stan bazy danych i ponowienie próby aktualizacji. Aby uzyskać więcej informacji, zobacz [jak: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
- Można również ustawić <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> na wartość false, która włącza wyłączone buforowanie i śledzenie zmian. Można następnie pobrać najnowsze wartości zawsze należy zbadać.  
+ Można również ustawić <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> na wartość false, która włącza wyłączone buforowanie i śledzenie zmian. Najnowsze wartości można później odzyskać za każdym razem, które można zbadać.  
   
-## <a name="cannot-call-submitchanges-in-read-only-mode"></a>Nie można wywołać funkcji SubmitChanges w trybie tylko do odczytu  
- Q. Podczas próby wywołania <xref:System.Data.Linq.DataContext.SubmitChanges%2A> w trybie tylko do odczytu, jest zgłaszany błąd.  
+## <a name="cannot-call-submitchanges-in-read-only-mode"></a>Nie można wywołać SubmitChanges w trybie tylko do odczytu  
+ PYTANIE: Podczas próby wywołania <xref:System.Data.Linq.DataContext.SubmitChanges%2A> w trybie tylko do odczytu, pojawia się błąd.  
   
- A. Tryb tylko do odczytu wyłącza możliwość kontekst śledzenia zmian.  
+ A. Tryb tylko do odczytu wyłącza możliwość śledzenia zmian kontekstu.  
   
-## <a name="see-also"></a>Zobacz też  
- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
- [Zabezpieczenia w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+## <a name="see-also"></a>Zobacz także
+- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Rozwiązywanie problemów](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
+- [Zabezpieczenia w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

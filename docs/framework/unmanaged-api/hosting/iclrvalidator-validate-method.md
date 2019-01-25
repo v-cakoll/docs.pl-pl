@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2ad9ef473a498804e5b3ac0469b5b68697c49f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccd6dbe63f02fa7e28c6aec1be815f1f1967a90a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718731"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate — Metoda
-Weryfikuje przenośny plik wykonywalny (PE) lub język pośredni firmy Microsoft (MSIL) w określonym pliku.  
+Sprawdza poprawność pliku wykonalnego (PE) lub języka Microsoft intermediate language (MSIL) w określonym pliku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,16 +44,16 @@ HRESULT Validate (
   
 #### <a name="parameters"></a>Parametry  
  `veh`  
- [in] Wskaźnik do `IVEHandler` wystąpienie, które obsługuje błędy sprawdzania poprawności.  
+ [in] Wskaźnik do `IVEHandler` wystąpienia, która obsługuje błędy sprawdzania poprawności.  
   
  `ulAppDomainId`  
- [in] Identyfikator bieżącego <xref:System.AppDomain>.  
+ [in] Identyfikator dla bieżącego <xref:System.AppDomain>.  
   
  `ulFlags`  
- [in] Kombinację [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) wartości i wskazujący rodzaj weryfikacji, które powinno być wykonywane.  
+ [in] Kombinacji [validatorflags —](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) wartości, wskazujący rodzaj sprawdzania poprawności, która powinna być wykonywana.  
   
  `ulMaxError`  
- [in] Maksymalna liczba błędów umożliwia przed zakończeniem sprawdzania poprawności.  
+ [in] Maksymalna liczba błędów, aby umożliwić przed zakończeniem weryfikacji.  
   
  `token`  
  [in] Nieużywane.  
@@ -62,30 +62,30 @@ HRESULT Validate (
  [in] Nazwa pliku, który ma zostać zweryfikowana.  
   
  `pe`  
- [in] Wskaźnik do pliku buforu.  
+ [in] Wskaźnik do buforu plików.  
   
  `ulSize`  
- [in] Rozmiar w bajtach, pliku, który ma zostać zweryfikowana.  
+ [in] Rozmiar w bajtach, plików, który ma zostać zweryfikowana.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`Validate` zwrócona pomyślnie.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.|  
+|S_OK|`Validate` pomyślnie zwrócił.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właścicielem blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwróci wartość E_FAIL, CLR nie jest już możliwe w ramach procesu. Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** IValidator.idl, IValidator.h  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICLRValidator, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICLRValidator, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

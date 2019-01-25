@@ -2,12 +2,12 @@
 title: -subsystemversion (opcje kompilatora C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 42d9d81c4cfbf98c1d7a470a5863ac9198f16395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025457"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738082"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opcje kompilatora C#)
 Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowany plik wykonywalny, określając w ten sposób wersje systemu Windows, na którym można uruchomić pliku wykonywalnego. Najczęściej ta opcja zapewnia, że plik wykonywalny mogą korzystać z funkcji zabezpieczeń, które nie są dostępne ze starszymi wersjami systemu Windows.  
@@ -49,7 +49,7 @@ Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowan
   
     -   [-target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
   
-    -   [-platform: arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
+    -   [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
 -   Wartość domyślna to 6.00, jeśli używasz programu MSBuild, gdy elementem docelowym [!INCLUDE[net_v45](~/includes/net-v45-md.md)], i nie został ustawiony opcji kompilatora, które zostały określone we wcześniejszej części tej listy.  
   
@@ -58,6 +58,6 @@ Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowan
 ## <a name="setting-this-option"></a>Ustawienie tej opcji  
  Aby ustawić **- subsystemversion** — opcja kompilatora w programie Visual Studio, możesz Otwórz plik .csproj i określić wartość dla `SubsystemVersion` właściwość MSBuild XML. Nie można ustawić tę opcję w środowisku IDE programu Visual Studio. Aby uzyskać więcej informacji, zobacz "Wartości domyślnej" wcześniej w tym temacie lub [wspólne właściwości projektów MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)

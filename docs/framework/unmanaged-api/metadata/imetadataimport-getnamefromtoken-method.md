@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a39eac88537d47535844d1f05e0741cc94142f0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36218fa44f1cb49d8d0193d7c72e6feb2d121050
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718848"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken — Metoda
-Pobiera nazwę UTF-8 obiektu odwołuje się token określonych metadanych. Ta metoda jest przestarzała.  
+Pobiera nazwę UTF-8 zawiera odwołanie do tokenu metadanych określonego obiektu. Ta metoda jest przestarzała.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,17 +44,17 @@ HRESULT GetNameFromToken (
  [out] Wskaźnik do nazwy obiektu UTF-8 w stosie.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetNameFromToken` jest przestarzała. Alternatywnie, należy wywołać metodę można pobrać właściwości określonego rodzaju token wymagane, takie jak `GetFieldProps` dla pola lub `GetMethodProps` metody.  
+ `GetNameFromToken` jest przestarzały. Alternatywnie należy wywołać metodę można pobrać właściwości określonego rodzaju token jest wymagany, takich jak `GetFieldProps` dla pola lub `GetMethodProps` dla metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** 1.0  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

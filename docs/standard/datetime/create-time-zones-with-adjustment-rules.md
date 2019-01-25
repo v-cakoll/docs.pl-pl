@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie stref czasowych przy użyciu reguł korygowania'
+title: 'Instrukcje: Tworzenie stref czasowych przy użyciu reguł korygowania'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a5c04f7807638a4a8b114828083835f348ac08
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721178"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Porady: tworzenie stref czasowych przy użyciu reguł korygowania
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Instrukcje: Tworzenie stref czasowych przy użyciu reguł korygowania
 
 Wymagane przez aplikację informacje o strefie czasowej dokładne mogą nie występować w określonym systemie z kilku powodów:
 
@@ -34,7 +34,7 @@ W takich przypadkach można wywołać <xref:System.TimeZoneInfo.CreateCustomTime
 > [!IMPORTANT]
 > Niestandardowe stref czasowych utworzonych przez wywoływanie <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metody nie są dodawane do rejestru. Zamiast tego są one dostępne tylko za pośrednictwem zwracane przez odwołanie do obiektu <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> wywołania metody.
 
-W tym temacie przedstawiono sposób tworzenia strefy czasowej przy użyciu reguł korygowania. Aby utworzyć strefę czasową, która nie obsługuje reguł dopasowania czasu letniego, zobacz [porady: tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
+W tym temacie przedstawiono sposób tworzenia strefy czasowej przy użyciu reguł korygowania. Aby utworzyć strefę czasową, która nie obsługuje reguł dopasowania czasu letniego, zobacz [jak: Tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>Aby utworzyć strefę czasową ze swobodnym reguł korygowania
 
@@ -95,6 +95,6 @@ Ten przykład wymaga:
 
 ## <a name="see-also"></a>Zobacz także
 
-* [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-* [Strefy czasowe — omówienie](../../../docs/standard/datetime/time-zone-overview.md)
-* [Instrukcje: Tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
+- [Strefy czasowe — omówienie](../../../docs/standard/datetime/time-zone-overview.md)
+- [Instrukcje: Tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

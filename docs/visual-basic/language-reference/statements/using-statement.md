@@ -9,15 +9,15 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd553430e56bbc5c21c9bdb25fc6b67eea530739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604968"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595399"
 ---
 # <a name="using-statement-visual-basic"></a>Using — Instrukcja (Visual Basic)
-Deklaruje początku `Using` blokować i opcjonalnie uzyskuje zasobów systemowych, które kontroluje bloku.  
+Deklaruje początku `Using` zablokować, a także opcjonalnie uzyskuje zasobów systemowych, które kontroluje bloku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,12 +31,12 @@ End Using
   
 |Termin|Definicja|  
 |---|---|  
-|`resourcelist`|Wymagane, jeśli nie podasz `resourceexpression`. Lista zasobów systemowych, co najmniej jeden tego `Using` blokowania formantów, oddzielonych przecinkami.|  
-|`resourceexpression`|Wymagane, jeśli nie podasz `resourcelist`. Odwołanie do zmiennej lub wyrażenie odwołuje się do zasobu systemu kontrolowany przez to `Using` bloku.|  
-|`statements`|Opcjonalna. Blok instrukcji który `Using` blokowanie działa.|  
+|`resourcelist`|Wymagane, jeśli nie podasz `resourceexpression`. Lista jednego lub więcej zasobów systemowych, że `Using` blokowania formantów, oddzielonych przecinkami.|  
+|`resourceexpression`|Wymagane, jeśli nie podasz `resourcelist`. Odwołanie do zmiennej lub wyrażenia odnoszące się do zasobu systemu będą kontrolowane przez to `Using` bloku.|  
+|`statements`|Opcjonalna. Blok instrukcji, `Using` block przebiegów.|  
 |`End Using`|Wymagana. Kończy definicję `Using` bloku i usuwa wszystkie zasoby, które kontroluje.|  
   
- Każdy zasób w `resourcelist` części ma następujące składni i części:  
+ Każdy zasób w `resourcelist` część zawiera następujące części i składni:  
   
  `resourcename As New resourcetype [ ( [ arglist ] ) ]`  
   
@@ -48,39 +48,39 @@ End Using
   
 |Termin|Definicja|  
 |---|---|  
-|`resourcename`|Wymagana. Odwołanie do zmiennej, która odwołuje się do zasobu systemu który `Using` blokowania formantów.|  
-|`New`|Jeśli wymagane `Using` instrukcji uzyskuje zasobu. Jeśli już zostały nabyte zasobu, należy użyć drugiej alternatywnej składni.|  
+|`resourcename`|Wymagana. Zmienną odwołania, która odwołuje się do zasobu systemu, `Using` blokowania formantów.|  
+|`New`|Jeśli wymagane `Using` instrukcję pobrania zasobu. Jeśli już posiadasz zasobu, należy użyć drugiej alternatywnej składni.|  
 |`resourcetype`|Wymagana. Klasa zasobu. Klasa musi implementować <xref:System.IDisposable> interfejsu.|  
-|`arglist`|Opcjonalna. Lista argumentów jest przekazywany do konstruktora w celu utworzenia wystąpienia `resourcetype`. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`resourceexpression`|Wymagana. Zmiennej lub wyrażenie odwołujących się do zasobu systemu spełniających wymagania `resourcetype`. Użycie drugiej alternatywnej składni, należy uzyskać zasobu przed przekazaniem kontroli do `Using` instrukcji.|  
+|`arglist`|Opcjonalna. Lista argumentów, które przekazujesz do konstruktora, aby utworzyć wystąpienie `resourcetype`. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
+|`resourceexpression`|Wymagana. Zmiennej lub wyrażenia odnoszące się do zasobu systemu niespełniających wymagań `resourcetype`. Korzystając z drugiego alternatywnej składni, należy uzyskać zasobu przed przekazaniem kontroli do `Using` instrukcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Czasami kodu wymaga zasób niezarządzany, np. dojście do pliku, otoki COM lub połączenia SQL. A `Using` bloku gwarantuje usuwania jeden lub więcej takich zasobów, po zakończeniu kodu z nimi. Udostępnia je dla innych kodu do użycia.  
+ Czasami kod wymaga niezarządzany zasób, takie jak dojście do pliku, otoka COM lub połączenia SQL. A `Using` bloku gwarantuje usuwania co najmniej jeden taki zasób, po zakończeniu swój kod z nimi. Udostępnia je dla innych kod do użycia.  
   
- Zarządzane zasoby są usuwane przez moduł zbierający elementy bezużyteczne .NET Framework (GC) bez żadnych dodatkowych kodowania ze strony użytkownika. Nie trzeba `Using` blok dla zarządzanych zasobów. Jednakże, nadal można `Using` bloku, aby wymusić usuwania zarządzanych zasobów, zamiast czekać na moduł garbage collector.  
+ Zarządzane zasoby są usuwane przez moduł odśmiecania pamięci środowiska .NET Framework (GC) bez żadnych dodatkowych kodowania ze strony użytkownika. Nie ma potrzeby `Using` blok dla zarządzanych zasobów. Jednak nadal można użyć `Using` bloku, aby wymusić likwidacji zasobów zarządzanych, zamiast czekać, aż moduł odśmiecania pamięci.  
   
- A `Using` bloku ma trzy części: nabycie, użycia i usuwania.  
+ A `Using` bloku ma trzy części: pozyskiwanie, użycia i usuwania.  
   
--   *Nabycia* oznacza tworzenia zmiennej i inicjowania go do odwoływania się do zasobu systemowego. `Using` Instrukcji można pobrać co najmniej jeden zasób, lub można uzyskać dokładnie jeden zasób przed wprowadzeniem bloku i dostarczenia go do `Using` instrukcji. Jeśli podasz `resourceexpression`, należy uzyskać zasobu przed przekazaniem kontroli do `Using` instrukcji.  
+-   *Pozyskiwanie* oznacza, że utworzenie zmiennej i inicjując go do odwoływania się do zasobów systemu. `Using` Poufności informacji mogą nabyć jeden lub więcej zasobów lub uzyskiwanie dokładnie jeden zasób przed wejściem bloku i dostarczenia go do `Using` instrukcji. Jeśli podasz `resourceexpression`, należy uzyskać zasobu przed przekazaniem kontrolki `Using` instrukcji.  
   
--   *Użycie* oznacza, że uzyskanie dostępu do zasobów i wykonywania związanych z nimi czynności. Instrukcje między `Using` i `End Using` reprezentują użycia zasobów.  
+-   *Użycie* oznacza, że dostęp do zasobów i wykonywania związanych z nimi czynności. Instrukcje między `Using` i `End Using` reprezentują użycie zasobów.  
   
--   *Usuwanie* sposób wywoływania <xref:System.IDisposable.Dispose%2A> metody dla obiekt w `resourcename`. Dzięki temu obiekt, aby prawidłowo zakończyć jego zasoby. `End Using` Instrukcji usuwa zasobów w ramach `Using` bloku kontroli.  
+-   *Usuwanie* oznacza, że wywołanie <xref:System.IDisposable.Dispose%2A> metody dla obiektu w `resourcename`. Dzięki temu obiekt, aby prawidłowo zakończyć jego zasobów. `End Using` Instrukcji usuwa zasobów w ramach `Using` bloku sterowania.  
   
 ## <a name="behavior"></a>Zachowanie  
- A `Using` bloku zachowuje się jak `Try`... `Finally` konstrukcji, w którym `Try` bloku używa zasobów i `Finally` bloku usuwa z nich. W związku z tym `Using` bloku gwarantuje usuwania tych zasobów, niezależnie od tego, jak zakończyć bloku. Dotyczy to nawet w przypadku nieobsługiwany wyjątek, z wyjątkiem <xref:System.StackOverflowException>.  
+ A `Using` blok, który zachowuje się jak `Try`... `Finally` konstrukcji, w którym `Try` bloku używa zasobów i `Finally` bloku usuwa z nich. W związku z tym `Using` bloku gwarantuje likwidacji zasobów, niezależnie od tego, jak zamknąć blok. Ta zasada obowiązuje nawet w przypadku nieobsługiwany wyjątek, z wyjątkiem <xref:System.StackOverflowException>.  
   
- Zakres zmiennej zasobu, co uzyskaną przez `Using` instrukcji jest ograniczona do `Using` bloku.  
+ Zakres każdej zmiennej zasobów nabytych przez `Using` instrukcja jest ograniczona do `Using` bloku.  
   
- Jeśli określono więcej niż jeden zasób systemowy w `Using` instrukcji, efekt jest taki sam, jakby użytkownik zagnieżdżone `Using` blokuje jedną w innym.  
+ W przypadku określenia więcej niż jeden zasób systemowy w `Using` instrukcji, efekt jest taki sam, tak, jakby możesz zagnieżdżone `Using` blokuje w innej.  
   
- Jeśli `resourcename` jest `Nothing`, Brak wywołania <xref:System.IDisposable.Dispose%2A> następuje, i nie jest wyjątek.  
+ Jeśli `resourcename` jest `Nothing`, Brak wywołania <xref:System.IDisposable.Dispose%2A> jest wykonywane, i jest zgłaszany żaden wyjątek.  
   
 ## <a name="structured-exception-handling-within-a-using-block"></a>Obsługa w bloku przy użyciu wyjątków strukturalnych  
- Jeśli należy do obsługi wyjątku, który może wystąpić w ramach `Using` bloku, możesz dodać pełnego `Try`... `Finally` konstrukcji do niego. Jeśli wymagana jest obsługa w przypadku których `Using` instrukcji zakończy się niepowodzeniem podczas uzyskiwania zasobu, możesz przetestować, aby sprawdzić, czy `resourcename` jest `Nothing`.  
+ Jeśli trzeba obsługiwać wyjątek, który może wystąpić w ciągu `Using` bloku, możesz dodać kompletna `Try`... `Finally` konstrukcji do niego. Jeśli potrzebujesz obsłużyć przypadek, gdzie `Using` instrukcji zakończy się niepowodzeniem podczas uzyskiwania zasobu, można przetestować, aby sprawdzić, czy `resourcename` jest `Nothing`.  
   
-## <a name="structured-exception-handling-instead-of-a-using-block"></a>Obsługi zamiast za pomocą bloku wyjątków strukturalnych  
- Jeśli potrzebujesz bardziej precyzyjną kontrolę nad nabywania zasobów lub konieczne dodatkowy kod w `Finally` bloku, można ponownie napisać `Using` zablokować jako `Try`... `Finally` konstrukcji. W poniższym przykładzie przedstawiono szkielet `Try` i `Using` konstrukcje, które są równoważne nabycia i usuwania `resource`.  
+## <a name="structured-exception-handling-instead-of-a-using-block"></a>Obsługa zamiast przy użyciu bloku wyjątków strukturalnych  
+ Jeśli potrzebujesz bardziej precyzyjną kontrolę nad pozyskiwanie zasobów lub potrzebujesz dodatkowego kodu w `Finally` bloku, można napisać ponownie `Using` zablokować, jako `Try`... `Finally` konstrukcji. W poniższym przykładzie przedstawiono szkielet `Try` i `Using` konstrukcji, które są równoważne w pozyskiwanie i likwidacji `resource`.  
   
 ```vb  
 Using resource As New resourceType   
@@ -100,16 +100,16 @@ End Try
 ```  
   
 > [!NOTE]
->  Kodu wewnątrz `Using` blok, nie należy przypisywać obiektu w `resourcename` do innej zmiennej. Po zakończeniu `Using` bloku, zasób zostanie usunięty i innej zmiennej nie może uzyskać dostęp do zasobu którą wskazuje.  
+>  Kod wewnątrz `Using` bloku nie należy przypisywać obiektów w `resourcename` do innej zmiennej. Po zakończeniu `Using` bloku, zasób zostanie usunięty, a druga zmienna nie może uzyskać dostępu zasobu, na którą wskazuje.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy plik o nazwie log.txt i zapisuje dwóch wierszy tekstu do pliku. W przykładzie również odczytuje tego samego pliku i wyświetla wiersze tekstu.  
+ Poniższy przykład tworzy plik, który nosi nazwę log.txt i zapisuje dwa wiersze tekstu do pliku. Przykład również odczytuje tego samego pliku i wyświetla wiersze tekstu.  
   
- Ponieważ <xref:System.IO.TextWriter> i <xref:System.IO.TextReader> implementacji klasy <xref:System.IDisposable> interfejsu, można użyć kodu `Using` instrukcje, aby upewnić się, że plik jest poprawnie zamknięte po wykonaniu operacji zapisu i operacje odczytu.  
+ Ponieważ <xref:System.IO.TextWriter> i <xref:System.IO.TextReader> implementacji klasy <xref:System.IDisposable> interfejsu, można użyć w kodzie `Using` instrukcji, aby upewnić się, czy plik jest poprawnie zamknięte po zapisu i operacji odczytu.  
   
  [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/using-statement_1.vb)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.IDisposable>  
- [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [Instrukcje: usuwanie zasobu systemu](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.IDisposable>
+- [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Instrukcje: Usuwanie zasobu systemu](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

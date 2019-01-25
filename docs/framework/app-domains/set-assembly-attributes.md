@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1ed022193b4896f91f1096a0bb16c21f5374868
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201429"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712603"
 ---
 # <a name="setting-assembly-attributes"></a>Ustawienie atrybutów zestawu
 Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Atrybuty są podzielone na następujące rodzaje informacji:  
@@ -37,9 +37,9 @@ Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Atryb
   
 |Atrybut tożsamości zestawu|Opis|  
 |---------------------------------|-----------------|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|Pole wyliczany wskazujący kultury, który obsługuje zestaw. Zestaw można również określić niezależność od kultury, wskazującą, czy zawiera on zasobów dla kultury domyślnej. **Uwaga:** środowiska uruchomieniowego traktuje zestawu, który ma atrybut kultury ustawiony na wartość null jako zestawu satelickiego. Takie zestawy podlegają zasad powiązania zestawu satelickiego. Aby uzyskać więcej informacji, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|Pole wyliczany wskazujący kultury, który obsługuje zestaw. Zestaw można również określić niezależność od kultury, wskazującą, czy zawiera on zasobów dla kultury domyślnej. **Uwaga:**  Środowisko uruchomieniowe traktuje zestawu, który ma atrybut kultury ustawiony na wartość null jako zestawu satelickiego. Takie zestawy podlegają zasad powiązania zestawu satelickiego. Aby uzyskać więcej informacji, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Wartość, która ustawia atrybutów zestawu, na przykład tego, czy zestaw można uruchomić równolegle.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|Wartość liczbową w formacie *głównych*. *drobne*. *Tworzenie*. *poprawka* (na przykład 2.4.0.0). Środowisko uruchomieniowe języka wspólnego używa tej wartości do wykonywania operacji wiązania w zestawach o silnej nazwie. **Uwaga:** Jeśli <xref:System.Reflection.AssemblyInformationalVersionAttribute> atrybut nie ma zastosowania do zestawu, numer wersji określony przez <xref:System.Reflection.AssemblyVersionAttribute> atrybut jest używany przez <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>, i <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> właściwości.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|Wartość liczbową w formacie *głównych*. *drobne*. *Tworzenie*. *poprawka* (na przykład 2.4.0.0). Środowisko uruchomieniowe języka wspólnego używa tej wartości do wykonywania operacji wiązania w zestawach o silnej nazwie. **Uwaga:**  Jeśli <xref:System.Reflection.AssemblyInformationalVersionAttribute> atrybut nie ma zastosowania do zestawu, numer wersji określony przez <xref:System.Reflection.AssemblyVersionAttribute> atrybut jest używany przez <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>, i <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> właściwości.|  
   
  Poniższy przykład kodu pokazuje sposób stosowania atrybutów wersję i kulturę do zestawu.  
   
@@ -55,7 +55,7 @@ Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Atryb
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Wartość ciągu, określając nazwę firmy.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Wartość, określając informacje o prawach autorskich ciągu.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Wartość ciągu, określając numeru wersji pliku systemu Win32. Domyślnie to zwykle wersji zestawu.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Wartość, określając informacje o wersji, który nie jest używany przez środowisko uruchomieniowe języka wspólnego, takie jak numer wersji pełnej produktu ciągu. **Uwaga:** Jeśli ten atrybut jest stosowany do zestawu, określa ciąg znaków można uzyskać w czasie wykonywania za pomocą <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> właściwości. Ten ciąg jest również używany w ścieżce i kluczy rejestru dostarczone przez <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> właściwości.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Wartość, określając informacje o wersji, który nie jest używany przez środowisko uruchomieniowe języka wspólnego, takie jak numer wersji pełnej produktu ciągu. **Uwaga:**  Jeśli ten atrybut jest stosowany do zestawu, określa ciąg znaków można uzyskać w czasie wykonywania za pomocą <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> właściwości. Ten ciąg jest również używany w ścieżce i kluczy rejestru dostarczone przez <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> właściwości.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|Wartość, określając informacje o produkcie ciągu.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Wartość, określając informacje o znakach towarowych ciągu.|  
   
@@ -86,6 +86,6 @@ Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Atryb
  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-## <a name="see-also"></a>Zobacz też  
-- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
+## <a name="see-also"></a>Zobacz także
+- [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

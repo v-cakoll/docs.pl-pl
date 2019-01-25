@@ -2,12 +2,12 @@
 title: Odwołanie do słowa kluczowego
 description: Znajdź łącza do informacji na temat wszystkich F# słowa kluczowe języka.
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579846"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857908"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
@@ -73,7 +73,7 @@ W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności a
 |`return!`|[Wyrażenia obliczeń](computation-expressions.md)<br /><br />[Asynchroniczne przepływy pracy](asynchronous-workflows.md)|Służy do wskazywania wyrażenia obliczeń, gdy obliczane, zwraca wynik funkcji zawierających wyrażenia obliczeń.|
 |`select`|[Wyrażenia zapytania](query-expressions.md)|Używane w wyrażeniach zapytań, aby określić, jakie pola lub kolumny do wyodrębnienia. Należy pamiętać, że jest kontekstowym słowem kluczowym, co oznacza, że nie jest faktycznie słowem zastrzeżonym, i działa jak słowem kluczowym w odpowiedniego kontekstu.|
 |`static`|[Elementy członkowskie](members/index.md)|Służy do wskazania metodę lub właściwość, która może być wywołana bez wystąpienia typu lub składowej wartość, która jest udostępniona wszystkim wystąpieniom typu.|
-|`struct`|[Struktury](structures.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane do deklarowania typu struktury.<br /><br />Również używany w ograniczenia parametru ogólnego.<br /><br />Używane dla zgodności OCaml w definicji modułu.|
+|`struct`|[Struktury](structures.md)<br /><br /> [Krotki](tuples.md)<br/><br/>[Ograniczenia](generics/constraints.md)|Używane do deklarowania typu struktury.<br /><br/>Służy do określania krotki struktury.<br/><br />Również używany w ograniczenia parametru ogólnego.<br /><br />Używane dla zgodności OCaml w definicji modułu.|
 |`then`|[Wyrażenie warunkowe: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktory](members/constructors.md)|Używane w wyrażeniach warunkowych.<br /><br />Umożliwia również wykonać efekty uboczne po konstrukcji obiektu.|
 |`to`|[Pętle: `for...to` Expression](loops-for-to-expression.md)|Używane w `for` pętli, aby określić zakres.|
 |`true`|[Typy pierwotne](primitive-types.md)|Używane jako literału wartości logicznej.|

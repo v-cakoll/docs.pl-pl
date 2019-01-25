@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 94d3ddcf71194eb69a2d26bcdf549aaf693e46e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5a37b571e0600927e0e50fdb1a63bcf8ef194d72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617541"
 ---
 # <a name="object-data-type"></a>Object — typ danych
 Zawiera adresy, które odwołują się do obiektów. Dowolnego typu odwołania (ciąg, macierz, klasy lub interfejsu) można przypisać do `Object` zmiennej. `Object` Zmiennej może również odnosić się do danych o dowolnym typie wartości (numeryczne, `Boolean`, `Char`, `Date`, struktury lub wyliczenia).  
@@ -66,11 +66,11 @@ Dim myCollection As New Collection()
 objDb = myCollection.Item(1)  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Object>  
- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)  
- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Instrukcje: określanie, czy dwa obiekty są powiązane](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [Instrukcje: określanie, czy dwa obiekty są jednakowe](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Object>
+- [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
+- [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Instrukcje: Określanie, czy dwa obiekty są powiązane](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Instrukcje: Określanie, czy dwa obiekty są jednakowe](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

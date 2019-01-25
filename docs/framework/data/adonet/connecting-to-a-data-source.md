@@ -2,12 +2,12 @@
 title: Łączenie ze źródłem danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 20cf22e1c9b9bf18dd3109cb9589c05a6c27d4d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701745"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Łączenie ze źródłem danych w ADO.NET
 W ADO.NET **połączenia** obiekt, aby połączyć się z określonym źródłem danych, podając niezbędne informacje dotyczące uwierzytelniania w parametrach połączenia. **Połączenia** obiektu użyjesz zależy od typu źródła danych.  
@@ -21,10 +21,10 @@ W ADO.NET **połączenia** obiekt, aby połączyć się z określonym źródłem
  [Zdarzenia połączenia](../../../../docs/framework/data/adonet/connection-events.md)  
  Opisuje sposób używania **InfoMessage** zdarzenie, aby pobrać komunikaty informacyjne ze źródła danych.  
   
-## <a name="see-also"></a>Zobacz też  
- [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)  
- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)
+- [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574771"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls — Metoda
-Wylicza MethodBody i MethodDeclaration tokeny reprezentujący metody określonego typu.  
+Wylicza MethodBody i MethodDeclaration tokenów reprezentujący metody określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,10 +42,10 @@ HRESULT EnumMethodImpls (
   
 #### <a name="parameters"></a>Parametry  
  `phEnum`  
- [w, out] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwsze wywołanie tej metody.  
+ [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
   
  `td`  
- [in] Element TypeDef token dla typu którego implementacje metod do wyliczenia.  
+ [in] Element TypeDef dla typu tokenu implementacje metod, których można wyliczyć.  
   
  `rMethodBody`  
  [out] Tablica do przechowywania tokenów MethodBody.  
@@ -57,24 +57,24 @@ HRESULT EnumMethodImpls (
  [in] Maksymalny rozmiar `rMethodBody` i `rMethodDecl` tablic.  
   
  `pcTokens`  
- [in] Rzeczywista liczba metod zwracane w `rMethodBody` i `rMethodDecl`.  
+ [in] Rzeczywista liczba zwracanych w metodach `rMethodBody` i `rMethodDecl`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` zwrócona pomyślnie.|  
-|`S_FALSE`|Nie ma żadnych tokenów — metoda wyliczania. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumMethodImpls` pomyślnie zwrócił.|  
+|`S_FALSE`|Nie ma żadnych tokeny metoda wyliczania. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

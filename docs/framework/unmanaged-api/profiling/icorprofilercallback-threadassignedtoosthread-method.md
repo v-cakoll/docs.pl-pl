@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e577413ea6807ea5ff8be4d668aa82f0acbb007d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c55c6ffea0f3688fc7c3c3283701b4e35f1fcbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651984"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread — Metoda
-Powiadamia profilera, że zarządzanego wątku jest implementowana przy użyciu wątku określonym systemie operacyjnym.  
+Powiadamia program profilujący, że wątków zarządzanych wdrażane za pomocą wątku określonego systemu operacyjnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +37,16 @@ HRESULT ThreadAssignedToOSThread(
   
 #### <a name="parameters"></a>Parametry  
  `managedThreadId`  
- [in] Identyfikator zarządzanego wątku.  
+ [in] Identyfikator wątków zarządzanych.  
   
  `osThreadId`  
  [in] Identyfikator wątku systemu operacyjnego.  
   
 ## <a name="remarks"></a>Uwagi  
- `ThreadAssignedToOSThread` Wywołania zwrotnego istnieje, dzięki czemu profilera można zachować dokładne mapowania między włókien wątków zarządzanych wątków i systemu operacyjnego.  
+ `ThreadAssignedToOSThread` Wywołania zwrotnego istnieje tak, aby program profilujący może zachować dokładne mapowania między włókien wątków zarządzanych wątków systemu operacyjnego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -53,5 +54,5 @@ HRESULT ThreadAssignedToOSThread(
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

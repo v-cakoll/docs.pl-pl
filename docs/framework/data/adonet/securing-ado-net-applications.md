@@ -2,12 +2,12 @@
 title: Zabezpieczanie aplikacji ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585370"
 ---
 # <a name="securing-adonet-applications"></a>Zabezpieczanie aplikacji ADO.NET
 Zapisywanie bezpiecznych aplikacji ADO.NET obejmuje więcej niż unikanie typowych pułapek kodowania, takie jak nie sprawdzania poprawności danych wejściowych użytkownika. Aplikacja, która uzyskuje dostęp do danych ma wiele potencjalnych punktów awarii, które osoba atakująca może wykorzystać do pobrania, manipulowanie lub zniszczyć poufnych danych. W związku z tym ważne jest zrozumienie wszystkie aspekty zabezpieczeń z procesu w fazie projektowania aplikacji, jego ostatecznej wdrażania i konserwacji do modelowania zagrożeń.  
@@ -51,6 +51,6 @@ Zapisywanie bezpiecznych aplikacji ADO.NET obejmuje więcej niż unikanie typowy
  [Bibliografia dotycząca zabezpieczeń](/visualstudio/ide/security-bibliography)  
  Zawiera łącza do zasobów zewnętrznych, które są dostępne w tryb online i drukowania.  
   
-## <a name="see-also"></a>Zobacz też  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Zobacz także
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

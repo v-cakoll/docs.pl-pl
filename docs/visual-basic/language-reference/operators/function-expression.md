@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b83bee06a3a001fd362a217907e783cb7ad293ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648118"
 ---
 # <a name="function-expression-visual-basic"></a>Function — Wyrażenie (Visual Basic)
 Deklaruje parametry i kod, który definiuje wyrażenie lambda funkcji.  
@@ -31,8 +31,8 @@ End Function
 |Termin|Definicja|  
 |---|---|  
 |`parameterlist`|Opcjonalna. Lista nazwy zmiennych lokalnych, które reprezentują parametry tej procedury. Nawiasy musi być obecny, nawet wtedy, gdy lista jest pusta. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).|  
-|`expression`|Wymagane. Pojedyncze wyrażenie. Typ wyrażenia jest zwracany typ funkcji.|  
-|`statements`|Wymagane. Listę instrukcji, która zwraca wartość przy użyciu `Return` instrukcji. (Zobacz [Return, instrukcja](../../../visual-basic/language-reference/statements/return-statement.md).) Typ wartości zwracanej jest zwracany typ funkcji.|  
+|`expression`|Wymagana. Pojedyncze wyrażenie. Typ wyrażenia jest zwracany typ funkcji.|  
+|`statements`|Wymagana. Listę instrukcji, która zwraca wartość przy użyciu `Return` instrukcji. (Zobacz [Return, instrukcja](../../../visual-basic/language-reference/statements/return-statement.md).) Typ wartości zwracanej jest zwracany typ funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
  A *wyrażenia lambda* jest funkcją bez nazwy, który oblicza i zwraca wartość. Można użyć wyrażenia lambda dowolnym można użyć typu delegata, z wyjątkiem jako argument do `RemoveHandler`. Aby uzyskać więcej informacji na temat delegatów i użycie wyrażeń lambda z obiektów delegowanych, zobacz [instrukcji delegata](../../../visual-basic/language-reference/statements/delegate-statement.md) i [swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
@@ -87,12 +87,12 @@ Dim londonCusts = db.Customers.
   
  Aby uzyskać więcej informacji na temat metody zapytań, zobacz [zapytania](../../../visual-basic/language-reference/queries/index.md). Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Przegląd](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)  
- [Porównania wartości](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)  
- [Wyrażenia logiczne](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)  
- [If, operator](../../../visual-basic/language-reference/operators/if-operator.md)  
- [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>Zobacz także
+- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Instrukcje](../../../visual-basic/programming-guide/language-features/statements.md)
+- [Porównania wartości](../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
+- [Wyrażenia logiczne](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
+- [If, operator](../../../visual-basic/language-reference/operators/if-operator.md)
+- [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

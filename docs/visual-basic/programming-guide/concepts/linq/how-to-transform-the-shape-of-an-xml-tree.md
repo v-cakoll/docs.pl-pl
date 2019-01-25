@@ -1,29 +1,29 @@
 ---
-title: 'Porady: Przekształcanie kształtu drzewo XML (Visual Basic)'
+title: 'Instrukcje: Przekształcanie kształtu drzewa XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: c1221fb3ad4017d7367493a3c6abef23b8c6b55b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3fb1cd0995597be6c5108832750b6695d196b58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624187"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Porady: Przekształcanie kształtu drzewo XML (Visual Basic)
-*Kształtu* XML dokumentu odwołuje się do nazwy elementu, nazw atrybutów i cechy jej hierarchii.  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Instrukcje: Przekształcanie kształtu drzewa XML (Visual Basic)
+*Kształt* XML dokumentu odwołuje się do jego nazwy elementów, nazwy atrybutów i cechy jej hierarchii.  
   
- Czasami trzeba będzie zmienić kształt dokumentu XML. Może być konieczne na przykład wysłać istniejący dokument XML do innego systemu, który wymaga innego elementu i nazwach atrybutów. W dokumencie, można przejść, usuwanie i zmiana nazwy elementów jako wymagana, ale przy użyciu konstrukcji funkcjonalności wyniki w bardziej czytelnym i łatwy w obsłudze kodu. Aby uzyskać więcej informacji na temat konstrukcji funkcjonalności, zobacz [funkcjonalności konstrukcji (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
+ Czasami trzeba będzie zmienić kształt dokumentu XML. Na przykład trzeba wysłać istniejący dokument XML do innego systemu, który wymaga innego elementu i nazwach atrybutów. Można przejść w dokumencie, usuwanie i zmienianie nazw elementów jako wymagana, ale przy użyciu konstrukcja funkcjonalna skutkuje bardziej czytelny i łatwy w obsłudze kodu. Aby uzyskać więcej informacji na temat konstrukcja funkcjonalna zobacz [konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
- Pierwszym przykładzie zmienia organizacji dokumentu XML. Powoduje przeniesienie złożonych elementów z jednej lokalizacji w drzewie do innego.  
+ Pierwszy przykład zmienia struktury dokumentu XML. Przenosi złożonych elementów z jednej lokalizacji w drzewie do innego.  
   
- Drugi przykład w tym temacie tworzy dokument XML z kształtem innego niż dokumentu źródłowego. Go zmiany wielkości liter nazwy elementów, zmienia nazwę niektóre elementy i pozostawia niektóre elementy z drzewa źródła poza przekształcone drzewa.  
+ Drugi przykład w tym temacie tworzy dokumentu XML z innego kształtu niż dokumentu źródłowego. Zmienia wielkość liter w wyrazie nazw elementów, zmienia nazwę niektóre elementy i pozostawi pewne elementy z drzewa źródła poza przekształcone drzewa.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod zmienia kształt plik XML przy użyciu wyrażenia osadzonego zapytania.  
+ Poniższy kod zmienia kształt pliku XML przy użyciu wyrażeń osadzonego zapytania.  
   
- Dokument XML źródła, w tym przykładzie zawiera `Customers` elementu w obszarze `Root` element, który zawiera wszystkich klientów. Zawiera także `Orders` elementu w obszarze `Root` element, który zawiera wszystkie zamówienia. Nowe drzewo XML, w którym zamówień dla każdego klienta są zawarte w tym przykładzie jest tworzony `Orders` w elemencie `Customer` elementu. Zawiera także oryginalnego dokumentu `CustomerID` element `Order` elementu; spowoduje to element można usunąć z ponownie kształcie dokumentu.  
+ Zawiera w dokumencie źródłowym XML w tym przykładzie `Customers` pod `Root` element, który zawiera wszystkich klientów. Zawiera ona także `Orders` pod `Root` element, który zawiera wszystkie zamówienia. W tym przykładzie tworzy nowego drzewa XML, w którym zamówień dla każdego klienta są zawarte w `Orders` elemencie `Customer` elementu. Oryginalny dokument zawiera również `CustomerID` element `Order` element; spowoduje elementu, można usunąć z ponownie ukształtowane dokumentu.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: Klienci i zamówienia (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -90,11 +90,11 @@ Console.WriteLine(newCustOrd)
 ```  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie zmienia nazwę niektóre elementy i konwertuje niektóre atrybuty elementów.  
+ Ten przykład zmienia nazwę niektóre elementy i konwertuje niektóre atrybuty elementów.  
   
- Kod wywołuje `ConvertAddress`, które zwraca listę <xref:System.Xml.Linq.XElement> obiektów. Argument do metody jest kwerendę, która określa `Address` złożonego elementu gdzie `Type` atrybut ma wartość `"Shipping"`.  
+ Kod wywołuje `ConvertAddress`, które zwraca listę <xref:System.Xml.Linq.XElement> obiektów. Argument do metody jest zapytanie, które określa `Address` złożonego elementu gdzie `Type` atrybut ma wartość `"Shipping"`.  
   
- W tym przykładzie użyto następujących dokumentu XML: [przykładowego pliku XML: typowe zamówienia zakupu (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -142,5 +142,5 @@ End Sub
 </PO>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Projekcje i przekształcenia (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

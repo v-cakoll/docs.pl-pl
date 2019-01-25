@@ -1,18 +1,18 @@
 ---
-title: Jak ustawić rozmiar sąsiadujących kafelków dla TileBrush
+title: 'Instrukcje: Ustaw rozmiar sąsiadujących kafelków dla TileBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tilepropertys
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: e1ba1a25281ffdd1cc00e0bed0efe4f8508780be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4bfc14693f1714206e89ec50128ad62dd239dbee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713567"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Jak ustawić rozmiar sąsiadujących kafelków dla TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Instrukcje: Ustaw rozmiar sąsiadujących kafelków dla TileBrush
 W tym przykładzie pokazano, jak Ustaw rozmiar sąsiadujących kafelków dla <xref:System.Windows.Media.TileBrush>. Domyślnie <xref:System.Windows.Media.TileBrush> generuje pojedynczy fragment, który całkowicie wypełnienia malowanego obszaru. Zachowanie to można zastąpić, ustawiając <xref:System.Windows.Media.TileBrush.Viewport%2A> i <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> właściwości.  
   
  <xref:System.Windows.Media.TileBrush.Viewport%2A> Właściwość określa rozmiar kafelka <xref:System.Windows.Media.TileBrush>. Domyślnie wartość <xref:System.Windows.Media.TileBrush.Viewport%2A> właściwość jest określana względem rozmiar obszaru są rysowane. Zapewnienie <xref:System.Windows.Media.TileBrush.Viewport%2A> właściwość określać rozmiar fragmentu bezwzględny, ustaw <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> właściwość <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
@@ -38,7 +38,7 @@ W tym przykładzie pokazano, jak Ustaw rozmiar sąsiadujących kafelków dla <xr
   
  Mimo że w tym przykładzie użyto <xref:System.Windows.Media.ImageBrush> klasy <xref:System.Windows.Media.TileBrush.Viewport%2A> i <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> właściwości zachowują się identycznie dla siebie <xref:System.Windows.Media.TileBrush> obiekty, oznacza to, że dla <xref:System.Windows.Media.DrawingBrush> i <xref:System.Windows.Media.VisualBrush>. Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.ImageBrush> , a druga <xref:System.Windows.Media.TileBrush> obiekty, zobacz [malowanie obrazami, rysowaniem i Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Media.TileBrush>  
- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Tworzenie różnych wzorów kafelkowych z użyciem elementu TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Media.TileBrush>
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Tworzenie różnych wzorów kafelkowych z użyciem elementu TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

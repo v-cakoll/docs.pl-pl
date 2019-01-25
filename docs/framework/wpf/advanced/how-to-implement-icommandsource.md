@@ -1,5 +1,5 @@
 ---
-title: 'Porady: implementowanie ICommandSource'
+title: 'Instrukcje: Zaimplementuj ICommandSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,31 +7,31 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d42c3a936114c01eb7b7493a9732597a7d2fab9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593943"
 ---
-# <a name="how-to-implement-icommandsource"></a>Porady: implementowanie ICommandSource
-W tym przykładzie pokazano, jak utworzyć źródło polecenia zaimplementowanie <xref:System.Windows.Input.ICommandSource>.  Źródło polecenia jest obiekt, który umożliwia wywołanie polecenia.  <xref:System.Windows.Input.ICommandSource> Interfejsu udostępnia trzy elementy członkowskie: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, i <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> to polecenie, które zostanie wywołany. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Jest typem danych zdefiniowane przez użytkownika, który jest przekazywany z źródło polecenia do metody, która obsługuje polecenie. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> To polecenie jest wykonywana na obiekt.  
+# <a name="how-to-implement-icommandsource"></a>Instrukcje: Zaimplementuj ICommandSource
+W tym przykładzie przedstawiono sposób tworzenia źródło polecenia poprzez implementację <xref:System.Windows.Input.ICommandSource>.  Źródło polecenia jest obiektem, który wie, jak wywołać polecenie.  <xref:System.Windows.Input.ICommandSource> Interfejsu udostępnia trzy elementy członkowskie: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, i <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> to polecenie, które zostaną wywołane. <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> Jest typem danych zdefiniowane przez użytkownika, który jest przekazywany ze źródła polecenia do metody, która obsługuje polecenie. <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> To polecenie jest wykonywane na obiekt.  
   
- W tym przykładzie klasa jest tworzony które podklasy <xref:System.Windows.Controls.Slider> kontroli i implementuje <xref:System.Windows.Input.ICommandSource>.  
+ W tym przykładzie tworzenia których podklasy klasy <xref:System.Windows.Controls.Slider> kontroli i implementuje <xref:System.Windows.Input.ICommandSource>.  
   
 ## <a name="example"></a>Przykład  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia szereg klas, które implementują <xref:System.Windows.Input.ICommandSource>, takich jak <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, i <xref:System.Windows.Controls.ListBoxItem>.  Źródło polecenia definiuje sposób wywołuje polecenie.   <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.MenuItem> wywołania polecenia, gdy są one kliknięty.  A <xref:System.Windows.Controls.ListBoxItem> wywołuje polecenie, po kliknięciu double. Te klasy tylko staną się polecenie źródło ich <xref:System.Windows.Input.ICommandSource.Command%2A> właściwość jest ustawiona.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wiele klas implementujących <xref:System.Windows.Input.ICommandSource>, takich jak <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.MenuItem>, i <xref:System.Windows.Controls.ListBoxItem>.  Źródło polecenia definiuje, jak je wywołuje polecenie.   <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.MenuItem> Wywołaj polecenie, po ich kliknięciu.  A <xref:System.Windows.Controls.ListBoxItem> wywołuje polecenie, gdy zostanie dwukrotnie kliknięta. W ramach tych zajęć stają się tylko polecenie źródło, gdy ich <xref:System.Windows.Input.ICommandSource.Command%2A> właściwość jest ustawiona.  
   
- W tym przykładzie mamy wywoła polecenie, gdy zostanie przesunięty suwak lub dokładniej, gdy <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> właściwości zostanie zmieniona.  
+ W tym przykładzie firma Microsoft będzie wywoływał dane polecenie po przeniesieniu suwak lub dokładniej, gdy <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> zmienić właściwości.  
   
- Poniżej znajduje się definicja klasy.  
+ Jest definicją klasy.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- Następnym krokiem jest zaimplementowanie <xref:System.Windows.Input.ICommandSource> elementów członkowskich.  W tym przykładzie właściwości są zaimplementowane jako <xref:System.Windows.DependencyProperty> obiektów.  Dzięki temu właściwości do używania wiązania z danymi.  Aby uzyskać więcej informacji na temat <xref:System.Windows.DependencyProperty> , zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  Aby uzyskać więcej informacji na temat wiązania danych, zobacz [omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Następnym krokiem jest zaimplementowanie <xref:System.Windows.Input.ICommandSource> elementów członkowskich.  W tym przykładzie właściwości są implementowane jako <xref:System.Windows.DependencyProperty> obiektów.  Dzięki temu właściwości do użycia powiązanie danych.  Aby uzyskać więcej informacji na temat <xref:System.Windows.DependencyProperty> klasy, zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  Aby uzyskać więcej informacji na temat tworzenia powiązań danych, zobacz [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
   
- Tylko <xref:System.Windows.Input.ICommandSource.Command%2A> pokazane właściwości.  
+ Tylko <xref:System.Windows.Input.ICommandSource.Command%2A> właściwości jest wyświetlana w tym miejscu.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandpropertydefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandPropertyDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandpropertydefinition)]  
@@ -41,14 +41,14 @@ W tym przykładzie pokazano, jak utworzyć źródło polecenia zaimplementowanie
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcecommandchanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceCommandChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcecommandchanged)]  
   
- Następnym krokiem jest dodawanie i usuwanie polecenia, który jest skojarzony ze źródłem polecenia.  <xref:System.Windows.Input.ICommandSource.Command%2A> Właściwości nie można po prostu zastąpione po dodaniu nowego polecenia, ponieważ obsługi zdarzeń skojarzonych z poprzedniego polecenia, jeśli wystąpił jeden z nich, najpierw należy usunąć.  
+ Następnym krokiem jest do dodawania i usuwania polecenia, które jest skojarzone z obiektem źródłowym polecenia.  <xref:System.Windows.Input.ICommandSource.Command%2A> Właściwości nie po prostu można zastąpić po dodaniu nowego polecenia, ponieważ programy obsługi zdarzeń skojarzonych z poprzedniego polecenia, jeśli wystąpił jeden z nich, najpierw należy usunąć.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourcehookunhookcommands)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceHookUnHookCommands](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourcehookunhookcommands)]  
   
  Ostatnim krokiem jest utworzenie logikę <xref:System.Windows.Input.ICommand.CanExecuteChanged> obsługi i <xref:System.Windows.Input.ICommand.Execute%2A> metody.  
   
- <xref:System.Windows.Input.ICommand.CanExecuteChanged> Zdarzeń powiadamia źródło polecenia, który mógł ulec zmianie możliwości polecenia do wykonania na aktualnym elemencie docelowym polecenia.  Gdy źródło polecenia odbiera to zdarzenie, zwykle wywołuje <xref:System.Windows.Input.ICommand.CanExecute%2A> metody w poleceniu.  Jeśli polecenie nie można wykonać na bieżącym elemencie docelowym polecenia, źródło polecenia zwykle sam się wyłączy.  Jeśli polecenie można wykonać na bieżącym elemencie docelowym polecenia, źródło polecenia zwykle Włącz samej siebie.  
+ <xref:System.Windows.Input.ICommand.CanExecuteChanged> Zdarzenie powiadamia źródła polecenia, które mogły ulec zmianie możliwości polecenia do wykonania w bieżącym elemencie docelowym polecenia.  Gdy źródło polecenia odbiera to zdarzenie, zwykle wywołuje <xref:System.Windows.Input.ICommand.CanExecute%2A> metody w poleceniu.  Jeśli polecenie nie można wykonać na aktualnym elemencie docelowym polecenia, źródło polecenia zazwyczaj sam się wyłączy.  Jeśli polecenie można wykonać na aktualnym elemencie docelowym polecenia, źródło polecenia zazwyczaj włączyć sam.  
   
  [!code-csharp[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandcanexecutechanged)]
  [!code-vb[ImplementICommandSource#ImplementICommandCanExecuteChanged](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandcanexecutechanged)]  
@@ -58,8 +58,8 @@ W tym przykładzie pokazano, jak utworzyć źródło polecenia zaimplementowanie
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Windows.Input.ICommandSource>  
- <xref:System.Windows.Input.ICommand>  
- <xref:System.Windows.Input.RoutedCommand>  
- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Windows.Input.ICommandSource>
+- <xref:System.Windows.Input.ICommand>
+- <xref:System.Windows.Input.RoutedCommand>
+- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)

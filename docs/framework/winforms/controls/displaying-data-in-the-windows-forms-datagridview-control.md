@@ -7,71 +7,71 @@ helpviewer_keywords:
 - displaying data [Windows Forms], data grids
 - DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-ms.openlocfilehash: 06df9bbcb1e8b1b53d061dbd219a25378a311072
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39c5482c48f3728469e8952220eabc4daef1cbf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665256"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Wyświetlanie danych w formancie DataGridView formularzy systemu Windows
-`DataGridView` Kontroli jest używana do wyświetlania danych z różnych źródeł danych zewnętrznych. Alternatywnie możesz Dodawanie wierszy i kolumn do formantu i ręcznie umieścić w nim danych.  
+`DataGridView` Formant jest używany do wyświetlania danych z różnych źródeł danych zewnętrznych. Można również dodawanie wierszy i kolumn do formantu i ręcznie wypełnić je danymi.  
   
- Powiązywanie formantu ze źródłem danych, może wygenerować kolumny automatycznie na podstawie schematu źródła danych. Jeśli te kolumny są niewidoczne, tak samo, jak mają być, można ukryć, usunąć lub zmienić ich kolejność. Można również dodać niepowiązanych kolumn, aby wyświetlić dane dodatkowe, które nie pochodzą ze źródła danych.  
+ Możesz powiązać formant ze źródłem danych, może wygenerować automatycznie na podstawie schematu źródła danych kolumny. Jeśli tak, jak chcesz, aby te kolumny są niewidoczne, można ukryć, usunąć lub zmienić ich kolejność. Można również dodać niepowiązanych kolumn do wyświetlenia dane dodatkowe, które nie pochodzą ze źródła danych.  
   
- Ponadto można wyświetlić dane przy użyciu standardowych formatów (na przykład w formacie waluty), lub można dostosować formatowanie do prezentowania danych, jednak należy (np. zmiana koloru tła dla wartości ujemne lub zastępowania wartości ciągów wyświetlania z odpowiedniego obrazów).  
+ Ponadto można wyświetlić danych przy użyciu standardowych formatów (na przykład format waluty) lub możesz dostosować formatowanie na prezentowanie danych, ale musisz się (np. Zmienianie koloru tła liczb ujemnych lub zastąpienie wartości ciągu wyświetlania przy użyciu odpowiedniego obrazów).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tryby wyświetlania danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
- Opisuje opcje wypełniania formantu z danymi.  
+ W tym artykule opisano opcje wypełnianie kontrolki z danymi.  
   
  [Formatowanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
- Opisuje opcje formatowania komórki wyświetlanej wartości.  
+ W tym artykule opisano opcje formatowania wartości wyświetlane w komórce.  
   
- [Przewodnik: tworzenie niepowiązanej kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
- Opisuje sposób ręcznego wypełnić kontrolki z danymi.  
+ [Przewodnik: Tworzenie Windows niezwiązanego formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ Opisuje sposób ręcznego wypełnienia kontrolki z danymi.  
   
- [Instrukcje: wiązanie danych z kontrolką DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- Opisuje sposób wypełnienia kontrolki z danych przez to powiązanie `BindingSource` zawierający informacje pobrane z bazy danych.  
+ [Instrukcje: Powiązanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+ Zawiera opis sposobu wypełniania kontrolki z danymi, tworząc powiązanie do `BindingSource` zawierający informacje pobierane z bazy danych.  
   
- [Instrukcje: automatyczne generowanie kolumn w powiązanej z danymi kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
- Opisuje sposób automatycznego generowania kolumn na podstawie źródła powiązana z danymi.  
+ [Instrukcje: Automatyczne generowanie kolumn w formancie DataGridView formularzy Windows powiązane z danymi](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+ Opisuje sposób automatycznie wygenerować na podstawie źródła danych powiązanych kolumn.  
   
- [Instrukcje: usuwanie utworzonych automatycznie kolumn z kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
- Opisuje sposób ukryć lub usunąć kolumny generowane automatycznie na podstawie źródła danych powiązania.  
+ [Instrukcje: Usuwanie utworzonych automatycznie kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+ Opisuje sposób ukryć lub usunąć automatycznie wygenerowany na podstawie źródła danych powiązanych kolumn.  
   
- [Instrukcje: zmienianie kolejności kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
- Opisuje sposób zmieniać kolejności kolumn generowane automatycznie na podstawie źródła danych powiązania.  
+ [Instrukcje: Zmienianie kolejności kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+ Opisuje sposób zmiana rozmieszczenia kolumn generowane automatycznie na podstawie źródła powiązane dane.  
   
- [Instrukcje: dodawanie niepowiązanych kolumn do powiązanej z danymi kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
- Opisuje sposób uzupełnienia danych ze źródła danych powiązania przez wyświetlanie dodatkowych, niepowiązanych kolumn.  
+ [Instrukcje: Dodawanie niepowiązanych kolumn do formantu DataGridView formularzy Windows powiązane z danymi](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
+ Opisuje sposób uzupełniają dane ze źródła powiązanych danych, wyświetlając dodatkowych, niepowiązanych kolumn.  
   
- [Instrukcje: wiązanie obiektów z kontrolkami DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
- Opisuje sposób do powiązania kontrolki do kolekcji obiektów dowolnego, dzięki czemu każdy obiekt jest wyświetlany w oddzielnym wierszu.  
+ [Instrukcje: Powiązanie obiektów do kontrolek DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ W tym temacie opisano kontrolkę można powiązać kolekcję obiektów dowolnego tak, aby każdy obiekt jest wyświetlana w oddzielnym wierszu.  
   
- [Instrukcje: uzyskiwanie dostępu do obiektów powiązanych z wierszami kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
- Opisuje sposób pobrać obiekt powiązany z określonego wiersza formantu.  
+ [Instrukcje: Uzyskiwanie dostępu do obiektów powiązanych z Windows Forms wierszami formantu DataGridView](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ W tym artykule opisano sposób pobierania obiektu powiązany do określonego wiersza formantu.  
   
- [Przewodnik: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
- Opisuje sposób wyświetlania danych z dwóch tabel w bazie danych, aby wartości wyświetlane w jednym `DataGridView` formantu są zależne od aktualnie zaznaczonego wiersza w inny formant.  
+ [Przewodnik: Tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
+ W tym artykule opisano sposób wyświetlania danych z dwóch tabel w bazie danych, aby wartości widocznych w jednym `DataGridView` kontrolki są zależne od aktualnie zaznaczonego wiersza w innej kontrolce.  
   
- [Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- Opisuje sposób obsługi <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> zdarzeń, aby zmienić wygląd komórek w zależności od ich wartości.  
+ [Instrukcje: Dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+ W tym artykule opisano sposób obsługi <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> zdarzenie, aby zmienić wygląd komórki, w zależności od ich wartości.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.DataGridView>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView> formantu.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView> kontroli.  
   
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView.DataSource%2A> właściwości.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridView.DataSource%2A> właściwości.  
   
  <xref:System.Windows.Forms.BindingSource>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.BindingSource> składnika.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.BindingSource> składnika.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
- Udostępnia tematów opisujących sposób zmiany przez użytkowników, dodawanie i modyfikowanie danych w formancie.  
+ Zawiera tematy, które opisują sposób zmiany przez użytkowników, dodawanie i modyfikowanie danych w formancie.  
   
-## <a name="see-also"></a>Zobacz też  
- [DataGridView, kontrolka](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Zobacz także
+- [DataGridView, kontrolka](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

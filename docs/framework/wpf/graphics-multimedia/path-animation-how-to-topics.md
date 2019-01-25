@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3904d4bedd1e73619b7918fa1519af492182de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665854"
 ---
 # <a name="path-animation-how-to-topics"></a>Animacja ścieżki Tematy Pomocy
-Tematy w tej sekcji przedstawiają sposób animować obiektu wzdłuż ścieżki.  
+Tematy w tej sekcji pokazują, jak animować obiekt na ścieżce.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Animowanie obiektu na ścieżce (animacja double)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
@@ -30,7 +30,7 @@ Tematy w tej sekcji przedstawiają sposób animować obiektu wzdłuż ścieżki.
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>Zobacz też  
- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>Zobacz także
+- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

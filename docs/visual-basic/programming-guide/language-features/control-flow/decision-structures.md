@@ -9,46 +9,46 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 1ede40d196b470a351aca4c60b33f074df14b86a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735250"
 ---
 # <a name="decision-structures-visual-basic"></a>Struktury decyzji (Visual Basic)
-Visual Basic umożliwia warunkach testowych i wykonywać różne operacje, w zależności od wyniki tego testu. Można sprawdzić warunku jest PRAWDA lub FAŁSZ, różnych wartości wyrażenia lub różne wyjątki generowane, gdy wykonanie serię instrukcji.  
+Visual Basic umożliwia warunki badania i wykonywać różne operacje, w zależności od wyników tego testu. Możesz sprawdzić warunku jest wartość true lub false dla różnych wartości wyrażenia lub różne wyjątki generowane, gdy wykonać serię instrukcji.  
   
- Na poniższej ilustracji przedstawiono strukturę decyzji, sprawdza, czy warunek jest spełniony, który wykonuje różne akcje w zależności od tego, czy ma wartość PRAWDA lub FAŁSZ.  
+ Poniższa ilustracja przedstawia strukturę decyzji, które sprawdza, czy warunek jest spełniony i wykonują różne akcje zależnie od tego, czy jest wartość PRAWDA lub FAŁSZ.  
   
- ![Schemat blokowy If... Następnie... Else budowa](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "ifthenelse —")  
-Wykonywania różnych akcji, gdy warunek ma wartość PRAWDA, a gdy ma wartość false  
+ ![Schemat blokowy If... Następnie... Konstrukcja ELSE](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "ifthenelse —")  
+Wykonywanie różnych akcji, gdy warunek ma wartość PRAWDA, a jeśli ma wartość false  
   
-## <a name="ifthenelse-construction"></a>IF... Następnie... Else budowa  
- `If...Then...Else` konstrukcje umożliwiają testu dla co najmniej jednego warunku i uruchom jedną lub więcej instrukcji w zależności od każdego warunku. Można przetestować warunków, a następnie podjąć działania w następujący sposób:  
+## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
+ `If...Then...Else` konstrukcje umożliwiają testowanie dla co najmniej jeden warunek i uruchomić jedną lub więcej instrukcji w zależności od każdego warunku. Można przetestować warunki i akcje w następujący sposób:  
   
--   Uruchom jednego lub więcej instrukcji, gdy jest warunek `True`  
+-   Uruchomić jedną lub więcej instrukcji, jeśli warunek jest `True`  
   
--   Uruchom jednego lub więcej instrukcji, gdy jest warunek `False`  
+-   Uruchomić jedną lub więcej instrukcji, jeśli warunek jest `False`  
   
--   Uruchamianie niektórych instrukcji, gdy jest warunek `True` oraz innym osobom, jeśli jest `False`  
+-   Uruchamianie niektórych instrukcji, jeśli warunek jest `True` i innym osobom, gdy jest `False`  
   
--   Test dodatkowy warunek, w przypadku warunku wstępnego `False`  
+-   Dodatkowe warunki badania, w przypadku warunku wstępnego `False`  
   
- Struktura kontroli, która oferuje wszystkie te możliwości to [Jeśli... Następnie... Else — instrukcja](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Można użyć wersji jeden wiersz, jeśli masz tylko jeden test i jednej instrukcji do uruchomienia. Jeśli masz bardziej złożonego zestawu elementów warunków i akcji, można użyć wersji wielu linii.  
+ Struktura kontrolki, która oferuje wszystkie powyższe możliwości jest [Jeśli... Następnie... Else — instrukcja](../../../../visual-basic/language-reference/statements/if-then-else-statement.md). Można użyć wersji jednowierszowego, jeśli masz tylko jeden test i jednej instrukcji do uruchomienia. W przypadku bardziej złożonego zestawu warunków i akcji można użyć wersji wielu linii.  
   
-## <a name="selectcase-construction"></a>Wybierz... Wielkość konstrukcji  
- `Select...Case` Konstrukcji pozwala obliczyć wyrażenia, jeden raz, a następnie uruchom różne zestawy instrukcji w oparciu o różne możliwe wartości. Aby uzyskać więcej informacji, zobacz [wybierz... Case — instrukcja](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
+## <a name="selectcase-construction"></a>Wybierz... Konstrukcja wielkości liter  
+ `Select...Case` Konstrukcja umożliwia ocena wyrażenia jeden raz i uruchomić różne zestawy instrukcji, w oparciu o różne możliwe wartości. Aby uzyskać więcej informacji, zobacz [wybierz... Case — instrukcja](../../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="trycatchfinally-construction"></a>Try... CATCH... Na koniec konstrukcji  
- `Try...Catch...Finally` konstrukcje umożliwiają uruchamianie zestaw instrukcji w środowisku, który zachowuje formantu, jeśli dowolny z instrukcji powoduje zgłoszenie wyjątku. Można wykonać różne akcje dla różnych wyjątków. Opcjonalnie można określić blok kodu uruchamianego przed zakończeniem pracy całego `Try...Catch...Finally` konstrukcji, niezależnie od tego, jakie występuje. Aby uzyskać więcej informacji, zobacz [spróbuj... CATCH... Instrukcji finally](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ `Try...Catch...Finally` konstrukcje umożliwiają uruchamianie zbiór instrukcji w środowisku, w którym zachowuje kontrolki, jeśli dowolny z zestawienia powoduje wyjątek. Możesz wykonywać różne akcje dla różnych wyjątków. Opcjonalnie można określić bloku kodu, który jest uruchamiany przed zakończeniem pracy całego `Try...Catch...Finally` konstrukcji, niezależnie od tego, co występuje. Aby uzyskać więcej informacji, zobacz [spróbuj... CATCH... Na koniec instrukcji](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 > [!NOTE]
->  Dla wielu struktur kontroli po kliknięciu słowem kluczowym wszystkich słów kluczowych w strukturze wyróżniono. Na przykład po kliknięciu `If` w `If...Then...Else` konstrukcji, wszystkie wystąpienia `If`, `Then`, `ElseIf`, `Else`, i `End If` są wyróżniane w konstrukcji. Aby przejść do następnej lub poprzedniej wyróżnione słowa kluczowego, naciśnij kombinację klawiszy CTRL + SHIFT + Strzałka w dół strzałkę lub CTRL + SHIFT + Strzałka w górę, strzałki.  
+>  Dla wielu struktur sterowania po kliknięciu słowem kluczowym wszystkich słów kluczowych w strukturze, zostały wyróżnione. Na przykład po kliknięciu `If` w `If...Then...Else` budowy, wszystkie wystąpienia elementu `If`, `Then`, `ElseIf`, `Else`, i `End If` w konstrukcji są wyróżnione. Aby przejść do następnego lub poprzedniego wyróżnionego słów kluczowych, naciśnij klawisz Strzałka CTRL + SHIFT + Strzałka w dół lub CTRL + SHIFT + Strzałka w górę Strzałka.  
   
-## <a name="see-also"></a>Zobacz też  
- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)  
- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)  
- [Zagnieżdżone struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)  
- [If, operator](../../../../visual-basic/language-reference/operators/if-operator.md)
+## <a name="see-also"></a>Zobacz także
+- [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
+- [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [Zagnieżdżone struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+- [If, operator](../../../../visual-basic/language-reference/operators/if-operator.md)

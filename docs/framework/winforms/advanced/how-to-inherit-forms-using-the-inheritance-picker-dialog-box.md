@@ -1,19 +1,19 @@
 ---
-title: 'Porady: dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia'
+title: 'Instrukcje: Dziedziczenie formularzy przy użyciu okna dialogowego selektora dziedziczenia'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 7a6de60ec7621792b4f19857a2743f64cbdc686c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837300"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601834"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Porady: dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Instrukcje: Dziedziczenie formularzy przy użyciu okna dialogowego selektora dziedziczenia
 Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **selektor dziedziczenia** okno dialogowe. Dzięki niemu można korzystać z zalet interfejsów kodu lub użytkownika (UI), utworzono już w innych rozwiązaniach.  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **sele
      Aby uzyskać informacje o tym, jak zmienić wygląd formularza podstawowego, zobacz [efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Łącząc dziedziczone kontrolek i składników za pomocą standardowych kontrolek i składników na formularzach Windows Forms, może wystąpić powoduje konflikt z kolejności z. Problem można rozwiązać, zmieniając porządku osi z, które jest realizowane przez kliknięcie w **Format** menu, wskazać polecenie **kolejności**, a następnie klikając polecenie **Przesuń na wierzch** lub  **Przesuń na spód**. Aby uzyskać więcej informacji na temat kolejności z formantów, zobacz [jak: warstwy obiektów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Łącząc dziedziczone kontrolek i składników za pomocą standardowych kontrolek i składników na formularzach Windows Forms, może wystąpić powoduje konflikt z kolejności z. Problem można rozwiązać, zmieniając porządku osi z, które jest realizowane przez kliknięcie w **Format** menu, wskazać polecenie **kolejności**, a następnie klikając polecenie **Przesuń na wierzch** lub  **Przesuń na spód**. Aby uzyskać więcej informacji na temat kolejności z formantów zobacz [jak: Warstw obiektów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
-## <a name="see-also"></a>Zobacz też  
- [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [using](~/docs/csharp/language-reference/keywords/using.md)  
- [Efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+## <a name="see-also"></a>Zobacz także
+- [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

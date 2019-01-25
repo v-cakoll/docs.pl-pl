@@ -3,12 +3,12 @@ title: '&lt;Stan&gt; z &lt;stanów&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: e4eaf1cbe788018b46759efb1e9755d65b19cc60
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1ddf7e0ed2849764f3b21e8cf1c31d98762c0d5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696246"
 ---
 # <a name="ltstategt-of-ltstatesgt"></a>&lt;Stan&gt; z &lt;stanów&gt;
 Element konfiguracji, który zawiera stan subskrybowanego działania, dla którego należy obliczanie rekord śledzenia.  
@@ -19,10 +19,10 @@ Element konfiguracji, który zawiera stan subskrybowanego działania, dla które
 \<Śledzenie >  
 \<trackingProfile>  
 \<przepływ pracy >  
-\<activityStateQueries >  
-\<activityStateQuery >  
+\<activityStateQueries>  
+\<activityStateQuery>  
 \<Stany >  
-\<Stan >  
+\<state>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -76,8 +76,8 @@ Element konfiguracji, który zawiera stan subskrybowanego działania, dla które
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
+- [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

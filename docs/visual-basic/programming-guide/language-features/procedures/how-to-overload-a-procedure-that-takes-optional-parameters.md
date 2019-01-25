@@ -1,5 +1,5 @@
 ---
-title: 'Porady: przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)'
+title: 'Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 1da1d67726a9669477721aabc0aace0119aa7e56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 343ede485a0486567710a8bf34d85ea356c139fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652899"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694129"
 ---
-# <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Porady: przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)
-Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) parametrów, nie można zdefiniować przeciążonego wersji zgodne z żadnym z jego niejawne przeładowania. Aby uzyskać więcej informacji, zobacz "Niejawne Overloads dla parametrów" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
+# <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)
+Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) parametrów, nie można zdefiniować przeciążoną wersją, dowolny z jej przeciążeń niejawne dopasowania. Aby uzyskać więcej informacji, zobacz "Niejawne przeciążenia dla opcjonalne parametry" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
   
-## <a name="one-optional-parameter"></a>Jeden opcjonalny parametr  
+## <a name="one-optional-parameter"></a>Jeden parametr opcjonalny  
   
-#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>Do procedury, która przyjmuje jeden parametr opcjonalny przeciążenia  
+#### <a name="to-overload-a-procedure-that-takes-one-optional-parameter"></a>Aby przeciążanie procedury, która przyjmuje jeden parametr opcjonalny  
   
 1.  Zapis `Sub` lub `Function` instrukcji deklaracji, która zawiera parametr opcjonalny na liście parametrów. Nie używaj `Optional` — słowo kluczowe w tej wersji przeciążona.  
   
-2.  Należy poprzedzić `Sub` lub `Function` — słowo kluczowe z [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe.  
+2.  Należy poprzedzić `Sub` lub `Function` — słowo kluczowe z [przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe.  
   
-3.  Pisanie kodu procedury, który powinien zostać wykonany, gdy kod wywołujący dostarcza opcjonalny argument.  
+3.  Napisz kod procedury, który powinien zostać wykonany, gdy kod wywołujący dostarcza opcjonalny argument.  
   
-4.  Zakończenie procedury z `End Sub` lub `End Function` oświadczenie zależnie od potrzeb.  
+4.  Zakończenie procedury z `End Sub` lub `End Function` instrukcji zgodnie z potrzebami.  
   
-5.  Zapis drugi instrukcji deklaracji, która jest taka sama jak pierwszej deklaracji z tą różnicą, że nie ma parametr opcjonalny na liście parametrów.  
+5.  Napisz drugiej instrukcji deklaracji, która jest taka sama jak pierwszej deklaracji, z tą różnicą, że nie ma opcjonalnego parametru na liście parametrów.  
   
-6.  Pisanie kodu procedury, który powinien zostać wykonany, gdy kod wywołujący nie dostarcza opcjonalny argument. Zakończenie procedury z `End Sub` lub `End Function` oświadczenie zależnie od potrzeb.  
+6.  Napisz kod procedury, który powinien zostać wykonany, gdy kod wywołujący nie dostarcza opcjonalny argument. Zakończenie procedury z `End Sub` lub `End Function` instrukcji zgodnie z potrzebami.  
   
-     W poniższym przykładzie przedstawiono procedurę zdefiniowane za pomocą opcjonalnego parametru równoważne zbiór dwie procedury przeciążenia, a na końcu przykłady zarówno nieprawidłowy prawidłowy zastąpionej wersji i.  
+     Poniższy przykład pokazuje zdefiniowane z opcjonalnym parametrem, równoważne zbiór dwie procedury przeciążone, a na końcu przykłady nieprawidłowych i prawidłowe przeciążone wersje procedury.  
   
      [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
   
@@ -44,31 +44,31 @@ Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/lan
   
      [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
   
-## <a name="multiple-optional-parameters"></a>Wiele następujące parametry opcjonalne  
- Procedury z więcej niż jeden parametr opcjonalny potrzebne są zwykle więcej niż dwie wersje przeciążona. Na przykład jeśli istnieją dwie opcjonalne parametry i kod wywołujący może dostarczyć lub Pomiń nich niezależnie od innych, należy cztery przeciążone wersji narzędzia, dla każdej możliwej kombinacji podanych argumentów.  
+## <a name="multiple-optional-parameters"></a>Wiele parametrów opcjonalnych  
+ Procedury z więcej niż jeden parametr opcjonalny zwykle wymaga więcej niż dwie przeciążone wersje. Na przykład jeśli istnieją dwa parametry opcjonalne, a kod wywołujący może dostarczyć lub Pomiń każdej z nich niezależnie od innych, należy cztery przeciążone wersje: jeden dla każdej możliwej kombinacji podanych argumentów.  
   
- Jak zwiększa liczbę następujące parametry opcjonalne, zwiększa złożoności logowania. Chyba, że niektóre kombinacje podanych argumentów nie są dozwolone, N następujące parametry opcjonalne mają być 2 ^ N przeciążony wersji. W zależności od charakteru procedura może się okazać, że jasności logiki uzasadnia dodatkowy wysiłek zdefiniowania zastąpionej wersji.  
+ W miarę zwiększania liczby parametrów opcjonalnych zwiększa złożonością przeciążenia. Chyba że niektóre kombinacje przekazanych argumentów nie są dozwolone, następujące parametry opcjonalne N na potrzeby należy 2 ^ N przeciążone wersje. W zależności od charakteru procedura może się okazać, że w celu uściślenia logiki uzasadnia dodatkowego wysiłku definiowania przeciążone wersje.  
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Aby przeciążanie procedury wykorzystującej więcej niż jeden parametr opcjonalny  
   
-1.  Określ kombinacje podane argumenty opcjonalne są akceptowane przez logikę procedury. Kombinację niedopuszczalne mogą wystąpić, jeśli jeden parametr opcjonalny jest zależna od innej. Na przykład jeden parametr akceptuje współmałżonka nazwę i inny akceptuje współmałżonka wieku, kombinacja argumentów dostarczanie wiek, ale bez określenia nazwy jest nie do przyjęcia.  
+1.  Ustal, kombinacje podane argumenty opcjonalne są akceptowane przez logikę procedury. Można zaakceptować połączenie może wystąpić, jeśli jeden parametr opcjonalny jest zależny od innego. Na przykład jeden parametr akceptuje współmałżonka nazwę i inny akceptuje współmałżonka wiek, kombinacja argumentów, podając wiek, ale pomijając nazwę jest nie do przyjęcia.  
   
-2.  Dla każdej kombinacji dopuszczalne podanych argumentów opcjonalnych zapisu `Sub` lub `Function` instrukcji deklaracji, który definiuje na odpowiedniej liście parametrów. Nie używaj `Optional` — słowo kluczowe.  
+2.  Dla każdej kombinacji dopuszczalne podanych argumentów opcjonalnych zapisu `Sub` lub `Function` instrukcji deklaracji, która definiuje odpowiednie listy parametrów. Nie używaj `Optional` — słowo kluczowe.  
   
-3.  W każdej deklaracji poprzedzać `Sub` lub `Function` — słowo kluczowe z [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe.  
+3.  W każdym zgłoszeniu, należy poprzedzić `Sub` lub `Function` — słowo kluczowe z [przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe.  
   
-4.  Po każdej deklaracji pisania kodu procedury, który powinien zostać wykonany po kod wywołujący dostarcza odpowiadającego tej deklaracji listy parametrów listy argumentów.  
+4.  Po każdym zgłoszeniu należy napisać kod procedury, który powinien zostać wykonany, gdy kod wywołujący dostarcza listy argumentów odpowiadający tej deklaracji listy parametrów.  
   
-5.  Zakończenie każdej procedury z `End Sub` lub `End Function` oświadczenie zależnie od potrzeb.  
+5.  Zakończenie każdej procedury z `End Sub` lub `End Function` instrukcji zgodnie z potrzebami.  
   
-## <a name="see-also"></a>Zobacz też  
- [Procedury](./index.md)  
- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Parametry opcjonalne](./optional-parameters.md)  
- [Tablice parametrów](./parameter-arrays.md)  
- [Przeciążanie procedury](./procedure-overloading.md)  
- [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)  
- [Instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Instrukcje: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
- [Instrukcje: przeciążanie procedury korzystającej z nieokreślonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
- [Rozpoznanie przeciążenia](./overload-resolution.md)
+## <a name="see-also"></a>Zobacz także
+- [Procedury](./index.md)
+- [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
+- [Parametry opcjonalne](./optional-parameters.md)
+- [Tablice parametrów](./parameter-arrays.md)
+- [Przeciążanie procedury](./procedure-overloading.md)
+- [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
+- [Instrukcje: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Instrukcje: Wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
+- [Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Rozpoznanie przeciążenia](./overload-resolution.md)

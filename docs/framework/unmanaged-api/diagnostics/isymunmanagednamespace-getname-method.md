@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aeb3c4e9a1d87b2d93a310b88c340aec0955a845
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5478a8d3433a8a57dab458c98ea745f32a9ffdf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721940"
 ---
 # <a name="isymunmanagednamespacegetname-method"></a>ISymUnmanagedNamespace::GetName — Metoda
 Pobiera nazwę tej przestrzeni nazw.  
@@ -39,19 +39,19 @@ HRESULT GetName(
   
 #### <a name="parameters"></a>Parametry  
  `cchName`  
- [in] A `ULONG32` wskazuje, że rozmiar `szName` buforu.  
+ [in] A `ULONG32` oznacza rozmiar `szName` buforu.  
   
  `pcchName`  
- [out] Wskaźnik do `ULONG32` rozmiaru, który odbiera w znaki buforu, muszą zawierać nazwę przestrzeni nazw, takie jak zakończenie wartości null.  
+ [out] Wskaźnik do `ULONG32` rozmiar, który odbiera w postaci, buforu, muszą zawierać nazwę przestrzeni nazw, w tym zakończenia o wartości null.  
   
  `szName`  
  [out] Wskaźnik do buforu, który zawiera nazwę przestrzeni nazw.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedNamespace, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedNamespace, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

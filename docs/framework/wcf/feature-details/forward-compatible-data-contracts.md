@@ -7,42 +7,42 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 95a72d5d09538bc6f663f2376c7f8f928909cd57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 732c47b03c2769a6147c3c812ddd6e81dab11a55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492209"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695650"
 ---
 # <a name="forward-compatible-data-contracts"></a>Kontrakty danych zgodne z nowszymi wersjami
-Funkcja programu Windows Communication Foundation (WCF) jest system kontraktu danych który umów można rozwijać w czasie nierozdzielający sposoby. Oznacza to, że klienta przy użyciu starszej wersji kontraktu danych może komunikować się z usługą przy użyciu nowszej wersji tego samego kontraktu danych lub klienta przy użyciu nowszej wersji kontraktu danych może komunikować się ze starszą wersją tej samej kontraktu danych. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Funkcji programu Windows Communication Foundation (WCF) to system kontraktu danych, kontraktów może z czasem ewoluować względami nieprzerywającymi działania aplikacji. Oznacza to, że klienta ze starszą wersją kontraktu danych może komunikować się z usługą za pomocą nowszej wersji tego samego kontraktu danych lub klienta za pomocą nowszej wersji kontraktu danych może komunikować się ze starszą wersją tej samej umowy dotyczącej danych. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
- Większość funkcji przechowywania wersji można stosować na zgodnie z potrzebami, podczas tworzenia nowych wersji istniejących kontraktu danych. Jednak jedna z funkcji przechowywania wersji, *dwustronną komunikację*, muszą zostać skompilowane na typ z pierwszej wersji prawidłowego funkcjonowania.  
+ Większość funkcji przechowywania wersji można stosować na zgodnie z potrzebami, podczas tworzenia nowych wersji istniejących kontraktu danych. Jednak jedna z funkcji przechowywania wersji, *Pełna zgodnooć wersji*, muszą zostać skompilowane do typu z pierwszej wersji, aby zapewnić prawidłowe działanie.  
   
-## <a name="round-tripping"></a>Dwustronną komunikację  
- Dwustronną komunikację występuje, gdy dane są przesyłane z nowej wersji na starszą wersję i z powrotem do nowej wersji kontraktu danych. Dwustronną komunikację gwarantuje, że żadne dane nie są tracone. Włączanie dwustronną komunikację sprawia, że typ zgodne z nowszymi o zmianach w przyszłości obsługiwane przez model przechowywanie wersji kontraktu danych.  
+## <a name="round-tripping"></a>Pełna zgodnooć wersji  
+ Pełna zgodnooć wersji występuje, gdy dane są przesyłane z nową wersję do starszej wersji i powrót do nowej wersji kontraktu danych. Pełna zgodnooć wersji gwarantuje, że żadne dane nie zostaną utracone. Włączanie Pełna zgodnooć wersji sprawia, że typ zgodne ze wszystkimi zmianami przyszłych obsługiwane przez model versioning kontraktu danych.  
   
- Aby włączyć dwustronną komunikację dla określonego typu, typ musi implementować <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu. Interfejs zawiera jedną właściwość <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> (zwracanie <xref:System.Runtime.Serialization.ExtensionDataObject> typu). Właściwość przechowuje wszystkie dane z przyszłych wersji kontraktu danych, który jest nieznany w bieżącej wersji.  
+ Aby włączyć Pełna zgodnooć wersji dla określonego typu, musi implementować typ <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu. Interfejs zawiera jedną właściwość <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> (zwracanie <xref:System.Runtime.Serialization.ExtensionDataObject> typu). Właściwość przechowuje wszystkie dane z przyszłych wersji kontraktu danych, który jest nieznany do bieżącej wersji.  
   
 ### <a name="example"></a>Przykład  
- Następujące kontraktu danych nie jest zgodne z nowszymi z przyszłe zmiany.  
+ Następujące kontraktu danych nie jest zgodne ze zmianami w przyszłości.  
   
  [!code-csharp[C_DataContract#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#7)]
  [!code-vb[C_DataContract#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#7)]  
   
- Aby typ zgodny z przyszłe zmiany (takich jak dodawanie nowego elementu członkowskiego danych o nazwie "phoneNumber"), należy zaimplementować <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu.  
+ Aby typ zgodny z przyszłe zmiany (na przykład dodając nowy element członkowski danych o nazwie "phoneNumber"), należy zaimplementować <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejsu.  
   
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- Jeśli infrastruktura WCF napotka dane, które nie jest częścią kontrakt danych, dane są przechowywane we właściwości i zachowane. Nie został przetworzony w inny sposób, z wyjątkiem magazynu tymczasowego. Jeśli obiekt jest zwracany do pochodzenie, jest także zwracany oryginalnych danych (nieznany). W związku z tym dane wprowadził obiegu do i z punktem końcowym źródłowego bez utraty. Należy jednak pamiętać, że w razie potrzeby danych do przetwarzania źródłowego punktu końcowego tego oczekuje się unmet i punkt końcowy musi jakiś sposób wykrywania i wprowadzać zmiany.  
+ Jeśli infrastruktura WCF napotka dane, które nie są częścią oryginalnej kontraktu danych, dane są przechowywane we właściwości i zachowane. Nie jest wykonywane w jakikolwiek inny sposób, z wyjątkiem magazynu tymczasowego. Jeśli obiekt jest zwracany, do którego pochodzi, zwracany jest również oryginalnych danych (nieznany). W związku z tym dane podejścia biznesowego uczyniło rund do i z źródłowy punkt końcowy bez utraty. Należy jednak pamiętać, że w razie potrzeby dane do przetworzenia źródłowy punkt końcowy tego oczekiwania jest niewypełnienia, a punkt końcowy musi jakiś sposób wykrywania i wprowadzać zmiany.  
   
- <xref:System.Runtime.Serialization.ExtensionDataObject> Typ nie zawiera publicznej metody lub właściwości. W związku z tym nie można uzyskać bezpośredni dostęp do danych przechowywanych w <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> właściwości.  
+ <xref:System.Runtime.Serialization.ExtensionDataObject> Typ nie zawiera żadnych metod ani właściwości. W związku z tym, nie można uzyskać bezpośredni dostęp do danych przechowywanych w <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> właściwości.  
   
- Funkcja dwustronną komunikację może zostać wyłączony, albo ustawiając `ignoreExtensionDataObject` do `true` w <xref:System.Runtime.Serialization.DataContractSerializer> konstruktora lub przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> właściwości `true` na <xref:System.ServiceModel.ServiceBehaviorAttribute>. Jeśli ta funkcja jest wyłączona, Deserializator nie spowoduje wypełnienie <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> właściwości i Serializator nie Emituj treści właściwości.  
+ Funkcja Pełna zgodnooć wersji może zostać wyłączony, albo ustawiając `ignoreExtensionDataObject` do `true` w <xref:System.Runtime.Serialization.DataContractSerializer> konstruktora lub przez ustawienie <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> właściwości `true` na <xref:System.ServiceModel.ServiceBehaviorAttribute>. Gdy ta funkcja jest wyłączona, Deserializator nie zostanie wypełniony <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> właściwość i Serializator nie Emituj zawartość właściwości.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- [Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
- [Najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- [Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)

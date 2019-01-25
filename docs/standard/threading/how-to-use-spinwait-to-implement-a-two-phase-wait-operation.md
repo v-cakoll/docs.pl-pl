@@ -1,5 +1,5 @@
 ---
-title: 'Porady: korzystanie z metody SpinWait do implementacji dwufazowej operacji oczekiwania'
+title: 'Instrukcje: Korzystanie z metody SpinWait do implementacji dwufazowej operacji oczekiwania'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb2fbf5e0a310156fdc6fac5fe736692e8ec133
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 52b9164546d2061a65c79fb167b14543b0dae5a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576515"
 ---
-# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Porady: korzystanie z metody SpinWait do implementacji dwufazowej operacji oczekiwania
+# <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Instrukcje: Korzystanie z metody SpinWait do implementacji dwufazowej operacji oczekiwania
 Poniższy przykład pokazuje, jak używać <xref:System.Threading.SpinWait?displayProperty=nameWithType> obiekt do implementacji dwufazowej operacji oczekiwania. W pierwszej fazie obiekt synchronizacji `Latch`, uruchamia dla kilku cykli, podczas gdy sprawdza, czy blokada stał się dostępny. W drugim etapie, jeśli blokada staje się dostępny a następnie `Wait` metoda zwraca bez użycia <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> przeprowadzić jego oczekiwania; w przeciwnym razie `Wait` wykonuje czas oczekiwania.  
   
 ## <a name="example"></a>Przykład  
@@ -32,5 +32,5 @@ Poniższy przykład pokazuje, jak używać <xref:System.Threading.SpinWait?displ
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)
 - [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)

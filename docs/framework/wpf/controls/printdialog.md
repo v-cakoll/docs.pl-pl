@@ -8,15 +8,15 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: a1f69e0960e2882e3f31b5c79eaf0aab7a1e0e82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689314"
 ---
 # <a name="printdialog"></a>PrintDialog
-<xref:System.Windows.Controls.PrintDialog> Kontroli jest używany do utworzenia wystąpienia standardowe okno dialogowe, które automatycznie konfiguruje <xref:System.Printing.PrintTicket> i <xref:System.Printing.PrintQueue> zgodnie z danych wejściowych użytkownika.  
+<xref:System.Windows.Controls.PrintDialog> Formant jest używany do utworzenia wystąpienia standardowe okno dialogowe, automatycznie konfiguruje <xref:System.Printing.PrintTicket> i <xref:System.Printing.PrintQueue> zgodnie z danych wejściowych użytkownika.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.PrintDialog>  
@@ -25,6 +25,6 @@ ms.locfileid: "33554771"
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a>Zobacz też  
- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>Zobacz także
+- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

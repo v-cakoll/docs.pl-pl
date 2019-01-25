@@ -2,12 +2,12 @@
 title: 'Instrukcje: Aktualizacja dynamiczna'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 597a4f8776398769307214090a8b463981bc0d46
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a021e6b550baf8fb7034a163179e0626bf42cfb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736601"
 ---
 # <a name="how-to-dynamic-update"></a>Instrukcje: Aktualizacja dynamiczna
 W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie aktualizować konfiguracji routingu. W tym przykładzie początkowej konfiguracji routingu jest uzyskiwana z pliku konfiguracji i kieruje wszystkie wiadomości w usłudze Kalkulator regularCalc; jednak jest następnie aktualizowany programowo Aby zmienić docelowy punkt końcowy usługi roundingCalc.  
@@ -296,5 +296,5 @@ namespace Microsoft.Samples.AdvancedFilters
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)

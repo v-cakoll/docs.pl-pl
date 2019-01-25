@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Używanie filtrów'
+title: 'Instrukcje: Użycie filtrów'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: aee0f2e4fbf3b4e0802803b76aa557f2dec668bb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530992"
 ---
-# <a name="how-to-use-filters"></a>Instrukcje: Używanie filtrów
+# <a name="how-to-use-filters"></a>Instrukcje: Użycie filtrów
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, który używa wielu filtrów. W tym przykładzie komunikaty są kierowane do dwie implementacje usługi Kalkulator, regularCalc i roundingCalc. Zarówno implementacje obsługują te same operacje; Jednak w jednej usłudze zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy ma być używany zaokrąglania wersję usługi; Jeśli brak preferencji Usługa bazy danych jest wyrażona wiadomość jest równoważone między obiema usługami. Operacje udostępniane przez obie te usługi są:  
   
 -   Dodaj  
@@ -325,5 +325,5 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Zobacz także
+- [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,27 +1,27 @@
 ---
-title: 'Porady: pobieranie akapitów z dokumentu pakietu Office Open XML (Visual Basic)'
+title: 'Instrukcje: Pobieranie akapitów z dokumentu Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: ea577d114c4c736b074311bfb3c927268d18830d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753315"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624255"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Porady: pobieranie akapitów z dokumentu pakietu Office Open XML (Visual Basic)
-W tym temacie przedstawiono przykład otwiera dokumentu pakietu Office Open XML, która pobiera zbiór wszystkich akapitów w dokumencie.  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Instrukcje: Pobieranie akapitów z dokumentu Office Open XML (Visual Basic)
+W tym temacie przedstawiono przykład, który spowoduje otwarcie dokumentu Office Open XML, a następnie pobiera zbiór wszystkich akapitów w dokumencie.  
   
- Aby uzyskać więcej informacji dotyczących Office Open XML, zobacz [marek oficjalny Blog](http://www.ericwhite.com).  
+ Aby uzyskać więcej informacji na temat Office Open XML, zobacz [Eric oficjalny Blog](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie zostanie otwarty pakiet Office Open XML, relacje w pakiecie Open XML są używane do wyszukiwania dokumentu i części stylu. Następnie wykonuje zapytanie dokumentu projekcji, Kolekcja typu anonimowego, który zawiera akapitu <xref:System.Xml.Linq.XElement> węzła, nazwa stylu każdego akapitu i tekst każdego akapitu.  
+ W tym przykładzie otwiera pakietu Office Open XML, używa relacji w pakiecie Open XML można znaleźć w dokumencie i części stylu. Następnie wykonuje zapytanie dokumentu projekcji zbiór typ anonimowy, który zawiera akapit <xref:System.Xml.Linq.XElement> węzła, nazwę stylu każdego akapitu, a tekst każdego akapitu.  
   
- W przykładzie użyto metody rozszerzenia o nazwie `StringConcatenate`, który także podano w przykładzie.  
+ W przykładzie użyto metody rozszerzenia o nazwie `StringConcatenate`, który również jest dostarczany w przykładzie.  
   
- Szczegółowy samouczek wyjaśnia, jak działa w tym przykładzie, zobacz [czysty funkcjonalności transformacji XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Aby uzyskać szczegółowy samouczek, który objaśnia, jak działa ten przykład, zobacz [czystego funkcjonalności przekształcenia XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- W tym przykładzie użyto znaleziony w zestawie WindowsBase klasy. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ W tym przykładzie użyto klasy znalezione w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -152,7 +152,7 @@ Module Module1
 End Module  
 ```  
   
- Uruchomienia z przykładowy dokument Open XML opisanego w [tworzenie źródło dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), w tym przykładzie tworzy następujące dane wyjściowe:  
+ Uruchamiania przy użyciu przykładowy dokument Open XML opisanego w [tworzenie źródłowego dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), ten przykład generuje następujące wyniki:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -172,5 +172,5 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Zaawansowane techniki zapytania (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

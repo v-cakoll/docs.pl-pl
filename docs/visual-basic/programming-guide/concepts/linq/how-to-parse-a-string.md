@@ -1,24 +1,24 @@
 ---
-title: 'Porady: przeanalizować składni ciągu (Visual Basic)'
+title: 'Instrukcje: Przeanalizować składni ciągu (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: da12ec98e03acceae375bbed4fc6ad4c2a71ec2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513a82cbed796be42eb8e531ec71221ef0ac267f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640244"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652452"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Porady: przeanalizować składni ciągu (Visual Basic)
-W tym temacie przedstawiono sposób tworzenia drzewo XML w języku C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Instrukcje: Przeanalizować składni ciągu (Visual Basic)
+W tym temacie przedstawiono sposób tworzenia drzewa XML w C#.  
   
 ## <a name="example"></a>Przykład  
- Ciąg w Visual Basic można analizować przy użyciu `XElement.Parse` metody. Jednak jest bardziej wydajne, aby użyć literałów XML, jak pokazano w następującym kodem, ponieważ literałów XML nie boryka się z tym samym spadku wydajności jako analizy pliku XML z ciągu.  
+ Ciąg w języku Visual Basic można analizować za pomocą `XElement.Parse` metody. Jednak jest bardziej wydajne, aby użyć literałów XML, jak pokazano w poniższym kodzie, ponieważ literały XML nie borykają się z tym samym spadku wydajności jako analizowanie kodu XML z ciągu.  
   
- Przy użyciu literałów XML, można po prostu skopiuj i Wklej kod XML w programie Visual Basic.  
+ Przy użyciu literałów XML, można po prostu skopiować i wkleić kod XML do programu Visual Basic.  
   
 > [!NOTE]
->  Analizowanie tekstu lub ładowania dokumentu XML z pliku tekstowego jest mniej wydajne niż konstrukcji funkcjonalności. Jeśli są inicjowanie drzewo XML z kodu, zajmuje mniej czasu procesora na korzystanie z funkcjonalności konstrukcji, niż można przeanalizować tekstu.  
+>  Analizowanie tekstu lub podczas ładowania dokumentu XML z pliku tekstowego jest mniej wydajne niż konstrukcja funkcjonalna. Jeśli są inicjowanie drzewa XML z kodu, zajmuje mniej czasu procesora, aby użyć konstrukcja funkcjonalna, niż można przeanalizować tekstu.  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -49,5 +49,5 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
- [Analiza kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Zobacz także
+- [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

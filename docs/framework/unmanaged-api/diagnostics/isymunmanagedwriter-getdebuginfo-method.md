@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1e9a2261ab5fd06e0514efdddf8a8e952a6e3d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87dd256bfe8a067ad798bff77a172b936f2d6aab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426903"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649937"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo — Metoda
-Zwraca informacje niezbędne do kompilatora, aby zapisać wpis katalogu debugowania w przenośnych nagłówka pliku wykonywalnego (PE). Moduł zapisujący symbol wypełnia wszystkie pola z wyjątkiem `TimeDateStamp` i `PointerToRawData`. (Kompilator jest odpowiedzialny za odpowiednie ustawienie tych dwóch pól).  
+Zwraca informacje niezbędne do kompilatora zapisać wpis katalogu debugowania w przenośnych nagłówka pliku wykonywalnego (PE). Moduł zapisujący symbol wypełni wszystkie pola z wyjątkiem `TimeDateStamp` i `PointerToRawData`. (Kompilator jest odpowiedzialny za odpowiednie ustawienie tych dwóch pól).  
   
- Kompilator powinien wywołać tę metodę, Emituj danych obiektu blob do pliku PE, ustaw `PointerToRawData` w IMAGE_DEBUG_DIRECTORY polecenie emitowany dane i zapis IMAGE_DEBUG_DIRECTORY pliku PE. Kompilator należy również ustawić `TimeDateStamp` równą `TimeDateStamp` Trwa generowanie pliku PE.  
+ Kompilatora powinna wywołać tę metodę, emisji obiektu blob danych do pliku PE, ustawianie `PointerToRawData` pole IMAGE_DEBUG_DIRECTORY polecenie emitowany dane i zapisać IMAGE_DEBUG_DIRECTORY do pliku PE. Kompilator należy również ustawić `TimeDateStamp` równą `TimeDateStamp` pliku PE generowane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,22 +42,22 @@ HRESULT GetDebugInfo(
   
 #### <a name="parameters"></a>Parametry  
  `pIDD`  
- [w, out] Wskaźnik do IMAGE_DEBUG_DIRECTORY, który wypełnia twórcę symbolu.  
+ [out w] Wskaźnik do IMAGE_DEBUG_DIRECTORY, który wypełni moduł zapisujący symboli.  
   
  `cData`  
- [in] A `DWORD` zawierający rozmiar danych debugowania.  
+ [in] Element `DWORD` zawierający rozmiar danych debugowania.  
   
  `pcData`  
  [out] Wskaźnik do `DWORD` odbierająca rozmiar buforu, muszą zawierać dane debugowania.  
   
  `data`  
- [out] Wskaźnik do buforu, który jest wystarczająco duży, aby pomieścić dane magazynu symboli debugowania.  
+ [out] Wskaźnik do buforu, który jest wystarczająco duży, aby pomieścić dane debugowania do magazynu symboli.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.  
+ S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Header:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Zobacz też  
- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

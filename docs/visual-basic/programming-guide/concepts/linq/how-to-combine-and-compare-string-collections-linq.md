@@ -1,20 +1,20 @@
 ---
-title: 'Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)'
+title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 0e8df8e6e324b2a575fb6232c54a223cb35a4ef2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9948cdb4aa40ca12f7dd058fe12ffcd6462cdaae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732664"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Porady: łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)
-Ten przykład przedstawia sposób plików zawierających wierszy tekstu, a następnie Sortuj wyniki scalania. W szczególności widoczny jest sposób wykonywać proste łączenia, Unii i przecięcie na dwa zestawy wierszy tekstu.  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)
+W tym przykładzie pokazano, jak można scalić plików, które zawierają wiersze tekstu, a następnie Sortuj wyniki. W szczególności pokazują sposób wykonywania prostych łączenia, Unii i część wspólną na dwa zestawy wierszy tekstu.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Aby skonfigurować projekt i plików tekstowych  
   
-1.  Skopiuj te nazwy do pliku tekstowego o nazwie names1.txt i zapisz go w folderze projektu:  
+1.  Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Ten przykład przedstawia sposób plików zawierających wierszy tekstu, a nast�
     Garcia, Debra  
     ```  
   
-2.  Skopiuj te nazwy do pliku tekstowego o nazwie names2.txt i zapisz go w folderze projektu. Należy pamiętać, że dwa pliki mają wspólną niektóre nazwy.  
+2.  Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu. Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.  
   
     ```  
     Liu, Jinghao  
@@ -163,8 +163,8 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Tworzenie projektu przeznaczonego dla programu .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji System.Linq przestrzeni nazw.  
+ Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.  
   
-## <a name="see-also"></a>Zobacz też  
- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Zobacz także
+- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

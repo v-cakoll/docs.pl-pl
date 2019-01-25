@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 164cdc5c04a55e9c33dda51e10dfb37f38ec1b6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746547"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize — Metoda
-Pobiera szacowany rozmiar binarne zestaw i jego metadanych w bieżącym zakresie.  
+Szacowany rozmiar binarne zestawu i jego metadane są pobierane w bieżącym zakresie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,33 +38,33 @@ HRESULT GetSaveSize (
   
 #### <a name="parameters"></a>Parametry  
  `fSave`  
- [in] Wartość [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) wyliczenia, która określa, czy można uzyskać dokładne i przybliżony rozmiar. Tylko trzy wartości są prawidłowe: cssAccurate, cssQuick i cssDiscardTransientCAs:  
+ [in] Wartość [corsavesize —](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) wyliczenie, które określa, czy uzyskać dokładne lub Przybliżony rozmiar. Tylko dla trzech wartości są prawidłowe: cssAccurate, cssQuick i cssDiscardTransientCAs:  
   
--   cssAccurate Zwraca dokładną Zapisz rozmiar, ale trwa dłużej do obliczenia.  
+-   cssAccurate zwraca dokładnie Zapisz rozmiar, ale trwa dłużej do obliczenia.  
   
--   cssQuick zwraca rozmiar, uzupełniona na potrzeby bezpieczeństwa, ale zajmuje mniej czasu do obliczenia.  
+-   cssQuick zwraca rozmiar, uzupełniona na potrzeby bezpieczeństwa, ale zajmuje mniej czasu, aby obliczyć.  
   
--   Określa, że cssDiscardTransientCAs `GetSaveSize` czy go można wyrzucać discardable atrybutów niestandardowych.  
+-   informuje cssDiscardTransientCAs `GetSaveSize` , może ona zgłosić natychmiast discardable atrybutów niestandardowych.  
   
  `pdwSaveSize`  
- [out] Wskaźnik do rozmiaru, który jest wymagany do zapisania pliku.  
+ [out] Wskaźnik do rozmiaru który jest wymagany, aby zapisać plik.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetSaveSize` oblicza przestrzeni wymaganej w bajtach, aby zapisać zestawu i wszystkich jego metadanych w bieżącym zakresie. (Wywołanie [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) metody może wyemitować to liczba bajtów.)  
+ `GetSaveSize` Obliczanie miejsca wymaganego w bajtach, można zapisać zestawu i wszystkich jego metadane w bieżącym zakresie. (Po wywołaniu [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) metoda może emitować to liczba bajtów.)  
   
- Jeśli element wywołujący implementuje [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interfejsu (za pośrednictwem [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) lub [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` będzie wykonywać dwa przebiegi za pośrednictwem metadane do optymalizacji i skompresować je. W przeciwnym razie są wykonywane nie optymalizacji.  
+ Jeśli obiekt wywołujący implementuje [imaptoken —](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interfejsu (za pośrednictwem [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) lub [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` wykona dwa przebiegi za pośrednictwem metadane do optymalizacji i skompresować je. W przeciwnym razie są wykonywane nie optymalizacji.  
   
- Jeśli będzie przeprowadzana Optymalizacja, Przekaż pierwszy po prostu sortuje struktur metadanych w celu dostrojenia wydajności wyszukiwań w trakcie importu. Ten krok powoduje zwykle przenoszenie rekordy wokół, z efektem ubocznym, że tokeny zachowywane przez narzędzie do użytku w przyszłości są unieważnione. Metadanych nie informuje wywołującego tokenu zmiany dopiero po drugim przebiegu, jednak. W drugim przebiegu różne optymalizacje są wykonywane przeznaczonych do redukowania łącznego rozmiaru metadane, takie jak Optymalizacja zadań (wczesnego wiązania) `mdTypeRef` i `mdMemberRef` tokenów, gdy jest odwołanie do typu lub elementu członkowskiego, który jest zadeklarowana w bieżący zakres metadanych. W tym przebiegu występuje round innego mapowania tokenu. Po tym przebiegu aparat metadanych powiadamia wywołującego, za pośrednictwem jego `IMapToken` interfejsu dowolnego zmienić wartości tokenów.  
+ Jeśli będzie przeprowadzana Optymalizacja, pierwszym przebiegu po prostu sortuje struktur metadanych, aby dostosować wydajność wyszukiwania w trakcie importu. Zazwyczaj ten krok powoduje przeniesienie rekordów wokół, za pomocą efekt uboczny, że tokeny zachowywane przez narzędzie do użytku w przyszłości nie są unieważniane. Metadane nie informuje obiekt wywołujący o tych zmianach token aż do po drugim — dostęp próbny, jednak. W drugim przebiegu, wykonywane są różne optymalizacje, które są przeznaczone do redukowania łącznego rozmiaru metadane, takie jak Optymalizacja odkładania (wczesne powiązania) `mdTypeRef` i `mdMemberRef` tokenów w przypadku odwołania do typu lub elementu członkowskiego, które są zadeklarowane w bieżący zakres metadanych. W tym przebiegu kolejną porcję tokenu mapowanie występuje. Po tym przebiegu aparatu metadanych powiadamia obiekt wywołujący, za pośrednictwem jego `IMapToken` interfejsu dowolnego zmienione wartości tokenu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Cor.h  
+ **Nagłówek:** COR.h  
   
- **Biblioteka:** używany jako zasób w MSCorEE.dll  
+ **Biblioteka:** Używany jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Zobacz także
+- [IMetaDataEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587963"
 ---
 # <a name="internet-authentication"></a>Uwierzytelnianie internetowe
 <xref:System.Net> Klasy obsługi różnych mechanizmów uwierzytelniania klienta, w tym standardowa Internet metod uwierzytelniania, podstawowe, szyfrowane, negocjowania NTLM, a uwierzytelnianie Kerberos, a także niestandardowych metod, które można utworzyć.  
@@ -39,7 +39,7 @@ ms.locfileid: "50181046"
   
  Niektóre schematy uwierzytelniania można uwierzytelnić użytkownika bez wcześniejszego utworzenia żądania dla zasobu. Aplikację można zaoszczędzić czas i preauthenticating użytkownika z zasobem, eliminując co najmniej jedną rundę do serwera. Lub, aby później można zwiększyć szybkość reakcji użytkownika może wykonywać uwierzytelnianie podczas uruchamiania programu. Schematy uwierzytelniania, które można użyć uwierzytelniania wstępnego zestawu <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> właściwości **true**.  
   
-## <a name="see-also"></a>Zobacz też  
- [Uwierzytelnianie podstawowe i szyfrowane](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>Zobacz także
+- [Uwierzytelnianie podstawowe i szyfrowane](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)

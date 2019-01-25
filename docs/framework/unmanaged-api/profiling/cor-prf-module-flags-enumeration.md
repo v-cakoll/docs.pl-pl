@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad04e90d1855e2de89aa6515bf16424de95ffa26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696441"
 ---
 # <a name="corprfmoduleflags-enumeration"></a>COR_PRF_MODULE_FLAGS — Wyliczenie
 Określa właściwości modułu.  
@@ -48,16 +48,16 @@ typedef enum
 |COR_PRF_MODULE_DISK|Moduł został załadowany z dysku.|  
 |COR_PRF_MODULE_NGEN|Moduł został wygenerowany przez Generator obrazu natywnego (Ngen.exe).|  
 |COR_PRF_MODULE_DYNAMIC|Moduł został utworzony za pomocą metod <xref:System.Reflection.Emit?displayProperty=nameWithType> przestrzeni nazw.|  
-|COR_PRF_MODULE_COLLECTIBLE|Okres istnienia modułu jest zarządzana przez moduł garbage collector.|  
-|COR_PRF_MODULE_RESOURCE|Moduł zawiera Brak metadanych i są używane wyłącznie jako zasób. Jest odpowiednikiem zarządzanych ten bit <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> metody.|  
-|COR_PRF_MODULE_FLAT_LAYOUT|Układ modułu w pamięci jest prosty, nie jest zamapowany. Jeśli moduł ten bit ustawił, profilowania, które zapoznały informacje bezpośrednio z przenośnym nagłówka pliku wykonywalnego (PE) należy zachować ostrożność podczas interpretacji względnych adresów wirtualnych (RVAs) w nagłówku.|  
-|COR_PRF_MODULE_WINDOWS_RUNTIME|Dla tego modułu zestawu w metadanych jest ustawiona flaga zawartości typu środowiska wykonawczego systemu Windows. Dotyczy to wszystkich modułów metadanych systemu Windows (.winmd).|  
+|COR_PRF_MODULE_COLLECTIBLE|Okres istnienia modułu jest zarządzany przez moduł odśmiecania pamięci.|  
+|COR_PRF_MODULE_RESOURCE|W module metadanych nie zawiera, są używane wyłącznie jako zasób. Zarządzane wielokrotność ten bit jest <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> metody.|  
+|COR_PRF_MODULE_FLAT_LAYOUT|Układ modułu w pamięci jest jednoznaczna, nie jest zamapowany. Jeśli moduł zawiera ten ustawiony bit, profilerów, które odczytują informacje bezpośrednio z przenośnych nagłówka pliku wykonywalnego (PE) będzie mieć należy zachować ostrożność podczas interpretowania względnych adresów wirtualnych (RVA) w nagłówku.|  
+|COR_PRF_MODULE_WINDOWS_RUNTIME|Flaga typu zawartości środowiska uruchomieniowego Windows jest ustawiona w metadanych dla zestawu tego modułu. Dotyczy to wszystkich modułów Windows metadanych (.winmd).|  
   
 ## <a name="remarks"></a>Uwagi  
- Usługi BITS z cor_prf_module_flags — nastąpi powrót do profilera w `pdwModuleFlags` parametru output [ICorProfilerInfo3::GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) metody. Niektóre kombinacje dwóch lub więcej flag jest możliwe, ale nie wszystkie połączenia są możliwe.  
+ Usługa BITS z cor_prf_module_flags — są zwracane do programu profilującego w `pdwModuleFlags` dane wyjściowe parametru [icorprofilerinfo3::getmoduleinfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) metody. Niektóre kombinacje co najmniej dwóch flagi są możliwe, ale nie wszystkie kombinacje są możliwe.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorProf.idl, CorProf.h  
   
@@ -65,5 +65,5 @@ typedef enum
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Zobacz także
+- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

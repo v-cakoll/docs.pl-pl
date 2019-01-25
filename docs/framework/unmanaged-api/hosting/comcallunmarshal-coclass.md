@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7884d53630ca13a30d7b4efd55d46684a9dd7d30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a404448c45a37d50794ceae9a9bf8ff6af08eeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574576"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal — Klasa coclass
-Zawiera interfejsy zarządzania organizowanie wskaźniki interfejsu.  
+Zawiera interfejsy zarządzania, organizowanie wskaźniki interfejsu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +38,16 @@ coclass ComCallUnmarshal {
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|`IMarshal`|Udostępnia metody do tworzenia, inicjowanie i zarządzania serwera proxy w ramach procesu klienta.|  
+|`IMarshal`|Zawiera metody służące do tworzenia, inicjowanie i zarządzania serwera proxy w ramach procesu klienta.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** MSCorEE.idl  
   
- **Biblioteka:** uwzględnione jako zasób w MSCorEE.dll  
+ **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
   
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
- [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a>Zobacz także
+- [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

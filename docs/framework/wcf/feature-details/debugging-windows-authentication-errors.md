@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 92efda893d0d96b5d0f6de90364faec0b85c79aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595139"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfejs dostawcy obsługi zabezpieczeń (SSPI) obsługuje zabezpieczenia procesów. Po wystąpieniu błędów zabezpieczeń w warstwie interfejsu SSPI, są one udostępniane przez Windows Communication Foundation (WCF). Ten temat zawiera framework i zestaw pytań, aby łatwiej diagnozować błędy.  
@@ -36,22 +36,22 @@ Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfej
   
  Nagłówki tabeli Pokaż typy możliwe konto używane przez serwer. Kolumna po lewej stronie zawiera typy kont używanych przez klienta.  
   
-||Użytkownik lokalny|System lokalny|Domena użytkownik|Maszyny do domeny|  
+||Użytkownik lokalny|Local System|Domena użytkownik|Maszyny do domeny|  
 |-|----------------|------------------|-----------------|--------------------|  
 |Użytkownik lokalny|NTLM|NTLM|NTLM|NTLM|  
-|System lokalny|Anonimowe uwierzytelnianie NTLM|Anonimowe uwierzytelnianie NTLM|Anonimowe uwierzytelnianie NTLM|Anonimowe uwierzytelnianie NTLM|  
+|Local System|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|Anonymous NTLM|  
 |Domena użytkownik|NTLM|NTLM|Kerberos|Kerberos|  
 |Maszyny do domeny|NTLM|NTLM|Kerberos|Kerberos|  
   
  W szczególności cztery typy kont obejmują:  
   
--   Użytkownika lokalnego: Profil użytkownika tylko do komputera. Na przykład: `MachineName\Administrator` lub `MachineName\ProfileName`.  
+-   Użytkownik lokalny: Profil użytkownika tylko do maszyny. Na przykład: `MachineName\Administrator` lub `MachineName\ProfileName`.  
   
--   System lokalny: Wbudowane konto SYSTEM na komputerze, który nie jest przyłączony do domeny.  
+-   Local System: Wbudowane konto SYSTEM na komputerze, który nie jest przyłączony do domeny.  
   
--   Użytkownik domeny: Konto użytkownika w domenie Windows. Na przykład: `DomainName\ProfileName`.  
+-   Użytkownik domeny: Konto użytkownika domeny Windows. Na przykład: `DomainName\ProfileName`.  
   
--   Komputer do domeny: Proces tożsamość komputera z uruchomioną na maszynie przyłączony do domeny Windows. Na przykład: `MachineName\Network Service`.  
+-   Komputer do domeny: Proces tożsamość komputera z uruchomioną na maszynie jest przyłączony do domeny Windows. Na przykład: `MachineName\Network Service`.  
   
 > [!NOTE]
 >  Poświadczenia usługi są przechwytywane podczas <xref:System.ServiceModel.ICommunicationObject.Open%2A> metody <xref:System.ServiceModel.ServiceHost> nosi nazwę klasy. Poświadczeń klienta jest do odczytu zawsze, gdy klient wysyła komunikat.  
@@ -139,15 +139,15 @@ Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfej
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>Interfejs SSPI nie jest dostępna  
- Następujące systemy operacyjne nie obsługują uwierzytelniania Windows, gdy jest używana jako serwer: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition, i [!INCLUDE[wv](../../../../includes/wv-md.md)]Home Edition.  
+ Następujące systemy operacyjne nie obsługują uwierzytelniania Windows, gdy jest używana jako serwer: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition, i [!INCLUDE[wv](../../../../includes/wv-md.md)]Home Edition.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Tworzenie i wdrażanie przy użyciu różnych tożsamości  
  Jeśli tworzenia aplikacji na jednym komputerze wdrożeniu w innym, używają różnych typów kont do uwierzytelniania na każdej maszynie, mogą występować inne zachowanie. Załóżmy, że tworzenie aplikacji przy użyciu Windows XP Pro maszyny `SSPI Negotiated` tryb uwierzytelniania. Jeśli używasz konta użytkownika lokalnego do uwierzytelniania przy użyciu protokołu NTLM będą używane. Gdy aplikacja jest opracowana, możesz wdrożyć usługę do maszyny systemu Windows Server 2003, w którym został uruchomiony w ramach konta domeny. W tym momencie klient nie będzie mógł uwierzytelnić usługi, ponieważ będą używać protokołu Kerberos i kontrolerem domeny.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.Security.WindowsServiceCredential>  
- <xref:System.ServiceModel.Security.WindowsClientCredential>  
- <xref:System.ServiceModel.ClientBase%601>  
- [Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
- [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.Security.WindowsServiceCredential>
+- <xref:System.ServiceModel.Security.WindowsClientCredential>
+- <xref:System.ServiceModel.ClientBase%601>
+- [Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Nieobsługiwane scenariusze](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 321038a148c27086ca499e2f448eb50cb93525ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6591fb4a2b4944dc0d02f70f0f90ffd87e071c47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735007"
 ---
 # <a name="importtypes-method"></a>ImportTypes — Metoda
-Inicjuje importowanie typów z każdym zakresem importować za pomocą [ImportFile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Inicjuje importowania typów z każdym zakresem importowane za pośrednictwem [importfile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,16 +44,16 @@ HRESULT ImportTypes(
  Identyfikator zestawu, aby zaimportować.  
   
  `FileToken`  
- Identyfikator pliku importowanego.  
+ Identyfikator pliku do zaimportowania z.  
   
  `dwScope`  
  Liczony od zera zakres do zaimportowania.  
   
  `phEnum`  
- Odbiera uchwytu modułu wyliczającego dla typów w tym zakresie.  
+ Odbiera uchwytu modułu wyliczającego dla typów, w tym zakresie.  
   
  `ppImportScope`  
- Opcjonalnie odbiera [IMetaDataImport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfejsu.  
+ Opcjonalnie odbiera [imetadataimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfejsu.  
   
  `pdwCountOfTypes`  
  Opcjonalnie odbiera liczba typów w zakresie wskazane.  
@@ -64,7 +64,7 @@ HRESULT ImportTypes(
 ## <a name="requirements"></a>Wymagania  
  Wymaga alink.h  
   
-## <a name="see-also"></a>Zobacz też  
- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Zobacz także
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

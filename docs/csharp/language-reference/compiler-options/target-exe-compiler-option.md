@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: 4a2d3ea2bda56caf6a16f52877ad36b3947357e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b9efa25870e11e0140cba2ad39c3bc4515056ce3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697884"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target: exe (opcje kompilatora C#)
 **-Target: exe** opcja powoduje, że kompilator, aby utworzyć plik wykonywalny (EXE), aplikacji konsoli.  
@@ -53,7 +53,7 @@ csc -target:exe in.cs
 csc in.cs  
 ```  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także
 
-- [-target (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [-target (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: d5f49529a2593093a234babc22f64b591ea3cc61
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c133e46b1adff0c100d49c4bfe5e17db4314a0bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399810"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738816"
 ---
 # <a name="myresponse-object"></a>My.Response — Obiekt
 Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.Page>. Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.  
@@ -27,6 +27,6 @@ Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.P
   
  [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.Web.HttpResponse>  
- [My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.Web.HttpResponse>
+- [My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)

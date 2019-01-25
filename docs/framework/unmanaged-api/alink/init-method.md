@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b512389078ab022208c4b163edc8501a900669ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 315ddf89d9c0653f357490dc31986dc302024622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400367"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662650"
 ---
-# <a name="init-method"></a><span data-ttu-id="041db-102">Init — Metoda</span><span class="sxs-lookup"><span data-stu-id="041db-102">Init Method</span></span>
-<span data-ttu-id="041db-103">Przygotowuje obiektów implementacja [ialink — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) do użycia.</span><span class="sxs-lookup"><span data-stu-id="041db-103">Prepares objects implementing the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) for use.</span></span>  
+# <a name="init-method"></a><span data-ttu-id="5367c-102">Init — Metoda</span><span class="sxs-lookup"><span data-stu-id="5367c-102">Init Method</span></span>
+<span data-ttu-id="5367c-103">Przygotowuje obiektów Implementowanie [ialink — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) do użycia.</span><span class="sxs-lookup"><span data-stu-id="5367c-103">Prepares objects implementing the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) for use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="041db-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="041db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5367c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5367c-104">Syntax</span></span>  
   
 ```  
 HRESULT Init(  
@@ -35,20 +35,20 @@ HRESULT Init(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="041db-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="041db-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5367c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="5367c-105">Parameters</span></span>  
  `pDispenser`  
- <span data-ttu-id="041db-106">[IMetaDataDispenserEx — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) wskaźnik do rozdzielacz metadanych.</span><span class="sxs-lookup"><span data-stu-id="041db-106">[IMetaDataDispenserEx Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
+ <span data-ttu-id="5367c-106">[Imetadatadispenserex — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) wskaźnik do rozdzielacz metadanych.</span><span class="sxs-lookup"><span data-stu-id="5367c-106">[IMetaDataDispenserEx Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
   
  `pErrorHandler`  
- <span data-ttu-id="041db-107">[IMetaDataError — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) wskaźnik do obsługi interfejsu opcjonalne błędów.</span><span class="sxs-lookup"><span data-stu-id="041db-107">[IMetaDataError Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
+ <span data-ttu-id="5367c-107">[Imetadataerror — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) wskaźnik do opcjonalne błąd obsługi interfejsu.</span><span class="sxs-lookup"><span data-stu-id="5367c-107">[IMetaDataError Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="041db-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="041db-108">Return Value</span></span>  
- <span data-ttu-id="041db-109">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="041db-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5367c-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="5367c-108">Return Value</span></span>  
+ <span data-ttu-id="5367c-109">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="5367c-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="041db-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="041db-110">Requirements</span></span>  
- <span data-ttu-id="041db-111">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="041db-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5367c-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5367c-110">Requirements</span></span>  
+ <span data-ttu-id="5367c-111">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="5367c-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="041db-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="041db-112">See Also</span></span>  
- [<span data-ttu-id="041db-113">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="041db-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="041db-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="041db-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="041db-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="041db-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="5367c-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5367c-112">See also</span></span>
+- [<span data-ttu-id="5367c-113">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="5367c-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="5367c-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="5367c-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="5367c-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="5367c-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

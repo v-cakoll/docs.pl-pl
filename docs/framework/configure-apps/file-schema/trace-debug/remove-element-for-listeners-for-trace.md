@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2e68a93840022776530bb9ed2f94a7505a8a3b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1587c28e05609970c732192752578d089ec9f35
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642795"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083837"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;śledzenia&gt;
 Usuwa odbiornik z **odbiorników** kolekcji.  

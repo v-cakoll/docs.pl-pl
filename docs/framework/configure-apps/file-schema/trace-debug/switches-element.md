@@ -9,14 +9,12 @@ helpviewer_keywords:
 - switches element
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f046e1142209b519ecf71e67a11592f9aa578f84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed5d30408b2c0f45f3bef091f4828bd812a63a7a
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666712"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083356"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;przełączniki&gt; — Element
 Zawiera przełączniki śledzenia i poziomu, gdzie są ustawione przełączniki śledzenia.  

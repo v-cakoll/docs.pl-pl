@@ -2,12 +2,12 @@
 title: Kolekcje (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 4163a87c04e280ed19f53d1f715df49b65d02f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f73081cacbc08fdaaca3cbc57dfe731eddab7ee
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620607"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084123"
 ---
 # <a name="collections-c"></a>Kolekcje (C#)
 W przypadku wielu aplikacji, dla których chcesz utworzyć grupy i zarządzać nimi powiązanych obiektów. Istnieją dwa sposoby grupowania obiektów: poprzez tworzenie tablic obiektów oraz poprzez tworzenie kolekcji obiektów.  
@@ -49,7 +49,7 @@ W przypadku wielu aplikacji, dla których chcesz utworzyć grupy i zarządzać n
 ## <a name="using-a-simple-collection"></a>Za pomocą prostej kolekcji  
  W przykładach w tej sekcji użyto ogólnego <xref:System.Collections.Generic.List%601> klasy, która umożliwia pracę z silnie typizowanej listy obiektów.  
   
- Poniższy przykład tworzy listę ciągów i następnie iterację przez ciągi przy użyciu lub [foreach](../../../csharp/language-reference/keywords/foreach-in.md) instrukcji.  
+ Poniższy przykład tworzy listę ciągów i następnie iterację przez ciągi przy użyciu [foreach](../../../csharp/language-reference/keywords/foreach-in.md) instrukcji.  
   
 ```csharp  
 // Create a list of strings.  

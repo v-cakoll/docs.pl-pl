@@ -5,16 +5,14 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980836"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083667"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Porady: włączanie i wyłączanie automatycznego przekierowania powiązań
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań
 
 Podczas kompilowania aplikacji w programie Visual Studio, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] i nowsze wersje, przekierowania powiązań mogą być automatycznie dodawane do pliku konfiguracyjnego aplikacji w celu zastąpienia ujednolicenia zestawów. Przekierowania powiązań są dodawane, jeśli aplikacja lub jej składniki odwołują się do więcej niż jednej wersji tego samego zestawu, nawet jeśli przekierowania powiązań zostaną określone ręcznie w pliku konfiguracji aplikacji. Funkcja automatycznego przekierowywania powiązań dotyczy aplikacje komputerowe i aplikacje sieci web, których platformą docelową [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] lub nowszej, chociaż zachowanie jest nieco inne w przypadku aplikacji sieci web. Można włączyć automatyczne przekierowywanie powiązań, jeśli masz istniejące aplikacje w tym docelowymi są poprzednie wersje programu .NET Framework lub wyłączyć tę funkcję, jeśli chcesz ręcznie tworzyć przekierowania powiązań.
 
@@ -103,5 +101,5 @@ Aby dodać przekierowania powiązań do **web.config** pliku:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [\<bindingRedirect > Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect> Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

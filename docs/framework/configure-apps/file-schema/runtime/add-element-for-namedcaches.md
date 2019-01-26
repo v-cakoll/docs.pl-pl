@@ -5,14 +5,12 @@ helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fa11cea7e78a56c3f5cbfd9d0678e1ed671f6f3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a292d5bdde019c4c01385a2126de29c3eea7afb
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506046"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084084"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;Dodaj&gt; elementu &lt;namedCaches&gt;
 Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.  

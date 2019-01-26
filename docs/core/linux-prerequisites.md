@@ -4,12 +4,12 @@ description: Obsługiwane wersje systemu Linux i zależności platformy .NET Cor
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656053"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083889"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Wymagania wstępne dla platformy .NET Core w systemie Linux
 
@@ -53,9 +53,9 @@ Zobacz [obsługiwane wersje systemu operacyjnego platformy .NET Core 2.1](https:
 * Red Hat Enterprise Linux 7
 * CentOS 7
 * Oracle Linux 7
-* Fedora 28 (.NET Core 1.1) 27
+* Fedora 28 (.NET Core 1.1), 27
 * Debian 8.2 lub nowsze wersje
-* 18.04 (.NET Core 1.1), Ubuntu 16.04, 14.04
+* Ubuntu 18.04 (.NET Core 1.1), 16.04, 14.04
 * Linux Mint 17
 * openSUSE 42.3 lub nowszej wersji (.NET Core 1.1)
 
@@ -75,11 +75,11 @@ Red Hat Enterprise Linux      | 6                     | X64
 Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
 Fedora                        | 28                    | X64
 Debian                        | 9                     | x64, ARM32\*, ARM64\*
-Ubuntu                        | 16.04 +, 18.04 +        | x64, ARM32\*, ARM64\*
+Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
 Mennic systemu Linux                    | 18                    | X64
-openSUSE                      | 42.3 +                 | X64
-SUSE Linux Enterprise (SLES)  | 12 Z DODATKIEM SP2 +               | X64
-Firma Alpine Linux                  | 3.8 +                  | x64, ARM64
+openSUSE                      | 42.3+                 | X64
+SUSE Linux Enterprise (SLES)  | 12 SP2+               | X64
+Firma Alpine Linux                  | 3.8+                  | x64, ARM64
 
 \* Obsługa ARM32 i ARM64 rozpoczyna się od Debian 9 i Ubuntu 16.04. Wcześniejszych wersjach te dystrybucje nie są obsługiwane na mikroukładami ARM.
 
@@ -100,7 +100,8 @@ Poniżej mają być przykłady. Na wybranej dystrybucji systemu Linux, nazwy i w
 Dystrybucje systemu Ubuntu wymagają następujących bibliotek zainstalowane:
 
 * liblttng-ust0
-* libcurl3
+* libcurl3 (dla 14.x i 16.x)
+* libcurl4 (w przypadku 18.x)
 * libssl1.0.0
 * libkrb5-3
 * zlib1g

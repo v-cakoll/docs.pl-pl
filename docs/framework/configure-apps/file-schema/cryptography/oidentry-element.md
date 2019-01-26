@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c891b5d67c7f2ef46682233ad555a1276f8e027d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c5309bc98a7781e82753869b1cf2bcf0a472327
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606903"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084097"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidentry —&gt; — Element
 Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.  

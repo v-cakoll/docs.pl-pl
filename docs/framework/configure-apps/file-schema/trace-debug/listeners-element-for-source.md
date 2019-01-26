@@ -7,14 +7,12 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 949b6c7272b39900698b618760f5e5bad11ccc3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8378d34ffc2fea22fb5d16ed0b727da54ca74503
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670644"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083993"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;odbiorniki&gt; elementu &lt;źródła&gt;
 Dodaje lub usuwa słuchaczy w <xref:System.Diagnostics.TraceSource.Listeners%2A> kolekcji <xref:System.Diagnostics.TraceSource>. Odbiornik kieruje dane wyjściowe śledzenia do odpowiedniego obiektu docelowego, takie jak dziennik, okno lub pliku tekstowego.  

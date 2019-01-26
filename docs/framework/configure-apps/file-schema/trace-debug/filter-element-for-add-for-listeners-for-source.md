@@ -9,14 +9,12 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 044d446b97f0899b9575085a15c3faa399ce776e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76aecf0b97a1b203d790dc34d83bc01ea1de5236
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624616"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083291"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Filtr&gt; elementu &lt;Dodaj&gt; dla &lt;odbiorników&gt; dla &lt;źródła&gt;
 Dodaje filtr do odbiornika w `Listeners` kolekcję dla źródła śledzenia.  

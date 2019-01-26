@@ -2,17 +2,21 @@
 title: Schemat ustawień kompilatora i dostawcy języka
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'configuration settings [.NET Framework], compilers'
-  - 'compiler configuration elements, schema'
-  - compiler configuration elements
-  - language providers
-  - 'compiler configuration settings, schema'
-  - 'configuration schema [.NET Framework], compiler settings'
-  - 'language providers, settings schema'
-  - compiler configuration settings
+- configuration settings [.NET Framework], compilers
+- compiler configuration elements, schema
+- compiler configuration elements
+- language providers
+- compiler configuration settings, schema
+- configuration schema [.NET Framework], compiler settings
+- language providers, settings schema
+- compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-author: mcleblanc
-ms.author: markl
+ms.openlocfilehash: ab8225d664b658789f7eb9e7830d5ec527ded94a
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084370"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Schemat ustawień kompilatora i dostawcy języka
 Kompilator i ustawienia dostawcy języka Określ elementy kompilatora konfiguracji dla dostępnych dostawców języka. Każdy element konfiguracji kompilator określa kod nazwę typu dostawcy, parametry kompilatora obsługiwane nazwy języka i obsługiwane rozszerzenia plików.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: bd08940ac04d0218f3d3936514a72c12449b34ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c50a25dc0802f275e5cd4e0068e1a68bf559abc1
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505565"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066041"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Referencje i importy — Instrukcja (Visual Basic)
 Można udostępnić zewnętrznych obiektów do projektu, wybierając **Dodaj odwołanie** polecenie **projektu** menu. Zestawy, które są podobne biblioteki typów, ale zawierają więcej informacji może wskazywać odwołania w języku Visual Basic.  
@@ -24,7 +24,7 @@ Można udostępnić zewnętrznych obiektów do projektu, wybierając **Dodaj odw
   
  `Imports` Instrukcji ma następującą składnię:  
   
- `Imports` [`|``Aliasname` =] `Namespace`  
+ `Imports [Aliasname =] Namespace`  
   
  `Aliasname` odnosi się do krótką nazwę, których można użyć w kodzie, do odwoływania się do importowanych przestrzeni nazw. `Namespace` jest dostępna za pośrednictwem jednej przestrzeni nazw odwołanie projektu za pomocą definicji w projekcie lub poprzedniej `Imports` instrukcji.  
   

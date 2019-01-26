@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: 3b8d13e606f28896cae88162d572470e49af3739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 862a9177d9e10e9561da389fdbffa3e35aa3b51a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730285"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065937"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Właściwości osi elementu podrzędnego XML (Visual Basic)
 Zapewnia dostęp do obiektów podrzędnych z następujących czynności: <xref:System.Xml.Linq.XElement> obiektu <xref:System.Xml.Linq.XDocument> object, zbiór <xref:System.Xml.Linq.XElement> obiektów lub kolekcji <xref:System.Xml.Linq.XDocument> obiektów.  
@@ -34,7 +34,7 @@ object...<descendant>
  Wymagana. Oznacza początek właściwości osi elementu podrzędnego.  
   
  `descendant`  
- Wymagana. Nazwy węzłów podrzędnych dostępu, w postaci [`prefix``:`]`name`.  
+ Wymagana. Nazwy węzłów podrzędnych dostępu, w postaci [`prefix:]name`.  
   
 |Część|Opis|  
 |----------|-----------------|  

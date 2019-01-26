@@ -3,12 +3,12 @@ title: C# struktur — Przewodnik po przykładzie w języku C#
 description: Dowiedz się, że podstawy języka C# wartości typów nazywanych struktury
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d22cb23fe095874f24d7c002dfdb3eefdde66722
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142739"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065963"
 ---
 # <a name="structs"></a>Struktury
 
@@ -30,7 +30,7 @@ W przypadku klas jest możliwe dwóch zmiennych odwoływać się do tego samego 
 
 [!code-csharp[PointUse](../../../samples/snippets/csharp/tour/structs/Program.cs#L19-L22)]
 
-Jeśli `Point` jest klasą, dane wyjściowe to 20, ponieważ i b odwoływać się do tego samego obiektu. Jeśli punkt jest strukturą, dane wyjściowe to 10, ponieważ przypisanie `a` do `b` tworzona jest kopia wartości, i nie ma wpływu następne przypisanie do tej kopii `a.x`.
+Jeśli `Point` jest klasą, dane wyjściowe to 20, ponieważ `a` i `b` odwoływać się do tego samego obiektu. Jeśli `Point` jest strukturą, dane wyjściowe to 10, ponieważ przypisanie `a` do `b` tworzona jest kopia wartości, i nie ma wpływu następne przypisanie do tej kopii `a.x`.
 
 W poprzednim przykładzie wyróżniono dwa ograniczenia dotyczące struktury. Po pierwsze całej strukturze jest to zazwyczaj mniej wydajne niż kopiowanie odwołanie do obiektu, dzięki czemu przekazywanie przypisania i wartość parametru może być bardziej kosztowne przy użyciu struktury niż w przypadku typów referencyjnych. Drugi, z wyjątkiem `in`, `ref`, i `out` parametrów, nie jest możliwe do utworzenia odwołania do struktury, która wyklucza ich użycia w różnych sytuacjach.
 

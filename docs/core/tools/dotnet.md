@@ -2,12 +2,12 @@
 title: polecenia DotNet
 description: Więcej informacji na temat polecenia dotnet (ogólny sterownik dla narzędzi interfejsu wiersza polecenia platformy .NET Core) i sposób jej użycia.
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170856"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066444"
 ---
 # <a name="dotnet-command"></a>polecenia DotNet
 
@@ -19,7 +19,7 @@ ms.locfileid: "53170856"
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
     [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
@@ -44,7 +44,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
@@ -78,9 +78,14 @@ Wyświetla zainstalowane środowiska uruchomieniowe platformy .NET Core.
 
 Wyświetla zainstalowanych zestawów .NET Core SDK.
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- Wyłącza wersja pomocnicza przenoszenie do przodu, jeśli ustawiono `0`. Aby uzyskać więcej informacji, zobacz [uaktualniane](../whats-new/dotnet-core-2-1.md#roll-forward).
+Definiuje zachowanie, gdy wymaganej struktury udostępnionego nie jest dostępna. `N` może być:
+ * `0` -Wyłącz nawet podverze przenoszenia do przodu.
+ * `1` -Uaktualniane w wersji pomocniczej, ale nie w wersji głównej. Jest to zachowanie domyślne.
+ * `2` -Uaktualniane na wersje pomocnicze, jak i głównej.
+
+ Aby uzyskać więcej informacji, zobacz [uaktualniane](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 
@@ -164,7 +169,7 @@ Drukuje wersję zestawu .NET Core SDK w użyciu.
 
 ### <a name="general"></a>Ogólne
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 | Polecenie                                       | Funkcja                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -261,9 +266,9 @@ Począwszy od programu .NET Core SDK 2.1.300, wiele narzędzi, które były dost
 | ------------------------------------------------- | ------------------------------------------------------------ |
 | dev-certs                                         | Tworzy i zarządza certyfikatami rozwoju.                |
 | [EF](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core narzędzia wiersza polecenia.                    |
-| pamięć podręczna SQL                                         | Narzędzia wiersza polecenia pamięci podręcznej programu SQL Server.                         |
-| [wpisami tajnymi użytkowników](/aspnet/core/security/app-secrets) | Umożliwia zarządzanie wpisami tajnymi użytkowników rozwoju.                            |
-| [Wyrażenie kontrolne](/aspnet/core/tutorials/dotnet-watch)      | Uruchamia obserwatora pliku, który uruchamia polecenie, gdy zmienią się pliki. |
+| sql-cache                                         | Narzędzia wiersza polecenia pamięci podręcznej programu SQL Server.                         |
+| [user-secrets](/aspnet/core/security/app-secrets) | Umożliwia zarządzanie wpisami tajnymi użytkowników rozwoju.                            |
+| [watch](/aspnet/core/tutorials/dotnet-watch)      | Uruchamia obserwatora pliku, który uruchamia polecenie, gdy zmienią się pliki. |
 
 Aby uzyskać więcej informacji na temat każdego z narzędzi, wpisz `dotnet <tool-name> --help`.
 
@@ -289,7 +294,7 @@ Uruchamianie aplikacji biblioteki DLL, takich jak `myapp.dll`:
 
 ## <a name="environment-variables"></a>Zmienne środowiskowe
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 

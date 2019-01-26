@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5a6d69b121827c3ee4f55714dcf3d4628706ce2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737900"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065833"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Standardowe typy danych (niezarządzana dokumentacja interfejsu API)
 W tym temacie przedstawiono typy proste dane używane przez niezarządzanych interfejsów API programu .NET Framework, które są definiowane przez C/C++ `typedef` instrukcji. Te typy danych są zazwyczaj aliasy dla języka C/C++ pierwotne typy danych. Zazwyczaj są nieprzezroczyste; wartości z tych typów danych oznacza to są zwracane przez konkretną funkcję lub metodę, aby może być przekazywany do innych funkcji lub metody bez żadnych modyfikacji.  
@@ -18,7 +18,8 @@ W tym temacie przedstawiono typy proste dane używane przez niezarządzanych int
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Identyfikator domeny aplikacji.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Identyfikator zestawu.|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Identyfikator klasy zarządzanej.|
+|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Identyfikator klasy zarządzanej.|  
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|Adres pamięci 64-bitowych.|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Nie jest dostępna|Adres pamięci 64-bitowych.|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Identyfikator połączenia dla wątku, który jest podłączony do wystąpienia programu Microsoft SQL Server.|  
 |Identyfikator kontekstu|`typedef UINT_PTR ContextID;`|corprof.h|Identyfikator kontekstu skojarzonego z określonym wątków zarządzanych.|  
@@ -29,6 +30,7 @@ W tym temacie przedstawiono typy proste dane używane przez niezarządzanych int
 |CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Wartość rejestru procesora CPU.|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|Identyfikator funkcji lub metody.|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Uchwyt kolekcji wyrzucania elementów.|  
+|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|Token definicję metody.|
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|Token metadanych (wiersz w tabeli metadanych).|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|Identyfikator modułu zestawu.|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|Identyfikator obiektu.|  

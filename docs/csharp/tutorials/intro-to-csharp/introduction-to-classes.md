@@ -3,12 +3,12 @@ title: Klasy i obiekty — wprowadzenie do C# samouczek
 description: Tworzenie pierwszego programu C# i Eksploruj pojęcia zorientowana obiektowo
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 8b823e05ea5e51bb3096d6a0611630c996f56b33
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6ce0c86a4b746b8ea2db82899a82734a68e46957
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205376"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066073"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Zapoznaj się z zorientowana obiektowo Programowanie przy użyciu klas i obiektów
 
@@ -16,7 +16,7 @@ W tym samouczku oczekuje, że masz maszyny, których można użyć do tworzenia 
 
 ## <a name="create-your-application"></a>Tworzenie aplikacji
 
-Za pomocą okna terminalu Utwórz katalog o nazwie **klasy**. Skompiluj aplikację istnieje. Przejdź do tego katalogu i wpisz `dotnet new console` w oknie konsoli. To polecenie umożliwia utworzenie aplikacji. Otwórz **Program.cs**. Jego powinien wyglądać następująco:
+Za pomocą okna terminalu Utwórz katalog o nazwie **klasy**. Skompiluj aplikację istnieje. Przejdź do tego katalogu i wpisz `dotnet new console` w oknie konsoli. To polecenie umożliwia utworzenie aplikacji. Otwórz **Program.cs**. Powinny wyglądać następująco:
 
 ```csharp
 using System;
@@ -106,7 +106,7 @@ Dodaj następującą deklarację elementu członkowskiego do `BankAccount` klasy
 private static int accountNumberSeed = 1234567890;
 ```
 
-Jest to element członkowski danych. Ma ona `private`, co oznacza, że może zostać oceniony jedynie przez kod wewnątrz `BankAccount` klasy. Jest to sposób rozdzielania obowiązków publiczny (takie jak obsługa numer konta) z prywatnej implementacji (jak numery kont są generowane.) Warto również `static`, co oznacza, że jest współużytkowana przez wszystkie ``BankAccount`` obiektów. Wartość zmiennej niestatycznych jest unikatowy dla każdego wystąpienia ``BankAccount`` obiektu. Dodaj następujące dwa wiersze do konstruktora, aby przypisać numer konta:
+Jest to element członkowski danych. Ma ona `private`, co oznacza, że może zostać oceniony jedynie przez kod wewnątrz `BankAccount` klasy. Jest to sposób rozdzielania obowiązków publiczny (takie jak obsługa numer konta) z prywatnej implementacji (jak numery kont są generowane.) Warto również `static`, co oznacza, że jest współużytkowana przez wszystkie `BankAccount` obiektów. Wartość zmiennej niestatycznych jest unikatowy dla każdego wystąpienia `BankAccount` obiektu. Dodaj następujące dwa wiersze do konstruktora, aby przypisać numer konta:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();

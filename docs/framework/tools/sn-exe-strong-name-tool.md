@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6db5b3d56c9dd4998625098b9868b276238a978
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558647"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066392"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Narzędzie silnych nazw)
 Narzędzie silnych nazw (Sn.exe) pomaga podpisywać zestawy za pomocą [silnych nazw](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
@@ -65,7 +65,7 @@ sn [-quiet][option [parameter(s)]]
 |**-t**[**p**] *infile*|Wyświetla token dla klucza publicznego zapisanego w *infile*. Zawartość *infile* musi być kluczem publicznym poprzednio wygenerowanym z pliku pary kluczy przy użyciu **-p**.  Nie używaj **-t [p]** opcji do wyodrębnienia tokenu bezpośrednio z pliku pary kluczy.<br /><br /> Sn.exe oblicza token przy użyciu funkcji skrótu z klucza publicznego. Aby zaoszczędzić przestrzeń, środowisko uruchomieniowe języka wspólnego zapisuje tokeny klucza publicznego w manifeście jako część odwołania do innego zestawu, gdy rejestruje zależność do zestawu z silną nazwą. **- Tp** opcji wyświetla także klucz publiczny oprócz tokenu. Jeśli <xref:System.Reflection.AssemblySignatureKeyAttribute> zastosowano atrybut do zestawu, token jest do klucza tożsamości i wyświetlana jest nazwa algorytmu wyznaczania wartości skrótu oraz klucz tożsamości.<br /><br /> Zauważ, że ta opcja nie weryfikuje podpisu zestawu i nie powinna być używana do podejmowania decyzji dotyczących zaufania.  Ta opcja wyświetla jedynie surowe dane tokenu klucza publicznego.|  
 |**-T**[**p**] *assembly*|Wyświetla token klucza publicznego dla *zestawu.* *Zestawu* musi być nazwą pliku zawierającego manifest zestawu.<br /><br /> Sn.exe oblicza token przy użyciu funkcji skrótu z klucza publicznego. Aby zaoszczędzić przestrzeń, środowisko uruchomieniowe przechowuje tokeny klucza publicznego w manifeście jako część odwołania do innego zestawu, gdy rejestruje zależność do zestawu z silną nazwą. **- Tp** opcji wyświetla także klucz publiczny oprócz tokenu. Jeśli <xref:System.Reflection.AssemblySignatureKeyAttribute> zastosowano atrybut do zestawu, token jest do klucza tożsamości i wyświetlana jest nazwa algorytmu wyznaczania wartości skrótu oraz klucz tożsamości.<br /><br /> Zauważ, że ta opcja nie weryfikuje podpisu zestawu i nie powinna być używana do podejmowania decyzji dotyczących zaufania.  Ta opcja wyświetla jedynie surowe dane tokenu klucza publicznego.|  
 |`-TS` `assembly` `infile`|Podpisuje testowo podpisany lub częściowo podpisany `assembly` parą kluczy w `infile`.|  
-|-`TSc``assembly``container`|Podpisuje testowo podpisany lub częściowo podpisany `assembly` parą kluczy w kontenerze kluczy `container`.|  
+|-`TSc` `assembly` `container`|Podpisuje testowo podpisany lub częściowo podpisany `assembly` parą kluczy w kontenerze kluczy `container`.|  
 |**-v** *zestawu*|Weryfikuje silną nazwę w *zestawu*, gdzie *zestawu* jest nazwą pliku zawierającego manifest zestawu.|  
 |**-vf**  *zestawu*|Weryfikuje silną nazwę w *zestawu.* W odróżnieniu od **- v** opcji **-vf** wymusza weryfikację, nawet jeśli jest wyłączone, za pomocą **- Vr** opcji.|  
 |**-Vk**  *regfile.reg* *zestawu* [*userlist*] [*infile*]|Tworzy plik wpisów rejestracji (reg), którego można użyć do zarejestrowania określonego zestawu, aby pomijał weryfikację. Zasady nazewnictwa zestawów, które są stosowane do **- Vr** opcja dotyczy **— Vk** także. Aby uzyskać informacje o *userlist* i *infile* opcji, zobacz **— Vr** opcji.|  

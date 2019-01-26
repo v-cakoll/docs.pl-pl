@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415536"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066431"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Stos dużych obiektów w systemach Windows
 
@@ -34,7 +34,7 @@ Małych obiektów zawsze są przydzielane w generacji 0 i, w zależności od ich
 
 Duże obiekty należą do generacji 2, ponieważ są one pobierane tylko podczas kolekcji generacji 2. Po zebraniu generacji, jego młodszych generation(s) również są zbierane. Na przykład w sytuacji odzyskiwania pamięci generacji 1 są zbierane zarówno generacji 1 i 0. I sytuacji odzyskiwania pamięci generacji 2 całego sterty są zbierane. Z tego powodu GC generacji 2 jest również nazywany *pełne odzyskiwanie pamięci*. Ten artykuł odnosi się do odzyskiwania pamięci generacji 2, zamiast pełną operacją GC, ale warunki są wymienne.
 
-Generacje zapewniają logiczne widok sterty GC. Fizycznie obiekty na żywo w zarządzanym stosie segmentach. A *segmentu w zarządzanej stercie* to fragment pamięci, która GC zastrzega sobie z systemu operacyjnego, wywołując [funkcji VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) imieniu kodu zarządzanego. Gdy środowisko CLR jest załadowany, GC przydziela dwa segmenty początkowej sterty: jeden dla małych obiektów (stos małych obiektów, lub raportu o kondycji) i jeden dla dużych obiektów (sterty obiektów wielkich).
+Generacje zapewniają logiczne widok sterty GC. Fizycznie obiekty na żywo w zarządzanym stosie segmentach. A *segmentu w zarządzanej stercie* to fragment pamięci, która GC zastrzega sobie z systemu operacyjnego, wywołując [funkcji VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) imieniu kodu zarządzanego. Gdy środowisko CLR jest załadowany, GC przydziela dwa segmenty początkowej sterty: jeden dla małych obiektów (stos małych obiektów, lub raportu o kondycji) i jeden dla dużych obiektów (sterty obiektów wielkich).
 
 Alokacja żądań następnie są spełnione, umieszczając zarządzane obiekty w tych segmentach sterty zarządzanej. Jeśli obiekt jest mniejszy niż rozmiarze 85 000 bajtów, zostanie ono przełączone na segmencie dla raportu o kondycji; w przeciwnym razie jest umieszczany w segmencie LOH. Segmenty są zatwierdzane (na mniejsze fragmenty) jako więcej i więcej obiektów są przydzielane do nich.
 Dla raportu o kondycji obiekty, które przeżyły wykaz Globalny są promowane do następnej generacji. Obiekty, które przeżyły bezużytecznych generacji 0, teraz są traktowane jako obiekty w generacji 1 i tak dalej. Obiekty, które przeżyły najstarsze generowania nadal są uwzględniane w najstarsze generacji. Innymi słowy przy życiu z generacji 2 są obiekty generacji 2; i pozostałości z LOH są obiektami LOH, (które są zbierane za pomocą gen2).
@@ -57,9 +57,9 @@ Rysunek 2: Po GC generacji 2
 
 Jeśli nie ma wystarczającej ilości wolnego miejsca, aby obsłużyć żądania alokacji dużego obiektu, GC najpierw próbuje pobrać więcej segmentów z systemu operacyjnego. W przypadku niepowodzenia wyzwala wykaz Globalny generacji 2 w nadzieję, że jest zwolnić miejsce.
 
-Podczas generacji 1 lub generacja 2 GC, moduł zbierający elementy bezużyteczne zwalnia, które mają żadne obiekty na żywo na nich do systemu operacyjnego, wywołując [funkcji VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). Odstęp po ostatni obiekt na żywo na końcu segmentu jest anulowane (z wyjątkiem w segmencie efemerycznym, gdzie gen0/gen1 na żywo, a gdy moduł odśmiecania pamięci przechowuje niektóre zatwierdzone, ponieważ aplikacja będzie przydzielanie w nim natychmiast). I wolnego miejsca do magazynowania pozostaną zatwierdzone, chociaż są one resetowane, co oznacza system operacyjny nie musi zapisywać dane w ich do dysku.
+Podczas generacji 1 lub generacja 2 GC, moduł zbierający elementy bezużyteczne zwalnia, które mają żadne obiekty na żywo na nich do systemu operacyjnego, wywołując [funkcji VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree). Odstęp po ostatni obiekt na żywo na końcu segmentu jest anulowane (z wyjątkiem w segmencie efemerycznym, gdzie gen0/gen1 na żywo, a gdy moduł odśmiecania pamięci przechowuje niektóre zatwierdzone, ponieważ aplikacja będzie przydzielanie w nim natychmiast). I wolnego miejsca do magazynowania pozostaną zatwierdzone, chociaż są one resetowane, co oznacza system operacyjny nie musi zapisywać dane w ich do dysku.
 
-Ponieważ LOH są zbierane podczas operacje odzyskiwania pamięci generacji 2, LOH segment może być zwolniony tylko podczas odzyskiwania pamięci. Rysunek 3 przedstawia scenariusz, w której moduł zbierający elementy bezużyteczne zwalnia jednego segmentu (segment 2) do systemu operacyjnego i anuluje więcej miejsca na pozostałe segmenty. Jeśli musi używać miejsca anulowane na końcu segmentu do spełnienia żądania alokacji dużego obiektu, jej zatwierdzenia pamięć ponownie. (Objaśnienia dotyczące zatwierdzania/anulowania, zobacz dokumentację dla [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
+Ponieważ LOH są zbierane podczas operacje odzyskiwania pamięci generacji 2, LOH segment może być zwolniony tylko podczas odzyskiwania pamięci. Rysunek 3 przedstawia scenariusz, w której moduł zbierający elementy bezużyteczne zwalnia jednego segmentu (segment 2) do systemu operacyjnego i anuluje więcej miejsca na pozostałe segmenty. Jeśli musi używać miejsca anulowane na końcu segmentu do spełnienia żądania alokacji dużego obiektu, jej zatwierdzenia pamięć ponownie. (Objaśnienia dotyczące zatwierdzania/anulowania, zobacz dokumentację dla [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
 ![Rysunek 3: LOH po gen 2 GC](media/loh/loh-figure-3.jpg)  
 Rysunek 3: LOH po GC generacji 2
@@ -302,13 +302,13 @@ Ponieważ LOH nie skompaktowany, czasami LOH jest thoought źródło fragmentacj
 
 Jest to bardziej powszechne, aby zobaczyć fragmentacji maszyny Wirtualnej spowodowane przez tymczasowe dużych obiektów, które wymagają modułu odśmiecania pamięci, można często uzyskać nowe zarządzane segmentów sterty z systemu operacyjnego i zwolnienie pustych z powrotem do systemu operacyjnego.
 
-Aby sprawdzić, czy LOH powoduje fragmentację maszyny Wirtualnej, możesz ustawić punkt przerwania na [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) i [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) aby zobaczyć, kto ich wywoływania. Na przykład aby zobaczyć, kto próbował Alokacja pamięci wirtualnej fragmentów w większe niż 8MBB z systemu operacyjnego, można ustawić punkt przerwania w następujący sposób:
+Aby sprawdzić, czy LOH powoduje fragmentację maszyny Wirtualnej, możesz ustawić punkt przerwania na [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) i [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) aby zobaczyć, kto ich wywoływania. Na przykład aby zobaczyć, kto próbował Alokacja pamięci wirtualnej fragmentów w większe niż 8MBB z systemu operacyjnego, można ustawić punkt przerwania w następujący sposób:
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-To polecenie przechodzi do debugera i przedstawia stos wywołań tylko wtedy, gdy [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) jest wywoływana z rozmiarem alokacji większe niż 8 MB (0x800000).
+To polecenie przechodzi do debugera i przedstawia stos wywołań tylko wtedy, gdy [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) jest wywoływana z rozmiarem alokacji większe niż 8 MB (0x800000).
 
 Środowisko CLR 2.0 dodano funkcję o nazwie *Hoarding maszyny Wirtualnej* , może być przydatne w przypadku scenarious gdzie segmenty (łącznie z dużymi i małymi obiekt sterty) są często nabyte i wydania. Aby określić Hoarding maszyny Wirtualnej, należy określić flagę uruchamiania o nazwie `STARTUP_HOARD_GC_VM` za pośrednictwem interfejsu API. Zamiast zwalnianie pustych segmentów do systemu operacyjnego, środowisko CLR anuluje pamięci w tych segmentach i umieszcza je na liście wstrzymania. (Zwróć uwagę, że CLR nie robi to segmentów, które są zbyt duże). Środowisko CLR używa później te segmenty do obsługi nowych żądań segmentu. Następnym razem, że Twoja aplikacja wymaga nowego segmentu, środowisko CLR używa z tej listy gotowości Jeśli znajdziesz taki, który jest wystarczająco duży.
 

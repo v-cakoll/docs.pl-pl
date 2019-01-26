@@ -2,12 +2,12 @@
 title: F#wytyczne dotyczące projektowania składnika
 description: Dowiedz się, wskazówki dotyczące pisania F# składników przeznaczonych do użytku przez inne obiekty wywołujące.
 ms.date: 05/14/2018
-ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415640"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066028"
 ---
 # <a name="f-component-design-guidelines"></a>F#wytyczne dotyczące projektowania składnika
 
@@ -708,7 +708,7 @@ Zamiast tego wolisz, zwracająca Typ nazwany, rezerwowanie zagregowane dane lub 
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Unikaj stosowania currying parametrów
 
-Zamiast tego należy użyć konwencji wywoływania .NET ``Method(arg1,arg2,…,argN)``.
+Zamiast tego należy użyć konwencji wywoływania .NET `Method(arg1,arg2,…,argN)`.
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str

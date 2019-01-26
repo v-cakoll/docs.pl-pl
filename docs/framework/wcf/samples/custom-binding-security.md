@@ -2,12 +2,12 @@
 title: Zabezpieczenia powiązania niestandardowego
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 5ed4b124fb5150974bcbe334e3fec627e027498f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49e14fd783fa89f25750aeb00efc105a850c0d3e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584902"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066135"
 ---
 # <a name="custom-binding-security"></a>Zabezpieczenia powiązania niestandardowego
 Niniejszy przykład pokazuje sposób konfigurowania zabezpieczeń przy użyciu niestandardowego powiązania. Widoczny jest sposób użyć niestandardowego powiązania, aby włączyć zabezpieczenia na poziomie komunikatu wraz z bezpiecznym transportem. Jest to przydatne, gdy bezpiecznym transportem jest wymagana do przesyłania komunikatów między klientem a usługą i jednocześnie komunikaty muszą być bezpieczne na poziomie komunikatu. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczane przez system.
@@ -57,7 +57,7 @@ Niniejszy przykład pokazuje sposób konfigurowania zabezpieczeń przy użyciu n
 </behaviors>
 ```
 
- Ponadto niestandardowego powiązania za pomocą zabezpieczeń wiadomości typ poświadczeń Windows — jest to domyślny typ poświadczeń. Jest to osiągane przez `security` element powiązania. Zarówno klient, jak i usługi są uwierzytelniane przy użyciu zabezpieczeń na poziomie komunikatu, jeśli mechanizm uwierzytelniania Kerberos jest dostępna. Dzieje się tak, jeśli na przykład jest uruchamiany w środowisku usługi Active Directory. Jeśli mechanizm uwierzytelniania Kerberos jest niedostępny, zostanie użyte uwierzytelnianie NTLM. NTLM uwierzytelnia klienta do usługi, ale nie uwierzytelnia usługi do klienta. `security` Element powiązania jest skonfigurowany do używania `SecureConversation``authenticationType`, co powoduje, że w przypadku tworzenia sesji zabezpieczeń zarówno klient, jak i usługi. Jest to wymagane do włączenia usługi kontraktu dwukierunkowego do pracy.
+ Ponadto niestandardowego powiązania za pomocą zabezpieczeń wiadomości typ poświadczeń Windows — jest to domyślny typ poświadczeń. Jest to osiągane przez `security` element powiązania. Zarówno klient, jak i usługi są uwierzytelniane przy użyciu zabezpieczeń na poziomie komunikatu, jeśli mechanizm uwierzytelniania Kerberos jest dostępna. Dzieje się tak, jeśli na przykład jest uruchamiany w środowisku usługi Active Directory. Jeśli mechanizm uwierzytelniania Kerberos jest niedostępny, zostanie użyte uwierzytelnianie NTLM. NTLM uwierzytelnia klienta do usługi, ale nie uwierzytelnia usługi do klienta. `security` Element powiązania jest skonfigurowany do używania `SecureConversation` `authenticationType`, co powoduje, że w przypadku tworzenia sesji zabezpieczeń zarówno klient, jak i usługi. Jest to wymagane do włączenia usługi kontraktu dwukierunkowego do pracy.
 
  Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.
 

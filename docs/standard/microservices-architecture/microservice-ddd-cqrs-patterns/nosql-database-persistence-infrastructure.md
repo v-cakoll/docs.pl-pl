@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | W 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 720c33fb4af197198f8ee1a21c5e1dc6dad24ce3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150878"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066288"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Użyj bazy danych NoSQL jako infrastruktury trwałości
 
@@ -317,12 +317,12 @@ services:
   [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 - **Vaughn Vernon. Idealne rozwiązanie oparte na domenie projektu agregacji Store?** \
-  [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+  <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
 - **Wprowadzenie do usługi Azure Cosmos DB: Interfejs API dla bazy danych MongoDB**  \
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
-- **Usługi Azure Cosmos DB: Tworzenie aplikacji internetowej interfejsu API usługi MongoDB przy użyciu platformy .NET i witryny Azure portal**  \
+- **Azure Cosmos DB: Tworzenie aplikacji internetowej interfejsu API usługi MongoDB przy użyciu platformy .NET i witryny Azure portal**  \
   [*https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet*](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet )
 
 - **Korzystanie z emulatora usługi Azure Cosmos DB do lokalnego tworzenia i testowania**  \

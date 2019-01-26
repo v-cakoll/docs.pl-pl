@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e373610a78cbed5d31ff408e3c4ef8f11216f6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679074"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066255"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "54679074"
   
  Klienci automatyzacji interfejsu użytkownika, dostęp do metod i właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontroli wzorzec klasy i ich używać, aby uzyskać informacje na [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], lub do manipulowania [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. W ramach tych zajęć wzorca kontrolki znajdują się w <xref:System.Windows.Automation> przestrzeni nazw (na przykład <xref:System.Windows.Automation.InvokePattern> i <xref:System.Windows.Automation.SelectionPattern>).  
   
- Klienci używają <xref:System.Windows.Automation.AutomationElement> metody (takie jak <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) lub [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] metod dostępu w celu uzyskania dostępu do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości przy użyciu wzorca. Każda klasa wzorzec kontroli ma składową pola (na przykład <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>"lub <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) który identyfikuje ten — wzorzec kontrolki i może być przekazywany jako parametr do <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> do pobrania tego wzorca dla <xref:System.Windows.Automation.AutomationElement>.  
+ Klienci używają <xref:System.Windows.Automation.AutomationElement> metody (takie jak <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) lub [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] metod dostępu w celu uzyskania dostępu do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości przy użyciu wzorca. Każda klasa wzorzec kontroli ma składową pola (na przykład <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> lub <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) który identyfikuje ten — wzorzec kontrolki i może być przekazywany jako parametr do <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> do pobrania tego wzorca dla <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Wzorce kontrolek dynamicznych  

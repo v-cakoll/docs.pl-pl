@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691479"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066015"
 ---
 # <a name="securing-method-access"></a>Zabezpieczanie dostępu metody
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Wirtualne wewnętrzne zastąpienia lub przeciążenia zastępowanego przyjaciela klasy  
   
 > [!NOTE]
->  W tej sekcji ostrzega o problem z zabezpieczeniami, podczas deklarowania metody jako `virtual` i `internal` (`Overloads``Overridable``Friend` w języku Visual Basic). To ostrzeżenie nie dotyczy wersji .NET Framework 1.0 i 1.1, nie ma zastosowania do nowszej wersji.  
+>  W tej sekcji ostrzega o problem z zabezpieczeniami, podczas deklarowania metody jako `virtual` i `internal` (`Overloads` `Overridable` `Friend` w języku Visual Basic). To ostrzeżenie nie dotyczy wersji .NET Framework 1.0 i 1.1, nie ma zastosowania do nowszej wersji.  
   
  W .NET Framework w wersji 1.0 i 1.1 należy pamiętać o nuance ułatwień dostępu systemu typu podczas potwierdzania, że Twój kod jest niedostępny dla innych zestawów. Metoda, która jest zadeklarowana **wirtualnego** i **wewnętrzny** (**Overloads Overridable Friend** w języku Visual Basic) można zastąpić wpis vtable klasy nadrzędnej i mogą być używane tylko z w ramach tego samego zestawu, ponieważ jest on wewnętrzny. Jednak ułatwień dostępu dla zastępowanie jest określana przez **wirtualnego** — słowo kluczowe i może to być zastąpiona z innego zestawu, tak długo, jak ten kod ma dostęp do samej klasy. Jeśli możliwość zastąpienia stanowi problem, użyj zabezpieczenia deklaratywne, aby go naprawić lub usunąć **wirtualnego** — słowo kluczowe, jeśli nie jest bezwzględnie konieczne.  
   

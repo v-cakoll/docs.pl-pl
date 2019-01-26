@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 321afe8904ff683ce9807ba9912bf3a38ecd73bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650512"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066003"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Compiler (xsltc.exe)
 Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Arkusz stylów skompilowanego można następnie przekazać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody. Nie można wygenerować zestawy podpisane za pomocą xsltc.exe.  
@@ -49,7 +49,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 >  Należy również uwzględnić skompilowanego zestawu jako odwołania w aplikacji.  
   
- Narzędzie xsltc.exe nie można zweryfikować klasy (`/class:``name`) lub zestawu (`/out:``assemblyName`) nazwy. Błędy są zgłaszane przez środowisko uruchomieniowe języka wspólnego, jeśli nazwy nie są prawidłowe.  
+ Narzędzie xsltc.exe nie można zweryfikować klasy (`/class:`*nazwa*) lub zestawu (`/out:`*assemblyName*) nazwy. Błędy są zgłaszane przez środowisko uruchomieniowe języka wspólnego, jeśli nazwy nie są prawidłowe.  
   
 ## <a name="examples"></a>Przykłady  
  Poniższe polecenie kompiluje arkusza stylów i tworzy zestaw o nazwie booksort.dll.  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: cd2e48ad9ee5e6266fff676cf109cdf6b0136f32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f60c0c07c0270b94dbb018b9423e210f16269d6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573910"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065807"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Instrukcje: Używanie klasy ogólnej (Visual Basic)
 Klasa, która przyjmuje *parametry typu* nosi nazwę *klasy generycznej*. Jeśli używasz klasy ogólnej, można wygenerować *skonstruowany klasy* z niego, podając *argument typu* dla każdego z tych parametrów. Następnie można zadeklarować zmienną typu klasy skonstruowany, a następnie można utworzyć wystąpienia klasy skonstruowany i przypisać ją do tej zmiennej.  
@@ -39,7 +39,7 @@ Klasa, która przyjmuje *parametry typu* nosi nazwę *klasy generycznej*. Jeśli
   
 1.  Na początku pliku źródłowego, obejmują [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) do zaimportowania <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw. Dzięki temu można odwoływać się do <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> klasy bez konieczności pełnej kwalifikacji je odróżnić go od innych klas kolejki takich jak <xref:System.Collections.Queue?displayProperty=nameWithType>.  
   
-2.  Utwórz obiekt w normalny sposób, ale Dodaj `(Of` `type``)` natychmiast po nazwie klasy.  
+2.  Utwórz obiekt w normalny sposób, ale Dodaj `(Of type)` natychmiast po nazwie klasy.  
   
      W poniższym przykładzie użyto tej samej klasy (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) do utworzenia dwóch obiektów kolejki, zawierających elementy różnych typów danych. Dodaje element do końca każdej kolejki i następnie usuwa i wyświetla elementy z przodu każdej kolejki.  
   

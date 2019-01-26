@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669318"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065859"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Instrukcje: Wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
 Używanym klasy, modułu lub struktura, która ma składowych typu Liczba całkowita bez znaku, można uzyskać dostęp do tych członków, za pomocą Visual Basic.  
@@ -32,7 +32,7 @@ Używanym klasy, modułu lub struktura, która ma składowych typu Liczba całko
   
 3.  Zajrzyj do dokumentacji dla funkcji Windows, wywoływany można znaleźć nazwy i wartości stałe, które są używane. Wiele z nich są zdefiniowane w pliku WinUser.h.  
   
-4.  Deklarowanie stałych niezbędne w kodzie. Wiele stałe Windows są wartości bez znaku 32-bitowe i należy je zadeklarować `As``UInteger`.  
+4.  Deklarowanie stałych niezbędne w kodzie. Wiele stałe Windows są wartości bez znaku 32-bitowe i należy je zadeklarować `As UInteger`.  
   
 5.  Wywołaj funkcję w normalny sposób. Poniższy przykład wywołuje funkcję Windows `MessageBox`, który przyjmuje argument typu Liczba całkowita bez znaku.  
   

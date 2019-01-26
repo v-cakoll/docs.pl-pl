@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982870"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066335"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a> W środowisko uruchomieniowe języka wspólnego (CLR) wyrzucanie elementów bezużytecznych działa jako automatycznych Menadżer pamięci. Zapewnia następujące korzyści:  
@@ -98,7 +98,7 @@ ms.locfileid: "50982870"
   
  Brak sterty zarządzanej dla każdego procesu zarządzanego. Wszystkie wątki w procesie przydzielają pamięć dla obiektów, które w tej samej sterty.  
   
- Aby zarezerwować pamięć, moduł zbierający elementy bezużyteczne wywołuje funkcję Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) funkcji i rezerwuje jeden segment pamięci na raz dla zarządzanych aplikacji. Moduł zbierający elementy bezużyteczne również rezerwuje segmentów zgodnie z potrzebami i zwalnia je do systemu operacyjnego (po wyczyszczeniu ich z wszystkich obiektów) poprzez wywołanie Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) funkcji.  
+ Aby zarezerwować pamięć, moduł zbierający elementy bezużyteczne wywołuje funkcję Win32 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) funkcji i rezerwuje jeden segment pamięci na raz dla zarządzanych aplikacji. Moduł zbierający elementy bezużyteczne również rezerwuje segmentów zgodnie z potrzebami i zwalnia je do systemu operacyjnego (po wyczyszczeniu ich z wszystkich obiektów) poprzez wywołanie Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) funkcji.  
   
 > [!IMPORTANT]
 >  Rozmiar segmentów przydzielonej przez moduł odśmiecania pamięci jest specyficzne dla implementacji i może ulec zmianie w dowolnym momencie, w tym w okresowe aktualizacje. Twoja aplikacja nigdy nie należy wprowadzić założeń dotyczących lub zależeć od rozmiaru określonego segmentu nie ma podejmować skonfigurować ilość pamięci dostępnej dla alokacji segmentu.  

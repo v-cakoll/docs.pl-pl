@@ -4,12 +4,12 @@ description: Dowiedz się, jak wykrywać i eliminowanie luk w zabezpieczeniach c
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123647"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066182"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Chronometraż luk, wraz z trybie CBC odszyfrowanie symetryczne, za pomocą wypełnienia
 
@@ -29,7 +29,7 @@ Szyfry opartej na blokach ma inną właściwość o nazwie trybu, który określ
 
 Osoba atakująca może użyć wypełnienie bazy danych oracle, w połączeniu z struktury danych CBC, wysyłanie komunikatów nieco zmiany do kodu, który udostępnia programu oracle i nadal wysyłać danych do momentu programu oracle dowie się, dane są poprawne. Z tej odpowiedzi osoba atakująca może odszyfrować komunikatu bajt po bajcie.
 
-Sieci nowoczesnych komputerowe są takie wysokiej jakości, że osoba atakująca może wykryć bardzo mały (mniej niż 0,1 ms) różnice w realizacji czasu w systemach zdalnych. Aplikacje, które są przy założeniu, że pomyślne odszyfrowywania tylko zdarzyć, gdy dane nie został naruszony, może być narażony na ataki z narzędzia, które są przeznaczone do zaobserwować różnice w odszyfrowywania zakończone powodzeniem i niepowodzeniem. Ta różnica czasu może być bardziej znaczące w niektórych językach i bibliotekach niż inne, teraz uważa się, to jest praktyczne przed zagrożeniami dla wszystkich języków i bibliotek w przypadku odpowiedzi awaria aplikacji jest brana pod uwagę.
+Sieci nowoczesnych komputerowe są takie wysokiej jakości, że osoba atakująca może wykryć bardzo mały (mniej niż 0,1 ms) różnice w realizacji czasu w systemach zdalnych. Aplikacje, które są przy założeniu, że pomyślne odszyfrowywania tylko zdarzyć, gdy dane nie został naruszony, może być narażony na ataki z narzędzia, które są przeznaczone do zaobserwować różnice w odszyfrowywania zakończone powodzeniem i niepowodzeniem. Ta różnica czasu może być bardziej znaczące w niektórych językach i bibliotekach niż inne, teraz uważa się, to jest praktyczne przed zagrożeniami dla wszystkich języków i bibliotek w przypadku odpowiedzi awaria aplikacji jest brana pod uwagę.
 
 Ten rodzaj ataku opiera się na możliwość zmieniania zaszyfrowanych danych i testowania wyników za pomocą programu oracle. Jedynym sposobem, aby w pełni zminimalizowania skuteczności ataku jest wykrywanie zmian w postaci zaszyfrowanych danych i odmawiają wykonywać w niej żadnych akcji. Standardowy sposób, w tym celu jest utworzenie sygnatury dla danych i zweryfikować ten podpis, zanim wszystkie operacje są wykonywane. Podpis musi być do sprawdzenia, nie można utworzyć przez osobę atakującą, w przeciwnym razie one może zmienić zaszyfrowane dane, a następnie obliczeń nowa sygnatura na podstawie zmienionych danych. Jeden typ wspólnego z odpowiednim podpisem jest znany jako kod uwierzytelniania wiadomości opartych na kluczach skrótu (metoda HMAC). HMAC różni się od sumy kontrolnej, w tym, że zajmuje klucza tajnego znanego tylko osoby produkujących HMAC i osoby, sprawdzanie poprawności go. Bez posiadania klucza nie można utworzyć poprawne HMAC. Po otrzymaniu dane będą zaszyfrowane dane, niezależnie obliczenia HMAC przy użyciu klucza tajnego, możesz i nadawcy udziału, a następnie porównaj HMAC one wysyłane przeciwko jednemu zostanie obliczona. To porównanie musi być stałą czasu, w przeciwnym razie po dodaniu innego oracle wykrywalny, pozwalając na inny rodzaj ataku.
 
@@ -100,7 +100,7 @@ Aplikacje, które są nie można zmienić ich format wiadomości, ale wykonać n
 
 ## <a name="finding-vulnerable-code---native-applications"></a>Znajdowanie kodu luki w zabezpieczeniach — aplikacje natywne
 
-Dla programów skompilowana kryptografii Windows: Biblioteka Next Generation (CNG):
+Dla programów skompilowana kryptografii Windows: Dalej Biblioteka Generation (CNG):
 
 - Wywołanie odszyfrowywania ma na celu [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), określanie `BCRYPT_BLOCK_PADDING` flagi.
 - Uchwytu klucza został zainicjowany przez wywołanie metody [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) z [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) równa `BCRYPT_CHAIN_MODE_CBC`.
@@ -109,7 +109,7 @@ Dla programów skompilowana kryptografii Windows: Biblioteka Next Generation (CN
 Dla programów skompilowana starsze Cryptographic API Windows:
 
 - Wywołanie odszyfrowywania ma na celu [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) z `Final=TRUE`.
-- Uchwytu klucza został zainicjowany przez wywołanie metody [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) z [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) równa `CRYPT_MODE_CBC`.
+- Uchwytu klucza został zainicjowany przez wywołanie metody [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) z [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) równa `CRYPT_MODE_CBC`.
   - Ponieważ `CRYPT_MODE_CBC` jest zachowaniem domyślnym, wpływ na kod nie może mieć przypisany żadnej wartości dla `KP_MODE`.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>Znajdowanie kodu luki w zabezpieczeniach — usługa managed applications

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d58ac91f42e07e3f556389a818d8118d846653c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e476674e99f0951148dc7cfc95deeeaede3862ae
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518166"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066301"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu pokrętło
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "54518166"
 |------------------|------------------|  
 |pokrętło<br /><br /> -Edycji (0 lub 1)<br />— Przycisk (2)<br />-Element list (0 lub więcej)|pokrętło<br /><br /> — ListItem (0 lub więcej)|  
   
- Aby upewnić się, że dwa przyciski w zainstalowanym poddrzewie widoku kontroli można rozróżnić przy użyciu narzędzia do testów automatycznych, Przypisz `SmallIncrement` lub `SmallDecrement``AutomationId` odpowiednio. Niektóre implementacje skojarzony formant edycji może być elementem równorzędnym pokrętła.  
+ Aby upewnić się, że dwa przyciski w zainstalowanym poddrzewie widoku kontroli można rozróżnić przy użyciu narzędzia do testów automatycznych, Przypisz `SmallIncrement` lub `SmallDecrement` `AutomationId` odpowiednio. Niektóre implementacje skojarzony formant edycji może być elementem równorzędnym pokrętła.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Właściwości automatyzacji interfejsu użytkownika wymagane  

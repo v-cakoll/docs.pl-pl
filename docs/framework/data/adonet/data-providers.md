@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: d96be73fc63856e317b129c1fdd8c381c9df6c07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627268"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066223"
 ---
 # <a name="net-framework-data-providers"></a>Dostawcy danych .NET framework
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawca danych służy do nawiązywania połączenia z bazą danych, wykonując polecenia i pobierania wyników. Te wyniki są albo przetwarzane bezpośrednio, umieszczone w <xref:System.Data.DataSet> celu uwidocznienie użytkownika zgodnie z potrzebami, połączone z danymi z wielu źródeł lub węzłach między warstwami. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych są uproszczone, tworzenie minimalnej warstwy między źródłem danych i kodu, zwiększenie wydajności bez poświęcania funkcjonalności.  
@@ -151,8 +151,8 @@ using System.Data.OracleClient;
 |--------------|-----------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Dostawca danych programu SQL Server|Zalecane w przypadku aplikacji warstwy środkowej, które używają programu Microsoft SQL Server.<br /><br /> Zalecane w przypadku aplikacji jednowarstwowej, które używają Microsoft Database Engine (MSDE) lub SQL Server.<br /><br /> Zalecane przez użycie dostawcy OLE DB dla programu SQL Server (SQLOLEDB) przy użyciu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|Dla programu SQL Server [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server, zaleca się zamiast tego dostawcy.<br /><br /> Zalecane w przypadku aplikacji jednowarstwowej, które używają bazy danych Microsoft Access. Nie zaleca się korzystanie z bazy danych programu Access dla aplikacji warstwy środkowej.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ' Data Provider for ODBC|Zalecane dla Środkowej i warstwy pojedynczej aplikacji, które używają źródła danych ODBC.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ' Data Provider Pro Oracle|Zalecane dla Środkowej i warstwy pojedynczej aplikacji, które używają źródła danych programu Oracle.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC|Zalecane dla Środkowej i warstwy pojedynczej aplikacji, które używają źródła danych ODBC.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider Pro Oracle|Zalecane dla Środkowej i warstwy pojedynczej aplikacji, które używają źródła danych programu Oracle.|  
   
 ## <a name="entityclient-provider"></a>Dostawca EntityClient  
  Dostawca EntityClient jest używany do uzyskiwania dostępu do danych opartych na Entity Data Model (EDM). W przeciwieństwie do innych dostawcy danych .NET Framework nie współdziała bezpośrednio ze źródłem danych. Zamiast tego używa jednostki SQL do komunikowania się z podstawowym dostawcą danych. Aby uzyskać więcej informacji, zobacz [EntityClient i jednostki SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  

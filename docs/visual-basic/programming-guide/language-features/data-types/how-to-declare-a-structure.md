@@ -7,15 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: bfed5c969466cb427e6c94d39bfcc6a6e007c320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672048"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066119"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Instrukcje: Deklarowanie struktury (Visual Basic)
-Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md), i kończy z `End` `Structure` instrukcji. Między te dwie instrukcje należy zadeklarować co najmniej jeden *elementu*. Elementy mogą być dowolnego typu danych, ale co najmniej jedna musi być zmienną nieudostępnionych lub nieudostępnionych, niestandardowych zdarzeń.  
+Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md), i kończy z `End Structure` instrukcji. Między te dwie instrukcje należy zadeklarować co najmniej jeden *elementu*. Elementy mogą być dowolnego typu danych, ale co najmniej jedna musi być zmienną nieudostępnionych lub nieudostępnionych, niestandardowych zdarzeń.  
   
  Nie można zainicjować elementy struktury w deklaracji struktury. Kiedy Deklarujesz zmienną typu struktury, należy przypisać wartości do elementów, uzyskując dostęp do nich za pośrednictwem zmiennej.  
   

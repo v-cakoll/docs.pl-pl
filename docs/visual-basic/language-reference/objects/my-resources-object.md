@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571824"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065872"
 ---
 # <a name="myresources-object"></a>My.Resources — Obiekt
 Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji.  
@@ -26,9 +26,9 @@ Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji
  Możesz uzyskać dostęp pliki specyficzne dla kultury zasobów aplikacji z `My.Resources` obiektu. Domyślnie `My.Resources` obiekt odwołuje się do zasobów z pliku zasobów, która pasuje kultury <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> właściwości. Można jednak zmienić to zachowanie i określić danej kultury na potrzeby zasobów. Aby uzyskać więcej informacji, zobacz [zasoby w aplikacjach pulpitu](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Właściwości  
- Właściwości `My.Resources` obiektu zapewniają dostęp tylko do odczytu do zasobów Twojej aplikacji. Aby dodać lub usunąć zasoby, należy użyć **projektanta projektu**. Dostęp do zasobów, o których dodane za pomocą **projektanta projektu** przy użyciu `My.Resources.``resourceName`.  
+ Właściwości `My.Resources` obiektu zapewniają dostęp tylko do odczytu do zasobów Twojej aplikacji. Aby dodać lub usunąć zasoby, należy użyć **projektanta projektu**. Dostęp do zasobów, o których dodane za pomocą **projektanta projektu** przy użyciu `My.Resources.` *resourceName*.  
   
- Można również dodać lub usunąć pliki zasobów, wybierając projekt w **Eksploratora rozwiązań** i klikając **Dodaj nowy element** lub **Dodaj istniejący element** z  **Projekt** menu. Dostępne zasoby dodane w ten sposób za pomocą `My.Resources.``resourceFileName`.`resourceName`.  
+ Można również dodać lub usunąć pliki zasobów, wybierając projekt w **Eksploratora rozwiązań** i klikając **Dodaj nowy element** lub **Dodaj istniejący element** z  **Projekt** menu. Dostępne zasoby dodane w ten sposób za pomocą `My.Resources.` *Nazwaplikuzasobów*`.`*resourceName*.  
   
  Każdy zasób ma nazwę, kategorii i wartość, a te ustawienia zasobów określają, jak uzyskać dostęp do zasobu pojawi się ona w `My.Resources` obiektu. Dla zasobów, które dodano w **projektanta projektu**:  
   

@@ -2,12 +2,12 @@
 title: LINQ to XML dla użytkowników metody XPath (C#)
 ms.date: 07/20/2015
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-ms.openlocfilehash: 5059181e89cf9da6bd617c8f1898f4c7d1b404e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79894aa0f7ba6b64119de6fa8e82be369299e361
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724008"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066340"
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>LINQ to XML dla użytkowników metody XPath (C#)
 Ten zbiór tematów Pokaż liczbę wyrażeń XPath i ich [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] odpowiedniki.  
@@ -31,7 +31,7 @@ Ten zbiór tematów Pokaż liczbę wyrażeń XPath i ich [!INCLUDE[sqltecxlinq](
 |[Instrukcje: Znajdowanie Unii dwóch ścieżek lokalizacji (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md)|Porównuje użycie operatora union <code>&#124;</code>, w elemencie XPath z <xref:System.Linq.Enumerable.Concat%2A> standardowego operatora zapytania w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:<code>"//Category&#124;//Price"</code>|  
 |[Instrukcje: Znajdowanie węzłów elementów równorzędnych (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-sibling-nodes-xpath-linq-to-xml.md)|Jak znaleźć wszystkie elementy równorzędne węzła, które mają określoną nazwą za pomocą wyrażenia XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"../Book"`|  
 |[Instrukcje: Znajdowanie atrybutu elementu nadrzędnego (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|Przejdź do elementu nadrzędnego i znaleźć skojarzone atrybutu przy użyciu XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"../@id"`|  
-|[Instrukcje: Znajdowanie atrybutów elementów równorzędnych o określonej nazwie (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md)|Jak znaleźć określone atrybuty elementów równorzędnych węzła kontekstu, za pomocą wyrażenia XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"``../Book/@id``"`|  
+|[Instrukcje: Znajdowanie atrybutów elementów równorzędnych o określonej nazwie (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md)|Jak znaleźć określone atrybuty elementów równorzędnych węzła kontekstu, za pomocą wyrażenia XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"../Book/@id"`|  
 |[Instrukcje: Znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md)|Jak znaleźć elementy al zawierające określony atrybut przy użyciu XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"./*[@Select]"`|  
 |[Instrukcje: Znajdowanie elementów podrzędnych na podstawie położenia (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md)|Jak znaleźć element w oparciu o jego względne położenie przy użyciu XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"Test[position() >= 2 and position() <= 4]"`|  
 |[Instrukcje: Znajdowanie bezpośrednio poprzednich elementów równorzędnych (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Jak znaleźć bezpośrednio poprzednich elementów równorzędnych węzła przy użyciu XPath porównuje i [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> Skojarzone wyrażenie XPath jest:`"preceding-sibling::*[1]"`|  

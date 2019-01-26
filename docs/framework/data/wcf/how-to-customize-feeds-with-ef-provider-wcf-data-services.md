@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 51e85fa108775806d2c92935868d7ed68534818f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8b493e6d9af1f19ca395e7b71657c6fd65aaa55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587976"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065999"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Instrukcje: Dostosowywanie źródła danych za pomocą dostawcy programu Entity Framework (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia dostosowanie Atom serializacji w odpowiedzi usługi danych, dzięki czemu właściwości jednostki mogą być mapowane do nieużywanych elementów, które są zdefiniowane w protokole AtomPub. W tym temacie przedstawiono sposób definiowania atrybutów mapowania dla typów jednostek w modelu danych, która jest zdefiniowana w pliku edmx przy użyciu dostawcy środowiska Entity Framework. Aby uzyskać więcej informacji, zobacz [kanału informacyjnego dostosowywania](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "54587976"
 6.  Skompiluj ponownie projekt.  
   
 ## <a name="example"></a>Przykład  
- Poprzedni przykład zwraca następujące wyniki dla identyfikatora URI `http://myservice/``Northwind.svc/Customers('ALFKI')`.  
+ Poprzedni przykład zwraca następujące wyniki dla identyfikatora URI `http://myservice/Northwind.svc/Customers('ALFKI')`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresult)]  
   

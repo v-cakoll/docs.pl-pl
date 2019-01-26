@@ -2,12 +2,12 @@
 title: 'Instrukcje: Określanie poświadczeń zabezpieczeń kanału'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495204"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066200"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Instrukcje: Określanie poświadczeń zabezpieczeń kanału
 Monikera programu Windows Communication Foundation (WCF) umożliwia aplikacji modelu COM do wywołania usługi WCF. Większość usług WCF wymaga klienta określić poświadczenia dla uwierzytelniania i autoryzacji. Podczas wywoływania usługi WCF z klienta programu WCF, te poświadczenia można określić w kodzie zarządzanym lub w pliku konfiguracji aplikacji. Podczas wywoływania usługi WCF z poziomu aplikacji modelu COM, można użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu, aby określić poświadczenia. W tym temacie przedstawiają różne sposoby, aby określić poświadczenia, za pomocą <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu.  
@@ -23,9 +23,9 @@ Monikera programu Windows Communication Foundation (WCF) umożliwia aplikacji mo
   
 2.  Otwórz projekt zabezpieczenia wiadomości.  
   
-3.  Dodaj `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` do `ICalculator` definicji interfejsu.  
+3.  Dodaj `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` do `ICalculator` definicji interfejsu.  
   
-4.  Dodaj `bindingNamespace=``http://Microsoft.ServiceModel.Samples` do znacznika punktu końcowego w pliku App.config dla usługi.  
+4.  Dodaj `bindingNamespace="http://Microsoft.ServiceModel.Samples"` do znacznika punktu końcowego w pliku App.config dla usługi.  
   
 5.  Zabezpieczenia komunikatów — przykład tworzenia i uruchom Service.exe. W programie Internet Explorer i przejdź do identyfikatora URI usługi (http://localhost:8000/ServiceModelSamples/Service) aby upewnić się, że usługa działa.  
   

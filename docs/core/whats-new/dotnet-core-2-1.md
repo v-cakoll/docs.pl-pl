@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 96f592799c42e96a5607489f18ee584264b167e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693681"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066354"
 ---
 # <a name="whats-new-in-net-core-21"></a>What's new in .NET Core 2.1
 
@@ -96,23 +96,30 @@ Wszystkie aplikacje platformy .NET Core, począwszy od programu .NET Core 2.0 au
 Uruchamianie przy użyciu platformy .NET Core 2.0, jeśli wersja programu .NET Core, która została zbudowana aplikacja nie jest obecny w czasie wykonywania, aplikacja automatycznie uruchamiana najnowszej zainstalowanej *wersja pomocnicza* programu .NET Core. Innymi słowy Jeśli aplikacja jest oparte na platformie .NET Core 2.0 i .NET Core 2.0 nie jest dostępny w systemie hosta, ale jest platformy .NET Core 2.1, aplikacja zostanie uruchomiona przy użyciu platformy .NET Core 2.1.
 
 > [!IMPORTANT]
-> To zachowanie przodu nie ma zastosowania do wersji w wersji zapoznawczej. Nie ma zastosowania do wersji głównej. Na przykład aplikacji platformy .NET Core 1.0 w takich sytuacjach przydałaby uaktualniane do platformy .NET Core 2.0 lub platformy .NET Core 2.1.
+> To zachowanie przodu nie ma zastosowania do wersji w wersji zapoznawczej. Domyślnie również nie dotyczy głównymi wersjami, ale można to zmienić za pomocą poniższych ustawień.
 
-Można również wyłączyć roll wersję pomocniczą na jeden z trzech sposobów:
+To zachowanie można zmienić, zmieniając ustawienie do przodu w udostępnionej platformy nie Release candidate. Ustawienia dostępne są następujące:
+- `0` — wyłączyć zachowanie przodu wersji pomocniczej. To ustawienie aplikacji dla platformy .NET Core 2.0.0 będą uaktualniane do platformy .NET Core 2.0.1, ale nie do platformy .NET Core 2.2.0 lub .NET Core 3.0.0.
+- `1` -Włącz zachowanie przodu wersji pomocniczej. Jest to wartość domyślna dla ustawienia. To ustawienie aplikacji dla platformy .NET Core 2.0.0 będą uaktualniane do obu platformy .NET Core 2.0.1 lub .NET Core 2.2.0, w zależności od tego, który jest zainstalowana jedna, ale jej nastąpi przeniesienie do przodu do programu .NET Core 3.0.0.
+- `2` -Włącz zachowanie przodu pomocnicze, jak i głównej wersji. Jeśli ustawiona, nawet różne wersje główne są traktowane jako, więc aplikacja skompilowana dla platformy .NET Core 2.0.0 będą uaktualniane do programu .NET Core 3.0.0.
 
-- Ustaw `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` zmiennej środowiskowej na wartość 0.
+Można zmodyfikować to ustawienie w jednym z trzech sposobów:
 
-- Dodaj następujący wiersz do pliku runtimeconfig.json:
+- Ustaw `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` zmienną środowiskową na żądaną wartość.
+
+- Dodaj następujący wiersz z odpowiednią wartość `runtimeconfig.json` pliku:
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Korzystając z [narzędzi interfejsu wiersza polecenia platformy .NET Core](../tools/index.md), obejmują będzie następująca opcja za pomocą polecenia .NET Core, takie jak `run`:
+- Korzystając z [narzędzi interfejsu wiersza polecenia platformy .NET Core](../tools/index.md), Dodaj poniższą opcję z żądaną wartość do polecenia .NET Core, takie jak `run`:
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+Wycofaj wersji poprawki do przodu jest niezależny od tego ustawienia i odbywa się po wszelkich potencjalnych drobne lub wersja główna przenoszenia do przodu jest stosowany.
 
 ## <a name="deployment"></a>wdrażania
 

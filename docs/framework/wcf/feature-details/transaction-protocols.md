@@ -2,12 +2,12 @@
 title: Protokoły transakcji
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 559b7ec1539a43ec27010031320be144d6f5e24b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533770"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066247"
 ---
 # <a name="transaction-protocols"></a>Protokoły transakcji
 Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transaction i WS-koordynacji protokoły.  
@@ -118,7 +118,7 @@ Windows Communication Foundation (WCF) implementuje usługi WS-Atomic Transactio
   
  R1232: Wychodzące `wscoor:Register` wiadomości należy użyć `IssuedTokenOverTransport` tryb uwierzytelniania opisanego w [protokołów zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- `wsse:Timestamp` Element musi być podpisany przy użyciu `SecurityContextToken``STx` wydane. Ta sygnatura jest dowód przesyłany tokenu skojarzone z danej transakcji i jest używany do uwierzytelniania uczestnik rejestrowanie w transakcji. RegistrationResponse wiadomości jest ponownie przy użyciu protokołu HTTPS.  
+ `wsse:Timestamp` Element musi być podpisany przy użyciu `SecurityContextToken STx` wydane. Ta sygnatura jest dowód przesyłany tokenu skojarzone z danej transakcji i jest używany do uwierzytelniania uczestnik rejestrowanie w transakcji. RegistrationResponse wiadomości jest ponownie przy użyciu protokołu HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Konfiguracja powiązania protokołu 2PC  
  Usługi WCF obsługuje wiadomości jednokierunkowe (datagram) przy użyciu protokołu HTTPS. Korelacja między wiadomości zostanie pozostawiony jako szczegółowo opisuje implementacja.  

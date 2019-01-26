@@ -2,12 +2,12 @@
 title: Działania dostępu do bazy danych
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850405"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066093"
 ---
 # <a name="database-access-activities"></a>Działania dostępu do bazy danych
 Działania dostępu do bazy danych umożliwiają dostęp do bazy danych w przepływie pracy. Te działania, Zezwalaj na dostęp do bazy danych do pobierania lub modyfikowanie informacji i użycia [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) dostęp do bazy danych.  
@@ -75,7 +75,7 @@ Public class DbUpdate: AsyncCodeActivity
 |Parametry połączenia|Parametry połączenia do łączenia z bazą danych. Jeśli ten argument jest ustawiona, następnie `ProviderName` również musi być ustawiona.|
 |ConfigName|Nazwa sekcji pliku konfiguracji, na którym są przechowywane informacje o połączeniu. Jeśli ten argument ma wartość `ProviderName` i `ConnectionString` nie są wymagane.|
 |CommandType|Typ <xref:System.Data.Common.DbCommand> do wykonania.|
-|SQL|Polecenie SQL do wykonania.|
+|Sql|Polecenie SQL do wykonania.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |AffectedRecords|Liczba rekordów na ostatnią operację.|
 
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
 
  Zapytanie do wykonania jest skonfigurowana w jego `Sql` właściwości i parametrów są przekazywane za pośrednictwem `Parameters` kolekcji.
 
- Po `DbQueryScalar` jest wykonywane, skalarnej jest zwracany w `Result``out` argumentu (typu `TResult`, która jest zdefiniowana w klasie bazowej <xref:System.Activities.AsyncCodeActivity%601>).
+ Po `DbQueryScalar` jest wykonywane, skalarnej jest zwracany w `Result out` argumentu (typu `TResult`, która jest zdefiniowana w klasie bazowej <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -128,7 +128,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
 |Parametry połączenia|Parametry połączenia do łączenia z bazą danych. Jeśli ten argument jest ustawiona, następnie `ProviderName` również musi być ustawiona.|
 |ConfigName|Nazwa sekcji pliku konfiguracji, na którym są przechowywane informacje o połączeniu. Jeśli ten argument ma wartość `ProviderName` i `ConnectionString` nie są wymagane.|
 |CommandType|Typ <xref:System.Data.Common.DbCommand> do wykonania.|
-|SQL|Polecenie SQL do wykonania.|
+|Sql|Polecenie SQL do wykonania.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |Wynik|Scalar, uzyskany po wykonaniu zapytania. Ten argument jest typu `TResult`.|
 
@@ -187,7 +187,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |Parametry połączenia|Parametry połączenia do łączenia z bazą danych. Jeśli ten argument jest ustawiona, następnie `ProviderName` również musi być ustawiona.|
 |ConfigName|Nazwa sekcji pliku konfiguracji, na którym są przechowywane informacje o połączeniu. Jeśli ten argument ma wartość `ProviderName` i `ConnectionString` nie są wymagane.|
 |CommandType|Typ <xref:System.Data.Common.DbCommand> do wykonania.|
-|SQL|Polecenie SQL do wykonania.|
+|Sql|Polecenie SQL do wykonania.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |mapowania|Mapowanie funkcji (<xref:System.Func%601><`DbDataReader`, `TResult`>) przyjmującej rekord `DataReader` uzyskane w rezultacie wykonywania zapytania, a następnie zwraca wystąpienie obiektu typu `TResult` mają zostać dodane do `Result` kolekcji.<br /><br /> W tym przypadku mapowanie odbywa się w jednym pulse wykonywania, ale nie utworzono, deklaratywnego za pomocą projektanta.|
 |MapperFunc|Mapowanie funkcji (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) przyjmującej rekord `DataReader` uzyskane w rezultacie wykonywania zapytania, a następnie zwraca wystąpienie obiektu typu `TResult` mają zostać dodane do `Result` kolekcji.<br /><br /> W tym przypadku mapowanie odbywa się w wielu impulsów wykonywania. Ta funkcja może być serializowany do XAML i utworzone w sposób deklaratywny (wszelkie istniejące działanie mogą uczestniczyć w mapowaniu).|
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
  Zapytanie do wykonania jest skonfigurowana w jego `Sql` właściwości i parametrów są przekazywane za pośrednictwem `Parameters` kolekcji.
 
- Po `DbQueryDataSet` jest wykonywany `DataSet` jest zwracany w `Result``out` argumentu (typu `TResult`, która jest zdefiniowana w klasie bazowej <xref:System.Activities.AsyncCodeActivity%601>).
+ Po `DbQueryDataSet` jest wykonywany `DataSet` jest zwracany w `Result out` argumentu (typu `TResult`, która jest zdefiniowana w klasie bazowej <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -240,14 +240,14 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |Parametry połączenia|Parametry połączenia do łączenia z bazą danych. Jeśli ten argument jest ustawiona, następnie `ProviderName` również musi być ustawiona.|
 |ConfigName|Nazwa sekcji pliku konfiguracji, na którym są przechowywane informacje o połączeniu. Jeśli ten argument ma wartość `ProviderName` i `ConnectionString` nie są wymagane.|
 |CommandType|Typ <xref:System.Data.Common.DbCommand> do wykonania.|
-|SQL|Polecenie SQL do wykonania.|
+|Sql|Polecenie SQL do wykonania.|
 |Parametry|Kolekcja parametrów zapytania SQL.|
 |Wynik|<xref:System.Data.DataSet> które są uzyskiwane po wykonaniu zapytania.|
 
 ## <a name="configuring-connection-information"></a>Konfigurowanie informacji o połączeniu
  Wszystkie DbActivities udostępniać te same parametry konfiguracji. Takie grupy można skonfigurować na dwa sposoby:
 
--   `ConnectionString + InvariantName`: Ustaw dostawcy ADO.NET niezmienną nazwę i parametry połączenia.
+-   `ConnectionString + InvariantName`: Ustawienie dostawcy ADO.NET niezmienną nazwę i parametry połączenia.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()

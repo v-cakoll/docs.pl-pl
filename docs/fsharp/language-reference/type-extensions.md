@@ -1,13 +1,13 @@
 ---
 title: Rozszerzenia typu
 description: Dowiedz się, jak F# rozszerzeń typu umożliwia dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614067"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066158"
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 
@@ -121,7 +121,7 @@ Nie istnieje sposób, aby otrzymać ten kod, aby pracować z opcjonalne rozszerz
 
 * Podobnie jak, `Sum` składowa ma różne ograniczenia `'T` (`static member get_Zero` i `static member (+)`) niż określa rozszerzenie typu.
 * Modyfikowanie rozszerzenie typu mają ten sam ograniczenie jako `Sum` nie będzie już zgodny zdefiniowane ograniczenia na `IEnumerable<'T>`.
-* Tworzenie, zmienianie członka do `member inline Sum` zapewni błąd niezgodność ograniczenia typu
+* Zmiana `member this.Sum` do `member inline this.Sum` zapewni błąd niezgodność typu ograniczenia.
 
 Co to jest pożądane to metody statyczne, "float w miejscu", które może być prezentowana tak, jakby ich one rozszerzanie typu. Jest to, gdzie metody rozszerzenia stają się niezbędne.
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: d9c3c63dece8a32280f17af6cc143b73bef58242
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df677e29534e2f451afa27b9b81159b4826c98ca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739287"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066145"
 ---
 # <a name="service-transaction-behavior"></a>Zachowanie transakcji usługi
 Niniejszy przykład pokazuje użycie transakcji koordynowane przez klienta i ustawień ServiceBehaviorAttribute i gdy, aby kontrolować zachowanie transakcji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementuje usługi Kalkulator, ale jest rozszerzony do obsługi operacji wykonywanych w tabeli bazy danych i stanowe, Suma operacji Kalkulator dziennika serwera. Utrwalonych zapisy do tabeli dziennika serwera są zależne od wyniku transakcji klienta koordynowany — Jeśli transakcja klienta nie zostanie ukończone, transakcji usługi sieci Web zapewnia aktualizacji do bazy danych nie są przekazywane.  
@@ -100,7 +100,7 @@ client.Close();
   
     -   `ReleaseServiceInstanceOnTransactionComplete` Właściwość określa, czy wystąpienie usługi zostanie odtworzony po zakończeniu transakcji. Ustawiając wartość `false`, usługa zapewnia tego samego wystąpienia usługi przez żądania operacji. Jest to wymagane, aby zachować łączna liczba uruchomionych. Jeśli ustawiono `true`, nowe wystąpienie jest generowany po wykonaniu każdej akcji.  
   
-    -   `TransactionAutoCompleteOnSessionClose` Właściwość określa, czy zaległe transakcje odbywa się po zamknięciu sesji. Ustawiając wartość `false`, poszczególnych operacji są wymagane do któryś zbiór `OperationBehaviorAttribute``TransactionAutoComplete` właściwości `true` lub jawnie wymaga wywołania `SetTransactionComplete` metody do realizowania transakcji. W przykładzie pokazano oba podejścia.  
+    -   `TransactionAutoCompleteOnSessionClose` Właściwość określa, czy zaległe transakcje odbywa się po zamknięciu sesji. Ustawiając wartość `false`, poszczególnych operacji są wymagane do któryś zbiór <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> właściwości `true` lub jawnie wymaga wywołania <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> metody do realizowania transakcji. W przykładzie pokazano oba podejścia.  
   
 -   Na `ServiceContractAttribute`:  
   

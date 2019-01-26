@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 08f2640613335b0ba54a4ff970b7d105d52b92c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743481"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066326"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalowanie programu .NET Framework w systemach Windows 10 i Windows Server 2016
 
-.NET Framework jest wymagana do uruchamiania wielu aplikacji na Windows. Instrukcje w tym artykule powinno pomóc w wersji programu .NET Framework, które należy zainstalować. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowszej dostępnej wersji.
+.NET Framework jest wymagana do uruchamiania wielu aplikacji na Windows. Instrukcje w tym artykule powinno pomóc w wersji programu .NET Framework, które należy zainstalować. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) jest najnowszej dostępnej wersji.
 
 Użytkownik może już korzystać na tej stronie po próby uruchomienia aplikacji i wyświetlanie okna dialogowego na swojej maszynie, podobny do następującego:
 
@@ -29,11 +29,11 @@ Użytkownik może już korzystać na tej stronie po próby uruchomienia aplikacj
 * [Usługa Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-> [Pobierz program .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [Pobierz program .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) może służyć do uruchamiania aplikacji dla programu .NET Framework 4.0, za pośrednictwem 4.7.1.
+[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) może służyć do uruchamiania aplikacji dla programu .NET Framework 4.0, za pośrednictwem 4.7.1.
 
-Możesz zainstalować [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) na:
+Możesz zainstalować [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) na:
 
 * Windows 10 Fall Creators Update (wersja 1709)
 * Windows 10 Creators Update (wersja 1703)

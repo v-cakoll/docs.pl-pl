@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143620"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066273"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
@@ -60,10 +60,10 @@ Niektóre osoby powiedzieć o tym, że model domeny anemic jest zapobieganie wzo
 - **DevIQ. Jednostka domeny** \
   [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
-- **Martina Fowlera. Model domeny** \
+- **Martin Fowler. Model domeny** \
   [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
-- **Martina Fowlera. Model domeny Anemic** \
+- **Martin Fowler. Model domeny Anemic** \
   [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>Wzorzec wartość obiektu
@@ -82,16 +82,17 @@ EF Core 2.0 obejmuje [należące do jednostek](https://blogs.msdn.microsoft.com/
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Martina Fowlera. Value — wzorzec obiektu**
+- **Martin Fowler. Value — wzorzec obiektu** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Obiekt wartości**
+- **Obiekt wartości** \
   [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
-- **Obiekty wartości w Test-Driven Development**
+- **Obiekty wartości w Test-Driven Development** \
   [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Projektowania opartego na domenie: Co dzień do czynienia złożoności serce oprogramowania.** (Zarezerwuj; zawiera omówienie obiekty wartości) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Projektowania opartego na domenie: Co dzień do czynienia złożoności serce oprogramowania.** (Zarezerwuj; zawiera omówienie obiekty wartości) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Wzorzec agregacji
 
@@ -134,19 +135,19 @@ Identyfikowanie i Praca z agregacjami wymaga badania i doświadczenie. Aby uzysk
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Vaughn Vernon. Efektywnym projektowaniu agregacji - Part I: Modelowanie jednej wartości zagregowanej** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon. Efektywnym projektowaniu agregacji - Part I: Modelowanie jednej wartości zagregowanej** (z <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Skuteczne agregacji projektu — część II: Tworzenie wartości zagregowanych pracują razem** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon. Skuteczne agregacji projektu — część II: Podejmowanie agreguje pracy ze sobą** (z <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Skuteczne agregacji projektu — część III: Uzyskiwanie wglądu w ramach odnajdywania** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon. Skuteczne agregacji projektu — część III: Uzyskiwanie wglądu w ramach odnajdywania** (z <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. Wzorce projektowe taktyczne DDD** \
   [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
-- **Chris Leonard. Tworzenie transakcji Mikrousług przy użyciu wartości zagregowanych** \
+- **Chris Richardson. Tworzenie transakcji Mikrousług przy użyciu wartości zagregowanych** \
   [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 - **DevIQ. Wzorzec agregacji** \

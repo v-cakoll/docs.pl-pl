@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548053"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065976"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>Element &lt;ImpliesType&gt; (architektura .NET Native)
 W przypadku zasad do typu, że zasady zostały zastosowane do zawierający typ lub metoda.  
@@ -99,7 +99,7 @@ W przypadku zasad do typu, że zasady zostały zastosowane do zawierający typ l
 </Type>  
 ```  
   
- `<ImpliesType>` Element może znajdować się również w `<Method>` elementu, ponieważ w niektórych przypadkach tworzenia wystąpienia metody rodzajowej oznacza rozważania na temat wystąpienia typu. Na przykład Wyobraź sobie metody ogólnej `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)` który danej biblioteki będzie miał dostęp dynamicznie wraz z skojarzonego <xref:System.Collections.Generic.List%601> i <xref:System.Array> typów. Może to być wyrażona jako:  
+ `<ImpliesType>` Element może znajdować się również w `<Method>` elementu, ponieważ w niektórych przypadkach tworzenia wystąpienia metody rodzajowej oznacza rozważania na temat wystąpienia typu. Na przykład Wyobraź sobie metody ogólnej `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` który danej biblioteki będzie miał dostęp dynamicznie wraz z skojarzonego <xref:System.Collections.Generic.List%601> i <xref:System.Array> typów. Może to być wyrażona jako:  
   
 ```xml  
 <Type Name="MyType">  

@@ -1,0 +1,1 @@
+<span data-ttu-id="8bdee-101">Dostępne, ponieważ listopad 2013, aktualizacja do wersji 4.5.1</span><span class="sxs-lookup"><span data-stu-id="8bdee-101">Available since November 2013 update to 4.5.1</span></span>

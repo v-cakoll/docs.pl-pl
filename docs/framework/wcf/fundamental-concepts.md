@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664028"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
 Ten dokument zawiera ogólny widok architektury usług Windows Communication Foundation (WCF). Jej celem jest zrozumienie podstawowych pojęć i jak one współdziałają ze sobą. Aby uzyskać samouczek dotyczący tworzenia najprostszym wersję usługi i klienta WCF, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md). Programowanie WCF można znaleźć [programowanie WCF Basic](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -45,7 +45,7 @@ Ten dokument zawiera ogólny widok architektury usług Windows Communication Fou
 ### <a name="message-patterns"></a>Wzorce wiadomości  
  Usługi WCF obsługuje kilka wzorce obsługi komunikatów, w tym typu żądanie odpowiedź, jednokierunkowe i komunikację dupleksową. Innego transportu obsługują różne wzorce obsługi komunikatów, a zatem wpływają na typy interakcji, które obsługują. Interfejsy API usługi WCF i środowisko uruchomieniowe również ułatwić do wysyłania wiadomości w sposób bezpieczny i niezawodny.  
   
-## <a name="wcf-terms"></a>Warunki usługi WCF  
+## <a name="wcf-terms"></a>WCF Terms  
  Innych pojęć i terminów używanych w dokumentacji usługi WCF m.in.  
   
   — komunikat  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  Skrót dla elementów z wciąż rosnącego zestawu specyfikacji usługi sieci Web (WS), takich jak usługi WS-Security, WS-ReliableMessaging i tak dalej, które są implementowane w usłudze WCF.  
   
-## <a name="see-also"></a>Zobacz też  
- [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Architektura WCF (Windows Communication Foundation)](../../../docs/framework/wcf/architecture.md)  
- [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Zobacz także
+- [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Architektura WCF (Windows Communication Foundation)](../../../docs/framework/wcf/architecture.md)
+- [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8fedec60b6152e77d6f99bf55cf11ec909fa8f80
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
-ms.translationtype: MT
+ms.openlocfilehash: f15111fbd65896cc42ab3d1462dc567133a7b4ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566349"
 ---
 # <a name="specifying-an-assembly39s-location"></a>Określanie zestawu&#39;lokalizacji s
 Istnieją dwa sposoby, aby określić lokalizację zestawu:  
@@ -45,7 +45,7 @@ Istnieją dwa sposoby, aby określić lokalizację zestawu:
 </configuration>  
 ```  
   
- **Wersji** atrybut jest wymagany dla wszystkich zestawów o silnej nazwie, ale należy pominąć dla zestawów, które są nie o silnej nazwie. **\<CodeBase >** element wymaga **href** atrybutu. Nie można określić wersji zakresów w  **\<codeBase >** elementu.  
+ **Wersji** atrybut jest wymagany dla wszystkich zestawów o silnej nazwie, ale należy pominąć dla zestawów, które są nie o silnej nazwie.  **\<CodeBase >** element wymaga **href** atrybutu. Nie można określić wersji zakresów w  **\<codeBase >** elementu.  
   
 > [!NOTE]
 >  Jeśli są podawania wskazówką podstawowego kodu dla zestawu, który nie jest, o silnych nazwach, wskazówka musi wskazywać podstawy aplikacji lub podkatalogiem katalogu podstawowego aplikacji.  
@@ -67,8 +67,8 @@ Istnieją dwa sposoby, aby określić lokalizację zestawu:
   
  **PrivatePath** atrybut zawiera katalogi, które środowisko wykonawcze powinno poszukać zestawów. Jeśli aplikacja znajduje się w lokalizacji C:\Program Files\MyApp, środowisko uruchomieniowe będzie szukać zestawów, które nie określisz bazy kodu w C:\Program Files\MyApp\Bin C:\Program Files\MyApp\Bin2\Subbin i C:\Program Files\MyApp\Bin3. Katalogi określone w **privatePath** musi być podkatalogi katalogu podstawowego aplikacji.  
   
-## <a name="see-also"></a>Zobacz też  
- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Konfigurowanie aplikacji programu .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>Zobacz także
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Konfigurowanie aplikacji programu .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

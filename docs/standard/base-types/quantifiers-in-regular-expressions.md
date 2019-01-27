@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4718dadddb2ad88ece05312b2f2b7232271d5b0e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678268"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Kwantyfikatory w wyrażeniach regularnych
 Kwantyfikatory Określ, ile wystąpień znak, grupa lub Klasa znaków musi znajdować się w danych wejściowych, aby dopasowanie zakończyło się można znaleźć.  W poniższej tabeli wymieniono kwantyfikatorów poparte .NET.  
@@ -31,8 +31,8 @@ Kwantyfikatory Określ, ile wystąpień znak, grupa lub Klasa znaków musi znajd
 |`*`|`*?`|Dopasowuje zero lub więcej razy.|  
 |`+`|`+?`|Dopasowuje jeden lub więcej razy.|  
 |`?`|`??`|Dopasowuje zero lub jeden raz.|  
-|`{` *N* `}`|`{` *N* `}?`|Dokładnie *n* razy.|  
-|`{` *N* `,}`|`{` *N* `,}?`|Zgodne z co najmniej *n* razy.|  
+|`{` *n* `}`|`{` *n* `}?`|Dokładnie *n* razy.|  
+|`{` *n* `,}`|`{` *n* `,}?`|Zgodne z co najmniej *n* razy.|  
 |`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Dopasowuje od *n* do *m* razy.|  
   
  Ilości `n` i `m` są stałe całkowite. Zazwyczaj Kwantyfikatory są zachłanne; mogą spowodować, że aparat wyrażenia regularnego dopasowuje dowolną liczbę wystąpień danego wzorców, jak to możliwe. Dołączanie `?` znak kwantyfikator sprawia, że z opóźnieniem; sprawia, że aparat wyrażeń regularnych dopasować jak najmniejszej liczby wystąpień, jak to możliwe. Aby uzyskać pełny opis różnicy między Kwantyfikatory zachłanne i z opóźnieniem, zobacz sekcję [Greedy i Kwantyfikatory opóźniające](#Greedy) w dalszej części tego tematu.  
@@ -273,5 +273,5 @@ Kwantyfikatory Określ, ile wystąpień znak, grupa lub Klasa znaków musi znajd
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Śledzenie wsteczne](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

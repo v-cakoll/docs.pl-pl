@@ -2,12 +2,12 @@
 title: Zgodność funkcji zaufania częściowego
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864527"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564733"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Zgodność funkcji zaufania częściowego
 Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są projektowane na podstawie określonego zestawu scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
   
 -   Wszystkie możliwe do serializacji `[DataMember]` pól lub właściwości w `[DataContract]` typu muszą być publiczne i odczytu/zapisu. Serializacja i deserializacja [tylko do odczytu](https://go.microsoft.com/fwlink/?LinkID=98854) pola nie jest obsługiwana podczas uruchamiania usługi WCF w częściowo zaufanych aplikacji.  
   
--   `[Serializable]` /ISerializable model programowania nie jest obsługiwany w środowisku częściowej relacji zaufania.  
+-    `[Serializable]` /ISerializable model programowania nie jest obsługiwany w środowisku częściowej relacji zaufania.  
   
 -   Znane typy, należy określić w kodzie lub konfiguracji poziomie komputera (machine.config). Znane typy nie może być określona w konfiguracji dodatku poziomu aplikacji ze względów bezpieczeństwa.  
   
@@ -92,7 +92,7 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
   
 -   Upewnij się, że jeśli aplikacja jest wdrażana jako w pełni zaufanych aplikacji, użytkownicy nie mogą modyfikować ustawienia zabezpieczeń dostępu kodu do uruchomienia aplikacji w środowisku częściowej relacji zaufania. Jeśli tak jest, więc, zachowanie nie działa i nie jest zgłaszany żaden wyjątek. Aby to zapewnić, zobacz **levelfinal** opcji za pomocą [Caspol.exe (narzędzie zasad zabezpieczeń dostępu kodu)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- Na przykład wspólnego zachowania zobacz [instrukcje: blokowanie dół punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Na przykład wspólnego zachowania zobacz [jak: Blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Konfiguracja  
  Z jednym wyjątkiem, częściowo zaufany kod może ładować wyłącznie sekcji konfiguracyjnych WCF w lokalnym `app.config` pliku. Aby załadować sekcji konfiguracji WCF, które odwołują się usługi WCF w sekcji w pliku machine.config lub w katalogu głównym pliku web.config wymaga ConfigurationPermission(Unrestricted). Bez tego uprawnienia odwołuje się do usługi WCF sekcji konfiguracji (zachowań, powiązania) poza lokalnej konfiguracji wyniki plik w wyjątek podczas ładowania konfiguracji.  
@@ -159,10 +159,10 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
 ## <a name="unlisted-features"></a>Funkcje nieznajdujące się na liście  
  Najlepszym sposobem odnajdywanie informacji lub akcja jest niedostępna, podczas uruchamiania w środowisku częściowej relacji zaufania spróbuj uzyskać dostęp do zasobu lub wykonaj akcję wewnątrz `try` bloku, a następnie `catch` awarii. Aby zapobiec przepełnieniu pliki śledzenia błędów zduplikowane, WCF wyłącza śledzenie zasobów lub akcji po pierwszym niepowodzeniu zabezpieczeń. Istnieje jeden śledzenia wyjątków dla każdego dostępu zasobu nie powiodło się po raz pierwszy zostanie podjęta próba dostępu do zasobu lub wykonania akcji.  
   
-## <a name="see-also"></a>Zobacz też  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>  
- [Obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)  
- [Najlepsze rozwiązania dotyczące częściowego zaufania](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+## <a name="see-also"></a>Zobacz także
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+- <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
+- [Obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
+- [Najlepsze rozwiązania dotyczące częściowego zaufania](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

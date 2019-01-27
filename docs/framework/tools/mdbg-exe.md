@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0993de6ebc56198a36bd3644c4352ec7380e844e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600388"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066405"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (Debuger wiersza polecenia w programie .NET Framework)
 Debuger wiersza polecenia programu .NET Framework ułatwia dostawcom narzędzi i deweloperom aplikacji znajdowanie i usuwanie błędów w programach, których platformą docelową jest środowisko uruchomieniowe języka wspólnego programu .NET Framework. To narzędzie używa interfejsu API debugowania środowiska uruchomieniowego w celu dostarczania usług debugowania. Za pomocą programu MDbg.exe można debugować tylko kod zarządzany; debugowanie kodu niezarządzanego jest nieobsługiwane.  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**SH**[**ow**] [*wierszy*]|Określa liczbę wierszy do pokazania.|  
 |**s**[**rok**]|Przenosi wykonywanie do następnej funkcji w bieżącym wierszu lub przechodzi do następnego wiersza, jeśli w danym wierszu nie ma funkcji do wykonania.|  
 |**su**[**wydatki**] [\* &#124; [~]*Numerwątku*]|Wstrzymuje działanie bieżącego wątku lub wątku określonego przez *Numerwątku* parametru.  Jeśli *Numerwątku* jest określony jako `*`, polecenie jest stosowane do wszystkich wątków. Jeśli numer wątku rozpoczyna się od `~`, polecenie jest stosowane do wszystkich wątków, z wyjątkiem określony przez *Numerwątku*. Wstrzymane wątki są wykluczane z uruchamiania, gdy proces jest uruchamiany przez **Przejdź** lub **kroku** polecenia. Jeśli istnieją wstrzymane wątki w procesie i wykonaniu **Przejdź** polecenia procesu nie będzie kontynuowana. W takim przypadku należy nacisnąć klawisze CTRL-C, aby przerwać działanie procesu.|  
-|**sy**[**mbol**] *commandName* [*Wartośćpolecenia*]|Określa jedno z następujących poleceń:<br /><br /> -   `symbol path` [`"``value``"`] — Wyświetla lub ustawia bieżącą ścieżkę symboli.<br />-   `symbol addpath` `"` `value` `"` -Dodaje do bieżącej ścieżki symboli.<br />-   `symbol reload` [`"``module``"`] — Ponownie ładuje wszystkie symbole lub symbole dla określonego modułu.<br />-   `symbol list` [`module`] — Pokazuje aktualnie załadowane symbole dla wszystkich modułów lub określonego modułu.|  
+|**sy**[**mbol**] *commandName* [*Wartośćpolecenia*]|Określa jedno z następujących poleceń:<br /><br /> -   `symbol path` [`"value"`] — Wyświetla lub ustawia bieżącą ścieżkę symboli.<br />-   `symbol addpath` `"value"` -Dodaje do bieżącej ścieżki symboli.<br />-   `symbol reload` [`"module"`] — Ponownie ładuje wszystkie symbole lub symbole dla określonego modułu.<br />-   `symbol list` [`module`] — Pokazuje aktualnie załadowane symbole dla wszystkich modułów lub określonego modułu.|  
 |**t**[**Kasuj**] [*Nowywątek*] [-*nick pseudonim*`]`|Polecenie thread bez parametrów wyświetla wszystkie zarządzane wątki w bieżącym procesie. Wątki są zazwyczaj identyfikowane za pomocą numerów wątków, ale jeśli wątek ma przypisany pseudonim, jest on wyświetlany zamiast numeru. Możesz użyć `-nick` parametru, aby przypisać pseudonim wątku.<br /><br /> -   **Wątek** `-nick` *threadName* przypisuje pseudonim aktualnie uruchomionemu wątkowi.<br /><br /> Pseudonimy nie mogą być liczbami. Jeśli bieżący wątek ma już przypisany pseudonim, stary pseudonim jest zastępowany nowym. Jeśli nowy pseudonim jest ciągiem pustym (""), pseudonim dla bieżącego wątku jest usuwany, ale do wątku nie jest przypisywany nowy pseudonim.|  
 |**u**[**p**]|Przenosi aktywną ramkę stosu w górę.|  
 |**uwgc**[**handle**] [*var*] &#124; [*address*]|Drukuje zmienną śledzoną przez dojście. Dojście można określić przy użyciu nazwy lub adresu.|  

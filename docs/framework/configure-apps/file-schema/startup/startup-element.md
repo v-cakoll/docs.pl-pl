@@ -9,14 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222743"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083720"
 ---
 # <a name="ltstartupgt-element"></a>&lt;uruchamianie&gt; — element
 
@@ -52,8 +50,8 @@ Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<requiredRuntime >](requiredruntime-element.md)|Określa, że aplikacja obsługuje tylko wersję 1.0 środowiska uruchomieniowego języka wspólnego. Skorzystaj z aplikacji utworzonych za pomocą środowiska uruchomieniowego wersji 1.1 lub nowszej  **\<supportedRuntime >** elementu.|
-|[\<supportedRuntime >](supportedruntime-element.md)|Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługuje aplikacja.|
+|[\<requiredRuntime>](requiredruntime-element.md)|Określa, że aplikacja obsługuje tylko wersję 1.0 środowiska uruchomieniowego języka wspólnego. Skorzystaj z aplikacji utworzonych za pomocą środowiska uruchomieniowego wersji 1.1 lub nowszej  **\<supportedRuntime >** elementu.|
+|[\<supportedRuntime>](supportedruntime-element.md)|Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługuje aplikacja.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 

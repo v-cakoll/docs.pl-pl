@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c5186aa94993ba551252db6fef55853b5b554789
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: e5c8449e72414775c40ced2c344e12d5137ac03f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546416"
 ---
-# <a name="linkedconfiguration-element"></a>\<linkedconfiguration — > element
+# <a name="linkedconfiguration-element"></a>\<linkedConfiguration> element
 
 Określa wymagający uwzględnienia plik konfiguracji.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<assemblybinding — >**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedconfiguration — >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -52,10 +52,10 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-**\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników. Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć  **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwany, aktualizowanie wspólnego pliku konfiguracji informacje zaktualizowanej konfiguracji do wszystkich aplikacji korzystających z zestawu.
+ **\<Linkedconfiguration — >** element upraszcza obsługę techniczną dla zestawów składników. Co najmniej jednej aplikacji, użycie zestawu, który zawiera plik konfiguracji znajdujących się w lokalizacji, dobrze znanego, pliki konfiguracji aplikacji, które używają zestawu można użyć  **\<linkedconfiguration — >** element, aby uwzględnić plik konfiguracji zestawu, a nie bezpośrednio w tym informacje o konfiguracji. Gdy zestaw składników jest obsługiwany, aktualizowanie wspólnego pliku konfiguracji informacje zaktualizowanej konfiguracji do wszystkich aplikacji korzystających z zestawu.
 
 > [!NOTE]
-> **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
+>  **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
 
 Użycie powiązane pliki konfiguracji decydują następujące reguły:
 
@@ -67,7 +67,7 @@ Użycie powiązane pliki konfiguracji decydują następujące reguły:
 
 - Wszystkie powiązane pliki konfiguracji są scalane w celu utworzenia jeden plik, podobne do zachowania `#include` dyrektywy języka C/C++.
 
-- **\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.
+-  **\<Linkedconfiguration — >** element jest dozwolony tylko w plikach konfiguracji aplikacji; jest ignorowana w *Machine.config*.
 
 - Odwołania cykliczne są wykrywane i zakończone. Oznacza to jeśli  **\<linkedconfiguration — >** elementy szeregu plików konfiguracyjnych tworzą pętli, pętla jest wykrywany i zatrzymane.
 
@@ -85,5 +85,5 @@ Poniższy przykład pokazuje, jak dołączyć plik konfiguracji z lokalnego dysk
 
 ## <a name="see-also"></a>Zobacz także
 
-[**\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-[Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [**\<assemblybinding — >** — Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

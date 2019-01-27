@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: e848b079d2c665052d8a5b5cfcd8fe379333b4b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 92745ed32ab671e7401d61c8edcbbe325fc1ddea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192385"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740704"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalowanie programu .NET Framework w systemach Windows Vista i Windows Server 2008
 
@@ -34,6 +34,6 @@ Możesz zainstalować [.NET Framework 3.5](https://go.microsoft.com/fwlink/?Link
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pobierz program .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Rozwiązywanie problemów z zablokowanych .NET Framework i odinstalowywaniem programu](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Instalowanie programu .NET Framework dla deweloperów](guide-for-developers.md)
+- [Pobierz program .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Instalowanie programu .NET Framework dla deweloperów](guide-for-developers.md)

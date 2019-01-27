@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
+ms.openlocfilehash: 64985d4ed2c6a82c54a7623df4b13d7ec54bff33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599351"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<assemblybinding — >, element dla \<konfiguracji >
 
@@ -47,14 +47,14 @@ Określa politykę powiązania zestawu na poziomie konfiguracji.
 
 |     | Opis |
 | --- | ----------- |
-| [**\<linkedconfiguration — >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Określa wymagający uwzględnienia plik konfiguracji. |
+| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Określa wymagający uwzględnienia plik konfiguracji. |
 
 ## <a name="remarks"></a>Uwagi
 
 [  **\<Linkedconfiguration — >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) element ułatwia zarządzanie zestawów składników, umożliwiając pliki konfiguracji aplikacji do dołączenia zestawu plików konfiguracji w lokalizacje znane zamiast duplikowania ustawienia konfiguracji zestawu.
 
 > [!NOTE]
-> **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
+>  **\<Linkedconfiguration — >** element nie jest obsługiwany w przypadku aplikacji o Windows side-by-side manifestów.
 
 ## <a name="example"></a>Przykład
 
@@ -70,4 +70,4 @@ Poniższy przykład pokazuje, jak dołączyć plik konfiguracji na lokalnym dysk
 
 ## <a name="see-also"></a>Zobacz także
 
-[Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

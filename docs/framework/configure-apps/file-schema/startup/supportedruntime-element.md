@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600521"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; — Element
 
@@ -24,7 +24,7 @@ Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługu
   
 [\<Konfiguracja >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime >**  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
   
 ## <a name="syntax"></a>Składnia
   
@@ -43,7 +43,7 @@ Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługu
 
 Jeśli  **\<supportedRuntime >** element nie jest obecny w pliku konfiguracyjnym aplikacji, jest używana wersja środowiska uruchomieniowego użytego do skompilowania aplikacji.  
 
-**\<SupportedRuntime >** element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elementu.  
+ **\<SupportedRuntime >** element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elementu.  
   
 > [!NOTE]
 >  Jeśli używasz [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) funkcji, aby określić plik konfiguracji, należy użyć `<requiredRuntime>` elementu dla wszystkich wersji środowiska uruchomieniowego. `<supportedRuntime>` Element jest ignorowany, gdy używasz [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
@@ -66,7 +66,7 @@ Zalecane jest, aby testować aplikacje z każdą wersją programu .NET Framework
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0 4.7.2|"v4.0"|  
+|4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>wartości "identyfikatorem jednostki sku"
@@ -110,6 +110,6 @@ Tego elementu można użyć w pliku konfiguracji aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
- [Schemat ustawień uruchamiania](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Wykonywanie równoczesne i wewnątrzprocesowe](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [Schemat ustawień uruchamiania](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Wykonywanie równoczesne i wewnątrzprocesowe](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

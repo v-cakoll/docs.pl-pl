@@ -1,5 +1,5 @@
 ---
-title: Niestandardowy element NameValueSectionHandler i DictionarySectionHandler
+title: Element niestandardowy dla NameValueSectionHandler i DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 3a16952c5cd3759873faeb0fce45b8aa5170b083
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752052"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693801"
 ---
-# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Niestandardowy element NameValueSectionHandler i DictionarySectionHandler
+# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Element niestandardowy dla NameValueSectionHandler i DictionarySectionHandler
 
-Definiuje ustawienia w sekcji Konfiguracja niestandardowa, korzystających z <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> klasy.
+Definiuje ustawienia powiązane z sekcji konfiguracji niestandardowej, korzystających z <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> klasy.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<sectionName >**
+&nbsp;&nbsp;**\<sectionName>**
 
 ## <a name="attributes"></a>Atrybuty
 
@@ -36,15 +36,15 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [**\<Dodaj >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler>  | Dodaje ustawienia aplikacji niestandardowych. |
-| [**\<Usuń >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> |    Usuwa wcześniej zdefiniowanego ustawienie. |
-| [**\<Wyczyść >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> | Czyści wszystkie ustawienia zdefiniowane w sekcji. |
+| [**\<Dodaj >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler>  | Dodaje ustawienia bezpieczeństwa aplikacji niestandardowych. |
+| [**\<Usuń >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> |    Usuwa ustawienie uprzednio zdefiniowany. |
+| [**\<Wyczyść >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> | Czyści wszystkie wcześniej zdefiniowane ustawienia w sekcji. |
 
 ## <a name="remarks"></a>Uwagi
 
-**\<SectionName >** element jest elementem niestandardowe zdefiniowane przez  **\<sekcji >** tagów w  **\<configSections >** elementu.
+ **\<Parametrami sectionName >** element jest elementem niestandardowe zdefiniowane przez  **\<sekcji >** tagów w  **\<configSections >** elementu.
 
-W poniższej tabeli przedstawiono zwraca typ obiektu metody ConfigurationSettings.GetConfig dla każdego modułu obsługi sekcji konfiguracji:
+W poniższej tabeli przedstawiono typ obiektu, metoda ConfigurationSettings.GetConfig zwraca dla każdej procedury obsługi sekcji konfiguracji:
 
 | Program obsługi sekcji konfiguracji                        | Zwracany typ                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
@@ -53,9 +53,9 @@ W poniższej tabeli przedstawiono zwraca typ obiektu metody ConfigurationSetting
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład przedstawia sposób zadeklarować sekcje, które używają <xref:System.Configuration.DictionarySectionHandler> i <xref:System.Configuration.NameValueSectionHandler> klasy. 
+Poniższy przykład pokazuje sposób deklarowania sekcje, które używają <xref:System.Configuration.DictionarySectionHandler> i <xref:System.Configuration.NameValueSectionHandler> klasy. 
 
-Pierwszy element niestandardowy jest  **\<dictionarySample >**, który zawiera ustawienia odczytywane przez <xref:System.Configuration.DictionarySectionHandler> klasy w `System.dll` zestawu. Drugi element niestandardowy jest  **\<mySection >**, który zawiera ustawienia odczytywane przez <xref:System.Configuration.NameValueSectionHandler> klasy w `System.dll` zestawu.
+Pierwszy element niestandardowego jest  **\<dictionarySample >**, który zawiera ustawienia odczytywane przez <xref:System.Configuration.DictionarySectionHandler> klasy w `System.dll` zestawu. Drugi element niestandardowego jest  **\<mySection >**, który zawiera ustawienia odczytywane przez <xref:System.Configuration.NameValueSectionHandler> klasy w `System.dll` zestawu.
 
 ```xml
 <configuration>
@@ -78,8 +78,8 @@ Pierwszy element niestandardowy jest  **\<dictionarySample >**, który zawiera u
 
 ## <a name="configuration-file"></a>Plik konfiguracji
 
-Ten element może być użyty w pliku konfiguracyjnym aplikacji plik konfiguracji maszyny (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.
+Ten element może być użyty w pliku konfiguracyjnym aplikacji, plik konfiguracji komputera (*Machine.config*), a *Web.config* pliki, które nie są na poziomie katalogu aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 
-[Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schemat pliku konfiguracji dla programu .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

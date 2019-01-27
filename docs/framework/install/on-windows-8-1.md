@@ -5,12 +5,12 @@ description: Dowiedz się, jak zainstalować program .NET Framework na Windows 8
 author: rlander
 ms.author: mairaw
 ms.date: 10/22/2017
-ms.openlocfilehash: 302215f71e00ef7de03f6d7a27def71087822012
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 114ff758be59afd08b0c4727378df3a95ebc8220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737809"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Instalowanie programu .NET Framework na Windows 8.1 i Windows Server 2012 R2
 
@@ -18,9 +18,9 @@ ms.locfileid: "53125525"
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Jest obsługiwana na Windows 8.1 i Windows Server 2012 R2 i jest dołączony do [Windows Update 10 października 2018 r.](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) i [Windows Update 10 kwietnia 2018 r](https://www.microsoft.com/software-download/windows10).
+Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Jest obsługiwana na Windows 8.1 i Windows Server 2012 R2 i jest dołączony do [Windows Update 10 października 2018 r.](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) i [Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10).
 
-## <a name="net-framework-472"></a>.NET framework 4.7.2
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
 > [Pobierz program .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
@@ -39,6 +39,6 @@ Możesz [kontakt z firmą Microsoft w celu uzyskania pomocy](mailto:dotnet-insta
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pobierz program .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)   
-[Rozwiązywanie problemów z zablokowanych .NET Framework i odinstalowywaniem programu](troubleshoot-blocked-installations-and-uninstallations.md)   
-[Instalowanie programu .NET Framework dla deweloperów](guide-for-developers.md)
+- [Pobierz program .NET Framework](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
+- [Instalowanie programu .NET Framework dla deweloperów](guide-for-developers.md)

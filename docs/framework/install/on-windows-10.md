@@ -5,14 +5,14 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3897b3acd06d4dbe8b61f4c12686a365bd17662a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: db5c6a45db299d716b2fdd115086e0dbc5952a59
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066326"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204304"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Instalowanie programu .NET Framework w systemach Windows 10 i Windows Server 2016
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalowanie programu .NET Framework w systemie Windows 10 i Windows Server 2016 lub nowszy
 
 .NET Framework jest wymagana do uruchamiania wielu aplikacji na Windows. Instrukcje w tym artykule powinno pomóc w wersji programu .NET Framework, które należy zainstalować. [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) jest najnowszej dostępnej wersji.
 
@@ -27,6 +27,12 @@ Użytkownik może już korzystać na tej stronie po próby uruchomienia aplikacj
 * [Usługa Windows Update 10 października 2018 r.](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 * [Usługa Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10)
+
+* Windows Server 2019
+
+* W systemie Windows Server w wersji 1809
+
+* W systemie Windows Server w wersji 1803
 
 > [!div class="button"]
 > [Pobierz program .NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)

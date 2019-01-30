@@ -9,16 +9,16 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: ff46fcc14a8a8e3d6c6d31dcb8c922640d6478c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7031fe21e53b38f686d229b350b8dfef7dd93bdc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691764"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204824"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Przewodnik: Tworzenie obiektów dynamicznych i posługiwanie (C# i Visual Basic)
 
-Obiekty dynamiczne udostępnianie składowych, takich jak właściwości i metody w czasie wykonywania, zamiast w w czasie kompilacji. Dzięki temu można utworzyć obiekty przeznaczone do pracy ze strukturami, które nie są zgodne, typu statycznego lub w formacie. Na przykład można użyć obiekt dynamiczny do odwołania HTML Document Object Model (DOM), który może zawierać dowolną kombinację prawidłowe elementów kodu znaczników HTML i atrybutów. Ponieważ każdy dokument HTML jest unikatowy, elementy członkowskie dla określonego dokumentu HTML są określane w czasie wykonywania. Częstą metodą można odwoływać się do atrybutu elementu HTML jest przekazanie nazwę atrybutu, aby `GetProperty` metoda elementu. Odwołania do `id` atrybutu elementu HTML `<div id="Div1">`, należy najpierw uzyskać odwołanie do `<div>` elementu, a następnie użyj `divElement.GetProperty("id")`. Jeśli używasz obiekt dynamiczny, można się odwołać `id` atrybutu jako `divElement.id`.  
+Obiekty dynamiczne udostępnianie składowych, takich jak właściwości i metody w czasie wykonywania, zamiast w czasie kompilacji. Dzięki temu można utworzyć obiekty przeznaczone do pracy ze strukturami, które nie są zgodne, typu statycznego lub w formacie. Na przykład można użyć obiekt dynamiczny do odwołania HTML Document Object Model (DOM), który może zawierać dowolną kombinację prawidłowe elementów kodu znaczników HTML i atrybutów. Ponieważ każdy dokument HTML jest unikatowy, elementy członkowskie dla określonego dokumentu HTML są określane w czasie wykonywania. Częstą metodą można odwoływać się do atrybutu elementu HTML jest przekazanie nazwę atrybutu, aby `GetProperty` metoda elementu. Odwołania do `id` atrybutu elementu HTML `<div id="Div1">`, należy najpierw uzyskać odwołanie do `<div>` elementu, a następnie użyj `divElement.GetProperty("id")`. Jeśli używasz obiekt dynamiczny, można się odwołać `id` atrybutu jako `divElement.id`.  
   
  Obiekty dynamiczne również zapewniają wygodny dostęp do dynamicznego języków, takich jak IronPython i IronRuby. Obiekt dynamiczny służy do odwoływania się do dynamicznego skryptu, który jest interpretowany w czasie wykonywania.  
   

@@ -4,12 +4,12 @@ description: Zalecane najlepsze dla pakietu nuget biblioteki .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724309"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204616"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -69,9 +69,9 @@ Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspe
 
 **CZY ✔️** za pomocą pakietu obrazu ikony, 64 x 64 z przezroczystym tłem, aby uzyskać najlepszy wygląd.
 
-**ROZWAŻ ✔️** Konfigurowanie [SourceLink](./sourcelink.md) do dodawania metadanych do kontroli źródła do zestawów i pakietów NuGet.
+**ROZWAŻ ✔️** Konfigurowanie [Linku źródłowego](./sourcelink.md) do dodawania metadanych do kontroli źródła do zestawów i pakietów NuGet.
 
-> Automatycznie dodaje SourceLink `RepositoryUrl` i `RepositoryType` metadanych do pakietu NuGet. SourceLink dodaje również, że informacje o kodzie źródłowym dokładnie pakiet został zbudowany z. Na przykład pakiet utworzony na podstawie repozytorium Git będzie mieć skrót zatwierdzenia dodać jako metadane.
+> Link źródłowy automatycznie dodaje `RepositoryUrl` i `RepositoryType` metadanych do pakietu NuGet. Link źródłowy dodaje także informacje o kodzie źródłowym dokładnie pakiet został zbudowany z. Na przykład pakiet utworzony na podstawie repozytorium Git będzie mieć skrót zatwierdzenia dodać jako metadane.
 
 ## <a name="pre-release-packages"></a>Pakiety w wersji wstępnej
 

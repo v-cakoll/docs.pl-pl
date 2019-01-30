@@ -4,12 +4,12 @@ description: Zalecenia dotyczące najlepszych rozwiązań dla wersji bibliotek p
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169602"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204746"
 ---
 # <a name="versioning"></a>Obsługa wersji
 
@@ -75,7 +75,7 @@ Wersja pliku zestawu jest używana do wyświetlania wersji pliku w Windows i nie
 <FileVersion>11.0.2.21924</FileVersion>
 ```
 
-![Eksplorator Windows](./media/versioning/win-properties.png "Eksplorator Windows")
+![Windows Explorer](./media/versioning/win-properties.png "Windows Explorer")
 
 **ROZWAŻ ✔️** tym ciągłej integracji kompilacji numer poprawki AssemblyFileVersion.
 
@@ -87,7 +87,7 @@ Wersja pliku zestawu jest używana do wyświetlania wersji pliku w Windows i nie
 
 ### <a name="assembly-informational-version"></a>Informacje o wersji zestawu
 
-Informacje o wersji zestawu jest używana do rejestrowania dodatkowe informacje o wersji i nie ma wpływu na zachowanie środowiska uruchomieniowego. Ustawienie tej wersji jest opcjonalne. Jeśli używasz SourceLink tej wersji zostanie ustawiona na kompilacji z wersji pakietu NuGet oraz wersja kontroli źródła. Na przykład `1.0.0-beta1+204ff0a` zawiera skrót zatwierdzenia zestawu został skompilowany z kodu źródłowego. Aby uzyskać więcej informacji, zobacz [SourceLink](./sourcelink.md).
+Informacje o wersji zestawu jest używana do rejestrowania dodatkowe informacje o wersji i nie ma wpływu na zachowanie środowiska uruchomieniowego. Ustawienie tej wersji jest opcjonalne. Jeśli używasz Linku źródłowego, ta wersja zostanie ustawiona na kompilacji z wersji pakietu NuGet oraz wersja kontroli źródła. Na przykład `1.0.0-beta1+204ff0a` zawiera skrót zatwierdzenia zestawu został skompilowany z kodu źródłowego. Aby uzyskać więcej informacji, zobacz [Linku źródłowego](./sourcelink.md).
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>

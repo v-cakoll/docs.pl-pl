@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: dfbeb5ff94f39e8d8df03feea9ff55db748d2182
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: c7f3b1b1525277bf948070c9121d151f9f520127
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058584"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204668"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
@@ -46,10 +46,10 @@ Tych kontekstach Konstruktor są również tylko kontekstów, w których jest on
 
 > [!NOTE]
 > `readonly` — Słowo kluczowe różni się od [const](const.md) — słowo kluczowe. A `const` pola mogą być inicjowane tylko na deklarację pola. A `readonly` pola można przypisać wiele razy w deklarację pola i dowolny Konstruktor. W związku z tym `readonly` pola mogą mieć różne wartości w zależności od używanego konstruktora. Ponadto, podczas gdy `const` pole jest stałą czasu kompilacji `readonly` pole może być używane dla stałych środowiska uruchomieniowego, jak w poniższym przykładzie:
-
-```csharp
-public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
-```
+>
+> ```csharp
+> public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
+> ```
 
 [!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
 

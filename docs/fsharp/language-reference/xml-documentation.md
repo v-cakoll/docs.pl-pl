@@ -2,12 +2,12 @@
 title: Dokumentacja XML (F#)
 description: Dowiedz się więcej o obsłudze w F# generowania dokumentacji z komentarzy.
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fb5eb682ff1188136b31b64e2d7c537d2c9a0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c5305dea8832112644710b2863269ef00feddd10
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153647"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204681"
 ---
 # <a name="xml-documentation"></a>Dokumentacja XML
 
@@ -15,7 +15,7 @@ Można tworzyć dokumentację z trzema ukośnikami (/ / /) komentarzy w kodzie F
 
 ## <a name="generating-documentation-from-comments"></a>Generowanie komentarzy dokumentacji
 
-Obsługa w F# Generowanie komentarzy dokumentacji jest taka sama jak w innych językach .NET Framework. Tak jak w innych językach .NET Framework [-doc — opcja kompilatora](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) pozwala wygenerować plik XML, który zawiera informacje, które można przekształcić w dokumentacji, za pomocą narzędzia takiego jak Sandcastle. Dokumentacja wygenerowany przy użyciu narzędzia, które są przeznaczone do użytku z zestawów, które są zwykle zapisywane w innych językach .NET Framework wygenerować widok interfejsów API, który jest oparty na skompilowanej formy F# konstrukcji. Chyba, że narzędzia przeznaczone do obsługi F#, dokumentacja generowanych przez te narzędzia nie odpowiada F# widok interfejsu API.
+Obsługa w F# Generowanie komentarzy dokumentacji jest taka sama jak w innych językach .NET Framework. Tak jak w innych językach .NET Framework [-doc — opcja kompilatora](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) umożliwia tworzyć pliki XML, który zawiera informacje, które można przekształcić w dokumentacji, przy użyciu narzędzia, takie jak [DocFX](https://dotnet.github.io/docfx/) lub [ Rozwiązania Sandcastle](https://github.com/EWSoftware/SHFB). Dokumentacja wygenerowany przy użyciu narzędzia, które są przeznaczone do użytku z zestawów, które są zwykle zapisywane w innych językach .NET Framework wygenerować widok interfejsów API, który jest oparty na skompilowanej formy F# konstrukcji. Chyba, że narzędzia przeznaczone do obsługi F#, dokumentacja generowanych przez te narzędzia nie odpowiada F# widok interfejsu API.
 
 Aby uzyskać więcej informacji na temat generowania dokumentacji z pliku XML, zobacz [komentarze dokumentacji XML &#40;C&#35; Programming Guide&#41;](https://msdn.microsoft.com/library/b2s063f7).
 

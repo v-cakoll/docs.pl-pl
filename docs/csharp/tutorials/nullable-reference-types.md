@@ -3,12 +3,12 @@ title: Projektowanie w przypadku typów referencyjnych dopuszczającego wartoś�
 description: W tym samouczku zaawansowane zawiera wprowadzenie do typów referencyjnych dopuszczającego wartość null. Dowiesz się, że express projektu chcący po wartości odniesienia może mieć wartości null i pozwolić kompilatorowi wymusić, gdy nie może mieć wartości null.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156493"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204772"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Samouczek: Wyraźniej Express zgodną z planem projektu w przypadku typów referencyjnych dopuszcza wartości null i nie dopuszcza wartości null
 
@@ -190,7 +190,7 @@ Podstawowa odpowiedzialność tej klasy jest do generowania odpowiedzi dla uczes
 1. Prosić o udział w ankiecie. Jeśli dana osoba nie zgodę, zwróć odpowiedź (wartość null lub nie).
 1. Zadawaj pytania i Zapisz odpowiedź. Wszystkie odpowiedzi jest także (wartość null lub nie).
 
-Dodaj następujący kod, aby Twoje `SurveyRespondent` klasy:
+Dodaj następujący kod, aby Twoje `SurveyResponse` klasy:
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -212,7 +212,7 @@ Ostatnim krokiem jest do wyświetlania wyników ankiety. Następnie dodasz kod d
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-Ponieważ `surveyResponses` nie dopuszcza wartości odniesienia, typ żadne testy nie są niezbędne przed usuwając odwołanie do. `Answer` Metoda zwraca ciąg z innych niż null, więc wybierz przeciążenia `GetValueOrDefault` przyjmującej drugi argument dla wartości domyślnej.
+Ponieważ `surveyResponses` jest typem niedopuszczającym odwołania żadne testy nie są niezbędne przed do odwoływania się do niego. `Answer` Metoda zwraca ciąg z innych niż null, więc wybierz przeciążenia `GetValueOrDefault` przyjmującej drugi argument dla wartości domyślnej.
 
 Następnie dodaj te trzy elementy członkowskie z wyrażeniem do `SurveyRun` klasy:
 
@@ -228,7 +228,7 @@ Nie potrzebujesz żadnej `null` sprawdza w tym kodzie, ponieważ został zaproje
 
 ## <a name="get-the-code"></a>Pobierz kod
 
-Możesz też uzyskać kod Zakończono samouczek z naszych [przykłady](https://github.com/dotnet/samples) repozytorium w [csharp/IntroToNullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) folderu.
+Możesz też uzyskać kod Zakończono samouczek z naszych [przykłady](https://github.com/dotnet/samples) repozytorium w [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) folderu.
 
 Eksperymentować, zmieniając deklaracje typu między typami dopuszczającego wartość null i wartości null. Zobacz, jak generujący różnych ostrzeżenia, aby upewnić się, przypadkowo nie wykonuj dereferencji `null`.
 

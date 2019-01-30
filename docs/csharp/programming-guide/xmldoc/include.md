@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: a9e87e803bef38ceb91849b976e2019deed54471
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ca6ccb24dce48243558cf1b2a9c1d297f961b81
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541173"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204652"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;obejmują&gt; (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -67,7 +67,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>Dane wyjściowe programu  
- Następujące dane wyjściowe są generowane podczas kompilowania z klas testowych i Test2 za pomocą następującego polecenia: `/doc:DocFileName.xml.` W programie Visual Studio określasz XML dokumentacji opcja komentarze w okienku kompilacji w Projektancie projektu. Gdy C# widzi kompilator \<obejmują > tag, przeszukiwane są przeznaczone do komentarzy dokumentacji w xml_include_tag.doc zamiast bieżącego pliku źródłowego. Kompilator generuje następnie DocFileName.xml i to jest plik, który jest używany przez narzędzia, dokumentację, takich jak [Sandcastle](https://github.com/EWSoftware/SHFB) do produkcji dokumentację.  
+ Następujące dane wyjściowe są generowane podczas kompilowania z klas testowych i Test2 za pomocą następującego polecenia: `/doc:DocFileName.xml.` W programie Visual Studio określasz XML dokumentacji opcja komentarze w okienku kompilacji w Projektancie projektu. Gdy C# widzi kompilator \<obejmują > tag, przeszukiwane są przeznaczone do komentarzy dokumentacji w xml_include_tag.doc zamiast bieżącego pliku źródłowego. Kompilator generuje następnie DocFileName.xml i to jest plik, który jest używany przez narzędzia, dokumentację, takich jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) do produkcji dokumentację.  
   
 ```xml  
 <?xml version="1.0"?>   

@@ -4,12 +4,12 @@ description: Wprowadzenie do tworzenia bibliotek platformy .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145728"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204651"
 ---
 # <a name="get-started"></a>Wprowadzenie
 
@@ -29,9 +29,9 @@ Najlepszym sposobem tworzenia pakietów NuGet dla bibliotek .NET typu open sourc
 
 NuGet umożliwia łatwe w użyciu istniejących pakietów podczas tworzenia biblioteki .NET. Więcej informacji na temat zależności NuGet wspólnych źródeł Ogranicz liczbę problemów i jak ich unikać.
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[Link do źródła](./sourcelink.md)
 
-SourceLink jest doskonałym narzędziem, który umożliwia użytkownikom biblioteki .NET wkroczyć do jego kod źródłowy podczas debugowania. W tym artykule przedstawiono omówienie procedury SourceLink jest i dlaczego należy z niej korzystać.
+Link źródłowy jest doskonałym narzędziem, który umożliwia użytkownikom biblioteki .NET wkroczyć do jego kod źródłowy podczas debugowania. W tym artykule przedstawiono omówienie Link źródłowy jest i dlaczego należy z niej korzystać.
 
 ### <a name="publishingpublish-nuget-packagemd"></a>[Publikowanie](./publish-nuget-package.md)
 

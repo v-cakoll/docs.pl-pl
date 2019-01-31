@@ -1,5 +1,5 @@
 ---
-title: '&lt;ServicePointManager —&gt; — Element (ustawienia sieci)'
+title: <servicePointManager> — Element (Ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: e30d38e3b925283b6048730aef2acc865be755b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a18f9eb3d38ef272b7a4df58d8588b622662184
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651620"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277553"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a><span data-ttu-id="0baba-102">&lt;ServicePointManager —&gt; — Element (ustawienia sieci)</span><span class="sxs-lookup"><span data-stu-id="0baba-102">&lt;servicePointManager&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="0baba-103">Służy do konfigurowania połączeń z zasobami sieciowymi.</span><span class="sxs-lookup"><span data-stu-id="0baba-103">Configures connections to network resources.</span></span>  
+# <a name="servicepointmanager-element-network-settings"></a><span data-ttu-id="75354-102">\<ServicePointManager — >, Element (ustawienia sieci)</span><span class="sxs-lookup"><span data-stu-id="75354-102">\<servicePointManager> Element (Network Settings)</span></span>
+<span data-ttu-id="75354-103">Służy do konfigurowania połączeń z zasobami sieciowymi.</span><span class="sxs-lookup"><span data-stu-id="75354-103">Configures connections to network resources.</span></span>  
   
- <span data-ttu-id="0baba-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="0baba-104">\<configuration></span></span>  
-<span data-ttu-id="0baba-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="0baba-105">\<system.net></span></span>  
-<span data-ttu-id="0baba-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="0baba-106">\<settings></span></span>  
-<span data-ttu-id="0baba-107">\<servicePointManager></span><span class="sxs-lookup"><span data-stu-id="0baba-107">\<servicePointManager></span></span>  
+ <span data-ttu-id="75354-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="75354-104">\<configuration></span></span>  
+<span data-ttu-id="75354-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="75354-105">\<system.net></span></span>  
+<span data-ttu-id="75354-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="75354-106">\<settings></span></span>  
+<span data-ttu-id="75354-107">\<servicePointManager></span><span class="sxs-lookup"><span data-stu-id="75354-107">\<servicePointManager></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0baba-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="0baba-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75354-108">Składnia</span><span class="sxs-lookup"><span data-stu-id="75354-108">Syntax</span></span>  
   
 ```xml  
 <servicePointManager  
@@ -37,36 +37,36 @@ ms.locfileid: "54651620"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0baba-109">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="0baba-109">Attributes and Elements</span></span>  
- <span data-ttu-id="0baba-110">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="0baba-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="75354-109">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="75354-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="75354-110">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="75354-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0baba-111">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="0baba-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="75354-111">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="75354-111">Attributes</span></span>  
   
-|<span data-ttu-id="0baba-112">**Atrybut**</span><span class="sxs-lookup"><span data-stu-id="0baba-112">**Attribute**</span></span>|<span data-ttu-id="0baba-113">**Opis**</span><span class="sxs-lookup"><span data-stu-id="0baba-113">**Description**</span></span>|  
+|<span data-ttu-id="75354-112">**Atrybut**</span><span class="sxs-lookup"><span data-stu-id="75354-112">**Attribute**</span></span>|<span data-ttu-id="75354-113">**Opis**</span><span class="sxs-lookup"><span data-stu-id="75354-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`checkCertificateName`|<span data-ttu-id="0baba-114">Określa, czy system należy sprawdzić, czy nazwa w certyfikacie jest zgodna nazwa hosta serwera przed rozpoczęciem korzystania z certyfikatu.</span><span class="sxs-lookup"><span data-stu-id="0baba-114">Specifies whether the system should verify that the name on the certificate matches the server host name before using the certificate.</span></span> <span data-ttu-id="0baba-115">Wartość domyślna to `true`.</span><span class="sxs-lookup"><span data-stu-id="0baba-115">The default value is `true`.</span></span>|  
-|`checkCertificateRevocationList`|<span data-ttu-id="0baba-116">Określa, czy system należy sprawdzić, czy certyfikat został odwołany przed rozpoczęciem korzystania z certyfikatu.</span><span class="sxs-lookup"><span data-stu-id="0baba-116">Specifies whether the system should check whether the certificate has been revoked before using the certificate.</span></span> <span data-ttu-id="0baba-117">Wartość domyślna to `false`.</span><span class="sxs-lookup"><span data-stu-id="0baba-117">The default value is `false`.</span></span>|  
-|`dnsRefreshTimeout`|<span data-ttu-id="0baba-118">Określa, ile domeny nazwa usługi (DNS) rozwiązania są buforowane w połączeniu z opcją DNS okrężnego w milisekundach.</span><span class="sxs-lookup"><span data-stu-id="0baba-118">Specifies how long Domain Name Service (DNS) resolutions are cached in conjunction with the DNS Round Robin option, in milliseconds.</span></span> <span data-ttu-id="0baba-119">Wartość domyślna to 120 000 milisekund (dwie minuty).</span><span class="sxs-lookup"><span data-stu-id="0baba-119">The default value is 120,000 milliseconds (two minutes).</span></span>|  
-|`enableDnsRoundRobin`|<span data-ttu-id="0baba-120">Określa, czy nazwy rozwiązania DNS hosta z wieloma adresami Internet Protocol (IP), zwracany, wszystkie adresy lub tylko pierwszy z nich.</span><span class="sxs-lookup"><span data-stu-id="0baba-120">Specifies whether DNS resolutions of host names with multiple Internet Protocol (IP) addresses return all the addresses, or just the first one.</span></span> <span data-ttu-id="0baba-121">Wartość domyślna to `false`.</span><span class="sxs-lookup"><span data-stu-id="0baba-121">The default value is `false`.</span></span>|  
-|`encryptionPolicy`|<span data-ttu-id="0baba-122">Określa zasady szyfrowania, zastosowane do sesji SSL/TLS w <xref:System.Net.ServicePointManager> wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="0baba-122">Specifies the encryption policy applied to an SSL/TLS session on a <xref:System.Net.ServicePointManager> instance.</span></span> <span data-ttu-id="0baba-123">Możliwe wartości to odpowiednikiem wartości <xref:System.Net.Security.EncryptionPolicy> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="0baba-123">The possible values are equivalent to the values for the <xref:System.Net.Security.EncryptionPolicy> enumeration.</span></span> <span data-ttu-id="0baba-124">Korzystanie z <xref:System.Security.Authentication.CipherAlgorithmType.Null> jest wymagany, jeśli ustawiono zasady szyfrowania `NoEncryption`.</span><span class="sxs-lookup"><span data-stu-id="0baba-124">The use of <xref:System.Security.Authentication.CipherAlgorithmType.Null> is required when the encryption policy is set to `NoEncryption`.</span></span> <span data-ttu-id="0baba-125">Wartość domyślna to `RequireEncryption`.</span><span class="sxs-lookup"><span data-stu-id="0baba-125">The default value is `RequireEncryption`.</span></span>|  
-|`expect100Continue`|<span data-ttu-id="0baba-126">Określa, czy metody POST należy się spodziewać otrzymać `100-continue` odpowiedzi z serwera.</span><span class="sxs-lookup"><span data-stu-id="0baba-126">Specifies whether POST methods should expect to receive a `100-continue` response from the server.</span></span> <span data-ttu-id="0baba-127">Wartość domyślna to `true`.</span><span class="sxs-lookup"><span data-stu-id="0baba-127">The default value is `true`.</span></span>|  
-|`useNagleAlgorithm`|<span data-ttu-id="0baba-128">Określa, czy kontrolowane przez usługę Menedżer punktu połączenia używają algorytmu Nagle'a.</span><span class="sxs-lookup"><span data-stu-id="0baba-128">Specifies whether connections controlled by the service point manager use the Nagle algorithm.</span></span> <span data-ttu-id="0baba-129">Wartość domyślna to `true`.</span><span class="sxs-lookup"><span data-stu-id="0baba-129">The default value is `true`.</span></span>|  
+|`checkCertificateName`|<span data-ttu-id="75354-114">Określa, czy system należy sprawdzić, czy nazwa w certyfikacie jest zgodna nazwa hosta serwera przed rozpoczęciem korzystania z certyfikatu.</span><span class="sxs-lookup"><span data-stu-id="75354-114">Specifies whether the system should verify that the name on the certificate matches the server host name before using the certificate.</span></span> <span data-ttu-id="75354-115">Wartość domyślna to `true`.</span><span class="sxs-lookup"><span data-stu-id="75354-115">The default value is `true`.</span></span>|  
+|`checkCertificateRevocationList`|<span data-ttu-id="75354-116">Określa, czy system należy sprawdzić, czy certyfikat został odwołany przed rozpoczęciem korzystania z certyfikatu.</span><span class="sxs-lookup"><span data-stu-id="75354-116">Specifies whether the system should check whether the certificate has been revoked before using the certificate.</span></span> <span data-ttu-id="75354-117">Wartość domyślna to `false`.</span><span class="sxs-lookup"><span data-stu-id="75354-117">The default value is `false`.</span></span>|  
+|`dnsRefreshTimeout`|<span data-ttu-id="75354-118">Określa, ile domeny nazwa usługi (DNS) rozwiązania są buforowane w połączeniu z opcją DNS okrężnego w milisekundach.</span><span class="sxs-lookup"><span data-stu-id="75354-118">Specifies how long Domain Name Service (DNS) resolutions are cached in conjunction with the DNS Round Robin option, in milliseconds.</span></span> <span data-ttu-id="75354-119">Wartość domyślna to 120 000 milisekund (dwie minuty).</span><span class="sxs-lookup"><span data-stu-id="75354-119">The default value is 120,000 milliseconds (two minutes).</span></span>|  
+|`enableDnsRoundRobin`|<span data-ttu-id="75354-120">Określa, czy nazwy rozwiązania DNS hosta z wieloma adresami Internet Protocol (IP), zwracany, wszystkie adresy lub tylko pierwszy z nich.</span><span class="sxs-lookup"><span data-stu-id="75354-120">Specifies whether DNS resolutions of host names with multiple Internet Protocol (IP) addresses return all the addresses, or just the first one.</span></span> <span data-ttu-id="75354-121">Wartość domyślna to `false`.</span><span class="sxs-lookup"><span data-stu-id="75354-121">The default value is `false`.</span></span>|  
+|`encryptionPolicy`|<span data-ttu-id="75354-122">Określa zasady szyfrowania, zastosowane do sesji SSL/TLS w <xref:System.Net.ServicePointManager> wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="75354-122">Specifies the encryption policy applied to an SSL/TLS session on a <xref:System.Net.ServicePointManager> instance.</span></span> <span data-ttu-id="75354-123">Możliwe wartości to odpowiednikiem wartości <xref:System.Net.Security.EncryptionPolicy> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="75354-123">The possible values are equivalent to the values for the <xref:System.Net.Security.EncryptionPolicy> enumeration.</span></span> <span data-ttu-id="75354-124">Korzystanie z <xref:System.Security.Authentication.CipherAlgorithmType.Null> jest wymagany, jeśli ustawiono zasady szyfrowania `NoEncryption`.</span><span class="sxs-lookup"><span data-stu-id="75354-124">The use of <xref:System.Security.Authentication.CipherAlgorithmType.Null> is required when the encryption policy is set to `NoEncryption`.</span></span> <span data-ttu-id="75354-125">Wartość domyślna to `RequireEncryption`.</span><span class="sxs-lookup"><span data-stu-id="75354-125">The default value is `RequireEncryption`.</span></span>|  
+|`expect100Continue`|<span data-ttu-id="75354-126">Określa, czy metody POST należy się spodziewać otrzymać `100-continue` odpowiedzi z serwera.</span><span class="sxs-lookup"><span data-stu-id="75354-126">Specifies whether POST methods should expect to receive a `100-continue` response from the server.</span></span> <span data-ttu-id="75354-127">Wartość domyślna to `true`.</span><span class="sxs-lookup"><span data-stu-id="75354-127">The default value is `true`.</span></span>|  
+|`useNagleAlgorithm`|<span data-ttu-id="75354-128">Określa, czy kontrolowane przez usługę Menedżer punktu połączenia używają algorytmu Nagle'a.</span><span class="sxs-lookup"><span data-stu-id="75354-128">Specifies whether connections controlled by the service point manager use the Nagle algorithm.</span></span> <span data-ttu-id="75354-129">Wartość domyślna to `true`.</span><span class="sxs-lookup"><span data-stu-id="75354-129">The default value is `true`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0baba-130">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="0baba-130">Child Elements</span></span>  
- <span data-ttu-id="0baba-131">Brak.</span><span class="sxs-lookup"><span data-stu-id="0baba-131">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="75354-130">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="75354-130">Child Elements</span></span>  
+ <span data-ttu-id="75354-131">Brak.</span><span class="sxs-lookup"><span data-stu-id="75354-131">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0baba-132">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="0baba-132">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="75354-132">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="75354-132">Parent Elements</span></span>  
   
-|<span data-ttu-id="0baba-133">**Element**</span><span class="sxs-lookup"><span data-stu-id="0baba-133">**Element**</span></span>|<span data-ttu-id="0baba-134">**Opis**</span><span class="sxs-lookup"><span data-stu-id="0baba-134">**Description**</span></span>|  
+|<span data-ttu-id="75354-133">**Element**</span><span class="sxs-lookup"><span data-stu-id="75354-133">**Element**</span></span>|<span data-ttu-id="75354-134">**Opis**</span><span class="sxs-lookup"><span data-stu-id="75354-134">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="0baba-135">Ustawienia</span><span class="sxs-lookup"><span data-stu-id="0baba-135">Settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="0baba-136">Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="0baba-136">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="75354-135">Ustawienia</span><span class="sxs-lookup"><span data-stu-id="75354-135">Settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="75354-136">Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="75354-136">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0baba-137">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0baba-137">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="75354-137">Uwagi</span><span class="sxs-lookup"><span data-stu-id="75354-137">Remarks</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="0baba-138">Pliki konfiguracji</span><span class="sxs-lookup"><span data-stu-id="0baba-138">Configuration Files</span></span>  
- <span data-ttu-id="0baba-139">Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="0baba-139">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="75354-138">Pliki konfiguracji</span><span class="sxs-lookup"><span data-stu-id="75354-138">Configuration Files</span></span>  
+ <span data-ttu-id="75354-139">Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="75354-139">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0baba-140">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0baba-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75354-140">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="75354-140">See also</span></span>
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
-- [<span data-ttu-id="0baba-141">Schemat ustawień sieci</span><span class="sxs-lookup"><span data-stu-id="0baba-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="75354-141">Schemat ustawień sieci</span><span class="sxs-lookup"><span data-stu-id="75354-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

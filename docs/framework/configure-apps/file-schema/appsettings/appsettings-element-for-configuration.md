@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt; elementu &lt;konfiguracji&gt;'
+title: <appSettings> — element do <configuration>
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dcdf8d0f11ae65353da08bba1f8d2fe5ab415c6b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190934"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289591"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings >, element dla \<konfiguracji >
 
 Zawiera ustawienia aplikacji niestandardowych. Jest to sekcję wstępnie zdefiniowanych konfiguracji podano w programie .NET Framework.
 
 [**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<appSettings >**
+&nbsp;&nbsp;**\<appSettings>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,13 +47,13 @@ Zawiera ustawienia aplikacji niestandardowych. Jest to sekcję wstępnie zdefini
 
 |     | Opis |
 | --- | ----------- |
-| [**\<Dodaj >**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Dodaje ustawienia aplikacji niestandardowych. |
-| [**\<Wyczyść >**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Usuwa wszystkie uprzednio zdefiniowany aplikacji ustawienia. |
-| [**\<Usuń >**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Usuwa ustawienie wcześniej zdefiniowanych aplikacji. |
+| [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Dodaje ustawienia aplikacji niestandardowych. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Usuwa wszystkie uprzednio zdefiniowany aplikacji ustawienia. |
+| [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Usuwa ustawienie wcześniej zdefiniowanych aplikacji. |
 
 ## <a name="remarks"></a>Uwagi
 
-**\<AppSettings >** element przechowuje informacje o konfiguracji niestandardowej aplikacji, takich jak parametry połączenia bazy danych, ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacja. Pary klucz/wartość, określona w  **\<appSettings >** elementu są dostępne w kodzie za pomocą <xref:System.Configuration.ConfigurationSettings> klasy.
+ **\<AppSettings >** element przechowuje informacje o konfiguracji niestandardowej aplikacji, takich jak parametry połączenia bazy danych, ścieżki do plików, adresy URL usługi sieci Web XML lub inne informacje konfiguracji niestandardowej dla aplikacja. Pary klucz/wartość, określona w  **\<appSettings >** elementu są dostępne w kodzie za pomocą <xref:System.Configuration.ConfigurationSettings> klasy.
 
 Możesz użyć **pliku** atrybutu w  **\<appSettings >** elementu *Web.config* i pliki konfiguracyjne aplikacji. Ten atrybut określa plik konfiguracji, która zapewnia dodatkowe ustawienia, lub zastępuje ustawienia określone w  **\<appSettings >** elementu. **Pliku** atrybut może być używany w źródło sterowania zespołu rozwoju scenariuszach, na przykład po użytkownik chce, aby zastąpić ustawienia projektu, określone w pliku konfiguracji aplikacji.
 

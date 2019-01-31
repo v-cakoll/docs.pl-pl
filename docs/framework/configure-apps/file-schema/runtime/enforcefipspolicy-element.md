@@ -1,5 +1,5 @@
 ---
-title: '&lt;enforceFIPSPolicy&gt; Element'
+title: <enforceFIPSPolicy>, element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - enforceFIPSPolicy element
@@ -9,59 +9,59 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 990add41d5f48da19f6bc20e4bbff19f36132df6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a4e5ba5ac1a5a3c08c351531efc84291925ba4b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742110"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267472"
 ---
-# <a name="ltenforcefipspolicygt-element"></a><span data-ttu-id="10187-102">&lt;enforceFIPSPolicy&gt; Element</span><span class="sxs-lookup"><span data-stu-id="10187-102">&lt;enforceFIPSPolicy&gt; Element</span></span>
-<span data-ttu-id="10187-103">Określa, czy do wymuszania wymagań konfiguracji komputera, że algorytmy kryptograficzne musi być zgodne z przetwarzania standardów FIPS (Federal Information).</span><span class="sxs-lookup"><span data-stu-id="10187-103">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>  
+# <a name="enforcefipspolicy-element"></a><span data-ttu-id="8a977-102">\<enforceFIPSPolicy> Element</span><span class="sxs-lookup"><span data-stu-id="8a977-102">\<enforceFIPSPolicy> Element</span></span>
+<span data-ttu-id="8a977-103">Określa, czy do wymuszania wymagań konfiguracji komputera, że algorytmy kryptograficzne musi być zgodne z przetwarzania standardów FIPS (Federal Information).</span><span class="sxs-lookup"><span data-stu-id="8a977-103">Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).</span></span>  
   
- <span data-ttu-id="10187-104">\<Konfiguracja > Element</span><span class="sxs-lookup"><span data-stu-id="10187-104">\<configuration> Element</span></span>  
-<span data-ttu-id="10187-105">\<środowisko uruchomieniowe > Element</span><span class="sxs-lookup"><span data-stu-id="10187-105">\<runtime> Element</span></span>  
-<span data-ttu-id="10187-106">\<enforceFIPSPolicy> Element</span><span class="sxs-lookup"><span data-stu-id="10187-106">\<enforceFIPSPolicy> Element</span></span>  
+ <span data-ttu-id="8a977-104">\<Konfiguracja > Element</span><span class="sxs-lookup"><span data-stu-id="8a977-104">\<configuration> Element</span></span>  
+<span data-ttu-id="8a977-105">\<środowisko uruchomieniowe > Element</span><span class="sxs-lookup"><span data-stu-id="8a977-105">\<runtime> Element</span></span>  
+<span data-ttu-id="8a977-106">\<enforceFIPSPolicy> Element</span><span class="sxs-lookup"><span data-stu-id="8a977-106">\<enforceFIPSPolicy> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10187-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="10187-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8a977-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="8a977-107">Syntax</span></span>  
   
 ```xml  
 <enforceFIPSPolicy enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="10187-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="10187-108">Attributes and Elements</span></span>  
- <span data-ttu-id="10187-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="10187-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8a977-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="8a977-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="8a977-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="8a977-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="10187-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="10187-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8a977-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="8a977-110">Attributes</span></span>  
   
-|<span data-ttu-id="10187-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="10187-111">Attribute</span></span>|<span data-ttu-id="10187-112">Opis</span><span class="sxs-lookup"><span data-stu-id="10187-112">Description</span></span>|  
+|<span data-ttu-id="8a977-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="8a977-111">Attribute</span></span>|<span data-ttu-id="8a977-112">Opis</span><span class="sxs-lookup"><span data-stu-id="8a977-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="10187-113">Włączone</span><span class="sxs-lookup"><span data-stu-id="10187-113">enabled</span></span>|<span data-ttu-id="10187-114">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="10187-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="10187-115">Określa, czy włączyć wymuszanie wymagań konfiguracji komputera, że algorytmy kryptograficzne musi być zgodna z trybem FIPS.</span><span class="sxs-lookup"><span data-stu-id="10187-115">Specifies whether to enable the enforcement of a computer configuration requirement that cryptographic algorithms must be compliant with FIPS.</span></span>|  
+|<span data-ttu-id="8a977-113">Włączone</span><span class="sxs-lookup"><span data-stu-id="8a977-113">enabled</span></span>|<span data-ttu-id="8a977-114">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="8a977-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="8a977-115">Określa, czy włączyć wymuszanie wymagań konfiguracji komputera, że algorytmy kryptograficzne musi być zgodna z trybem FIPS.</span><span class="sxs-lookup"><span data-stu-id="8a977-115">Specifies whether to enable the enforcement of a computer configuration requirement that cryptographic algorithms must be compliant with FIPS.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="10187-116">Atrybut włączony</span><span class="sxs-lookup"><span data-stu-id="10187-116">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="8a977-116">Atrybut włączony</span><span class="sxs-lookup"><span data-stu-id="8a977-116">enabled Attribute</span></span>  
   
-|<span data-ttu-id="10187-117">Wartość</span><span class="sxs-lookup"><span data-stu-id="10187-117">Value</span></span>|<span data-ttu-id="10187-118">Opis</span><span class="sxs-lookup"><span data-stu-id="10187-118">Description</span></span>|  
+|<span data-ttu-id="8a977-117">Wartość</span><span class="sxs-lookup"><span data-stu-id="8a977-117">Value</span></span>|<span data-ttu-id="8a977-118">Opis</span><span class="sxs-lookup"><span data-stu-id="8a977-118">Description</span></span>|  
 |-----------|-----------------|  
-|`true`|<span data-ttu-id="10187-119">Jeśli komputer jest skonfigurowany do wymagają algorytmów kryptograficznych jako zgodny ze standardem FIPS, wymóg ten jest wymuszany.</span><span class="sxs-lookup"><span data-stu-id="10187-119">If your computer is configured to require cryptographic algorithms to be FIPS compliant, that requirement is enforced.</span></span> <span data-ttu-id="10187-120">Jeśli klasa implementuje algorytm, który nie jest zgodna z trybem FIPS, konstruktory lub `Create` metody tej klasy zgłaszają wyjątki, gdy są uruchamiane na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="10187-120">If a class implements an algorithm that is not compliant with FIPS, the constructors or `Create` methods for that class throw exceptions when they are run on that computer.</span></span> <span data-ttu-id="10187-121">Domyślnie włączone.</span><span class="sxs-lookup"><span data-stu-id="10187-121">This is the default.</span></span>|  
-|`false`|<span data-ttu-id="10187-122">Algorytmy kryptograficzne, które są używane przez aplikację nie są wymagane do zapewnienia zgodności ze standardem FIPS, niezależnie od konfiguracji komputera.</span><span class="sxs-lookup"><span data-stu-id="10187-122">Cryptographic algorithms that are used by the application are not required to be compliant with FIPS, regardless of computer configuration.</span></span>|  
+|`true`|<span data-ttu-id="8a977-119">Jeśli komputer jest skonfigurowany do wymagają algorytmów kryptograficznych jako zgodny ze standardem FIPS, wymóg ten jest wymuszany.</span><span class="sxs-lookup"><span data-stu-id="8a977-119">If your computer is configured to require cryptographic algorithms to be FIPS compliant, that requirement is enforced.</span></span> <span data-ttu-id="8a977-120">Jeśli klasa implementuje algorytm, który nie jest zgodna z trybem FIPS, konstruktory lub `Create` metody tej klasy zgłaszają wyjątki, gdy są uruchamiane na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="8a977-120">If a class implements an algorithm that is not compliant with FIPS, the constructors or `Create` methods for that class throw exceptions when they are run on that computer.</span></span> <span data-ttu-id="8a977-121">Domyślnie włączone.</span><span class="sxs-lookup"><span data-stu-id="8a977-121">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="8a977-122">Algorytmy kryptograficzne, które są używane przez aplikację nie są wymagane do zapewnienia zgodności ze standardem FIPS, niezależnie od konfiguracji komputera.</span><span class="sxs-lookup"><span data-stu-id="8a977-122">Cryptographic algorithms that are used by the application are not required to be compliant with FIPS, regardless of computer configuration.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="10187-123">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="10187-123">Child Elements</span></span>  
- <span data-ttu-id="10187-124">Brak.</span><span class="sxs-lookup"><span data-stu-id="10187-124">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8a977-123">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="8a977-123">Child Elements</span></span>  
+ <span data-ttu-id="8a977-124">Brak.</span><span class="sxs-lookup"><span data-stu-id="8a977-124">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="10187-125">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="10187-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8a977-125">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="8a977-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="10187-126">Element</span><span class="sxs-lookup"><span data-stu-id="10187-126">Element</span></span>|<span data-ttu-id="10187-127">Opis</span><span class="sxs-lookup"><span data-stu-id="10187-127">Description</span></span>|  
+|<span data-ttu-id="8a977-126">Element</span><span class="sxs-lookup"><span data-stu-id="8a977-126">Element</span></span>|<span data-ttu-id="8a977-127">Opis</span><span class="sxs-lookup"><span data-stu-id="8a977-127">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="10187-128">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="10187-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="10187-129">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="10187-129">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="8a977-128">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8a977-128">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="8a977-129">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="8a977-129">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="10187-130">Uwagi</span><span class="sxs-lookup"><span data-stu-id="10187-130">Remarks</span></span>  
- <span data-ttu-id="10187-131">Począwszy od programu .NET Framework 2.0, tworzenie klas, które implementują algorytmy kryptograficzne, zależy od konfiguracji komputera.</span><span class="sxs-lookup"><span data-stu-id="10187-131">Starting with the .NET Framework 2.0, the creation of classes that implement cryptographic algorithms is controlled by the configuration of the computer.</span></span> <span data-ttu-id="10187-132">Jeśli komputer jest skonfigurowany do żądania algorytmów do zapewnienia zgodności ze standardem FIPS, a klasa implementuje algorytm, który nie jest zgodna z trybem FIPS, wszelkie próby utworzenia wystąpienia tej klasy zgłasza wyjątek.</span><span class="sxs-lookup"><span data-stu-id="10187-132">If the computer is configured to require algorithms to be compliant with FIPS, and a class implements an algorithm that is not compliant with FIPS, any attempt to create an instance of that class throws an exception.</span></span> <span data-ttu-id="10187-133">Konstruktory throw <xref:System.InvalidOperationException> wyjątek, i `Create` metod generują <xref:System.Reflection.TargetInvocationException> wyjątek z wewnętrznego <xref:System.InvalidOperationException> wyjątku.</span><span class="sxs-lookup"><span data-stu-id="10187-133">Constructors throw an <xref:System.InvalidOperationException> exception, and `Create` methods throw a <xref:System.Reflection.TargetInvocationException> exception with an inner <xref:System.InvalidOperationException> exception.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8a977-130">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8a977-130">Remarks</span></span>  
+ <span data-ttu-id="8a977-131">Począwszy od programu .NET Framework 2.0, tworzenie klas, które implementują algorytmy kryptograficzne, zależy od konfiguracji komputera.</span><span class="sxs-lookup"><span data-stu-id="8a977-131">Starting with the .NET Framework 2.0, the creation of classes that implement cryptographic algorithms is controlled by the configuration of the computer.</span></span> <span data-ttu-id="8a977-132">Jeśli komputer jest skonfigurowany do żądania algorytmów do zapewnienia zgodności ze standardem FIPS, a klasa implementuje algorytm, który nie jest zgodna z trybem FIPS, wszelkie próby utworzenia wystąpienia tej klasy zgłasza wyjątek.</span><span class="sxs-lookup"><span data-stu-id="8a977-132">If the computer is configured to require algorithms to be compliant with FIPS, and a class implements an algorithm that is not compliant with FIPS, any attempt to create an instance of that class throws an exception.</span></span> <span data-ttu-id="8a977-133">Konstruktory throw <xref:System.InvalidOperationException> wyjątek, i `Create` metod generują <xref:System.Reflection.TargetInvocationException> wyjątek z wewnętrznego <xref:System.InvalidOperationException> wyjątku.</span><span class="sxs-lookup"><span data-stu-id="8a977-133">Constructors throw an <xref:System.InvalidOperationException> exception, and `Create` methods throw a <xref:System.Reflection.TargetInvocationException> exception with an inner <xref:System.InvalidOperationException> exception.</span></span>  
   
- <span data-ttu-id="10187-134">Jeśli aplikacja działa na komputerach, na których konfiguracje wymagają zgodności z trybem FIPS, a Twoja aplikacja używa algorytmu, który nie jest zgodna z trybem FIPS, można użyć tego elementu w pliku konfiguracji aby zapobiec środowisko uruchomieniowe języka wspólnego (CLR) z Wymuszanie zgodności ze standardem FIPS.</span><span class="sxs-lookup"><span data-stu-id="10187-134">If your application runs on computers whose configurations require compliance with FIPS, and your application uses an algorithm that is not compliant with FIPS, you can use this element in your configuration file to prevent the common language runtime (CLR) from enforcing FIPS compliance.</span></span> <span data-ttu-id="10187-135">Ten element został wprowadzony w [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="10187-135">This element was introduced in the [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].</span></span>  
+ <span data-ttu-id="8a977-134">Jeśli aplikacja działa na komputerach, na których konfiguracje wymagają zgodności z trybem FIPS, a Twoja aplikacja używa algorytmu, który nie jest zgodna z trybem FIPS, można użyć tego elementu w pliku konfiguracji aby zapobiec środowisko uruchomieniowe języka wspólnego (CLR) z Wymuszanie zgodności ze standardem FIPS.</span><span class="sxs-lookup"><span data-stu-id="8a977-134">If your application runs on computers whose configurations require compliance with FIPS, and your application uses an algorithm that is not compliant with FIPS, you can use this element in your configuration file to prevent the common language runtime (CLR) from enforcing FIPS compliance.</span></span> <span data-ttu-id="8a977-135">Ten element został wprowadzony w [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8a977-135">This element was introduced in the [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].</span></span>  
   
-## <a name="example"></a><span data-ttu-id="10187-136">Przykład</span><span class="sxs-lookup"><span data-stu-id="10187-136">Example</span></span>  
- <span data-ttu-id="10187-137">Poniższy przykład pokazuje, jak uniemożliwić CLR Wymuszanie zgodności ze standardem FIPS.</span><span class="sxs-lookup"><span data-stu-id="10187-137">The following example shows how to prevent the CLR from enforcing FIPS compliance.</span></span>  
+## <a name="example"></a><span data-ttu-id="8a977-136">Przykład</span><span class="sxs-lookup"><span data-stu-id="8a977-136">Example</span></span>  
+ <span data-ttu-id="8a977-137">Poniższy przykład pokazuje, jak uniemożliwić CLR Wymuszanie zgodności ze standardem FIPS.</span><span class="sxs-lookup"><span data-stu-id="8a977-137">The following example shows how to prevent the CLR from enforcing FIPS compliance.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,7 +71,7 @@ ms.locfileid: "54742110"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="10187-138">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="10187-138">See also</span></span>
-- [<span data-ttu-id="10187-139">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="10187-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="10187-140">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="10187-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="10187-141">Model kryptografii</span><span class="sxs-lookup"><span data-stu-id="10187-141">Cryptography Model</span></span>](../../../../../docs/standard/security/cryptography-model.md)
+## <a name="see-also"></a><span data-ttu-id="8a977-138">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8a977-138">See also</span></span>
+- [<span data-ttu-id="8a977-139">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="8a977-139">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="8a977-140">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="8a977-140">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="8a977-141">Model kryptografii</span><span class="sxs-lookup"><span data-stu-id="8a977-141">Cryptography Model</span></span>](../../../../../docs/standard/security/cryptography-model.md)

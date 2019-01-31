@@ -1,5 +1,5 @@
 ---
-title: '&lt;Filtr&gt; elementu &lt;Dodaj&gt; dla &lt;odbiorników&gt; dla &lt;śledzenia&gt;'
+title: <filter> — Element do <add> dla <listeners> dla <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: b53c3e4cc2362a1f1dc0312d59aff403ca924b5e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: f364590a419c3f31af49ea2c3dd6fa5901bf0272
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084188"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283182"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="544d1-102">&lt;Filtr&gt; elementu &lt;Dodaj&gt; dla &lt;odbiorników&gt; dla &lt;śledzenia&gt;</span><span class="sxs-lookup"><span data-stu-id="544d1-102">&lt;filter&gt; Element for &lt;add&gt; for &lt;listeners&gt; for &lt;trace&gt;</span></span>
-<span data-ttu-id="544d1-103">Dodaje filtr do odbiornika w `Listeners` kolekcji dla śledzenia.</span><span class="sxs-lookup"><span data-stu-id="544d1-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a><span data-ttu-id="f32e5-102">\<Filtr >, Element dla \<Dodaj > dla \<odbiorników > dla \<śledzenia ></span><span class="sxs-lookup"><span data-stu-id="f32e5-102">\<filter> Element for \<add> for \<listeners> for \<trace></span></span>
+<span data-ttu-id="f32e5-103">Dodaje filtr do odbiornika w `Listeners` kolekcji dla śledzenia.</span><span class="sxs-lookup"><span data-stu-id="f32e5-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
   
- <span data-ttu-id="544d1-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="544d1-104">\<configuration></span></span>  
-<span data-ttu-id="544d1-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="544d1-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="544d1-106">\<trace></span><span class="sxs-lookup"><span data-stu-id="544d1-106">\<trace></span></span>  
-<span data-ttu-id="544d1-107">\<listeners></span><span class="sxs-lookup"><span data-stu-id="544d1-107">\<listeners></span></span>  
-<span data-ttu-id="544d1-108">\<add></span><span class="sxs-lookup"><span data-stu-id="544d1-108">\<add></span></span>  
-<span data-ttu-id="544d1-109">\<Filtr ></span><span class="sxs-lookup"><span data-stu-id="544d1-109">\<filter></span></span>  
+ <span data-ttu-id="f32e5-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="f32e5-104">\<configuration></span></span>  
+<span data-ttu-id="f32e5-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="f32e5-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="f32e5-106">\<trace></span><span class="sxs-lookup"><span data-stu-id="f32e5-106">\<trace></span></span>  
+<span data-ttu-id="f32e5-107">\<listeners></span><span class="sxs-lookup"><span data-stu-id="f32e5-107">\<listeners></span></span>  
+<span data-ttu-id="f32e5-108">\<add></span><span class="sxs-lookup"><span data-stu-id="f32e5-108">\<add></span></span>  
+<span data-ttu-id="f32e5-109">\<Filtr ></span><span class="sxs-lookup"><span data-stu-id="f32e5-109">\<filter></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="544d1-110">Składnia</span><span class="sxs-lookup"><span data-stu-id="544d1-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f32e5-110">Składnia</span><span class="sxs-lookup"><span data-stu-id="f32e5-110">Syntax</span></span>  
   
 ```xml  
 <filter   
@@ -33,36 +33,36 @@ ms.locfileid: "55084188"
   initializeData="data" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="544d1-111">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="544d1-111">Attributes and Elements</span></span>  
- <span data-ttu-id="544d1-112">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="544d1-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f32e5-111">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="f32e5-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="f32e5-112">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="f32e5-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="544d1-113">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="544d1-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f32e5-113">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="f32e5-113">Attributes</span></span>  
   
-|<span data-ttu-id="544d1-114">Atrybut</span><span class="sxs-lookup"><span data-stu-id="544d1-114">Attribute</span></span>|<span data-ttu-id="544d1-115">Opis</span><span class="sxs-lookup"><span data-stu-id="544d1-115">Description</span></span>|  
+|<span data-ttu-id="f32e5-114">Atrybut</span><span class="sxs-lookup"><span data-stu-id="f32e5-114">Attribute</span></span>|<span data-ttu-id="f32e5-115">Opis</span><span class="sxs-lookup"><span data-stu-id="f32e5-115">Description</span></span>|  
 |---------------|-----------------|  
-|`type`|<span data-ttu-id="544d1-116">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="544d1-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="544d1-117">Określa typ filtr, który powinien dziedziczyć <xref:System.Diagnostics.TraceFilter> klasy.</span><span class="sxs-lookup"><span data-stu-id="544d1-117">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="544d1-118">Można użyć w przestrzeni nazw, kwalifikowana nazwa typu, który odnosi się do typu <xref:System.Type.FullName%2A> właściwości lub można użyć w pełni kwalifikowana nazwa typu w tym informacje o zestawie, który odpowiada <xref:System.Type.AssemblyQualifiedName%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="544d1-118">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="544d1-119">Aby dowiedzieć się, w pełni kwalifikowanych nazw typów, zobacz [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="544d1-119">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|`initializeData`|<span data-ttu-id="544d1-120">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="544d1-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="544d1-121">Ciąg przekazany do konstruktora dla klasy określony filtr.</span><span class="sxs-lookup"><span data-stu-id="544d1-121">The string passed to the constructor for the specified filter class.</span></span>|  
+|`type`|<span data-ttu-id="f32e5-116">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="f32e5-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="f32e5-117">Określa typ filtr, który powinien dziedziczyć <xref:System.Diagnostics.TraceFilter> klasy.</span><span class="sxs-lookup"><span data-stu-id="f32e5-117">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="f32e5-118">Można użyć w przestrzeni nazw, kwalifikowana nazwa typu, który odnosi się do typu <xref:System.Type.FullName%2A> właściwości lub można użyć w pełni kwalifikowana nazwa typu w tym informacje o zestawie, który odpowiada <xref:System.Type.AssemblyQualifiedName%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="f32e5-118">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="f32e5-119">Aby dowiedzieć się, w pełni kwalifikowanych nazw typów, zobacz [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="f32e5-119">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|`initializeData`|<span data-ttu-id="f32e5-120">Atrybut opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="f32e5-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="f32e5-121">Ciąg przekazany do konstruktora dla klasy określony filtr.</span><span class="sxs-lookup"><span data-stu-id="f32e5-121">The string passed to the constructor for the specified filter class.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="544d1-122">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="544d1-122">Child Elements</span></span>  
- <span data-ttu-id="544d1-123">Brak.</span><span class="sxs-lookup"><span data-stu-id="544d1-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f32e5-122">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="f32e5-122">Child Elements</span></span>  
+ <span data-ttu-id="f32e5-123">Brak.</span><span class="sxs-lookup"><span data-stu-id="f32e5-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="544d1-124">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="544d1-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f32e5-124">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="f32e5-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="544d1-125">Element</span><span class="sxs-lookup"><span data-stu-id="544d1-125">Element</span></span>|<span data-ttu-id="544d1-126">Opis</span><span class="sxs-lookup"><span data-stu-id="544d1-126">Description</span></span>|  
+|<span data-ttu-id="f32e5-125">Element</span><span class="sxs-lookup"><span data-stu-id="f32e5-125">Element</span></span>|<span data-ttu-id="f32e5-126">Opis</span><span class="sxs-lookup"><span data-stu-id="f32e5-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="544d1-127">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="544d1-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="544d1-128">Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.</span><span class="sxs-lookup"><span data-stu-id="544d1-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`trace`|<span data-ttu-id="544d1-129">Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów śledzenia.</span><span class="sxs-lookup"><span data-stu-id="544d1-129">Contains listeners that collect, store, and route tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="544d1-130">Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów w postaci.</span><span class="sxs-lookup"><span data-stu-id="544d1-130">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="544d1-131">Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.</span><span class="sxs-lookup"><span data-stu-id="544d1-131">Listeners direct the tracing output to an appropriate target.</span></span>|  
-|`add`|<span data-ttu-id="544d1-132">Dodaje odbiornik do `Listeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="544d1-132">Adds a listener to the `Listeners` collection.</span></span>|  
+|`configuration`|<span data-ttu-id="f32e5-127">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f32e5-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="f32e5-128">Określa obiektów nasłuchujących śledzenia zbierać, przechowywać i kierowanie komunikatów i poziom, którego ustawiono przełącznikiem śledzenia.</span><span class="sxs-lookup"><span data-stu-id="f32e5-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="f32e5-129">Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów śledzenia.</span><span class="sxs-lookup"><span data-stu-id="f32e5-129">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="f32e5-130">Zawiera obiektów nasłuchujących zbierać, przechowywać i kierowanie komunikatów w postaci.</span><span class="sxs-lookup"><span data-stu-id="f32e5-130">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="f32e5-131">Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.</span><span class="sxs-lookup"><span data-stu-id="f32e5-131">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`add`|<span data-ttu-id="f32e5-132">Dodaje odbiornik do `Listeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="f32e5-132">Adds a listener to the `Listeners` collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="544d1-133">Uwagi</span><span class="sxs-lookup"><span data-stu-id="544d1-133">Remarks</span></span>  
- <span data-ttu-id="544d1-134">`<filter>` Element musi być zawarty w `<add>` elementu dla odbiornika śledzenia, który określa typ odbiornika, nie tylko nazwy odbiornik zdefiniowane w [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span><span class="sxs-lookup"><span data-stu-id="544d1-134">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span></span> <span data-ttu-id="544d1-135">Jeśli odbiornik jest zdefiniowany w [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), filtr dla tego odbiornika musi być zdefiniowany w tym elemencie.</span><span class="sxs-lookup"><span data-stu-id="544d1-135">If the listener is defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f32e5-133">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f32e5-133">Remarks</span></span>  
+ <span data-ttu-id="f32e5-134">`<filter>` Element musi być zawarty w `<add>` elementu dla odbiornika śledzenia, który określa typ odbiornika, nie tylko nazwy odbiornik zdefiniowane w [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span><span class="sxs-lookup"><span data-stu-id="f32e5-134">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span></span> <span data-ttu-id="f32e5-135">Jeśli odbiornik jest zdefiniowany w [ \<sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), filtr dla tego odbiornika musi być zdefiniowany w tym elemencie.</span><span class="sxs-lookup"><span data-stu-id="f32e5-135">If the listener is defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
   
- <span data-ttu-id="544d1-136">Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="544d1-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="f32e5-136">Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f32e5-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="544d1-137">Przykład</span><span class="sxs-lookup"><span data-stu-id="544d1-137">Example</span></span>  
- <span data-ttu-id="544d1-138">Poniższy przykład pokazuje, jak używać `<filter>` elementu Dodawanie filtru do odbiornika `console` w `Listeners` kolekcji śledzenie, określając poziom zdarzenia filtru jako `Error`.</span><span class="sxs-lookup"><span data-stu-id="544d1-138">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
+## <a name="example"></a><span data-ttu-id="f32e5-137">Przykład</span><span class="sxs-lookup"><span data-stu-id="f32e5-137">Example</span></span>  
+ <span data-ttu-id="f32e5-138">Poniższy przykład pokazuje, jak używać `<filter>` elementu Dodawanie filtru do odbiornika `console` w `Listeners` kolekcji śledzenie, określając poziom zdarzenia filtru jako `Error`.</span><span class="sxs-lookup"><span data-stu-id="f32e5-138">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,9 +81,9 @@ ms.locfileid: "55084188"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="544d1-139">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="544d1-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f32e5-139">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f32e5-139">See also</span></span>
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [<span data-ttu-id="544d1-140">Schemat ustawień śledzenia i debugowania</span><span class="sxs-lookup"><span data-stu-id="544d1-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="f32e5-140">Schemat ustawień śledzenia i debugowania</span><span class="sxs-lookup"><span data-stu-id="f32e5-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;para&gt; - C# Programming Guide'
+title: <para> - C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: e37f1b47ae1f45b29697fee220d99e6698a8c96d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e97ee59817ec0b60ac85d20199c9219c3e0014a3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498336"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261372"
 ---
-# <a name="ltparagt-c-programming-guide"></a><span data-ttu-id="de268-102">&lt;para&gt; (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="de268-102">&lt;para&gt; (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="de268-103">Składnia</span><span class="sxs-lookup"><span data-stu-id="de268-103">Syntax</span></span>  
+# <a name="para-c-programming-guide"></a><span data-ttu-id="96aab-102">\<para > (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="96aab-102">\<para> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="96aab-103">Składnia</span><span class="sxs-lookup"><span data-stu-id="96aab-103">Syntax</span></span>  
   
 ```xml  
 <para>content</para>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="de268-104">Parametry</span><span class="sxs-lookup"><span data-stu-id="de268-104">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="96aab-104">Parametry</span><span class="sxs-lookup"><span data-stu-id="96aab-104">Parameters</span></span>  
  `content`  
- <span data-ttu-id="de268-105">Tekst akapitu.</span><span class="sxs-lookup"><span data-stu-id="de268-105">The text of the paragraph.</span></span>  
+ <span data-ttu-id="96aab-105">Tekst akapitu.</span><span class="sxs-lookup"><span data-stu-id="96aab-105">The text of the paragraph.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="de268-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="de268-106">Remarks</span></span>  
- <span data-ttu-id="de268-107">\<Para > tag jest przeznaczona do użytku wewnątrz znacznik, taki jak [ \<podsumowania >](../../../csharp/programming-guide/xmldoc/summary.md), [ \<Uwagi >](../../../csharp/programming-guide/xmldoc/remarks.md), lub [ \<zwraca >](../../../csharp/programming-guide/xmldoc/returns.md)i umożliwia dodawanie struktury w tekście.</span><span class="sxs-lookup"><span data-stu-id="de268-107">The \<para> tag is for use inside a tag, such as [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md), [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md), or [\<returns>](../../../csharp/programming-guide/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="96aab-106">Uwagi</span><span class="sxs-lookup"><span data-stu-id="96aab-106">Remarks</span></span>  
+ <span data-ttu-id="96aab-107">\<Para > tag jest przeznaczona do użytku wewnątrz znacznik, taki jak [ \<podsumowania >](../../../csharp/programming-guide/xmldoc/summary.md), [ \<Uwagi >](../../../csharp/programming-guide/xmldoc/remarks.md), lub [ \<zwraca >](../../../csharp/programming-guide/xmldoc/returns.md)i umożliwia dodawanie struktury w tekście.</span><span class="sxs-lookup"><span data-stu-id="96aab-107">The \<para> tag is for use inside a tag, such as [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md), [\<remarks>](../../../csharp/programming-guide/xmldoc/remarks.md), or [\<returns>](../../../csharp/programming-guide/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
   
- <span data-ttu-id="de268-108">Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.</span><span class="sxs-lookup"><span data-stu-id="de268-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="96aab-108">Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.</span><span class="sxs-lookup"><span data-stu-id="96aab-108">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="de268-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="de268-109">Example</span></span>  
- <span data-ttu-id="de268-110">Zobacz [ \<podsumowania >](../../../csharp/programming-guide/xmldoc/summary.md) na przykład za pomocą \<para >.</span><span class="sxs-lookup"><span data-stu-id="de268-110">See [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) for an example of using \<para>.</span></span>  
+## <a name="example"></a><span data-ttu-id="96aab-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="96aab-109">Example</span></span>  
+ <span data-ttu-id="96aab-110">Zobacz [ \<podsumowania >](../../../csharp/programming-guide/xmldoc/summary.md) na przykład za pomocą \<para >.</span><span class="sxs-lookup"><span data-stu-id="96aab-110">See [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) for an example of using \<para>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de268-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="de268-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96aab-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="96aab-111">See also</span></span>
 
-- [<span data-ttu-id="de268-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="de268-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="de268-113">Zalecane tagi przeznaczone do komentarzy dokumentacji</span><span class="sxs-lookup"><span data-stu-id="de268-113">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="96aab-112">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="96aab-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="96aab-113">Zalecane tagi przeznaczone do komentarzy dokumentacji</span><span class="sxs-lookup"><span data-stu-id="96aab-113">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

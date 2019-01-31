@@ -1,5 +1,5 @@
 ---
-title: '&lt;codeBase&gt; Element'
+title: <codeBase>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: 0c4856085574792f567ff0e4bce34fc76a9c1565
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ebf7e2624cc36fb6a758afef38e2054669061dff
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083304"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269656"
 ---
-# <a name="ltcodebasegt-element"></a><span data-ttu-id="781c1-102">&lt;codeBase&gt; Element</span><span class="sxs-lookup"><span data-stu-id="781c1-102">&lt;codeBase&gt; Element</span></span>
-<span data-ttu-id="781c1-103">Określa, gdzie znaleźć zestawu środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="781c1-103">Specifies where the common language runtime can find an assembly.</span></span>  
+# <a name="codebase-element"></a><span data-ttu-id="685cc-102">\<codeBase> Element</span><span class="sxs-lookup"><span data-stu-id="685cc-102">\<codeBase> Element</span></span>
+<span data-ttu-id="685cc-103">Określa, gdzie znaleźć zestawu środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="685cc-103">Specifies where the common language runtime can find an assembly.</span></span>  
   
- <span data-ttu-id="781c1-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="781c1-104">\<configuration></span></span>  
-<span data-ttu-id="781c1-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="781c1-105">\<runtime></span></span>  
-<span data-ttu-id="781c1-106">\<assemblybinding — ></span><span class="sxs-lookup"><span data-stu-id="781c1-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="781c1-107">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="781c1-107">\<dependentAssembly></span></span>  
-<span data-ttu-id="781c1-108">\<codeBase></span><span class="sxs-lookup"><span data-stu-id="781c1-108">\<codeBase></span></span>  
+ <span data-ttu-id="685cc-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="685cc-104">\<configuration></span></span>  
+<span data-ttu-id="685cc-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="685cc-105">\<runtime></span></span>  
+<span data-ttu-id="685cc-106">\<assemblybinding — ></span><span class="sxs-lookup"><span data-stu-id="685cc-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="685cc-107">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="685cc-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="685cc-108">\<codeBase></span><span class="sxs-lookup"><span data-stu-id="685cc-108">\<codeBase></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="781c1-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="781c1-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="685cc-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="685cc-109">Syntax</span></span>  
   
 ```xml  
    <codeBase    
@@ -33,43 +33,43 @@ version="Assembly version"
 href="URL of assembly"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="781c1-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="781c1-110">Attributes and Elements</span></span>  
- <span data-ttu-id="781c1-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="781c1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="685cc-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="685cc-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="685cc-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="685cc-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="781c1-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="781c1-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="685cc-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="685cc-112">Attributes</span></span>  
   
-|<span data-ttu-id="781c1-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="781c1-113">Attribute</span></span>|<span data-ttu-id="781c1-114">Opis</span><span class="sxs-lookup"><span data-stu-id="781c1-114">Description</span></span>|  
+|<span data-ttu-id="685cc-113">Atrybut</span><span class="sxs-lookup"><span data-stu-id="685cc-113">Attribute</span></span>|<span data-ttu-id="685cc-114">Opis</span><span class="sxs-lookup"><span data-stu-id="685cc-114">Description</span></span>|  
 |---------------|-----------------|  
-|`href`|<span data-ttu-id="781c1-115">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="781c1-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="781c1-116">Określa adres URL, których środowisko uruchomieniowe można znaleźć określonej wersji zestawu.</span><span class="sxs-lookup"><span data-stu-id="781c1-116">Specifies the URL where the runtime can find the specified version of the assembly.</span></span>|  
-|`version`|<span data-ttu-id="781c1-117">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="781c1-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="781c1-118">Określa wersję zestawu, który dotyczy bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="781c1-118">Specifies the version of the assembly the codebase applies to.</span></span> <span data-ttu-id="781c1-119">Format numeru wersji zestawu to *główna.pomocnicza.kompilacja.poprawka*.</span><span class="sxs-lookup"><span data-stu-id="781c1-119">The format of an assembly version number is *major.minor.build.revision*.</span></span>|  
+|`href`|<span data-ttu-id="685cc-115">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="685cc-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="685cc-116">Określa adres URL, których środowisko uruchomieniowe można znaleźć określonej wersji zestawu.</span><span class="sxs-lookup"><span data-stu-id="685cc-116">Specifies the URL where the runtime can find the specified version of the assembly.</span></span>|  
+|`version`|<span data-ttu-id="685cc-117">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="685cc-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="685cc-118">Określa wersję zestawu, który dotyczy bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="685cc-118">Specifies the version of the assembly the codebase applies to.</span></span> <span data-ttu-id="685cc-119">Format numeru wersji zestawu to *główna.pomocnicza.kompilacja.poprawka*.</span><span class="sxs-lookup"><span data-stu-id="685cc-119">The format of an assembly version number is *major.minor.build.revision*.</span></span>|  
   
-## <a name="version-attribute"></a><span data-ttu-id="781c1-120">Wersja atrybutu</span><span class="sxs-lookup"><span data-stu-id="781c1-120">version Attribute</span></span>  
+## <a name="version-attribute"></a><span data-ttu-id="685cc-120">Wersja atrybutu</span><span class="sxs-lookup"><span data-stu-id="685cc-120">version Attribute</span></span>  
   
-|<span data-ttu-id="781c1-121">Wartość</span><span class="sxs-lookup"><span data-stu-id="781c1-121">Value</span></span>|<span data-ttu-id="781c1-122">Opis</span><span class="sxs-lookup"><span data-stu-id="781c1-122">Description</span></span>|  
+|<span data-ttu-id="685cc-121">Wartość</span><span class="sxs-lookup"><span data-stu-id="685cc-121">Value</span></span>|<span data-ttu-id="685cc-122">Opis</span><span class="sxs-lookup"><span data-stu-id="685cc-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="781c1-123">Prawidłowe wartości dla każdej części numer wersji to od 0 do 65535.</span><span class="sxs-lookup"><span data-stu-id="781c1-123">Valid values for each part of the version number are 0 to 65535.</span></span>|<span data-ttu-id="781c1-124">Nie dotyczy.</span><span class="sxs-lookup"><span data-stu-id="781c1-124">Not applicable.</span></span>|  
+|<span data-ttu-id="685cc-123">Prawidłowe wartości dla każdej części numer wersji to od 0 do 65535.</span><span class="sxs-lookup"><span data-stu-id="685cc-123">Valid values for each part of the version number are 0 to 65535.</span></span>|<span data-ttu-id="685cc-124">Nie dotyczy.</span><span class="sxs-lookup"><span data-stu-id="685cc-124">Not applicable.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="781c1-125">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="781c1-125">Child Elements</span></span>  
- <span data-ttu-id="781c1-126">Brak.</span><span class="sxs-lookup"><span data-stu-id="781c1-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="685cc-125">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="685cc-125">Child Elements</span></span>  
+ <span data-ttu-id="685cc-126">Brak.</span><span class="sxs-lookup"><span data-stu-id="685cc-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="781c1-127">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="781c1-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="685cc-127">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="685cc-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="781c1-128">Element</span><span class="sxs-lookup"><span data-stu-id="781c1-128">Element</span></span>|<span data-ttu-id="781c1-129">Opis</span><span class="sxs-lookup"><span data-stu-id="781c1-129">Description</span></span>|  
+|<span data-ttu-id="685cc-128">Element</span><span class="sxs-lookup"><span data-stu-id="685cc-128">Element</span></span>|<span data-ttu-id="685cc-129">Opis</span><span class="sxs-lookup"><span data-stu-id="685cc-129">Description</span></span>|  
 |-------------|-----------------|  
-|`buildproviders`|<span data-ttu-id="781c1-130">Definiuje kolekcję dostawców kompilacji używana do kompilowania plików zasobów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="781c1-130">Defines a collection of build providers used to compile custom resource files.</span></span> <span data-ttu-id="781c1-131">Może mieć dowolną liczbę dostawców kompilacji.</span><span class="sxs-lookup"><span data-stu-id="781c1-131">You can have any number of build providers.</span></span>|  
-|`compilation`|<span data-ttu-id="781c1-132">Konfiguruje wszystkie ustawienia kompilacji używane przez program ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="781c1-132">Configures all the compilation settings that ASP.NET uses.</span></span>|  
-|`configuration`|<span data-ttu-id="781c1-133">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="781c1-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`System.web`|<span data-ttu-id="781c1-134">Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="781c1-134">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`buildproviders`|<span data-ttu-id="685cc-130">Definiuje kolekcję dostawców kompilacji używana do kompilowania plików zasobów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="685cc-130">Defines a collection of build providers used to compile custom resource files.</span></span> <span data-ttu-id="685cc-131">Może mieć dowolną liczbę dostawców kompilacji.</span><span class="sxs-lookup"><span data-stu-id="685cc-131">You can have any number of build providers.</span></span>|  
+|`compilation`|<span data-ttu-id="685cc-132">Konfiguruje wszystkie ustawienia kompilacji używane przez program ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="685cc-132">Configures all the compilation settings that ASP.NET uses.</span></span>|  
+|`configuration`|<span data-ttu-id="685cc-133">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="685cc-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`System.web`|<span data-ttu-id="685cc-134">Określa element root dla sekcji konfiguracyjnej platformy ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="685cc-134">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="781c1-135">Uwagi</span><span class="sxs-lookup"><span data-stu-id="781c1-135">Remarks</span></span>  
- <span data-ttu-id="781c1-136">Użyj środowiska uruchomieniowego  **\<codeBase >** ustawienia w pliku konfiguracji komputera lub plik zasad wydawcy, plik również przekierować wersji zestawu.</span><span class="sxs-lookup"><span data-stu-id="781c1-136">For the runtime to use the **\<codeBase>** setting in a machine configuration file or publisher policy file, the file must also redirect the assembly version.</span></span> <span data-ttu-id="781c1-137">Pliki konfiguracyjne aplikacji może mieć ustawienie kodu bez przekierowywanie wersji zestawu.</span><span class="sxs-lookup"><span data-stu-id="781c1-137">Application configuration files can have a codebase setting without redirecting the assembly version.</span></span> <span data-ttu-id="781c1-138">Po ustaleniu, jakiego zestawu należy użyć, środowisko uruchomieniowe ma zastosowanie z ustawieniem kodu z pliku, który określa wersja.</span><span class="sxs-lookup"><span data-stu-id="781c1-138">After determining which assembly version to use, the runtime applies the codebase setting from the file that determines the version.</span></span> <span data-ttu-id="781c1-139">Jeśli codebase nie jest zaznaczone, środowisko uruchomieniowe sondy dla zestawu w zwykły sposób.</span><span class="sxs-lookup"><span data-stu-id="781c1-139">If no codebase is indicated, the runtime probes for the assembly in the usual way.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="685cc-135">Uwagi</span><span class="sxs-lookup"><span data-stu-id="685cc-135">Remarks</span></span>  
+ <span data-ttu-id="685cc-136">Użyj środowiska uruchomieniowego  **\<codeBase >** ustawienia w pliku konfiguracji komputera lub plik zasad wydawcy, plik również przekierować wersji zestawu.</span><span class="sxs-lookup"><span data-stu-id="685cc-136">For the runtime to use the **\<codeBase>** setting in a machine configuration file or publisher policy file, the file must also redirect the assembly version.</span></span> <span data-ttu-id="685cc-137">Pliki konfiguracyjne aplikacji może mieć ustawienie kodu bez przekierowywanie wersji zestawu.</span><span class="sxs-lookup"><span data-stu-id="685cc-137">Application configuration files can have a codebase setting without redirecting the assembly version.</span></span> <span data-ttu-id="685cc-138">Po ustaleniu, jakiego zestawu należy użyć, środowisko uruchomieniowe ma zastosowanie z ustawieniem kodu z pliku, który określa wersja.</span><span class="sxs-lookup"><span data-stu-id="685cc-138">After determining which assembly version to use, the runtime applies the codebase setting from the file that determines the version.</span></span> <span data-ttu-id="685cc-139">Jeśli codebase nie jest zaznaczone, środowisko uruchomieniowe sondy dla zestawu w zwykły sposób.</span><span class="sxs-lookup"><span data-stu-id="685cc-139">If no codebase is indicated, the runtime probes for the assembly in the usual way.</span></span>  
   
- <span data-ttu-id="781c1-140">Jeśli zestaw ma silną nazwą, ustawienie kodu może być dowolnym miejscu na lokalny intranet lub Internetem.</span><span class="sxs-lookup"><span data-stu-id="781c1-140">If the assembly has a strong name, the codebase setting can be anywhere on the local intranet or the Internet.</span></span> <span data-ttu-id="781c1-141">Jeśli zestaw jest zestaw prywatny, ustawienie codebase musi być ścieżką względną wobec katalogu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="781c1-141">If the assembly is a private assembly, the codebase setting must be a path relative to the application's directory.</span></span>  
+ <span data-ttu-id="685cc-140">Jeśli zestaw ma silną nazwą, ustawienie kodu może być dowolnym miejscu na lokalny intranet lub Internetem.</span><span class="sxs-lookup"><span data-stu-id="685cc-140">If the assembly has a strong name, the codebase setting can be anywhere on the local intranet or the Internet.</span></span> <span data-ttu-id="685cc-141">Jeśli zestaw jest zestaw prywatny, ustawienie codebase musi być ścieżką względną wobec katalogu aplikacji.</span><span class="sxs-lookup"><span data-stu-id="685cc-141">If the assembly is a private assembly, the codebase setting must be a path relative to the application's directory.</span></span>  
   
- <span data-ttu-id="781c1-142">Na zestawy bez silnej nazwy, wersji jest ignorowany, a moduł ładujący używa pierwszego pojawienia się \<codebase > wewnątrz \<dependentAssembly >.</span><span class="sxs-lookup"><span data-stu-id="781c1-142">For assemblies without a strong name, version is ignored and the loader uses the first appearance of \<codebase> inside \<dependentAssembly>.</span></span> <span data-ttu-id="781c1-143">Jeśli istnieje wpis w pliku konfiguracyjnym aplikacji, który przekierowuje powiązanie do innego zestawu, przekierowywanie będą miały pierwszeństwo, nawet wtedy, gdy wersja zestawu nie odpowiada na żądania powiązania.</span><span class="sxs-lookup"><span data-stu-id="781c1-143">If there is an entry in the application configuration file that redirects binding to another assembly, the redirection will take precedence even if the assembly version doesnt match the binding request.</span></span>  
+ <span data-ttu-id="685cc-142">Na zestawy bez silnej nazwy, wersji jest ignorowany, a moduł ładujący używa pierwszego pojawienia się \<codebase > wewnątrz \<dependentAssembly >.</span><span class="sxs-lookup"><span data-stu-id="685cc-142">For assemblies without a strong name, version is ignored and the loader uses the first appearance of \<codebase> inside \<dependentAssembly>.</span></span> <span data-ttu-id="685cc-143">Jeśli istnieje wpis w pliku konfiguracyjnym aplikacji, który przekierowuje powiązanie do innego zestawu, przekierowywanie będą miały pierwszeństwo, nawet wtedy, gdy wersja zestawu nie odpowiada na żądania powiązania.</span><span class="sxs-lookup"><span data-stu-id="685cc-143">If there is an entry in the application configuration file that redirects binding to another assembly, the redirection will take precedence even if the assembly version doesnt match the binding request.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="781c1-144">Przykład</span><span class="sxs-lookup"><span data-stu-id="781c1-144">Example</span></span>  
- <span data-ttu-id="781c1-145">Poniższy przykład pokazuje, jak określić, gdzie środowisko uruchomieniowe można znaleźć zestawu.</span><span class="sxs-lookup"><span data-stu-id="781c1-145">The following example shows how to specify where the runtime can find an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="685cc-144">Przykład</span><span class="sxs-lookup"><span data-stu-id="685cc-144">Example</span></span>  
+ <span data-ttu-id="685cc-145">Poniższy przykład pokazuje, jak określić, gdzie środowisko uruchomieniowe można znaleźć zestawu.</span><span class="sxs-lookup"><span data-stu-id="685cc-145">The following example shows how to specify where the runtime can find an assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -87,8 +87,8 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="781c1-146">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="781c1-146">See also</span></span>
-- [<span data-ttu-id="781c1-147">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="781c1-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="781c1-148">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="781c1-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="781c1-149">Określanie lokalizacji zestawu</span><span class="sxs-lookup"><span data-stu-id="781c1-149">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [<span data-ttu-id="781c1-150">Sposoby lokalizowania zestawów przez środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="781c1-150">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="685cc-146">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="685cc-146">See also</span></span>
+- [<span data-ttu-id="685cc-147">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="685cc-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="685cc-148">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="685cc-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="685cc-149">Określanie lokalizacji zestawu</span><span class="sxs-lookup"><span data-stu-id="685cc-149">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
+- [<span data-ttu-id="685cc-150">Sposoby lokalizowania zestawów przez środowisko uruchomieniowe</span><span class="sxs-lookup"><span data-stu-id="685cc-150">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

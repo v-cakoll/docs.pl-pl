@@ -1,5 +1,5 @@
 ---
-title: 'Rozwiązywanie problemów: Usługi aplikacji kupione&#39;instalować'
+title: 'Rozwiązywanie problemów: Aplikacja usług nie instaluje'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - troubleshooting service applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: 45c48e2e-b97d-44bc-8896-14f328e0ce33
 author: ghogen
-ms.openlocfilehash: 998c7a3f5ca405b3bd66b877d027126f6c76cc15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecbaa3b2fb0e0fc85ed383385368617bf361f497
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494421"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289442"
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>Rozwiązywanie problemów: Usługi aplikacji kupione&#39;instalować
+# <a name="troubleshooting-service-application-wont-install"></a>Rozwiązywanie problemów: Aplikacja usług nie instaluje
 Jeśli Twoja aplikacja usługi nie zainstaluje się poprawnie, sprawdź, upewnij się, że <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> właściwość klasy usługi jest ustawiona na tę samą wartość, pokazane w Instalatorze za daną usługę. Wartość musi być taka sama w obu przypadkach, w kolejności dla usługi w taki sposób poprawnie zainstalować.  
   
 > [!NOTE]

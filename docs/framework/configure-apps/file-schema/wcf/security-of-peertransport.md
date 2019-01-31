@@ -1,15 +1,15 @@
 ---
-title: '&lt;security&gt; w &lt;peerTransport&gt;'
+title: <security> z <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 8b0b8c5f230e8e93c07e13212201896010429af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aadf2058c66cea4919d5dc9aa5aeab7850fcc395
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585383"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283767"
 ---
-# <a name="ltsecuritygt-of-ltpeertransportgt"></a>&lt;security&gt; w &lt;peerTransport&gt;
+# <a name="security-of-peertransport"></a>\<Zabezpieczenia > z \<peerTransport >
 Zawiera ustawienia zabezpieczenia skojarzone z równorzędnym kanałem, takie jak typ uwierzytelniania i zabezpieczenia używany do transportu wiadomości.  
   
  \<system.serviceModel>  

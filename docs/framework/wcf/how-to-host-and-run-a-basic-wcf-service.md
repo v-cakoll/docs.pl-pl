@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation'
+title: Jak hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a029ef23ba3e9a0dd62e410739fa8734acc202a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129379"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277774"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Instrukcje: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Jak hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
 
-Jest to trzecia sześciu zadań podrzędnych, wymagane do utworzenia aplikacji Windows Communication Foundation (WCF). Omówienie wszystkich sześciu zadań, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.
+Jest to trzecia sześciu zadań podrzędnych, wymagane do utworzenia aplikacji Windows Communication Foundation (WCF). Omówienie wszystkich sześciu zadań, zobacz [Samouczek wprowadzający](getting-started-tutorial.md) tematu.
 
 W tym temacie opisano, jak hostować usługi Windows Communication Foundation (WCF) w aplikacji konsoli. Ta procedura obejmuje następujące kroki:
 
@@ -142,14 +142,14 @@ End Module
 
 **Krok 2** — tworzy wystąpienie <xref:System.ServiceModel.ServiceHost> klasy do obsługi usługi. Konstruktor przyjmuje dwa parametry typu klasy, który implementuje ten kontrakt usługi i podstawowego adresu usługi.
 
-**Krok 3** — tworzy <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia. Punkt końcowy usługi składa się z adresu, powiązanie i kontraktu usługi. <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor przyjmuje w związku z tym typem interfejsu kontraktu usługi, powiązanie i adres. Umowa serwisowa jest `ICalculator`, zdefiniowane przez użytkownika, która implementuje typu usługi. Wiązanie używane w tym przykładzie jest <xref:System.ServiceModel.WSHttpBinding> czyli wbudowane powiązania, które służy do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](../../../docs/framework/wcf/bindings-overview.md). Adres jest dołączany do podstawowego adresu do identyfikowania punktu końcowego. Adres podany w tym kodzie jest "CalculatorService", dlatego jest w pełni kwalifikowany adres punktu końcowego `"http://localhost:8000/GettingStarted/CalculatorService"`.
+**Krok 3** — tworzy <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia. Punkt końcowy usługi składa się z adresu, powiązanie i kontraktu usługi. <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor przyjmuje w związku z tym typem interfejsu kontraktu usługi, powiązanie i adres. Umowa serwisowa jest `ICalculator`, zdefiniowane przez użytkownika, która implementuje typu usługi. Wiązanie używane w tym przykładzie jest <xref:System.ServiceModel.WSHttpBinding> czyli wbudowane powiązania, które służy do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](bindings-overview.md). Adres jest dołączany do podstawowego adresu do identyfikowania punktu końcowego. Adres podany w tym kodzie jest "CalculatorService", dlatego jest w pełni kwalifikowany adres punktu końcowego `"http://localhost:8000/GettingStarted/CalculatorService"`.
 
     > [!IMPORTANT]
-    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).
 
-**Krok 4** — Włączanie wymiany metadanych. Klienci będą używać wymiany metadanych do Generowanie serwerów proxy, które będą używane do wywoływania operacji usługi. Umożliwia tworzenie wymiany metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia, należy ustawić go w <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwości `true`i dodać zachowanie, aby <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` zbiór <xref:System.ServiceModel.ServiceHost> wystąpienia.
+**Krok 4** — Włączanie wymiany metadanych. Klienci będą używać wymiany metadanych do Generowanie serwerów proxy, które będą używane do wywoływania operacji usługi. Umożliwia tworzenie wymiany metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia, należy ustawić go w <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwości `true`i dodać zachowanie, aby <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> zbiór <xref:System.ServiceModel.ServiceHost> wystąpienia.
 
-**Krok 5** — Otwórz <xref:System.ServiceModel.ServiceHost> do nasłuchiwania pod kątem przychodzących wiadomości. Zauważ, że kod oczekuje na użytkownika trafić wprowadzić. Jeśli nie tego zrobić, aplikacja zostanie natychmiast zamknięta i usługa zostanie zamknięta. Zwróć również uwagę bloku try/catch używane. Po <xref:System.ServiceModel.ServiceHost> został uruchomiony, inny kod znajduje się w bloku try/catch. Aby uzyskać więcej informacji na temat bezpiecznego przechwytywanie wyjątków zgłaszanych przez <xref:System.ServiceModel.ServiceHost>, zobacz [Użyj Zamknij i Abort, aby zwolnić zasoby klienta WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+**Krok 5** — Otwórz <xref:System.ServiceModel.ServiceHost> do nasłuchiwania pod kątem przychodzących wiadomości. Zauważ, że kod oczekuje na użytkownika trafić wprowadzić. Jeśli nie tego zrobić, aplikacja zostanie natychmiast zamknięta i usługa zostanie zamknięta. Zwróć również uwagę bloku try/catch używane. Po <xref:System.ServiceModel.ServiceHost> został uruchomiony, inny kod znajduje się w bloku try/catch. Aby uzyskać więcej informacji na temat bezpiecznego przechwytywanie wyjątków zgłaszanych przez <xref:System.ServiceModel.ServiceHost>, zobacz [Użyj Zamknij i Abort, aby zwolnić zasoby klienta WCF](samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > Edytowanie pliku App.config w GettingStartedLib w celu odzwierciedlenia zmian w kodzie:
@@ -396,18 +396,18 @@ End Module
 ```
 
 > [!NOTE]
-> Usługi, takie jak tego wymaga uprawnienia do rejestrowania adresy HTTP na komputerze w celu nasłuchiwania. Administrator konta mają to uprawnienie, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. Aby uzyskać więcej informacji o sposobie konfigurowania rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Podczas uruchamiania w programie Visual Studio, service.exe muszą być uruchomione z uprawnieniami administratora.
+> Usługi, takie jak tego wymaga uprawnienia do rejestrowania adresy HTTP na komputerze w celu nasłuchiwania. Administrator konta mają to uprawnienie, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. Aby uzyskać więcej informacji o sposobie konfigurowania rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](feature-details/configuring-http-and-https.md). Podczas uruchamiania w programie Visual Studio, service.exe muszą być uruchomione z uprawnieniami administratora.
 
 ## <a name="next-steps"></a>Następne kroki
 
 Teraz usługa jest uruchomiona. Następne zadanie tworzenia klienta programu WCF.
 
 > [!div class="nextstepaction"]
-> [Jak: Utworzenie klienta WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [Instrukcje: Utworzenie klienta WCF](how-to-create-a-wcf-client.md)
 
-Aby uzyskać informacje dotyczące rozwiązywania problemów, zobacz [Rozwiązywanie problemów z samouczka Wprowadzenie](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
+Aby uzyskać informacje dotyczące rozwiązywania problemów, zobacz [Rozwiązywanie problemów z samouczka Wprowadzenie](troubleshooting-the-getting-started-tutorial.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [Host samodzielny](../../../docs/framework/wcf/samples/self-host.md)
+- [Wprowadzenie](samples/getting-started-sample.md)
+- [Host samodzielny](samples/self-host.md)

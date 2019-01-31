@@ -1,5 +1,5 @@
 ---
-title: Zmienna &#39; &lt;nazwa_zmiennej&gt; &#39; jest używana, zanim została do niej przypisana wartość
+title: Zmienna „<variablename>” jest używana, zanim zostanie do niej przypisana wartość
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42104
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: f91343e850600c9e5f4b4b4eb2126798baf3d980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23201b89f44f6384ae9f75d941d264e8d59bef80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647026"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268837"
 ---
-# <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>Zmienna &#39; &lt;nazwa_zmiennej&gt; &#39; jest używana, zanim została do niej przypisana wartość
+# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wartość
 Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wartość. W czasie wykonywania może wystąpić wyjątek pustej referencji.  
   
  Aplikacja ma co najmniej jedną ścieżkę możliwe za pośrednictwem jego kod, który odczytuje zmienną przed przypisaniem do niej dowolną wartość.  

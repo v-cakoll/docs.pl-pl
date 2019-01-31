@@ -1,15 +1,15 @@
 ---
-title: '&lt;userDefinedType&gt;'
+title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 1a4f371737e9e801f3b929f4d65ac310d5fe0e28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69571f5d34c2f844662f3d70ca67a2fb8ed0291
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642951"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284690"
 ---
-# <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
+# <a name="userdefinedtype"></a>\<userDefinedType>
 Reprezentuje użytkownika zdefiniowany typ (UDT), które ma być zawarty w kontrakcie usługi.  
   
  \<system.ServiceModel>  

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określić zestaw&#39;s w pełni kwalifikowana nazwa'
+title: 'Instrukcje: Określić w pełni kwalifikowanej nazwy zestawu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7124271c0118800883d4beb68591f8591ac43dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520714"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283520"
 ---
-# <a name="how-to-determine-an-assembly39s-fully-qualified-name"></a>Instrukcje: Określić zestaw&#39;s w pełni kwalifikowana nazwa
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Instrukcje: Określić w pełni kwalifikowanej nazwy zestawu
 Aby dowiedzieć się, w pełni kwalifikowana nazwa zestawu w globalnej pamięci podręcznej, użyj Global Assembly Cache Tool ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Zobacz [jak: Wyświetlanie zawartości globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Dla zestawów, które nie znajdują się w globalnej pamięci podręcznej, można uzyskać w pełni kwalifikowanej nazwy zestawu na kilka sposobów: można użyć kod służący do wypełniania wyjściowego informacji konsoli lub do zmiennej lub można użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)zbadać metadanych zestawu, który zawiera w pełni kwalifikowana nazwa.  

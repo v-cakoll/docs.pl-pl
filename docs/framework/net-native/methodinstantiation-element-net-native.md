@@ -1,17 +1,17 @@
 ---
-title: Element &lt;MethodInstantiation&gt; (architektura .NET Native)
+title: <MethodInstantiation> (Architektura .NET Native)
 ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2d05f9c727672c4f249e388a32b1101aaafd2f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccc8cd22c3175a2b6456f71d9dc773ce85848949
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538266"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275067"
 ---
-# <a name="ltmethodinstantiationgt-element-net-native"></a>Element &lt;MethodInstantiation&gt; (architektura .NET Native)
+# <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > (architektura .NET Native)
 Ma zastosowanie zasad odbicia środowiska uruchomieniowego do skonstruowanego metody rodzajowej.  
   
 ## <a name="syntax"></a>Składnia  

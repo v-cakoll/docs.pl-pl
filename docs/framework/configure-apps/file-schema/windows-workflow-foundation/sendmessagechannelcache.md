@@ -1,16 +1,16 @@
 ---
-title: '&lt;sendMessageChannelCache&gt;'
+title: <sendMessageChannelCache>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: dce81dec9067c25fc85b62cc4aa5860499347ab2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c8e381aa81655e8e3246e783ee7da45623d83ca
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657353"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55289253"
 ---
-# <a name="ltsendmessagechannelcachegt"></a>&lt;sendMessageChannelCache&gt;
+# <a name="sendmessagechannelcache"></a>\<sendMessageChannelCache>
 Zachowanie usługi, który umożliwia dostosowywania pamięci podręcznej udostępnianie poziomy, ustawienia pamięci podręcznej fabryki kanału i ustawienia pamięci podręcznej kanału do wysyłania wiadomości do punktów końcowych usługi za pomocą wysyłania wiadomości działania przepływami pracy.  
   
 \<system.ServiceModel>  

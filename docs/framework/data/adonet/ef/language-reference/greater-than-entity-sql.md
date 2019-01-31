@@ -1,15 +1,15 @@
 ---
-title: '&gt; (Większe niż) (Jednostka SQL)'
+title: '> (Większe niż) (Jednostka SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
-ms.openlocfilehash: 1449af09022a9e11be1f3627023318270adf0121
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4a0f60f6dcaf503dca0b16ed80bc05884922b34
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736932"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277397"
 ---
-# <a name="gt-greater-than-entity-sql"></a>&gt; (Większe niż) (Jednostka SQL)
+# <a name="-greater-than-entity-sql"></a>> (Większe niż) (jednostka SQL)
 Porównuje dwa wyrażenia w celu określenia, czy lewe wyrażenie ma wartość większą niż wyrażenie prawej krawędzi.  
   
 ## <a name="syntax"></a>Składnia  

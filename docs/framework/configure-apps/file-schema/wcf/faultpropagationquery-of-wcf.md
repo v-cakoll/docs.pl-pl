@@ -1,15 +1,15 @@
 ---
-title: '&lt;faultPropagationQuery&gt; w WCF'
+title: <faultPropagationQuery> w WCF
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: 1da2a95d27756296aab5a205a90fb028508c4b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1670f8fdf72bc202a4a595034f3818ab43b11be6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601808"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276058"
 ---
-# <a name="ltfaultpropagationquerygt-of-wcf"></a>&lt;faultPropagationQuery&gt; w WCF
+# <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery > w WCF
 
 Reprezentuje zapytanie, które jest używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia. Należy użyć takiej kwerendy do śledzenia obsługi błędów występujących w ramach działania. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania błędów propagacji rekordów.  
   

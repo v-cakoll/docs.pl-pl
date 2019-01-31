@@ -1,5 +1,5 @@
 ---
-title: Co&#39;s jako przestarzałe w bibliotece klas programu .NET Framework
+title: Przestarzałe elementy w bibliotece klas programu .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541264"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287823"
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Co&#39;s jako przestarzałe w bibliotece klas programu .NET Framework
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>Przestarzałe elementy w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i składowe typu, które zapewniają nowe funkcje. Istniejące typy i składowe są również zmienić wraz z upływem czasu. Na przykład niektóre typy stać się mniej ważne technologii, które obsługują zostaje zastąpiona przez nową technologię, a niektóre metody są zastępowane przez nowszą metody, które są bardziej wygodne lub zaawansowanych funkcji.  
   
  .NET Framework i środowiska uruchomieniowego języka wspólnego Dokładamy wszelkich starań obsługiwać zgodność z poprzednimi wersjami (dzięki czemu aplikacje, które zostały opracowane z jednej wersji programu .NET Framework do uruchamiania w następnej wersji programu .NET Framework). Utrudnia to po prostu usunąć typu lub składowej typu. Zamiast tego programu .NET Framework wskazuje, że typu lub składowej typu powinna nie jest już używane, oznaczając je jako nieaktualne lub przestarzały. Wycofano typu lub elementu członkowskiego obejmuje, oznaczając je, tak aby deweloperzy mają świadomość spowoduje pozbycie i masz czasu na odpowiadanie na jego usunięcie. Jednak istniejący kod, który używa typu lub elementu członkowskiego kontynuuje działanie w nowej wersji programu .NET Framework.  

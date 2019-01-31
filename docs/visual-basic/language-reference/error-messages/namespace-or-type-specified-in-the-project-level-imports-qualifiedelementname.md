@@ -1,5 +1,5 @@
 ---
-title: Namespace lub typ określony w elemencie Imports na poziomie projektu &#39; &lt;qualifiedelementname&gt; &#39; &#39;t zawiera żadnej publicznej składowej lub nie można odnaleźć
+title: Przestrzeń nazw lub typ określony w elemencie Imports „<qualifiedelementname>” na poziomie projektu nie zawierają żadnego członka publicznego lub nie można go odnaleźć
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40057
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 215d8d301317f711aecb88167030e70ed01408aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12d20a88179a3d0c93c18f0aed65ca46b001059a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552466"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283312"
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace lub typ określony w elemencie Imports na poziomie projektu &#39; &lt;qualifiedelementname&gt; &#39; &#39;t zawiera żadnej publicznej składowej lub nie można odnaleźć
+# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace lub typ określony w elemencie Imports na poziomie projektu\<qualifiedelementname >' nie zawiera żadnej publicznej składowej lub nie można odnaleźć
 Namespace lub typ określony w elemencie Imports na poziomie projektu\<qualifiedelementname >' nie zawiera żadnej publicznej składowej lub nie można odnaleźć. Upewnij się, że przestrzeń nazw lub typ zostały zdefiniowane i zawierają co najmniej jednego członka publicznego. Upewnij się, że nazwa aliasu nie zawiera innych aliasów.  
   
  Właściwość importowania projektu określa element zawierający, która nie może być odnaleziona lub nie definiuje `Public` elementów członkowskich.  

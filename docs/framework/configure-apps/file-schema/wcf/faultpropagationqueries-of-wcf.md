@@ -1,15 +1,15 @@
 ---
-title: '&lt;faultPropagationQueries&gt; w WCF'
+title: <faultPropagationQueries> w WCF
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: 77a38f8474b5e2ac8634d6ea91bc80c6044ff3ed
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bc016827c5bb243bc83dbb53c1eda7eec1bfd8c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144967"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280400"
 ---
-# <a name="ltfaultpropagationqueriesgt-of-wcf"></a>&lt;faultPropagationQueries&gt; w WCF
+# <a name="faultpropagationqueries-of-wcf"></a>\<faultPropagationQueries > w WCF
 
 Reprezentuje kolekcję zapytań, które są używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia. Należy użyć takiej kwerendy do śledzenia obsługi błędów występujących w ramach działania. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania błędów propagacji rekordów.  
   
@@ -17,10 +17,10 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profile >  
+\<profiles>  
 \<trackingProfile>  
 \<przepływ pracy >  
-\<faultPropagationQueries >  
+\<faultPropagationQueries>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -51,7 +51,7 @@ Brak.
 
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](faultpropagationquery-of-wcf.md)|Zapytanie, które jest używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia.|  
+|[\<faultPropagationQuery>](faultpropagationquery-of-wcf.md)|Zapytanie, które jest używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

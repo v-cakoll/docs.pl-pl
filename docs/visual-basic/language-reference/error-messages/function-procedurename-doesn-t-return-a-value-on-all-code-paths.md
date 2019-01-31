@@ -1,5 +1,5 @@
 ---
-title: Funkcja &#39; &lt;nazwaprocedury&gt; &#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu
+title: Funkcja „<procedurename>" nie zwraca wartości we wszystkich ścieżkach kodu
 ms.date: 07/20/2015
 f1_keywords:
 - bc42105
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: b6cc5143aafb6c2554b183a1fc5fb3b1331ec5d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552193"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281063"
 ---
-# <a name="function-39ltprocedurenamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Funkcja &#39; &lt;nazwaprocedury&gt; &#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu
+# <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu
 Funkcja "\<nazwaprocedury >' nie zwraca wartości we wszystkich ścieżkach kodu. Czy nie brakuje instrukcji "Return"?  
   
  A `Function` procedura ma co najmniej jedną ścieżkę możliwe za pośrednictwem jego kodu, która nie zwraca wartości.  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;headers&gt;'
+title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: f47462ba63b9bd8868420ee9d3a320ba18c83c65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c3c3a3d747a1338e2db3afa92c735af4a588642
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557828"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288031"
 ---
-# <a name="ltheadersgt"></a>&lt;headers&gt;
+# <a name="headers"></a>\<headers>
 Punkt końcowy może zostać zlikwidowane przez jeden lub więcej nagłówków protokołu SOAP, oprócz jego podstawowego identyfikatora URI. Jeden zestaw scenariuszy, w których jest to przydatne to zestaw scenariuszy pośrednie protokołu SOAP, gdzie punktu końcowego wymaga od klientów zawiera nagłówków protokołu SOAP, przeznaczona dla pośredników tego punktu końcowego. Ten element konfiguracji, może służyć do definiowania takich Nagłówki niestandardowe adresów. Wpisy w kolekcję nagłówków punktu końcowego są zdefiniowane przez użytkownika elementy XML. Każdy element musi być poprawnie sformułowany XML.  
   
  \<system.ServiceModel>  

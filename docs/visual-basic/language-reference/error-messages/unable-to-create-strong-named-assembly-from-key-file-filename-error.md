@@ -1,5 +1,5 @@
 ---
-title: 'Nie można utworzyć zestawu o silnej nazwie z pliku klucza &#39; &lt;filename&gt;&#39;: &lt;błąd&gt;'
+title: 'Nie można utworzyć zestawu o silnej nazwie z pliku kluczy „<filename>": <error>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31026
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: de0f9fabdb2b64f0d246e2d169e60b35da2a28b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f8070dd05f9964546f03fc8227b8dbe8adccccd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511241"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269357"
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>Nie można utworzyć zestawu o silnej nazwie z pliku klucza &#39; &lt;filename&gt;&#39;: &lt;błąd&gt;
+# <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>Nie można utworzyć zestawu o silnej nazwie z pliku kluczy "\<nazwa pliku >": \<błąd >
 Nie można utworzyć zestawu z silną nazwą z określonego pliku klucza.  
   
  **Identyfikator błędu:** BC31026  

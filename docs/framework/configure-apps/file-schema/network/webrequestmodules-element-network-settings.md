@@ -1,5 +1,5 @@
 ---
-title: '&lt;webRequestModules&gt; — Element (ustawienia sieci)'
+title: <webRequestModules> — Element (Ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: 4e2a37f6829341b33475f91796e8671d867ac151
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd7c5765665345906597963f8a4b2dbf7fcc7227
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699795"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288850"
 ---
-# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; — Element (ustawienia sieci)
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules >, Element (ustawienia sieci)
 Określa moduły do użycia na żądanie informacji z hostów w sieci.  
   
  \<Konfiguracja >  

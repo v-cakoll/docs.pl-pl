@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptoClass&gt; Element'
+title: <cryptoClass>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: f97701a959db5babffb7da29892206efe57f630f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 161c9212600a417a97fa5a4e0edeac02db0f17a1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084019"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287537"
 ---
-# <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; Element
+# <a name="cryptoclass-element"></a>\<cryptoClass> Element
 Zawiera klasy kryptografii, która ma mapowania do przyjazną nazwę w [ \<nameentry — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) elementu.  
   
  \<Konfiguracja >  

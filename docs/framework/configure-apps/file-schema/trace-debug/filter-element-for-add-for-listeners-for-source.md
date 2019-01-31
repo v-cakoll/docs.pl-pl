@@ -1,5 +1,5 @@
 ---
-title: '&lt;Filtr&gt; elementu &lt;Dodaj&gt; dla &lt;odbiorników&gt; dla &lt;źródła&gt;'
+title: <filter> — Element do <add> dla <listeners> dla <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 76aecf0b97a1b203d790dc34d83bc01ea1de5236
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 7207e72c537e8338f8c646750016c9b6c810bf9a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083291"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260583"
 ---
-# <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Filtr&gt; elementu &lt;Dodaj&gt; dla &lt;odbiorników&gt; dla &lt;źródła&gt;
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<Filtr >, Element dla \<Dodaj > dla \<odbiorników > dla \<źródła >
 Dodaje filtr do odbiornika w `Listeners` kolekcję dla źródła śledzenia.  
   
  \<Konfiguracja >  

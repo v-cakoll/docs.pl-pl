@@ -1,5 +1,5 @@
 ---
-title: '&lt;Dodaj&gt; element dla NameValueSectionHandler i DictionarySectionHandler'
+title: <add> element dla NameValueSectionHandler i DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 502f86e49d68e456d8e64e00e7632aa603cafbe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b421b4bab32c1aae7a6ba7d69b9f4aea2ab99a5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523912"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278281"
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Dodaj >, element dla NameValueSectionHandler i DictionarySectionHandler
 

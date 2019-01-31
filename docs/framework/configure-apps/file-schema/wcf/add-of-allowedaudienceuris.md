@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; w &lt;allowedAudienceUris&gt;'
+title: <add> z <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-ms.openlocfilehash: 2e3939f670bcb2424cfb1dfaa2b5e036bbf2888b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5538db902525b03513a69fcc1a5c06d0877b8e0e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569014"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281154"
 ---
-# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a>&lt;add&gt; w &lt;allowedAudienceUris&gt;
+# <a name="add-of-allowedaudienceuris"></a>\<Dodaj > z \<allowedAudienceUris >
 Dodaje identyfikator Uri elementu docelowego dla którego <xref:System.IdentityModel.Tokens.SamlSecurityToken> tokenu zabezpieczeń może być kierowany aby były uważane za prawidłowe przez <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> wystąpienia.  
   
  \<system.ServiceModel>  

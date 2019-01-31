@@ -1,16 +1,16 @@
 ---
-title: '&lt;activityScheduledQueries&gt;'
+title: <activityScheduledQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ca6e82f1-54f2-48d6-899c-9873065b5547
-ms.openlocfilehash: 2285dfae84f078483c03d85801051e29b79e74c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6891144d613623b199e7279aa091d4d7cbe4445
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561845"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284560"
 ---
-# <a name="ltactivityscheduledqueriesgt"></a>&lt;activityScheduledQueries&gt;
+# <a name="activityscheduledqueries"></a>\<activityScheduledQueries>
 Reprezentuje kolekcję zapytań, które są używane do śledzenia działania zaPLanowane do wykonania przez działanie nadrzędne. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania zaPLanowane rekordów.  
   
  Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

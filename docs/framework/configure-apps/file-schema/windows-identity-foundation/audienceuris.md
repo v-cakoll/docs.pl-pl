@@ -1,23 +1,23 @@
 ---
-title: '&lt;audienceUris&gt;'
+title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: af138a4da49a48ed43e1bc8f2c2c81c56892feed
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48034483"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267278"
 ---
-# <a name="ltaudienceurisgt"></a>&lt;audienceUris&gt;
+# <a name="audienceuris"></a>\<audienceUris>
 Określa zbiór identyfikatorów URI, które są dopuszczalne identyfikatorów jednostki uzależnionej strony (RP). Tokeny nie będą akceptowane, chyba że są one w zakresie dla jednej z dozwolonych odbiorców identyfikatorów URI.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
 \<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<audienceUris >  
+\<securityTokenHandlerConfiguration>  
+\<audienceUris>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,7 +58,7 @@ Określa zbiór identyfikatorów URI, które są dopuszczalne identyfikatorów j
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji zabezpieczeń programy obsługi tokenów.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji zabezpieczeń programy obsługi tokenów.|  
   
 ## <a name="remarks"></a>Uwagi  
  Domyślnie kolekcja jest pusta, Użyj `<add>`, `<clear>`, i `<remove>` elementy, aby zmodyfikować kolekcji. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> i <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> obiekty wartości w kolekcji identyfikatora URI grupy odbiorców do skonfigurowania wszystkich dozwolone odbiorców ograniczeń identyfikatora URI w użycie <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> obiektów.  

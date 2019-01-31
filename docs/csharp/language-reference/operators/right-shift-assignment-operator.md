@@ -1,5 +1,5 @@
 ---
-title: '&gt;&gt;= — operator - C# odwołania'
+title: '>>= — operator - C# odwołania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: 02a9559a5c4086eeed09094c15c3620366ffad8c
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 8cc341c14ee1b90fde2abb369c187e57b4ce5c00
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333695"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278983"
 ---
-# <a name="gtgt-operator-c-reference"></a>&gt;&gt;= — operator (C# odwołania)
+# <a name="-operator-c-reference"></a>>> = — operator (C# odwołania)
 
 Operator przypisania przesunięcia w prawo.
 

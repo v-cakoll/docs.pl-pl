@@ -1,5 +1,5 @@
 ---
-title: '&lt;requestCaching —&gt; — Element (ustawienia sieci)'
+title: <requestCaching> — Element (Ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: e5d74a033b14d5f1b523422d0afd360206c0cb48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d78325438ba158c0c1d0e322d0b02d0a0a2a57f0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685016"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277709"
 ---
-# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching —&gt; — Element (ustawienia sieci)
+# <a name="requestcaching-element-network-settings"></a>\<requestCaching — >, Element (ustawienia sieci)
 Określa mechanizm buforowania żądań sieci.  
   
  \<Konfiguracja >  

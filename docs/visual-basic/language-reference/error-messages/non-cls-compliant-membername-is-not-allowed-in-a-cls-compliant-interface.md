@@ -1,5 +1,5 @@
 ---
-title: Non zgodne ze specyfikacją CLS &lt;membername&gt; jest niedozwolone w interfejsie zgodnym ze specyfikacją CLS
+title: Element <membername> niezgodny ze specyfikacją CLS jest niedozwolony w interfejsie zgodnym ze specyfikacją CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40033
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: c837065d2d448fc2523cfbd18efac962445f8bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627700"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288980"
 ---
-# <a name="non-cls-compliant-ltmembernamegt-is-not-allowed-in-a-cls-compliant-interface"></a>Non zgodne ze specyfikacją CLS &lt;membername&gt; jest niedozwolone w interfejsie zgodnym ze specyfikacją CLS
+# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Non zgodne ze specyfikacją CLS \<membername > jest niedozwolone w interfejsie zgodnym ze specyfikacją CLS
 Właściwość, procedura lub zdarzenie w interfejsie jest oznaczony jako `<CLSCompliant(True)>` po interfejsie, sama jest oznaczony jako `<CLSCompliant(False)>` lub nie jest oznaczona.  
   
  Dla interfejsu zachować zgodność z [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS), wszystkich jej członków muszą być zgodne.  

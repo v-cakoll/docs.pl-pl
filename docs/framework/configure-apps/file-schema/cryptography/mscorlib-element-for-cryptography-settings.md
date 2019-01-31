@@ -1,5 +1,5 @@
 ---
-title: '&lt;mscorlib&gt; Element ustawień kryptografii'
+title: <mscorlib> — Element ustawień kryptografii
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: a067f1f2793d98c51304269c7a37754031940824
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 84eb12916c2d1ec2d35830fae2c6ce07f1c7c664
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084162"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259644"
 ---
-# <a name="ltmscorlibgt-element-for-cryptography-settings"></a><span data-ttu-id="6cf71-102">&lt;mscorlib&gt; Element ustawień kryptografii</span><span class="sxs-lookup"><span data-stu-id="6cf71-102">&lt;mscorlib&gt; Element for Cryptography Settings</span></span>
-<span data-ttu-id="6cf71-103">Zawiera [ \<cryptographysettings — > element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span><span class="sxs-lookup"><span data-stu-id="6cf71-103">Contains the [\<cryptographySettings> element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span></span>  
+# <a name="mscorlib-element-for-cryptography-settings"></a><span data-ttu-id="c7f57-102">\<mscorlib > Element ustawień kryptografii</span><span class="sxs-lookup"><span data-stu-id="c7f57-102">\<mscorlib> Element for Cryptography Settings</span></span>
+<span data-ttu-id="c7f57-103">Zawiera [ \<cryptographysettings — > element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span><span class="sxs-lookup"><span data-stu-id="c7f57-103">Contains the [\<cryptographySettings> element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).</span></span>  
   
- <span data-ttu-id="6cf71-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="6cf71-104">\<configuration></span></span>  
-<span data-ttu-id="6cf71-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="6cf71-105">\<mscorlib></span></span>  
+ <span data-ttu-id="c7f57-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="c7f57-104">\<configuration></span></span>  
+<span data-ttu-id="c7f57-105">\<mscorlib></span><span class="sxs-lookup"><span data-stu-id="c7f57-105">\<mscorlib></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6cf71-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="6cf71-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7f57-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="c7f57-106">Syntax</span></span>  
   
 ```xml  
       <mscorlib>   
 </mscorlib>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6cf71-107">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="6cf71-107">Attributes and Elements</span></span>  
- <span data-ttu-id="6cf71-108">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="6cf71-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c7f57-107">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="c7f57-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="c7f57-108">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="c7f57-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6cf71-109">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="6cf71-109">Attributes</span></span>  
- <span data-ttu-id="6cf71-110">Brak.</span><span class="sxs-lookup"><span data-stu-id="6cf71-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c7f57-109">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="c7f57-109">Attributes</span></span>  
+ <span data-ttu-id="c7f57-110">Brak.</span><span class="sxs-lookup"><span data-stu-id="c7f57-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="6cf71-111">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="6cf71-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c7f57-111">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="c7f57-111">Child Elements</span></span>  
   
-|<span data-ttu-id="6cf71-112">Element</span><span class="sxs-lookup"><span data-stu-id="6cf71-112">Element</span></span>|<span data-ttu-id="6cf71-113">Opis</span><span class="sxs-lookup"><span data-stu-id="6cf71-113">Description</span></span>|  
+|<span data-ttu-id="c7f57-112">Element</span><span class="sxs-lookup"><span data-stu-id="c7f57-112">Element</span></span>|<span data-ttu-id="c7f57-113">Opis</span><span class="sxs-lookup"><span data-stu-id="c7f57-113">Description</span></span>|  
 |-------------|-----------------|  
-|`cryptographySettings`|<span data-ttu-id="6cf71-114">Zawiera ustawienia szyfrowania.</span><span class="sxs-lookup"><span data-stu-id="6cf71-114">Contains cryptography settings.</span></span>|  
+|`cryptographySettings`|<span data-ttu-id="c7f57-114">Zawiera ustawienia szyfrowania.</span><span class="sxs-lookup"><span data-stu-id="c7f57-114">Contains cryptography settings.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="6cf71-115">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="6cf71-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c7f57-115">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="c7f57-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="6cf71-116">Element</span><span class="sxs-lookup"><span data-stu-id="6cf71-116">Element</span></span>|<span data-ttu-id="6cf71-117">Opis</span><span class="sxs-lookup"><span data-stu-id="6cf71-117">Description</span></span>|  
+|<span data-ttu-id="c7f57-116">Element</span><span class="sxs-lookup"><span data-stu-id="c7f57-116">Element</span></span>|<span data-ttu-id="c7f57-117">Opis</span><span class="sxs-lookup"><span data-stu-id="c7f57-117">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="6cf71-118">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6cf71-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`configuration`|<span data-ttu-id="c7f57-118">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c7f57-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="6cf71-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="6cf71-119">Example</span></span>  
- <span data-ttu-id="6cf71-120">Poniższy przykład pokazuje, jak używać  **\<mscorlib >** element odwołuje się do klasy kryptografii i konfigurowanie środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="6cf71-120">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="6cf71-121">Ciąg "RSA" można następnie przekazać do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metody i użyj <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodę, aby zwrócić `MyCryptoRSAClass` obiektu.</span><span class="sxs-lookup"><span data-stu-id="6cf71-121">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
+## <a name="example"></a><span data-ttu-id="c7f57-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="c7f57-119">Example</span></span>  
+ <span data-ttu-id="c7f57-120">Poniższy przykład pokazuje, jak używać  **\<mscorlib >** element odwołuje się do klasy kryptografii i konfigurowanie środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="c7f57-120">The following example shows how to use the **\<mscorlib>** element to reference a cryptography class and to configure the runtime.</span></span> <span data-ttu-id="c7f57-121">Ciąg "RSA" można następnie przekazać do <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> metody i użyj <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> metodę, aby zwrócić `MyCryptoRSAClass` obiektu.</span><span class="sxs-lookup"><span data-stu-id="c7f57-121">You can then pass the string "RSA" to the <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> method and use the <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> method to return a `MyCryptoRSAClass` object.</span></span>  
   
 ```xml  
 <configuration>  
@@ -68,10 +68,10 @@ ms.locfileid: "55084162"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6cf71-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6cf71-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7f57-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c7f57-122">See also</span></span>
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [<span data-ttu-id="6cf71-123">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="6cf71-123">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="6cf71-124">Schemat ustawień kryptografii</span><span class="sxs-lookup"><span data-stu-id="6cf71-124">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [<span data-ttu-id="6cf71-125">Usługi kryptograficzne</span><span class="sxs-lookup"><span data-stu-id="6cf71-125">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
-- [<span data-ttu-id="6cf71-126">Konfigurowanie klas kryptografii</span><span class="sxs-lookup"><span data-stu-id="6cf71-126">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [<span data-ttu-id="c7f57-123">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="c7f57-123">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="c7f57-124">Schemat ustawień kryptografii</span><span class="sxs-lookup"><span data-stu-id="c7f57-124">Cryptography Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [<span data-ttu-id="c7f57-125">Usługi kryptograficzne</span><span class="sxs-lookup"><span data-stu-id="c7f57-125">Cryptographic Services</span></span>](../../../../../docs/standard/security/cryptographic-services.md)
+- [<span data-ttu-id="c7f57-126">Konfigurowanie klas kryptografii</span><span class="sxs-lookup"><span data-stu-id="c7f57-126">Configuring Cryptography Classes</span></span>](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

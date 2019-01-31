@@ -3,13 +3,13 @@ title: Implementowanie zadań w tle w mikrousługach za pomocą interfejsu IHost
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Dowiedz się, nowe opcje do użycia pomocą interfejsu IHostedService i BackgroundService implementowania zadań tle w mikrousługach .NET Core.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/02/2018
-ms.openlocfilehash: 3fe1f4bdf80943394688941c17d3041ea90256da
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: 721a3129a00867279846bc44155b307f5e97ae39
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126085"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479788"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementowanie zadań w tle w mikrousługach za pomocą interfejsu IHostedService i klasa BackgroundService
 
@@ -27,11 +27,11 @@ Należy zanotować różnicę między `WebHost` i `Host`.
 
 A `WebHost` (podstawowa Implementacja klasy `IWebHost`) w programie ASP.NET Core 2.0 jest artefaktów infrastruktury umożliwia Podaj serwer HTTP funkcje do procesu, na przykład w przypadku wdrażania aplikacji sieci web MVC lub interfejsu API sieci Web usługi. Zawiera wszystkie nowe zgodność infrastruktury w programie ASP.NET Core, umożliwiając iniekcji zależności, Wstaw middlewares Potok żądań, itp. i dokładnie służą `IHostedServices` dla zadań w tle.
 
-A `Host` (podstawowa Implementacja klasy `IHost`), jednak jest coś, co nowego w programie .NET Core 2.1. Po prostu `Host` pozwala na korzystanie z podobnych infrastruktury niż posiadane przez Ciebie za pomocą `WebHost` (iniekcji zależności, hostowanych usług, itp.), ale w takim przypadku po prostu chcesz mieć jaśniejszy procesem jako hosta, z żadnych danych dotyczących MVC , HTTP i interfejsów API funkcji serwera w sieci web.
+A `Host` (podstawowa Implementacja klasy `IHost`) wprowadzono w programie .NET Core 2.1. Po prostu `Host` pozwala na korzystanie z podobnych infrastruktury niż posiadane przez Ciebie za pomocą `WebHost` (iniekcji zależności, hostowanych usług, itp.), ale w takim przypadku po prostu chcesz mieć jaśniejszy procesem jako hosta, z żadnych danych dotyczących MVC , HTTP i interfejsów API funkcji serwera w sieci web.
 
 W związku z tym, można wybrać i Utwórz wyspecjalizowane procesu hosta za pomocą IHost do obsługi usług hostowanych i nic, mikrousługi, stworzona dla hostingu `IHostedServices`, lub też można rozszerzyć istniejące platformy ASP.NET Core `WebHost` , takich jak istniejącej aplikacji i interfejsów API platformy ASP.NET Core MVC. 
 
-Każde podejście ma zalety i wady, w zależności od potrzeb biznesowych i skalowalności. Mierzenie jest zasadniczo Jeśli zadania w tle nie ma nic do zrobienia za pośrednictwem protokołu HTTP (IWebHost), należy użyć IHost (przy użyciu platformy .NET Core 2.1).
+Każde podejście ma zalety i wady, w zależności od potrzeb biznesowych i skalowalności. Mierzenie jest zasadniczo Jeśli zadania w tle nie ma nic do zrobienia za pośrednictwem protokołu HTTP (IWebHost), należy użyć IHost.
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Rejestrowanie hostowanych usług w hosta lub hostem sieci Web
 
@@ -47,7 +47,7 @@ SignalR jest przykładem artefakt przy użyciu usług hostowanych, ale możesz r
 
 W zasadzie można odciążyć dowolne z tych akcji, aby zadanie w tle oparte na pomocą interfejsu IHostedService.
 
-Sposób dodawania jednego lub wielu `IHostedServices` do Twojej `WebHost` lub `Host` polega na rejestrowania ich za pośrednictwem standardowych DI (iniekcji zależności) w programie ASP.NET Core `WebHost` (lub `Host` w programie .NET Core 2.1). Zasadniczo należy zarejestrować usług hostowanych w znanej `ConfigureServices()` metody `Startup` klasy, jak w poniższym kodzie z typowym hostem sieci Web platformy ASP.NET. 
+Sposób dodawania jednego lub wielu `IHostedServices` do Twojej `WebHost` lub `Host` polega na rejestrowania ich za pośrednictwem standardowych DI (iniekcji zależności) w programie ASP.NET Core `WebHost` (lub `Host` platformy .NET Core 2.1 lub więcej). Zasadniczo należy zarejestrować usług hostowanych w znanej `ConfigureServices()` metody `Startup` klasy, jak w poniższym kodzie z typowym hostem sieci Web platformy ASP.NET. 
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -101,11 +101,11 @@ Jako deweloper jest odpowiedzialny za obsługę Akcja zatrzymania lub usługi w 
 
 Przejdź dalej i tworzenia klasy niestandardowej usługi hostowanej od podstaw i zaimplementować `IHostedService`, jak należy wykonać w przypadku korzystania z platformy .NET Core 2.0. 
 
-Jednak ponieważ większość zadań w tle będzie miał podobnych potrzebach w zakresie zarządzania tokenów anulowania i innymi typowymi operacjami, platformy .NET Core 2.1 zapewnia bardzo wygodne abstrakcyjna klasa bazowa, użytkownik może pochodzić od, o nazwie BackgroundService.
+Ponieważ większość zadań w tle będzie miał podobnych potrzebach w zakresie zarządzania tokenów anulowania i innymi typowymi operacjami, ma jednak wygodne abstrakcyjna klasa bazowa może pochodzić od o nazwie `BackgroundService` (dostępny od platformy .NET Core 2.1).
 
 Ta klasa zawiera główna Praca niezbędne do skonfigurowania zadanie w tle.
 
-Następny kod jest abstrakcyjna klasa bazowa BackgroundService zaimplementowanego w programie .NET Core 2.1.
+Następny kod jest abstrakcyjna klasa bazowa BackgroundService zaimplementowanego w programie .NET Core.
 
 ```csharp
 // Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0. 
@@ -249,7 +249,7 @@ Ale nawet w przypadku `WebHost` wdrożone do puli aplikacji, istnieją scenarius
 -   **Implementowanie pomocą interfejsu IHostedService w programie ASP.NET Core 2.0** <br/>
     [*https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
 
--   **Przykłady Core 2.1 hostingu platformy ASP.NET** <br/>
+-   **Przykład GenericHost za pomocą platformy ASP.NET Core 2.1** <br/>
     [*https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
 
 >[!div class="step-by-step"]

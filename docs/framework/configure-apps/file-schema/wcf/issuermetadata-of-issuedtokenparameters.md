@@ -1,15 +1,15 @@
 ---
-title: '&lt;issuerMetadata&gt; w &lt;issuedTokenParameters&gt;'
+title: <issuerMetadata> z <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 74f5c1275eb7ef6a89d355b5ea279363ae6b8026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2697d24a731dbf8de3d68bcce7fd52c55ff6dc68
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546205"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276981"
 ---
-# <a name="ltissuermetadatagt-of-ltissuedtokenparametersgt"></a>&lt;issuerMetadata&gt; w &lt;issuedTokenParameters&gt;
+# <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata > z \<issuedTokenParameters >
 \<system.serviceModel>  
 \<powiązania >  
 \<customBinding>  

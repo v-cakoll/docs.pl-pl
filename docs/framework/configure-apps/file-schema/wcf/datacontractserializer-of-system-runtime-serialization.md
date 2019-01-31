@@ -1,15 +1,15 @@
 ---
-title: '&lt;dataContractSerializer&gt; w &lt;system.runtime.serialization&gt;'
+title: <dataContractSerializer> z < system.runtime.serialization >
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: 3a959c9a4e2b1cbbbb6a52a1438261037704d244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 488b0754194c1fa7896a168daac0a3a497076e56
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557971"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265938"
 ---
-# <a name="ltdatacontractserializergt-of-ltsystemruntimeserializationgt"></a>&lt;dataContractSerializer&gt; w &lt;system.runtime.serialization&gt;
+# <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer> of \<system.runtime.serialization>
 Zawierająca dane konfiguracyjne <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  \<system.runtime.serialization>  

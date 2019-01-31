@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513727"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480065"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Przewodnik: Buforowanie danych aplikacji w aplikacji WPF
-Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Dane o dostępie ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast tego podczas pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.
+Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Udostępnia klasy, które umożliwiają używanie buforowania w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji. W ramach tych zajęć, znajdują się w <xref:System.Runtime.Caching> przestrzeni nazw.
 
@@ -218,7 +218,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Jeśli nie podano żadnych informacji eksmisji lub data jej wygaśnięcia, wartość domyślna to <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, co oznacza, że wpisy w pamięci podręcznej nigdy nie wygasa oparte tylko na bezwzględnego czasu. Zamiast tego wpisy w pamięci podręcznej wygasa tylko wtedy, gdy wykorzystanie pamięci. Najlepszym rozwiązaniem należy zawsze jawnie określić bezwzględną lub wygaśnięcia elewacji.
+     Jeśli nie podano żadnych informacji eksmisji lub data jej wygaśnięcia, wartość domyślna to <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, co oznacza, że wpisy w pamięci podręcznej nigdy nie wygasa oparte tylko na bezwzględnego czasu. Zamiast tego wpisy w pamięci podręcznej wygasa tylko wtedy, gdy wykorzystanie pamięci. Najlepszym rozwiązaniem należy zawsze jawnie określić bezwzględną lub wygaśniecie.
 
 7.  Wewnątrz `if/then` blokowania i po kodzie dodanym w poprzednim kroku, Dodaj następujący kod, aby utworzyć kolekcję dla ścieżki do plików, które chcesz monitorować i Dodaj ścieżkę do pliku tekstowego do kolekcji:
 
@@ -254,7 +254,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      Sygnatura czasowa daty i godziny jest dodawany, dzięki czemu będą mogli zobaczyć po wygaśnięciu wpisu pamięci podręcznej.
@@ -296,7 +296,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
      Zawartości w pamięci podręcznej w pliku tekstowym jest wyświetlany w oknie komunikatu. Zwróć uwagę, znacznik czasu: w pliku.
 
-3.  Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie **.**
+3.  Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
 
      Sygnatura czasowa pozostaje bez zmian. Oznacza to, że jest wyświetlana zawartość z pamięci podręcznej.
 
@@ -306,7 +306,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 5.  W edytorze tekstu Otwórz plik tekstowy, który został utworzony. Jeszcze nie wprowadzaj żadnych zmian.
 
-6.  Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie **.**
+6.  Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
 
      Ponownie Zwróć uwagę sygnaturę czasową.
 

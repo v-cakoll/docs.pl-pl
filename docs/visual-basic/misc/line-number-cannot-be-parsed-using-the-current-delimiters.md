@@ -1,17 +1,17 @@
 ---
-title: Wiersz &lt;numer&gt; nie może zostać przeanalizowany przy użyciu bieżącego ograniczników
+title: Wiersz <number> nie może zostać przeanalizowany przy użyciu bieżącego ograniczników
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-ms.openlocfilehash: a5e4f5f5127322f4160ea73f627f59436bc83a3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 776cf7ed231f63ec9ad4308305fe77d500a4fc1b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652348"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257346"
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Wiersz &lt;numer&gt; nie może zostać przeanalizowany przy użyciu bieżącego ograniczników
+# <a name="line-number-cannot-be-parsed-using-the-current-delimiters"></a>Wiersz \<numer > nie można przeanalizować za pomocą bieżącego ograniczników
 Nie można przeanalizować określonego wiersza, ponieważ używa ona ograniczniki innych niż określone.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

@@ -1,5 +1,5 @@
 ---
-title: Niejawna konwersja z &#39; &lt;typename1&gt; &#39; do &#39; &lt;typename2&gt; &#39; podczas kopiowania wartości &#39;ByRef&#39; parametru &#39; &lt; Nazwa parametru&gt; &#39; powrotem do pasującego argumentu.
+title: Niejawna konwersja z „<typename1>” na „<typename2>” podczas kopiowania wartości parametru „ByRef” „<parametername>” z powrotem do pasującego argumentu.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc41999
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 9f05a5fbcbef828b4ffa920d8cade475cedb64d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537246"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279620"
 ---
-# <a name="implicit-conversion-from-39lttypename1gt39-to-39lttypename2gt39-in-copying-the-value-of-39byref39-parameter-39ltparameternamegt39-back-to-the-matching-argument"></a>Niejawna konwersja z &#39; &lt;typename1&gt; &#39; do &#39; &lt;typename2&gt; &#39; podczas kopiowania wartości &#39;ByRef&#39; parametru &#39; &lt; Nazwa parametru&gt; &#39; powrotem do pasującego argumentu.
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Niejawna konwersja z "\<typename1 >" do "\<typename2 >" podczas kopiowania wartości parametru "ByRef" "\<parametername >" powrotem do pasującego argumentu.
 Procedura jest wywoływana z [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) argumentu typu innego niż jego odpowiadającego mu parametru.  
   
  W przypadku przekazania argument `ByRef`, Visual Basic czasami kopiuje wartość argumentu do zmiennej lokalnej w procedurze, zamiast przekazywać odwołania. W takim przypadku po powrocie z procedury języka Visual Basic należy skopiować do argumentu w wywoływanym kodzie następnie wartości zmiennej lokalnej.  

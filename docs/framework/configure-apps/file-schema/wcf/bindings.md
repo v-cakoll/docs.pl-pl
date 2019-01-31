@@ -1,15 +1,15 @@
 ---
-title: '&lt;Powiązania&gt;'
+title: <bindings>
 ms.date: 03/30/2017
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: b7ef15f768e3eb5484bbc75eeaf988fd36fc155b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a952ff5a8dd39a5615aa17f15229557bbd0f41f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690231"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257307"
 ---
-# <a name="ltbindingsgt"></a>&lt;Powiązania&gt;
+# <a name="bindings"></a>\<powiązania >
 Ta sekcja przetrzymuje kolekcję powiązań standardowych i niestandardowych. Każdy wpis jest `binding` element, który może być określony przez jego unikatowy `name`. Usługi używają powiązania, łącząc je za pomocą `name`. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwę. Aby uzyskać więcej informacji o domyślnej konfiguracji i powiązania pustego oraz zachowań, zobacz [uproszczona konfiguracja](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="system-provided-binding"></a>System-Provided Binding  

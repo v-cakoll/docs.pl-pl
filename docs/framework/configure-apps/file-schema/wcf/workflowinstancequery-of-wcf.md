@@ -1,15 +1,15 @@
 ---
-title: '&lt;workflowInstanceQuery&gt; w WCF'
+title: <workflowInstanceQuery> w WCF
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 01867171941db82260d28b0825bdf3453e46e66c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148178"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278775"
 ---
-# <a name="ltworkflowinstancequerygt-of-wcf"></a>&lt;workflowInstanceQuery&gt; w WCF
+# <a name="workflowinstancequery-of-wcf"></a>\<workflowInstanceQuery > w WCF
 
 Reprezentuje zapytanie, które śledzenie zmian cyklu życia wystąpienia przepływu pracy, takich jak zdarzenia uruchomiona lub ukończone.  
   
@@ -17,11 +17,11 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profile >  
+\<profiles>  
 \<trackingProfile>  
 \<przepływ pracy >  
 \<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
+\<workflowInstanceQuery>  
   
 ## <a name="syntax"></a>Składnia  
   

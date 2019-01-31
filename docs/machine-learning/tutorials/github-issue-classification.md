@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu wielokla
 ms.date: 01/24/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6f01357906fd4398f68dadfb35dbce816f4302c0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: a951e884a7494b0dcc808fc3dafbfadebc5577dc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066210"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254993"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Samouczek: Umożliwia strukturze ML.NET w scenariuszu klasyfikacji wieloklasowej klasyfikacji problemów w usłudze GitHub.
 
@@ -106,6 +106,8 @@ Klasyfikacja zadań są często jednym z następujących typów:
 
 * Plik binarny: A i B.
 * Kontra: wielu kategorii, które można przewidzieć przy użyciu pojedynczego modelu.
+
+Tego rodzaju problem przy użyciu kontra klasyfikacji zadania, ponieważ do prognozowania kategorii problemu może być jednym z wielu kategorii (kontra) zamiast tylko dwóch (binarnych).
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 

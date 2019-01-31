@@ -1,15 +1,15 @@
 ---
-title: '&lt;bookmarkResumptionQuery&gt; w WCF'
+title: <bookmarkResumptionQuery> w WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 6463404e17edff8eb1efe3f96e44b5b9997ffca3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 38c87cefc49821b03d119299ef60e3fbbad21d7e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147814"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255123"
 ---
-# <a name="ltbookmarkresumptionquerygt-of-wcf"></a>&lt;bookmarkResumptionQuery&gt; w WCF
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery > w WCF
 
 Reprezentuje zapytanie, które jest używane do śledzenia wznowienie zakładki w ramach wystąpienie przepływu pracy. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania zakładki wznowienie rekordów.  
   
@@ -17,11 +17,11 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profile >  
+\<profiles>  
 \<trackingProfile>  
 \<przepływ pracy >  
-\<bookmarkResumptionQueries >  
-\<bookmarkResumptionQuery >  
+\<bookmarkResumptionQueries>  
+\<bookmarkResumptionQuery>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,7 +57,7 @@ Brak.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<bookmarkResumptionQueries >](bookmarkresumptionqueries-of-wcf.md)|Reprezentuje kolekcję zapytań, które są używane do śledzenia wznowienie zakładki w ramach wystąpienie przepływu pracy.|  
+|[\<bookmarkResumptionQueries>](bookmarkresumptionqueries-of-wcf.md)|Reprezentuje kolekcję zapytań, które są używane do śledzenia wznowienie zakładki w ramach wystąpienie przepływu pracy.|  
   
 ## <a name="see-also"></a>Zobacz także
 

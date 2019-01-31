@@ -1,17 +1,17 @@
 ---
-title: Element członkowski publiczny "&lt;membername&gt;"w typie"&lt;typename&gt;" nie znaleziono
+title: Element członkowski publiczny "<membername>"w typie"<typename>" nie znaleziono
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
-ms.openlocfilehash: 36918c99b41ed9b31b3463e22294e7462732c5e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14bd5dac22a8bed6402363294237569cb2ba00ea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625201"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258304"
 ---
-# <a name="public-member-ltmembernamegt-on-type-lttypenamegt-not-found"></a>Element członkowski publiczny "&lt;membername&gt;"w typie"&lt;typename&gt;" nie znaleziono
+# <a name="public-member-membername-on-type-typename-not-found"></a>Publicznego elementu członkowskiego "\<membername >" w typie "\<typename >' nie znaleziono
 Nie można odnaleźć elementu członkowskiego, do którego próbujesz uzyskać dostęp. Ten błąd może wystąpić podczas uzyskiwania dostępu do elementów członkowskich niepublicznych obiektów z późnym wiązaniem.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

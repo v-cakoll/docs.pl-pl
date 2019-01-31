@@ -1,5 +1,5 @@
 ---
-title: '&lt;&lt; Operator - C# odwołania'
+title: << operator - C# odwołania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: 79a48d88e2c83b5ad78804367ee3c07f78622c08
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 0271c97bc624a8946b90508e9ce39d217a128c05
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333528"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261753"
 ---
-# <a name="ltlt-operator-c-reference"></a>&lt;&lt; Operator (odwołanie w C#)
+# <a name="-operator-c-reference"></a>\<\< Operator (odwołanie w C#)
 
 Operator przesunięcia w lewo (`<<`) pierwszy argument operacji lewo o liczbę bitów określoną przez drugim argumentem operacji przesunięcia. Typ drugiego argumentu operacji musi być [int](../keywords/int.md) lub typ, który ma wstępnie zdefiniowanych niejawnej konwersji liczbowych do `int`.
 

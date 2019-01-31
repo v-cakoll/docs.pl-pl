@@ -1,17 +1,17 @@
 ---
-title: Wiersz &lt;numer&gt; nie można odczytać, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza.
+title: Wiersz <number> nie można odczytać, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-ms.openlocfilehash: 6288f50a28ed4edac876dd1ea08d9d09dbca90be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f9a784676777fa1419dc85f07ef26a614768ab8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671411"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256905"
 ---
-# <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Wiersz &lt;numer&gt; nie można odczytać, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza.
+# <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Wiersz \<numer > nie można odczytać, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza.
 Nie można odczytać wiersza, ponieważ jego rozmiar przekracza maksymalny rozmiar wiersza. Zwykle oznacza to, że jest to otwierający cudzysłów w pliku, ale nie cudzysłowu zamykającego.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

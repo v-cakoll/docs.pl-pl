@@ -1,5 +1,5 @@
 ---
-title: Niemożliwa reprezentacja wyrażenia stałego w typie &#39; &lt;typename&gt;&#39;
+title: Niemożliwa reprezentacja wyrażenia stałego w typie „<typename>”
 ms.date: 07/20/2015
 f1_keywords:
 - bc30439
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: e0acfb26ce75e88c5967233fb5496306deec7029
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6834e66d1d1b02465540b4568fba624aef079b40
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529082"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262825"
 ---
-# <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>Niemożliwa reprezentacja wyrażenia stałego w typie &#39; &lt;typename&gt;&#39;
+# <a name="constant-expression-not-representable-in-type-typename"></a>Niemożliwa reprezentacja wyrażenia stałego w typie "\<typename >"
 Próbujesz obliczyć stałą, który nie mieści się w typ docelowy zazwyczaj, ponieważ jest ona przepełnienie zakresu.  
   
  **Identyfikator błędu:** BC30439  

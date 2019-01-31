@@ -1,5 +1,5 @@
 ---
-title: '&#39;Jest&#39; wymaga argumentów operacji, które mają typ referencyjny, ale ten argument operacji ma typ wartości &#39; &lt;typename&gt;&#39;'
+title: Element „Is” wymaga argumentów operacji, które mają typ referencyjny, ale ten argument operacji ma typ wartości „<typename>”.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30020
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: 0b3f80e98087e455ec730dea8c57478528e9259c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbd0011e76ccecc605b0355025b7ca131e44724e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722923"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263937"
 ---
-# <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>&#39;Jest&#39; wymaga argumentów operacji, które mają typ referencyjny, ale ten argument operacji ma typ wartości &#39; &lt;typename&gt;&#39;
+# <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>"Is" wymaga argumentów operacji, które mają typ referencyjny, ale ten argument operacji ma typ wartości "\<typename >"
 `Is` Operator porównania określa, czy dwie zmienne do obiektu odnoszą się do tego samego wystąpienia. To porównanie nie jest zdefiniowany dla typów wartości.  
   
  **Identyfikator błędu:** BC30020  

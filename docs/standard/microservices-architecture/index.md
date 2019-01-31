@@ -3,19 +3,19 @@ title: Mikrousługi .NET. Architektura konteneryzowanych aplikacji .NET
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Mikrousługi są moduły i niezależnie do wdrożenia usługi. Kontenery platformy docker (dla systemu Linux i Windows) można uprościć wdrażanie i testowanie przez tworzenie pakietów usługi i jego zależności w pojedynczą jednostkę, który następnie jest uruchamiany w środowisku izolowanym.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030441"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479948"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET
 
 ![Okładki książki](./media/cover-small.png)
 
-**Wersja v2.1.03** — zaktualizowano w celu platformy ASP.NET Core 2.1
+**Wersja v2.2.00** — zaktualizowano w celu platformy ASP.NET Core 2.2
 
 Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzanie nimi przy użyciu kontenerów. Omówiono w nim kwestie projektowania architektonicznego i zbliża się do wdrożenia przy użyciu platformy .NET Core i kontenerów rozwiązania Docker. 
 
@@ -49,7 +49,7 @@ Po mają materiałami tego przewodnika, następnym krokiem jest więcej informac
 
 ## <a name="version"></a>Wersja
 
-Ten przewodnik został zaktualizowany w celu pokrycia **platformy .NET Core 2.1** wersji oraz wiele dodatkowe aktualizacje związane z takie same "wave" technologii (czyli. Azure wraz z dodatkowymi 3 innych firm technologii) odpowiedzialnego w czasie za pomocą platformy .NET Core 2.1. Dlatego wersji książki został także zaktualizowany do wersji **2.1**. 
+Ten przewodnik został zaktualizowany w celu pokrycia **platformy .NET Core 2.2** wersji oraz wiele dodatkowe aktualizacje związane z takie same "wave" technologii (czyli. Azure wraz z dodatkowymi 3 innych firm technologii) odpowiedzialnego w czasie za pomocą platformy .NET Core 2.2. Dlatego wersji książki został także zaktualizowany do wersji **2.2**. 
 
 ## <a name="what-this-guide-does-not-cover"></a>Co ten przewodnik nie obejmuje
 
@@ -90,7 +90,7 @@ Współautorzy:
 
 > **Torre'a de la Cesarowi**, starszy PM, zespół produktu platformy .NET, Microsoft Corp.
 >
-> **Bill Wagnera**, starszy zawartości dla deweloperów, C + E, Microsoft Corp.
+> **Bill Wagner**, Sr. Content Developer, C+E, Microsoft Corp.
 >
 > **Mike Rousos**, inżynier ds. oprogramowania jednostki, zespołu DevDiv CAT, Microsoft
 
@@ -124,6 +124,8 @@ Uczestnicy i osób dokonujących przeglądu:
 >
 > **Scott Hunter**, Dyrektor ds. partnerów PM, zespołem platformy .NET, Microsoft
 >
+> **Anil zakończenia**, starszy Menedżer programu, zespół .NET, Microsoft
+>
 > **Dylan Reisenberger**, architekt i Kierownik Dev w Polly
 >
 > **Steve Smith**, wytwarzającym oprogramowanie & Trainer na ASPSmith Ltd.
@@ -140,14 +142,13 @@ Uczestnicy i osób dokonujących przeglądu:
 >
 > **Javier Valero**, Dyrektor operacyjny ds. na rozwiązanie Grupo
 >
-> **Pierre proso**, starszy konsultant, Microsoft
+> **Pierre Millet**, Sr. Consultant, Microsoft
 >
 > **Michael Friis**, Menedżer produktu, Inc platformy Docker
 >
 > **Charles Lowell**, inżynier ds. oprogramowania, zespołu CAT programu VS, Microsoft
 >
 > **Miguel Veloso**, starszy konsultant na żądanie Turing
-
 
 ## <a name="copyright"></a>Prawa autorskie
 

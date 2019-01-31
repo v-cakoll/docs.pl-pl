@@ -1,5 +1,5 @@
 ---
-title: 'Wystąpił błąd podczas zapisywania tymczasowego pliku zasobów Win32 &#39; &lt;filename&gt;&#39;: &lt;komunikat o błędzie&gt;'
+title: "Błąd w zapisywaniu tymczasowego pliku zasobów Win32 '<filename>': <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30137
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-ms.openlocfilehash: 5339f994560c6c7e2c40651c5ea326f3713d3649
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3af4ff0ace8afcb2f576ec4fde022672def0b90b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595932"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265093"
 ---
-# <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>Wystąpił błąd podczas zapisywania tymczasowego pliku zasobów Win32 &#39; &lt;filename&gt;&#39;: &lt;komunikat o błędzie&gt;
+# <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>Wystąpił błąd podczas zapisywania tymczasowego pliku zasobów Win32 "\<nazwa pliku >": \<komunikat o błędzie >
 Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd podczas uzyskiwania nazwę pliku do użytku w pisaniu zasobem w pamięci.  
   
  **Identyfikator błędu:** BC30137  

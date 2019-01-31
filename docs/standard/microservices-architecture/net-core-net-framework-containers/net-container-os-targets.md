@@ -3,13 +3,13 @@ title: Jakiego systemu operacyjnego docelowo z kontenerami .NET
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Jakiego systemu operacyjnego docelowo z kontenerami .NET
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: f6a5cf8d5e32e527977b7c142f5686310e88a068
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147203"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479870"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Jakiego systemu operacyjnego docelowo z kontenerami .NET
 
@@ -38,21 +38,21 @@ Po dodaniu nazwy obrazu do pliku Dockerfile, można wybrać system operacyjny i 
 </thead>
 <tbody>
 <tr>
-<td>Microsoft / dotnet:2.1 — środowisko uruchomieniowe</td>
-<td>Architektura wielu platformy .NET core 2.1: Obsługa systemu Linux i Windows Nano Server, w zależności od hosta platformy Docker.</td>
+<td>Microsoft / dotnet:2.2 — środowisko uruchomieniowe</td>
+<td>Architektura wielu platformy .NET core 2.2: Obsługa systemu Linux i Windows Nano Server, w zależności od hosta platformy Docker.</td>
 </tr>
 <tr class="odd">
-<td>Microsoft / dotnet:2.1-aspnetcore-środowiska uruchomieniowego</td>
-<td><p>Architektura wielu platformy ASP.NET Core 2.1: Obsługa systemu Linux i Windows Nano Server, w zależności od hosta platformy Docker.</p>
+<td>Microsoft / dotnet:2.2-aspnetcore-środowiska uruchomieniowego</td>
+<td><p>Architektura wielu platformy ASP.NET Core 2.2: Obsługa systemu Linux i Windows Nano Server, w zależności od hosta platformy Docker.</p>
 <p>Obraz aspnetcore ma kilka optymalizacji dla platformy ASP.NET Core.</p></td>
 </tr>
 <tr class="even">
-<td>Microsoft / dotnet:2.1-aspnetcore-runtime-alpine</td>
-<td>.NET core 2.1 w wersji tylko do środowiska uruchomieniowego na Alpine dystrybucja systemu Linux</td>
+<td>Microsoft / dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>.NET core 2.2 tylko do środowiska uruchomieniowego na Alpine dystrybucja systemu Linux</td>
 </tr>
 <tr class="odd">
-<td>Microsoft / dotnet:2.1-aspnetcore-runtime-nanoserver-1803</td>
-<td>.NET core 2.1, środowisko uruchomieniowe tylko na serwerze Windows Nano Server (Windows Server w wersji 1803)</td>
+<td>Microsoft / dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>.NET core 2.2 tylko do środowiska uruchomieniowego na serwerze Windows Nano Server (Windows Server w wersji 1803)</td>
 </tr>
 </tbody>
 </table>

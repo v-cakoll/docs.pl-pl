@@ -3,13 +3,13 @@ title: Terminologia platformy docker
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Terminologia platformy docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 8bf26087564e4f592d5f89afc6da211c5d1cff57
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: 2229599ab2fdc008c1668fb317f6cbe7dae95380
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150657"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480000"
 ---
 # <a name="docker-terminology"></a>Terminologia platformy docker
 
@@ -17,7 +17,7 @@ W tej sekcji przedstawiono terminów i definicje, które należy zapoznać się 
 
 **Obraz kontenera**: Pakiet ze wszystkimi zależnościami i informacje potrzebne do utworzenia kontenera. Obraz obejmuje wszystkie zależności (np. Platform) oraz wdrażaniem i uruchamianiem konfiguracji ma być używany przez kontener środowiska uruchomieniowego. Zwykle obraz pochodzi z wielu obrazy podstawowe, znajdujących się na siebie w celu utworzenia kontenera systemu plików, stos warstwy. Obraz jest niezmienny, po jego utworzeniu.
 
-**Plik Dockerfile**: Plik tekstowy, który zawiera instrukcje dotyczące sposobu tworzenia obrazu platformy Docker. Jest on podobny do skryptu wsadowego, pierwszy wiersz stany obrazu podstawowego z, a następnie postępuj zgodnie z instrukcjami, aby zainstalować wymagane programy, skopiuj pliki i tak dalej, dopóki nie zostanie wyświetlony środowiska pracy należy.
+**Dockerfile**: Plik tekstowy, który zawiera instrukcje dotyczące sposobu tworzenia obrazu platformy Docker. Jest on podobny do skryptu wsadowego, pierwszy wiersz stany obrazu podstawowego z, a następnie postępuj zgodnie z instrukcjami, aby zainstalować wymagane programy, skopiuj pliki i tak dalej, dopóki nie zostanie wyświetlony środowiska pracy należy.
 
 **Tworzenie**: Akcja kompilowania obrazu kontenera, na podstawie informacji i kontekst dostarczonych przez jego pliku Dockerfile, a także dodatkowe pliki w folderze, w którym obraz jest kompilowany. Możesz tworzyć obrazy platformy Docker **kompilacji platformy docker** polecenia. 
 
@@ -33,9 +33,9 @@ W tej sekcji przedstawiono terminów i definicje, które należy zapoznać się 
 
 **Rejestr**: To usługa, która zapewnia dostęp do repozytoriów. Rejestr domyślne obrazy najbardziej publiczny jest [usługi Docker Hub](https://hub.docker.com/) (właściciel platformy Docker jako organizacja). Rejestr zawiera zazwyczaj repozytoriów z wielu zespołów. Firmy często mają prywatnych rejestrów do przechowywania i zarządzania obrazami, którym zostały utworzone. Usługa Azure Container Registry jest inny przykład.
 
-**Obraz architektury wielu**: W przypadku wielu architektury jest funkcja, która ułatwia wybór odpowiedni obraz zależnie od platformy, na którym działa platformy Docker, np. gdy plik Dockerfile żąda obrazu podstawowego **od firmy microsoft / dotnet:2.1 — zestaw sdk** z Rejestr faktycznie pobiera **2.1-sdk-nanoserver-1709**, **2.1-sdk-nanoserver-1803** lub **2.1-sdk-alpine**, w zależności od tego, czy wersja systemu operacyjnego i gdzie Docker jest uruchomiona.
+**Obraz architektury wielu**: W przypadku wielu architektury jest funkcja, która ułatwia wybór odpowiedni obraz zależnie od platformy, na którym działa platformy Docker, np. gdy plik Dockerfile żąda obrazu podstawowego **od firmy microsoft / dotnet:2.2 — zestaw sdk** z Rejestr faktycznie pobiera **2.2-sdk-nanoserver-1709**, **2.2-sdk-nanoserver-1803**, **2.2-sdk-nanoserver-1809** lub **2.2-sdk-alpine**, w zależności od systemu operacyjnego i wersji, w którym platformy Docker jest uruchomiona.
 
-**Usługi docker Hub**: Publicznego rejestru przekazywania obrazów i pracować z nimi. Usługi docker Hub udostępnia platformy Docker hostingu obrazu, publicznych lub prywatnych rejestrów, wyzwalaczy kompilacji oraz elementów web hook i integracja z usługą GitHub i Bitbucket.
+**Docker Hub**: Publicznego rejestru przekazywania obrazów i pracować z nimi. Usługi docker Hub udostępnia platformy Docker hostingu obrazu, publicznych lub prywatnych rejestrów, wyzwalaczy kompilacji oraz elementów web hook i integracja z usługą GitHub i Bitbucket.
 
 **Usługa Azure Container Registry**: Zasób publicznego do pracy z obrazów platformy Docker i jego składniki na platformie Azure. Dzięki temu rejestru, który znajduje się w pobliżu wdrożeń na platformie Azure i zapewnia kontrolę dostępu, dzięki czemu można użyć usługi Azure Active Directory, grup i uprawnień.
 
@@ -49,7 +49,7 @@ W tej sekcji przedstawiono terminów i definicje, które należy zapoznać się 
 
 **Klaster**: Kolekcja hostów platformy Docker, udostępniane tak, jakby była pojedynczego wirtualnego hosta platformy Docker, tak aby aplikację można skalować do wielu wystąpień usługi rozkładają się na wielu hostach w klastrze. Klastry platformy docker można tworzyć przy użyciu rozwiązania Kubernetes, Azure Service Fabric, Docker Swarm i Mesosphere DC/OS.
 
-**Program orchestrator**: Narzędzie, które upraszcza zarządzanie klastrów i hostów platformy Docker. Orkiestratory umożliwiają zarządzanie ich obrazów kontenerów i hostami za pomocą interfejsu wiersza polecenia (CLI) lub graficznego interfejsu użytkownika. Można zarządzać kontenerowa, konfiguracje, równoważenia obciążenia, odnajdowania usług, wysoką dostępność, Konfiguracja hosta platformy Docker i więcej. Program orchestrator jest odpowiedzialny za systemem, dystrybucja, skalowanie i naprawiania obciążeń między kolekcję węzłów. Zazwyczaj produkty programu orchestrator są tego samego produktów, które udostępniają infrastrukturę klastra, takich jak Kubernetes i usługi Azure Service Fabric, wśród innych ofert na rynku. 
+**Orchestrator**: Narzędzie, które upraszcza zarządzanie klastrów i hostów platformy Docker. Orkiestratory umożliwiają zarządzanie ich obrazów kontenerów i hostami za pomocą interfejsu wiersza polecenia (CLI) lub graficznego interfejsu użytkownika. Można zarządzać kontenerowa, konfiguracje, równoważenia obciążenia, odnajdowania usług, wysoką dostępność, Konfiguracja hosta platformy Docker i więcej. Program orchestrator jest odpowiedzialny za systemem, dystrybucja, skalowanie i naprawiania obciążeń między kolekcję węzłów. Zazwyczaj produkty programu orchestrator są tego samego produktów, które udostępniają infrastrukturę klastra, takich jak Kubernetes i usługi Azure Service Fabric, wśród innych ofert na rynku. 
 
 >[!div class="step-by-step"]
 >[Poprzednie](docker-defined.md)

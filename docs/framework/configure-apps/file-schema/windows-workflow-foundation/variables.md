@@ -1,16 +1,16 @@
 ---
-title: '&lt;Zmienne&gt;'
+title: <variables>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: da0fd144-dda9-4613-b650-fe6325076513
-ms.openlocfilehash: c3861eb02d7b19bde6932c67c3d5d19b82fd8fcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff568c267331538fb9be0e6cb40eebbca44d882
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520545"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276552"
 ---
-# <a name="ltvariablesgt"></a>&lt;Zmienne&gt;
+# <a name="variables"></a>\<Zmienne >
 Reprezentuje kolekcję zmiennych skojarzoną z tym zapytaniem działania.  
   
  Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

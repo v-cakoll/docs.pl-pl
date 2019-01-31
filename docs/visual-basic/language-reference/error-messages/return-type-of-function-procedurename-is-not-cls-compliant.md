@@ -1,5 +1,5 @@
 ---
-title: Zwracany typ funkcji &#39; &lt;nazwaprocedury&gt; &#39; nie jest zgodny ze specyfikacją CLS
+title: Zwracany typ funkcji „<procedurename>” jest niezgodny ze specyfikacją CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40027
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: b7704ee63031c38f708a2243e84b880c25fcf819
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5e746981d10ba8e662aebf86f67f08856ba37199
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243785"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260518"
 ---
-# <a name="return-type-of-function-39ltprocedurenamegt39-is-not-cls-compliant"></a>Zwracany typ funkcji &#39; &lt;nazwaprocedury&gt; &#39; nie jest zgodny ze specyfikacją CLS
+# <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>Zwracany typ funkcji "\<nazwaprocedury >' nie jest zgodny ze specyfikacją CLS
 A `Function` procedura jest oznaczona jako `<CLSCompliant(True)>` , ale zwraca typ, który jest oznaczony jako `<CLSCompliant(False)>`, nie jest oznaczony jako lub nie kwalifikują się, ponieważ jest to typ niezgodne.  
   
  Procedury zachować zgodność z [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS), jej używać tylko typów zgodnych ze specyfikacją CLS. Dotyczy to typy parametrów, typ zwracany i typy jego zmiennych lokalnych.  

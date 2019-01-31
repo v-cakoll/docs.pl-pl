@@ -1,15 +1,15 @@
 ---
-title: '&lt;customTrackingQueries&gt; w WCF'
+title: <customTrackingQueries> w WCF
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: f4f6186aa51ef1656f31fb0035f58a07e5c2447b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b317cc289853902592e145e34b6e7bf5f84763b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700796"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282376"
 ---
-# <a name="ltcustomtrackingqueriesgt-of-wcf"></a>&lt;customTrackingQueries&gt; w WCF
+# <a name="customtrackingqueries-of-wcf"></a>\<customTrackingQueries > w WCF
 
 Reprezentuje kolekcję zapytań, które są używane do śledzenia zdarzeń zdefiniowanych przez użytkownika w działaniach kodu. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania śledzenia niestandardowe rekordów.  
   

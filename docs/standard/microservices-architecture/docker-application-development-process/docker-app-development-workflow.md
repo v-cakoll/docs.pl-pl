@@ -3,13 +3,13 @@ title: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych na platformie Docker. Rozpocznij krok po kroku i Uzyskaj do niektórych szczegółów, aby zoptymalizować pliki Dockerfile oraz kończyć się znakiem uproszczonego przepływu pracy dostępna przy użyciu programu Visual Studio.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/27/2018
-ms.openlocfilehash: 52053f270067ba0cc3ab8535560ec8145eda0758
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.date: 01/07/2019
+ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084982"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480104"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -66,7 +66,7 @@ Możesz rozpocząć kodowanie swoją aplikację w zwykły .NET (zwykle w .NET Co
 - **Wprowadzenie do platformy Docker CE dla Windows** \
   [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
 
-- **Program Visual Studio 2017** \
+- **Visual Studio 2017** \
   [*https://visualstudio.microsoft.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 ![2 — pisanie plików Dockerfile](./media/image4.png)
@@ -97,14 +97,14 @@ W podobny sposób, program Visual Studio można również dodać plik docker-com
 
 Zazwyczaj Tworzenie niestandardowego obrazu kontenera na podstawie obrazu podstawowego, otrzymasz od oficjalnego repozytorium, takiego jak [usługi Docker Hub](https://hub.docker.com/) rejestru. To jest dokładnie co się dzieje w tle po włączeniu obsługi platformy Docker w programie Visual Studio. Z pliku Dockerfile użyje istniejącej `aspnetcore` obrazu.
 
-Wcześniej opisano firma Microsoft, które obrazów platformy Docker i repozytoriów, można użyć w zależności od framework i systemu operacyjnego zostały wybrane. Na przykład, jeśli chcesz użyć programu ASP.NET Core (Linux lub Windows), jest obrazu do użycia `microsoft/dotnet:2.1-aspnetcore-runtime`. W związku z tym wystarczy określić, jakie podstawowego obrazu platformy Docker, który będzie używany dla kontenera. Można to zrobić, dodając `FROM microsoft/dotnet:2.1-aspnetcore-runtime` do Twojego pliku Dockerfile. To zostanie przeprowadzona przez program Visual Studio, ale w przypadku zaktualizowania wersji zaktualizuj tę wartość.
+Wcześniej opisano firma Microsoft, które obrazów platformy Docker i repozytoriów, można użyć w zależności od framework i systemu operacyjnego zostały wybrane. Na przykład, jeśli chcesz użyć programu ASP.NET Core (Linux lub Windows), jest obrazu do użycia `microsoft/dotnet:2.2-aspnetcore-runtime`. W związku z tym wystarczy określić, jakie podstawowego obrazu platformy Docker, który będzie używany dla kontenera. Można to zrobić, dodając `FROM microsoft/dotnet:2.2-aspnetcore-runtime` do Twojego pliku Dockerfile. To zostanie przeprowadzona przez program Visual Studio, ale w przypadku zaktualizowania wersji zaktualizuj tę wartość.
 
 Oficjalna repozytorium obrazów platformy .NET z usługi Docker Hub przy użyciu numeru wersji zapewnia, że te same funkcje języka są dostępne na wszystkich komputerach (w tym programowanie, testowanie i produkcja).
 
 Poniższy kod przedstawia przykładowy plik Dockerfile dla kontenera platformy ASP.NET Core.
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0
+FROM microsoft/dotnet:2.2-aspnetcore-runtime
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-W tym przypadku obraz, który zależy od wersji 2.1 oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows). Jest to ustawienie `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Aby uzyskać więcej informacji na temat tego obrazu podstawowego zobacz [obrazu platformy Docker programu ASP.NET Core](https://hub.docker.com/r/microsoft/aspnetcore/) strony i [obrazu platformy Docker programu .NET Core](https://hub.docker.com/r/microsoft/dotnet/) strony.) W pliku Dockerfile trzeba będzie również poinstruować platformy Docker do nasłuchiwania na porcie TCP, używane w czasie wykonywania (w tym przypadku port 80, zgodnie z konfiguracją z ustawieniem UDOSTĘPNIAJĄ).
+W tym przypadku obraz, który zależy od wersji 2.2 oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows). Jest to ustawienie `FROM microsoft/dotnet:2.2-aspnetcore-runtime`. (Aby uzyskać więcej informacji na temat tego obrazu podstawowego zobacz [obrazu platformy Docker programu .NET Core](https://hub.docker.com/r/microsoft/dotnet/) strony.) W pliku Dockerfile trzeba będzie również poinstruować platformy Docker do nasłuchiwania na porcie TCP, używane w czasie wykonywania (w tym przypadku port 80, zgodnie z konfiguracją z ustawieniem UDOSTĘPNIAJĄ).
 
 Można określić dodatkowe ustawienia konfiguracji w pliku Dockerfile, w zależności od języka i struktury, którego używasz. Na przykład wiersz punktu wejścia z `["dotnet", "MySingleContainerWebApp.dll"]` platformy docker, aby uruchomić aplikację .NET Core. Jeśli używasz zestawu SDK i .NET Core interfejsu wiersza polecenia (interfejsu wiersza polecenia platformy dotnet) aby skompilować i uruchomić aplikację .NET, to ustawienie będzie inny. Mierzenie to, że wiersz punktu wejścia i inne ustawienia będą różnić w zależności od języka i platformy, wybrany dla aplikacji.
 
@@ -132,20 +132,20 @@ Można określić dodatkowe ustawienia konfiguracji w pliku Dockerfile, w zależ
 
 ### <a name="using-multi-arch-image-repositories"></a>Przy użyciu repozytoriów wielu architektury obrazu
 
-Jednym repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz. Ta funkcja umożliwia dostawców, takich jak Microsoft (obraz podstawowy dla twórców) do utworzenia pojedynczego repozytorium na pokrycie wiele platform (dotyczy to systemów Linux i Windows). Na przykład [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) repozytorium, które są dostępne w rejestrze usługi Docker Hub zapewnia obsługę dla systemów Linux i Windows Nano Server przy użyciu tej samej nazwy repozytorium.
+Jednym repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz. Ta funkcja umożliwia dostawców, takich jak Microsoft (obraz podstawowy dla twórców) do utworzenia pojedynczego repozytorium na pokrycie wiele platform (dotyczy to systemów Linux i Windows). Na przykład [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) repozytorium, które są dostępne w rejestrze usługi Docker Hub zapewnia obsługę dla systemów Linux i Windows Nano Server przy użyciu tej samej nazwy repozytorium.
 
 Jeśli określony tag, przeznaczonych dla platformy, która jest jawne, takich jak w następujących przypadkach:
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-stretch-slim` \
-  Cele: .NET Core 2.1, środowisko uruchomieniowe tylko w systemie Linux
+- `microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim` \
+  Cele: .NET Core 2.2 tylko do środowiska uruchomieniowego w systemie Linux
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime-nanoserver-1709` \
-  Cele: .NET Core 2.1, środowisko uruchomieniowe tylko na serwerze Windows Nano Server
+- `microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1809` \
+  Cele: .NET Core 2.2 tylko do środowiska uruchomieniowego na serwerze Windows Nano Server
 
 Jednak jeśli określisz taką samą nazwę obrazu, nawet w przypadku tego samego tagu wielu architektury obrazów (takich jak `aspnetcore` obrazu) będą używać systemu Linux lub Windows wersji w zależności od systemu operacyjnego hosta platformy Docker jest wdrażany, jak pokazano w poniższym przykładzie:
 
-- `microsoft/dotnet:2.1-aspnetcore-runtime` \
-  Wiele arch: .NET Core 2.1, środowisko uruchomieniowe tylko w systemie Linux lub Windows Nano Server w zależności od systemu operacyjnego hosta platformy Docker
+- `microsoft/dotnet:2.2-aspnetcore-runtime` \
+  Wiele arch: .NET Core 2.2 w czasie wykonywania tylko w systemie Linux lub Windows Nano Server w zależności od systemu operacyjnego hosta platformy Docker
 
 Dzięki temu podczas ściągnąć obraz z hosta Windows go każda będzie ściągać wariant Windows i ściągania taką samą nazwę obrazu na hoście z systemem Linux każda będzie ściągać wariantów systemu Linux.
 
@@ -174,11 +174,11 @@ Prawdopodobnie najlepszym sposobem, aby dowiedzieć się, że wieloetapowych prz
 Początkowy pliku Dockerfile może wyglądać mniej więcej tak:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS build
+ 5  FROM microsoft/dotnet:2.2-sdk AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -266,11 +266,11 @@ Końcowe optymalizacji te rzeczy dzieją wierszu 20 jest nadmiarowa, jako wiersz
 Wynikowy plik jest następnie:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+ 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.1-sdk AS publish
+ 5  FROM microsoft/dotnet:2.2-sdk AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
@@ -424,7 +424,7 @@ Można wdrożyć aplikację obsługującą wiele kontenerów za pomocą pliku do
 
 Jeśli aplikacja ma tylko jeden kontener, możesz uruchomić go przez wdrożenie jej do hosta platformy Docker (maszyny Wirtualnej lub serwera fizycznego). Jednak jeśli aplikacja zawiera wiele usług, możesz go wdrożyć jako złożone aplikacji, za pomocą jednego polecenia interfejsu wiersza polecenia (docker-compose się), lub za pomocą programu Visual Studio, które korzystają z tego polecenia w sposób niewidoczny. Przyjrzyjmy się różne opcje.
 
-### <a name="option-a-running-a-single-container-application"></a>Opcja A: Uruchamianie aplikacji jednego kontenera
+### <a name="option-a-running-a-single-container-application"></a>Option A: Uruchamianie aplikacji jednego kontenera
 
 #### <a name="using-docker-cli"></a>Za pomocą interfejsu wiersza polecenia platformy Docker
 

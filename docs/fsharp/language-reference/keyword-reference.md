@@ -3,10 +3,10 @@ title: Odwołanie do słowa kluczowego
 description: Znajdź łącza do informacji na temat wszystkich F# słowa kluczowe języka.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857908"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
@@ -64,7 +64,7 @@ W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności a
 |`null`|[Wartości null](values/null-values.md)<br /><br />[Ograniczenia](generics/constraints.md)|Wskazuje brak obiektu.<br /><br />Również używany w ograniczenia parametru ogólnego.|
 |`of`|[Sumy rozłączne](discriminated-unions.md)<br /><br />[Delegaty](delegates.md)<br /><br />[Typy wyjątków](exception-handling/exception-types.md)|Używane w połączenia dyskryminowanych, aby wskazać typ kategorii wartości, a w deklaracjach delegata i wyjątków.|
 |`open`|[Deklaracje importowania: słowo kluczowe `open`](import-declarations-the-open-keyword.md)|Używane, aby udostępnić zawartość przestrzeni nazw lub module bez kwalifikacji.|
-|`or`|[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane z warunkami logiczną jako wartość logiczna `or` operatora. Odpowiednikiem "||`.<br /><br />Również używany w ograniczeniami elementu członkowskiego.|
+|`or`|[Odwołanie do symboli i operatorów](symbol-and-operator-reference/index.md)<br /><br />[Ograniczenia](generics/constraints.md)|Używane z warunkami logiczną jako wartość logiczna `or` operatora. Odpowiednikiem `||`.<br /><br />Również używany w ograniczeniami elementu członkowskiego.|
 |`override`|[Elementy członkowskie](members/index.md)|Używany do implementowania nieco inna niż wersja podstawowa metody abstrakcyjne lub wirtualne.|
 |`private`|[Kontrola dostępu](access-control.md)|Ogranicza dostęp do elementu członkowskiego do kodu, w tym samym typie lub modułu.|
 |`public`|[Kontrola dostępu](access-control.md)|Umożliwia dostęp do elementu członkowskiego z zewnątrz typu.|

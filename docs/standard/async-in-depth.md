@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492836"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285028"
 ---
 # <a name="async-in-depth"></a>Asynchroniczne szczegółowo
 
 Zapisywanie operacji We/Wy i Procesora CPU kodu asynchronicznego jest proste przy użyciu modelu opartego na zadaniach .NET async. Model jest uwidaczniany przez `Task` i `Task<T>` typów i `async` i `await` słów kluczowych w języku C# i Visual Basic. (Specyficzne dla języka zasoby znajdują się w [Zobacz też](#see-also) sekcji.) W tym artykule wyjaśniono, jak używać asynchronicznych .NET i zapewnia wgląd w ramach asynchronicznych używane w sposób niewidoczny.
 
-## <a name="task-and-tasklttgt"></a>Zadanie i zadania&lt;T&gt;
+## <a name="task-and-taskt"></a>Zadanie i zadania\<T >
 
 Zadania są konstrukcji używanych do wdrożenia, co jest nazywane [Promise modelu współbieżności](https://en.wikipedia.org/wiki/Futures_and_promises).  Krótko mówiąc oferują one, że możesz element "promise", które działają zakończy się w późniejszym czasie, dzięki czemu możesz skontaktować się z zobowiązania przy użyciu czystego interfejsu API.
 
@@ -114,7 +114,7 @@ Co ważniejsze ponieważ praca I/O-powiązane z spędzony przez praktycznie w kr
 
 Ponadto wywołujący pracę w wątku interfejsu użytkownika (takie jak aktualizowanie interfejsu użytkownika) jest bardzo proste dzięki `async` metod i nie wymaga dodatkowej pracy (na przykład podczas wywoływania delegata wątkowo).
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Bardziej zgłębić temat do zadań i zadań&lt;T&gt; dla operacji zależne od Procesora CPU
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Bardziej zgłębić temat do zadań i zadań\<T > do działania zależne od Procesora CPU
 
 Zależne od Procesora CPU `async` kod jest nieco inna niż I/O-granica `async` kodu.  Ponieważ praca odbywa się na procesorze CPU, nie ma możliwości można pobrać na dedykowanym wątku do obliczeń.  Korzystanie z `async` i `await` oferuje użytkownikowi eleganckie rozwiązanie do interakcji z tłem wątku i Zachowaj dynamiczne obiektu wywołującego metody async.  Należy pamiętać, że nie zapewnia żadnej ochrony dla udostępnionych danych.  Jeśli używasz udostępnionych danych nadal konieczne będzie zastosowanie strategii synchronizacji odpowiednich.
 

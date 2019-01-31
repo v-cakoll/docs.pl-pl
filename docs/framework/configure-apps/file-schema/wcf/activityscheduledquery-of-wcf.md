@@ -1,15 +1,15 @@
 ---
-title: '&lt;activityScheduledQuery&gt; w WCF'
+title: <activityScheduledQuery> w WCF
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: fd7830bc178de0693f0632cea3b390d792408ec1
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5087d56092296f8c68b719ec0945993adeb3de0a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147882"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272906"
 ---
-# <a name="ltactivityscheduledquerygt-of-wcf"></a>&lt;activityScheduledQuery&gt; w WCF
+# <a name="activityscheduledquery-of-wcf"></a>\<activityScheduledQuery > w WCF
 
 Reprezentuje kolekcję zapytań, które są używane do śledzenia działania zaPLanowane do wykonania przez działanie nadrzędne. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania zaPLanowane rekordów.  
   
@@ -17,11 +17,11 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profile >  
+\<profiles>  
 \<trackingProfile>  
 \<przepływ pracy >  
-\<activityScheduledQueries >  
-\<activityScheduledQuery >  
+\<activityScheduledQueries>  
+\<activityScheduledQuery>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -59,7 +59,7 @@ Brak.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<activityScheduledQueries >](activityscheduledqueries-of-wcf.md)|Kolekcję zapytań, które są używane do śledzenia działania zaplanowane do wykonania przez działanie nadrzędne.|  
+|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|Kolekcję zapytań, które są używane do śledzenia działania zaplanowane do wykonania przez działanie nadrzędne.|  
   
 ## <a name="see-also"></a>Zobacz także
 

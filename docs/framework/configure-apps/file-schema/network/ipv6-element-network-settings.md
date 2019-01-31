@@ -1,5 +1,5 @@
 ---
-title: '&lt;Protokół IPv6&gt; — Element (ustawienia sieci)'
+title: <ipv6> — Element (Ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: 1ca1bb6a0b1a9c3deab9cb3ba15e9b3b2c29f1f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 708604c782690efa631e4eab0aa62c1c0b1f657b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531892"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279698"
 ---
-# <a name="ltipv6gt-element-network-settings"></a>&lt;Protokół IPv6&gt; — Element (ustawienia sieci)
+# <a name="ipv6-element-network-settings"></a>\<Protokół IPv6 >, Element (ustawienia sieci)
 Włącza protokołu internetowego w wersji 6 (IPv6) odpowiedzi od przestarzałe elementy członkowskie <xref:System.Net.Dns> klasy.  
   
  \<Konfiguracja >  

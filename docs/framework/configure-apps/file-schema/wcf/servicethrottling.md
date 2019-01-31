@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceThrottling&gt;'
+title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: ebef29360f661c77f51557ae4c9ca0bdf8177b99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87952a92bab1ef7147100332bcef87b6f0534817
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689484"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270402"
 ---
-# <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
+# <a name="servicethrottling"></a>\<serviceThrottling>
 Określa mechanizm ograniczania przepustowości usługi Windows Communication Foundation (WCF).  
   
  \<system.ServiceModel>  

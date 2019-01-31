@@ -1,5 +1,5 @@
 ---
-title: Zmienna &#39; &lt;nazwa_zmiennej&gt; &#39; ukrywa zmienną w otaczającym bloku
+title: Zmienna „<variablename>” ukrywa zmienną w otaczającym bloku
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30616
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 23ec659535b71ee9af189f5c4fec0dec2bb1cd8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ec1aac7ee8d292e2a433e0fb35039d4fb317b4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719433"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278502"
 ---
-# <a name="variable-39ltvariablenamegt39-hides-a-variable-in-an-enclosing-block"></a>Zmienna &#39; &lt;nazwa_zmiennej&gt; &#39; ukrywa zmienną w otaczającym bloku
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>Zmienna "\<nazwa_zmiennej >" ukrywa zmienną w otaczającym bloku
 Zmienna ujęte w blok ma taką samą nazwę jak inny zmiennej lokalnej.  
   
  **Identyfikator błędu:** BC30616  

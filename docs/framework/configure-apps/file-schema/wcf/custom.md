@@ -1,15 +1,15 @@
 ---
-title: '&lt;custom&gt;'
+title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 5180b8866d8b0155a8683ab9cb6135c26f696929
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b268d9d040bbeed2b3563783226f7ca8c18e3b5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734990"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254291"
 ---
-# <a name="ltcustomgt"></a>&lt;custom&gt;
+# <a name="custom"></a>\<custom>
 Określa ustawienia dla równorzędnej niestandardowej usługi rozpoznawania.  
   
 \<system.serviceModel>  

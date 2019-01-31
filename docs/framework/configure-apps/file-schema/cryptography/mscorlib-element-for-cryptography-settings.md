@@ -1,5 +1,5 @@
 ---
-title: '&lt;mscorlib&gt; Element ustawień kryptografii'
+title: <mscorlib> — Element ustawień kryptografii
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: a067f1f2793d98c51304269c7a37754031940824
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 84eb12916c2d1ec2d35830fae2c6ce07f1c7c664
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084162"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259644"
 ---
-# <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt; Element ustawień kryptografii
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > Element ustawień kryptografii
 Zawiera [ \<cryptographysettings — > element](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).  
   
  \<Konfiguracja >  

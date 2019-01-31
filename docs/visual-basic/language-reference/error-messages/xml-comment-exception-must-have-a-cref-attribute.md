@@ -1,5 +1,5 @@
 ---
-title: Wyjątek komentarza XML musi mieć &#39;cref&#39; atrybutu
+title: Wyjątek komentarza XML musi mieć atrybut „cref”
 ms.date: 07/20/2015
 f1_keywords:
 - bc42319
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: 0f276781165e80b2d869da2518dbe34b33085d5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a11bfe261ffb8ded95f2e513aaddf00aa00f702e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649950"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266640"
 ---
-# <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a>Wyjątek komentarza XML musi mieć &#39;cref&#39; atrybutu
+# <a name="xml-comment-exception-must-have-a-cref-attribute"></a>Wyjątek komentarza XML musi mieć atrybut „cref”
 \<Wyjątku > tag umożliwia dokumentowanie wyjątki, które mogą być generowane przez metodę. Wymagane `cref` atrybut określa nazwę elementu członkowskiego, która jest sprawdzana przez generator dokumentacji. Jeśli istnieje elementu członkowskiego, jest tłumaczony nazwy kanonicznej elementu w pliku dokumentacji.  
   
  **Identyfikator błędu:** BC42319  

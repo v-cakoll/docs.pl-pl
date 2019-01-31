@@ -1,17 +1,17 @@
 ---
-title: Element &lt;GenericParameter&gt; (architektura .NET Native)
+title: <GenericParameter> (Architektura .NET Native)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 002addf0f020365f87e239b7b8707f3a6031003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519453"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257775"
 ---
-# <a name="ltgenericparametergt-element-net-native"></a>Element &lt;GenericParameter&gt; (architektura .NET Native)
+# <a name="genericparameter-element-net-native"></a>\<GenericParameter> Element (.NET Native)
 Stosuje zasady do typu parametru typu ogólnego lub metody.  
   
 ## <a name="syntax"></a>Składnia  

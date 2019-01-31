@@ -1,5 +1,5 @@
 ---
-title: Nazwa &lt;membername&gt; nie jest zgodny ze specyfikacją CLS
+title: Nazwa <membername> jest niezgodna ze specyfikacją CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40031
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: b950be530eb80fd1c65b48e1625eb344c642d260
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74b625cc3a60e591417530c6a6229c01666038e2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626371"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271255"
 ---
-# <a name="name-ltmembernamegt-is-not-cls-compliant"></a>Nazwa &lt;membername&gt; nie jest zgodny ze specyfikacją CLS
+# <a name="name-membername-is-not-cls-compliant"></a>Nazwa \<membername > nie jest zgodny ze specyfikacją CLS
 Zestaw jest oznaczony jako `<CLSCompliant(True)>` , ale udostępnia element członkowski o nazwie rozpoczynającej się od znaku podkreślenia (`_`).  
   
  Programowania element może zawierać jeden lub więcej podkreślenia, ale aby zachować zgodność z [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS), należy nie zaczyna się ona od znaku podkreślenia. Zobacz [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  

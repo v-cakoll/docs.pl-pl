@@ -1,5 +1,5 @@
 ---
-title: '&lt;&lt;= — Operator (Visual Basic)'
+title: << = — operator (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<=
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: 9d4f367506c847ddf2478dd1ea07e28332cc62a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c262da906a6033680b05f6a4099a6a1dc8bfab5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677774"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260635"
 ---
-# <a name="ltlt-operator-visual-basic"></a>&lt;&lt;= — Operator (Visual Basic)
+# <a name="-operator-visual-basic"></a>\<\<= — Operator (Visual Basic)
 Wykonuje arytmetyczne przesunięcie w lewo na wartość zmiennej lub właściwości, a następnie przypisuje wynik do zmiennej lub właściwości.  
   
 ## <a name="syntax"></a>Składnia  

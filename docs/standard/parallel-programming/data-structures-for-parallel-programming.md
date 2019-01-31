@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517620"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479701"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Struktury danych dla Programowania równoległego
 .NET Framework w wersji 4 wprowadza kilka nowych typów, które są przydatne do programowania równoległego, w tym zestaw klas kolekcji współbieżnych, podstawowych uproszczone synchronizacji i typów d inicjowania z opóźnieniem. Można użyć tych typów, zawierające kod aplikacji wielowątkowych, w tym w bibliotece równoległych zadań i PLINQ.  
@@ -41,7 +41,7 @@ ms.locfileid: "54517620"
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Umożliwia wielu wątków do pracy nad algorytmu równoległego, podając punkt, w której każde zadanie podrzędne może sygnalizują jego następnie blokowane, aż już korzystać z niektórych lub wszystkich zadań. Aby uzyskać więcej informacji, zobacz [barierę](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Upraszcza scenariusze rozwidlenia i sprzężenia, dostarczając mechanizmu łatwego spotkania. Aby uzyskać więcej informacji, zobacz [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Element synchronizacji, podobnie jak <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> to lekki, ale można używać tylko do komunikacji wewnątrz procesu. Aby uzyskać więcej informacji, zobacz [ManualResetEvent i ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Element synchronizacji, podobnie jak <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> to lekki, ale można używać tylko do komunikacji wewnątrz procesu.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Element synchronizacji, która ogranicza liczbę wątków, które można jednocześnie uzyskać dostęp do zasobu lub puli zasobów. Aby uzyskać więcej informacji, zobacz [Semaphore i SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Podstawowego blokady wzajemne wykluczenie, który powoduje wątku, który próbuje uzyskać blokady oczekiwać w pętli, lub *pokrętła*, okres czasu przed jego quantum reaguje. W scenariuszach, w którym powinien być krótki, czas oczekiwania na blokadę <xref:System.Threading.SpinLock> zapewnia większą wydajność niż inne formy blokowania. Aby uzyskać więcej informacji, zobacz [struktury SpinLock](../../../docs/standard/threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Małe, lekkie typ, który będzie pokrętła przez określony czas i ostatecznie umieścić wątku w stan oczekiwania, po przekroczeniu liczby pokrętła.  Aby uzyskać więcej informacji, zobacz [metody SpinWait](../../../docs/standard/threading/spinwait.md).|  

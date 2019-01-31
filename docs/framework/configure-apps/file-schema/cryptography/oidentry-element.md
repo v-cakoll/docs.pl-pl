@@ -1,5 +1,5 @@
 ---
-title: '&lt;oidentry —&gt; — Element'
+title: <oidEntry>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: 7c5309bc98a7781e82753869b1cf2bcf0a472327
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b1dc4c788576fd3cab55db5255617cc55e68594b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084097"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259062"
 ---
-# <a name="ltoidentrygt-element"></a>&lt;oidentry —&gt; — Element
+# <a name="oidentry-element"></a>\<oidEntry> Element
 Mapuje ASN.1 identyfikator obiektu (OID) przyjazną nazwę.  
   
  \<Konfiguracja >  

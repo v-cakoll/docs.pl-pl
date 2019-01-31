@@ -3,13 +3,13 @@ title: Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docke
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: 1a91f645aa6f9ce8652fb18243c2e2775abe87d1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128755"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479909"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -31,11 +31,11 @@ Jednak nawet w przypadku tego wyjątkowych postęp od .NET Standard 2.0 i .NET C
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>Przy użyciu technologii .NET, które nie są dostępne dla platformy .NET Core 
 
-Niektóre technologie .NET Framework nie są dostępne w bieżącej wersji programu .NET Core (wersja 2.1 w trakcie tworzenia tej dokumentacji). Niektóre z nich będzie dostępny w nowszych wersjach platformy .NET Core (.NET Core 2.x), ale nie dotyczą innych nową aplikację wzorce docelowej platformy .NET Core i nigdy nie mogą być dostępne.
+Niektóre technologie .NET Framework nie są dostępne w bieżącej wersji programu .NET Core (wersja 2.2 na chwilę obecną). Niektóre z nich będzie dostępny w nowszych wersjach platformy .NET Core (.NET Core 2.x), ale nie dotyczą innych nową aplikację wzorce docelowej platformy .NET Core i nigdy nie mogą być dostępne.
 
 Na poniższej liście przedstawiono najbardziej technologii, które nie są dostępne w programie .NET Core 2.x:
 
--   Formularze sieci Web ASP.NET. Ta technologia jest dostępna tylko w programie .NET Framework. Obecnie nie ma żadnych planów, aby wyświetlić formularzy sieci Web ASP.NET i .NET Core.
+-   ASP.NET Web Forms. Ta technologia jest dostępna tylko w programie .NET Framework. Obecnie nie ma żadnych planów, aby wyświetlić formularzy sieci Web ASP.NET i .NET Core.
 
 -   Usługi WCF. Nawet wtedy, gdy [biblioteki klienta platformy WCF](https://github.com/dotnet/wcf) jest dostępna do korzystania z usług WCF z platformy .NET Core, ponieważ połowie 2017 implementacji serwera WCF jest dostępna tylko w programie .NET Framework. Ten scenariusz może zostać uznane za w przyszłych wersjach programu .NET Core, istnieją nawet z niektórych interfejsów API uwzględnione w w [systemie Windows Compatibility Pack](../../../core/porting/windows-compat-pack.md).
 

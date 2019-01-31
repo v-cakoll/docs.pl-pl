@@ -1,17 +1,17 @@
 ---
-title: Nie domyślnego elementu członkowskiego znaleziono dla typu "&lt;typename&gt;"
+title: Nie domyślnego elementu członkowskiego znaleziono dla typu "<typename>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
 ms.assetid: 1869ecb8-7c6a-422f-86ac-5da96c6adc66
-ms.openlocfilehash: 76b12ad4267834e2a8f51f873dd769d2127c25a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a90d81f144658e4a4b48e393358ffcb51b579dc4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613564"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264404"
 ---
-# <a name="no-default-member-found-for-type-lttypenamegt"></a>Nie domyślnego elementu członkowskiego znaleziono dla typu "&lt;typename&gt;"
+# <a name="no-default-member-found-for-type-typename"></a>Nie domyślnego elementu członkowskiego znaleziono dla typu "\<typename >"
 Indeks z późnym wiązaniem `Get` lub `Set` podjęto próbę wywołania.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

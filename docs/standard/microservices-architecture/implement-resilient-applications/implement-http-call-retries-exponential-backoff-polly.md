@@ -3,13 +3,13 @@ title: Implementowanie ponownych prób wywołania HTTP z wykorzystaniem wykładn
 description: Informacje o sposobie obsługi błędów HTTP za pomocą Polly i HttpClientFactory.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362759"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479649"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementowanie ponownych prób wywołania HTTP z wykorzystaniem wykładniczego wycofywania z zasadami dotyczącymi HttpClientFactory i Polly
 
@@ -21,9 +21,9 @@ Jednak za pomocą biblioteki Polly firmy przy użyciu własnego kodu niestandard
 
 Poniższe kroki pokazują, jak można użyć protokołu Http ponownych prób w usłudze Polly zintegrowane HttpClientFactory, która została wyjaśniona w poprzedniej sekcji.
 
-**Dokumentacja platformy ASP.NET Core 2.1 pakietów**
+**Odwołania się do pakietów programu ASP.NET Core 2.2**
 
-Projekt ma być używane pakiety platformy ASP.NET Core 2.1 z pakietów NuGet. Zazwyczaj należy `AspNetCore` meta Microsoft.aspnetcore.all, a pakiet rozszerzenia `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` jest dostępny od platformy .NET Core 2.1 jednak zaleca się korzystanie z najnowszych pakietów platformy ASP.NET Core 2.2 z pakietów NuGet w projekcie. Zazwyczaj należy `AspNetCore` meta Microsoft.aspnetcore.all, a pakiet rozszerzenia `Microsoft.Extensions.Http.Polly`.
 
 **Konfigurowanie klienta zasady ponawiania prób w Polly, uruchamiania**
 

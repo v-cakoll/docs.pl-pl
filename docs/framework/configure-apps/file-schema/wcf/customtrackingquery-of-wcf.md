@@ -1,15 +1,15 @@
 ---
-title: '&lt;customTrackingQuery&gt; w WCF'
+title: <customTrackingQuery> w WCF
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: 234703e677f838dcdccdf857ba38b8729d25a488
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 0a5e7c034ce1ef12a8d7d5b1753e2e441e48e293
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146384"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279490"
 ---
-# <a name="ltcustomtrackingquerygt-of-wcf"></a>&lt;customTrackingQuery&gt; w WCF
+# <a name="customtrackingquery-of-wcf"></a>\<customTrackingQuery > w WCF
 
 Reprezentuje zapytanie, które jest używane do śledzenia zdarzeń zdefiniowanych przez użytkownika w działaniach kodu. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania śledzenia niestandardowe rekordów.
 
@@ -17,11 +17,11 @@ Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz 
   
 \<system.serviceModel>  
 \<Śledzenie >  
-\<profile >  
+\<profiles>  
 \<trackingProfile>  
 \<przepływ pracy >  
-\<customTrackingQueries >  
-\<customTrackingQuery >  
+\<customTrackingQueries>  
+\<customTrackingQuery>  
   
 ## <a name="syntax"></a>Składnia  
   

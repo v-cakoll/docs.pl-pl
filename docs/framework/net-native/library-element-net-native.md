@@ -1,17 +1,17 @@
 ---
-title: Element &lt;Library&gt; (architektura .NET Native)
+title: <Library> (Architektura .NET Native)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6615ab30fdc0d0ab65f135e1df4e206f5548dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f2de27152200ed07e5f82b5dc08613451c7aa25
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743791"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284911"
 ---
-# <a name="ltlibrarygt-element-net-native"></a>Element &lt;Library&gt; (architektura .NET Native)
+# <a name="library-element-net-native"></a>\<Biblioteka > (architektura .NET Native)
 Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.  
   
  \<Dyrektywy > Element  

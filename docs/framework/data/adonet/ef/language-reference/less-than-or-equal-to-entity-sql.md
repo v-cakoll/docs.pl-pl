@@ -1,15 +1,15 @@
 ---
-title: '&lt;= (Mniejsze niż lub równe) (jednostka SQL)'
+title: < = (mniejsze niż lub równe) (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
-ms.openlocfilehash: 66eb2dc5d4b23ea2f4e00888237b36c950c80602
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a4c91800dce2ab6a632e849a8c58c378150535
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604031"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284716"
 ---
-# <a name="lt-less-than-or-equal-to-entity-sql"></a>&lt;= (Mniejsze niż lub równe) (jednostka SQL)
+# <a name="-less-than-or-equal-to-entity-sql"></a>\<= (Mniejsze niż lub równe) (jednostka SQL)
 Porównuje dwa wyrażenia, aby ustalić, czy lewe wyrażenie ma wartość mniejszą niż lub równe wyrażenie prawej krawędzi.  
   
 ## <a name="syntax"></a>Składnia  

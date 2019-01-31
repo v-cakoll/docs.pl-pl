@@ -1,16 +1,16 @@
 ---
-title: '&lt;Powiązania&gt;'
+title: <binding>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 666183d6-4d1f-45c7-ac64-bdf93ee8f36f
-ms.openlocfilehash: fb4fafda31205e2ce5efd01ab265fcacfa70bdf6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb51eb1962603439b89a203eb668dfb543049170
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539197"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271476"
 ---
-# <a name="ltbindinggt"></a>&lt;Powiązania&gt;
+# <a name="binding"></a>\<Powiązanie >
 Możesz użyć `binding` elementu do konfigurowania różnych typów wstępnie zdefiniowanych powiązań dostarczonych przez Windows Communication Foundation (WCF).  
   
 ## <a name="system-provided-binding"></a>System-Provided Binding  

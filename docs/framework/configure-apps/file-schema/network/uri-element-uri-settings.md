@@ -1,15 +1,15 @@
 ---
-title: '&lt;Identyfikator URI&gt; — Element (ustawienia identyfikatora Uri)'
+title: <Uri> — Element (Ustawienia identyfikatora Uri)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 48769298246dd71e040aac1c682e0fddfb5de89b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f432be7594b1659dfcae0c6eee706358230f2cbb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655546"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269253"
 ---
-# <a name="lturigt-element-uri-settings"></a>&lt;Identyfikator URI&gt; — Element (ustawienia identyfikatora Uri)
+# <a name="uri-element-uri-settings"></a>\<Identyfikator URI >, Element (ustawienia identyfikatora Uri)
 Zawiera ustawienia, które określają, jak .NET Framework obsługuje adresy URL wyrażone za pomocą uniform resource identifier (URI).  
   
 ## <a name="schema-hierarchy"></a>Hierarchia schematu  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;oneWay&gt;'
+title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: c909bce5b54976a215a59ca8fd9f097f574acd80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35631cc4b120169e0cadb80c6beba26ab9eafd7a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600300"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283273"
 ---
-# <a name="ltonewaygt"></a>&lt;oneWay&gt;
+# <a name="oneway"></a>\<oneWay>
 Włącza pakiet rutingu i metod jednokierunkowych dla niestandardowego powiązania.  
   
  \<system.serviceModel>  

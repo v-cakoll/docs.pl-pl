@@ -1,5 +1,5 @@
 ---
-title: Właściwość &#39; &lt;propertyname&gt; &#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu
+title: Właściwość „<propertyname>” nie zwraca wartości we wszystkich ścieżkach kodu
 ms.date: 07/20/2015
 f1_keywords:
 - bc42107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: b8059ebc9b6c1de685f2f04c3ee362ab8cf6d05e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1788d06aa5236d4cfc33999df86ad72c420b41df
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611257"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269006"
 ---
-# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>Właściwość &#39; &lt;propertyname&gt; &#39; &#39;t zwraca wartości we wszystkich ścieżkach kodu
+# <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>Właściwość "\<propertyname >' nie zwraca wartości we wszystkich ścieżkach kodu
 Właściwość "\<propertyname >' nie zwraca wartości we wszystkich ścieżkach kodu. Może wystąpić wyjątek pustej referencji, w czasie wykonywania, gdy zostanie użyty wynik.  
   
  Właściwość `Get` procedura ma co najmniej jedną ścieżkę możliwe za pośrednictwem jego kodu, która nie zwraca wartości.  

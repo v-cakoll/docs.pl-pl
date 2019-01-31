@@ -1,22 +1,22 @@
 ---
-title: '&lt;Typ oświadczenia&gt;'
+title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 805377565b6e835fd9ffba915a003bc56529a3b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47234965"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55267238"
 ---
-# <a name="ltclaimtypegt"></a>&lt;Typ oświadczenia&gt;
+# <a name="claimtype"></a>\<claimType>
 Określa pojedynczy opcjonalne lub wymagane oświadczenia przychodzące tokeny zabezpieczające.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<claimTypeRequired >  
-\<Element claimType >  
+\<claimTypeRequired>  
+\<claimType>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ Określa pojedynczy opcjonalne lub wymagane oświadczenia przychodzące tokeny z
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|— typ|Typ oświadczenia. Zazwyczaj identyfikator URI. Wymagane.|  
+|— typ|Typ oświadczenia. Zazwyczaj identyfikator URI. Wymagana.|  
 |optional|Wartość logiczna określająca, czy typ oświadczenia jest opcjonalne. Opcjonalna.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -48,4 +48,4 @@ Określa pojedynczy opcjonalne lub wymagane oświadczenia przychodzące tokeny z
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Określa zestaw wymagane oświadczenia przychodzące tokeny zabezpieczeń.|
+|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Określa zestaw wymagane oświadczenia przychodzące tokeny zabezpieczeń.|

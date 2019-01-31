@@ -1,17 +1,17 @@
 ---
-title: Element &lt;Field&gt; (architektura .NET Native)
+title: <Field> (Architektura .NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de8569c55ef50e3f18d084f7d7ad60c733e58e50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4a062e060e7b367f0d56b3633238de74ae8ed88
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623108"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281674"
 ---
-# <a name="ltfieldgt-element-net-native"></a>Element &lt;Field&gt; (architektura .NET Native)
+# <a name="field-element-net-native"></a>\<Pole > (architektura .NET Native)
 Zastosowanie zasad odbicia środowiska uruchomieniowego do pola.  
   
 ## <a name="syntax"></a>Składnia  

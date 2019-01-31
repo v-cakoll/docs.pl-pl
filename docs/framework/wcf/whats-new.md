@@ -1,16 +1,16 @@
 ---
-title: Co&#39;nowego w Windows Communication Foundation 4.5
+title: Co nowego w wersji 4.5 programu WCF (Windows Communication Foundation)?
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1fe3ea53be6305553e789f8644e378d95bfac71b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 8d079613d1970d2a50ddb3449c2a3072010b2c55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873521"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280010"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Co nowego w wersji 4.5 programu WCF (Windows Communication Foundation)?
 
@@ -45,7 +45,7 @@ W tym temacie omówiono funkcje nowych do Windows Communication Foundation (WCF)
 ### <a name="wcf-configuration-validation"></a>Sprawdzanie poprawności konfiguracji programu WCF
  Jako część procesu kompilacji w programie Visual Studio WCF, pliki konfiguracyjne są teraz sprawdzane dla atrybuty zdefiniowane w projekcie. Lista ostrzeżeń ani błędów sprawdzania poprawności jest wyświetlany w programie Visual Studio, jeśli weryfikacja zakończy się niepowodzeniem.
 
-### <a name="xml-editor-tooltips"></a>Etykietki narzędzi edytora XML
+### <a name="xml-editor-tooltips"></a>XML Editor Tooltips
  W celu ułatwić nowych i istniejących deweloperzy usług WCF do konfigurowania swoich usług, edytorze XML Visual Studio teraz udostępnia etykietki narzędzi dla każdego elementu konfiguracji i jego właściwości, które jest częścią pliku konfiguracji usługi.
 
 ## <a name="streaming-improvements"></a>Ulepszenia przesyłania strumieniowego
@@ -58,7 +58,7 @@ W tym temacie omówiono funkcje nowych do Windows Communication Foundation (WCF)
  Niektóre stosów przetwarzania WSDL innych firm nie są przetworzyć dokumenty WSDL, które mają zależności w innych dokumentów za pośrednictwem: import.  Usługi WCF umożliwia teraz określić, że wszystkie informacje o WSDL zwrócone w jednym dokumencie. Żądanie dołączenia pojedynczym dokumencie WSDL "? singleWSDL" do identyfikatora URI, gdy żąda metadanych usługi.
 
 ## <a name="websocket-support"></a>Obsługa protokołu WebSocket
- Funkcja WebSockets jest to technologia, która zapewnia komunikację dwukierunkową przez porty 80 i 443 charakterystyki wydajności podobny do protokołu TCP. Dodano dwa nowe powiązania na potrzeby obsługi komunikacji za pośrednictwem protokołu WebSocket transportu. <xref:System.ServiceModel.NetHttpBinding> i <xref:System.ServiceModel.NetHttpsBinding>. Aby uzyskać więcej informacji, zobacz: [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md).
+ Funkcja WebSockets jest to technologia, która zapewnia komunikację dwukierunkową przez porty 80 i 443 charakterystyki wydajności podobny do protokołu TCP. Dodano dwa nowe powiązania na potrzeby obsługi komunikacji za pośrednictwem protokołu WebSocket transportu. <xref:System.ServiceModel.NetHttpBinding> i <xref:System.ServiceModel.NetHttpsBinding>. Aby uzyskać więcej informacji, zobacz: [Powiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md).
 
 ## <a name="new-transport-default-values"></a>Nowe wartości domyślne transportu
  W poniższej tabeli opisano ustawienia, które zostały zmienione i gdzie można znaleźć dodatkowe informacje.
@@ -71,7 +71,7 @@ W tym temacie omówiono funkcje nowych do Windows Communication Foundation (WCF)
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * liczba procesorów|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
 |receiveTimeout|SMSvcHost.exe|30 sekund|[Konfigurowanie usługi współużytkowania portów Net.TCP](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
-## <a name="xml-editor-tooltips"></a>Etykietki narzędzi edytora XML
+## <a name="xml-editor-tooltips"></a>XML Editor Tooltips
  W celu ułatwić nowych i istniejących deweloperzy usług WCF do konfigurowania swoich usług, edytorze XML Visual Studio teraz udostępnia etykietki narzędzi dla każdego elementu konfiguracji i jego właściwości, które jest częścią pliku konfiguracji usługi.
 
 ## <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie

@@ -1,16 +1,16 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206185"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277527"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 Określa kolekcję programy obsługi tokenów zabezpieczających, które są zarejestrowane z punktem końcowym.  
   
  \<system.identityModel>  
@@ -42,15 +42,15 @@ Określa kolekcję programy obsługi tokenów zabezpieczających, które są zar
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Dodaje programu obsługi tokenów zabezpieczających do kolekcji programu obsługi tokenów.|  
-|[\<Wyczyść >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Czyści wszystkie programy obsługi tokenów zabezpieczających z kolekcji programu obsługi tokenów.|  
+|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|Czyści wszystkie programy obsługi tokenów zabezpieczających z kolekcji programu obsługi tokenów.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|Usuwa programu obsługi tokenów zabezpieczających z kolekcji programu obsługi tokenów.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji programy obsługi tokenów.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Udostępnia konfigurację dla kolekcji programy obsługi tokenów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Określa ustawienia tożsamości na poziomie usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
  W konfiguracji usługi, można określić jeden lub więcej kolekcji o nazwie programy obsługi tokenów zabezpieczających. Można określić nazwę dla kolekcji za pomocą `name` atrybutu. Tylko nazwy, które obsługuje platformę są "funkcję ActAs" i "OnBehalfOf". Jeśli istnieją programy obsługi w tych kolekcjach, są one używane przez usługę tokenu zabezpieczającego (STS) zamiast obsługi domyślne podczas przetwarzania `ActAs` i `OnBehalfOf` tokenów.  

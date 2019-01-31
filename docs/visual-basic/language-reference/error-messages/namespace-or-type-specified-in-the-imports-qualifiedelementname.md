@@ -1,5 +1,5 @@
 ---
-title: Namespace lub typ określony w elemencie Imports &#39; &lt;qualifiedelementname&gt; &#39; &#39;t zawiera żadnej publicznej składowej lub nie można odnaleźć
+title: Przestrzeń nazw lub typ określone w elemencie Imports „<qualifiedelementname>” nie zawierają żadnego członka publicznego lub nie można go odnaleźć
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a769b33b3b63b7f431b73841f49632e41f9e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552141"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288278"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace lub typ określony w elemencie Imports &#39; &lt;qualifiedelementname&gt; &#39; &#39;t zawiera żadnej publicznej składowej lub nie można odnaleźć
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace lub typ określony w elemencie Imports\<qualifiedelementname >' nie zawiera żadnej publicznej składowej lub nie można odnaleźć
 Namespace lub typ określony w elemencie Imports\<qualifiedelementname >' nie zawiera żadnej publicznej składowej lub nie można odnaleźć. Upewnij się, że przestrzeń nazw lub typ zostały zdefiniowane i zawierają co najmniej jednego członka publicznego. Upewnij się, że nazwa aliasu nie zawiera innych aliasów.  
   
  `Imports` Instrukcja określa element zawierający, która nie może być odnaleziona lub nie definiuje `Public` elementów członkowskich.  

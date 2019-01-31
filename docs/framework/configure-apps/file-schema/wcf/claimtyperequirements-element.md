@@ -1,15 +1,15 @@
 ---
-title: '&lt;claimTypeRequirements&gt;, element'
+title: <claimTypeRequirements> — element
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: 32eafa3ce235b2087012bd5810a685ad5276e09d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95cc1adf7ab37475e8d3eeb01750531a7f8ab249
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632897"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279633"
 ---
-# <a name="ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt;, element
+# <a name="claimtyperequirements-element"></a>\<claimTypeRequirements > element
 Określa kolekcję wymaganych typów oświadczeń.  
   
  W federacyjnym scenariuszu usługi stanu wymagania dotyczące poświadczeń przychodzących. Na przykład poświadczenia przychodzących musi mieć określone typy oświadczeń. Każdy element podrzędny w tej kolekcji Określa typy wymaganych i opcjonalnych oświadczeń, oczekiwano w federacyjnym poświadczeniu.  

@@ -1,5 +1,5 @@
 ---
-title: '&#39;Jako&#39; nie jest obsługiwana w &#39;Declare&#39; instrukcji'
+title: Element „As Any” nie jest obsługiwany w instrukcjach „Declare”
 ms.date: 07/20/2015
 f1_keywords:
 - bc30828
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
-ms.openlocfilehash: 560ddc8674718f98f3e1a2f6d4facdb198f5e506
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdf339e0d91106a6d6527e085608a06b0439951c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709865"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274095"
 ---
-# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;Jako&#39; nie jest obsługiwana w &#39;Declare&#39; instrukcji
+# <a name="as-any-is-not-supported-in-declare-statements"></a>Element „As Any” nie jest obsługiwany w instrukcjach „Declare”
 `Any` — Typ danych był używany z `Declare` instrukcje w Visual Basic 6.0 i starszych wersji, aby zezwolić na korzystanie z argumentów, które mogą zawierać dowolny typ danych. Obsługa języka Visual Basic przeciążenia, jednak i sprawia, że tak `Any` przestarzały typ danych.  
   
  **Identyfikator błędu:** BC30828  

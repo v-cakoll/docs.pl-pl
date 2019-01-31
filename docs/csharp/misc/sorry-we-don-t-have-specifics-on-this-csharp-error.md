@@ -1,5 +1,5 @@
 ---
-title: Niestety, firma Microsoft nie&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
+title: Niestety nie są dostępne szczegółowe informacje na temat tego błędu języka C#
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,14 +882,14 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: f172d9579e18bffdde98756bd3acf471a80e6211
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576023"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262775"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, firma Microsoft nie&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Niestety nie są dostępne szczegółowe informacje na temat tego błędu języka C#
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Lub możesz poprosić, aby inni deweloperzy przy użyciu jednej z tych forów:  
   
  [W języku Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  

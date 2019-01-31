@@ -1,5 +1,5 @@
 ---
-title: 'Wystąpił błąd podczas tworzenia manifestu zestawu: &lt;komunikat o błędzie&gt;'
+title: 'Błąd podczas tworzenia manifestu zestawu: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: 7efdfa09ad7bf58fc3ddc8f702377a4d41b2fed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655390"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266484"
 ---
-# <a name="error-creating-assembly-manifest-lterror-messagegt"></a>Wystąpił błąd podczas tworzenia manifestu zestawu: &lt;komunikat o błędzie&gt;
+# <a name="error-creating-assembly-manifest-error-message"></a>Wystąpił błąd podczas tworzenia manifestu zestawu: \<komunikat o błędzie >
 Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd podczas etapu emisji wstępnego tworzenia zestawu.  
   
  Może to wystąpić, jeśli występują problemy z pliku klucza lub określony kontener kluczy. Aby w pełni Podpisz zestaw, należy podać prawidłowy plik klucza, który zawiera informacje o kluczach publicznych i prywatnych. Aby opóźnić Podpisz zestaw, należy wybrać **opóźnienie logowania tylko** pole wyboru, a następnie podaj prawidłowy plik klucza, który zawiera informacje o informacje o kluczu publicznym. Klucz prywatny nie jest konieczne w przypadku, gdy zestaw jest podpisany z opóźnieniem. Aby uzyskać więcej informacji, zobacz [jak: Podpisywanie zestawu silną nazwą](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  

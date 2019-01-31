@@ -1,25 +1,25 @@
 ---
-title: '&lt;activityStateQuery&gt; w WCF'
+title: <activityStateQuery> w WCF
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97fce512415ad6ae165b29c7e8eff3394d5e675a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151793"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254798"
 ---
-# <a name="ltactivitystatequerygt-of-wcf"></a>&lt;activityStateQuery&gt; w WCF
+# <a name="activitystatequery-of-wcf"></a>\<activityStateQuery > w WCF
 
 Reprezentuje zapytanie, które jest używane do śledzenia zmian cyklem życia działań, które tworzą wystąpienie przepływu pracy. Na przykład chcesz do śledzenia za każdym razem, gdy kończy działanie "Wyślij wiadomość E-Mail", w ramach wystąpienie przepływu pracy. To zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania obiektów rekordu stanu działania. Stany do subskrybowania są wyszczególnione w ActivityStates.  
   
 Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
 
-\<system.serviceModel > \<śledzenia >  
-\<profile > \<trackingProfile >  
+\<system.serviceModel> \<tracking>  
+\<profiles> \<trackingProfile>  
 \<przepływ pracy >  
-\<activityStateQueries >  
-\<activityStateQuery >  
+\<activityStateQueries>  
+\<activityStateQuery>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -61,7 +61,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<argumenty >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Kolekcja argumenty skojarzone z tej kwerendy działania.|  
+|[\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Kolekcja argumenty skojarzone z tej kwerendy działania.|  
 |[\<Stany >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Kolekcja elementów konfiguracji, które zawierają stany subskrybowanego działania, dla którego należy obliczanie rekord śledzenia.|  
 |[\<Stany >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Kolekcja zmiennych skojarzoną z tym zapytaniem działania.|  
   
@@ -69,7 +69,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Reprezentuje listę elementów konfiguracji, które są używane do śledzenia żądań, aby anulować działanie podrzędne przez działanie nadrzędne. Zapytanie jest niezbędne do uczestnika śledzenia do subskrybowania Anuluj żądanie rekordu obiektów.|  
+|[\<faultPropagationQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Reprezentuje listę elementów konfiguracji, które są używane do śledzenia żądań, aby anulować działanie podrzędne przez działanie nadrzędne. Zapytanie jest niezbędne do uczestnika śledzenia do subskrybowania Anuluj żądanie rekordu obiektów.|  
   
 ## <a name="remarks"></a>Uwagi
 

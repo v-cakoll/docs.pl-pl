@@ -1,5 +1,5 @@
 ---
-title: Typ wartości opcjonalnej dla parametru opcjonalnego &lt;parametername&gt; nie jest zgodny ze specyfikacją CLS
+title: Typ wartości opcjonalnej dla parametru opcjonalnego <parametername> jest niezgodny ze specyfikacją CLS
 ms.date: 07/20/2015
 f1_keywords:
 - BC40042
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: dd77cd8cbd36f7681e2597d908dd8e55bf249392
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 39054fb6bf82a344cb38613164cb42968aa632f7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960352"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261428"
 ---
-# <a name="type-of-optional-value-for-optional-parameter-ltparameternamegt-is-not-cls-compliant"></a>Typ wartości opcjonalnej dla parametru opcjonalnego &lt;parametername&gt; nie jest zgodny ze specyfikacją CLS
+# <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>Typ wartości opcjonalnej dla parametru opcjonalnego \<parametername > nie jest zgodny ze specyfikacją CLS
 Procedura jest oznaczona jako `<CLSCompliant(True)>` , ale deklaruje [opcjonalnie](../../../visual-basic/language-reference/modifiers/optional.md) parametru z wartością domyślną niezgodnego typu.  
   
  Procedury zachować zgodność z [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS), jej używać tylko typów zgodnych ze specyfikacją CLS. Dotyczy to typy parametrów, typ zwracany i typy jego zmiennych lokalnych. Ma również zastosowanie do wartościami domyślnymi parametrów opcjonalnych.  

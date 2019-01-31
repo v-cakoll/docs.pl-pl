@@ -1,15 +1,15 @@
 ---
-title: '&lt;windows&gt; w &lt;clientCredentials&gt;, element'
+title: <windows> z <clientCredentials> — Element
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 1331456f6defc24511064684181f615451be5b93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb55fb9901e4c08a3c5d7662fdb3bf12a71876bb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610750"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275161"
 ---
-# <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;windows&gt; w &lt;clientCredentials&gt;, element
+# <a name="windows-of-clientcredentials-element"></a>\<Windows > z \<clientCredentials > Element
 Określa ustawienia dla poświadczenia Windows do użycia do reprezentacji klienta.  
   
  \<system.ServiceModel>  

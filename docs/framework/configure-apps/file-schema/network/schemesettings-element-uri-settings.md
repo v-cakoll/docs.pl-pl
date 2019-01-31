@@ -1,15 +1,15 @@
 ---
-title: '&lt;schemeSettings&gt; — Element (ustawienia identyfikatora Uri)'
+title: <schemeSettings> — Element (Ustawienia identyfikatora Uri)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 3320fde81df3ec31bd52e3194a84686acc5d9216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06cb07b1620a603f0c0cf67a9236be143c2ec4a2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628893"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260202"
 ---
-# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; — Element (ustawienia identyfikatora Uri)
+# <a name="schemesettings-element-uri-settings"></a>\<schemeSettings >, Element (ustawienia identyfikatora Uri)
 Określa, jak <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.  
   
  \<Konfiguracja >  

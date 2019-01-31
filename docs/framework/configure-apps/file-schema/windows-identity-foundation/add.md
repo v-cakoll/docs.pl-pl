@@ -1,16 +1,16 @@
 ---
-title: '&lt;add&gt;'
+title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 4cd86a858223997ed379d2b26518e14f6d3ebb3e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: cb88d2a37740cf439f4fd2aa0f7fe4c098da1cf2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845362"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269760"
 ---
-# <a name="ltaddgt"></a>&lt;add&gt;
+# <a name="add"></a>\<add>
 Programu obsługi tokenów zabezpieczeń określone są dodawane do kolekcji programu obsługi tokenów.  
   
  \<system.identityModel>  

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zmiana w formancie MonthCalendar formularzy Windows&#39;wygląd'
+title: 'Instrukcje: Zmienianie wyglądu formantu MonthCalendar formularzy Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 5afee81d3db9452be352c875dbba0f7885592c02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7f321c1557bc7ea19213f2fc67767fe56328cf4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624355"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258929"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Instrukcje: Zmiana w formancie MonthCalendar formularzy Windows&#39;wygląd
+# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Instrukcje: Zmienianie wyglądu formantu MonthCalendar formularzy Windows
 Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli umożliwia dostosowanie wyglądu kalendarza na wiele sposobów. Na przykład można ustawić schemat kolorów i wybierz opcję wyświetlić lub ukryć numery tygodni i bieżącą datą.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>Aby zmienić schemat kolorów kalendarza miesięcznego  

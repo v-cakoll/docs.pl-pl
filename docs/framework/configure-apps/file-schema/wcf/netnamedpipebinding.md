@@ -1,15 +1,15 @@
 ---
-title: '&lt;netNamedPipeBinding&gt;'
+title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 54f1ad4feefe15f4901d8e493cadc0842f55224f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 183ce624d22162c2d665b173d8c04e132457a3fb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606676"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257255"
 ---
-# <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
+# <a name="netnamedpipebinding"></a>\<netNamedPipeBinding>
 Definiuje powiązanie, które jest bezpieczne i niezawodne, zoptymalizowane pod kątem na maszynie komunikacji pomiędzy procesami. Domyślnie generuje ona stosu środowiska uruchomieniowego komunikacji przy użyciu WS-ReliableMessaging niezawodność i zabezpieczenia transportu dla bezpieczeństwa transferu nazwane potoki dostarczania wiadomości i kodowania komunikatu binarnego.  
   
  \<system.ServiceModel>  

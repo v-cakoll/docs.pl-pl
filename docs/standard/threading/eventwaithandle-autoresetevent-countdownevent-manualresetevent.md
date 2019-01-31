@@ -1,5 +1,5 @@
 ---
-title: EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
+title: ManualResetEvent EventWaitHandle, CountdownEvent,
 ms.date: 09/14/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be9c858d7c76fdcc1b3e02485eb0b459f4e7555c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c682fbcc09609a9a4e59b29d5c8997a5ae21d2bc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583155"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266528"
 ---
-# <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
+# <a name="eventwaithandle-countdownevent-manualresetevent"></a>ManualResetEvent EventWaitHandle, CountdownEvent,
 
 Uchwyty oczekiwania na zdarzenie umożliwiają wątków, aby zsynchronizować działań przez siebie Sygnalizowanie i Oczekiwanie na siebie nawzajem sygnałów. Te zdarzenia synchronizacji opierają się na uchwyty oczekiwania na system operacyjny i można podzielić na dwa typy: te, które automatycznie resetować podczas sygnalizowane, które zostaną przywrócone ręcznie.  
   
@@ -26,9 +26,6 @@ Uchwyty oczekiwania na zdarzenie są przydatne w wielu z tych samych scenariuszy
 
  [EventWaitHandle](eventwaithandle.md)  
  <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> Klasa może reprezentować albo automatyczne lub ręczne Resetowanie zdarzenia i albo lokalne lub o nazwie zdarzenia systemowe.  
-  
- [AutoResetEvent](autoresetevent.md)  
- <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> Klasa pochodzi od <xref:System.Threading.EventWaitHandle> i reprezentuje zdarzenie lokalnego, który przywraca automatycznie.  
   
  [ManualResetEvent i ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md)  
  <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Klasa pochodzi od <xref:System.Threading.EventWaitHandle> i reprezentuje lokalne zdarzenia, które muszą zostać zresetowane ręcznie. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> Klasa jest uproszczone, szybciej wersji, który może służyć do zdarzenia w obrębie tego samego procesu.  

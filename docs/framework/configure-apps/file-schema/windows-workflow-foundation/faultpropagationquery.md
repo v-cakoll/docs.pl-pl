@@ -1,16 +1,16 @@
 ---
-title: '&lt;faultPropagationQuery&gt;'
+title: <faultPropagationQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fb5c2b1-3dad-4eca-9c7f-3efb51899813
-ms.openlocfilehash: a91a6f61b39a780ed48ad8d5f5e0dfb9ef60da39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a6899eaa04ad16192e07f4bc2ad1abe6e4aedd5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538339"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257372"
 ---
-# <a name="ltfaultpropagationquerygt"></a>&lt;faultPropagationQuery&gt;
+# <a name="faultpropagationquery"></a>\<faultPropagationQuery>
 Reprezentuje zapytanie, które jest używane do śledzenia obsługi błędów występujących w ramach działania.  To zdarzenie występuje, każdym razem FaultHandler przetwarza błąd wystąpienia. Należy użyć takiej kwerendy do śledzenia obsługi błędów występujących w ramach działania. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania błędów propagacji rekordów.  
   
  Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

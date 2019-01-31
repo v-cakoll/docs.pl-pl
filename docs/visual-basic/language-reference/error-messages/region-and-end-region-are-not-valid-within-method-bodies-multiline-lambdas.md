@@ -1,5 +1,5 @@
 ---
-title: '&#39;#Region&#39; i &#39;#End Region&#39; instrukcje nie są prawidłowe w ramach metod treści wielowierszowych wyrażeń lambda'
+title: Instrukcje "#Region" i "#End Region" nie są prawidłowe w metod treści wielowierszowych wyrażeń lambda
 ms.date: 07/20/2015
 f1_keywords:
 - bc32025
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32025
 ms.assetid: 43707bf1-1c6b-4d82-b081-e5a17dca51c1
-ms.openlocfilehash: 55399cd123ce4d67cc833f2eabe3230acdafc0bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a2f5692518c6784dfc6e3be6302f1e8dcf2aaa7
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737218"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265574"
 ---
-# <a name="39region39-and-39end-region39-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>&#39;#Region&#39; i &#39;#End Region&#39; instrukcje nie są prawidłowe w ramach metody treści/wielowierszowych wyrażeń lambda
+# <a name="region-and-end-region-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>Instrukcje „#Region” i „#End Region” nie są prawidłowe w treści metod/wielowierszowych wyrażeń lambda
 `#Region` Bloku musi być zadeklarowany na poziomie klasy, modułu lub przestrzeni nazw. Region zwijany może zawierać jedną lub kilkoma procedurami, ale go nie może rozpoczynać się ani kończyć się wewnątrz procedury.  
   
  **Identyfikator błędu:** BC32025  

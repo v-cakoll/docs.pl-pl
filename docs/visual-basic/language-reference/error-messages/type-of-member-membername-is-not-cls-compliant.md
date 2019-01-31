@@ -1,5 +1,5 @@
 ---
-title: Typ elementu członkowskiego &#39; &lt;membername&gt; &#39; nie jest zgodny ze specyfikacją CLS
+title: Typ członka „<membername>” nie jest zgodny ze specyfikacją CLS
 ms.date: 07/20/2015
 f1_keywords:
 - bc40025
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b23ebca955d961771b194df2c7316cb1b7f4a50
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603853"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254096"
 ---
-# <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Typ elementu członkowskiego &#39; &lt;membername&gt; &#39; nie jest zgodny ze specyfikacją CLS
+# <a name="type-of-member-membername-is-not-cls-compliant"></a>Typ elementu członkowskiego "\<membername >' nie jest zgodny ze specyfikacją CLS
 Typ danych określony dla tego elementu członkowskiego nie jest częścią [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS). Nie jest to błąd w ramach składnika, ponieważ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] i język Visual Basic obsługuje ten typ danych. Jednak inny składnik, napisany w ściśle zgodna ze specyfikacją CLS kod nie może obsługiwać tego typu danych. Takiego składnika nie może być możliwość interakcji pomyślnie z danego składnika.  
   
  Następujące typy danych Visual Basic nie są zgodne ze specyfikacją CLS:  

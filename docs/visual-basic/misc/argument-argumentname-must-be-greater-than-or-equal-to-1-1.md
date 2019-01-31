@@ -1,17 +1,17 @@
 ---
-title: Argument "&lt;argumentname&gt;" musi być większa niż lub równy-1
+title: Argument "<argumentname>" musi być większa niż lub równy-1
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GEMinusOne1
 ms.assetid: 4bdbef4c-6eff-4fab-a1d0-cb176d5f8798
-ms.openlocfilehash: 7a31814b5a9d02add34a49399af32a38ba636fb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e217052d2875f77163eadc9051b4940e62df215
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664758"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255118"
 ---
-# <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to--1"></a>Argument "&lt;argumentname&gt;" musi być większa niż lub równy-1
+# <a name="argument-argumentname-must-be-greater-than-or-equal-to--1"></a>Argument "\<argumentname >" musi być większa niż lub równy-1
 Wartość argumentu jest mniejsza niż -1.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

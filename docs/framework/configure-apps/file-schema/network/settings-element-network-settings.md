@@ -1,5 +1,5 @@
 ---
-title: '&lt;ustawienia&gt; — Element (ustawienia sieci)'
+title: <settings> — Element (Ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 7db55dd9d2ca79342cadb2320d08ca9235223def
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 839907d9339d459070fff12dbca22d3c2df5b020
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671856"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260622"
 ---
-# <a name="ltsettingsgt-element-network-settings"></a>&lt;ustawienia&gt; — Element (ustawienia sieci)
+# <a name="settings-element-network-settings"></a>\<Ustawienia >, Element (ustawienia sieci)
 Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net?displayProperty=nameWithType> przestrzeni nazw.  
   
  \<Konfiguracja >  

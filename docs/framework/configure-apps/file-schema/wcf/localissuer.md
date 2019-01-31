@@ -1,15 +1,15 @@
 ---
-title: '&lt;localIssuer&gt;'
+title: <localIssuer>
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: 893ac2cb0e6c54beae68e2607c31564baafd95fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ab90ec8982580a0a1efe1ed042ae7deff53819a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527552"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256514"
 ---
-# <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
+# <a name="localissuer"></a>\<localIssuer>
 Określa adres i powiązanie wystawcy lokalnego, można użyć do uzyskania tokenu zabezpieczającego.  
   
  \<system.ServiceModel>  

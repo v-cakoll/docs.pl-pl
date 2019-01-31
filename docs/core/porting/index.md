@@ -4,12 +4,12 @@ description: Zrozumieć proces przenoszenia i Odkryj narzędzia, które mogą by
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 5c7cd8b01672e71b0db7255dad23d994a95ce532
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170044"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266575"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Przyłącz kod z .NET Framework i .NET Core
 
@@ -41,7 +41,7 @@ Jest to proces, firma Microsoft zaleca należy wykonać podczas przenoszenia pro
 
 Na poniższej liście przedstawiono narzędzia, że może się okazać przydatne podczas przenoszenia proces:
 
-* Narzędzia .NET portability Analyzer - [narzędzia wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases) lub [rozszerzenie programu Visual Studio](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b), łańcuch narzędzi, który można wygenerować raport jak przenośny kod jest między .NET Framework i .NET Core za pomocą zestaw, zestaw z rozbiciem na poszczególne problemy. Aby uzyskać więcej informacji, zobacz [narzędzia .NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
+* Narzędzia .NET portability Analyzer - [narzędzia wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases) lub [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), łańcuch narzędzi, który można wygenerować raport jak przenośny kod jest między .NET Framework i .NET Core za pomocą zestaw, zestaw z rozbiciem na poszczególne problemy. Aby uzyskać więcej informacji, zobacz [narzędzia .NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
 * Analizator interfejsu API platformy .NET — analizatora Roslyn, który wykryje potencjalne zagrożenia zgodność dla C# interfejsów API na różnych platformach i wykrywa wywołania interfejsów API przestarzałych. Aby uzyskać więcej informacji, zobacz [analizatora interfejsu API platformy .NET](../../standard/analyzers/api-analyzer.md).
 * Odwrócone wyszukiwanie pakietu - A [usługi sieci web przydatne](https://packagesearch.azurewebsites.net) umożliwiająca wyszukiwania dla typu i znajdowania pakiety zawierające tego typu.
 

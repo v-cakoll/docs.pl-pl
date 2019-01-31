@@ -1,5 +1,5 @@
 ---
-title: '&lt;Usuń&gt; Element dla authenticationModules (ustawienia sieci)'
+title: <remove> — Element dla authenticationModules (Ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 20d90c4554f9718651070456f6d4a14475d88bf6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8afdf442f8dc4e57a407583ea6c452330dae53f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651581"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55281024"
 ---
-# <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;Usuń&gt; Element dla authenticationModules (ustawienia sieci)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Usuń >, Element dla authenticationModules (ustawienia sieci)
 Usuwa moduł uwierzytelniania z aplikacji.  
   
  \<Konfiguracja >  

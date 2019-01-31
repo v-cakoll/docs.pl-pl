@@ -1,23 +1,25 @@
 ---
-title: Usuwanie stanu widoku Projektanta dodaje do pliku XAML
+title: Usuwanie stanu widoku Projektanta dodaje do pliku XAML — WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: 0d4dccb16796893df58f709e011657457cc71670
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 71a2aadeefd53b391f4589ed9dc32d9cd6e3183a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835723"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260570"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Usuwanie stanu widoku Projektanta dodaje do pliku XAML
-W tym przykładzie pokazano, jak utworzyć klasę, która jest pochodną <xref:System.Windows.Markup.XamlWriter> i usuwa wyświetlanie stanu z pliku XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] zapisuje informacje w dokumencie XAML, który jest znany jako stan widoku. Wyświetl stan odnosi się do informacje, które są wymagane w czasie projektowania, takie jak układ pozycjonowanie, i które nie są wymagane w czasie wykonywania. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Wstawia tych informacji do dokumentu XAML jest edytowany. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] zapisuje stan widoku w pliku XAML z `mc:Ignorable` atrybutu, dzięki czemu te informacje nie został załadowany, gdy środowisko uruchomieniowe ładuje plik XAML. W tym przykładzie pokazano, jak utworzyć klasę, która powoduje usunięcie tego widoku stanu podczas przetwarzania węzłów XAML.
+
+W tym przykładzie pokazano, jak utworzyć klasę, która jest pochodną <xref:System.Xaml.XamlWriter> i usuwa wyświetlanie stanu z pliku XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] zapisuje informacje w dokumencie XAML, który jest znany jako stan widoku. Wyświetl stan odnosi się do informacje, które są wymagane w czasie projektowania, takie jak układ pozycjonowanie, i które nie są wymagane w czasie wykonywania. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] Wstawia tych informacji do dokumentu XAML jest edytowany. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] zapisuje stan widoku w pliku XAML z `mc:Ignorable` atrybutu, dzięki czemu te informacje nie został załadowany, gdy środowisko uruchomieniowe ładuje plik XAML. W tym przykładzie pokazano, jak utworzyć klasę, która powoduje usunięcie tego widoku stanu podczas przetwarzania węzłów XAML.
 
 ## <a name="discussion"></a>Dyskusja
- W tym przykładzie pokazano, jak utworzyć niestandardowy Edytor.
 
- Aby utworzyć niestandardowy Edytor XAML, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.Windows.Markup.XamlWriter>. Autorzy XAML często są zagnieżdżone, jest typowy do śledzenia "wewnętrzny" zapisywania XAML. Te "wewnętrzny" autorzy można traktować jako odwołanie do pozostałych stosu moduły zapisujące XAML, dzięki czemu możesz mieć wiele punktów wejścia do pracy i następnie poprzez delegowanie przekazać przetwarzania do pozostałej części stosu.
+W tym przykładzie pokazano, jak utworzyć niestandardowy Edytor.
 
- W tym przykładzie istnieje kilka elementów zainteresowania. Jeden jest sprawdzenie, czy element zapisywana jest z projektanta przestrzeni nazw. Należy pamiętać, że to również musiał użycie innych typów z przestrzeni nazw projektanta przepływu pracy.
+Aby utworzyć niestandardowy Edytor XAML, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.Xaml.XamlWriter>. Autorzy XAML często są zagnieżdżone, jest typowy do śledzenia "wewnętrzny" zapisywania XAML. Te "wewnętrzny" autorzy można traktować jako odwołanie do pozostałych stosu moduły zapisujące XAML, dzięki czemu możesz mieć wiele punktów wejścia do pracy i następnie poprzez delegowanie przekazać przetwarzania do pozostałej części stosu.
+
+W tym przykładzie istnieje kilka elementów zainteresowania. Jeden jest sprawdzenie, czy element zapisywana jest z projektanta przestrzeni nazw. Należy pamiętać, że to również musiał użycie innych typów z przestrzeni nazw projektanta przepływu pracy.
 
 ```csharp
 static Boolean IsDesignerAttachedProperty(XamlMember xamlMember)
@@ -39,7 +41,7 @@ XamlWriter InnerWriter {get; set; }
 Stack<XamlMember> MemberStack {get; set; }
 ```
 
- Tworzy to również stosu XAML elementów członkowskich, które są używane podczas rekursywnego przesyłania strumień węzłów. Praca pozostała tego przykładu stopniu znajduje się w <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` metody.
+Tworzy to również stosu XAML elementów członkowskich, które są używane podczas rekursywnego przesyłania strumień węzłów. Praca pozostała tego przykładu stopniu znajduje się w `WriteStartMember` metody.
 
 ```csharp
 public override void WriteStartMember(XamlMember xamlMember)
@@ -60,7 +62,7 @@ public override void WriteStartMember(XamlMember xamlMember)
 }
 ```
 
- Kolejne metody, a następnie sprawdź, czy nadal znajdują się w kontenerze stanu widoku, a jeśli tak, wróć i nie przekazuj węzeł w dół stosu składnika zapisywania.
+Kolejne metody, a następnie sprawdź, czy nadal znajdują się w kontenerze stanu widoku, a jeśli tak, wróć i nie przekazuj węzeł w dół stosu składnika zapisywania.
 
 ```csharp
 public override void WriteValue(Object value)
@@ -74,7 +76,7 @@ public override void WriteValue(Object value)
 }
 ```
 
- Aby użyć niestandardowego Edytor XAML, możesz musi zostać połączony je ze sobą w stosie autorzy XAML. Poniższy kod pokazuje, jak może być używany.
+Aby użyć niestandardowego Edytor XAML, możesz musi zostać połączony je ze sobą w stosie autorzy XAML. Poniższy kod pokazuje, jak może być używany.
 
 ```csharp
 XmlWriterSettings writerSettings = new XmlWriterSettings {  Indent = true };
@@ -83,7 +85,7 @@ XamlXmlWriter xamlWriter = new XamlXmlWriter(xmlWriter, new XamlSchemaContext())
 XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilderWriter(xamlWriter)), ab);
 ```
 
-#### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
+## <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
 1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania ViewStateCleaningWriter.sln.
 
@@ -102,9 +104,9 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 > [!NOTE]
 > Aby uzyskać <xref:System.Activities.Statements.Sequence> przepływu pracy, liczba wirtualizacji wskazówki są usuwane. Powoduje to projektanta Aby ponownie Oblicz układ następnym razem, gdy jest on ładowany. Kiedy korzystać z tej próbki dla <xref:System.Activities.Statements.Flowchart>, pozycjonowanie i wiersza informacji o routingu są usuwane, a w kolejnych ładowanie do projektanta, wszystkie działania są ułożone w lewej części ekranu.
 
-#### <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a>Aby utworzyć przykładowy plik XAML do użytku z tego przykładu
+## <a name="to-create-a-sample-xaml-file-for-use-with-this-sample"></a>Aby utworzyć przykładowy plik XAML do użytku z tego przykładu
 
-1. Otwórz program Visual Studio 2010.
+1. Open Visual Studio 2010.
 
 2. Utwórz nową aplikację konsoli przepływu pracy.
 
@@ -115,10 +117,10 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 5. Sprawdź plik XAML, aby wyświetlić widok stanu dołączone właściwości.
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
->   
+> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

@@ -1,5 +1,5 @@
 ---
-title: '&lt;źródła&gt; — Element'
+title: <sources>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: c34ca1a47910f4255951be041d97f92ea7fd46ad
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: d7d92f91838a8d1914ffe574f018cc701477d767
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083317"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262507"
 ---
-# <a name="ltsourcesgt-element"></a>&lt;źródła&gt; — Element
+# <a name="sources-element"></a>\<źródła > Element
 Określa źródła śledzenia, które inicjują komunikatów śledzenia.  
   
  \<Konfiguracja >  

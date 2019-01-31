@@ -1,5 +1,5 @@
 ---
-title: '&lt;sieć&gt; — Element (ustawienia sieci)'
+title: <network> — Element (Ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 7270cee07bea50aa50dc191ac957132e2794c0bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67743ccf2fa14117814160aeb7624c2be4eea364
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599267"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257869"
 ---
-# <a name="ltnetworkgt-element-network-settings"></a>&lt;sieć&gt; — Element (ustawienia sieci)
+# <a name="network-element-network-settings"></a>\<Sieć >, Element (ustawienia sieci)
 Konfiguruje opcje sieciowe dla zewnętrznego serwera transportu protokołu SMTP (Simple Mail).  
   
  \<Konfiguracja >  

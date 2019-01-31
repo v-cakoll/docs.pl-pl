@@ -1,5 +1,5 @@
 ---
-title: 'Nie można zapisać do pliku wyjściowego &#39; &lt;filename&gt;&#39;: &lt;błąd&gt;'
+title: 'Nie można zapisać do pliku wyjściowego „<filename>”: <error>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f7580c53535c28c97213a5a0488c3fc0365c4ac
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572698"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274111"
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Nie można zapisać do pliku wyjściowego &#39; &lt;filename&gt;&#39;: &lt;błąd&gt;
+# <a name="unable-to-write-to-output-file-filename-error"></a>Nie można zapisać do pliku wyjściowego "\<nazwa pliku >": \<błąd >
 Wystąpił problem podczas tworzenia pliku.  
   
  Nie można otworzyć pliku wyjściowego do zapisu. Plik (lub folder zawierający plik) może być otwarty do wyłącznego użytku przez inny proces lub może być jej ustawiony atrybut tylko do odczytu.  

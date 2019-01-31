@@ -2,20 +2,20 @@
 title: Protokoły transakcyjne wersja 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: d2a50e798af47dd4f80f149362f2afffbab007f6
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066366"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258022"
 ---
 # <a name="transaction-protocols-version-10"></a>Protokoły transakcyjne wersja 1.0
 Windows Communication Foundation (WCF) w wersji 1 implementuje wersji 1.0 protokołów WS-Atomic Transaction i WS-koordynacji. Aby uzyskać więcej informacji o wersji 1.1, zobacz [protokoły transakcji](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
   
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
-|WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
-|WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
+|WS-Coordination|<http://specs.xmlsoap.org/ws/2004/10/wscoor/wscoor.pdf>|  
+|WS-AtomicTransaction|<http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf>|  
   
  Współdziałanie w specyfikacji protokołu jest wymagany na dwóch poziomach: między aplikacjami i między menedżerowie transakcji (patrz poniższy rysunek). Specyfikacje opisano szczegółowo formaty wiadomości i wiadomości programu exchange na obu poziomach współdziałania. Niektóre bezpieczeństwa, niezawodności i kodowania dla aplikacji do aplikacji programu exchange mają zastosowanie jak w przypadku regularnego aplikacji programu exchange. Pomyślne współdziałanie menedżerowie transakcji wymaga jednak umowy w określonym powiązaniu, ponieważ zwykle nie jest skonfigurowany przez użytkownika.  
   

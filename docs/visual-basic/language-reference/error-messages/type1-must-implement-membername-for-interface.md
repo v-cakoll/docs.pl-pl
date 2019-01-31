@@ -1,5 +1,5 @@
 ---
-title: '&lt;type1&gt;&#39;&lt;typename&gt; &#39; musi implementować &#39; &lt;membername&gt; &#39; interfejsu &#39; &lt;interfacename&gt;&#39;'
+title: <type1>'<typename>' musi zaimplementować '<membername>' dla interfejsu '<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: 14e7bd199215764676a4b563eafc68bd6dabadc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de7dd9026e08495941a89be0db11ad4c68d2a748
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574745"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264235"
 ---
-# <a name="lttype1gt39lttypenamegt39-must-implement-39ltmembernamegt39-for-interface-39ltinterfacenamegt39"></a>&lt;type1&gt;&#39;&lt;typename&gt; &#39; musi implementować &#39; &lt;membername&gt; &#39; interfejsu &#39; &lt;interfacename&gt;&#39;
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 > "\<typename >" musi implementować "\<membername >" dla interfejsu "\<interfacename >"
 "\<typename >" musi implementować "\<membername >" dla interfejsu "\<interfacename >". Implementowanie właściwości musi mieć dopasowania "ReadOnly" / specyfikatorów "WriteOnly".  
   
  Klasa lub struktura oświadczeń zaimplementować interfejs, ale nie implementuje procedurę, właściwości lub zdarzenia, zdefiniowany przez interfejs. Należy zaimplementować każdego członka interfejsu.  

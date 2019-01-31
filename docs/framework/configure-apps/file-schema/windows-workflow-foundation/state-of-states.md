@@ -1,16 +1,16 @@
 ---
-title: '&lt;Stan&gt; z &lt;stanów&gt;'
+title: <state> z <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: 1ddf7e0ed2849764f3b21e8cf1c31d98762c0d5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 657814eb120878cdc71cd7603d0499ff65ca50e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696246"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271437"
 ---
-# <a name="ltstategt-of-ltstatesgt"></a>&lt;Stan&gt; z &lt;stanów&gt;
+# <a name="state-of-states"></a>\<Stan > z \<stany >
 Element konfiguracji, który zawiera stan subskrybowanego działania, dla którego należy obliczanie rekord śledzenia.  
   
  Aby uzyskać więcej informacji na podstawie śledzenia zapytań profilu zobacz [profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

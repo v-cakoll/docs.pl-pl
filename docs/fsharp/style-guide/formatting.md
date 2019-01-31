@@ -2,12 +2,12 @@
 title: F#wskazówki dotyczące formatowania kodu
 description: Dowiedz się, wskazówki dotyczące formatowania F# kodu.
 ms.date: 11/26/2018
-ms.openlocfilehash: d4b61646154c613093374ef3dcf7436de4b0d3ea
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415445"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254833"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#wskazówki dotyczące formatowania kodu
 
@@ -275,6 +275,17 @@ match x, y with
 | x, 1 -> 0
 | x, y -> 1
 ```
+
+Jest ono również powszechnie akceptowane Aby pominąć nawiasów, jeśli wartość zwracaną przez funkcję spójnej kolekcji:
+
+```fsharp
+// OK
+let update model msg =
+    match msg with
+    | 1 -> model + 1, []
+    | _ -> model, [ msg ]
+```
+Podsumowanie Preferuj wystąpień krotki ujęty w nawiasy, ale podczas korzystania z krotek do dopasowywania do wzorca lub wartość zwracana jest uznawane za można uniknąć nawiasów.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formatowanie Suma rozłączna deklaracje złożeń
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;gniazda&gt; — Element (ustawienia sieci)'
+title: <socket> — Element (Ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 01e4b5ef4583d30114720ffe559a342b45fe2b98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f599d6ada288db861f69fc64e6b84ee326b5830
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640020"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256901"
 ---
-# <a name="ltsocketgt-element-network-settings"></a>&lt;gniazda&gt; — Element (ustawienia sieci)
+# <a name="socket-element-network-settings"></a>\<gniazda >, Element (ustawienia sieci)
 Określa, czy operacje gniazda używają portów.  
   
  \<Konfiguracja >  

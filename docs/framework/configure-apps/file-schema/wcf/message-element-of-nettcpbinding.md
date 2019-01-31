@@ -1,15 +1,15 @@
 ---
-title: '&lt;message&gt; w &lt;netTcpBinding&gt;'
+title: <message> element <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 018cd6797b730bc5469cc68dd23fcf8315716588
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677401"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276929"
 ---
-# <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>&lt;message&gt; w &lt;netTcpBinding&gt;
+# <a name="message-element-of-nettcpbinding"></a>\<komunikat > element \<netTcpBinding >
 Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe skonfigurowane za pomocą [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  \<system.ServiceModel>  

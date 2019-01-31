@@ -1,15 +1,15 @@
 ---
-title: '&lt;certificate&gt;, element'
+title: <certificate>, element
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: d1449cc6c40ae16190bacf378df3bd60c49d060c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b53a0328ed1fcbae03e8844ccca64e949db44e7e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538326"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254551"
 ---
-# <a name="ltcertificategt-element"></a>&lt;certificate&gt;, element
+# <a name="certificate-element"></a>\<certyfikat > Element
 Określa certyfikat X.509 do podpisywania i szyfrowania wiadomości dla klientów peer-to-peer.  
   
  \<system.ServiceModel>  

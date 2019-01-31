@@ -1,5 +1,5 @@
 ---
-title: Typ bazowy &lt;typename&gt; wyliczenia jest niezgodny ze specyfikacją CLS
+title: Typ źródłowy <typename> wyliczenia jest niezgodny ze specyfikacją CLS
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40032
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75f66c79bcf6c857fb19acf7c5a75320b16a43d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674797"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258631"
 ---
-# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Typ bazowy &lt;typename&gt; wyliczenia jest niezgodny ze specyfikacją CLS
+# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>Typ bazowy \<typename > wyliczenia jest niezgodny ze specyfikacją CLS
 Typ danych określony dla tego wyliczenia jest częścią [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS). Nie jest to błąd w ramach składnika, ponieważ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] i język Visual Basic obsługuje ten typ danych. Jednak inny składnik, napisany w ściśle zgodna ze specyfikacją CLS kod nie może obsługiwać tego typu danych. Takiego składnika nie może być możliwość interakcji pomyślnie z danego składnika.  
   
  Następujące typy danych Visual Basic nie są zgodne ze specyfikacją CLS:  

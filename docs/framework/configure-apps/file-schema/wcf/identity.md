@@ -1,15 +1,15 @@
 ---
-title: '&lt;Tożsamość&gt;'
+title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 03e73f64090e0851b06ee67fe70c157b6145966c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e8c4a4aae3565b8af7adaa73def453107ea93
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677367"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274160"
 ---
-# <a name="ltidentitygt"></a>&lt;Tożsamość&gt;
+# <a name="identity"></a>\<identity>
 Element tożsamości pozwala deweloperowi klienta określić w czasie projektu oczekiwaną tożsamość usługi. W procesu uzgadniania między klientem a usługą infrastruktury usług Windows Communication Foundation (WCF) gwarantuje, że tożsamość pasuje do oczekiwanej usługi wartości tego elementu i dlatego może zostać uwierzytelniony. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<system.ServiceModel>  

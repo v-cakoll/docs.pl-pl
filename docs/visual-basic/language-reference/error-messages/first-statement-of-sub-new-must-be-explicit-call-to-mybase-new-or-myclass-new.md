@@ -1,5 +1,5 @@
 ---
-title: 'Pierwsza instrukcja tego &#39;Sub New&#39; musi być jawnym wywołaniem &#39;MyBase.New&#39; lub &#39;MyClass.New&#39; ponieważ &#39; &lt;constructorname&gt; &#39; w klasie bazowej &#39; &lt;baseclassname&gt; &#39; z &#39; &lt;derivedclassname&gt; &#39; jest oznaczony jako przestarzały: &#39; &lt;komunikat o błędzie&gt;&#39;'
+title: 'Pierwsza instrukcja tego elementu „Sub New” musi być jawnym wywołaniem elementu „MyBase.New” lub „MyClass.New”, ponieważ element „<constructorname>” w klasie bazowej „<baseclassname>” elementu „<derivedclassname>” jest oznaczony jako przestarzały: „<errormessage>"'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30920
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 9d07a68fd8d9790178427c512375323f23f46772
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f92d1e52e50b2a87fd6a6af6e3c87292f4437f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566782"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268798"
 ---
-# <a name="first-statement-of-this-39sub-new39-must-be-an-explicit-call-to-39mybasenew39-or-39myclassnew39-because-the-39ltconstructornamegt39-in-the-base-class-39ltbaseclassnamegt39-of-39ltderivedclassnamegt39-is-marked-obsolete-39lterrormessagegt39"></a>Pierwsza instrukcja tego &#39;Sub New&#39; musi być jawnym wywołaniem &#39;MyBase.New&#39; lub &#39;MyClass.New&#39; ponieważ &#39; &lt;constructorname&gt; &#39; w klasie bazowej &#39; &lt;baseclassname&gt; &#39; z &#39; &lt;derivedclassname&gt; &#39; jest oznaczony jako przestarzały: &#39; &lt;komunikat o błędzie&gt;&#39;
+# <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Pierwsza instrukcja tego elementu "Sub New" musi być jawnym wywołaniem elementu "MyBase.New" lub "MyClass.New", ponieważ "\<constructorname >" w klasie bazowej\<baseclassname > "z"\<derivedclassname > "jest oznaczony jako przestarzały:"\< komunikat o błędzie > "
 Konstruktor klasy nie jawnie wywołać konstruktora klasy bazowej i Konstruktor niejawne klasy bazowej jest oznaczona za pomocą <xref:System.ObsoleteAttribute> atrybut i dyrektywy traktowanie jej jako błąd.  
   
  Jeśli konstruktor klasy pochodnej nie wywołać konstruktora klasy bazowej, Visual Basic spróbuje go wygenerować wywołanie niejawne konstruktor bez parametrów klasy bazowej. Jeśli jest dostępny żaden konstruktor nie w klasie bazowej, który można wywołać bez argumentów, Visual Basic nie można wygenerować wywołanie niejawne. W tym przypadku wymaganego konstruktora jest oznaczona za pomocą <xref:System.ObsoleteAttribute> atrybutu, więc języka Visual Basic nie można wywołać go.  

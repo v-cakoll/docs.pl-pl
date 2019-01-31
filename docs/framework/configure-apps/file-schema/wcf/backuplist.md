@@ -1,15 +1,15 @@
 ---
-title: '&lt;backupList&gt;'
+title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: c11fd38e7c40f740d4c1c36ab87c44744ed0daab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e2b3eacbc845ad40030f3a48be2ef93c4ddbd8c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627995"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262436"
 ---
-# <a name="ltbackuplistgt"></a>&lt;backupList&gt;
+# <a name="backuplist"></a>\<backupList>
 Reprezentuje sekcję konfiguracji dla definiowania listy kopii zapasowych, która wylicza zestaw punktów końcowych, które chcesz, aby usługa routingu do użycia w przypadku, gdy nie można nawiązać połączenia z podstawowego punktu końcowego. Jeśli pierwszy punkt końcowy na liście nie działa, usługa routingu będzie automatycznie przełączać się kolejny na liście.  Dzięki temu możesz szybko dodać niezawodność do Twojej aplikacji bez konieczności nauki aplikacji klienckiej sposobu obsługi złożonych wzorów lub wszystkich usług wdrożonym.  
   
  \<system.serviceModel>  

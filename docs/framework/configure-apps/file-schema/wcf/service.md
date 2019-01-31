@@ -1,15 +1,15 @@
 ---
-title: '&lt;service&gt;'
+title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: e91e04c602fd867e329477015fc0a8354ae26a05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57fbdd2cf7c398e611f835eeb4e924fb4f3e0c9e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535011"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270306"
 ---
-# <a name="ltservicegt"></a>&lt;service&gt;
+# <a name="service"></a>\<service>
 `service` Element zawiera ustawienia usługi Windows Communication Foundation (WCF). Zawiera ona także punktów końcowych, które udostępniają usługi.  
   
  \<system.ServiceModel>  

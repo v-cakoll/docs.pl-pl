@@ -1,25 +1,25 @@
 ---
-title: '&lt;transport&gt; w &lt;webHttpBinding&gt;'
+title: <transport> z <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 657de92129d27e70834cb401cde42d24b633f7ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2c7ee3512ddeefae6e5551a58b3bab76742ed30
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677020"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286419"
 ---
-# <a name="lttransportgt-of-ltwebhttpbindinggt"></a><span data-ttu-id="bfc53-102">&lt;transport&gt; w &lt;webHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="bfc53-102">&lt;transport&gt; of &lt;webHttpBinding&gt;</span></span>
-<span data-ttu-id="bfc53-103">Określa ustawienia zabezpieczenia na poziomie transportu dla punktu końcowego skonfigurowanego do odbierania żądań HTTP.</span><span class="sxs-lookup"><span data-stu-id="bfc53-103">Defines the transport-level security settings for a service endpoint configured to receive HTTP requests.</span></span>  
+# <a name="transport-of-webhttpbinding"></a><span data-ttu-id="0692c-102">\<transport > z \<webHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="0692c-102">\<transport> of \<webHttpBinding></span></span>
+<span data-ttu-id="0692c-103">Określa ustawienia zabezpieczenia na poziomie transportu dla punktu końcowego skonfigurowanego do odbierania żądań HTTP.</span><span class="sxs-lookup"><span data-stu-id="0692c-103">Defines the transport-level security settings for a service endpoint configured to receive HTTP requests.</span></span>  
   
- <span data-ttu-id="bfc53-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="bfc53-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="bfc53-105">\<powiązania ></span><span class="sxs-lookup"><span data-stu-id="bfc53-105">\<bindings></span></span>  
-<span data-ttu-id="bfc53-106">\<webHttpBinding></span><span class="sxs-lookup"><span data-stu-id="bfc53-106">\<webHttpBinding></span></span>  
-<span data-ttu-id="bfc53-107">\<Powiązanie ></span><span class="sxs-lookup"><span data-stu-id="bfc53-107">\<binding></span></span>  
-<span data-ttu-id="bfc53-108">\<security></span><span class="sxs-lookup"><span data-stu-id="bfc53-108">\<security></span></span>  
-<span data-ttu-id="bfc53-109">\<transport></span><span class="sxs-lookup"><span data-stu-id="bfc53-109">\<transport></span></span>  
+ <span data-ttu-id="0692c-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="0692c-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="0692c-105">\<powiązania ></span><span class="sxs-lookup"><span data-stu-id="0692c-105">\<bindings></span></span>  
+<span data-ttu-id="0692c-106">\<webHttpBinding></span><span class="sxs-lookup"><span data-stu-id="0692c-106">\<webHttpBinding></span></span>  
+<span data-ttu-id="0692c-107">\<Powiązanie ></span><span class="sxs-lookup"><span data-stu-id="0692c-107">\<binding></span></span>  
+<span data-ttu-id="0692c-108">\<security></span><span class="sxs-lookup"><span data-stu-id="0692c-108">\<security></span></span>  
+<span data-ttu-id="0692c-109">\<transport></span><span class="sxs-lookup"><span data-stu-id="0692c-109">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bfc53-110">Składnia</span><span class="sxs-lookup"><span data-stu-id="bfc53-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0692c-110">Składnia</span><span class="sxs-lookup"><span data-stu-id="0692c-110">Syntax</span></span>  
   
 ```xml  
 <webHttpBinding>
@@ -39,59 +39,59 @@ ms.locfileid: "54677020"
 </webHttpBinding>
 ```  
   
-## <a name="type"></a><span data-ttu-id="bfc53-111">Typ</span><span class="sxs-lookup"><span data-stu-id="bfc53-111">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="0692c-111">Typ</span><span class="sxs-lookup"><span data-stu-id="0692c-111">Type</span></span>  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bfc53-112">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="bfc53-112">Attributes and Elements</span></span>  
- <span data-ttu-id="bfc53-113">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="bfc53-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0692c-112">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="0692c-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="0692c-113">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="0692c-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bfc53-114">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="bfc53-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0692c-114">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="0692c-114">Attributes</span></span>  
   
-|<span data-ttu-id="bfc53-115">Atrybut</span><span class="sxs-lookup"><span data-stu-id="bfc53-115">Attribute</span></span>|<span data-ttu-id="bfc53-116">Opis</span><span class="sxs-lookup"><span data-stu-id="bfc53-116">Description</span></span>|  
+|<span data-ttu-id="0692c-115">Atrybut</span><span class="sxs-lookup"><span data-stu-id="0692c-115">Attribute</span></span>|<span data-ttu-id="0692c-116">Opis</span><span class="sxs-lookup"><span data-stu-id="0692c-116">Description</span></span>|  
 |---------------|-----------------|  
-|`clientCredentialType`|<span data-ttu-id="bfc53-117">Określa poświadczenia używane do uwierzytelniania klienta do usługi.</span><span class="sxs-lookup"><span data-stu-id="bfc53-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="bfc53-118">Ten atrybut jest typu <xref:System.ServiceModel.HttpClientCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="bfc53-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
-|`proxyCredentialType`|<span data-ttu-id="bfc53-119">Określa poświadczenia używane do uwierzytelniania klienta do domeny serwera proxy.</span><span class="sxs-lookup"><span data-stu-id="bfc53-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="bfc53-120">Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="bfc53-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
-|`realm`|<span data-ttu-id="bfc53-121">Ciąg, który określa obszar uwierzytelniania dla uwierzytelniania podstawowego lub szyfrowanego.</span><span class="sxs-lookup"><span data-stu-id="bfc53-121">A string that specifies the authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="bfc53-122">Wartość domyślna to ciąg pusty.</span><span class="sxs-lookup"><span data-stu-id="bfc53-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="bfc53-123">Obszar uwierzytelniania co najmniej Określa nazwę hosta, który przeprowadza uwierzytelnianie.</span><span class="sxs-lookup"><span data-stu-id="bfc53-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="bfc53-124">Można również określić zbiór użytkowników, które ma dostęp.</span><span class="sxs-lookup"><span data-stu-id="bfc53-124">It can also specify a collection of users that has access.</span></span> <span data-ttu-id="bfc53-125">Użytkownika można badać obszaru uwierzytelniania, aby upewnić się, co kilka możliwych nazw użytkowników i haseł może służyć.</span><span class="sxs-lookup"><span data-stu-id="bfc53-125">A user can query the authentication realm to ascertain which one of the several possible usernames and passwords can be used.</span></span>|  
-|`policyEnforcement`|<span data-ttu-id="bfc53-126">To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.</span><span class="sxs-lookup"><span data-stu-id="bfc53-126">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="bfc53-127">1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrony rozszerzonej jest wyłączone).</span><span class="sxs-lookup"><span data-stu-id="bfc53-127">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="bfc53-128">2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.</span><span class="sxs-lookup"><span data-stu-id="bfc53-128">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="bfc53-129">3.  Zawsze — zasady zawsze są wymuszane.</span><span class="sxs-lookup"><span data-stu-id="bfc53-129">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="bfc53-130">Klienci, którzy nie obsługują ochrony rozszerzonej zakończy się niepowodzeniem do uwierzytelniania.</span><span class="sxs-lookup"><span data-stu-id="bfc53-130">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
+|`clientCredentialType`|<span data-ttu-id="0692c-117">Określa poświadczenia używane do uwierzytelniania klienta do usługi.</span><span class="sxs-lookup"><span data-stu-id="0692c-117">Specifies the credential used to authenticate the client to the service.</span></span> <span data-ttu-id="0692c-118">Ten atrybut jest typu <xref:System.ServiceModel.HttpClientCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="0692c-118">This attribute is of type <xref:System.ServiceModel.HttpClientCredentialType>.</span></span>|  
+|`proxyCredentialType`|<span data-ttu-id="0692c-119">Określa poświadczenia używane do uwierzytelniania klienta do domeny serwera proxy.</span><span class="sxs-lookup"><span data-stu-id="0692c-119">Specifies the credential used to authenticate the client to a domain proxy.</span></span> <span data-ttu-id="0692c-120">Ten atrybut jest typu <xref:System.ServiceModel.HttpProxyCredentialType>.</span><span class="sxs-lookup"><span data-stu-id="0692c-120">This attribute is of type <xref:System.ServiceModel.HttpProxyCredentialType>.</span></span>|  
+|`realm`|<span data-ttu-id="0692c-121">Ciąg, który określa obszar uwierzytelniania dla uwierzytelniania podstawowego lub szyfrowanego.</span><span class="sxs-lookup"><span data-stu-id="0692c-121">A string that specifies the authentication realm for digest or basic authentication.</span></span> <span data-ttu-id="0692c-122">Wartość domyślna to ciąg pusty.</span><span class="sxs-lookup"><span data-stu-id="0692c-122">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="0692c-123">Obszar uwierzytelniania co najmniej Określa nazwę hosta, który przeprowadza uwierzytelnianie.</span><span class="sxs-lookup"><span data-stu-id="0692c-123">An authentication realm specifies at least the name of the host that performs the authentication.</span></span> <span data-ttu-id="0692c-124">Można również określić zbiór użytkowników, które ma dostęp.</span><span class="sxs-lookup"><span data-stu-id="0692c-124">It can also specify a collection of users that has access.</span></span> <span data-ttu-id="0692c-125">Użytkownika można badać obszaru uwierzytelniania, aby upewnić się, co kilka możliwych nazw użytkowników i haseł może służyć.</span><span class="sxs-lookup"><span data-stu-id="0692c-125">A user can query the authentication realm to ascertain which one of the several possible usernames and passwords can be used.</span></span>|  
+|`policyEnforcement`|<span data-ttu-id="0692c-126">To wyliczenie Określa, kiedy <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> powinny być wymuszane.</span><span class="sxs-lookup"><span data-stu-id="0692c-126">This enumeration specifies when the <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> should be enforced.</span></span><br /><br /> <span data-ttu-id="0692c-127">1.  Nigdy nie — zasady nigdy nie są wymuszane (ochrony rozszerzonej jest wyłączone).</span><span class="sxs-lookup"><span data-stu-id="0692c-127">1.  Never – The policy is never enforced (Extended Protection is disabled).</span></span><br /><span data-ttu-id="0692c-128">2.  WhenSupported — zasady są wymuszane tylko wtedy, gdy klient obsługuje ochrony rozszerzonej.</span><span class="sxs-lookup"><span data-stu-id="0692c-128">2.  WhenSupported – The policy is enforced only if the client supports Extended Protection.</span></span><br /><span data-ttu-id="0692c-129">3.  Zawsze — zasady zawsze są wymuszane.</span><span class="sxs-lookup"><span data-stu-id="0692c-129">3.  Always – The policy is always enforced.</span></span> <span data-ttu-id="0692c-130">Klienci, którzy nie obsługują ochrony rozszerzonej zakończy się niepowodzeniem do uwierzytelniania.</span><span class="sxs-lookup"><span data-stu-id="0692c-130">Clients which don’t support Extended Protection will fail to authenticate.</span></span>|  
   
-## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="bfc53-131">właściwości ClientCredentialType o wartości atrybutu</span><span class="sxs-lookup"><span data-stu-id="bfc53-131">clientCredentialType Attribute</span></span>  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="0692c-131">właściwości ClientCredentialType o wartości atrybutu</span><span class="sxs-lookup"><span data-stu-id="0692c-131">clientCredentialType Attribute</span></span>  
   
-|<span data-ttu-id="bfc53-132">Wartość</span><span class="sxs-lookup"><span data-stu-id="bfc53-132">Value</span></span>|<span data-ttu-id="bfc53-133">Opis</span><span class="sxs-lookup"><span data-stu-id="bfc53-133">Description</span></span>|  
+|<span data-ttu-id="0692c-132">Wartość</span><span class="sxs-lookup"><span data-stu-id="0692c-132">Value</span></span>|<span data-ttu-id="0692c-133">Opis</span><span class="sxs-lookup"><span data-stu-id="0692c-133">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="bfc53-134">Zabezpieczenia są wyłączone.</span><span class="sxs-lookup"><span data-stu-id="bfc53-134">Security is disabled.</span></span>|  
-|`Basic`|<span data-ttu-id="bfc53-135">Korzysta z uwierzytelniania podstawowego.</span><span class="sxs-lookup"><span data-stu-id="bfc53-135">Uses basic authentication.</span></span>|  
-|`Certificate`|<span data-ttu-id="bfc53-136">Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.</span><span class="sxs-lookup"><span data-stu-id="bfc53-136">Uses X.509 certificates to authenticate the client.</span></span>|  
-|`Digest`|<span data-ttu-id="bfc53-137">Uwierzytelnianie szyfrowane używa.</span><span class="sxs-lookup"><span data-stu-id="bfc53-137">Uses digest authentication.</span></span>|  
-|`Ntlm`|<span data-ttu-id="bfc53-138">Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeną systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="bfc53-138">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
-|`Windows`|<span data-ttu-id="bfc53-139">Używa zintegrowanego uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="bfc53-139">Uses integrated Windows authentication.</span></span>|  
+|`None`|<span data-ttu-id="0692c-134">Zabezpieczenia są wyłączone.</span><span class="sxs-lookup"><span data-stu-id="0692c-134">Security is disabled.</span></span>|  
+|`Basic`|<span data-ttu-id="0692c-135">Korzysta z uwierzytelniania podstawowego.</span><span class="sxs-lookup"><span data-stu-id="0692c-135">Uses basic authentication.</span></span>|  
+|`Certificate`|<span data-ttu-id="0692c-136">Przy użyciu certyfikatów X.509 do uwierzytelniania klienta.</span><span class="sxs-lookup"><span data-stu-id="0692c-136">Uses X.509 certificates to authenticate the client.</span></span>|  
+|`Digest`|<span data-ttu-id="0692c-137">Uwierzytelnianie szyfrowane używa.</span><span class="sxs-lookup"><span data-stu-id="0692c-137">Uses digest authentication.</span></span>|  
+|`Ntlm`|<span data-ttu-id="0692c-138">Korzysta z uwierzytelniania NTLM, jako rezerwowe z domeną systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="0692c-138">Uses NTLM authentication as a fallback with a Windows domain.</span></span>|  
+|`Windows`|<span data-ttu-id="0692c-139">Używa zintegrowanego uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="0692c-139">Uses integrated Windows authentication.</span></span>|  
   
-## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="bfc53-140">proxyCredentialType atrybutu</span><span class="sxs-lookup"><span data-stu-id="bfc53-140">proxyCredentialType Attribute</span></span>  
+## <a name="proxycredentialtype-attribute"></a><span data-ttu-id="0692c-140">proxyCredentialType atrybutu</span><span class="sxs-lookup"><span data-stu-id="0692c-140">proxyCredentialType Attribute</span></span>  
   
-|<span data-ttu-id="bfc53-141">Wartość</span><span class="sxs-lookup"><span data-stu-id="bfc53-141">Value</span></span>|<span data-ttu-id="bfc53-142">Opis</span><span class="sxs-lookup"><span data-stu-id="bfc53-142">Description</span></span>|  
+|<span data-ttu-id="0692c-141">Wartość</span><span class="sxs-lookup"><span data-stu-id="0692c-141">Value</span></span>|<span data-ttu-id="0692c-142">Opis</span><span class="sxs-lookup"><span data-stu-id="0692c-142">Description</span></span>|  
 |-----------|-----------------|  
-|`None`|<span data-ttu-id="bfc53-143">Zabezpieczenia są wyłączone.</span><span class="sxs-lookup"><span data-stu-id="bfc53-143">Security is disabled.</span></span>|  
-|`Basic`|<span data-ttu-id="bfc53-144">Korzysta z uwierzytelniania podstawowego.</span><span class="sxs-lookup"><span data-stu-id="bfc53-144">Uses basic authentication.</span></span>|  
-|`Digest`|<span data-ttu-id="bfc53-145">Uwierzytelnianie szyfrowane używa.</span><span class="sxs-lookup"><span data-stu-id="bfc53-145">Uses digest authentication.</span></span>|  
-|`Ntlm`|<span data-ttu-id="bfc53-146">Wykorzystuje NTLM jako rezerwowe z domeną systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="bfc53-146">Uses NTLM as a fallback with a Windows domain.</span></span>|  
-|`Windows`|<span data-ttu-id="bfc53-147">Używa zintegrowanego uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="bfc53-147">Uses integrated Windows authentication.</span></span>|  
+|`None`|<span data-ttu-id="0692c-143">Zabezpieczenia są wyłączone.</span><span class="sxs-lookup"><span data-stu-id="0692c-143">Security is disabled.</span></span>|  
+|`Basic`|<span data-ttu-id="0692c-144">Korzysta z uwierzytelniania podstawowego.</span><span class="sxs-lookup"><span data-stu-id="0692c-144">Uses basic authentication.</span></span>|  
+|`Digest`|<span data-ttu-id="0692c-145">Uwierzytelnianie szyfrowane używa.</span><span class="sxs-lookup"><span data-stu-id="0692c-145">Uses digest authentication.</span></span>|  
+|`Ntlm`|<span data-ttu-id="0692c-146">Wykorzystuje NTLM jako rezerwowe z domeną systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="0692c-146">Uses NTLM as a fallback with a Windows domain.</span></span>|  
+|`Windows`|<span data-ttu-id="0692c-147">Używa zintegrowanego uwierzytelniania Windows.</span><span class="sxs-lookup"><span data-stu-id="0692c-147">Uses integrated Windows authentication.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="bfc53-148">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="bfc53-148">Child Elements</span></span>  
- <span data-ttu-id="bfc53-149">Brak.</span><span class="sxs-lookup"><span data-stu-id="bfc53-149">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0692c-148">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="0692c-148">Child Elements</span></span>  
+ <span data-ttu-id="0692c-149">Brak.</span><span class="sxs-lookup"><span data-stu-id="0692c-149">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="bfc53-150">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="bfc53-150">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0692c-150">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="0692c-150">Parent Elements</span></span>  
   
-|<span data-ttu-id="bfc53-151">Element</span><span class="sxs-lookup"><span data-stu-id="bfc53-151">Element</span></span>|<span data-ttu-id="bfc53-152">Opis</span><span class="sxs-lookup"><span data-stu-id="bfc53-152">Description</span></span>|  
+|<span data-ttu-id="0692c-151">Element</span><span class="sxs-lookup"><span data-stu-id="0692c-151">Element</span></span>|<span data-ttu-id="0692c-152">Opis</span><span class="sxs-lookup"><span data-stu-id="0692c-152">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="bfc53-153">\<Zabezpieczenia ></span><span class="sxs-lookup"><span data-stu-id="bfc53-153">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|<span data-ttu-id="bfc53-154">Reprezentuje możliwości zabezpieczeń [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elementu.</span><span class="sxs-lookup"><span data-stu-id="bfc53-154">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element.</span></span>|  
+|[<span data-ttu-id="0692c-153">\<Zabezpieczenia ></span><span class="sxs-lookup"><span data-stu-id="0692c-153">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|<span data-ttu-id="0692c-154">Reprezentuje możliwości zabezpieczeń [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elementu.</span><span class="sxs-lookup"><span data-stu-id="0692c-154">Represents the security capabilities of the [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="bfc53-155">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bfc53-155">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0692c-155">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0692c-155">See also</span></span>
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [<span data-ttu-id="bfc53-156">Zabezpieczanie usług i klientów</span><span class="sxs-lookup"><span data-stu-id="bfc53-156">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [<span data-ttu-id="bfc53-157">Powiązania</span><span class="sxs-lookup"><span data-stu-id="bfc53-157">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="bfc53-158">Konfigurowanie powiązań dostarczanych przez system</span><span class="sxs-lookup"><span data-stu-id="bfc53-158">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [<span data-ttu-id="bfc53-159">Konfigurowanie usług i klientów za pomocą powiązań</span><span class="sxs-lookup"><span data-stu-id="bfc53-159">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [<span data-ttu-id="bfc53-160">\<Powiązanie ></span><span class="sxs-lookup"><span data-stu-id="bfc53-160">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
-- [<span data-ttu-id="bfc53-161">Model programowania protokołu HTTP sieci Web w programie WCF</span><span class="sxs-lookup"><span data-stu-id="bfc53-161">WCF Web HTTP Programming Model</span></span>](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [<span data-ttu-id="0692c-156">Zabezpieczanie usług i klientów</span><span class="sxs-lookup"><span data-stu-id="0692c-156">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [<span data-ttu-id="0692c-157">Powiązania</span><span class="sxs-lookup"><span data-stu-id="0692c-157">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="0692c-158">Konfigurowanie powiązań dostarczanych przez system</span><span class="sxs-lookup"><span data-stu-id="0692c-158">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [<span data-ttu-id="0692c-159">Konfigurowanie usług i klientów za pomocą powiązań</span><span class="sxs-lookup"><span data-stu-id="0692c-159">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="0692c-160">\<Powiązanie ></span><span class="sxs-lookup"><span data-stu-id="0692c-160">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+- [<span data-ttu-id="0692c-161">Model programowania protokołu HTTP sieci Web w programie WCF</span><span class="sxs-lookup"><span data-stu-id="0692c-161">WCF Web HTTP Programming Model</span></span>](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

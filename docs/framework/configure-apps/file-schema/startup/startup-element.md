@@ -1,5 +1,5 @@
 ---
-title: '&lt;uruchamianie&gt; — element'
+title: <startup> — element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: cc261097593150583072ab796df9de8edea5ca6e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083720"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280205"
 ---
-# <a name="ltstartupgt-element"></a>&lt;uruchamianie&gt; — element
+# <a name="startup-element"></a>\<Uruchamianie > element
 
 Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka.
 
@@ -61,7 +61,7 @@ Określa informacje o uruchamianiu środowisko uruchomieniowe wspólnego języka
 
 ## <a name="remarks"></a>Uwagi
 
-  **\<SupportedRuntime >** element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać  **\<requiredRuntime >** elementu.
+ **\<SupportedRuntime >** element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje stworzone z myślą o obsługiwały tylko wersję 1.0 środowiska uruchomieniowego muszą używać  **\<requiredRuntime >** elementu.
 
  Ignoruje kodu startowego dla aplikacji hostowanej w programie Internet Explorer  **\<uruchamiania >** elementu i jego elementy podrzędne.
 

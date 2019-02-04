@@ -1,11 +1,17 @@
 ---
-title: 'Delegaty - C# przewodnik programowania'
+title: Delegaty - C# przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, delegates'
-  - 'delegates [C#]'
+- C# language, delegates
+- delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
+ms.openlocfilehash: 1c272dd9ab4f810a0eb1a1064b4c7731873d2c80
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675377"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaty (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, który reprezentuje odwołania do metod z określoną listą parametrów i typ zwracany. Podczas tworzenia wystąpienia delegata można skojarzyć jego wystąpienie z dowolną metodą mającą zgodny podpis i zwracany typ. Za pośrednictwem wystąpienia delegata można wywołać metodę.  
@@ -40,7 +46,7 @@ A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, 
   
 -   [Używanie delegatów](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [Kiedy należy używać obiektów delegowanych zamiast interfejsów (C# Programming Guide)](https://msdn.microsoft.com/library/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
+-   [Kiedy należy używać obiektów delegowanych zamiast interfejsów (C# Programming Guide)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
 -   [Delegaci z metodami nazwanymi lub anonimowymi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   

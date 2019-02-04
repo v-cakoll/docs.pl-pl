@@ -1,6 +1,6 @@
 ---
 title: 'Instrukcje: Zapisywanie znaków w ciągu'
-ms.date: 03/30/2017
+ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,38 +13,38 @@ helpviewer_keywords:
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 125c8ba03c4d1006535dd1e10cbd162b32fede4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb35c61b34fa571f35da6691ebe7fa2516eb2df1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740986"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674753"
 ---
-# <a name="how-to-write-characters-to-a-string"></a><span data-ttu-id="28fe1-102">Instrukcje: Zapisywanie znaków w ciągu</span><span class="sxs-lookup"><span data-stu-id="28fe1-102">How to: Write Characters to a String</span></span>
-<span data-ttu-id="28fe1-103">Poniższe przykłady kodu zapisywać znaki synchronicznie i asynchronicznie z tablicy znaków w ciągu.</span><span class="sxs-lookup"><span data-stu-id="28fe1-103">The following code examples write characters synchronously and asynchronously from a character array into a string.</span></span>  
+# <a name="how-to-write-characters-to-a-string"></a><span data-ttu-id="d2347-102">Instrukcje: Zapisywanie znaków w ciągu</span><span class="sxs-lookup"><span data-stu-id="d2347-102">How to: Write characters to a string</span></span>
+<span data-ttu-id="d2347-103">Poniższe przykłady kodu zapisywać znaki synchronicznie lub asynchronicznie z tablicy znaków w ciągu.</span><span class="sxs-lookup"><span data-stu-id="d2347-103">The following code examples write characters synchronously or asynchronously from a character array into a string.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="28fe1-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="28fe1-104">Example</span></span>  
- <span data-ttu-id="28fe1-105">Poniższy przykład zapisuje 5 znaków synchronicznie z tablicy na ciąg.</span><span class="sxs-lookup"><span data-stu-id="28fe1-105">The following example writes 5 characters synchronously from an array to a string.</span></span>  
+## <a name="example-write-characters-synchronously-in-a-console-app"></a><span data-ttu-id="d2347-104">Przykład: Zapisywanie znaków synchronicznie w aplikacji konsoli</span><span class="sxs-lookup"><span data-stu-id="d2347-104">Example: Write characters synchronously in a console app</span></span>  
+ <span data-ttu-id="d2347-105">W poniższym przykładzie użyto <xref:System.IO.StringWriter> do zapisu synchronicznego na pięć znaków <xref:System.Text.StringBuilder> obiektu.</span><span class="sxs-lookup"><span data-stu-id="d2347-105">The following example uses a <xref:System.IO.StringWriter> to write five characters synchronously to a <xref:System.Text.StringBuilder> object.</span></span> 
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
-## <a name="example"></a><span data-ttu-id="28fe1-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="28fe1-106">Example</span></span>  
- <span data-ttu-id="28fe1-107">Następny przykład odczytuje wszystkie znaki asynchronicznie z <xref:System.Windows.Controls.TextBox> kontrolować i przechowuje je w tablicy.</span><span class="sxs-lookup"><span data-stu-id="28fe1-107">The next example reads all the characters asynchronously from a <xref:System.Windows.Controls.TextBox> control, and stores them in an array.</span></span> <span data-ttu-id="28fe1-108">Następnie asynchronicznie zapisuje każdy literę lub biały znak w osobnym wierszu następuje znak końca wiersza, aby <xref:System.Windows.Controls.TextBlock> kontroli.</span><span class="sxs-lookup"><span data-stu-id="28fe1-108">It then asynchronously writes each letter or white space character on a separate line followed by a line break to a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
+## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a><span data-ttu-id="d2347-106">Przykład: Asynchronicznie zapisywanie znaków w aplikacji WPF</span><span class="sxs-lookup"><span data-stu-id="d2347-106">Example: Write characters asynchronously in a WPF app</span></span> 
+ <span data-ttu-id="d2347-107">Następny przykład jest kod związany z aplikacji WPF.</span><span class="sxs-lookup"><span data-stu-id="d2347-107">The next example is the code behind a WPF app.</span></span> <span data-ttu-id="d2347-108">Po załadowaniu okna przykład asynchronicznie odczytuje wszystkie znaki od <xref:System.Windows.Controls.TextBox> kontroli i przechowuje je w tablicy.</span><span class="sxs-lookup"><span data-stu-id="d2347-108">On window load, the example asynchronously reads all characters from a <xref:System.Windows.Controls.TextBox> control and stores them in an array.</span></span> <span data-ttu-id="d2347-109">Następnie asynchronicznie zapisuje każdy znak litera lub znak odstępu w osobnym wierszu <xref:System.Windows.Controls.TextBlock> kontroli.</span><span class="sxs-lookup"><span data-stu-id="d2347-109">It then asynchronously writes each letter or white-space character to a separate line of a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
   
- [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source2.cs#2)]
- [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source2.vb#2)]  
+ [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
+ [!code-vb[StreamReaderWriter](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="28fe1-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="28fe1-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2347-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d2347-110">See also</span></span>
 
-- <xref:System.IO.StringWriter>
-- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>
-- <xref:System.Text.StringBuilder>
-- [<span data-ttu-id="28fe1-110">We/Wy plików i strumieni</span><span class="sxs-lookup"><span data-stu-id="28fe1-110">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)
-- [<span data-ttu-id="28fe1-111">Asynchroniczne operacje We/Wy pliku</span><span class="sxs-lookup"><span data-stu-id="28fe1-111">Asynchronous File I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)
-- [<span data-ttu-id="28fe1-112">Instrukcje: Wyliczanie katalogów i plików</span><span class="sxs-lookup"><span data-stu-id="28fe1-112">How to: Enumerate Directories and Files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
-- [<span data-ttu-id="28fe1-113">Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych</span><span class="sxs-lookup"><span data-stu-id="28fe1-113">How to: Read and Write to a Newly Created Data File</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
-- [<span data-ttu-id="28fe1-114">Instrukcje: Otwieranie i dołączanie do pliku dziennika</span><span class="sxs-lookup"><span data-stu-id="28fe1-114">How to: Open and Append to a Log File</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
-- [<span data-ttu-id="28fe1-115">Instrukcje: Odczytywanie tekstu z pliku</span><span class="sxs-lookup"><span data-stu-id="28fe1-115">How to: Read Text from a File</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)
-- [<span data-ttu-id="28fe1-116">Instrukcje: Zapisywanie tekstu do pliku</span><span class="sxs-lookup"><span data-stu-id="28fe1-116">How to: Write Text to a File</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)
-- [<span data-ttu-id="28fe1-117">Instrukcje: Odczytywanie znaków z ciągu</span><span class="sxs-lookup"><span data-stu-id="28fe1-117">How to: Read Characters from a String</span></span>](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- <xref:System.IO.StringWriter>  
+- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
+- <xref:System.Text.StringBuilder>  
+- [<span data-ttu-id="d2347-111">We/Wy plików i strumieni</span><span class="sxs-lookup"><span data-stu-id="d2347-111">File and stream I/O</span></span>](../../../docs/standard/io/index.md)  
+- [<span data-ttu-id="d2347-112">Asynchroniczne We/Wy pliku</span><span class="sxs-lookup"><span data-stu-id="d2347-112">Asynchronous file I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
+- [<span data-ttu-id="d2347-113">Instrukcje: Wyliczanie katalogów i plików</span><span class="sxs-lookup"><span data-stu-id="d2347-113">How to: Enumerate directories and files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [<span data-ttu-id="d2347-114">Instrukcje: Odczyt i zapis w nowo utworzonym pliku danych</span><span class="sxs-lookup"><span data-stu-id="d2347-114">How to: Read and write to a newly created data file</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [<span data-ttu-id="d2347-115">Instrukcje: Otwieranie i dołączanie do pliku dziennika</span><span class="sxs-lookup"><span data-stu-id="d2347-115">How to: Open and append to a log file</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [<span data-ttu-id="d2347-116">Instrukcje: Odczytywanie tekstu z pliku</span><span class="sxs-lookup"><span data-stu-id="d2347-116">How to: Read text from a file</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [<span data-ttu-id="d2347-117">Instrukcje: Zapisywanie tekstu do pliku</span><span class="sxs-lookup"><span data-stu-id="d2347-117">How to: Write text to a file</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [<span data-ttu-id="d2347-118">Instrukcje: Odczytywanie znaków z ciągu</span><span class="sxs-lookup"><span data-stu-id="d2347-118">How to: Read characters from a string</span></span>](../../../docs/standard/io/how-to-read-characters-from-a-string.md)

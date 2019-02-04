@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea20569b207100886ddd4b40c8d4c86c55d5ddf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be5e1b5fff1feb8ef4cc2ff7fcbca193aafcd781
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743546"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674883"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funkcje konwersji typu (Visual Basic)
 Te funkcje są skompilowany w tekście, co oznacza, że kod konwersji jest częścią kodu, który oblicza wyrażenie. Czasami jest Brak wywołania do procedury wykonywania konwersji, co zwiększa wydajność. Każda funkcja przekształca wynik wyrażenia na określony typ danych.  
@@ -128,7 +128,7 @@ CUShort(expression)
 |`CDbl`|[Double, typ danych](../../../visual-basic/language-reference/data-types/double-data-type.md)|-1.79769313486231570E + 308 do - 4.94065645841246544E-324 dla wartości ujemnych; 4.94065645841246544E-324 za pośrednictwem 1.79769313486231570E + 308 dla wartości dodatnich.|  
 |`CDec`|[Decimal, typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+/-79,228,162,514,264,337,593,543,950,335 numerów skalowanych na zero oznacza to, liczby bez miejsc dziesiętnych. W przypadku liczb 28 miejsc dziesiętnych zakres jest +/-7.9228162514264337593543950335. Najmniejsza możliwa liczba różna od zera jest 0,0000000000000000000000000001 (+/-1E-28).|  
 |`CInt`|[Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) za pośrednictwem <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2 147 483 647); ułamkowe są zaokrąglane.<sup> 1</sup> <br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja liczby całkowitej z `CInt` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład. |  
-|`CLng`|[Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MaxValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) za pośrednictwem <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9,223,372,036,854,775,807); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja 64-bitową liczbę całkowitą z `CLng` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
+|`CLng`|[Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) za pośrednictwem <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9,223,372,036,854,775,807); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja 64-bitową liczbę całkowitą z `CLng` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
 |`CObj`|[Object, typ danych](../../../visual-basic/language-reference/data-types/object-data-type.md)|Dowolne prawidłowe wyrażenie.|  
 |`CSByte`|[SByte, typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (od -128) za pośrednictwem <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych Aby konwersja bajt oznaczony za pomocą `CSByte` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  
 |`CShort`|[Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32 768) za pośrednictwem <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32 767); ułamkowe są zaokrąglane.<sup> 1</sup><br/><br/>Począwszy od 15.8 Visual Basic, Visual Basic optymalizację wydajności zmiennoprzecinkowych, konwersja 16-bitową liczbę całkowitą z `CShort` funkcji; zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. Zobacz [przykład CInt](#cint-example) sekcji przykład.|  

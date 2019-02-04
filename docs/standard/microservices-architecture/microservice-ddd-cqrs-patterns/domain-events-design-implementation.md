@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Uz
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127852"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675481"
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia w domenie: projektowanie i implementacja
 
@@ -31,7 +31,7 @@ Krótko mówiąc zdarzenia domeny pomóc, jawnie, te reguły można wyrazić dom
 
 Należy upewnić się, że tylko takie jak transakcji bazy danych, albo wszystkie operacje związane z zdarzenie domeny zakończy się pomyślnie lub żadna z nich.
 
-Zdarzenia domeny są podobne do zdarzeń stylu komunikatów, z jedną istotną różnicą. Za pomocą rzeczywistych obsługi komunikatów, usługi kolejkowania komunikatów, brokerami lub usługi Service bus przy użyciu AMPQ komunikat jest zawsze wysyłane asynchronicznie i przekazywane między procesami i maszyny. Jest to przydatne do integrowania wielu ograniczone konteksty mikrousług lub nawet różnych aplikacji. Jednak za pomocą zdarzeń domeny, aby wywołać zdarzenie z operacji domeny, które są aktualnie uruchomione, ale chcesz, aby wszelkie efekty uboczne zostać przeprowadzone w tej samej domenie.
+Zdarzenia domeny są podobne do zdarzeń stylu komunikatów, z jedną istotną różnicą. Za pomocą rzeczywistych obsługi komunikatów, usługi kolejkowania komunikatów, brokerami lub za pomocą protokołu AMQP usługi Service bus komunikat jest zawsze wysyłane asynchronicznie i przekazywane między procesami i maszyny. Jest to przydatne do integrowania wielu ograniczone konteksty mikrousług lub nawet różnych aplikacji. Jednak za pomocą zdarzeń domeny, aby wywołać zdarzenie z operacji domeny, które są aktualnie uruchomione, ale chcesz, aby wszelkie efekty uboczne zostać przeprowadzone w tej samej domenie.
 
 Zdarzenia domeny i ich skutki uboczne (akcje wyzwalane po tym dniu, które są zarządzane przez programy obsługi zdarzeń) powinny być wykonywane niemal natychmiast, zwykle w procesie, a w ramach tej samej domenie. W związku z tym zdarzenia domeny może być synchroniczna lub asynchroniczna. Zdarzenia integracji, jednak powinny zawsze być asynchroniczne.
 

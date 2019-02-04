@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680309"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675442"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in ułatwień dostępu w programie .NET Framework
 
@@ -292,7 +292,7 @@ Począwszy od programu .NET Framework 4.7.1 o wysokim kontraście wprowadzono ul
 Aby uzyskać więcej informacji na temat ulepszenia ułatwień dostępu WPF w programie .NET Framework 4.7.1, zobacz [ulepszenia ułatwień dostępu w programie WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
 <a name="winforms471"></a>
-## <a name="windows-forms-accessibility-improvements"></a>Ulepszenia ułatwień dostępu w Windows Forms
+### <a name="windows-forms-accessibility-improvements"></a>Ulepszenia ułatwień dostępu w Windows Forms
 
 W .NET Framework 4.7.1 Windows Forms (WinForms) zawiera zmiany ułatwień dostępu w następujących obszarach.
 
@@ -358,7 +358,7 @@ Formularze Windows począwszy od programu .NET Framework 4.7.1 obejmuje:
 - Ulepszone narrator zachowanie.
  
 <a name="aspnet471"></a>
-## <a name="aspnet-web-controls"></a>Kontrolki sieci web platformy ASP.NET
+### <a name="aspnet-web-controls"></a>Kontrolki sieci web platformy ASP.NET
 
 Począwszy od .NET Framework 4.7.1 i Visual Studio 2017 15.3, ASP.NET poprawia działanie kontrolki sieci web platformy ASP.NET przy użyciu technologii ułatwień dostępu w programie Visual Studio. Następujące zmiany:
 
@@ -369,14 +369,14 @@ Począwszy od .NET Framework 4.7.1 i Visual Studio 2017 15.3, ASP.NET poprawia d
 - Zmiany w celu polepszenia nawigacji klawiatury napotyka formanty, takie jak **pola** okna dialogowego w **Edytuj pola pagera** kreatora formantu DataPager **konfigurowania obiektu ObjectContext**  okno dialogowe, lub **Konfigurowanie wyboru danych** dialogowego **skonfigurować źródło danych** kreatora.
 
 <a name="tools471"></a>
-## <a name="net-sdk-tools"></a>.NET SDK Tools
+### <a name="net-sdk-tools"></a>.NET SDK Tools
 
 [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) i [narzędzie śledzenia usług (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zostały ulepszone przez Rozwiązywanie problemów zależeć od dostępności. Większość z nich zostały się niewielkie problemy, takie jak nazwy, nie zostały zdefiniowane lub niektóre wzorce automatyzacji interfejsu użytkownika nie jest zaimplementowana poprawnie. Gdy wielu użytkowników nie należy pamiętać o tych niepoprawne wartości, klienci korzystający z technologiami pomocniczymi, takich jak czytniki zawartości ekranu znajduje się tych narzędzi zestawu SDK łatwiej dostępne. 
 
 Te ulepszenia zmianę niektórych zachowań poprzedniej, takich jak kolejność fokus klawiatury.
 
 <a name="wf471"></a>
-## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Projektanta przepływów pracy programu Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Projektanta przepływów pracy programu Windows Workflow Foundation (WF)
 
 Następujące zmiany w ułatwienia dostępu w Projektancie przepływu pracy:
 

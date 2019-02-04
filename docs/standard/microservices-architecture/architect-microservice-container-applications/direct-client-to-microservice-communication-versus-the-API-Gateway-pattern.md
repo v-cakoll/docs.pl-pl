@@ -4,12 +4,12 @@ description: Dowiedz się, różnice i wykorzystuje wzorzec bramy interfejsu API
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 7e81b46c2dbcee3b3658ab3c2e576644f0e7b372
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479896"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675455"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 
@@ -25,7 +25,7 @@ Możliwych podejść jest bezpośrednia komunikacja klienta z mikrousługą opar
 
 W tym podejściu poszczególne mikrousługi ma publiczny punkt końcowy, czasami z różnych portów TCP dla poszczególnych mikrousług. Przykładowy adres URL dla określonej usługi może być następujący adres URL na platformie Azure:
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 W środowisku produkcyjnym, oparte na klastrze mapującej adres URL do modułu równoważenia obciążenia, używany w klastrze, który z kolei rozkłada żądania na mikrousługi. W środowiskach produkcyjnych, może mieć Application Delivery kontrolera (ADC) takich jak [usługi Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) mikrousługi od Internetu. Jest to zabezpieczenie przezroczyste warstwy, która nie przeprowadza równoważenia obciążenia tylko zabezpiecza usług, oferując kończenia żądań SSL. Zwiększa to obciążenie hostów, przenosząc kończenia żądań SSL mocy procesora CPU i inne opłaty routingu do usługi Azure Application Gateway. W każdym przypadku modułu równoważenia obciążenia i ADC są niewidoczne z aplikacji logicznych architektury punktu widzenia.
 

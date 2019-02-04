@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b816c3a2c4f684993117deb38b40f4436a627c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df3fa60c4fcacc84be36e49e40933d195a9e43e5
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653804"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674935"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Instrukcje: Ładowanie zestawów do domeny aplikacji
 Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną metodą jest użycie `static` (`Shared` w języku Visual Basic) <xref:System.Reflection.Assembly.Load%2A> metody <xref:System.Reflection.Assembly?displayProperty=nameWithType> klasy. Inne sposoby, które zestawy można załadować obejmują:  
@@ -37,7 +37,7 @@ Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną
 > [!NOTE]
 >  Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe nie załaduje zestawu, który został skompilowany przy użyciu wersji programu .NET Framework, który ma wyższy numer wersji niż obecnie załadowanym środowiskiem uruchomieniowym. Dotyczy to kombinacja składniki główny i pomocniczy numer wersji.  
   
- Można określić sposób just-in-time (JIT) skompilowany kod z załadowanych zestawów jest współużytkowane między domenami aplikacji. Aby uzyskać więcej informacji, zobacz [domeny aplikacji i zestawy](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346).  
+ Można określić sposób just-in-time (JIT) skompilowany kod z załadowanych zestawów jest współużytkowane między domenami aplikacji. Aby uzyskać więcej informacji, zobacz [domeny aplikacji i zestawy](application-domains.md#application-domains-and-assemblies).  
   
 ## <a name="example"></a>Przykład  
  Następujące obciążenia kod pobiera zestaw o nazwie "example.exe" lub "example.dll" do bieżącej domeny aplikacji typu o nazwie `Example` z zestawu, pobiera bez parametrów metody o nazwie `MethodA` wpisz i wykonuje metodę. Wyczerpujące omówienie na uzyskiwanie informacji z załadowanego zestawu, zobacz [dynamiczne ładowanie i przy użyciu typów](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
@@ -52,4 +52,4 @@ Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną
 - [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)
 - [Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
-- [Domeny aplikacji i zestawy](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+- [Domeny aplikacji i zestawy](application-domains.md#application-domains-and-assemblies)

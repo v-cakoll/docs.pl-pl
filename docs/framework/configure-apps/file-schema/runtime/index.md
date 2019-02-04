@@ -2,12 +2,18 @@
 title: Schemat ustawień środowiska uruchomieniowego
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - schema runtime settings
-  - 'configuration schema [.NET Framework], runtime settings'
-  - runtime settings schema
+- schema runtime settings
+- configuration schema [.NET Framework], runtime settings
+- runtime settings schema
 ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: b6c0ead0715221354970ddee90e89bae7c583266
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675429"
 ---
 # <a name="runtime-settings-schema"></a>Schemat ustawień środowiska uruchomieniowego
 Ustawienia środowiska uruchomieniowego są używane przez środowisko uruchomieniowe języka wspólnego do konfigurowania aplikacji środowiska .NET Framework.  
@@ -127,5 +133,5 @@ Ustawienia środowiska uruchomieniowego są używane przez środowisko uruchomie
   
 ## <a name="see-also"></a>Zobacz także
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Instrukcje: Wyłączyć współbieżne wyrzucanie elementów bezużytecznych](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [Aby wyłączyć współbieżne wyrzucanie elementów bezużytecznych](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Przekierowywanie wersji zestawu](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

@@ -2,12 +2,12 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 336e8c4a4aae3565b8af7adaa73def453107ea93
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b5248f4cb8bdcd15b553fa14351013e78d422d9
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274160"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675403"
 ---
 # <a name="identity"></a>\<identity>
 Element tożsamości pozwala deweloperowi klienta określić w czasie projektu oczekiwaną tożsamość usługi. W procesu uzgadniania między klientem a usługą infrastruktury usług Windows Communication Foundation (WCF) gwarantuje, że tożsamość pasuje do oczekiwanej usługi wartości tego elementu i dlatego może zostać uwierzytelniony. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
@@ -55,7 +55,8 @@ Element tożsamości pozwala deweloperowi klienta określić w czasie projektu o
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Określa niestandardowe elementu równorzędnego programu rozpoznawania nazw dla netPeerTcpBinding.|  
-|[\<punkt końcowy >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Służy do konfigurowania różnych typów punktów końcowych.|  
+|[\<punkt końcowy >](endpoint-element.md)|Służy do konfigurowania punktów końcowych usługi.|  
+|[\<punkt końcowy > z \<klienta >](endpoint-of-client.md)|Służy do konfigurowania punktów końcowych kanałów.|  
 |[\<Wystawca >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Określa Usługa tokenu zabezpieczającego (STS) dla usługi federacyjnej.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Określa punkt końcowy metadanych dla Usługa tokenu zabezpieczającego (STS) z usługi federacyjnej.|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Definiuje parametry dla wystawiony token do niestandardowego powiązania.|  

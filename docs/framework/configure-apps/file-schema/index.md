@@ -21,12 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 37600331ac52add60a98c9fd573591dc34b94f5f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083967"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674909"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Schemat pliku konfiguracji dla programu .NET Framework
 
@@ -75,10 +75,10 @@ Aby uzyskać informacje o typach, formatu i lokalizacji plików konfiguracji, zo
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Schemat ustawień komunikacji zdalnej](https://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) w tym artykule opisano elementy, które konfigurują aplikacje klienckie i serwerowe, które implementują komunikację zdalną.
+[Schemat ustawień komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) w tym artykule opisano elementy, które konfigurują aplikacje klienckie i serwerowe, które implementują komunikację zdalną.
 
-[ASP.NET Settings Schema](https://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) opisano elementy, które kontrolują zachowanie aplikacji sieci Web ASP.NET.
+[ASP.NET Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) opisano elementy, które kontrolują zachowanie aplikacji sieci Web ASP.NET.
 
-[Schemat ustawień usługi w sieci Web](https://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) opisano elementy, które kontrolują zachowanie swoich klientów i usług sieci Web platformy ASP.NET.
+[Schemat ustawień usługi w sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) opisano elementy, które kontrolują zachowanie swoich klientów i usług sieci Web platformy ASP.NET.
 
-[Konfigurowanie aplikacji programu .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) opisano, jak skonfigurować zabezpieczenia, zmontować zestaw i komunikacji zdalnej w programie .NET Framework.
+[Konfigurowanie aplikacji programu .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100)) opisano, jak skonfigurować zabezpieczenia, zmontować zestaw i komunikacji zdalnej w programie .NET Framework.

@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 84e2d07275194683661a75e422847bbe0ebf1383
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198370"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674415"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Dodatkowe biblioteki klas i interfejsów API
 
@@ -29,7 +29,7 @@ Ponadto niektóre biblioteki kierować konkretnych platform lub implementacji .N
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Zawiera kolekcje, które są wątkowo bezpieczne i gwarancji nigdy nie zmieni się ich zawartości. |
 | <xref:System.Net.Http.WinHttpHandler> | Udostępnia program obsługi komunikatów dla <xref:System.Net.Http.HttpClient> oparte na interfejsie WinHTTP Windows. |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | Zawiera bibliotekę typy wektorowe, które mogą korzystać SIMD przyspieszanie sprzętowe.| 
+| <xref:System.Numerics> | Zawiera bibliotekę typy wektorowe, które mogą korzystać SIMD przyspieszanie sprzętowe.| 
 | <xref:System.Threading.Tasks.Dataflow> | Biblioteka przepływu danych TPL zapewnia składników przepływu danych, aby zwiększyć niezawodność aplikacji obsługujących współbieżności. |  
 
 ## <a name="platform-specific-libraries"></a>Biblioteki charakterystyczne dla platformy

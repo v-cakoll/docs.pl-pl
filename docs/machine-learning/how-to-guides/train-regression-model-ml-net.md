@@ -1,24 +1,24 @@
 ---
 title: Uczenie modelu regresji do przewidywania wartości przy użyciu strukturze ML.NET
 description: Dowiedz się, jak to w opracowywaniu regresji model do przewidywania wartości przy użyciu strukturze ML.NET uczenia maszynowego
-ms.date: 11/07/2018
+ms.date: 02/01/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: e6cd62876f6ac9497e7485b93d4dbd8f95ccc1bb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: febf12565b9ae5509efec9f350f413df99ba1c05
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155445"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739452"
 ---
-# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="d2379-103">Uczenie modelu regresji do przewidywania wartości przy użyciu strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="d2379-103">Train a regression model to predict a value using ML.NET</span></span>
+# <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a><span data-ttu-id="4178f-103">Uczenie modelu regresji do przewidywania wartości przy użyciu strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="4178f-103">Train a regression model to predict a value using ML.NET</span></span>
 
-<span data-ttu-id="d2379-104">Ogólnie rzecz biorąc istnieją trzy kroki do trenowania modelu w strukturze ML.NET:</span><span class="sxs-lookup"><span data-stu-id="d2379-104">Generally, there are three steps for model training in ML.NET:</span></span>
+<span data-ttu-id="4178f-104">Ogólnie rzecz biorąc istnieją trzy kroki do trenowania modelu w strukturze ML.NET:</span><span class="sxs-lookup"><span data-stu-id="4178f-104">Generally, there are three steps for model training in ML.NET:</span></span>
 
-1. <span data-ttu-id="d2379-105">Pobierz dane szkoleniowe w formie `IDataView`</span><span class="sxs-lookup"><span data-stu-id="d2379-105">Get the training data in a form of an `IDataView`</span></span>
-2. <span data-ttu-id="d2379-106">Tworzenie potoku uczenia jako sekwencja podstawowe "operatory" (aplikacjom).</span><span class="sxs-lookup"><span data-stu-id="d2379-106">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
-3. <span data-ttu-id="d2379-107">Wywołaj `Fit` do potoku w celu uzyskania trenowanego modelu.</span><span class="sxs-lookup"><span data-stu-id="d2379-107">Call `Fit` on the pipeline to obtain the trained model.</span></span>
+1. <span data-ttu-id="4178f-105">Pobierz dane szkoleniowe w formie `IDataView`</span><span class="sxs-lookup"><span data-stu-id="4178f-105">Get the training data in a form of an `IDataView`</span></span>
+2. <span data-ttu-id="4178f-106">Tworzenie potoku uczenia jako sekwencja podstawowe "operatory" (aplikacjom).</span><span class="sxs-lookup"><span data-stu-id="4178f-106">Build the 'learning pipeline' as a sequence of elementary 'operators' (estimators).</span></span>
+3. <span data-ttu-id="4178f-107">Wywołaj `Fit` do potoku w celu uzyskania trenowanego modelu.</span><span class="sxs-lookup"><span data-stu-id="4178f-107">Call `Fit` on the pipeline to obtain the trained model.</span></span>
 
-<span data-ttu-id="d2379-108">W tym [przykładowy plik](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv), przewidywany etykiety (`target`) jest ostatnią kolumnę (12) i wszystkie pozostałe funkcje:</span><span class="sxs-lookup"><span data-stu-id="d2379-108">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
+<span data-ttu-id="4178f-108">W tym [przykładowy plik](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv), przewidywany etykiety (`target`) jest ostatnią kolumnę (12) i wszystkie pozostałe funkcje:</span><span class="sxs-lookup"><span data-stu-id="4178f-108">In this [Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv),the predicted label (`target`) is the last column (12th) and all the rest are features:</span></span>
 
 ```console
 feature_0;feature_1;feature_2;feature_3;feature_4;feature_5;feature_6;feature_7;feature_8;feature_9;feature_10;target
@@ -33,33 +33,39 @@ feature_0;feature_1;feature_2;feature_3;feature_4;feature_5;feature_6;feature_7;
 var mlContext = new MLContext();
 
 // Step one: read the data as an IDataView.
-// First, we define the reader: specify the data columns and where to find them in the text file.
-var reader = mlContext.Data.TextReader(new TextLoader.Arguments
-{
-    Column = new[] {
-        // We read the first 11 values as a single float vector.
-        new TextLoader.Column("FeatureVector", DataKind.R4, 0, 10),
 
-        // Separately, read the target variable.
-        new TextLoader.Column("Target", DataKind.R4, 11),
-    },
-    // First line of the file is a header, not a data row.
-    HasHeader = true,
-    Separator = ";"
-});
+// First, we define the reader: specify the data columns and where to find them in the text file.
+var reader = mlContext.Data.CreateTextReader(
+        columns: new TextLoader.Column[]
+        {
+            // We read the first 11 values as a single float vector.
+            new TextLoader.Column("FeatureVector",DataKind.R4,0,10),
+            // Separately, read the target variable.
+            new TextLoader.Column("Target",DataKind.R4,11)
+        },
+        // Default separator is tab, but the dataset has semicolon.
+        separatorChar: ';',
+        // First line of the file is a header, not a data row.
+        hasHeader: true
+);
 
 // Now read the file (remember though, readers are lazy, so the actual reading will happen when the data is accessed).
-var trainData = reader.Read(trainDataPath);
+var trainData = reader.Read(dataPath);
 
 // Step two: define the learning pipeline.
 
 // We 'start' the pipeline with the output of the reader.
 var pipeline =
-    // First 'normalize' the data (rescale to be
-    // between -1 and 1 for all examples)
-    mlContext.Transforms.Normalize("FeatureVector")
-    // Add the SDCA regression trainer.
-    .Append(mlContext.Regression.Trainers.StochasticDualCoordinateAscent(label: "Target", features: "FeatureVector"));
+        // First 'normalize' the data (rescale to be
+        // between -1 and 1 for all examples)
+        mlContext.Transforms.Normalize("FeatureVector")
+        // Cache data in memory so that SDCA trainer will be able to randomly access training examples without
+        // reading data from disk multiple times. Data will be cached at its first use in any downstream step.
+        // Notice that unused part in the data may not be cached.
+        .AppendCacheCheckpoint(mlContext)
+        // First 'normalize' the data (rescale to be
+        // between -1 and 1 for all examples)
+        .Append(mlContext.Regression.Trainers.StochasticDualCoordinateAscent("Target", "FeatureVector"));
 
 // Step three. Fit the pipeline to the training data.
 var model = pipeline.Fit(trainData);

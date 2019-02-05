@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania'
+title: 'Instrukcje: Tworzenie certyfikatów tymczasowych do użytku w trakcie opracowywania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 2d0301b040d0fd9865eaf5c3f96fe320ccfd8488
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46698587"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738633"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do użytku w trakcie opracowywania
 
 Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu usługi Windows Communication Foundation (WCF), często jest konieczne dostarczanie certyfikatu X.509, który ma być używany jako poświadczenia. Certyfikat jest zazwyczaj w łańcuchu certyfikatów za pomocą głównego urzędu znaleziono w magazynie zaufanych głównych urzędów certyfikacji komputera. Posiadanie łańcuch certyfikatów umożliwia określania zakresu zestawu certyfikatów, w których zwykle głównego urzędu certyfikacji jest od swojej organizacji lub jednostki biznesowej. Aby emulować to w czasie programowania, można utworzyć dwa certyfikaty do spełnienia wymagań dotyczących zabezpieczeń. Pierwsza to certyfikat z podpisem własnym, który jest umieszczony w magazynie zaufanych głównych urzędów certyfikacji i drugiego certyfikatu jest tworzony z pierwszego i znajduje się w magazynie osobistym lokalizacji komputera lokalnego lub w magazynie osobistym Bieżąca lokalizacja użytkownika. W tym temacie przedstawiono kroki umożliwiające utworzenie tych dwóch certyfikatów przy użyciu programu Powershell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) polecenia cmdlet.
 
@@ -62,7 +62,7 @@ Po utworzeniu certyfikatu z podpisem własnym można zainstalować go w magazyni
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Aby zainstalować certyfikat z podpisem własnym w zaufanych głównych urzędów certyfikacji
 
-1. Otwórz przystawkę certyfikatu. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie certyfikatów za pomocą przystawki programu MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
+1. Otwórz przystawkę certyfikatu. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie certyfikatów za pomocą przystawki programu MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Otwórz folder z certyfikatem, albo **komputera lokalnego** lub **bieżącego użytkownika**.
 
@@ -70,7 +70,7 @@ Po utworzeniu certyfikatu z podpisem własnym można zainstalować go w magazyni
 
 4. Kliknij prawym przyciskiem myszy **certyfikaty** folder i kliknij przycisk **wszystkie zadania**, następnie kliknij przycisk **importu**.
 
-5. Postępuj zgodnie z wyświetlanymi na ekranie kreatora instrukcjami, aby zaimportować TempCa.cer do magazynu.
+5. Postępuj zgodnie z wyświetlanymi na ekranie kreatora instrukcjami, aby zaimportować RootCA.pfx do magazynu.
 
 ## <a name="using-certificates-with-wcf"></a>Za pomocą certyfikatów przy użyciu programu WCF
 
@@ -115,5 +115,5 @@ Pamiętaj usunąć wszystkie certyfikaty urzędu głównego tymczasowe z **zaufa
 ## <a name="see-also"></a>Zobacz także
 
 - [Praca z certyfikatami](working-with-certificates.md)
-- [Instrukcje: wyświetlanie certyfikatów w przystawce programu MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Instrukcje: Wyświetlanie certyfikatów za pomocą przystawki programu MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Zabezpieczanie usług i klientów](securing-services-and-clients.md)

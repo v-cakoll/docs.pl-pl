@@ -2,12 +2,12 @@
 title: Kształt dokumentów WordprocessingML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: ddd48823ded78fe5547e53ee5e9b1ffa8c696b7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 635f8a2f97f1d8568230e17f9998fa87d6a7c02c
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549668"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738854"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Kształt dokumentów WordprocessingML (Visual Basic)
 W tym temacie przedstawiono kształt XML w dokumencie WordprocessingML.  
@@ -90,7 +90,7 @@ End Module
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  [Wprowadzenie do formatów pakietu Office (2007) Open XML](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))  
   
- [Omówienie WordprocessingML](https://msdn.microsoft.com/library/aa212812(office.11).aspx)  
+ [Omówienie WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))  
   
  [Office 2003: XML odwołanie schematów strony plików do pobrania](https://go.microsoft.com/fwlink/?LinkId=98095)  
   

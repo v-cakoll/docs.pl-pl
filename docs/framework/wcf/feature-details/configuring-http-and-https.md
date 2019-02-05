@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635681"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738932"
 ---
 # <a name="configuring-http-and-https"></a>Konfigurowanie protokołów HTTP i HTTPS
 Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołów HTTP i HTTPS. Ustawienia HTTP/HTTPS są skonfigurowane przy użyciu usług Internet Information Services (IIS) lub za pomocą narzędzia wiersza polecenia. Gdy usługa WCF jest hostowana w ustawieniach usług IIS HTTP lub HTTPS można skonfigurować w ramach usług IIS (za pomocą narzędzia inetmgr.exe). Jeśli usługa WCF jest samodzielnie hostowana, ustawienia protokołu HTTP lub HTTPS są konfigurowane za pomocą narzędzia wiersza polecenia.  
@@ -33,7 +33,7 @@ Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołów HTT
  Oto składnia polecenia tak, za pomocą `set urlacl` opcji  
   
 ```console  
-httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
+httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /a ACL  
 ```  
   
  `/u` Parametr jest wymagany w przypadku korzystania z `set urlacl`. Potrzebny jest ciąg zawierający w pełni kwalifikowany adres URL, który służy jako klucz rekordu dla rezerwacji wykonywane.  

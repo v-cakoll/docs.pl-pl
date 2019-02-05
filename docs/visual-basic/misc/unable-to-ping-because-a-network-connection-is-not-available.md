@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
-ms.openlocfilehash: 25cf0acb6355d792f5ad286826a8603dc122449d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd713ea5c99d343946e9420662733ec4caf4f739
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512480"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738789"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>Nie można wykonać polecenie ping, ponieważ połączenie sieciowe jest niedostępne
 Nie można wykonać operacji, ponieważ nie połączenie sieciowe jest dostępne.  
@@ -21,5 +21,5 @@ Nie można wykonać operacji, ponieważ nie połączenie sieciowe jest dostępne
 ## <a name="see-also"></a>Zobacz także
 - [My.Computer.Network.Ping](xref:Microsoft.VisualBasic.Devices.Network.Ping%2A)
 - [My.Computer.Network.IsAvailable](xref:Microsoft.VisualBasic.Devices.Network.IsAvailable)
-- [Operacje sieciowe w programie .NET Framework za pomocą Visual Basic](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)
+- [Operacje sieciowe w programie .NET Framework za pomocą Visual Basic](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms172756(v=vs.100))
 - [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)

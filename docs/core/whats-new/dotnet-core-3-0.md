@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: baaa2676865c475e331ec889e7b10ae326b552fa
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e31f4391a057d0863f9dcdca00c90f9e591bc5e8
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675091"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739140"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 2)
 
@@ -308,7 +308,7 @@ Podziel się swoją opinię na [dotnet/winforms](https://github.com/dotnet/winfo
 
 [MSIX](https://docs.microsoft.com/windows/msix/) jest nowy format pakietu aplikacji Windows. Może służyć do wdrażania aplikacji klasycznych .NET Core 3.0 dla systemu Windows 10.
 
-[Projekt pakietu aplikacji Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępne w wersji 2 (wersja zapoznawcza) 2019 r w usłudze Visual Studio, umożliwia tworzenie pakietów MSIX [niezależna](../deploying/#self-contained-deployments-scd) aplikacji .NET Core.
+[Projekt pakietu aplikacji Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępne w wersji 2 (wersja zapoznawcza) 2019 r w usłudze Visual Studio, umożliwia tworzenie pakietów MSIX [niezależna](../deploying/index.md#self-contained-deployments-scd) aplikacji .NET Core.
 
 >Uwaga: Plik projektu .NET Core, musisz określić obsługiwane środowiska uruchomieniowe w `<RuntimeIdentifiers>` właściwości:
 ```xml

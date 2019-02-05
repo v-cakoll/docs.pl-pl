@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 7c393abe0e1ff9872de6bdf4d3bc3befa5cde0d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2a6b4893229115ed1bc1329d5e81939b92eab2e
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746185"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738945"
 ---
 # <a name="-bugreport"></a>-bugreport
 Tworzy plik, który można użyć, gdy plik jest raport o usterce.  
@@ -65,4 +65,4 @@ vbc -bugreport:problem.txt t2.vb
 - [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [trustLevel elementu dla securityPolicy (ASP.NET Settings Schema)](https://msdn.microsoft.com/library/729ab04c-03da-4ee5-86b1-be9d08a09369)
+- [trustLevel elementu dla securityPolicy (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))

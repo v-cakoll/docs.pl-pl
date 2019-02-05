@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086767"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739465"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Język Visual Basic — Wskazówki
 Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariuszy, które sprawia, że ich dobrym miejscem do uruchomienia, informacje o strefie dana funkcja lub produktu.  
@@ -47,9 +47,6 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  [Wdrażanie dziedziczenia z obiektami COM](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Pokazuje, jak Visual Basic 6.0 do utworzenia obiektu COM, zawierających klasy, a następnie użyć jej jako klasę bazową w języku Visual Basic.  
   
- [Wielowątkowość](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- Przedstawia sposób tworzenia aplikacji wielowątkowej, która wyszukuje plik tekstowy dla wystąpień wyrazu.  
-  
  [Ustalanie, gdzie My.Application.Log zapisuje informacje](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  W tym artykule opisano domyślne `My.Application.Log` ustawienia i jak określić ustawienia aplikacji.  
   
@@ -80,5 +77,5 @@ Wskazówki dotyczące zapewniają instrukcje krok po kroku dla typowych scenariu
  [Przechowywanie obiektu w języku Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Pokazuje sposób tworzenia prostego obiektu i zachować jego dane do pliku.  
   
- [Wcześniejsze testowanie obsługi przy użyciu użycia funkcji generowania na podstawie](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Przewodnik: Wcześniejsze testowanie obsługi przy użyciu użycia funkcji generowania na podstawie](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Pokazuje, jak wczesnego testowania programowania, w którym najpierw pisanie testów jednostkowych i następnie napisać kod źródłowy, aby testy powiodło się.

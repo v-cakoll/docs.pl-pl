@@ -1,17 +1,23 @@
 ---
-title: 'Typy — C# przewodnik programowania'
+title: Typy — C# przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'value types [C#]'
-  - 'reference types [C#]'
-  - 'types [C#]'
-  - 'C# language, data types'
-  - 'common type system [C#]'
-  - 'data types [C#]'
-  - 'C# language, types'
-  - 'strong typing [C#]'
+- value types [C#]
+- reference types [C#]
+- types [C#]
+- C# language, data types
+- common type system [C#]
+- data types [C#]
+- C# language, types
+- strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
+ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739319"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 ## <a name="types-variables-and-values"></a>Typy, zmienne i wartości  
@@ -82,8 +88,8 @@ Typy wartości i typy odwołań w CTS
  Wbudowane typy liczbowe są strukturami i mają właściwości i metody, do których masz dostęp:  
   
 ```csharp  
-// Static method on type Byte.  
-byte b = Byte.MaxValue;  
+// Static method on type byte.  
+byte b = byte.MaxValue;
 ```  
   
  Ale zadeklarować i przypisać do nich wartości, tak jakby były one proste typami-aggregacji:  

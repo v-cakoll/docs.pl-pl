@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5dd2829a9a00f869af3d7f370f99361979b8106
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193591"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758797"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) — Metoda
 
@@ -25,8 +25,8 @@ ms.locfileid: "44193591"
 
 Konwertuje określony strumień na strumień o dostępie losowym.
 
-**Namespace:** <xref:System.IO?displayProperty=nameWithType> 
- **zestawu:** System.Runtime.WindowsRuntime (w pliku System.Runtime.WindowsRuntime.dll)
+**Namespace:** <xref:System.IO?displayProperty=nameWithType>
+**Zestaw:** System.Runtime.WindowsRuntime (in System.Runtime.WindowsRuntime.dll)
 
 ## <a name="syntax"></a>Składnia
 
@@ -72,9 +72,8 @@ Ta metoda rozszerzenia jest dostępna tylko podczas projektowania aplikacji do S
 
 **Platforma .NET dla aplikacji Windows Store**
 
-Obsługiwane w: Windows 8.1
+Obsługują: Windows 8.1
 
 ## <a name="see-also"></a>Zobacz także
 
--[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
--[porady: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego Windows](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+- [Instrukcje: Konwertowanie między .NET Framework i strumieni środowiska wykonawczego Windows](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

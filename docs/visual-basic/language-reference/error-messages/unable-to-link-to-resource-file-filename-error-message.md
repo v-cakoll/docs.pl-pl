@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: e84de65a9aef89d8cb9c210989e7a5dd976c13df
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a4e53cd2d330fd3ee78d2de4246e5c51e77ed713
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289643"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759421"
 ---
 # <a name="unable-to-link-to-resource-file-filename-error-message"></a>Nie można połączyć z plikiem zasobów "\<nazwa pliku >": \<komunikat o błędzie >
 Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd łączenie z natywnego modelu COM + plik zasobów z zestawu.  
@@ -27,5 +27,5 @@ Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Ali
   
 ## <a name="see-also"></a>Zobacz także
 
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

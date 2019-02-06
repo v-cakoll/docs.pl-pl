@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: a7e6c084c84fec1af05a38664bcfbcabc99061ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a8481d312c0a2c58d6e68d3fc0945766eba3e2b
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534345"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759720"
 ---
 # <a name="get-started-with-visual-basic"></a>Wprowadzenie do języka Visual Basic
 Ten rozdział dokumentacji pomaga rozpocząć pracę z opracowywaniem aplikacji w języku Visual Basic.  
@@ -23,32 +23,43 @@ Ten rozdział dokumentacji pomaga rozpocząć pracę z opracowywaniem aplikacji 
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 
-[Co nowego w języku Visual Basic](whats-new.md)   
+- [Co nowego w języku Visual Basic](whats-new.md)\
 Zawiera listę nowych funkcji w każdej wersji programu Visual Basic .NET.
 
-[Visual Basic — fundamentalne zmiany w Visual Studio](breaking-changes-in-visual-studio.md)  
-Informuje o zmianach wprowadzonych w tej wersji, które mogą uniemożliwić kompilowanie aplikacji lub zmienić jej działanie.  
-  
-[Dodatkowe zasoby dla programistów Visual Basic](additional-resources.md)  
-Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znalezieniu odpowiedzi na typowe problemy.  
+- [Visual Basic — przełomowe zmiany w programie Visual Studio](breaking-changes-in-visual-studio.md)\
+Informuje o zmianach wprowadzonych w tej wersji, które mogą uniemożliwić kompilowanie aplikacji lub zmienić jej działanie.
+
+- [Zasoby dodatkowe dla programistów Visual Basic](additional-resources.md)\
+Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znalezieniu odpowiedzi na typowe problemy.
 
 ## <a name="see-also"></a>Zobacz także
-- [Pobierz Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) obsługuje udostępnia łącza pobierania dla wersji programu Visual Studio, które umożliwiają języka Visual Basic, w tym bezpłatne wersje.  
 
-- [Podstawy języka Visual Basic dla osób początkujących](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) kurs Microsoft Virtual Academy, pokazujący podstawy programowania w języku Visual Basic.
+- [Pobierz Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)\
+Łącza pobierania wersji programu Visual Studio, które obejmują obsługę języka Visual Basic, w tym bezpłatne wersje.
 
-- [Programowanie zorientowane obiektowo](../programming-guide/concepts/object-oriented-programming.md) zawiera łącza do stron, które wprowadzają programowanie zorientowane obiektowo i opisują sposób tworzenia własnych obiektów oraz sposób wykorzystania obiektów w celu uproszczenia kodowania.  
+- [Podstawy Visual Basic dla całkowicie początkujących](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)\
+Kurs Microsoft Virtual Academy, pokazujący podstawy programowania w języku Visual Basic.
 
-- [Przykłady](../../visual-basic/sample-applications.md) zawiera łącza do przykładowego kodu w języku Visual Basic.  
+- [Programowanie zorientowane obiektowo](../programming-guide/concepts/object-oriented-programming.md)\
+Oferuje łącza do stron, które wprowadzają programowanie zorientowane obiektowo i opisują sposób tworzenia własnych obiektów, a także sposób wykorzystania obiektów w celu uproszczenia kodowania.
 
-- [Wskazówki dotyczące](../../visual-basic/walkthroughs.md) zawiera listę stron pomocy, które przedstawiają aspekty związane z języka Visual Basic.  
+- [Przykłady](../../visual-basic/sample-applications.md)\
+Zawiera łącza do przykładowego kodu w języku Visual Basic.
 
-- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us) opisano, jak uzyskać pomoc techniczną i Przekaż opinię.  
+- [Instruktaże](../../visual-basic/walkthroughs.md)\
+Oferuje listę stron pomocy, które przedstawiają aspekty związane z języka Visual Basic.
 
-- [Program Visual Studio](/visualstudio/) zawiera łącza do dokumentacji programu Visual Studio.  
+- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)\
+Opisuje sposoby uzyskania pomocy technicznej i przekazywania opinii zwrotnej.
 
-- [C#](../../csharp/index.md) zawiera łącza do dokumentacji dotyczącej tworzenia aplikacji za pomocą języka Visual C#.  
+- [Visual Studio](/visualstudio/)\
+Oferuje łącza do dokumentacji programu Visual Studio.
 
-- [Visual C++](/cpp/) zawiera łącza do dokumentacji języka Visual C++.  
+- [C#](../../csharp/index.md)\
+Zawiera łącza do dokumentacji dotyczącej tworzenia aplikacji przy użyciu Visual C#.
 
-- [Pakiet Office i programu SharePoint](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio) zawiera informacje dotyczące używania programu Microsoft Office i programu Visual Studio jako części aplikacji biznesowych.
+- [Visual C++](/cpp/)\
+Oferuje łącza do dokumentacji języka Visual C++.
+
+- [Pakiet Office i programu SharePoint](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)\
+Zawiera informacje o korzystaniu z programu Microsoft Office i programu Visual Studio jako części aplikacji biznesowych.

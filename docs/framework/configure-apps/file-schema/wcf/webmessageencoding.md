@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e263062d47708983e7771a8db63ba20d2193ece3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260037"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759648"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScript (JSON) i "nieprzetworzonej" zawartości binarnej Odczyt i zapis, gdy jest używana w powiązaniu usługi Windows Communication Foundation (WCF).  
@@ -41,7 +41,7 @@ Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScrip
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -60,7 +60,7 @@ Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScrip
   
  `maxReadPoolSize` i `maxWritePoolSize` można również ustawić maksymalną liczbę czytników i składników zapisywania do przydzielenia, odpowiednio. Domyślnie są przydzielane 64 czytników i składników zapisywania 16.  
   
- Domyślne ograniczenia złożoności również są ustawiane przy użyciu [ \<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) element, aby zapewnić ochronę przed klasą typu odmowa usługi (DOS) ataki taka próba blokując przetwarzania punktu końcowego za pomocą złożoności wiadomości zasoby.  
+ Domyślne ograniczenia złożoności również są ustawiane przy użyciu [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) element, aby zapewnić ochronę przed klasą typu odmowa usługi (DOS) ataki taka próba blokując przetwarzania punktu końcowego za pomocą złożoności wiadomości zasoby.  
   
 ## <a name="example"></a>Przykład  
   

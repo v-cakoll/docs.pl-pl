@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707885"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758434"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Obsługa i zgłaszanie wyjątków na platformie .NET
 
@@ -69,4 +69,4 @@ W poniższej tabeli wymieniono niektóre typowe wyjątki z przykładami co mogą
 - [Instrukcje: Używanie bloków Finally](how-to-use-finally-blocks.md)
 - [Obsługa wyjątków międzyoperacyjności COM](handling-com-interop-exceptions.md)
 - [Najlepsze rozwiązania dotyczące wyjątków](best-practices-for-exceptions.md)
-- [Co Dev co trzeba wiedzieć o wyjątków w środowisku uruchomieniowym](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
+- [Co każdy deweloper musi wiedzieć o wyjątków w środowisku uruchomieniowym](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)

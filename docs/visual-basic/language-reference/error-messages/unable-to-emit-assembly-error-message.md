@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 404a8255adcdc414a40b40395ada1c90c1078325
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: d564f4f4462a691504297d65575956c5f06691ca
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42751934"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759226"
 ---
 # <a name="unable-to-emit-assembly-error-message"></a>Nie można wyemitować zestawu: \<komunikat o błędzie >
 
@@ -61,7 +61,7 @@ Kompilator języka Visual Basic wywołuje Assembly Linker (*Al.exe*, znanego ró
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).
-- [Sn.exe (narzędzie silnych nazw)] [Sn.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md))
-- [Instrukcje: tworzenie pary kluczy publiczny-prywatny](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md)
+- [Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

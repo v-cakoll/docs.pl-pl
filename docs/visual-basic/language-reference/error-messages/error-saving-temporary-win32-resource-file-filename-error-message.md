@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-ms.openlocfilehash: 3af4ff0ace8afcb2f576ec4fde022672def0b90b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: af41297fb3e512db579204d54d77133e85fd5758
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265093"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758251"
 ---
 # <a name="error-saving-temporary-win32-resource-file-filename-error-message"></a>Wystąpił błąd podczas zapisywania tymczasowego pliku zasobów Win32 "\<nazwa pliku >": \<komunikat o błędzie >
 Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd podczas uzyskiwania nazwę pliku do użytku w pisaniu zasobem w pamięci.  
@@ -27,5 +27,5 @@ Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Ali
   
 ## <a name="see-also"></a>Zobacz także
 
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

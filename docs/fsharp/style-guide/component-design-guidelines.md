@@ -3,10 +3,10 @@ title: F#wytyczne dotyczące projektowania składnika
 description: Dowiedz się, wskazówki dotyczące pisania F# składników przeznaczonych do użytku przez inne obiekty wywołujące.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
+ms.lasthandoff: 02/07/2019
 ms.locfileid: "55066028"
 ---
 # <a name="f-component-design-guidelines"></a>F#wytyczne dotyczące projektowania składnika
@@ -74,7 +74,7 @@ Poniższa tabela jest zgodna z konwencjami nazewnictwa i wielkości liter, platf
 |-----------|------|------|----------|-------|
 | Typów konkretnych | PascalCase | Rzeczownik / przymiotników | Lista, Double, złożone | Konkretne typy są struktur, klas, wyliczeń, delegatów, rekordy i Unii. Chociaż nazwy typów są zazwyczaj pisane małymi literami w OCaml, F# przyjęła schemat nazewnictwa platformy .NET dla typów.
 | biblioteki DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Tagi Unii     | PascalCase | Rzeczownik | Niektóre z nich, Dodaj sukces | Nie używaj prefiksu w publicznych interfejsów API. Opcjonalnie użyj prefiksu, gdy wewnętrznych, takich jak `wpisz zespołów = TAlpha | TBeta | TDelta.` |
+| Tagi Unii     | PascalCase | Rzeczownik | Niektóre z nich, Dodaj sukces | Nie używaj prefiksu w publicznych interfejsów API. Opcjonalnie użyj prefiksu, gdy wewnętrznych, takich jak `type Teams = TAlpha | TBeta | TDelta.` |
 | Zdarzenie          | PascalCase | zlecenia | ValueChanged / ValueChanging |  |
 | Wyjątki     | PascalCase |      | Klasa WebException | Nazwa powinna kończyć "Wyjątki". |
 | Pole          | PascalCase | Rzeczownik | CurrentName  | |

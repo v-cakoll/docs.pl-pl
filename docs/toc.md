@@ -1189,7 +1189,7 @@
 ## [Samouczki](machine-learning/tutorials/index.md)
 ### [Analiza tonacji (klasyfikacja binarna)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Klasyfikacja problemów (klasyfikacja wieloklasowa)](machine-learning/tutorials/github-issue-classification.md)
-### [Przewidywanie opłat za taksówki (regresja)](machine-learning/tutorials/taxi-fare.md)
+### [Przewidywanie cen (regresja)](machine-learning/tutorials/taxi-fare.md)
 ### [Kwiaty irysów (klastrowanie)](machine-learning/tutorials/iris-clustering.md)
 ## [Przewodniki z instrukcjami](machine-learning/how-to-guides/index.md)
 ### Przygotowywanie danych
@@ -1200,7 +1200,7 @@
 #### [Ładowanie danych z pliku tekstowego](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [Wstępne przetwarzanie danych za pomocą normalizatorów](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### Trenowanie, ocenianie i objaśnianie modelu
-#### [Uczenie modelu z danymi spoza pliku tekstowego](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [Uczenie modelu źródłami danych w czasie rzeczywistym](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [Uczenie modelu przy użyciu walidacji krzyżowej](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [Sprawdzanie wartości danych pośrednich potoku](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Uczenie modelu regresji](machine-learning/how-to-guides/train-regression-model-ml-net.md)

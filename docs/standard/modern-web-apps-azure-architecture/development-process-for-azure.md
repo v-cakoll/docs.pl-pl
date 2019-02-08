@@ -3,13 +3,13 @@ title: Proces programistyczny dla platformy Azure
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Proces programistyczny dla platformy Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 932d3869483b6c96f2394ec308d3aa014b8650d4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152617"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827477"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 
@@ -88,15 +88,15 @@ Tworzenie aplikacji platformy ASP.NET Core do wdrożenia na platformie Azure nie
 
 Zawsze, gdy wszystko będzie gotowe udostępniać kod swojemu zespołowi, będzie wypchnąć zmiany z repozytorium lokalnego źródła do repozytorium źródłowy udostępniony Twojego zespołu. Jeśli masz doświadczenie w pracy w gałęzi niestandardowych, ten krok obejmuje zazwyczaj scalanie kodu w gałęzi udostępnionej (prawdopodobnie przez klasy [żądania ściągnięcia](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Krok 3. Serwer kompilacji: Ciągła integracja. kompilowanie, testowanie, pakietu
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Krok 3. Build Server: Ciągła integracja. kompilowanie, testowanie, pakietu
 
 Nowa kompilacja jest wyzwalana na serwerze kompilacji zawsze wtedy, gdy przeprowadzane jest zatwierdzenie nowe repozytorium kodu udostępnionej aplikacji. Jako część procesu ciągłej integracji Ta kompilacja powinna pełni skompilować aplikację i uruchomić testy automatyczne, aby upewnić się, że wszystko działa zgodnie z oczekiwaniami. Wynik końcowy w procesie ciągłej integracji powinny być spakowana utworzona wersja aplikacji sieci web, gotowe do wdrożenia.
 
-#### <a name="step-4-build-server-continuous-delivery"></a>Krok 4. Serwer kompilacji: Ciągłe dostarczanie
+#### <a name="step-4-build-server-continuous-delivery"></a>Krok 4. Build Server: Ciągłe dostarczanie
 
 Gdy kompilacja zakończyła się pomyślnie, proces ciągłego Dostarczania przejmą artefaktów kompilacji utworzone. Dotyczy to sieci web wdrożenia pakietu. Serwer kompilacji zostanie wdrożona ten pakiet w usłudze Azure App Service, zastępując wszystkie istniejące usługi na nowo utworzony zestaw. Zazwyczaj ten krok jest przeznaczony dla środowisko przejściowe, ale niektóre aplikacje wdrażać bezpośrednio w środowisku produkcyjnym przez proces ciągłego Dostarczania.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Usługa Azure App Service Web App
+#### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Azure App Service Web App
 
 Po wdrożeniu aplikacji platformy ASP.NET Core jest uruchamiany w kontekście usługi Azure App Service Web Apps. Ta aplikacja sieci Web można monitorować, a dodatkowo skonfigurować w witrynie Azure Portal.
 

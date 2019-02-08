@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 69eb1490c61cc7187d11c776fe95c659271750b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb45b890ddfab3f771d4b4a8932f970036b346d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608485"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828296"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z zestawu danych z usługi sieci Web XML
 <xref:System.Data.DataSet> Została zaprojektowana z projektem bez połączenia, w części w celu ułatwienia wygodne transportu danych za pośrednictwem Internetu. **DataSet** jest "serializacji", może być określony jako dane wejściowe lub dane wyjściowe z usług XML sieci Web bez pisania dodatkowe wymagane do przesyłania strumieniowego zawartości **DataSet** z usługi XML sieci Web do klientów i z powrotem. **DataSet** niejawnie konwertowane na strumień XML przy użyciu formatu w formacie DiffGram, wysyłane przez sieć i następnie odtworzone strumień XML jako **DataSet** po stronie odbiorczej. Zapewnia to bardzo prosty i elastyczny metody przesyłania i zwraca dane relacyjne przy użyciu usług XML sieci Web. Aby uzyskać więcej informacji na temat formatu w formacie DiffGram zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -18,7 +18,7 @@ ms.locfileid: "54608485"
  Poniższy przykład przedstawia sposób tworzenia usługi XML sieci Web i klienta, który używał **DataSet** do przesyłania danych relacyjnych (w tym zmodyfikowanych danych) i rozwiązać wszelkie aktualizacje z powrotem do oryginalnego źródła danych.  
   
 > [!NOTE]
->  Zaleca się, że należy zawsze należy wziąć pod uwagę skutki dla bezpieczeństwa podczas tworzenia usługi XML sieci Web. Aby uzyskać informacje na temat zabezpieczenia usługi sieci Web XML, zobacz [zabezpieczanie XML sieci Web usług utworzone za pomocą programu ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  Zaleca się, że należy zawsze należy wziąć pod uwagę skutki dla bezpieczeństwa podczas tworzenia usługi XML sieci Web. Aby uzyskać informacje na temat zabezpieczenia usługi sieci Web XML, zobacz [zabezpieczanie XML sieci Web usług utworzone za pomocą programu ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Do tworzenia usługi XML sieci Web, zwraca wartość, która korzysta z zestawu danych  
   
@@ -266,5 +266,5 @@ ms.locfileid: "54608485"
 - [Wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
 - [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Parametry elementu DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [Narzędzia języka opisu usługi sieci Web (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)
+- [Narzędzia języka opisu usługi sieci Web (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

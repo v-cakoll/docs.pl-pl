@@ -4,16 +4,16 @@ description: Opisuje sposób tworzenia narzędzie globalne. Narzędzie globalnej
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144593"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826424"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Utworzyć narzędzie globalnej platformy .NET Core przy użyciu interfejsu wiersza polecenia platformy .NET Core
 
-Ten artykuł nauczy Cię sposobu tworzenia i pakietu Narzędzia globalnej Core środowiska .NET. Interfejs wiersza polecenia platformy .NET Core umożliwia tworzenie aplikacji konsoli jako globalne narzędzia, które inne osoby można łatwo zainstalować i uruchomić. Narzędzia programu .NET core globalne są pakiety NuGet, które są instalowane z interfejsu wiersza polecenia platformy .NET Core. Aby uzyskać więcej informacji na temat narzędzia globalnej zobacz [Omówienie narzędzia globalnej platformy .NET Core][global-tool-info].
+Ten artykuł nauczy Cię sposobu tworzenia i pakietu Narzędzia globalnej Core środowiska .NET. Interfejs wiersza polecenia platformy .NET Core umożliwia tworzenie aplikacji konsoli jako globalne narzędzia, które inne osoby można łatwo zainstalować i uruchomić. Narzędzia programu .NET core globalne są pakiety NuGet, które są instalowane z interfejsu wiersza polecenia platformy .NET Core. Aby uzyskać więcej informacji na temat narzędzia globalnej zobacz [Omówienie narzędzia globalnej platformy .NET Core](global-tools.md).
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
@@ -170,7 +170,7 @@ Teraz, gdy pakiet, należy zainstalować narzędzia z tego pakietu:
 dotnet tool install --global --add-source ./nupkg botsay
 ```
 
-`--add-source` Parametru informuje .NET Core interfejs wiersza polecenia i użyj tymczasowo `./nupkg` folder (nasze `<PackageOutputPath>` folder) jako źródło dodatkowych źródło danych dla pakietów NuGet. Aby uzyskać więcej informacji na temat instalowania narzędzi globalnych, zobacz [Omówienie narzędzia globalnej platformy .NET Core][global-tool-info].
+`--add-source` Parametru informuje .NET Core interfejs wiersza polecenia i użyj tymczasowo `./nupkg` folder (nasze `<PackageOutputPath>` folder) jako źródło dodatkowych źródło danych dla pakietów NuGet. Aby uzyskać więcej informacji na temat instalowania narzędzi globalnych, zobacz [Omówienie narzędzia globalnej platformy .NET Core](global-tools.md).
 
 Jeśli instalacja zakończy się pomyślnie, zostanie wyświetlony komunikat przedstawiający polecenia używane do wywoływania narzędzia i wersją zainstalowaną, podobny do poniższego przykładu:
 
@@ -191,5 +191,3 @@ Po zakończeniu eksperymentowanie, za pomocą narzędzia, możesz je usunąć za
 ```console
 dotnet tool uninstall -g botsay
 ```
-
-[global-tool-info]: global-tools.md

@@ -2,12 +2,12 @@
 title: LINQ do Jednostek
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: a3b35c28dc9b764b99b73440a1526176293e10a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19849f318d07a11fe0d894f7f0a68cd37f1ee249
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514754"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825787"
 ---
 # <a name="linq-to-entities"></a>LINQ do Jednostek
 Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), która umożliwia programistom pisanie kwerend modelu koncepcyjnego Entity Framework przy użyciu języka Visual Basic lub Visual C#. Zapytania dotyczące programu Entity Framework są reprezentowane przez zapytania w drzewie poleceń, których wykonanie względem kontekst. Składnik LINQ to Entities konwertuje zapytań Language-Integrated zapytania (LINQ) z poleceniem Drzewo zapytań, wykonuje zapytania względem programu Entity Framework i zwraca obiekty używane przez Entity Framework i LINQ. Poniżej przedstawiono proces tworzenia i wykonywanie w zapytaniu składnika LINQ to Entities:  
@@ -90,6 +90,7 @@ Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), 
   
 ## <a name="see-also"></a>Zobacz także
 - [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- [Zapytanie o języku zintegrowanym (LINQ) —C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Zapytanie o języku zintegrowanym (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ i ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [Program Entity Framework na platformie ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)

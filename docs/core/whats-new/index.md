@@ -3,20 +3,20 @@ title: What's new in .NET Core
 description: Dowiedz się więcej o nowych funkcjach w każdej wersji programu .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 12/04/2018
+ms.date: 02/04/2019
 ms.custom: seodec18
-ms.openlocfilehash: d114514597dbe476ea4425592be041fc7809194e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d494f4c2c106271fa5171ddfa57237c4b4dd9ab
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604346"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827399"
 ---
 # <a name="whats-new-in-net-core"></a>What's new in .NET Core
 
 Ta strona zawiera podsumowanie nowych funkcji w każdej wersji programu .NET Core, począwszy od programu .NET Core 2.0. Poniższe linki zawierają szczegółowe informacje o główne funkcje dodane w każdej wersji.
 
-- [.NET core 3.0 (wersja zapoznawcza 1)](dotnet-core-3-0.md)
+- [.NET core 3.0 (wersja zapoznawcza 2)](dotnet-core-3-0.md)
 
 - [.NET Core 2.2](dotnet-core-2-2.md)
 

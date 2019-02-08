@@ -1,13 +1,13 @@
 ---
 title: Opcje wartości
 description: Dowiedz się więcej o F# opcję wartość typu, który jest wersja struktury typu opcji.
-ms.date: 06/16/2018
-ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/06/2019
+ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613430"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828036"
 ---
 # <a name="value-options"></a>Opcje wartości
 
@@ -16,7 +16,7 @@ Typ opcji wartości w F# jest używany podczas przechowywania następujących dw
 1. Scenariusz jest odpowiedni dla [ F# opcji](options.md).
 2. Za pomocą struktury zapewnia korzyści wydajności, w tym scenariuszu.
 
-Nie wszystkie scenariusze wrażliwego na wydajność to "rozwiązane" przy użyciu struktury. Należy wziąć pod uwagę dodatkowych kosztów kopiowania podczas korzystania z nich zamiast typów odwołań. Jednak duże F# programy często wystąpienia wielu opcjonalne typy, które będą działać przy użyciu ścieżek krytycznych, ponieważ struktury czasami może zapewnić lepszą ogólną wydajność w okresie istnienia programu.
+Nie wszystkie scenariusze wrażliwego na wydajność to "rozwiązane" przy użyciu struktury. Należy wziąć pod uwagę dodatkowych kosztów kopiowania podczas korzystania z nich zamiast typów odwołań. Jednak duże F# programy często wystąpienia wielu opcjonalne typy, które będą działać przy użyciu ścieżek krytycznych oraz w takich przypadkach struktury często może zapewnić lepszą wydajność ogólną, przez cały okres istnienia programu.
 
 ## <a name="definition"></a>Definicja
 

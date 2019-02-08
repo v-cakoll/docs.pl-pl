@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c4b656d1ee7edcdc7e0e5cd41f7d57266ad5ad26
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066223"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828361"
 ---
 # <a name="net-framework-data-providers"></a>Dostawcy danych .NET framework
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawca danych służy do nawiązywania połączenia z bazą danych, wykonując polecenia i pobierania wyników. Te wyniki są albo przetwarzane bezpośrednio, umieszczone w <xref:System.Data.DataSet> celu uwidocznienie użytkownika zgodnie z potrzebami, połączone z danymi z wielu źródeł lub węzłach między warstwami. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych są uproszczone, tworzenie minimalnej warstwy między źródłem danych i kodu, zwiększenie wydajności bez poświęcania funkcjonalności.  
@@ -24,7 +24,7 @@ A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawca danyc
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC|W przypadku źródeł danych udostępnianych przez przy użyciu interfejsu ODBC. Używa <xref:System.Data.Odbc> przestrzeni nazw.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider Pro Oracle|W przypadku źródeł danych programu Oracle. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle obsługuje Oracle wersji oprogramowania 8.1.7 lub nowszy i wykorzystuje <xref:System.Data.OracleClient> przestrzeni nazw.|  
 |Dostawca EntityClient|Zapewnia dostęp do danych w aplikacji Entity Data Model (EDM) struktury. Używa <xref:System.Data.EntityClient> przestrzeni nazw.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Dostawca danych programu SQL Server Compact 4.0.|Zapewnia dostęp do danych dla programu Microsoft SQL Server Compact 4.0. Używa [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) przestrzeni nazw.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Dostawca danych programu SQL Server Compact 4.0.|Zapewnia dostęp do danych dla programu Microsoft SQL Server Compact 4.0. Używa [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) przestrzeni nazw.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Podstawowych obiektów dostawcy danych .NET Framework  
  W poniższej tabeli przedstawiono cztery podstawowych obiektów, które tworzą [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych.  

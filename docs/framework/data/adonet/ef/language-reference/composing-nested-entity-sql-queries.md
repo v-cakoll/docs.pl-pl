@@ -2,12 +2,12 @@
 title: Tworzenie zagnieżdżonych zapytań jednostki SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 87a9877b7c865fbe393d91365d03bab8f56377c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fc39a25b5b8592117348b150da9d82454a1562
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589484"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827321"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Tworzenie zagnieżdżonych zapytań jednostki SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest bogaty język funkcjonalności. Elementem składowym [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażeniem. W przeciwieństwie do poziomu konwencjonalnego SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczona do zestawu wyniku tabelarycznym: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub zagnieżdżonych wyrażeń. Wartości w wyrażeniu można ustawiać parametry lub składa się z niektóre inne wyrażenie.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- Poniższy przykład pokazuje, jak poprawnie zagnieździć wyrażeń w [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Jak: Kolejność sumę dwóch zapytań](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ Poniższy przykład pokazuje, jak poprawnie zagnieździć wyrażeń w [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Instrukcje: Kolejność sumę dwóch zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
 ## <a name="nested-queries-in-projection"></a>Zapytania zagnieżdżone w projekcji  
  Zapytania zagnieżdżone w klauzuli projektu może uzyskać przetłumaczone na zapytania formułuje iloczyn na serwerze. W niektórych serwerów wewnętrznej bazy danych, w tym SQL Server może to spowodować tabeli bazy danych TempDB, aby stać się bardzo duże, który może niekorzystnie wpłynąć na wydajność serwera.  

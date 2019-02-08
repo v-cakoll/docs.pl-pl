@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 7fb00046eb9ab92ed2514cd7615c41ea40124de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594918"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827607"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Ładowanie elementu DataSet z pliku XML
 Zawartość ADO.NET <xref:System.Data.DataSet> można tworzyć na podstawie strumień XML lub dokumentu. Ponadto, za pomocą programu .NET Framework masz dużą elastyczność w informacjach jest ładowany z pliku XML i w jaki sposób schematu lub relacyjnej struktury elementu <xref:System.Data.DataSet> zostanie utworzony.  
   
- Aby wypełnić <xref:System.Data.DataSet> z danymi z pliku XML, należy użyć **ReadXml** metody <xref:System.Data.DataSet> obiektu. **ReadXml** metoda odczytuje z pliku strumienia, lub **XmlReader**i przyjmuje jako argumenty źródła XML oraz opcjonalnie **XmlReadMode** argumentu. (Aby uzyskać więcej informacji na temat **XmlReader**, zobacz [NIB: Odczytywanie danych XML przy użyciu klasy XmlTextReader](https://msdn.microsoft.com/library/762c069b-b50c-41b8-936e-39eacfb0d540).) **ReadXml** metoda odczytuje zawartość strumienia XML lub dokumentu i obciążeniami <xref:System.Data.DataSet> z danymi. Utworzy on również schemat relacyjnej <xref:System.Data.DataSet> w zależności od **XmlReadMode** określona, czy schemat relacyjny już istnieje.  
+ Aby wypełnić <xref:System.Data.DataSet> z danymi z pliku XML, należy użyć **ReadXml** metody <xref:System.Data.DataSet> obiektu. **ReadXml** metoda odczytuje z pliku strumienia, lub **XmlReader**i przyjmuje jako argumenty źródła XML oraz opcjonalnie **XmlReadMode** argumentu. Aby uzyskać więcej informacji na temat **XmlReader**, zobacz [odczytywania danych XML przy użyciu klasy XmlTextReader](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). **ReadXml** metoda odczytuje zawartość strumienia XML lub dokumentu i obciążeniami <xref:System.Data.DataSet> z danymi. Utworzy on również schemat relacyjnej <xref:System.Data.DataSet> w zależności od **XmlReadMode** określona, czy schemat relacyjny już istnieje.  
   
  W poniższej tabeli opisano opcje **XmlReadMode** argumentu.  
   

@@ -2,12 +2,12 @@
 title: Stronicowanie (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: ba4f334d-03e5-4a7b-9d42-628f4639b9a2
-ms.openlocfilehash: f6ff95c387224705e58edb0b80bf908f39391a80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1cc7b0ff931e0772cbdfc0f278b75153558efda6
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672932"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825995"
 ---
 # <a name="paging-entity-sql"></a>Stronicowanie (jednostka SQL)
 Stronicowanie fizycznych można wykonać przy użyciu [POMIŃ](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) i [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) podklauzul w [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) klauzuli. Do wykonania, fizycznych stronicowania w sposób deterministyczny, należy używać SKIP i LIMIT. Jeśli chcesz ograniczyć liczbę wierszy w wyniku w sposób niejednoznaczny, należy użyć [GÓRNEJ](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md). TOP i SKIP/LIMIT wzajemnie się wykluczają.  
@@ -27,4 +27,4 @@ Stronicowanie fizycznych można wykonać przy użyciu [POMIŃ](../../../../../..
 ## <a name="see-also"></a>Zobacz także
 - [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Instrukcje: Przejrzyj wyniki zapytania](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)
+- [Instrukcje: Przejrzyj wyniki zapytania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))

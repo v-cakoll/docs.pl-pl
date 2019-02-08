@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: 117043a461779dee19f1c99361c44a33f5904993
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b897be62a940f1d27e9a8cf2eb54eec460b60468
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583525"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825943"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Wielotabelowe (LINQ to DataSet)
 Oprócz wykonywania zapytań pojedynczej tabeli, można również wykonać wielotabelowe w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Jest to wykonywane przy użyciu *sprzężenia*. Sprzężenie jest skojarzenie obiektów w jednym źródle danych z obiektami, które udostępniać wspólny atrybut w innym źródle danych, takie jak produkt lub skontaktuj się z identyfikatora. W programowanie zorientowane obiektowo relacje między obiektami są stosunkowo łatwo można przejść, ponieważ każdy obiekt ma element członkowski, który odwołuje się do innego obiektu. W tabelach zewnętrznej bazy danych jednak nawigowanie po relacjach nie jest tak proste. Tabele bazy danych nie zawierają wbudowane relacji. W takich przypadkach operacja join może służyć do dopasowania elementy z każdego źródła. Na przykład biorąc pod uwagę dwie tabele, które zawierają informacje o produkcie i informacji o sprzedaży, można użyć operacji tworzenia sprzężenia do dopasowania informacji o sprzedaży i produkty do tego samego zamówienia sprzedaży.  
@@ -21,7 +21,7 @@ Oprócz wykonywania zapytań pojedynczej tabeli, można również wykonać wielo
   
  <xref:System.Linq.Enumerable.GroupJoin%2A> Operatory mają bezpośredniego odpowiednika w warunkach relacyjnej bazy danych; implementują nadzbiorem sprzężenia wewnętrzne lewych sprzężeń zewnętrznych. Lewe sprzężenie zewnętrzne jest sprzężenie zwracające każdego elementu pierwszej kolekcji (po lewej stronie), nawet wtedy, gdy go nie ma żadnych elementów skorelowane w drugiej kolekcji.  
   
- Aby uzyskać więcej informacji na temat sprzężenia, zobacz [operacji Join](https://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).  
+ Aby uzyskać więcej informacji na temat sprzężenia, zobacz [operacji Join](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120)).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład wykonuje tradycyjnych przyłączenia `SalesOrderHeader` i `SalesOrderDetail` tabel z przykładowej bazy danych AdventureWorks uzyskać zamówienia online z sierpień.  
@@ -33,5 +33,5 @@ Oprócz wykonywania zapytań pojedynczej tabeli, można również wykonać wielo
 - [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Zapytania jednotabelowe](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
 - [Wykonywanie zapytania do typizowanych zestawów danych](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [Operacje połączone](https://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)
+- [Operacje połączone](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))
 - [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

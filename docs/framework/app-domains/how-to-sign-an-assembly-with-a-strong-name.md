@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 963923951b3f3c288506cf339cd8a15f27792af3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599221"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826905"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Instrukcje: Podpisywanie zestawu silną nazwą
 Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:  
@@ -42,6 +42,9 @@ Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:
 3.  Wybierz **Podpisz zestaw** pole.  
   
 4.  W **wybierz plik klucza o silnej nazwie** wybierz  **\<Przeglądaj … >**, a następnie przejdź do pliku klucza. Aby utworzyć nowy plik klucza, wybierz  **\<nowy... >** i wprowadź jego nazwę w **Utwórz klucz silnej nazwy** okno dialogowe.  
+  
+> [!NOTE]
+>  W celu [opóźnienie podpisywania zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md), wybierz plik klucza publicznego.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Aby utworzyć i podpisać zestaw za pomocą silnej nazwy przy użyciu programu Assembly Linker  
   

@@ -3,17 +3,17 @@ title: Wybierz między aplikacjami tradycyjnej sieci web i aplikacje jednostroni
 description: Dowiedz się, jak dokonać wyboru między tradycyjnych aplikacji i internetowych aplikacji jednostronicowej (źródła), podczas tworzenia aplikacji sieci web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 01/30/2019
+ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745306"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825748"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami tradycyjnej sieci Web i aplikacje jednostronicowe (źródła)
 
-> "Prawo firmy Atwoodem: każda aplikacja, która może być napisana w języku JavaScript po pewnym czasie zostanie zapisany w języku JavaScript."  
+> "Prawo Atwoodem firmy: Każda aplikacja, która może być napisana w języku JavaScript zostanie ostatecznie zapisany w języku JavaScript."  
 > _\- Jeffem Atwoodem_
 
 Dostępne są dwie opcje ogólne do kompilowania nowoczesnych aplikacji sieci web: aplikacje tradycyjnej sieci web, które wykonują większość logiki aplikacji na serwerze i aplikacji jednostronicowej (źródła), które wykonują większość logikę interfejsu użytkownika w przeglądarce sieci web Komunikacja z serwerem sieci web, przede wszystkim za pomocą interfejsów API sieci web. Możliwe jest również podejście hybrydowe, najprostszym trwa hosta jedną lub więcej zaawansowanych przypominającej SPA podrzędnych aplikacji w obrębie większej aplikacji sieci web tradycyjnych.
@@ -37,6 +37,10 @@ Należy użyć SPA po:
 Ponadto wymagają większej struktury SPA architektury i doświadczenia w zakresie zabezpieczeń. One występować większe zmian z powodu częstych aktualizacji i nowych platform niż tradycyjne internetowych. Konfigurowanie zautomatyzowanych procesów kompilacji i wdrożenia, a korzystanie z opcji wdrażania, takich jak kontenery są za pomocą aplikacji SPA trudniejsze niż aplikacji tradycyjnej sieci web.
 
 Ulepszenia środowiska użytkownika staje się możliwy przez SPA model należy porównać te zagadnienia.
+
+## <a name="razor-components"></a>Składniki Razor
+
+Platforma ASP.NET Core 3.0 wprowadzono nowy model do tworzenia bogatych i interaktywnych i konfigurowalna interfejsu użytkownika o nazwie składniki Razor. Składniki razor umożliwić deweloperom tworzenie interfejsu użytkownika ze składnią Razor na serwerze, a dla tego kodu, które mają zostać dostarczone do przeglądarki i wykonywane przy użyciu biblioteki JavaScript o nazwie format WebAssembly klienta. Platforma ASP.NET Core 3.0 jest nadal w fazie projektowania, ale należy się spodziewać zobaczyć więcej informacji na temat tej technologii w wersji 3.0 aktualizacji tę książkę elektroniczną. Aby uzyskać więcej informacji na temat składników Razor (o nazwie Blazor kod), zobacz [wprowadzenie Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Kiedy należy wybrać aplikacje tradycyjnej sieci web
 

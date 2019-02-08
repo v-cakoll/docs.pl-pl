@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: fcba4ea556d1f5036c2bbd0beaeb5f349dec4e36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688109"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826273"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczeń dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury, dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji są wykonywane z uprawnienia użytkownika lub jednostki. W rezultacie systemów komputerowych, może być uszkodzone i prywatnych danych naruszenia zabezpieczeń w przypadku złośliwego lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podwyższonym poziomem uprawnień.  
@@ -23,7 +23,7 @@ ms.locfileid: "54688109"
  Środowisko CLR umożliwia kod do wykonywania tych operacji, które kod ma uprawnienia do wykonania. Kod może zażądać uprawnień, a te żądania są honorowane, na podstawie zasad zabezpieczeń ustawione przez administratora.  
   
 > [!NOTE]
->  Kod wykonywany w CLR nie można udzielić uprawnień do samego siebie. Na przykład kod może żądać i mieć przyznane uprawnienia mniej, niż zezwala na zasady zabezpieczeń, ale nigdy nie zostanie udzielony mieć większe uprawnienia. Podczas nadawania uprawnień należy rozpoczynać się w ogóle nie ma uprawnień, a następnie dodaj najwęższego uprawnienia do danego zadania wykonywane. Począwszy od wszystkich uprawnień, a następnie odmawianie pojedyncze pliki prowadzi do niezabezpieczone aplikacje, które mogą zawierać luki w zabezpieczeniach niezamierzone z udzielanie więcej uprawnień niż jest to wymagane. Aby uzyskać więcej informacji, zobacz [NIB: Konfigurowanie zasad zabezpieczeń](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) i [NIB: Zarządzanie zasadami zabezpieczeń](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  Kod wykonywany w CLR nie można udzielić uprawnień do samego siebie. Na przykład kod może żądać i mieć przyznane uprawnienia mniej, niż zezwala na zasady zabezpieczeń, ale nigdy nie zostanie udzielony mieć większe uprawnienia. Podczas nadawania uprawnień należy rozpoczynać się w ogóle nie ma uprawnień, a następnie dodaj najwęższego uprawnienia do danego zadania wykonywane. Począwszy od wszystkich uprawnień, a następnie odmawianie pojedyncze pliki prowadzi do niezabezpieczone aplikacje, które mogą zawierać luki w zabezpieczeniach niezamierzone z udzielanie więcej uprawnień niż jest to wymagane. Aby uzyskać więcej informacji, zobacz [konfigurowania zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) i [Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
  Istnieją trzy typy uprawnień dostępu do kodu:  
   
@@ -38,14 +38,14 @@ ms.locfileid: "54688109"
 ### <a name="requesting-permissions"></a>Żądanie uprawnień  
  Żądanie uprawnień ma na celu poinformować środowiska uruchomieniowego, uprawnienia, które aplikacja wymaga, aby można było uruchomić i upewnij się, że będzie ona otrzymywać tylko uprawnienia, które jest faktycznie potrzebny. Na przykład, jeśli Twoja aplikacja potrzebuje do zapisywania danych na dysku lokalnym, wymaga <xref:System.Security.Permissions.FileIOPermission>. Jeśli nie zostało udzielone uprawnienie, aplikacja zakończy się niepowodzeniem podczas próby zapisania na dysku. Jednak jeśli aplikacja żąda `FileIOPermission` i że nie przyznano uprawnienia aplikacji zostanie wygenerowany wyjątek na początku i nie zostanie załadowany.  
   
- W przypadku której aplikacja musi tylko do odczytu danych z dysku możesz poprosić, że jej nigdy nie zostać przyznane uprawnienia do zapisu. W przypadku błędu lub złośliwymi atakami kod nie może uszkodzić dane, na którym działa. Aby uzyskać więcej informacji, zobacz [NIB: Żądanie uprawnień](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ W przypadku której aplikacja musi tylko do odczytu danych z dysku możesz poprosić, że jej nigdy nie zostać przyznane uprawnienia do zapisu. W przypadku błędu lub złośliwymi atakami kod nie może uszkodzić dane, na którym działa. Aby uzyskać więcej informacji, zobacz [żąda uprawnienia](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
   
 ## <a name="role-based-security-and-cas"></a>Zabezpieczenia oparte na rolach i urzędy certyfikacji  
  Implementowanie zabezpieczeń opartych na rolach i zabezpieczeń dostępne z kodu (CAS) zwiększa ogólną zabezpieczeń aplikacji. Zabezpieczenia oparte na rolach może opierać się na konto Windows lub tożsamość niestandardowa, udostępniając informacje podmiotu zabezpieczeń bieżącego wątku. Ponadto aplikacje często są wymagane w celu zapewnienia dostępu do danych lub zasobów, w oparciu o poświadczenia podane przez użytkownika. Zazwyczaj takie aplikacje sprawdzić rolę użytkownika i umożliwiają dostęp do zasobów na podstawie tych ról.  
   
  Zabezpieczenia oparte na rolach umożliwia składnikowi zidentyfikować bieżących użytkowników i ich skojarzone role w czasie wykonywania. Informacja ta jest następnie mapowana do określania zestawu uprawnień przyznanych w czasie wykonywania za pomocą zasad CAS. W domenie określonej aplikacji hosta można zmienić domyślne zasady zabezpieczeń opartej na rolach i skonfigurować podmiotu zabezpieczeń domyślny, który reprezentuje użytkownika, jak i role skojarzone z tym użytkownikiem.  
   
- Środowisko CLR używa uprawnień do implementacji jego mechanizm wymuszania ograniczenia dotyczące kodu zarządzanego. Uprawnienia zabezpieczeń oparte na rolach, zapewniają mechanizm do wykrywania, czy użytkownik (lub agent działający w imieniu użytkownika) ma określoną tożsamość lub jest członkiem określonej roli. Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń](https://msdn.microsoft.com/library/b03757b4-e926-4196-b738-3733ced2bda0).  
+ Środowisko CLR używa uprawnień do implementacji jego mechanizm wymuszania ograniczenia dotyczące kodu zarządzanego. Uprawnienia zabezpieczeń oparte na rolach, zapewniają mechanizm do wykrywania, czy użytkownik (lub agent działający w imieniu użytkownika) ma określoną tożsamość lub jest członkiem określonej roli. Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
  W zależności od typu aplikacji, które tworzysz należy również rozważyć Implementowanie opartej na rolach uprawnień w bazie danych. Aby uzyskać więcej informacji na temat zabezpieczeń opartych na rolach w programie SQL Server, zobacz [zabezpieczeń serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
@@ -139,7 +139,7 @@ ms.locfileid: "54688109"
  Aby włączyć korzystanie z <xref:System.Data.SqlClient> uprawnienia dla określonej strefy, administrator systemu należy utworzyć niestandardowe uprawnienie ustawić i ustawić go jako zestawu uprawnień dla określonej strefy. Domyślne zestawy uprawnień, takich jak `LocalIntranet`, nie może być modyfikowany. Na przykład w celu uwzględnienia <xref:System.Data.SqlClient> uprawnień do kodu, który ma <xref:System.Security.Policy.Zone> z `LocalIntranet`, administrator systemu można skopiować zestawu uprawnień dla `LocalIntranet`, zmień jego nazwę na "CustomLocalIntranet", Dodaj <xref:System.Data.SqlClient> importowanie uprawnień uprawnienie CustomLocalIntranet można ustawić przy użyciu [Caspol.exe (narzędzie zasad zabezpieczeń dostępu kodu)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)i ustaw zestaw uprawnień `LocalIntranet_Zone` do CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Przykładowy zestaw uprawnień  
- Oto przykład zestawu uprawnień dla dostawcy danych .NET Framework dla programu SQL Server w scenariuszu częściowo zaufanych. Aby uzyskać informacje na temat tworzenia zestawów uprawnień niestandardowych, zobacz [NIB: Konfigurowanie uprawnień ustawia za pomocą Caspol.exe](https://msdn.microsoft.com/library/94e2625e-21ad-4038-af36-6d1f9df40a57).  
+ Oto przykład zestawu uprawnień dla dostawcy danych .NET Framework dla programu SQL Server w scenariuszu częściowo zaufanych. Aby uzyskać informacje na temat tworzenia zestawów uprawnień niestandardowych, zobacz [konfigurowania uprawnień ustawia za pomocą Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Weryfikowanie dostępu kodu ADO.NET przy użyciu uprawnień zabezpieczeń  
- W przypadku scenariuszy częściowego zaufania może wymagać uprawnienia urzędów certyfikacji dla określonej metody w kodzie, określając <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Jeśli to uprawnienie nie jest dozwolone przez zasady zabezpieczeń z ograniczeniami obowiązuje, wyjątek jest zgłaszany, przed uruchomieniem kodu. Aby uzyskać więcej informacji na temat zasad zabezpieczeń, zobacz [NIB: Zarządzanie zasadami zabezpieczeń](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) i [NIB: Najlepsze rozwiązania dotyczące zabezpieczeń zasad](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ W przypadku scenariuszy częściowego zaufania może wymagać uprawnienia urzędów certyfikacji dla określonej metody w kodzie, określając <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Jeśli to uprawnienie nie jest dozwolone przez zasady zabezpieczeń z ograniczeniami obowiązuje, wyjątek jest zgłaszany, przed uruchomieniem kodu. Aby uzyskać więcej informacji na temat zasad zabezpieczeń, zobacz [Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) i [najlepszych rozwiązań dotyczących zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak napisać kod, który wymaga ciągu określonego połączenia. Symuluje, odmawianie nieograniczonych uprawnień do <xref:System.Data.SqlClient>, której administrator systemu może zaimplementować, za pomocą zasady CAS w świecie rzeczywistym.  
@@ -196,6 +196,6 @@ Failed, as expected: Request failed.
   
 ## <a name="see-also"></a>Zobacz także
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [PAVE zabezpieczeń w natywnym i kodzie .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Zabezpieczenia w kodzie natywnym i kodzie .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Zabezpieczenia oparte na rolach](../../../../docs/standard/security/role-based-security.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

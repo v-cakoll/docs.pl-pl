@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: f449e7d5626d4a8c9709ae2cb4c026869d1e2dc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec61a295f50fa64c484902ed811a627a22ee1c7
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661779"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828049"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Wyrażenia w składniku LINQ do zapytań jednostki
 Wyrażenie jest fragment kodu, które może przyjąć jedną wartość, obiektu, metody lub przestrzeni nazw. Wyrażenia może zawierać wartości literału, wywołanie metody, operatora i argumentów lub prostą nazwą. Proste nazwy mogą być nazwa zmiennej, składowej typu, parametru metody, przestrzeń nazw lub typu. Wyrażenia można używać operatorów, które z kolei inne wyrażenia używane jako parametry lub metoda wywołuje metodę, której parametry są z kolei inne wywołania metody. W związku z tym w bardzo złożone wyrażenia może wynosić od prostego.  
@@ -34,7 +34,7 @@ Wyrażenie jest fragment kodu, które może przyjąć jedną wartość, obiektu,
   
  [Wyrażenia inicjowania](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
   
- [Właściwości nawigacji](https://msdn.microsoft.com/library/41e1e6b9-8a57-467d-99d9-1857d2ca2ea5)  
+ [Relacje, właściwości nawigacji i kluczy obcych](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>Zobacz także
 - [Program Entity Framework na platformie ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)

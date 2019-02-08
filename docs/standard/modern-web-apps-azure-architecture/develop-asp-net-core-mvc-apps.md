@@ -3,13 +3,13 @@ title: Tworzenie platformy ASP.NET Core MVC aplikacji
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Tworzenie aplikacji programu ASP.NET Core MVC
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.date: 01/30/2019
+ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058506"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827882"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie platformy ASP.NET Core MVC aplikacji
 
@@ -17,6 +17,24 @@ ms.locfileid: "54058506"
 > _— Andrew Hunt i Davida Thomas_
 
 Platforma ASP.NET Core to dla wielu platform, typu open source umożliwiająca tworzenie aplikacji nowoczesne rozwiązania sieci web, które są zoptymalizowane pod kątem chmury. Aplikacje platformy ASP.NET Core to uproszczone, modułowe, z wbudowaną obsługę wstrzykiwania zależności, umożliwiając większe możliwości testowania i łatwość konserwacji. W połączeniu z MVC, który obsługuje tworzenie nowoczesnych internetowych interfejsów API oprócz aplikacji opartych na widok, platforma ASP.NET Core to Rozbudowana platforma umożliwiające tworzenie aplikacji sieci web enterprise.
+
+## <a name="mvc-and-razor-pages"></a>MVC i stron Razor
+
+Platforma ASP.NET Core MVC udostępnia wiele funkcji, które są przydatne do tworzenia interfejsów API i aplikacje sieci web. Termin MVC oznacza "Model-View-Controller", wzorzec interfejsu użytkownika, który powoduje podział obowiązków odpowiadania na żądania użytkowników na kilka fragmentów. Oprócz tego wzorca, możesz również wdrożyć funkcje w aplikacjach ASP.NET Core jako stron Razor. Strony razor są wbudowane w platformy ASP.NET Core MVC i te same funkcje na użytek routingu powiązanie modelu, itp. Jednak zamiast mające oddzielnych folderów i plików dla kontrolerów, widoki, itp., a przy użyciu opartych na atrybutach routingu, stron Razor są umieszczane w jednym folderze ("/ strony"), trasę na podstawie względnej lokalizacji w tym folderze, a uchwyt żądania obsługi zamiast akcji kontrolera.
+
+Podczas tworzenia nowej aplikacji platformy ASP.NET Core, powinien mieć planu, należy pamiętać o rodzaju aplikacji, którą chcesz skompilować. W programie Visual Studio możesz wybrać kilka szablonów. Trzy Najpopularniejsze szablony projektów są interfejsu API sieci Web, aplikacji sieci Web i aplikacji sieci Web (Model-View-Controller). Ta decyzja można wprowadzać tylko w przypadku, gdy należy najpierw utworzyć projekt, ale nie jest on nieodwołalną decyzją. Projekt interfejsu API sieci Web używa standardowych kontrolerów Model-View-Controller — po prostu nie ma widoków domyślnie. Podobnie domyślnego szablonu aplikacji sieci Web używa stron Razor i dlatego też brakuje folderu widoków. W tych projektach później w celu obsługi zachowanie na podstawie widoku można dodać folder widoków. Domyślnie projekty składnika Web API i Model-View-Controller nie zawierają folder stron, ale możesz je dodać później w celu obsługi zachowanie oparte na stron Razor. Można potraktować te trzy szablony jako obsługuje trzy różne rodzaje interakcji z użytkownikiem domyślne: danych (interfejs API sieci web), na stronie i na podstawie widoku. Można jednak mieszać i dopasowywać wybranych lub wszystkich z nich w ramach pojedynczego projektu, w razie potrzeby.
+
+### <a name="why-razor-pages"></a>Dlaczego stron Razor?
+
+Strony razor jest podejście domyślne dla nowych aplikacji sieci web w programie Visual Studio. Strony razor zapewnia prostszy sposób tworzenia funkcji oparty na stronie aplikacji, takich jak formularze bez SPA. Przy użyciu widoków i kontrolerów, były wspólne dla aplikacji do bardzo dużych kontrolery, które działały z wielu różnych składników zależnych, a widok modeli i zwrócony z wielu różnych widoków. To spowodowało wiele złożoności i często spowodowało kontrolery, które nie zastosowano zasady pojedynczej odpowiedzialności lub zasadami otwarty/zamknięty skutecznie. Strony razor rozwiązuje ten problem poprzez hermetyzację logiki po stronie serwera dla danego logiczne "strony" w aplikacji sieci web za pomocą jego znaczników Razor. Strona Razor nie logiki po stronie serwera może po prostu składają się z pliku Razor (na przykład "Index.cshtml"). Większość nietrywialnymi stron Razor będzie jednak skojarzona strona klasy modelu, który zwyczajowo ma nazwę taki sam jak plik Razor z rozszerzeniem "CS" (na przykład "Index.cshtml.cs").
+
+Strona Razor strony modelu łączy obowiązków kontroler MVC i viewmodel. Zamiast obsługę żądania za pomocą metody akcji kontrolera, obsługi modelu strony, takich jak "OnGet()" są wykonywane, renderowanie ich skojarzona strona domyślnie. Strony razor upraszcza proces tworzenia poszczególnych stron w aplikacji ASP.NET Core, przy jednoczesnym dalszym zapewnianiu funkcji architektury platformy ASP.NET Core MVC. Są one to wybór dobre domyślne dla nowych funkcji opartych na stronie.
+
+### <a name="when-to-use-mvc"></a>Kiedy należy używać MVC
+
+Jeśli tworzysz interfejsów API sieci web wzorzec MVC pozwala także lepszym rozwiązaniem niż podjęcie próby korzystania ze stron Razor. Jeśli projekt będzie tylko udostępnić punkty końcowe interfejsu API sieci web, najlepiej należy zacząć od szablonu projektu interfejsu API sieci Web, ale w przeciwnym razie jest łatwe do dodania do dowolnej aplikacji platformy ASP.NET Core kontrolery i skojarzone punkty końcowe interfejsu API. Jeśli w przypadku migrowania istniejącej aplikacji platformy ASP.NET MVC 5 lub jego starszej wersji platformy ASP.NET Core MVC i chcesz to zrobić z najmniejszą ilością nakład pracy, należy użyć podejście oparte na widoku MVC. Po utworzeniu początkowej migracji, będziesz w stanie ocenić, czy warto przyjąć stron Razor na temat nowych funkcji, lub nawet całościowego migracji.
+
+Czy istnieje możliwość tworzenia aplikacji sieci web przy użyciu stron Razor lub widoków MVC, aplikacja będzie mieć podobną wydajność i będzie zawierać obsługę wstrzykiwania zależności filtry, wiązania modelu i sprawdzania poprawności, itp.
 
 ## <a name="mapping-requests-to-responses"></a>Mapowania żądania do odpowiedzi
 
@@ -58,6 +76,18 @@ public class ProductsController : Controller
 }
 ```
 
+Strony razor nie korzysta z trasami atrybutów. Informacje o szablonie dodatkowe trasy dla strony Razor można określić jako część jej `@page` dyrektywy:
+
+```csharp
+@page "{id:int}"
+```
+
+W poprzednim przykładzie, ta strona będzie pasował trasy z liczbą całkowitą `id` parametru. Na przykład *Products.cshtml* strony znajduje się w folderze głównym `/Pages` miałby tej trasy:
+
+```csharp
+"/Products/123"
+```
+
 Gdy danego żądania został dopasowany do trasy, ale przed akcją, metoda jest wywoływana, ASP.NET Core MVC wykona [wiązanie modelu](/aspnet/core/mvc/models/model-binding) i [Walidacja modelu](/aspnet/core/mvc/models/validation) na żądanie. Wiązanie modelu jest odpowiedzialny za konwersji danych przychodzących HTTP do typów .NET określane jako parametry metody akcji, które ma zostać wywołana. Na przykład jeśli metoda akcji oczekuje parametru id int, wiązania modelu będzie podejmowana próba udostępnienia tego parametru z wartością podana jako część żądania. Aby to zrobić, wiązanie modelu szuka wartości przesłanego formularza, wartości trasy, sama i wartości ciągu zapytania. Przy założeniu, że wartość zostanie znaleziony, zostanie przekonwertowany na liczbę całkowitą przed przekazaniem do metody akcji.
 
 Po powiązaniu modelu, ale przed wywołaniem metody akcji występuje weryfikacji modelu. Sprawdzanie poprawności modelu korzysta z opcjonalnych atrybutów na typ modelu, a może pomóc upewnić się, że obiekt podany model spełnia określone wymagania danych. Niektóre wartości mogą być określone jako wymagane lub ograniczone do niektórych długości lub zakresu liczbowego, itp. Jeśli podano atrybutów sprawdzania poprawności, ale modelu nie jest zgodny z ich wymaganiami, właściwość ModelState.IsValid będzie mieć wartość false, a zestaw reguł sprawdzania poprawności, które uległy awarii, będzie można wysłać do klienta wysyłającego żądanie.
@@ -65,6 +95,8 @@ Po powiązaniu modelu, ale przed wywołaniem metody akcji występuje weryfikacji
 Jeśli używasz weryfikacji modelu, należy się, że zawsze sprawdzić, czy model jest prawidłowy, przed wykonaniem dowolnego polecenia zmiany stanu, aby upewnić się, że aplikacja nie jest uszkodzony, przez nieprawidłowe dane. Możesz użyć [filtru](/aspnet/core/mvc/controllers/filters) Aby uniknąć konieczności dodawania kodu w tym w każdym działaniu. Platforma ASP.NET Core MVC filtry oferują sposób przechwycenia grup żądań, tak, aby wspólnych zasad i odciąż przekrojowe zagadnienia, które mogą być stosowane na podstawie docelowej. Filtry można stosować do poszczególnych czynności w całej kontrolerów, lub globalnie dla aplikacji.
 
 W przypadku internetowych interfejsów API obsługuje platformy ASP.NET Core MVC [ _negocjacji zawartości_](/aspnet/core/mvc/models/formatting), zezwolenie na żądania określić, jak powinny być sformatowane odpowiedzi. Oparte na nagłówki podany w żądaniu, akcje zwracający dane sformatuje odpowiedzi XML, JSON lub innego obsługiwanego formatu. Ta funkcja umożliwia tego samego interfejsu API, który będzie używany przez wielu klientów z różnymi danymi format wymaganiami.
+
+Projekty sieci Web interfejsu API należy wziąć pod uwagę przy użyciu `[ApiController]` atrybut, który można zastosować do poszczególnych kontrolerów, klasę kontrolera podstawowego lub cały zespół. Ten atrybut dodaje sprawdzania poprawności modelu automatyczne i działania z modelem nieprawidłowy zwróci element BadRequest ze szczegółami błędów sprawdzania poprawności. Ten atrybut wymaga również wszystkie akcje mają trasę atrybutu, a nie za pomocą konwencjonalnych trasy i zwraca szczegółowe informacje o ProblemDetails w odpowiedzi na błędy.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Odwołania — mapowania żądania do odpowiedzi
 >
@@ -76,6 +108,8 @@ W przypadku internetowych interfejsów API obsługuje platformy ASP.NET Core MVC
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtry**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+> - **Atrybut klasy ApiController**
+ > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
 
 ## <a name="working-with-dependencies"></a>Praca z zależnościami
 
@@ -132,13 +166,13 @@ Model obiektu i interfejsy aplikacji będzie umieszczona w projekcie Application
 
 Szczegóły implementacji, takich jak jak odbywa się trwałości lub jak mogą być wysyłane powiadomienia do użytkownika, są przechowywane w projekcie infrastruktury. Ten projekt będzie odwoływać się do pakietów specyficzne dla implementacji, takich jak Entity Framework Core, ale nie powinny uwidaczniać szczegółowe informacje o tych implementacji, poza projektem. Usługi infrastruktury i repozytoriów powinny implementować interfejsy, które są zdefiniowane w projekcie ApplicationCore i ich implementacji trwałości jest odpowiedzialny za pobieranie i przechowywanie podmioty zdefiniowane w ApplicationCore.
 
-Projekt interfejsu użytkownika programu ASP.NET Core jest odpowiedzialny za jakiekolwiek wątpliwości poziomu interfejsu użytkownika, ale nie może zawierać szczegóły logikę lub infrastruktury firmy. W rzeczywistości najlepiej go nie należy jeszcze mają zależności w projekcie infrastruktury, co poprawi, upewnij się, że przypadkowo wprowadzone nie zależności między dwa projekty. Można to osiągnąć za pomocą konteneru DI innych firm, takich jak StructureMap, dzięki czemu można zdefiniować reguły DI w klasach rejestru w każdym projekcie.
+Projekt interfejsu użytkownika programu ASP.NET Core jest odpowiedzialny za jakiekolwiek wątpliwości poziomu interfejsu użytkownika, ale nie może zawierać szczegóły logikę lub infrastruktury firmy. W rzeczywistości najlepiej go nie należy jeszcze mają zależności w projekcie infrastruktury, co poprawi, upewnij się, że przypadkowo wprowadzone nie zależności między dwa projekty. Można to osiągnąć za pomocą konteneru DI innych firm, takich jak Autofac, dzięki czemu można zdefiniować reguły DI w klasach modułu w każdym projekcie.
 
 Oddzielenie aplikacji, od szczegółów implementacji na innym sposobem jest mikrousługi wywołanie aplikacji, może być wdrażane w poszczególnych kontenerach platformy Docker. Jeszcze większe rozdzielenie problemów i oddzielenie niż wykorzystaniu DI między dwa projekty, ale ma dodatkową złożoność.
 
 ### <a name="feature-organization"></a>Funkcja organizacji
 
-Domyślnie aplikacje platformy ASP.NET Core organizowanie ich strukturę folderów w celu uwzględnienia kontrolery i widoki i często modele widoków. Kod po stronie klienta do obsługi tych struktur po stronie serwera są zwykle przechowywane osobno w folderze wwwroot. Jednak duże aplikacje mogą wystąpić problemy z tej organizacji, ponieważ często nad dowolnym dana funkcja wymaga przechodzenie między te foldery. Pobiera to bardziej trudne, wraz z rozwojem liczbę plików i podfolderów w folderze każdego skutkuje dużym stopniem przewijanie w Eksploratorze rozwiązań. Jedno rozwiązanie tego problemu jest zorganizowanie kod aplikacji przez _funkcji_ zamiast według typu pliku. Ten styl organizacji jest zwykle określane jako funkcja foldery lub wycinki funkcji (Zobacz również: [Wycinki pionowy](https://deviq.com/vertical-slices/)).
+Domyślnie aplikacje platformy ASP.NET Core organizowanie ich strukturę folderów w celu uwzględnienia kontrolery i widoki i często modele widoków. Kod po stronie klienta do obsługi tych struktur po stronie serwera są zwykle przechowywane osobno w folderze wwwroot. Jednak duże aplikacje mogą wystąpić problemy z tej organizacji, ponieważ często nad dowolnym dana funkcja wymaga przechodzenie między te foldery. Pobiera to bardziej trudne, wraz z rozwojem liczbę plików i podfolderów w folderze każdego skutkuje dużym stopniem przewijanie w Eksploratorze rozwiązań. Jedno rozwiązanie tego problemu jest zorganizowanie kod aplikacji przez _funkcji_ zamiast według typu pliku. Ten styl organizacji jest zwykle określane jako funkcja foldery lub [funkcji wycinki](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx) (Zobacz również: [Wycinki pionowy](https://deviq.com/vertical-slices/)).
 
 Platforma ASP.NET Core MVC obsługuje obszary, w tym celu. Obszary można utworzyć oddzielne zestawy kontrolery i widoki folderów (a także żadnych modeli skojarzone) w każdym folderze obszaru. Rysunek 7-1 przedstawiono przykład struktury folderów, korzystać z obszarów.
 
@@ -220,7 +254,7 @@ Filtry zwykle są implementowane jako atrybuty, dzięki czemu można je zastosow
 public class AccountController : Controller
 
 {
-    [AllowAnonymous]
+    [AllowAnonymous] // overrides the Authorize attribute
     public async Task<IActionResult> Login() {}
     public async Task<IActionResult> ForgotPassword() {}
 }
@@ -262,6 +296,8 @@ public class ValidateModelAttribute : ActionFilterAttribute
     }
 }
 ```
+
+Możesz dodać `ValidateModelAttribute` do projektu jako zależności NuGet, umieszczając [Ardalis.ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) pakietu. W przypadku interfejsów API, można użyć `ApiController` atrybutu, aby wymusić to zachowanie, bez konieczności oddzielnego `ValidateModel` filtru.
 
 Podobnie filtr może służyć do sprawdzania, czy rekord istnieje i zwrócić kod 404, przed wykonaniem akcji, eliminując konieczność wykonywania tych sprawdzeń w akcji. Po ściągane się typowych Konwencji i zorganizowane rozwiązania, aby oddzielić infrastruktury kodu i logiki biznesowej od interfejsu użytkownika, MVC metody akcji powinny być bardzo cienka:
 
@@ -384,6 +420,13 @@ Większość interfejsów API sieci web należy zaimplementować uwierzytelniani
 
 **Rysunek 7-4.** Uwierzytelnianie oparte na tokenach dla interfejsów API sieci Web.
 
+Można utworzyć usługi uwierzytelniania, integracja z usługą Azure AD i OAuth lub implementacji usługi przy użyciu narzędzia typu open source, takich jak [IdentityServer](https://github.com/IdentityServer).
+
+#### <a name="custom-security"></a>Custom Security
+
+Ostrożnie szczególnie "Uaktualnianie własnych" implementację kryptografii, członkostwa użytkownika lub generowania tokenów systemu. Istnieje wiele komercyjnych i open-source alternatywy dostępne, które prawie na pewno lepsze zabezpieczenia niż implementację niestandardową.
+
+
 > ### <a name="references--security"></a>Odwołania — zabezpieczenia
 >
 > - **Omówienie zabezpieczeń usługi Docs**  
@@ -396,12 +439,14 @@ Większość interfejsów API sieci web należy zaimplementować uwierzytelniani
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Uwierzytelnianie i autoryzacja dla usługi API Apps w usłudze Azure App Service**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
+> - **Tożsamość serwera**  
+>   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>Komunikacja z klientem
 
 Oprócz obsługi stron i odpowiadanie na żądania dotyczące danych za pośrednictwem interfejsów API sieci web, aplikacje platformy ASP.NET Core mogą komunikować się bezpośrednio z połączonych klientów. Ta komunikacja wychodząca można użyć wielu różnych technologii transportu jest najbardziej typowych funkcji WebSockets. SignalR platformy ASP.NET Core to bibliotekę, która ułatwia dodawanie funkcji komunikacji serwera do klienta w czasie rzeczywistym do aplikacji. SignalR obsługuje szereg technologii transportu, w tym funkcji WebSockets i streszcza away wiele szczegółów implementacji od dewelopera.
 
-SignalR platformy ASP.NET Core jest dostępny za pomocą platformy ASP.NET Core 2.1.
+SignalR platformy ASP.NET Core jest udostępniana z platformą ASP.NET Core od wersji 2.1.
 
 Komunikacja z klientem w czasie rzeczywistym, czy przy użyciu funkcji WebSockets bezpośrednio lub innych technik przydają się w różnych zastosowaniach. Oto niektóre przykłady:
 
@@ -455,9 +500,9 @@ Należy rozważyć sposobów w których Twoje aplikacje komunikują się bezpoś
 
 > ### <a name="references--client-communication"></a>Odwołania — komunikacja z klientem
 >
-> - **SignalR platformy ASP.NET Core**  
+> - **ASP.NET Core SignalR**  
 >   <https://github.com/aspnet/SignalR>
-> - **Menedżer WebSocket**  
+> - **WebSocket Manager**  
 >   https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Projektowanie oparte na domenie — powinien zastosowania?

@@ -2,19 +2,19 @@
 title: Parametry połączenia w programie ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: d01218713319b84eb700b3be7ab71fe51357ac46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30972edb7877127eb2e4c60f7e6377e4d893aecc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497462"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826476"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Parametry połączenia w programie ADO.NET Entity Framework
 Parametry połączenia zawierają informacje inicjowania, który jest przekazywany jako parametr od dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a ciąg połączenia jest analizowany podczas próby otwarcia połączenia. Parametry połączenia używane przez program Entity Framework zawiera informacje używane do łączenia z podstawowego dostawcy danych ADO.NET, który obsługuje platformy Entity Framework. Zawierają one informacje o wymaganych modelu i mapowania plików.  
   
  Ciąg połączenia jest używany dostawca EntityClient podczas uzyskiwania dostępu do modelu i mapowania metadanych i nawiązania połączenia ze źródłem danych. Parametry połączenia można uzyskać dostępu do lub ustawić za pomocą <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> właściwość <xref:System.Data.EntityClient.EntityConnection>. <xref:System.Data.EntityClient.EntityConnectionStringBuilder> Klasa może być używana do programowego tworzenia lub dostęp do parametrów w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
- [Narzędzia modelu Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) wygenerować parametry połączenia, które są przechowywane w pliku konfiguracji aplikacji. <xref:System.Data.Objects.ObjectContext> pobiera informacje o połączeniu automatycznie podczas tworzenia zapytań dotyczących obiektów. <xref:System.Data.EntityClient.EntityConnection> Posługują się <xref:System.Data.Objects.ObjectContext> wystąpienia jest możliwy z <xref:System.Data.Objects.ObjectContext.Connection%2A> właściwości. Aby uzyskać więcej informacji, zobacz [zarządzania połączeniami i transakcje](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ [Narzędzia modelu Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) wygenerować parametry połączenia, które są przechowywane w pliku konfiguracji aplikacji. <xref:System.Data.Objects.ObjectContext> pobiera informacje o połączeniu automatycznie podczas tworzenia zapytań dotyczących obiektów. <xref:System.Data.EntityClient.EntityConnection> Posługują się <xref:System.Data.Objects.ObjectContext> wystąpienia jest możliwy z <xref:System.Data.Objects.ObjectContext.Connection%2A> właściwości. Aby uzyskać więcej informacji, zobacz [zarządzania połączeniami i transakcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).  
 
 ## <a name="connection-string-syntax"></a>Składnia ciągu połączenia
 
@@ -31,7 +31,7 @@ W poniższej tabeli wymieniono prawidłowe nazwy wartości — słowo kluczowe w
 |`Metadata`|Jeśli wymagane `Name` — słowo kluczowe nie jest określony. Rozdzielany potoku lista katalogów, plików i lokalizacje zasobów, w których warto szukać informacji mapowania i metadanych. Oto przykład:<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Spacje na każdej stronie separatora potoku są ignorowane.<br /><br /> This — słowo kluczowe jest wzajemnie wykluczających się przy użyciu `Name` — słowo kluczowe.|  
 |`Name`|Aplikację można opcjonalnie określić nazwę połączenia w pliku konfiguracyjnym aplikacji, który zawiera wartości parametrów połączeń wymaganych — słowo kluczowe i wartości. W tym przypadku nie podajesz je bezpośrednio w parametrach połączenia. `Name` — Słowo kluczowe nie jest dozwolona w pliku konfiguracji.<br /><br /> Gdy `Name` — słowo kluczowe jest niedostępna w parametrach połączenia, wartości niepuste dostawcy — słowo kluczowe jest wymagana.<br /><br /> This — słowo kluczowe jest wzajemnie wykluczających się przy użyciu wszystkich innych połączenia ciąg słów kluczowych.|  
   
- Oto przykład parametrów połączenia umożliwiających [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) przechowywane w pliku konfiguracji aplikacji:  
+ Oto przykład parametrów połączenia umożliwiających [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) przechowywane w pliku konfiguracji aplikacji:  
   
   
   
@@ -111,5 +111,5 @@ Metadata=.\
 ## <a name="see-also"></a>Zobacz także
 - [Praca z dostawcami danymi](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)
 - [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Zarządzania połączeniami i transakcji](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)
+- [Zarządzania połączeniami i transakcji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)

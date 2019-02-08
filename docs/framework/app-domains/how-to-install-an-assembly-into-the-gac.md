@@ -1,6 +1,6 @@
 ---
-title: Instalowanie zestawu w GAC
-ms.date: 09/20/2018
+title: 'Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej'
+ms.date: 02/05/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - Gacutil.exe
@@ -11,51 +11,55 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d365ac77fe6cd7fc4fca36705729ec12b06d6830
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: adeaaa6626a1c9e9e4543613a8fa9e94d2b67e89
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584584"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826840"
 ---
-# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Porady: Instalowanie zestawu w globalnej pamięci podręcznej
+# <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej
 
-Istnieją dwa sposoby instalacji zestawu o silnej nazwie do globalnej pamięci podręcznej zestawów (GAC).
+Zestawy, które mają kilka aplikacji są przechowywane w globalnej pamięci podręcznej zestawów (GAC). Instalowanie zestawu w [globalnej pamięci podręcznej](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac) przy użyciu jednego z następujących składników: 
+- [Windows Installer](#windows-installer)
+- [Narzędzie Global assembly cache](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> W pamięci podręcznej GAC można instalować tylko zestawy o silnych nazwach. Aby uzyskać informacje o sposobie tworzenia zestawu z silną nazwą, zobacz [porady: podpisywanie zestawu za pomocą silnej nazwy](how-to-sign-an-assembly-with-a-strong-name.md).
+> Pamięci podręcznej GAC można instalować tylko zestawy o silnych nazwach. Aby uzyskać informacje o sposobie tworzenia zestawu z silną nazwą, zobacz [jak: Podpisywanie zestawu silną nazwą](how-to-sign-an-assembly-with-a-strong-name.md).
 
 ## <a name="windows-installer"></a>Instalator Windows
 
-[Instalator Windows](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), aparat instalacji Windows jest zalecany sposób dodawania zestawów do globalnej pamięci podręcznej. Instalator Windows zapewnia zliczanie odwołań zestawów w globalnej pamięci podręcznej i inne korzyści. Możesz użyć [zestaw narzędzi WiX rozszerzenia programu Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension) do utworzenia pakietu Instalatora dla Instalatora Windows.
+[Instalator Windows](https://docs.microsoft.com/en-us/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), aparat instalacji Windows jest zalecany sposób dodawania zestawów do globalnej pamięci podręcznej. Instalator Windows zapewnia zliczanie odwołań zestawów w globalnej pamięci podręcznej i inne korzyści. Aby utworzyć pakiet instalacyjny Instalatora Windows, użyj [WiX rozszerzenia narzędzi programu Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).
 
 ## <a name="global-assembly-cache-tool"></a>Narzędzie Global assembly cache
 
-Możesz użyć [narzędzie Global assembly cache (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) dodać zestawy o silnej nazwie do globalnej pamięci podręcznej oraz wyświetlanie zawartości globalnej pamięci podręcznej.
+Możesz użyć [narzędzie global assembly cache (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) dodawania zestawów do globalnej pamięci podręcznej oraz wyświetlanie zawartości globalnej pamięci podręcznej.
 
    > [!NOTE]
-   > Narzędzie Gacutil.exe jest przeznaczone tylko do celów deweloperskich i nie powinno być używane do instalowania zestawów produkcyjnych w globalnej pamięci podręcznej zestawów.
+   > *Gacutil.exe* jest tylko do celów programowania. Nie jest używany do instalowania zestawów produkcyjnych w globalnej pamięci podręcznej.
 
-Składnia gacutil jest następująca:
+Składnia przy użyciu *gacutil.exe* instalować zestawów w globalnej pamięci podręcznej zestawów jest następująca:
 
-```shell
+```console
 gacutil -i <assembly name>
 ```
 
-W tym poleceniu *nazwy zestawu* to nazwa zestawu, aby zainstalować w globalnej pamięci podręcznej.
+W tym poleceniu  *\<Nazwa zestawu >* to nazwa zestawu, aby zainstalować w globalnej pamięci podręcznej.
 
-Poniższy przykład instaluje zestaw o nazwie pliku `hello.dll` w globalnej pamięci podręcznej.
+Jeśli *gacutil.exe* nie znajduje się w ścieżce systemowej, użyj [wiersz polecenia programisty dla programu VS  *\<wersji >*](https://docs.microsoft.com/en-us/dotnet/framework/tools/developer-command-prompt-for-vs).
 
-```shell
+Poniższy przykład instaluje zestaw o nazwie pliku *hello.dll* w globalnej pamięci podręcznej.
+
+```console
 gacutil -i hello.dll
 ```
 
 > [!NOTE]
-> We wcześniejszych wersjach programu .NET Framework rozszerzenie powłoki Windows Shfusion.dll umożliwia instalację zestawów przez przeciąganie ich **Eksploratora plików**. Począwszy od programu .NET Framework 4, biblioteka Shfusion.dll jest przestarzała.
+> We wcześniejszych wersjach programu .NET Framework *Shfusion.dll* rozszerzenie powłoki Windows umożliwiają instalowanie zestawów, przeciągając je do Eksploratora plików. Począwszy od programu .NET Framework 4, *Shfusion.dll* jest przestarzały.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Praca z zestawami i globalną pamięcią podręczną zestawów](working-with-assemblies-and-the-gac.md)
-- [Instrukcje: usuwanie zestawu z pamięci Global Assembly Cache](how-to-remove-an-assembly-from-the-gac.md)
-- [Gacutil.exe (narzędzie Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
-- [Instrukcje: podpisywanie zestawu silną nazwą](how-to-sign-an-assembly-with-a-strong-name.md)
+- [Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej](how-to-remove-an-assembly-from-the-gac.md)
+- [Gacutil.exe (narzędzie Global assembly cache)](../tools/gacutil-exe-gac-tool.md)
+- [Instrukcje: Podpisywanie zestawu silną nazwą](how-to-sign-an-assembly-with-a-strong-name.md)

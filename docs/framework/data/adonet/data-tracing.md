@@ -2,12 +2,12 @@
 title: Śledzenie danych w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: ac9e290d4c9209cbf8ccf5eb3acdeceb68f9021b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f1191396c8e5a68d613c403d260d15d26fa929f
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721930"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826580"
 ---
 # <a name="data-tracing-in-adonet"></a>Śledzenie danych w ADO.NET
 ADO.NET funkcji funkcja śledzenia danych wbudowane, który jest obsługiwany przez dostawcę danych .NET dla programu SQL Server, Oracle, OLE DB i ODBC, a także ADO.NET <xref:System.Data.DataSet>i protokoły sieciowe programu SQL Server.  
@@ -26,10 +26,10 @@ ADO.NET funkcji funkcja śledzenia danych wbudowane, który jest obsługiwany pr
   
  Aby zapewnić obsługę śledzenia różne technologie, śledzenia jest rozszerzalny, więc deweloper śledzenia problemu na dowolnym poziomie stosu aplikacji. Chociaż śledzenia nie jest to funkcja przeznaczona tylko do ADO.NET, dostawców firmy Microsoft zalet uogólnionego śledzenie i Instrumentacja interfejsów API.  
   
- Aby uzyskać więcej informacji na temat i konfigurowanie zarządzanych śledzenia w ADO.NET, zobacz [dostęp do danych śledzenia](https://msdn.microsoft.com/library/hh880086.aspx).  
+ Aby uzyskać więcej informacji na temat i konfigurowanie zarządzanych śledzenia w ADO.NET, zobacz [dostęp do danych śledzenia](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Uzyskiwanie dostępu do informacji diagnostycznych w dzienniku zdarzeń rozszerzonych  
- W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server, dostępu do danych śledzenia ([śledzenie dostępu do danych](https://msdn.microsoft.com/library/hh880086.aspx)) został zaktualizowany, aby ułatwić ułatwia korelowanie zdarzeń klienta z informacje diagnostyczne, takie jak błędy połączenia z łączność serwera cyklicznego buforu i aplikacji informacje o wydajności w dzienniku zdarzeń rozszerzonych. Aby uzyskać informacje o odczytywaniu dziennika zdarzeń rozszerzonych, zobacz [dane sesji zdarzeń widoku](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server, dostępu do danych śledzenia ([śledzenie dostępu do danych](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) został zaktualizowany, aby ułatwić ułatwia korelowanie zdarzeń klienta z informacje diagnostyczne, takie jak błędy połączenia z łączność serwera cyklicznego buforu i aplikacji informacje o wydajności w dzienniku zdarzeń rozszerzonych. Aby uzyskać informacje o odczytywaniu dziennika zdarzeń rozszerzonych, zobacz [dane sesji zdarzeń widoku](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).  
   
  W przypadku operacji połączenia ADO.NET wyśle klientowi identyfikator połączenia. Jeśli połączenie nie powiedzie się, możesz uzyskać dostęp bufor cykliczny łączności ([rozwiązywania problemów z łącznością w programie SQL Server 2008 buforem pierścienia łączności](https://go.microsoft.com/fwlink/?LinkId=207752)) i Znajdź `ClientConnectionID` pola, a następnie uzyskaj informacje diagnostyczne o Błąd połączenia. Identyfikatory połączenia klienta są rejestrowane w bufor cykliczny, tylko wtedy, gdy wystąpi błąd. (Jeśli połączenie nie powiedzie się przed wysłaniem identyfikatora pakietu, identyfikator połączenia klienta nie będą generowane.) Identyfikator połączenia klienta jest 16-bajtowy identyfikator GUID. Połączenia klienta można także znaleźć IDENTYFIKATORA w danych wyjściowych docelowej rozszerzonych zdarzeń, jeśli `client_connection_id` akcja zostanie dodany do zdarzenia w sesji zdarzeń rozszerzonych. Można włączyć śledzenie dostępu do danych i uruchom ponownie polecenie połączenia i obserwować `ClientConnectionID` pole Śledzenie dostępu do danych, jeśli potrzebujesz dodatkowej pomocy diagnostycznych sterownika klienta.  
   

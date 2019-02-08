@@ -4,12 +4,12 @@ description: Przewodnik, na które implementacji .NET należy rozważyć podczas
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699509"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828517"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybieranie między programami .NET Core i .NET Framework dla aplikacji serwerowych
 
@@ -99,7 +99,7 @@ Oprócz oficjalne plan istnieją inne struktury mogą być przenoszone do platfo
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Konieczność użycia platformy, która nie obsługuje platformy .NET Core
 
-Niektóre firmy Microsoft lub innych platform nie obsługują platformy .NET Core. Na przykład usługi niektóre platformy Azure, takich jak Usługa Service Fabric stanowych usług Reliable Services i elementów Reliable Actors usługi Service Fabric wymaga środowiska .NET Framework. Niektóre inne usługi zapewniają zestaw SDK nie jest jeszcze dostępna do użytku na platformie .NET Core. Jest to przejściowy okoliczności, wszystkich usług platformy Azure wykorzystania platformy .NET Core. W międzyczasie zawsze można użyć równoważnego API REST zamiast zestawu SDK klienta.
+Niektóre firmy Microsoft lub innych platform nie obsługują platformy .NET Core. Niektóre usługi platformy Azure zapewniają zestaw SDK nie jest jeszcze dostępna do użytku na platformie .NET Core. Jest to przejściowy okoliczności, wszystkich usług platformy Azure wykorzystania platformy .NET Core. W międzyczasie zawsze można użyć równoważnego API REST zamiast zestawu SDK klienta.
 
 ## <a name="see-also"></a>Zobacz także
 

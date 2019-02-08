@@ -1,24 +1,24 @@
 ---
-title: Przewidywanie, Nowy Jork taksówek opłaty za pomocą uczeń regresji za pomocą platformy ML.NET
-description: Przewidywanie opłaty za pomocą platformy ML.NET przy użyciu uczeń regresji.
+title: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
+description: Przewidywanie ceny za pomocą platformy ML.NET przy użyciu uczeń regresji.
 author: aditidugar
 ms.author: johalex
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333788"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828400"
 ---
-# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Samouczek: Przewidywanie, Nowy Jork taksówek opłaty za pomocą uczeń regresji za pomocą platformy ML.NET
+# <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Samouczek: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
 
 > [!NOTE]
 > W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-W tym samouczku pokazano, jak za pomocą strukturze ML.NET tworzyć [modelu regresji](../resources/glossary.md#regression) do przewidywania taryf taksówek w Nowym Jorku.
+W tym samouczku pokazano, jak za pomocą strukturze ML.NET tworzyć [modelu regresji](../resources/glossary.md#regression) do prognozowania cen, w szczególności, taksówek w Nowym Jorku cen w klasie ekonomicznej.
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]

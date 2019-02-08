@@ -3,13 +3,13 @@ title: Praca z danymi w aplikacji ASP.NET Core
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Praca z danymi w aplikacji platformy ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 01/30/2019
+ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532685"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827178"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacji platformy ASP.NET Core
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Może zawierać wiele relacji, a możesz również uwzględnić relacje podrzędne przy użyciu ThenInclude. EF Core wykona pojedynczego zapytania można pobrać Wynikowy zestaw jednostek.
+Może zawierać wiele relacji, a możesz również uwzględnić relacje podrzędne przy użyciu ThenInclude. EF Core wykona pojedynczego zapytania można pobrać Wynikowy zestaw jednostek. Alternatywnie może zawierać właściwości nawigacji dla właściwości nawigacji, przekazując "." -rozdzielonych ciąg `.Include()` metodę rozszerzenia, w następujący sposób:
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+Oprócz enkapsulacji logikę filtrowania, Specyfikacja można określić kształt danych ma zostać zwrócone, łącznie z właściwości, które można wypełnić. Przykład eShopOnWeb obejmuje kilka specyfikacje, które pokazują, zawieranie wczesne ładowanie informacji w ramach specyfikacji. Aby zobaczyć, jak specyfikację jest używana jako część zapytania w tym miejscu:
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 Innym rozwiązaniem do ładowania danych pokrewnych jest użycie _jawne ładowanie_. Jawne ładowanie umożliwia ładowanie dodatkowe dane do jednostki, które już zostały pobrane. Ponieważ wymaga to oddzielne żądania w bazie danych, nie jest zalecane dla aplikacji sieci web, które należy zminimalizować liczbę baz danych rund wprowadzone na żądanie.
 
 _Powolne ładowanie_ to funkcja, która automatycznie ładuje powiązanych danych, ponieważ jest odwoływany przez aplikację. EF Core została dodana obsługa ładowania z opóźnieniem w wersji 2.1. Powolne ładowanie nie jest domyślnie włączona i wymaga zainstalowania `Microsoft.EntityFrameworkCore.Proxies`. Podobnie jak w przypadku jawne ładowanie powolne ładowanie powinien zazwyczaj można wyłączyć dla aplikacji sieci web, ponieważ spowoduje jej użycie w zapytaniach dodatkowa baza danych, które zostaną wprowadzone w ramach każdego żądania sieci web. Niestety koszty ponoszone przez powolne ładowanie często prowadzi niezauważona w czasie projektowania, gdy czas oczekiwania jest mały i często są małe, zestawy danych używane do testowania. Jednak w środowisku produkcyjnym z większej liczby użytkowników, większej ilości danych i więcej opóźnienia żądania dodatkowej bazy danych można często spowodować obniżenie wydajności dla aplikacji sieci web, które intensywnie korzystają z opóźnieniem ładowania.
 
 [Należy unikać powolne ładowanie jednostek w aplikacjach sieci Web](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="encapsulating-data"></a>Zawieranie danych
+
+EF Core obsługuje kilka funkcji, które umożliwiają modelu do hermetyzacji prawidłowo swojego stanu. Typowym problemem w modeli domeny jest eksponowanie właściwości nawigacji kolekcji jako typy list dostępny publicznie. Dzięki temu wszystkie współpracownika do manipulowania zawartość tych kolekcji typów, które może pominąć reguł biznesowych ważne związanych z kolekcji, prawdopodobnie pozostawienie obiektu w nieprawidłowym stanie. Rozwiązaniem tego problemu, aby uwidocznić dostęp tylko do odczytu do powiązanej kolekcji i jawnie zapewnić metody definiowania sposobów, w których klientów można manipulować nimi, jak w poniższym przykładzie:
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+Należy pamiętać, że tego typu jednostki nie ujawnia publiczny `List` lub `ICollection` właściwości, ale zamiast tego udostępnia `IReadOnlyCollection` typ, który otacza bazowego typu listy. Gdy za pomocą ten wzorzec może wskazywać na platformy Entity Framework Core służące do pola pomocniczego w następujący sposób:
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+Innym sposobem, w którym można zwiększyć modelu domeny jest przy użyciu obiektów wartości dla typów, Brak tożsamości, które różnią się tylko przez ich właściwości. Używanie tych typów jako właściwości jednostki zabezpieczać logiki określonego obiektu wartości, gdzie należy i uniknąć zduplikowanych logika między wiele jednostek, które używają tego samego pojęcia. W programie Entity Framework Core można utrwalić obiekty wartości w tej samej tabeli jako ich właścicielem jednostki, konfigurując typ jako jednostki należące do firmy, w następujący sposób:
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+W tym przykładzie `ShipToAddress` właściwość jest typu `Address`. `Address` jest obiekt wartości przy użyciu kilka właściwości, takich jak `Street` i `City`. EF Core mapuje `Order` obiektu do swojej tabeli z jedną kolumną na `Address` właściwości poprzedzania ich nazwa kolumny o nazwie właściwości. W tym przykładzie `Order` tabela będzie zawierać kolumny takie jak `ShipToAddress_Street` i `ShipToAddress_City`.
+
+[EF Core 2.2 wprowadzono obsługę kolekcjami jednostek należące do firmy](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>Odporne na błędy połączenia
 
@@ -253,7 +322,7 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-Ponieważ oferuje ona mniejszą hermetyzacji, programem Dapper wymaga deweloperów dowiedzieć się więcej o jak są przechowywane ich dane, jak skutecznie wykonuje zapytania i zapisać więcej kodu, aby go pobrać. Po zmianie modelu, a nie po prostu utworzenie nowej migracji (inna funkcja programu EF Core) i/lub aktualizowanie informacji o mapowaniu w jednym miejscu w DbContext każdego zapytania, które ma wpływ na musi zostać zaktualizowany. Te zapytania zostały nie gwarantuje czas kompilacji, więc one mogą przestać działać w czasie wykonywania w odpowiedzi na zmiany w modelu lub bazy danych, co utrudnia szybko wykrywać błędy. W zamian za tych kompromisów programem Dapper oferuje bardzo wydajne.
+Ponieważ oferuje ona mniejszą hermetyzacji, programem Dapper wymaga deweloperów dowiedzieć się więcej o jak są przechowywane ich dane, jak skutecznie wykonuje zapytania i zapisać więcej kodu, aby go pobrać. Po zmianie modelu, a nie po prostu utworzenie nowej migracji (inna funkcja programu EF Core) i/lub aktualizowanie informacji o mapowaniu w jednym miejscu w DbContext każdego zapytania, które ma wpływ na musi zostać zaktualizowany. Te zapytania zostały bez gwarancji czasu kompilacji, więc one mogą przestać działać w czasie wykonywania w odpowiedzi na zmiany w modelu lub bazy danych, co utrudnia szybko wykrywać błędy. W zamian za tych kompromisów programem Dapper oferuje bardzo wydajne.
 
 Dla większości aplikacji i większość części niemal wszystkich aplikacji programu EF Core zapewnia akceptowalny poziom wydajności. W związku z tym jego korzyści produktywność dla deweloperów prawdopodobnie przeważają swoje zmniejszenie wydajności. Dla zapytań, które mogą korzystać z pamięci podręcznej, rzeczywiste zapytanie może wykonać tylko niewielki odsetek czasu, dzięki czemu stosunkowo mały zapytania moot różnice wydajności.
 

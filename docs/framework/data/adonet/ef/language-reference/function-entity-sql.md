@@ -2,12 +2,12 @@
 title: — Funkcja (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: 6da7c1c11cb6211764fac5ca7b210788784a7c21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0ace658de0cc6d1ee2d50c9e86d66dea1ac649a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697364"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827542"
 ---
 # <a name="function-entity-sql"></a>— Funkcja (jednostka SQL)
 Definiuje funkcję w zakresie polecenia zapytań jednostki SQL.  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- Aby uzyskać więcej informacji, zobacz [jak: Wywoływanie funkcji zdefiniowanej przez użytkownika](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02).  
+ Aby uzyskać więcej informacji, zobacz [jak: Wywoływanie funkcji zdefiniowanej przez użytkownika](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  Funkcje mogą być także zadeklarowane w samym modelu. Funkcje zadeklarowane w modelu są wykonywane w taki sam sposób jak funkcje zadeklarowane wbudowanego w poleceniu. Aby uzyskać więcej informacji, zobacz [funkcje zdefiniowane przez użytkownika](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
   

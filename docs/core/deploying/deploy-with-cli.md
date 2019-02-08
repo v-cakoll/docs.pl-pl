@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504005"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826463"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie .NET Core z aplikacji przy użyciu interfejsu wiersza polecenia
 
@@ -38,11 +38,11 @@ Szukasz szybkiego pomocy przy użyciu interfejsu wiersza polecenia? W poniższej
 
 ## <a name="publishing-basics"></a>Podstawy publikowania
 
-`<TargetFramework>` Ustawienie pliku projektu określa platformę docelową domyślne podczas publikowania aplikacji. Możesz zmienić platformę docelową na dowolne, prawidłowe [Moniker Framework docelowych (TFM)](../../standard/frameworks.md). Na przykład, jeśli projekt używa `<TargetFramework>netcoreapp2.2</TargetFramework>`, zostanie utworzony plik binarny, który jest przeznaczony dla platformy .NET Core 2.2. TFM określone w tym ustawieniu jest używany przez domyślny element docelowy [ `dotnet publish` ] [ dotnet-publish] polecenia.
+`<TargetFramework>` Ustawienie pliku projektu określa platformę docelową domyślne podczas publikowania aplikacji. Możesz zmienić platformę docelową na dowolne, prawidłowe [Moniker Framework docelowych (TFM)](../../standard/frameworks.md). Na przykład, jeśli projekt używa `<TargetFramework>netcoreapp2.2</TargetFramework>`, zostanie utworzony plik binarny, który jest przeznaczony dla platformy .NET Core 2.2. TFM określone w tym ustawieniu jest używany przez domyślny element docelowy [ `dotnet publish` ](../tools/dotnet-publish.md) polecenia.
 
 Jeśli chcesz przeanalizować więcej niż jednej struktury, możesz ustawić `<TargetFrameworks>` ustawienie do więcej niż jednego elementu TFM wartości, rozdzielając je średnikiem. Możesz opublikować jedną z platform z `dotnet publish -f <TFM>` polecenia. Na przykład, jeśli masz `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` i uruchom `dotnet publish -f netcoreapp2.1`, zostanie utworzony plik binarny, który jest przeznaczony dla platformy .NET Core 2.1.
 
-Chyba że inaczej ustawiony, katalog wyjściowy [ `dotnet publish` ] [ dotnet-publish] polecenie jest `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Wartość domyślna **konfigurację kompilacji** tryb jest **debugowania** , chyba że zmieniono za pomocą `-c` parametru. Na przykład `dotnet publish -c Release -f netcoreapp2.1` publikuje `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Chyba że inaczej ustawiony, katalog wyjściowy [ `dotnet publish` ](../tools/dotnet-publish.md) polecenie jest `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Wartość domyślna **konfigurację kompilacji** tryb jest **debugowania** , chyba że zmieniono za pomocą `-c` parametru. Na przykład `dotnet publish -c Release -f netcoreapp2.1` publikuje `myfolder/bin/Release/netcoreapp2.1/publish/`. 
 
 Jeśli używasz platformy .NET Core SDK 3.0, domyślnie opublikować tryb dla aplikacji, czy docelowej platformy .NET Core w wersji 2.1, 2.2 lub 3.0 jest zależny od struktury pliku wykonywalnego.
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-Po uruchomieniu aplikacji ([`dotnet run`][dotnet-run]), zostaną wyświetlone następujące dane wyjściowe:
+Po uruchomieniu aplikacji ([`dotnet run`](../tools/dotnet-run.md)), zostaną wyświetlone następujące dane wyjściowe:
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ Należy użyć następujących przełączników z `dotnet publish` polecenie w c
 
 - [Przegląd wdrażania aplikacji programu .NET core](index.md)
 - [Katalog platformy .NET core środowiska uruchomieniowego identyfikator (RID)](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md

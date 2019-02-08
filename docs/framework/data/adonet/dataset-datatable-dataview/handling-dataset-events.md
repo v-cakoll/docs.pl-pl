@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 88ff0be43099758c076216e963d139b945936ba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d3ce8262800fbea8e01ba4296715349bc0e140a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652946"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828322"
 ---
 # <a name="handling-dataset-events"></a>Obsługa zdarzeń elementu DataSet
 <xref:System.Data.DataSet> Obiekt zawiera trzy zdarzenia: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, i <xref:System.Data.DataSet.MergeFailed>.  
@@ -51,12 +51,12 @@ private static void DataSetMergeFailed(
  `DataSet` jest tworzony na podstawie <xref:System.ComponentModel.MarshalByValueComponent> klasy, która ujawnia zarówno <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metody i <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzeń. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Zdarzenie dodaje procedurę obsługi zdarzeń do nasłuchiwania na zdarzenie usunięte w składniku. Możesz użyć <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzenia `DataSet` Jeśli chcesz wykonać kod, gdy <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metoda jest wywoływana. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> zwalnia zasoby używane przez <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
->  `DataSet` i `DataTable` obiekty dziedziczyć <xref:System.ComponentModel.MarshalByValueComponent> i obsługa techniczna <xref:System.Runtime.Serialization.ISerializable> interfejs do komunikacji zdalnej. Są to jedyne obiekty ADO.NET, które mogą być w węzłach. Aby uzyskać więcej informacji, zobacz [obiekty zdalne](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58).  
+>  `DataSet` i `DataTable` obiekty dziedziczyć <xref:System.ComponentModel.MarshalByValueComponent> i obsługa techniczna <xref:System.Runtime.Serialization.ISerializable> interfejs do komunikacji zdalnej. Są to jedyne obiekty ADO.NET, które mogą być w węzłach. Aby uzyskać więcej informacji, zobacz [wywołaniem funkcji zdalnych .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)).  
   
  Aby uzyskać informacje na temat innych zdarzeń, które są dostępne w przypadku pracy z `DataSet`, zobacz [Obsługa zdarzeń elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) i [Obsługa zdarzeń elementu DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Sprawdzanie poprawności danych](https://msdn.microsoft.com/library/b3a9ee4e-5d4d-4411-9c56-c811f2b4ee7e)
+- [Sprawdzanie poprawności danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e31f4391a057d0863f9dcdca00c90f9e591bc5e8
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 9a43f9407d530224b5ad4775ef3a8c0ef2a9fe27
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739140"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828413"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 2)
 
@@ -20,11 +20,12 @@ W tym artykule opisano nowości w programie .NET Core 3.0 (wersja zapoznawcza 2)
 
 .NET core 3.0 dodaje obsługę C# 8.0.
 
-[Pobierz i rozpoczynanie pracy z usługą .NET Core 3 w wersji zapoznawczej 2](https://aka.ms/netcore3download) teraz na Windows, Mac i Linux. Można wyświetlić szczegółowe informacje o wersji w [informacje o wersji platformy .NET Core 3 w wersji zapoznawczej 2](https://aka.ms/netcore3releasenotes).
+[Pobierz i rozpoczynanie pracy z usługą .NET Core 3.0 w wersji zapoznawczej 2](https://aka.ms/netcore3download) teraz na Windows, Mac i Linux. Można wyświetlić szczegółowe informacje o wersji w [informacje o wersji platformy .NET Core 3.0 w wersji zapoznawczej 2](https://aka.ms/netcore3releasenotes).
 
-Aby uzyskać więcej informacji na temat co została wydana w wersji zapoznawczej 1, zobacz [ogłoszenie .NET Core 3.0 w wersji zapoznawczej 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/).
+Aby uzyskać więcej informacji na temat co wydanej z każdą wersją zobacz następujące komunikaty:
 
-Aby uzyskać więcej informacji na temat co została wydana w wersji 2 zobacz [ogłoszenie .NET Core 3.0 w wersji zapoznawczej 1]().
+- [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 2](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 

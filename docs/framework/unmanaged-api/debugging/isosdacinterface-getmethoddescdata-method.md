@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e56f837c4d3362ec6e71030e4fb475df42b9fba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639961"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825956"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Metoda ISOSDacInterface::GetMethodDescData
 
-Pobiera dane dla danego [MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md).
+Pobiera dane dla danego wskaźnika MethodDesc.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -34,9 +34,9 @@ Pobiera dane dla danego [MethodDesc](../../../../docs/framework/unmanaged-api/co
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
-    void                       *data,
+    DacpMethodDescData *data,
     ULONG                      cRevertedRejitVersions,
-    void                      *rgRevertedRejitData,
+    DacpReJitData      *rgRevertedRejitData,
     void                      *pcNeededRevertedRejitData
 );
 ```
@@ -47,17 +47,17 @@ HRESULT GetMethodDescData(
 
 `ip` [in] Adres IP metody.
 
-`data` [out] Dane skojarzone z MethodDesc w postaci zwracanej przez wewnętrznych interfejsach API. Struktura wymaga co najmniej 168 bajtów.
+`data` [out] Dane skojarzone z MethodDesc w postaci zwracanej przez wewnętrznych interfejsach API.
 
 `cRevertedRejitVersions` [out] Numer wersji przywróconym rejit.
 
-`rgRevertedRejitData` [out] Dane związane z wersjami przywróconym rejit jak zwrócony z wewnętrznych interfejsach API. Struktura wymaga co najmniej 24 bajtów.
+`rgRevertedRejitData` [out] Dane związane z wersjami przywróconym rejit jak zwrócony z wewnętrznych interfejsach API.
 
 `pcNeededRevertedRejitData` [out] Liczba bajtów potrzebnych do przechowania danych skojarzonych z przywróconym wersje ReJit.
 
 ## <a name="remarks"></a>Uwagi
 
-Podana metoda jest częścią `ISOSDacInterface` interfejs i odnosi się do 20 gniazda tabeli metod wirtualnych. Również `CLRDATA_ADDRESS` są 64-bitowej nieoznaczonej liczby całkowitej.
+Podana metoda jest częścią `ISOSDacInterface` interfejs i odnosi się do 20 gniazda tabeli metod wirtualnych. Aby móc ich używać, [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) musi być zdefiniowany jako 64-bitowej nieoznaczonej liczby całkowitej.
 
 ## <a name="requirements"></a>Wymagania
 

@@ -3,13 +3,13 @@ title: Projektowania nowoczesnych aplikacji sieci web za pomocą platformy ASP.N
 description: Przewodnik, który dostarcza wskazówki end-to-end na tworzeniu aplikacji monolitycznych internetowych przy użyciu platformy ASP.NET Core i platformy Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148109"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827867"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 Microsoft Corporation
+Copyright © 2019 przez firmę Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Nie części zawartości tej książki może odtworzyć lub przenoszone w jakiejkolwiek formie lub za pomocą jakichkolwiek środków bez pisemnej zgody wydawcy.
 
@@ -43,7 +43,7 @@ Wszystkie inne znaki i logo są własnością ich prawnych właścicieli.
 
 Autor:
 
-> **Steve Smith (@ardalis)**, Doradca architektury oprogramowania, [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** — architekt oprogramowania i Trainer — [Ardalis.com](https://ardalis.com)
 
 Edytory:
 
@@ -63,11 +63,11 @@ Edytory:
 
 - Side-by-side wersji programu .NET w wersji przez aplikację na tym samym serwerze.
 
-Tradycyjne aplikacje .NET można i należy zapewnić obsługę tych wymagań, ale platformy ASP.NET Core i .NET Core zostały zoptymalizowane do zaoferowania Ulepszona obsługa dla powyższych scenariuszy.
+Tradycyjne aplikacje .NET można i należy obsługiwać wiele z tych wymagań, ale platformy ASP.NET Core i .NET Core zostały zoptymalizowane do zaoferowania Ulepszona obsługa dla powyższych scenariuszy.
 
 Coraz więcej organizacji decyduje się na hostowanie aplikacji sieci web w chmurze przy użyciu usług takich jak Microsoft Azure. Należy rozważyć obsługę aplikacji w chmurze, jeśli następujące usługi są ważne do aplikacji lub organizacji:
 
-- Inwestycji zmniejszenie kosztów centrum danych (sprzętu, oprogramowania, miejsca, narzędzia itp.)
+- Zmniejszenie zwrot z inwestycji w kosztów centrum danych (sprzętu, oprogramowania, miejsca, narzędzia, Zarządzanie serwerem, itp.)
 
 - Elastyczny cennik (płatność na podstawie użycia, nie za bezczynną dyspozycyjność).
 
@@ -81,7 +81,7 @@ Tworzenie aplikacji sieci web za pomocą programu ASP.NET Core, hostowanych na p
 
 ## <a name="purpose"></a>Cel
 
-Ten przewodnik zawiera wskazówki dotyczące end-to-end na tworzeniu aplikacji monolitycznych internetowych przy użyciu platformy ASP.NET Core i platformy Azure.
+Ten przewodnik zawiera end-to-end wskazówki dotyczące tworzenia aplikacji *monolityczne* aplikacji internetowych za pomocą platformy ASP.NET Core i platformy Azure. W tym kontekście "monolitycznych" odnosi się do faktu, że te aplikacje są wdrażane jako pojedynczą jednostkę, a nie jako zbiór interakcje usługi i aplikacje.
 
 Ten przewodnik jest uzupełnieniem ["_Mikrousługi .NET. Architektura aplikacji kontenerowych nimi .NET_"](../microservices-architecture/index.md) hostowanie aplikacji przedsiębiorstwa który skupia się więcej na platformy Docker, Mikrousługi i wdrażanie kontenerów.
 

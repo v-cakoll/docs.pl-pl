@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707482"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828348"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego kompilowane do kodu źródłowego aplikacji można przeglądać za pomocą [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli nigdy nie zmieni się parametry połączenia, aplikacji musi być ponownie kompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracji aplikacji.  
@@ -70,7 +70,7 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
  Począwszy od programu .NET Framework 2.0, <xref:System.Configuration.ConfigurationManager> jest używany podczas pracy z plikami konfiguracji na komputerze lokalnym, zastępując przestarzałego <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> Służy do pracy z plikami konfiguracji platformy ASP.NET. Jest przeznaczona do pracy z plikami konfiguracji na serwerze sieci Web i umożliwia dostęp programistyczny do sekcji w pliku konfiguracji, takich jak **system.web**.  
   
 > [!NOTE]
->  Uzyskiwanie dostępu do plików konfiguracji w czasie wykonywania wymaga udzielanie uprawnień do obiektu wywołującego wymagane uprawnienia zależą od typu aplikacji, pliku konfiguracji i lokalizacji. Aby uzyskać więcej informacji, zobacz [przy użyciu klas konfiguracji](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc) i <xref:System.Web.Configuration.WebConfigurationManager> dla aplikacji ASP.NET i <xref:System.Configuration.ConfigurationManager> dla aplikacji Windows.  
+>  Uzyskiwanie dostępu do plików konfiguracji w czasie wykonywania wymaga udzielanie uprawnień do obiektu wywołującego wymagane uprawnienia zależą od typu aplikacji, pliku konfiguracji i lokalizacji. Aby uzyskać więcej informacji, zobacz [przy użyciu klas konfiguracji](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100)) i <xref:System.Web.Configuration.WebConfigurationManager> dla aplikacji ASP.NET i <xref:System.Configuration.ConfigurationManager> dla aplikacji Windows.  
   
  Możesz użyć <xref:System.Configuration.ConnectionStringSettingsCollection> można pobrać parametry połączenia z plików konfiguracji aplikacji. Zawiera on zbiór <xref:System.Configuration.ConnectionStringSettings> obiektów, z których każdy reprezentuje jeden wpis **connectionStrings** sekcji. Jego właściwości są mapowane na atrybuty ciągu połączenia, dzięki czemu możesz pobrać parametry połączenia, określając nazwę lub nazwę dostawcy.  
   
@@ -102,7 +102,7 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Szyfrowanie przy użyciu sekcji pliku konfiguracji chronionych konfiguracji  
- ASP.NET 2.0 wprowadzono nową funkcję o nazwie *chronione konfiguracji*, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Mimo że przeznaczony głównie dla platformy ASP.NET, konfiguracji chronionych można również zaszyfrować sekcji pliku konfiguracji w aplikacji Windows. Aby uzyskać szczegółowy opis możliwości konfiguracji chronionych, zobacz [szyfrowania informacji przy użyciu chronione Konfiguracja](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+ ASP.NET 2.0 wprowadzono nową funkcję o nazwie *chronione konfiguracji*, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Mimo że przeznaczony głównie dla platformy ASP.NET, konfiguracji chronionych można również zaszyfrować sekcji pliku konfiguracji w aplikacji Windows. Aby uzyskać szczegółowy opis możliwości konfiguracji chronionych, zobacz [szyfrowania informacji przy użyciu chronione Konfiguracja](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
  Następujący plik konfiguracji fragment przedstawia **connectionStrings** sekcji po został zaszyfrowany. **ConfigProtectionProvider** określa dostawcę konfiguracji chronionych, używany do szyfrowania i odszyfrowywania parametry połączenia. **Element EncryptedData** sekcja zawiera zaszyfrowanego tekstu.  
   
@@ -136,16 +136,16 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
   
 |Dostawca|Opis|  
 |--------------|-----------------|  
-|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Używa algorytmu szyfrowania RSA do szyfrowania i odszyfrowywania danych. Algorytm RSA może służyć do szyfrowanie kluczem publicznym i podpisy cyfrowe. Jest także znana jako "klucz publiczny" lub szyfrowanie asymetryczne ponieważ wykorzystuje on dwa różne klucze. Możesz użyć [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](https://msdn.microsoft.com/library/6491c41e-e2b0-481f-9863-db3614d5f96b) do szyfrowania sekcji w pliku Web.config i zarządzać kluczami szyfrowania. ASP.NET odszyfrowuje plik konfiguracyjny podczas przetwarzania pliku. Tożsamość aplikacji ASP.NET musi mieć dostęp do odczytu do klucza szyfrowania, który jest używany do szyfrowania i odszyfrowywania zaszyfrowanych sekcje.|  
+|<xref:System.Configuration.RsaProtectedConfigurationProvider>|Używa algorytmu szyfrowania RSA do szyfrowania i odszyfrowywania danych. Algorytm RSA może służyć do szyfrowanie kluczem publicznym i podpisy cyfrowe. Jest także znana jako "klucz publiczny" lub szyfrowanie asymetryczne ponieważ wykorzystuje on dwa różne klucze. Możesz użyć [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) do szyfrowania sekcji w pliku Web.config i zarządzać kluczami szyfrowania. ASP.NET odszyfrowuje plik konfiguracyjny podczas przetwarzania pliku. Tożsamość aplikacji ASP.NET musi mieć dostęp do odczytu do klucza szyfrowania, który jest używany do szyfrowania i odszyfrowywania zaszyfrowanych sekcje.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Używa interfejsu API ochrony danych Windows (DPAPI) do szyfrowania sekcji konfiguracji. Używa wbudowanych usług kryptograficznych Windows i mogą być skonfigurowane dla ochrony specyficzny dla komputera lub konta — specyficzne dla użytkownika. Ochrona specyficzny dla komputera jest przydatne w przypadku wielu aplikacji na tym samym serwerze, który muszą udostępniać informacje. Ochrona konta — specyficzne dla użytkownika może być stosowana z usługami, które działają z określona tożsamość użytkownika, takie jak udostępnione Środowisko hostingu. Każda aplikacja uruchamiana osobne tożsamości, która ogranicza dostęp do zasobów, takich jak pliki i bazy danych.|  
   
- Obaj dostawcy oferują silnego szyfrowania danych. Jednakże jeśli planujesz użyć tego samego pliku konfiguracji zaszyfrowane na wielu serwerach, np. kolektywu serwerów sieci Web, tylko `RsaProtectedConfigurationProvider` umożliwia eksportowanie kluczy szyfrowania używany do szyfrowania danych i zaimportuj je na innym serwerze. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie chronione Konfiguracja RSA kontenery kluczy](https://msdn.microsoft.com/library/f3022b39-f17f-48c1-b067-025eab0ce8bc).  
+ Obaj dostawcy oferują silnego szyfrowania danych. Jednakże jeśli planujesz użyć tego samego pliku konfiguracji zaszyfrowane na wielu serwerach, np. kolektywu serwerów sieci Web, tylko `RsaProtectedConfigurationProvider` umożliwia eksportowanie kluczy szyfrowania używany do szyfrowania danych i zaimportuj je na innym serwerze. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie chronione Konfiguracja RSA kontenery kluczy](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Przy użyciu klas konfiguracji  
  <xref:System.Configuration> Przestrzeń nazwy udostępnia klasy do pracy z ustawieniami konfiguracji programowo. <xref:System.Configuration.ConfigurationManager> Klasy zapewnia dostęp do plików konfiguracji komputera, aplikacji i użytkownika. Jeśli tworzysz aplikację ASP.NET, możesz użyć <xref:System.Web.Configuration.WebConfigurationManager> klasy, która zawiera te same funkcje, podczas umożliwiającego dostęp do ustawień, które są unikatowe dla aplikacji ASP.NET, takich jak znajdują się w  **\< System.Web >**.  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> Przestrzeń nazw zawiera klasy, które zapewniają dodatkowe opcje dotyczące szyfrowania i odszyfrowywania danych. Korzystając z tych klas, w razie potrzeby usługi kryptograficzne, które nie są dostępne za pośrednictwem chronioną konfiguracji. Niektóre z tych klas są otoki dla niezarządzanych CryptoAPI firmy Microsoft, a inne wyłącznie zarządzanej implementacji. Aby uzyskać więcej informacji, zobacz [usługi kryptograficzne](https://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
+>  <xref:System.Security.Cryptography> Przestrzeń nazw zawiera klasy, które zapewniają dodatkowe opcje dotyczące szyfrowania i odszyfrowywania danych. Korzystając z tych klas, w razie potrzeby usługi kryptograficzne, które nie są dostępne za pośrednictwem chronioną konfiguracji. Niektóre z tych klas są otoki dla niezarządzanych CryptoAPI firmy Microsoft, a inne wyłącznie zarządzanej implementacji. Aby uzyskać więcej informacji, zobacz [usługi kryptograficzne](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
 ### <a name="appconfig-example"></a>Przykład pliku App.config  
  W tym przykładzie pokazano, jak przełączać szyfrowania **connectionStrings** sekcji **app.config** pliku dla aplikacji Windows. W tym przykładzie nazwa aplikacji jako argument, na przykład "MyApplication.exe" przyjmowane przez procedurę. **App.config** plik zostanie następnie zaszyfrowana i kopiowane do folderu, który zawiera plik wykonywalny pod nazwą "MyApplication.exe.config".  
@@ -167,12 +167,12 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Aby uzyskać więcej informacji, zabezpieczanie aplikacji platformy ASP.NET, zobacz [NIB: Zabezpieczenia programu ASP.NET](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) i [platformy ASP.NET 2.0 działań w zakresie bezpieczeństwa w skrócie](https://go.microsoft.com/fwlink/?LinkId=59997) w Centrum deweloperów platformy ASP.NET.  
+ Aby uzyskać więcej informacji na temat zabezpieczania aplikacji ASP.NET, zobacz [witryn sieci web ASP.NET Zabezpieczanie](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
 - [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Przy użyciu klas konfiguracji](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [Przy użyciu klas konfiguracji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
 - [Konfigurowanie aplikacji](../../../../docs/framework/configure-apps/index.md)
-- [Administrowanie witryną sieci Web platformy ASP.NET](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [Administrowanie witryną sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

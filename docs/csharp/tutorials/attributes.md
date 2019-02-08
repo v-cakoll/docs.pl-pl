@@ -4,12 +4,12 @@ description: Dowiedz się, jak działają atrybutów w języku C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029830"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826827"
 ---
 # <a name="using-attributes-in-c"></a>Przy użyciu atrybutów w języku C# #
 
@@ -137,7 +137,7 @@ Poniżej przedstawiono kilka istotnych atrybuty wbudowanych w platformy .NET Cor
 * `[Obsolete]`. Ten zestaw został użyty w powyższych przykładach i znajduje się `System` przestrzeni nazw. Jest to przydatne do zapewnienia deklaratywne dokumentacji dotyczące zmieniania bazy kodu. Można podać komunikat w postaci ciągu, a inny parametr logiczny może służyć do podwyższania poziomu z ostrzeżenia kompilatora do błędu kompilatora.
 
 * `[Conditional]`. Ten atrybut jest `System.Diagnostics` przestrzeni nazw. Ten atrybut można stosować do metod (lub klas atrybutów). Ciąg musi być przekazane do konstruktora.
-Jeśli ciąg który dopasowuje `#define` dyrektywy, następnie wszelkie wywołania tej metody (ale nie metody) zostaną usunięte przez kompilator języka C#. Zazwyczaj służy do debugowania (Diagnostyka).
+Jeśli ten ciąg nie jest zgodny `#define` dyrektywy, następnie wszelkie wywołania tej metody (ale nie metody) zostanie usunięta z dniem C# kompilatora. Zazwyczaj służy do debugowania (Diagnostyka).
 
 * `[CallerMemberName]`. Ten atrybut może być używany na parametry i powiązane z nimi `System.Runtime.CompilerServices` przestrzeni nazw. Jest to atrybut, który jest używany, aby wstawić nazwę metody, która wywołuje inną metodę. To jest zwykle używany jako sposób, aby wyeliminować "Magiczna ciągi" podczas implementowania INotifyPropertyChanged w różnych platform tworzenia interfejsu użytkownika. Na przykład:
 

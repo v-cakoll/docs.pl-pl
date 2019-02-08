@@ -3,13 +3,13 @@ title: Charakterystyka nowoczesnych aplikacji sieci web
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Charakterystyka nowoczesnych aplikacji sieci web
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147339"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828127"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Charakterystyka nowoczesnych aplikacji sieci Web
 
@@ -39,25 +39,25 @@ Platforma ASP.NET Core jest zoptymalizowany pod kątem cloud (chmura publiczna, 
 
 ## <a name="cross-platform"></a>Wiele platform
 
-Platforma ASP.NET Core jest dla wielu platform i systemem Linux i MacOS, a także Windows. Spowoduje to otwarcie wiele nowych opcji dla środowisk deweloperskich i wdrożenia aplikacji skompilowanej za pomocą platformy ASP.NET Core. Kontenery platformy docker, które zwykle z systemem Linux już dziś, może obsługiwać aplikacje platformy ASP.NET Core, umożliwiając im móc korzystać z zalet [kontenery i mikrousługi](../microservices-architecture/index.md).
+Platforma ASP.NET Core jest dla wielu platform i można uruchomić w systemie Linux, macOS i Windows. Spowoduje to otwarcie wiele nowych opcji dla środowisk deweloperskich i wdrożenia aplikacji skompilowanej za pomocą platformy ASP.NET Core. Kontenery platformy docker — Linux i Windows — może obsługiwać aplikacje platformy ASP.NET Core, umożliwiając im móc korzystać z zalet [kontenery i mikrousługi](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Moduły i luźno powiązane
 
 Pakiety NuGet są najwyższej jakości obywateli w programie .NET Core oraz aplikacji platformy ASP.NET Core składają się z wielu bibliotek za pośrednictwem pakietu NuGet. Ten poziom szczegółowości funkcjonalność zapewnia tylko zależą od aplikacji i wdrożenia funkcji, które rzeczywiście wymagają one, zmniejszyć ich wpływu i zabezpieczeń luk w zabezpieczeniach obszar powierzchni.
 
-Platforma ASP.NET Core także w pełni obsługuje wstrzykiwanie zależności, zarówno wewnętrznie, jak i na poziomie aplikacji. Interfejsy mogą mieć wiele implementacji, które mogą być wymieniane zgodnie z potrzebami. Wstrzykiwanie zależności umożliwia aplikacjom luźno kilka do tych interfejsów, dzięki czemu łatwiej można rozszerzyć, utrzymywanie i testowanie.
+Również w pełni obsługuje platformy ASP.NET Core [wstrzykiwanie zależności](https://deviq.com/dependency-injection/), zarówno wewnętrznie, jak i na poziomie aplikacji w poziomie. Interfejsy mogą mieć wiele implementacji, które mogą być wymieniane zgodnie z potrzebami. Wstrzykiwanie zależności umożliwia aplikacjom luźno połączyć te interfejsy, zamiast określonych implementacji, dzięki czemu łatwiej można rozszerzyć, utrzymywanie i testowanie.
 
 ## <a name="easily-tested-with-automated-tests"></a>Łatwo przetestowane za pomocą testów automatycznych
 
-Aplikacje platformy ASP.NET Core obsługują testy jednostkowe i ich luźne powiązania i obsługi iniekcji zależności ułatwia wymiany infrastruktury problemy z implementacjami fałszywych do celów testowych. Platforma ASP.NET Core jest również dostarczany elementu TestServer, który może służyć do hostowania aplikacji w pamięci. Testy funkcjonalne następnie mogą wysyłać żądania do tego serwera w pamięci, wykonywania stosu pełnej aplikacji (w tym oprogramowania pośredniczącego, routing, wiązaniem modelu, filtrami itp.) i odbierania odpowiedzi, wszystko w ułamku czasu jaki zajęłoby do hostowania tej aplikacji na serwerze rzeczywistych i wysyłanie żądań za pośrednictwem warstwy sieci. Te testy są szczególnie ułatwia pisanie i cenne dla interfejsów API, które są coraz ważniejsze w nowoczesnych aplikacji sieci web.
+Aplikacje platformy ASP.NET Core obsługują testy jednostkowe i ich luźne powiązania i obsługę wstrzykiwania zależności ułatwia wymiany infrastruktury problemy z implementacjami fałszywych do celów testowych. Platforma ASP.NET Core jest również dostarczany elementu TestServer, który może służyć do hostowania aplikacji w pamięci. Testy funkcjonalne następnie mogą wysyłać żądania do tego serwera w pamięci, wykonywania stosu pełnej aplikacji (w tym oprogramowania pośredniczącego, routing, wiązaniem modelu, filtrami itp.) i odbierania odpowiedzi, wszystko w ułamku czasu jaki zajęłoby do hostowania tej aplikacji na serwerze rzeczywistych i wysyłanie żądań za pośrednictwem warstwy sieci. Te testy są szczególnie ułatwia pisanie i cenne dla interfejsów API, które są coraz ważniejsze w nowoczesnych aplikacji sieci web.
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Zachowania tradycyjnego i SPA obsługiwane
 
-Aplikacje sieci web tradycyjnych mają brać nieco zachowania po stronie klienta, ale zamiast tego ma opiera się na serwerze dla nawigacji, zapytań i aktualizacji, które aplikacja może być konieczne. Każdej nowej operacji wprowadzone przez użytkownika będzie tłumaczona na nowe żądanie sieci web z wynikiem jest załadowanie pełnej strony w przeglądarce użytkownika końcowego. Klasyczny Model-View-Controller (MVC) struktur zazwyczaj postępuj zgodnie z takim podejściu z każdego nowego żądania odpowiadający działania innego kontrolera, który z kolei może pracować z modelem i zwrócenia widoku. Niektóre poszczególne operacje na danej stronie mogą być dołączane funkcji AJAX (asynchronicznego języka JavaScript i XML), ale ogólna Architektura aplikacji używane w wielu różnych widoków MVC i punkty końcowe adresu URL.
+Aplikacje sieci web tradycyjnych mają brać nieco zachowania po stronie klienta, ale zamiast tego ma opiera się na serwerze dla nawigacji, zapytań i aktualizacji, które aplikacja może być konieczne. Każdej nowej operacji wprowadzone przez użytkownika będzie tłumaczona na nowe żądanie sieci web z wynikiem jest załadowanie pełnej strony w przeglądarce użytkownika końcowego. Klasyczny Model-View-Controller (MVC) struktur zazwyczaj postępuj zgodnie z takim podejściu z każdego nowego żądania odpowiadający działania innego kontrolera, który z kolei może pracować z modelem i zwrócenia widoku. Niektóre poszczególne operacje na danej stronie mogą być dołączane funkcji AJAX (asynchronicznego języka JavaScript i XML), ale ogólna Architektura aplikacji używane w wielu różnych widoków MVC i punkty końcowe adresu URL. Ponadto ASP.NET Core MVC obsługuje również stron Razor, prostszy sposób organizowania strony MVC stylu.
 
 Aplikacje jednostronicowe (źródła), natomiast obejmują bardzo mało ładowania dynamicznie generowanym strony po stronie serwera (jeśli istnieje). Wiele aplikacji jednostronicowych są inicjowane w ciągu statyczny plik HTML, który ładuje wymagane biblioteki JavaScript do uruchomienia aplikacji. Te aplikacje mocno użycia interfejsów API sieci Web odpowiadające ich potrzebom dane i może zapewnić, że znacznie bogatsze podejrzewać.
 
-Wiele aplikacji sieci web obejmują kombinacją tradycyjnej sieci web aplikacji zachowanie (zwykle zawartość) i aplikacji jednostronicowych (na potrzeby interakcyjności). Platforma ASP.NET Core obsługuje zarówno MVC (widoki i/lub stron Razor) i interfejsów API w tej samej aplikacji przy użyciu tego samego zestawu narzędzi i bazowych bibliotek platformy sieci web.
+Wiele aplikacji sieci web obejmują kombinacją tradycyjnej sieci web aplikacji zachowanie (zwykle zawartość) i aplikacji jednostronicowych (na potrzeby interakcyjności). Platforma ASP.NET Core obsługuje zarówno MVC (widoki lub strony oparte na) i interfejsy API sieci web w tej samej aplikacji przy użyciu tego samego zestawu narzędzi i bazowych bibliotek platformy.
 
 ## <a name="simple-development-and-deployment"></a>Proste tworzenie i wdrażanie
 

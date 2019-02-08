@@ -3,12 +3,12 @@ title: Przewodnik po strukturze ML.NET zawartości
 description: Dowiedz się, jak tworzyć niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET za pomocą strukturze ML.NET
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550464"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826276"
 ---
 # <a name="mlnet-content-guide"></a>Przewodnik po strukturze ML.NET zawartości
 
@@ -31,7 +31,7 @@ Aby poznać podstawy, zobacz [podstawowe pojęcia do trenowania modelu w struktu
 
 [Klasyfikowanie problemów w usłudze GitHub za pomocą modelu klasyfikacji wieloklasowej](tutorials/github-issue-classification.md) pokazuje, jak utworzyć aplikację, która określa etykietę obszar problemu w usłudze GitHub.
 
-[Przewidywanie taryfy taksówek za pomocą modelu regresji](tutorials/taxi-fare.md) przedstawiono sposób tworzenia predykcyjnego aplikację, która używa wielu czynników z danych historycznych w celu ustalenia odpowiedź.
+[Dokładność przewidywanych cen. przy użyciu modelu regresji](tutorials/taxi-fare.md) przedstawiono sposób tworzenia predykcyjnego aplikację, która używa wielu czynników z danych historycznych w celu ustalenia odpowiedź.
 
 [Klasyfikowanie irysów kwiatów przy użyciu funkcji](tutorials/iris-clustering.md) pokazano, jak model klastrowania umożliwia analizowanie zestawu danych iris. 
 

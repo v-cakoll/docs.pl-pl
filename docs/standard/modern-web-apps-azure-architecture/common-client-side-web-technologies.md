@@ -3,13 +3,13 @@ title: Typowe technologie sieci web po stronie klienta
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Typowe technologie sieci web po stronie klienta
 author: ardalis
 ms.author: wiwagn
-ms.date: 6/28/2018
-ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 36bb18d21740f406d33306c212195fa5dbb25ee1
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153894"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828335"
 ---
 # <a name="common-client-side-web-technologies"></a>Typowe technologie sieci web po stronie klienta
 
@@ -102,7 +102,7 @@ Platformy Angular sprawia, że doskonałe korzystanie z narzędzi interfejsu wie
 
 Firma Microsoft opracowała aplikację odwołanie [ramach aplikacji eShopOnContainers](https://aka.ms/MicroservicesArchitecture), który zawiera implementację Angular SPA. Ta aplikacja zawiera Angular modułów, aby zarządzać sklepu internetowego zakupy koszyka, ładowanie i wyświetlanie elementów ze swojego katalogu i obsługa tworzenia zamówienia. Możesz wyświetlić i pobrać przykładową aplikację z [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
-### <a name="react"></a>react
+### <a name="react"></a>React
 
 Inaczej niż w przypadku szablonów Angular, która zapewnia pełnej implementacji wzorca Model-View-Controller, React dotyczy jedynie widoków. Nie jest framework, po prostu bibliotekę, aby tworzyć SPA należy korzystać z dodatkowych bibliotek.
 

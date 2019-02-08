@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
-ms.openlocfilehash: 75cbb08950675ef53770a288bbf7b6d0ef3a5ece
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33abf1a56750d6f13dabe773605ba1474ec75d45
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613259"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827308"
 ---
 # <a name="how-to-call-canonical-functions"></a>Instrukcje: Wywoływanie funkcji kanonicznych
 <xref:System.Data.Objects.EntityFunctions> Klasa zawiera metody, które udostępniają funkcje canonical do użycia w składniku LINQ do zapytań jednostki. Aby uzyskać informacje na temat funkcji kanonicznej Zobacz [funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -23,13 +23,13 @@ ms.locfileid: "54613259"
  Niektóre funkcje canonical można wywoływać za pomocą wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) metody w składniku LINQ do zapytań jednostki. Aby uzyskać listę metodach CLR, które mapowania kanonicznej funkcji, zobacz [metody mapowania kanonicznej funkcji CLR](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). Kod w przykładzie wykonuje zapytaniu składnika LINQ to Entities używającej <xref:System.Data.Objects.EntityFunctions.DiffDays%2A> metodę, aby zwrócić wszystkie produkty, dla którego różnica między `SellEndDate` i `SellStartDate` jest mniejszy niż 365 dni:  
+ W poniższym przykładzie użyto [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples). Kod w przykładzie wykonuje zapytaniu składnika LINQ to Entities używającej <xref:System.Data.Objects.EntityFunctions.DiffDays%2A> metodę, aby zwrócić wszystkie produkty, dla którego różnica między `SellEndDate` i `SellStartDate` jest mniejszy niż 365 dni:  
   
  [!code-csharp[DP L2E CanonicalAndStoreFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e canonicalandstorefunctions/cs/program.cs#1)]
  [!code-vb[DP L2E CanonicalAndStoreFunctions#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#1)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832). Przykład wywołuje agregacji <xref:System.Data.Objects.EntityFunctions.StandardDeviation%2A> bezpośrednio metodę i zwraca odchylenie standardowe `SalesOrderHeader` sum częściowych. Należy pamiętać, że <xref:System.Data.Objects.ObjectQuery%601> jest przekazywany do funkcji, co pozwala na można wywołać bez bycie częścią zapytaniu składnika LINQ to Entities.  
+ W poniższym przykładzie użyto [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples). Przykład wywołuje agregacji <xref:System.Data.Objects.EntityFunctions.StandardDeviation%2A> bezpośrednio metodę i zwraca odchylenie standardowe `SalesOrderHeader` sum częściowych. Należy pamiętać, że <xref:System.Data.Objects.ObjectQuery%601> jest przekazywany do funkcji, co pozwala na można wywołać bez bycie częścią zapytaniu składnika LINQ to Entities.  
   
  [!code-csharp[DP L2E CanonicalAndStoreFunctions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e canonicalandstorefunctions/cs/program.cs#2)]
  [!code-vb[DP L2E CanonicalAndStoreFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#2)]  

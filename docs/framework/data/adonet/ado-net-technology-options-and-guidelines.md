@@ -2,12 +2,12 @@
 title: Opcje technologii ADO.NET i wskazówki
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 2550c286485025a394cf3f8afe6c43a0472b2cd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e43fa3ae893a8a18e35693cde364d227e7959398
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566284"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828478"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opcje technologii ADO.NET i wskazówki
 Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość kodowania i konserwacji wymagane dla deweloperów, należy włączyć je aby programować przy użyciu modeli danych koncepcyjnymi encji. Ta platforma obejmuje ADO.NET Entity Framework i powiązanych technologii.  
@@ -19,7 +19,7 @@ Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość ko
  Entity Data Model (EDM) jest specyfikację projektu, który definiuje dane aplikacji jako zestawów jednostek i relacji. Dane w tym modelu obsługuje mapowania obiektowo relacyjny i programowania danych granice aplikacji.  
   
 ### <a name="object-services"></a>Usługi obiektów  
- Usługi obiektów umożliwia programistom do interakcji z modelu koncepcyjnego za pomocą zestawu typowych klas środowiska uruchomieniowego (języka wspólnego CLR) języka. Te klasy może być automatycznie wygenerowany na podstawie modelu koncepcyjnego lub mogą być tworzone niezależnie odzwierciedlający strukturę modelu koncepcyjnego. Obiekt usługi obsługuje również infrastruktury dla programu Entity Framework, w tym usług, takich jak zarządzanie stanem, sprawdzaniu spójności, rozwiązanie tożsamości, ładowania i, nawigowanie po relacjach, propagowanie zmian obiektu do modyfikacji bazy danych a obsługa języka Entity SQL tworzenia zapytania. Aby uzyskać więcej informacji, zobacz [obiektu usługi — omówienie (Entity Framework)](https://msdn.microsoft.com/library/43014cf9-c9cb-4538-bfbb-197820b60038).  
+ Usługi obiektów umożliwia programistom do interakcji z modelu koncepcyjnego za pomocą zestawu typowych klas środowiska uruchomieniowego (języka wspólnego CLR) języka. Te klasy może być automatycznie wygenerowany na podstawie modelu koncepcyjnego lub mogą być tworzone niezależnie odzwierciedlający strukturę modelu koncepcyjnego. Obiekt usługi obsługuje również infrastruktury dla programu Entity Framework, w tym usług, takich jak zarządzanie stanem, sprawdzaniu spójności, rozwiązanie tożsamości, ładowania i, nawigowanie po relacjach, propagowanie zmian obiektu do modyfikacji bazy danych a obsługa języka Entity SQL tworzenia zapytania. Aby uzyskać więcej informacji, zobacz [obiektu usługi — omówienie (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
   
 ### <a name="linq-to-entities"></a>LINQ do Jednostek  
  Składnik LINQ to Entities jest implementacja zapytanie o języku zintegrowanym (LINQ), który umożliwia deweloperom tworzenie silnie typizowane zapytania w odniesieniu do kontekstu obiektów programu Entity Framework za pomocą wyrażenia LINQ i LINQ standardowych operatorów zapytań. Składnik LINQ to Entities umożliwia deweloperom pracować z modelu koncepcyjnego za pomocą bardzo elastyczny mapowania obiektowo relacyjny programu Microsoft SQL Server i baz danych innych firm. Aby uzyskać więcej informacji, zobacz [składnik LINQ to Entities](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
@@ -31,7 +31,7 @@ Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość ko
  Dostawca EntityClient jest używane do interakcji z modelu Entity Data Model nowego dostawcy danych .NET Framework. Dostawca EntityClient jest zgodny ze wzorcem dostawcy danych .NET Framework, ujawnienia <xref:System.Data.EntityClient.EntityConnection> i <xref:System.Data.EntityClient.EntityCommand> obiekty, które zwraca <xref:System.Data.EntityClient.EntityDataReader>. Dostawca EntityClient w programach języka Entity SQL, zapewniając elastyczne mapowania z dostawcami magazynu danych. Aby uzyskać więcej informacji, zobacz [EntityClient i jednostki SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ### <a name="entity-data-model-tools"></a>Narzędzia modelu danych jednostki  
- Entity Framework udostępnia narzędzia wiersza polecenia, kreatory i projektanci w celu ułatwienia tworzenia EDM aplikacji. Sterowanie EntityDataSource obsługuje scenariusze powiązania danych w oparciu o EDM. Powierzchni programowania formantu EntityDataSource jest podobne do innych formantów źródła danych w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia modelu danych jednostki ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527).  
+ Entity Framework udostępnia narzędzia wiersza polecenia, kreatory i projektanci w celu ułatwienia tworzenia EDM aplikacji. Sterowanie EntityDataSource obsługuje scenariusze powiązania danych w oparciu o EDM. Powierzchni programowania formantu EntityDataSource jest podobne do innych formantów źródła danych w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
   
 ## <a name="linq-to-sql"></a>LINQ do SQL  
  LINQ do SQL jest relacyjne mapowanie obiektów (lub / M) wdrożenia, która pozwala na model bazy danych programu SQL Server przy użyciu klas .NET Framework. LINQ do SQL umożliwia wykonywanie zapytań bazy danych przy użyciu LINQ, jak również aktualizacji, wstawianie i usuwanie danych z niego. LINQ do SQL obsługuje transakcje, widoków i procedur składowanych, zapewniając łatwy sposób Zintegruj swój model danych sprawdzanie poprawności danych i reguł logiki biznesowej. Object Relational Designer (O/R Designer) służy do modelowania klas jednostek i skojarzenia, które są oparte na obiektach w bazie danych. Aby uzyskać więcej informacji, zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  

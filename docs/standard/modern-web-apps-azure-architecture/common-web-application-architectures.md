@@ -3,13 +3,13 @@ title: Typowe architektury aplikacji internetowych
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Poznaj typowe architektury aplikacji internetowych
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 3b0b109b0910eb5763ecab228115b7bc932d4a10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129938"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826736"
 ---
 # <a name="common-web-application-architectures"></a>Typowe architektury aplikacji internetowych
 
@@ -87,7 +87,7 @@ Jak wzrostem wymagań aplikacji bardziej złożone i niezawodnych rozwiązań wd
 
 Wewnętrznie organizacji tego projektu na wiele projektów, w oparciu o odpowiedzialności zwiększa łatwość konserwacji aplikacji.
 
-Tej jednostki mogą być skalowane w górę lub w poziomie z zalet skalowania na żądanie oparte na chmurze. Skalowanie w górę oznacza dodawanie dodatkowych procesora CPU, pamięci, miejsca na dysku lub inne zasoby do serwerów hostującego twoją aplikację. Skalowanie w poziomie oznacza, że dodanie dodatkowych wystąpień takich serwerów, czy są to serwery fizyczne lub maszyny wirtualne. Gdy aplikacja jest hostowana w wielu wystąpieniach, moduł równoważenia obciążenia służy do przypisywania żądania do wystąpień poszczególnych aplikacji.
+Tej jednostki mogą być skalowane w górę lub w poziomie z zalet skalowania na żądanie oparte na chmurze. Skalowanie w górę oznacza dodawanie dodatkowych procesora CPU, pamięci, miejsca na dysku lub inne zasoby do serwerów hostującego twoją aplikację. Skalowanie w poziomie oznaczają dodanie dodatkowych wystąpień takie serwery są serwerów fizycznych, maszyn wirtualnych lub kontenerów. Gdy aplikacja jest hostowana w wielu wystąpieniach, moduł równoważenia obciążenia służy do przypisywania żądania do wystąpień poszczególnych aplikacji.
 
 Najprostszym sposobem skalowanie aplikacji sieci web na platformie Azure jest skonfigurować skalowanie ręczne w planie usług aplikacji w aplikacji. Rysunek 5 – 6 przedstawia ekranu odpowiedniego pulpitu nawigacyjnego platformy Azure, aby skonfigurować liczbę wystąpień obsługujących aplikację.
 
@@ -212,9 +212,9 @@ Wdrażanie aktualizacji zgodnie z obrazów platformy Docker jest znacznie szybsz
 
 Kontenery są założenia niezmienne, zgodnie z projektem, nigdy nie musisz się martwić o uszkodzony maszyn wirtualnych, natomiast skryptów aktualizacji może zapomniano konto niektóre konkretnej konfiguracji lub po lewej stronie w pliku na dysku.
 
-_Korzystaj z kontenerów platformy Docker, monolitycznych wdrożenia aplikacji sieci web, prostsze. Zwiększa to ciągłej integracji i ciągłego wdrażania potoków i pomaga osiągnąć sukces wdrażania do produkcji. Nie ma więcej "działa w mojej maszynie, dlaczego nie działa w środowisku produkcyjnym?"_
+Korzystaj z kontenerów platformy Docker, monolitycznych wdrożenia aplikacji sieci web, prostsze. Zwiększa to ciągłej integracji i ciągłego wdrażania potoków i pomaga osiągnąć sukces wdrażania do produkcji. Nie ma więcej "działa w mojej maszynie, dlaczego nie działa w środowisku produkcyjnym?"
 
-Architektura mikrousług ma wiele zalet, ale te korzyści pochodzą kosztem wzrostu złożoności. W niektórych przypadkach koszty przeważają korzyści, lepszym rozwiązaniem nie jest aplikacją monolityczną wdrożenia uruchomionych w jednym kontenerze, lub w kilku kontenerów.
+Architektura mikrousług ma wiele zalet, ale te korzyści pochodzą kosztem wzrostu złożoności. W niektórych przypadkach koszty przeważają korzyści, dlatego lepszym rozwiązaniem nie jest aplikacją monolityczną wdrożenia uruchomionych w jednym kontenerze, lub w kilku kontenerów.
 
 Aplikacji monolitycznej może nie być w prosty sposób decomposable na mikrousługi dobrze rozdzielone. Mikrousługi powinny działać niezależnie od siebie, aby zapewnić lepszą odporność aplikacji. Jeśli nie można dostarczyć wycinki funkcji niezależnie od aplikacji, oddzielając tylko zwiększa złożoność.
 
@@ -224,7 +224,7 @@ Na wczesnym etapie tworzenia aplikacji możesz nie mieć dalsze których natural
 
 Oddzielenie aplikacji w wielu procesach dyskretnych wprowadza również obciążenie. Istnieje więcej złożoności w podziale funkcji w różnych procesach. Protokoły komunikacyjne są coraz bardziej złożone. Zamiast wywołania metody należy użyć komunikacji asynchronicznej między usługami. Po przeniesieniu do architektury mikrousług, musisz dodać wiele bloków konstrukcyjnych zaimplementowane w wersji mikrousługi aplikacji w ramach aplikacji eShopOnContainers: Obsługa magistrali zdarzeń, odporności komunikat i ponownych prób i spójności ostatecznej.
 
-Znacznie prostsze [aplikacji referencyjnej eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) obsługuje użycie pojedynczej kontenerami monolitycznego. Aplikacja zawiera dwie aplikacje sieci web: ją przy użyciu tradycyjnych MVC, a drugi przy użyciu stron Razor. Jednocześnie można uruchamiać z katalogu głównego rozwiązania przy użyciu `docker-compose build` i `docker-compose up` poleceń. To polecenie umożliwia skonfigurowanie oddzielnych kontenerów dla każdego internetowego wystąpienia, za pomocą `Dockerfile` znalezione w katalogu głównym projektu sieci web i uruchamia każdego kontenera na oddzielnych portów. Można pobrać źródła dla tej aplikacji z witryny GitHub i uruchomić go lokalnie. Nawet tej aplikacji monolitycznej korzysta z wdrażana w środowisku kontenera.
+Znacznie prostsze [aplikacji referencyjnej eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) obsługuje użycie pojedynczej kontenerami monolitycznego. Aplikacja zawiera jednej aplikacji sieci web, która obejmuje tradycyjnych widoków MVC, internetowe interfejsy API i stron Razor. Tę aplikację można uruchomić z katalogu głównego rozwiązania przy użyciu `docker-compose build` i `docker-compose up` poleceń. To polecenie umożliwia skonfigurowanie kontenera sieci Web wystąpienia, za pomocą `Dockerfile` znalezione w katalogu głównym projektu sieci web i uruchamia kontener na określonym porcie. Można pobrać źródła dla tej aplikacji z witryny GitHub i uruchomić go lokalnie. Nawet tej aplikacji monolitycznej korzysta z wdrażana w środowisku kontenera.
 
 Do jednego wdrażania konteneryzowanych oznacza, że każde wystąpienie aplikacji działa w tym samym środowisku. Dotyczy to również Środowisko deweloperskie, gdzie odbywać się wcześnie środowisk testowych i programistycznych. Zespół opracowujący można uruchomić aplikację w środowisku konteneryzowanych, który odpowiada środowisku produkcyjnym.
 
@@ -236,24 +236,14 @@ Na koniec konteneryzowania aplikacji powoduje oddzielenie logiki biznesowej i st
 
 `eShopOnWeb` Uruchomienia projektu na platformie .NET Core. W związku z tym może działać w kontenerach opartych na systemie Linux albo systemem Windows. Należy pamiętać, wdrożenie platformy Docker, chcesz używać tego samego typu hosta dla programu SQL Server. Kontenery opartych na systemie Linux Zezwalaj na mniejszych rozmiarów i są preferowane.
 
-Visual Studio 2017 umożliwia Dodaj obsługę platformy Docker do istniejącej aplikacji, klikając prawym przyciskiem myszy nad projektem w **Eksploratora rozwiązań** i wybierając pozycję **Dodaj** > **obsługę platformy Docker** . Dodaje pliki wymagane i modyfikuje projekt, aby umożliwić ich używanie. Bieżący `eShopOnWeb` przykładowe ma już tych plików w miejscu.
+Można użyć programu Visual Studio 2017 r. lub nowszej można dodać obsługę platformy Docker do istniejącej aplikacji, klikając prawym przyciskiem myszy nad projektem w **Eksploratora rozwiązań** i wybierając pozycję **Dodaj** > **platformy Docker Obsługa**. Dodaje pliki wymagane i modyfikuje projekt, aby umożliwić ich używanie. Bieżący `eShopOnWeb` przykładowe ma już tych plików w miejscu.
 
-Poziom rozwiązania `docker-compose.yml` plik zawiera informacje o jakie obrazy do tworzenia i jakie kontenery do uruchomienia. Plik umożliwia `docker-compose` polecenie, aby uruchomić obie wersje aplikacji sieci web, w tym samym czasie. Można również użyć do konfigurowania zależności, takich jak kontener oddzielnej bazy danych.
+Poziom rozwiązania `docker-compose.yml` plik zawiera informacje o jakie obrazy do tworzenia i jakie kontenery do uruchomienia. Plik umożliwia `docker-compose` polecenie w celu uruchomienia wielu aplikacji w tym samym czasie. W tym przypadku jest tylko uruchamianie projektu sieci Web. Można również użyć do konfigurowania zależności, takich jak kontener oddzielnej bazy danych.
 
 ```yml
 version: '3'
 
 services:
-  eshopwebrazor:
-    image: eshopwebrazor
-    build:
-      context: .
-      dockerfile: src/WebRazorPages/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5107:5107"
-
   eshopwebmvc:
     image: eshopwebmvc
     build:
@@ -270,28 +260,27 @@ networks:
       name: nat
 ```
 
-`docker-compose.yml` Pliku odwołania `Dockerfile` w `Web` i `WebRazorPages` projektów. `Dockerfile` Służy do określania kontener, którego podstawowy, który będzie używany, i konfiguracji aplikacji w nim. `WebRazorPages`" `Dockerfile`:
+`docker-compose.yml` Pliku odwołania `Dockerfile` w `Web` projektu. `Dockerfile` Służy do określania kontener, którego podstawowy, który będzie używany, i konfiguracji aplikacji w nim. `Web`" `Dockerfile`:
 
 ```
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/aspnetcore-build:2.1.300-preview1 AS build
-RUN npm install -g bower@1.8.4
-WORKDIR /src
+COPY *.sln .
 COPY . .
-WORKDIR /src/src/WebRazorPages
-RUN dotnet restore -nowarn:msb3202,nu1503
-RUN dotnet build --no-restore -c Release -o /app
+WORKDIR /app/src/Web
+RUN dotnet restore
 
-FROM build AS publish
-RUN dotnet publish --no-restore -c Release -o /app
+RUN dotnet publish -c Release -o out
 
-FROM base AS final
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
+COPY --from=build /app/src/Web/out ./
+
+# Optional: Set this here if not setting it from docker-compose.yml
+# ENV ASPNETCORE_ENVIRONMENT Development
+
+ENTRYPOINT ["dotnet", "Web.dll"]
 ```
 
 ### <a name="troubleshooting-docker-problems"></a>Rozwiązywanie problemów z platformy Docker
@@ -300,10 +289,9 @@ Po jego uruchomieniu konteneryzowanej aplikacji będzie nadal działać, dopóki
 
 Należy pamiętać, że uruchamianie kontenerów platformy Docker może być powiązany z portów, które w przeciwnym razie spróbuj do użycia w środowisku programistycznym. Jeśli spróbujesz uruchomić ani debugować aplikację jako działający kontener platformy Docker przy użyciu tego samego portu, zostanie wyświetlony komunikat o błędzie informujący, że serwer nie może utworzyć powiązanie do tego portu. Jeszcze raz zatrzymywanie kontenera powinno rozwiązać problem.
 
-Jeśli chcesz dodać obsługę platformy Docker do aplikacji za pomocą programu Visual Studio, upewnij się, że platformy Docker jest uruchomiona, po wykonaniu tej czynności. Kreator nie będzie działać poprawnie, jeśli platformy Docker nie jest uruchomiona, po uruchomieniu kreatora. Ponadto Kreator sprawdza, czy bieżący wybór kontenera można dodać poprawną obsługę platformy Docker. Aby dodać obsługę kontenerów Windows, musisz uruchomić kreatora, gdy masz platformy Docker z kontenerów Windows skonfigurowane. Jeśli chcesz dodać obsługę kontenerów systemu Linux, uruchom kreatora, gdy masz platformy Docker z kontenerów systemu Linux skonfigurowany.
+Jeśli chcesz dodać obsługę platformy Docker do aplikacji za pomocą programu Visual Studio, upewnij się, że pulpitu platformy Docker jest uruchomiona, po wykonaniu tej czynności. Kreator nie będzie działać poprawnie, jeśli pulpitu platformy Docker nie jest uruchomiona, po uruchomieniu kreatora. Ponadto Kreator sprawdza, czy bieżący wybór kontenera można dodać poprawną obsługę platformy Docker. Aby dodać obsługę kontenerów Windows, musisz uruchomić kreatora, gdy masz pulpitu platformy Docker z kontenerów Windows skonfigurowany. Jeśli chcesz dodać obsługę kontenerów systemu Linux, uruchom kreatora, gdy masz platformy Docker z kontenerów systemu Linux skonfigurowany.
 
-> ### <a name="references--common-web-architectures"></a>Odwołania — typowych architektur w sieci web
->
+### <a name="references--common-web-architectures"></a>Odwołania — typowych architektur w sieci web
 > - **Wyczyść architektury**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Architektura przenikanie**  

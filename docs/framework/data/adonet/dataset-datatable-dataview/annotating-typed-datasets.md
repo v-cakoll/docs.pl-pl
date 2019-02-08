@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629618"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825735"
 ---
 # <a name="annotating-typed-datasets"></a>Dodawanie adnotacji do typizowanych elementów DataSet
 Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.Data.DataSet> bez modyfikowania schemat źródłowy. Modyfikowanie nazwy elementów w schemacie bazowego spowodowałoby wpisanego **DataSet** do odwoływania się do obiektów, które nie istnieją w źródle danych, a także stracić odwołania do obiektów, które istnieją w źródle danych.  
@@ -74,7 +74,7 @@ Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.D
 |**Nadrzędny** metody dostępu|TableNameRow|typedParent|  
 |**Zestaw danych** zdarzenia|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Aby użyć wpisane **zestawu danych** adnotacji, należy uwzględnić następujące **xmlns** odwołania w schemacie języka (XSD) definicji schematu XML. (Aby utworzyć xsd z tabel bazy danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Praca z zestawami danych w programie Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ Aby użyć wpisane **zestawu danych** adnotacji, należy uwzględnić następujące **xmlns** odwołania w schemacie języka (XSD) definicji schematu XML. Aby utworzyć xsd z tabel bazy danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Praca z zestawami danych w programie Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  

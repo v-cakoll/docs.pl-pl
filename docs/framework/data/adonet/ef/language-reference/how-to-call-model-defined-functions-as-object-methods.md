@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 4e88143943c6418d11da55b8e7458a4c8f682934
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b145c3d2b262729fae9a03b7930b286f7641d36
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597505"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825722"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Instrukcje: Wywoływanie funkcji definiowanych przez Model jako metod obiektu
 W tym temacie opisano sposób wywołania funkcji definiowanych przez model jako metodę na <xref:System.Data.Objects.ObjectContext> obiektu lub metody statycznej na klasę niestandardową. A *funkcja zdefiniowana przez model* jest funkcją, która jest zdefiniowana w modelu koncepcyjnym. Procedury przedstawione w tym temacie opisano sposób wywołać te funkcje bezpośrednio, zamiast wywoływania ich z LINQ do zapytań jednostki. Aby dowiedzieć się, jak wywoływanie funkcji definiowanych przez model w składniku LINQ do jednostek zapytań, zobacz [jak: Wywoływanie funkcji definiowanych przez Model w zapytaniach](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Czy wywołania funkcji definiowanych przez model jako <xref:System.Data.Objects.ObjectContext> metody lub jako statyczną metodę na klasę niestandardową, należy najpierw mapowanie metody funkcji definiowanych przez model <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Jednak gdy należy zdefiniować metodę <xref:System.Data.Objects.ObjectContext> klasy, należy użyć <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> właściwości do udostępnienia dostawcy LINQ, natomiast podczas definiowania metody statycznej na klasę niestandardową, należy użyć <xref:System.Linq.IQueryable.Provider%2A> właściwości do udostępnienia dostawcy LINQ. Aby uzyskać więcej informacji zobacz przykłady, które należy wykonać poniższe procedury.  
   
- Poniższej procedury zapewnienia wysokiego poziomu opisanych wywoływanie funkcji definiowanych przez model jako metodę na <xref:System.Data.Objects.ObjectContext> obiektu oraz metody statycznej na klasę niestandardową. Przykłady, które należy wykonać więcej szczegółowych informacji o krokach w procedurach. W procedurach założono, że zdefiniowano funkcję w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
+ Poniższej procedury zapewnienia wysokiego poziomu opisanych wywoływanie funkcji definiowanych przez model jako metodę na <xref:System.Data.Objects.ObjectContext> obiektu oraz metody statycznej na klasę niestandardową. Przykłady, które należy wykonać więcej szczegółowych informacji o krokach w procedurach. W procedurach założono, że zdefiniowano funkcję w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Aby wywołać funkcję definiowanych przez model jako metodę do obiektu ObjectContext  
   
@@ -46,9 +46,9 @@ W tym temacie opisano sposób wywołania funkcji definiowanych przez model jako 
 ## <a name="example"></a>Przykład  
  **Wywoływanie funkcji definiowanych przez Model jako metodę do obiektu ObjectContext**  
   
- Poniższy przykład pokazuje, jak wywoływanie funkcji definiowanych przez model jako metodę na <xref:System.Data.Objects.ObjectContext> obiektu. W przykładzie użyto [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
+ Poniższy przykład pokazuje, jak wywoływanie funkcji definiowanych przez model jako metodę na <xref:System.Data.Objects.ObjectContext> obiektu. W przykładzie użyto [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
- Należy wziąć pod uwagę, że modelu koncepcyjnego poniżej:: gettotalsize() zwróciło produktu przychodu dla określonego produktu. (Aby uzyskać informacje dotyczące dodawania funkcji do modelu koncepcyjnego, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
+ Należy wziąć pod uwagę, że modelu koncepcyjnego poniżej:: gettotalsize() zwróciło produktu przychodu dla określonego produktu. (Aby uzyskać informacje dotyczące dodawania funkcji do modelu koncepcyjnego, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).)  
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
@@ -84,12 +84,12 @@ W tym temacie opisano sposób wywołania funkcji definiowanych przez model jako 
 ## <a name="example"></a>Przykład  
  **Wywoływanie funkcji definiowanych przez Model jako metody statycznej na klasę niestandardową**  
   
- Następny przykład pokazuje, jak wywoływanie funkcji definiowanych przez model jako metody statycznej na klasę niestandardową. W przykładzie użyto [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
+ Następny przykład pokazuje, jak wywoływanie funkcji definiowanych przez model jako metody statycznej na klasę niestandardową. W przykładzie użyto [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 > [!NOTE]
 >  Po wywołaniu funkcji definiowanych przez model jako metody statycznej na klasę niestandardową, funkcji definiowanych przez model musi zaakceptować kolekcji i zwracają agregacji wartości w kolekcji.  
   
- Należy wziąć pod uwagę, że modelu koncepcyjnego poniżej:: gettotalsize() zwróciło przychodu z produktu dla kolekcji szczegóły zamówienia sprzedaży. (Aby uzyskać informacje dotyczące dodawania funkcji do modelu koncepcyjnego, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
+ Należy wziąć pod uwagę, że modelu koncepcyjnego poniżej:: gettotalsize() zwróciło przychodu z produktu dla kolekcji szczegóły zamówienia sprzedaży. (Aby uzyskać informacje dotyczące dodawania funkcji do modelu koncepcyjnego, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).).  
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
@@ -106,6 +106,6 @@ W tym temacie opisano sposób wywołania funkcji definiowanych przez model jako 
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Omówienie pliku edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [Omówienie pliku edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [Wywoływanie funkcji w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

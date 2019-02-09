@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: daaa93c4da16ac67b7f7018fdafdc2b2d9f0784a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1099d8ec8e9d516b2269232857c695f9ff04d99c
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692785"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904593"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Uzyskiwanie DbProviderFactory
 Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> polega na przekazywanie informacji o dostawcy danych do <xref:System.Data.Common.DbProviderFactories> klasy. Na podstawie tych informacji <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> metoda tworzy fabrykę dostawcy silnie typizowanych. Na przykład, aby utworzyć <xref:System.Data.SqlClient.SqlClientFactory>, można przekazać `GetFactory` ciąg zawierający nazwę dostawcy, określony jako "System.Data.SqlClient". Inne przeciążenia `GetFactory` przyjmuje <xref:System.Data.DataRow>. Po utworzeniu fabryki dostawców, następnie umożliwia jej metod do tworzenia obiektów dodatkowych. Niektóre metody `SqlClientFactory` obejmują <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, i <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -98,5 +98,5 @@ Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> polega na przekaz
 ## <a name="see-also"></a>Zobacz także
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Przy użyciu klas konfiguracji](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Przy użyciu klas konfiguracji](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
+- [Omówienie ADO.NET](ado-net-overview.md)

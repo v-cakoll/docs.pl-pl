@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: b73f1063c83d61e02a01cb31932d93c468996598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d7ec8914fe83bb34e946fd5596f161e526038b1
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741499"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904618"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ Considerations (WCF Data Services)
 Ten temat zawiera informacje o sposobie w LINQ, które zapytania są składa się i są stosowane podczas korzystania z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta i ograniczeń za pomocą LINQ do zapytań usługi danych, który implementuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Aby uzyskać więcej informacji na temat tworzenia i wykonywanie zapytań względem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie danych usługi, zobacz [zapytań usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -36,7 +36,7 @@ Ten temat zawiera informacje o sposobie w LINQ, które zapytania są składa si�
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- Aby uzyskać bardziej ogólne informacje dotyczące LINQ, zobacz [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Aby uzyskać bardziej ogólne informacje dotyczące LINQ, zobacz [Language-Integrated Query (LINQ) - C# ](../../../csharp/programming-guide/concepts/linq/index.md) lub [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
  LINQ umożliwia tworzenie zapytań przy użyciu obu specyficzny dla języka deklaratywnego Składnia kwerendy, pokazano w poprzednim przykładzie, a także zestaw metod zapytania, znane jako standardowych operatorów zapytań. Kwerendę równoważny z poprzednim przykładem może być składana przy użyciu tylko oparte na metodzie składni, jak pokazano w poniższym przykładzie:  
   

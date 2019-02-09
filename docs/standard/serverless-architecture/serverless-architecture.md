@@ -4,16 +4,16 @@ description: Badań różnych architektur oraz aplikacje, które są obsługiwan
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150306"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904792"
 ---
 # <a name="serverless-architecture"></a>Architektura bezserwerowa
 
-Dostępnych jest wiele metod, aby przy użyciu architektur bezserwerowych. W tym rozdziale przedstawiono przykłady typowych architektur, które integrują się bez użycia serwera. Obejmuje ona również kwestie, które mogą stanowić wyzwania dodatkowe lub wymagają dodatkowych brany pod uwagę podczas implementowania bez użycia serwera. Na koniec kilka przykładów projektu są pod warunkiem, które ilustrują, różne przypadki użycia bez użycia serwera.
+Dostępnych jest wiele metod za pomocą [bezserwerowe](http://azure.com/serverless) architektury. W tym rozdziale przedstawiono przykłady typowych architektur, które integrują się bez użycia serwera. Obejmuje ona również kwestie, które mogą stanowić wyzwania dodatkowe lub wymagają dodatkowych brany pod uwagę podczas implementowania bez użycia serwera. Na koniec kilka przykładów projektu są pod warunkiem, które ilustrują, różne przypadki użycia bez użycia serwera.
 
 Bez użycia serwera hostów często używają istniejącego opartych na kontenerach lub warstwy PaaS do zarządzania wystąpieniami bez użycia serwera. Na przykład, na podstawie usługi Azure Functions [usługi Azure App Service](https://docs.microsoft.com/azure/app-service/). Usługa App Service umożliwia skalowanie w poziomie wystąpienia i zarządzanie nimi środowiska uruchomieniowego, który jest wykonywany kod usługi Azure Functions. W przypadku funkcji z systemem Windows działa hosta jako PaaS i skaluje się poza środowisko uruchomieniowe platformy .NET. Dla funkcji opartych na systemie Linux host korzysta z kontenerów.
 

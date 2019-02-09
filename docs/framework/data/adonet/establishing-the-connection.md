@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 6e3a88f7b34c64480d69df1a06a113e392d8fe53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619386"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903815"
 ---
 # <a name="establishing-the-connection"></a>Podczas nawiązywania połączenia
 Aby połączyć z programem Microsoft SQL Server, należy użyć <xref:System.Data.SqlClient.SqlConnection> obiektu .NET Framework Data Provider for SQL Server. Aby połączyć się ze źródłem danych OLE DB, użyj <xref:System.Data.OleDb.OleDbConnection> obiektu .NET Framework Data Provider for OLE DB. Aby połączyć się ze źródłem danych ODBC, użyj <xref:System.Data.Odbc.OdbcConnection> obiekt dostawcy danych programu .NET Framework dla ODBC. Aby połączyć się ze źródłem danych Oracle, użyj <xref:System.Data.OracleClient.OracleConnection> obiektu .NET Framework Data Provider for Oracle. Bezpieczne przechowywanie i pobieranie parametrów połączenia, zobacz [ochrony informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -51,7 +51,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>Zintegrowane zabezpieczenia i platformy ASP.NET  
  SQL Server, zintegrowane zabezpieczenia (znany także jako zaufanych połączeń) ułatwia ochronę podczas nawiązywania połączenia z programem SQL Server, ponieważ nie uwidacznia identyfikator użytkownika i hasło w parametrach połączenia i jest to zalecana metoda do uwierzytelniania połączenia. Zintegrowane zabezpieczenia używa bieżącej tożsamości zabezpieczeń lub token wykonywanego procesu. Dla aplikacji klasycznych zazwyczaj jest to tożsamość aktualnie zalogowanego użytkownika.  
   
- Tożsamość zabezpieczeń dla aplikacji platformy ASP.NET można ustawić na jeden z kilku różnych opcji. Aby lepiej zrozumieć tożsamości zabezpieczeń, która aplikacja ASP.NET używa podczas nawiązywania połączenia z programem SQL Server, zobacz [personifikacji aplikacji ASP.NET](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [Uwierzytelnianie ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), i [jak: Dostęp do programu SQL Server przy użyciu Windows zintegrowane zabezpieczenia](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
+ Tożsamość zabezpieczeń dla aplikacji platformy ASP.NET można ustawić na jeden z kilku różnych opcji. Aby lepiej zrozumieć tożsamości zabezpieczeń, która aplikacja ASP.NET używa podczas nawiązywania połączenia z programem SQL Server, zobacz [personifikacji aplikacji ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)), [Uwierzytelnianie ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100)), i [jak: Dostęp do programu SQL Server przy użyciu Windows zintegrowane zabezpieczenia](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100)).  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>Łączenie ze źródłem danych OLE DB  
  .NET Framework Data Provider for OLE DB zapewnia łączność ze źródłami danych uwidaczniane za pomocą OLE DB (za pośrednictwem SQLOLEDB, dostawca OLE DB dla programu SQL Server), za pomocą **oledbconnection —** obiektu.  

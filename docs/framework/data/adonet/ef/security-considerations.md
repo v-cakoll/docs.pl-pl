@@ -2,12 +2,12 @@
 title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612830"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904143"
 ---
 # <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla opracowywanie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również przestrzegać zaleceń dotyczących tworzenia bezpiecznych [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [Przegląd zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -38,7 +38,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
 -   Szyfrowanie przy użyciu konfiguracji chronionych sekcji pliku konfiguracji.  
   
-     Program ASP.NET zapewnia funkcję o nazwie chronionych konfigurację, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Mimo że przeznaczony głównie dla platformy ASP.NET, umożliwia także konfiguracji chronionej do szyfrowania sekcjami plików konfiguracji w aplikacji Windows. Aby uzyskać szczegółowy opis nowych funkcji konfiguracji chronionej, zobacz [szyfrowania informacji przy użyciu chronione Konfiguracja](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+     Program ASP.NET zapewnia funkcję o nazwie chronionych konfigurację, która umożliwia szyfrowanie poufnych informacji w pliku konfiguracji. Mimo że przeznaczony głównie dla platformy ASP.NET, umożliwia także konfiguracji chronionej do szyfrowania sekcjami plików konfiguracji w aplikacji Windows. Aby uzyskać szczegółowy opis nowych funkcji konfiguracji chronionej, zobacz [szyfrowania informacji przy użyciu chronione Konfiguracja](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
 -   Store parametry połączenia w plikach konfiguracyjnych zabezpieczone.  
   
@@ -98,7 +98,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
      Ataki przez iniekcję SQL mogą być wykonywane w [!INCLUDE[esql](../../../../../includes/esql-md.md)] poprzez dostarczenie złośliwych danych do wartości, które są używane w predykacie zapytania i w nazwach parametrów. Aby uniknąć ryzyka wstrzyknięcie kodu SQL, nigdy nie należy łączyć dane wejściowe użytkownika z [!INCLUDE[esql](../../../../../includes/esql-md.md)] tekst polecenia.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania akceptować wszędzie, gdzie parametry, że literały są akceptowane. Należy użyć sparametryzowanych zapytań zamiast iniekcji literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć za pomocą metody konstruktora zapytań do konstruowania bezpiecznie [jednostki SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania akceptować wszędzie, gdzie parametry, że literały są akceptowane. Należy użyć sparametryzowanych zapytań zamiast iniekcji literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć użycie [metody konstruktora zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) bezpiecznie skonstruowanie jednostki SQL.  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ataki przez iniekcję kodu:  
   
@@ -132,7 +132,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Podczas generowania i pracą z nimi przy użyciu typów jednostek, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Nie należy udostępniać obiektu ObjectContext w różnych domenach aplikacji.  
- Udostępnianie <xref:System.Data.Objects.ObjectContext> z więcej niż jednej aplikacji domeny może spowodować ujawnienie informacji w parametrach połączenia. Zamiast tego należy przeniesienie obiektów zserializowanych lub wykresów obiektów do innej domeny aplikacji i następnie dołączyć te obiekty do <xref:System.Data.Objects.ObjectContext> w tej domenie aplikacji. Aby uzyskać więcej informacji, zobacz [serializacji obiektów](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Udostępnianie <xref:System.Data.Objects.ObjectContext> z więcej niż jednej aplikacji domeny może spowodować ujawnienie informacji w parametrach połączenia. Zamiast tego należy przeniesienie obiektów zserializowanych lub wykresów obiektów do innej domeny aplikacji i następnie dołączyć te obiekty do <xref:System.Data.Objects.ObjectContext> w tej domenie aplikacji. Aby uzyskać więcej informacji, zobacz [serializacji obiektów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
 #### <a name="prevent-type-safety-violations"></a>Zapobiegaj naruszenia bezpieczeństwa typu.  
  W przypadku naruszenia bezpieczeństwa typu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie może zagwarantować integralności danych w obiektach. Naruszenia bezpieczeństwa typu może wystąpić, jeśli zezwolisz na niezaufane aplikacje do uruchamiania przy użyciu zabezpieczeń dostępu kodu pełnego zaufania.  

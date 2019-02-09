@@ -2,6 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
+ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903619"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET jest zestaw klas, które ujawniają usługi dostępu do danych dla programistów .NET Framework. ADO.NET zapewnia bogaty zestaw składników do tworzenia aplikacji rozproszonych, udostępnianie danych. Jest integralną częścią programu .NET Framework, zapewniając dostęp do relacyjnych, XML i dane aplikacji. ADO.NET obsługuje szereg rozwoju, w tym tworzenie frontonu bazy danych klientów i używanych przez aplikacje, narzędzi, języków lub przeglądarek internetowych obiektów firm warstwy środkowej.  
@@ -38,23 +44,20 @@ ADO.NET jest zestaw klas, które ujawniają usługi dostępu do danych dla progr
  Zawiera opis funkcji i zachowań, które są specyficzne dla .NET Framework Data Provider for Oracle.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [PAVE zabezpieczeń w natywnym i kodzie .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- Zawiera łącza do tematów zabezpieczeń dla programu Visual Studio, .NET Framework i kryptografii.  
+ [Zapytanie o języku zintegrowanym (LINQ) —C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ Zawiera łącza do tematów LINQ i przykłady, za pomocą C#.  
   
- [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- Zawiera łącza do tematów LINQ i przykładów.  
+ [Zapytanie o języku zintegrowanym (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Zawiera łącza do tematów LINQ i przykłady w języku Visual Basic.  
   
  [Usługi danych WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
  Opisuje sposób używania [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do wdrażania usług danych w Internecie lub intranecie, które implementują Open Data Protocol (OData).  
   
- [Podstawowe technologie programowania](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ [Przewodnik projektowania programu .NET framework](../../development-guide.md)  
  Zawiera łącza do informacji o zadaniach tworzenia w standardzie w programie .NET Framework.  
   
- [Zaawansowanych technologii.](https://msdn.microsoft.com/library/a493kdy6.aspx)  
- Zawiera łącza do informacji na temat zadań zaawansowanych rozwoju i technik w .NET Framework.  
-  
- [Przykłady i Przewodniki Szybki Start](https://msdn.microsoft.com/library/ms184422.aspx)  
- Zapewnia pełną listy wszystkich przykładów i quickstart — przykłady związane z programu .NET Framework.  
+ [Przykłady i samouczki](../../../samples-and-tutorials/index.md)  
+ Zawiera listę samouczki i przykłady kodu platformy .NET.
   
 ## <a name="see-also"></a>Zobacz także
 - [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

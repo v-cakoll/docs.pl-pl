@@ -2,15 +2,15 @@
 title: Funkcje zdefiniowane przez użytkownika (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
-ms.openlocfilehash: 7810f2b643ace0b8219855db80c6ed5466df1c1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86b7d26e7959be954b4ddd7404f3a3ad6c76c1c5
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694662"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904508"
 ---
 # <a name="user-defined-functions-entity-sql"></a>Funkcje zdefiniowane przez użytkownika (jednostka SQL)
-Jednostka SQL obsługuje wywoływanie funkcji zdefiniowanej przez użytkownika w zapytaniu. Można zdefiniować tych wbudowanych funkcji z zapytaniem (zobacz [jak: Wywołaj funkcję User-defined](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)) lub jako część modelu koncepcyjnego (zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)). Model koncepcyjny funkcji są definiowane jako polecenia SQL jednostki w [DefiningExpression](https://msdn.microsoft.com/library/d3da8d8b-a048-47ee-8d81-0c2ea3acdd3e) elementu [funkcja](https://msdn.microsoft.com/library/dc3beca7-55cf-4977-8db0-5064cdbab134) elementu w modelu koncepcyjnym.  
+Jednostka SQL obsługuje wywoływanie funkcji zdefiniowanej przez użytkownika w zapytaniu. Można zdefiniować tych wbudowanych funkcji z zapytaniem (zobacz [jak: Wywołaj funkcję User-defined](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))) lub jako część modelu koncepcyjnego (zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))). Model koncepcyjny funkcji są definiowane jako polecenia SQL jednostki w [DefiningExpression](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#definingexpression-element-csdl) elementu [funkcja](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#function-element-csdl) elementu w modelu koncepcyjnym.  
   
  Jednostka SQL umożliwia zdefiniowanie funkcji w niej samo polecenie zapytania. [Funkcja](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operator definiuje wbudowane funkcje. Można zdefiniować wiele funkcji za pomocą jednego polecenia, a te funkcje mogą mieć taką samą nazwę funkcji, tak długo, jak sygnatury funkcji są unikatowe. Aby uzyskać więcej informacji, zobacz [rozdzielczość przeciążenia funkcji](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).  
   

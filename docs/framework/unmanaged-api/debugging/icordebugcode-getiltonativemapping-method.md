@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8614dd612fff2886c4e44a977d05a575fce74eec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e49c24a4b98a5287ec27b1667f45055d9a94d53
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648946"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903415"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping — Metoda
 Pobiera tablicę wystąpień "cor_debug_il_to_native_map —", które reprezentują mapowań od przesunięcia języka pośredniego (MSIL) firmy Microsoft do natywnych przesunięć.  
@@ -46,7 +46,7 @@ HRESULT GetILToNativeMapping (
  [out] Wskaźnik do rzeczywistej liczby elementów zwracanych w `map` tablicy.  
   
  `map`  
- [out] Tablica `COR_DEBUG_IL_TO_NATIVE_MAP` stuctures, z których każdy reprezentuje mapowanie z przesunięcia MSIL na przesunięciu macierzystym.  
+ [out] Tablica `COR_DEBUG_IL_TO_NATIVE_MAP` struktur, z których każdy reprezentuje mapowanie z przesunięcia MSIL na przesunięciu macierzystym.  
   
  Nie ma żadnych kolejności do tablicy elementów zwracanych.  
   

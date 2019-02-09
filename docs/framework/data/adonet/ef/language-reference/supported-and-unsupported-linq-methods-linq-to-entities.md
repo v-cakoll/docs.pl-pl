@@ -2,12 +2,12 @@
 title: Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: a1a5f9f1789d8c0446a2816c2c07f61b6a373869
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710381"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904285"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)
 Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych operatorów zapytań, które są obsługiwane lub nieobsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Wiele LINQ standardowych operatorów zapytań ma przeciążona wersja, która akceptuje argument liczby całkowitej. Argument liczby całkowitej odpowiada liczony od zera indeks w sekwencji, sprawdzonych, <xref:System.Collections.Generic.IEqualityComparer%601>, lub <xref:System.Collections.Generic.IComparer%601>. O ile nie określono inaczej, te przeciążone wersje LINQ standardowe operatory zapytań nie są obsługiwane, a próby ich wykorzystania spowoduje zgłoszenie wyjątku.  
@@ -145,7 +145,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 |<xref:System.Linq.Queryable.Sum%2A>|Nieobsługiwane|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Typ metody  
- LINQ standardowych operatorów zapytań, które zajmuje się konwersji typu CLR i testowanie są obsługiwane w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. W składniku LINQ to Entities są obsługiwane tylko te typy CLR, mapowane na typy modelu koncepcyjnego. Aby uzyskać listę typów modelu koncepcyjnego, zobacz [koncepcyjny modelu typy (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Poniższa tabela zawiera listę metod typu obsługiwane i nieobsługiwane.  
+ LINQ standardowych operatorów zapytań, które zajmuje się konwersji typu CLR i testowania są obsługiwane w programie Entity Framework. W składniku LINQ to Entities są obsługiwane tylko te typy CLR, mapowane na typy modelu koncepcyjnego. Aby uzyskać listę typów modelu koncepcyjnego, zobacz [koncepcyjny modelu typy (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Poniższa tabela zawiera listę metod typu obsługiwane i nieobsługiwane.  
   
 |Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

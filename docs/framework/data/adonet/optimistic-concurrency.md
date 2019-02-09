@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 132a4c72f6abc4b1510c4d28b4ec0de6f80c1261
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd8aeeb1ed56acfca0d57cb3c2c56cabab184683
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539659"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904085"
 ---
 # <a name="optimistic-concurrency"></a>Optymistyczna współbieżność
 W środowisku wielodostępnym, istnieją dwa modele aktualizacji danych w bazie danych: optymistycznej współbieżności i pesymistycznej współbieżności. <xref:System.Data.DataSet> Obiektu jest przeznaczona do zachęcać do stosowania funkcji optymistycznej współbieżności dla długotrwałych działań, takich jak dane usług zdalnych i wchodzenie w interakcje z danymi.  
@@ -123,7 +123,7 @@ adapter.UpdateCommand.Parameters.Add( _
   "@CompanyName", SqlDbType.NVarChar, 30, "CompanyName")  
   
 ' Pass the original values to the WHERE clause parameters.  
-Dim parameter As SqlParameter = dataSet.UpdateCommand.Parameters.Add( _  
+Dim parameter As SqlParameter = adapter.UpdateCommand.Parameters.Add( _  
   "@oldCustomerID", SqlDbType.NChar, 5, "CustomerID")  
 parameter.SourceVersion = DataRowVersion.Original  
 parameter = adapter.UpdateCommand.Parameters.Add( _  

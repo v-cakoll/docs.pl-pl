@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634c76c3510d594584f06ea14bed84b1b0423c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26d763884cc392a08e8cef7f5321d23f1c52a7fa
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502182"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903512"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>Przetwarzanie danych XML przy użyciu LINQ to XML
 LINQ to XML jest nowy model w .NET Framework w wersji 3.5 do przetwarzania danych XML. LINQ to XML umożliwia deweloperom robić wszystko, czego mogą oczekiwać z danymi XML: wykonywanie zapytań, modyfikowanie, tworzenia, zapisywania i serializacja dokumentów XML. Istotne zalety znajdują się w funkcje zapytań i tworzenia.  
@@ -19,7 +19,7 @@ LINQ to XML jest nowy model w .NET Framework w wersji 3.5 do przetwarzania danyc
   
  LINQ to XML korzysta z technologii zapytanie o języku zintegrowanym (LINQ) w programie .NET Framework w wersji 3.5. LINQ rozszerza składni języka C# i Visual Basic oraz możliwości kwerend, które można rozszerzyć na potencjalnie dowolnego magazynu danych.  
   
- Zobacz [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) szczegółowe omówienie użytkowania i zobacz [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) omówienie LINQ framework.  
+ Aby uzyskać szczegółowe omówienie jego użycia, zobacz [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). Aby uzyskać omówienie LINQ framework, zobacz [Language-Integrated Query (LINQ) - C# ](../../../csharp/programming-guide/concepts/linq/index.md) lub [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

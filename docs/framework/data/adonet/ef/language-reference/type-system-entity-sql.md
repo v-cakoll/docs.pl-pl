@@ -2,12 +2,12 @@
 title: System typów (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: 1831028f9e659dab90ca3c8689d7ff2d5c0ee36a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2748407703b90c60d3082b0e6c0b6aa2d3fb365
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554338"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904682"
 ---
 # <a name="type-system-entity-sql"></a>System typów (jednostka SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje wiele typów:  
@@ -18,7 +18,7 @@ ms.locfileid: "54554338"
   
 -   Typy anonimowe, które nie są zdefiniowane w schemacie na jawnie: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType>, i <xref:System.Data.Metadata.Edm.RefType>.  
   
- W tej sekcji opisano typy anonimowe, które nie są zdefiniowane w schemacie na jawnie, ale są obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Informacje o typach pierwotnych i nominalną, zobacz [koncepcyjny modelu typy (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4).  
+ W tej sekcji omówiono typy anonimowe, które nie są zdefiniowane w schemacie na jawnie, ale są obsługiwane przez jednostki SQL. Informacje o typach pierwotnych i nominalną, zobacz [koncepcyjny modelu typy (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl).  
   
 ## <a name="rows"></a>Wiersze  
  Struktura wiersz zależy od sekwencji nazwane i wpisane elementów członkowskich, które składają się wiersz. Typ wiersza jest Brak tożsamości i nie może być dziedziczona z. Wystąpienia tego samego typu wiersza są równoważne, jeżeli elementy członkowskie są odpowiednio równoważne. Wiersze nie zachowanie poza ich równoważność strukturalnych i nie mają odpowiednika w środowisko uruchomieniowe języka wspólnego. Zapytania może spowodować struktur, które zawierają wiersze lub kolekcji wierszy. Interfejs API powiązania między [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania i języka hosta definiuje, jak wiersze są realizowane w zapytaniu, wytworzonego wynik. Aby uzyskać informacji na temat sposobu tworzenia wystąpienia wiersza, zobacz [konstruowanie typów](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45748641"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904374"
 ---
 # <a name="working-with-data-definition-language"></a>Praca z językiem definicji danych
 Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] w wersji 4 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje języka definicji danych (DDL). Dzięki temu można utworzyć lub usunąć wystąpienie bazy danych na podstawie parametrów połączenia i metadanych modelu magazynu (SSDL).  
@@ -40,11 +40,11 @@ Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]
   
 2.  Dodawanie istniejącego modelu do aplikacji.  
   
-    1.  Dodaj pusty modelu o nazwie `SchoolModel`. Aby utworzyć pusty model, zobacz [porady: Tworzenie nowego edmx pliku](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) tematu.  
+    1.  Dodaj pusty modelu o nazwie `SchoolModel`. Aby utworzyć pusty model, zobacz [jak: Tworzenie nowego edmx pliku](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) tematu.  
   
      Plik SchoolModel.edmx zostanie dodany do projektu.  
   
-    1.  Skopiuj pojęciach, magazynu i mapowanie zawartości przez model do szkoły [modelu School](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) tematu.  
+    1.  Skopiuj pojęciach, magazynu i mapowanie zawartości przez model do szkoły [modelu School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) tematu.  
   
     2.  Otwórz plik SchoolModel.edmx i Wklej zawartość w ramach `edmx:Runtime` tagów.  
   

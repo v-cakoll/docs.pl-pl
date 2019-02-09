@@ -2,14 +2,14 @@
 title: Port kodu z .NET Framework i .NET Core
 description: Zrozumieć proces przenoszenia i Odkryj narzędzia, które mogą być przydatne podczas przenoszenia projektu .NET Framework i .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266575"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903569"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Przyłącz kod z .NET Framework i .NET Core
 
@@ -37,8 +37,6 @@ Jest to proces, firma Microsoft zaleca należy wykonać podczas przenoszenia pro
 
 5. Wykonaj swój plan w celu przenoszenia!
 
-## <a name="tools-to-help"></a>Narzędzia ułatwiające
-
 Na poniższej liście przedstawiono narzędzia, że może się okazać przydatne podczas przenoszenia proces:
 
 * Narzędzia .NET portability Analyzer - [narzędzia wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases) lub [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), łańcuch narzędzi, który można wygenerować raport jak przenośny kod jest między .NET Framework i .NET Core za pomocą zestaw, zestaw z rozbiciem na poszczególne problemy. Aby uzyskać więcej informacji, zobacz [narzędzia .NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
@@ -51,4 +49,4 @@ Ponadto, możesz spróbować rozwiązań mniejszych portu lub poszczególnych pr
 > CsprojToVs2017 to narzędzia innych firm. Nie ma żadnej gwarancji, która będzie działać w przypadku wszystkich swoich projektach i może spowodować, że wprowadzono subtelne zmiany w zachowaniu, który, na których polegasz. CsprojToVs2017 powinien być używany jako _punkt początkowy_ który automatyzuje podstawowe czynności, które można zautomatyzować. Nie jest gwarantowana rozwiązania do migrowania formatów plików projektu.
 
 >[!div class="step-by-step"]
->[Next](third-party-deps.md)
+>[Next](net-framework-tech-unavailable.md)

@@ -2,14 +2,14 @@
 title: Analizowanie zależności kodu portów w celu platformy .NET Core
 description: Dowiedz się, jak analizować zależnościami zewnętrznymi w celu portu projekty w programie .NET Framework i .NET Core.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415224"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904336"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analizowanie zależności kodu portów w celu platformy .NET Core
 
@@ -93,13 +93,13 @@ Aby pominąć to ostrzeżenie, edytując plik projektu, znaleźć `PackageRefere
 
 Aby uzyskać więcej informacji na temat sposobu pomijanie ostrzeżeń kompilatora w programie Visual Studio, zobacz [pomijanie ostrzeżeń dla pakietów NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
 
-### <a name="port-your-packages-to-packagereference"></a>Pakietów do portu `PackageReference`
+## <a name="port-your-packages-to-packagereference"></a>Pakietów do portu `PackageReference`
 
 Korzysta z platformy .NET core [PackageReference](/nuget/consume-packages/package-references-in-project-files) do określania zależności pakietów. Jeśli używasz [packages.config](/nuget/reference/packages-config) do określenia pakietów, musisz przekonwertować za pośrednictwem `PackageReference`.
 
 Dowiedz się więcej na [migracja z pliku packages.config na PackageReference](/nuget/reference/migrate-packages-config-to-package-reference).
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Co zrobić, gdy Twoje zależności pakietów NuGet nie zostanie uruchomiona na platformie .NET Core
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Co zrobić, gdy Twoje zależności pakietów NuGet nie zostanie uruchomiona na platformie .NET Core
 
 Istnieje kilka rzeczy, które można zrobić, jeśli pakiet NuGet, których zależysz nie działa na platformie .NET Core:
 
@@ -119,6 +119,5 @@ Zespół .NET chce wiedzieć, które biblioteki są najważniejsze dla pomocy te
 
 Może mieć zależność, która nie jest pakiet NuGet, takich jak biblioteki DLL w systemie plików. Jedynym sposobem ustalenia przenoszenia tej zależności jest uruchomienie [narzędzia .NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport) narzędzia. Narzędzie można analizować zestawów, które obsługują program .NET Framework i zidentyfikować interfejsy API, które nie są przenośne na innych platformach .NET, takich jak .NET Core. Narzędzie można uruchomić jako aplikację konsolową w języku lub [rozszerzenia programu Visual Studio](../../standard/analyzers/portability-analyzer.md).
 
-## <a name="next-steps"></a>Następne kroki
-
-Jeśli masz przenoszenie biblioteki, zapoznaj się z [przenoszenie bibliotek](libraries.md).
+>[!div class="step-by-step"]
+>[Next](libraries.md)

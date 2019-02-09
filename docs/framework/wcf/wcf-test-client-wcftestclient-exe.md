@@ -2,12 +2,12 @@
 title: Testowy klient WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: d48caebed857a3a61842b1ea1d3e8b2977d749ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611387"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903996"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Testowy klient WCF (WcfTestClient.exe)
 Windows Communication Foundation (WCF) testowanie klient (WcfTestClient.exe) jest narzędziem graficznego interfejsu użytkownika, które umożliwia użytkownikom testu parametrów wejściowych, przesyłanie, że dane wejściowe do usługi i wyświetlanie odpowiedzi, który usługa wysyła z powrotem. Zapewnia bezproblemowe usługi testowania doświadczenie w połączeniu z hosta usługi WCF.  
@@ -125,7 +125,7 @@ Windows Communication Foundation (WCF) testowanie klient (WcfTestClient.exe) jes
  Podczas serwera proxy są wyłączone, elementy menu do generowania, kompilowania binarne lub wywołania usługi, które obsługuje odświeżania usługi. Wywołania usługi jest niedostępne.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>Lokalizacja plików wygenerowanych przez klienta testowego  
- Domyślnie klient testowy WCF magazynów generowane klienta kod i pliki konfiguracyjne w folderze "%appdata%\Local\temp\Test projektów klienckich". Ten folder jest usuwany po zakończeniu klienta testowego WCF. Jeśli plik konfiguracji zostanie zmodyfikowany w kliencie testowym WCF i **zawsze Generuj konfiguracji podczas uruchamiania usługi** opcja jest wyłączona, zmodyfikowany plik zostanie skopiowany do folderu "Pamięci podręcznej konfiguracji" w obszarze "Moje Documents\Test projektów klienckich Projektów klienckich Documents\Test"za pomocą mapowania pliku XML (metadane adres pliku nazwa) jako indeks.  
+ Domyślnie klient testowy WCF magazynów generowane klienta kod i pliki konfiguracyjne w folderze "%appdata%\Local\temp\Test projektów klienckich". Ten folder jest usuwany po zakończeniu klienta testowego WCF. Jeśli plik konfiguracji zostanie zmodyfikowany w kliencie testowym WCF i **zawsze Generuj konfiguracji podczas uruchamiania usługi** opcja jest wyłączona, zmodyfikowany plik jest kopiowany do folderu "Pamięci podręcznej konfiguracji" w obszarze "Moje projekty Documents\Test klienta" za pomocą mapowania pliku XML (metadane adres pliku nazwa) jako indeks.  
   
  Można również uruchomić klienta testowego WCF w wierszu polecenia, użyj `/ProjectPath` przełączyć się do określenia nowej ścieżki odpowiednią do przechowywania plików wygenerowanych lub użyj `/RestoreProjectPath` przełącznika, aby przywrócić domyślną lokalizację. Składnia jest następująca:  
   

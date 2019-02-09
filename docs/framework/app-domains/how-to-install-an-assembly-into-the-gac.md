@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: adeaaa6626a1c9e9e4543613a8fa9e94d2b67e89
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 233a7803cb59f9bfeac15d293dc3fb5a0db449c9
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826840"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903758"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej
 
-Zestawy, które mają kilka aplikacji są przechowywane w globalnej pamięci podręcznej zestawów (GAC). Instalowanie zestawu w [globalnej pamięci podręcznej](https://docs.microsoft.com/en-us/dotnet/framework/app-domains/gac) przy użyciu jednego z następujących składników: 
+Zestawy, które mają kilka aplikacji są przechowywane w globalnej pamięci podręcznej zestawów (GAC). Instalowanie zestawu w [globalnej pamięci podręcznej](gac.md) przy użyciu jednego z następujących składników: 
 - [Windows Installer](#windows-installer)
 - [Narzędzie Global assembly cache](#global-assembly-cache-tool)
 
@@ -29,7 +29,7 @@ Zestawy, które mają kilka aplikacji są przechowywane w globalnej pamięci pod
 
 ## <a name="windows-installer"></a>Instalator Windows
 
-[Instalator Windows](https://docs.microsoft.com/en-us/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), aparat instalacji Windows jest zalecany sposób dodawania zestawów do globalnej pamięci podręcznej. Instalator Windows zapewnia zliczanie odwołań zestawów w globalnej pamięci podręcznej i inne korzyści. Aby utworzyć pakiet instalacyjny Instalatora Windows, użyj [WiX rozszerzenia narzędzi programu Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).
+[Instalator Windows](/windows/desktop/Msi/installation-of-assemblies-to-the-global-assembly-cache), aparat instalacji Windows jest zalecany sposób dodawania zestawów do globalnej pamięci podręcznej. Instalator Windows zapewnia zliczanie odwołań zestawów w globalnej pamięci podręcznej i inne korzyści. Aby utworzyć pakiet instalacyjny Instalatora Windows, użyj [WiX rozszerzenia narzędzi programu Visual Studio 2017](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension).
 
 ## <a name="global-assembly-cache-tool"></a>Narzędzie Global assembly cache
 
@@ -46,7 +46,7 @@ gacutil -i <assembly name>
 
 W tym poleceniu  *\<Nazwa zestawu >* to nazwa zestawu, aby zainstalować w globalnej pamięci podręcznej.
 
-Jeśli *gacutil.exe* nie znajduje się w ścieżce systemowej, użyj [wiersz polecenia programisty dla programu VS  *\<wersji >*](https://docs.microsoft.com/en-us/dotnet/framework/tools/developer-command-prompt-for-vs).
+Jeśli *gacutil.exe* nie znajduje się w ścieżce systemowej, użyj [wiersz polecenia programisty dla programu VS  *\<wersji >*](../tools/developer-command-prompt-for-vs.md).
 
 Poniższy przykład instaluje zestaw o nazwie pliku *hello.dll* w globalnej pamięci podręcznej.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: e41b0d039d88e5e0dae594b03fd7c1b346b19e80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4081558f9ea6a1bc258ab4cbebe6c2f72ee2c60c
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563226"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903383"
 ---
 # <a name="executing-a-command"></a>Wykonywanie polecenia
 Każdego dostawcy danych .NET Framework, dołączone do programu .NET Framework ma swój własny obiekt polecenia, która dziedziczy <xref:System.Data.Common.DbCommand>. .NET Framework Data Provider for OLE DB zawiera <xref:System.Data.OleDb.OleDbCommand> obiektu .NET Framework Data Provider for SQL Server zawiera <xref:System.Data.SqlClient.SqlCommand> obiektu .NET Framework Data Provider for ODBC obejmuje <xref:System.Data.Odbc.OdbcCommand> obiektu i .NET Framework Data Provider Pro Oracle obejmuje <xref:System.Data.OracleClient.OracleCommand> obiektu. Każda z tych obiektów udostępnia metody wykonywania poleceń na podstawie typu polecenia, a żądane zwracanej wartości, zgodnie z opisem w poniższej tabeli.  
@@ -42,5 +42,4 @@ Każdego dostawcy danych .NET Framework, dołączone do programu .NET Framework 
 ## <a name="see-also"></a>Zobacz także
 - [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Praca z DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
-- [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Omówienie ADO.NET](ado-net-overview.md)

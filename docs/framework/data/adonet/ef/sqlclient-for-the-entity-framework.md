@@ -2,12 +2,12 @@
 title: SqlClient programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: 1c38567f77d69a894376e23b6d4ff6c669edc806
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b47b035932062b859d470716903e826b2bb6f3d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569105"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903842"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient programu Entity Framework
 W tej sekcji opisano .NET Framework Data Provider for SQL Server (SqlClient), co umożliwia Entity Framework do pracy za pośrednictwem programu Microsoft SQL Server.  
@@ -18,7 +18,7 @@ W tej sekcji opisano .NET Framework Data Provider for SQL Server (SqlClient), co
  Użyj SqlClient, należy przypisać do ciągu "System.Data.SqlClient" `Provider` atrybutu `Schema` elementu.  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken Schema Attribute  
- `ProviderManifestToken` Wymagany atrybut `Schema` element SSDL. Ten token służy do ładowania manifestu dostawcy dla scenariuszy w trybie offline. Aby uzyskać więcej informacji na temat `ProviderManifestToken` atrybutów, zobacz [elementu schematu (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222).  
+ `ProviderManifestToken` Wymagany atrybut `Schema` element SSDL. Ten token służy do ładowania manifestu dostawcy dla scenariuszy w trybie offline. Aby uzyskać więcej informacji na temat `ProviderManifestToken` atrybutów, zobacz [elementu schematu (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
   
  Klient SQL może służyć jako dostawca danych dla różnych wersji programu SQL Server. Te wersje mają różne możliwości. Na przykład [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] nie obsługuje `varchar(max)` i `nvarchar(max)` typy, które zostały wprowadzone w programie [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
   
@@ -29,7 +29,7 @@ W tej sekcji opisano .NET Framework Data Provider for SQL Server (SqlClient), co
 |2000|2005|2008|  
   
 > [!NOTE]
->  Począwszy od programu Visual Studio 2010, [narzędzia modelu danych jednostki ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) nie obsługują programu SQL Server 2000.  
+>  Począwszy od programu Visual Studio 2010, [narzędzia modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) nie obsługują programu SQL Server 2000.  
   
 ## <a name="provider-namespace-name"></a>Nazwa Namespace dostawcy  
  Wszyscy dostawcy należy określić przestrzeni nazw. Ta właściwość zawiera informacje dla programu Entity Framework, który prefiks jest używany przez dostawcę dla określonego konstrukcji, takich jak typy i funkcje. Przestrzeń nazw dla manifestów dostawcy SqlClient jest `SqlServer`. Aby uzyskać więcej informacji na temat przestrzenie nazw, zobacz [przestrzenie nazw](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  

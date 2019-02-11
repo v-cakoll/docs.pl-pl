@@ -191,9 +191,11 @@
 ### [dotnet-svcutil.xmlserializer](core/additional-tools/dotnet-svcutil.xmlserializer-guide.md)
 ### [Generator serializatora XML](core/additional-tools/xml-serializer-generator.md)
 ## [Przenoszenie z platformy .NET Framework](core/porting/index.md)
-### [Organizowanie projektów dla platformy .NET Core](core/porting/project-structure.md)
+### [Technologie .NET Framework niedostępne na platformie .NET Core](core/porting/net-framework-tech-unavailable.md)
 ### [Analizowanie zależności innych firm](core/porting/third-party-deps.md)
 ### [Przenoszenie bibliotek](core/porting/libraries.md)
+### [Organizowanie projektów dla platformy .NET Core](core/porting/project-structure.md)
+### [Narzędzia pomagające przenosić kod na platformę .NET Core](core/porting/tools.md)
 ### [Korzystanie z pakietu zgodności systemu Windows](core/porting/windows-compat-pack.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [Kompilacja platformy .NET Core ze źródła](core/build/index.md)

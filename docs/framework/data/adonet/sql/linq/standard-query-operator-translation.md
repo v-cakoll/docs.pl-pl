@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588577"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093934"
 ---
 # <a name="standard-query-operator-translation"></a>Translacja standardowego operatora zapytania
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy standardowych operatorów zapytań do polecenia SQL. Procesor zapytań bazy danych określa semantyka wykonania tłumaczenia SQL.  
   
- Standardowe operatory zapytań są zdefiniowane dla *sekwencje*. Sekwencja jest *uporządkowane* i opiera się na tożsamości referencyjnej dla każdego elementu w sekwencji. Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Standardowe operatory zapytań są zdefiniowane dla *sekwencje*. Sekwencja jest *uporządkowane* i opiera się na tożsamości referencyjnej dla każdego elementu w sekwencji. Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) lub [standardowe operatory zapytań — Przegląd (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  SQL dotyczy przede wszystkim *nieuporządkowane zestawy wartości*. Kolejność jest zazwyczaj wyraźnie określone, przetwarzanie końcowe operacji, która jest stosowana do końcowego wyniku zapytania, a nie do wyników pośrednich. Tożsamość jest definiowany przez wartości. Z tego powodu zapytania SQL są zrozumiałe radzenia sobie z multisets (*zbiory*) zamiast *ustawia*.  
   

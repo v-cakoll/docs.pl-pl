@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e1227cbf85e72570bcb08f7f13168392b7c7b60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592578"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093687"
 ---
 # <a name="overview-of-the-net-framework"></a>Przegląd programu .NET Framework
 
@@ -87,7 +87,7 @@ Jak można oczekiwać od biblioteki klas obiektowych, typy programu .NET Framewo
 
 - Aplikacje zorientowane na usługę przy użyciu usługi Windows Communication Foundation (WCF). Zobacz [zorientowane na usługę aplikacje z usługą WCF](../../../docs/framework/wcf/index.md).
 
-- Aplikacje współdziałające z przepływu pracy przy użyciu Windows Workflow Foundation (WF). Zobacz [tworzenia przepływów pracy w programie .NET Framework](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Aplikacje współdziałające z przepływu pracy przy użyciu Windows Workflow Foundation (WF). Zobacz [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
 Klas formularzy Windows są kompleksowymi zestawami typów wielokrotnego użytku, które znacznie upraszczają proces tworzenia graficznego interfejsu użytkownika Windows. Jeśli piszesz aplikację formularza sieci Web platformy ASP.NET, można użyć klas formularzy sieci Web.
 
@@ -97,5 +97,5 @@ Klas formularzy Windows są kompleksowymi zestawami typów wielokrotnego użytku
 - [Przewodnik instalacji](../../../docs/framework/install/index.md)
 - [Podręcznik programowania](../../../docs/framework/development-guide.md)
 - [Narzędzia](../../../docs/framework/tools/index.md)
-- [Przykłady dla platformy .NET framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)
+- [Samouczki i przykłady kodu platformy .NET](../../samples-and-tutorials/index.md)
 - [Biblioteka klas programu .NET framework](https://go.microsoft.com/fwlink/?LinkID=227195)

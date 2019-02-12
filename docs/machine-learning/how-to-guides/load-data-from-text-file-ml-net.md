@@ -1,14 +1,14 @@
 ---
 title: Ładowanie danych z pliku tekstowego, machine learning przetwarzania - strukturze ML.NET
 description: Dowiedz się, jak załadować dane z pliku tekstowego do użycia w modelu uczenia maszynowego, kompilowania, szkolenia i oceniania za pomocą platformy ML.NET
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 6a8f74cc5324050ca94e60592f083c35afc68377
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 70c7ccdeaa27b78a412c2bc82f524d4bf42a740a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479675"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091711"
 ---
 # <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a>Ładowanie danych z pliku tekstowego, machine learning przetwarzania - strukturze ML.NET
 
@@ -34,7 +34,7 @@ Aby załadować dane z pliku tekstowego:
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // A boolean column depicting the 'target label'.

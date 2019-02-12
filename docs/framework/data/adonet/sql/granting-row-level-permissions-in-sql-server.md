@@ -2,15 +2,15 @@
 title: Udzielanie uprawnień na poziomie wiersza w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 28e552e005cdfa0b4c69ff95927b938fa3898193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092520f04ba828c9589a16b4ffd6574d04170249
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553778"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092998"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Udzielanie uprawnień na poziomie wiersza w programie SQL Server
-W niektórych scenariuszach istnieje wymóg do kontrolowania dostępu do danych na bardziej szczegółowym poziomie niż zapewnia jakie po prostu udzielanie, odwoływanie lub odmawianie uprawnień. Na przykład szpitali aplikacji bazy danych może wymagać poszczególnych lekarzy ograniczona do uzyskiwania dostępu do informacji dotyczących tylko pacjentów. Istnieją podobne wymagania w wielu środowiskach, w tym Finanse, prawo, instytucji rządowych i wojskowe aplikacji. Aby ułatwić obsługę tych scenariuszy, programu SQL Server 2016 zapewnia [zabezpieczenia na poziomie wiersza](https://msdn.microsoft.com/library/dn765131.aspx) funkcja, która upraszcza i umożliwia scentralizowanie logiki dostępu na poziomie wiersza w zasadach zabezpieczeń. We wcześniejszych wersjach programu SQL Server podobne funkcje można osiągnąć przy użyciu widoków wprowadzenie filtrowanie na poziomie wiersza.  
+W niektórych scenariuszach istnieje wymóg do kontrolowania dostępu do danych na bardziej szczegółowym poziomie niż zapewnia jakie po prostu udzielanie, odwoływanie lub odmawianie uprawnień. Na przykład szpitali aplikacji bazy danych może wymagać poszczególnych lekarzy ograniczona do uzyskiwania dostępu do informacji dotyczących tylko pacjentów. Istnieją podobne wymagania w wielu środowiskach, w tym Finanse, prawo, instytucji rządowych i wojskowe aplikacji. Aby ułatwić obsługę tych scenariuszy, programu SQL Server 2016 zapewnia [zabezpieczenia na poziomie wiersza](/sql/relational-databases/security/row-level-security) funkcja, która upraszcza i umożliwia scentralizowanie logiki dostępu na poziomie wiersza w zasadach zabezpieczeń. We wcześniejszych wersjach programu SQL Server podobne funkcje można osiągnąć przy użyciu widoków wprowadzenie filtrowanie na poziomie wiersza.  
   
 ## <a name="implementing-row-level-filtering"></a>Implementowanie filtrowanie na poziomie wiersza  
  Filtrowanie na poziomie wiersza jest używana do przechowywania informacji w jednej tabeli podobnie jak w powyższym przykładzie szpitali aplikacji. Aby zaimplementować filtrowanie każdy wiersz na poziomie wiersza ma kolumny, która ma parametr różnicujący, takie jak nazwa użytkownika, etykietę lub inny identyfikator. Można tworzyć zasady zabezpieczeń lub widoku w tabeli i filtrować wiersze, których użytkownik ma dostęp. Następnie można utworzyć sparametryzowany procedur składowanych, które kontrolę typów zapytań, które użytkownik może uruchomić.  
@@ -60,7 +60,7 @@ W niektórych scenariuszach istnieje wymóg do kontrolowania dostępu do danych 
 -   Udziel wykonać na procedurach przechowywanych do ról bazy danych. Użytkownicy mogą tylko dostęp do danych przy użyciu przechowywanych procedur.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zabezpieczenia na poziomie wiersza](https://msdn.microsoft.com/library/dn765131.aspx)
+- [Zabezpieczenia na poziomie wiersza](/sql/relational-databases/security/row-level-security)
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

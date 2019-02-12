@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 11002ea61d53b16817714a4b03481383311b7c4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63dcfd80cca0db67dfad87c491d607506057a532
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733249"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092270"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortowanie za pomocą widoku danych (LINQ to DataSet)
 Możliwość sortowania danych w oparciu o określone kryteria, a następnie prezentować dane do klienta za pomocą kontrolki interfejsu użytkownika jest istotnym elementem powiązanie danych. <xref:System.Data.DataView> zapewnia kilka metod sortowania danych i zwraca wiersze danych uporządkowanych według określonych kryteriów porządkowania. Oprócz jego opartego na ciągach sortowanie możliwości <xref:System.Data.DataView> również pozwala na użycie [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] wyrażeń kryterium sortowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia pozwalają znacznie bardziej złożone i zaawansowane operacje sortowania niż sortowanie oparte na ciągach. W tym temacie opisano sortowanie, za pomocą obu metod <xref:System.Data.DataView>.  
@@ -84,4 +84,4 @@ Możliwość sortowania danych w oparciu o określone kryteria, a następnie pre
 ## <a name="see-also"></a>Zobacz także
 - [Powiązanie danych i LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [Filtrowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [Sortowanie danych](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+- [Sortowanie danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

@@ -2,12 +2,12 @@
 title: Typy danych i funkcje
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711898"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091438"
 ---
 # <a name="data-types-and-functions"></a>Typy danych i funkcje
 Tematy wymienione w poniższej tabeli opisano LINQ do SQL działu pomocy technicznej dla członków, konstrukcje i rzutowania środowisko uruchomieniowe języka wspólnego (CLR). Obsługiwane elementy członkowskie i konstrukcje są dostępne do użycia w Twojej zapytania LINQ to SQL.  
@@ -34,4 +34,3 @@ Tematy wymienione w poniższej tabeli opisano LINQ do SQL działu pomocy technic
 ## <a name="see-also"></a>Zobacz także
 - [Niezgodność typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Biblioteka klas programu .NET framework w programie Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

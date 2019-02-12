@@ -2,12 +2,12 @@
 title: N-warstwowe i zdalne aplikacje za pomocą LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 614adf9e00f912e0dddb6674fe4c4ab329f652c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32035720992a679457f11414ab282f949b450082
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734545"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094077"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N-warstwowe i zdalne aplikacje za pomocą LINQ to SQL
 Można utworzyć aplikacji n warstwowa lub wielowarstwowa, które używają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Zazwyczaj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kontekst danych, klas jednostek i logiki budowa zapytania znajdują się w warstwie środkowej jako warstwa dostępu do danych (DAL). Logika biznesowa i trwałe dane mogą być implementowane całkowicie w klasy częściowe i metody jednostek i kontekst danych, lub może być implementowana w osobnych klas.
@@ -16,7 +16,7 @@ Można utworzyć aplikacji n warstwowa lub wielowarstwowa, które używają [!IN
 
  W środkowej warstwie jednostki są tworzone przez kontekst danych, który śledzi ich stan i zarządza odroczone ładowanie z i przesyłanie zmian do bazy danych. Te jednostki są "dołączone" do `DataContext`. Jednak po jednostki są wysyłane do innej warstwy za pomocą serializacji, stają się one odłączone, co oznacza, że `DataContext` już służy do śledzenia stanu. Jednostki, które klient wysyła aktualizacje musi być ponownie dołączyć do kontekstu danych przed [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] można przesłać zmian w bazie danych. Klient jest odpowiedzialny za zapewnienie oryginalnych wartości i/lub sygnatury czasowe z powrotem do warstwy środkowej, jeśli są wymagane w celu pomyślnych kontroli współbieżności.
 
- W aplikacjach ASP.NET <xref:System.Web.UI.WebControls.LinqDataSource> zarządza większość tę złożoność. Aby uzyskać więcej informacji, zobacz [NIB: Omówienie kontrolki serwera sieci Web LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136).
+ W aplikacjach ASP.NET <xref:System.Web.UI.WebControls.LinqDataSource> zarządza większość tę złożoność. Aby uzyskać więcej informacji, zobacz [omówienie kontrolki serwera sieci Web LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100)).
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
  Aby uzyskać więcej informacji o sposobie wdrażania aplikacji n warstwowej, które używają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], zobacz następujące tematy:

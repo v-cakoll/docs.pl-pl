@@ -1,15 +1,15 @@
 ---
 title: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfikacji binarnej zrozumienie, jak na potrzeby prognozowania tonacji podjąć odpowiednie działania.
-ms.date: 01/15/2019
+ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 47cf9deb9452d15aee8cf4c1ebc5e3d0f1aa10ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628012"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092764"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -21,18 +21,19 @@ Ten przykładowy samouczek przedstawia tworzenie klasyfikatora tonacji za pomoc�
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 > * Omówienie problemu
-> * Wybierz zadanie uczenia odpowiedniej maszyny
+> * Wybieranie algorytmu uczenia maszynowego odpowiednie
 > * Przygotowywanie danych
-> * Tworzenie potoku uczenia
-> * Ładowanie klasyfikatora
+> * Przekształcanie danych
 > * Uczenie modelu
-> * Ocena modelu za pomocą innego zestawu danych
-> * Pojedyncze wystąpienie wynik danych testu przy użyciu modelu prognozowania
-> * Przewidywanie wyników danych testów przy użyciu załadować modelu
+> * Ocena modelu
+> * Prognozowanie za pomocą uczonego modelu
+> * Wdrażanie i przewidywanie załadować modelu
 
 ## <a name="sentiment-analysis-sample-overview"></a>Omówienie przykładowych analizy tonacji
 
 Próbka jest aplikacją konsoli, która używa strukturze ML.NET do nauczenia modelu, która klasyfikuje i przewiduje wskaźniki nastrojów klientów, jak dodatnie lub ujemne. Oblicza model z drugiego zestawu danych do analizy jakości dostawców. Zestawy danych wskaźniki nastrojów klientów są od projektu WikiDetox.
+
+Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) repozytorium.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -54,8 +55,8 @@ Fazy przepływu pracy są następujące:
 3. **Kompilowanie i szkolenie** 
    * **Uczenie modelu**
    * **Ocena modelu**
-4. **Uruchom**
-   * **Model użycia**
+4. **Wdrażanie modelu**
+   * **Użyj modelu do prognozowania**
 
 ### <a name="understand-the-problem"></a>Omówienie problemu
 
@@ -67,7 +68,7 @@ Ten problem można podzielić do tonacji tekstu i wartości tonacji danych mają
 
 Następnie należy **określić** tonacji, która ułatwia wybieranie zadań uczenia maszynowego.
 
-## <a name="select-the-appropriate-machine-learning-task"></a>Wybierz zadanie uczenia odpowiedniej maszyny
+## <a name="select-the-appropriate-machine-learning-algorithm"></a>Wybieranie algorytmu uczenia maszynowego odpowiednie
 
 W rozwiązaniu tego problemu znasz następujące fakty:
 
@@ -77,18 +78,18 @@ Przewidywanie **tonacji** nowego komentarza witryny sieci Web, toksyczne lub nie
 * Punktowanych — Dodawanie żadnego znaczenia do Wikipedia.
 * Jest on najlepsze, a artykuł powinien oznacza, że.
 
-Zadania uczenia maszyny klasyfikacji najlepiej nadaje się dla tego scenariusza.
+Algorytmu uczenia maszynowego klasyfikacji najlepiej nadaje się dla tego scenariusza.
 
 ### <a name="about-the-classification-task"></a>O zadaniu klasyfikacji
 
-Klasyfikacja jest zadanie uczenia maszynowego, które są używane dane do **określić** kategorii, typ lub klasa elementu lub wiersza danych. Na przykład można użyć klasyfikacji:
+Klasyfikacja jest algorytm uczenia maszynowego, która korzysta z danych do **określić** kategorii, typ lub klasa elementu lub wiersza danych. Na przykład można użyć klasyfikacji:
 
 * Zidentyfikuj tonacji jako dodatnia lub ujemna.
 * Klasyfikowanie wiadomości e-mail jako spam, wiadomości-śmieci lub właściwej.
 * Ustal, czy pacjent laboratorium przykładowe dane stanowią cancerous.
 * Klienci na kategorie według ich tendencje do odpowiedzi na kampanię sprzedaży.
 
-Klasyfikacja zadań są często jednym z następujących typów:
+Algorytmy klasyfikacji są często jednym z następujących typów:
 
 * Plik binarny: A i B.
 * Kontra: wielu kategorii, które można przewidzieć przy użyciu pojedynczego modelu.
@@ -107,7 +108,7 @@ Klasyfikacja zadań są często jednym z następujących typów:
 
 ### <a name="prepare-your-data"></a>Przygotowywanie danych
 
-1. Pobierz [WikiPedia detox-250-linia data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) i [wikipedia-detox-250-linia test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) danych ustawia i zapisywanie ich *danych* wcześniej utworzony folder. Szkolenie modeli modelu uczenia maszynowego na pierwszego zestawu danych, a drugi może służyć do oceny, jak dokładna jest model.
+1. Pobierz [Wikipedia detox-250-linia data.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv) i [wikipedia-detox-250-linia test.tsv](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv) danych ustawia i zapisywanie ich *danych* wcześniej utworzony folder. Szkolenie modeli modelu uczenia maszynowego na pierwszego zestawu danych, a drugi może służyć do oceny, jak dokładna jest model.
 
 2. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy każdy z \*pliki tsv i wybierz pozycję **właściwości**. W obszarze **zaawansowane**, zmień wartość właściwości **Kopiuj do katalogu wyjściowego** do **Kopiuj Jeśli nowszy**.
 
@@ -152,14 +153,14 @@ Utwórz zmienną o nazwie `mlContext` i zainicjuj ją o nowe wystąpienie klasy 
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-Następnie do Instalatora w celu załadowania zainicjować danych `_textLoader` zmienna globalna, aby można było użyć go ponownie.  Należy zauważyć, że używasz `TextReader`. Po utworzeniu `TextLoader` przy użyciu `TextReader`, są przekazywane w kontekście potrzebne i <xref:Microsoft.ML.Data.TextLoader.Arguments> klasy, która umożliwia dostosowanie.
+Następnie do Instalatora w celu załadowania zainicjować danych `_textLoader` zmienna globalna, aby można było użyć go ponownie.  Po utworzeniu `TextLoader` przy użyciu `MLContext.Data.CreateTextLoader`, są przekazywane w kontekście potrzebne i <xref:Microsoft.ML.Data.TextLoader.Arguments> klasy, która umożliwia dostosowanie.
 
  Określ schemat danych, przekazując tablicę <xref:Microsoft.ML.Data.TextLoader.Column> obiektów modułu ładującego zawierająca wszystkie nazwy kolumn i ich typy. Wcześniej zdefiniowany schemat danych podczas tworzenia naszej `SentimentData` klasy. Dla naszych schematu jest pierwszą kolumnę (etykieta) <xref:System.Boolean> (Prognozowane) i druga kolumna (SentimentText) to funkcja typu/ciąg tekstowy używany do prognozowania tonacji.
-`TextReader` Klasa zwraca w pełni zainicjowane <xref:Microsoft.ML.Data.TextLoader>  
+`TextLoader` Klasa zwraca w pełni zainicjowane <xref:Microsoft.ML.Data.TextLoader>  
 
 Aby zainicjować `_textLoader` zmienna globalna, aby można było użyć go ponownie w przypadku wymaganych zestawów danych, Dodaj następujący kod po `mlContext` inicjowania:
 
-[!code-csharp[initTextReader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextReader")]
+[!code-csharp[initTextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#4 "Initialize the TextLoader")]
 
 Dodaj następujący kod jako następnego wiersza kodu w `Main` metody:
 
@@ -186,7 +187,7 @@ Należy zauważyć, że dwa parametry są przekazywane do metody Train; `MLConte
 
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Będzie załadować dane przy użyciu `_textLoader` zmienna globalna z `dataPath` parametru. Zwraca <xref:Microsoft.ML.Data.IDataView>. Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
+Będzie załadować dane przy użyciu `_textLoader` zmienna globalna z `dataPath` parametru. Zwraca <xref:Microsoft.Data.DataView.IDataView>. Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
 
 W strukturze ML.NET dane są podobne do widoku SQL. Jest opóźnieniem ocenianą informatycznych i heterogenicznych. Obiekt jest pierwszą częścią potoku i służy do ładowania danych. W tym samouczku ładuje zestaw danych o komentarze i odpowiednie toksyczne lub inne niż toksyczne tonacji. Służy do tworzenia modelu i szkoleń.
 
@@ -216,7 +217,7 @@ Dodaj następujący kod do `Train` metody:
 
 ## <a name="train-the-model"></a>Uczenie modelu
 
-Uczenie modelu, <xref:Microsoft.ML.Data.TransformerChain%601>zgodnie z zestawu danych, który został załadowany i przekształcone. Po zdefiniowaniu estymatora uczenie modelu przy użyciu <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*> przy jednoczesnym zapewnieniu dane szkoleniowe już załadowana. Spowoduje to zwrócenie modelu na potrzeby prognozy. `pipeline.Fit()` szkolenie modeli potoku i zwraca `Transformer` na podstawie `DataView` przekazany. Eksperyment nie jest wykonywane, dopóki nie dzieje.
+Uczenie modelu, <xref:Microsoft.ML.Data.TransformerChain%601>zgodnie z zestawu danych, który został załadowany i przekształcone. Po zdefiniowaniu estymatora uczenie modelu przy użyciu <xref:Microsoft.ML.Data.EstimatorChain%601.Fit*> przy jednoczesnym zapewnieniu dane szkoleniowe już załadowana. Spowoduje to zwrócenie modelu na potrzeby prognozy. `pipeline.Fit()` szkolenie modeli potoku i zwraca `Transformer` na podstawie `DataView` przekazany. Eksperyment nie jest wykonywane, dopóki nie dzieje.
 
 Dodaj następujący kod do `Train` metody:
 
@@ -290,14 +291,13 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 Następnie utwórz metodę, aby zapisać modelu mogą być używane ponownie i używane w innych aplikacjach. `ITransformer` Ma <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> metodę, która przyjmuje `_modelPath` globalne pola i <xref:System.IO.Stream>. Aby zapisać ten element jako plik zip, należy utworzyć `FileStream` bezpośrednio przed wywołaniem `SaveTo` metody. Dodaj następujący kod do `SaveModelAsFile` metodę jako następny wiersz:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
-
-Można również wyświetlić, którym został zapisany plik przy pisaniu komunikatu konsoli, za pomocą `_modelPath`, używając następującego kodu:
+Wdrażanie i przewidywanie załadować model, można również wyświetlić, którym został zapisany plik przy pisaniu komunikatu konsoli, za pomocą `_modelPath`, używając następującego kodu:
 
 ```csharp
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>Przewidywanie wyników danych testu za pomocą modelu i pojedynczego komentarza
+## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>Wynik testu danych przy użyciu zapisanych modelu prognozowania
 
 Tworzenie `Predict` metody tuż za `Evaluate` metody, używając następującego kodu:
 
@@ -321,7 +321,7 @@ Dodaj wywołanie do nowej metody z `Main` metody, po prawej stronie w obszarze `
 
 Gdy `model` jest `transformer` który operuje na wiele wierszy danych, to bardzo typowy scenariusz w środowisku produkcyjnym jest na potrzeby prognoz na poszczególne przykłady. <xref:Microsoft.ML.PredictionEngine%602> Jest otoką, który jest zwracany z `CreatePredictionEngine` metody. Możemy dodać następujący kod, aby utworzyć `PredictionEngine` jako pierwszy wiersz w `Predict` metody:
 
-[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionEngine")]
   
 Dodaj komentarz do testowania uczonego modelu prognozowania w `Predict` metody przez utworzenie wystąpienia `SentimentData`:
 
@@ -331,13 +331,13 @@ Dodaj komentarz do testowania uczonego modelu prognozowania w `Predict` metody p
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
-### <a name="model-operationalization-prediction"></a>Model operacjonalizacji: prognoz
+### <a name="using-the-model-prediction"></a>Przy użyciu modelu: prognoz
 
 Wyświetlanie `SentimentText` i odpowiednie przewidywania opinii w celu udostępniania wyników i odpowiednie do nich działanie na nich. Jest to nazywane operacjonalizacji, jako część zasad operacyjnych przy użyciu zwracanych danych. Tworzenie ekranu wyników za pomocą następujących <xref:System.Console.WriteLine?displayProperty=nameWithType> kodu:
 
 [!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#20 "Display prediction output")]
 
-## <a name="predict-the-test-data-outcomes-with-the-saved-model"></a>Przewidywanie wyników danych testów z zapisanej modelem
+## <a name="deploy-and-predict-with-a-loaded-model"></a>Wdrażanie i przewidywanie załadować modelu
 
 Tworzenie `PredictWithModelLoadedFromFile` metody, tuż przed `SaveModelAsFile` metody, używając następującego kodu:
 
@@ -367,11 +367,11 @@ Model obciążenia
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-Teraz, gdy model, możesz go używać, aby przewidzieć toksyczne lub inne niż toksyczne tonacji przy użyciu danych komentarz <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)> metody. Aby uzyskać prognozę, użyj `Predict` na nowych danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy. Dodaj następujący kod do `PredictWithModelLoadedFromFile` metodę dla prognoz:
+Teraz, gdy model, możesz go używać, aby przewidzieć toksyczne lub inne niż toksyczne tonacji przy użyciu danych komentarz <xref:Microsoft.ML.Core.Data.ITransformer.Transform%2A> metody. Aby uzyskać prognozę, użyj `Predict` na nowych danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy. Dodaj następujący kod do `PredictWithModelLoadedFromFile` metodę dla prognoz:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
-### <a name="model-operationalization-prediction"></a>Model operacjonalizacji: prognoz
+### <a name="using-the-loaded-model-for-prediction"></a>Przy użyciu załadować modelu do prognozowania
 
 Wyświetlanie `SentimentText` i odpowiednie przewidywania opinii w celu udostępniania wyników i odpowiednie do nich działanie na nich. Jest to nazywane operacjonalizacji, jako część zasad operacyjnych przy użyciu zwracanych danych. Utwórz nagłówek dla wyników za pomocą następujących <xref:System.Console.WriteLine?displayProperty=nameWithType> kodu:
 
@@ -410,12 +410,12 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 =============== End of training ===============
 
 
-The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
+The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.1\Data\Model.zip
 
 =============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
-Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279
+Sentiment: I love this article. | Prediction: Not Toxic | Probability: 0.09454837
 
 ```
 
@@ -426,13 +426,13 @@ Gratulacje! Model uczenia maszynowego dla klasyfikacji i prognozowanie tonacji w
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]
 > * Omówienie problemu
-> * Wybierz zadanie uczenia odpowiedniej maszyny
+> * Wybieranie algorytmu uczenia maszynowego odpowiednie
 > * Przygotowywanie danych
-> * Tworzenie potoku uczenia
-> * Ładowanie klasyfikatora
+> * Przekształcanie danych
 > * Uczenie modelu
-> * Ocena modelu za pomocą innego zestawu danych
-> * Przewidywanie wyników danych testów przy użyciu modelu
+> * Ocena modelu
+> * Prognozowanie za pomocą uczonego modelu
+> * Wdrażanie i przewidywanie załadować modelu
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej
 > [!div class="nextstepaction"]

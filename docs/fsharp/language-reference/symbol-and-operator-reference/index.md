@@ -1,13 +1,13 @@
 ---
 title: Odwołanie do symbolu i operatora
 description: Dowiedz się więcej o symboli i operatorów, które są używane w F# języka programowania.
-ms.date: 04/04/2018
-ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/11/2019
+ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613807"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092946"
 ---
 # <a name="symbol-and-operator-reference"></a>Odwołanie do symbolu i operatora
 
@@ -50,8 +50,8 @@ W poniższej tabeli przedstawiono symbole używane w F# język zawiera łącza d
 |`-`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Odejmuje po prawej stronie z lewej strony, gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
 |`->`|[Funkcje](../functions/index.md)<br /><br />[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>W funkcji typy rozgranicza argumenty i zwracać wartości.<br /></li><li>Daje w wyniku wyrażenia (wyrażenia sekwencji); odpowiednikiem `yield` — słowo kluczowe.<br /></li><li>Używać w wyrażeniach dopasowania<br /></li></ul>|
 |`.`|[Elementy członkowskie](../members/index.md)<br /><br />[Typy pierwotne](../primitive-types.md)|<ul><li>Uzyskuje dostęp do elementu członkowskiego, a oddziela poszczególne nazwy w pełni kwalifikowanej nazwy.<br /></li><li>Określa separator dziesiętny liczb zmiennoprzecinkowych.<br /></li></ul>|
-|`..`|[Pętle: `for...in` Wyrażenie](../loops-for-in-expression.md)|<ul><li>Określa zakres.<br /></li></ul>|
-|`.. ..`|[Pętle: `for...in` Wyrażenie](../loops-for-in-expression.md)|<ul><li>Określa zakres wraz z przyrostem.<br /></li></ul>|
+|`..`|[Pętle: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>Określa zakres.<br /></li></ul>|
+|`.. ..`|[Pętle: `for...in` Expression](../loops-for-in-expression.md)|<ul><li>Określa zakres wraz z przyrostem.<br /></li></ul>|
 |`.[...]`|[Tablice](../arrays.md)|<ul><li>Uzyskuje dostęp do elementu tablicy.<br /></li></ul>|
 |`/`|[Operatory arytmetyczne](arithmetic-operators.md)<br /><br />[Jednostki miary](../units-of-measure.md)|<ul><li>Dzieli po lewej stronie (licznik), po prawej stronie (dzielnik).<br /></li><li>Używane w jednostkach miary typów.<br /></li></ul>|
 |`/?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Dzieli po lewej stronie przez po prawej stronie, gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
@@ -75,8 +75,8 @@ W poniższej tabeli przedstawiono symbole używane w F# język zawiera łącza d
 |`<=`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po lewej stronie jest mniejsza niż lub równe po prawej stronie; w przeciwnym razie zwraca `false`.<br /></li></ul>|
 |`<=?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza operacji "mniejsze niż lub równe", gdy po prawej stronie jest typ dopuszczający wartość null.<br /></li></ul>|
 |<code>&lt;&#124;</code>|[Funkcje](../functions/index.md)|<ul><li>Przekazuje wynik wyrażenia po prawej stronie do funkcji po lewej stronie (operator potoku do tyłu).<br /></li></ul>|
-|<code>&lt;&#124;&#124;</code>|[Operatory. &#40; &#60; &#124; &#124; &#41; &#60;"U T1,"T2,"&#62; — funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki dwa argumenty po prawej stronie do funkcji po lewej stronie.<br /></li></ul>|
-|<code>&lt;&#124;&#124;&#124;</code>|[Operatory. &#40; &#60; &#124; &#124; &#124; &#41; &#60;U "T1,"T2", T3,"&#62; — funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki trzech argumentów po prawej stronie do funkcji po lewej stronie.<br /></li></ul>|
+|<code>&lt;&#124;&#124;</code>|[Operators.&#40; &#60;&#124;&#124; &#41;&#60;'T1,'T2,'U&#62; Function](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki dwa argumenty po prawej stronie do funkcji po lewej stronie.<br /></li></ul>|
+|<code>&lt;&#124;&#124;&#124;</code>|[Operators.&#40; &#60;&#124;&#124;&#124; &#41;&#60;'T1,'T2,'T3,'U&#62; Function](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki trzech argumentów po prawej stronie do funkcji po lewej stronie.<br /></li></ul>|
 |`<@...@>`|[Cytaty kodu](../code-quotations.md)|<ul><li>Rozgranicza oferty kod maszynowy.<br /></li></ul>|
 |`<@@...@@>`|[Cytaty kodu](../code-quotations.md)|<ul><li>Rozgranicza kodu bez typu oferty.<br /></li></ul>|
 |`=`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po lewej stronie jest równy po prawej stronie; w przeciwnym razie zwraca `false`.<br /></li></ul>|
@@ -107,8 +107,8 @@ W poniższej tabeli przedstawiono symbole używane w F# język zawiera łącza d
 |<code>&#124;&#124;</code>|[Operatory logiczne](boolean-operators.md)|<ul><li>Oblicza operacji logicznego OR.<br /></li></ul>|
 |<code>&#124;&#124;&#124;</code>|[Operatory bitowe](bitwise-operators.md)|<ul><li>Oblicza operacja bitowa OR.<br /></li></ul>|
 |<code>&#124;></code>|[Funkcje](../functions/index.md)|<ul><li>Przekazuje jego wynik po lewej stronie do funkcji po prawej stronie (operator potoku przesyłania dalej).<br /></li></ul>|
-|<code>&#124;&#124;></code>|[Operatory. &#40; &#124; &#124; &#62; &#41; &#60;"U T1,"T2,"&#62; — funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki dwa argumenty po lewej stronie do funkcji po prawej stronie.<br /></li></ul>|
-|<code>&#124;&#124;&#124;></code>|[Operatory. &#40; &#124; &#124; &#124; &#62; &#41; &#60;U "T1,"T2", T3,"&#62; — funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki trzech argumentów po lewej stronie do funkcji po prawej stronie.<br /></li></ul>|
+|<code>&#124;&#124;></code>|[Operators.&#40; &#124;&#124;&#62; &#41;&#60;'T1,'T2,'U&#62; Function](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki dwa argumenty po lewej stronie do funkcji po prawej stronie.<br /></li></ul>|
+|<code>&#124;&#124;&#124;></code>|[Operators.&#40; &#124;&#124;&#124;&#62; &#41;&#60;'T1,'T2,'T3,'U&#62; Function](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki trzech argumentów po lewej stronie do funkcji po prawej stronie.<br /></li></ul>|
 |`~~`|[Przeładowanie operatora](../operator-overloading.md)|<ul><li>Używane do deklarowania przeciążenia dla Jednoargumentowy operator negacji.<br /></li></ul>|
 |`~~~`|[Operatory bitowe](bitwise-operators.md)|<ul><li>Oblicza operatora testu koniunkcji nie operacji.<br /></li></ul>|
 |`~-`|[Przeładowanie operatora](../operator-overloading.md)|<ul><li>Używane do deklarowania przeciążenia jednoargumentowy minus operator.<br /></li></ul>|
@@ -133,7 +133,7 @@ W poniższej tabeli przedstawiono kolejność pierwszeństwa operatorów i innyc
 |`or`, <code>&#124;&#124;</code>|Lewe|
 |`&`, `&&`|Lewe|
 |`:>`, `:?>`|Prawe|
-|`!=`*Op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&` *op* , `&`<br /><br />(w tym `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Lewe|
+|`<`*Op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&` *op*, `&`<br /><br />(w tym `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Lewe|
 |`^`*OP*<br /><br />(w tym `^^^`)|Prawe|
 |`::`|Prawe|
 |`:?`|Nie asocjacyjne|

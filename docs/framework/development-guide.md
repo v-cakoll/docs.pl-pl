@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123764"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092959"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework — podręcznik programowania
 W tej sekcji wyjaśniono, jak do tworzenia, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji .NET Framework. Sekcja zawiera również informacje odnośnie do zagadnień technologicznych takich jak dynamiczne programowania, interoperacyjności, rozszerzalności, zarządzanie pamięcią i wątków.  
@@ -79,5 +79,5 @@ W tej sekcji wyjaśniono, jak do tworzenia, konfigurowanie, debugowanie, zabezpi
  [Narzędzia](../../docs/framework/tools/index.md)  
  W tym artykule opisano narzędzia, które pomagają tworzyć, konfigurować i wdrażać aplikacje przy użyciu technologii .NET Framework.  
   
- [Przykłady dla platformy .NET framework](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)  
- Zawiera łącza do galerii przykładów MSDN kodu przykładowe aplikacje demonstrujące technologii .NET Framework.
+ [Samouczki i przykłady kodu platformy .NET](../samples-and-tutorials/index.md)  
+ Zawiera łącza do przykładów i samouczki ułatwiające więcej informacji na temat platformy .NET.

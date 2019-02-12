@@ -2,12 +2,12 @@
 title: LINQ do SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 6b3a951256d0804c214016de04457cc1869b595f
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 532813f68c0996337ce3bed8172a826425db1ec0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904298"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092231"
 ---
 # <a name="linq-to-sql"></a>LINQ do SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jest składnikiem [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] wersji 3.5, która zapewnia infrastrukturę czasu wykonywania dla zarządzania relacyjnymi bazami danych jako obiektami.  
@@ -47,11 +47,11 @@ ms.locfileid: "55904298"
  [LINQ i ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  Linki do [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] portalu.  
   
- [LINQ to SQL — wskazówki](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  
+ [LINQ to SQL — wskazówki](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  Przedstawiono wskazówki dostępne dla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  W tym artykule opisano sposób pobierania przykładowej bazy danych używane w dokumentacji.  
   
- [LinqDataSource Technology Overview](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [Omówienie kontrolki serwera sieci Web kontrolka LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
  W tym artykule opisano sposób, w jaki <xref:System.Web.UI.WebControls.LinqDataSource> kontrolować ujawnia [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] deweloperom sieci Web za pośrednictwem [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] architektura kontroli źródła danych.

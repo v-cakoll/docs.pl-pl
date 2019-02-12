@@ -2,12 +2,12 @@
 title: Wyrażenia obliczeń
 description: Dowiedz się, jak utworzyć wygodnej składni do pisania obliczeń w F# , można sekwencyjna i połączone przy użyciu kontrolowania konstrukcje przepływów i powiązania.
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610700"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093518"
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
@@ -218,6 +218,7 @@ W poniższej tabeli opisano metody, których można użyć w klasie konstruktora
 |`Yield`|`'T -> M<'T>`|Wywoływana dla `yield` wyrażeń w wyrażenia obliczeń.|
 |`YieldFrom`|`M<'T> -> M<'T>`|Wywoływana dla `yield!` wyrażeń w wyrażenia obliczeń.|
 |`Zero`|`unit -> M<'T>`|Wywoływana dla pusta `else` gałęzi z `if...then` wyrażeń w wyrażenia obliczeń.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Wskazuje, że wyrażenia obliczeń jest przekazywany do `Run` elementem członkowskim jak oferty. Tłumaczy je wszystkie wystąpienia elementu obliczeń w cudzysłowie.|
 
 Wiele metod w klasie konstruktora użycia i zwracają `M<'T>` konstrukcji, która jest zwykle oddzielnie zdefiniowanego typu, który charakteryzuje rodzaju obliczeń połączone, przykładowo, `Async<'T>` asynchronicznych przepływów pracy i `Seq<'T>` w przypadku przepływów pracy sekwencji. Podpisy metody te je włączyć połączone i zagnieżdżone ze sobą, tak, aby obiekt przepływu pracy, zwracany z jedną konstrukcję może być przekazywany do następnej. Po przeanalizowaniu wyrażenia obliczeń, kompilator konwertuje wyrażenie w serii zagnieżdżonych wywołań funkcji przy użyciu metod przedstawionych w powyższej tabeli i kodu w wyrażeniu obliczeń.
 

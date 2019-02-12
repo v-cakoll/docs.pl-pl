@@ -2,12 +2,12 @@
 title: Wprowadzenie do Integracja środowiska CLR programu SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 215230486cb3e1ebee4cb40280b91c8bf9f6c799
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcfc43a68fb8bcacd4a14d6b94a932d656635d55
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714935"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092582"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Wprowadzenie do Integracja środowiska CLR programu SQL Server
 Środowisko uruchomieniowe języka wspólnego (CLR) to serce platformy Microsoft .NET Framework i oferuje środowisko wykonywania dla całego kodu .NET Framework. Kod, który jest uruchamiany w ramach środowiska CLR jest określany jako kod zarządzany. Środowisko CLR oferuje różnych funkcji i usług wymaganych do wykonania programu, w tym just-in-time (JIT) kompilacja, przydzielanie i zarządzanie pamięcią, wymuszanie bezpieczeństwo typów, obsługa wyjątków, zarządzanie wątkami i zabezpieczeń.  
@@ -66,6 +66,5 @@ GO
 -   [Debugowanie obiektów bazy danych środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
 - [Zabezpieczenia dostępu kodu i ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

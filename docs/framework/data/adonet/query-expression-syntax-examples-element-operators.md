@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
-ms.openlocfilehash: 8690e4ec79dbe4b728695b073299ca3d21e7f098
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 195c698404f4411c01561ae12b31762de5ce1101
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632598"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093739"
 ---
 # <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a>Przykłady składni wyrażeń zapytania: Operatory elementu (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.First%2A> i <xref:System.Linq.Enumerable.ElementAt%2A> metody w celu uzyskania <xref:System.Data.DataRow> elementy z <xref:System.Data.DataSet> przy użyciu składni wyrażeń zapytania.  
@@ -45,4 +45,5 @@ Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerabl
 ## <a name="see-also"></a>Zobacz także
 - [Ładowanie danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Standardowe operatory zapytań — przegląd](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+- [Omówienie operatorów standardowej kwerendy (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

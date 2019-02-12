@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596894"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093037"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Typy kopiowalne i niekopiowalne
 Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych i niezarządzanych i nie wymagają specjalnej obsługi, organizator międzyoperacyjny. Te typy są nazywane *kopiowalnymi* , ponieważ nie wymaga konwersji, gdy są one przekazywane między kodu zarządzanego i niezarządzanego.  
@@ -49,7 +49,7 @@ Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych
   
 -   Tablice jednowymiarowe typów danych kopiowalnych, takich jak tablica liczb całkowitych. Typ, który zawiera zmienną tablicy typów danych kopiowalnych nie jest jednak sam danych kopiowalnych.  
   
--   Typy sformatowanej wartości, które zawierają typy danych kopiowalnych tylko (i klasy, jeśli są one organizowane jak sformatowane typy). Aby uzyskać więcej informacji na temat typów sformatowaną wartość zobacz [domyślny Marshaling dla typów wartości](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
+-   Typy sformatowanej wartości, które zawierają typy danych kopiowalnych tylko (i klasy, jeśli są one organizowane jak sformatowane typy). Aby uzyskać więcej informacji na temat typów sformatowaną wartość zobacz [domyślny marshaling dla typów wartości](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Odwołania do obiektu nie są danych kopiowalnych. Obejmuje to tablica odniesień do obiektów, które danych kopiowalnych samodzielnie. Na przykład można zdefiniować strukturę danych kopiowalnych, ale nie można zdefiniować typ danych kopiowalnych, który zawiera szereg odwołań do tych struktur.  
   
@@ -57,7 +57,7 @@ Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych
   
  Niektóre typy zarządzanych danych wymagają różnych reprezentacji w środowisku niezarządzanych. Te typy danych niekopiowalnych należy przekonwertować do formularza, który może być organizowany. Na przykład ciągi zarządzane są typów niekopiowalnych, ponieważ muszą zostać przekonwertowane na obiektów w postaci ciągów, zanim one może być organizowany.  
   
- Poniższa tabela zawiera listę typów niekopiowalnych z <xref:System> przestrzeni nazw. [Delegaty](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)), służą do struktur danych, które odwołują się do statycznej metody lub wystąpienia klasy, są również niekopiowalnych.  
+ Poniższa tabela zawiera listę typów niekopiowalnych z <xref:System> przestrzeni nazw. [Delegaty](default-marshaling-behavior.md#default-marshaling-for-delegates), służą do struktur danych, które odwołują się do statycznej metody lub wystąpienia klasy, są również niekopiowalnych.  
   
 |Typ danych kopiowalnych inne niż|Opis|  
 |-------------------------|-----------------|  

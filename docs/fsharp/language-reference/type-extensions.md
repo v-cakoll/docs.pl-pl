@@ -1,13 +1,13 @@
 ---
 title: Rozszerzenia typu
 description: Dowiedz się, jak F# rozszerzeń typu umożliwia dodawanie nowych członków do typu obiektu zdefiniowanego wcześniej.
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066158"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092478"
 ---
 # <a name="type-extensions"></a>Rozszerzenia typu
 
@@ -100,6 +100,8 @@ Teraz uzyskiwać dostęp do `RepeatElements` tak, jakby jest członkiem <xref:Sy
 Opcjonalne rozszerzenia nie są wyświetlane w typie rozszerzonym, gdy badany przez odbicie. Opcjonalne rozszerzenia muszą być w modułach i są one w zakresie wyłącznie wtedy, gdy moduł, który zawiera rozszerzenie jest otwarty lub jest w zakresie.
 
 Opcjonalne elementy członkowskie rozszerzeń są kompilowane do statycznych elementów członkowskich, dla których wystąpienie obiektu jest przekazywane niejawnie jako pierwszy parametr. Jednak działają one tak, jakby były elementami członkowskimi wystąpień lub elementami statycznymi według tego jak są one zdeklarowane.
+
+Również opcjonalne elementy członkowskie rozszerzeń nie są widoczne dla C# , czy dla konsumentów VB. Mogą być używane tylko w innych F# kodu.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Ogólne ograniczenia rozszerzeń typu wewnętrzne i opcjonalne
 

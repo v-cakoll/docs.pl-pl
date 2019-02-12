@@ -2,12 +2,12 @@
 title: What's New in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: efba4d3f0822aa6654eb55bd0aff059dbf84d02e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2acbd6a766d91e31db71ce193bcc4081e5f32c9d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283702"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092517"
 ---
 # <a name="whats-new-in-adonet"></a>What's New in ADO.NET
 Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -54,5 +54,5 @@ Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../..
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [What's New in usług danych WCF](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)
+- [What's New in usługi danych WCF 5.0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

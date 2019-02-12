@@ -1,14 +1,14 @@
 ---
 title: Ładowanie danych z wielu plików, machine learning przetwarzania - strukturze ML.NET
 description: Dowiedz się, jak ładowanie danych z wielu plików do użycia w modelu uczenia maszynowego, kompilowania, szkolenia i oceniania za pomocą platformy ML.NET
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: fe6758e46d923dc07908e1334056ea8394c1085e
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: f5108aaed80769f2bc7ed2f974f9a729abe8455e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479987"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092049"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>Ładowanie danych z wielu plików, machine learning przetwarzania - strukturze ML.NET
 
@@ -23,7 +23,7 @@ Użyj `TextLoader`i określ tablicę plików `Read` metody. Pliki muszą mieć t
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // A boolean column depicting the 'target label'.

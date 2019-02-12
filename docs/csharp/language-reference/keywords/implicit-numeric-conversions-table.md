@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 703f60f48e1e569e0ffcab66ff7ccc91d4a49514
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058467"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093557"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabela niejawnych konwersji liczbowych (odwołanie w C#)
 
@@ -38,9 +38,9 @@ W poniższej tabeli przedstawiono wstępnie zdefiniowanych niejawne konwersje mi
 
 - Dokładności, ale wartość nie może być utracone w konwersje z `int`, `uint`, `long`, lub `ulong` do `float` i `long` lub `ulong` do `double`.  
   
-- Brak konwersji niejawnych do `char`, `byte` i `sbyte` typów.  
+- Brak konwersji niejawnych do `char`, `byte`, i `sbyte` typów.  
 
-- Brak niejawnej konwersji z `char`, `double` i `decimal` typów.
+- Brak niejawnej konwersji z `double` i `decimal` typów.
   
 - Brak niejawnej konwersji między `decimal` typu i `float` lub `double` typów.  
   

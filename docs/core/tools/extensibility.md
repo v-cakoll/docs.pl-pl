@@ -4,12 +4,12 @@ description: Dowiedz się, jak można je rozszerzyć narzędzi interfejsu wiersz
 author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170239"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093011"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Model rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core
 
@@ -79,7 +79,7 @@ Tego rodzaju narzędzia ma wykres zależności, które łączą się z wykresu z
 Można znaleźć przykłady bardziej rozbudowane i różnych kombinacji w [repozytorium interfejsu wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
 Można również wyświetlić [implementacji narzędzia używane](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) w tym samym repozytorium.
 
-### <a name="custom-targets"></a>Niestandardowe obiekty docelowe
+## <a name="custom-targets"></a>Niestandardowe obiekty docelowe
 NuGet ma możliwość [pakiet niestandardowego programu MSBuild cele i pliki właściwości](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Wraz z przejściem narzędzi interfejsu wiersza polecenia platformy .NET Core, za pomocą programu MSBuild ten sam mechanizm rozszerzalności teraz ma zastosowanie do projektów .NET Core. Będzie używać tego typu rozszerzeń, gdy chcesz rozszerzyć proces kompilacji lub chcesz uzyskać dostęp do dowolnego z artefaktów w procesie kompilacji, takie jak wygenerowanych plików lub chcesz sprawdzić konfigurację w ramach której zostanie wywołana kompilacji , itp.
 
 W poniższym przykładzie można zobaczyć projekt docelowy plik za pomocą `csproj` składni. To powoduje, że [ `dotnet pack` ](dotnet-pack.md) polecenia wybierania elementów do pakietu, umieszczania plików obiektów docelowych, a także zestawy w *kompilacji* folder wewnątrz pakietu. Zwróć uwagę `<ItemGroup>` element, który ma `Label` właściwością `dotnet pack instructions`, i docelowy zdefiniowane poniżej.
@@ -137,7 +137,7 @@ Przy użyciu niestandardowe obiekty docelowe zależy wyłącznie od konfiguracji
 
 Jednak jeśli chcesz zapewnić lepsze środowisko użytkownika do użytkowników, można połączyć narzędzi dla projektów i niestandardowych elementów docelowych. W tym scenariuszu narzędzie-projekt będzie zasadniczo wystarczy zaakceptować dowolnie wymagane parametry i czy tłumaczenie, wymagane [ `dotnet msbuild` ](dotnet-msbuild.md) wywołania, które element docelowy jest wykonywany. Przykład tego rodzaju synergii może zobaczyć na [przykłady MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) repozytorium w [ `dotnet-packer` ](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer) projektu.
 
-### <a name="path-based-extensibility"></a>Rozszerzalność opartego na ŚCIEŻKACH
+## <a name="path-based-extensibility"></a>Rozszerzalność opartego na ŚCIEŻKACH
 Rozszerzalność opartego na ŚCIEŻKACH jest zazwyczaj używane do tworzenia maszyn wymagających to narzędzie, które pod względem koncepcyjnym obejmuje więcej niż jednego projektu. Główną wadą tego mechanizmu rozszerzenia jest, że jest powiązany z maszyną której istnieje narzędzie. Jeśli potrzebujesz jej na innym komputerze, trzeba ją wdrożyć.
 
 Ten wzorzec rozszerzalności narzędzi interfejsu wiersza polecenia jest bardzo proste. Zgodnie z opisem w [omówienie interfejsu wiersza polecenia platformy .NET Core](index.md), `dotnet` sterownik można uruchomić dowolne polecenie, który nosi nazwę po `dotnet-<command>` Konwencji. Domyślnej logiki rozpoznawania najpierw sondy w kilku lokalizacjach, a na koniec przechodzi do ścieżki systemu. Jeśli żądane polecenie w systemie ŚCIEŻKA istnieje i jest plik binarny, który może być wywołana, `dotnet` sterowników będzie go wywoływać.

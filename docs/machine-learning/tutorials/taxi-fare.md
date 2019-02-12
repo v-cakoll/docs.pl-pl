@@ -3,15 +3,15 @@ title: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
 description: Przewidywanie ceny za pomocą platformy ML.NET przy użyciu uczeń regresji.
 author: aditidugar
 ms.author: johalex
-ms.date: 01/15/2019
+ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828400"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092543"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Samouczek: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
 
@@ -122,9 +122,9 @@ Utwórz zmienną o nazwie `mlContext` i zainicjuj ją o nowe wystąpienie klasy 
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-Następnie do Instalatora w celu załadowania zainicjować danych `_textLoader` zmienna globalna, aby można było użyć go ponownie.  Należy zauważyć, że użyto `TextReader`. Po utworzeniu `TextLoader` przy użyciu `TextReader`, są przekazywane w kontekście potrzebne i <xref:Microsoft.ML.Data.TextLoader.Arguments> klasy, która umożliwia dostosowanie. Określ schemat danych, przekazując tablicę <xref:Microsoft.ML.Data.TextLoader.Column> obiekty do `TextReader` zawierająca wszystkie nazwy kolumn i ich typy. Zdefiniowany schemat danych wcześniej podczas tworzenia naszej `TaxiTrip` klasy.
+Następnie do Instalatora w celu załadowania zainicjować danych `_textLoader` zmienna globalna, aby można było użyć go ponownie. Po utworzeniu `TextLoader`, są przekazywane w kontekście potrzebne i <xref:Microsoft.ML.Data.TextLoader.Arguments> klasy, która umożliwia dostosowanie. Określ schemat danych, przekazując tablicę <xref:Microsoft.ML.Data.TextLoader.Column> obiekty do `TextLoader` zawierająca wszystkie nazwy kolumn i ich typy. Zdefiniowany schemat danych wcześniej podczas tworzenia naszej `TaxiTrip` klasy.
 
-`TextReader` Klasa zwraca w pełni zainicjowane <xref:Microsoft.ML.Data.TextLoader>  
+`TextLoader` Klasa zwraca w pełni zainicjowane <xref:Microsoft.ML.Data.TextLoader>  
 
 Aby zainicjować `_textLoader` zmienna globalna, aby można było użyć go ponownie w przypadku wymaganych zestawów danych, Dodaj następujący kod po `mlContext` inicjowania:
 
@@ -155,7 +155,7 @@ Firma Microsoft kończy się sukcesem dwa parametry do `Train` metoda; `MLContex
 
 ## <a name="load-and-transform-data"></a>Obciążenia i przekształcania danych
 
-Firma Microsoft będzie załadować dane przy użyciu `_textLoader` zmienna globalna z `dataPath` parametru. Zwraca <xref:Microsoft.ML.Data.IDataView>. Jako dane wejściowe i wyjściowe transformacji `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
+Firma Microsoft będzie załadować dane przy użyciu `_textLoader` zmienna globalna z `dataPath` parametru. Zwraca <xref:Microsoft.Data.DataView.IDataView>. Jako dane wejściowe i wyjściowe transformacji `IDataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
 
 W strukturze ML.NET dane są podobne do widoku SQL. Jest opóźnieniem ocenianą informatycznych i heterogenicznych. Obiekt jest pierwszą częścią potoku i służy do ładowania danych. W tym samouczku ładuje zestaw danych taksówek podróży informacje przydatne do prognozowania cen biletów. Służy do tworzenia modelu i szkoleń.
 

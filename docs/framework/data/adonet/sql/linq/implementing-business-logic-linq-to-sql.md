@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 7e24bf24785538863738fe2c006834a77f47e1ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ea8960b74cd44734eb68a07c6959727bf1ac797
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496092"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093973"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementowanie logiki biznesowej (LINQ to SQL)
 Termin "logikę biznesową" w tym temacie odnosi się do żadnych reguł niestandardowych lub testów sprawdzania poprawności, które są stosowane do danych, przed jego wstawione, zaktualizowane lub usunięte z bazy danych. Logika biznesowa jest również czasami określane jako "reguł biznesowych" lub "Logika domeny". W aplikacjach n warstwowych zazwyczaj służy jako logiczne warstwy tak, aby można było jej modyfikować niezależnie od warstwy prezentacji lub warstwy dostępu do danych. Logika biznesowa może być wywoływany przez warstwę dostępu do danych, przed lub po nim żadnych aktualizacji, wstawiania lub usuwania danych w bazie danych.  
@@ -181,10 +181,10 @@ partial class Customer
   
  [Przewodnik: Dostosowywanie zachowania wstawiania, aktualizacji i usuwania dla klas jednostek](/visualstudio/data-tools/walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes)  
   
- [Przewodnik: Dodawanie walidacji do klas jednostek](https://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
+ [Przewodnik: Dodawanie walidacji do klas jednostek](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb629301(v=vs.120))  
   
 ## <a name="see-also"></a>Zobacz także
-- [Klasy częściowe i metody](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
+- [Klasy częściowe i metody](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Metody częściowe](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Narzędzia LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
 - [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

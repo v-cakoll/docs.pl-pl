@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: e80d01c01ed0b2558c86aefea0f554926f40e509
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42eb0a417659776b2cd2fffa9d2fd62e58a4a176
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573672"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091997"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Element SqlDependency w aplikacji ASP.NET
 W przykładzie w tej sekcji pokazano sposób użycia <xref:System.Data.SqlClient.SqlDependency> pośrednio, wykorzystując platformę ASP.NET <xref:System.Web.Caching.SqlCacheDependency> obiektu. <xref:System.Web.Caching.SqlCacheDependency> Obiektu używa <xref:System.Data.SqlClient.SqlDependency> do nasłuchiwania powiadomień i poprawnie zaktualizować pamięci podręcznej.  
@@ -47,7 +47,7 @@ W przykładzie w tej sekcji pokazano sposób użycia <xref:System.Data.SqlClient
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  Dodaj dwie metody pomocnika, `GetConnectionString` i `GetSQL`. Parametry połączenia, definicja używa zintegrowanych zabezpieczeń. Należy sprawdzić, czy konto, którego używasz, ma uprawnienia niezbędne bazy danych oraz że przykładowej bazy danych, **AdventureWorks**, ma włączone powiadomienia. Aby uzyskać więcej informacji, zobacz [specjalne zagadnienia dotyczące podczas przy użyciu powiadomienia o zapytaniach](https://msdn.microsoft.com/library/a83c8dc8-4fb9-4ffd-a2a5-c07cf4a203c7).  
+5.  Dodaj dwie metody pomocnika, `GetConnectionString` i `GetSQL`. Parametry połączenia, definicja używa zintegrowanych zabezpieczeń. Należy sprawdzić, czy konto, którego używasz, ma uprawnienia niezbędne bazy danych oraz że przykładowej bazy danych, **AdventureWorks**, ma włączone powiadomienia.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

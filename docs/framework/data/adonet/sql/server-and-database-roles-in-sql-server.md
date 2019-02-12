@@ -2,12 +2,12 @@
 title: Serwer i role bazy danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643081"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091815"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serwer i role bazy danych w programie SQL Server
 Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpieczeń, dzięki czemu można przypisać uprawnienia do roli lub grupy użytkowników, a nie do poszczególnych użytkowników. Stałej i ról stałej bazy danych mają stały zestaw uprawnień przypisanych do nich.  
@@ -27,8 +27,8 @@ Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpiecze�
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Server-Level Roles](/sql/relational-databases/security/authentication-access/server-level-roles) i [uprawnienia ról stałej](https://msdn.microsoft.com/library/ms175892.aspx) w SQL Server — książki Online|W tym artykule opisano stałej ról i uprawnień skojarzonych z nimi w programie SQL Server.|  
-|[Database-Level Roles](/sql/relational-databases/security/authentication-access/database-level-roles) i [uprawnienia ról stałej bazy danych](https://msdn.microsoft.com/library/ms189612.aspx) w SQL Server — książki Online|Opis ról stałej bazy danych i uprawnień skojarzonych z nimi|  
+|[Ról na poziomie serwera](/sql/relational-databases/security/authentication-access/server-level-roles)|W tym artykule opisano stałej ról i uprawnień skojarzonych z nimi w programie SQL Server.|  
+|[Ról na poziomie bazy danych](/sql/relational-databases/security/authentication-access/database-level-roles)|Opis ról stałej bazy danych i uprawnień skojarzonych z nimi|  
   
 ## <a name="database-roles-and-users"></a>Role bazy danych i użytkowników  
  Nazwy logowania muszą być zamapowane do kont użytkowników bazy danych w celu pracy z obiektami bazy danych. Bazy danych można następnie można dodać użytkowników do ról bazy danych, dziedziczenie żadnych zestawów uprawnień skojarzonych z tymi rolami. Mogą być przyznawane wszystkie uprawnienia.  
@@ -58,8 +58,8 @@ Wszystkie wersje programu SQL Server przy użyciu opartej na rolach zabezpiecze�
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Tożsamości i kontroli dostępu](https://msdn.microsoft.com/library/bb510418.aspx) w SQL Server — książki Online|Zawiera łącza do tematów opisujących podmiotów zabezpieczeń, ról, poświadczenia, obiektów zabezpieczanych i uprawnienia.|  
-|[Jednostki](/sql/relational-databases/security/authentication-access/principals-database-engine) w SQL Server — książki Online|W tym artykule opisano podmiotów zabezpieczeń i zawiera łącza do tematów, które opisują role serwera i bazy danych.|  
+|[Rozpoczęcie korzystania z uprawnień aparatu bazy danych](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Zawiera łącza do tematów opisujących podmiotów zabezpieczeń, ról, poświadczenia, obiektów zabezpieczanych i uprawnienia.|  
+|[Podmiotów zabezpieczeń](/sql/relational-databases/security/authentication-access/principals-database-engine)|W tym artykule opisano podmiotów zabezpieczeń i zawiera łącza do tematów, które opisują role serwera i bazy danych.|  
   
 ## <a name="see-also"></a>Zobacz także
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

@@ -2,12 +2,12 @@
 title: Powiadomienia zapytań w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 87335b5c9ad626e998fdb7bf0e71cae2542386f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636693"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092296"
 ---
 # <a name="query-notifications-in-sql-server"></a>Powiadomienia zapytań w programie SQL Server
 Powiadomienia o zapytaniach utworzonych na podstawie infrastruktury programu Service Broker, Zezwalaj na aplikacje otrzymywać powiadomienia, gdy dane zostały zmienione. Ta funkcja jest szczególnie użyteczna w przypadku aplikacji, które zapewniają pamięci podręcznej informacje z bazy danych, takich jak aplikacji sieci Web i musi być zgłoszone po zmianie źródła danych.  
@@ -26,17 +26,17 @@ Powiadomienia o zapytaniach utworzonych na podstawie infrastruktury programu Ser
   
  Jeśli tworzysz aplikację, gdzie potrzebujesz niezawodnej sekundy powiadomienia po zmianie danych, zapoznaj się z sekcji **planowania strategii wydajne powiadomienia kwerendy** i **alternatywy dla zapytania Powiadomienia** w [planowanie powiadomień](https://go.microsoft.com/fwlink/?LinkId=211984) temat w dokumentacji SQL Server — książki Online. Aby uzyskać więcej informacji na temat powiadomienia o zapytaniach i SQL Server Service Broker zobacz poniższe linki do tematów, w dokumentacji SQL Server — książki Online.  
   
- **SQL Server Books Online**  
+ **Dokumentacja programu SQL Server**  
   
--   [Przy użyciu powiadomienia o zapytaniach](https://msdn.microsoft.com/library/ms175110.aspx)  
+-   [Przy użyciu powiadomienia o zapytaniach](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [Tworzenie zapytania o powiadomienie](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Tworzenie zapytania o powiadomienie](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Usługa Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Programowanie (programu Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [Service Broker Developer InfoCenter](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Programowanie (programu Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Przewodnik dewelopera usługi (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Włączanie powiadomień o zapytaniach](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  

@@ -2,12 +2,12 @@
 title: Overview2 zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 24da83af6876e9bbb23c7978db6b9413ec00d8ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570489"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091802"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w której deweloper może zagwarantować, czy aplikacja jest bezpieczne przed atakami wszystkich, ponieważ nie jest możliwe do przewidzenia, jakie rodzaje nowe technologie atakom w przyszłości nastąpi. Z drugiej strony po prostu, ponieważ nikt nie ma luki w zabezpieczeniach jeszcze odnalezionych (lub opublikowany) w systemie nie oznacza brak istnieje, lub może istnieć. Należy Planowanie zabezpieczeń w fazie projektowania projektu, a także zaplanować, jak zabezpieczenia zostaną zachowane w okresie istnienia aplikacji.  
@@ -89,7 +89,7 @@ Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w któ
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Omówienie zabezpieczeń programu SQL Server przy użyciu scenariuszy aplikacji, które zawierają wskazówki dotyczące tworzenia bezpiecznych aplikacji ADO.NET, których obiektem docelowym programu SQL Server.|  
-|[Zalecenia dotyczące strategii dostępu do danych](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji w bazie danych.|  
+|[Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji w bazie danych.|  
   
 ## <a name="security-policy-and-administration"></a>Zasady zabezpieczeń i administracji  
  Nieprawidłowo administrowania zasady zabezpieczenia dostępu kodu może utworzyć luk zabezpieczeń. Po wdrożeniu aplikacji powinny być używane techniki monitorowanie zabezpieczeń i wyłaniać ryzyko oceniane jako nowe zagrożenia.  
@@ -98,11 +98,11 @@ Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w któ
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[NIB: Zarządzanie zasadami zabezpieczeń](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Zawiera informacje na temat tworzenia i administrowanie zasadami zabezpieczeń.|  
-|[NIB: Najlepsze rozwiązania dotyczące zasad zabezpieczeń](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Zawiera łącza, dotyczące administrowania zasadami zabezpieczeń.|  
+|[Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Zawiera informacje na temat tworzenia i administrowanie zasadami zabezpieczeń.|  
+|[Najlepsze rozwiązania dotyczące zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Zawiera łącza, dotyczące administrowania zasadami zabezpieczeń.|  
   
 ## <a name="see-also"></a>Zobacz także
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [PAVE zabezpieczeń w natywnym i kodzie .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Zabezpieczenia w .NET](../../../standard/security/index.md)
 - [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

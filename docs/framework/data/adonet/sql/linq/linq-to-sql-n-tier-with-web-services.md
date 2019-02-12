@@ -2,12 +2,12 @@
 title: LINQ to SQL N-warstwowa przy użyciu usługi sieci Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623615"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092725"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL N-warstwowa przy użyciu usługi sieci Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przeznaczone dla użycia w warstwie środkowej luźno powiązane warstwie dostępu do danych (DAL) takich jak usługi sieci Web. Jeśli Warstwa prezentacji jest to strona sieci Web platformy ASP.NET, a następnie używasz <xref:System.Web.UI.WebControls.LinqDataSource> formant serwera do zarządzania przesyłaniem danych między interfejsu użytkownika sieci Web i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w warstwie środkowej. Jeśli Warstwa prezentacji nie jest to strona programu ASP.NET, następnie warstwy środkowej i warstwy prezentacji należy wykonać wykonania dodatkowych czynności, aby zarządzać serializacji i deserializacji obiektu danych.  
@@ -38,4 +38,4 @@ ms.locfileid: "54623615"
   
 ## <a name="see-also"></a>Zobacz także
 - [N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
-- [NIB: Omówienie kontrolki serwera sieci Web kontrolka LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+- [Omówienie kontrolki serwera sieci Web kontrolka LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

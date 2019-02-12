@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083850"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093284"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Pobierają dane przy użyciu elementu DataReader
 Do pobierania danych przy użyciu **DataReader**, Utwórz wystąpienie obiektu **polecenia** obiektu, a następnie utwórz **DataReader** przez wywołanie metody **Command.ExecuteReader**  pobieranie wierszy ze źródła danych. **DataReader** zapewnia Niebuforowane strumienia danych, które umożliwia procedurach logikę w celu wydajnego przetwarzania wyników ze źródła danych, po kolei. **DataReader** to dobry wybór w przypadku, gdy w przypadku pobierania dużych ilości danych, ponieważ dane nie są buforowane w pamięci.
@@ -258,7 +258,6 @@ adapter.Fill(ds);
 >  Aby uniknąć **overflowexception —**, firma Microsoft zaleca również obsługiwać każda konwersja z typu Liczba Oracle na prawidłowy typ .NET Framework przed zapisaniem wartości w <xref:System.Data.DataRow>. Możesz użyć <xref:System.Data.Common.DataAdapter.FillError> zdarzenia w celu określenia, czy **overflowexception —** wystąpił. Aby uzyskać więcej informacji na temat <xref:System.Data.Common.DataAdapter.FillError> zdarzeń, zobacz [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Praca z DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)

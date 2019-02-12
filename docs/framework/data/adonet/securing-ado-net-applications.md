@@ -2,12 +2,12 @@
 title: Zabezpieczanie aplikacji ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 935d963ed19175518191006c2cc367f88d69e2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585370"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092244"
 ---
 # <a name="securing-adonet-applications"></a>Zabezpieczanie aplikacji ADO.NET
 Zapisywanie bezpiecznych aplikacji ADO.NET obejmuje więcej niż unikanie typowych pułapek kodowania, takie jak nie sprawdzania poprawności danych wejściowych użytkownika. Aplikacja, która uzyskuje dostęp do danych ma wiele potencjalnych punktów awarii, które osoba atakująca może wykorzystać do pobrania, manipulowanie lub zniszczyć poufnych danych. W związku z tym ważne jest zrozumienie wszystkie aspekty zabezpieczeń z procesu w fazie projektowania aplikacji, jego ostatecznej wdrażania i konserwacji do modelowania zagrożeń.  
@@ -42,10 +42,10 @@ Zapisywanie bezpiecznych aplikacji ADO.NET obejmuje więcej niż unikanie typowy
  [Zabezpieczenia](../../../../docs/standard/security/index.md)  
  Zawiera łącza do tematów opisujących wszystkie aspekty zabezpieczeń na platformie .NET.  
   
- [Narzędzia zabezpieczeń](https://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Narzędzia zabezpieczeń](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  Narzędzia programu .NET framework do zabezpieczania i administrowania zasadami zabezpieczeń.  
   
- [Zasoby służące do tworzenia bezpiecznych aplikacji](https://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Zasoby służące do tworzenia bezpiecznych aplikacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Zawiera łącza do tematów dotyczące tworzenia bezpiecznych aplikacji.  
   
  [Bibliografia dotycząca zabezpieczeń](/visualstudio/ide/security-bibliography)  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 2c722f0c4847f2403e9940ade6ee42e82be29c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b7e078b2eb76191ba572a7d141b29f71d7d8a96
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614360"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092556"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Konfigurowanie usługi danych (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można utworzyć usługi danych, które uwidaczniają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Dane w tych źródłach mogą pochodzić z różnych źródeł danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] korzysta z dostawców danych w celu ujawnienia tych danych jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Dostawcy te obejmują [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy, dostawcy odbicia i zestaw danych niestandardowych usług dostawcy interfejsów. Implementacja dostawcy definiuje model danych dla usługi. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -69,7 +69,7 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można u
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - i -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nieobsługiwane|Nieobsługiwane|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Nieobsługiwane|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - i -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nieobsługiwane|Nieobsługiwane|Nieobsługiwane|Nieobsługiwane|  
   
- <sup>1</sup> w tym przykładzie `Address` reprezentuje właściwość typu złożonego `Customers` jednostki, która ma właściwość o nazwie `StreetAddress`. Model używany przez usługi danych Northwind nie definiuje jawnie tego typu złożonego. Jeśli model danych jest zdefiniowana za pomocą [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy, można użyć [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia do definiowania typu złożonego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i modyfikowanie typów złożonych](https://msdn.microsoft.com/library/afb8e206-0ffe-4597-b6d4-6ab566897e1d).  
+ <sup>1</sup> w tym przykładzie `Address` reprezentuje właściwość typu złożonego `Customers` jednostki, która ma właściwość o nazwie `StreetAddress`. Model używany przez usługi danych Northwind nie definiuje jawnie tego typu złożonego. Jeśli model danych jest zdefiniowana za pomocą [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy, można użyć [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia do definiowania typu złożonego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie i modyfikowanie typów złożonych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
  <sup>2</sup> ten identyfikator URI jest obsługiwana, gdy właściwość, która zwraca duży obiekt binarny (BLOB) jest zdefiniowany jako zasób nośnika, który należy do jednostki, która jest wpisu łącza nośnika, w tym przypadku jest `Customers`. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   

@@ -1,13 +1,13 @@
 ---
 title: Literały
 description: Dowiedz się więcej o typy literałów w F# języka programowania.
-ms.date: 05/16/2016
-ms.openlocfilehash: dfc02f0ff8ac3ad8600be5f3b6c9359f02bd25be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/08/2019
+ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612455"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092166"
 ---
 # <a name="literals"></a>Literały
 
@@ -25,14 +25,14 @@ W poniższej tabeli przedstawiono typy literałów w F#. Znaki, które reprezent
 |sbyte|8-bitową liczbę całkowitą ze znakiem|t|`86y`<br /><br />`0b00000101y`|
 |byte|niepodpisane 8-bitowa liczba naturalna|UY|`86uy`<br /><br />`0b00000101uy`|
 |Int16|16-bitową liczbę całkowitą ze znakiem|s|`86s`|
-|UInt16|Liczba naturalna bez znaku 16-bitowych|USA|`86us`|
+|UInt16|Liczba naturalna bez znaku 16-bitowych|us|`86us`|
 |int<br /><br />int32|32-bitowa liczba całkowita ze znakiem|l lub Brak|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|niepodpisane 32-bitowa liczba naturalna|u lub ul|`86u`<br /><br />`86ul`|
 |unativeint —|wskaźnik natywny jako liczba naturalna bez znaku|NZ|`0x00002D3Fun`|
 |int64|64-bitowa liczba całkowita ze znakiem|L|`86L`|
 |uint64|niepodpisane 64-bitowa liczba naturalna|UL|`86UL`|
 |pojedynczy, float32|32-bitowych liczb zmiennoprzecinkowych|F lub f|`4.14F` lub `4.14f`|
-|||LF|`0x00000000lf`|
+|||lf|`0x00000000lf`|
 |float; podwójne|64-bitowych liczb zmiennoprzecinkowych|brak|`4.14` lub `2.3E+32` lub `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|Liczba całkowita nie ogranicza się do reprezentacja 64-bitowa|I|`9999999999999999999999999999I`|
@@ -51,16 +51,16 @@ Począwszy od programu F# 3.1, można użyć `+` Zaloguj się połączyć litera
 
 ```fsharp
 [<Literal>]
-let literal1 = "a" + "b"
+let Literal1 = "a" + "b"
 
 [<Literal>]
-let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let literal2 = 1 ||| 64
+let Literal2 = 1 ||| 64
 
 [<Literal>]
-let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 Nie jest dozwolone używanie innych operatorów bitowych.
@@ -76,8 +76,8 @@ W wyrażeniach dopasowania do wzorca identyfikatory, które zaczynają się od m
 Liczby całkowite ze znakiem 32-bitowych można również określić szesnastkową, ósemkowej lub binarny przy użyciu `0x`, `0o` lub `0b` odpowiednio prefiksu.
 
 ```fsharp
-let Numbers = (0x9F, 0o77, 0b1010)
-// Result: Numbers : int * int * int = (159, 63, 10)
+let numbers = (0x9F, 0o77, 0b1010)
+// Result: numbers : int * int * int = (159, 63, 10)
 ```
 
 ## <a name="underscores-in-numeric-literals"></a>Podkreślenia w literałach numerycznych

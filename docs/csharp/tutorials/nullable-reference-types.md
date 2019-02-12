@@ -3,12 +3,12 @@ title: Projektowanie w przypadku typów referencyjnych dopuszczającego wartoś�
 description: W tym samouczku zaawansowane zawiera wprowadzenie do typów referencyjnych dopuszczającego wartość null. Dowiesz się, że express projektu chcący po wartości odniesienia może mieć wartości null i pozwolić kompilatorowi wymusić, gdy nie może mieć wartości null.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204772"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092205"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Samouczek: Wyraźniej Express zgodną z planem projektu w przypadku typów referencyjnych dopuszcza wartości null i nie dopuszcza wartości null
 
@@ -55,7 +55,7 @@ Poprzedni pragma można dodać dowolne miejsce w pliku źródłowym i od tego mo
 Można też włączyć **typy dopuszczające wartości null odwołań** dla całego projektu, dodając następujący element do pliku csproj, na przykład, następujący bezpośrednio po `LangVersion` elementu, która umożliwiała C# 8.0:
 
 ```xml
-<NullableReferenceTypes>true</NullableReferenceTypes>
+<NullableContextOptions>enable</NullableContextOptions>
 ```
 
 ### <a name="design-the-types-for-the-application"></a>Projektowanie typów dla aplikacji

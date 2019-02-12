@@ -2,12 +2,12 @@
 title: Bezpieczny dostęp do danych
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fad9145cde499d7f0fc1b158810b75ff85c039b
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494642"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094038"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostępnych w podstawowym magazynie danych lub bazy danych. Należy również wziąć pod uwagę ryzyko związane z innych funkcji lub składniki, które Twoja aplikacja może zawierać.  
@@ -24,7 +24,7 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)|W tym artykule opisano najlepsze rozwiązania dotyczące zabezpieczeń i technik do ochrony informacji o połączeniu, takich jak za pomocą konfiguracji chronionej do szyfrowania parametrów połączenia.|  
-|[Zalecenia dotyczące strategii dostępu do danych](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji w bazie danych.|  
+|[Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywania operacji w bazie danych.|  
 |[Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)|W tym artykule opisano sposób tworzenia parametrów połączenia z danych wejściowych użytkownika w czasie wykonywania.|  
 |[Przegląd zabezpieczeń serwera SQL](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|W tym artykule opisano architekturę zabezpieczeń programu SQL Server.|  
   
@@ -46,7 +46,7 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Przegląd luki w zabezpieczeniach skryptu](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|W tym artykule opisano sposób zabezpieczyć się przed skryptów i instrukcji SQL luki w zabezpieczeniach.|  
+|[Przegląd luki w zabezpieczeniach skryptu](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|W tym artykule opisano sposób zabezpieczyć się przed skryptów i instrukcji SQL luki w zabezpieczeniach.|  
   
 ## <a name="probing-attacks"></a>Badanie ataków  
  Osoby atakujące często używają informacji z wyjątku, takie jak nazwa serwera, bazy danych lub tabeli, aby zainstalować ataku w systemie. Ponieważ wyjątki mogą zawierać określone informacje na temat aplikacji lub źródła danych, można zabezpieczyć ze źródłem danych i aplikacji lepiej chroniony przez tylko udostępnianie istotnych informacji klientowi.  
@@ -75,7 +75,7 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[COM + opartej na rolach zabezpieczeń i .NET Framework](https://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|W tym artykule omówiono sposób integracji aplikacji kod zarządzanego przy użyciu usług zabezpieczeń modelu COM +.|  
+|[Zabezpieczenia oparte na rolach](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|W tym artykule omówiono sposób integracji aplikacji kod zarządzanego przy użyciu usług zabezpieczeń modelu COM +.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
  .NET Framework oferuje interakcji z niezarządzanego kodu, w tym modelu COM składników modelu COM + usług, zewnętrzne biblioteki typów i wielu usług systemu operacyjnego. Praca z kodem niezarządzanym obejmuje wydostawać obwodu zabezpieczeń dla kodu zarządzanego. Zarówno kod, jak i wszelki kod, który ją wywołuje musi mieć niezarządzanych uprawnień kodu (<xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> określono flagę). Niezarządzanego kodu można wprowadzać luk w zabezpieczeniach niezamierzone do aplikacji. W związku z tym należy unikać współdziałanie z kodem niezarządzanym, chyba że jest to absolutnie konieczne.  
@@ -90,7 +90,7 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
 ## <a name="see-also"></a>Zobacz także
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Zalecenia dotyczące strategii dostępu do danych](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

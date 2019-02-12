@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2655cf5d5fb211149bdbe09179707ec53c737d3
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204564"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091841"
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe programu .NET framework
 
@@ -98,7 +98,7 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej wersji programu .NET F
 
 - [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] obejmuje [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], więc nie trzeba go zainstalować osobno. Podobnie [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] obejmuje [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
 
-- .NET Framework ma ograniczoną obsługę roli Server Core z systemu Windows Server 2008 R2 z dodatkiem SP1 lub nowszym. Zobacz [funkcje platformy .NET Core serwera](https://msdn.microsoft.com/library/ee391632.aspx) listę nieobsługiwanych interfejsów API.
+- .NET Framework ma ograniczoną obsługę roli Server Core z systemu Windows Server 2008 R2 z dodatkiem SP1 lub nowszym. Zobacz [funkcje platformy .NET Core serwera](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) listę nieobsługiwanych interfejsów API.
 
 - .NET Framework nie jest obsługiwana w systemie Windows Server 2008 R2 dla komputerów z procesorem Itanium.
 

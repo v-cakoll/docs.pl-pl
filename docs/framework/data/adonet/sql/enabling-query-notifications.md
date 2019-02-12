@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a711ad4779b8c932436ce1886b1a93dda849a94
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743039"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093960"
 ---
 # <a name="enabling-query-notifications"></a>Włączanie powiadomień o zapytaniach
 Aplikacje używające powiadomienia o zapytaniach mają wspólny zbiór wymagań. Źródła danych muszą być prawidłowo skonfigurowane do obsługi powiadomień kwerendy SQL, a użytkownik musi mieć odpowiednie uprawnienia po stronie klienta i po stronie serwera.  
@@ -28,25 +28,25 @@ Aplikacje używające powiadomienia o zapytaniach mają wspólny zbiór wymagań
 ## <a name="query-notifications-requirements"></a>Wymagania dotyczące powiadomień kwerendy  
  Powiadomienia o zapytaniach są obsługiwane tylko w przypadku instrukcji SELECT, spełniających określone wymagania. Poniższa tabela zawiera linki do dokumentacji programu Service Broker i powiadomienia o zapytaniach w dokumentacji SQL Server — książki Online.  
   
- **SQL Server Books Online**  
+ **Dokumentacja programu SQL Server**  
   
--   [Tworzenie zapytania o powiadomienie](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Tworzenie zapytania o powiadomienie](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Zagadnienia dotyczące zabezpieczeń dla programu Service Broker](https://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Zagadnienia dotyczące zabezpieczeń dla programu Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [Zabezpieczenia i ochrona (programu Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Zabezpieczenia i ochrona (programu Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Zagadnienia dotyczące zabezpieczeń dla usługi powiadomień](https://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Zagadnienia dotyczące zabezpieczeń dla usługi powiadomień](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [Uprawnienia do zapytań powiadomień](https://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Uprawnienia do zapytań powiadomień](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Międzynarodowe uwagi dotyczące programu Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Międzynarodowe uwagi dotyczące programu Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [Solution Design Considerations (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Solution Design Considerations (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Service Broker Developer InfoCenter](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Przewodnik dewelopera usługi (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Przewodnik dewelopera usługi (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Włączanie powiadomień kwerendy do uruchomienia przykładowego kodu  
  Aby włączyć brokera usługi na **AdventureWorks** bazy danych przy użyciu programu SQL Server Management Studio, wykonaj następującą instrukcję języka Transact-SQL:  

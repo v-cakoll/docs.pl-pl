@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e54c564fbd81f9a52bae5ea8a02514569902d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589181"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094012"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET framework — przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] wraz ze swoimi aplikacjami.
@@ -55,7 +55,7 @@ Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowol
 
 - Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], użytkownicy mogą wyświetlić listę uruchomionych aplikacji .NET Framework podczas instalacji i łatwo je zamknąć. Może to pomóc uniknąć ponownych uruchomień systemu spowodowanych przez instalacje .NET Framework. Zobacz [zmniejszenie liczby System ponownych uruchomień](../../../docs/framework/deployment/reducing-system-restarts.md).
 
-- Odinstalowywanie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub jeden z jego punktu również zwalnia usuwa istniejące [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] plików. Jeśli chcesz wrócić do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], należy ponownie zainstalować wraz z wszelkimi aktualizacjami do niego. (Zobacz [Instalowanie programu .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
+- Odinstalowywanie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub jeden z jego punktu również zwalnia usuwa istniejące [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] plików. Jeśli chcesz wrócić do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], należy ponownie zainstalować wraz z wszelkimi aktualizacjami do niego. (Zobacz [Instalowanie programu .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).)
 
 - .NET Framework 4.5 redistributable został zaktualizowany na 9 października 2012 r. Aby rozwiązać problem związany z niewłaściwym znacznikiem czasu dla certyfikatu cyfrowego, który spowodował cyfrowego podpisu wygenerowanego i podpisanego przez firmę Microsoft przedwczesne wygaśnięcie. Jeśli wcześniej zainstalowano .NET Framework 4.5, pakiet redystrybucyjny z dnia 16 sierpnia 2012 r., firma Microsoft zaleca aktualizację kopii najnowszym składnikiem redystrybucyjnym z [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484). Aby uzyskać więcej informacji na temat tego problemu, zobacz [Microsoft Security Advisory 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 

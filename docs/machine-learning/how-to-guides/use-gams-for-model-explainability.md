@@ -1,14 +1,14 @@
 ---
 title: Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
 description: Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
-ms.date: 02/01/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7899c0efb80af178ec4fa8623b0712eb9e438e43
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: c6f30a8cc5c07d97c62ded065f1e18a4f0523617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738893"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093115"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
 
@@ -25,21 +25,21 @@ var gamModel = fitPipeline.LastTransformer.Model;
 var intercept = gamModel.Intercept;
 Console.WriteLine($"Average predicted cost: {intercept:0.00}");
 
-// Get the feature names from the training set
-var featureNames = data.Schema.AsEnumerable()
+// Get the column names from the training set
+var columnNames = data.Schema.AsEnumerable()
     .Select(column => column.Name) // Get the column names
     .Where(name => name != "MedianHomeValue") // Drop the Label
     .ToArray();
 
 // Get the index of a variable from the training data
-var myFeatureIndex = featureNames.ToList().FindIndex(str => str.Equals("MyFeature"));
+var myFeatureIndex = columnNames.ToList().FindIndex(str => str.Equals("MyFeature"));
 
 // The shape functions represent the deviation from the average prediction as a function of the feature value
 // It is represented by a discrete set of bins
 // First, get the array of bin upper bounds from the model for this feature
-var myFeatureBins = gamModel.GetFeatureBinUpperBounds(myFeatureIndex);
+var myFeatureBins = gamModel.GetBinUpperBounds(myFeatureIndex);
 // Then get the array of bin weights; these are the effect size for each bin
-var myFeatureWeights = gamModel.GetFeatureWeights(myFeatureIndex);
+var myFeatureWeights = gamModel.GetBinEffects(myFeatureIndex);
 
 // Write out the shape function for the feature (see the following figure for what this looks like)
 for (int i = 0; i < myFeatureBins.Length; i++)

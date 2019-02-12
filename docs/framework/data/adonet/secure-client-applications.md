@@ -2,12 +2,12 @@
 title: Zabezpieczanie aplikacje klienckich
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8efdf4c4baceb22ee60bdcf333ad1fec9ebd2d0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599624"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092712"
 ---
 # <a name="secure-client-applications"></a>Zabezpieczanie aplikacje klienckich
 Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystkie chronione przed lukami w zabezpieczeniach, które mogą spowodować utratę danych lub w przeciwnym razie naruszyć bezpieczeństwo systemu. Tworzenie interfejsów użytkownika bezpiecznego może uniemożliwić wielu problemów przez blokowanie osoby atakujące przed uzyskaniem dostępu do danych lub zasobów systemowych.  
@@ -21,7 +21,7 @@ Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystk
  [Zabezpieczenia i dane użytkownika](../../../../docs/standard/security/security-and-user-input.md)  
  W tym artykule opisano sposób obsługi błędów delikatny i potencjalnie niebezpiecznych obejmujących dane wejściowe użytkownika.  
   
- [Walidacja danych wejściowych użytkownika na stronach sieci Web platformy ASP.NET](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
+ [Walidacja danych wejściowych użytkownika na stronach sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Omówienie sprawdzania poprawności danych wejściowych za pomocą programu ASP.NET sprawdzania poprawności formantów użytkownika.  
   
  [Dane użytkownika w formularzach Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
@@ -39,7 +39,7 @@ Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystk
  [Formularze Windows Forms i niezarządzane aplikacje](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  W tym artykule opisano sposób interakcji z niezarządzanych aplikacji w aplikacji Windows Forms.  
   
- [Wdrożenie rozwiązania ClickOnce dla Windows Forms aplikacji](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ [Wdrożenie ClickOnce w przypadku formularzy Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
  Opisuje sposób używania `ClickOnce` wdrożenia w aplikacji Windows Forms i omówiono skutki dla bezpieczeństwa.  
   
 ## <a name="aspnet-and-xml-web-services"></a>Program ASP.NET i usługi XML sieci Web  
@@ -51,23 +51,23 @@ Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystk
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[NIB: ASP.NET Security](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|W tym artykule omówiono sposób zabezpieczania aplikacji ASP.NET.|  
-|[Zabezpieczanie usług sieci Web XML utworzone za pomocą programu ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|W tym artykule omówiono sposób implementacji zabezpieczeń dla usługi sieci Web ASP.NET.|  
-|[Przegląd luki w zabezpieczeniach skryptu](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|W tym artykule omówiono sposób ochrony przed atakiem wykorzystać skrypt, który próbuje wstawić złośliwego znaków do strony sieci Web.|  
-|[NIB: podstawowe rozwiązania w zakresie zabezpieczeń dla aplikacji sieci Web ASP.NET](https://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|Zabezpieczenia ogólne informacje i linki do dalszych dyskusji|  
+|[Zabezpieczanie witryn sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|W tym artykule omówiono sposób zabezpieczania aplikacji ASP.NET.|  
+|[Zabezpieczanie usług sieci Web XML utworzone za pomocą programu ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|W tym artykule omówiono sposób implementacji zabezpieczeń dla usługi sieci Web ASP.NET.|  
+|[Przegląd luki w zabezpieczeniach skryptu](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|W tym artykule omówiono sposób ochrony przed atakiem wykorzystać skrypt, który próbuje wstawić złośliwego znaków do strony sieci Web.|  
+|[Wskazówki dotyczące podstawowych zabezpieczeń dla aplikacji sieci Web](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|Zabezpieczenia ogólne informacje i linki do dalszych dyskusji|  
   
 ## <a name="remoting"></a>Komunikacja zdalna  
  Wywołaniem funkcji zdalnych .NET umożliwia łatwe tworzenie aplikacji powszechnie rozproszonych, czy składniki aplikacji znajdują się już na jednym komputerze rozszerzane na całym świecie. Można tworzyć aplikacje klienta, które używają obiektów w innych procesów na tym samym komputerze lub na innym komputerze, który jest dostępny za pośrednictwem sieci. Można również użyć wywołaniem funkcji zdalnych .NET, do komunikowania się z innych domen aplikacji, w tym samym procesie.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Konfigurację zdalnego aplikacji](https://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|W tym artykule omówiono sposób konfigurowania aplikacji usług zdalnych w celu uniknięcia typowych problemów.|  
-|[Zabezpieczenia w komunikacji zdalnej](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|W tym artykule opisano, uwierzytelniania i szyfrowania, a także tematy dodatkowe zabezpieczenia komunikacji zdalnej.|  
+|[Konfigurację zdalnego aplikacji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|W tym artykule omówiono sposób konfigurowania aplikacji usług zdalnych w celu uniknięcia typowych problemów.|  
+|[Zabezpieczenia w komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|W tym artykule opisano, uwierzytelniania i szyfrowania, a także tematy dodatkowe zabezpieczenia komunikacji zdalnej.|  
 |[Zabezpieczenia i zagadnienia dotyczące komunikacji zdalnej](../../../../docs/framework/misc/security-and-remoting-considerations.md)|W tym artykule opisano problemy z zabezpieczeniami, za pomocą chronionych obiektów i występujące w wielu domenach aplikacji.|  
   
 ## <a name="see-also"></a>Zobacz także
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Zalecenia dotyczące strategii dostępu do danych](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Zabezpieczanie aplikacji](/visualstudio/ide/securing-applications)
 - [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Przykłady
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 55d53642b1d98c798b164ca99d2a59d7ba299d22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 840aeaee70df02dc07033490db5bd081de5500cf
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729032"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092010"
 ---
 # <a name="samples"></a>Przykłady
 Ten temat zawiera łącza do rozwiązań Visual Basic i C#, które zawierają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przykładowego kodu.  
@@ -17,7 +17,7 @@ Ten temat zawiera łącza do rozwiązań Visual Basic i C#, które zawierają [!
  [Przykładowe zapytania (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
  Wersja języka C# rozwiązania SampleQueries  
- [Rozwiązanie przykładów w języku C# LINQ](https://msdn.microsoft.com/library/23852e6b-b9a9-4a06-aedb-b27a5930ed74)  
+ [Przykładowe zapytania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
   
  Wykonaj następujące kroki, aby znaleźć dodatkowe przykłady [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodu oraz aplikacji:  
   
@@ -29,4 +29,4 @@ Ten temat zawiera łącza do rozwiązań Visual Basic i C#, które zawierają [!
   
 ## <a name="see-also"></a>Zobacz także
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ to SQL — wskazówki](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)
+- [LINQ to SQL — wskazówki](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

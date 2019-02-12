@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380ebeaa4c6265cccfe0e264884f509292b31eab
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709159"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093297"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenariusze aplikacji (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje udostępnianie i wykorzystywanie danych jako podstawowy zestaw scenariuszy [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. W tym temacie punktów do tematów, które są istotne dla tych scenariuszy.  
@@ -37,11 +37,11 @@ ms.locfileid: "54709159"
 -   [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej opartych na technologii Silverlight.  
- -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
 -   [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Instrukcje: Powiązania usługi danych z kontrolkami (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Instrukcje: Powiązania usługi danych z kontrolkami (klienta Silverlight)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))  
   
  Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej opartych na technologii AJAX.  
  -   [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "54709159"
   
 -   [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
   
  Prezentowania i wykorzystywania [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kanał duży obiekt binarny, który jest dostępny i zmienić jako strumień.  
  -   [Dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  

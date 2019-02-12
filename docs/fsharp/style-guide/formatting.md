@@ -1,13 +1,13 @@
 ---
 title: F#wskazówki dotyczące formatowania kodu
 description: Dowiedz się, wskazówki dotyczące formatowania F# kodu.
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254833"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093622"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#wskazówki dotyczące formatowania kodu
 
@@ -354,7 +354,7 @@ type PostalAddress =
     }
 ```
 
-Wprowadzenie do tokenu otwierającym znakiem nowego wiersza i token zamknięcia w nowym wierszu jest preferrable, jeśli są deklarowanie implementacje interfejsu lub elementów członkowskich, które znajdują się w rekordzie:
+Wprowadzenie do tokenu otwierającym znakiem nowego wiersza i token zamknięcia w nowym wierszu jest preferowana, jeśli są deklarowanie implementacje interfejsu lub elementów członkowskich, które znajdują się w rekordzie:
 
 ```fsharp
 // Declaring additional members on PostalAddress
@@ -389,7 +389,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Wprowadzenie do otwarcia tokenu w nowym wierszu, zawartość z kartami jednego zakresu, a token zamknięcia w nowym wierszu jest preferrable, jeśli:
+Wprowadzenie do otwarcia tokenu w nowym wierszu, zawartość z kartami jednego zakresu i token zamknięcia w nowym wierszu jest preferowana, jeśli:
 
 * Poruszanie się w rekordów w kodzie z zakresami różnych wcięć
 * Przekazanie w potoku je do funkcji
@@ -423,6 +423,42 @@ let foo a =
 ```
 
 Te same zasady mają zastosowanie dla elementów listy i tablicy.
+
+## <a name="formatting-copy-and-update-record-expressions"></a>Formatowanie rekordu kopiowanie i aktualizacja wyrażeń
+
+Wyrażenie kopiowanie i aktualizacja rekordu jest nadal rekord, więc podobne wytycznych.
+
+Krótkie wyrażenia mieści się w jednym wierszu:
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+Dłuższe wyrażenia należy korzystać z nowych wierszy:
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+I jako ze wskazówkami w rekordzie, można przeznaczyć w osobnych wierszach dla nawiasów klamrowych i wcięcia jeden zakres, z prawej strony z wyrażeniem. Należy zwrócić uwagę na to, że w niektórych przypadkach specjalnych, takich jak zawijania wartość z opcjonalnymi bez nawiasów, może być konieczne przechowywanie nawiasu klamrowego na jeden wiersz:
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
 
 ## <a name="formatting-lists-and-arrays"></a>Formatowanie, list i tablice
 
@@ -759,7 +795,7 @@ Po zastosowaniu do parametru, musi znajdować się na tym samym wierszu i oddzie
 
 ## <a name="formatting-literals"></a>Literały formatowania
 
-[F#literały](../language-reference/literals.md) przy użyciu `Literal` atrybut powinien należy umieścić atrybut w osobnym wierszu i użyj nazw camelCase:
+[F#literały](../language-reference/literals.md) przy użyciu `Literal` atrybut należy umieścić atrybut w osobnym wierszu i użyj camelCase nazewnictwa:
 
 ```fsharp
 [<Literal>]

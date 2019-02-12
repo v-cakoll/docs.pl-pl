@@ -3,15 +3,21 @@ title: Obsługa i wywoływanie zdarzeń
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - delegate model for events
-  - 'application development [.NET Framework], events'
-  - 'events [.NET Framework]'
+- delegate model for events
+- application development [.NET Framework], events
+- events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: d692f440354583e645606def4303f0c7c8f1e777
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093596"
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następuje po wzorcu projektowania obserwatora, który umożliwia subskrybentom zarejestrowanie i otrzymywanie powiadomienia od dostawcy. Nadawca wydarzenie wypycha powiadomienie, która miała miejsce zdarzenie, Odbiorca zdarzenia odbiera to powiadomienie i definiuje odpowiedź na to. W tym artykule opisano główne składniki modelu delegowanego, jak używać zdarzenia w aplikacjach i sposobie implementacji zdarzenia w kodzie.  
@@ -39,7 +45,7 @@ Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następ
   
  Delegaty mają charakter multiemisyjny, co oznacza, że mogą posiadać odniesienia do więcej niż jednej metody obsługi zdarzeń. Aby uzyskać więcej informacji, zobacz <xref:System.Delegate> odwołania do stron. Delegaty zapewniają elastyczność i szczegółową kontrolę w obsłudze zdarzeń. Delegat działa jako wysyłający zdarzenia dla klasy, która wywołuje zdarzenie Utrzymując listę zarejestrowanych obsług zdarzeń dla zdarzenia.  
   
- W scenariuszach gdzie <xref:System.EventHandler> i <xref:System.EventHandler%601> delegatów nie działają, można zdefiniować delegata. Scenariusze wymagające umożliwia zdefiniowanie pełnomocnika są bardzo rzadkie, np gdy musisz pracować z kodem, który nie rozpoznaje typów ogólnych. Oznaczasz pełnomocnika z `delegate` w (C#) i `Delegate` (w języku Visual Basic) słowa kluczowego w zgłoszeniu. Poniższy przykład pokazuje, jak zadeklarować delegatów nazwanych `ThresholdReachedEventHandler`.  
+ W scenariuszach gdzie <xref:System.EventHandler> i <xref:System.EventHandler%601> delegatów nie działają, można zdefiniować delegata. Scenariusze wymagające umożliwia zdefiniowanie pełnomocnika są bardzo rzadkie, np gdy musisz pracować z kodem, który nie rozpoznaje typów ogólnych. Oznaczasz pełnomocnika z `delegate` (w C#) i `Delegate` (w języku Visual Basic) słowa kluczowego w zgłoszeniu. Poniższy przykład pokazuje, jak zadeklarować delegatów nazwanych `ThresholdReachedEventHandler`.  
   
  [!code-csharp[EventsOverview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
  [!code-vb[EventsOverview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -65,7 +71,7 @@ Zdarzenia w .NET Framework są oparte na modelu delegata. Model delegata następ
  [!code-vb[EventsOverview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Programy obsługi zdarzeń statycznych i dynamicznych  
- .NET Framework umożliwia subskrybentom zarejestrowanie powiadomień o zdarzeniach statycznie lub dynamicznie. Programy obsługi zdarzeń statycznych działają przez całe życie klasy, której zdarzenie obsługują. Programy obsługi zdarzeń dynamicznych są jawnie aktywowane i dezaktywowane podczas wykonywania programu, zwykle w odpowiedzi na niektóre warunkowe logiki programu. Mogą one na przykład używane, jeśli powiadomienia zdarzeń są potrzebne tylko w określonych warunkach lub aplikacja zapewnia wiele procedur obsługi zdarzeń, a warunki uruchomieniowe określają odpowiedni do użycia. W przykładzie w poprzedniej sekcji pokazano, jak dynamicznie dodać program obsługi zdarzeń. Aby uzyskać więcej informacji, zobacz [zdarzenia](../../visual-basic/programming-guide/language-features/events/index.md) i [zdarzenia](../../csharp/programming-guide/events/index.md).  
+ .NET Framework umożliwia subskrybentom zarejestrowanie powiadomień o zdarzeniach statycznie lub dynamicznie. Programy obsługi zdarzeń statycznych działają przez całe życie klasy, której zdarzenie obsługują. Programy obsługi zdarzeń dynamicznych są jawnie aktywowane i dezaktywowane podczas wykonywania programu, zwykle w odpowiedzi na niektóre warunkowe logiki programu. Mogą one na przykład używane, jeśli powiadomienia zdarzeń są potrzebne tylko w określonych warunkach lub aplikacja zapewnia wiele procedur obsługi zdarzeń, a warunki uruchomieniowe określają odpowiedni do użycia. W przykładzie w poprzedniej sekcji pokazano, jak dynamicznie dodać program obsługi zdarzeń. Aby uzyskać więcej informacji, zobacz [zdarzenia](../../visual-basic/programming-guide/language-features/events/index.md) (w języku Visual Basic) i [zdarzenia](../../csharp/programming-guide/events/index.md) (w C#).  
   
 ## <a name="raising-multiple-events"></a>Podjęcie wielu zdarzeń  
  Jeśli klasa wywołuje wiele zdarzeń, kompilator generuje jedno pole na wystąpienie delegata zdarzenia. Jeśli liczba zdarzeń jest duża, koszt magazynowania jednego pola przypadającego na delegata może nie być akceptowane. W tych sytuacjach program .NET Framework dostarcza właściwości zdarzeń służące z inną wybraną strukturą danych do przechowywania delegatów zdarzeń.  

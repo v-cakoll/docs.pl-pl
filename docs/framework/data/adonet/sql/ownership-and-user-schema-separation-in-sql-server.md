@@ -2,12 +2,12 @@
 title: Własność i oddzielenie schematu użytkownika w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: adeed5ff4961a33d8f7d330941a5680f11a88b96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694805"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092608"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Własność i oddzielenie schematu użytkownika w programie SQL Server
 Podstawowa koncepcja zabezpieczeń programu SQL Server jest właściciele obiektów uprawnień do administrowania nimi. Nie można usunąć uprawnień od właściciela obiektu, a nie można usunąć użytkowników z bazy danych, jeśli ich właścicielem obiektów w nim.  
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Oddzielenie schematu użytkownika](https://msdn.microsoft.com/library/ms190387.aspx) w SQL Server — książki Online|Opis zmian wprowadzonych przez oddzielenie schematu użytkownika. Obejmuje nowe zachowanie, ich wpływu na własność, widoków wykazu i uprawnienia.|  
+|[Oddzielenie schematu użytkownika](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Opis zmian wprowadzonych przez oddzielenie schematu użytkownika. Obejmuje nowe zachowanie, ich wpływu na własność, widoków wykazu i uprawnienia.|  
   
 ## <a name="see-also"></a>Zobacz także
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

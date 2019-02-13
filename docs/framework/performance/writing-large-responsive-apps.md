@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540666"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219844"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takie jak pliki lub bazy danych. Te wskazówki pochodzą ponowne napisanie kompilatory C# i Visual Basic w kodzie zarządzanym, a w tym artykule przedstawiono kilka przykładów rzeczywistych z kompilatorem C#. 
@@ -37,7 +37,7 @@ Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji
  Należy ustawić środowiska lub scenariuszy celami wydajności dla klientów w aplikacji i pisania testów do pomiaru wydajności. Badanie niepowodzenie testów, stosując metodę wykładniczej: aby ułatwiają, hipotezę, co może być problem, użyj profilów i testowanie Twojej hipotezę z eksperymentu lub zmiany kodu. Wraz z upływem czasu z regularnych testowania, należy ustanowić pomiarów wydajności bazowego, dzięki czemu można izolować zmiany, które powodują regresji wydajności. Zbliża się wydajność pracy, w sposób rygorystyczne, będzie uniknąć marnowania czasu za pomocą aktualizacji kodu, które nie są potrzebne. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fakt 3: Dobre narzędzia sprawiają, że wszystkie różnicy  
- Dobre narzędzia pozwalają szybko przejść do szczegółów największych problemów z wydajnością (procesor CPU, pamięć lub dysk) i pomoc, możesz znaleźć kod, który powoduje, że te wąskich gardeł. Microsoft dostarczany szeroką gamą narzędzi wydajności, takich jak [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [narzędzie do analizy Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), i [narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
+ Dobre narzędzia pozwalają szybko przejść do szczegółów największych problemów z wydajnością (procesor CPU, pamięć lub dysk) i pomoc, możesz znaleźć kod, który powoduje, że te wąskich gardeł. Microsoft dostarczany szeroką gamą narzędzi wydajności, takich jak [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) i [narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  Narzędzia PerfView jest bezpłatne i niezwykle wydajne narzędzia, która pozwala skupić się na szczegółowe zagadnienia, takie jak We/Wy dysku, zdarzenia odzyskiwania pamięci i pamięci. Można przechwycić związane z wydajnością [Event Tracing for Windows](../../../docs/framework/wcf/samples/etw-tracing.md) zdarzeń (ETW) i widok prosty sposób na aplikację, na proces, na stosie i na informacje o wątku. Narzędzia PerfView pokazuje, ile i jakiego rodzaju pamięci są przydzielane aplikację, i które funkcji lub wywołanie stosów Współtworzenie ile alokacji pamięci. Aby uzyskać więcej informacji, zobacz zaawansowane tematy pomocy, pokazy i filmy wideo, włączone za pomocą narzędzia (takie jak [samouczki narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) w witrynie Channel 9). 
   
@@ -466,9 +466,8 @@ class Compilation { /*...*/
 - [Film wideo: prezentacja części tego tematu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Profilowanie wydajności — przewodnik dla początkujących](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Wydajność](../../../docs/framework/performance/index.md)
-- [Wskazówki dotyczące wydajności .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Wskazówki dotyczące wydajności .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Narzędzie do analizy wydajności Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [Znajdź wąskie gardła za pomocą programu Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [Channel 9 samouczki narzędzia PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Zestaw SDK platformy kompilatora .NET](../../csharp/roslyn-sdk/index.md)
 - [repozytorium DotNet/roslyn w witrynie GitHub](https://github.com/dotnet/roslyn)

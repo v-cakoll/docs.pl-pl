@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38894f57ec93fd44610b5c612326b399d477b723
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35dcabcf65af1634533edfba1e300a8746bc97ec
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531187"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221371"
 ---
 # <a name="net-native-reflection-api-reference"></a>Dokumentacja interfejsu API odbicia dla platformy .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] zawiera trzy nowe typy wyjątków: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), i [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Należy pamiętać o następujących dotyczących wszystkich trzech typów:  
@@ -25,7 +25,7 @@ ms.locfileid: "54531187"
 -   [MissingMetadataException narzędzia do rozwiązywania problemów](https://dotnet.github.io/native/troubleshooter/method.html) dla metod.  
   
 > [!NOTE]
->  Ta dokumentacja dokumenty trzy typy wyjątków, które są unikatowe dla [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Aby uzyskać dokumentację referencyjną dla interfejs API odbicia core .NET Framework, zobacz [przestrzenie nazw System.Reflection](https://msdn.microsoft.com/library/gg145033.aspx). Aby uzyskać dokumentację referencyjną dla .NET Framework core interoperacyjnego API, zobacz <xref:System.Runtime.InteropServices>.  
+>  Ta dokumentacja dokumenty trzy typy wyjątków, które są unikatowe dla [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Aby uzyskać dokumentację referencyjną dla interfejs API odbicia core .NET Framework, zobacz <xref:System.Reflection>, <xref:System.Reflection.Context> i <xref:System.Reflection.Emit> przestrzeni nazw. Aby uzyskać dokumentację referencyjną dla .NET Framework core interoperacyjnego API, zobacz <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>Przestrzeń nazw System.Reflection  
  <xref:System.Reflection> Przestrzeń nazw zawiera typy podstawowe używane w celu odbicia w .NET Framework. Aby uzyskać [!INCLUDE[net_native](../../../includes/net-native-md.md)], obejmuje także dwóch nowych typów wyjątków:  

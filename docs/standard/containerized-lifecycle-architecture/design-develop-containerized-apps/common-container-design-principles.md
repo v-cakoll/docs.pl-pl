@@ -1,15 +1,15 @@
 ---
 title: Wspólne zasady projektowania kontenera
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+description: Dowiedz się podstawową zasadą kontenera dobry projekt, jest to, że kontener należy obsługiwać tylko jeden proces.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: ce51eb296591490fba2d37e753be7881a55ea556
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152880"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220338"
 ---
 # <a name="common-container-design-principles"></a>Wspólne zasady projektowania kontenera
 

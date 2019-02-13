@@ -1,15 +1,15 @@
 ---
 title: Co to jest Docker?
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+description: Uzyskiwanie bardziej w zrozumienie platformy docker, prosty sposób analogiczny poniżej mogą pomóc.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: c8300c964dfce0cc8e39478cc10ed7589dbca2c9
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152725"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218557"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 

@@ -1,16 +1,16 @@
 ---
-title: Visual Studio Tools for Docker na Windows
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+title: Visual Studio Tools for Docker on Windows
+description: Ustal, jakimi narzędzi platformy Docker, dostępnych w programie Visual Studio 2017 w wersji 15.7 lub nowszej.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/12/2018
+ms.date: 11/23/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: 79e9b5cc9bac317a368583013abbc5124ef2c9ac
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a373a8ebfef605b9845a684d3987355f8841aa1b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151216"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219545"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>Za pomocą narzędzi Visual Studio Tools for Docker (Visual Studio Windows)
 
@@ -25,7 +25,7 @@ Najnowsze wersje platformy Docker for Windows ([https://docs.docker.com/docker-f
 
 Obsługę platformy docker znajduje się w programie Visual Studio 2017. Pobierz program Visual Studio 2017 w tym miejscu: [https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-## <a name="use-docker-tools-in-visual-studio-2017"></a>Korzystanie z narzędzi platformy Docker w programie Visual Studio 2017
+## <a name="use-docker-tools-in-visual-studio-2017"></a>Use Docker Tools in Visual Studio 2017
 
 Istnieją dwa poziomy obsługę platformy Docker, które można dodać do projektu. W projektach aplikacji sieci web platformy .NET Core, można po prostu dodać *pliku Dockerfile* pliku do projektu, należy włączyć obsługę platformy Docker. Następny poziom to obsługa aranżacji kontenerów, który dodaje *pliku Dockerfile* do projektu (jeśli jeszcze nie istnieje) i *docker-compose.yml* pliku na poziomie rozwiązania. W Visual Studio 2017 w wersji 15.7 lub wcześniejszej domyślnie zostanie dodana jego obsługa aranżacji kontenerów, za pomocą narzędzia Docker Compose. Obsługa aranżacji kontenerów to funkcja opcjonalna w wersjach programu Visual Studio 2017 15.8 lub później, w którym to przypadku narzędzia Docker Compose i Service Fabric są obsługiwane.
 
@@ -72,15 +72,15 @@ W menu głównym wybierz **narzędzia** > **opcje**i rozwiń **narzędzia konten
 
 ![](./media/visual-studio-docker-tools-options.png)
 
-Ilustracja 4-30 Platformy docker narzędzia, opcje
+Ilustracja 4-30 Docker Tools Options
 
 Poniższa tabela może pomóc zdecydować, jak ustawić te opcje.
 
 | Nazwa | Ustawienie domyślne | Dotyczy: | Opis |
 | -----|:---------------:|:----------:| ----------- |
-| Automatycznie Ściągnij wymagane obrazy platformy Docker po załadowaniu projektu | On | Narzędzia docker Compose | Aby zwiększyć wydajność, podczas ładowania projektów Visual Studio rozpocznie operacji ściągania aparatu Docker w tle, tak, aby gdy jesteś gotowy do uruchomienia kodu, obraz, który został już pobrany, lub w trakcie pobierania. Jeśli właśnie trwa ładowanie projektów i przeglądania kodu, możesz Wyłącz tę opcję, aby uniknąć pobierania obrazów kontenerów, które nie są potrzebne. |
-| Automatycznie uruchom kontenery w tle | On | Narzędzia docker Compose | Ponownie do zwiększenia wydajności programu Visual Studio tworzy kontener z instaluje wolumin gotowy do podczas kompilowania i uruchamiania kontenera. Jeśli chcesz kontrolować, po utworzeniu kontenera, wyłącz tę opcję. |
-| Automatycznie zabij kontenery rozwiązanie, zamknij | On | Narzędzia docker Compose | Wyłącz tę opcję, jeśli chcesz kontenerów do rozwiązania w celu będą nadal działać po zamknięcie rozwiązania lub zamknięcia programu Visual Studio. |
+| Automatycznie Ściągnij wymagane obrazy platformy Docker po załadowaniu projektu | On | Docker Compose | Aby zwiększyć wydajność, podczas ładowania projektów Visual Studio rozpocznie operacji ściągania aparatu Docker w tle, tak, aby gdy jesteś gotowy do uruchomienia kodu, obraz, który został już pobrany, lub w trakcie pobierania. Jeśli właśnie trwa ładowanie projektów i przeglądania kodu, możesz Wyłącz tę opcję, aby uniknąć pobierania obrazów kontenerów, które nie są potrzebne. |
+| Automatycznie uruchom kontenery w tle | On | Docker Compose | Ponownie do zwiększenia wydajności programu Visual Studio tworzy kontener z instaluje wolumin gotowy do podczas kompilowania i uruchamiania kontenera. Jeśli chcesz kontrolować, po utworzeniu kontenera, wyłącz tę opcję. |
+| Automatycznie zabij kontenery rozwiązanie, zamknij | On | Docker Compose | Wyłącz tę opcję, jeśli chcesz kontenerów do rozwiązania w celu będą nadal działać po zamknięcie rozwiązania lub zamknięcia programu Visual Studio. |
 | Nie monituj o zaufanie certyfikatowi protokołu SSL | Off | Projekty ASP.NET Core 2.1 | Jeśli certyfikatowi protokołu SSL nie jest zaufany, Visual Studio wyświetli monit o za każdym razem, gdy uruchamiasz projekt, chyba że to pole wyboru jest zaznaczone. |
 
 > [!WARNING]

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a90b4214e244bc1f9c5f8e71782e604bd6c7b619
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8feb94f3d57c25d634bd51b8f41eca42d5e5757a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582596"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220312"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Dynamiczne generowanie i kompilacja kodu źródłowego
 Program .NET Framework zawiera do tego mechanizm nazywany kodu Document Object Model (CodeDOM) umożliwia deweloperom programy, które emitują kod źródłowy do generowania kodu źródłowego w wielu językach programowania, w czasie wykonywania, oparty na jednym modelu, który reprezentuje kod do renderowania.  
@@ -37,10 +37,10 @@ Program .NET Framework zawiera do tego mechanizm nazywany kodu Document Object M
  [Generowanie kodu źródłowego i kompilacja programu z wykresu CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
  W tym artykule opisano sposób generowania kodu źródłowego i kompilowania wygenerowanego kodu za pomocą zewnętrznego kompilatora przy użyciu klas zdefiniowanych w `System.CodeDom.Compiler` przestrzeni nazw.  
   
- [Instrukcje: tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
+ [Instrukcje: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
  W tym artykule opisano, jak za pomocą modelu CodeDOM generowanie kodu za pomocą komentarzy dokumentacji XML i kompilowania wygenerowanego kodu, aby tworzy dane wyjściowe dokumentacji XML.  
   
- [Instrukcje: tworzenie klasy za pomocą modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
+ [Instrukcje: Utwórz klasę za pomocą modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
  W tym artykule opisano, jak wygenerować klasę, zawierający pola, właściwości, metody, Konstruktor i punktu wejścia za pomocą modelu CodeDOM.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -51,5 +51,5 @@ Program .NET Framework zawiera do tego mechanizm nazywany kodu Document Object M
  Definiuje interfejsów Generowanie i kompilowanie kodu w czasie wykonywania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [CodeDOM — podręczny wykaz](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ [CodeDOM — podręczny wykaz](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
  Umożliwia szybkie dla deweloperów można znaleźć elementów CodeDOM, które reprezentują elementy kodu źródłowego.

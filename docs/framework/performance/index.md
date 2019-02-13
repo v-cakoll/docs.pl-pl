@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d3e26c835a96bba3c97e471075f5d02b5330461
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f5667d55b8a49ba7b32570ad6a230b220ac8953b
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201572"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221176"
 ---
 # <a name="net-framework-performance"></a>Wydajność środowiska .NET Framework
 Jeśli chcesz tworzyć aplikacje o bardzo dużej wydajności, należy zaprojektować i zaplanować wydajność tak samo jak projektowanie innych funkcji aplikacji. Można użyć narzędzi dostarczanych przez firmę Microsoft do pomiaru wydajności Twojej aplikacji i, jeśli to konieczne, poprawić wykorzystanie pamięci, przepływność kodu i szybkość reakcji. Ten temat zawiera listę narzędzi do analizy wydajności zapewnia firmy Microsoft i zawiera łącza do innych tematów, które obejmują wydajność dla konkretnych obszarów projektowania aplikacji.  
@@ -32,8 +32,8 @@ Jeśli chcesz tworzyć aplikacje o bardzo dużej wydajności, należy zaprojekto
   
 |Narzędzie|Opis|  
 |----------|-----------------|  
-|Analiza wydajności programu Visual Studio|Użyj do analizowania użycia Procesora aplikacji .NET Framework, które zostaną wdrożone na komputerach z systemem operacyjnym Windows.<br /><br /> To narzędzie jest dostępne z **debugowania** menu w programie Visual Studio po otwarciu projektu. Aby uzyskać więcej informacji, zobacz [Eksplorator wydajności](/visualstudio/profiling/performance-explorer). **Uwaga:** analiza aplikacji Windows Phone użycia (zob. następny wiersz) Jeśli Windows Phone.|  
-|Analiza aplikacji Windows Phone|Użyj do analizowania Procesora i pamięci, szybkość transferu danych sieci, czas reakcji aplikacji i zużycia baterii w aplikacjach Windows Phone.<br /><br /> To narzędzie jest dostępne z **debugowania** menu dla projektu Windows Phone w programie Visual Studio po zainstalowaniu [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773). Aby uzyskać więcej informacji, zobacz [profilowanie aplikacji dla Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/jj215908\(v=vs.105\).aspx).|  
+|Analiza wydajności programu Visual Studio|Użyj do analizowania użycia Procesora aplikacji .NET Framework, które zostaną wdrożone na komputerach z systemem operacyjnym Windows.<br /><br /> To narzędzie jest dostępne z **debugowania** menu w programie Visual Studio po otwarciu projektu. Aby uzyskać więcej informacji, zobacz [Eksplorator wydajności](/visualstudio/profiling/performance-explorer). **Uwaga:**  Użyj analizy aplikacji Windows Phone (zob. następny wiersz) Jeśli Windows Phone.|  
+|Analiza aplikacji Windows Phone|Użyj do analizowania Procesora i pamięci, szybkość transferu danych sieci, czas reakcji aplikacji i zużycia baterii w aplikacjach Windows Phone.<br /><br /> To narzędzie jest dostępne z **debugowania** menu dla projektu Windows Phone w programie Visual Studio po zainstalowaniu [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=265773). Aby uzyskać więcej informacji, zobacz [profilowanie aplikacji dla systemu Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
 |[Narzędzia PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Służy do identyfikowania Procesora i problemów z wydajnością związane z pamięcią. To narzędzie używa śledzenia zdarzeń dla Windows (ETW) i środowiska CLR profilowania API, aby zapewnić zaawansowanej pamięci i dochodzeń CPU, a także informacji na temat wyrzucania elementów bezużytecznych i kompilacji JIT. Aby uzyskać więcej informacji na temat używania narzędzia PerfView, zobacz pliki samouczka i pomocy, które są dołączone do aplikacji [samouczki wideo kanału 9](https://channel9.msdn.com/Series/PerfView-Tutorial), i [wpisów w blogu](https://blogs.msdn.com/b/vancem/archive/tags/perfview/).<br /><br /> W przypadku problemów specyficznych dla pamięci zobacz [za pomocą narzędzia PerfView dla pamięci](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
 |[Analizator wydajności Windows](https://www.microsoft.com/download/details.aspx?id=30652)|Użyj, aby określić ogólną wydajność systemu, takie jak wykorzystanie magazynu i pamięć aplikacji, gdy wiele aplikacji jest uruchomionych na tym samym komputerze. To narzędzie jest dostępne w Centrum pobierania jako część Windows Assessment and Deployment Kit (ADK) dla [!INCLUDE[win8](../../../includes/win8-md.md)]. Aby uzyskać więcej informacji, zobacz [Analizator wydajności Windows](/windows-hardware/test/wpt/windows-performance-analyzer).|  
   
@@ -47,10 +47,8 @@ Jeśli chcesz tworzyć aplikacje o bardzo dużej wydajności, należy zaprojekto
 |--------------|---------|  
 |Aplikacje .NET framework dla wszystkich platform|[Odzyskiwanie pamięci i wydajność](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Wskazówki dotyczące wydajności](../../../docs/framework/performance/performance-tips.md)|  
 |[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje napisane w języku C++, C# i Visual Basic|[Wydajność — najlepsze rozwiązania dla aplikacji Windows Store przy użyciu języka C++, C# i Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
-|Windows Phone|[Zagadnienia dotyczące wydajności aplikacji dla Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff967560\(v=vs.105\).aspx)<br /><br /> [Analiza aplikacji Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/hh202934\(v=vs.105\).aspx)<br /><br /> [Pobieranie aplikacji Windows Phone na rynku szybciej](https://msdn.microsoft.com/magazine/hh781024.aspx)|  
-|Windows Presentation Foundation (WPF)|[Pakiet wydajności WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)|  
-|Silverlight|[Porady dotyczące wydajności](https://msdn.microsoft.com/library/cc189071\(v=vs.95\).aspx)|  
-|ASP.NET|[Przegląd wydajności platformy ASP.NET](https://msdn.microsoft.com/library/f882bf1b-a009-4312-ac06-74370ffabc0b)|  
+|Windows Presentation Foundation (WPF)|[WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
+|ASP.NET|[Przegląd wydajności platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
 |Windows Forms|[Praktyczne wskazówki do zwiększenia wydajności aplikacji w Windows Forms](https://msdn.microsoft.com/magazine/cc163630.aspx)|  
   
 ## <a name="related-topics"></a>Tematy pokrewne  

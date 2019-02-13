@@ -1,15 +1,15 @@
 ---
 title: Kroki w przepływie pracy DevOps zewnętrznej pętli dla aplikacji platformy Docker
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+description: Poznaj procedurę "zewnętrzna pętla" przepływ pracy DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143652"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220942"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki w przepływie pracy DevOps zewnętrznej pętli dla aplikacji platformy Docker
 
@@ -21,11 +21,11 @@ Rysunek 5-1. Przepływ pracy zewnętrzna pętla DevOps dla aplikacji platformy D
 
 Teraz Przeanalizujmy każdy z tych kroków, które bardziej szczegółowo.
 
-## <a name="step-1-inner-loop-development-workflow"></a>Krok 1: Przepływ pracy wewnętrznej pętli tworzenia kodu
+## <a name="step-1-inner-loop-development-workflow"></a>Krok 1. Przepływ pracy wewnętrznej pętli tworzenia kodu
 
 Ten krok jest omówiona szczegółowo w rozdziale 4, ale aby podsumowanie, Oto gdzie zewnętrzna pętla rozpoczyna się, moment, w którym Deweloper wypycha kodu do systemu zarządzania kontrolą źródła (takich jak Git), inicjowanie działania potoku ciągłej integracji.
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Krok 2: Integracja kontroli kodu źródłowego i zarządzanie za pomocą usługi Azure DevOps Services i Git
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Krok 2. Integracja kontroli kodu źródłowego i zarządzanie za pomocą usługi Azure DevOps Services i Git
 
 W tym kroku musisz mieć systemu kontroli wersji, aby zebrać jednolity całego kodu pochodzących z różnych deweloperów w zespole.
 
@@ -35,7 +35,7 @@ Obrazów lokalnych generowane przez deweloperów, samodzielnie powinny być uży
 
 Usługa Azure DevOps usług i Team Foundation Server obsługuje Git i kontroli wersji serwera Team Foundation. Można wybrać między nimi i użyć jej do środowiska Microsoft end-to-end. Można jednak również mogą zarządzać kodu w repozytoriach zewnętrznych (takich jak GitHub, lokalne repozytoria Git i Subversion) i nadal mieć możliwość nawiązania połączenia i pobrania kodu jako punktu wyjścia dla potoku ciągłej integracji metodyki DevOps.
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Krok 3: Tworzenie elementu konfiguracji, integracja i testowanie na platformie Azure DevOps usług i platformą Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Krok 3. Tworzenie elementu konfiguracji, integracja i testowanie na platformie Azure DevOps usług i platformą Docker
 
 Ciągła Integracja została uznana zawiera standardowe rozwiązanie dla nowoczesnych oprogramowania testowania i dostarczania. Rozwiązanie Docker przechowuje separacji między zespołami deweloperów i operacyjne. Niezmienność obrazów platformy Docker zapewnia powtarzalne wdrożenia między co został opracowany, przetestowane za pośrednictwem ciągłej integracji i uruchomić w środowisku produkcyjnym. Aparat platformy docker wdrożony na komputery przenośne dla deweloperów i infrastrukturę testowania sprawia, że kontenery przenośny między środowiskami.
 
@@ -157,7 +157,7 @@ Rysunek 5-5: Publikowanie niestandardowych obrazów do rejestru platformy Docker
 
 **Więcej informacji o** Aby dowiedzieć się więcej o rozszerzeniu Docker dla usługi DevOps platformy Azure, przejdź do <https://aka.ms/vstsdockerextension>. Aby dowiedzieć się więcej na temat usługi Azure Container Registry, przejdź do <https://aka.ms/azurecontainerregistry>.
 
-## <a name="step-4-cd-deploy"></a>Krok 4: Ciągłe wdrażanie, wdrażanie
+## <a name="step-4-cd-deploy"></a>Krok 4. Ciągłe wdrażanie, wdrażanie
 
 Niezmienność obrazów platformy Docker zapewnia powtarzalne wdrożenia za pomocą co został opracowany, przetestowane za pośrednictwem ciągłej integracji i uruchomić w środowisku produkcyjnym. Po utworzeniu aplikacji obrazów platformy Docker, opublikowane w rejestrze Docker (prywatnej lub publicznej), można wdrożyć je do kilku środowiskach, które mogą wystąpić (produkcyjne, QA, przemieszczania, itp.) z potok ciągłego wdrażania za pomocą usługi DevOps platformy Azure zadania potoku lub usługi Azure DevOps usługi Release Management.
 
@@ -221,13 +221,13 @@ Rozszerzenie usługom DevOps platformy Azure dla platformy Docker i Azure Contai
 
 Usługa Azure Container Service: <https://aka.ms/azurecontainerservice>
 
-System mesosphere DC/OS: <https://mesosphere.com/product/>
+Mesosphere DC/OS: <https://mesosphere.com/product/>
 
-## <a name="step-5-run-and-manage"></a>Krok 5: Uruchamianie i zarządzanie
+## <a name="step-5-run-and-manage"></a>Krok 5. Uruchamianie i zarządzanie
 
 Ponieważ uruchamianie aplikacji i zarządzanie nimi w środowisku produkcyjnym przedsiębiorstwa poziom jest główne tematu w i samego siebie oraz ze względu na rodzaj operacji, i ludzie przy pracy na tym samym poziomie (operacje IT) oraz duży zakres tego obszaru, firma Microsoft ma poświęcona całą obok rozdziału w celu objaśniające go.
 
-## <a name="step-6-monitor-and-diagnose"></a>Krok 6: Monitorowanie i diagnozowanie
+## <a name="step-6-monitor-and-diagnose"></a>Krok 6. Monitorowanie i diagnozowanie
 
 W tym temacie również jest objęte w następnym rozdziale zadań wykonywanych przez dział operacji IT w systemach produkcyjnych. jednak ważne jest wyróżnić szczegółowe dane uzyskane w tym kroku źródła musi danych do zespołu programistycznego, tak, aby stale zwiększona aplikacji. Z tego punktu widzenia, jest również częścią metodyki DevOps, chociaż zadania oraz operacje są zazwyczaj wykonywane przez IT.
 
@@ -235,4 +235,4 @@ Tylko w przypadku monitorowania i diagnostyki 100 procent, w obszarze metodyki D
 
 >[!div class="step-by-step"]
 >[Poprzednie](index.md)
->[dalej](../run-manage-monitor-docker-environments/index.md)
+>[dalej](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

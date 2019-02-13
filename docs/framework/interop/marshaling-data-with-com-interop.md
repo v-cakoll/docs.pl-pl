@@ -1,54 +1,54 @@
 ---
-title: Marshaling danych za pomocą modelu COM
+title: Organizowanie danych za pomocą modelu COM
 ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0d94223223568efe921af3a340815a966cc6c6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab4dbdd0a69b158ff5c49949bee5089bd3fe095c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388358"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220536"
 ---
-# <a name="marshaling-data-with-com-interop"></a>Marshaling danych za pomocą modelu COM
-Współdziałanie z COM zapewnia obsługę zarówno przy użyciu obiektów COM z kodu zarządzanego i udostępnianie zarządzane obiekty do modelu COM. Obsługa przekazywanie danych do i z modelu COM jest rozbudowana i prawie zawsze zawiera poprawne zachowanie marshalingu.  
+# <a name="marshaling-data-with-com-interop"></a>Organizowanie danych za pomocą modelu COM
+Usługa międzyoperacyjna modelu COM zapewnia obsługę zarówno za pomocą obiektów COM z kodu zarządzanego i udostępnianie zarządzane obiekty do modelu COM. Obsługa kierowania danych do i z modelu COM są obszerne i prawie zawsze zawiera poprawne zachowanie organizowania.  
   
- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Obejmuje następujące narzędzia międzyoperacyjnego COM:  
+ [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Obejmuje następujące narzędzia międzyoperacyjnego modelu COM:  
   
--   [Importer biblioteki (Tlbimp.exe) wpisz](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), który konwertuje Biblioteka typów COM do zestawu międzyoperacyjnego. Z tego zestawu interop organizowanie usługi generuje otoki wykonujących przekazywanie między zarządzanymi i niezarządzanymi pamięci danych.  
+-   [Importer biblioteki (Tlbimp.exe) wpisz](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), która konwertuje bibliotece typów modelu COM do zestawu międzyoperacyjnego. Z tego zestawu międzyoperacyjnego marshaling usługi generuje otoki, które wykonują danych szeregowanie między zarządzanymi i niezarządzanymi pamięci.  
   
--   [Eksporter biblioteki (Tlbexp.exe) wpisz](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), która tworzy bibliotekę typów COM z zestawu i generuje otoki, który wykonuje przekazywanie podczas wywołania metody.  
+-   [Eksporter biblioteki (Tlbexp.exe) wpisz](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), która generuje bibliotekę typów modelu COM z zestawu i generuje otoki, który wykonuje marshaling podczas wywołania metody.  
   
- Poniższe sekcje łącza do tematów opisujących procesów dostosowywania otoki międzyoperacyjnego, jeśli można lub musi podasz organizatora typu dodatkowe informacje.  
+ Poniższe sekcje łącza do tematów opisujących procesy dostosowywania otoki międzyoperacyjny podczas mogą lub musi podawania organizator informacji o dodatkowych typach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
-[Porady: ręczne tworzenie otok](how-to-create-wrappers-manually.md)   
-Opisuje sposób tworzenia otoki COM ręcznie w kodzie źródłowym zarządzanych. 
+[Instrukcje: Ręczne tworzenie otok](how-to-create-wrappers-manually.md)   
+W tym artykule opisano sposób tworzenia otoki COM ręcznie w zarządzanym kodzie źródłowym. 
  
  [Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
- Opisuje sposób Migrowanie zarządzanego kodu DCOM do WCF dla najbardziej bezpieczne rozwiązania.  
+ W tym artykule opisano, jak przeprowadzić migrację zarządzanego kodu DCOM do WCF dla najbardziej bezpieczne rozwiązania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Typy danych modelu COM](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
- Zawiera odpowiednie typy zarządzane i niezarządzane danych.  
+ [Typy danych COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
+ Udostępnia odpowiednie typy danych zarządzanych i niezarządzanych.  
   
- [Dostosowywanie wywoływane otoki COM](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
- Opisuje sposób jawnie kierować typy danych przy użyciu <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu w czasie projektowania.  
+ [Dostosowywanie wywoływanych otok COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
+ Opisuje sposób kieruje jawnie tego typów danych przy użyciu <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu w czasie projektowania.  
   
- [Dostosowywanie wywoływane otoki środowiska uruchomieniowego](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
- Opisuje sposób dostosować zachowanie marshalingu typów z zestawu międzyoperacyjnego oraz definiowanie typów COM ręcznie.  
+ [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
+ W tym artykule opisano, jak dostosować zachowanie organizowania typów w zestaw międzyoperacyjny oraz sposób definiowania typów modelu COM ręcznie.  
   
- [Współdziałanie COM zaawansowane](https://msdn.microsoft.com/library/bd9cdfyx(v=vs.100).aspx)  
- Zawiera łącza do dodatkowych informacji o włączenie składniki modelu COM aplikacji .NET Framework.  
+ [Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
+ Zawiera łącza do dodatkowych informacji o dołączaniu składników COM do aplikacji środowiska .NET Framework.  
   
- [Zestaw do typu biblioteki konwersja — podsumowanie](https://msdn.microsoft.com/library/xk1120c3(v=vs.100).aspx)  
- Zawiera opis zestawu na typ procesu konwersji eksportu biblioteki.  
+ [Zestaw do wpisz biblioteki konwersja — podsumowanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
+ W tym artykule opisano zestaw na typ procesu konwersji eksportu biblioteki.  
   
- [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/k83zzh38(v=vs.100).aspx)  
- W tym artykule opisano bibliotekę typów, aby proces konwersji importu zestawu.  
+ [Biblioteki typów na zestaw konwersja — podsumowanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
+ W tym artykule opisano biblioteki typów do procesu konwersji importowania zestawu.  
   
- [Współdziałanie za pomocą typów ogólnych](https://msdn.microsoft.com/library/ms229590(v=vs.100).aspx)  
- Opisuje akcje, które są obsługiwane w przypadku współdziałania COM za pomocą typów ogólnych.
+ [Międzyoperacyjne używanie typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
+ W tym artykule opisano akcje, które są obsługiwane w przypadku współdziałania COM za pomocą typów ogólnych.

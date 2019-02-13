@@ -1,15 +1,15 @@
 ---
-title: Organizowanie mikrousług i aplikacji wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+title: Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
+description: Aplikacje rzeczywistej produkcji mają być wdrażane i zarządzane przy użyciu koordynatorów, które obsługują kondycji, obciążenia i cyklami życia dla wszystkich kontenerów.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/19/2017
-ms.openlocfilehash: fa64562808bba9c9dea5a5eedc367af7decf83b7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 749b613ac847c57eb993bff90b36f02a0b39477f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126903"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221163"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i aplikacji wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
@@ -181,4 +181,4 @@ Należy zauważyć, że kontenery platformy Docker samodzielnie bezstanowe. Jeś
 
 >[!div class="step-by-step"]
 >[Poprzednie](soa-applications.md)
->[dalej](docker-apps-development-environment.md)
+>[dalej](deploy-azure-kubernetes-service.md)

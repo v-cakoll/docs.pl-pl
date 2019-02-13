@@ -1,15 +1,15 @@
 ---
 title: Środowisko programistyczne dla aplikacji platformy Docker
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+description: Ustal, jakimi najważniejszych opcjach narzędzia do programowania, które obsługują programowanie platformy Docker w cyklu życia.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152419"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220000"
 ---
 # <a name="development-environment-for-docker-apps"></a>Środowisko programistyczne dla aplikacji platformy Docker
 
@@ -26,7 +26,7 @@ Jeśli wolisz lekkie Międzyplatformowe Edytor Obsługa dowolnego języka progra
 
 Aby pobrać platformy Docker dla systemów Mac i Windows, przejdź do <https://www.docker.com/products/docker>.
 
-### <a name="visual-studio-with-docker-tools"></a>Visual Studio z narzędziami Docker
+### <a name="visual-studio-with-docker-tools"></a>Visual Studio with Docker Tools
 
 Podczas korzystania z programu Visual Studio 2015 można zainstalować dodatkowe narzędzia "Narzędzia platformy Docker dla programu Visual Studio". Dla programu Visual Studio 2017 narzędzia platformy Docker są wbudowane już. W obu przypadkach można rozwijać, uruchamianie i Weryfikuj aplikacje bezpośrednio w wybranym środowisku platformy Docker. F5 aplikacji (jeden kontener lub wiele kontenerów) bezpośrednio do platformy Docker hosta debugowania lub naciśnij klawisze Ctrl + F5, aby edytować i odświeżać aplikację bez konieczności ponownego kompilowania kontenera. Jest to najprostsza i bardziej wydajne wyborem dla deweloperów Windows tworzenie kontenerów platformy Docker dla systemu Linux lub Windows.
 
@@ -47,5 +47,5 @@ Możesz opracowywać aplikacje platformy Docker i narzędzi firmy Microsoft przy
 Zasadniczo można używać dowolnego języka modern, obsługiwane przez platformę Docker w systemie Linux lub Windows.
 
 >[!div class="step-by-step"]
->[Poprzednie](orchestrate-high-scalability-availability.md)
+>[Poprzednie](deploy-azure-kubernetes-service.md)
 >[dalej](docker-apps-inner-loop-workflow.md)

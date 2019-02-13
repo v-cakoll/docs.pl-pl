@@ -1,15 +1,15 @@
 ---
 title: Aplikacje monolityczne
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+description: Zrozumienie podstawowych pojęć do umieszczania aplikacji monolitycznych w kontenerze.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743272"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221358"
 ---
 # <a name="monolithic-applications"></a>Aplikacje monolityczne
 
@@ -21,7 +21,7 @@ Następujące jednostki kontenera jest tylko jedno i zrobi to w jednym procesie 
 
 ![](./media/image1.png)
 
-Rysunek 4-1: przykład architektury aplikacji monolitycznej
+Rysunek 4-1. Przykładem architektury aplikacji monolitycznych
 
 Wadą tego podejścia jest dostarczany, lub gdy aplikacja powiększa się w wymaganiem go do skalowania. W przypadku zmiany skali całej aplikacji nie jest tak naprawdę problem. Jednak w większości przypadków kilka części aplikacji są punkty urządzenie rozruchowe, które wymagają skalowania, inne składniki są używane w mniej.
 
@@ -35,13 +35,13 @@ Z perspektywy infrastruktury każdy serwer można uruchomić wiele aplikacji, w 
 
 ![](./media/image2.png)
 
-Rysunek 4-2: hoście z uruchomionym wiele aplikacji/kontenerów
+Rysunek 4-2: Host uruchomionych wiele aplikacji/kontenerów
 
 Aplikacje monolityczne na platformie Azure można wdrożyć przy użyciu dedykowanych maszyn wirtualnych dla poszczególnych wystąpień. Za pomocą [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), łatwe skalowanie maszyn wirtualnych. [Usługi Azure App Services](https://azure.microsoft.com/services/app-service/) uruchamiać aplikacje monolityczne i łatwo skalować wystąpień bez konieczności zarządzania maszynami wirtualnymi. Od 2016 r. usługi Azure App Services można uruchomić jednego wystąpienia kontenerów platformy Docker, jak również uproszczenia procesu wdrażania. Ponadto za pomocą platformy Docker, możesz wdrożyć jedną maszynę Wirtualną jako hosta Docker i uruchomić wiele wystąpień. Za pomocą równoważenie Azure, jak pokazano w rysunek 4-3, możesz zarządzać, skalowanie.
 
 ![](./media/image3.png)
 
-Rysunek 4-3: wiele hostów skalowanie w poziomie w jednej aplikacji aplikacji/kontenerów Docker
+Rysunek 4-3: Wiele hostów skalowanie w poziomie w jednej aplikacji aplikacji/kontenerów Docker
 
 Możesz zarządzać wdrożenia na różnych hostach przy użyciu techniki wdrażania tradycyjnych. Hostów platformy Docker można zarządzać za pomocą poleceń, takich jak `docker run` ręcznie, za pomocą usługi automation, takie jak potoki ciągłe dostarczanie (CD), które firma Microsoft opisano w dalszej części tej książce elektronicznej.
 
@@ -65,7 +65,7 @@ Teraz, jednak (o którym poinformowano na konferencji Microsoft Connect 2016 w l
 
 ![](./media/image4.png)
 
-Rysunek 4-4: publikowanie kontenera w usłudze Azure App Service z programu Visual Studio aplikacje/kontenerów
+Rysunek 4-4: Publikowanie kontenera w usłudze Azure App Service z programu Visual Studio aplikacje/kontenerów
 
 Rysunek 4-4 pokazuje również, że przepływ publikowania wypycha obraz do rejestru kontenerów, która może być usługa Azure Container Registry (rejestru blisko wdrożenia na platformie Azure i chronione przez usługę Azure Active Directory, grupy i konta) lub dowolnego rejestru platformy Docker Podobnie jak rejestry usługi Docker Hub lub w środowisku lokalnym.
 

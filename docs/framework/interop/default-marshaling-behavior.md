@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689003"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221293"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Marshaling międzyoperacyjny działa w regułach tego dyktować, jak dane skojarzone z parametrami metody zachowuje się jak przekazuje między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolować takie kierowania działań jako przekształcenia typu danych, / / wywoływany można zmienić danych przekazanych do niego i zwracają te zmiany do obiektu wywołującego, a w ramach której okolicznościach Organizator udostępnia optymalizację wydajności.  
@@ -24,7 +24,7 @@ Marshaling międzyoperacyjny działa w regułach tego dyktować, jak dane skojar
  W tej sekcji wymieniono domyślnych parametrów zachowań interop marshaling usługi. Przedstawia ona szczegółowe informacje na temat organizowanie tablic, typów logicznych, typu char, delegatów, klas, obiektów, ciągi i struktur.  
   
 > [!NOTE]
->  Marshaling typów ogólnych nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz [współpracy za pomocą typów ogólnych](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100)).  
+>  Marshaling typów ogólnych nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz [współpracy za pomocą typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Zarządzanie pamięcią za pomocą organizatora międzyoperacyjnego  
  Organizator międzyoperacyjny zawsze spróbuje zwolnić pamięć przydzielana przez kod niezarządzany. To zachowanie jest zgodne z zasadami zarządzania pamięci COM, ale różni się od reguły rządzące natywnych języka C++.  
@@ -41,7 +41,7 @@ BSTR MethodOne (BSTR b) {
   
  Jednakże, jeśli zdefiniujesz metody jako prototyp wywołania platformy, Zastąp każde **BSTR** to typ <xref:System.String> typu, a następnie wywołaj `MethodOne`, środowisko uruchomieniowe języka wspólnego spróbuje zwolnić `b` dwa razy. Można zmienić zachowanie organizowania za pomocą <xref:System.IntPtr> typy zamiast **ciąg** typów.  
   
- Środowisko uruchomieniowe zawsze używa **CoTaskMemFree** metodę, aby zwolnić pamięć. Jeśli pamięci, w którym pracujesz, nie została przydzielona za pomocą **CoTaskMemAlloc** metody, należy użyć **IntPtr** i zwalniają pamięć ręcznie przy użyciu odpowiedniej metody. Podobnie, można uniknąć pamięcią automatyczną zwalnianie w sytuacjach, w których nigdy nie powinna być zwolniona pamięć, tak jak w przypadku **GetCommandLine** funkcji z modułu Kernel32.dll, która zwraca wskaźnik do pamięci jądra. Aby uzyskać szczegółowe informacje dotyczące ręcznego zwalniania pamięci, zobacz [przykłady buforów](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
+ Środowisko uruchomieniowe zawsze używa **CoTaskMemFree** metodę, aby zwolnić pamięć. Jeśli pamięci, w którym pracujesz, nie została przydzielona za pomocą **CoTaskMemAlloc** metody, należy użyć **IntPtr** i zwalniają pamięć ręcznie przy użyciu odpowiedniej metody. Podobnie, można uniknąć pamięcią automatyczną zwalnianie w sytuacjach, w których nigdy nie powinna być zwolniona pamięć, tak jak w przypadku **GetCommandLine** funkcji z modułu Kernel32.dll, która zwraca wskaźnik do pamięci jądra. Aby uzyskać szczegółowe informacje dotyczące ręcznego zwalniania pamięci, zobacz [przykłady buforów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Organizowanie domyślne dotyczące klas  
  Klasy mogą być organizowane wyłącznie przez współdziałania z modelem COM i zawsze są przekazywane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy jest nazywane interfejsu klasy. Aby dowiedzieć się, jak zastępowanie interfejsu klasy za pomocą ulubionego interfejsu, zobacz [wprowadzenie interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface).  

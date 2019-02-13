@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596140"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218986"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Instrukcje: Generowanie zestawów podstawowej obsługi Międzyoperacyjnej przy użyciu Tlbimp.exe
 Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:  
@@ -38,7 +38,7 @@ Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:
   
 1.  W wierszu polecenia wpisz polecenie:  
   
-     **tlbimp** *tlbfile***/primary/KeyFile:** *filename* **/out:** *assemblyname*   
+     **tlbimp** *tlbfile***/primary/KeyFile:** *filename* **/out:** *assemblyname*  
   
      W tym poleceniu *tlbfile* to plik biblioteki typów modelu COM, zawierającą *filename* to nazwa kontenera lub pliku, który zawiera pary kluczy i *assemblyname* jest Nazwa zestawu, aby zalogować się przy użyciu silnej nazwy.  
   
@@ -46,7 +46,7 @@ Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:
   
  Zależne podstawowego zestawu międzyoperacyjnego z numerem wersji, która różni się od oryginalnej biblioteki typów nie jest stała się wykrywalna zainstalowany w bieżącym katalogu. Należy zarejestrować zależne podstawowy zestaw międzyoperacyjny w rejestrze systemu Windows lub użyj **/reference** opcji, należy upewnić się, że Tlbimp.exe znajdzie zależnej biblioteki DLL.  
   
- Można również opakować wielu wersji biblioteki typów. Aby uzyskać instrukcje, zobacz [jak: OPAKOWYWANIE wielu wersji bibliotek typów](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100)).  
+ Można również opakować wielu wersji biblioteki typów. Aby uzyskać instrukcje, zobacz [jak: OPAKOWYWANIE wielu wersji bibliotek typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).  
   
 ## <a name="example"></a>Przykład  
  Następujący przykład importuje biblioteki typów COM `LibUtil.tlb` i podpisuje zestaw `LibUtil.dll` silną nazwą przy użyciu pliku klucza `CompanyA.snk`. Pomijając nazwę określonej przestrzeni nazw, ten przykład generuje domyślny obszar nazw `LibUtil`.  

@@ -1,5 +1,5 @@
 ---
-title: Marshaling międzyoperacyjny
+title: Organizowanie międzyoperacyjne
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, COM interop
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453258"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221254"
 ---
-# <a name="interop-marshaling"></a>Marshaling międzyoperacyjny
+# <a name="interop-marshaling"></a>Organizowanie międzyoperacyjne
 <a name="top"></a> Marshaling międzyoperacyjny decyduje o tym, jak dane są przekazywane w metodzie argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania. Marshaling międzyoperacyjny jest czynnością środowiska wykonawczego, wykonywane przez usługę organizowania wykonywalnych języka wspólnego.  
   
  Większość typów danych mają wspólne reprezentacji w pamięci zarządzanych i niezarządzanych. Organizator międzyoperacyjny obsługuje następujące typy dla Ciebie. Inne typy może być niejednoznaczne lub nie jest reprezentowana w ogóle w pamięci zarządzanej.  
@@ -62,8 +62,8 @@ Wywołanie platformy i przepływ wywołań międzyoperacyjnych COM
   
 |Klient modelu COM|Serwer .NET|Charakteryzuje się wymaganiami|  
 |----------------|-----------------|-----------------------------|  
-|STA|`Both` staje się komórce jednowątkowej|Marshaling tego samego typu apartment.|  
-|MTA|`Both` staje się MTA.|Marshaling tego samego typu apartment.|  
+|STA|`Both` becomes STA.|Marshaling tego samego typu apartment.|  
+|MTA|`Both` becomes MTA.|Marshaling tego samego typu apartment.|  
   
  Ponieważ klient i serwer znajdują się w tej samej typu apartment, interop marshaling usługi automatycznie obsługuje marshaling wszystkich danych. Poniższa ilustracja przedstawia międzyoperacyjny usługi organizowania działające między zarządzanymi i niezarządzanymi stosów w ramach tego samego typu apartment styl modelu COM.  
   
@@ -77,7 +77,7 @@ Tego samego typu apartment organizowania procesu
   
  Tworzenie składnika ustawienie koligacji wątku serwera COM. W poniższej tabeli przedstawiono kombinacje ustawień apartamentu dla klientów programu .NET i serwerów COM. Pokazuje również, wynikowy marshaling wymagania dotyczące kombinacje.  
   
-|Klient modelu .NET|Serwer COM|Charakteryzuje się wymaganiami|  
+|Klient .NET|Serwer COM|Charakteryzuje się wymaganiami|  
 |-----------------|----------------|-----------------------------|  
 |MTA (ustawienie domyślne)|MTA<br /><br /> STA|Marshaling międzyoperacyjny.<br /><br /> Współdziałanie i organizowanie COM.|  
 |STA|MTA<br /><br /> STA|Współdziałanie i organizowanie COM.<br /><br /> Marshaling międzyoperacyjny.|  
@@ -149,11 +149,11 @@ Zdalne wywołania przez zapory za pomocą protokołu SOAP lub klasy TcpChannel
 |[Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)|W tym artykule opisano, jak deklarować parametrów metod i przekazywać argumenty do funkcji eksportowanych przez niezarządzanych bibliotek.|  
 |[Marshaling danych za pomocą modelu COM](marshaling-data-with-com-interop.md)|Opisuje sposób dostosowywania otoki COM, aby zmienić zachowanie organizowania.|  
 |[Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|W tym artykule opisano, jak przeprowadzić migrację z modelu DCOM do WCF.|  
-|[Instrukcje: Mapowanie wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)|W tym artykule opisano sposób mapowania niestandardowej wyjątków na wartości HRESULT i zapewnia pełną mapowania od każdego HRESULT do jej klasy porównywalne wyjątków w programie .NET Framework.|  
-|[Międzyoperacyjne używanie typów ogólnych](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|W tym artykule opisano akcje, które są obsługiwane w przypadku współdziałania COM za pomocą typów ogólnych.|  
+|[Instrukcje: Mapa wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)|W tym artykule opisano sposób mapowania niestandardowej wyjątków na wartości HRESULT i zapewnia pełną mapowania od każdego HRESULT do jej klasy porównywalne wyjątków w programie .NET Framework.|  
+|[Międzyoperacyjne używanie typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|W tym artykule opisano akcje, które są obsługiwane w przypadku współdziałania COM za pomocą typów ogólnych.|  
 |[Współdziałanie z kodem niezarządzanym](index.md)|Opisuje współdziałanie usługi udostępniane przez środowisko uruchomieniowe języka wspólnego.|  
 |[Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera łącza do dodatkowych informacji o dołączaniu składników COM do aplikacji środowiska .NET Framework.|  
-|[Zagadnienia dotyczące projektowania do celów międzyoperacyjności](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Zawiera wskazówki dotyczące pisania zintegrowane składników COM.|  
+|[Zagadnienia dotyczące projektowania do celów międzyoperacyjności](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Zawiera wskazówki dotyczące pisania zintegrowane składników COM.|  
   
  [Powrót do początku](#top)  
   

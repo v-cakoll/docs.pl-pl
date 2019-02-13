@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453086"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221241"
 ---
 # <a name="reflection-in-the-net-framework"></a>Odbicie w oprogramowaniu .NET Framework
-Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji na temat załadować [zestawy](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) i typy zdefiniowane w nich, takich jak [klasy](../../../docs/standard/base-types/common-type-system.md#classes), [interfejsów](../../../docs/standard/base-types/common-type-system.md#interfaces), i [typy wartości](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Można również używać odbicia do tworzenia wystąpień typów w czasie wykonywania, a także wywołania i uzyskiwać do nich dostęp. Tematy dotyczące konkretnych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego omówienia.  
+Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji na temat załadować [zestawy](../app-domains/assemblies-in-the-common-language-runtime.md) i typy zdefiniowane w nich, takich jak [klasy](../../standard/base-types/common-type-system.md#classes), [interfejsów](../../standard/base-types/common-type-system.md#interfaces), i [typy wartości](../../csharp/language-reference/keywords/value-types.md). Można również używać odbicia do tworzenia wystąpień typów w czasie wykonywania, a także wywołania i uzyskiwać do nich dostęp. Tematy dotyczące konkretnych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego omówienia.
   
  [Środowiska uruchomieniowego języka wspólnego](../../../docs/standard/clr.md) zarządza modułu ładującego [domen aplikacji](../../../docs/framework/app-domains/application-domains.md), które stanowią zdefiniowane granice wokół obiektów, które mają ten sam zakres aplikacji. Zarządzania obejmuje ładowania każdego zestawu do odpowiedniej domeny aplikacji i kontrolowanie układu pamięci hierarchii typów w obrębie każdego zestawu.  
   
@@ -77,10 +77,10 @@ Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?disp
 |[Odbicie i typy ogólne](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|W tym artykule wyjaśniono, jak odbicie obsługuje parametrów typu i argumentów typu rodzajowego typów i metod ogólnych.|  
 |[Zagadnienia dotyczące zabezpieczeń dla odbicia](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|W tym artykule opisano zasady określające, w jakim stopniu odbicie może służyć do odnajdywanie typu informacji i dostęp do typów.|  
 |[Dynamiczne ładowanie i używanie typów](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|W tym artykule opisano interfejs niestandardowego powiązania odbicia, który obsługuje późnego wiązania.|  
-|[Instrukcje: ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|W tym artykule opisano kontekstu ładowania tylko odbicie. Pokazuje sposób załadowania zestawu, jak przetestować kontekst oraz zbadania atrybuty stosowane do zestawu w kontekstu reflection-only.|  
+|[Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|W tym artykule opisano kontekstu ładowania tylko odbicie. Pokazuje sposób załadowania zestawu, jak przetestować kontekst oraz zbadania atrybuty stosowane do zestawu w kontekstu reflection-only.|  
 |[Uzyskiwanie dostępu do atrybutów niestandardowych](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Demonstruje użycie odbicia do istnienia atrybut zapytania i wartości.|  
 |[Określanie w pełni kwalifikowanych nazw typów](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Opisuje format w pełni kwalifikowanych nazw typów w postaci notacji Backusa-Naura (BNF) oraz składni wymaganej do określania znaków specjalnych, nazwy zestawu, wskaźników, odwołań i tablic.|  
-|[Instrukcje: podłączanie delegata za pomocą odbicia](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Wyjaśnia, jak utworzyć delegata dla metody i podłączyć delegata do zdarzenia. Opis sposobu tworzenia metody obsługi zdarzeń w czasie wykonywania za pomocą <xref:System.Reflection.Emit.DynamicMethod>.|  
+|[Instrukcje: Podłączanie delegata za pomocą odbicia](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Wyjaśnia, jak utworzyć delegata dla metody i podłączyć delegata do zdarzenia. Opis sposobu tworzenia metody obsługi zdarzeń w czasie wykonywania za pomocą <xref:System.Reflection.Emit.DynamicMethod>.|  
 |[Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Wyjaśnia, jak można wygenerować zestawów dynamicznych i metod dynamicznych.|  
   
 ## <a name="reference"></a>Tematy pomocy  

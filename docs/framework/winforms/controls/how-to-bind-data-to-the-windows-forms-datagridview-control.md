@@ -1,63 +1,55 @@
 ---
-title: 'Instrukcje: Powiązanie danych w kontrolce DataGridView formularzy Windows Forms'
-ms.date: 03/30/2017
+title: 'Instrukcje: Powiąż dane z formantu DataGridView formularzy Windows'
+ms.date: 02/08/2019
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - data binding [Windows Forms], grids
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-ms.openlocfilehash: eefc588ef8f637e91bfcad1bcc24d88bb0078fdc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 0d9b72766ce2e93472a07eebdf7bf59cc7b0328d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744391"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220578"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Instrukcje: Powiązanie danych w kontrolce DataGridView formularzy Windows Forms
-<xref:System.Windows.Forms.DataGridView> Kontroli obsługuje standardowe Windows Forms powiązanie modelu danych, więc będzie powiązać różnorodne źródła danych. W większości przypadków, jednak użytkownik zostanie z nim powiązane <xref:System.Windows.Forms.BindingSource> składnik, który będzie zarządzać szczegółowe informacje o interakcji ze źródłem danych. <xref:System.Windows.Forms.BindingSource> Składnika może reprezentować dowolnego źródła danych Windows Forms i zapewnia elastyczność podczas wybierania lub modyfikowania lokalizację danych. Aby uzyskać więcej informacji o źródłach danych obsługiwanych przez <xref:System.Windows.Forms.DataGridView> sterowania, zobacz [— informacje o formancie DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Instrukcje: Powiąż dane z formantu DataGridView formularzy Windows
+
+<xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje standardowy model powiązanie danych formularzy Windows, dzięki czemu można powiązać różnorodne źródła danych. Zazwyczaj można powiązać <xref:System.Windows.Forms.BindingSource> który zarządza interakcji ze źródłem danych. <xref:System.Windows.Forms.BindingSource> Mogą być dowolnego źródła danych Windows Forms, co zapewnia dużą elastyczność podczas wybierania lub modyfikowania lokalizacji usługi danych. Aby uzyskać więcej informacji o źródłach danych <xref:System.Windows.Forms.DataGridView> kontrolować obsługuje, zobacz [— informacje o formancie DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+
+Program Visual Studio została rozbudowana Obsługa powiązanie danych z kontrolką DataGridView. Aby uzyskać więcej informacji, zobacz [jak: Powiąż dane z formantu DataGridView formularzy Windows za pomocą projektanta](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
+
+Do formantu DataGridView połączyć się z danymi:
+
+1. Implementuje metodę do obsługi Szczegóły pobierania danych. Poniższy kod implementuje przykład `GetData` metodę, która inicjuje <xref:System.Data.SqlClient.SqlDataAdapter>i używa ich do wypełnienia <xref:System.Data.DataTable>. Następnie powiąże <xref:System.Data.DataTable> do <xref:System.Windows.Forms.BindingSource>. 
+
+2. W formularzu <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń, powiązania <xref:System.Windows.Forms.DataGridView> kontrolę <xref:System.Windows.Forms.BindingSource>i wywoływać `GetData` metody do pobierania danych.  
+
+## <a name="example"></a>Przykład
+
+Ten przykład kompletny kod pobiera dane z bazy danych do wypełnienia formantu DataGridView w formularzu Windows. Formularz zawiera również przycisków, aby ponownie załadować danych i przesyłanie zmian do bazy danych.  
+
+Ten przykład wymaga: 
+
+- Dostęp do przykładowej bazy danych Northwind programu SQL Server. Aby uzyskać więcej informacji na temat Instalowanie przykładowej bazy danych Northwind, zobacz [przykładowych baz danych należy uzyskać przykłady kodu ADO.NET](../../data/adonet/sql/linq/downloading-sample-databases.md). 
+
+- Odwołania do zestawów systemu, przestrzeń nazw System.Windows.Forms, dane systemowe i System.Xml.  
+
+Aby skompilować i uruchomić ten przykład, Wklej kod do *Form1* pliku z kodem w nowym projekcie Windows Form.  Aby uzyskać więcej informacji, zobacz [jak: Skompilować i uruchomić pełny przykład kodu Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)). Aby uzyskać informacje dotyczące tworzenia aplikacji z C# lub wiersza polecenia programu Visual Basic, zobacz [za pomocą wiersza polecenia przy użyciu csc.exe](/csharp/language-reference/compiler-options/command-line-building-with-csc-exe) lub [kompilacji z wiersza polecenia](/visual-basic/reference/command-line-compiler/building-from-the-command-line).  
   
- Brak zaawansowaną obsługę dla tego zadania w programie Visual Studio.  Zobacz też [jak: Powiązywanie danych Windows DataGridView formantu formularzy przy użyciu narzędzia Projektant](https://msdn.microsoft.com/library/33w255ac\(v=vs.110\)).  
-  
-## <a name="procedure"></a>Procedura  
-  
-#### <a name="to-connect-a-datagridview-control-to-data"></a>Aby nawiązać połączenie danych formantu DataGridView  
-  
-1.  Implementuje metodę do obsługi Szczegóły pobierania danych z bazy danych. Poniższy kod implementuje przykład `GetData` metodę, która inicjuje <xref:System.Data.SqlClient.SqlDataAdapter> składnika i używa ich do wypełnienia <xref:System.Data.DataTable>. <xref:System.Data.DataTable> Następnie jest powiązany z <xref:System.Windows.Forms.BindingSource> składnika. Pamiętaj ustawić `connectionString` zmiennej na wartość, która jest odpowiednia dla bazy danych. Dostęp do serwera, należy za pomocą programu SQL Server Northwind przykładowej bazy danych zainstalowany.  
-  
-     [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#20)]
-     [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#20)]
-     [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#20)]  
-  
-2.  Do formularza <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń, powiązania <xref:System.Windows.Forms.DataGridView> kontrolę <xref:System.Windows.Forms.BindingSource> składnika i wywołania `GetData` metodę, aby pobrać dane z bazy danych.  
-  
-     [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#10)]
-     [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#10)]
-     [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#10)]  
-  
-## <a name="example"></a>Przykład  
- Poniższy przykład kompletny kod zawiera przyciski umożliwiające ponowne załadowanie danych z bazy danych i przesyłanie zmian do bazy danych.  
-  
- [!code-cpp[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/cpp/datagridviewboundeditable.cpp#00)]
- [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewBoundEditable#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb#00)]  
-  
-## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Ten przykład wymaga:  
-  
--   Odwołania do zestawów systemu, przestrzeń nazw System.Windows.Forms, dane systemowe i System.XML.  
-  
- Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
-  
-## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Przechowywanie poufnych informacji, takich jak hasła, w ciągu połączenia mogą wpływać na bezpieczeństwo aplikacji. Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych. Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+Wypełnij `connectionString` zmiennej w przykładzie z wartościami połączenia programu SQL Server Northwind przykładowej bazy danych. Uwierzytelnianie Windows, nazywany również zabezpieczenia zintegrowane jest bardziej bezpieczny sposób łączenia z bazą danych niż przechowywanie hasła w parametrach połączenia. Aby uzyskać więcej informacji na temat zabezpieczeń połączeń, zobacz [chronić informacje o połączeniu](../../data/adonet/protecting-connection-information.md).  
+
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource>
-- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Wyświetlanie danych w formancie DataGridView formularzy Windows](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md)

@@ -1,16 +1,16 @@
 ---
 title: w modyfikator parametru - C# odwołania
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 02/12/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631415"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219558"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>w modyfikator parametrów (odwołanie w C#)
 
@@ -20,11 +20,14 @@ ms.locfileid: "54631415"
 
 Poprzedni przykład pokazuje, że `in` modyfikator jest zazwyczaj zbędna w witrynie wywołania. Jest wymagany tylko w deklaracji metody.
 
+
 > [!NOTE] 
 > `in` — Słowo kluczowe można również za pomocą parametru typu ogólnego do określenia, czy parametr typu jest kontrawariantny, jako część `foreach` instrukcji, lub jako część `join` klauzuli w zapytaniu LINQ. Aby uzyskać więcej informacji na temat użytkowania `in` Zobacz — słowo kluczowe w tych kontekstach [w](in.md), który zawiera łącza do wszystkich tych zastosowań.
   
  Zmienne są przekazywane jako `in` argumentów musi zostać zainicjowany przed przesłaniem w wywołaniu metody. Jednak wywoływanej metody nie może przypisać wartość lub zmodyfikuj argumentu.  
-  
+
+`in` Modyfikator parametru jest dostępna w C# wersji 7.2 lub nowszy. Poprzednie wersje wygenerować błąd kompilatora `CS8107` ("Funkcja"odwołań tylko do odczytu"nie jest dostępna w C# 7.0. Użyj języka w wersji 7.2 lub większą.") Aby skonfigurować wersji kompilatora języka, zobacz [wybierz C# wersji językowej](../configure-language-version.md).
+
  Mimo że `in`, `ref`, i `out` słowa kluczowe powodować różne zachowanie w czasie wykonywania, ich nie są uważane za część podpisu metody w czasie kompilacji. W związku z tym, nie mogą być przeciążone metody, jeśli jedyna różnica polega na to, że jedna metoda przyjmuje strukturę `ref` lub `in` argument i drugie `out` argumentu. Poniższy kod, na przykład, nie zostanie skompilowany:  
   
 ```csharp

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531515"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221085"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Pakowanie zestawu dla modelu COM
 COM, deweloperzy mogą korzystać z następujące informacje na temat typów zarządzanych, ich planowanie, które należy uwzględnić w swoich aplikacji:  
@@ -60,7 +60,7 @@ COM, deweloperzy mogą korzystać z następujące informacje na temat typów zar
   
      Niezależnie od wybranego mechanizmu tylko typy publiczne zdefiniowane w zestawie, który podasz znajdują się w wygenerowanej biblioteki typów.  
   
-     Można bibliotekę typów w osobnym pliku pakietu lub osadzenie go jako plik zasobów Win32 w ciągu. Aplikacja oparta na sieci. Microsoft Visual Basic 6.0 wykonać to zadanie dla Ciebie automatycznie. Jednakże korzystając z [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], należy ręcznie osadzić biblioteki typów. Aby uzyskać instrukcje, zobacz [jak: Osadzanie bibliotek typu jako zasobów Win32 w. Aplikacje oparte na NET](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
+     Można bibliotekę typów w osobnym pliku pakietu lub osadzenie go jako plik zasobów Win32 w ciągu. Aplikacja oparta na sieci. Microsoft Visual Basic 6.0 wykonać to zadanie dla Ciebie automatycznie. Jednakże korzystając z [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], należy ręcznie osadzić biblioteki typów. Aby uzyskać instrukcje, zobacz [jak: Osadzanie bibliotek typu jako zasobów Win32 w. Aplikacje oparte na NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Eksporter biblioteki typów  
@@ -89,4 +89,4 @@ COM, deweloperzy mogą korzystać z następujące informacje na temat typów zar
 - [Zagadnienia dotyczące zabezpieczeń zestawów](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
-- [Instrukcje: Osadzanie bibliotek typu jako zasobów Win32 w aplikacjach](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+- [Instrukcje: Osadzanie bibliotek typu jako zasobów Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540575"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220981"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 
@@ -80,7 +80,7 @@ Przykłady opracowano na podstawie DLR języków są następujące:
 
  DLR dodaje zestaw usług do środowiska CLR dla lepiej obsługuje języki dynamiczne. Te usługi są następujące:
 
--   Drzewa wyrażeń. DLR używa drzew wyrażeń, który reprezentuje semantykę języka. W tym celu DLR ma rozszerzone drzew wyrażeń LINQ do uwzględnienia przepływ sterowania, przypisywania i inne węzły modelowanie języka. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).
+-   Drzewa wyrażeń. DLR używa drzew wyrażeń, który reprezentuje semantykę języka. W tym celu DLR ma rozszerzone drzew wyrażeń LINQ do uwzględnienia przepływ sterowania, przypisywania i inne węzły modelowanie języka. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) lub [drzew wyrażeń (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
 -   Wywołaj buforowanie lokacji. A *witryny wywołania dynamicznego* to miejsce w kodzie, gdzie można wykonać operacji, takiej jak `a + b` lub `a.b()` obiektów dynamicznych. DLR buforuje charakterystyki `a` i `b` (zazwyczaj typy tych obiektów) i informacje na temat operacji. Jeśli taka operacja została wykonana wcześniej, DLR pobiera wszystkie niezbędne informacje z pamięci podręcznej na potrzeby szybkiego wysyłania.
 
@@ -96,5 +96,6 @@ DLR używa integratorów wywołania do komunikowania się nie tylko przy użyciu
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md)
-- [Drzewa wyrażeń](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [Drzewa wyrażeń (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Drzewa wyrażeń (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Przewodnik: Tworzenie obiektów dynamicznych i posługiwanie](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1651583f4cd962f5038fbe0e3f55a5d8b42ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589678"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221280"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling klas, struktur i unii
 Klasy i struktury są podobne w .NET Framework. Jednocześnie może mieć pola, właściwości i zdarzenia. Może to być również metody statyczne i Niestatyczne. Jeden zauważalnej różnicy jest struktury są typami wartości a klasy są typami odwołań.  
@@ -129,7 +129,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile — przykład  
- W tym przykładzie pokazano, jak przekazać strukturę, która zawiera strukturę drugi, osadzone do niezarządzanej funkcji. Ilustruje też sposób używania <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby zadeklarować tablicę o stałej długości w taki sposób, w obrębie struktury. W tym przykładzie osadzone elementy są dodawane do nadrzędnej struktury. Przykładowy osadzony struktury, która nie jest spłaszczany [przykłady struktur](https://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e(v=vs.100)).  
+ W tym przykładzie pokazano, jak przekazać strukturę, która zawiera strukturę drugi, osadzone do niezarządzanej funkcji. Ilustruje też sposób używania <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby zadeklarować tablicę o stałej długości w taki sposób, w obrębie struktury. W tym przykładzie osadzone elementy są dodawane do nadrzędnej struktury. Przykładowy osadzony struktury, która nie jest spłaszczany [przykłady struktur](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100)).  
   
  Findfile — przykład używa następującej funkcji niezarządzanej, wyświetlane z jej oryginalną deklaracją funkcji:  
   
@@ -242,7 +242,7 @@ typedef struct _SYSTEMTIME {
   
  W tym przykładzie `SystemTime` klasy zawiera elementy oryginalnej struktury, które są reprezentowane jako elementy członkowskie klasy. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Ma ustawioną wartość atrybutu upewnij się, że elementy członkowskie są rozmieszczone w pamięci sekwencyjnej, w kolejności, w jakiej są wyświetlane.  
   
- `LibWrap` Klasa zawiera zarządzane prototyp `GetSystemTime` metody, która przekazuje `SystemTime` klasy jako In/Out parametru domyślnie. Parametr musi być zadeklarowany z <xref:System.Runtime.InteropServices.InAttribute> i <xref:System.Runtime.InteropServices.OutAttribute> atrybutów, ponieważ klasy, które są typami odwołań, są przekazywane w parametrach domyślnie. Do obiektu wywołującego otrzymać wyników są [atrybuty kierunkowe](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100)) muszą być stosowane w sposób jawny. `App` Klasy tworzy nowe wystąpienie klasy `SystemTime` klasy i uzyskuje dostęp do jego pola danych.  
+ `LibWrap` Klasa zawiera zarządzane prototyp `GetSystemTime` metody, która przekazuje `SystemTime` klasy jako In/Out parametru domyślnie. Parametr musi być zadeklarowany z <xref:System.Runtime.InteropServices.InAttribute> i <xref:System.Runtime.InteropServices.OutAttribute> atrybutów, ponieważ klasy, które są typami odwołań, są przekazywane w parametrach domyślnie. Do obiektu wywołującego otrzymać wyników są [atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)) muszą być stosowane w sposób jawny. `App` Klasy tworzy nowe wystąpienie klasy `SystemTime` klasy i uzyskuje dostęp do jego pola danych.  
   
 ### <a name="code-samples"></a>Przykłady kodu  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -290,6 +290,5 @@ typedef struct _MYSTRSTRUCT2
   
 ## <a name="see-also"></a>Zobacz także
 - [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
-- [Typy danych w wywołaniu platformy](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
 - [Marshaling ciągów](marshaling-strings.md)
-- [Organizowanie tablic typów](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+- [Organizowanie różnych typów tablic](marshaling-different-types-of-arrays.md)

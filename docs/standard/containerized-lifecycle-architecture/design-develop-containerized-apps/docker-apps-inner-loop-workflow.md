@@ -1,15 +1,15 @@
 ---
 title: Przepływ pracy wewnętrznej pętli tworzenia aplikacji platformy Docker
-description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
+description: Dowiedz się więcej "wewnętrzną pętlę" przepływu pracy dla opracowywania aplikacji platformy Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f7acb60e6136c0250d18bdce23ac21fb6aa80b34
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148866"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219091"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy wewnętrznej pętli tworzenia aplikacji platformy Docker
 
@@ -41,7 +41,7 @@ Rysunek 4 – 15 przedstawiono podstawowe kroki, które zazwyczaj trzeba przepro
 
 Rysunek 4 — 15: Ogólny przepływ pracy dla cyklu życia aplikacji kontenerowych nimi platformy Docker za pomocą interfejsu wiersza polecenia platformy Docker
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Krok 1: Rozpocznij kodowanie w programie Visual Studio Code i utworzyć linię bazową początkową aplikacji/usługi
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Krok 1. Rozpocznij kodowanie w programie Visual Studio Code i utworzyć linię bazową początkową aplikacji/usługi
 
 Sposób tworzenia aplikacji jest bardzo podobny sposób, co można zrobić bez platformy Docker. Różnica jest, że podczas tworzenia, są wdrażanie i testowanie aplikacji lub usług działających w kontenerach platformy Docker, umieszczone w środowisku lokalnym (np. maszyny Wirtualnej systemu Linux lub Windows).
 
@@ -67,7 +67,7 @@ Visual Studio Code jest zapewniana przez rozszerzenie, należy zainstalować. Ab
 
 Rysunek 4 – 16: Instalowanie rozszerzenia platformy Docker w programie Visual Studio Code
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Krok 2: Tworzenie pliku DockerFile związane z istniejącego obrazu (zwykły system operacyjny lub środowiskach deweloperskich, takich jak .NET Core, Node.js i Ruby)
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Krok 2. Tworzenie pliku DockerFile związane z istniejącego obrazu (zwykły system operacyjny lub środowiskach deweloperskich, takich jak .NET Core, Node.js i Ruby)
 
 Potrzebny będzie plik DockerFile według obrazu niestandardowego do zbudowania i kontenera do wdrożenia, w związku z tym, jeśli aplikacja składa się z jednej usługi niestandardowych, konieczne będzie pojedynczego pliku DockerFile. Ale jeśli aplikacja składa się z wielu usług (tak jak w architekturze mikrousług), musisz mieć jeden plik Dockerfile na usługę.
 
@@ -132,7 +132,7 @@ W miarę koncentruje się kontenery Windows jednym repozytorium może zawierać 
 
 Można utworzyć własny obraz podstawowy platformy Docker od podstaw, zgodnie z opisem w tym [artykułu](https://docs.docker.com/engine/userguide/eng-image/baseimages/) docker. Jest to scenariusz, który prawdopodobnie nie jest najlepszym rozwiązaniem dla Ciebie, jeśli po prostu rozpoczynasz korzystanie z platformy Docker, ale jeśli chcesz ustawić bity określonego obrazu podstawowego, możesz to zrobić.
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Krok 3: Tworzenie niestandardowych obrazów platformy Docker osadzania usługi w nim
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Krok 3. Tworzenie niestandardowych obrazów platformy Docker osadzania usługi w nim
 
 Dla każdej usługi niestandardowego, który składa się z aplikacji należy utworzyć obraz powiązane. Jeśli aplikacja składa się z jednej usługi lub aplikacji sieci web, musisz pojedynczego obrazu.
 
@@ -159,7 +159,7 @@ Można znaleźć istniejących obrazów w lokalnym repozytorium (komputerze dewe
 
 Rysunek 4-20: Wyświetlanie istniejących obrazów przy użyciu obrazów platformy docker
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Krok 4: (Opcjonalnie) Zdefiniuj swoje usługi w docker-compose.yml, podczas kompilowania złożone aplikacji platformy Docker z wieloma usługami
+### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Krok 4. (Opcjonalnie) Zdefiniuj swoje usługi w docker-compose.yml, podczas kompilowania złożone aplikacji platformy Docker z wieloma usługami
 
 Za pomocą pliku docker-compose.yml można zdefiniować zestaw powiązanych usług, który można wdrożyć jako złożone aplikacji za pomocą poleceń wdrażania opisano w następnej sekcji krok.
 
@@ -192,7 +192,7 @@ W tym konkretnym przypadku ten plik definiuje dwie usługi: Usługa sieci web (u
 
 Używa usługi redis [najnowszego obrazu publicznego redis](https://hub.docker.com/_/redis/) pobierane z rejestru usługi Docker Hub. [redis](https://redis.io/) to system bardzo popularnej pamięci podręcznej dla aplikacji po stronie serwera.
 
-### <a name="step-5-build-and-run-your-docker-app"></a>Krok 5: Kompilowanie i uruchamianie aplikacji platformy Docker
+### <a name="step-5-build-and-run-your-docker-app"></a>Krok 5. Kompilowanie i uruchamianie aplikacji platformy Docker
 
 Jeśli aplikacja ma tylko jeden kontener, wystarczy uruchomić go przez wdrożenie jej do hosta platformy Docker (maszyny Wirtualnej lub serwera fizycznego). Jednak jeśli Twoja aplikacja składa się z wielu usług, musisz *została utworzona*również. Teraz widzieć różne opcje.
 
@@ -225,7 +225,7 @@ Uwaga docker-compose się i platformy docker, uruchom może być wystarczający 
 
 Dla [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) i [Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment) użyje wdrożenia różnych poleceń i skryptów, jak również.
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Krok 6: Testowanie aplikacji platformy Docker (lokalnie, w swojej lokalnej maszyny Wirtualnej dysku CD)
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Krok 6. Testowanie aplikacji platformy Docker (lokalnie, w swojej lokalnej maszyny Wirtualnej dysku CD)
 
 W tym kroku różnią się w zależności od tego, jakie działania aplikacji.
 

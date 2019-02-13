@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663169"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221098"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Edytor lokalizacji zasobów Windows)
 
@@ -53,7 +53,7 @@ Stan elementów interfejsu użytkownika z formularza w projekcie programu Window
 
 - Plik zasobów kultury można zapisać jako inny plik zasobów kultury. Na przykład plik zasobów Angielski (USA) można zapisać jako plik zasobów Polski. Zazwyczaj nowy plik będzie można później edytować, aby był zgodny z nową kulturą.
 
-Zobacz też [hierarchiczna organizacja zasobów do lokalizacji](https://msdn.microsoft.com/library/756hydy4\(v=vs.110\)) lub [hierarchiczna organizacja zasobów do lokalizacji](https://msdn.microsoft.com/library/756hydy4\(v=vs.120\)).
+Zobacz też [hierarchiczna organizacja zasobów do lokalizacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) lub [hierarchiczna organizacja zasobów do lokalizacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
 Winres.exe nie może skonwertować pliku resx na odpowiedni plik resources; użyj narzędzia Resgen.exe. Aby uzyskać więcej informacji na temat Resgen.exe, zobacz [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
 

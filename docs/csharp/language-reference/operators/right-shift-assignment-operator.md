@@ -1,45 +1,51 @@
 ---
 title: '>>= — operator - C# odwołania'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - '>>=_CSharpKeyword'
 helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: 8cc341c14ee1b90fde2abb369c187e57b4ce5c00
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 51914bb5e9ebffd5d868528b5a8d3072a956cea6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278983"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220916"
 ---
 # <a name="-operator-c-reference"></a>>> = — operator (C# odwołania)
 
 Operator przypisania przesunięcia w prawo.
 
-## <a name="remarks"></a>Uwagi
-
-Wyrażenie formularza
+Usługi za pomocą wyrażenia `>>=` operatora, takich jak
 
 ```csharp
 x >>= y
 ```
 
-jest wykonywane jako
+odpowiada wyrażeniu
 
 ```csharp
 x = x >> y
 ```
 
-z tą różnicą, że `x` jest obliczone tylko raz. [Operator >>](right-shift-operator.md) przesuwa `x` w prawo o liczbę bitów określoną przez `y`.
+z tą różnicą, że `x` jest obliczany tylko raz.
 
-Operatora [ nie można przeciążyć bezpośrednio, ale ](right-shift-operator.md)operator >>[ (zobacz ](../keywords/operator.md)operator) może zostać przeciążony w typach danych zdefiniowanych przez użytkownika.
+[ `>>` Operator](right-shift-operator.md) bezpośrednio przenosi swojego pierwszego operandu przez liczbę bitów definicją drugim argumentem.
 
-## <a name="example"></a>Przykład
+W poniższym przykładzie pokazano użycie `>>=` operator:
 
-[!code-csharp[csRefOperators#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#11)]
+[!code-csharp-interactive[right shift assignment](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#RightShiftAssignment)]
+
+## <a name="operator-overloadability"></a>Overloadability — operator
+
+Jeśli typ zdefiniowany przez użytkownika [przeciążenia](../keywords/operator.md) [ `>>` operator](right-shift-operator.md), operator przypisania przesunięcia w prawo `>>=` niejawnie jest przeciążony. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć operator przypisania przesunięcia w prawo.
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz [przydział złożony](~/_csharplang/spec/expressions.md#compound-assignment) części [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

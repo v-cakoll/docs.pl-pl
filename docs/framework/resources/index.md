@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cda11a99211c6f797159b6d6bcbc78fe2e13c26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613951"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221046"
 ---
 # <a name="resources-in-net-apps"></a>Zasoby w aplikacjach .NET
 Niemal każda aplikacja jakości produkcyjnej ma korzystać z zasobów. Zasób to wszelkie dane niewykonywalne, które są logicznie wdrażane za pomocą aplikacji. Zasób może być wyświetlany w aplikacji jako komunikaty o błędach lub jako część interfejsu użytkownika. Zasoby mogą zawierać dane w wielu formach, takich jak ciągi, obrazy i obiekty utrwalone. (Do zapisywania obiektów utrwalonego pliku zasobów, obiekty muszą podlegać serializacji.) Przechowywanie danych w pliku zasobów umożliwia zmianę danych bez konieczności ponownego kompilowania całej aplikacji. On również pozwala na przechowywanie danych w jednej lokalizacji i eliminuje konieczność łączenia się z zakodowanych danych przechowywanych w wielu lokalizacjach.  
   
  .NET Framework i .NET Core zapewnia kompleksowe obsługi tworzenia i lokalizacji zasobów. Ponadto .NET obsługuje prosty model do pakowania i wdrażania zlokalizowanych zasobów.  
   
- Aby uzyskać informacje o zasobach w programie ASP.NET, zobacz [omówienie zasoby strony sieci Web programu ASP.NET](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+ Aby uzyskać informacje o zasobach w programie ASP.NET, zobacz [omówienie zasoby strony sieci Web programu ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  ## <a name="creating-and-localizing-resources"></a>Tworzenia i lokalizowania zasobów  
  W aplikacji — zlokalizowane pliki zasobów można użyć jako repozytorium dla danych aplikacji, szczególnie w przypadku ciągów, które mogą zostać zakodowane w wielu miejscach w kodzie źródłowym. Najczęściej, możesz tworzyć zasoby jako tekstowy (txt) lub pliki XML (resx) i używać [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) do kompilowania ich do binarnych plików Resources. Te pliki mogą być następnie osadzony w pliku wykonywalnym aplikacji przez kompilator języka. Aby uzyskać więcej informacji na temat tworzenia zasobów, zobacz [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  

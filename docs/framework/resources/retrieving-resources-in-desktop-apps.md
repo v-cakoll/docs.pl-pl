@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539756"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221228"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 Podczas pracy z zlokalizowane zasoby w aplikacjach pulpitu .NET Framework, należy najlepiej pakietów zasobów dla kultury neutralnej lub domyślne przy użyciu zestawu głównego i utworzyć zestaw satelicki osobne dla każdego języka lub kultury, którą obsługuje aplikacja. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do zasobów o nazwie. Jeśli nie chcesz osadzić zasobów w głównym zestawie i zestawy satelickie, można również przejść binarnych plików Resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików Resources](#from_file) później w tym artykuł.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) w Centrum deweloperów Windows.  
@@ -158,7 +158,7 @@ Struktura katalogu i konwencje nazewnictwa dla plików Resources
  Po utworzeniu zasobów i umieścić je w odpowiednim katalogu, możesz utworzyć <xref:System.Resources.ResourceManager> obiektu na korzystanie z zasobów przez wywołanie metody <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> metody. Pierwszy parametr określa nazwę katalogu głównego pliku Resources domyślnej aplikacji (będzie to "ciągi", na przykład w poprzedniej sekcji). Drugi parametr określa lokalizację zasobów ("zasoby" w poprzednim przykładzie). Trzeci parametr określa <xref:System.Resources.ResourceSet> wdrożenia do użycia. Jeśli trzeci parametr jest `null`, domyślne środowisko uruchomieniowe <xref:System.Resources.ResourceSet> jest używany.  
   
 > [!NOTE]
->  Nie należy wdrażać aplikacji ASP.NET przy użyciu plików Resources autonomicznych. Może to powodować blokowanie wdrażania XCOPY problemy i znaki podziału. Firma Microsoft zaleca wdrażania zasobów platformy ASP.NET w zestawach satelickich. Aby uzyskać więcej informacji, zobacz [omówienie zasoby strony sieci Web programu ASP.NET](https://msdn.microsoft.com/library/0936b3b2-9e6e-4abe-9c06-364efef9dbbd).  
+>  Nie należy wdrażać aplikacji ASP.NET przy użyciu plików Resources autonomicznych. Może to powodować blokowanie wdrażania XCOPY problemy i znaki podziału. Firma Microsoft zaleca wdrażania zasobów platformy ASP.NET w zestawach satelickich. Aby uzyskać więcej informacji, zobacz [omówienie zasoby strony sieci Web programu ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  Po tworzenia wystąpienia <xref:System.Resources.ResourceManager> obiektu, możesz użyć <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>, i <xref:System.Resources.ResourceManager.GetStream%2A> metod, zgodnie z wcześniejszym opisem w celu pobierania zasobów. Jednak pobieranie zasobów bezpośrednio z plików Resources różni się od pobierania osadzone zasoby z zestawów. Podczas pobierania zasobów z plików Resources <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>, i <xref:System.Resources.ResourceManager.GetStream%28System.String%29> metody zawsze pobierają zasobów kultury domyślnej, niezależnie od bieżącej kultury. Aby pobrać zasoby bieżącej kultury albo aplikacji lub określonej kultury, należy wywołać <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>, lub <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> metodę i określić kulturę, którego zasoby mają być pobierane. Aby pobrać zasoby bieżącej kultury, określ wartość <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwość jako `culture` argumentu. Jeśli Menedżera zasobów nie można pobrać zasobów `culture`, używa reguł rezerwowego standardowych zasobów do pobierania odpowiednich zasobów.  
   

@@ -12,18 +12,18 @@ ms.locfileid: "53154937"
 ---
 # <a name="expressions"></a>Wyrażenia
 
-*Wyrażenia* są konstruowane na podstawie *operandy* i *operatory*. Operatory wyrażenie wskazuje operacji do zastosowania do operandów. Przykłady operatorów `+`, `-`, `*`, `/`, i `new`. Przykładami operandy są literały, pola, zmienne lokalne i wyrażeń.
+*Wyrażenia* są konstruowane na podstawie *operandów* i *operatorów*. Operatory wyrażenia wskazują operacje do zastosowania dla operandów. Przykłady operatorów to `+`, `-`, `*`, `/`i `new`. Przykładami operandów są literały, pola, zmienne lokalne i wyrażenia.
 
-Gdy wyrażenie zawiera wiele operatorów *pierwszeństwo* operatorów określa kolejność, w jakiej są oceniane poszczególnych operatorach. Na przykład, wyrażenie `x + y * z` jest oceniane jako `x + (y * z)` ponieważ `*` operator ma wyższy priorytet niż `+` operatora.
+Gdy wyrażenie zawiera wiele operatorów *pierwszeństwo* operatorów określa kolejność, w jakiej są oceniane poszczególne operatory. Na przykład, wyrażenie `x + y * z` jest oceniane jako `x + (y * z)`, ponieważ operator `*` ma wyższy priorytet niż operator `+`.
 
-Gdy argument odbywa się między dwa operatory o tym samym priorytecie *kojarzenie* operatorów określa kolejność, w której są wykonywane operacje:
+Gdy operand występuje między dwoma operatorami o tym samym priorytecie *asocjacyjność* operatorów określa kolejność, w której są wykonywane operacje:
 
-*   Z wyjątkiem operatorów przypisania wszystkie operatory dwuargumentowe to *lewostronne*, co oznacza, że operacje są wykonywane od lewej do prawej. Na przykład `x + y + z` jest oceniane jako `(x + y) + z`.
-*   Operatory przypisania i operator warunkowy (`?:`) są *zespolony z prawej*, co oznacza, że operacje są wykonywane od prawej do lewej. Na przykład `x = y = z` jest oceniane jako `x = (y = z)`.
+*   Z wyjątkiem operatorów przypisania wszystkie operatory dwuargumentowe są *lewostronne*, co oznacza, że operacje są wykonywane od lewej do prawej. Na przykład `x + y + z` jest oceniane jako `(x + y) + z`.
+*   Operatory przypisania i operator warunkowy (`?:`) są *prawostronne*, co oznacza, że operacje są wykonywane od prawej do lewej. Na przykład `x = y = z` jest oceniane jako `x = (y = z)`.
 
-Pierwszeństwo i kojarzenie mogą być kontrolowane za pomocą nawiasów. Na przykład `x + y * z` najpierw mnoży `y` przez `z` , a następnie dodaje wynik do `x`, ale `(x + y) * z` najpierw dodaje `x` i `y` i następnie mnoży wynik przez `z`.
+Pierwszeństwo i asocjacyjność mogą być kontrolowane za pomocą nawiasów. Na przykład `x + y * z` najpierw mnoży `y` przez `z` , a następnie dodaje wynik do `x`, ale `(x + y) * z` najpierw dodaje `x` i `y` i następnie wynik mnoży przez `z`.
 
-Większość operatorów może być *przeciążone*. Przeciążanie operatora zezwala na implementacjami operatorów zdefiniowanych przez użytkownika, może być określony dla operacji, gdzie jeden lub oba operandy są typu klasy lub struktury zdefiniowany przez użytkownika.
+Większość operatorów może być *przeciążona*. Przeciążanie operatora umożliwia określanie definiowanych przez użytkownika implementacji operatorów dla operacji, w których jeden lub oba operandy mają typ struktury lub klasy zdefiniowanej przez użytkownika.
 
 Poniżej znajduje się podsumowanie C#firmy operatorów, najniższą listę kategorii operatora w kolejności od najwyższego do. Operatory w tej samej kategorii mają równy priorytet. W każdej z nich znajduje się lista wyrażeń w danej kategorii, oraz opis tego typu wyrażenia.
 
@@ -51,7 +51,7 @@ Poniżej znajduje się podsumowanie C#firmy operatorów, najniższą listę kate
     - `--x`: Predekrementacja
     - `(T)x`: Jawnie przekonwertować `x` na typ `T`
     - `await x`: Asynchronicznie poczekaj, aż `x` do ukończenia
-* Mnożenia
+* Mnożeniowy
     - `x * y`: Mnożenie
     - `x / y`: Dzielenie
     - `x % y`: Reszta
@@ -68,24 +68,24 @@ Poniżej znajduje się podsumowanie C#firmy operatorów, najniższą listę kate
     - `x >= y`: Większe niż lub równe
     - `x is T`: Zwróć `true` Jeśli `x` jest `T`, `false` inaczej
     - `x as T`: Zwróć `x` wpisanych w formie `T`, lub `null` Jeśli `x` nie jest `T`
-* Równość
+* Równości
     - `x == y`: Równa się
     - `x != y`: Nie równa się
-* AND logiczne
+* Logicznego AND
     - `x & y`: Liczba całkowita bitowe i logicznych logiczne AND
-* XOR logiczne
+* Logicznego XOR
     - `x ^ y`: Bitowe XOR dla wartości całkowitych, logiczne XOR dla wartości binarnych
-* OR logiczne
+* Logicznego OR
     - `x | y`: Bitowe OR dla wartości całkowitych, logiczne OR dla wartości binarnych
-* AND warunkowe
+* Warunkowego AND
     - `x && y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `false`
-* OR warunkowe
+* Warunkowego OR
     - `x || y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `true`
-* Łączenie wartości null
+* Łączenia wartości null
     - `x ?? y`: Daje w wyniku `y` Jeśli `x` ma wartość null, aby `x` inaczej
 * Warunkowe
     - `x ? y : z`: Ocenia `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest `false`
-* Przypisania lub funkcja anonimowa
+* Przypisania lub funkcji anonimowej
     - `x = y`: Przypisanie
     - `x op= y`: Przydział złożony; obsługiwane operatory to
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`

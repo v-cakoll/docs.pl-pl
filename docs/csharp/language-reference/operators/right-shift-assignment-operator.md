@@ -1,48 +1,54 @@
 ---
 title: '>>= — operator - C# odwołania'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - '>>=_CSharpKeyword'
 helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: 8cc341c14ee1b90fde2abb369c187e57b4ce5c00
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 51914bb5e9ebffd5d868528b5a8d3072a956cea6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278983"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220916"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="bb121-102">>> = — operator (C# odwołania)</span><span class="sxs-lookup"><span data-stu-id="bb121-102">>>= operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="6353c-102">>> = — operator (C# odwołania)</span><span class="sxs-lookup"><span data-stu-id="6353c-102">>>= operator (C# Reference)</span></span>
 
-<span data-ttu-id="bb121-103">Operator przypisania przesunięcia w prawo.</span><span class="sxs-lookup"><span data-stu-id="bb121-103">The right-shift assignment operator.</span></span>
+<span data-ttu-id="6353c-103">Operator przypisania przesunięcia w prawo.</span><span class="sxs-lookup"><span data-stu-id="6353c-103">The right-shift assignment operator.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="bb121-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bb121-104">Remarks</span></span>
-
-<span data-ttu-id="bb121-105">Wyrażenie formularza</span><span class="sxs-lookup"><span data-stu-id="bb121-105">An expression of the form</span></span>
+<span data-ttu-id="6353c-104">Usługi za pomocą wyrażenia `>>=` operatora, takich jak</span><span class="sxs-lookup"><span data-stu-id="6353c-104">An expression using the `>>=` operator, such as</span></span>
 
 ```csharp
 x >>= y
 ```
 
-<span data-ttu-id="bb121-106">jest wykonywane jako</span><span class="sxs-lookup"><span data-stu-id="bb121-106">is evaluated as</span></span>
+<span data-ttu-id="6353c-105">odpowiada wyrażeniu</span><span class="sxs-lookup"><span data-stu-id="6353c-105">is equivalent to</span></span>
 
 ```csharp
 x = x >> y
 ```
 
-<span data-ttu-id="bb121-107">z tą różnicą, że `x` jest obliczone tylko raz.</span><span class="sxs-lookup"><span data-stu-id="bb121-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="bb121-108">[Operator >>](right-shift-operator.md) przesuwa `x` w prawo o liczbę bitów określoną przez `y`.</span><span class="sxs-lookup"><span data-stu-id="bb121-108">The [>> operator](right-shift-operator.md) shifts `x` right by an amount specified by `y`.</span></span>
+<span data-ttu-id="6353c-106">z tą różnicą, że `x` jest obliczany tylko raz.</span><span class="sxs-lookup"><span data-stu-id="6353c-106">except that `x` is only evaluated once.</span></span>
 
-<span data-ttu-id="bb121-109">Operatora [ nie można przeciążyć bezpośrednio, ale ](right-shift-operator.md)operator >>[ (zobacz ](../keywords/operator.md)operator) może zostać przeciążony w typach danych zdefiniowanych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="bb121-109">The >>= operator cannot be overloaded directly, but user-defined types can overload the [>> operator](right-shift-operator.md) (see [operator](../keywords/operator.md)).</span></span>
+<span data-ttu-id="6353c-107">[ `>>` Operator](right-shift-operator.md) bezpośrednio przenosi swojego pierwszego operandu przez liczbę bitów definicją drugim argumentem.</span><span class="sxs-lookup"><span data-stu-id="6353c-107">The [`>>` operator](right-shift-operator.md) shifts its first operand right by the number of bits defined by its second operand.</span></span>
 
-## <a name="example"></a><span data-ttu-id="bb121-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="bb121-110">Example</span></span>
+<span data-ttu-id="6353c-108">W poniższym przykładzie pokazano użycie `>>=` operator:</span><span class="sxs-lookup"><span data-stu-id="6353c-108">The following example demonstrates the usage of the `>>=` operator:</span></span>
 
-[!code-csharp[csRefOperators#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#11)]
+[!code-csharp-interactive[right shift assignment](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#RightShiftAssignment)]
 
-## <a name="see-also"></a><span data-ttu-id="bb121-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bb121-111">See also</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="6353c-109">Overloadability — operator</span><span class="sxs-lookup"><span data-stu-id="6353c-109">Operator overloadability</span></span>
 
-- [<span data-ttu-id="bb121-112">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="bb121-112">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="bb121-113">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="bb121-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="bb121-114">C#Operatory</span><span class="sxs-lookup"><span data-stu-id="bb121-114">C# operators</span></span>](index.md)
+<span data-ttu-id="6353c-110">Jeśli typ zdefiniowany przez użytkownika [przeciążenia](../keywords/operator.md) [ `>>` operator](right-shift-operator.md), operator przypisania przesunięcia w prawo `>>=` niejawnie jest przeciążony.</span><span class="sxs-lookup"><span data-stu-id="6353c-110">If a user-defined type [overloads](../keywords/operator.md) the [`>>` operator](right-shift-operator.md), the right-shift assignment operator `>>=` is implicitly overloaded.</span></span> <span data-ttu-id="6353c-111">Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć operator przypisania przesunięcia w prawo.</span><span class="sxs-lookup"><span data-stu-id="6353c-111">A user-defined type cannot explicitly overload the right-shift assignment operator.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="6353c-112">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="6353c-112">C# language specification</span></span>
+
+<span data-ttu-id="6353c-113">Aby uzyskać więcej informacji, zobacz [przydział złożony](~/_csharplang/spec/expressions.md#compound-assignment) części [ C# specyfikacji języka](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="6353c-113">For more information, see the [Compound assignment](~/_csharplang/spec/expressions.md#compound-assignment) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="6353c-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6353c-114">See also</span></span>
+
+- [<span data-ttu-id="6353c-115">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="6353c-115">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="6353c-116">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="6353c-116">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="6353c-117">C#Operatory</span><span class="sxs-lookup"><span data-stu-id="6353c-117">C# operators</span></span>](index.md)

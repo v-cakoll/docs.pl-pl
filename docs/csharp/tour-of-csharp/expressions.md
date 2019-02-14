@@ -25,7 +25,7 @@ Pierwszeństwo i asocjacyjność mogą być kontrolowane za pomocą nawiasów. N
 
 Większość operatorów może być *przeciążona*. Przeciążanie operatora umożliwia określanie definiowanych przez użytkownika implementacji operatorów dla operacji, w których jeden lub oba operandy mają typ struktury lub klasy zdefiniowanej przez użytkownika.
 
-Poniżej znajduje się podsumowanie C#firmy operatorów, najniższą listę kategorii operatora w kolejności od najwyższego do. Operatory w tej samej kategorii mają równy priorytet. W każdej z nich znajduje się lista wyrażeń w danej kategorii, oraz opis tego typu wyrażenia.
+Poniżej znajduje się podsumowanie operatorów języka C#. Kategorie operatorów wypisane są w kolejności pierwszeństwa od najwyższego do najniższego. Operatory w tej samej kategorii mają takie samo pierwszeństwo. Pod każdą z kategorii znajduje się lista wyrażeń znajdujących się w niej, wraz z opisem danego typu wyrażenia.
 
 * Podstawowy
     - `x.m`: Dostęp do elementu członkowskiego
@@ -49,8 +49,8 @@ Poniżej znajduje się podsumowanie C#firmy operatorów, najniższą listę kate
     - `~x`: Negacja bitowa
     - `++x`: Preinkrementacja
     - `--x`: Predekrementacja
-    - `(T)x`: Jawnie przekonwertować `x` na typ `T`
-    - `await x`: Asynchronicznie poczekaj, aż `x` do ukończenia
+    - `(T)x`: Jawna konwersja `x` na typ `T`
+    - `await x`: Asynchronicznie poczekaj na ukończenie `x`
 * Mnożeniowy
     - `x * y`: Mnożenie
     - `x / y`: Dzielenie
@@ -87,7 +87,7 @@ Poniżej znajduje się podsumowanie C#firmy operatorów, najniższą listę kate
     - `x ? y : z`: Ocenia `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest `false`
 * Przypisania lub funkcji anonimowej
     - `x = y`: Przypisanie
-    - `x op= y`: Przydział złożony; obsługiwane operatory to
+    - `x op= y`: Złożone przypisanie; obsługiwane operatory to
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
     - `(T x) => y`: Funkcja anonimowa (wyrażenie lambda)
 

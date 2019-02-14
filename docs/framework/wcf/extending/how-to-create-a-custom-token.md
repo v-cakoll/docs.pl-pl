@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 20c462f811be86d52ec6f06700326f0e949a76d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3367a75fc0532e3eaa312400221c662bb35146bf
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637914"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261170"
 ---
 # <a name="how-to-create-a-custom-token"></a>Instrukcje: Tworzenie tokenu niestandardowego
 W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy użyciu <xref:System.IdentityModel.Tokens.SecurityToken> klasy i jak ją zintegrować z niestandardowego dostawcy tokenów zabezpieczeń i uwierzytelniania. Aby uzyskać pełny przykład kodu zobacz [niestandardowy Token](../../../../docs/framework/wcf/samples/custom-token.md) próbki.  
@@ -29,8 +29,6 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
  Aby uzyskać więcej informacji na temat niestandardowych poświadczeń i Menedżer tokenów zabezpieczeń, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Zobacz <xref:System.IdentityModel.Tokens> przestrzeń nazw dla innych klas, które reprezentują tokenów zabezpieczających.  
-  
- Aby uzyskać więcej informacji na temat klasy dostawcy i wystawcy uwierzytelnienia poświadczeń, Menedżer tokenów zabezpieczeń i zobacz [architekturę zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Procedury  
  Aplikacja kliencka muszą być wyposażone w sposób określania informacji o karcie kredytowej dla infrastruktura zabezpieczeń. Te informacje staje się dostępny do aplikacji przez klasę poświadczenia niestandardowego klienta. Pierwszym krokiem jest utworzenie klasy do reprezentowania informacje dotyczące kart kredytowych klientów niestandardowych poświadczeń.  
@@ -165,4 +163,3 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
 - [Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Instrukcje: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
 - [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

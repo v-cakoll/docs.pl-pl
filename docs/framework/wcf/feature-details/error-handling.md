@@ -2,12 +2,12 @@
 title: Obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695559"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261157"
 ---
 # <a name="error-handling"></a>Obsługa błędów
 ## <a name="error-handling-in-windows-communication-foundation"></a>Obsługa błędów w programie Windows Communication Foundation  
@@ -22,7 +22,7 @@ ms.locfileid: "54695559"
   
  Bloki aplikacji Staraj się zastosować powszechnie używane najlepsze rozwiązania i podaj typowym podejściem wyjątków, obsługa w całej aplikacji. Z drugiej strony procedury obsługi błędów niestandardowych oraz umów błędów opracowane na podstawie własnych może również być bardzo przydatne. Na przykład obsługi błędu niestandardowego zapewniają doskonała okazja automatycznie Przenieś wszystkie wyjątki FaultExceptions, a także dodawanie funkcji logowania do aplikacji.  
   
- Aby uzyskać więcej informacji, zobacz [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
+ Aby uzyskać więcej informacji, zobacz [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Zajmowanie się oczekiwane wyjątki  
  Prawidłowego sposobu działania jest catch oczekiwane wyjątki w każdej operacji lub punkt odpowiednich rozszerzeń, zdecyduj, czy ich można odzyskać z zwrócić prawidłowego błędów niestandardowych w FaultException —\<T >  

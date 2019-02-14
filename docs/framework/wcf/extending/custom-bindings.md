@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 9257a16b1f15290a8b997e8d12d5570349d88dde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3954e90ed091d03656f25ce1a9b1ff35ffaa9ea
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720554"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260728"
 ---
 # <a name="custom-bindings"></a>Powiązania niestandardowe
-Możesz użyć <xref:System.ServiceModel.Channels.CustomBinding> klasy, gdy jedno z powiązań dostarczanych przez system nie spełnia wymagania dotyczące usługi. Wszystkie powiązania są konstruowane na podstawie uporządkowany zestaw elementów wiązania. Powiązania niestandardowe mogą być zbudowane z zestaw elementów powiązania dostarczane przez system lub może zawierać elementów zdefiniowanych przez użytkownika niestandardowego powiązania. Elementy powiązania niestandardowego, na przykład umożliwia korzystanie z nowego transportu lub koderów na punkt końcowy usługi. Przykłady pracy, zobacz [niestandardowe powiązanie przykłady](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Aby uzyskać więcej informacji, zobacz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+Możesz użyć <xref:System.ServiceModel.Channels.CustomBinding> klasy, gdy jedno z powiązań dostarczanych przez system nie spełnia wymagania dotyczące usługi. Wszystkie powiązania są konstruowane na podstawie uporządkowany zestaw elementów wiązania. Powiązania niestandardowe mogą być zbudowane z zestaw elementów powiązania dostarczane przez system lub może zawierać elementów zdefiniowanych przez użytkownika niestandardowego powiązania. Elementy powiązania niestandardowego, na przykład umożliwia korzystanie z nowego transportu lub koderów na punkt końcowy usługi. Przykłady pracy, zobacz [niestandardowe powiązanie przykłady](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Aby uzyskać więcej informacji, zobacz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ## <a name="construction-of-a-custom-binding"></a>Konstrukcja powiązania niestandardowego  
  Powiązanie niestandardowe jest tworzony przy użyciu <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> konstruktora z kolekcji elementów, które są "skumulowany" w określonej kolejności wiązania:  

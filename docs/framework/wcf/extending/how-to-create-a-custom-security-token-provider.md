@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: db492967dc6df882221f0547b609b3c7f700b118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627710"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261352"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń
 W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandardowego dostawcy tokenów zabezpieczeń i sposobu integracji dostawcę z Menedżer tokenów zabezpieczeń niestandardowych.  
@@ -23,8 +23,6 @@ W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandar
  Dostawcy tokenów zabezpieczeń tworzy reprezentację tokenu zabezpieczeń, na podstawie informacji w poświadczeniach klienta lub usługę. Aby użyć niestandardowego dostawcy tokenów zabezpieczeń w usłudze security Windows Communication Foundation (WCF), należy utworzyć niestandardowe poświadczenia i implementacje Menedżer tokenów zabezpieczeń.  
   
  Aby uzyskać więcej informacji na temat niestandardowych poświadczeń i Menedżer tokenów zabezpieczeń zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
-  
- Aby uzyskać więcej informacji na temat poświadczeń zabezpieczeń tokenu menedżera, dostawcy i wystawcy uwierzytelnienia klas, zobacz [architekturę zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>Aby utworzyć niestandardowego dostawcy tokenów zabezpieczeń  
   
@@ -61,4 +59,3 @@ W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandar
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
 - [Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Instrukcje: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

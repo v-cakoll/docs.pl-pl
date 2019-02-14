@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: acf2e02479e66c6b2304b47340f19b665922cf5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df45f943da62624b92d483851e788dad0e240f47
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638746"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261131"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Porady: tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych
 W tym temacie przedstawiono sposób tworzenia wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych oraz zintegrować ją z usługą Menedżer tokenów zabezpieczeń niestandardowych. Wystawcy uwierzytelniania tokenu zabezpieczeń sprawdza poprawność zawartości tokenu zabezpieczającego z dołączonym wiadomości przychodzącej. Jeśli weryfikacja zakończy się powodzeniem, wystawcy uwierzytelnienia zwraca kolekcję <xref:System.IdentityModel.Policy.IAuthorizationPolicy> wystąpień, gdy obliczane, zwracany jest zestaw oświadczeń.  
   
- Aby użyć wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych w Windows Communication Foundation (WCF), należy najpierw utworzyć niestandardowe poświadczenia i zabezpieczeń implementacje Menedżer tokenów. Aby uzyskać więcej informacji na temat tworzenia niestandardowych poświadczeń i zabezpieczeń Menedżer tokenów zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Aby uzyskać więcej informacji na temat klasy dostawcy i wystawcy uwierzytelnienia poświadczeń, Menedżer tokenów zabezpieczeń i zobacz [architekturę zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Aby użyć wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych w Windows Communication Foundation (WCF), należy najpierw utworzyć niestandardowe poświadczenia i zabezpieczeń implementacje Menedżer tokenów. Aby uzyskać więcej informacji na temat tworzenia niestandardowych poświadczeń i zabezpieczeń Menedżer tokenów zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).
   
 ## <a name="procedures"></a>Procedury  
   
@@ -65,4 +65,3 @@ W tym temacie przedstawiono sposób tworzenia wystawcy uwierzytelniania tokenu z
 - <xref:System.IdentityModel.Tokens.UserNameSecurityToken>
 - [Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Architektura zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

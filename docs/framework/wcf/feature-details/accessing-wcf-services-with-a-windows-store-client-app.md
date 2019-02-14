@@ -2,12 +2,12 @@
 title: Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 95a717f139983be8291c2d156d8dd1626a43372a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613665"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261118"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te aplikacje są projektowane na podstawie interfejsem ekranie dotykowym. .NET framework 4.5 umożliwia aplikacji Windows Store do wywołania usługi WCF.  
@@ -55,7 +55,7 @@ Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te ap
  Obsługiwane są zarówno tekstowych i binarnych kodowania. Obsługiwane są wszystkie tryby transferu WCF. Aby uzyskać więcej informacji, zobacz [przesyłanie strumieniowe przesyłanie komunikatów](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Dodaj odwołanie do usługi  
- Aby wywołać usługi WCF z aplikacji Windows Store, użyj funkcji Dodaj odwołanie do usługi Visual Studio 2012. Zauważysz kilka zmian w funkcji Dodaj odwołanie do usługi po zakończeniu w aplikacji Windows Store. Najpierw plik konfiguracji nie jest generowany. Aplikacje Windows Store nie należy używać plików konfiguracji, więc musi być skonfigurowany w kodzie. Ten kod konfiguracji można znaleźć w pliku References.cs generowane przez Dodaj odwołanie do usługi. Aby wyświetlić ten plik, koniecznie wybierz pozycję "Pokaż wszystkie pliki" w Eksploratorze rozwiązań. Plik zostanie umieszczony w odwołania do usług, a następnie Reference.svcmap węzły w projekcie. Wszystkie operacje wygenerowane dla usług WCF w aplikacji Windows Store jest asynchroniczne, za pomocą wzorca asynchronicznego opartego na zadaniach. Aby uzyskać więcej informacji, zobacz [wzorca asynchronicznego opartego na zadaniach](https://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Aby wywołać usługi WCF z aplikacji Windows Store, użyj funkcji Dodaj odwołanie do usługi Visual Studio 2012. Zauważysz kilka zmian w funkcji Dodaj odwołanie do usługi po zakończeniu w aplikacji Windows Store. Najpierw plik konfiguracji nie jest generowany. Aplikacje Windows Store nie należy używać plików konfiguracji, więc musi być skonfigurowany w kodzie. Ten kod konfiguracji można znaleźć w pliku References.cs generowane przez Dodaj odwołanie do usługi. Aby wyświetlić ten plik, koniecznie wybierz pozycję "Pokaż wszystkie pliki" w Eksploratorze rozwiązań. Plik zostanie umieszczony w odwołania do usług, a następnie Reference.svcmap węzły w projekcie. Wszystkie operacje wygenerowane dla usług WCF w aplikacji Windows Store jest asynchroniczne, za pomocą wzorca asynchronicznego opartego na zadaniach. Aby uzyskać więcej informacji, zobacz [zadań asynchronicznych - uprościć programowanie asynchroniczne przy użyciu zadania](https://msdn.microsoft.com/magazine/ff959203.aspx).  
   
  Ponieważ konfiguracji jest teraz generowany w kodzie, wszelkie zmiany wprowadzone w pliku Reference.cs zostaną zastąpione za każdym razem, gdy odwołanie do usługi jest aktualizowana. Aby rozwiązać ten problem kodu konfiguracji zostanie wygenerowany wewnątrz metody częściowej, można zaimplementować w klasie serwera proxy klienta. Metoda częściowa jest zadeklarowana w następujący sposób:  
   

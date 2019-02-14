@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: a21c32547b1bd612196daf8be54cf85c373a7ff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681745"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261543"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi
 W tym temacie pokazano, jak zaimplementować niestandardowego klienta i poświadczeń usługi i sposobu użycia niestandardowych poświadczeń w kodzie aplikacji.  
@@ -23,8 +23,6 @@ W tym temacie pokazano, jak zaimplementować niestandardowego klienta i poświad
 -   Wykonaj jako fabryki dla <xref:System.IdentityModel.Selectors.SecurityTokenManager> implementacji.  
   
  Zarówno <xref:System.ServiceModel.Description.ClientCredentials> i <xref:System.ServiceModel.Description.ServiceCredentials> klasy dziedziczą abstrakcyjnej <xref:System.ServiceModel.Security.SecurityCredentialsManager> klasę, która definiuje kontrakt dla zwracania <xref:System.IdentityModel.Selectors.SecurityTokenManager>.  
-  
- Aby uzyskać więcej informacji dotyczących klasy poświadczenia i sposób dopasowania w architekturę zabezpieczeń programu WCF, zobacz [architekturę zabezpieczeń](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  Domyślnej implementacji dostarczane w programie WCF obsługują typy poświadczeń dostarczanych przez system i utworzyć Menedżer tokenów, który może obsługiwać te typy poświadczeń zabezpieczeń.  
   

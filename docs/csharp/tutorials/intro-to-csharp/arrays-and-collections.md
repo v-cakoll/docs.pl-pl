@@ -3,12 +3,12 @@ title: Praca z kolekcjami — wprowadzenie do C# samouczek
 description: Dowiedz się, C# eksplorując kolekcji listy, w tym samouczku.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205285"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261274"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Dowiedz się, jak zarządzać zbierania danych przy użyciu typu listy ogólnej
 
@@ -19,9 +19,6 @@ W tym samouczku oczekuje, że będziesz mieć maszyny, których można użyć do
 ## <a name="a-basic-list-example"></a>Przykład podstawowa lista
 
 Utwórz katalog o nazwie **samouczek**. Upewnij, że bieżącego katalogu i uruchom `dotnet new console`.
-
-> [!NOTE]
-> Jeśli właśnie został ukończony [Rozpocznij pracę z platformą .NET w 10 minut](https://www.microsoft.com/net), możesz nadal korzystać z aplikacji myApp, który został utworzony.
 
 Otwórz **Program.cs** w ulubionym edytorze i Zastąp istniejący kod następującym kodem:
 

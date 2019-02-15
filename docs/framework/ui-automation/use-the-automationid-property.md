@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 8d7de0ea18adf81d7bcd5b4142e1aa51d6d223ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1987d5af904f1e151617d0cea6c183c52b8386e2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743845"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305483"
 ---
 # <a name="use-the-automationid-property"></a>Użyj właściwości AutomationID
 > [!NOTE]
@@ -47,7 +47,7 @@ ms.locfileid: "54743845"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Użyj ścieżki trwały, aby powrócić do wcześniej zidentyfikowane obiektu AutomationElement  
   
--   Aplikacje klienckie, ze skryptów prosty test niezawodne rejestrowanie i narzędzia odtwarzania może wymagać dostępu do elementów, które się nie aktualnie wystąpienia, takie jak plik Otwórz okno dialogowe lub elementu menu i dlatego nie istnieją w drzewa automatyzacji interfejsu użytkownika. Te elementy można wdrożyć tylko przez odtwarzanie, lub "odtwarzania", sekwencji określonych [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] akcje za pośrednictwem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, takie jak AutomationID, wzorców kontrolek i detektory zdarzenia. Zobacz [Test przykładowy Generator skrypt](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) przykład, który używa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] można wygenerować skryptów testowych oparte na interakcję użytkownika z [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Aplikacje klienckie, ze skryptów prosty test niezawodne rejestrowanie i narzędzia odtwarzania może wymagać dostępu do elementów, które się nie aktualnie wystąpienia, takie jak plik Otwórz okno dialogowe lub elementu menu i dlatego nie istnieją w drzewa automatyzacji interfejsu użytkownika. Te elementy mogą być tylko utworzone przez odtwarzanie, lub "odtwarzania", określonej kolejności akcji UI za pomocą właściwości automatyzacji interfejsu użytkownika, takie jak AutomationID, wzorców kontrolek i detektory zdarzenia.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

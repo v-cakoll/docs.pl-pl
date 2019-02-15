@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: c92ea7b4cb2acbe84d9086698cdf8dfbf5f239bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e361b5af5c360869ef51650bb6926a24d1f560d
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738618"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304027"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Przewodnik: Układania Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. **Windows Forms Designer** udostępnia wiele narzędzi układu, w tym celu. Są trzy najważniejsze <xref:System.Windows.Forms.Control.Margin%2A>, <xref:System.Windows.Forms.Control.Padding%2A>, i <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości, które znajdują się na wszystkie kontrolki Windows Forms.  
@@ -60,7 +60,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1.  Tworzenie **aplikacji Windows** projekt o nazwie `LayoutExample`. Aby uzyskać więcej informacji, zobacz [jak: Utwórz projekt aplikacji Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Tworzenie **aplikacji Windows** projekt o nazwie `LayoutExample`. Aby uzyskać więcej informacji, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
 2.  Wybierz formularz w **Windows Forms Designer**.  
   

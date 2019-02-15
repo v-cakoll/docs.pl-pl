@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9f5b6ad4765edfdea9f56debad085d69e9fc769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a7abcda5ecf56602e884e4d66e1c6900f17b4c6
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680442"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305886"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime — Metoda
 Powiadamia hosta, że formant jest pozostawienie środowisko uruchomieniowe języka wspólnego (CLR) i wprowadzając niezarządzanej funkcji, która z kolei wywoływana z kodu zarządzanego.  
@@ -65,4 +65,4 @@ HRESULT ReverseLeaveRuntime ();
 - [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
 - [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
 - [LeaveRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)
-- [Im bliżej wywołania platformy](https://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)
+- [Im bliżej wywołania platformy](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))

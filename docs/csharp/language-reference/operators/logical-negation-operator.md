@@ -1,7 +1,7 @@
 ---
 title: '! Operator - C# odwołania'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/14/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
@@ -9,24 +9,26 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 464bd658c9bf430191d84d3d5ad8d57173ab87c5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333229"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303715"
 ---
 # <a name="-operator-c-reference"></a>! operator (odwołanie w C#)
 
-Operator logiczny negacji (`!`) jest operatorem jednoargumentowym, który neguje swój argument operacji. Jest zdefiniowany dla typu `bool` i zwraca wartość `true` tylko wtedy, gdy argument operacji jest `false`.
+Operator logiczny negacji `!` jest Jednoargumentowy operator, który oblicza negacji logicznej jego [bool](../keywords/bool.md) operand. Oznacza to, tworzy `true`, jeśli argument jest `false`, i `false`, jeśli argument jest `true`:
 
-## <a name="remarks"></a>Uwagi
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalNegationExamples.cs#Example)]
 
-Typy definiowane przez użytkownika mogą przeciążać operator `!` (zobacz [operator](../keywords/operator.md)).
+## <a name="operator-overloadability"></a>Overloadability — operator
 
-## <a name="example"></a>Przykład
+Typy zdefiniowane przez użytkownika może [przeciążenia](../keywords/operator.md) `!` operatora.
 
-[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz [operator logiczny negacji](~/_csharplang/spec/expressions.md#logical-negation-operator) części [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

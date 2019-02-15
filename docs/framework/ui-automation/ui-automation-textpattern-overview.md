@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c905dfbb0fffcf37c8b196e883003ea70e509b2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea03c037312ffdb66146dc0461e157c230aafcd2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534319"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304053"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Przegląd automatyzacji interfejsu użytkownika — TextPattern
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "54534319"
  Udostępnianie zawartości tekstowej kontrolki odbywa się za pośrednictwem <xref:System.Windows.Automation.TextPattern> — wzorzec kontrolki, która reprezentuje zawartość kontenera tekstu jako strumienia tekstu. Z kolei <xref:System.Windows.Automation.TextPattern> wymaga obsługi elementu <xref:System.Windows.Automation.Text.TextPatternRange> klasy w celu udostępnienia styl i formatu atrybutów. <xref:System.Windows.Automation.Text.TextPatternRange> obsługuje <xref:System.Windows.Automation.TextPattern> poprzez reprezentowanie ciągłych lub wielu rozłączne zakresy tekstu w kontenerze tekstu z kolekcją <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> i <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktów końcowych. <xref:System.Windows.Automation.Text.TextPatternRange> obsługuje funkcje, takie jak wybór, porównanie, pobieranie i przechodzenia.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> Klasy zapewnia sposób wstawiania lub modyfikowanie tekstu. Jednak w zależności od kontrolki, to może być dokonane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> lub przy użyciu danych wprowadzonych z klawiatury bezpośrednich. Zobacz [TextPattern Wstaw tekst przykładowy](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) przykład.  
+> <xref:System.Windows.Automation.TextPattern> Klasy zapewnia sposób wstawiania lub modyfikowanie tekstu. Jednak w zależności od kontrolki, to może być dokonane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> lub przy użyciu danych wprowadzonych z klawiatury bezpośrednich. Zobacz [TextPattern Wstaw tekst przykładowy](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) przykład.  
   
  Funkcje opisane w tym omówieniu jest niezbędna do dostawców technologii pomocniczych i użytkownikom końcowym. Można użyć technologiami pomocniczymi [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] do gromadzenia pełny tekst formatowanie informacje dotyczące użytkownika, a następnie podaj Nawigacja programowa i zaznaczonego tekstu przez <xref:System.Windows.Automation.Text.TextUnit> (znak, word, wiersza lub akapitu).  
   
@@ -136,4 +136,4 @@ Poniżej przedstawiono zestaw punkt początkowy i końcowy.
 - [Używanie buforowania w automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Tekst usługi Framework](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)
+- [Tekst usługi Framework](/windows/desktop/api/_tsf/)

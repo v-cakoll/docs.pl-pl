@@ -2,12 +2,12 @@
 title: Tożsamość usług — przykład
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 1efa354f62e1b28ad6cec02d9879448205791e4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33d3344e6a74e2afa9ad36f9df2e36eb8e1cb17b
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707638"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303897"
 ---
 # <a name="service-identity-sample"></a>Tożsamość usług — przykład
 Ta tożsamość usług — przykład pokazuje, jak ustawić tożsamość usługi. W czasie projektowania klient może pobrać tożsamości przy użyciu metadanych usługi, a następnie w czasie wykonywania klienta można uwierzytelnić tożsamości usługi. Pojęcie tożsamości usługi jest umożliwienie klienta do uwierzytelniania usługi przed wywołaniem dowolnej swojego działania, w tym samym ochrony klienta przed nieuwierzytelnione wywołania. Dla bezpiecznego połączenia usługi jest również uwierzytelniany poświadczeń klienta przed zezwoleniem na jego dostęp, ale nie jest celem tego przykładu. Zobacz przykłady w [klienta](../../../../docs/framework/wcf/samples/client.md) ukazują uwierzytelniania serwera.
@@ -126,7 +126,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 4.  Uruchom Client.exe z katalogu \client\bin lub naciskając klawisz F5 w programie Visual Studio, aby skompilować i uruchomić. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
   
-5.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach  
   
@@ -150,7 +150,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 10. Na komputerze, usługi uruchom Service.exe w wierszu polecenia.  
   
-11. Na komputerze klienckim należy uruchomić Client.exe z poziomu wiersza polecenia. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+11. Na komputerze klienckim należy uruchomić Client.exe z poziomu wiersza polecenia. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   

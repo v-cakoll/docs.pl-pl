@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508525"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303400"
 ---
 # <a name="unmanaged-api-reference"></a>Niezarządzany wykaz interfejsów API
 Ta sekcja zawiera informacje na temat niezarządzanych interfejsów API, które mogą być używane przez aplikacje zarządzane — związane z kodem, takich jak hosty środowiska uruchomieniowego, kompilatory, deasemblery, obfuscators, debugery i profilery.  
@@ -32,7 +32,7 @@ Ta sekcja zawiera informacje na temat niezarządzanych interfejsów API, które 
  [Stałe](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  W tym artykule opisano, stałe, które są zdefiniowane w CorSym.idl.  
   
- [Niestandardowe atrybuty interfejsu](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Niestandardowe atrybuty interfejsu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  W tym artykule opisano component object model (COM) niestandardowe atrybuty interfejsu.  
   
  [Debugowanie](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -64,5 +64,3 @@ Ta sekcja zawiera informacje na temat niezarządzanych interfejsów API, które 
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Podręcznik programowania](../../../docs/framework/development-guide.md)  
-  
- [Zaawansowane zagadnienia dotyczące programu .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

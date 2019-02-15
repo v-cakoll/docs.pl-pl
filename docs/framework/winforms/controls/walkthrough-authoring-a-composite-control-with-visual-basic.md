@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: e961826f4c33edf59934597734aec36ce301194e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc18c571d65d95b8ffc84f9b7d84213e527689b
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694389"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305821"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic
 Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy graficzne można tworzyć i ponownie używane. Formant złożony jest zasadniczo składnika za pomocą wizualnej reprezentacji. W efekcie może składać się z co najmniej Windows Forms formantów, składników lub bloki kodu, które mogą rozszerzyć funkcjonalność, sprawdzanie poprawności danych wejściowych użytkownika, modyfikując właściwości wyświetlania lub wykonywania innych zadań wymaganych przez autora. Formanty złożone można umieścić na formularzach Windows Forms w taki sam sposób jak inne kontrolki. W pierwszej części tego przewodnika, tworzenie prostego formantu złożonego o nazwie `ctlClock`. W drugiej części tego przewodnika, możesz rozszerzyć funkcjonalność `ctlClock` poprzez dziedziczenie.  
@@ -356,7 +356,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
   
 11. Ustaw właściwości tych kontrolek, w następujący sposób.  
   
-    |Formant|Właściwość|Wartość|  
+    |formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
     |`label1`|**Text**|`(blank space)`|  
     ||**Nazwa**|`lblTest`|  
@@ -399,4 +399,3 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
 - [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
 - [Instrukcje: Formanty złożone autora](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Tworzenie składników — wskazówki](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

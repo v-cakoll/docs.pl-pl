@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8de1d1b1f2bfe385a815eb6147b79a1dc2be0206
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717561"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304898"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automatyzacja interfejsu użytkownika a skalowanie ekranu
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "54717561"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Ta funkcja sprawia, że cały proces [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware, co oznacza, że wszystkie systemy windows, które należą do procesu nieskalowanego. W [przykładowe wyróżnienia](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), na przykład czterech systemu windows, które tworzą prostokąt wyróżnienia znajdują się w fizycznych współrzędne uzyskany z [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], współrzędne logiczne. Jeśli plik nie [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-pamiętać, Podświetlenie mogłoby być rysowany w logiczne współrzędne na komputerze stacjonarnym, co mogłoby spowodować nieprawidłowe położenie w non-96 - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] środowiska.  
+     Ta funkcja sprawia, że cały proces obsługującą ustawienia DPI, co oznacza, że wszystkie systemy windows, które należą do procesu nieskalowanego. W [przykładowe wyróżnienia](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), na przykład czterech systemu windows, które tworzą prostokąt wyróżnienia znajdują się w fizycznych współrzędne uzyskany z automatyzacji interfejsu użytkownika, współrzędne logiczne. Jeśli plik nie były obsługującą ustawienia DPI, Podświetlenie będzie rysowany w współrzędne logiczne na komputerze stacjonarnym, co mogłoby spowodować nieprawidłowe położenie w środowisku bez rozdzielczości 96.  
   
 2.  Aby uzyskać współrzędne kursora, należy wywołać [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcja `GetPhysicalCursorPos`. Poniższy przykład pokazuje sposób deklarowania i użyć tej funkcji.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "54717561"
  Jeśli Twoja aplikacja działa bezpośredniej komunikacji między procesami z non - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aplikacjom obsługującym może mieć konwertowania między logiczne i fizyczne współrzędnych przy użyciu [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcje `PhysicalToLogicalPoint` i `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przykładowe wyróżnienia](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+- [Przykładowe wyróżnienia](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

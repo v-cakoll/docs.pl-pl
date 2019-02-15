@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: 392f0e98c3401ca5ae5e01fefbf35462462b3a4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d9fbc518d54ab83d517a5c305b171d4b77a664a
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531255"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305951"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual C# #
 Za pomocą [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], można tworzyć zaawansowane Kontrolki niestandardowe za pomocą *dziedziczenia*. Poprzez dziedziczenie jest możliwe w celu tworzenia formantów, które zachować wszystkie związane funkcje standardowych kontrolek Windows Forms, ale również dołączać niestandardowe funkcje. W tym instruktażu utworzysz prostą odziedziczoną kontrolkę o nazwie `ValueButton`. Ten przycisk będzie dziedziczyć funkcji z formularzy Windows <xref:System.Windows.Forms.Button> kontrolować i udostępni właściwość niestandardową o nazwie `ButtonValue`.  
@@ -142,7 +142,5 @@ Za pomocą [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], można
      Cyfry, '5' jest wyświetlana w `label1`, pokazując, `ButtonValue` właściwości dziedziczonych formant został przekazany do `label1` za pośrednictwem `valueButton1_Click` metody. Ten sposób Twoja `ValueButton` kontrola dziedziczy wszystkie funkcje standardowe przycisku Windows Forms, ale udostępnia dodatkowe, niestandardowe właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Programowanie przy użyciu składników](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
-- [Tworzenie składników — wskazówki](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
 - [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)

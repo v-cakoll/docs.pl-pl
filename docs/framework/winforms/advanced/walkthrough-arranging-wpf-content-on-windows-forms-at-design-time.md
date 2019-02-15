@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 66fb814bbf0a40ccaa9339eb24dcc49332861deb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 543546de4f9b93deb5fa70c98608246e9c06e4f7
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647672"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304560"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Rozmieszczanie zawartości WPF na formularzach Windows Forms w czasie projektowania
 W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation (WPF).
@@ -56,7 +56,7 @@ W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularz
   
 1.  Dodaj nowe WPF <xref:System.Windows.Controls.UserControl> do projektu. Użyj domyślnej nazwy dla kontrolek typu `UserControl1.xaml`. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i Przesuń elementy na powierzchni projektowej](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+2.  W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i Przesuń elementy na powierzchni projektowej](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
   
 3.  W **właściwości** okna, ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości `200`.  
   
@@ -83,7 +83,7 @@ W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularz
   
 6.  W **przybornika**, kliknij dwukrotnie `UserControl1` Aby utworzyć inną instancję w drugiej komórce <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
   
-7.  W **konspekt dokumentu** wybierz `tableLayoutPanel1`. Aby uzyskać więcej informacji, zobacz [okno konspektu dokumentu](https://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8).  
+7.  W **konspekt dokumentu** wybierz `tableLayoutPanel1`. Aby uzyskać więcej informacji, zobacz [okno konspektu dokumentu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf).  
   
 8.  W **właściwości** okna, ustaw wartość <xref:System.Windows.Forms.Control.Padding%2A> właściwość `10, 10, 10, 10`.  
   

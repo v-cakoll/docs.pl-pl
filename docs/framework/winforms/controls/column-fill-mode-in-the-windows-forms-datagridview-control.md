@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 79ef0310e5f134c09c9bbf0c0403ea6aa7cd7059
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 823d3c06648ed37003176eab9df538d95f1ced69
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595152"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304313"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows
 W tryb wypełniania kolumny <xref:System.Windows.Forms.DataGridView> kontroli zmienia rozmiar kolumn automatycznie, tak aby zajmowały szerokość obszaru dostępny ekran. Kontrolka nie wyświetla poziomy pasek przewijania z wyjątkiem sytuacji, gdy jest konieczne zapewnienie szerokość każdej kolumny równa lub większa niż jego <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> wartości właściwości.  
@@ -60,7 +60,7 @@ W tryb wypełniania kolumny <xref:System.Windows.Forms.DataGridView> kontroli zm
   
 -   Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.  
   
--   Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  Zobacz też [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.DataGridView>

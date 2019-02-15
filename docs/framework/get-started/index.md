@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074924ebb430953df8cee30351e72ec42c736a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712801"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304690"
 ---
 # <a name="get-started-with-the-net-framework"></a>Wprowadzenie do programu .NET Framework
 
@@ -41,7 +41,7 @@ ms.locfileid: "54712801"
 
 - Wykonanie Side-by-side. Program .NET Framework pomaga rozwiązywać konflikty wersji poprzez umożliwienie wielu wersjom środowiska uruchomieniowego języka wspólnego współistnienie na tym samym komputerze. Oznacza to, że wiele wersji aplikacji mogą współistnieć, i że aplikację można uruchomić w wersji programu .NET Framework, z którą została skompilowana. Wykonanie Side-by-side odnosi się do grup w wersji .NET Framework 1.0/1.1, 2.0/3.0/3.5 i 4/4.5.x/4.6.x/4.7.x.
 
-- Wielowersyjności kodu w programie. Dzięki systemowi [.NET Standard](~/docs/standard/net-standard.md), deweloperom tworzenie bibliotek klas, które działają na wielu platformach .NET Framework obsługiwane przez tę wersję standard. Na przykład bibliotek przeznaczonych dla platformy .NET Standard 2.0 może służyć przez aplikacje, których platformą docelową jest program .NET Framework 4.6.1, .NET Core 2.0 i platformy uniwersalnej systemu Windows 10.0.16299. 
+- Wielowersyjności kodu w programie. Dzięki systemowi [.NET Standard](../../standard/net-standard.md), deweloperom tworzenie bibliotek klas, które działają na wielu platformach .NET Framework obsługiwane przez tę wersję standard. Na przykład bibliotek przeznaczonych dla platformy .NET Standard 2.0 może służyć przez aplikacje, których platformą docelową jest program .NET Framework 4.6.1, .NET Core 2.0 i platformy uniwersalnej systemu Windows 10.0.16299. 
 
 <a name="ForUsers"></a>
 ## <a name="the-net-framework-for-users"></a>.NET Framework dla użytkowników
@@ -54,7 +54,7 @@ Ogólnie rzecz biorąc nie należy odinstalować wersji programu .NET Framework,
 
 - Jeśli aplikacji, którego używasz, zależy od określonej wersji programu .NET Framework, ta aplikacja może spowodować przerwanie usunięcie tej wersji.
 
-- Niektóre wersje programu .NET Framework są aktualizacje w miejscu do wcześniejszych wersji. Na przykład [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] stanowi aktualizację w miejscu do wersji 2.0 i .NET Framework 4.7.2 stanowi aktualizację w miejscu do wersji 4 do 4.7.1. Aby uzyskać więcej informacji, zobacz [wersje programu .NET Framework i zależności](../../../docs/framework/migration-guide/versions-and-dependencies.md).
+- Niektóre wersje programu .NET Framework są aktualizacje w miejscu do wcześniejszych wersji. Na przykład [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] stanowi aktualizację w miejscu do wersji 2.0 i .NET Framework 4.7.2 stanowi aktualizację w miejscu do wersji 4 do 4.7.1. Aby uzyskać więcej informacji, zobacz [wersje programu .NET Framework i zależności](../migration-guide/versions-and-dependencies.md).
 
 Na wersje Windows wcześniejsze niż Windows 8, jeśli zdecydujesz się usunąć programu .NET Framework, zawsze używaj **programy i funkcje** z poziomu Panelu sterowania, aby go odinstalować. Nigdy nie ręcznie usuń wersję programu .NET Framework. W systemie Windows 8 lub nowszym programu .NET Framework jest składnikiem systemu operacyjnego i nie można odinstalować niezależnie.
 
@@ -67,29 +67,29 @@ Jeśli jesteś deweloperem aplikacji, należy wybrać dowolny język programowan
 
 Tworzenie aplikacji .NET Framework lub składniki, wykonaj następujące czynności:
 
-1. Jeśli nie jest preinstalowany w systemie operacyjnym, należy zainstalować wersję programu .NET Framework, przeznaczony dla twojej aplikacji. Najnowsza wersja produkcyjna jest .NET Framework 4.7.2. Jest preinstalowany w systemie Windows 10 kwietnia 2018 Update i Windows 10 października 2018 r. Zaktualizuj i jest dostępna do pobrania we wcześniejszych wersjach systemu operacyjnego Windows. Aby uzyskać wymagania systemowe programu .NET Framework, zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md). Aby uzyskać informacje na temat instalowania innych wersji systemu .NET Framework, zobacz [Przewodnik instalacji](../../../docs/framework/install/guide-for-developers.md). Dodatkowe pakiety .NET Framework są wydawane poza pasmem, która oznacza, że ich wydaniu w sposób ciągły poza wszelkie regularnie lub według harmonogramu cyklu. Aby uzyskać informacje o tych paloetach, zobacz [.NET Framework i wersji Out-of-Band](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Jeśli nie jest preinstalowany w systemie operacyjnym, należy zainstalować wersję programu .NET Framework, przeznaczony dla twojej aplikacji. Najnowsza wersja produkcyjna jest .NET Framework 4.7.2. Jest preinstalowany w systemie Windows 10 kwietnia 2018 Update i Windows 10 października 2018 r. Zaktualizuj i jest dostępna do pobrania we wcześniejszych wersjach systemu operacyjnego Windows. Aby uzyskać wymagania systemowe programu .NET Framework, zobacz [wymagania systemowe](system-requirements.md). Aby uzyskać informacje na temat instalowania innych wersji systemu .NET Framework, zobacz [Przewodnik instalacji](../install/guide-for-developers.md). Dodatkowe pakiety .NET Framework są wydawane poza pasmem, która oznacza, że ich wydaniu w sposób ciągły poza wszelkie regularnie lub według harmonogramu cyklu. Aby uzyskać informacje o tych paloetach, zobacz [.NET Framework i wersji Out-of-Band](the-net-framework-and-out-of-band-releases.md).
 
-2. Wybierz język lub języki obsługiwane przez .NET Framework, która ma być używany do tworzenia aplikacji. Dostępnych jest kilka języków, w tym [języka Visual Basic](../../visual-basic/index.md), [ C# ](../../csharp/index.md), [ F# ](../../fsharp/index.md)i C + +/ interfejsu wiersza polecenia platformy firmy Microsoft. (Język programowania, który pozwala na opracowywanie aplikacji dla programu .NET Framework działa zgodnie z [specyfikacja Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkId=199862).)
+2. Wybierz język lub języki obsługiwane przez .NET Framework, która ma być używany do tworzenia aplikacji. Dostępnych jest kilka języków, w tym [języka Visual Basic](../../visual-basic/index.md), [ C# ](../../csharp/index.md), [ F# ](../../fsharp/index.md), i [C + +/ CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) od firmy Microsoft. (Język programowania, który pozwala na opracowywanie aplikacji dla programu .NET Framework działa zgodnie z [specyfikacja Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).)
 
 3. Wybierz i zainstaluj rozwoju środowisko służące do tworzenia aplikacji, które obsługuje z wybranego języka programowania lub języków. Microsoft zintegrowane środowisko programistyczne (IDE) dla aplikacji .NET Framework jest [programu Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Jest ona dostępna w wielu wersjach.
 
-Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla platformy .NET Framework, zobacz [Podręcznik programowania](../../../docs/framework/development-guide.md).
+Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla platformy .NET Framework, zobacz [Podręcznik programowania](../development-guide.md).
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 | Tytuł | Opis |
 | ----- |------------ |
-| [Omówienie](../../../docs/framework/get-started/overview.md) | Zawiera szczegółowe informacje dla deweloperów, którzy tworzenia aplikacji pod kątem programu .NET Framework. |
-| [Przewodnik instalacji](../../../docs/framework/install/index.md) | Zawiera informacje dotyczące instalowania programu .NET Framework. |  
-| [Program .NET Framework i wydania poza harmonogramem (OOB)](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | W tym artykule opisano .NET Framework poza harmonogramem i sposobu ich używania w Twojej aplikacji. |
-| [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md) | Wyświetla listę wymagań sprzętowych i programowych do uruchamiania programu .NET Framework. |
-| [Oprogramowanie .NET Core i Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md) | W tym artykule opisano platformy .NET Core w odniesieniu do programu .NET Framework i jak dostęp do projektów .NET Core typu open source. |
-| [Dokumentacja platformy .NET core](https://docs.microsoft.com/dotnet/) | Udostępnia koncepcyjnej i dokumentacja interfejsu API dla platformy .NET Core. |
-| [.NET Standard](~/docs/standard/net-standard.md) | W tym artykule omówiono .NET Standard, numerów wersji specyfikacji, obsługujące poszczególnych implementacji platformy .NET w celu zagwarantowania, że spójny zestaw interfejsów API są dostępne na wielu platformach.
+| [Omówienie](overview.md) | Zawiera szczegółowe informacje dla deweloperów, którzy tworzenia aplikacji pod kątem programu .NET Framework. |
+| [Przewodnik instalacji](../install/index.md) | Zawiera informacje dotyczące instalowania programu .NET Framework. |  
+| [Program .NET Framework i wydania poza harmonogramem (OOB)](the-net-framework-and-out-of-band-releases.md) | W tym artykule opisano .NET Framework poza harmonogramem i sposobu ich używania w Twojej aplikacji. |
+| [Wymagania systemowe](system-requirements.md) | Wyświetla listę wymagań sprzętowych i programowych do uruchamiania programu .NET Framework. |
+| [Oprogramowanie .NET Core i Open-Source](net-core-and-open-source.md) | W tym artykule opisano platformy .NET Core w odniesieniu do programu .NET Framework i jak dostęp do projektów .NET Core typu open source. |
+| [Dokumentacja platformy .NET core](../../core/index.md) | Udostępnia koncepcyjnej i dokumentacja interfejsu API dla platformy .NET Core. |
+| [.NET Standard](../../standard/net-standard.md) | W tym artykule omówiono .NET Standard, numerów wersji specyfikacji, obsługujące poszczególnych implementacji platformy .NET w celu zagwarantowania, że spójny zestaw interfejsów API są dostępne na wielu platformach.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [.NET framework — przewodnik](../../../docs/framework/index.md)
-- [Co nowego](../../../docs/framework/whats-new/index.md)
-- [Przeglądarka interfejsu API .NET](/dotnet/api/)
-- [Podręcznik programowania](../../../docs/framework/development-guide.md)
+- [.NET framework — przewodnik](../index.md)
+- [Co nowego](../whats-new/index.md)
+- [Przeglądarka interfejsu API .NET](../../../api/index.md)
+- [Podręcznik programowania](../development-guide.md)

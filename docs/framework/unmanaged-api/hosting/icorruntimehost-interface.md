@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41dc37751e2dcf26eea887e84423179512c53614
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0182de9b998b7eb88a3bd003543bee876398633
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653518"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304651"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost — Interfejs
 Udostępnia metody umożliwiające hosta do uruchamiania i zatrzymywania środowisko uruchomieniowe języka wspólnego (CLR) jawnie, aby utworzyć i skonfigurować domeny aplikacji, dostęp do domyślnej domeny i wyliczyć wszystkich domen, uruchomiony w procesie.  
@@ -65,6 +65,6 @@ Udostępnia metody umożliwiające hosta do uruchamiania i zatrzymywania środow
 - <xref:System.AppDomain>
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
-- [Hosty środowiska uruchomieniowego](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)
+- [Hosty środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
 - [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [CorRuntimeHost, klasa coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

@@ -1,15 +1,16 @@
 ---
-title: Binding1
+title: Powiązania WCF przykłady
 ms.date: 03/30/2017
 ms.assetid: 324fa627-d012-465a-b266-95594a09dac2
-ms.openlocfilehash: 124a4bd252f838b737a06b76452619182bc9dea1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 260e8a957b76c0e00ac0adae8d2a032d0d0d598b
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026824"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305834"
 ---
-# <a name="binding"></a>Powiązanie
+# <a name="binding"></a>Wiązanie
+
 Ta sekcja zawiera przykłady pokazujące, za pomocą atrybutów powiązania punktu końcowego elementu.  
   
 ## <a name="in-this-section"></a>W tej sekcji

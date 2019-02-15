@@ -2,12 +2,12 @@
 title: Wystawca uwierzytelnienia tokenów
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: fbd036001e3b39c7df27e2388bc2ac4b803f0de3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6cbef617145e40cfc1e43012af2eb65afbbe05c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619548"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305005"
 ---
 # <a name="token-authenticator"></a>Wystawca uwierzytelnienia tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego wystawcy uwierzytelniania tokenu. Wystawcy uwierzytelnienia tokenu w Windows Communication Foundation (WCF) służy do sprawdzania poprawności tokenu użytego komunikatem, weryfikowanie, czy jest spójny i uwierzytelniania tożsamości skojarzonych z tokenem.
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  Uruchom client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
   
-4.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. Na komputerze klienckim należy uruchomić Client.exe z poziomu wiersza polecenia.  
   
-10. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   

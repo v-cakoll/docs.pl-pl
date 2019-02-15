@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585422"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305847"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel
 Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas zmiany rozmiaru formularza lub zawartość zmienia rozmiar formularza. Kiedy należy układ dynamiczny i nie chcesz obsługiwać <xref:System.Windows.Forms.Control.Layout> zdarzenia jawnie w kodzie, należy wziąć pod uwagę przy użyciu panelu układu.  
@@ -22,7 +22,7 @@ Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas 
   
  <xref:System.Windows.Forms.TableLayoutPanel> Rozmieszcza jego zawartość w siatce, zapewniając funkcjonalność podobną do HTML \<tabeli > element. <xref:System.Windows.Forms.TableLayoutPanel> Sterowanie umożliwia Umieść formanty w przypadku układu tabelarycznego bez konieczności dokładnie określać położenie każdego pojedynczego formantu. Jej komórek są rozmieszczone w wiersze i kolumny, a te może mieć różne rozmiary. Komórki mogą zostać scalone między wierszami i kolumnami. Komórki mogą zawierać żadnych formularza może zawierać i zachowują się w większości innych aspektach jako kontenery.  
   
- <xref:System.Windows.Forms.TableLayoutPanel> Kontroli także proporcjonalna możliwość zmiany rozmiaru w czasie wykonywania, dzięki czemu układu można zmienić bez problemów ze zmienionym rozmiarem formularza. To sprawia, że <xref:System.Windows.Forms.TableLayoutPanel> kontroli dobrze nadaje się do celów takich jak formularze wprowadzanie danych i aplikacji zlokalizowanych. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) i [instruktażu: Tworzenie formularza Windows Lokalizowalny](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ <xref:System.Windows.Forms.TableLayoutPanel> Kontroli także proporcjonalna możliwość zmiany rozmiaru w czasie wykonywania, dzięki czemu układu można zmienić bez problemów ze zmienionym rozmiarem formularza. To sprawia, że <xref:System.Windows.Forms.TableLayoutPanel> kontroli dobrze nadaje się do celów takich jak formularze wprowadzanie danych i aplikacji zlokalizowanych. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)) i [instruktażu: Tworzenie formularza Windows Lokalizowalny](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).  
   
  Ogólnie rzecz biorąc, nie należy używać <xref:System.Windows.Forms.TableLayoutPanel> kontroli jako kontener dla całego układu. Użyj <xref:System.Windows.Forms.TableLayoutPanel> formantów, aby zapewnić możliwości zmiany rozmiaru proporcjonalne części układu.  
   
@@ -54,7 +54,7 @@ Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas 
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1.  Utwórz projekt aplikacji Windows o nazwie "TableLayoutPanelExample". Aby uzyskać więcej informacji, zobacz [jak: Utwórz projekt aplikacji Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Utwórz projekt aplikacji Windows o nazwie "TableLayoutPanelExample". Aby uzyskać więcej informacji, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
 2.  Wybierz formularz w **Windows** **projektanta formularzy**.  
   
@@ -184,8 +184,8 @@ Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas 
 - [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Środowisko użytkownika Microsoft Windows, oficjalnych wytycznych dotyczących projektanci i deweloperzy interfejsu użytkownika. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [Przewodnik: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
-- [Przewodnik: Tworzenie formularza Windows Lokalizowalny](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [Przewodnik: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
+- [Przewodnik: Tworzenie formularza Windows Lokalizowalny](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [Najlepsze praktyki dotyczące kontrolki TableLayoutPanel](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize, właściwość — omówienie](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
 - [Instrukcje: Dokowanie formantów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)

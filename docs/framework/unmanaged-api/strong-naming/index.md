@@ -2,12 +2,18 @@
 title: Silne nazewnictwo (Niezarządzany wykaz interfejsów API)
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'strong naming [.NET Framework], using the unmanaged API'
-  - 'native API reference [.NET Framework], strong naming'
-  - 'unmanaged API reference [.NET Framework], strong naming'
+- strong naming [.NET Framework], using the unmanaged API
+- native API reference [.NET Framework], strong naming
+- unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305650"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Silne nazewnictwo (Niezarządzany wykaz interfejsów API)
 Silnych nazw interfejsu API umożliwia klientowi do administrowania podpisywania zestawów silnymi nazwami.  
@@ -15,8 +21,6 @@ Silnych nazw interfejsu API umożliwia klientowi do administrowania podpisywania
  Podpisanie zestawu silną nazwą dodaje szyfrowanie kluczem publicznym do pliku zawierającego manifest zestawu. Podpis silnej nazwy pomaga zweryfikować unikatowość nazwy, uniemożliwia fałszowanie nazwy i zapewnia wywołań przy użyciu unikatowych tożsamości, gdy odwołanie nie zostanie rozwiązany. Jednak żaden poziom zaufania jest skojarzony z silną nazwą.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Silnych nazw statycznych funkcji globalnych](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- Opisuje niezarządzane globalne funkcje statyczne, używanych przez silnych nazw interfejsu API.  
   
 > [!NOTE]
 >  Wszystkie te funkcje są przestarzałe począwszy od [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Sugerowane rozwiązania alternatywne, można zobaczyć [iclrstrongname —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) interfejsu.  
@@ -98,9 +102,6 @@ Silnych nazw interfejsu API umożliwia klientowi do administrowania podpisywania
   
  [StrongNameTokenFromPublicKey, funkcja](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Pobiera token reprezentujący klucz publiczny. Przestarzałe, począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
-  
- [Silne nazewnictwo — struktury](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- Opisuje niezarządzane strukturę, która silnych nazw interfejsu API używa do administrowania podpisywania zestawów silnymi nazwami...  
   
  [PublicKeyBlob, struktura](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Reprezentuje klucz publiczny z pary kluczy publiczny/prywatny w formacie binarnym.  

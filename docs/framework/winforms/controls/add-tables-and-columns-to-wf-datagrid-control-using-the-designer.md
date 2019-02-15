@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: c130dac068ee4866f44fd12398202e21d91fcf48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 079b4121c3f9e5c55e003b089f85cd08a5bae5d2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536232"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304417"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: Dodawanie tabel i kolumn do formantu DataGrid formularzy Windows przy użyciu narzędzia Projektant
 
@@ -20,7 +20,7 @@ ms.locfileid: "54536232"
   
  Można wyświetlić dane w formularzach Windows Forms <xref:System.Windows.Forms.DataGrid> formantu w tabelach i kolumnach, tworząc <xref:System.Windows.Forms.DataGridTableStyle> obiektów oraz dodać je do <xref:System.Windows.Forms.GridTableStylesCollection> obiektu, który jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości. Każdy styl tabeli Wyświetla zawartość tabeli niezależnie od danych jest określona w <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>. Domyślny styl tabeli bez style kolumny określone wyświetli wszystkie kolumny w tabeli danych. Można ograniczyć, które kolumny z tabeli są wyświetlane, dodając <xref:System.Windows.Forms.DataGridColumnStyle> obiekty do <xref:System.Windows.Forms.GridColumnStylesCollection>, który jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwości każdego <xref:System.Windows.Forms.DataGridTableStyle>.  
   
- Poniższe procedury wymagają **aplikacji Windows** projektu za pomocą formularza, który zawiera <xref:System.Windows.Forms.DataGrid> kontroli. Aby dowiedzieć się, jak skonfigurować taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) i [jak: Dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Domyślnie w programie Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> formantu nie znajduje się w **przybornika**. Aby uzyskać informacje dotyczące dodawania go, zobacz [jak: Dodaj elementy do przybornika](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ Poniższe procedury wymagają **aplikacji Windows** projektu za pomocą formularza, który zawiera <xref:System.Windows.Forms.DataGrid> kontroli. Aby dowiedzieć się, jak skonfigurować taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Domyślnie w programie Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> formantu nie znajduje się w **przybornika**. Aby uzyskać informacje dotyczące dodawania go, zobacz [jak: Dodaj elementy do przybornika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  

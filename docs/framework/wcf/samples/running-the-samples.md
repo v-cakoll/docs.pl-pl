@@ -2,12 +2,12 @@
 title: Uruchamianie przykładów programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 3ae982b49a0d54d59d889166375938560c0d0d1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec7d7f9ce0a6db5d20bce47ab313f4248e86c88
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535884"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304677"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Uruchamianie przykładów programu Windows Communication Foundation
 Przykłady Windows Communication Foundation (WCF) mogą być uruchamiane w konfiguracji pojedynczego komputera lub między komputerami. Dostarczony, próbki są gotowe do uruchamiania na jednym komputerze. W konfiguracji między komputerami jest niezbędnej do modyfikacji ustawień pliku konfiguracji w próbce. Poniższe procedury dotyczą sposobu uruchamiania przykładu w tym samym komputerze, jak i między komputerami konfiguracji. Należy pamiętać, że istnieją różnice w krokach dla usług hostowanych w Internet Information Services (IIS) i samodzielnie hostowanej próbek. Większość przykładów są hostowane w usługach IIS; Zapoznaj się z informacjami readme próbki, aby określić, jak jest hostowana.  
@@ -19,13 +19,13 @@ Przykłady Windows Communication Foundation (WCF) mogą być uruchamiane w konfi
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1.  Jeśli usługa jest hostowana przez usługi IIS, upewnij się, czy można uzyskać dostęp do usługi, za pomocą przeglądarki, wpisując następujący adres: `http://localhost/servicemodelsamples/service.svc`. Strona potwierdzenia powinna być wyświetlana w odpowiedzi. Jeśli nie zostanie wyświetlona strona potwierdzenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Jeśli usługa jest hostowana przez usługi IIS, upewnij się, czy można uzyskać dostęp do usługi, za pomocą przeglądarki, wpisując następujący adres: `http://localhost/servicemodelsamples/service.svc`. Strona potwierdzenia powinna być wyświetlana w odpowiedzi. Jeśli nie zostanie wyświetlona strona potwierdzenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 2.  Jeśli usługa jest samodzielnie hostowana, uruchom Service.exe \service\bin jest dostępna z folderu specyficzny dla języka. Działania usługi będzie wyświetlany w oknie konsoli usługi.  
   
 3.  Uruchom Client.exe z \client\bin\\, jest dostępna z folderu specyficzny dla języka. Aktywność klienta jest wyświetlany w oknie konsoli klienta.  
   
-4.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Do uruchomienia przykładu na komputerach  
   
@@ -81,5 +81,4 @@ Przykłady Windows Communication Foundation (WCF) mogą być uruchamiane w konfi
   
 ## <a name="see-also"></a>Zobacz także
 - [Kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)
-- [Uruchamianie przykładów programu, w grupie roboczej, a na maszynach](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)
-- [Wskazówki dotyczące rozwiązywania problemów](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+- [Wskazówki dotyczące rozwiązywania problemów, aby uzyskać przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 9ee071eb88be504f7fde29b61d3a39327f0b467f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11435dc6f941a566427c0e0cb797e84f33dd66a2
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693441"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303650"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi WCF
 Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić między klientem a usługą Windows Communication Foundation (WCF), nawet jeśli usługa nie jest dostępna w czasie komunikacji. Poniższe procedury pokazują, jak zapewnić niezawodne komunikacji między klientem a usługą przy użyciu standardu w kolejce wiążące podczas implementowania usługi WCF.  
@@ -41,7 +41,7 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  Zdefiniuj <xref:System.ServiceModel.Description.ServiceEndpoint> w konfiguracji, który określa adres usługi i używa standardu <xref:System.ServiceModel.NetMsmqBinding> powiązania. Aby uzyskać więcej informacji na temat korzystania z konfiguracji usługi WCF, zobacz [Konfigurowanie aplikacji systemu Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+5.  Zdefiniuj <xref:System.ServiceModel.Description.ServiceEndpoint> w konfiguracji, który określa adres usługi i używa standardu <xref:System.ServiceModel.NetMsmqBinding> powiązania. Aby uzyskać więcej informacji na temat korzystania z konfiguracji usługi WCF, zobacz [usług WCF Konfigurowanie](../configuring-services.md).  
   
   
   
@@ -90,6 +90,5 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
 - [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Instalowanie usługi kolejkowania komunikatów (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
-- [Przykłady powiązania Integracja usługi kolejkowania komunikatów](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
 - [Obsługa kolejek komunikatów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
 - [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

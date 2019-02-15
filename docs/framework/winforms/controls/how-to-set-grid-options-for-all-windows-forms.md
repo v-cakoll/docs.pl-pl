@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 3fedf663a885ec0da8925ccb335dca7177a33fcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70e6e53c4aaa348c6cae2e677121f92367f33349
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530739"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305262"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Instrukcje: Ustawianie opcji siatki dla wszystkich formularzy Windows
 Stają się używane do pracy w środowisku programowania Visual Studio, można ustawić preferencje dotyczące wszystkich formularzy i projektów, nad którymi pracujesz w programie Windows Forms Designer.  
@@ -31,7 +31,7 @@ Stają się używane do pracy w środowisku programowania Visual Studio, można 
   
 ## <a name="see-also"></a>Zobacz także
 - [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Ogólne, Windows Forms Designer, okno dialogowe Opcje](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
+- [Ogólne, Windows Forms Designer, okno dialogowe Opcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)
 - [Instrukcje: Dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
 - [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)

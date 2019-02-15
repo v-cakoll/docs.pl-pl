@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4c6bf42bdd1ba6b0f9ccddb730dc517dbaab963
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730272"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304092"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi
-Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie, zostanie automatycznie wyświetlona w **przybornika**, za pomocą trzeba wykonywać żadnych czynności przez użytkownika. Możesz również ręcznie wypełnić **przybornika** za pomocą składników niestandardowych za pomocą [wybierz przybornika dialogowego elementy (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), ale **przybornika** uwzględnia elementy w Twoim rozwiązaniu kompilacji danych wyjściowych o następującej charakterystyce:  
+Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie, zostanie automatycznie wyświetlona w **przybornika**, za pomocą trzeba wykonywać żadnych czynności przez użytkownika. Możesz również ręcznie wypełnić **przybornika** za pomocą składników niestandardowych za pomocą [wybierz przybornika dialogowego elementy (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ale **przybornika** uwzględnia elementy w Twoim rozwiązaniu kompilacji danych wyjściowych o następującej charakterystyce:  
   
 -   Implementuje <xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie,
   
 2.  Dodaj nowy składnik do projektu. Wywołaj go `DemoComponent`.  
   
-     Aby uzyskać więcej informacji, zobacz [NIB: jak: Dodaj nowe elementy projektu](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Aby uzyskać więcej informacji, zobacz [jak: Dodaj nowe elementy projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
 3.  Skompiluj projekt.  
   
@@ -80,7 +80,7 @@ Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie,
   
 1.  Zwolnij projekt z rozwiązania.  
   
-     Aby uzyskać więcej informacji na temat zwalniając projekty, zobacz [NIB: jak: Zwolnij i ponownie Załaduj projekty](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Jeśli zostanie wyświetlony monit, aby zapisać, wybierz opcję **tak**.  
+     Aby uzyskać więcej informacji na temat zwalniając projekty, zobacz [jak: Zwolnij i ponownie Załaduj projekty](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Jeśli zostanie wyświetlony monit, aby zapisać, wybierz opcję **tak**.  
   
 2.  Dodaj nową **aplikacji Windows** projektu do rozwiązania. Otwórz formularz w **projektanta**.  
   
@@ -94,7 +94,7 @@ Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie,
  Ten przewodnik pokazuje, że **przybornika** bierze pod uwagę elementów projektu, ale **przybornika** jest również uwzględnia kontrolki. Poeksperymentuj z Kontrolki niestandardowe, dodając i usuwając kontroli projektów w rozwiązaniu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Ogólne, Windows Forms Designer, okno dialogowe Opcje](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
-- [Instrukcje: Manipulowanie karty przybornika](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
-- [Wybierz elementy przybornika, okno dialogowe (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [Ogólne, Windows Forms Designer, okno dialogowe Opcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Instrukcje: Manipulowanie karty przybornika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [Wybierz elementy przybornika, okno dialogowe (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Umieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

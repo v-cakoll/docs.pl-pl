@@ -2,12 +2,12 @@
 title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485943"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332822"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedynczej i multiemisji jako niestandardowy transportu Windows Communication Foundation (WCF). Przykład w tym artykule opisano zalecane procedury tworzenia niestandardowych transportu programu WCF, za pomocą struktura kanału i zgodnie z najlepszymi rozwiązaniami WCF. Kroki umożliwiające utworzenie niestandardowego transportu są następujące:  
@@ -36,7 +36,7 @@ Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedyn
   
      Korzystając z datagram MEP, klient wysyła komunikat "fire and forget" program exchange jest używany. Element zostanie wyzwolony i zapomnij programu exchange to taki, który wymaga potwierdzenia out-of-band skutecznej. Komunikat może zostać utracone podczas przesyłania i nigdy nie dotrzeć do usługi. Jeśli operacja wysyłania zakończy się pomyślnie po stronie klienta, nie gwarantuje to, że zdalny punkt końcowy otrzymał komunikat. Datagram jest elementem konstrukcyjnym podstawowych do obsługi komunikatów, możesz tworzyć własne protokołów na jego podstawie — w tym protokoły niezawodne i bezpieczne protokoły. Implementowanie kanały datagram klientów <xref:System.ServiceModel.Channels.IOutputChannel> implementuje interfejs i usługi kanały datagram <xref:System.ServiceModel.Channels.IInputChannel> interfejsu.  
   
--   Odpowiedź na żądanie (IRequestChannel/IReplyChannel)  
+-   Request-Response (IRequestChannel/IReplyChannel)  
   
      W tym MEP wiadomość jest wysyłana i odpowiedzi. Wzorzec składa się z pary odpowiedź na żądanie. Odpowiedź na żądanie wywołania przykłady zdalnych wywołań procedur (RPC) i przeglądarka pobiera. Ten wzorzec jest nazywany również półdupleks. W tym MEP zaimplementuj kanały klientów <xref:System.ServiceModel.Channels.IRequestChannel> i zaimplementować usługi kanały <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
@@ -54,15 +54,15 @@ Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedyn
   
 -   Utworzone: Jest to stan <xref:System.ServiceModel.ICommunicationObject> po raz pierwszy zostanie uruchomiony. Nie wejścia/wyjścia (We/Wy) występuje w tym stanie.  
   
--   Otwieranie: Obiekty przejście do tego stanu, gdy <xref:System.ServiceModel.ICommunicationObject.Open%2A> jest wywoływana. W tym momencie są wprowadzane niezmienialnych właściwości i rozpocząć wejścia/wyjścia. Ten proces przejścia jest prawidłowy tylko w stanie Created.  
+-   Otwieranie: Stan przejścia obiektów do tego, kiedy <xref:System.ServiceModel.ICommunicationObject.Open%2A> jest wywoływana. W tym momencie są wprowadzane niezmienialnych właściwości i rozpocząć wejścia/wyjścia. Ten proces przejścia jest prawidłowy tylko w stanie Created.  
   
--   Otwarta: Przejście obiekty do tego stanu po zakończeniu procesu otwierania. Ten proces przejścia jest prawidłowy tylko w stanie otwarcia. W tym momencie obiekt jest w pełni użyteczne do przeniesienia.  
+-   Otwarta: Obiekty przejście do tego stanu po zakończeniu procesu otwierania. Ten proces przejścia jest prawidłowy tylko w stanie otwarcia. W tym momencie obiekt jest w pełni użyteczne do przeniesienia.  
   
--   Zamykający: Obiekty przejście do tego stanu, gdy <xref:System.ServiceModel.ICommunicationObject.Close%2A> jest wywoływana dla łagodne zamykanie. Ten proces przejścia jest prawidłowy tylko w stanie otwartym.  
+-   Zamknięcie: Stan przejścia obiektów do tego, kiedy <xref:System.ServiceModel.ICommunicationObject.Close%2A> jest wywoływana dla łagodne zamykanie. Ten proces przejścia jest prawidłowy tylko w stanie otwartym.  
   
 -   Zamknięte: W polu Zamknięto obiekty stanu nie są już można używać. Ogólnie rzecz biorąc większość konfiguracji jest nadal dostępne dla kontroli, ale nie można komunikować się. Ten stan jest odpowiednikiem zostanie usunięty.  
   
--   Faulted: W stanie Faulted obiekty są dostępne do wglądu, ale można już używać. Gdy wystąpi błąd nieodwracalny, obiekt przechodzi w ten stan. Jedyne prawidłowe przejścia z tego stanu jest do `Closed` stanu.  
+-   Wystąpił błąd: W stanie Faulted obiekty są dostępne do wglądu, ale można już używać. Gdy wystąpi błąd nieodwracalny, obiekt przechodzi w ten stan. Jedyne prawidłowe przejścia z tego stanu jest do `Closed` stanu.  
   
  Występują zdarzenia, które są aktywowane, dla każdego przejścia stanu. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Metodę można wywołać w dowolnym momencie i sprawia, że obiekt do którego nastąpi przejście od razu od bieżącego stanu w stanie zamkniętym. Wywoływanie <xref:System.ServiceModel.ICommunicationObject.Abort%2A> kończy się dowolnym niedokończona praca.  
   
@@ -108,7 +108,7 @@ ArraySegment<byte> messageBuffer = EncodeMessage(message);
 this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Count, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
-### <a name="the-udpchannellistener"></a>UdpChannelListener  
+### <a name="the-udpchannellistener"></a>The UdpChannelListener  
  `UdpChannelListener` Że próbki implementuje pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelListenerBase> klasy. Aby otrzymać datagramy używa jedno gniazdo UDP. `OnOpen` Metoda otrzymuje dane przy użyciu gniazda UDP pętlę asynchronicznego. Dane są następnie przekształcana w wiadomości przy użyciu Framework Kodowanie komunikatu.  
   
 ```csharp
@@ -146,7 +146,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 ### <a name="adding-wsdl-support"></a>Dodawanie pomocy technicznej WSDL  
  Element powiązania transportu powiązanie jest odpowiedzialny za eksportowanie i importowanie informacji o adresach w metadanych. Korzystając z powiązania protokołu SOAP, element powiązania transportu powinien również wyeksportować poprawne transportu identyfikatora URI w metadanych.  
   
-#### <a name="wsdl-export"></a>Eksportu WSDL  
+#### <a name="wsdl-export"></a>WSDL Export  
  Aby wyeksportować informacje dotyczące adresowania `UdpTransportBindingElement` implementuje `IWsdlExportExtension` interfejsu. `ExportEndpoint` Metoda dodaje poprawnych informacji adresowania do portu WSDL.  
   
 ```csharp
@@ -166,7 +166,7 @@ if (soapBinding != null)
 }  
 ```  
   
-#### <a name="wsdl-import"></a>Importu WSDL  
+#### <a name="wsdl-import"></a>WSDL Import  
  Aby rozszerzyć system importu WSDL do obsługi adresów importowania, firma Microsoft należy dodać następującą konfigurację do pliku konfiguracji dla Svcutil.exe jak pokazano w pliku Svcutil.exe.config.  
   
 ```xml
@@ -255,7 +255,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Dodawanie standardowych powiązania  
  Nasz element powiązania może służyć w następujących dwóch sposobów:  
   
--   Za pośrednictwem powiązania niestandardowego: niestandardowego powiązania zezwala użytkownikowi na tworzenie własnych powiązania na podstawie dowolnego zestawu elementów wiązania.  
+-   Za pośrednictwem powiązania niestandardowego: Powiązanie niestandardowe umożliwia użytkownikowi tworzenie własnych powiązania na podstawie dowolnego zestawu elementów wiązania.  
   
 -   Za pomocą powiązania dostarczane przez system obejmuje to nasz element powiązania. WCF udostępnia wiele z tych powiązań zdefiniowanych przez system, takie jak `BasicHttpBinding`, `NetTcpBinding`, i `WsHttpBinding`. Każda z tych powiązań jest skojarzona z profilem dobrze zdefiniowane.  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Usługa Test UDP i klienta  
- Za pomocą transportu ten przykładowy kod testu jest dostępna w katalogach UdpTestService i UdpTestClient. Kod usługi składa się z dwóch testów — jeden test ustawia powiązania i punktów końcowych z kodu i innych zrobi to za pośrednictwem konfiguracji. Oba testy używają dwa punkty końcowe. Jeden punkt końcowy korzysta z `SampleUdpProfileBinding` z [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) równa `true`. Inny punkt końcowy korzysta z niestandardowego powiązania za pomocą `UdpTransportBindingElement`. Jest to równoważne użyciu `SampleUdpProfileBinding` z [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) równa `false`. Oba testy utworzyć usługę, Dodaj punkt końcowy dla każdego powiązania, otwórz usługę i zaczekaj, aż użytkownikowi przed zamknięciem usługi naciśnij klawisz ENTER.  
+ Za pomocą transportu ten przykładowy kod testu jest dostępna w katalogach UdpTestService i UdpTestClient. Kod usługi składa się z dwóch testów — jeden test ustawia powiązania i punktów końcowych z kodu i innych zrobi to za pośrednictwem konfiguracji. Oba testy używają dwa punkty końcowe. Jeden punkt końcowy korzysta z `SampleUdpProfileBinding` z [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) równa `true`. Inny punkt końcowy korzysta z niestandardowego powiązania za pomocą `UdpTransportBindingElement`. Jest to równoważne użyciu `SampleUdpProfileBinding` z [ \<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) równa `false`. Oba testy utworzyć usługę, Dodaj punkt końcowy dla każdego powiązania, otwórz usługę i zaczekaj, aż użytkownikowi przed zamknięciem usługi naciśnij klawisz ENTER.  
   
  Po uruchomieniu aplikacji testowej usługi powinny pojawić się następujące dane wyjściowe.  
   

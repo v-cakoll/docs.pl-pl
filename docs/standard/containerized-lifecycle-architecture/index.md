@@ -3,33 +3,31 @@ title: Wprowadzenie do kontenerów i platformy Docker
 description: Uzyskaj ogólny przegląd głównych korzyści z używania platformy Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 547a76b46a319cd1b8403505ce3da618123b490e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: aa3ead1cb184e23dd091822368e62f580ed73ee5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218700"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332640"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Wprowadzenie do kontenerów i platformy Docker
 
-Konteneryzacji to podejście do tworzenia oprogramowania, w którym aplikacji lub usługi, jego zależności i jego konfiguracji (wyodrębnione pliki manifestu wdrożenia) jednym pakiecie w postaci obrazu kontenera. Możesz następnie testowanie konteneryzowanych aplikacji jako jednostki i wdrożyć go jako wystąpienia obrazu kontenera do systemu operacyjnego hosta.
+*Konteneryzacji to podejście do tworzenia oprogramowania, w którym aplikacji lub usługi, jego zależności i jego konfiguracji (wyodrębnione pliki manifestu wdrożenia) jednym pakiecie w postaci obrazu kontenera. Możesz następnie testowanie konteneryzowanych aplikacji jako jednostki i wdrożyć go jako wystąpienia obrazu kontenera do hosta systemu operacyjnego (OS).*
 
-Tak samo, jak branży wysyłki używa standardowych kontenerów, aby przenieść towarów przez statku, szkolenie lub truck niezależnie od ładunku wewnątrz nich kontenery oprogramowania pełnić rolę pojedynczej jednostki standard oprogramowania, który może zawierać inny kod i zależności. Wprowadzenie do oprogramowania do kontenerów umożliwia deweloperom i informatykom, wdrażanie tych kontenerów w środowiskach o niewielkich modyfikacji.
+Po prostu dopuszcza wysyła kontenery transportu statku, szkolenie lub truck niezależnie od ładunku wewnątrz towarów, kontenery oprogramowania pełnić rolę pojedynczej jednostki standard wdrożenia oprogramowania, który może zawierać inny kod i zależności. Konteneryzowania oprogramowania w ten sposób umożliwia deweloperom i informatykom, ich wdrażania w środowiskach o niewielkich modyfikacji.
 
-Kontenery także izolowania aplikacji od siebie nawzajem na udostępnionym systemu operacyjnego (OS). Uruchamianie konteneryzowanych aplikacji na hoście kontenera, który z kolei jest uruchamiany w systemach operacyjnych (Linux lub Windows). Dlatego kontenery mają znacznie mniejszy wyświetlacz niż obrazy maszyn wirtualnych (VM).
+Kontenery także izolowania aplikacji od siebie nawzajem na udostępnionym systemu operacyjnego. Konteneryzowane aplikacje uruchamiane w systemie hosta kontenera, który z kolei jest uruchamiany w systemach operacyjnych (Linux lub Windows). Kontenery w związku z tym mają znacznie mniejszy wyświetlacz niż obrazy maszyn wirtualnych (VM).
 
-Każdy kontener można uruchomić w całej aplikacji sieci web lub usługi, jak pokazano w rysunku 1-1.
+Każdy kontener można uruchomić aplikacji całej sieci web lub usługi, jak pokazano w rysunku 1-1. W tym przykładzie hosta platformy Docker jest host kontenera i serwera App1, App2, Svc1 i Svc2 są konteneryzowanych aplikacji lub usług.
 
-![](./media/image1.png)
+![Dwie aplikacje i dwie usługi działające w ramach systemu operacyjnego na maszynie Wirtualnej lub serwera fizycznego](./media/image1.png)
 
-Rysunek 1-1: Wiele kontenerów, działające na hoście kontenera
+**Rysunek 1-1**. Wiele kontenerów, działające na hoście kontenera
 
-W tym przykładzie hosta platformy Docker jest host kontenera, a aplikacja 1, 2 aplikacji, Svc 1 i Svc 2 są konteneryzowanych aplikacji lub usług.
+Kolejną korzyścią, które może pochodzić z konteneryzacji jest skalowalność. Można skalować w poziomie szybko tworząc nowe kontenery krótkoterminowych zadań. Z punktu widzenia aplikacji wystąpienia obrazu (utworzenie kontenera) jest podobne do tworzenia wystąpienia procesu, takich jak usługi lub aplikacji sieci web. Niezawodność jednak po uruchomieniu wielu wystąpień tego samego obrazu na wielu serwerach hosta, zazwyczaj chcesz każdego kontenera (obraz wystąpienia), aby uruchomić na innym serwerze hosta lub maszyn wirtualnych w różnych domenach błędów.
 
-Kolejną korzyścią, które może pochodzić z konteneryzacji jest skalowalność. Użytkownik może skalowalnego w poziomie szybko tworząc nowe kontenery krótkoterminowych zadań. Z punktu widzenia aplikacji *wystąpienia obrazu* (utworzenie kontenera) jest podobne do tworzenia wystąpienia procesu, takich jak usługi lub aplikacji sieci web. Niezawodność jednak po uruchomieniu wielu wystąpień tego samego obrazu na wielu serwerach hosta, zazwyczaj chcesz każdego kontenera (obraz wystąpienia), aby uruchomić na innym serwerze hosta lub maszyn wirtualnych w różnych domenach błędów.
-
-Krótko mówiąc kontenery oferują korzyści z izolacji, przenośność, elastyczność, skalowalność i kontroli w całej aplikacji przepływu pracy cyklu życia. Najważniejszą korzyścią jest izolacja świadczona między deweloperskim i operacjami.
+Krótko mówiąc kontenery oferują korzyści z izolacji, przenośność, elastyczność, skalowalność i kontroli w całej aplikacji przepływu pracy cyklu życia. Najważniejsze korzyści to środowisko izolacji, udostępniane między deweloperskim i operacjami.
 
 >[!div class="step-by-step"]
 >[Next](what-is-docker.md)

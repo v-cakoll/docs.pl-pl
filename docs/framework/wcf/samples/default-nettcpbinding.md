@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a96ff1b588bd86ee3c391ea37b7ca5724db5e650
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589974"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333355"
 ---
 # <a name="default-nettcpbinding"></a>Domyślny element NetTcpBinding
 Ten przykład demonstruje użycie <xref:System.ServiceModel.NetTcpBinding> powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. W tym przykładzie usługa jest samodzielnie hostowana. Klient i usługa są aplikacji konsoli.  
@@ -26,7 +26,7 @@ Ten przykład demonstruje użycie <xref:System.ServiceModel.NetTcpBinding> powi�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- Powiązanie jest określona w plikach konfiguracji klienta i usługi. Typ powiązania jest określona w `binding` atrybutu [ \<punktu końcowego >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu, jak pokazano w poniższym Przykładowa konfiguracja.  
+ Powiązanie jest określona w plikach konfiguracji klienta i usługi. Typ powiązania jest określona w `binding` atrybutu [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) elementu, jak pokazano w poniższym Przykładowa konfiguracja.  
   
 ```xml  
 <endpoint address=""  

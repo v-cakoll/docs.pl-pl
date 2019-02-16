@@ -4,12 +4,12 @@ description: Zabezpieczenia w Mikrousługach .NET i aplikacji sieci Web - Get w 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 9a60f326035a6d04aa39a14c98fc1c711ffe494a
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: e53e6a50c1fdfaff6839a0a1e328047562a47824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362304"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333505"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Bezpieczne Mikrousług .NET i aplikacji sieci Web
 
@@ -191,7 +191,7 @@ Należy pamiętać, korzystając z tego przepływu pracy, oprogramowanie pośred
 
 Jeśli chcesz wystawiać tokeny zabezpieczające dla użytkowników lokalnych tożsamości platformy ASP.NET Core, a nie przy użyciu zewnętrznego dostawcy tożsamości, możesz korzystać z zalet pewne dobre bibliotek innych firm.
 
-[Pomocą usługi IdentityServer4](https://github.com/IdentityServer/IdentityServer4) i [OpenIddict](https://github.com/openiddict/openiddict-core) dostawców uwierzytelniania OpenID Connect, które łatwo zintegrować z tożsamości platformy ASP.NET Core, aby umożliwić wydawania tokenów zabezpieczających usługi sieci Web platformy ASP.NET Core. [Dokumentacji pomocą usługi IdentityServer4](https://identityserver4.readthedocs.io/en/release/) zawiera szczegółowe instrukcje dotyczące korzystania z biblioteki. Jednak podstawowe kroki, które korzystają z pomocą usługi IdentityServer4 do wydawania tokenów są w następujący sposób.
+[Pomocą usługi IdentityServer4](https://github.com/IdentityServer/IdentityServer4) i [OpenIddict](https://github.com/openiddict/openiddict-core) dostawców uwierzytelniania OpenID Connect, które łatwo zintegrować z tożsamości platformy ASP.NET Core, aby umożliwić wydawania tokenów zabezpieczających usługi sieci Web platformy ASP.NET Core. [Dokumentacji pomocą usługi IdentityServer4](https://identityserver4.readthedocs.io/en/latest/) zawiera szczegółowe instrukcje dotyczące korzystania z biblioteki. Jednak podstawowe kroki, które korzystają z pomocą usługi IdentityServer4 do wydawania tokenów są w następujący sposób.
 
 1. Możesz wywołać aplikacji. UseIdentityServer w metodzie Startup.Configure dodać pomocą usługi IdentityServer4 do potoku przetwarzania żądań HTTP w aplikacji. Dzięki temu biblioteki, obsługiwać żądań uwierzytelniania OpenID Connect i punktów końcowych protokołu OAuth2, takich jak /connect/token.
 
@@ -199,17 +199,17 @@ Jeśli chcesz wystawiać tokeny zabezpieczające dla użytkowników lokalnych to
 
 3. Możesz skonfigurować serwer tożsamości, ustawiając następujące dane:
 
-   - [Poświadczenia](https://identityserver4.readthedocs.io/en/release/topics/crypto.html) do użycia podczas podpisywania.
+   - [Poświadczenia](https://identityserver4.readthedocs.io/en/latest/topics/crypto.html) do użycia podczas podpisywania.
 
-   - [Tożsamość i interfejs API zasobów](https://identityserver4.readthedocs.io/en/release/topics/resources.html) czy użytkownicy mogą żądać dostępu do:
+   - [Tożsamość i interfejs API zasobów](https://identityserver4.readthedocs.io/en/latest/topics/resources.html) czy użytkownicy mogą żądać dostępu do:
 
       - Zasoby interfejsu API reprezentuje chronionych danych lub funkcji, których użytkownik może uzyskać dostęp przy użyciu tokenu dostępu. Przykładem zasobu interfejsu API może być, interfejs API sieci web (lub zestaw interfejsów API), wymaga autoryzacji.
 
       - Zasoby tożsamości reprezentują informacje (oświadczeń), które podano na kliencie do identyfikacji użytkownika. Oświadczenia mogą obejmować nazwę użytkownika, adres e-mail i tak dalej.
 
-   - [Klientów](https://identityserver4.readthedocs.io/en/release/topics/clients.html) będą łączyć, aby żądać tokenów.
+   - [Klientów](https://identityserver4.readthedocs.io/en/latest/topics/clients.html) będą łączyć, aby żądać tokenów.
 
-   - Mechanizm magazynu, aby uzyskać informacje o użytkowniku, takie jak [tożsamości platformy ASP.NET Core](https://identityserver4.readthedocs.io/en/release/quickstarts/6_aspnet_identity.html) lub alternatywnej.
+   - Mechanizm magazynu, aby uzyskać informacje o użytkowniku, takie jak [tożsamości platformy ASP.NET Core](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) lub alternatywnej.
 
 Po określeniu, klientów i zasoby dotyczące pomocą usługi IdentityServer4 do użycia, możesz przekazać <xref:System.Collections.Generic.IEnumerable%601> kolekcji odpowiedniego typu do metod, które przyjmują magazynów klienta lub zasobu w pamięci. Lub w przypadku bardziej złożonych scenariuszy, można dostarczyć klienta lub zasobów dostawcy typów za pomocą iniekcji zależności.
 
@@ -300,7 +300,7 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
   [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
 
 - **IdentityServer4. Oficjalna dokumentacja** \
-  [*https://identityserver4.readthedocs.io/en/release/*](https://identityserver4.readthedocs.io/en/release/)
+  *<https://identityserver4.readthedocs.io/en/latest/>*
 
 >[!div class="step-by-step"]
 >[Poprzednie](../implement-resilient-applications/monitor-app-health.md)

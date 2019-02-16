@@ -2,18 +2,18 @@
 title: Serializacja notacji JSON w przypadku programowania na poziomie komunikatu
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: 39e6eaf138ee4f4946a876f492457831cbbbf80a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f4f9a136c3e6261c7e5fca516c42f83c3ea4403
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663053"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332913"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>Serializacja notacji JSON w przypadku programowania na poziomie komunikatu
 Usługi WCF obsługuje serializacji danych w formacie JSON. W tym temacie opisano, jak sprawdzić WCF do serializacji typów przy użyciu <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
 ## <a name="typed-message-programming"></a>Programowanie wpisany komunikat  
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Jest używane podczas <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> jest stosowany do operacji usługi. Oba te atrybuty pozwalają na określenie `RequestFormat` i `ResponseFormat`. Aby przy użyciu formatu JSON dla żądań i odpowiedzi, ustaw oba te do `WebMessageFormat.Json`.  Aby można było używać JSON, należy użyć <xref:System.ServiceModel.WebHttpBinding> która automatycznie konfiguruje <xref:System.ServiceModel.Description.WebHttpBehavior>. Aby uzyskać więcej informacji na temat serializacji WCF zobacz: [Serializacja i deserializacja](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md), [serializacji w Windows Communication Foundation](https://msdn.microsoft.com/magazine/cc163569.aspx). Aby uzyskać więcej informacji na temat formatu JSON i WCF zobacz [wprowadzenie do usług RESTfull z programem WCF](https://msdn.microsoft.com/magazine/dd315413.aspx), [włączone JSON do tworzenia usług WCF w .NET 3.5](https://www.pluralsight-training.net/community/blogs/fritz/archive/2008/01/31/50121.aspx), i [Przegląd REST programu WCF](https://msdn.microsoft.com/netframework/dd547388).  
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Jest używane podczas <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> jest stosowany do operacji usługi. Oba te atrybuty pozwalają na określenie `RequestFormat` i `ResponseFormat`. Aby przy użyciu formatu JSON dla żądań i odpowiedzi, ustaw oba te do `WebMessageFormat.Json`.  Aby można było używać JSON, należy użyć <xref:System.ServiceModel.WebHttpBinding> która automatycznie konfiguruje <xref:System.ServiceModel.Description.WebHttpBehavior>. Aby uzyskać więcej informacji na temat serializacji WCF zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md). Aby uzyskać więcej informacji na temat formatu JSON i WCF, zobacz [wprowadzenie do usług RESTfull z programem WCF](https://msdn.microsoft.com/magazine/dd315413.aspx) i [włączone JSON do tworzenia usług WCF w .NET 3.5](https://www.pluralsight-training.net/community/blogs/fritz/archive/2008/01/31/50121.aspx).  
   
 > [!IMPORTANT]
 >  Przy użyciu wymaga użycia <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior> nie obsługują komunikację protokołu SOAP. Usługi, które komunikują się z <xref:System.ServiceModel.WebHttpBinding> nie obsługują metadanych narażając konta usługi, więc nie można użyć funkcji Dodaj odwołanie do usługi Visual Studio lub narzędzia wiersza polecenia narzędzia svcutil do generowania serwera proxy po stronie klienta. Aby uzyskać więcej informacji, w jaki sposób można programowo wywołać usługi używające <xref:System.ServiceModel.WebHttpBinding>, zobacz [używanie usług REST z usługą WCF](https://blogs.msdn.com/b/pedram/archive/2008/04/21/how-to-consume-rest-services-with-wcf.aspx).  

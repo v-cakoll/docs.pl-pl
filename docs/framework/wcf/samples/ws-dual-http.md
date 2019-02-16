@@ -2,12 +2,12 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 93097c5f13a45ba399ec90d6282db8ca277a8ede
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5c6309a183c0bf0b666fd39aea3d760eb7008ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640553"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332159"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 Przykład podwójnego Http pokazuje, jak skonfigurować `WSDualHttpBinding` powiązania. W tym przykładzie składa się z konsoli programu klienckiego (.exe) i usługi biblioteki (.dll), hostowanej przez Internetowe usługi informacyjne (IIS). Usługa implementuje kontraktu dwukierunkowego. Kontrakt jest definiowany przez `ICalculatorDuplex` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia). W tym przykładzie `ICalculatorDuplex` interfejs umożliwia klientowi do wykonywania operacji matematycznych obliczania wyniku uruchomionych za pośrednictwem sesji. Niezależnie od siebie, usługa zwraca wyniki w `ICalculatorDuplexCallback` interfejsu. Kontrakt dupleksowy wymaga elementu session, ponieważ kontekst muszą być ustalane do skorelowania zestaw komunikatów przesyłanych między klientem a usługą. `WSDualHttpBinding` Powiązania obsługującego komunikację dupleksową.  
@@ -87,7 +87,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Podczas uruchamiania klienta w konfiguracji między komputerami, koniecznie Zastąp ciąg localhost w obu `address` atrybutu [punktu końcowego](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu i `clientBaseAddress` atrybutu [ \< Powiązanie >](../../../../docs/framework/misc/binding.md) elementu [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) element z nazwą odpowiedniej maszyny, jak pokazano:  
+    >  Podczas uruchamiania klienta w konfiguracji między komputerami, koniecznie Zastąp ciąg localhost w obu `address` atrybutu [ \<punktu końcowego > z \<klienta >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu i `clientBaseAddress` atrybut [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) element z nazwą odpowiedniej maszyny, jak pokazano:  
   
     ```xml  
     <client>  

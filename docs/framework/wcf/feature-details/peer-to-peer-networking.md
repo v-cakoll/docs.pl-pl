@@ -2,12 +2,12 @@
 title: Sieci równorzędne
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-ms.openlocfilehash: 16416ec467caa10216930ae3c961869cbfcd59d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 388f6659602276cd3f356da2af63e4d31b5e22d6
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516335"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332770"
 ---
 # <a name="peer-to-peer-networking"></a>Sieci równorzędne
 Kanał elementu równorzędnego jest wielostronnej, peer-to-peer (P2P) technologię komunikacji w Windows Communication Foundation (WCF). Zapewnia bezpieczny i skalowalny oparta na komunikatach P2P kanał komunikacji dla deweloperów aplikacji. Jeden typowy przykład wielostronnej aplikację, która może być korzystne kanał elementu równorzędnego jest aplikacji współpracy, na przykład rozmowy, w przypadku, gdy grupa osób komunikować się z siebie nawzajem w sposób peer-to-peer, bez serwerów. Kanał elementu równorzędnego umożliwia współpracę P2P, dystrybucję zawartości, równoważenia obciążenia i rozproszone przetwarzanie dla scenariuszy firmowych i komercyjnych.  
@@ -17,14 +17,14 @@ Kanał elementu równorzędnego jest wielostronnej, peer-to-peer (P2P) technolog
  Poniższe sekcje zawierają informacje o sieci peer-to-peer i użycie klas kanał elementu równorzędnego do tworzenia aplikacji z włączoną obsługą równorzędnej sieci.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Komunikacja równorzędna scenariusze obejmujące kanał](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md): w tym artykule opisano scenariusze rozwoju obsługiwane przez interfejsy API kanał elementu równorzędnego, takie jak publikacji/subskrypcji, wiadomości i współpracy, rozproszonego przetwarzania i gry.  
+ [Scenariusze obejmujące kanał elementu równorzędnego](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md):  W tym artykule opisano scenariusze rozwoju obsługiwane przez interfejsy API kanał elementu równorzędnego, takie jak publikacji/subskrypcji, wiadomości i współpracy, rozproszonego przetwarzania i gry.  
   
- [Komunikacja równorzędna pojęcia kanałów](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md): w tym artykule opisano siatki elementów równorzędnych, węzły równorzędne i zabezpieczenia kanału równorzędnego oraz mechanizmy rozpoznawania elementów równorzędnych.  
+ [Pojęcia kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md):  W tym artykule opisano siatki elementów równorzędnych, węzły równorzędne i zabezpieczenia kanału równorzędnego oraz mechanizmy rozpoznawania elementów równorzędnych.  
   
- [Tworzenie aplikacji kanału równorzędnego](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md): wskazówki dotyczące tworzenia aplikacji kanału równorzędnego.  
+ [Tworzenie aplikacji kanału równorzędnego](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md):  Wskazówki dotyczące tworzenia aplikacji kanału równorzędnego.  
   
 ## <a name="peer-channel-code-examples"></a>Przykłady kodu dla kanału równorzędnego  
- [Kanał elementu równorzędnego niestandardowego elementu równorzędnego programu rozpoznawania nazw](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23)  
+ [Kanał elementu równorzędnego niestandardowego elementu równorzędnego programu rozpoznawania nazw](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))  
   
 ## <a name="peer-channel-team-blog"></a>Blog zespołu ds. kanał elementu równorzędnego  
  [Blog zespołu ds. kanał elementu równorzędnego](https://go.microsoft.com/fwlink/?LinkID=114530)

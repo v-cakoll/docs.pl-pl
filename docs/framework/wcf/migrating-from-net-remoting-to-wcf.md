@@ -2,12 +2,12 @@
 title: Migrowanie z programu .NET Remoting do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415978"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333069"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
 W tym artykule opisano sposób migrowania aplikacji korzystającej z wywołaniem funkcji zdalnych .NET do użycia usług Windows Communication Foundation (WCF). Jego porównuje podobne pojęcia między tymi produktami, a następnie w tym artykule opisano sposób wykonywania kilku typowych scenariuszy komunikacji zdalnej programu WCF.  
@@ -207,11 +207,7 @@ public class WCFCustomer
   
  Atrybut [DataContract] określa tego typu jako jeden, który może być serializacji i deserializacji między klientem i serwerem. Atrybut [DataMember] identyfikuje poszczególne właściwości lub pól do serializacji.  
   
- Gdy WCF wysyła obiekt w warstwach, serializuje tylko wartości i tworzy nowe wystąpienie obiektu w innej warstwie. Wszystkie interakcje z wartościami obiektu występują tylko lokalnie — nie komunikują się z warstwą zrobić obiektów przez odwołanie wywołaniem funkcji zdalnych .NET. Więcej informacji znajduje się w następujących tematach:  
-  
--   [Serializacja i deserializacja](./feature-details/serialization-and-deserialization.md)  
-  
--   [Serializacja w Windows Communication Foundation](https://msdn.microsoft.com/magazine/cc163569.aspx)  
+ Gdy WCF wysyła obiekt w warstwach, serializuje tylko wartości i tworzy nowe wystąpienie obiektu w innej warstwie. Wszystkie interakcje z wartościami obiektu występują tylko lokalnie — nie komunikują się z warstwą zrobić obiektów przez odwołanie wywołaniem funkcji zdalnych .NET. Aby uzyskać więcej informacji, zobacz [serializacji i deserializacji](./feature-details/serialization-and-deserialization.md).  
   
 ### <a name="exception-handling-capabilities"></a>Możliwości obsługi wyjątków  
   

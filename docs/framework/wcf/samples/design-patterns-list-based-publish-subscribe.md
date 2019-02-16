@@ -2,12 +2,12 @@
 title: 'Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 87151cb8e50f526838565b22088f117941d6ab98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717911"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333394"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście
 W tym przykładzie pokazano wzorzec listy publikowanie/subskrybowanie oparte na zaimplementowane jako program Windows Communication Foundation (WCF).  
@@ -124,7 +124,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Uruchom Datasource.exe z \datasource\bin\\, jest dostępna z folderu specyficzny dla języka. W oknie konsoli wyświetlane jest działanie źródła danych. Gdy źródło danych wysyła informacje do usługi, powinien zostać przekazany do każdego klienta.  
   
-4.  W przypadku klienta, źródła danych i usługi, programy nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  W przypadku klienta, źródła danych i usługi, programy nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Do uruchomienia przykładu na komputerach  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b0abe7a6b127a254c2f5c72dc66fc128d35374fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491366"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332250"
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Tematy zawarte w tej sekcji są przeznaczone do umożliwiają szybkie narażenia na Windows Communication Foundation (WCF) środowisko programowania. Mają zostać wykonane zgodnie z kolejnością na liście w dolnej części tego tematu. Ten samouczek umożliwia poznanie wprowadzające kroków wymaganych do tworzenia aplikacji usługi i klienta WCF. Usługa udostępnia jeden lub więcej punktów końcowych, z których każdy ujawnia co najmniej jednej operacji usługi. *Punktu końcowego* usługi Określa adres, gdzie można znaleźć usługi, powiązania, który zawiera informacje opisujące, jak klientowi komunikowanie się z usługą i kontrakt definiujący funkcje udostępniane przez usługę do swoich klientów.
@@ -22,7 +22,7 @@ Tematy zawarte w tej sekcji są przeznaczone do umożliwiają szybkie narażenia
 
 Tematy w tej sekcji założono, że używasz programu Visual Studio jako środowiska deweloperskiego. Jeśli używasz innego środowiska deweloperskiego, zignorować instrukcje dotyczące programu Visual Studio.
 
-Aby uzyskać przykładowe aplikacje, które może być pobierany na dysku twardym i uruchamiania, zobacz Tematy w [Windows Communication Foundation — przykłady](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). W tym temacie, zobacz temat w szczególności [wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md).
+Aby uzyskać przykładowe aplikacje, które może być pobierany na dysku twardym i uruchamiania, zobacz Tematy w [przykładów Windows Communication Foundation (WCF)](./samples/index.md). W tym temacie, zobacz temat w szczególności [wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md).
 
 Aby uzyskać bardziej szczegółowe informacje o sposobie tworzenia usług i klientów, zobacz [programowanie WCF Basic](../../../docs/framework/wcf/basic-wcf-programming.md).
 
@@ -58,7 +58,7 @@ Aby uzyskać bardziej szczegółowe informacje o sposobie tworzenia usług i kli
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-- [Windows Communication Foundation — przykłady](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Przykłady Windows Communication Foundation (WCF)](./samples/index.md)
 - [Podstawowy cykl życia programowania](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 
 ## <a name="see-also"></a>Zobacz także

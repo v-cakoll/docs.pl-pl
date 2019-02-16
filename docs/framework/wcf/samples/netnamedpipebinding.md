@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: d35d5115f6005578164d13b94c9940152ddc1c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57a5df92b1e1dd20575c7930ac2a6eb546e1400
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734464"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333004"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 W tym przykładzie przedstawiono `netNamedPipeBinding` powiązanie, które zapewnia komunikację między procesami na tym samym komputerze. Nazwane potoki nie działają na komputerach. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) kalkulatora usługi.  
@@ -19,7 +19,7 @@ W tym przykładzie przedstawiono `netNamedPipeBinding` powiązanie, które zapew
 > [!NOTE]
 >  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.  
   
- Powiązanie jest określona w plikach konfiguracji klienta i usługi. Typ powiązania jest określona w `binding` atrybutu [ \<punktu końcowego >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu, jak pokazano w poniższym Przykładowa konfiguracja:  
+ Powiązanie jest określona w plikach konfiguracji klienta i usługi. Typ powiązania jest określona w `binding` atrybutu [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) lub [ \<punktu końcowego > z \<klienta >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu, jak pokazano w następujące przykładowe konfiguracji:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  

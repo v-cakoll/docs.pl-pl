@@ -1,15 +1,15 @@
 ---
 title: Użyj strukturze ML.NET w scenariuszu wieloklasowej klasyfikacji problemu usługi GitHub
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu wieloklasowej klasyfikacji można klasyfikować problemy usługi GitHub, aby przypisać je do danego obszaru.
-ms.date: 02/01/2019
+ms.date: 02/14/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 79c0ae1ba38b410c0709659a4e5ee1ac2308b983
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739426"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333524"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Samouczek: Umożliwia strukturze ML.NET w scenariuszu klasyfikacji wieloklasowej klasyfikacji problemów w usłudze GitHub
 
@@ -20,11 +20,11 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > * Omówienie problemu
 > * Wybieranie algorytmu uczenia maszynowego odpowiednie
 > * Przygotowywanie danych
-> * Wyodrębnianie funkcji i przekształcania danych
+> * Przekształcanie danych
 > * Uczenie modelu
-> * Ocena modelu za pomocą innego zestawu danych
-> * Pojedyncze wystąpienie wynik danych testu za pomocą uczonego modelu do prognozowania
-> * Pojedyncze wystąpienie danych testowych, załadowanych modelu prognozowania
+> * Ocena modelu
+> * Prognozowanie za pomocą uczonego modelu
+> * Wdrażanie i przewidywanie załadować modelu
 
 > [!NOTE]
 > W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -55,8 +55,8 @@ Fazy przepływu pracy są następujące:
 3. **Kompilowanie i szkolenie** 
    * **Uczenie modelu**
    * **Ocena modelu**
-4. **Uruchom**
-   * **Model użycia**
+4. **Wdrażanie modelu**
+   * **Użyj modelu do prognozowania**
 
 ### <a name="understand-the-problem"></a>Omówienie problemu
 
@@ -146,7 +146,7 @@ Utwórz trzy pola globalnego na potrzeby przechowywania ścieżek do ostatnio po
 * `_testDataPath` zawiera ścieżkę do zestawu danych, używane do oceny modelu.
 * `_modelPath` ma ścieżkę, w którym jest zapisany trenowanego modelu.
 * `_mlContext` jest <xref:Microsoft.ML.MLContext> zapewniający przetwarzania kontekstu.
-* `_trainingDataView` jest <xref:Microsoft.ML.Data.IDataView> używani do przetwarzania zestaw danych szkoleniowych.
+* `_trainingDataView` jest <xref:Microsoft.Data.DataView.IDataView> używani do przetwarzania zestaw danych szkoleniowych.
 * `_predEngine` jest <xref:Microsoft.ML.PredictionEngine%602> używany dla pojedynczego prognozy.
 * `_reader` jest <xref:Microsoft.ML.Data.TextLoader> używany do ładowania i przekształcić zestawy danych.
 
@@ -187,7 +187,7 @@ Inicjowanie `_mlContext` zmienna globalna o nowe wystąpienie klasy `MLContext` 
 
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Następnie zainicjuj `_trainingDataView` <xref:Microsoft.ML.Data.IDataView> zmiennej globalnej i ładowanie danych za pomocą `_trainDataPath` parametru.
+Następnie zainicjuj `_trainingDataView` <xref:Microsoft.Data.DataView.IDataView> zmiennej globalnej i ładowanie danych za pomocą `_trainDataPath` parametru.
 
  Jako dane wejściowe i wyjściowe [ `Transforms` ](../basic-concepts-model-training-in-mldotnet.md#transformer), `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
 
@@ -195,7 +195,7 @@ W strukturze ML.NET, dane są podobne do `SQL view`. Jest opóźnieniem ocenian�
 
 Ponieważ utworzone wcześniej `GitHubIssue` typ modelu danych jest zgodny schemat zestawu danych, można połączyć inicjowania, mapowanie i zestaw danych ładowania do jednego wiersza kodu.
 
-Pierwsza część wiersza (`CreateTextReader<GitHubIssue>(hasHeader: true)`) tworzy <xref:Microsoft.ML.Data.TextLoader> przez wnioskowanie schematu zestawu danych z `GitHubIssue` modelu danych, typ i przy użyciu nagłówka zestawu danych.
+Pierwsza część wiersza (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) tworzy <xref:Microsoft.ML.Data.TextLoader> przez wnioskowanie schematu zestawu danych z `GitHubIssue` modelu danych, typ i przy użyciu nagłówka zestawu danych.
 
 Wcześniej zdefiniowany schemat danych podczas tworzenia `GitHubIssue` klasy. Dla schematu:
 
@@ -245,6 +245,9 @@ Gdy wiedzę i oceniane, domyślne wartości w modelu **etykiety** kolumny będą
 
 [!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
+>[!WARNING]
+> Wersja strukturze ML.NET 0.10 została zmieniona kolejność parametrów transformacji. To spowoduje nie Błąd limitu do czasu kompilacji. Użyj nazwy parametrów transformacji, jak pokazano w poprzednim fragmencie kodu.
+
 Ostatnim krokiem w przygotowaniu danych łączy wszystkie kolumny funkcji do **funkcji** przy użyciu kolumny `Concatenate` klasy przekształcenia. Domyślnie algorytmu uczenia przetwarza tylko funkcje z **funkcji** kolumny. Dołącz to przekształcenie do potoku z następującym kodem:
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
@@ -288,13 +291,7 @@ Należy zauważyć, że dwa parametry są przekazywane do metody BuildAndTrainMo
 
 ### <a name="choose-a-learning-algorithm"></a>Wybieranie algorytmu uczenia
 
-Aby dodać Algorytm uczenia, użyj <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> obiektu.  `SdcaMultiClassTrainer` Jest dołączany do `pipeline` i akceptuje neural `Title` i `Description` (`Features`) i `Label` parametrów, aby dowiedzieć się więcej na podstawie historycznych danych wejściowych.
-
-Dodaj następujący kod do `BuildAndTrainModel` metody:
-
-[!code-csharp[SdcaMultiClassTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SdcaMultiClassTrainer)]
-
-Teraz, po utworzeniu Algorytm uczenia, dołącz go do `pipeline`. Należy również mapować etykiety na wartość, aby powrócić do stanu pierwotnego do odczytu. Czy obu tych akcji, używając następującego kodu:
+Aby dodać Algorytm uczenia, należy wywołać `mlContext.MulticlassClassification.Trainers.StochasticDualCoordinateAscent` metody otoki, która zwraca <xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer> obiektu.  `SdcaMultiClassTrainer` Jest dołączany do `pipeline` i akceptuje neural `Title` i `Description` (`Features`) i `Label` parametrów, aby dowiedzieć się więcej na podstawie historycznych danych wejściowych. Należy również mapować etykiety na wartość, aby powrócić do stanu pierwotnego do odczytu. Czy obu tych akcji, używając następującego kodu:
 
 [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTrainer)]
 
@@ -310,6 +307,8 @@ Gdy `model` jest `transformer` który operuje na wiele wierszy danych, na potrze
 
 [!code-csharp[CreatePredictionEngine1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine1)]
 
+### <a name="predict-with-the-trained-model"></a>Prognozowanie za pomocą uczonego modelu
+
 Dodaj problem w usłudze GitHub do testowania uczonego modelu prognozowania w `Predict` metody przez utworzenie wystąpienia `GitHubIssue`:
 
 [!code-csharp[CreateTestIssue1](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
@@ -318,7 +317,7 @@ Można go używać, aby przewidzieć `Area` etykiety pojedyncze wystąpienie dan
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Predict)]
 
-### <a name="using-the-model-prediction"></a>Przy użyciu modelu: prognoz
+### <a name="using-the-model-prediction-results"></a>Przy użyciu modelu: przewidywanie wyników
 
 Wyświetlanie `GitHubIssue` i odpowiadających im `Area` etykiety prognozowania, aby można było udostępnić wyniki i podejmowanie odpowiednich działań na nich.  Tworzenie ekranu wyników za pomocą następujących <xref:System.Console.WriteLine?displayProperty=nameWithType> kodu:
 
@@ -356,7 +355,7 @@ Tak jak poprzednio w przypadku zestawu danych szkoleniowych, można łączyć in
 
 [!code-csharp[LoadTestDataset](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTestDataset)]
 
-`MulticlassClassificationContext.Evaluate` Jest otoką <xref:Microsoft.ML.MulticlassClassificationContext.Evaluate%2A> metody, które oblicza metryk jakości dla modelu przy użyciu określonego zestawu danych. Zwraca <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> obiekt, który zawiera metryki ogólną obliczone przez ewaluatory klasyfikacji wieloklasowej.
+`MulticlassClassificationContext.Evaluate` Jest otoką <xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A> metody, które oblicza metryk jakości dla modelu przy użyciu określonego zestawu danych. Zwraca <xref:Microsoft.ML.Data.MultiClassClassifierMetrics> obiekt, który zawiera metryki ogólną obliczone przez ewaluatory klasyfikacji wieloklasowej.
 Aby wyświetlić metryki, aby określić jakość modelu, należy je uzyskać pierwszy.
 Zwróć uwagę na `Transform` metoda uczenia maszynowego `_trainedModel` zmiennej globalnej (transformatora) do wprowadzania funkcji i zwracają prognozy. Dodaj następujący kod do `Evaluate` metodę jako następny wiersz:
 
@@ -409,7 +408,7 @@ Można również wyświetlić, którym został zapisany plik przy pisaniu komuni
 Console.WriteLine("The model is saved to {0}", _modelPath);
 ```
 
-## <a name="predict-the-test-data-outcome-with-the-saved-model"></a>Wynik testu danych przy użyciu zapisanych modelu prognozowania
+## <a name="deploy-and-predict-with-a-loaded-model"></a>Wdrażanie i przewidywanie załadować modelu
 
 Dodaj wywołanie do nowej metody z `Main` metody, po prawej stronie w obszarze `Evaluate` wywołania metody, używając następującego kodu:
 
@@ -478,11 +477,11 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 > * Omówienie problemu
 > * Wybieranie algorytmu uczenia maszynowego odpowiednie
 > * Przygotowywanie danych
-> * Wyodrębnianie funkcji i przekształcania danych
+> * Przekształcanie danych
 > * Uczenie modelu
-> * Ocena modelu za pomocą innego zestawu danych
-> * Pojedyncze wystąpienie wynik danych testu za pomocą uczonego modelu do prognozowania
-> * Pojedyncze wystąpienie danych testowych, załadowanych modelu prognozowania
+> * Ocena modelu
+> * Prognozowanie za pomocą uczonego modelu
+> * Wdrażanie i przewidywanie załadować modelu
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej
 > [!div class="nextstepaction"]

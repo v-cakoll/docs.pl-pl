@@ -3,12 +3,12 @@ title: Typy krotki — Przewodnik po języku C#
 description: Dowiedz się więcej o krotki nazwane i nienazwane typy w języku C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155135"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332757"
 ---
 # <a name="c-tuple-types"></a>Typy krotek języka C# #
 
@@ -82,7 +82,7 @@ Istnieją dwa warunki gdzie Release candidate nazwy pól nie są pokazane na pol
 
 Te warunki uniknąć niejednoznaczności. Te nazwy mogłoby spowodować niejednoznaczność, gdyby były one używane jako nazwy pól dla pola w spójnej kolekcji. Żadna z tych warunków nie powodują błędy czasu kompilacji. Zamiast tego elementy bez nazwy przewidywany nie ma nazwy semantycznego przewidywany dla nich.  W poniższych przykładach pokazano następujące warunki:
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Tych sytuacji nie powodują błędy kompilatora, ponieważ byłoby istotną zmianę kod napisany w języku C# 7.0 podczas projekcji nazwę pola krotki nie były dostępne.
 
@@ -90,29 +90,31 @@ Tych sytuacji nie powodują błędy kompilatora, ponieważ byłoby istotną zmia
 
 Począwszy od języka C# 7.3 krotki typy obsługi `==` i `!=` operatorów. Te operatory działają przez porównanie każdy element członkowski argument po lewej stronie do każdego członka prawy argument w kolejności. Zwarcie tych porównań. Przestaną one oceny członków, jak tylko jedną parę nie jest równa. Poniższy kod przykłady użycia `==`, ale dotyczą wszystkich reguł porównania `!=`. Poniższy przykład kodu pokazuje porównania dla dwóch par liczb całkowitych:
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 Istnieje kilka reguł, które testy równość krotki bardziej wygodne. Równość krotki wykonuje [zniesione konwersje](~/_csharplang/spec/conversions.md#lifted-conversion-operators) jedna z krotek czy krotki dopuszczającego wartość null, jak pokazano w poniższym kodzie:
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 Równość krotki również wykonuje konwersje niejawne w każdym członku zarówno krotek. Obejmują one podniesionym konwersji, rozszerzające konwersje lub inne niejawne konwersje. Poniższe przykłady pokazują, czy liczba całkowita 2-krotka można porównać do długie 2-krotka z powodu niejawna konwersja liczbę całkowitą długie:
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 Nazwy elementów członkowskich krotki nie biorą udziału w testach dla równości. Jednakże jeśli jeden z argumentów jest literałem jawne nazwy krotki, kompilator generuje ostrzeżenie CS8383, jeśli te nazwy są niezgodne nazwy to drugi operand.
 W przypadku, gdy oba operandy są literałach krotek to ostrzeżenie jest na prawy operand jak pokazano w poniższym przykładzie:
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 Na koniec krotek mogą zawierać zagnieżdżonych krotek. Równość krotki porównuje "kształt" Każdy argument przy użyciu zagnieżdżonych krotek, co pokazano w poniższym przykładzie:
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+Jest to błąd czasu kompilacji, aby porównać dwie spójne kolekcje pod względem równości (lub nierówności) gdy mają różne kształty. Kompilator wygrał "podejmować żadnych dekonstrukcja krotek zagnieżdżonych w celu porównania ich.
 
 ## <a name="assignment-and-tuples"></a>Przypisanie i krotki
 
-Język obsługuje przypisanie między typy krotek, które mają taką samą liczbę elementów, gdzie każdy element po prawej stronie mogą być niejawnie konwertowane do odpowiadającego mu elementu po lewej stronie. Inne konwersje nie są uwzględniane przydziałów. Przyjrzyjmy się rodzaje przypisania, które są dozwolone między typami spójnej kolekcji.
+Język obsługuje przypisanie między typy krotek, które mają taką samą liczbę elementów, gdzie każdy element po prawej stronie mogą być niejawnie konwertowane do odpowiadającego mu elementu po lewej stronie. Inne konwersje nie są traktowane jako przydziałów. Jest to błąd czasu kompilacji, można przypisać po jednej krotce na inny, gdy mają one różne kształty. Kompilator nie będzie podejmować żadnych dekonstrukcja krotek zagnieżdżonych Aby przypisać je.
+Przyjrzyjmy się rodzaje przypisania, które są dozwolone między typami spójnej kolekcji.
 
 Należy wziąć pod uwagę te zmienne używane w następujących przykładach:
 

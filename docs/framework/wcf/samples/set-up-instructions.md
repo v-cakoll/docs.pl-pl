@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: b5c57b7b7fa2fe72d0fbad6d7fcf5aa17f2abad8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fc68759e3057b6a1fd2a2ca4e0bffe81cea5f095
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529581"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333433"
 ---
 # <a name="set-up-instructions"></a>Instrukcje dotyczące konfiguracji
 Ten zbiór tematów w tym artykule opisano sposób konfigurowania usługi, które są wymagane do uruchamiania usługi Windows Communication Foundation (WCF).  
@@ -37,11 +37,8 @@ Ten zbiór tematów w tym artykule opisano sposób konfigurowania usługi, któr
  [Uruchamianie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  Artykuł zawiera opis uruchamianie przykładów programu WCF, na tym samym komputerze i na komputerach.  
   
- [Włączanie usług równorzędnych](https://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
- Opisano kroki, aby zainstalować składnik Windows Peer-to-Peer, wbudowany mechanizm rozpoznawania usług obsługi wiadomości peer-to-peer.  
-  
  [Instalowanie usługi kolejkowania komunikatów (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  Opisano kroki, aby zainstalować usługę kolejkowania komunikatów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wskazówki dotyczące rozwiązywania problemów](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Wskazówki dotyczące rozwiązywania problemów, aby uzyskać przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

@@ -2,12 +2,12 @@
 title: Punkty końcowe usługi i adresowanie kolejki
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: b513dbf5bfde812c551335826813967272bfd708
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613925"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332523"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
 W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z kolejki i sposobu mapowania punktów końcowych usługi do kolejek. Przypominamy Poniższa ilustracja przedstawia klasycznego wdrożenia aplikacji w kolejce usług Windows Communication Foundation (WCF).  
@@ -46,7 +46,7 @@ W tym temacie omówiono, jak klienci adresów usług, które są odczytywane z k
   
  Adres kolejki jest używany jako identyfikator URI nasłuchiwania przez odbiornik do odczytywania komunikatów z. Innymi słowy adres kolejki jest odpowiednikiem nasłuchiwania gniazda portu TCP.  
   
- Punkt końcowy, który odczytuje z kolejki, należy określić adres kolejki przy użyciu tego samego schematu określony wcześniej podczas otwierania elementu ServiceHost. Aby uzyskać przykłady, zobacz [netto powiązanie usługi MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md) i [przykłady do powiązania integracji usługi kolejkowania komunikatów](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
+ Punkt końcowy, który odczytuje z kolejki, należy określić adres kolejki przy użyciu tego samego schematu określony wcześniej podczas otwierania elementu ServiceHost. Aby uzyskać przykłady, zobacz [netto powiązanie usługi MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Wiele kontraktów w kolejce  
  Wiadomości w kolejce można zaimplementować różnymi umowami. W tym przypadku jest istotne, jedną z następujących jest wartość true, aby pomyślnie odczytywać i przetwarzać komunikaty:  

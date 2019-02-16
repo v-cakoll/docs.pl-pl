@@ -2,12 +2,12 @@
 title: 'Instrukcje: Zabezpieczanie komunikatów w sesjach niezawodnych'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 4d35f88e127bdd813a2f41a51e2aba69dc688ae6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ee35f2a36ca08814423b5a3d0b1432bacd28c2e5
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185355"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333056"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Instrukcje: Zabezpieczanie komunikatów w sesjach niezawodnych
 
@@ -21,7 +21,7 @@ Ta procedura obejmuje następujące trzy kluczowe zadania:
 
 1. Określanie typu poświadczeń klienta, który klient musi używać uwierzytelniania za pomocą usługi.
 
-Jest ważne w pierwszym zadaniu, który zawiera element konfiguracji punktu końcowego `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie (w tym przykładzie) `MessageSecurity`. [  **\<Powiązania >** ](../../../../docs/framework/misc/binding.md) element konfiguracji odwołuje się następnie tę nazwę, aby włączyć niezawodnej sesji przez ustawienie `enabled` atrybutu [  **\<reliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elementu `true`. Możesz wymagać, że gwarancje dostarczenia uporządkowane są dostępne w ramach sesji niezawodnej, ustawiając `ordered` atrybutu `true`.
+Jest ważne w pierwszym zadaniu, który zawiera element konfiguracji punktu końcowego `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie (w tym przykładzie) `MessageSecurity`. [  **\<Powiązania >** ](../../../../docs/framework/misc/binding.md) element konfiguracji odwołuje się następnie tę nazwę, aby włączyć niezawodnej sesji przez ustawienie `enabled` atrybutu [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) elementu `true`. Możesz wymagać, że gwarancje dostarczenia uporządkowane są dostępne w ramach sesji niezawodnej, ustawiając `ordered` atrybutu `true`.
 
 Dla źródła kopii przykładu, na którym opiera się poniższą procedurę konfiguracji, zobacz [sesja niezawodna WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
@@ -34,11 +34,11 @@ Podstawowe elementy trzeci zadania są wykonywane przez ustawienie `clientCreden
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurowanie usługi przy użyciu WSHttpBinding używać niezawodnej sesji
 
-Ta procedura jest opisana w [instrukcje: wymiana komunikatów w ramach niezawodnej sesji](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Ta procedura jest opisana w [jak: Wymiana komunikatów w ramach sesji niezawodnej](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurowanie klienta za pomocą WSHttpBinding używać niezawodnej sesji
 
-Ta procedura jest opisana w [instrukcje: wymiana komunikatów w ramach niezawodnej sesji](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
+Ta procedura jest opisana w [jak: Wymiana komunikatów w ramach sesji niezawodnej](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md).
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>Ustaw tryb i właściwości ClientCredentialType o wartości w konfiguracji
 

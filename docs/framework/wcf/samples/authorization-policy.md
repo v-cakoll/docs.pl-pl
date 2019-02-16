@@ -2,12 +2,12 @@
 title: Zasady autoryzacji
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873482"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332679"
 ---
 # <a name="authorization-policy"></a>Zasady autoryzacji
 
@@ -460,7 +460,7 @@ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki
 
 1. Uruchom Client.exe z *\client\bin*. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.
 
-  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach
 
@@ -500,11 +500,11 @@ Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki
 
 14. Na komputerze klienckim, aby uruchomić Client.exe z okna wiersza polecenia.
 
-   Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+   Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 ### <a name="clean-up-after-the-sample"></a>Wyczyść zasoby po ukończeniu próbki
 
 Aby wyczyścić zasoby po próbki, należy uruchomić *Cleanup.bat* w folderze samples, po zakończeniu działa aplikacja przykładowa. Spowoduje to usunięcie certyfikaty klienta i serwera z magazynu certyfikatów.
 
 > [!NOTE]
-> Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Jeśli uruchamiasz przykłady WCF, które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople przechowywania. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Jeśli uruchamiasz przykłady WCF, które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople przechowywania. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

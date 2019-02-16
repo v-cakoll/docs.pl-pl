@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: d76b7db8a3c8f2dcdc8bdbc325a1bb14b87229ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721113"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333472"
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa jakie tryb zabezpieczeń do użycia i określa, czy klient musi podać poświadczenia. Zabezpieczanie klienta, w związku z tym, proces jest prosty: metadane uzyskane z usługi (jeśli jest publikowany) oraz tworzyć klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia usługi bezpiecznego zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
@@ -41,7 +41,7 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
  W przypadku konfiguracji narzędzia Svcutil.exe wygenerowanych plików, sprawdź [ \<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sekcji, aby określić, jakiego typu poświadczeń klienta jest wymagany. W ramach tej sekcji są elementy wiązania, które określają wymagania w zakresie zabezpieczeń. W szczególności sprawdź \<zabezpieczeń > Element każdego powiązania. Ten element zawiera `mode` atrybut, który można ustawić jedną z trzech wartości (`Message`, `Transport`, lub `TransportWithMessageCredential`). Wartość atrybutu określa tryb, a tryb Określa, które z elementów podrzędnych ma znaczenie.  
   
  `<security>` Element może zawierać albo `<transport>` lub `<message>` elementu lub obu. Istotny element jest odpowiedni tryb zabezpieczeń. Na przykład, poniższy kod określa, czy tryb zabezpieczeń jest `"Message"`i klienta, typ dla poświadczeń `<message>` element jest `"Certificate"`. W tym przypadku `<transport>` elementu można zignorować. Jednak `<message>` element określa, czy należy podać certyfikat X.509.  
-  
+
 ```xml  
 <wsHttpBinding>  
     <binding name="WSHttpBinding_ICalculator">  
@@ -56,7 +56,7 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
     </binding>  
 </wsHttpBinding>  
 ```  
-  
+
  Należy pamiętać, że jeśli `clientCredentialType` ma ustawioną wartość atrybutu `"Windows"`, jak pokazano w poniższym przykładzie, nie trzeba podawać wartości rzeczywiste poświadczenia. Jest to spowodowane zintegrowanych zabezpieczeń Windows zawiera rzeczywiste poświadczenia (tokenu protokołu Kerberos) osobie, która jest uruchomiony klient.  
   
 ```xml  
@@ -107,29 +107,21 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 </configuration>  
 ```  
   
- Aby ustawić konfigurację poświadczeń klienta, należy dodać [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) element do pliku konfiguracji. Ponadto element dodano zachowania muszą zostać połączone do punktu końcowego usługi za pomocą `behaviorConfiguration` atrybutu [ \<punktu końcowego >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu, jak pokazano w poniższym przykładzie. Wartość `behaviorConfiguration` atrybutu musi odpowiadać wartości zachowania `name` atrybutu.  
-  
- `<configuration>`  
-  
- `<system.serviceModel>`  
-  
- `<client>`  
-  
- `<endpoint address="http://localhost/servicemodelsamples/service.svc"`  
-  
- `binding="wsHttpBinding"`  
-  
- `bindingConfiguration="Binding1"`  
-  
- `behaviorConfiguration="myEndpointBehavior"`  
-  
- `contract="Microsoft.ServiceModel.Samples.ICalculator" />`  
-  
- `</client>`  
-  
- `</system.serviceModel>`  
-  
- `</configuration>`  
+ Aby ustawić konfigurację poświadczeń klienta, należy dodać [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) element do pliku konfiguracji. Ponadto element dodano zachowania muszą zostać połączone do punktu końcowego usługi za pomocą `behaviorConfiguration` atrybutu [ \<punktu końcowego > z \<klienta >](../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu, jak pokazano w poniższym przykładzie. Wartość `behaviorConfiguration` atrybutu musi odpowiadać wartości zachowania `name` atrybutu.  
+
+```xml
+<configuration>
+  <system.serviceModel>
+    <client>
+      <endpoint address="http://localhost/servicemodelsamples/service.svc"
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
+                behaviorConfiguration="myEndpointBehavior"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </client>
+  </system.serviceModel>
+</configuration>
+```
   
 > [!NOTE]
 >  Niektóre wartości poświadczeń klienta nie może być zestaw za pomocą plików konfiguracji aplikacji, na przykład, nazwę użytkownika i hasła, lub Windows użytkownika i wartości haseł. Wartości tych poświadczeń można określić tylko w przypadku kodu.  

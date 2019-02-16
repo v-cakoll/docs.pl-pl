@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683975"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333407"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
 Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końcowych. Podczas tworzenia aplikacji przy użyciu funkcji Windows Communication Foundation (WCF), wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika, lub może zażądać lub wysyłanie informacji przez Internet do witryny sieci Web. Technologii firmy Microsoft w przypadku osadzenia w aplikacji, technologia ta może mieć własną zachowanie, które mogą mieć wpływ na prywatność. Usługi WCF nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy chce wysłać ją do nas.  
@@ -402,5 +402,5 @@ Firma Microsoft jest zaangażowana w ochronę prywatności użytkowników końco
  Web Services Description Language (WSDL) zawiera definicję portu. Każdy port ma adres punktu końcowego i powiązania, który reprezentuje usług używanych przez aplikację. Udostępnianie WSDL można wyłączyć za pomocą konfiguracji. Żadne informacje nie są przechowywane na komputerze.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Windows Communication Foundation](index.md)
 - [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md)

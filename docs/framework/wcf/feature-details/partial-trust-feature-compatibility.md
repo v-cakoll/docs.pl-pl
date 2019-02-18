@@ -2,12 +2,12 @@
 title: Zgodność funkcji zaufania częściowego
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564733"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333509"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Zgodność funkcji zaufania częściowego
 Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są projektowane na podstawie określonego zestawu scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
   
 -   `[MessageContract]` klasy i składowe mogą być `public`. Jeśli `[MessageContract]` klasa jest zdefiniowana w zestawie aplikacji może być `internal` i `internal` elementów członkowskich.  
   
-## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
+## <a name="system-provided-bindings"></a>Wiązania dostarczane przez system  
  <xref:System.ServiceModel.BasicHttpBinding> i <xref:System.ServiceModel.WebHttpBinding> są w pełni obsługiwane w środowisku częściowej relacji zaufania. <xref:System.ServiceModel.WSHttpBinding> Jest obsługiwana w przypadku tylko tryb zabezpieczeń Transport.  
   
  Powiązania używających transportu innego niż HTTP, takich jak <xref:System.ServiceModel.NetTcpBinding>, <xref:System.ServiceModel.NetNamedPipeBinding>, lub <xref:System.ServiceModel.NetMsmqBinding>, nie są obsługiwane w przypadku uruchamiania w środowisku częściowej relacji zaufania.  
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
   
 -   <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]
+-   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  Następujące elementy członkowskie z <xref:System.Diagnostics.TraceOptions> wyliczenia nie należy określać:  
   

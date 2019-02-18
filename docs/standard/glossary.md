@@ -60,7 +60,7 @@ Ta CLR składa się z tego samego kodu podstawowego jako środowiska CLR. Począ
 
 Biblioteki klas podstawowych platformy .NET (BCL)
 
-Przestrzenie nazw zestawu, biblioteki, które tworzą Microsoft.* i System.* (a w ograniczonym zakresie Microsoft.*). BCL jest ogólnego przeznaczenia, framework niższego poziomu, które wyższego poziomu struktur aplikacji, takich jak ASP.NET Core. Kod źródłowy .NET Core BCL jest zawarty w [repozytorium CoreFX](https://github.com/dotnet/corefx). Jednak większość interfejsów API programu .NET Core są również dostępne w .NET Framework, dzięki czemu można traktować CoreFX jako rozwidlenie .NET Framework BCL.
+Przestrzenie nazw zestawu, biblioteki, które tworzą Microsoft. i System.* (a w ograniczonym zakresie Microsoft.*). BCL jest ogólnego przeznaczenia, framework niższego poziomu, które wyższego poziomu struktur aplikacji, takich jak ASP.NET Core. Kod źródłowy .NET Core BCL jest zawarty w [repozytorium CoreFX](https://github.com/dotnet/corefx). Jednak większość interfejsów API programu .NET Core są również dostępne w .NET Framework, dzięki czemu można traktować CoreFX jako rozwidlenie .NET Framework BCL.
 
 ## <a name="corert"></a>CoreRT
 

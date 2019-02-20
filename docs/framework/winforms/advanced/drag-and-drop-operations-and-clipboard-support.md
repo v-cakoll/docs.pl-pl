@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281d102ecd02623e7e18ebf4fc569538ebbdaf7f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528617"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442012"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Operacje przeciągania i upuszczania oraz obsługa schowka
 Aby umożliwić operacji przeciągania i upuszczania użytkownika w ramach aplikacji opartych na Windows dzięki obsłudze szereg zdarzeń, w szczególności <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, i <xref:System.Windows.Forms.Control.DragDrop> zdarzenia.  
@@ -19,16 +19,16 @@ Aby umożliwić operacji przeciągania i upuszczania użytkownika w ramach aplik
  Możesz również wdrożyć wycinania/kopiowania/wklejania Pomoc dla użytkowników i transfer danych użytkownika do Schowka w aplikacji z systemem Windows przy użyciu wywołania metody proste.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przewodnik: wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
+ [Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)  
  Wyjaśnia, jak rozpocząć operację przeciągania i upuszczania.  
   
- [Instrukcje: wykonywanie operacji przeciągania i upuszczania między aplikacjami](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ [Instrukcje: Wykonywanie operacji przeciągania i upuszczania między aplikacjami](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
  Przedstawia sposób wykonania operacji przeciągania i upuszczania między aplikacjami.  
   
- [Instrukcje: dodawanie danych do schowka](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
+ [Instrukcje: Dodawanie danych do Schowka](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
  W tym artykule opisano sposób programowe wstawianie informacji ze Schowka.  
   
- [Instrukcje: pobieranie danych ze schowka](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
+ [Instrukcje: Pobieranie danych ze Schowka](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
  Opisuje sposób dostępu do danych przechowywanych w Schowku.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
@@ -42,4 +42,4 @@ Aby umożliwić operacji przeciągania i upuszczania użytkownika w ramach aplik
  W tym artykule opisano niewymagającego metodę, która stanowi podstawę do od operacji przeciągania.  
   
  <xref:System.Windows.Forms.Clipboard>  
- Zobacz też [porady: wysyłanie danych do Active MDI Child](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).
+ Zobacz też [jak: Wysyłanie danych do Active MDI Child](how-to-send-data-to-the-active-mdi-child.md).

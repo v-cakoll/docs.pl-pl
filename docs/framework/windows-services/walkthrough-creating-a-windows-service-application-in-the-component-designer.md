@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15f05f1d05a50676eb25cfa568598a575cb9cf5a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123673"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442909"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>Przewodnik: Tworzenie aplikacji usługi Windows
 
@@ -26,7 +26,7 @@ Aby rozpocząć, Utwórz projekt i ustaw wartości, które są niezbędne do pop
 
 1. W programie Visual Studio, na pasku menu wybierz **pliku** > **New** > **projektu** (lub naciśnij **Ctrl** + **Shift**+**N**) aby otworzyć **nowy projekt** okna dialogowego.
 
-2. Przejdź do, a następnie wybierz pozycję **usługi Windows** szablonu projektu. Rozwiń **zainstalowane** > [**Visual C#** lub **języka Visual Basic**] > **pulpitu Windows**, lub typu **usługi Windows** w polu wyszukiwania w prawym górnym rogu.
+2. Przejdź do, a następnie wybierz pozycję **usługi Windows** szablonu projektu. Rozwiń **zainstalowane** > [**Visual C#**  lub **języka Visual Basic**] > **pulpitu Windows**, lub typu **Windows Usługa** w polu wyszukiwania w prawym górnym rogu.
 
    ![Szablon usługi Windows w oknie dialogowym Nowy projekt, w programie Visual Studio](media/new-project-dialog.png)
 
@@ -296,7 +296,7 @@ Przed uruchomieniem usługi Windows, musisz zainstalować go, który rejestruje 
     > [!IMPORTANT]
     > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> Konto ma szerokie uprawnienia, w tym możliwość zapisu do dziennika zdarzeń. Należy go używać ostrożnie, ponieważ może zwiększyć ryzyko ataku przez złośliwe oprogramowanie. W przypadku innych zadań, należy wziąć pod uwagę przy użyciu <xref:System.ServiceProcess.ServiceAccount.LocalService> konta, które działa jako użytkownik bez uprawnień na komputerze lokalnym i przedstawia poświadczenia anonimowe każdemu zdalnemu serwerowi. W tym przykładzie zakończy się niepowodzeniem, jeśli zostanie podjęta próba użycia <xref:System.ServiceProcess.ServiceAccount.LocalService> konta, ponieważ wymaga uprawnień do zapisu w dzienniku zdarzeń.
 
-Aby uzyskać więcej informacji na temat instalatory zobacz [porady: Dodawanie instalatorów do usługi aplikacji](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
+Aby uzyskać więcej informacji na temat instalatory zobacz [jak: Dodawanie instalatorów do usługi aplikacji](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
 
 ## <a name="optional-set-startup-parameters"></a>(Opcjonalnie) Ustaw parametry uruchamiania
 
@@ -431,7 +431,7 @@ Teraz, gdy masz utworzoną usługę Windows, należy ją zainstalować. Aby zain
 
     Jeśli **installutil.exe** przetwarzać raporty o awarii, sprawdź dziennik instalacji, aby dowiedzieć się, dlaczego. Domyślnie dziennik jest w tym samym folderze co plik wykonywalny usługi. Instalacja może zakończyć się niepowodzeniem, jeśli <xref:System.ComponentModel.RunInstallerAttribute> klasy nie znajduje się na `ProjectInstaller` klasy, jeśli ten atrybut nie jest równa **true**, lub jeśli `ProjectInstaller` klasy nie jest oznaczony jako **publicznych**.
 
-Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Uruchom program i uruchom usługę
 
@@ -452,7 +452,7 @@ Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie
 1. Otwórz **Podgląd zdarzeń** , zaczynając wpisywanie **Podgląd zdarzeń** w polu wyszukiwania na pasku zadań Windows, a następnie wybierając pozycję **Podgląd zdarzeń** w wynikach wyszukiwania.
 
    > [!TIP]
-   > W programie Visual Studio są dostępne dzienniki zdarzeń, otwierając **Eksploratora serwera** (klawiatura: **Ctrl**+**Alt**+**S**) rozwijanie i **dzienniki zdarzeń** węzła na komputerze lokalnym.
+   > W programie Visual Studio są dostępne dzienniki zdarzeń, otwierając **Eksploratora serwera** (klawiatury: **CTRL**+**Alt**+**S**) i rozwijając **dzienniki zdarzeń** węzła na komputerze lokalnym.
 
 2. W **Podgląd zdarzeń**, rozwiń węzeł **Dzienniki aplikacji i usług**.
 
@@ -472,7 +472,7 @@ Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie
     installutil.exe /u MyNewService.exe
     ```
 
-   Jeśli usługa zostanie pomyślnie, odinstalowana **installutil.exe** raporty usługi został pomyślnie usunięty. Aby uzyskać więcej informacji, zobacz [porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Jeśli usługa zostanie pomyślnie, odinstalowana **installutil.exe** raporty usługi został pomyślnie usunięty. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -486,5 +486,5 @@ Odpowiednio konfigurując instalatora, można spowodować generowanie dziennika 
 
 - [Aplikacje usług Windows](../../../docs/framework/windows-services/index.md)
 - [Wprowadzenie do aplikacji usług Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Porady: debugowanie aplikacji usług Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Usługi (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [Instrukcje: Debugowanie aplikacji usług Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Usługi (Windows)](/windows/desktop/Services/services)

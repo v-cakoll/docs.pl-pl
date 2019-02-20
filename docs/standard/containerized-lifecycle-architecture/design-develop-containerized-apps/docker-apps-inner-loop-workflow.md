@@ -4,12 +4,12 @@ description: Dowiedz się więcej "wewnętrzną pętlę" przepływu pracy dla op
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 03eb4662e55551678105fa9ef25b42cc05c132a5
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2d592f92153040d910dcf529ec21770693f5973c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219091"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442324"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy wewnętrznej pętli tworzenia aplikacji platformy Docker
 
@@ -120,7 +120,7 @@ W pliku DockerFile trzeba będzie również poinstruować platformy Docker do na
 
 Istnieją inne wiersze konfiguracji, którą można dodać w pliku DockerFile w zależności od języka/platformy, którego używasz, dzięki czemu Docker wie, jak uruchomić aplikację. Na przykład, potrzebny jest wiersz punktu wejścia przy użyciu \["dotnet", "MyCustomMicroservice.dll"\] do uruchamiania aplikacji .NET Core, chociaż może mieć wiele wariantów w zależności od podejście do kompilowania i uruchamiania usługi. Jeśli używasz zestawu SDK i interfejsu wiersza polecenia platformy dotnet do kompilowania i uruchamiania aplikacji .NET może być nieco inne. Mierzenie to, że wiersz punktu wejścia, a także dodatkowe wiersze będą różnić w zależności od języka/platformy, na której możesz wybrać dla swojej aplikacji.
 
-**Więcej informacji o** uzyskać informacji na temat Tworzenie obrazów platformy Docker dla aplikacji platformy .NET Core, przejdź do <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
+**Więcej informacji o** uzyskać informacji na temat Tworzenie obrazów platformy Docker dla aplikacji platformy .NET Core, przejdź do [ https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images ](../../../core/docker/building-net-docker-images.md).
 
 Aby dowiedzieć się więcej o tworzeniu własnych obrazów, przejdź do [ https://docs.docker.com/engine/\ samouczki/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 

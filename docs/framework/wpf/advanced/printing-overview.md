@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: e17a3888e3467d8d21506108e6599c8ae5da2fe2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef88c9c2a7569be518794ee9083d1bf5c266d975
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695611"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442064"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu Windows Presentation Foundation (WPF) mają bogaty zestaw nowych Zarządzanie systemem drukowania i wydruku [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Za pomocą [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych rozszerzeń systemu drukowania są również dostępne dla programistów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperzy korzystający z niezarządzanego kodu. W ramach tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku.  
@@ -29,7 +29,7 @@ Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>Temat XPS  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] jest format dokumentu elektronicznego, format pliku buforu i języka opisu strony. Jest format Otwórz dokument, który używa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]i innych standardów branżowych, do tworzenia dokumentów dla wielu platform. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Upraszcza to proces, za pomocą którego cyfrowe dokumenty są utworzone, udostępniony, drukowane, wyświetlać i archiwizowane. Aby uzyskać dodatkowe informacje na temat [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], zobacz [witryny sieci Web XPS](https://www.microsoft.com/xps).  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] jest format dokumentu elektronicznego, format pliku buforu i języka opisu strony. Jest format Otwórz dokument, który używa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]i innych standardów branżowych, do tworzenia dokumentów dla wielu platform. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Upraszcza to proces, za pomocą którego cyfrowe dokumenty są utworzone, udostępniony, drukowane, wyświetlać i archiwizowane. Aby uzyskać dodatkowe informacje na temat [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], zobacz [dokumenty XPS](/windows/desktop/printdocs/documents).  
   
  Kilka technik do drukowania [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] na podstawie zawartości przy użyciu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zostały przedstawione w [programowe drukowanie plików XPS](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Może okazać się przydatne odwołać te przykłady podczas przeglądu zawartości znajdujących się w tym temacie. (Deweloperzy niezarządzany kod powinien zostać wyświetlony dokumentacji [funkcja MXDC_ESCAPE](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). Windows Forms deweloperzy muszą używać [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] w <xref:System.Drawing.Printing> przestrzeni nazw, który nie obsługuje pełnej [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku, ale obsługa ma ścieżkę drukowania hybrydowego GDI do plików XPS. Zobacz **architektura ścieżka wydruku** poniżej.)  
   
@@ -144,6 +144,6 @@ W przypadku aplikacji, które nie wymagają [!INCLUDE[TLA2#tla_metro](../../../.
 - <xref:System.Printing.PrintQueue>
 - [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
 - [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [XPS](https://www.microsoft.com/xps)
+- [XPS Documents](/windows/desktop/printdocs/documents)
 - [Serializacja dokumentu i przechowywanie](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
 - [Konwerter (MXDC) dokumentów XPS firmy Microsoft](https://msdn.microsoft.com/library/windows/desktop/ff686803.aspx)

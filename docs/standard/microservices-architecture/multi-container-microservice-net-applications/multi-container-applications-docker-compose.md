@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ja
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145257"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442233"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą platformy docker-compose.yml 
 
@@ -89,11 +89,11 @@ Klucz główny, w tym pliku jest usług. W ramach tego klucza, należy zdefiniow
 | Nazwa usługi | Opis |
 |--------------|-------------|
 | webmvc       | Kontener, w tym aplikacji ASP.NET Core MVC, korzystanie z mikrousług from C po stronie serwera\#|
-| Catalog.API  | Kontener, w tym mikrousług katalogu ASP.NET Core Web API |
+| catalog.api  | Kontener, w tym mikrousług katalogu ASP.NET Core Web API |
 | Ordering.API | Kontenera w tym mikrousług porządkowanie Core Web API platformy ASP.NET |
-| SQL.Data     | Działanie programu SQL Server dla systemu Linux, zawierający bazy danych mikrousług kontenera |
-| basket.API   | Kontener z mikrousług koszyka ASP.NET Core Web API |
-| basket.Data  | Usługi za pomocą bazy danych koszyka jako pamięci podręcznej REDIS w pamięci podręcznej kontenera z systemem usługi REDIS |
+| sql.data     | Działanie programu SQL Server dla systemu Linux, zawierający bazy danych mikrousług kontenera |
+| basket.api   | Kontener z mikrousług koszyka ASP.NET Core Web API |
+| basket.data  | Usługi za pomocą bazy danych koszyka jako pamięci podręcznej REDIS w pamięci podręcznej kontenera z systemem usługi REDIS |
 
 ### <a name="a-simple-web-service-api-container"></a>Prosty kontener interfejsu API usługi sieci Web
 
@@ -458,7 +458,7 @@ Aby to osiągnąć, zespół .NET dostarcza trzy podstawowe warianty w [microsof
 
 1.  **zestaw SDK**: dla scenariuszy projektowania i kompilowania.
 2.  **środowisko uruchomieniowe**: w scenariuszu produkcji i
-3.  **środowisko uruchomieniowe deps**: w scenariuszu produkcyjnym z [aplikacje samodzielne](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd).
+3.  **środowisko uruchomieniowe deps**: w scenariuszu produkcyjnym z [aplikacje samodzielne](../../../core/deploying/index.md#self-contained-deployments-scd).
 
 Środowisko uruchomieniowe obrazów zapewnia również automatyczne ustawienie aspnetcore\_adresy URL do portu 80 i wstępnie ngend pamięci podręcznej zestawów; aby ułatwić wprowadzenie szybsze uruchamianie.
 
@@ -468,7 +468,7 @@ Aby to osiągnąć, zespół .NET dostarcza trzy podstawowe warianty w [microsof
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **Tworzenie obrazów platformy Docker dla aplikacji .NET Core** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[Poprzednie](data-driven-crud-microservice.md)

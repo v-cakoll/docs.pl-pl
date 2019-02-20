@@ -2,12 +2,12 @@
 title: Proces zakupów firmowych
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837193"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442246"
 ---
 # <a name="corporate-purchase-process"></a>Proces zakupów firmowych
 W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania dla procesu zakupu propozycji (RFP) na podstawie z automatycznego najlepszym wyborem propozycji. Łączy ona <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i niestandardowe działanie, aby utworzyć przepływ pracy, który reprezentuje proces.
@@ -108,7 +108,7 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
 |RequestForProposal|Żądanie do składania wniosków (RFP) to zaproszenie dla dostawców, którzy mają możliwość przesyłania propozycji dla określonego produktu lub usługi.|  
 |VendorProposal|Wniosek dostawcy do konkretnych RFP.|  
 |VendorRepository|Repozytorium dostawców. Ta implementacja zawiera kolekcję w pamięci wystąpień dostawcy i metod udostępniania tych wystąpień.|  
-|RfpRepository|Repozytorium żądania do składania wniosków. Ta implementacja zawiera używa Linq to XML w pliku XML żądania dla propozycji generowane przez informatycznych trwałości kwerendy. Ta klasa implementuje [System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx).|  
+|RfpRepository|Repozytorium żądania do składania wniosków. Ta implementacja zawiera używa Linq to XML w pliku XML żądania dla propozycji generowane przez informatycznych trwałości kwerendy. |  
 |IOHelper|Ta klasa obsługuje wszystkie problemy I dotyczących wejścia/wyjścia (folderów, ścieżek i itd.)|  
   
 ### <a name="web-client"></a>Klient sieci Web  
@@ -127,7 +127,7 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
 |Formularz|Opis|  
 |-|-|  
 |NewRfp|Tworzy i przesyła nowe żądanie do składania wniosków.|  
-|ShowProposals|Pokaż wszystkich aktywnych i zakończonych żądań do składania wniosków. **Uwaga:** może być konieczne kliknięcie **Odśwież** przycisku w interfejsie użytkownika, aby zobaczyć zmiany w tym ekranie, po utworzeniu lub zmodyfikować żądanie dla propozycji.|  
+|ShowProposals|Pokaż wszystkich aktywnych i zakończonych żądań do składania wniosków. **Uwaga:**  Może być konieczne kliknięcie **Odśwież** przycisku w interfejsie użytkownika, aby zobaczyć zmiany w tym ekranie, po utworzeniu lub zmodyfikować żądanie dla propozycji.|  
 |SubmitProposal|Uzyskać propozycji od dostawcy w żądaniu konkretnych propozycji. To okno jest używane tylko przez dostawców.|  
 |ViewRfp|Pokaż wszystkie informacje o żądaniu konkurs (propozycji odebrane, dat, wartości i innych informacji). To okno jest używana tylko przez autora żądania do składania wniosków.|  
   
@@ -136,9 +136,9 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
   
 |Nazwa pliku|Opis|Ścieżka|  
 |-|-|-|  
-|rfps.XML|Plik XML z wszystkich aktywnych i zakończonych żądań do składania wniosków.|<xref:System.IO.Path.GetTempPath%2A>|  
+|rfps.xml|Plik XML z wszystkich aktywnych i zakończonych żądań do składania wniosków.|<xref:System.IO.Path.GetTempPath%2A>|  
 |[identyfikator instanceid]|Ten plik zawiera wszystkie informacje na temat wystąpienia przepływu pracy.<br /><br /> Ten plik został wygenerowany przez implementację informatycznych trwałości (PersistenceParticipant w XmlPersistenceProvider).|<xref:System.IO.Path.GetTempPath%2A>|  
-|.tracking [instanceId]|Plik tekstowy, wszystkie zdarzenia, które wystąpiły w ciągu konkretne wystąpienie.<br /><br /> Ten plik jest generowany przez TrackingParticipant.|<xref:System.IO.Path.GetTempPath%2A>|  
+|[instanceId].tracking|Plik tekstowy, wszystkie zdarzenia, które wystąpiły w ciągu konkretne wystąpienie.<br /><br /> Ten plik jest generowany przez TrackingParticipant.|<xref:System.IO.Path.GetTempPath%2A>|  
 |PurchaseProcess.Tracing.TraceLog.txt|Plik śledzenia generowane przez przepływ pracy na podstawie parametrów konfiguracji w pliku App.config lub Web.config plików.|Bieżąca ścieżka wykonywania|  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
@@ -155,20 +155,20 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
   
 ### <a name="web-client-options"></a>Opcje klienta sieci Web  
   
--   **Utwórz nowy RFP**: tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
+-   **Utwórz nowy RFP**: Tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
   
 -   **Odśwież**: Odświeża listę aktywnych i RFPs zostało zakończone w głównym oknie.  
   
--   **Widok**: Pokazuje zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.).  
+-   **Widok**: Zostanie wyświetlona zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.).  
   
 -   Wyświetl jako: Użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.  
   
 ### <a name="winforms-client-options"></a>Opcje klienta WinForms  
   
--   **Utwórz RFP**: tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
+-   **Utwórz RFP**: Tworzy nowe żądanie propozycji (RFP) i rozpoczyna proces zakupu przepływu pracy.  
   
 -   **Odśwież**: Odświeża listę aktywnych i RFPs zostało zakończone w głównym oknie.  
   
--   **Wyświetl RFP**: Pokazuje zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.)  
+-   **Wyświetl RFP**: Zostanie wyświetlona zawartość istniejącego RFP. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub RFP nie zostało zakończone.)  
   
--   **Połącz jako**: użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.
+-   **Połącz się jako**: Użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnikiem **Wyświetl jako** pola kombi w siatce RFPs active.

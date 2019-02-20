@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fdb3de03eaa60a4d29d5a0c7e4082a6806b0ec9
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713320"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441674"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Klasy częściowe i metody (Przewodnik programowania w języku C#)
 Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywords/class.md), [struktury](../../../csharp/language-reference/keywords/struct.md), [interfejsu](../../../csharp/language-reference/keywords/interface.md) lub metody za pośrednictwem dwóch lub więcej plików źródłowych. Każdy plik źródłowy zawiera sekcję definicji typu lub metody, a wszystkie elementy są łączone, podczas kompilowania aplikacji.  
@@ -111,7 +111,7 @@ Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywor
 ## <a name="example-1"></a>Przykład 1  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie, pola i Konstruktor klasy `CoOrds`, są deklarowane w jedną definicję klasy częściowe i elementu członkowskiego, `PrintCoOrds`, jest zadeklarowany w innej definicji częściowej klasy.  
+ W poniższym przykładzie, pola i Konstruktor klasy `Coords`, są deklarowane w jedną definicję klasy częściowe i elementu członkowskiego, `PrintCoords`, jest zadeklarowany w innej definicji częściowej klasy.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  

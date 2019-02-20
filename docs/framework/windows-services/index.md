@@ -2,21 +2,15 @@
 title: Tworzenie aplikacji usług systemu Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
-- ServiceInstaller class, Windows Service applications
-- Service class, Windows Service applications
-- Windows Service applications
-- Windows NT services
-- ServiceProcessInstaller class, Windows Service applications
-- services
-- .NET applications, Windows applications
+  - 'ServiceInstaller class, Windows Service applications'
+  - 'Service class, Windows Service applications'
+  - Windows Service applications
+  - Windows NT services
+  - 'ServiceProcessInstaller class, Windows Service applications'
+  - services
+  - '.NET applications, Windows applications'
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 79de8adbc0f994653f308882b335da2ffa5f7455
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035925"
 ---
 # <a name="develop-windows-service-apps"></a>Tworzenie aplikacji usługi Windows
 
@@ -31,7 +25,7 @@ Za pomocą programu Visual Studio lub zestawu SDK programu .NET Framework, możn
 
 Omówienie aplikacji usług Windows, okres istnienia usługi i jak aplikacji usług różni się od innych popularnych typów projektów.
 
-[Przewodnik: tworzenie aplikacji usługowej systemu Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+[Przewodnik: Tworzenie aplikacji usługi Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 
 Stanowi przykład tworzenia usługi w języka Visual Basic i Visual C#.
 
@@ -39,7 +33,7 @@ Stanowi przykład tworzenia usługi w języka Visual Basic i Visual C#.
 
 Opisano elementy języka używany w programowaniu usługi.
 
-[Instrukcje: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+[Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 
 W tym artykule opisano proces tworzenia i konfigurowania usług Windows przy użyciu szablonu projektu usługi Windows.
 
@@ -51,4 +45,4 @@ W tym artykule opisano proces tworzenia i konfigurowania usług Windows przy uż
 
 <xref:System.ServiceProcess.ServiceInstaller> — Opis funkcji <xref:System.ServiceProcess.ServiceInstaller> klasy, która jest używana wraz z <xref:System.ServiceProcess.ServiceProcessInstaller> klasy do instalowania i odinstalowywania usługi.
 
-[Twórz projekty na podstawie szablonów](https://msdn.microsoft.com/library/7c36d86a-6b79-4480-8228-0f925f1204b2) — w tym artykule opisano projektów typów używanych w tym rozdziale oraz sposobu wybierania między nimi.
+[Twórz projekty na podstawie szablonów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) — w tym artykule opisano projektów typów używanych w tym rozdziale oraz sposobu wybierania między nimi.

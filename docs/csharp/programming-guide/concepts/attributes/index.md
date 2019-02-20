@@ -1,12 +1,6 @@
 ---
-title: Atrybuty (C#)
+title: 'Atrybuty (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: f211e8af48bdfef0bb9bf4341c7a5911b5695101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573351"
 ---
 # <a name="attributes-c"></a>Atrybuty (C#)
 

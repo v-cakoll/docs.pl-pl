@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 439366791fcd8fa40bb3fe8fc2982272798120ef
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653752"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441609"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opcje kompilatora C# w porządku alfabetycznym
 
@@ -36,6 +36,8 @@ Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę
 |[-delaysign](delaysign-compiler-option.md)|Podpisuje testowo opóźnienie zestawie, używając tylko publicznej części klucza silnej nazwy.|
 |[-deterministic](deterministic-compiler-option.md)|Powoduje, że kompilator do wyjściowego zestawu, którego zawartość binarna jest identyczna w kompilacjach, jeśli dane wejściowe są identyczne.|
 |[-doc](doc-compiler-option.md)|Określa plik dokumentacji XML do wygenerowania.|
+|-osadzania|Osadź wszystkich plików źródłowych w pliku PDB.|
+|-osadzania:\<lista plików >|Osadzanie plików określonych w pliku PDB.|
 |[-errorreport](errorreport-compiler-option.md)|Określa sposób obsługiwać wewnętrzne błędy kompilatora: wiersz, Wyślij lub Brak. Domyślna wartość to Brak.|
 |[-filealign](filealign-compiler-option.md)|Określa wyrównanie stosowane dla sekcji plików wyjściowych.|
 |[-fullpaths](fullpaths-compiler-option.md)|Powoduje, że kompilatorowi Generowanie ścieżek w pełni kwalifikowanych.|

@@ -3,13 +3,13 @@ title: Zasady dotyczące architektury
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Zasady dotyczące architektury
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828101"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442987"
 ---
 # <a name="architectural-principles"></a>Zasady dotyczące architektury
 
@@ -99,21 +99,10 @@ Wymóg, że klasy nie ma żadnej z powyższych funkcje lub zachowania dodaje spr
 
 Co najmniej poszczególnych aplikacjach sieci web należy dążyć do mieć własne kontekstach z własny magazyn stanów trwałych dla swojego modelu biznesowego, a nie z innych aplikacji do udostępniania bazy danych. Między ograniczone konteksty odbywa się za pośrednictwem interfejsów programistycznych, a nie za pomocą udostępnionej bazy danych, który pozwala na logiki biznesowej i zdarzenia, aby móc umieścić w odpowiedzi na zmiany, które mają miejsce. Ograniczone konteksty mapy ściśle do mikrousług, które również najlepiej są implementowane jako własnych indywidualnych ograniczone konteksty.
 
-> ### <a name="references--modern-web-applications"></a>Odwołania — nowoczesnych aplikacji sieci Web
-> - **Separacji**  
-> <https://deviq.com/separation-of-concerns/>
-> - **Hermetyzacja protokołu**  
-> <https://deviq.com/encapsulation/>
-> - **Zasada odwrócenie zależności**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Zasada jawne zależności**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **Nie powtarzaj samodzielnie**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **Nieznajomości trwałości**  
-> <https://deviq.com/persistence-ignorance/>
-> - **Ograniczony kontekst**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>Dodatkowe zasoby
+
+* [Wzorce projektowe oparte na języku JAVA: Zasady](https://java-design-patterns.com/principles/)
+* [Ograniczony kontekst](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Poprzednie](choose-between-traditional-web-and-single-page-apps.md)

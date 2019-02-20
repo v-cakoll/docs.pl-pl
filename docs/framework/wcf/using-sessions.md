@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533144"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442727"
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
 W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wiadomości do konwersacji. Sesje WCF są inne niż dostępne w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji obsługują różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje umożliwiające w sesji programu WCF aplikacji i sposobu ich używania.  
@@ -137,7 +137,7 @@ W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wia
  Brak interakcji między <xref:System.ServiceModel.SessionMode> wyliczenia w Umowie oraz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwość, która kontroluje skojarzenie między kanałów i obiektów określonej usługi. Aby uzyskać więcej informacji, zobacz [sesji, Instancing i współbieżności](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Udostępnianie obiektów typu InstanceContext  
- Można również sterować określające kanał oparte na sesji lub wywołanie jest skojarzone z którym <xref:System.ServiceModel.InstanceContext> obiektu, wykonując tego skojarzenia, samodzielnie. Aby uzyskać kompletny przykład, zobacz [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ Można również sterować określające kanał oparte na sesji lub wywołanie jest skojarzone z którym <xref:System.ServiceModel.InstanceContext> obiektu, wykonując tego skojarzenia, samodzielnie. 
   
 ## <a name="sessions-and-streaming"></a>Sesje i przesyłania strumieniowego  
  W przypadku dużych ilości danych do przesłania strumieniowego tryb transferu programu WCF jest możliwe alternatywa domyślne zachowanie buforowania i przetwarzanie komunikatów w pamięci w całości. Podczas przesyłania strumieniowego wywołania z powiązaniem oparte na sesji, może wystąpić nieoczekiwane zachowanie. Wszystkie wywołania przesyłania strumieniowego są nawiązywane przy użyciu jednego kanału (kanał datagram), który nie obsługuje sesji, nawet jeśli powiązania, używany jest skonfigurowany do używania sesji. Jeśli wielu klientów wywołań przesyłania strumieniowego do tego samego obiektu usługi za pośrednictwem powiązania oparte na sesji i tryb współbieżności obiekt usługi jest ustawiony na jednym i jego wystąpienie kontekstu tryb jest ustawiony na `PerSession`, wywołania musi przechodzić przez kanał datagram, a tym samym tylko jedno wywołanie są przetwarzane w danym momencie. Co najmniej jeden klient może następnie limit czasu. Można obejść ten problem, ustawiając obiektu usługi `InstanceContextMode` do `PerCall` lub współbieżności do wielu.  

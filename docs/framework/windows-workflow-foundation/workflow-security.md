@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 2979f8e50b7fc0d0fab419a89e708517fd271be8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199204"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441763"
 ---
 # <a name="workflow-security"></a>Zabezpieczenia przepływu pracy
 Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii, takich jak Microsoft SQL Server i Windows Communication Foundation (WCF). Interakcja z tych technologii może powodować problemy z zabezpieczeniami w Twój przepływ pracy, jeśli będą wykonywane niepoprawnie.
@@ -26,7 +26,7 @@ Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii,
 
 5.  Aplikacje, które wymagają izolacji zabezpieczeń nie powinny współużytkować to samo wystąpienie elementu abstrakcji schematu. Takich aplikacji należy użyć magazynu różnych dostawców, lub przechowywać dostawców skonfigurowany do używania innego magazynu wystąpień.
 
-## <a name="sql-server-security-concerns"></a>Problemy dotyczące zabezpieczeń programu SQL Server
+## <a name="sql-server-security-concerns"></a>SQL Server Security Concerns
 
 -   Podczas korzystania z dużą liczbą działania podrzędne, lokalizacji, zakładek, rozszerzenia hosta lub zakresów lub stosowania zakładek z ładunkami bardzo duże, może dojść do wyczerpania pamięci lub nadmiernej ilości miejsca w bazie danych mogą być przydzielone w trwałości. Można to zminimalizować przy użyciu zabezpieczeń na poziomie bazy danych i na poziomie obiektu.
 
@@ -36,16 +36,16 @@ Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii,
 
 -   Ponieważ parametry połączenia bazy danych, często znajduje się w pliku konfiguracji, zabezpieczenia na poziomie systemu windows (ACL) powinien być używany do zapewnienia, że plik konfiguracyjny (zwykle w pliku Web.Config) jest bezpieczna i informacje logowania i hasła nie są objęte Parametry połączenia. Uwierzytelnianie Windows należy użyć między bazy danych i serwera sieci web.
 
-## <a name="considerations-for-workflowservicehost"></a>Zagadnienia dotyczące elementu WorkflowServiceHost
+## <a name="considerations-for-workflowservicehost"></a>Considerations for WorkflowServiceHost
 
 -   Powinny być zabezpieczone punkty końcowe usług Windows Communication Foundation (WCF) używane w przepływach pracy. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń programu WCF](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   Uwierzytelnianie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [instrukcje: tworzenie Menedżera autoryzacji niestandardowej dla usługi](https://go.microsoft.com/fwlink/?LinkId=192228) Aby uzyskać szczegółowe informacje.
+-   Uwierzytelnianie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [jak: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](https://go.microsoft.com/fwlink/?LinkId=192228) Aby uzyskać szczegółowe informacje.
 
 -   ServiceSecurityContext komunikatu przychodzącego jest również dostępne z poziomu przepływów pracy, uzyskując dostęp do elementu OperationContext.
 
 ## <a name="wf-security-pack-ctp"></a>Pakiet zabezpieczeń WF CTP
- Microsoft WF zabezpieczeń pakietu CTP 1 jest pierwsza wersja zapoznawcza (CTP) technologii społeczności zestawu działań i ich wdrażania w oparciu o [Windows Workflow Foundation](https://msdn.microsoft.com/netframework/aa663328.aspx)w [.NET Framework 4](https://msdn.microsoft.com/netframework/default.aspx) (WF (4) i [Windows Identity Foundation (WIF)](https://msdn.microsoft.com/security/aa570351.aspx).  Microsoft WF zabezpieczeń Pack CTP 1 zawiera zarówno działań, jak i ich projektantów, które pokazują, jak łatwo automatyzować różne scenariusze związane z zabezpieczeniami, za pomocą przepływu pracy, w tym:
+ Microsoft WF zabezpieczeń pakietu CTP 1 jest pierwsza wersja zapoznawcza (CTP) technologii społeczności zestawu działań i ich wdrażania w oparciu o [Windows Workflow Foundation](index.md) w [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF (4) i [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF zabezpieczeń Pack CTP 1 zawiera zarówno działań, jak i ich projektantów, które pokazują, jak łatwo automatyzować różne scenariusze związane z zabezpieczeniami, za pomocą przepływu pracy, w tym:
 
 1.  Personifikacja tożsamości klienta, w przepływie pracy
 
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii,
 
 4.  Prowadząca do tokenu zabezpieczeń klienta z usługą zaplecza (delegacji opartej na oświadczeniach) za pomocą usługi WS-Trust ActAs
 
-Aby uzyskać więcej informacji i Pobierz CTP pakietu programu WF zabezpieczeń, zobacz: [CTP pakietu zabezpieczeń WF](https://wf.codeplex.com/releases/view/48114)
+Aby uzyskać więcej informacji i Pobierz CTP pakietu programu WF zabezpieczeń zobacz: [Pakiet zabezpieczeń WF CTP](https://wf.codeplex.com/releases/view/48114)

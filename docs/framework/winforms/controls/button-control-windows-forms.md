@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a3c45a74618e4129e6de368f69b2f0d271c543e3
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183226"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442571"
 ---
 # <a name="button-control-windows-forms"></a>Kontrolka przycisku (Formularze systemu Windows)
 Formularze Windows `Button` kontrolki pozwala użytkownikowi na kliknij go, aby wykonać akcję. `Button` Formant może wyświetlić tekst i obrazy. Po kliknięciu przycisku wygląda, jakby on wypychania i wydania.  
@@ -19,19 +19,19 @@ Formularze Windows `Button` kontrolki pozwala użytkownikowi na kliknij go, aby 
  [Button, kontrolka — omówienie](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
  Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
- [Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
  W tym artykule wyjaśniono podstawowe użycie przycisku w formularzu Windows.  
   
- [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Akceptuj](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
+ [Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Akceptuj](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)  
  Wyjaśnia, jak wyznaczyć `Button` formantu na przycisk Akceptuj, znany także jako przycisk domyślny.  
   
- [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Anuluj](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
+ [Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Anuluj](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-cancel-button.md)  
  Wyjaśnia, jak wyznaczyć `Button` formantu przycisku anulowania, który zostanie kliknięty zawsze wtedy, gdy użytkownik naciśnie klawisz ESC.  
   
  [Sposoby wyboru kontrolki przycisku Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  Zawiera listę metod naciśnięcie przycisku.  
   
- Zobacz też [porady: wyznaczanie przycisku formularzy Windows do akceptowania przycisk przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) i [porady: wyznaczanie przycisku formularzy Windows do anulowania przycisk przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
+ Zobacz też [jak: Wyznaczanie przycisku Windows Forms na przycisk Akceptuj przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) i [jak: Wyznaczanie przycisku Windows Forms na przycisk Anuluj, za pomocą projektanta](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.Button> Klasa  
@@ -41,4 +41,4 @@ Formularze Windows `Button` kontrolki pozwala użytkownikowi na kliknij go, aby 
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
- Zobacz też [danych wejściowych użytkownika do okien dialogowych](https://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) i [jak: Zamknij okna dialogowe i przechowywać dane wejściowe użytkownika](https://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ Zobacz też [danych wejściowych użytkownika do okien dialogowych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1s9ws53w(v=vs.100)) i [jak: Zamykanie okien dialogowych i zachowywanie danych wejściowych użytkownika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/65ad5907(v=vs.100)).

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558959"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441362"
 ---
 # <a name="how-to-create-application-settings"></a>Instrukcje: Tworzenie ustawień aplikacji
 Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wiązania ich z właściwościami w formularzu lub kontrolki formularza tak, aby te ustawienia są ładowane i zapisywane automatycznie w czasie wykonywania.  
   
  W poniższej procedurze należy ręcznie utworzyć klasy otoki, która pochodzi od klasy <xref:System.Configuration.ApplicationSettingsBase>. Aby tej klasy należy dodać publicznie dostępnych właściwości dla każdego ustawienia aplikacji, które chcesz udostępnić.  
   
- Można również wykonać tę procedurę za pomocą minimalnej ilości kodu w Projektancie Visual Studio.  Zobacz też [jak: Tworzenie ustawień aplikacji za pomocą projektanta](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Można również wykonać tę procedurę za pomocą minimalnej ilości kodu w Projektancie Visual Studio.  Zobacz też [jak: Tworzenie ustawień aplikacji za pomocą projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/wabtadw6(v=vs.100)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Aby programowo utworzyć nowe ustawienia aplikacji  
   

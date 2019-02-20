@@ -3,19 +3,13 @@ title: What's new in .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- what's new [.NET Framework]
+  - 'what''s new [.NET Framework]'
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416030"
 ---
 # What's new in .NET Framework <a name="introduction"></a>
 
@@ -612,7 +606,7 @@ Masz teraz możliwość korzystania z stosu dotyk/pióra, na podstawie [wiadomo�
 
 **Nową metodę implementacji dla WPF, drukowanie interfejsów API**
 
-WPF użytkownika drukowanie interfejsów API w <xref:System.Printing.PrintQueue?displayProperty=nameWithType> klasa wywołać Windows [interfejsu API pakietu dokument Drukuj](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) zamiast przestarzałego [API drukowanie plików XPS](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx). Wpływ tej zmiany na zgodność aplikacji w temacie [zmiany Retargetingu w programie .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+WPF użytkownika drukowanie interfejsów API w <xref:System.Printing.PrintQueue?displayProperty=nameWithType> klasa wywołać Windows [interfejsu API pakietu dokument Drukuj](/windows/desktop/printdocs/tailored-app-printing-api) zamiast przestarzałego [API drukowanie plików XPS](/windows/desktop/printdocs/xps-printing). Wpływ tej zmiany na zgodność aplikacji w temacie [zmiany Retargetingu w programie .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="v462" />
 
@@ -1168,7 +1162,7 @@ Klient SQL teraz automatycznie zapewnia szybsze połączenia do grupy dostępno�
 
 **Przykłady**
 
- Istnieje szereg [przykłady interfejsów WPF](https://msdn.microsoft.com/library/ms771633.aspx) w witrynie MSDN. Więcej niż 200 próbek najpopularniejszych (na podstawie ich użycia) zostanie przeniesiony do [repozytorium Otwórz serwis GitHub źródła](https://github.com/Microsoft/WPF-Samples). Pomóż nam udoskonalać nasze przykłady, wysyłając żądania ściągnięcia lub otwierania [problem w usłudze GitHub](https://github.com/Microsoft/WPF-Samples/issues).
+ Istnieje kilka przykładów WPF w [WPF-Microsoft-Samples](https://github.com/Microsoft/WPF-Samples) repozytorium GitHub. Pomóż nam udoskonalać nasze przykłady, wysyłając żądania ściągnięcia lub otwierania [problem w usłudze GitHub](https://github.com/Microsoft/WPF-Samples/issues).
 
  **Rozszerzenia programu DirectX**
 
@@ -1316,7 +1310,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
     - **Aktualizacje kryptografii**
 
-         <xref:System.Security.Cryptography?displayProperty=nameWithType> Interfejsu API jest aktualizowana w celu obsługi [interfejsu API kryptografii Windows CNG](/windows/desktop/SecCNG/cng-reference). Poprzednie wersje programu .NET Framework mają opiera się wyłącznie na [starszą wersję Windows API kryptografii](/windows/desktop/SecCrypto/cryptography-portal) jako podstawa <xref:System.Security.Cryptography?displayProperty=nameWithType> implementacji. Mieliśmy żądania w celu obsługi interfejsu API CNG, ponieważ obsługuje on [algorytmy kryptograficzne nowoczesnych](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support), które są ważne w przypadku niektórych rodzajów aplikacji.
+         <xref:System.Security.Cryptography?displayProperty=nameWithType> Interfejsu API jest aktualizowana w celu obsługi [interfejsu API kryptografii Windows CNG](/windows/desktop/SecCNG/cng-reference). Poprzednie wersje programu .NET Framework mają opiera się wyłącznie na [starszą wersję Windows API kryptografii](/windows/desktop/SecCrypto/cryptography-portal) jako podstawa <xref:System.Security.Cryptography?displayProperty=nameWithType> implementacji. Mieliśmy żądania w celu obsługi interfejsu API CNG, ponieważ obsługuje on [algorytmy kryptograficzne nowoczesnych](/windows/desktop/SecCNG/cng-features#suite-b-support), które są ważne w przypadku niektórych rodzajów aplikacji.
 
          .NET Framework 4.6 obejmuje następujące nowe ulepszenia do obsługi interfejsu API kryptografii Windows CNG:
 
@@ -1765,7 +1759,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
 Program ASP.NET 4.5 i 4.5.1 dodaje powiązanie modelu dla formularzy sieci Web, obsługa protokołu WebSocket, obsługę asynchroniczną, ulepszenia wydajności i wiele innych funkcji. Aby uzyskać więcej informacji, zobacz następujące zasoby:
 
-- [ASP.NET 4.5 and Visual Studio 2012](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
+- [ASP.NET 4.5 and Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [Platforma ASP.NET i narzędzia Web Tools dla programu Visual Studio 2013 — informacje o wersji](/aspnet/visual-studio/overview/2013/release-notes)
 

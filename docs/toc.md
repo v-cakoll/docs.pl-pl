@@ -259,6 +259,7 @@
 ### [Eksplorowanie języka C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Praca z typami referencyjnymi dopuszczającymi wartość null](csharp/tutorials/nullable-reference-types.md)
 ### [Generowanie i używanie strumieni asynchronicznych](csharp/tutorials/generate-consume-asynchronous-stream.md)
+### [Uaktualnianie aplikacji do typów referencyjnych dopuszczających wartość null](csharp/tutorials/upgrade-to-nullable-references.md)
 ### [Aplikacja konsolowa](csharp/tutorials/console-teleprompter.md)
 ### [Klient REST](csharp/tutorials/console-webapiclient.md)
 ### [Dziedziczenie w języku C# i .NET](csharp/tutorials/inheritance.md)

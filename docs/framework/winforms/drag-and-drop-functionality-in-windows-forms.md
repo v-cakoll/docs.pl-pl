@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 29ed138f80705539b96f82898e50e80dd0e3cb16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527032"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664771"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funkcjonalność przeciągania i upuszczania w formularzach systemu Windows
-Windows Forms zawiera zestaw metod, zdarzeń i klasy, które implementują zachowanie przeciągnij i upuść. Ten temat zawiera omówienie obsługi przeciągania i upuszczania w formularzach Windows Forms.  Zobacz też [operacji przeciągania i upuszczania oraz Obsługa schowka](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms zawiera zestaw metod, zdarzeń i klasy, które implementują zachowanie przeciągnij i upuść. Ten temat zawiera omówienie obsługi przeciągania i upuszczania w formularzach Windows Forms.  Zobacz też [operacji przeciągania i upuszczania oraz Obsługa schowka](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Wykonywanie operacji przeciągania i upuszczania  
  Aby wykonać operację przeciągania i upuszczania, należy użyć <xref:System.Windows.Forms.Control.DoDragDrop%2A> metody <xref:System.Windows.Forms.Control> klasy. Aby uzyskać więcej informacji na temat sposobu wykonywana jest operacja przeciągania i upuszczania, zobacz <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Aby uzyskać prostokąt, w którym muszą zostać przeciągnięte wskaźnik myszy nad, przed rozpoczęciem operacji przeciągania i upuszczania, użyj <xref:System.Windows.Forms.SystemInformation.DragSize%2A> właściwość <xref:System.Windows.Forms.SystemInformation> klasy.  

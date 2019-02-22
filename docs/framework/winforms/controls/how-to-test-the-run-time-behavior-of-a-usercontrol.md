@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506371"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664422"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Instrukcje: Testowanie zachowania UserControl w czasie wykonywania
 Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetestować jej zachowanie w czasie wykonywania. Można utworzyć projekt oddzielną aplikację z systemem Windows i umieść swój formant na formularzu testu, ale ta procedura jest wygodne. Szybciej i łatwiej metodą jest użycie **UserControl — kontener testowy** dostarczane przez program Visual Studio. Ten kontener testowy uruchamia się bezpośrednio z Twojego Projekt Biblioteka formantów Windows.  
@@ -29,7 +29,7 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Aby testowanie zachowania UserControl w czasie wykonywania  
   
-1.  Utwórz projekt Biblioteka formantów Windows o nazwie **TestContainerExample**. Aby uzyskać więcej informacji, zobacz [szablon biblioteki kontrolki Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Utwórz projekt Biblioteka formantów Windows o nazwie **TestContainerExample**. Aby uzyskać więcej informacji, zobacz [szablon biblioteki kontrolki Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  W **Windows Forms Designer**, przeciągnij <xref:System.Windows.Forms.Label> z kontrolować **przybornika** na powierzchnię projektowania formantu.  
   
@@ -41,7 +41,7 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
   
 6.  Zamknij kontener testu.  
   
-7.  Dodaj inną kontrolkę użytkownika do **TestContainerExample** projektu. Aby uzyskać więcej informacji, zobacz [NIB: jak: Dodaj istniejące elementy do projektu](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Dodaj inną kontrolkę użytkownika do **TestContainerExample** projektu. Aby uzyskać więcej informacji, zobacz [jak: Dodaj istniejące elementy do projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
   
 8.  W **Windows Forms Designer**, przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** na powierzchnię projektowania formantu.  
   
@@ -54,7 +54,7 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
   
 #### <a name="to-test-user-controls-from-another-project"></a>Aby przetestować kontrolki użytkownika z innego projektu  
   
-1.  Utwórz projekt Biblioteka formantów Windows o nazwie **TestContainerExample2**. Aby uzyskać więcej informacji, zobacz [szablon biblioteki kontrolki Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Utwórz projekt Biblioteka formantów Windows o nazwie **TestContainerExample2**. Aby uzyskać więcej informacji, zobacz [szablon biblioteki kontrolki Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  W **Windows Forms Designer**, przeciągnij <xref:System.Windows.Forms.RadioButton> z kontrolować **przybornika** na powierzchnię projektowania formantu.  
   
@@ -71,4 +71,4 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
 - [Instrukcje: Formanty złożone autora](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Projektant kontrolki użytkownika](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+- [Projektant kontrolki użytkownika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

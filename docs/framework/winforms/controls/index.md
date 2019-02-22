@@ -2,16 +2,10 @@
 title: Formanty formularzy systemu Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms controls
-- controls [Windows Forms]
-- Windows Forms controls, about Windows Forms controls
+  - Windows Forms controls
+  - 'controls [Windows Forms]'
+  - 'Windows Forms controls, about Windows Forms controls'
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: 5b3b49ca61d491a2593db7b43bf3efd0b63af650
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526250"
 ---
 # <a name="windows-forms-controls"></a>Formanty formularzy systemu Windows
 W przypadku projektowania i modyfikowania interfejsu użytkownika aplikacji Windows Forms, konieczne będzie dodawanie, wyrównanie i ustawianie formantów. Formanty są obiekty, które są zawarte w postaci obiektów. Każdy typ kontrolki ma swój własny zestaw właściwości, metod i zdarzeń, które ułatwiają nadające się do określonego celu. Można manipulować formantów w projektancie, a następnie napisać kod, aby dodać formanty dynamicznie w czasie wykonywania.  
@@ -39,5 +33,3 @@ W przypadku projektowania i modyfikowania interfejsu użytkownika aplikacji Wind
  [Aplikacje klienckie](../../../../docs/framework/develop-client-apps.md)  
  Omówienie tworzenia aplikacji systemu Windows.  
   
- [Windows Forms — wskazówki](https://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
- Wyświetla listę tematów wskazówki dotyczące Windows formularzy i kontrolek.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c75f9ffe17d04ad4b8e41a6e1402a3cf4be7e07f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0681ff9c59e77650654495ecd6e6d9f9ded82517
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722715"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665098"
 ---
 # <a name="custom-timespan-format-strings"></a>Niestandardowe ciągi formatujące TimeSpan
 
@@ -54,7 +54,7 @@ Niestandardowe <xref:System.TimeSpan> ciągi formatu są również używane prze
 |"s", "%s"|Liczba sekund całego w odstępie czasu, które nie są dołączane jako część godzin, dni lub minut. Sekundy oznaczona jedną cyfrą nie ma wiodącego zera.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "s"](#sSpecifier).|`TimeSpan.FromSeconds(12.965)`:<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
 |„ss”|Liczba sekund całego w odstępie czasu, które nie są dołączane jako część godzin, dni lub minut.  Oznaczona jedną cyfrą sekund ma wiodącego zera.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "ss"](#ssSpecifier).|`TimeSpan.FromSeconds(6.965)`:<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
 |"f", "%f"|Liczba dziesiątych części sekundy w odstępie czasu.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "f"](#fSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
-|„ff”|Liczba setnych części sekundy w odstępie czasu.<br /><br /> Więcej informacji:[specyfikator formatu niestandardowego "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
+|„ff”|Liczba setnych części sekundy w odstępie czasu.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "ff"](#ffSpecifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
 |„fff”|Liczba milisekund w odstępie czasu.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "fff"](#f3Specifier).|`TimeSpan.FromSeconds(6.895)`:<br /><br /> `fff` --> 895<br /><br /> `ss\.fff` --> 06.895|
 |„ffff”|-Dziesięciotysięcznych części sekundy w odstępie czasu.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "ffff"](#f4Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `ffff` --> 8954<br /><br /> `ss\.ffff` --> 06.8954|
 |„fffff”|-Stutysięcznych części sekundy w odstępie czasu.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "fffff"](#f5Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffff` --> 89543<br /><br /> `ss\.fffff` --> 06.89543|
@@ -68,7 +68,7 @@ Niestandardowe <xref:System.TimeSpan> ciągi formatu są również używane prze
 |„FFFFFF”|Liczba milionowych części sekundy w odstępie czasu. Ułamkowe końcowe zera nie są wyświetlane.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |„FFFFFFF”|10 milionach części sekundy w odstępie czasu. Ułamkowe końcowe zera lub siedem zer nie są wyświetlane.<br /><br /> Więcej informacji: [Specyfikator formatu niestandardowego "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
 |"*ciąg*"|Ogranicznik ciągu literału.<br /><br /> Więcej informacji: [Inne znaki](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
-|\\| Znak ucieczki.<br /><br /> Więcej informacji:[inne znaki](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|&#92;|Znak ucieczki.<br /><br /> Więcej informacji: [Inne znaki](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Jakikolwiek inny znak|Dowolnego znaku o niezmienionym znaczeniu jest interpretowany jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji: [Inne znaki](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
 <a name="dSpecifier"></a> 

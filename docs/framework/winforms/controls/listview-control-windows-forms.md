@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591945"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664890"
 ---
 # <a name="listview-control-windows-forms"></a>ListView — Formant (Formularze systemu Windows)
 Formularze Windows `ListView` kontrolka Wyświetla listę elementów z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takich jak okienku po prawej stronie Eksploratora Windows.  
@@ -81,9 +81,6 @@ Formularze Windows `ListView` kontrolka Wyświetla listę elementów z ikonami. 
   
  [Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Zawiera instrukcje dotyczące układu formularza Windows z wieloma okienkami.  
-  
- [Funkcje systemu Windows XP i kontrolek formularzy Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- Wyjaśnia, jak korzystać z funkcji specyficznych dla Windows XP, które są stosowane do <xref:System.Windows.Forms.ListView> kontroli.  
   
 ## <a name="see-also"></a>Zobacz także
 - [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

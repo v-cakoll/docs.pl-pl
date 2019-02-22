@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b422de09b41d72a680146192fd773767fe64e257
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593794"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664565"
 ---
 # <a name="user-input-in-windows-forms"></a>Dane użytkownika w formularzach systemu Windows
 Windows Forms zawiera model danych wejściowych użytkownika na podstawie zdarzeń, które są wywoływane podczas przetwarzania pokrewne wiadomości Windows. Tematy w tej sekcji udostępniają informacje dotyczące klawiatury i myszy dane wejściowe użytkownika, wraz z przykładami kodu, które pokazują, jak do wykonywania określonych zadań.  
@@ -27,14 +27,14 @@ Windows Forms zawiera model danych wejściowych użytkownika na podstawie zdarze
  [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  Zawiera informacje dotyczące mysz, zdarzeń i inne powiązane myszy funkcje, w tym kursory myszy i przechwytywanie myszy.  
   
- [Instrukcje: symulowanie zdarzeń myszy i klawiatury w kodzie](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
+ [Instrukcje: Symulowanie zdarzeń myszy i klawiatury w kodzie](../../../docs/framework/winforms/how-to-simulate-mouse-and-keyboard-events-in-code.md)  
  Pokazuje kilka różnych sposobów, aby programowo symulować myszy i klawiatury.  
   
- [Instrukcje: obsługa zdarzeń związanych z danymi użytkownika w kontrolkach formularzy Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
+ [Instrukcje: Obsługa zdarzenia wejściowe użytkownika w kontrolkach formularzy Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)  
  Przedstawia informacje o przykładu kodu, który obsługuje większość zdarzenia wejściowe użytkownika i raportuje informacje dotyczące każdego zdarzenia.  
   
  [Weryfikacja danych użytkownika w formularzach Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
  W tym artykule opisano metody, aby sprawdzić poprawność danych wejściowych użytkownika w aplikacjach Windows Forms.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- Zobacz też [tworzenie obsługi zdarzeń w formularzach Windows Forms](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).
+ Zobacz też [tworzenie obsługi zdarzeń w formularzach Windows Forms](creating-event-handlers-in-windows-forms.md).

@@ -1,20 +1,20 @@
 ---
-title: Wprowadzenie do usługi Azure Blob storage przy użyciu języka F#
+title: Rozpoczynanie pracy z usługą Azure Blob storage przy użyciuF#
 description: Store danych bez struktury w chmurze za pomocą usługi Azure Blob storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037285"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664994"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Wprowadzenie do usługi Azure Blob storage przy użyciu języka F# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure Blob storage przy użyciuF# #
 
 Usługa Azure Blob storage to usługa, która przechowuje dane niestrukturalne w chmurze w postaci obiektów blob. Magazyn obiektów blob można przechowywać dowolnego typu dane tekstowe lub binarne, takie jak dokument, plik multimedialny lub Instalator aplikacji. Magazyn obiektów blob jest również określany jako magazyn obiektów.
 
-W tym artykule przedstawiono sposób wykonywania typowych zadań przy użyciu usługi Blob storage. Przykłady są zapisywane z użyciem F# za pomocą biblioteki klienta usługi Azure Storage dla platformy .NET. Zadania objęte obejmują jak przekazywanie, listy, pobieranie i usuwanie obiektów blob.
+W tym artykule przedstawiono sposób wykonywania typowych zadań przy użyciu usługi Blob storage. Przykłady są zapisywane z użyciem F# przy użyciu biblioteki klienta usługi Azure Storage dla platformy .NET. Zadania objęte obejmują jak przekazywanie, listy, pobieranie i usuwanie obiektów blob.
 
 Aby uzyskać omówienie pojęć dotyczących magazynu obiektów blob, zobacz [przewodnik platformy .NET dla usługi blob storage](/azure/storage/storage-dotnet-how-to-use-blobs).
 
@@ -22,9 +22,9 @@ Aby uzyskać omówienie pojęć dotyczących magazynu obiektów blob, zobacz [pr
 
 Aby użyć tego przewodnika, należy najpierw [Tworzenie konta usługi Azure storage](/azure/storage/storage-create-storage-account). Musisz mieć również klucz dostępu do magazynu dla tego konta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz skrypt F# i Rozpocznij języka F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Tworzenie F# skrypt i uruchomić F# interaktywne
 
-Przykłady w tym artykule może służyć w aplikacji F# lub skryptu F#. Aby utworzyć skrypt F#, Utwórz plik o `.fsx` rozszerzenia, na przykład `blobs.fsx`, w środowisku projektowym F#.
+Przykłady w tym artykule mogą być używane w jednej F# aplikacji lub F# skryptu. Aby utworzyć F# skrypt, Utwórz plik o `.fsx` rozszerzenia, na przykład `blobs.fsx`w usługi F# środowiska deweloperskiego.
 
 Następnie użyj [Menedżera pakietów](package-management.md) takich jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) zainstalował `WindowsAzure.Storage` i `Microsoft.WindowsAzure.ConfigurationManager` pakietów i odwołań `WindowsAzure.Storage.dll` i `Microsoft.WindowsAzure.Configuration.dll` przy użyciu skryptu `#r` dyrektywy.
 
@@ -216,23 +216,24 @@ Domyślnie usługi Azure Storage zapewnia bezpieczeństwo danych przez ogranicze
 
 Domyślnie dane obiektów blob na koncie magazynu jest dostępny tylko dla właściciela konta magazynu. Uwierzytelnianie żądań dotyczących magazynu obiektów Blob wymaga klucza dostępu do konta, domyślnie. Można jednak udostępnić określone dane obiektów blob innym użytkownikom.
 
-Aby uzyskać szczegółowe informacje na temat kontrolowania dostępu do magazynu obiektów blob, zobacz [.NET — przewodnik dla sekcji magazyn obiektów blob na kontroli dostępu na](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data).
-
-
 ### <a name="encrypting-blob-data"></a>Szyfrowanie danych obiektów blob
 
 Usługa Azure Storage obsługuje szyfrowanie danych obiektów blob, zarówno na kliencie, jak i na serwerze.
-
-Aby uzyskać więcej informacji na temat szyfrowania danych obiektów blob, zobacz [.NET — przewodnik dla sekcji magazyn obiektów blob na szyfrowaniu](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data).
 
 ## <a name="next-steps"></a>Następne kroki
 
 Teraz, kiedy znasz już podstawy usługi Blob storage, skorzystaj z poniższych linków, aby dowiedzieć się więcej.
 
 ### <a name="tools"></a>Narzędzia
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) F# dostawcy typu, który może służyć do zapoznaj się z zasobami obiektów Blob, tabel i kolejek usługi Azure Storage i z łatwością zastosować operacji CRUD na nich.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F# interfejsu API przy użyciu usługi Microsoft Azure Table Storage
-- [Microsoft Azure Storage Explorer Poglądową](/azure/vs-azure-tools-storage-manage-with-storage-explorer) jest bezpłatną, autonomiczną aplikacją oferowaną przez firmę Microsoft, która umożliwia wizualną pracę z danymi usługi Azure Storage w Windows, OS X i Linux.
+
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+F# Dostawcy typu, który może służyć do zapoznaj się z zasobami obiektów Blob, tabel i kolejek usługi Azure Storage i z łatwością zastosować operacji CRUD na nich.
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+F# Interfejs API przy użyciu usługi Microsoft Azure Table Storage
+
+- [Microsoft Azure Storage Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Bezpłatną, autonomiczną aplikacją oferowaną przez firmę Microsoft, która umożliwia wizualną pracę z danymi usługi Azure Storage w Windows, OS X i Linux.
 
 ### <a name="blob-storage-reference"></a>Odwołanie do obiektu blob magazynu
 
@@ -246,3 +247,4 @@ Teraz, kiedy znasz już podstawy usługi Blob storage, skorzystaj z poniższych 
 - [Transferowanie danych za pomocą narzędzia wiersza polecenia AzCopy w systemie Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Konfigurowanie parametrów połączenia usługi Azure Storage](/azure/storage/common/storage-configure-connection-string)
 - [Blog zespołu usługi Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Szybki start: Tworzenie obiektu blob w magazynie obiektów przy użyciu .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

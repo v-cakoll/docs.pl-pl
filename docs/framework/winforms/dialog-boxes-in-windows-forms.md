@@ -6,35 +6,19 @@ helpviewer_keywords:
 - Windows Forms dialog boxes
 - dialogs [Windows Forms], using in Windows Forms
 ms.assetid: d43d022b-451b-490d-9386-dc79d98fbf8a
-ms.openlocfilehash: ef07c087ca43efaf99231453fcb56af0db24234a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b218be7d845ede7661ba31a1023ec12ec15231ab
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864258"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664762"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Okna dialogowe w formularzach systemu Windows
 Okna dialogowe są używane do interakcji z użytkownikiem i pobierania informacji. Mówiąc najprościej, okno dialogowe jest formularz z jego <xref:System.Windows.Forms.FormBorderStyle> wyliczenie ustawioną na `FixedDialog`. Możesz utworzyć własne niestandardowe okna dialogowe, za pomocą programu Windows Forms Designer w programie Visual Studio. Dodaj formanty, takie jak `Label`, `Textbox`, i `Button` dostosowywania okna dialogowe do konkretnych potrzeb. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera również wstępnie zdefiniowanych okien dialogowych, takich jak **Otwórz plik** i okna komunikatów, które można dostosować do własnych aplikacji. Aby uzyskać więcej informacji, zobacz [okno dialogowe formanty i składniki](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: wyświetlanie okien dialogowych formularzy Windows Forms](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
+ [Instrukcje: Wyświetlanie okien dialogowych dla formularzy Windows Forms](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
  Zawiera wskazówki dotyczące wyświetlanie okien dialogowych.  
-  
--   [Porady: pobieranie informacji z okna dialogowego selektywnie za pomocą wielu właściwości](https://msdn.microsoft.com/library/56taefba\(v=vs.110\))  
-  
--   [Porady: pobieranie informacji z nadrzędnego formularza okna dialogowego](https://msdn.microsoft.com/library/k70t19bb\(v=vs.110\))  
-  
--   [Dane wejściowe użytkownika do okien dialogowych](https://msdn.microsoft.com/library/1s9ws53w\(v=vs.110\))  
-  
--   [Porady: pobieranie wyników dla okien dialogowych](https://msdn.microsoft.com/library/40x40td1\(v=vs.110\))  
-  
--   [Wskazówki: Pobieranie informacji z okna dialogowego za pomocą zbiorczego korzystania obiektów](https://msdn.microsoft.com/library/cakx2hdw\(v=vs.110\))  
-  
--   [Porady: zamykanie okien dialogowych i zachowywanie danych wejściowych użytkownika](https://msdn.microsoft.com/library/65ad5907\(v=vs.110\))  
-  
--   [Porady: tworzenie okien dialogowych w czasie projektowania](https://msdn.microsoft.com/library/55cz5x2c\(v=vs.110\))  
-  
--   [Porady: wyświetlanie okien komunikatów](https://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki i składniki okien dialogowych](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  

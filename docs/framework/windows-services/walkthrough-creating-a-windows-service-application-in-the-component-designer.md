@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 15f05f1d05a50676eb25cfa568598a575cb9cf5a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442909"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665033"
 ---
 # <a name="walkthrough-create-a-windows-service-app"></a>Przewodnik: Tworzenie aplikacji usługi Windows
 
@@ -476,7 +476,7 @@ Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie us
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz, po utworzeniu usługi, można utworzyć program instalacyjny autonomicznego, który inne można użyć do zainstalowania usługi Windows. Funkcja ClickOnce nie obsługuje usług Windows, ale można użyć [zestaw narzędzi WiX](http://wixtoolset.org/) możliwość utworzenia Instalatora usługi Windows. Zapoznać się z pomysłami z innymi zobacz [Utwórz pakiet instalacyjny](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
+Teraz, po utworzeniu usługi, można utworzyć program instalacyjny autonomicznego, który inne można użyć do zainstalowania usługi Windows. Funkcja ClickOnce nie obsługuje usług Windows, ale można użyć [zestaw narzędzi WiX](http://wixtoolset.org/) możliwość utworzenia Instalatora usługi Windows. Zapoznać się z pomysłami z innymi zobacz [Utwórz pakiet instalacyjny](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 Może zbadać użycie <xref:System.ServiceProcess.ServiceController> składnik, który umożliwia wysyłanie poleceń do usługi, po zainstalowaniu.
 

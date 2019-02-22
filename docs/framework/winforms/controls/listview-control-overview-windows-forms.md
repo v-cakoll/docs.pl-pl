@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: 3ac1bc5482d00419ec8a41815633150e30b4039a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ceed741e72dae46f7f791b7564b7f5c38f82bc2
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613990"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664630"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.ListView> kontrolka Wyświetla listę elementów z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takich jak okienku po prawej stronie Eksploratora Windows. Kontrolka ma cztery trybów wyświetlania: LargeIcon, SmallIcon, listy i szczegółów.  
@@ -45,7 +45,7 @@ Formularze Windows <xref:System.Windows.Forms.ListView> kontrolka Wyświetla lis
   
  <xref:System.Windows.Forms.ListView.Activation%2A> Właściwość określa, jakiego rodzaju akcji użytkownik musi wykonać, aby uaktywnić element na liście: opcje są <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, i <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> Aktywacja wymaga jednego kliknięcia, aby aktywować elementu. <xref:System.Windows.Forms.ItemActivation.TwoClick> Aktywacja wymaga od użytkownika, kliknij dwukrotnie, aby aktywować elementu; jednym kliknięciem zmienia kolor tekstu elementu. <xref:System.Windows.Forms.ItemActivation.Standard> Aktywacja wymaga od użytkownika, kliknij dwukrotnie, aby uaktywnić element, ale element nie zmienia się wygląd.  
   
- <xref:System.Windows.Forms.ListView> Kontroli obsługuje również stylów wizualnych i inne funkcje, które są dostępne na platformie Windows XP, w tym grupowania, widoku kafelków i wstawiania znaczników. Aby uzyskać więcej informacji, zobacz [funkcje systemu Windows XP i kontrolki formularzy Windows](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ <xref:System.Windows.Forms.ListView> Kontroli obsługuje również stylów wizualnych i inne funkcje, które są dostępne na platformie Windows XP, w tym grupowania, widoku kafelków i wstawiania znaczników.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.ListView>

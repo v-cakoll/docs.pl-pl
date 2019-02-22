@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573978"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664747"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzystać z danych przechowywanych w bazach danych. Powiązanie danych formularzy Windows, umożliwia dostęp do danych z bazy danych, a także dane w innych strukturach, takich jak tablice i kolekcje, tak długo, jak niektóre minimalne wymagania zostały spełnione.  
@@ -37,7 +37,7 @@ Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzysta�
  Formularze Windows obsługuje właściwości kontrolki powiązania danych właściwości publicznych w wystąpieniu obiektu przy użyciu <xref:System.Windows.Forms.Binding> typu. Windows Forms również obsługuje powiązanie kontrolek na podstawie listy, takie jak <xref:System.Windows.Forms.ListControl> do obiektu wystąpienia, gdy <xref:System.Windows.Forms.BindingSource> jest używany.  
   
  tablicy lub kolekcji  
- Do działania jako źródło danych, należy zaimplementować listy <xref:System.Collections.IList> interfejsu; jeden przykładem może być tablica, która jest wystąpieniem <xref:System.Array> klasy. Aby uzyskać więcej informacji na temat tablic, zobacz [jak: Utwórz tablicę obiektów (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Do działania jako źródło danych, należy zaimplementować listy <xref:System.Collections.IList> interfejsu; jeden przykładem może być tablica, która jest wystąpieniem <xref:System.Array> klasy. Aby uzyskać więcej informacji na temat tablic, zobacz [jak: Utwórz tablicę obiektów (Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100)).  
   
  Ogólnie rzecz biorąc, należy użyć <xref:System.ComponentModel.BindingList%601> podczas tworzenia list obiektów dla powiązania danych. <xref:System.ComponentModel.BindingList%601> jest ogólny wersją <xref:System.ComponentModel.IBindingList> interfejsu. <xref:System.ComponentModel.IBindingList> Interfejs rozszerza <xref:System.Collections.IList> interfejsu przez dodanie właściwości, metody i zdarzenia wymagane dla powiązania danych dwukierunkowe.  
   

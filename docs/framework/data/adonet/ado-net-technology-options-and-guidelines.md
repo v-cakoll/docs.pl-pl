@@ -2,12 +2,12 @@
 title: Opcje technologii ADO.NET i wskazówki
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: e43fa3ae893a8a18e35693cde364d227e7959398
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828478"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664799"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opcje technologii ADO.NET i wskazówki
 Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość kodowania i konserwacji wymagane dla deweloperów, należy włączyć je aby programować przy użyciu modeli danych koncepcyjnymi encji. Ta platforma obejmuje ADO.NET Entity Framework i powiązanych technologii.  
@@ -28,7 +28,7 @@ Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość ko
  Jednostka SQL jest język kwerendy oparte na tekście przeznaczone do interakcji z modelu Entity Data Model. Jednostka SQL jest dialekt SQL, który zawiera konstrukcje zapytań pod względem wyższego poziomu modelowania, takich jak dziedziczenie, złożonych typów i relacji jawnego. Deweloperzy mogą również używać jednostki SQL bezpośrednio z usługi obiektów. Aby uzyskać więcej informacji, zobacz [jednostki języka SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
 ### <a name="entityclient"></a>EntityClient  
- Dostawca EntityClient jest używane do interakcji z modelu Entity Data Model nowego dostawcy danych .NET Framework. Dostawca EntityClient jest zgodny ze wzorcem dostawcy danych .NET Framework, ujawnienia <xref:System.Data.EntityClient.EntityConnection> i <xref:System.Data.EntityClient.EntityCommand> obiekty, które zwraca <xref:System.Data.EntityClient.EntityDataReader>. Dostawca EntityClient w programach języka Entity SQL, zapewniając elastyczne mapowania z dostawcami magazynu danych. Aby uzyskać więcej informacji, zobacz [EntityClient i jednostki SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ Dostawca EntityClient jest używane do interakcji z modelu Entity Data Model nowego dostawcy danych .NET Framework. Dostawca EntityClient jest zgodny ze wzorcem dostawcy danych .NET Framework, ujawnienia <xref:System.Data.EntityClient.EntityConnection> i <xref:System.Data.EntityClient.EntityCommand> obiekty, które zwraca <xref:System.Data.EntityClient.EntityDataReader>. Dostawca EntityClient w programach języka Entity SQL, zapewniając elastyczne mapowania z dostawcami magazynu danych. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ### <a name="entity-data-model-tools"></a>Narzędzia modelu danych jednostki  
  Entity Framework udostępnia narzędzia wiersza polecenia, kreatory i projektanci w celu ułatwienia tworzenia EDM aplikacji. Sterowanie EntityDataSource obsługuje scenariusze powiązania danych w oparciu o EDM. Powierzchni programowania formantu EntityDataSource jest podobne do innych formantów źródła danych w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzia modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  

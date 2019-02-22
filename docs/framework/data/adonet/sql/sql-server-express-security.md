@@ -2,12 +2,12 @@
 title: SQL Server Express Security
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: a767f4c3f862b3b7442e1455bf086bdba7042062
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091620"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664253"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express Security
 Microsoft SQL Server Express Edition, (SQL Server Express) jest oparty na programie Microsoft SQL Server i obsługuje większość funkcji aparatu bazy danych. Zaprojektowano tak, aby mniej ważne funkcje i połączenie sieciowe są domyślnie wyłączone. Powoduje to zmniejszenie obszaru powierzchni dostępne ataku przez złośliwego użytkownika.  
@@ -31,7 +31,6 @@ Microsoft SQL Server Express Edition, (SQL Server Express) jest oparty na progra
   
 |||  
 |-|-|  
-|[Nawiązywanie połączenia z SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) w SQL Server — książki Online|Opisuje sposób używania programu SQL Server Express Edition w sieci.|  
 |[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Pełna dokumentacja dotycząca programu SQL Server 2005 Express Edition.|  
 |[Wystąpienia użytkownika dla użytkowników niebędących administratorami](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) w SQL Server — książki Online|Opisuje sposób tworzenia i wdrażania wystąpienia użytkownika.|  
 |[Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|W tym artykule opisano możliwości wystąpienia użytkownika w aplikacji ADO.NET. Zawiera informacje o tym, jak włączyć wystąpienia użytkownika, nawiązać połączenie z wystąpieniem użytkownika za pomocą <xref:System.Data.SqlClient.SqlConnection>, okres istnienia wystąpienia użytkownika i scenariuszy wystąpienia użytkownika.|  

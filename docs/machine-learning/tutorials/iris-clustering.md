@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: 03a584095badf4b1c3318833f6e67367f27b32ba
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093609"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583722"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Samouczek: Kwiatów iris klastra przy użyciu klastrowania uczeń za pomocą platformy ML.NET
 
@@ -84,7 +84,7 @@ Usuń istniejącą definicję klasy i Dodaj następujący kod, który określa k
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` jest klasą danych wejściowych i ma definicji dla każdej funkcji z zestawu danych. Użyj [kolumny](xref:Microsoft.ML.Data.ColumnAttribute) atrybutu, aby określić indeksów kolumny źródłowe w pliku zestawu danych.
+`IrisData` jest klasą danych wejściowych i ma definicji dla każdej funkcji z zestawu danych. Użyj [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) atrybutu, aby określić indeksów kolumny źródłowe w pliku zestawu danych.
 
 `ClusterPrediction` Klasa reprezentuje dane wyjściowe model klastrowania dotyczą `IrisData` wystąpienia. Użyj [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) atrybut do powiązania `PredictedClusterId` i `Distances` polom **PredictedLabel** i **wynik** kolumn odpowiednio. W przypadku klastrowania zadania te kolumny mają następujące znaczenie:
 
@@ -127,7 +127,7 @@ Dodaj następujący kod do `Main` metodę, aby skonfigurować sposób ładowania
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Należy pamiętać, że nazwy kolumn i indeksów, które są zgodne schemat zdefiniowany przez `IrisData` klasy. <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> Wartość Określa `float` typu.
+Użyj [ogólny `CreateTextLoader` ](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) metoda zostać wywnioskowany schemat zestawu danych z `IrisData` definicji klasy.
 
 Użyj wystąpienia <xref:Microsoft.ML.Data.TextLoader> wystąpienia, aby utworzyć <xref:Microsoft.Data.DataView.IDataView> wystąpienia, która reprezentuje źródło danych dla zestawu danych szkolenia:
 

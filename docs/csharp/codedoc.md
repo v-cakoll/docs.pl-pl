@@ -3,12 +3,12 @@ title: Dokumentowanie kodu przy użyciu komentarzy XML
 description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumentacji XML do generowania pliku dokumentacji XML w czasie kompilacji.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4e5efacbb3dcc9121a5ef52ae437af263fd86cff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271359"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583709"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
 
@@ -194,9 +194,9 @@ Teraz, gdy komentarz XML w oddzielnym pliku, zobaczmy, jak Twój kod może się 
 
 I są dostępne: naszego kodu jest do odczytu i utracono żadnych informacji o dokumentacji.
 
-`filename` Atrybut reprezentuje nazwę pliku XML zawierającego dokumentację.
+`file` Atrybut reprezentuje nazwę pliku XML zawierającego dokumentację.
 
-`path` Atrybutu reprezentuje [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) zapytania `tag name` obecne w określonym `filename`.
+`path` Atrybutu reprezentuje [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) zapytania `tag name` obecne w określonym `file`.
 
 `name` Atrybut reprezentuje określenie nazwy w tagu, który poprzedza komentarze.
 

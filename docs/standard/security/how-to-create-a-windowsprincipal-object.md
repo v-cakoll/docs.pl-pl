@@ -1,5 +1,5 @@
 ---
-title: 'Porady: tworzenie obiektu WindowsPrincipal'
+title: 'Instrukcje: Tworzenie obiektu WindowsPrincipal'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 016f19c7141ebaf9b5c1f03adc263b689489119b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3960a7f87f8ac9a09da7222bd0f7a4a01afc4154
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198039"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583449"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>Porady: tworzenie obiektu WindowsPrincipal
+# <a name="how-to-create-a-windowsprincipal-object"></a>Instrukcje: Tworzenie obiektu WindowsPrincipal
 Istnieją dwa sposoby tworzenia <xref:System.Security.Principal.WindowsPrincipal> obiekt, w zależności od tego, czy kod musi wielokrotnie weryfikowania opartej na rolach lub należy to wykonać tylko raz.  
   
  Jeśli kod musi wykonać wielokrotnie Walidacja oparta na rolach, pierwsza z poniższych procedur powoduje mniejsze obciążenie. Gdy kod musi wprowadzić walidacji opartej na rolach tylko raz, można utworzyć <xref:System.Security.Principal.WindowsPrincipal> obiektu za pomocą drugiego z poniższych procedur.  
@@ -42,12 +42,12 @@ Istnieją dwa sposoby tworzenia <xref:System.Security.Principal.WindowsPrincipal
 2.  Za pomocą zasad należy ustawić, używa się statycznej <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> właściwość służąca do pobierania jednostki, która hermetyzuje bieżącego użytkownika Windows. Ponieważ typ zwracany przez właściwość <xref:System.Security.Principal.IPrincipal>, należy rzutować wynik, który ma <xref:System.Security.Principal.WindowsPrincipal> typu. Inicjuje nowe wystąpienie następującego kodu <xref:System.Security.Principal.WindowsPrincipal> obiektu do wartości podmiot zabezpieczeń skojarzony z bieżącym wątkiem.  
   
     ```csharp  
-    WindowsPrincipal MyPrincipal =   
+    WindowsPrincipal myPrincipal =   
         (WindowsPrincipal) Thread.CurrentPrincipal;  
     ```  
   
     ```vb  
-    Dim MyPrincipal As WindowsPrincipal = _  
+    Dim myPrincipal As WindowsPrincipal = _  
         CType(Thread.CurrentPrincipal, WindowsPrincipal)   
     ```  
   
@@ -58,21 +58,21 @@ Istnieją dwa sposoby tworzenia <xref:System.Security.Principal.WindowsPrincipal
 1.  Zainicjuj nowe <xref:System.Security.Principal.WindowsIdentity> obiektu przez wywołanie statycznego <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> metody, która odpytuje bieżącego konta Windows, a następnie umieszcza informacji na temat tego konta do obiektu tożsamości nowo utworzony. Poniższy kod tworzy nową <xref:System.Security.Principal.WindowsIdentity> obiektu i inicjuje go do aktualnego użytkownika uwierzytelnionego.  
   
     ```csharp  
-    WindowsIdentity MyIdentity = WindowsIdentity.GetCurrent();  
+    WindowsIdentity myIdentity = WindowsIdentity.GetCurrent();  
     ```  
   
     ```vb  
-    Dim MyIdentity As WindowsIdentity = WindowsIdentity.GetCurrent()  
+    Dim myIdentity As WindowsIdentity = WindowsIdentity.GetCurrent()  
     ```  
   
 2.  Utwórz nową <xref:System.Security.Principal.WindowsPrincipal> obiektu i przekaż go wartość <xref:System.Security.Principal.WindowsIdentity> obiekt utworzony w poprzednim kroku.  
   
     ```csharp  
-    WindowsPrincipal MyPrincipal = new WindowsPrincipal(MyIdentity);  
+    WindowsPrincipal myPrincipal = new WindowsPrincipal(myIdentity);  
     ```  
   
     ```vb  
-    Dim MyPrincipal As New WindowsPrincipal(MyIdentity)  
+    Dim myPrincipal As New WindowsPrincipal(myIdentity)  
     ```  
   
 3.  Po utworzeniu obiektu podmiotu zabezpieczeń, można użyć jednej z kilku metod Aby zweryfikować, czy.  

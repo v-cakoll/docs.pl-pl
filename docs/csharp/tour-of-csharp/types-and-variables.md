@@ -3,12 +3,12 @@ title: C#Typy i zmienne — Przewodnik po przykładzie C# języka
 description: Informacje na temat definiowania typów i zadeklarowania zmiennych wC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129522"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583956"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -57,20 +57,20 @@ Znakowe i przetwarzania w języku C# przy użyciu kodowania Unicode. `char` Typ 
 To znajduje się podsumowanie C#na typy liczbowe.
 
 * Całkowite podpisem
-    - `sbyte`:  8 bitów, należą do zakresu od -128 do 127
-    - `short`: 16 bitów, w zakresie od 32 767-32 768
-    - `int`  : 32-bitowy z zakresu od -2,147,483,648-2 147 483 647
-    - `long` : 64-bitowy, do zakresu od –9,223,372,036,854,775,808 do 9,223,372,036,854,775,807
+    - `sbyte`:  8 bitów, z zakresu od -128 do 127
+    - `short`: 16 bitów, z zakresu od-32 768 do 32 767 znaków
+    - `int`  : 32-bitowy, do zakresu od -2,147,483,648 do 2 147 483 647
+    - `long` : 64-bitowy, do zakresu od-9,223,372,036,854,775,808 do 9,223,372,036,854,775,807
 * Całkowite bez znaku
-    - `byte`   :  8 bitów należeć do zakresu od 0 - 255
-    - `ushort` : 16 bitów należeć do zakresu od 0 - 65 535
-    - `uint`   : 32-bitowy, do zakresu od 0 - 4 294 967 295
-    - `ulong`  : 64-bitowy, do zakresu od 0 - 18,446,744,073,709,551,615
+    - `byte`   :  8 bitów, z zakresu od 0 do 255
+    - `ushort` : 16 bitów, z zakresu od 0 do 65 535 działań
+    - `uint`   : 32-bitowy z zakresu od 0 do 4 294 967 295
+    - `ulong`  : 64-bitowy z zakresu od 0 do 18,446,744,073,709,551,615
 * Liczba zmiennoprzecinkowa
-    - `float`  : 32-bitowy, do zakresu od 1,5 x 10<sup>−45</sup> — 3,4 x 10<sup>38</sup>, dokładności 7 cyfr
-    - `double` : 64-bitowy, do zakresu od 5.0 x 10<sup>−324</sup> -1.7 x 10<sup>308</sup>, dokładności 15 cyfr
+    - `float`  : 32-bitowy, do zakresu od 1,5 x 10<sup>-45</sup> do 3,4 x 10<sup>38</sup>, dokładności 7 cyfr
+    - `double` : 64-bitowy, do zakresu od 5.0 x 10<sup>-324</sup> do wersji 1.7 x 10<sup>308</sup>, dokładności 15 cyfr
 * Wartość dziesiętna
-    - `decimal` : 128 bitów — zakres jest co najmniej –7.9 x 10<sup>−28</sup> -7,9 x 10<sup>28</sup>, z dokładnością co najmniej 28-cyfrowy
+    - `decimal` : 128 bitów — zakres jest co najmniej od -7,9 x 10<sup>-28</sup> do 7,9 x 10<sup>28</sup>, z dokładnością co najmniej 28-cyfrowy
     
 C# programy użyj *wpisz deklaracje* do tworzenia nowych typów. Deklaracja typu Określa nazwę i elementy członkowskie nowego typu. Pięciu C#firmy kategorie typów są definiowane przez użytkownika: klasy, typy, typy struktury, typy interfejsów, typach wyliczeniowych i typy delegatów.
 

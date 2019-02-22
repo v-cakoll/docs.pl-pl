@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36891a5acbb2fe06b4ab61573e26612927587c01
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527630"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583839"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Instrukcje: Tworzenie kontrolki formularzy Windows prosty
 W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu Windows Forms. Prosty formant opracowanych w tym przewodniku umożliwia wyrównanie jego <xref:System.Windows.Forms.Control.Text%2A> właściwości, które mają być zmienione. Nie podnieść lub obsługi zdarzeń.  
@@ -34,7 +34,7 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
     public class FirstControl:Control {}  
     ```  
   
-2.  Zdefiniuj właściwości. (Nie wymagane do zdefiniowania właściwości, ponieważ formant dziedziczy wiele właściwości z <xref:System.Windows.Forms.Control> klasy, ale większość niestandardowe formanty ogólnie zdefiniować dodatkowe właściwości.) Poniższy fragment kodu definiuje właściwość o nazwie `TextAlignment` , `FirstControl` jest używany do formatowania wyświetlania <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control>. Aby uzyskać więcej informacji na temat definiowania właściwości, zobacz [Przegląd właściwości](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
+2.  Zdefiniuj właściwości. (Nie wymagane do zdefiniowania właściwości, ponieważ formant dziedziczy wiele właściwości z <xref:System.Windows.Forms.Control> klasy, ale większość niestandardowe formanty ogólnie zdefiniować dodatkowe właściwości.) Poniższy fragment kodu definiuje właściwość o nazwie `TextAlignment` , `FirstControl` jest używany do formatowania wyświetlania <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control>. Aby uzyskać więcej informacji na temat definiowania właściwości, zobacz [Przegląd właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
@@ -46,7 +46,7 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Podaj atrybuty kontrolki. Atrybuty Włącz projektanta wizualnego wyświetlić kontrolki i ich właściwości i zdarzenia odpowiednio w czasie projektowania. Poniższy fragment kodu, ma zastosowanie atrybutów, które mają `TextAlignment` właściwości. W projektancie, takich jak Visual Studio <xref:System.ComponentModel.CategoryAttribute.Category%2A> atrybutu (pokazano we fragmencie kodu) powoduje, że właściwości, które mają być wyświetlane w obszarze kategoria logiczna. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Atrybutu powoduje, że opisowy ciąg, który będzie wyświetlany w dolnej części **właściwości** okna po `TextAlignment` właściwości jest zaznaczone. Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty czasu projektowania dla składników](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+4.  Podaj atrybuty kontrolki. Atrybuty Włącz projektanta wizualnego wyświetlić kontrolki i ich właściwości i zdarzenia odpowiednio w czasie projektowania. Poniższy fragment kodu, ma zastosowanie atrybutów, które mają `TextAlignment` właściwości. W projektancie, takich jak Visual Studio <xref:System.ComponentModel.CategoryAttribute.Category%2A> atrybutu (pokazano we fragmencie kodu) powoduje, że właściwości, które mają być wyświetlane w obszarze kategoria logiczna. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Atrybutu powoduje, że opisowy ciąg, który będzie wyświetlany w dolnej części **właściwości** okna po `TextAlignment` właściwości jest zaznaczone. Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  

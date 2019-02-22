@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-ms.openlocfilehash: e216a91a612c5d4370d5786492426f757f39a262
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aff0b0262441fb6c9d24240b1fe1c24707f94b8
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658094"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584255"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Instrukcje: Włączanie zmiany układu kolumn w kontrolce DataGridView formularzy Windows Forms
 Po włączeniu zmiany układu kolumn w <xref:System.Windows.Forms.DataGridView> kontrolki, użytkownicy mogą przechodzić kolumnę w nowe położenie przez przeciągnięcie nagłówka kolumny za pomocą myszy. W <xref:System.Windows.Forms.DataGridView> kontroli <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType> wartość właściwości określa, czy użytkownicy mogą przechodzić do innej pozycji kolumn.  
   
- Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: Włączanie zmiany układu kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](https://msdn.microsoft.com/library/8xwtyc86\(v=vs.110\))  
+ Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: Włącz w Windows zmiany układu kolumn do formantu DataGridView przy użyciu narzędzia Projektant formularzy](enable-column-reordering-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-enable-column-reordering-programmatically"></a>Aby włączyć programowe Zmienianie kolejności kolumn  
   

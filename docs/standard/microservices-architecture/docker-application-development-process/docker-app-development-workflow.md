@@ -4,12 +4,12 @@ description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c5c8cc34c70771d3f362f967cc99e76013291faa
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c34d49307408520afc6223a43d1c347dd6cffb97
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480104"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584307"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -489,7 +489,7 @@ Istotną kwestią jest, jak pokazano na rysunku 5-12, w programie Visual Studio 
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Uwaga dotycząca testowanie i wdrażanie przy użyciu koordynatorów
 
-Narzędzia docker compose się i platformy docker, Uruchom polecenia (lub uruchamianie i debugowanie kontenerów w programie Visual Studio) są odpowiednie do testowania kontenerów w środowisku programistycznym. Jednak to podejście nie należy używać w przypadku wdrożeń produkcyjnych, w którym powinien dotyczyć koordynatorów, takich jak [Kubernetes](https://kubernetes.io/) lub [usługi Service Fabric](https://azure.microsoft.com/services/service-fabric/). Jeśli używasz usługi Kubernetes, trzeba użyć [zasobników](https://kubernetes.io/docs/concepts/workloads/pods/pod/) do organizowania kontenerów i [usług](https://kubernetes.io/docs/concepts/services-networking/service/) do ich sieci. Możesz także użyć [wdrożeń](https://kubernetes.io/docs/tutorials/k8s201/#deployments) do organizowania zasobnika tworzenia i modyfikacji.
+Narzędzia docker compose się i platformy docker, Uruchom polecenia (lub uruchamianie i debugowanie kontenerów w programie Visual Studio) są odpowiednie do testowania kontenerów w środowisku programistycznym. Jednak to podejście nie należy używać w przypadku wdrożeń produkcyjnych, w którym powinien dotyczyć koordynatorów, takich jak [Kubernetes](https://kubernetes.io/) lub [usługi Service Fabric](https://azure.microsoft.com/services/service-fabric/). Jeśli używasz usługi Kubernetes, trzeba użyć [zasobników](https://kubernetes.io/docs/concepts/workloads/pods/pod/) do organizowania kontenerów i [usług](https://kubernetes.io/docs/concepts/services-networking/service/) do ich sieci. Możesz także użyć [wdrożeń](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) do organizowania zasobnika tworzenia i modyfikacji.
 
 ![6 — testowanie aplikacji sieci Web lub mikrousług](./media/image17.png)
 

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | U�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d855b56a7fd00b316dde599683900ad2db758d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2bcd3491c58884653cd6c119753696019151bfed
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152243"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584372"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ środowiska deweloperskie lub testowe
 
@@ -30,13 +30,14 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Implementation using RabbitMQ API
     //...
+}
 ```
 
 Implementacja RabbitMQ magistrali zdarzeń i testowania aplikacji przykładowej jest standardowy kod. Musi on obsługiwać połączenia z serwerem RabbitMQ i podać kod do publikowania zdarzeń komunikatów do kolejki. Ma również implementacji słownika kolekcje integracji obsługi zdarzeń dla każdego typu zdarzenia; te typy zdarzeń może mieć różne wystąpienia i różnych subskrypcji dla poszczególnych mikrousług odbiornik, jak pokazano w rysunek 6-21.
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementowanie prostego publikowania metody z oprogramowaniem RabbitMQ
 
-Poniższy kod jest częścią implementacji magistrali uproszczone zdarzenia, dla oprogramowania RabbitMQ, ulepszone w [rzeczywisty kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) z w ramach aplikacji eShopOnContainers. Zazwyczaj nie należy zakodować go, chyba że w przypadku wprowadzania ulepszeń. Kod pobiera połączenia i kanał RabbitMQ, tworzy komunikat o, a następnie publikuje komunikat do kolejki.
+Poniższy kod jest ***uproszczone*** wersję implementacji magistrali zdarzeń RabbitMQ, aby zaprezentować całego scenariusza. Nie naprawdę obsługują połączenia w ten sposób. Aby wyświetlić pełną implementację, zobacz rzeczywisty kod w [dotnet architektura/ramach aplikacji eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) repozytorium. 
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

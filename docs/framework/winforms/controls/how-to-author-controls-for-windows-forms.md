@@ -6,18 +6,18 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: a6ea57dda8f034684e8590ce4c3b6d37ab01230e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb14e30e3ed2bebdabcf9163291c647e05b1cc5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579527"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584385"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms
 Formant reprezentuje graficzny link między użytkownikiem i program. Kontrolki można podać i przetwarzania danych, akceptują dane wejściowe użytkownika, odpowiadanie na zdarzenia lub wykonywać dowolna liczba innych funkcji, które łączą się z użytkownikiem a aplikacją. Ponieważ formant jest zasadniczo składnika za pomocą interfejsu graficznego, może być każda funkcja, która jest składnikiem, również zapewnić interakcji z użytkownikiem. Formanty są tworzone do obsługi określonych celów i tworzenie formantów jest po prostu kolejne zadania programowania. Mając to na uwadze następujące kroki przedstawiają Przegląd kontroli procesu tworzenia. Linki udostępniają dodatkowe informacje na temat poszczególnych kroków.  
   
 > [!NOTE]
->  Jeśli chcesz utworzyć formant niestandardowy do użycia w formularzach sieci Web, zobacz artykuł [tworzenie niestandardowe formanty serwera ASP.NET](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+>  Jeśli chcesz utworzyć formant niestandardowy do użycia w formularzach sieci Web, zobacz artykuł [tworzenie niestandardowe formanty serwera ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
 >   
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -49,7 +49,7 @@ Formant reprezentuje graficzny link między użytkownikiem i program. Kontrolki 
   
 9. Powtórz udoskonalanie projektu.  
   
-10. Tworzenie pakietów i wdrażanie formantu. Aby uzyskać więcej informacji, zobacz [wdrażania aplikacji, usług i składników](https://msdn.microsoft.com/library/wtzawcsz).  
+10. Tworzenie pakietów i wdrażanie formantu. Aby uzyskać więcej informacji, zobacz [Pierwsze spojrzenie na wdrażanie w programie Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).  
   
 ## <a name="see-also"></a>Zobacz także
 - [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)

@@ -19,7 +19,7 @@ W scenariuszach mikrousług uwierzytelniania jest zazwyczaj obsługiwana central
 
 **Rysunek 9-1**. Scentralizowane uwierzytelnianie przy użyciu bramy interfejsu API
 
-Jeśli usługi są dostępne bezpośrednio, usługi uwierzytelniania, takich jak Azure Active Directory lub mikrousług dedykowanych uwierzytelniania, pełniący funkcję zabezpieczeń, usługa tokenów (STS) może być używane do uwierzytelniania użytkowników. Usługi za pomocą tokenów zabezpieczających lub pliki cookie są współużytkowane decyzji dotyczących zaufania. (Tokeny te mogą być współużytkowane między aplikacjami, jeśli to konieczne, w programie ASP.NET Core za pomocą [usługi ochrony danych](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications).) Ten wzorzec zilustrowano w rysunek 9-2.
+Jeśli usługi są dostępne bezpośrednio, usługi uwierzytelniania, takich jak Azure Active Directory lub mikrousług dedykowanych uwierzytelniania, pełniący funkcję zabezpieczeń, usługa tokenów (STS) może być używane do uwierzytelniania użytkowników. Usługi za pomocą tokenów zabezpieczających lub pliki cookie są współużytkowane decyzji dotyczących zaufania. (Tokeny te mogą być współużytkowane między aplikacje platformy ASP.NET Core, jeśli to konieczne, implementując [udostępnianie plików cookie](/aspnet/core/security/cookie-sharing).) Ten wzorzec zilustrowano w rysunek 9-2.
 
 ![Gdy mikrousług są dostępne bezpośrednio, zaufanie, która obejmuje uwierzytelnianie i autoryzacja, jest obsługiwane przez tokenu zabezpieczającego wydane przez dedykowany mikrousług, współużytkowana mikrousług.](./media/image2.png)
 
@@ -271,7 +271,7 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Współużytkowanie plików cookie między aplikacjami** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **Wprowadzenie do tożsamości** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
@@ -285,7 +285,7 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
 - **Michell Anicas. Wprowadzenie do protokołu OAuth 2** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (repozytorium GitHub dla dostawców uwierzytelniania OAuth ASP.NET. \
+- **AspNet.Security.OAuth.Providers** (repozytorium GitHub dla dostawców uwierzytelniania OAuth ASP.NET) \
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Danny Strockis. Integrowanie usługi Azure AD dla aplikacji sieci web ASP.NET Core** \

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 439366791fcd8fa40bb3fe8fc2982272798120ef
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7be62b3a97614faea14eb874be58c79246754903
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441609"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583657"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opcje kompilatora C# w porządku alfabetycznym
 
@@ -38,6 +38,8 @@ Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę
 |[-doc](doc-compiler-option.md)|Określa plik dokumentacji XML do wygenerowania.|
 |-osadzania|Osadź wszystkich plików źródłowych w pliku PDB.|
 |-osadzania:\<lista plików >|Osadzanie plików określonych w pliku PDB.|
+|-errorendlocation|Wyprowadź wiersz i kolumnę lokalizacji końcowej dla każdego błędu.|
+|— Dziennik błędów:\<pliku >|Określ plik, aby rejestrować wszystkie diagnostyki kompilatora i analizator.|
 |[-errorreport](errorreport-compiler-option.md)|Określa sposób obsługiwać wewnętrzne błędy kompilatora: wiersz, Wyślij lub Brak. Domyślna wartość to Brak.|
 |[-filealign](filealign-compiler-option.md)|Określa wyrównanie stosowane dla sekcji plików wyjściowych.|
 |[-fullpaths](fullpaths-compiler-option.md)|Powoduje, że kompilatorowi Generowanie ścieżek w pełni kwalifikowanych.|
@@ -70,12 +72,14 @@ Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę
 |[-reference](reference-compiler-option.md)|Odwołuje się do metadanych z określonych plików zestawów.|
 |[-refout](refout-compiler-option.md)|Generowanie zestawu odwołania oprócz podstawowego zestawu.|
 |[-refonly](refonly-compiler-option.md)|Generowanie zestawu odwołania zamiast podstawowego zestawu.|
+|-reportanalyzer|Analizator dodatkowych informacji w raporcie, takie jak czas wykonywania.|
 |[-resource](resource-compiler-option.md)|Osadza określony zasób.|
 |-zestaw reguł:\<pliku >|Określ plik zestawu reguł, który wyłącza działania diagnostyczne zależne.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Określa minimalną wersję podsystemu, którego można użyć pliku wykonywalnego.|
 |[-target](target-compiler-option.md)|Określa format pliku wyjściowego przy użyciu jednej z czterech opcji: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: library](target-library-compiler-option.md), [-docelowej: Moduł](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |[-unsafe](unsafe-compiler-option.md)|Umożliwia [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) kodu.|
 |[-utf8output](utf8output-compiler-option.md)|Dane wyjściowe komunikaty kompilatora przy użyciu kodowania UTF-8.|
+|-Wersja|Wyświetlanie numeru wersji kompilatora i zakończenia.|
 |[-warn](warn-compiler-option.md)|Ustawia poziom ostrzeżeń (0-4).|
 |[-warnaserror](warnaserror-compiler-option.md)|Raporty określone ostrzeżenia jako błędy.|
 |[-win32icon](win32icon-compiler-option.md)|Używa tej ikony dla danych wyjściowych.|

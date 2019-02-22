@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: ba5aaec9e66f1d3c66bb50709f6fbd4afde893ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eea77b7601b7dc81b92f7b08806f3f00b494aecd
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562729"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583891"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Instrukcje: Ustawianie przemiennych wierszy dla kontrolki DataGridView formularzy Windows Forms
 Dane tabelaryczne często jest przesyłany do użytkowników w postaci księgi, gdzie przemienne wiersze mają różnych kolorów tła. Ten format ułatwia użytkownikom Poinformuj komórki, które są w każdym wierszu, szczególnie w przypadku szerokich tabel, które mają wiele kolumn.  
   
  Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolę, można określić dotycząca pełną styl naprzemiennych wierszach. Dzięki temu możesz użyć właściwości stylu, takich jak kolor pierwszego planu i czcionki, oprócz kolor tła do odróżnienia przemienne wiersze.  
   
- Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: Ustawianie przemiennych wierszy dla formantu DataGridView, które przy użyciu narzędzia Projektant formularzy Windows](https://msdn.microsoft.com/library/3z9sk148\(v=vs.110\)).  
+ Są obsługiwane dla tego zadania w programie Visual Studio.  Zobacz też [jak: Ustawianie przemiennych wierszy dla formantu DataGridView, które przy użyciu narzędzia Projektant formularzy Windows](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-set-alternating-row-styles-programmatically"></a>Aby ustawić programowo alternatywnych stylów wierszy  
   

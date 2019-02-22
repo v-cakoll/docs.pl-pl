@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c5792425bec8dce9a45f438f62c112aec21c360
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710472"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584242"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Instrukcje: Bezpieczne wątkowo wywołania kontrolek formularzy Windows Forms
 
@@ -404,9 +404,6 @@ private:
 
 ## <a name="example"></a>Przykład
  Poniższy przykład kodu jest kompletna aplikacja Windows Forms, która składa się z formularza przy użyciu trzech przycisków i jedno pole tekstowe. Pierwszy pokazuje niebezpieczny dostęp między wątkami, drugi przycisk pokazuje bezpieczny dostęp za pomocą <xref:System.Windows.Forms.Control.Invoke%2A>, a trzeci przycisk pokazuje bezpieczny dostęp przy użyciu <xref:System.ComponentModel.BackgroundWorker>.
-
-> [!NOTE]
-> Aby uzyskać instrukcje na temat sposobu uruchamiania przykładu, zobacz [jak: Skompilować i uruchomić przykładowy kod pełną Windows Forms przy użyciu programu Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). W tym przykładzie wymaga odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.
 
 ```csharp
 using System;

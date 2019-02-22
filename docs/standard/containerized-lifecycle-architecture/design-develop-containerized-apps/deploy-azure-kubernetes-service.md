@@ -3,64 +3,64 @@ title: Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalo
 description: Dowiedz się, jak wdrożyć aplikację przy użyciu usługi Azure Kubernetes Service.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 984a72c9ca8883b338d10fdaa826a6007580372d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221398"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664968"
 ---
-# <a name="deploy-to-azure-kubernetes-service-aks"></a><span data-ttu-id="8a48e-103">Wdrażanie w usłudze Azure Kubernetes Service (AKS)</span><span class="sxs-lookup"><span data-stu-id="8a48e-103">Deploy to Azure Kubernetes Service (AKS)</span></span>
+# <a name="deploy-to-azure-kubernetes-service-aks"></a><span data-ttu-id="b392d-103">Wdrażanie w usłudze Azure Kubernetes Service (AKS)</span><span class="sxs-lookup"><span data-stu-id="b392d-103">Deploy to Azure Kubernetes Service (AKS)</span></span>
 
-<span data-ttu-id="8a48e-104">Możesz wchodzić w interakcje za pomocą usługi AKS, korzystając z preferowanego klienta systemu operacyjnego, w tym miejscu przedstawiono, jak to zrobić za pomocą programu Microsoft Windows i osadzone wersję Ubuntu Linux w Windows, za pomocą poleceń powłoki Bash.</span><span class="sxs-lookup"><span data-stu-id="8a48e-104">You can interact with AKS using your preferred client operating system, here we show how to do it with Microsoft Windows and an embedded version of Ubuntu Linux in Windows, using Bash commands.</span></span>
+<span data-ttu-id="b392d-104">Możesz wchodzić w interakcje za pomocą usługi AKS, korzystając z preferowanego klienta systemu operacyjnego, w tym miejscu przedstawiono, jak to zrobić za pomocą programu Microsoft Windows i osadzone wersję Ubuntu Linux w Windows, za pomocą poleceń powłoki Bash.</span><span class="sxs-lookup"><span data-stu-id="b392d-104">You can interact with AKS using your preferred client operating system, here we show how to do it with Microsoft Windows and an embedded version of Ubuntu Linux in Windows, using Bash commands.</span></span>
 
-<span data-ttu-id="8a48e-105">Dostępne są następujące wymagania wstępne, aby przed rozpoczęciem korzystania z usługi AKS:</span><span class="sxs-lookup"><span data-stu-id="8a48e-105">Prerequisites to have before using AKS are:</span></span>
+<span data-ttu-id="b392d-105">Dostępne są następujące wymagania wstępne, aby przed rozpoczęciem korzystania z usługi AKS:</span><span class="sxs-lookup"><span data-stu-id="b392d-105">Prerequisites to have before using AKS are:</span></span>
 
-- <span data-ttu-id="8a48e-106">Komputerze deweloperskim systemu Linux lub Mac</span><span class="sxs-lookup"><span data-stu-id="8a48e-106">Linux or Mac development machine</span></span>
-- <span data-ttu-id="8a48e-107">Komputer deweloperski Windows</span><span class="sxs-lookup"><span data-stu-id="8a48e-107">Windows development machine</span></span>
-  - <span data-ttu-id="8a48e-108">Tryb dewelopera, włączone na Windows</span><span class="sxs-lookup"><span data-stu-id="8a48e-108">Developer Mode enabled on Windows</span></span>
-  - <span data-ttu-id="8a48e-109">Podsystem Windows dla systemu Linux</span><span class="sxs-lookup"><span data-stu-id="8a48e-109">Windows Subsystem for Linux</span></span>
-- <span data-ttu-id="8a48e-110">Azure-CLI zainstalowana na [Windows, Mac lub Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)</span><span class="sxs-lookup"><span data-stu-id="8a48e-110">Azure-CLI installed on [Windows, Mac or Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)</span></span>
+- <span data-ttu-id="b392d-106">Komputerze deweloperskim systemu Linux lub Mac</span><span class="sxs-lookup"><span data-stu-id="b392d-106">Linux or Mac development machine</span></span>
+- <span data-ttu-id="b392d-107">Komputer deweloperski Windows</span><span class="sxs-lookup"><span data-stu-id="b392d-107">Windows development machine</span></span>
+  - <span data-ttu-id="b392d-108">Tryb dewelopera, włączone na Windows</span><span class="sxs-lookup"><span data-stu-id="b392d-108">Developer Mode enabled on Windows</span></span>
+  - <span data-ttu-id="b392d-109">Podsystem Windows dla systemu Linux</span><span class="sxs-lookup"><span data-stu-id="b392d-109">Windows Subsystem for Linux</span></span>
+- <span data-ttu-id="b392d-110">Azure-CLI zainstalowana na [Windows, Mac lub Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)</span><span class="sxs-lookup"><span data-stu-id="b392d-110">Azure-CLI installed on [Windows, Mac or Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8a48e-111">Aby uzyskać pełne informacje na temat:</span><span class="sxs-lookup"><span data-stu-id="8a48e-111">To find complete information about:</span></span>
+> <span data-ttu-id="b392d-111">Aby uzyskać pełne informacje na temat:</span><span class="sxs-lookup"><span data-stu-id="b392d-111">To find complete information about:</span></span>
 >
-> <span data-ttu-id="8a48e-112">Wiersza polecenia platformy Azure: [https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest](https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest)</span><span class="sxs-lookup"><span data-stu-id="8a48e-112">Azure-CLI: [https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest](https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest)</span></span>
+> <span data-ttu-id="b392d-112">Wiersza polecenia platformy Azure: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest></span><span class="sxs-lookup"><span data-stu-id="b392d-112">Azure-CLI: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest></span></span>
 >
-> <span data-ttu-id="8a48e-113">Podsystem Windows dla systemu Linux: [https://docs.microsoft.com/windows/wsl/about](https://docs.microsoft.com/windows/wsl/about)</span><span class="sxs-lookup"><span data-stu-id="8a48e-113">Windows Subsystem for Linux: [https://docs.microsoft.com/windows/wsl/about](https://docs.microsoft.com/windows/wsl/about)</span></span>
+> <span data-ttu-id="b392d-113">Podsystem Windows dla systemu Linux: <https://docs.microsoft.com/windows/wsl/about></span><span class="sxs-lookup"><span data-stu-id="b392d-113">Windows Subsystem for Linux: <https://docs.microsoft.com/windows/wsl/about></span></span>
 
-## <a name="create-the-aks-environment-in-azure"></a><span data-ttu-id="8a48e-114">Tworzenie środowiska usługi AKS na platformie Azure</span><span class="sxs-lookup"><span data-stu-id="8a48e-114">Create the AKS environment in Azure</span></span>
+## <a name="create-the-aks-environment-in-azure"></a><span data-ttu-id="b392d-114">Tworzenie środowiska usługi AKS na platformie Azure</span><span class="sxs-lookup"><span data-stu-id="b392d-114">Create the AKS environment in Azure</span></span>
 
-<span data-ttu-id="8a48e-115">Istnieje kilka sposobów, aby utworzyć środowisko usługi AKS.</span><span class="sxs-lookup"><span data-stu-id="8a48e-115">There are several ways to create the AKS Environment.</span></span> <span data-ttu-id="8a48e-116">Można zrobić za pomocą poleceń interfejsu wiersza polecenia Azure lub za pomocą witryny Azure portal.</span><span class="sxs-lookup"><span data-stu-id="8a48e-116">It can be done by using Azure-CLI commands or by using the Azure portal.</span></span>
+<span data-ttu-id="b392d-115">Istnieje kilka sposobów, aby utworzyć środowisko usługi AKS.</span><span class="sxs-lookup"><span data-stu-id="b392d-115">There are several ways to create the AKS Environment.</span></span> <span data-ttu-id="b392d-116">Można zrobić za pomocą poleceń interfejsu wiersza polecenia Azure lub za pomocą witryny Azure portal.</span><span class="sxs-lookup"><span data-stu-id="b392d-116">It can be done by using Azure-CLI commands or by using the Azure portal.</span></span>
 
-<span data-ttu-id="8a48e-117">W tym miejscu możesz eksplorować przykłady przy użyciu interfejsu wiersza polecenia platformy Azure platformy do utworzenia klastra i witryny Azure portal, aby przejrzeć wyniki.</span><span class="sxs-lookup"><span data-stu-id="8a48e-117">Here you can explore some examples using the Azure-CLI to create the cluster and the Azure portal to review the results.</span></span> <span data-ttu-id="8a48e-118">Musisz również mieć Kubectl i platformy Docker w komputerze deweloperskim.</span><span class="sxs-lookup"><span data-stu-id="8a48e-118">You also need to have Kubectl and Docker in your development machine.</span></span>  
+<span data-ttu-id="b392d-117">W tym miejscu możesz eksplorować przykłady przy użyciu interfejsu wiersza polecenia platformy Azure platformy do utworzenia klastra i witryny Azure portal, aby przejrzeć wyniki.</span><span class="sxs-lookup"><span data-stu-id="b392d-117">Here you can explore some examples using the Azure-CLI to create the cluster and the Azure portal to review the results.</span></span> <span data-ttu-id="b392d-118">Musisz również mieć Kubectl i platformy Docker w komputerze deweloperskim.</span><span class="sxs-lookup"><span data-stu-id="b392d-118">You also need to have Kubectl and Docker in your development machine.</span></span>  
 
-## <a name="create-the-aks-cluster"></a><span data-ttu-id="8a48e-119">Tworzenie klastra AKS</span><span class="sxs-lookup"><span data-stu-id="8a48e-119">Create the AKS cluster</span></span>
+## <a name="create-the-aks-cluster"></a><span data-ttu-id="b392d-119">Tworzenie klastra AKS</span><span class="sxs-lookup"><span data-stu-id="b392d-119">Create the AKS cluster</span></span>
 
-<span data-ttu-id="8a48e-120">Tworzenie klastra AKS, za pomocą tego polecenia:</span><span class="sxs-lookup"><span data-stu-id="8a48e-120">Create the AKS cluster using this command:</span></span>
+<span data-ttu-id="b392d-120">Tworzenie klastra AKS, za pomocą tego polecenia:</span><span class="sxs-lookup"><span data-stu-id="b392d-120">Create the AKS cluster using this command:</span></span>
 
 ```console
 az aks create --resource-group MSSampleResourceGroup --name MSSampleClusterK801 --agent-count 1 --generate-ssh-keys --location westus2
 ```
 
-<span data-ttu-id="8a48e-121">Po zakończeniu zadania tworzenia, możesz zobaczyć AKS utworzone w witrynie Azure portal:</span><span class="sxs-lookup"><span data-stu-id="8a48e-121">After the creation job finishes, you can see the AKS created in the Azure portal:</span></span>
+<span data-ttu-id="b392d-121">Po zakończeniu zadania tworzenia, możesz zobaczyć AKS utworzone w witrynie Azure portal:</span><span class="sxs-lookup"><span data-stu-id="b392d-121">After the creation job finishes, you can see the AKS created in the Azure portal:</span></span>
 
-<span data-ttu-id="8a48e-122">Grupa zasobów:</span><span class="sxs-lookup"><span data-stu-id="8a48e-122">The resource group:</span></span>
+<span data-ttu-id="b392d-122">Grupa zasobów:</span><span class="sxs-lookup"><span data-stu-id="b392d-122">The resource group:</span></span>
 
 ![Widok grupy zasobów platformy Azure w usłudze AKS w przeglądarce.](media/aks-resource-group-view.png)
 
-<span data-ttu-id="8a48e-124">**Rysunek 4-17**.</span><span class="sxs-lookup"><span data-stu-id="8a48e-124">**Figure 4-17**.</span></span> <span data-ttu-id="8a48e-125">Widok grupy zasobów usługi AKS z platformy Azure.</span><span class="sxs-lookup"><span data-stu-id="8a48e-125">AKS Resource Group view from Azure.</span></span>
+<span data-ttu-id="b392d-124">**Rysunek 4-17**.</span><span class="sxs-lookup"><span data-stu-id="b392d-124">**Figure 4-17**.</span></span> <span data-ttu-id="b392d-125">Widok grupy zasobów usługi AKS z platformy Azure.</span><span class="sxs-lookup"><span data-stu-id="b392d-125">AKS Resource Group view from Azure.</span></span>
 
-<span data-ttu-id="8a48e-126">Klaster AKS:</span><span class="sxs-lookup"><span data-stu-id="8a48e-126">The AKS cluster:</span></span>
+<span data-ttu-id="b392d-126">Klaster AKS:</span><span class="sxs-lookup"><span data-stu-id="b392d-126">The AKS cluster:</span></span>
 
 ![Widok grupy zasobów usługi AKS w przeglądarce.](media/aks-cluster-view.png)
 
-<span data-ttu-id="8a48e-128">**Rysunek 4-18**.</span><span class="sxs-lookup"><span data-stu-id="8a48e-128">**Figure 4-18**.</span></span> <span data-ttu-id="8a48e-129">Widok AKS z platformy Azure.</span><span class="sxs-lookup"><span data-stu-id="8a48e-129">AKS view from Azure.</span></span>
+<span data-ttu-id="b392d-128">**Rysunek 4-18**.</span><span class="sxs-lookup"><span data-stu-id="b392d-128">**Figure 4-18**.</span></span> <span data-ttu-id="b392d-129">Widok AKS z platformy Azure.</span><span class="sxs-lookup"><span data-stu-id="b392d-129">AKS view from Azure.</span></span>
 
-<span data-ttu-id="8a48e-130">Można również wyświetlić węzeł utworzone za pomocą `Azure-CLI` i `Kubectl`.</span><span class="sxs-lookup"><span data-stu-id="8a48e-130">You can also view the node created using `Azure-CLI` and `Kubectl`.</span></span>
+<span data-ttu-id="b392d-130">Można również wyświetlić węzeł utworzone za pomocą `Azure-CLI` i `Kubectl`.</span><span class="sxs-lookup"><span data-stu-id="b392d-130">You can also view the node created using `Azure-CLI` and `Kubectl`.</span></span>
 
-<span data-ttu-id="8a48e-131">Po pierwsze Uzyskiwanie poświadczeń:</span><span class="sxs-lookup"><span data-stu-id="8a48e-131">First, getting the credentials:</span></span>
+<span data-ttu-id="b392d-131">Po pierwsze Uzyskiwanie poświadczeń:</span><span class="sxs-lookup"><span data-stu-id="b392d-131">First, getting the credentials:</span></span>
 
 ```console
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
@@ -68,9 +68,9 @@ az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Clu
 
 ![Dane wyjściowe z powyższego polecenia konsoli: Scalone "MsSampleK8Cluster jako /root/.kube/config bieżącym kontekście.](media/get-credentials-command-result.png)
 
-<span data-ttu-id="8a48e-133">**Rysunek 4-19**.</span><span class="sxs-lookup"><span data-stu-id="8a48e-133">**Figure 4-19**.</span></span> <span data-ttu-id="8a48e-134">`aks get-credentials` wynik polecenia.</span><span class="sxs-lookup"><span data-stu-id="8a48e-134">`aks get-credentials` command result.</span></span>
+<span data-ttu-id="b392d-133">**Rysunek 4-19**.</span><span class="sxs-lookup"><span data-stu-id="b392d-133">**Figure 4-19**.</span></span> <span data-ttu-id="b392d-134">`aks get-credentials` wynik polecenia.</span><span class="sxs-lookup"><span data-stu-id="b392d-134">`aks get-credentials` command result.</span></span>
 
-<span data-ttu-id="8a48e-135">Następnie wyszukaj pobieranie węzłów z narzędzia Kubectl:</span><span class="sxs-lookup"><span data-stu-id="8a48e-135">And then, getting nodes from Kubectl:</span></span>
+<span data-ttu-id="b392d-135">Następnie wyszukaj pobieranie węzłów z narzędzia Kubectl:</span><span class="sxs-lookup"><span data-stu-id="b392d-135">And then, getting nodes from Kubectl:</span></span>
 
 ```console
 kubectl get nodes
@@ -78,9 +78,9 @@ kubectl get nodes
 
 ![Dane wyjściowe powyższej polecenia konsoli: Lista węzłów o stanie, wiek (czas uruchamiania) i wersji](media/kubectl-get-nodes-command-result.png)
 
-<span data-ttu-id="8a48e-137">**Rysunek 4-20**.</span><span class="sxs-lookup"><span data-stu-id="8a48e-137">**Figure 4-20**.</span></span> <span data-ttu-id="8a48e-138">`kubectl get nodes` wynik polecenia.</span><span class="sxs-lookup"><span data-stu-id="8a48e-138">`kubectl get nodes` command result.</span></span>
+<span data-ttu-id="b392d-137">**Rysunek 4-20**.</span><span class="sxs-lookup"><span data-stu-id="b392d-137">**Figure 4-20**.</span></span> <span data-ttu-id="b392d-138">`kubectl get nodes` wynik polecenia.</span><span class="sxs-lookup"><span data-stu-id="b392d-138">`kubectl get nodes` command result.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="8a48e-139">[Poprzednie](orchestrate-high-scalability-availability.md)
->[dalej](docker-apps-development-environment.md)</span><span class="sxs-lookup"><span data-stu-id="8a48e-139">[Previous](orchestrate-high-scalability-availability.md)
+><span data-ttu-id="b392d-139">[Poprzednie](orchestrate-high-scalability-availability.md)
+>[dalej](docker-apps-development-environment.md)</span><span class="sxs-lookup"><span data-stu-id="b392d-139">[Previous](orchestrate-high-scalability-availability.md)
 [Next](docker-apps-development-environment.md)</span></span>

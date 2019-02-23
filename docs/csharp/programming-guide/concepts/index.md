@@ -1,13 +1,7 @@
 ---
-title: Koncepcje programowania (C#)
+title: 'Koncepcje programowania (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143197"
 ---
 # <a name="programming-concepts-c"></a>Koncepcje programowania (C#)
 Ten rozdział opisuje pojęcia programowania w języku C#.  
@@ -16,7 +10,7 @@ Ten rozdział opisuje pojęcia programowania w języku C#.
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/index.md)|Opisuje sposób tworzenia i używania zestawów.|  
+|[Zestawy w środowisku .NET](../../../standard/assembly/index.md)|Opisuje sposób tworzenia i używania zestawów.|  
 |[Programowanie asynchroniczne z async i await (C#)](../../../csharp/programming-guide/concepts/async/index.md)|Opisuje, jak zapisać rozwiązania asynchroniczne za pomocą [async](../../../csharp/language-reference/keywords/async.md) i [await](../../../csharp/language-reference/keywords/await.md) słów kluczowych w języku C#. Zawiera Instruktaż.|  
 |[Atrybuty (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)|W tym artykule omówiono, jak zapewnić dodatkowe informacje na temat programowania elementów, takich jak typy, pola, metody i właściwości, za pomocą atrybutów.|  
 |[Informacje o wywołującym (C#)](../../../csharp/programming-guide/concepts/caller-information.md)|W tym artykule opisano sposób uzyskiwania informacji o obiekcie wywołującym metodę. Informacje te obejmują ścieżkę pliku i numer wiersza kodu źródłowego i nazwę elementu członkowskiego obiektu wywołującego.|  

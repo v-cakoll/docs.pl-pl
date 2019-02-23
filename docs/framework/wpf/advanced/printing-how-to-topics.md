@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 24899d8a2184c73b50902de4a30c39327576ded1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441206"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747359"
 ---
 # <a name="printing-how-to-topics"></a>Drukowanie Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia poligrafii i dołączone do funkcji zarządzania drukowaniem systemu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oraz nowe [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ścieżka wydruku.  
@@ -30,9 +30,6 @@ Tematy w tej sekcji przedstawiają sposoby użycia poligrafii i dołączone do f
   
  [Wyliczanie podzbioru kolejek drukowania](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Instrukcje dotyczące generowania listę drukarek mające określoną wspólną charakterystykę.  
-  
- [NOTINBUILD: Instrukcje: Rozszerzenie schematu wydruku i tworzyć nowe klasy wydruku System](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- Omówienie rozszerzonej działanie kodu zarządzanego programistów schemat można rozszerzyć drukowania do urządzeń drukujących specjalizacji lub drukarki przy użyciu nowych lub rzadko funkcji.  
   
  [Pobieranie właściwości obiektu systemowego drukowania bez odbicia](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
  Instrukcje dotyczące odnajdywania w środowisku uruchomieniowym drukowanie właściwości obiektu systemowego i ich typy.  

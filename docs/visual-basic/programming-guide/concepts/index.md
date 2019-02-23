@@ -2,12 +2,6 @@
 title: Koncepcje programowania (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147245"
 ---
 # <a name="programming-concepts-visual-basic"></a>Koncepcje programowania (Visual Basic)
 Ten rozdział opisuje pojęcia programowania w języku Visual Basic.  
@@ -16,7 +10,7 @@ Ten rozdział opisuje pojęcia programowania w języku Visual Basic.
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Opisuje sposób tworzenia i używania zestawów.|  
+|[Zestawy w środowisku .NET](../../../standard/assembly/index.md)|Opisuje sposób tworzenia i używania zestawów.|  
 |[Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Opisuje, jak zapisać rozwiązania asynchroniczne za pomocą [Async](../../../visual-basic/language-reference/modifiers/async.md) i [Await](../../../visual-basic/language-reference/operators/await-operator.md) słów kluczowych. Zawiera Instruktaż.|  
 |[Omówienie atrybuty (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|W tym artykule omówiono, jak zapewnić dodatkowe informacje na temat programowania elementów, takich jak typy, pola, metody i właściwości, za pomocą atrybutów.|  
 |[Informacje o wywołującym (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|W tym artykule opisano sposób uzyskiwania informacji o obiekcie wywołującym metodę. Informacje te obejmują ścieżkę pliku i numer wiersza kodu źródłowego i nazwę elementu członkowskiego obiektu wywołującego.|  

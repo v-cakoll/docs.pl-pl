@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40631a15bd07b5aa54488e5d3b99cee751e2e0bd
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611413"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748339"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps — Metoda
-Pobiera informacje o metadanych, w tym m.in. nazwy, podpis binarny i względny adres wirtualny, <xref:System.Type> odwołuje się token metadanych określonego elementu członkowskiego.  
+Pobiera informacje przechowywane w metadanych dla definicji określonego elementu członkowskiego, w tym m.in. nazwy, podpis binarny i względny adres wirtualny, <xref:System.Type> odwołuje się token metadanych określonego elementu członkowskiego. Jest to metoda pomocnika proste: Jeśli *mb* jest MethodDef **getmethodprops —** nosi nazwę; Jeśli *mb* jest FieldDef **getfieldprops —** jest wywoływana. Zobacz te inne metody, aby uzyskać szczegółowe informacje. 
   
 ## <a name="syntax"></a>Składnia  
   
@@ -79,7 +79,7 @@ HRESULT GetMemberProps (
  [out] Wszystkie skojarzone z elementem flagi implementacji metody.  
   
  `pdwCPlusTypeFlag`  
- [out] Flaga, która oznacza <xref:System.ValueType>.  
+ [out] Flaga, która oznacza <xref:System.ValueType>. Jest to jeden z `ELEMENT_TYPE_*` wartości.
   
  `ppValue`  
  [out] Wartość stała ciągu zwracane przez ten element członkowski.  

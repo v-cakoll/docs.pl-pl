@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfik
 ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9afdf1d8369e71f9614ebc2bf327e98d31b988ff
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092764"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748391"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -204,6 +204,9 @@ UCZENIE MASZYNOWE. Potoki przekształcenie firmy NET tworzą zbiór niestandardo
 Następnie wywołaj `mlContext.Transforms.Text.FeaturizeText` które featurizes kolumny tekstowej (`SentimentText`) o nazwie kolumny do wektora liczbowych `Features` używane przez algorytm uczenia maszynowego. To wywołanie otoką zwracające <xref:Microsoft.ML.Data.EstimatorChain%601> skutecznie się potoku. Nazwij to `pipeline` jako następnie dołączy trainer do `EstimatorChain`. Dodaj jako następnego wiersza kodu:
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
+
+>[!WARNING]
+> Wersja strukturze ML.NET 0.10 została zmieniona kolejność parametrów transformacji. To spowoduje nie Błąd limitu do czasu uruchomienia aplikacji i tworzenie modelu. Użyj nazwy parametrów transformacji, jak pokazano w poprzednim fragmencie kodu.
 
 Jest to krok przetwarzania wstępnego cechowania. Za pomocą dodatkowych składników dostępnych w strukturze ML.NET umożliwiają lepsze wyniki za pomocą modelu.
 

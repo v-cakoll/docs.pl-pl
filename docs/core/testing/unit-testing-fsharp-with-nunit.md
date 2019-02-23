@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 384d0ac9f36f9ef9daba851f52d577d97248cd67
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241765"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746049"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Testy jednostkowe F# bibliotek w programie .NET Core za pomocą polecenia dotnet test i NUnit
 
@@ -45,7 +45,7 @@ Wprowadź *MathService* bieżącego katalogu i uruchom następujące polecenie, 
 dotnet new classlib -lang F#
 ```
 
-Aby użyć Programowanie oparte na testach (TDD), należy utworzyć niepowodzenie stosowania usługi matematyczne:
+Możesz tworzyć niepowodzenie stosowania usługi matematyczne:
 
 ```fsharp
 module MyMath =
@@ -116,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Otwórz *UnitTest1.fs* i Dodaj następujący kod:
+Jeden zapisu kończy się niepowodzeniem testu, ułatwiają — dostęp próbny, a następnie powtórz ten proces. Otwórz *UnitTest1.fs* i Dodaj następujący kod:
 
 ```fsharp
 namespace MathService.Tests

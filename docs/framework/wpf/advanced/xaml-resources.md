@@ -7,18 +7,18 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 5898d3236f58cd40c5e1ccd446b756b94e3fb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a72d70d6fd0753677f2e9635a05a60d33fec
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718666"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748274"
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
 Zasób jest obiektem, który może być ponownie używane w różnych miejscach w aplikacji. Przykładami zasobów pędzle i stylów. W tym omówieniu opisano, jak użyć zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Można również tworzyć i uzyskiwać dostęp do zasobów przy użyciu kodu lub zamiennie między kodem i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [zasoby i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
   
 > [!NOTE]
->  Pliki zasobów, opisane w tym temacie są inne niż pliki zasobów opisano w [zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) i różni się od zasobów osadzony lub połączony opisanych w [ Zarządzanie zasobami aplikacji (.NET)](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  Pliki zasobów, opisane w tym temacie są inne niż pliki zasobów opisano w [zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) i różni się od zasobów osadzony lub połączony opisanych w [Zarządzanie Zasoby aplikacji (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
   
 <a name="usingresources"></a>   

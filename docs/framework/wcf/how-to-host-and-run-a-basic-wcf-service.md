@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 3a029ef23ba3e9a0dd62e410739fa8734acc202a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 73633c2c6119204f2fb608b32ae794a2e07b27d0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277774"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747077"
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Jak hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
 
@@ -101,7 +101,7 @@ Module Service
     Class Program
         Shared Sub Main()
             ' Step 1 Create a URI to serve as the base address
-            Dim baseAddress As New Uri("http://localhost:8000/ServiceModelSamples/Service")
+            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted")
 
             ' Step 2 Create a ServiceHost instance
             Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
@@ -144,18 +144,17 @@ End Module
 
 **Krok 3** — tworzy <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia. Punkt końcowy usługi składa się z adresu, powiązanie i kontraktu usługi. <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor przyjmuje w związku z tym typem interfejsu kontraktu usługi, powiązanie i adres. Umowa serwisowa jest `ICalculator`, zdefiniowane przez użytkownika, która implementuje typu usługi. Wiązanie używane w tym przykładzie jest <xref:System.ServiceModel.WSHttpBinding> czyli wbudowane powiązania, które służy do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](bindings-overview.md). Adres jest dołączany do podstawowego adresu do identyfikowania punktu końcowego. Adres podany w tym kodzie jest "CalculatorService", dlatego jest w pełni kwalifikowany adres punktu końcowego `"http://localhost:8000/GettingStarted/CalculatorService"`.
 
-    > [!IMPORTANT]
-    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](simplified-configuration.md) and [Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md).
+> [!IMPORTANT]
+> Dodawanie punktu końcowego usługi jest opcjonalny podczas korzystania z programu .NET Framework 4 lub nowszej. W tych wersjach Jeśli punkty końcowe nie są dodawane w kodzie lub konfiguracji usługi WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontrakt implementowane przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](specifying-an-endpoint-address.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](simplified-configuration.md) i [uproszczona konfiguracja usług WCF](./samples/simplified-configuration-for-wcf-services.md).
 
 **Krok 4** — Włączanie wymiany metadanych. Klienci będą używać wymiany metadanych do Generowanie serwerów proxy, które będą używane do wywoływania operacji usługi. Umożliwia tworzenie wymiany metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia, należy ustawić go w <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwości `true`i dodać zachowanie, aby <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> zbiór <xref:System.ServiceModel.ServiceHost> wystąpienia.
 
 **Krok 5** — Otwórz <xref:System.ServiceModel.ServiceHost> do nasłuchiwania pod kątem przychodzących wiadomości. Zauważ, że kod oczekuje na użytkownika trafić wprowadzić. Jeśli nie tego zrobić, aplikacja zostanie natychmiast zamknięta i usługa zostanie zamknięta. Zwróć również uwagę bloku try/catch używane. Po <xref:System.ServiceModel.ServiceHost> został uruchomiony, inny kod znajduje się w bloku try/catch. Aby uzyskać więcej informacji na temat bezpiecznego przechwytywanie wyjątków zgłaszanych przez <xref:System.ServiceModel.ServiceHost>, zobacz [Użyj Zamknij i Abort, aby zwolnić zasoby klienta WCF](samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
-> Edytowanie pliku App.config w GettingStartedLib w celu odzwierciedlenia zmian w kodzie:
-> 1. Zmień wiersz 14 `<service name="GettingStartedLib.CalculatorService">`
-> 2. Zmień wiersz 17 `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-> 3. Zmień wiersz 22 `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+> Po dodaniu biblioteki usługi WCF, Visual Studio może obsługiwać go dla Ciebie podczas debugowania przez uruchomienie hosta usługi. Aby uniknąć konfliktów tę opcję można wyłączyć. 
+> 1. Otwórz właściwości projektu dla GettingStartedLib.
+> 2. Przejdź do **opcje WCF** i usuń zaznaczenie pola wyboru **Start podczas debugowania Host usługi WCF**.
 
 ## <a name="verify-the-service-is-working"></a>Sprawdź, czy usługa działa
 
@@ -163,7 +162,7 @@ End Module
 
    Usługa musi być uruchamiane z uprawnieniami administratora. Ponieważ program Visual Studio została otwarta z uprawnieniami administratora, GettingStartedHost również jest uruchamiane z uprawnieniami administratora. Możesz również otworzyć nowego przy użyciu wiersza polecenia **Uruchom jako administrator** i uruchom service.exe znajdujący się w nim.
 
-2. Otwórz przeglądarkę internetową i przejdź do strony debugowania usługi na `http://localhost:8000/GettingStarted/CalculatorService`.
+2. Otwórz przeglądarkę internetową i przejdź do strony debugowania usługi na `http://localhost:8000/GettingStarted/`. **Uwaga! Końcowy ukośnik jest znaczący.**
 
 ## <a name="example"></a>Przykład
 
@@ -249,7 +248,7 @@ namespace GettingStartedHost
         static void Main(string[] args)
         {
             // Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("http://localhost:8000/ServiceModelSamples/Service");
+            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
 
             // Step 2 of the hosting procedure: Create ServiceHost
             ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
@@ -357,7 +356,7 @@ Module Service
     Class Program
         Shared Sub Main()
             ' Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Dim baseAddress As New Uri("http://localhost:8000/ServiceModelSamples/Service")
+            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted/")
 
             ' Step 2 of the hosting procedure: Create ServiceHost
             Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
@@ -411,3 +410,4 @@ Aby uzyskać informacje dotyczące rozwiązywania problemów, zobacz [Rozwiązyw
 
 - [Wprowadzenie](samples/getting-started-sample.md)
 - [Host samodzielny](samples/self-host.md)
+- [Usługi hostingowe](hosting-services.md)

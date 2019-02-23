@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Wyświetlanie danych z serwera bazy danych SQL w formancie DataGrid'
+title: 'Przewodnik: Wyświetlanie danych z bazy danych programu SQL Server w formancie DataGrid'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: e3db65c91e53ee0ed7b5e520bbc4989cd7404816
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197139"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748417"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Przewodnik: Wyświetlanie danych z bazy danych programu SQL Server w formancie DataGrid
 
@@ -75,7 +75,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 4.  Wybierz <xref:System.Windows.Window>.
 
-5.  Za pomocą okna właściwości lub Edytor XAML, Utwórz program obsługi zdarzeń dla <xref:System.Windows.Window> o nazwie `Window_Loaded` dla <xref:System.Windows.FrameworkElement.Loaded> zdarzeń. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie prostego programu obsługi zdarzeń](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+5.  Za pomocą okna właściwości lub Edytor XAML, Utwórz program obsługi zdarzeń dla <xref:System.Windows.Window> o nazwie `Window_Loaded` dla <xref:System.Windows.FrameworkElement.Loaded> zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Utwórz procedurę obsługi zdarzenia prostego](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
      Poniżej przedstawiono XAML dla pliku MainWindow.xaml.
 
@@ -100,4 +100,4 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.DataGrid>
-- [Jak I: rozpocząć korzystanie z programu Entity Framework w aplikacjach WPF?](https://go.microsoft.com/fwlink/?LinkId=159868)
+- [Jak mogę Rozpoczynanie pracy z platformą Entity Framework w aplikacjach WPF?](https://go.microsoft.com/fwlink/?LinkId=159868)

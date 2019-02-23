@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266913"
 ---
 # <a name="net-core-application-deployment"></a>Wdrażanie aplikacji .NET core
 
@@ -30,7 +24,7 @@ STACJE wdrożysz swojej aplikacji i zależności innych firm. Twoja aplikacja b�
 
 Wdrażanie z stacje ma szereg zalet:
 
-- Nie trzeba zdefiniować systemów operacyjnych, korzystających z aplikacji .NET Core będą z wyprzedzeniem. Ponieważ platformy .NET Core używa wspólny format plików PE w przypadku plików wykonywalnych i bibliotek, niezależnie od systemu operacyjnego, platformy .NET Core można wykonać aplikacji niezależnie od zasadniczego systemu operacyjnego. Aby uzyskać więcej informacji o formacie pliku PE, zobacz [Format pliku zestawu .NET](../../standard/assembly-format.md).
+- Nie trzeba zdefiniować systemów operacyjnych, korzystających z aplikacji .NET Core będą z wyprzedzeniem. Ponieważ platformy .NET Core używa wspólny format plików PE w przypadku plików wykonywalnych i bibliotek, niezależnie od systemu operacyjnego, platformy .NET Core można wykonać aplikacji niezależnie od zasadniczego systemu operacyjnego. Aby uzyskać więcej informacji o formacie pliku PE, zobacz [Format pliku zestawu .NET](../../standard/assembly/file-format.md).
 
 - Rozmiar pakietu wdrażania jest mały. Można wdrażać tylko w aplikacji oraz jego zależności, a nie .NET Core sam.
 

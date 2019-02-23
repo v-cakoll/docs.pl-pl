@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: c239cb3005d2748f9cba55a5bb0b5d564828f51b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0eb14b3f3859983ba4ba0436ab5a0fab9fda5006
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717915"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745308"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Instrukcje: Zaimplementuj PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] działa, określając listę powiązania. Lista powiązania jest uporządkowana z najwyższym priorytetem do najniższego priorytetu. Jeśli powiązanie najwyższy priorytet, zwraca wartość pomyślnie, gdy jest on przetwarzany występuje nigdy nie trzeba przetworzyć pozostałych powiązaniach na liście. Może to być takim powiązanie najwyższy priorytet zajmuje dużo czasu ma zostać obliczone, dalej najwyższy priorytet, która zwraca wartość pomyślnie będzie służyć do momentu powiązanie o wyższym priorytecie zwraca wartość pomyślnie.  
@@ -27,7 +27,7 @@ ms.locfileid: "54717915"
  Metody dostępu get z `SlowestDP` czeka na 5 sekund przed zwróceniem wartości `_slowestDP` element członkowski danych.  
   
 > [!NOTE]
->  Ten przykład dotyczy tylko w celach demonstracyjnych. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Wytyczne zaleca się przed definiowania właściwości, które są rzędów wolniej, niż byłoby zestaw pól. Aby uzyskać więcej informacji, zobacz [NIB: Wybieranie między właściwości i metody](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  Ten przykład dotyczy tylko w celach demonstracyjnych. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Wytyczne zaleca się przed definiowania właściwości, które są rzędów wolniej, niż byłoby zestaw pól. Aby uzyskać więcej informacji, zobacz [wybór między właściwości i metody](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

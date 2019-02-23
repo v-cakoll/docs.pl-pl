@@ -2,12 +2,12 @@
 title: 'Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd03154f9f4defdedd0694fe10398c6f62d920df
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500632"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746931"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)
 W przypadku osadzenia informacji o typie z zarządzanego zestawu z silną nazwą, luźno połączyć typy w aplikacji, aby osiągnąć niezależność. Oznacza to by używał typów z wielu wersji zarządzanej biblioteki bez konieczności ponownie skompilowana dla każdej wersji można napisać program.  
@@ -237,4 +237,4 @@ W przypadku osadzenia informacji o typie z zarządzanego zestawu z silną nazwą
 - [/ Link (opcje kompilatora C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)
 - [Programowanie za pomocą zestawów](../../../../framework/app-domains/programming-with-assemblies.md)
-- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Zestawy w środowisku .NET](../../../../standard/assembly/index.md)

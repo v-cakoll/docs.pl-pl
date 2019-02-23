@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94b061b6c403c22fc7eed4ca3632f3165693e868
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736020"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747142"
 ---
 # <a name="toolstrip-technology-summary"></a>Podsumowanie informacji o technologii formantów ToolStrip
 Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które obsługują jego użycia.  
@@ -63,26 +63,26 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które 
 ### <a name="task-dialog-boxes"></a>Okno dialogowe zadań  
  W programie Visual Studio kliknięcie tagu inteligentnego na formantu w Projektancie Wyświetla listę zadań wygodny dostęp do wielu często używanych poleceń.  
   
--   [MenuStrip — okno dialogowe zadań](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [MenuStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [ToolStrip — okno dialogowe zadań](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [ToolStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [ContextMenuStrip — okno dialogowe zadań](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   [ContextMenuStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [StatusStrip — okno dialogowe zadań](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   [StatusStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [ToolStripContainer — okno dialogowe zadań](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   [ToolStripContainer — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>Edytory kolekcji elementów  
  W programie Visual Studio, po kliknięciu **Edytuj elementy** zadania listy lub kliknij prawym przyciskiem myszy formant, a następnie wybierz pozycję **Edytuj elementy** w menu skrótów edytora kolekcji dla formantu jest wyświetlany. Edytory kolekcji umożliwiają dodawanie, usuwanie i zmienić kolejność elementów, które zawierają kontrolki. Można również wyświetlanie i zmiana właściwości formantu i kontrolki elementów.  
   
--   [MenuStrip — Edytor kolekcji elementów](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [MenuStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip — Edytor kolekcji elementów](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [StatusStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip — Edytor kolekcji elementów](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [ContextMenuStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [Edytor kolekcji elementów ToolStrip](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [Edytor kolekcji elementów ToolStrip](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>Hosting kontrolek  
  <xref:System.Windows.Forms.ToolStripControlHost> Klasa udostępnia wbudowane otoki <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, i <xref:System.Windows.Forms.ToolStripProgressBar> kontrolki. Możesz również hostować innych istniejących lub kontrolki COM w <xref:System.Windows.Forms.ToolStripControlHost>.  

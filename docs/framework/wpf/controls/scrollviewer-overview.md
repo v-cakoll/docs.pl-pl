@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: bcd51903879675f2607996c47aab9645217e9e21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bee47ed5294af66bcaa45254105c00d825042ad
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519622"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746062"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer — Przegląd
 Zawartość w interfejsie użytkownika często jest większy niż obszaru wyświetlania ekranu komputera. <xref:System.Windows.Controls.ScrollViewer> Kontrola zapewnia wygodny sposób, aby włączyć przewijanie zawartości w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie przedstawiono <xref:System.Windows.Controls.ScrollViewer> elementu i udostępnia kilka przykładów użycia.  
@@ -64,7 +64,7 @@ Zawartość w interfejsie użytkownika często jest większy niż obszaru wyświ
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [Tworzenie podglądu z przewijaniem](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)
+- [Instrukcje: Tworzenie podglądu z przewijaniem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 - [ScrollBar — style i szablony](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
 - [Kontrolki](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

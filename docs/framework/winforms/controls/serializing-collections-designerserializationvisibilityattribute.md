@@ -11,17 +11,17 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 5c9bb0bc16517ba3ffe6621cdf53b1685e8730e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ec32f5c365162883797b3f3f9ece4305dce7551
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533549"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747667"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Przewodnik: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute
 Kontrolki niestandardowe czasami udostępni kolekcji jako właściwość. W tym instruktażu przedstawiono sposób użycia <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> klasy do kontrolowania, jak kolekcja jest serializowany w czasie projektowania. Stosowanie <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> wartości właściwości z kolekcji zapewnia właściwość będzie serializowana.  
   
- Aby skopiować kod, w tym temacie na jednej liście, zobacz [jak: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9).  
+ Aby skopiować kod, w tym temacie na jednej liście, zobacz [jak: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -36,9 +36,9 @@ Kontrolki niestandardowe czasami udostępni kolekcji jako właściwość. W tym 
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>Aby utworzyć kontrolkę za pomocą kolekcji serializacji  
   
-1.  Utwórz projekt Biblioteka formantów Windows o nazwie `SerializationDemoControlLib`. Aby uzyskać więcej informacji, zobacz [szablon biblioteki kontrolki Windows](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Utwórz projekt Biblioteka formantów Windows o nazwie `SerializationDemoControlLib`. Aby uzyskać więcej informacji, zobacz [szablon biblioteki kontrolki Windows](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
-2.  Zmień nazwę `UserControl1` do `SerializationDemoControl`. Aby uzyskać więcej informacji, zobacz [jak: Zmiana nazw identyfikatorów](https://msdn.microsoft.com/library/2430f732-2b70-4516-8cf6-a7bb71cc9724).  
+2.  Zmień nazwę `UserControl1` do `SerializationDemoControl`. Aby uzyskać więcej informacji, zobacz [symbolu kodu Refaktoryzacja zmiany nazwy](/visualstudio/ide/reference/rename).  
   
 3.  W **właściwości** okna, ustaw wartość <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> właściwość `10`.  
   
@@ -129,16 +129,16 @@ Kontrolki niestandardowe czasami udostępni kolekcji jako właściwość. W tym 
 ## <a name="next-steps"></a>Następne kroki  
  Wiesz, jak do serializacji kolekcji standardowych typów, należy wziąć pod uwagę integrowanie Kontrolki niestandardowe głębiej środowisku czasu projektowania. W poniższych tematach opisano, jak poprawić integracji czasu projektowania dla kontrolek niestandardowych:  
   
--   [Architektura czasu projektowania](https://msdn.microsoft.com/library/4881917b-628f-4689-b872-472e4f8a4e3a)  
+-   [Architektura czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
   
 -   [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
   
--   [Przegląd serializacji projektanta](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
+-   [Przegląd serializacji projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
 -   [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [Przegląd serializacji projektanta](https://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)
-- [Instrukcje: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+- [Przegląd serializacji projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
+- [Instrukcje: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
 - [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

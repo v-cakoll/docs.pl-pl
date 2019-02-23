@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 4a99f4826a34ff3ab022686b6615f199558d7af4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fed7127624714e67121c388e70b8b833d88d772
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606299"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746539"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplikacje często są zależne od plików, które zawierają dane niewykonywalne, takich jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i audio. Windows Presentation Foundation (WPF) oferuje specjalne obsługę konfigurowania, identyfikowania i stosowania tych typów plików danych, które są wywoływane, pliki danych aplikacji. Ta obsługa dotyczy tego określonego zestawu typów plików danych aplikacji, w tym:  
@@ -53,7 +53,7 @@ ms.locfileid: "54606299"
 -   Musi być możliwy do zlokalizowania pliku danych aplikacji (zobacz [Przegląd lokalizacja i globalizacja WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
->  Pliki zasobów, opisane w tej sekcji są inne niż pliki zasobów opisano w [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md) i różni się od zasobów osadzony lub połączony opisanych w [zasobów zarządzania aplikacji (.NET) ](https://msdn.microsoft.com/library/f2582734-8ada-4baa-8a7c-e2ef943ddf7e).  
+>  Pliki zasobów, opisane w tej sekcji są inne niż pliki zasobów opisano w [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md) i różni się od zasobów osadzony lub połączony opisanych w [zasobów zarządzania aplikacji (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Konfigurowanie plików zasobów  
  W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], plik zasobów jest plikiem, który znajduje się w [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] projektu jako `Resource` elementu.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 5208d5a5291969b7060ef5a48e3f6c3ae42aa22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f600e8f27345f6555b0ecf9269ba97d34ba65477
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671919"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748222"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Określa format danych wyjściowych kompilatora.  
@@ -63,5 +63,5 @@ vbc -target:library in.vb
 - [— Odwołanie (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
-- [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

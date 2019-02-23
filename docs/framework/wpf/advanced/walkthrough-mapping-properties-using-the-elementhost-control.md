@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: bb418b725afd0c38a39e42e50511147d0f616059
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29356f171506ece0fe35418f682681b19830d71c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623225"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746341"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Przewodnik: Mapowanie właściwości z użyciem formantu ElementHost
 
@@ -62,7 +62,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 4.  Otwórz `Form1` w programie Windows Forms Designer. Kliknij dwukrotnie formularz, aby dodać moduł obsługi zdarzenia <xref:System.Windows.Forms.Form.Load> zdarzeń.
 
-5.  Wróć do projektanta Windows Forms i Dodaj program obsługi zdarzeń w formularzu <xref:System.Windows.Forms.Control.Resize> zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń za pomocą projektanta](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).
+5.  Wróć do projektanta Windows Forms i Dodaj program obsługi zdarzeń w formularzu <xref:System.Windows.Forms.Control.Resize> zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń za pomocą projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
 
 6.  Zadeklaruj <xref:System.Windows.Forms.Integration.ElementHost> pole `Form1` klasy.
 

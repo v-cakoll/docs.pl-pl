@@ -2,12 +2,12 @@
 title: 'Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 1f6176746b783d020c809fb0b5d55d741ce0148b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f14a3e41c00ae307086a6d3745d4ec76b772721c
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245479"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747547"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)
 W przypadku osadzenia informacji o typie z zarządzanego zestawu z silną nazwą, luźno połączyć typy w aplikacji, aby osiągnąć niezależność. Oznacza to by używał typów z wielu wersji zarządzanej biblioteki bez konieczności ponownie skompilowana dla każdej wersji można napisać program.  
@@ -222,8 +222,8 @@ End Function
   
 6.  W Eksploratorze plików otwórz folder wyjściowy ścieżki (na przykład C:\TypeEquivalenceSample). Kliknij dwukrotnie TypeEquivalenceClient.exe do uruchomienia programu. Program będzie odzwierciedlać nową wersję zestawu TypeEquivalenceRuntime bez konieczności został ponownie kompilowana.  
   
-## <a name="see-also"></a>Zobacz też  
- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)  
- [Pojęcia związane z programowaniem](../../../../visual-basic/programming-guide/concepts/index.md)  
- [Programowanie za pomocą zestawów](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Zobacz także
+- [/ Link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)
+- [Pojęcia związane z programowaniem](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Programowanie za pomocą zestawów](../../../../framework/app-domains/programming-with-assemblies.md)
+- [Zestawy w środowisku .NET](../../../../standard/assembly/index.md)

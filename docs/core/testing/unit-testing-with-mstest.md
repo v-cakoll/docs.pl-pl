@@ -5,12 +5,12 @@ author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
 ms.custom: seodec18
-ms.openlocfilehash: d0da8640393e298c3a6e367433eaa68ebb88fad7
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 4f6e1bb9a03a8f98052ec7bc911f22c288df6fe0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170295"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746853"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Jednostki testowania C# przy użyciu MSTest i .NET Core
 
@@ -26,7 +26,7 @@ Otwieranie okna powłoki. Utwórz katalog o nazwie *jednostki — testowanie-prz
     /PrimeService
 ```
 
-Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.cs* do *PrimeService.cs*. Aby użyć Programowanie oparte na testach (TDD), należy utworzyć z implementacją niepowodzenie `PrimeService` klasy:
+Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.cs* do *PrimeService.cs*. Tworzenie wdrożenia niepowodzenie `PrimeService` klasy:
 
 ```csharp
 using System;
@@ -93,7 +93,7 @@ Wykonaj [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj` ](../t
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould.cs* o następującej zawartości:
+Jeden zapisu kończy się niepowodzeniem testu, ułatwiają — dostęp próbny, a następnie powtórz ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould.cs* o następującej zawartości:
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;

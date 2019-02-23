@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 47964fa27ca3b8cbc509467a9b21f942bfc7cc75
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 193746e8efda5d7bc9e086bb0abf934cfeb1741a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239959"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748599"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Jednostki testowania bibliotek języka Visual Basic .NET Core za pomocą polecenia dotnet test i struktury xUnit
 
@@ -30,7 +30,7 @@ Utwórz katalog rozwiązania *PrimeService* katalogu. Mają następującą struk
     /PrimeService
 ```
 
-Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib -lang VB` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.VB* do *PrimeService.VB*. Aby użyć Programowanie oparte na testach (TDD), należy utworzyć z implementacją niepowodzenie `PrimeService` klasy:
+Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib -lang VB` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.VB* do *PrimeService.VB*. Tworzenie wdrożenia niepowodzenie `PrimeService` klasy:
 
 ```vb
 Namespace Prime.Services
@@ -92,7 +92,7 @@ Wykonaj [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` ](../t
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Usuń *UnitTest1.vb* z *PrimeService.Tests* katalogu i Utwórz nowy plik języka Visual Basic o nazwie *PrimeService_IsPrimeShould.VB*. Dodaj następujący kod:
+Jeden zapisu kończy się niepowodzeniem testu, ułatwiają — dostęp próbny, a następnie powtórz ten proces. Usuń *UnitTest1.vb* z *PrimeService.Tests* katalogu i Utwórz nowy plik języka Visual Basic o nazwie *PrimeService_IsPrimeShould.VB*. Dodaj następujący kod:
 
 ```vb
 Imports Xunit

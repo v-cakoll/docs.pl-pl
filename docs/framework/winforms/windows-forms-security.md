@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: 75016e9e04cf47782add18c87f7c677931743a4e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1da8e2c6ed8091b5931e8b0a881b54329228e82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865647"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746788"
 ---
 # <a name="windows-forms-security"></a>Zabezpieczenia formularzy systemu Windows
 Formularze Windows oferuje model zabezpieczeń, który jest oparty na kodzie (zabezpieczeń ustawionych poziomów dla kodu, niezależnie od użytkownika, uruchamiając kod). Jest to oprócz schematów zabezpieczeń, które mogą być spełnione już na komputerze. Mogą to być te w przeglądarce (na przykład na podstawie strefy zabezpieczeń dostępnych w programie Internet Explorer) lub systemu operacyjnego (na przykład opartego na poświadczeniu zabezpieczenia systemu Windows NT).  
@@ -33,10 +33,10 @@ Formularze Windows oferuje model zabezpieczeń, który jest oparty na kodzie (za
  W tym artykule opisano przeprowadzanie manipulacji okna: Korzystanie ze Schowka i wykonywania wywołań do kodu niezarządzanego w częściowo zaufanym środowisku.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [NIB: Domyślnych zasad zabezpieczeń](https://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [Domyślnych zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  Wyświetla listę domyślne uprawnienia przyznane w zestawy uprawnień pełnego zaufania, lokalny Intranet i Internet.  
   
- [NIB: Administrowanie zasadami zabezpieczeń Ogólne](https://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [Ogólne zasady zabezpieczeń administracji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))  
  Zawiera informacje dotyczące administrowania zasadami zabezpieczeń .NET Framework i podnoszenia uprawnień.  
   
  [Niebezpieczne uprawnienia i administrowanie zasadami](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -45,7 +45,7 @@ Formularze Windows oferuje model zabezpieczeń, który jest oparty na kodzie (za
  [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)  
  Zawiera łącza do tematów, które opisują najlepsze rozwiązania dotyczące bezpiecznego pisanie kodu dla programu .NET Framework.  
   
- [NIB: Żądanie uprawnień](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [Żądanie uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
  W tym artykule omówiono używanie atrybutów, aby umożliwić środowiska uruchomieniowego wiedzieć, jakie uprawnienia, kod musi zostać uruchomiony.  
   
  [Główne pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md)  
@@ -54,8 +54,8 @@ Formularze Windows oferuje model zabezpieczeń, który jest oparty na kodzie (za
  [Podstawy zabezpieczeń dostępu kodu](../../../docs/framework/misc/code-access-security-basics.md)  
  W tym artykule omówiono podstawowe informacje dotyczące pracy z .NET Framework, zasady zabezpieczeń w czasie uruchomienia.  
   
- [NIB: Ustalanie, kiedy modyfikowania zasad zabezpieczeń](https://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
+ [Ustalanie, kiedy modyfikowania zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
  Wyjaśnia, jak ustalić, kiedy trzeba rozdzielić z domyślnych zasad zabezpieczeń aplikacji.  
   
- [NIB: Wdrażanie zasad zabezpieczeń](https://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [Wdrażanie zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
  W tym artykule omówiono najlepsze sposób wdrażania zmiany zasad zabezpieczeń.

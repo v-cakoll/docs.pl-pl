@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms], about StatusStrip control
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
-ms.openlocfilehash: 9356ca85003987eabf4f62a25acad45d73e144fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2558c9c89bc296a3a92512a7d1a0ee7110dbcc21
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627242"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745240"
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip — Informacje o formancie
 A <xref:System.Windows.Forms.StatusStrip> kontrolka Wyświetla informacje dotyczące obiektu są wyświetlane na <xref:System.Windows.Forms.Form>, składniki obiektu lub informacji kontekstowych, które odnoszą się do tego obiektu operacji w ramach aplikacji. Zazwyczaj <xref:System.Windows.Forms.StatusStrip> kontrola składa się z <xref:System.Windows.Forms.ToolStripStatusLabel> obiektów, z których każda wyświetla tekst i/lub ikonę. <xref:System.Windows.Forms.StatusStrip> Może również zawierać <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton>, i <xref:System.Windows.Forms.ToolStripProgressBar> kontrolki.  
@@ -21,7 +21,7 @@ A <xref:System.Windows.Forms.StatusStrip> kontrolka Wyświetla informacje dotycz
   
  Brak rozbudowana Obsługa obsługi <xref:System.Windows.Forms.StatusStrip> elementów i Typowe polecenia w programie Visual Studio.  
   
- Zobacz też [StatusStrip — Edytor kolekcji elementów](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [StatusStrip — okno dialogowe zadania](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).  
+ Zobacz też [StatusStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100)) i [StatusStrip — okno dialogowe zadania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100)).  
   
  Mimo że <xref:System.Windows.Forms.StatusStrip> zastępuje i rozszerza <xref:System.Windows.Forms.StatusBar> kontrolki z poprzednich wersji <xref:System.Windows.Forms.StatusBar> został zachowany na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości wybranie opcji.  
   

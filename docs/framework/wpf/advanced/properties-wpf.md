@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 1d6d9ac86ccc15ccc55d27e4222864c4cda92ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546032"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745576"
 ---
 # <a name="properties-wpf"></a>Właściwości (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia to zestaw usług, których można użyć, aby rozszerzyć funkcjonalność programu [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Zbiorczo te usługi są zwykle nazywane systemu właściwość WPF. Właściwość, która nie jest obsługiwana przez [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] właściwości systemu jest znany jako właściwość zależności.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia zestaw usług, które mogą służyć do rozszerzenia funkcji [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Zbiorczo te usługi są zwykle określane jako system właściwości WPF. Właściwość, która jest wspierana przez [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] system właściwości jest znany jako właściwość zależności.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Wywołania zwrotne i weryfikacja właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Metadane właściwości struktury](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [Następstwo wartości właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [Właściwości zależności tylko do odczytu](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [Dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [Zabezpieczenia właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [Bezpieczne wzorce konstruktora dla obiektów DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [Właściwości zależności typu kolekcji](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [Ładowanie XAML i właściwości zależności](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
+- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [Wywołania zwrotne i weryfikacja właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+- [Metadane właściwości struktury](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
+- [Następstwo wartości właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [Właściwości zależności tylko do odczytu](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [Dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [Zabezpieczenia właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+- [Bezpieczne wzorce konstruktora dla obiektów DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [Właściwości zależności typu kolekcji](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
+- [Ładowanie XAML i właściwości zależności](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.DependencyProperty>  

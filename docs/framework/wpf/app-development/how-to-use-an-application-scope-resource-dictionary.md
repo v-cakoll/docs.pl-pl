@@ -9,18 +9,18 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: 8df357d3b366a057b2a6072fb69b47a6075df5a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cd3e125b5b1a97f5851d4d1845e3e9e384e3d16
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492549"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748560"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Instrukcje: Użyj słownika zasobów zakresu aplikacji
 Ten przykład pokazuje, jak zdefiniować i użyć słownika niestandardowego zasobów zakresu aplikacji.  
   
 ## <a name="example"></a>Przykład  
- <xref:System.Windows.Application> udostępnia magazyn zakresu aplikacji do zasobów udostępnionych: <xref:System.Windows.Application.Resources%2A>. Domyślnie <xref:System.Windows.Application.Resources%2A> właściwość jest inicjowana z wystąpieniem <xref:System.Windows.ResourceDictionary> typu. Użycie tego wystąpienia, jeśli pobieranie i ustawianie właściwości zakresu aplikacji za pomocą <xref:System.Windows.Application.Resources%2A>. Aby uzyskać więcej informacji, zobacz [jak: Pobieranie i ustawianie zasobów zakresu aplikacji](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application> udostępnia magazyn zakresu aplikacji do zasobów udostępnionych: <xref:System.Windows.Application.Resources%2A>. Domyślnie <xref:System.Windows.Application.Resources%2A> właściwość jest inicjowana z wystąpieniem <xref:System.Windows.ResourceDictionary> typu. Użycie tego wystąpienia, jeśli pobieranie i ustawianie właściwości zakresu aplikacji za pomocą <xref:System.Windows.Application.Resources%2A>. Aby uzyskać więcej informacji, zobacz [jak: Pobieranie i ustawianie zasobów zakresu aplikacji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348547(v=vs.100)).
   
  Jeśli masz wiele zasobów, które można ustawić za pomocą <xref:System.Windows.Application.Resources%2A>, można zamiast tego użyć słownika zasobów niestandardowych do przechowywania tych zasobów i ustawić <xref:System.Windows.Application.Resources%2A> z nim zamiast tego. Poniżej przedstawiono, jak zadeklarować słownik zasobów niestandardowych przy użyciu XAML.
   

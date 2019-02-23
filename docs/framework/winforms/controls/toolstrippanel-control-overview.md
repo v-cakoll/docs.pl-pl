@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 104ccfd0370eff48312372a2391031575b53b3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f701223912d577d1ef4f738639186e8d413697
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660232"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748365"
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel — Informacje o formancie
 A <xref:System.Windows.Forms.ToolStripPanel> zapewnia pojedynczy obszar rozmieszczania i rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.StatusStrip> kontrolki. Wiele <xref:System.Windows.Forms.ToolStrip> formantów stosu w pionie lub w poziomie w zależności od <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> z <xref:System.Windows.Forms.ToolStripPanel>.  
@@ -31,4 +31,4 @@ A <xref:System.Windows.Forms.ToolStripPanel> zapewnia pojedynczy obszar rozmiesz
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>
-- [ToolStrip — przykład](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+- [ToolStrip — przykład](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms181005(v=vs.90))

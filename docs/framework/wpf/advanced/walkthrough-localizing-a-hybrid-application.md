@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 3d658d0dfb07a636a7338c69cae93b7e8a54383e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2f771f124cee6ad52ea841006a6749408540048
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613873"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746075"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Przewodnik: Lokalizacja aplikacji hybrydowej
 
@@ -177,5 +177,5 @@ Zlokalizowane zawartość jest przechowywana w tylko do zasobów *zestawie satel
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Lokalizowanie aplikacji](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
-- [Przewodnik: Lokalizowanie interfejsów Windows Forms](https://msdn.microsoft.com/library/9a96220d-a19b-4de0-9f48-01e5d82679e5)
+- [Przewodnik: Lokalizowanie interfejsów Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

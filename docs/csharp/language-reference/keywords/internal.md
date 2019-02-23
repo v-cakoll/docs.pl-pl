@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: 8d787f8deb8f3b7d1e59d99e71662960a5c04e15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aefb806b452452d4837b29b6ab11ce158ea412bc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652088"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745424"
 ---
 # <a name="internal-c-reference"></a>internal (odwołanie w C#)
 `internal` Słowo kluczowe jest [modyfikator dostępu](../../../csharp/language-reference/keywords/access-modifiers.md) dla typów i elementów członkowskich typu. 
@@ -32,7 +32,7 @@ public class BaseClass
 
  Porównanie `internal` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md) i [modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Aby uzyskać więcej informacji na temat zestawów, zobacz [zestawy i Globalna pamięć podręczna zestawów](../../../csharp/programming-guide/concepts/assemblies-gac/index.md).  
+ Aby uzyskać więcej informacji na temat zestawów, zobacz [zestawy na platformie .NET](../../../standard/assembly/index.md).  
   
  Typowym zastosowaniem dostępu wewnętrznego jest opracowywany oparty na komponentach, ponieważ umożliwia grupy składników do współpracy w sposób prywatne bez ujawniania w pozostałej części kodu aplikacji. Na przykład można dostarczyć umożliwiająca tworzenie graficznych interfejsów użytkownika `Control` i `Form` klas, które współpracują przy użyciu elementów członkowskich z dostępem do wewnętrznych. Ponieważ te elementy członkowskie są wewnętrzne, nie są one widoczne do kodu, który używa programu framework.  
   

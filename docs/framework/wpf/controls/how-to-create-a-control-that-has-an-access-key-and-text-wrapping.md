@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: 12410e2abd1031f7ac42bdaab4b8e09a6b8b6006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb8379776066802277886b54c60c502ad58768e0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649586"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748170"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Instrukcje: Utwórz formant z kluczem dostępu i zwijaniem tekstu
 W tym przykładzie pokazano, jak utworzyć formant, który ma klucz dostępu i obsługuje zawijania tekstu. W przykładzie użyto <xref:System.Windows.Controls.Label> kontroli w celu zilustrowania koncepcji te.  
@@ -37,4 +37,4 @@ W tym przykładzie pokazano, jak utworzyć formant, który ma klucz dostępu i o
  [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Ustaw właściwość Target etykiety](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)
+- [Instrukcje: Ustaw właściwość Target etykiety](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie i używanie zestawów przy użyciu wiersza polecenia (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: eefb6ccfabdb7897874ae4e5a8abc8c2d9cc8e35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbfccfc80c683dfd49739e680587ca40e6ca24f3
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534777"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746393"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Instrukcje: Tworzenie i używanie zestawów przy użyciu wiersza polecenia (Visual Basic)
 Zestaw lub łączenia Biblioteka dynamiczna (DLL), jest połączony z programu w czasie wykonywania. Aby zademonstrować, tworzenie i używanie biblioteki DLL, należy rozważyć następujący scenariusz:  
@@ -119,5 +119,5 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
   
 ## <a name="see-also"></a>Zobacz także
 - [Pojęcia związane z programowaniem](../../../../visual-basic/programming-guide/concepts/index.md)
-- [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Zestawy w środowisku .NET](../../../../standard/assembly/index.md)
 - [Tworzenie klasy utrzymującej funkcje DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

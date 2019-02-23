@@ -2,12 +2,12 @@
 title: 'Instrukcje: Dzielenie się zestawem z innymi aplikacjami (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: d0e1dafc700b55a63342331b3280337d2c93cbd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1acd665c702dd3b765cdeffde5470893e7097695
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631831"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747693"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Instrukcje: Dzielenie się zestawem z innymi aplikacjami (Visual Basic)
 Zestawy mogą być prywatne lub udostępnione: domyślnie większości programów proste składają się z zestawu prywatnego, ponieważ nie są przeznaczone do użycia przez inne aplikacje.  
@@ -29,5 +29,5 @@ Zestawy mogą być prywatne lub udostępnione: domyślnie większości programó
 ## <a name="see-also"></a>Zobacz także
 
 - [Pojęcia związane z programowaniem](../../../../visual-basic/programming-guide/concepts/index.md)
-- [Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [Zestawy w środowisku .NET](../../../../standard/assembly/index.md)
 - [Programowanie za pomocą zestawów](../../../../framework/app-domains/programming-with-assemblies.md)

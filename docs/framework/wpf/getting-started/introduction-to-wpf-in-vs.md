@@ -15,22 +15,22 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: a2d88b9094a6168989360102a25ef7ce6e0a918a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554970"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747317"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Wprowadzenie do platformy WPF w programie Visual Studio
-Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom ujednolicony model programowania do tworzenia aplikacji klasycznych biznesowych — w systemie Windows.  
+Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom jednolity model programowania do tworzenia aplikacji klasycznych line-of-business na Windows.  
   
- [Utwórz aplikacje klasyczne z technologii Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [Twórz aplikacje pulpitu za pomocą programu Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [Projektowanie XAML w programie Visual Studio i Blend for Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [Projektowanie XAML w programach Visual Studio i Blend for Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
  [Wprowadzenie do WPF](/visualstudio/designers/introduction-to-wpf)  
   
- [WPF w programie .NET Framework](https://msdn.microsoft.com/library/ms754130\(v=vs.100\).aspx)  
+ [Platformy WPF w programie .NET Framework](../index.md)  
   
- [Pobierz program Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [Get Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

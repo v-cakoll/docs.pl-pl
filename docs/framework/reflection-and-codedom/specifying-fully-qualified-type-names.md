@@ -1,6 +1,6 @@
 ---
 title: Określanie w pełni kwalifikowanych nazw typów
-ms.date: 03/14/2018
+ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d73cad94e0e4343c5dd09a3b12131afeabef873
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628542"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747252"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Określanie w pełni kwalifikowanych nazw typów
 Należy określić nazwy typów, które mają prawidłowe dane wejściowe do różnych operacji odbicia. W pełni kwalifikowaną nazwę typu składa się z specyfikacja nazwy zestawu, specyfikacji przestrzeni nazw i nazwę typu. Specyfikacje nazwy typu są używane przez metody takie jak <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, i <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
@@ -41,9 +41,12 @@ ReferenceTypeSpec
 
 SimpleTypeSpec
     : PointerTypeSpec
-    | ArrayTypeSpec
+    | GenericTypeSpec
     | TypeName
     ;
+
+GenericTypeSpec
+   : SimpleTypeSpec ` NUMBER
 
 PointerTypeSpec
     : SimpleTypeSpec '*'
@@ -177,7 +180,10 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0  
 ```  
-  
+## <a name="specifying-generic-types"></a>Określanie typów ogólnych
+
+SimpleTypeSpec\`numer reprezentuje to otwarty typ ogólny z od 1 do *n* parametrów typu genetycznego. Na przykład, można pobrać odwołania do otwarty typ ogólny listy\<T > lub zamknięty typ ogólny List\<ciągu >, użyj ``Type.GetType("System.Collections.Generic.List`1")`` można pobrać odwołania do typu ogólnego słownika\<TKey, TValue >, użyj ``Type.GetType("System.Collections.Generic.Dictionary`2")``. 
+
 ## <a name="specifying-pointers"></a>Określenie wskaźników  
  SimpleTypeSpec * reprezentuje niezarządzanym wskaźnikiem. Na przykład, aby uzyskać wskaźnik do typu MyType, użyj `Type.GetType("MyType*")`. Aby uzyskać wskaźnik do wskaźnika do typu MyType, użyj `Type.GetType("MyType**")`.  
   
@@ -192,7 +198,6 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 -   `Type.GetType("MyArray[]")` pobiera tablicy jednowymiarowej, za pomocą 0 dolną granicę.  
   
 -   `Type.GetType("MyArray[*]")` pobiera tablicy jednowymiarowej, za pomocą nieznany dolną granicę.  
-  
 -   `Type.GetType("MyArray[][]")` Pobiera tablicę dwuwymiarową tablicę.  
   
 -   `Type.GetType("MyArray[*,*]")` i `Type.GetType("MyArray[,]")` pobiera prostokątnej dwuwymiarowej tablicy przy użyciu nieznanego dolne granice.  

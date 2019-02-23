@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 3db82db502c7404ce235c5824b58046fbd4dbe7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54307313eb7955a40e290218aacf27be320e745b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705433"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746665"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (C#)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o silnych nazwach. Oba zestawy muszą silnej nazwy. Mimo że oba zestawy w tym przykładzie użyć tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
@@ -91,7 +91,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Zestawy w środowisku .NET](../../../../standard/assembly/index.md)
 - [Przyjazne zestawy (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
 - [Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)

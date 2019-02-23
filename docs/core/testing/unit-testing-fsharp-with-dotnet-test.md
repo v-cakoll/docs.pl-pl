@@ -7,12 +7,12 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 08ebe39fd6e992fdcdc10e19d87d565e76d909a2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9765c463bb427f79dcd0308e7e4fc643fdc06968
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239202"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745949"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Testy jednostkowe F# bibliotek w programie .NET Core za pomocą polecenia dotnet test i struktury xUnit
 
@@ -30,7 +30,7 @@ Utwórz katalog rozwiązania *MathService* katalogu. Struktura katalogów i plik
     /MathService
 ```
 
-Wprowadź *MathService* bieżącego katalogu i uruchom [ `dotnet new classlib -lang F#` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego.  Aby korzystać z projektowania opartego na testach (TDD), należy utworzyć niepowodzenie stosowania usługi matematyczne:
+Wprowadź *MathService* bieżącego katalogu i uruchom [ `dotnet new classlib -lang F#` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego.  Utworzysz niepowodzenie stosowania usługi matematyczne:
 
 ```fsharp
 module MyMath =
@@ -87,7 +87,7 @@ Wykonaj [ `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` ](../too
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Otwórz *Tests.fs* i Dodaj następujący kod:
+Jeden zapisu kończy się niepowodzeniem testu, ułatwiają — dostęp próbny, a następnie powtórz ten proces. Otwórz *Tests.fs* i Dodaj następujący kod:
 
 ```fsharp
 [<Fact>]

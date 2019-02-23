@@ -1,5 +1,5 @@
 ---
-title: Jak analizować atrament za pomocą wskazówek analizy
+title: 'Instrukcje: Analizuj atrament za pomocą wskazówek analizy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ink [WPF], AnalysisHintNode objects [WPF]
 - AnalysisHintNode objects [WPF]
 ms.assetid: d4421ed4-77f5-4640-829e-9f1de50b2ff2
-ms.openlocfilehash: 74f8b3df5767888e8bca0d9f67e9c47630353fb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0071620c406c5907bbb656269729a5aad98eede
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543605"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748677"
 ---
-# <a name="how-to-analyze-ink-with-analysis-hints"></a>Jak analizować atrament za pomocą wskazówek analizy
-[System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) udostępnia wskazówkę dla [System.Windows.Ink.InkAnalyzer](https://msdn.microsoft.com/library/system.windows.ink.inkanalyzer(v=vs.100).aspx) do której jest dołączona.  Wskazówka ma zastosowanie do obszaru określonego przez [System.Windows.Ink.ContextNode.Location%2A](https://msdn.microsoft.com/library/system.windows.ink.contextnode.location(v=vs.100).aspx) właściwość [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) i zawiera dodatkowy kontekst do analizatora pismo odręczne na zwiększyć dokładność rozpoznawania. [System.Windows.Ink.InkAnalyzer](https://msdn.microsoft.com/library/system.windows.ink.inkanalyzer(v=vs.100).aspx) zastosowanie tego informacje o kontekście podczas analizowania odręczne uzyskane z wewnątrz obszaru wskazówki.  
+# <a name="how-to-analyze-ink-with-analysis-hints"></a>Instrukcje: Analizuj atrament za pomocą wskazówek analizy
+[System.Windows.Ink.AnalysisHintNode](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms610344(v=vs.90)) stanowi wskazówkę dla [System.Windows.Ink.InkAnalyzer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms616754(v=vs.90)) do której jest dołączona.  Wskazówka ma zastosowanie do obszaru, który został określony przez [System.Windows.Ink.ContextNode.Location%2A](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms594508(v=vs.90)) właściwość [System.Windows.Ink.AnalysisHintNode](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms610344(v=vs.90)) i tworzy dodatkowy kontekst do analizator pisma odręcznego Zwiększ dokładność rozpoznawania. [System.Windows.Ink.InkAnalyzer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms616754(v=vs.90)) stosuje te informacje kontekstu, gdy analizowanie pisma odręcznego uzyskany z obszaru wskazówki.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład dotyczy aplikacji, która używa wielu [System.Windows.Ink.AnalysisHintNode](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode(v=vs.100).aspx) obiekty formularza, który akceptuje odręczne. Aplikacja używa [System.Windows.Ink.AnalysisHintNode.Factoid%2A](https://msdn.microsoft.com/library/system.windows.ink.analysishintnode.factoid(v=vs.100)) właściwość, aby podać informacje o kontekście dla każdego wpisu w formularzu.  Aplikacja używa analizy w tle w celu analizowania pismo odręczne i czyści formę odręczne wszystkich pięciu sekund po przesunięciu Dodawanie odręczne.  
+ Poniższy przykład jest aplikacja, która korzysta z wielu [System.Windows.Ink.AnalysisHintNode](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms610344(v=vs.90)) obiektów w formularzu, który akceptuje dane wejściowe pisma odręcznego. Aplikacja używa [System.Windows.Ink.AnalysisHintNode.Factoid%2A](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms594341(v=vs.90)) właściwości, aby zapewnić informacje o kontekście dla każdego wpisu w formularzu.  Aplikacja analizowanie pisma odręcznego za pomocą analizy w tle i czyści formularza całe pismo odręczne pięciu sekund po użytkownik zatrzymuje Dodawanie pisma odręcznego.  
   
  [!code-xaml[HowToAnalyzeInk#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HowToAnalyzeInk/CSharp/FormAnalyzer.xaml#1)]  
   

@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2c8a6b86dd66b13faa242f94cf11cb940986fbd0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239159"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746879"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Biblioteki języka Visual Basic .NET Core za pomocą polecenia dotnet test i NUnit testy jednostkowe
 
@@ -44,7 +44,7 @@ Wprowadź *PrimeService* bieżącego katalogu i uruchom następujące polecenie,
 dotnet new classlib -lang VB
 ```
 
-Zmień nazwę *Class1.VB* do *PrimeService.VB*. Aby użyć Programowanie oparte na testach (TDD), należy utworzyć z implementacją niepowodzenie `PrimeService` klasy:
+Zmień nazwę *Class1.VB* do *PrimeService.VB*. Tworzenie wdrożenia niepowodzenie `PrimeService` klasy:
 
 ```vb
 Imports System
@@ -116,7 +116,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. W *PrimeService.Tests* katalogu, zmiana nazwy *UnitTest1.vb* plik *PrimeService_IsPrimeShould.VB* i zastąp jego całą zawartość następującym kodem:
+Jeden zapisu kończy się niepowodzeniem testu, ułatwiają — dostęp próbny, a następnie powtórz ten proces. W *PrimeService.Tests* katalogu, zmiana nazwy *UnitTest1.vb* plik *PrimeService_IsPrimeShould.VB* i zastąp jego całą zawartość następującym kodem:
 
 ```vb
 Imports NUnit.Framework

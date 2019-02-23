@@ -7,12 +7,12 @@ helpviewer_keywords:
 - control library [WPF]
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
-ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0bdd636af78ddfce22c28edc3dd4523654d07611
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964897"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746014"
 ---
 # <a name="control-library"></a>Biblioteka formantów
 Biblioteka formantów Windows Presentation Foundation (WPF) zawiera informacje dotyczące formantów, dostarczone przez Windows Presentation Foundation (WPF), alfabetycznym.  
@@ -50,7 +50,6 @@ Biblioteka formantów Windows Presentation Foundation (WPF) zawiera informacje d
  [PrintDialog](../../../../docs/framework/wpf/controls/printdialog.md)  
  [RadioButton](../../../../docs/framework/wpf/controls/radiobutton.md)  
  [RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton.md)  
- [Wstążka (WPF)](https://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
  [RichTextBox](../../../../docs/framework/wpf/controls/richtextbox.md)  
  [ScrollBar](../../../../docs/framework/wpf/controls/scrollbar.md)  
  [ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer.md)  

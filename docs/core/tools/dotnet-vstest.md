@@ -3,12 +3,12 @@ title: polecenie vstest DotNet
 description: Polecenia dotnet vstest kompiluje projekt i wszystkie jego zależności.
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169031"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747732"
 ---
 # <a name="dotnet-vstest"></a>DotNet vstest
 
@@ -20,7 +20,7 @@ ms.locfileid: "53169031"
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
@@ -43,7 +43,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>Opis
 
-`dotnet-vstest` Polecenia `VSTest.Console` aplikacji wiersza polecenia do uruchamiania automatycznych jednostkowych i kodowanych testów aplikacji interfejsu użytkownika.
+`dotnet-vstest` Polecenia `VSTest.Console` aplikacji wiersza polecenia, aby uruchomić automatyczne testy jednostkowe.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -53,7 +53,7 @@ Uruchom testy z określonych zestawów. Oddziel wiele nazw zestawów testowych s
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-21tabnetcore21"></a>[.NET core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -73,11 +73,11 @@ Docelowa platforma architektury używanej do wykonania testu. Prawidłowe warto�
 
 `--Framework|/Framework:<Framework Version>`
 
-Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework35`, `Framework40`, `Framework45`, `FrameworkCore10`, i `FrameworkUap10`.
+Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40`, `Framework45`, `FrameworkCore10`, i `FrameworkUap10`.
 
 `--Parallel|/Parallel`
 
-Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Ustaw jawne liczby rdzeni, przy użyciu pliku ustawień.
+Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Określ jawną liczby rdzeni, ustawiając właściwość MaxCpuCount w węźle RunConfiguration w pliku runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -162,11 +162,11 @@ Docelowa platforma architektury używanej do wykonania testu. Prawidłowe warto�
 
 `--Framework|/Framework:<Framework Version>`
 
-Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework35`, `Framework40`, `Framework45`, i `FrameworkCore10`.
+Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40`, `Framework45`, i `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Ustaw jawne liczby rdzeni, przy użyciu pliku ustawień.
+Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Określ jawną liczby rdzeni, ustawiając właściwość MaxCpuCount w węźle RunConfiguration w pliku runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -238,11 +238,11 @@ Docelowa platforma architektury używanej do wykonania testu. Prawidłowe warto�
 
 `--Framework|/Framework:<Framework Version>`
 
-Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework35`, `Framework40`, `Framework45`, i `FrameworkCore10`.
+Wersja docelowa.NET Framework używanego do wykonania testu. Prawidłowe wartości należą do nich `.NETFramework,Version=v4.6` lub `.NETCoreApp,Version=v1.0`. Inne obsługiwane wartości to `Framework40`, `Framework45`, i `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Ustaw jawne liczby rdzeni, przy użyciu pliku ustawień.
+Wykonuj testy równolegle. Domyślnie wszystkie dostępne rdzenie maszyny są dostępne do użycia. Określ jawną liczby rdzeni, ustawiając właściwość MaxCpuCount w węźle RunConfiguration w pliku runsettings.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

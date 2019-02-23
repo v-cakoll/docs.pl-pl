@@ -2,12 +2,12 @@
 title: 'Instrukcje: Ładowanie i zwalnianie zestawów (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: eadab1d0e5ddd22fb5c0e92f45162548c9bfd76c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ff3c494b40650da1e30e111b2e7f916e249d78a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509353"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748755"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Instrukcje: Ładowanie i zwalnianie zestawów (C#)
 Zestawy odwołuje się program automatycznie zostaną załadowane w czasie kompilacji, ale jest również możliwe do załadowania określonych zestawów do bieżącej domeny aplikacji w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [jak: Ładowanie zestawów do domeny aplikacji](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -27,5 +27,5 @@ Zestawy odwołuje się program automatycznie zostaną załadowane w czasie kompi
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)
-- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Zestawy w środowisku .NET](../../../../standard/assembly/index.md)
 - [Instrukcje: Ładowanie zestawów do domeny aplikacji](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

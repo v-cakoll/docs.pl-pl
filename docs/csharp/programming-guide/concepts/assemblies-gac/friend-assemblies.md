@@ -2,12 +2,12 @@
 title: Przyjazne zestawy (C#)
 ms.date: 07/20/2015
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-ms.openlocfilehash: e464162f12fe386c37262753331635ea82b128b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5de27643be8f5ddbf533ebb75b66666fc6bc148b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576983"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748196"
 ---
 # <a name="friend-assemblies-c"></a>Przyjazne zestawy (C#)
 A *przyjaznego zestawu* to zestaw, który mogą uzyskiwać dostęp do innego zestawu [wewnętrzny](../../../../csharp/language-reference/keywords/internal.md) typów i elementów członkowskich. Po zidentyfikowaniu zestawu jako zestaw przyjazny, masz już Oznacz typy i elementy członkowskie jako publiczny je, aby były dostępne dla innych zestawów. Jest to szczególnie wygodne w następujących scenariuszach:  
@@ -76,5 +76,5 @@ public class ClassWithFriendMethod
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
 - [Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Zestawy w środowisku .NET](../../../../standard/assembly/index.md)
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)

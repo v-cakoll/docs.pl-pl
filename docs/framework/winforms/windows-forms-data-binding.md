@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b33ad9d78230588b9c1afd5d59fd0333e2cd18a6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486013"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747064"
 ---
 # <a name="windows-forms-data-binding"></a>Powiązywanie danych formularzy systemu Windows
 Powiązanie danych w formularzach Windows Forms zapewnia sposób wyświetlania i zmiany informacji ze źródła danych w kontrolkach w formularzu. Możesz powiązać zarówno źródeł danych tradycyjnych, jak i praktycznie dowolne strukturę, która zawiera dane.  
@@ -27,31 +27,31 @@ Powiązanie danych w formularzach Windows Forms zapewnia sposób wyświetlania i
  [Interfejsy dotyczące wiązania danych](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
  Opisano kilka interfejsów używane dla wiązania danych Windows Forms.  
   
- [Instrukcje: nawigowanie po danych w formularzach Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
+ [Instrukcje: Nawigowanie po danych w formularzach Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
  Pokazuje, jak przechodzenie przez elementy w źródle danych.  
   
  [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  W tym artykule opisano różne rodzaje powiadomienia o zmianie dla powiązania danych Windows Forms.  
   
- [Instrukcje: implementowanie interfejsu INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
+ [Instrukcje: Implementowanie interfejsu INotifyPropertyChanged](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
  Pokazuje, jak zaimplementować <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu. Interfejs komunikuje się kontrolki powiązane zmiany właściwości w obiekcie firmy  
   
- [Instrukcje: stosowanie wzorca PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
+ [Instrukcje: Stosowanie wzorca PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
  Przedstawia sposób zastosowania *PropertyName*wzorzec zmieniono właściwości formant użytkownika interfejsu Windows Forms.  
   
- [Instrukcje: implementowanie interfejsu ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
+ [Instrukcje: Implementowanie interfejsu ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
  Pokazuje, jak włączyć funkcję odnajdywania schematu, który może być powiązana lista implementując <xref:System.ComponentModel.ITypedList> interfejsu.  
   
- [Instrukcje: implementowanie interfejsu IListSource](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
+ [Instrukcje: Implementowanie interfejsu IListSource](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
  Pokazuje, jak zaimplementować <xref:System.ComponentModel.IListSource> nie implementuje interfejsu, aby utworzyć klasę, które można powiązać <xref:System.Collections.IList>, ale zawiera listę z innej lokalizacji.  
   
- [Instrukcje: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ [Instrukcje: Upewnij się, wiele formantów powiązanych z tym samym źródłem danych pozostają zsynchronizowane](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
  Pokazuje, jak obsługiwać <xref:System.Windows.Forms.BindingSource.BindingComplete> zdarzeń, aby upewnić się, wszystkie formanty związany ze źródłem danych pozostają zsynchronizowane.  
   
- [Instrukcje: zapewnienie pozostawania wybranego wiersza w tabeli podrzędnej w prawidłowym położeniu](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
+ [Instrukcje: Upewnij się, że zaznaczony wiersz w tabeli podrzędnej pozostaje w prawidłowym położeniu](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Pokazuje, jak zapewnić wybranego wiersza w tabeli podrzędnej nie zmienia się, w przypadku zmian z polem tabeli nadrzędnej.  
   
- Zobacz też [interfejsy powiązane z wiązaniem danych](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [jak: Przejdź danych w formularzach Windows Forms](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [porady: Tworzenie prostej kontrolki powiązanej na formularzu Windows](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Zobacz też [interfejsy powiązane z wiązaniem danych](interfaces-related-to-data-binding.md), [jak: Nawigowanie po danych w formularzach Windows Forms](how-to-navigate-data-in-windows-forms.md), i [jak: Tworzenie prostego formantu powiązanego na formularzu Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  

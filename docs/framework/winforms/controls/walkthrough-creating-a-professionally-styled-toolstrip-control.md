@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714896"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746247"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Przewodnik: Tworzenie profesjonalnego formantu ToolStrip
 Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profesjonalny wygląd i zachowanie, pisząc własne klasy pochodzącej od <xref:System.Windows.Forms.ToolStripProfessionalRenderer> typu.  
@@ -49,7 +49,7 @@ Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profes
   
 2.  W **Eksploratora rozwiązań**, usunąć projekt domyślny formant przez usunięcie pliku źródłowego o nazwie "UserControl1.cs" lub "UserControl1.vb", w zależności od tego, w wybranym języku.  
   
-     Aby uzyskać więcej informacji, zobacz [NIB: jak: Usuń Delete i wykluczyć elementy](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Aby uzyskać więcej informacji, zobacz [jak: Usuń Delete i wykluczyć elementy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Dodaj nową <xref:System.Windows.Forms.UserControl> elementu do **StackViewLibrary** projektu. Nazwij nowy plik źródłowy podstawowej z `StackView`.  
   
@@ -121,7 +121,7 @@ Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profes
   
 8.  Zmień nazwę `mailStackButton_Click` procedurę obsługi zdarzeń do `stackButton_Click`.  
   
-     Aby uzyskać więcej informacji, zobacz [jak: Zmień nazwę identyfikatora (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Aby uzyskać więcej informacji, zobacz [symbolu kodu Refaktoryzacja zmiany nazwy](/visualstudio/ide/reference/rename).  
   
 9. Wstaw następujący kod do `stackButton_Click` programu obsługi zdarzeń.  
   
@@ -135,7 +135,7 @@ Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profes
 12. Powtórz kroki 10 i 11 dla `contactsStackButton` i `tasksStackButton` kontrolki.  
   
 ## <a name="defining-icons"></a>Definiowanie ikon  
- Każdy `StackView` przycisk ma skojarzona ikona. Dla wygody, każda ikona jest reprezentowany jako ciąg zakodowany w formacie Base64, który jest przeprowadzona przed <xref:System.Drawing.Bitmap> utworzonych na jej podstawie. W środowisku produkcyjnym można przechowywać dane mapy bitowej jako zasób, a ikony są wyświetlane w programie Windows Forms Designer. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie obrazów w tle do formularzy Windows Forms](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Każdy `StackView` przycisk ma skojarzona ikona. Dla wygody, każda ikona jest reprezentowany jako ciąg zakodowany w formacie Base64, który jest przeprowadzona przed <xref:System.Drawing.Bitmap> utworzonych na jej podstawie. W środowisku produkcyjnym można przechowywać dane mapy bitowej jako zasób, a ikony są wyświetlane w programie Windows Forms Designer. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie obrazów w tle do formularzy Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dff9f95f(v=vs.100)).  
   
 #### <a name="to-define-icons"></a>Aby zdefiniować ikon  
   

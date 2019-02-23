@@ -2,14 +2,14 @@
 title: Omówienie narzędzia svcutil WCF
 description: Omówienie narzędzia dotnet svcutil Microsoft WCF, który dodaje funkcje dla projektów .NET Core i ASP.NET Core, podobny do narzędzia svcutil WCF dla projektów programu .NET Framework.
 author: mlacouture
-ms.date: 08/20/2018
+ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: e42ec0d4072c56456c824a814f1b383ea70a9307
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a1361c30e6b529d68dc93a65c645d31ca6c8e564
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237262"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747239"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Narzędzia dotnet svcutil WCF dla platformy .NET Core
 
@@ -24,12 +24,19 @@ Podobnie jak [ **metadanych modelu usługi - svcutil** ](../../framework/wcf/ser
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Zestaw .NET core SDK](https://dotnet.microsoft.com/download) v1.0.4 lub nowsze wersje
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+* [Zestaw SDK programu .NET core 2.1](https://dotnet.microsoft.com/download) lub nowsze wersje
 * Wybrany edytor kodu
+
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+* [.NET core 1.0.4 SDK](https://dotnet.microsoft.com/download) lub nowsze wersje
+* Wybrany edytor kodu
+
+---
 
 ## <a name="getting-started"></a>Wprowadzenie
 
-Poniższy przykład przeprowadzi Cię przez kroki wymagane do Dodaj odwołanie do usługi sieci web, aby projekt konsoli .NET Core i wywołać usługę. Utworzysz aplikację konsolową .NET Core, o nazwie _HelloSvcutil_ i doda odwołanie do usługi sieci web, który implementuje ten kontrakt następujące:
+Poniższy przykład przeprowadzi Cię przez kroki wymagane do Dodaj odwołanie do usługi sieci web do projektu sieci web platformy .NET Core i wywołać usługę. Utworzysz aplikację sieci web platformy .NET Core, o nazwie _HelloSvcutil_ i Dodaj odwołanie do usługi sieci web, który implementuje ten kontrakt następujące:
 
 ```csharp
 [ServiceContract]
@@ -40,7 +47,7 @@ public interface ISayHello
 }
 ```
 
-W tym przykładzie Usługa sieci web zostanie przyjęta wartość będzie hostowana pod następującym adresem: `http://contoso.com/SayHello.svc`
+W tym przykładzie załóżmy, że będzie hostowana usługa sieci web, korzystając z następującego adresu: `http://contoso.com/SayHello.svc`
 
 Z poziomu okna polecenia Windows, macOS lub Linux, wykonaj następujące czynności:
 
@@ -51,13 +58,20 @@ mkdir HelloSvcutil
 cd HelloSvcutil
 ```
 
-2. Utwórz nowy projekt konsoli języka C#, w tym katalogu przy użyciu [ `dotnet new` ](../tools/dotnet-new.md) polecenia w następujący sposób:
+2. Utwórz nową C# projektu sieci web w tym katalogu przy użyciu [ `dotnet new` ](../tools/dotnet-new.md) polecenia w następujący sposób:
 
 ```console
-dotnet new console
+dotnet new web
 ```
 
-3. Otwórz `HelloSvcutil.csproj` projektu plik w edytorze, Edytuj `Project` element i Dodaj [ `dotnet-svcutil` pakietu NuGet](https://nuget.org/packages/dotnet-svcutil) jako odwołanie narzędzie interfejsu wiersza polecenia, używając następującego kodu:
+3. Zainstaluj [ `dotnet-svcutil` pakietu NuGet](https://nuget.org/packages/dotnet-svcutil) jako narzędzie interfejsu wiersza polecenia:
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+```console
+dotnet tool install --global dotnet-svcutil
+```
+
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+Otwórz `HelloSvcutil.csproj` projektu plik w edytorze, Edytuj `Project` element i Dodaj [ `dotnet-svcutil` pakietu NuGet](https://nuget.org/packages/dotnet-svcutil) jako odwołanie narzędzie interfejsu wiersza polecenia, używając następującego kodu:
 
 ```xml
 <ItemGroup>
@@ -65,58 +79,94 @@ dotnet new console
 </ItemGroup>
 ```
 
-4. Przywróć _narzędzia svcutil dotnet_ pakietu przy użyciu [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia w następujący sposób:
+Następnie Przywróć _narzędzia svcutil dotnet_ pakietu przy użyciu [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia w następujący sposób:
 
 ```console
 dotnet restore
 ```
 
-5. Uruchom _dotnet_ z _svcutil_ polecenie, aby wygenerować plik odwołanie do usługi sieci web w następujący sposób:
+---
 
+4. Uruchom _narzędzia svcutil dotnet_ polecenie, aby wygenerować plik odwołanie do usługi sieci web w następujący sposób:
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+```console
+dotnet-svcutil http://contoso.com/SayHello.svc
+```
+
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 ```console
 dotnet svcutil http://contoso.com/SayHello.svc
 ```
-Wygenerowany plik jest zapisywany jako _HelloSvcutil/ServiceReference1/Reference.cs_. _Dotnet_svcutil_ narzędzie automatycznie dodaje również do projektu odpowiednich pakietów WCF wymagane przez kod serwera proxy jako odwołania do pakietu.
+---
 
-6. Przywróć pakiety programu WCF za pomocą [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia w następujący sposób:
+Wygenerowany plik jest zapisywany jako _HelloSvcutil/ServiceReference/Reference.cs_. _Narzędzia svcutil dotnet_ narzędzie automatycznie dodaje również do projektu odpowiednich pakietów WCF wymagane przez kod serwera proxy jako odwołania do pakietu.
+
+## <a name="using-the-service-reference"></a>Za pomocą odwołania do usługi
+
+1. Przywróć pakiety programu WCF za pomocą [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia w następujący sposób:
 
 ```console
 dotnet restore
 ```
 
-7. Otwórz `Program.cs` plik w edytorze, Edytuj `Main()` metodę i Zastąp automatycznego generowania kodu za pomocą następującego kodu, aby wywołać usługę sieci web:
+2. Znajdź nazwę klienta, klasy i operacji, które chcesz użyć. `Reference.cs` zawiera klasy, która dziedziczy `System.ServiceModel.ClientBase`, za pomocą metod, które mogą służyć do wywoływania operacji w usłudze. W tym przykładzie, który chcesz wybrać _SayHello_ usługi _Hello_ operacji. `ServiceReference.SayHelloClient` jest nazwą Klasa klienta i metody o nazwie `HelloAsync` można wywołać operację.
+
+3. Otwórz `Startup.cs` plik w edytorze i Dodaj instrukcję using instrukcji dla przestrzeni nazw odwołań usługi u góry:
 
 ```csharp
-static void Main(string[] args)
-{
-    var client = new SayHelloClient();
-    Console.WriteLine(client.HelloAsync("dotnet-svcutil").Result);
-}
+using ServiceReference;
 ```
 
-8. Uruchamianie aplikacji przy użyciu [ `dotnet run` ](../tools/dotnet-run.md) polecenia w następujący sposób:
+ 4. Edytuj `Configure` metody do wywołania usługi sieci web. Możesz to zrobić przez utworzenie wystąpienia klasy, która dziedziczy `ClientBase` i wywołanie metody w obiekcie klienta:
+
+```csharp
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
+
+    app.Run(async (context) =>
+    {
+        var client = new SayHelloClient();
+        var response = await client.HelloAsync();
+        await context.Response.WriteAsync(response);
+    });
+}
+
+```
+
+5. Uruchamianie aplikacji przy użyciu [ `dotnet run` ](../tools/dotnet-run.md) polecenia w następujący sposób:
 
 ```console
 dotnet run
 ```
+
+6. Przejdź do adresu URL podanego w konsoli (na przykład `http://localhost:5000`) w przeglądarce sieci web.
+
 Powinny zostać wyświetlone następujące dane wyjściowe: "Hello dotnet-svcutil /!"
 
 Aby uzyskać szczegółowy opis `dotnet-svcutil` narzędzia parametrów, wywołaj narzędzie przekazywania parametru pomocy w następujący sposób:
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+```console
+dotnet-svcutil --help
+```
 
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 ```console
 dotnet svcutil --help
 ```
+---
 
-## <a name="next-steps"></a>Następne kroki
-
-### <a name="feedback--questions"></a>Opinie i pytania
+## <a name="feedback--questions"></a>Opinie i pytania
 
 Jeśli masz pytania lub opinie, [Otwórz problem w serwisie GitHub](https://github.com/dotnet/wcf/issues/new). Możesz również sprawdzić wszelkie istniejące pytania lub problemy [w repozytorium usługi WCF w usłudze GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
 
-### <a name="release-notes"></a>Uwagi do wersji
+## <a name="release-notes"></a>Uwagi do wersji
 
 * Zapoznaj się [informacje o wersji](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) uzyskać informacje o zaktualizowanej wersji, w tym znanych problemów.
 
-### <a name="information"></a>Informacje
+## <a name="information"></a>Informacje
 
 * [Pakiet NuGet narzędzia svcutil DotNet](https://nuget.org/packages/dotnet-svcutil)

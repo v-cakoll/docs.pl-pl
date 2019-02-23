@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
-ms.openlocfilehash: a1d41418b2f546c62f1d6a51b19337ee2d303ccc
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 874420775215502ebdacb8420b3fe0e027d6660f
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665260"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747625"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -41,7 +41,7 @@ C#8.0 rozwija tego słownika, aby można było używać więcej wzorzec wyrażen
 
 Oprócz nowych wzorców w nowych miejscach C# dodaje 8.0 **wzorców cyklicznego**. Wynik dowolne wyrażenie wzorca jest wyrażeniem. Wzorzec cyklicznego jest po prostu wyrażenie wzorzec, które są stosowane do danych wyjściowych innego wyrażenia wzorca.
 
-### <a name="switch-expressions"></a>wyrażenia Switch
+### <a name="switch-expressions"></a>Wyrażenia Switch
 
 Często [ `switch` ](../language-reference/keywords/switch.md) instrukcja generuje wartości w każdym z jego `case` bloków. **Przełącz wyrażenia** umożliwiają korzystanie z bardziej zwięzłym składni wyrażeń. Istnieją mniej powtarzalne `case` i `break` słów kluczowych i mniej nawiasów klamrowych.  Na przykład należy wziąć pod uwagę następujące wyliczenia, który wyświetla kolory tęczowego:
 
@@ -177,7 +177,7 @@ static string Quadrant(Point p) => p switch
 
 Wzorca odrzucania w poprzednim przełącznika pasuje, podczas albo `x` lub `y`, ale nie obu wynosi 0. Wyrażenie switch musi mieć wartość albo zgłosić wyjątek. Wyrażenie switch zgłasza wyjątek, jeśli żaden z przypadków są zgodne. Kompilator generuje ostrzeżenia dla Ciebie, jeśli nie obejmują wszystkich możliwych przypadków w wyrażeniu przełącznika.
 
-## <a name="using-declarations"></a>za pomocą deklaracji
+## <a name="using-declarations"></a>Za pomocą deklaracji
 
 A **użycie — deklaracja** jest deklaracja zmiennej jest poprzedzony `using` — słowo kluczowe. Go informuje kompilator, że na końcu zasięgu powinny zostać zlikwidowane deklarowanej zmiennej. Na przykład rozważmy następujący kod, który zapisuje plik tekstowy:
 
@@ -247,23 +247,23 @@ int M()
     int x = 7;
     return Add(x, y);
 
-    int Add(int left, int right) => left + right;
+    static int Add(int left, int right) => left + right;
 }
 ```
 
 ## <a name="disposable-ref-structs"></a>Struktury ref możliwe do rozporządzania
 
-A `struct` zadeklarowane za pomocą `ref` modyfikator nie może implementować żadnych interfejsów i dlatego nie może implementować <xref:System.IDisposable>. W związku z tym aby umożliwić `ref struct` usuwana, musi mieć dostępne `void Dispose()` metody.
+A `struct` zadeklarowane za pomocą `ref` modyfikator nie może implementować żadnych interfejsów i dlatego nie może implementować <xref:System.IDisposable>. W związku z tym aby umożliwić `ref struct` usuwana, musi mieć dostępne `void Dispose()` metody. Dotyczy to również `readonly ref struct` deklaracji.
 
 ## <a name="nullable-reference-types"></a>Typy dopuszczające wartości null odwołań
 
 W kontekście annotation dopuszczający wartość null, dowolnej zmiennej typu odwołania jest uważany za **Typ referencyjny niedopuszczające wartości null**. Jeśli chcesz wskazać, że zmienna może mieć wartości null, należy dołączyć nazwę typu z `?` Aby zadeklarować zmienną jako **typu dopuszczającego wartość null odwołania**.
 
-Dla typów odwołań kolumną kompilator używa analizę przepływu, aby upewnić się, że zmienne lokalne są inicjowane na wartość inną niż null, gdy zadeklarowana. Pola muszą być zainicjowane w trakcie konstruowania. Kompilator generuje ostrzeżenie, jeśli zmienna nie jest ustawiona w wszystkie konstruktory lub inicjatora. Ponadto typy odwołań kolumną nie można przypisać wartość, która może mieć wartości null.
+Dla typów odwołań kolumną kompilator używa analizę przepływu, aby upewnić się, że zmienne lokalne są inicjowane na wartość inną niż null, gdy zadeklarowana. Pola muszą być zainicjowane w trakcie konstruowania. Kompilator generuje ostrzeżenie, jeśli zmienna nie jest ustawiony przez wywołanie do dowolnych dostępnych konstruktorów lub inicjatora. Ponadto typy odwołań kolumną nie można przypisać wartość, która może mieć wartości null.
 
 Typy dopuszczające wartości null odwołań nie są sprawdzany w celu zapewnienia ich nie są przypisywany lub zainicjowany do wartości null. Jednak kompilator używa analizę przepływu, aby upewnić się, że jakakolwiek zmienna typu odwołania dopuszczającego wartość null jest sprawdzana względem o wartości null, przed jego dostępny lub przypisane do typu odwołania niedopuszczające wartości null.
 
-Dowiedz się więcej na temat funkcji w przeglądzie [typy dopuszczające wartości null odwołań](../nullable-references.md). Samodzielnie wypróbować tę funkcję w nowej aplikacji, w tym [samouczek typy dopuszczające wartości null odwołanie](../tutorials/nullable-reference-types.md). Więcej informacji na temat czynności, aby migrować dane istniejącej bazy kodu umożliwiają używanie typów nullable odwołania [migracji aplikacji, aby skorzystać z samouczka typy dopuszczające wartości null odwołanie]... /Tutorials/Upgrade-to-Nullable-References.MD).
+Dowiedz się więcej na temat funkcji w przeglądzie [typy dopuszczające wartości null odwołań](../nullable-references.md). Samodzielnie wypróbować tę funkcję w nowej aplikacji, w tym [samouczek typy dopuszczające wartości null odwołanie](../tutorials/nullable-reference-types.md). Dowiedz się więcej o kroki, aby migrować dane istniejącej bazy kodu w zapewnienie użytkowania typy dopuszczające wartości null odwołań w [migrowania aplikacji do użycia odwołania nullable typy samouczek](../tutorials/upgrade-to-nullable-references.md).
 
 ## <a name="asynchronous-streams"></a>Asynchroniczne strumienie
 
@@ -301,7 +301,7 @@ Możesz spróbować asynchronicznymi strumieniami samodzielnie w naszym samouczk
 
 Zakresy i indeksów, które zapewniają zwięzłą składnię do określania podzakresów w tablicy, <xref:System.Span%601>, lub <xref:System.ReadOnlySpan%601>.
 
-Można określić indeksu **od końca**. Należy określić **od końca** przy użyciu `^` operatora. Znasz `array[2]` oznacza element "2 od samego początku". Teraz `array[^2]` oznacza, że element "2 od końca". Indeks `^0` oznacza "koniec" lub jednego w tym ostatnim elementem.
+Można określić indeksu **od końca**. Należy określić **od końca** przy użyciu `^` operatora. Znasz `array[2]` oznacza element "2 od samego początku". Teraz `array[^2]` oznacza, że element "2 od końca". Indeks `^0` oznacza "koniec" lub indeks, który następuje po ostatnim elemencie.
 
 Można określić **zakres** z **operatora zakresu**: `..`. Na przykład `0..^0` określa cały zakres tablicy: 0 od początku do, z wyłączeniem 0 od końca. Jeden z operandów może używać "start" lub "end". Ponadto można pominąć oba operandy. Wartości domyślne to `0` dla indeksu początkowego i `^0` dla indeksu zakończenia.
 

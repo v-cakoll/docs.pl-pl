@@ -65,7 +65,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
 ## <a name="platform-sections"></a>Sekcje platformy  
  [Domeny aplikacji](../../framework/app-domains/application-domains.md)  
   
- [Zestawy i globalna pamięć podręczna zestawów](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [Zestawy w środowisku .NET](../../standard/assembly/index.md)  
   
  [Atrybuty](../../csharp/programming-guide/concepts/attributes/index.md)  
   

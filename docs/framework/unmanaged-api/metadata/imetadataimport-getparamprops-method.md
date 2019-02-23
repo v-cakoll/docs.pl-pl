@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685532"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745923"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps — Metoda
 Pobiera metadane wartości dla parametru odwołuje się określona ParamDef token.  
@@ -64,7 +64,7 @@ HRESULT GetParamProps (
  [out] Rozmiar zwrócony w znaków `szName`.  
   
  `pdwAttr`  
- [out] Wskaźnik do flag atrybut skojarzony z parametrem.  
+ [out] Wskaźnik do flag atrybut skojarzony z parametrem. Jest to z `CorParamAttr` wartości.  
   
  `pdwCPlusTypeFlag`  
  [out] Wskaźnik do określania flagi, że parametr jest <xref:System.ValueType>.  
@@ -75,6 +75,10 @@ HRESULT GetParamProps (
  `pcchValue`  
  [out] Rozmiar `ppValue` znaków dwubajtowych lub zero, jeśli `ppValue` nie zawiera ciągu.  
   
+## <a name="remarks"></a>Uwagi
+
+Sekwencja wartości w `pulSequence` zaczynają się od 1 dla parametrów. Wartość zwracana ma kolejny numer 0.
+
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   

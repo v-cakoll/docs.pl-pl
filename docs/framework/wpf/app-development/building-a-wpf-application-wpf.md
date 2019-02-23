@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 3bae07f8b72225ccb502a32fbc03fb4651c80d63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 682563937de0bb907b97ee4237d33c76307493da
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654285"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745641"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), biblioteki (.dll) lub jako kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki w procesie kompilacji.  
@@ -26,7 +26,7 @@ Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!IN
   
 -   Microsoft Build Engine (MSBuild). Oprócz kodu i pliki XAML aplikacja musi zawierać plik projektu programu MSBuild. Aby uzyskać więcej informacji zobacz "MSBuild".  
   
--   Program Visual Studio. Visual Studio to zintegrowane środowisko deweloperskie kompiluje aplikacje WPF za pomocą narzędzia MSBuild, która zawiera projektanta wizualnego do tworzenia interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [opracowywanie aplikacji w programie Visual Studio](https://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68) i [projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
+-   Program Visual Studio. Visual Studio to zintegrowane środowisko deweloperskie kompiluje aplikacje WPF za pomocą narzędzia MSBuild, która zawiera projektanta wizualnego do tworzenia interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [pisanie kodu i zarządzanie nim przy użyciu programu Visual Studio](/visualstudio/ide/index-writing-code) i [projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>Potok kompilacji WPF  

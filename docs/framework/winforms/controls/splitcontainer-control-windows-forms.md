@@ -5,12 +5,12 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0afc1aba32852406b975cc65ab4d4bff334d3ff7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518810"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745466"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer — Formant (Formularze systemu Windows)
 Formularze Windows `SplitContainer` kontrolki mogą być uważane za złożonego, a dwa panele rozdzielone ruchome paska. Gdy wskaźnik myszy znajduje się nad paskiem, kursor zmienia kształt, aby pokazać, że pasek jest ruchomy.  
@@ -24,16 +24,16 @@ Formularze Windows `SplitContainer` kontrolki mogą być uważane za złożonego
  [SplitContainer, kontrolka — omówienie](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
  Wprowadza `SplitContainer` kontroli i zawiera opis często używanych właściwości, metody i zdarzenia.  
   
- [Instrukcje: definiowanie zachowania dotyczącego zmieniania rozmiaru i pozycjonowania w podzielonym oknie](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Instrukcje: Definiowanie zmieniania rozmiaru i pozycjonowania zachowania w podzielonym oknie](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
  W tym artykule opisano sposób kontrolowania podziału w ramach `SplitContainer` kontroli.  
   
- [Instrukcje: dzielenie okna w poziomie](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
+ [Instrukcje: Dzielenie okna w poziomie](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
  W tym artykule opisano sposób kontrolowania orientacji rozdzielacza w ramach `SplitContainer` kontroli.  
   
- [Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Tworzy interfejs użytkownika wielu okienko, który jest podobny do tego użyć programu Microsoft Outlook.  
   
- Zobacz też [porady: Dzielenie okna w poziomie za pomocą projektanta](how-to-split-a-window-horizontally-using-the-designer.md), [jak: Tworzenie interfejsu w stylu Eksploratora Windows na formularzu Windows](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [jak: tworzenie Multipane interfejsu użytkownika za pomocą Windows Forms przy użyciu narzędzia Projektant](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
+ Zobacz też [jak: Dzielenie okna w poziomie za pomocą projektanta](how-to-split-a-window-horizontally-using-the-designer.md), [jak: Tworzenie interfejsu w stylu Eksploratora Windows na formularzu Windows](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), [jak: Tworzenie złożonego interfejsu użytkownika za pomocą interfejsu Windows Forms przy użyciu narzędzia Projektant](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.SplitContainer> Klasa  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a20dc95467df4baedce2f4acc63f0c029f178c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724346"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748495"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Przewodnik: Powiązanie z danymi w aplikacjach hybrydowych
 Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniając użytkownikom dostęp do danych bazowych, czy używasz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym instruktażu przedstawiono sposób korzystania powiązanie danych w aplikacjach hybrydowych, które zawierają zarówno [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
@@ -122,7 +122,7 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
   
 1.  Z **danych** menu, wybierz opcję **Dodaj nowe źródło danych**.  
   
-2.  W **Kreatora konfiguracji źródła danych**, Utwórz połączenie z bazą danych Northwind za pomocą zestawu danych. Aby uzyskać więcej informacji, zobacz [jak: Łączenie z danymi w bazie danych](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  W **Kreatora konfiguracji źródła danych**, Utwórz połączenie z bazą danych Northwind za pomocą zestawu danych. Aby uzyskać więcej informacji, zobacz [jak: Łączenie z danymi w bazie danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
   
 3.  Po wyświetleniu monitu przez **Kreatora konfiguracji źródła danych**, Zapisz parametry połączenia jako `NorthwindConnectionString`.  
   

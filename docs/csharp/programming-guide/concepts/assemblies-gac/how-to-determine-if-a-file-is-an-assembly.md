@@ -2,12 +2,12 @@
 title: 'Instrukcje: Określić, czy plik jest zestawem (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 474cc4622e9444cab8e9d611dd9481d5358e10f0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681771"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745253"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Instrukcje: Określić, czy plik jest zestawem (C#)
 Plik jest zestawem, tylko wtedy, gdy jest zarządzana i wpis zestawu w metadanych. Aby uzyskać więcej informacji na temat zestawów i metadanych, zobacz temat [manifestu zestawu](../../../../../docs/framework/app-domains/assembly-manifest.md).  
@@ -70,4 +70,4 @@ class TestAssembly
 
 - <xref:System.Reflection.AssemblyName>
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)
-- [Zestawy i Globalna pamięć podręczna zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Zestawy w środowisku .NET](../../../../standard/assembly/index.md)

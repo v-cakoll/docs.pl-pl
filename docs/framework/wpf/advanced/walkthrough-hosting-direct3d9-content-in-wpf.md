@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: c8bee03cc3a72e1938cca182d59818f9bc2eabc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a298bdd9a78279f177b5891bf69d0197ec7c040
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626091"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746710"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Przewodnik: Hosting zawartości Direct3D9 w WPF
 Ten poradnik pokazuje jak do hostowania zawartości Direct3D9 w aplikacji Windows Presentation Foundation (WPF).  
@@ -39,7 +39,7 @@ Ten poradnik pokazuje jak do hostowania zawartości Direct3D9 w aplikacji Window
   
 #### <a name="to-create-the-wpf-project"></a>Aby utworzyć projekt WPF  
   
--   Utwórz nowy projekt aplikacji WPF w języku Visual C# o nazwie `D3DHost`. Aby uzyskać więcej informacji, zobacz [jak: Utwórz nowy projekt aplikacji WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+-   Utwórz nowy projekt aplikacji WPF w języku Visual C# o nazwie `D3DHost`. Aby uzyskać więcej informacji, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
      Otworzy się w pliku MainWindow.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   

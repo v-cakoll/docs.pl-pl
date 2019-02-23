@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: 556da93d6237836dc32fc3f6715909593907ba74
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: f84792e5d973f2b2d8bcf418f68e7038fd7a81f5
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738737"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747853"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Testowanie jednostek języka C# w .NET Core za pomocą polecenia dotnet test i struktury xUnit
 
@@ -28,7 +28,7 @@ Utwórz katalog rozwiązania *PrimeService* katalogu. Struktura katalogów i pli
     /PrimeService
 ```
 
-Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.cs* do *PrimeService.cs*. Aby korzystać z projektowania opartego na testach (TDD), należy najpierw utworzyć niepowodzenie wykonania `PrimeService` klasy:
+Wprowadź *PrimeService* bieżącego katalogu i uruchom [ `dotnet new classlib` ](../tools/dotnet-new.md) do utworzenia projektu źródłowego. Zmień nazwę *Class1.cs* do *PrimeService.cs*. Należy najpierw utworzyć niepowodzenie wykonania `PrimeService` klasy:
 
 ```csharp
 using System;
@@ -105,7 +105,7 @@ dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
-Podejścia TDD wymaga zapisywania niepowodzenie jednego testu, dzięki czemu przekazać, a następnie powtórzyć ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould.cs*. Dodaj następujący kod:
+Jeden zapisu kończy się niepowodzeniem testu, ułatwiają — dostęp próbny, a następnie powtórz ten proces. Usuń *UnitTest1.cs* z *PrimeService.Tests* katalogu i Utwórz nowy C# plik o nazwie *PrimeService_IsPrimeShould.cs*. Dodaj następujący kod:
 
 ```csharp
 using Xunit;

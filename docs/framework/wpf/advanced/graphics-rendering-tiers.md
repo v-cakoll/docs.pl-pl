@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543857"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748586"
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
 Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajności na urządzeniu z systemem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -90,7 +90,7 @@ Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajnośc
 |Rasteryzowany zawartości, który używa <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Żadnej zawartości, renderowane przy użyciu <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> metody <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
 |Fragmentacji zawartość, która używa <xref:System.Windows.Media.TileBrush>|Sąsiadująco dowolnej zawartości, w którym <xref:System.Windows.Media.TileBrush.TileMode%2A> właściwość <xref:System.Windows.Media.TileBrush> ustawiono <xref:System.Windows.Media.TileMode.Tile>.|  
 |Powierzchniach, które przekracza rozmiar maksymalny tekstury sprzętu graficznego.|W przypadku większości sprzęt graficzny dużych powierzchni są 2048 x 2048 lub 4096 x 4096 pikseli.|  
-|Wszelkie operacje, w których wideo wymagań pamięci RAM przekracza ilość pamięci, możliwości sprzętu graficznego|Możesz monitorować użycie pamięci RAM wideo w aplikacji za pomocą narzędzia Perforator, który znajduje się w [pakiet wydajności WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) w zestawie Windows SDK.|  
+|Wszelkie operacje, w których wideo wymagań pamięci RAM przekracza ilość pamięci, możliwości sprzętu graficznego|Możesz monitorować użycie pamięci RAM wideo w aplikacji za pomocą narzędzia Perforator, który znajduje się w [pakiet wydajności WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) w zestawie Windows SDK.|  
 |Warstwowej systemu windows|System windows warstwowych na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji do renderowania zawartości ekranu w oknie prostokątny. W systemach operacyjnych obsługują Display modelu sterownika (WDDM) Windows, takich jak [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] i [!INCLUDE[win7](../../../../includes/win7-md.md)], warstwowej systemu windows są accelerated sprzętu. W innych systemach takich jak [!INCLUDE[winxp](../../../../includes/winxp-md.md)], warstwowej systemu windows są renderowane przez oprogramowanie, które nie przyspieszanie sprzętowe.<br /><br /> Możesz włączyć warstwowej okna w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , ustawiając następujące <xref:System.Windows.Window> właściwości:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
@@ -117,7 +117,7 @@ Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajnośc
 |Perforator|Na użytek analizując zachowanie renderowania.|  
 |Visual Profiler|Na użytek profilowania użytkowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usługi, takie jak układ i obsługi przez elementy w drzewie wizualnym zdarzeń.|  
   
- Pakiet wydajności WPF zapewnia rozbudowane, graficzny widok danych dotyczących wydajności. Aby uzyskać więcej informacji na temat narzędzia do oceny wydajności WPF, zobacz [pakiet wydajności WPF](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
+ Pakiet wydajności WPF zapewnia rozbudowane, graficzny widok danych dotyczących wydajności. Aby uzyskać więcej informacji na temat narzędzia do oceny wydajności WPF, zobacz [pakiet wydajności WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)).  
   
 ### <a name="directx-diagnostic-tool"></a>Narzędzie diagnostyczne DirectX  
  [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Narzędzie diagnostyczne, Dxdiag.exe zaprojektowano w celu ułatwienia rozwiązywania problemów z [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]— problemy związane z usługą. Domyślny folder instalacji dla [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] jest narzędzie do diagnostyki:  
@@ -133,6 +133,6 @@ Narzędzie diagnostyczne DirectX głównego okna.
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Ustawienia rejestru renderowania grafiki](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Animacja — porady i wskazówki](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

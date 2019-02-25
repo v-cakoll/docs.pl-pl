@@ -20,7 +20,7 @@ Ten przewodnik wyjaśnia podstawowe pojęcia oraz zawiera samouczki i dokumentac
 > W związku z tym materiał ten może ulec zmianie. 
 > Aby uzyskać więcej informacji, zobacz [wprowadzenie do ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-## <a name="get-started"></a>Zacznijmy
+## <a name="get-started"></a>Wprowadzenie
 
 Aby zainstalować strukturę ML.NET i zacząć tworzyć za jej pomocą, skorzystaj z [samouczka z wprowadzeniem](https://www.microsoft.com/net/learn/machinelearning-ai/ml-dotnet-get-started-tutorial).
 
@@ -49,7 +49,7 @@ Aby poznać podstawy, zobacz [Podstawowe pojęcia dotyczące trenowania modelu w
 
 [Zadania do wykonania za pomocą uczenia maszynowego](resources/tasks.md) – w tym artykule opisano zadania, takie jak klasyfikowanie i wykrywanie anomalii. 
 
-[Przekształcenie danych](resources/transforms.md) zawiera opis możliwości przygotowywania danych przez ML.NET.
+[Przekształcenia danych](resources/transforms.md) zawiera opis możliwości przygotowywania danych w strukturze ML.NET.
 
 
 ## <a name="api-reference"></a>Dokumentacja interfejsów API

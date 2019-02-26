@@ -1,24 +1,15 @@
 ---
 title: Przewodnik po zawartości struktury ML.NET
-description: Dowiedz się, jak tworzyć niestandardowe rozwiązania za pomocą sztucznej inteligencji i łączyć je z aplikacją .NET za pomocą struktury ML.NET
-description: Dowiedz się, jak tworzyć niestandardowe rozwiązania za pomocą sztucznej inteligencji i łączyć je z aplikacją .NET za pomocą ML.NET
+description: 'Dowiedz się, jak tworzyć niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET za pomocą strukturze ML.NET'
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826276"
 ---
 # <a name="mlnet-content-guide"></a>Przewodnik po zawartości struktury ML.NET
 
 Ten przewodnik wyjaśnia podstawowe pojęcia oraz zawiera samouczki i dokumentację interfejsu API dla struktury ML.NET.
 
 > [!NOTE]
-> Ta dokumentacja dotyczy struktury ML.NET, która jest obecnie dostępna w wersji zapoznawczej. Materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [Wprowadzenie do struktury ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet). 
-> W związku z tym materiał ten może ulec zmianie. 
-> Aby uzyskać więcej informacji, zobacz [wprowadzenie do ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+> Ta dokumentacja dotyczy struktury ML.NET, która jest obecnie dostępna w wersji zapoznawczej. Materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [Wprowadzenie do struktury ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="get-started"></a>Wprowadzenie
 
@@ -26,7 +17,7 @@ Aby zainstalować strukturę ML.NET i zacząć tworzyć za jej pomocą, skorzyst
 
 Aby dowiedzieć się więcej o strukturze ML.NET, zobacz [Co to jest struktura ML.NET?](what-is-mldotnet.md)
 
-Aby poznać podstawy, zobacz [Podstawowe pojęcia dotyczące trenowania modelu w strukturze ML.NET](basic-concepts-model-training-in-mldotnet.md).
+Aby poznać podstawy, zobacz [podstawowe pojęcia do trenowania modelu w strukturze ML.NET](basic-concepts-model-training-in-mldotnet.md).
 
 ## <a name="tutorials"></a>Samouczki
 
@@ -40,10 +31,9 @@ Aby poznać podstawy, zobacz [Podstawowe pojęcia dotyczące trenowania modelu w
 
 ## <a name="how-to-guide"></a>Przewodnik z instrukcjami
 
-[Tworzenie aplikacji do dopasowywania graczy do jednej rozgrywki za pomocą Infer.NET i programowania probabilistycznego](how-to-guides/matchup-app-infer-net.md) 
-– poradnik ten pokazuje, jak stworzyć uproszczony system dopasowywania graczy do jednej rozgrywki, podobny do użytego w grach na konsolę Xbox.
+[Tworzenie aplikacji do dopasowywania graczy do jednej rozgrywki za pomocą Infer.NET i programowania probabilistycznego](how-to-guides/matchup-app-infer-net.md) – poradnik ten pokazuje, jak stworzyć uproszczony system dopasowywania graczy do jednej rozgrywki, podobny do użytego w grach na konsolę Xbox.
 
-## <a name="resources"></a>Zasoby
+## <a name="resources"></a>Resources
 
 [Słownik pojęć na temat uczenia maszynowego](resources/glossary.md) – znajdziesz tutaj wyjaśnienie kluczowych pojęć.
 

@@ -31,7 +31,8 @@
 ### [Analizator przenośności](standard/analyzers/portability-analyzer.md)
 ### [Analizator struktury](standard/analyzers/framework-analyzer.md)
 ## [Obsługa i zgłaszanie wyjątków](standard/exceptions/)
-## [Format pliku zestawu .NET](standard/assembly-format.md)
+## [Zestawy w środowisku .NET](standard/assembly/index.md)
+### [Format pliku zestawu .NET](standard/assembly/file-format.md) 
 ## [Odzyskiwanie pamięci](standard/garbage-collection/)
 ## [Typy ogólne](standard/generics.md)
 ## [Delegaci i wyrażenia lambda](standard/delegates-lambdas.md)
@@ -521,7 +522,7 @@
 #### [Dostosowywanie, które obiekty są dostępne w My](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [Pojęcia związane z programowaniem](visual-basic/programming-guide/concepts/index.md)
-### [Zestawy i globalna pamięć podręczna zestawów](visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+### [Zestawy w środowisku .NET](standard/assembly/index.md)
 ### [Programowanie asynchroniczne z Async i Await](visual-basic/programming-guide/concepts/async/index.md)
 ### [Atrybuty](visual-basic/programming-guide/concepts/attributes/index.md)
 ### [Drzewa wyrażeń](visual-basic/programming-guide/concepts/expression-trees/index.md)

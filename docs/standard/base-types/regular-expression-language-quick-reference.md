@@ -1,4 +1,4 @@
----
+﻿---
 title: Język wyrażeń regularnych — podręczny wykaz
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -105,7 +105,7 @@ ms.locfileid: "56836308"
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Konstrukty grupujące  
- Konstrukcje grupujące wyznaczają podwyrażenia wyrażeń regularnych i często przechwytywane podciągi ciągu wejściowego. Konstrukcje grupowania obejmują elementy języka wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
+ Konstrukcje grupujące wyznaczają podwyrażenia wyrażeń regularnych i często przechwytywane podciągi ciągu wejściowego. Konstrukcje grupowania obejmują elementy języka wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [Konstrukty grupujące](grouping-constructs-in-regular-expressions.md).  
   
 |Konstrukcja grupująca|Opis|Wzorzec|Dopasowania|  
 |------------------------|-----------------|-------------|-------------|  
@@ -185,7 +185,7 @@ ms.locfileid: "56836308"
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Opcje wyrażeń regularnych  
- Można określić opcje sterujące sposobem, w jaki aparat wyrażeń regularnych interpretuje wzorzec wyrażenia regularnego. Wiele z tych opcji można określić jako wbudowane (we wzorcu wyrażenia regularnego) lub jako jedną lub więcej <xref:System.Text.RegularExpressions.RegexOptions> stałe. W tym krótkim opisie wymieniono tylko opcje określane w tekście. Aby uzyskać więcej informacji dotyczących wbudowania i <xref:System.Text.RegularExpressions.RegexOptions> opcji, zapoznaj się z artykułem [Regular Expression Options](regular-expression-options.md).  
+ Można określić opcje sterujące sposobem, w jaki aparat wyrażeń regularnych interpretuje wzorzec wyrażenia regularnego. Wiele z tych opcji można określić jako wbudowane (we wzorcu wyrażenia regularnego) lub jako jedną lub więcej <xref:System.Text.RegularExpressions.RegexOptions> stałe. W tym krótkim opisie wymieniono tylko opcje określane w tekście. Aby uzyskać więcej informacji dotyczących wbudowania i <xref:System.Text.RegularExpressions.RegexOptions> opcji, zapoznaj się z artykułem [Opcje wyrażeń regularnych](regular-expression-options.md).  
   
  Opcję określaną w tekście można określić na dwa sposoby:  
   
@@ -198,9 +198,9 @@ ms.locfileid: "56836308"
 |Opcja|Opis|Wzorzec|Dopasowania|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Używa dopasowywania bez uwzględniania wielkości liter.|`\b(?i)a(?-i)a\w+\b`|`"aardvark"`, `"aaaAuto"` w `"aardvark AAAuto aaaAuto Adam breakfast"`|  
-|`m`|Używa trybu wielowierszowego. `^` i `$` pasuje do początku i końcu wiersza, zamiast początku i końca ciągu.|Aby uzyskać przykład, zobacz sekcję "Tryb wielowierszowy" w [Regular Expression Options](regular-expression-options.md).||  
-|`n`|Nie przechwytuje nienazwanych grup.|Aby uzyskać przykład, zobacz sekcję "Tylko jawne Przechwytywanie" w [Regular Expression Options](regular-expression-options.md).||  
-|`s`|Używa trybu jednowierszowego.|Aby uzyskać przykład, zobacz sekcję "Tryb jednowierszowy" w [Regular Expression Options](regular-expression-options.md).||  
+|`m`|Używa trybu wielowierszowego. `^` i `$` pasuje do początku i końcu wiersza, zamiast początku i końca ciągu.|Aby uzyskać przykład, zobacz sekcję "Tryb wielowierszowy" w [Opcje wyrażeń regularnych](regular-expression-options.md).||  
+|`n`|Nie przechwytuje nienazwanych grup.|Aby uzyskać przykład, zobacz sekcję "Tylko jawne Przechwytywanie" w [Opcje wyrażeń regularnych](regular-expression-options.md).||  
+|`s`|Używa trybu jednowierszowego.|Aby uzyskać przykład, zobacz sekcję "Tryb jednowierszowy" w [Opcje wyrażeń regularnych](regular-expression-options.md).||  
 |`x`|Ignoruje niepoprzedzony znakiem ucieczki znak odstępu we wzorcu wyrażenia regularnego.|`\b(?x) \d+ \s \w+`|`"1 aardvark"`, `"2 cats"` w `"1 aardvark 2 cats IV centurions"`|  
   
  [Powrót do początku](#top)  

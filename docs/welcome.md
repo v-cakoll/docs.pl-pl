@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: ee4f9cd33e33006697a15f0bdafb4cc9d7ecf809
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d5ee6d9cbb8beb819d023c92af1123ebc37b53c8
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147208"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834919"
 ---
 # <a name="welcome-to-net"></a>Zapraszamy do platformy .NET
 
@@ -23,7 +23,7 @@ Twórz wiele rodzajów aplikacji przy użyciu platformy .NET, takich jak chmury,
 Najnowsze wiadomości dotyczące platformy .NET Sprawdź następujących blogach:
 
 - [.NET Blog](https://blogs.msdn.microsoft.com/dotnet/)
-- [Blog platformy ASP.NET](https://blogs.msdn.microsoft.com/webdev/)
+- [ASP.NET Blog](https://blogs.msdn.microsoft.com/webdev/)
 - [Blog Visual Studio](https://blogs.msdn.microsoft.com/visualstudio/)
 - [Zespół programu Visual Basic](https://blogs.msdn.microsoft.com/vbteam/)
 
@@ -42,7 +42,7 @@ Informacje o najnowszych funkcjach dodane do implementacji platformy .NET i obs�
 
 ## <a name="documentation"></a>Dokumentacja
 
-Ta dokumentacja obejmuje zakresem .NET, platform i języków.  Możesz rozpocząć pracę przy użyciu platformy .NET i jego języków, w dowolnym z następujących sekcji:
+Ta dokumentacja obejmuje zakresem .NET, platform i języków. Możesz rozpocząć pracę przy użyciu platformy .NET i jego języków, w dowolnym z następujących sekcji:
 
 - [.NET — przewodnik](standard/index.md)
 - [Przewodnik platformy .NET Core](core/index.md)

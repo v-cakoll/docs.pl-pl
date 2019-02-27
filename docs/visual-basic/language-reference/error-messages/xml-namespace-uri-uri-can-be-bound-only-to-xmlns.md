@@ -1,5 +1,5 @@
 ---
-title: Identyfikator URI przestrzeni nazw XML "<uri>" może być powiązana tylko z "xmlns"
+title: Identyfikator URI przestrzeni nazw XML '<uri>' może być powiązana tylko z 'xmlns'
 ms.date: 07/20/2015
 f1_keywords:
 - bc31183
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55279880"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>Identyfikator URI przestrzeni nazw XML `http://www.w3.org/XML/1998/namespace`; może być powiązana tylko z "xmlns"
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>Identyfikator URI przestrzeni nazw XML `http://www.w3.org/XML/1998/namespace`; może być powiązana tylko z 'xmlns'
 Identyfikator URI `http://www.w3.org/XML/1998/namespace` jest używany w deklaracji przestrzeni nazw XML. Ten identyfikator URI jest zarezerwowaną przestrzenią nazw i nie można uwzględnić w deklaracji przestrzeni nazw XML.  
   
  **Identyfikator błędu:** BC31183  

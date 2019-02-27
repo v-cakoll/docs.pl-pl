@@ -45,5 +45,4 @@ Ta sekcja zawiera wskazówki dotyczące projektowania bibliotek, które rozszerz
 ## <a name="see-also"></a>Zobacz także
 
 - [Omówienie](../../../docs/framework/get-started/overview.md)
-- [Harmonogram działania dla platformy .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Podręcznik programowania](../../../docs/framework/development-guide.md)

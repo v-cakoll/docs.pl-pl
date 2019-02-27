@@ -3,12 +3,12 @@ title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejące i pliki csproj .NET Core
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 8b44c445fbfd3d15cc8e6c53e640a8ae5e284d27
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748013"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836218"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -208,7 +208,7 @@ Wartość logiczna określająca, czy klient musi monitować konsumenta o zaakce
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-Wyrażenie licencji SPDX lub ścieżkę do pliku licencji w ramach pakietu, często wyświetlany w użytkownika, jak również adres nuget.org.
+[Identyfikatora licencji SPDX](https://spdx.org/licenses/) lub wyrażenie. Na przykład `Apache-2.0`.
 
 Oto Pełna lista [identyfikatory licencji SPDX](https://spdx.org/licenses/). NuGet.org akceptuje tylko OSI lub licencji FSF zatwierdzone, korzystając z licencji wyrażenie typu.
 
@@ -236,23 +236,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 Ścieżka do pliku licencji w ramach pakietu, jeśli używasz licencji, w której nie przypisano identyfikator SPDX lub jest ona niestandardowe licencji (przeciwnym `PackageLicenseExpression` jest preferowana)
 
-> [!NOTE]
-> Tylko jeden z `PackageLicenseExpression`, `PackageLicenseFile` i `PackageLicenseUrl` można określić jednocześnie.
-
-### <a name="packagelicenseurl"></a>PackageLicenseUrl
-
-Adres URL licencji, która ma zastosowanie do pakietu. (_przestarzały począwszy od programu Visual Studio 15.9.4, zestaw SDK platformy .NET 2.1.502 i 2.2.101_)
-
-### <a name="packagelicenseexpression"></a>PackageLicenseExpression
-
-[Identyfikatora licencji SPDX](https://spdx.org/licenses/) lub wyrażenie, czyli `Apache-2.0`.
-
-Zastępuje `PackageLicenseUrl`, nie można połączyć z `PackageLicenseFile` i wymaga programu Visual Studio 15.9.4, zestaw SDK platformy .NET 2.1.502 lub 2.2.101, lub nowszej.
-
-### <a name="packagelicensefile"></a>PackageLicenseFile
-
-Ścieżka do licencji pliku na dysku, względem pliku projektu, czyli `LICENSE.txt`.
-
 Zastępuje `PackageLicenseUrl`, nie można połączyć z `PackageLicenseExpression` i wymaga programu Visual Studio 15.9.4, zestaw SDK platformy .NET 2.1.502 lub 2.2.101, lub nowszej.
 
 Należy upewnić się, że plik licencji jest pakowany, jawnie dodając ją do projektu, na przykład użycia:
@@ -264,6 +247,12 @@ Należy upewnić się, że plik licencji jest pakowany, jawnie dodając ją do p
   <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
 </ItemGroup>
 ```
+
+### <a name="packagelicenseurl"></a>PackageLicenseUrl
+
+Adres URL licencji, która ma zastosowanie do pakietu. (_przestarzały począwszy od programu Visual Studio 15.9.4, zestaw SDK platformy .NET 2.1.502 i 2.2.101_)
+
+
 ### <a name="packageiconurl"></a>PackageIconUrl
 Adres URL obrazu 64 x 64 z przezroczystym tłem do użycia jako ikona dla pakietu wyświetlania w interfejsie użytkownika.
 

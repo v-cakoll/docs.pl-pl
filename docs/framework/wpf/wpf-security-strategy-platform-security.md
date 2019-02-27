@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 2252214a8ec217c30842995ea7d4d141e127d5f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2363042ace7440ee74e4590a2271e87c1389ebcc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640449"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836347"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jednocześnie również wykorzystuje funkcje zabezpieczeń, możliwości platformy, która zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy są łączone w celu zapewnienia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, ochronę w głębi, który próbuje uniknąć dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
@@ -50,7 +50,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
  W przeszłości przepełnienia buforu zostały Przyczyna wielu lukami w zabezpieczeniach o dużym znaczeniu. Przepełnienie buforu występuje, gdy osoba atakująca wykorzystuje kodu, który umożliwia uruchomienie złośliwego kodu, który zapisuje poza granice buforu. Pozwala to następnie osobie atakującej przejąć kontrolę nad proces, w której kod jest wykonywany przez zastąpienie adres zwrotny funkcji, aby spowodować, że wykonywanie kodu osoby atakującej. Wynik jest złośliwy kod, który jest wykonywany dowolnego kodu z takie same uprawnienia jak proces przejętego.  
   
- Na wysokim poziomie flagi kompilatora/GS chroni przed niektóre potencjalne przepełnienia buforów przez iniekcję specjalnych zabezpieczeniach plik cookie, aby chronić adres zwrotny funkcji, która ma buforów lokalnego ciągu. Po powrocie funkcji, pliku cookie zabezpieczeń jest porównywana z poprzedniej wartości. Jeśli wartość została zmieniona, może wystąpić przepełnienie buforu, a proces zostanie zatrzymany warunek błędu. Trwa zatrzymywanie procesu uniemożliwia wykonywanie potencjalnie złośliwego kodu. Zobacz [/GS (Sprawdzanie zabezpieczeń bufora)](https://msdn.microsoft.com/library/8dbf701c.aspx) Aby uzyskać więcej informacji.  
+ Na wysokim poziomie flagi kompilatora/GS chroni przed niektóre potencjalne przepełnienia buforów przez iniekcję specjalnych zabezpieczeniach plik cookie, aby chronić adres zwrotny funkcji, która ma buforów lokalnego ciągu. Po powrocie funkcji, pliku cookie zabezpieczeń jest porównywana z poprzedniej wartości. Jeśli wartość została zmieniona, może wystąpić przepełnienie buforu, a proces zostanie zatrzymany warunek błędu. Trwa zatrzymywanie procesu uniemożliwia wykonywanie potencjalnie złośliwego kodu. Zobacz [/GS (Sprawdzanie zabezpieczeń bufora)](/cpp/build/reference/gs-buffer-security-check) Aby uzyskać więcej informacji.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest kompilowany za pomocą flagi/GS, aby dodać kolejną warstwę ochrony do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
   
@@ -174,7 +174,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] to technologia wdrażania kompleksowe, jest dołączana do .NET Framework, która integruje się z [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (zobacz [Przegląd wdrażania ClickOnce](https://msdn.microsoft.com/library/142dbbz4.aspx) Aby uzyskać szczegółowe informacje). Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje można wdrożyć przy użyciu [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], natomiast aplikacje hostowane w przeglądarce musi zostać wdrożony za pomocą [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] to technologia wdrażania kompleksowe, jest dołączana do .NET Framework, która integruje się z [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (zobacz [ClickOnce zabezpieczeń i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment) Aby uzyskać szczegółowe informacje). Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje można wdrożyć przy użyciu [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)], natomiast aplikacje hostowane w przeglądarce musi zostać wdrożony za pomocą [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].  
   
  Aplikacje wdrożone za pomocą [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] są podane jako dodatkowa warstwa zabezpieczeń za pośrednictwem [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]; zasadniczo [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] wdrożone aplikacje zażądać uprawnień, które są im niezbędne. Otrzymują uprawnienia Jeśli nie przekraczają zestaw uprawnień strefy, w którym aplikacja jest wdrażana. Zmniejszenie zestaw uprawnień tylko do tych, które są potrzebne, nawet jeśli są mniejsze niż te dostarczone przez zestaw uprawnień strefy uruchamiania, jest wiele zasobów, które aplikacja ma dostęp do ograniczenie do minimum systemu od zera. W związku z tym jeśli przejęta aplikacji jest mniejsze ryzyko uszkodzenia komputer kliencki.  
   
@@ -210,9 +210,6 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
   
 ## <a name="see-also"></a>Zobacz także
 - [Opis zabezpieczeń w programie Microsoft Internet Explorer 6 Windows XP z dodatkiem SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
-- [Opis i pracą z nimi w programie Internet Explorer w trybie chronionym](https://msdn.microsoft.com/library/bb250462.aspx)
-- [Windows XP Service Pack 3](https://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)
-- [Poradnik bezpieczeństwa programu Windows Vista](https://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)
 - [Zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md)
 - [Zabezpieczenia](../../../docs/framework/wpf/security-wpf.md)
 - [Zabezpieczenie częściowej relacji zaufania WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)

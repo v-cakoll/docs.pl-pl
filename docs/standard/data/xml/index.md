@@ -5,12 +5,6 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202962"
 ---
 # <a name="xml-documents-and-data"></a>Dokumenty i dane XML
 .NET Framework zapewnia kompleksowego i zintegrowanego zestaw klas, które umożliwiają łatwe tworzenie aplikacji z obsługą XML. Klasy w następujące przestrzenie nazw obsługują analizowania i zapisywania, edytowania plików XML danych XML w pamięci, sprawdzanie poprawności danych i transformacji XSLT.  
@@ -25,7 +19,7 @@ ms.locfileid: "50202962"
   
 -   <xref:System.Xml.Linq>  
   
- Aby uzyskać pełną listę, zobacz [przestrzenie nazw System.Xml](https://msdn.microsoft.com/library/gg145036.aspx) strony sieci Web.  
+ Aby uzyskać pełną listę, wyszukaj "System.Xml" na [przeglądarka interfejsu API .NET](https://docs.microsoft.com/dotnet/api/?term=system.xml).  
   
  Klasy w te przestrzenie nazw obsługują zalecenia konsorcjum World Wide Web Consortium (W3C). Na przykład:  
   
@@ -33,13 +27,13 @@ ms.locfileid: "50202962"
   
 -   <xref:System.Xml.XmlReader?displayProperty=nameWithType> i <xref:System.Xml.XmlWriter?displayProperty=nameWithType> klasy pomocy technicznej [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) i [przestrzeni nazw w kodzie XML](https://www.w3.org/TR/REC-xml-names/) zalecenia.  
   
--   Schematy w <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> klasy pomocy technicznej [W3C XML schematu część 1: struktur](https://www.w3.org/TR/xmlschema-1/) i [XML schematu część 2: typy danych](https://www.w3.org/TR/xmlschema-2/) zalecenia.  
+-   Schematy w <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> klasy pomocy technicznej [W3C XML schematu część 1: Struktury](https://www.w3.org/TR/xmlschema-1/) i [XML schematu część 2: Typy danych](https://www.w3.org/TR/xmlschema-2/) zalecenia.  
   
 -   Klasy w <xref:System.Xml.Xsl?displayProperty=nameWithType> przekształcenia XSLT obsługi przestrzeni nazw, które są zgodne z [W3C specyfikacji XSLT 1.0](https://www.w3.org/TR/xslt) zalecenia.  
   
  Klasy XML w programie .NET Framework zapewniają następujące korzyści:  
   
--   **Wydajność.** [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) ułatwia program za pomocą XML i zapewnia środowisko zapytania, które są podobne do bazy danych SQL.  
+-   **Wydajność.** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) i [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) ułatwia program za pomocą XML i zapewnia środowisko zapytania, które są podobne do bazy danych SQL.  
   
 -   **Rozszerzalność.** Klasy XML w programie .NET Framework można rozszerzać za pomocą abstrakcyjnych klas bazowych i metod wirtualnych. Na przykład można utworzyć pochodnej klasy <xref:System.Xml.XmlUrlResolver> klasę, która przechowuje strumień pamięci podręcznej na dysku lokalnym.  
   
@@ -62,7 +56,7 @@ ms.locfileid: "50202962"
  W tym artykule omówiono opcje związane z przetwarzaniem danych XML.  
   
  [Przetwarzanie danych XML w pamięci](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- W tym artykule omówiono trzy modele dla przetwarzania XML danych w pamięci. [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13), <xref:System.Xml.XmlDocument> klasy (oparty na formacie W3C Document Object Model) i <xref:System.Xml.XPath.XPathDocument> klasy (oparty na modelu danych XPath).  
+ W tym artykule omówiono trzy modele dla przetwarzania XML danych w pamięci: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) i [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), <xref:System.Xml.XmlDocument> klasy (oparty na formacie W3C Document Object Model) i <xref:System.Xml.XPath.XPathDocument> klasy (oparty na modelu danych XPath).  
   
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
  W tym artykule opisano sposób użycia procesora XSLT.  

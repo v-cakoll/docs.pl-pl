@@ -3,21 +3,15 @@ title: Plik i Stream operacji We/Wy — .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- IO namespace
-- files, I/O
-- System.IO namespace
-- I/O [.NET Framework]
-- streams, I/O
-- data streams, I/O
+  - IO namespace
+  - 'files, I/O'
+  - System.IO namespace
+  - 'I/O [.NET Framework]'
+  - 'streams, I/O'
+  - 'data streams, I/O'
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07ea22fcd76a9f52fd9fd0b00c58d6d3b9b906d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279477"
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 
@@ -47,7 +41,7 @@ Należy zawsze podawać niezawodne wyjątków, obsługa podczas wywoływania met
 
 Oprócz tych klas, użytkowników programu Visual Basic można użyć metod i właściwości dostarczonych przez <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> klasy dla we/wy pliku.
 
-Zobacz [jak: Kopiowanie katalogów](how-to-copy-directories.md), [jak: Create a Directory Listing](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), i [jak: Wyliczanie katalogów i plików](how-to-enumerate-directories-and-files.md).
+Zobacz [jak: Kopiowanie katalogów](how-to-copy-directories.md), [jak: Create a Directory Listing](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)), i [jak: Wyliczanie katalogów i plików](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Strumienie
 

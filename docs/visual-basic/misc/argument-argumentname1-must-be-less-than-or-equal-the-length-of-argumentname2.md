@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname1>" musi być mniejsza lub równa długości argumentu "<argumentname2>"
+title: Argument '<argumentname1>' musi być mniejsza lub równa długości argumentu '<argumentname2>'
 ms.date: 07/20/2015
 ms.assetid: 55a2401f-a44d-4671-b35e-878f48594162
 ms.openlocfilehash: cb92960eea352c3d35f45008bea667769f8a9b41
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55265249"
 ---
-# <a name="argument-argumentname1-must-be-less-than-or-equal-the-length-of-argument-argumentname2"></a>Argument "\<argumentname1 >" musi być mniejsza lub równa długości argumentu "\<argumentname2 >"
+# <a name="argument-argumentname1-must-be-less-than-or-equal-the-length-of-argument-argumentname2"></a>Argument '\<argumentname1 >' musi być mniejsza lub równa długości argumentu '\<argumentname2 >'
 Długość podanej argumentu przekracza długość argumentu, który zastępuje go.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

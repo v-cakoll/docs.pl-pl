@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4bf2cf647682062fbacb4484ffae905d1b7995
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645967"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835372"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers — Metoda
 Wylicza tokenów MemberDef reprezentujących elementy określonego typu.  
@@ -39,7 +39,7 @@ HRESULT EnumMembers (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `phEnum`  
  [out w] Wskaźnik do modułu wyliczającego.  
   
@@ -63,7 +63,9 @@ HRESULT EnumMembers (
 |`S_FALSE`|Nie ma żadnych tokeny MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas wyliczania kolekcji elementów członkowskich dla klasy `EnumMembers` zwraca tylko elementy członkowskie zdefiniowane bezpośrednio w klasie. Nie zwraca żadnych elementów członkowskich, które klasa dziedziczy, nawet wtedy, gdy klasa udostępnia implementację dla tych dziedziczonych elementów członkowskich. Aby wyliczyć dziedziczone elementy członkowskie, obiekt wywołujący jawnie prowadzą użytkownika łańcuch dziedziczenia. Należy pamiętać, że zasady łańcuch dziedziczenia, mogą się różnić w zależności od języka i kompilatora, które są emitowane odpowiednich oryginalnych metadanych.  
+ Podczas wyliczania kolekcji elementów członkowskich klasy, `EnumMembers` zwraca tylko elementy członkowskie (pola i metody, ale **nie** właściwości lub zdarzenia) zdefiniowany bezpośrednio na klasie. Nie zwraca żadnych elementów członkowskich, które klasa dziedziczy, nawet wtedy, gdy klasa udostępnia implementację dla tych dziedziczonych elementów członkowskich. Aby wyliczyć dziedziczone elementy członkowskie, obiekt wywołujący jawnie prowadzą użytkownika łańcuch dziedziczenia. Należy pamiętać, że zasady łańcuch dziedziczenia, mogą się różnić w zależności od języka i kompilatora, które są emitowane odpowiednich oryginalnych metadanych.
+ 
+ Właściwości i zdarzenia nie są wyliczane przez `EnumMembers`. Aby wyliczyć te, należy użyć [enumproperties —](imetadataimport-enumproperties-method.md) lub [enumevents —](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

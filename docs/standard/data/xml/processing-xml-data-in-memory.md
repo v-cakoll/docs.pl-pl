@@ -5,15 +5,15 @@ ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e6e89cafeb4cc580edb9630ba7415a669ea750c
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: f1a4587838180896b52bb79d447ed7ede3e22d1a
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904410"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836490"
 ---
 # <a name="processing-xml-data-in-memory"></a>Przetwarzanie danych XML w pamięci
-Microsoft .NET Framework zawiera trzy modele związane z przetwarzaniem danych XML: <xref:System.Xml.XmlDocument> klasy <xref:System.Xml.XPath.XPathDocument> klasy, a [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
+Microsoft .NET Framework zawiera trzy modele związane z przetwarzaniem danych XML: <xref:System.Xml.XmlDocument> klasy <xref:System.Xml.XPath.XPathDocument> klasy i [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) i [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   
  <xref:System.Xml.XmlDocument> Klasa implementuje W3C dokumentu object model (DOM) poziom 1 core i core modelu DOM na poziomie 2 zalecenia. Model DOM jest w pamięci (pamięć podręczna) drzewa reprezentacja dokumentu XML. Za pomocą <xref:System.Xml.XmlDocument> i jej klasy pokrewne można konstruowania, dokumentów XML, obciążenia i uzyskiwać dostęp do danych i modyfikować dane i zapisać zmiany.  
   

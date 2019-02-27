@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218910"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835242"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importowanie biblioteki typów jako zestawu
 Definicje typów modelu COM zazwyczaj znajdują się w bibliotece typów. Z kolei zgodne ze specyfikacją CLS kompilatory generuje metadanych typu w zestawie. Dwa źródła informacji o typie są zupełnie inny. W tym temacie opisano techniki do generowania metadanych z biblioteki typów. Wynikowy zestaw nosi nazwę zestawu międzyoperacyjnego i zawartych w nim informacje o typie umożliwia używanie typów modelu COM aplikacji .NET Framework.  
@@ -44,7 +44,7 @@ Definicje typów modelu COM zazwyczaj znajdują się w bibliotece typów. Z kole
   
 -   Visual Studio  
   
-     Program Visual Studio automatycznie konwertuje typy modelu COM w bibliotece typów na metadanych w zestawie. Aby uzyskać instrukcje, zobacz [jak: Dodaj odwołania do bibliotek typów](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md), [instruktażu: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md), i [instruktażu: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md).  
+     Program Visual Studio automatycznie konwertuje typy modelu COM w bibliotece typów na metadanych w zestawie. Aby uzyskać instrukcje, zobacz [jak: Dodaj odwołania do bibliotek typów](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 -   [Importer biblioteki typów (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,5 +81,3 @@ Definicje typów modelu COM zazwyczaj znajdują się w bibliotece typów. Z kole
 - [Wdrażanie aplikacji międzyoperacyjnych](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [Instrukcje: Dodaj odwołania do bibliotek typów](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [Instrukcje: Generowanie zestawów międzyoperacyjnych z bibliotek typów](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

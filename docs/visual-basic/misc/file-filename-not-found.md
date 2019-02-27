@@ -1,5 +1,5 @@
 ---
-title: Plik "<filename>" nie znaleziono
+title: Plik '<filename>' nie znaleziono
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileNotFound1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55274524"
 ---
-# <a name="file-filename-not-found"></a>Plik "\<nazwa pliku >" nie znaleziono
+# <a name="file-filename-not-found"></a>Plik '\<nazwa pliku >' nie znaleziono
 Nazwa pliku jest nieprawidłowa lub plik nie istnieje.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

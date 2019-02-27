@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18244ab0473ca4de97e8b6e4eb84151d3a1a5b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692967"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836425"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 <a name="top"></a> Kowariancja i kontrawariancja to terminy odwołujące się do możliwość używania typu bardziej pochodnego (bardziej szczegółowe) lub mniej pochodnego typu (specyficzne dla języka less) niż oryginalnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. W przykładach założono, klasa bazowa o nazwie `Base` i Klasa pochodna o nazwie `Derived`.  
@@ -135,7 +135,7 @@ ms.locfileid: "54692967"
 ### <a name="variance-in-generic-and-non-generic-delegates"></a>Wariancja w delegatach ogólnych i nieogólnych  
  W poprzednim kodzie podpis `MyMethod` dokładnie pasuje do podpisu skonstruowanego delegata ogólnego: `Func<Base, Derived>` (`Func(Of Base, Derived)` w języku Visual Basic). W przykładzie pokazano czy ten delegat ogólny mogą być przechowywane w zmiennych lub parametrach metody, które mają bardziej pochodne typy parametrów i mniej pochodne typy zwracane, tak długo, jak wszystkie typy delegatów są konstruowane na podstawie ogólnego typu delegatów <xref:System.Func%602>.  
   
- Jest to ważny punkt. Efekty zastosowania kowariancji i kontrawariancji w parametrach typu delegatów ogólnych są podobne do efektów zastosowania kowariancji i kontrawariancji w zwykłych powiązaniach delegatów (zobacz [wariancje w Delegatach](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)). Jednak wariancja w powiązaniach delegatów działa ze wszystkimi typami delegatów, a nie tylko z ogólnymi typami delegatów, które mają wariantne parametry typu. Co więcej wariancja w powiązaniach delegatów umożliwia powiązanie metody z dowolnym delegatem, który ma bardziej restrykcyjne typy parametrów i mniej restrykcyjny typ zwracany, podczas gdy przypisanie delegatów ogólnych działa tylko wtedy, gdy oba typy delegatów są konstruowane na podstawie jednej definicji typu ogólnego.  
+ Jest to ważny punkt. Efekty zastosowania kowariancji i kontrawariancji w parametrach typu delegatów ogólnych są podobne do efektów zastosowania kowariancji i kontrawariancji w zwykłych powiązaniach delegatów (zobacz [wariancje w Delegatach (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [ Wariancje w Delegatach (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)). Jednak wariancja w powiązaniach delegatów działa ze wszystkimi typami delegatów, a nie tylko z ogólnymi typami delegatów, które mają wariantne parametry typu. Co więcej wariancja w powiązaniach delegatów umożliwia powiązanie metody z dowolnym delegatem, który ma bardziej restrykcyjne typy parametrów i mniej restrykcyjny typ zwracany, podczas gdy przypisanie delegatów ogólnych działa tylko wtedy, gdy oba typy delegatów są konstruowane na podstawie jednej definicji typu ogólnego.  
   
  W poniższym przykładzie pokazano połączone efekty zastosowania wariancji w powiązaniu delegatów oraz zastosowania wariancji w parametrach typu ogólnego. Przykładzie zdefiniowano hierarchię typów zawierającą trzy typy, od najmniej pochodnych (`Type1`) do najbardziej pochodnego (`Type3`). Wariancja w zwykłym powiązaniu delegatów służy do tworzenia powiązania metody mającej typ parametru z `Type1` i zwracanym typem `Type3` z delegatem ogólnym mającym typ parametru elementu `Type2` i zwracanym typem `Type2`. Następnie wynikowy Delegat ogólny jest przypisywany do innej zmiennej, której typ delegata ogólnego ma parametr typu `Type3` i zwracanym typem `Type1`, przy użyciu kowariancji i kontrawariancji parametrów typu genetycznego. Drugie przypisanie wymaga zarówno typ zmiennej i typ delegata zostały skonstruowane na podstawie jednej definicji typu ogólnego, w tym przypadku <xref:System.Func%602>.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54692967"
   
  Programy Visual Basic i C# nie zezwalają na naruszanie reguł używania kowariantnych i kontrawariantnych parametrów typu oraz dodawanie adnotacji o kowariancji i kontrawariancji do parametrów typu dla typów innych niż interfejsy i delegaty. [MSIL Assembler](../../../docs/framework/tools/ilasm-exe-il-assembler.md) nie wykonuje takich kontroli, ale <xref:System.TypeLoadException> jest generowany, jeśli zostanie podjęta próba załadowania typu naruszającego reguły.  
   
- Aby uzyskać informacji i przykładowy kod, zobacz [wariancje w interfejsach](https://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a).  
+ Aby uzyskać informacji i przykładowy kod, zobacz [wariancje w interfejsach (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) i [wariancje w interfejsach (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).  
   
  [Powrót do początku](#top)  
   
@@ -192,4 +192,5 @@ ms.locfileid: "54692967"
 
 - [Kowariancja i Kontrawariancja (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Kowariancja i Kontrawariancja (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [Wariancje w delegatach](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+- [Wariancje w Delegatach (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Wariancje w Delegatach (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

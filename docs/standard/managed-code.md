@@ -1,44 +1,44 @@
 ---
 title: Co to jest zarządzany kod?
-description: Dowiedz się, jak zarządzanego kodu jest kodem, których wykonanie jest zarządzany przez moduł wykonawczy środowiska uruchomieniowego języka wspólnego (CLR).
+description: Dowiedz się, jak zarządzany kod jest kodem, których wykonanie jest zarządzany przez środowisko uruchomieniowe, środowisko uruchomieniowe języka wspólnego (CLR).
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574546"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836282"
 ---
-# <a name="what-is-managed-code"></a>Co to jest "kodu zarządzanego"?
+# <a name="what-is-managed-code"></a>Co to jest "kod zarządzany"?
 
-Podczas pracy z .NET Framework, można napotkać często termin "kod zarządzany". Ten dokument zostanie Wyjaśnij, określenie to oznacza i dodatkowe informacje wokół niego.
+Podczas pracy z programem .NET Framework, można napotkać często termin "kod zarządzany". W tym dokumencie wyjaśniono, co oznacza ten termin i dodatkowe informacje na temat jej.
 
-Aby umieścić bardzo prosty, kod zarządzany jest właśnie tę: kodu, których wykonanie jest zarządzane przez środowisko wykonawcze. W takim przypadku nosi nazwę środowiska uruchomieniowego w **środowisko uruchomieniowe języka wspólnego** lub CLR, niezależnie od implementacji ([Mono](https://www.mono-project.com/) lub .NET Framework lub .NET Core). CLR jest odpowiedzialny za pobierania kodu zarządzanego, kompilowanie go do kod maszynowy i jej wykonanie. U góry, runtime zawiera kilka ważnych usług, takich jak automatyczne zarządzanie pamięcią, granic zabezpieczeń typu bezpieczeństwa itp.
+Aby przełączyć bardzo prosty sposób, kod zarządzany jest po prostu: kodu, których wykonanie jest zarządzany przez środowisko uruchomieniowe. W tym przypadku danego środowiska uruchomieniowego jest nazywany **środowiska uruchomieniowego języka wspólnego** lub CLR, niezależnie od implementacji ([Mono](https://www.mono-project.com/) lub .NET Framework lub .NET Core). Środowisko CLR jest odpowiedzialny za wykonanie kodu zarządzanego, kompilując go do kodu maszynowego i jej wykonanie. Na górze, środowisko wykonawcze zapewnia kilka ważnych usług, takich jak automatyczne zarządzanie pamięcią, granice zabezpieczeń wpisz bezpieczeństwa itp.
 
-Natomiast to sposób którą należy uruchomić program C/C++, nazywane również "kodu niezarządzanego". W świecie niezarządzane programistę jest odpowiedzialny za niemal wszystkie elementy. Rzeczywiste program jest zasadniczo binary, który system operacyjny (OS) ładuje do pamięci i uruchamia. Wszystkie inne z zarządzania pamięci do zagadnienia dotyczące zabezpieczeń są obciążenia programisty.
+Natomiast to sposób, który należy uruchomić program C/C++, nazywany również "Kod niezarządzanego". W świecie niezarządzanych programistę odpowiada za niemal wszystkie elementy. Rzeczywisty program jest zasadniczo plik binarny, który jest ładowany do pamięci systemu operacyjnego (OS) i uruchamia. Wszystkie inne czynności, od zarządzania pamięci do zagadnienia dotyczące zabezpieczeń są obciążenia programisty.
 
-Zarządzany kod jest zapisywany w jednym z języków wysokiego poziomu, które mogą być uruchamiane na górze .NET, takich jak C#, Visual Basic, F # i inne. Podczas kompilowania kodu napisanego w tych językach z ich odpowiednich kompilatora nie otrzymasz kod maszynowy. Możesz uzyskać **język pośredni** środowiska uruchomieniowego następnie kompiluje i uruchamia kod. C++ jest jedynym wyjątkiem od tej reguły, jak można utworzyć również macierzystego, niezarządzane pliki binarne, uruchomionych w systemie Windows.
+Kod zarządzany jest zapisywany w jednym z języków wysokiego poziomu, które mogą być uruchamiane na szczycie .NET, takich jak C#, Visual Basic F# i innym osobom. Podczas kompilowania kodu napisanego w tych językach za pomocą ich odpowiednich kompilatora nie uzyskasz kodu maszynowego. Możesz uzyskać **języka pośredniego** kod, który środowiska uruchomieniowego następnie kompiluje i wykonuje. Język C++ jest jedynym wyjątkiem od tej reguły, jak można utworzyć również natywnych i niezarządzane pliki binarne, które systemem Windows.
 
-## <a name="intermediate-language--execution"></a>Pośredni języka i wykonanie
+## <a name="intermediate-language--execution"></a>Pośredni języka i wykonywanie
 
-Co to jest "Język pośredni" (lub IL skrócie)? Jest to produkt kompilacji kod napisany w językach .NET wysokiego poziomu. Możesz kompilacji kodu napisane w jeden z tych języków, otrzymasz pliku binarnego, które zostało utworzone poza IL. Ważne jest, aby należy pamiętać, że IL jest niezależna od dowolnego określonego języka, który działa w oparciu o środowiska uruchomieniowego; nawet to oddzielne Specyfikacja dla niego, który może odczytywać, jeśli jest to pochylone.
+Co to jest "Język pośredni" (lub IL w skrócie)? Jest to produkt kompilacji kod napisany w językach .NET wysokiego poziomu. Po skompilowaniu kodu napisanego w jeden z tych języków, zostanie wyświetlony plik binarny, który składa się z IL. Ważne jest, aby pamiętać, że IL jest niezależna od określonego języka, uruchamiane w systemie środowiska uruchomieniowego; jest parzysta oddzielnych specyfikacji dla niego, który może odczytać, jeśli jest więc pochylone.
 
-Gdy utworzysz IL w kodzie wysokiego poziomu, prawdopodobnie można go uruchomić. Gdzie CLR przejmuje i uruchamia proces **Just In Time** kompilowania, lub **używać JIT** kodu z IL do kodu maszyny, który faktycznie można uruchamiać na procesora CPU. W ten sposób CLR zna dokładnie kodu czynności i mogą skutecznie _zarządzanie_ go.
+Gdy zostanie wyświetlony IL w kodzie wysokiego poziomu, prawdopodobnie można go uruchomić. Jest to, gdzie CLR przejmuje i rozpoczyna proces **Just-In-Time** kompilacji, lub **JIT ing** kod z IL do kodu maszynowego, który faktycznie można uruchomić na procesorze CPU. W ten sposób CLR wie dokładnie co kod robi i może się skutecznie _zarządzanie_ go.
 
-Język pośredni również czasami jest nazywany wspólnego języka pośredniego (CIL) lub Microsoft języka pośredniego (MSIL).
+Język pośredni czasami skrót wspólny język pośredni (CIL) lub Microsoft Intermediate Language (MSIL).
 
-## <a name="unmanaged-code-interoperability"></a>Współdziałanie z kodem niezarządzanym
+## <a name="unmanaged-code-interoperability"></a>Współdziałanie kodu niezarządzanego
 
-Oczywiście CLR umożliwia przekazywanie granice między world zarządzane i niezarządzane, a wiele kod, który obsługuje, nawet w [podstawowej biblioteki klas](framework-libraries.md). Ta metoda jest wywoływana **współdziałanie** lub po prostu **interop** skrócie. Umożliwia te przepisy, na przykład dobiega końca niezarządzane biblioteki i wywołują go. Jest jednak należy pamiętać, że po tym, gdy kod przekazuje granice środowiska uruchomieniowego rzeczywiste Zarządzanie wykonywania jest ponownie ręczne kodu niezarządzanego, a w związku z tym podlega takie same ograniczenia.
+Oczywiście, CLR umożliwia przekazywanie granice między zarządzanymi i niezarządzanymi świecie i jest dużo kod, który obsługuje, nawet w [bibliotek klas Base](framework-libraries.md). Jest to nazywane **współdziałanie** lub po prostu **interop** w skrócie. Te przepisy pozwoliłoby, na przykład zawinąć biblioteką niezarządzaną i wywoływać ją. Jednak należy pamiętać, że gdy to zrobisz, gdy kod przekazuje granice środowiska uruchomieniowego, rzeczywiste Zarządzanie wykonywania ponownie jest ręczne niezarządzanego kodu i związku z tym podlega tym samym ograniczeniom.
 
-Podobnie do poniższego, C# jest jeden język, który pozwala na stosowanie konstrukcji niezarządzanych, takich jak wskaźniki bezpośrednio w kodzie wykorzystując, co jest nazywane **niebezpiecznym kontekście** który wyznacza fragment kodu, dla którego wykonanie nie jest zarządzany przez CLR.
+Mniej więcej tak, C# to jeden język, który pozwala na używanie niezarządzanych konstrukcji, takich jak wskaźniki bezpośrednio w kodzie, wykorzystując, co jest nazywane **niebezpieczny kontekst** który wyznacza fragment kodu, dla którego wykonanie nie jest zarządzany przez środowisko CLR.
 
-## <a name="more-resources"></a>Więcej zasobów
+## <a name="more-resources"></a>Inne zasoby
 
-*   [Omówienie pojęć programu .NET framework](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [Niebezpieczny kod i wskaźniki](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [Współdziałanie (Przewodnik programowania C#)](https://msdn.microsoft.com/library/ms173184.aspx)
+* [Omówienie programu .NET Framework](../framework/get-started/overview.md)
+* [Niebezpieczny kod i wskaźniki](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [Współdziałanie natywne](./native-interop/index.md)

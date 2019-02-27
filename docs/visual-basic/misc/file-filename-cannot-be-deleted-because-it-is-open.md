@@ -1,5 +1,5 @@
 ---
-title: Plik "<filename>" nie można usunąć, ponieważ jest on otwarty
+title: Plik '<filename>' nie można usunąć, ponieważ jest on otwarty
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55254343"
 ---
-# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a>Plik "\<nazwa pliku >" nie można usunąć, ponieważ jest on otwarty
+# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a>Plik '\<nazwa pliku >' nie można usunąć, ponieważ jest on otwarty
 Próba usunięcia na otwartego pliku.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

@@ -3,13 +3,13 @@ title: Środowisko programistyczne dla aplikacji platformy Docker
 description: Ustal, jakimi najważniejszych opcjach narzędzia do programowania, które obsługują programowanie platformy Docker w cyklu życia.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 09d15d4221d948b654912a8890df66052e68f6eb
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220000"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836178"
 ---
 # <a name="development-environment-for-docker-apps"></a>Środowisko programistyczne dla aplikacji platformy Docker
 
@@ -22,27 +22,29 @@ Niezależnie od tego Jeśli wolisz, pełne i zaawansowanego środowiska IDE lub 
 Jeśli wolisz lekkie Międzyplatformowe Edytor Obsługa dowolnego języka programowania, można użyć programu Visual Studio Code i interfejsu wiersza polecenia platformy Docker. Te produkty zapewniają proste, ale niezawodne środowisko, co ma kluczowe znaczenie dla usprawnienie przepływu pracy dewelopera. Instalując "Docker for Mac" lub "Docker for Windows" (środowisko programistyczne), deweloperzy platformy Docker można użyć pojedynczego interfejsu wiersza polecenia platformy Docker do tworzenia aplikacji Windows lub Linux (środowisko uruchomieniowe). Ponadto w Visual Studio Code obsługuje rozszerzenia dla platformy Docker za pomocą funkcji IntelliSense dla plików Dockerfile i skrót zadania to uruchamianie poleceń Docker z poziomu edytora.
 
 > [!NOTE]
+>
 > Aby pobrać program Visual Studio Code, przejdź do <https://code.visualstudio.com/download>.
+>
+> Aby pobrać platformy Docker dla systemów Mac i Windows, przejdź do <https://www.docker.com/products/docker>.
 
-Aby pobrać platformy Docker dla systemów Mac i Windows, przejdź do <https://www.docker.com/products/docker>.
+### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Visual Studio z narzędziami Docker (komputerze deweloperskim Windows)
 
-### <a name="visual-studio-with-docker-tools"></a>Visual Studio with Docker Tools
+Zalecane jest użycie programu Visual Studio 2017 (lub późniejszy) za pomocą wbudowanych narzędzi platformy Docker, włączone. Za pomocą programu Visual Studio mogą tworzyć, uruchamianie i Weryfikuj aplikacje bezpośrednio w wybranym środowisku platformy Docker. Naciśnij klawisz F5, aby debugować aplikację (jeden kontener lub wiele kontenerów) bezpośrednio w hosta platformy Docker lub naciśnij klawisze Ctrl + F5, aby edytować i odświeżać aplikację bez konieczności ponownego kompilowania kontenera. Jest to najprostszy i najbardziej wydajnymi procesorami wybór dla deweloperów Windows do tworzenia kontenerów platformy Docker dla systemu Linux lub Windows.
 
-Podczas korzystania z programu Visual Studio 2015 można zainstalować dodatkowe narzędzia "Narzędzia platformy Docker dla programu Visual Studio". Dla programu Visual Studio 2017 narzędzia platformy Docker są wbudowane już. W obu przypadkach można rozwijać, uruchamianie i Weryfikuj aplikacje bezpośrednio w wybranym środowisku platformy Docker. F5 aplikacji (jeden kontener lub wiele kontenerów) bezpośrednio do platformy Docker hosta debugowania lub naciśnij klawisze Ctrl + F5, aby edytować i odświeżać aplikację bez konieczności ponownego kompilowania kontenera. Jest to najprostsza i bardziej wydajne wyborem dla deweloperów Windows tworzenie kontenerów platformy Docker dla systemu Linux lub Windows.
+### <a name="visual-studio-for-mac-mac-development-machine"></a>Program Visual Studio for Mac (komputerze deweloperskim Mac)
 
-> [!NOTE]
-> Aby pobrać narzędzia aparatu Docker dla programu Visual Studio, przejdź do <https://visualstudiogallery.msdn.microsoft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4>.
+Możesz użyć [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/) podczas tworzenia aplikacji opartych na platformie Docker. Program Visual Studio for Mac oferuje rozbudowane środowisko IDE, w porównaniu do programu Visual Studio Code dla komputerów Mac.
 
 ## <a name="language-and-framework-choices"></a>Opcje języka i struktury
 
-Możesz opracowywać aplikacje platformy Docker i narzędzi firmy Microsoft przy użyciu najbardziej nowoczesnych języków. Poniżej przedstawiono listę początkowej, ale nie są ograniczone do niego:
+Można tworzyć aplikacje platformy Docker przy użyciu narzędzia Microsoft większość nowoczesnych języków. Poniżej przedstawiono listę początkowej, ale nie są ograniczone do niego:
 
--   .NET Core i ASP.NET Core
--   Node.js
--   Golang
--   Java
--   Ruby
--   Python
+- .NET Core i ASP.NET Core
+- Node.js
+- Z rzeczywistym użyciem
+- Java
+- Ruby
+- Python
 
 Zasadniczo można używać dowolnego języka modern, obsługiwane przez platformę Docker w systemie Linux lub Windows.
 

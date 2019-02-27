@@ -7,18 +7,17 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: d7c3a6b01591dd1c7fc7554a6e660f1ca7b12de1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: afc39b0d079bf273170a649f03a3756953c29eea
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582216"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836399"
 ---
 # <a name="audio-and-video-how-to-topics"></a>Audio i wideo Tematy porad
 W poniższych tematach pokazano sposób użycia <xref:System.Windows.Controls.MediaElement> zintegrować zawartości audio i wideo w aplikacjach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: dynamiczne dodawanie elementu](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
  [Sterowanie elementem MediaElement (odtwórz, pauza, zatrzymaj, głośność i szybkość)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
  [Sterowanie elementem MediaElement z użyciem scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
  [Wyzwalanie odtwarzania multimediów za pomocą zdarzenia użytkownika](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267303"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835255"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>XSLT skryptów przy użyciu arkusza stylów \<msxsl: script >
 <xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu.  
@@ -45,7 +45,7 @@ ms.locfileid: "55267303"
   
  Aby uzyskać dowód z zestawu, należy użyć `this.GetType().Assembly.Evidence`. Aby uzyskać dowód z jednolite zasobów identyfikator (URI), użyj `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Jeśli używasz <xref:System.Xml.Xsl.XslTransform.Load%2A> metod, które przyjmują <xref:System.Xml.XmlResolver> , ale nie `Evidence`, wartością domyślną pełnego zaufania strefie zabezpieczeń dla zestawu. Aby uzyskać więcej informacji, zobacz <xref:System.Security.SecurityZone> i [nazwanych zestawów uprawnień](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Jeśli używasz <xref:System.Xml.Xsl.XslTransform.Load%2A> metod, które przyjmują <xref:System.Xml.XmlResolver> , ale nie `Evidence`, wartością domyślną pełnego zaufania strefie zabezpieczeń dla zestawu. Aby uzyskać więcej informacji, zobacz <xref:System.Security.SecurityZone> i [nazwanych zestawów uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Funkcje mogą być zadeklarowane w obrębie `msxsl:script` elementu. W poniższej tabeli przedstawiono przestrzenie nazw, które są obsługiwane przez domyślny. Można użyć klas spoza listy obszarów nazw. Jednak te klasy musi być w pełni kwalifikowana.  
   

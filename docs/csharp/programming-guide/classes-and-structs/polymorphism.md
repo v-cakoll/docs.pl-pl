@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ec66015159e03de8d2c16971c0e858ebc128014
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659647"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835112"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
 Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektowo, po hermetyzacji i dziedziczenia. Polimorfizm jest wyrazem greckim, co oznacza "wiele kształcie" i ma dwa różne aspekty:  
@@ -78,7 +78,7 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
  W tym przypadku jeśli `DoWork` jest wywoływana w D przy użyciu zmiennej typu D, nowe `DoWork` jest wywoływana. Jeśli zmienna typu C, B i A umożliwia dostęp do wystąpienia D, wywołanie `DoWork` będzie zgodna z zasadami dziedziczenie wirtualne routingu wywołań do implementacji `DoWork` klasy C.  
   
 ### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>Uzyskiwanie dostępu do wirtualnych elementów członkowskich klasy podstawowej w klasach pochodnych  
- Klasy pochodnej, która została zastąpiona bądź przesłonięcia metody lub właściwości nadal będą mogli metody lub właściwości w klasie bazowej, przy użyciu base — słowo kluczowe. Poniższy kod stanowi przykład:  
+ Klasa pochodna, która została zastąpiona bądź przesłonięcia metody lub właściwości mogą nadal uzyskiwać dostęp do metody lub właściwości w klasie bazowej, przy użyciu `base` — słowo kluczowe. Poniższy kod stanowi przykład:  
   
  [!code-csharp[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   

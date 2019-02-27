@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c15c1e63573d6ebdf25f802a380defbe4c97e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7db1b0fe3d4b884bca2c2b00cc95c0872bfa7e7a
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535427"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835580"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>Walidacja schematu (XSD) XML przy użyciu klasy XmlSchemaSet
 Można zweryfikować względem schematu języka (XSD) definicji schematu XML w dokumentach XML <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -23,7 +23,7 @@ Można zweryfikować względem schematu języka (XSD) definicji schematu XML w d
  Dokumenty XML są weryfikowane przez <xref:System.Xml.XmlReader.Create%2A> metody <xref:System.Xml.XmlReader> klasy. Aby sprawdzić poprawność dokumentu XML, należy utworzyć <xref:System.Xml.XmlReaderSettings> obiekt, który zawiera schemat języka (XSD) definicji schematu XML za pomocą którego do walidacji dokumentu XML.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema> Przestrzeń nazw zawiera metody rozszerzenia, które ułatwiają sprawdzanie poprawności drzewa XML z pliku XSD, korzystając z [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). Aby uzyskać więcej informacji na temat weryfikacji dokumentów XML za pomocą LINQ to XML, zobacz [jak: Weryfikowanie przy użyciu XSD](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b).  
+>  <xref:System.Xml.Schema> Przestrzeń nazw zawiera metody rozszerzenia, które ułatwiają sprawdzanie poprawności drzewa XML z pliku XSD, korzystając z [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) i [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). Aby uzyskać więcej informacji na temat weryfikacji dokumentów XML za pomocą LINQ to XML, zobacz [jak: Weryfikowanie przy użyciu XSD (LINQ to XML) (C#)](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) i [jak: Weryfikowanie przy użyciu XSD (LINQ to XML) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md).  
   
  Poszczególne schematu lub zestawu schematów (jako <xref:System.Xml.Schema.XmlSchemaSet>) mogą być dodawane do <xref:System.Xml.Schema.XmlSchemaSet> , przekazując jeden jako parametr do <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> metody <xref:System.Xml.Schema.XmlSchemaSet>. Należy pamiętać, że podczas weryfikowania dokumentu docelowego obszaru nazw dokumentu musi odpowiadać docelowego obszaru nazw schematu w zestawie schematów.  
   

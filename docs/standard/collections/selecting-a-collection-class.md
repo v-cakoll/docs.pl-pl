@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd40e35c001318f7e5e685a68fd591b253cbf051
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620087"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836373"
 ---
 # <a name="selecting-a-collection-class"></a>Wybieranie klasy kolekcji
 Należy wybrać uważnie klasy kolekcji. Przy użyciu nieprawidłowego typu można ograniczyć korzystanie z kolekcji. Ogólnie rzecz biorąc, unikaj używania typów w <xref:System.Collections> przestrzeni nazw, chyba że są specjalnie przeznaczone dla .NET Framework w wersji 1.1. Ogólny i równoczesne wersje kolekcje są preferowane ze względu na ich większe bezpieczeństwo typu i inne ulepszenia.  
@@ -75,7 +75,7 @@ Należy wybrać uważnie klasy kolekcji. Przy użyciu nieprawidłowego typu moż
     -   Ponadto można użyć dowolnej klasy kolekcji rodzajowej w <xref:System.Collections.Generic> przestrzeni nazw jako silnie typizowane kolekcji ciągów, określając <xref:System.String> klasy dla ich argumentów typu rodzajowego.  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ do obiektów i PLINQ  
- LINQ do obiektów umożliwia deweloperom Używanie zapytań LINQ do dostępu do obiektów w pamięci, tak długo, jak długo typ obiektu implementuje <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych, zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętli i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Aby uzyskać więcej informacji, zobacz [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ LINQ do obiektów umożliwia deweloperom Używanie zapytań LINQ do dostępu do obiektów w pamięci, tak długo, jak długo typ obiektu implementuje <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych, zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętli i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Aby uzyskać więcej informacji, zobacz [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) i [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
   
  Program PLINQ zawiera implementacja przetwarzania równoległego LINQ do obiektów, które może zaoferować szybsze wykonywanie zapytań w wielu scenariuszach, za pomocą bardziej efektywne wykorzystywanie komputerach wielordzeniowych. Aby uzyskać więcej informacji, zobacz [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

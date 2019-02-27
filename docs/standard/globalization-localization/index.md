@@ -16,7 +16,7 @@ ms.author: ronpet
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizacja aplikacji .NET
 
-Tworzenie [aplikacji gotowej dla całego świata](https://msdn.microsoft.com/goglobal/bb978433.aspx), w tym aplikacji, która może być lokalizowana w jednym lub kilku językach, obejmuje trzy kroki: globalizacja, przegląd możliwości lokalizacji i lokalizacja.
+Opracowywanie aplikacji gotowej dla całego świata, w tym aplikacji, która może być lokalizowana w jednym lub kilku językach, obejmuje trzy kroki: globalizacja, przegląd możliwości lokalizacji i lokalizacja.
 
 [Globalizacja](globalization.md)
 

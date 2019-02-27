@@ -3,15 +3,15 @@ title: Tworzenie aplikacji platformy ASP.NET Core 2.1 wdrażane jako kontenery s
 description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: b03b6fab9dcd53e97c2bc4d7e5c958ca4b931077
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/25/2019
+ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221394"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835515"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-akskubernetes-orchestrator"></a>Tworzenie aplikacji platformy ASP.NET Core 2.1 wdrażane jako kontenery systemu Linux do programu orchestrator AKS/Kubernetes
+# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Tworzenie aplikacji platformy ASP.NET Core 2.1 wdrażane jako kontenery systemu Linux do programu orchestrator AKS/Kubernetes
 
 Usługa Azure Kubernetes usługi (AKS) to usługi platformy Azure zarządzanego rozwiązania Kubernetes mechanizmów, które upraszczają wdrażanie kontenerów i zarządzanie nimi.
 
@@ -35,11 +35,11 @@ W tym przykładzie użyto prosty projekt oparty na podstawie interfejsu API siec
 
 **Rysunek 4-36**. Tworzenie aplikacji platformy ASP.NET Core
 
-Aby utworzyć przykładowy projekt, musisz wybrać **pliku** > **New** > **projektu** w programie Visual Studio. A następnie pojawi się lista szablonów dla kilku typów projektów, których należy szukać **Web** > **platformy .NET Core** w panelu po lewej stronie. W tym przykładzie wybierz **aplikacji sieci Web programu ASP.NET Core**.
+Aby utworzyć przykładowy projekt w programie Visual Studio, wybierz **pliku** > **New** > **projektu**, wybierz opcję **Web**typów projektów w okienku po lewej stronie, a następnie **aplikacji sieci Web programu ASP.NET Core**.
 
-W następnym oknie dialogowym upewnij się, wybrane platformy .NET Core i ASP.NET Core 2.1 jako platformę docelową w górnym pulldowns, jak pokazano na rysunku 4-37, a następnie wybierz pozycję opcji interfejsu API, aby utworzyć aplikację internetowego interfejsu API platformy ASP.NET Core.
+Program Visual Studio Wyświetla listę szablonów dla projektów sieci web. W tym przykładzie wybierz **API** do tworzenia aplikacji interfejsu API sieci Web programu ASP.NET.
 
-.NET Core 2.1 jest dostępne w ramach programu Visual Studio 2017, wersja 15.7.0 lub nowszej i zostanie automatycznie zainstalowany i skonfigurowany dla Ciebie, po wybraniu **programowanie dla wielu platform .NET Core** obciążenie podczas instalacji.
+Sprawdź, czy jako platformę wybrano platformy ASP.NET Core 2.1. .NET core 2.1 znajduje się w najnowszej wersji programu Visual Studio 2017 i jest automatycznie zainstalowane i skonfigurowane podczas instalacji programu Visual Studio 2017.
 
 ![Visual Studio okno dialogowe Wybieranie typu aplikacji sieci Web programu ASP.NET Core z wybraną opcją interfejsu API.](media/create-web-api-application.png)
 
@@ -47,25 +47,25 @@ W następnym oknie dialogowym upewnij się, wybrane platformy .NET Core i ASP.NE
 
 W przypadku poprzednich wersji programu .NET Core, można go pobrać i zainstalować wersja 2.1 z <https://www.microsoft.com/net/download/core#/sdk>.
 
-Podczas tworzenia projektu w poprzednim kroku lub nowszy, jeśli zajdzie taka potrzeba, po uruchomieniu projektu można dodać obsługę platformy Docker. Aby dodać obsługę platformy Docker po utworzeniu projektu, kliknij prawym przyciskiem myszy plik projektu w **Eksploratora rozwiązań** i wybierz **Dodaj** > **obsługę platformy Docker** na menu kontekstowe.
+Podczas tworzenia projektu, można dodać obsługę platformy Docker lub później, więc użytkownik może "przekształcać" projektu w dowolnym momencie. Aby dodać obsługę platformy Docker, po utworzeniu projektu, kliknij prawym przyciskiem myszy węzeł projektu w Eksploratorze rozwiązań, a następnie wybierz **Dodaj** > **obsługę platformy Docker** w menu kontekstowym.
 
 ![Opcja menu kontekstowego, aby dodać obsługę platformy Docker do istniejącego projektu: Kliknij prawym przyciskiem myszy (projekt) > Dodaj > obsługę platformy Docker.](media/add-docker-support-to-project.png)
 
 **Rysunek 4-38**. Dodawanie obsługi platformy Docker do istniejącego projektu
 
-Aby ukończyć dodawanie obsługę platformy Docker, użytkownik może Windows lub Linux. W takim przypadku wybierz **Linux**, ponieważ AKS nie obsługuje kontenery Windows (jako późnego 2018 r.).
+Aby ukończyć dodawanie obsługę platformy Docker, możesz wybrać Windows lub Linux. W takim przypadku wybierz **Linux**, ponieważ AKS nie obsługuje kontenery Windows (jako późnego 2018 r.).
 
 ![Okno dialogowe opcji aby wybrać docelowy system operacyjny do pliku Dockerfile.](media/select-linux-docker-support.png)
 
 **Rysunek 4-39**. Wybieranie kontenerów systemu Linux.
 
-Z tych prostych kroków będziesz mieć aplikacji platformy ASP.NET Core 2.1, uruchomionej w kontenerze systemu Linux.
+Te proste kroki masz aplikacji platformy ASP.NET Core 2.1, uruchomionej w kontenerze systemu Linux.
 
 Jak widać, integrację między usługą Visual Studio 2017 i platformy Docker jest całkowicie ukierunkowana na produktywność dla deweloperów.
 
-Teraz możesz nacisnąć przycisk **F5** Aby skompilować i uruchomić aplikację.
+Teraz można uruchomić aplikacji za pomocą **F5** klucza lub przy użyciu **Odtwórz** przycisku.
 
-Po uruchomieniu projektu, możesz wyświetlić listę obrazów przy użyciu `docker images` polecenia. Powinien zostać wyświetlony `mssampleapplication` obrazu utworzonego za pomocą automatycznego wdrażania naszej projektu programu Visual Studio 2017.
+Po uruchomieniu projektu, możesz wyświetlić listę obrazów przy użyciu `docker images` polecenia. Powinien zostać wyświetlony `mssampleapplication` obrazów utworzonych przez automatyczne wdrażanie naszego projektu za pomocą programu Visual Studio 2017.
 
 ```console
 docker images
@@ -81,13 +81,13 @@ Przekazanie obrazu do dowolnego rejestru platformy Docker, takie jak [usługi Az
 
 ### <a name="create-the-image-in-release-mode"></a>Tworzenie obrazu w trybie przygotowania do wydania
 
-Tworzenie obrazu w **wersji** zmiana trybu (gotowe do produkcji) do wersji, jak pokazano poniżej i naciśnij klawisz F5, aby uruchomić ponownie aplikację.
+Teraz utworzymy obrazu w **wersji** trybu (gotowe do produkcji), zmieniając **wersji**, jak pokazano na rysunku 4-41 i uruchamiania aplikacji, ile My mieliśmy przed.
 
 ![Opcja narzędzi w programie VS można tworzyć w trybie wydania.](media/select-release-mode.png)
 
 **Rysunek 4-41**. Wybierając tryb wersji
 
-Jeśli zostanie wykonana `docker image` polecenia zostaną wyświetlone zarówno obrazy utworzone. Jeden dla `debug` i inne `release` trybu.
+Jeśli zostanie wykonana `docker image` polecenia zostaną wyświetlone zarówno obrazy utworzone, jeden dla `debug` i inne `release` trybu.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Tworzenie nowego tagu obrazu
 
@@ -111,13 +111,13 @@ az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:l
 
 W obu przypadkach będzie uzyskać nazwę. W naszym przykładzie `mssampleacr.azurecr.io`.
 
-Teraz możesz oznaczyć obrazu, biorąc najnowszego obrazu (wersja obrazu), za pomocą następującego polecenia:
+Teraz możesz oznaczyć obrazu, biorąc najnowszego obrazu (obraz wersji), za pomocą polecenia:
 
 ```console
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Po uruchomieniu `docker tag` polecenia, listy obrazów za pomocą `docker images` polecenia. Powinien zostać wyświetlony obraz za pomocą nowego tagu.
+Po uruchomieniu `docker tag` polecenia, listy obrazów za pomocą `docker images` polecenia, a powinien zostać wyświetlony obraz za pomocą nowego tagu.
 
 ![Dane wyjściowe z polecenia obrazów platformy docker z konsoli.](media/tagged-docker-images-list.png)
 
@@ -143,7 +143,7 @@ Można zobaczyć poniżej wynik, że powinna pojawić się po zakończeniu proce
 
 **Rysunek 4-46**. Widok węzłów
 
-Następnym krokiem jest do wdrożenia kontenera w klastrze AKS rozwiązania Kubernetes. Do tego niezbędny pliku (**yml wdrażanie pliku**), w tym przypadku zawiera:
+Następnym krokiem jest do wdrożenia kontenera w klastrze AKS rozwiązania Kubernetes. Do tego niezbędny pliku (**yml wdrażanie pliku**) zawiera następujące czynności:
 
 ```yml
 apiVersion: apps/v1beta1

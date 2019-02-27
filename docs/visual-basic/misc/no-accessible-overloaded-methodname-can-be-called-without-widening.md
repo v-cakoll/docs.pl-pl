@@ -1,5 +1,5 @@
 ---
-title: 'Przeciążone nie dostępne "<methodname>" można wywołać z tymi argumentami bez konwersji rozszerzającej: <list>'
+title: "Przeciążone nie dostępne '<methodname>' można wywołać z tymi argumentami bez konwersji rozszerzającej: <list>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_WideningConversion2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55261659"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-widening-conversion-list"></a>Przeciążone nie dostępne "\<methodname >" można wywołać z tymi argumentami bez konwersji rozszerzającej: \<listy >
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-widening-conversion-list"></a>Przeciążone nie dostępne '\<methodname >' można wywołać z tymi argumentami bez konwersji rozszerzającej: \<listy >
 Przeciążona metoda została wywołana, ale żadna metoda może zostać dopasowane do listy podanych argumentów bez konwersji rozszerzającej.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

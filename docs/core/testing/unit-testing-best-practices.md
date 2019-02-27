@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 79c8e216126353bdf5fca34baf432496aacb93ce
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151530"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836256"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Najlepsze rozwiązania przy użyciu platformy .NET Core i .NET Standard testy jednostkowe
 
@@ -18,7 +18,7 @@ Istnieje wiele korzyści, do pisania testów jednostkowych; pomagają przy użyc
 
 W tym przewodniku dowiesz się najważniejsze wskazówki podczas pisania testów jednostkowych, aby zachować testów, odporne i łatwe do zrozumienia.
 
-Przez [John Reese](https://reesespieces.io) ze specjalnymi dzięki [Roy Osherove](http://osherove.com/)
+Przez [John Reese](https://reese.dev) ze specjalnymi dzięki [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Dlaczego test jednostkowy?
 

@@ -3,21 +3,15 @@ title: Kolekcje i struktury danych
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- grouping data in collections
-- objects [.NET Framework], grouping in collections
-- Array class, grouping data in collections
-- threading [.NET Framework], safety
-- Collections classes
-- collections [.NET Framework]
+  - grouping data in collections
+  - 'objects [.NET Framework], grouping in collections'
+  - 'Array class, grouping data in collections'
+  - 'threading [.NET Framework], safety'
+  - Collections classes
+  - 'collections [.NET Framework]'
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af76322cac08d7cf4e7e30e503c7fa2c97414898
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154911"
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
 Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i modyfikowane jako kolekcję. Możesz użyć <xref:System.Array?displayProperty=nameWithType> klasy lub klas w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable przestrzenie nazw, do dodawania, usuwania i modyfikowania poszczególnych elementów lub szereg elementów w kolekcji.  
@@ -33,7 +27,7 @@ Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i mod
   
 -   **Umożliwia wyliczenie kolekcji**  
   
-     Kolekcje .NET framework albo wdrożyć <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> można włączyć kolekcji należy powtórzyć za pośrednictwem. Moduł wyliczający można traktować jako ruchome wskaźnik do dowolnego elementu w kolekcji. [Foreach w](~/docs/csharp/language-reference/keywords/foreach-in.md) instrukcji i [For Each... Następna instrukcja](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) Użyj modułu wyliczającego udostępnianych przez <xref:System.Collections.IEnumerable.GetEnumerator%2A> metody i Ukryj złożoność manipulowanie moduł wyliczający. Ponadto dowolnej kolekcji implementującej <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> jest uważany za *typ odpytywalny* i może być odpytywana za pomocą LINQ. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych. Zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętli i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Zapytania LINQ można również zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) i [wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     Kolekcje .NET framework albo wdrożyć <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> można włączyć kolekcji należy powtórzyć za pośrednictwem. Moduł wyliczający można traktować jako ruchome wskaźnik do dowolnego elementu w kolekcji. [Foreach w](../../csharp/language-reference/keywords/foreach-in.md) instrukcji i [For Each... Następna instrukcja](../../visual-basic/language-reference/statements/for-each-next-statement.md) Użyj modułu wyliczającego udostępnianych przez <xref:System.Collections.IEnumerable.GetEnumerator%2A> metody i Ukryj złożoność manipulowanie moduł wyliczający. Ponadto dowolnej kolekcji implementującej <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> jest uważany za *typ odpytywalny* i może być odpytywana za pomocą LINQ. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych. Zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętli i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Zapytania LINQ można również zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [wprowadzenie do zapytań LINQ () C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md), i [podstawowe operacje zapytań (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
 -   **Możliwość kopiowania zawartości kolekcji do tablicy**  
   

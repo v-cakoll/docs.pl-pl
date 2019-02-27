@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ae6f76ba358d07101f56de321a9453b3eee1bf2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40dc7abd8adffef04535f6492be14bf6463ca30d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674040"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835814"
 ---
 # <a name="when-to-use-generic-collections"></a>Kiedy należy używać kolekcji ogólnych
 Za pomocą kolekcji ogólnych ogólnie zaleca się, ponieważ uzyskanie bezpośrednią korzyść bezpieczeństwa typu bez konieczności pochodzić od typu podstawowego kolekcji i implementowanie elementów specyficznych dla typu. Typy generyczne kolekcji również zazwyczaj mają lepszą wydajność niż odpowiadające typy kolekcji nierodzajowymi (i lepiej niż typy, pochodne typy nierodzajowymi bazowej kolekcji) po elementy kolekcji są typami wartości, ponieważ za pomocą typów ogólnych nie ma potrzeby polu elementów.  
@@ -46,7 +46,7 @@ Za pomocą kolekcji ogólnych ogólnie zaleca się, ponieważ uzyskanie bezpośr
 -   <xref:System.Collections.Concurrent.ConcurrentBag%601> zapewnia szybkie wstawiania i usuwania elementów nieuporządkowaną.  
   
 ## <a name="linq-to-objects"></a>LINQ do obiektów  
- Funkcja LINQ to Objects umożliwia używanie zapytań LINQ do dostępu do obiektów w pamięci, tak długo, jak długo typ obiektu implementuje <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interfejsu. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych. zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętle i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Zapytania LINQ można również zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) i [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ Funkcja LINQ to Objects umożliwia używanie zapytań LINQ do dostępu do obiektów w pamięci, tak długo, jak długo typ obiektu implementuje <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interfejsu. Zapytania LINQ zapewniają wspólny wzorzec do uzyskiwania dostępu do danych. zazwyczaj są bardziej zwięzłe i czytelne niż standardowe `foreach` pętle i zapewniają filtrowanie, porządkowanie i możliwości grupowania. Zapytania LINQ można również zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), i [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="additional-functionality"></a>Dodatkowe funkcje  
  Niektórych typów ogólnych są funkcje, które nie znajduje się w typach nierodzajowymi kolekcji. Na przykład <xref:System.Collections.Generic.List%601> klasy, która odnosi się do nongeneric <xref:System.Collections.ArrayList> klasy, ma wiele metod, które akceptują delegatów ogólnych, takich jak <xref:System.Predicate%601> delegat, który pozwala na określenie metody wyszukiwania na liście <xref:System.Action%601>delegat, który reprezentuje metody, które działają na każdym elemencie listy, a <xref:System.Converter%602> delegat, który pozwala zdefiniować konwersje między typami.  

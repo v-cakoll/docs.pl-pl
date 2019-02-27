@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 6db3db3ebe3e1934a8e74212692f07158b88b1d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717522"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836646"
 ---
 # <a name="inheritance-in-c-and-net"></a>Dziedziczenie w języku C# i .NET
 
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-W niektórych przypadkach klasę pochodną *musi* zastępować implementację klasy bazowej. Składowych klasy oznaczona za pomocą podstawowej [abstrakcyjne](../language-reference/keywords/abstract.md) — słowo kluczowe wymaga, że klasy pochodne je zastąpić. Podjęto próbę skompilować poniższy przykład generuje błąd kompilatora CS0534, "<class> nie implementuje odziedziczonej abstrakcyjnej składowej <member>", ponieważ klasa `B` zapewnia implementacji `A.Method1`.
+W niektórych przypadkach klasę pochodną *musi* zastępować implementację klasy bazowej. Składowych klasy oznaczona za pomocą podstawowej [abstrakcyjne](../language-reference/keywords/abstract.md) — słowo kluczowe wymaga, że klasy pochodne je zastąpić. Podjęto próbę skompilować poniższy przykład generuje błąd kompilatora CS0534, "&lt;klasy&gt; nie implementuje odziedziczonej abstrakcyjnej składowej &lt;elementu członkowskiego&gt;", ponieważ klasa `B` nie zawiera Implementacja `A.Method1`.
 
 ```csharp
 public abstract class A

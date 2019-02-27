@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b42f20509b34b934418ed8e870a60713def7387
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842583"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835788"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Korzystanie z przenośnej biblioteki klas w połączeniu z modelem Model-View-View Model
 Można użyć programu .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) implementacji wzorca Model-View-View Model (MVVM) i udostępnianie zestawów na wielu platformach.
@@ -27,7 +27,7 @@ Można użyć programu .NET Framework [Portable Class Library](../../../docs/sta
 
  ![Przenośne przy użyciu diagramu MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")
 
- Ten temat nie zawiera ogólne informacje dotyczące wzorca MVVM. Zapewnia tylko informacje o sposobie używania [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] do zaimplementowania MVVM. Aby uzyskać więcej informacji na temat MVVM zobacz [Szybki Start MVVM](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx).
+ Ten temat nie zawiera ogólne informacje dotyczące wzorca MVVM. Zapewnia tylko informacje o sposobie używania [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] do zaimplementowania MVVM. Aby uzyskać więcej informacji na temat MVVM zobacz [MVVM Szybki Start za pomocą biblioteki Prism 5.0 biblioteki dla WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 
 ## <a name="classes-that-support-mvvm"></a>Klasy, które obsługują MVVM
  Jeśli platformą docelową jest program [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight lub Windows Phone 7.5 dla Twojego [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] projektu, następujące klasy są dostępne do implementowania wzorca MVVM:

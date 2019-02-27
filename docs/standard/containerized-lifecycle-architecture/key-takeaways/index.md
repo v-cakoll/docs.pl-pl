@@ -3,27 +3,21 @@ title: Najważniejsze wnioski
 description: Przejrzyj najważniejsze wnioski przewodnik.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 31ecd6eff3590dded69b48c6ee718a94a2d697cd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219233"
+ms.date: 02/15/2019
 ---
 # <a name="key-takeaways"></a>Najważniejsze wnioski
 
--   Rozwiązania oparte na kontenerach zawiera istotne zalety oszczędności, ponieważ kontenery są rozwiązania problemów z wdrażaniem spowodowane brakiem zależności w środowisku produkcyjnym, dlatego znacząco poprawy operacje operacji deweloperskich i produkcyjnych .
+- Rozwiązań opartych na kontenerach zapewniają istotne korzyści oszczędności, ponieważ kontenery rozwiązywaniu problemów z wdrażaniem spowodowane przez błędy zależności w środowiskach produkcyjnych, znacznie zwiększając operacje operacji deweloperskich i produkcyjnych.
 
--   Docker staje się de facto standardem w branży kontenera, obsługiwane przez najważniejszych dostawców w ekosystemu Linux i Windows, łącznie z firmy Microsoft. W przyszłości Docker będzie wszechobecne w dowolnych centrach danych w chmurze lub lokalnie.
+- Docker staje się de facto standardem w branży kontenera i jest obsługiwany przez najważniejszych dostawców w ekosystemu Linux i Windows, łącznie z firmy Microsoft. W przyszłości Docker będzie wszechobecne w dowolnych centrach danych w chmurze lub lokalnie.
 
--   Kontener platformy Docker, staje się standardową jednostką wdrożenia dla dowolnej usługi lub aplikacji opartej na serwerze.
+- Kontener platformy Docker, staje się standardową jednostką wdrożenia dla dowolnej usługi lub aplikacji opartej na serwerze.
 
--   Docker koordynatorów, takich jak te dostępne w usłudze Azure Container Service (System operacyjny centrum danych Mesosphere (DC/OS), Docker Swarm, Kubernetes) i usługi Azure Service Fabric to podstawowe i niezbędne do żadnych opartych na mikrousługach lub wieloma kontenerami w celu znaczące złożoności i skalowalność aplikację.
+- Docker koordynatorów, takich jak te dostępne w usłudze Azure Kubernetes Service (AKS) i usługi Azure Service Fabric to podstawowe i niezbędne dla wszystkich aplikacji opartych na mikrousługach lub wiele kontenerów, które mają znaczący potrzeb złożoności i skalowalności.
 
--   Środowisko DevOps end-to-end, obsłudze ciągłej integracji i ciągłego wdrażania nawiązywania połączenia z środowiskami produkcyjnymi platformy Docker zapewnia elastyczność i ostatecznie poprawia czas wprowadzenia na rynek aplikacji.
+- Środowiska DevOps end-to-end, który obsługuje ciągłej integracji i ciągłego wdrażania i nawiązanie połączenia z środowiskami produkcyjnymi platformy Docker można zapewnić elastyczność i ostatecznie skrócić czas wprowadzania na rynek aplikacji.
 
-Usługi Azure DevOps znacznie upraszcza środowiska DevOps umieszczoną w środowiskach platformy Docker z potoków ciągłego wdrażania, w tym proste środowiskach platformy Docker lub bardziej zaawansowanych koordynatorów mikrousług i kontenerów, oparty na platformie Azure.
+- Usługi Azure DevOps znacznie upraszcza środowiska DevOps dzięki wdrażaniu w środowiskach platformy Docker z potoków ciągłej integracji/ciągłego wdrażania. Ta instrukcja ma zastosowanie do prostych środowiskach platformy Docker oraz zaawansowane mikrousług i koordynatorów kontenerów, oparty na platformie Azure.
 
 >[!div class="step-by-step"]
 >[Poprzednie](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

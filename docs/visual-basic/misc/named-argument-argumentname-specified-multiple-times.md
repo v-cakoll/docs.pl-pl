@@ -1,5 +1,5 @@
 ---
-title: Argument nazwany "<argumentname>" określony wiele razy
+title: Argument nazwany '<argumentname>' określony wiele razy
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55271450"
 ---
-# <a name="named-argument-argumentname-specified-multiple-times"></a>Argument nazwany "\<argumentname >" określony wiele razy
+# <a name="named-argument-argumentname-specified-multiple-times"></a>Argument nazwany '\<argumentname >' określony wiele razy
 Nazwany argument jest określony więcej niż jeden raz.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

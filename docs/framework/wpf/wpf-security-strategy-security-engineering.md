@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 6006024f29c37545ce95e579c7b93727d8c6bc67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ab6981b85d5b0663fd8e464a840bfbe55f6d3b0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547751"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836594"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia zabezpieczeń WPF - projekt zabezpieczeń
 Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft, zapewniających produkcji bezpiecznego kodu. To kluczowy element wiarygodne technologie komputerowe [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Jest praktykę, który jest używany w połączeniu z standardowa inżynieryjnym ułatwiają dostarczanie bezpiecznego kodu. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Składa się z dziesięciu fazy, które łączą najlepsze rozwiązania z ujęcie w formalne ramy measurability oraz dodatkowe struktury, w tym:  
@@ -94,5 +94,4 @@ Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft, zapewniającyc
 - [Zabezpieczenie częściowej relacji zaufania WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
 - [Strategia zabezpieczeń WPF — zabezpieczenia platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
 - [Wiarygodne technologie komputerowe](https://www.microsoft.com/mscorp/twc/default.mspx)
-- [Modelowanie aplikacji zagrożeń](https://msdn.microsoft.com/security/securecode/threatmodeling/acetm/)
-- [Security Guidelines: .NET Framework 2.0](https://msdn.microsoft.com/library/default.asp?url=/library/dnpag2/html/PAGGuidelines0003.asp)
+- [Zabezpieczenia w .NET](../../standard/security/index.md)

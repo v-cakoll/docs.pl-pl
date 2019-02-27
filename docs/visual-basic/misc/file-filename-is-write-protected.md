@@ -1,5 +1,5 @@
 ---
-title: Plik "<filename>" jest chroniona zapisu
+title: Plik '<filename>' jest chroniona zapisu
 ms.date: 07/20/2015
 ms.assetid: 6e5105b1-a634-4cde-a753-5bf1ae85a55a
 ms.openlocfilehash: bdc00d8dd31fa3a2cfe1f483d1286f026b3d85a8
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55287586"
 ---
-# <a name="file-filename-is-write-protected"></a>Plik "\<nazwa pliku >" jest chroniona zapisu
+# <a name="file-filename-is-write-protected"></a>Plik '\<nazwa pliku >' jest chroniona zapisu
 Plik, który próbujesz zapisać jest zabezpieczony przed zapisem i dlatego nie można zmienić.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

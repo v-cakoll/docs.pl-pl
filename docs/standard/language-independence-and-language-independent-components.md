@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842830"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836555"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
-Program .NET Framework jest niezależny od języka. Oznacza to, że deweloper może pracować w jednym z wielu języków, przeznaczonych dla programu .NET Framework, takich jak C#, C + +/ interfejsu wiersza polecenia, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i Windows PowerShell. Dostępne typy i członków bibliotek klas opracowanych dla programu .NET Framework bez znajomości języka, w którym zostały one pierwotnie napisane i bez konieczności którąkolwiek z Konwencji języka oryginału. Jeśli jesteś deweloperem składnika, dostęp do danego składnika jest możliwy przez dowolną aplikację .NET Framework, niezależnie od języka.  
+Program .NET Framework jest niezależny od języka. Oznacza to, że jako deweloper możesz tworzyć w jednym z wielu języków, których platformą docelową .NET Framework, takich jak C#, C + +/ CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i Windows PowerShell. Dostępne typy i członków bibliotek klas opracowanych dla programu .NET Framework bez znajomości języka, w którym zostały one pierwotnie napisane i bez konieczności którąkolwiek z Konwencji języka oryginału. Jeśli jesteś deweloperem składnika, dostęp do danego składnika jest możliwy przez dowolną aplikację .NET Framework, niezależnie od języka.  
   
 > [!NOTE]
 >  To pierwsza część w tym artykule omówiono tworzenie składników niezależnych od języka — czyli składników, które mogą być używane przez aplikacje napisane w dowolnym języku. Można również utworzyć pojedynczy składnik lub aplikację z kodu źródłowego napisanego w wielu językach; zobacz [współdziałanie między językami](#CrossLang) w drugiej części tego artykułu.  
@@ -305,7 +305,7 @@ Program .NET Framework jest niezależny od języka. Oznacza to, że deweloper mo
   
      Z powodu działania tej reguły typy zgodne ze specyfikacją CLS nie muszą Implementuj składowe zgodne ze specyfikacją niezgodne ze specyfikacją. Jeśli platforma zgodna ze specyfikacją CLS udostępnia klasę, która implementuje interfejs zgodne ze specyfikacją CLS, powinno dodatkowo dostarczać konkretnych implementacji wszystkich członków innych niż zgodne ze specyfikacją CLS.  
   
- Kompilatory języka zgodne ze specyfikacją CLS muszą również pozwalać, aby klasa zapewniała oddzielne implementacje członków, którzy mają taką samą nazwę i podpis w wielu interfejsach.  Zarówno C# i Visual Basic obsługują [jawne implementacje interfejsu](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md) aby zapewnić różne implementacje metod o identycznej nazwie. Visual Basic obsługuje również `Implements` implementuje słowo kluczowe, które umożliwia jawne wyznaczanie interfejsu i członka określonego elementu członkowskiego. Poniższy przykład ilustruje ten scenariusz, definiując `Temperature` klasę, która implementuje `ICelsius` i `IFahrenheit` interfejsów jako jawne implementacje interfejsu.  
+ Kompilatory języka zgodne ze specyfikacją CLS muszą również pozwalać, aby klasa zapewniała oddzielne implementacje członków, którzy mają taką samą nazwę i podpis w wielu interfejsach.  Zarówno C# i Visual Basic obsługują [jawne implementacje interfejsu](../csharp/programming-guide/interfaces/explicit-interface-implementation.md) aby zapewnić różne implementacje metod o identycznej nazwie. Visual Basic obsługuje również `Implements` implementuje słowo kluczowe, które umożliwia jawne wyznaczanie interfejsu i członka określonego elementu członkowskiego. Poniższy przykład ilustruje ten scenariusz, definiując `Temperature` klasę, która implementuje `ICelsius` i `IFahrenheit` interfejsów jako jawne implementacje interfejsu.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -548,23 +548,23 @@ Program .NET Framework jest niezależny od języka. Oznacza to, że deweloper mo
   
  Aby spakować dwóch klas w jednym zestawie, należy skompilować je do modułów. Aby skompilować plik kodu źródłowego języka Visual Basic w module, użyj tego polecenia:  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- Aby uzyskać więcej informacji na temat składni wiersza polecenia kompilatora języka Visual Basic, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Aby uzyskać więcej informacji na temat składni wiersza polecenia kompilatora języka Visual Basic, zobacz [tworzenie z wiersza polecenia](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
  Aby skompilować plik kodu źródłowego języka C# w module, użyj tego polecenia:  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- Aby uzyskać więcej informacji na temat składni wiersza polecenia kompilatora C#, zobacz [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ Aby uzyskać więcej informacji na temat składni wiersza polecenia kompilatora C#, zobacz [wiersza polecenia tworzenia przy użyciu csc.exe](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Następnie użyj [Link-narzędzie (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) skompilować dwa moduły do zestawu:  
+ Następnie użyj [opcje konsolidatora](/cpp/build/reference/linker-options) skompilować dwa moduły do zestawu:  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +575,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  Aby skompilować kod w języku Visual Basic, użyj tego polecenia:  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  Aby skompilować przy użyciu języka C#, Zmień nazwę kompilator **vbc** do **csc**i zmień rozszerzenie pliku z .vb CS:  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   

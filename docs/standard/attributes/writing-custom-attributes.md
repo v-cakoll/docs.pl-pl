@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d0a0659c99a49770d0d08460026363ecef06654
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696220"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836321"
 ---
 # <a name="writing-custom-attributes"></a>Wpisywanie atrybutów niestandardowych
 Aby zaprojektować atrybutów niestandardowych, nie trzeba opanować wiele nowych pojęć. Jeśli znasz programowanie zorientowane obiektowo i wiedzieć, jak klasy należy projektować, masz już większość wiedzę potrzebną. Atrybuty niestandardowe są zasadniczo tradycyjnych klas, które pochodzą bezpośrednio lub pośrednio z <xref:System.Attribute?displayProperty=nameWithType>. Podobnie jak tradycyjnych klasy atrybutów niestandardowych, które zawierają metody, które przechowywać i pobierać dane.  
@@ -118,7 +118,7 @@ Aby zaprojektować atrybutów niestandardowych, nie trzeba opanować wiele nowyc
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- Możesz doprowadzić do przeciążenia konstruktora, aby obsłużyć różne kombinacje wartości. Jeśli należy także zdefiniować [właściwość](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) dla swojej klasy atrybutów niestandardowych, można użyć kombinacji parametrów nazwanych i pozycyjnych podczas inicjowania atrybutu. Zazwyczaj można zdefiniować wszystkie wymagane parametry jako parametry pozycyjne i wszystkie opcjonalne jako o nazwie. W tym przypadku atrybut nie można zainicjować bez wymaganego parametru. Wszystkie inne parametry są opcjonalne. Należy pamiętać, że w języku Visual Basic konstruktory klasy atrybutów nie należy używać argumentu ParamArray.  
+ Możesz doprowadzić do przeciążenia konstruktora, aby obsłużyć różne kombinacje wartości. Jeśli należy także zdefiniować [właściwość](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) dla swojej klasy atrybutów niestandardowych, można użyć kombinacji parametrów nazwanych i pozycyjnych podczas inicjowania atrybutu. Zazwyczaj można zdefiniować wszystkie wymagane parametry jako parametry pozycyjne i wszystkie opcjonalne jako o nazwie. W tym przypadku atrybut nie można zainicjować bez wymaganego parametru. Wszystkie inne parametry są opcjonalne. Należy pamiętać, że w języku Visual Basic konstruktory klasy atrybutów nie należy używać argumentu ParamArray.  
   
  W poniższym przykładzie kodu przedstawiono sposób atrybut, który korzysta z poprzednich Konstruktor może odnosić się przy użyciu parametrów opcjonalnych i wymaganych. Przyjęto założenie, że ten atrybut ma jedną wartość logiczną wymagane i właściwość jeden opcjonalny ciąg.  
   
@@ -127,7 +127,7 @@ Aby zaprojektować atrybutów niestandardowych, nie trzeba opanować wiele nowyc
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>Deklarowanie właściwości  
- Jeśli chcesz zdefiniować nazwany parametr lub prosty sposób zwracania wartości przechowywane przez atrybut, Zadeklaruj [właściwość](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Właściwości atrybutów powinien być zadeklarowany jako publiczny jednostki opis typu danych, który zostanie zwrócony. Zdefiniuj zmienną, która będzie przechowywać wartości właściwości i powiąż ją z **uzyskać** i **ustaw** metody. Poniższy przykład kodu demonstruje sposób implementacji właściwości prostej usługi atrybutu.  
+ Jeśli chcesz zdefiniować nazwany parametr lub prosty sposób zwracania wartości przechowywane przez atrybut, Zadeklaruj [właściwość](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Właściwości atrybutów powinien być zadeklarowany jako publiczny jednostki opis typu danych, który zostanie zwrócony. Zdefiniuj zmienną, która będzie przechowywać wartości właściwości i powiąż ją z **uzyskać** i **ustaw** metody. Poniższy przykład kodu demonstruje sposób implementacji właściwości prostej usługi atrybutu.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

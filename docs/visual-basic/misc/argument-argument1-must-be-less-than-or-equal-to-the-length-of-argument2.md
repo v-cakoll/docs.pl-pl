@@ -1,5 +1,5 @@
 ---
-title: Argument "<argument1>'musi być mniejsza niż długość argumentu'<argument2>"
+title: Argument '<argument1>'musi być mniejsza niż długość argumentu'<argument2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IndexLELength2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55269084"
 ---
-# <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>Argument "\<argument1 >" musi być mniejsza niż długość argumentu "\<argument2 >"
+# <a name="argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument-argument2"></a>Argument '\<argument1 >' musi być mniejsza niż długość argumentu '\<argument2 >'
 Długość argumentu przekracza dozwolony limit jest określany przez długość drugiego argumentu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 07986ac0c49387422aa334711b6997b159151e79
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d5fd244ea22fd48bf5b81d2cdf55127f745c145b
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244970"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835021"
 ---
 # <a name="new-modifier-c-reference"></a>New — modyfikator (odwołanie w C#)
 
@@ -24,11 +24,11 @@ W tym przykładzie `BaseC.Invoke` jest ukryta przez `DerivedC.Invoke`. Pole `x` 
 
 Ukrywanie nazw poprzez dziedziczenie ma jedną z następujących form:
 
-Ogólnie rzecz biorąc stała, pole, właściwość lub typ, który został wprowadzony w klasie lub strukturze ukrywa wszystkie składowe klasy podstawowej, które współdzielą jego nazwę.  Istnieją przypadki specjalne.  Na przykład, jeśli zadeklarujesz nowe pole o nazwie `N` typu, którego nie można wywołać i typ podstawowy deklaruje `N` jako metodę, nowe pole nie powoduje ukrycia podstawowej deklaracji w składni wywołania.  Zobacz [specyfikacji języka C# w wersji 5.0](https://www.microsoft.com/download/details.aspx?id=7029) Aby uzyskać szczegółowe informacje (zobacz sekcję "Wyszukanie członka" w sekcji "Wyrażenia").
+- Ogólnie rzecz biorąc stała, pole, właściwość lub typ, który został wprowadzony w klasie lub strukturze ukrywa wszystkie składowe klasy podstawowej, które współdzielą jego nazwę.  Istnieją przypadki specjalne.  Na przykład, jeśli zadeklarujesz nowe pole o nazwie `N` typu, którego nie można wywołać i typ podstawowy deklaruje `N` jako metodę, nowe pole nie powoduje ukrycia podstawowej deklaracji w składni wywołania.  Zobacz [specyfikacji języka C# w wersji 5.0](https://www.microsoft.com/download/details.aspx?id=7029) Aby uzyskać szczegółowe informacje (zobacz sekcję "Wyszukanie członka" w sekcji "Wyrażenia").
 
-Metoda wprowadzona w klasie lub strukturze ukrywa właściwości, pola i typy, które współużytkują tę nazwę w klasie bazowej. Ukrywa wszystkie metody klasy podstawowej, które mają taki sam podpis.
+- Metoda wprowadzona w klasie lub strukturze ukrywa właściwości, pola i typy, które współużytkują tę nazwę w klasie bazowej. Ukrywa wszystkie metody klasy podstawowej, które mają taki sam podpis.
 
-Indeksator wprowadzony w klasie lub strukturze ukrywa wszystkie indeksatory klas podstawowych, które mają taki sam podpis.
+- Indeksator wprowadzony w klasie lub strukturze ukrywa wszystkie indeksatory klas podstawowych, które mają taki sam podpis.
 
 Jest to błąd, można użyć zarówno `new` i [zastąpienia](override.md) na tym samym użytkownikiem, ponieważ modyfikatorów mają znaczenie wzajemnie się wykluczają. `new` Modyfikator tworzy nowy element członkowski o takiej samej nazwie i powoduje, że oryginalny element członkowski będzie ukryty. `override` Modyfikator rozszerza implementację dla odziedziczonego członka.
 

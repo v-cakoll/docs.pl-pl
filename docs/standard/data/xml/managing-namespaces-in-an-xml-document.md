@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9375386360c94f959f638e1227cb847b783b994
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b0ace73d81783852242a52bec006b0ad2edaadd
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676175"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836139"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Zarządzanie przestrzeniami nazw w dokumencie XML
 Obszary nazw XML skojarzyć nazw elementów i atrybutów w dokumencie XML przy użyciu wstępnie zdefiniowanych i niestandardowych identyfikatorów URI. Aby utworzyć te skojarzenia, zdefiniuj prefiksów identyfikatorów URI przestrzeni nazw, a używać tych prefiksów do kwalifikowania nazwy elementów i atrybutów w danych XML. Przestrzenie nazw zapobiec kolizjom nazw elementów i atrybutów i umożliwić elementów i atrybutów o tej samej nazwie i obsługi sprawdzania poprawności w różny sposób.  
@@ -63,7 +63,7 @@ Obszary nazw XML skojarzyć nazw elementów i atrybutów w dokumencie XML przy u
  Menedżer przestrzeni nazw nie wykonuje żadnych sprawdzania poprawności w przypadku przestrzeni nazw, ale założono, że prefiksy i przestrzenie nazw już zweryfikowana i są zgodne z [przestrzenie nazw W3C](https://www.w3.org/TR/REC-xml-names/) specyfikacji.  
   
 > [!NOTE]
->  [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) nie używa <xref:System.Xml.XmlNamespaceManager> do zarządzania przestrzeniami nazw. Zobacz [Praca z przestrzeniami nazw XML](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430) w dokumentacji programu LINQ, informacje o zarządzaniu przestrzeni nazw w przypadku korzystania z LINQ to XML.  
+> [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) i [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) nie używaj <xref:System.Xml.XmlNamespaceManager> do zarządzania przestrzeniami nazw. Zobacz [Praca z przestrzeniami nazw XML (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) i [Praca z przestrzeniami nazw XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) w dokumentacji programu LINQ, informacje o zarządzaniu przestrzeni nazw w przypadku korzystania z LINQ to XML.  
   
  Poniżej przedstawiono niektóre z zadań zarządzania i wyszukiwania, można wykonywać za pomocą <xref:System.Xml.XmlNamespaceManager> klasy. Aby uzyskać więcej informacji i przykładów skorzystaj z linków na stronie dokumentacji każda metoda lub właściwość.  
   

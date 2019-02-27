@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71c2a6b183890aa9625dcffbef59d14c27ebe754
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c12096739e66a47fadd89eb27e30ba3de43c7da3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219403"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836438"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Instrukcje: Dodaj odwołania do bibliotek typów
 Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane, gdy użytkownik dodaje odnośnik do biblioteki typów. Jeśli podstawowy zestaw międzyoperacyjny jest dostępny, Visual Studio korzysta z istniejącego zestawu przed wygenerowaniem nowego zestawu międzyoperacyjnego.  
@@ -47,8 +47,6 @@ Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane, g
 ## <a name="see-also"></a>Zobacz także
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
 - [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
-- [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [Przewodnik: Osadzanie informacji o typie z zestawów Microsoft Office w programie Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
 - [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/ Link (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)

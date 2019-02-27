@@ -1,5 +1,5 @@
 ---
-title: Przeciążone nie dostępne "<methodname>" można wywołać z tymi argumentami bez konwersji zawężającej
+title: Przeciążone nie dostępne '<methodname>' można wywołać z tymi argumentami bez konwersji zawężającej
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55260401"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Przeciążone nie dostępne "\<methodname >" można wywołać z tymi argumentami bez konwersji zawężającej
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Przeciążone nie dostępne '\<methodname >' można wywołać z tymi argumentami bez konwersji zawężającej
 Przeciążona metoda została wywołana, ale brak metody zostały dopasowane do elementu z podanych argumentów bez konwersji zawężającej z listy.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

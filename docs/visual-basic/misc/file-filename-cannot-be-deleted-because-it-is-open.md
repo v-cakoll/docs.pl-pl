@@ -1,5 +1,5 @@
 ---
-title: Plik "<filename>" nie można usunąć, ponieważ jest on otwarty
+title: Plik '<filename>' nie można usunąć, ponieważ jest on otwarty
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
@@ -11,14 +11,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55254343"
 ---
-# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="3df6b-102">Plik "\<nazwa pliku >" nie można usunąć, ponieważ jest on otwarty</span><span class="sxs-lookup"><span data-stu-id="3df6b-102">File '\<filename>' cannot be deleted because it is open</span></span>
-<span data-ttu-id="3df6b-103">Próba usunięcia na otwartego pliku.</span><span class="sxs-lookup"><span data-stu-id="3df6b-103">A deletion is being attempted on an open file.</span></span>  
+# <a name="file-filename-cannot-be-deleted-because-it-is-open"></a><span data-ttu-id="c6713-102">Plik '\<nazwa pliku >' nie można usunąć, ponieważ jest on otwarty</span><span class="sxs-lookup"><span data-stu-id="c6713-102">File '\<filename>' cannot be deleted because it is open</span></span>
+<span data-ttu-id="c6713-103">Próba usunięcia na otwartego pliku.</span><span class="sxs-lookup"><span data-stu-id="c6713-103">A deletion is being attempted on an open file.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3df6b-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="3df6b-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c6713-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="c6713-104">To correct this error</span></span>  
   
--   <span data-ttu-id="3df6b-105">Zamknij plik przed jego usunięciem.</span><span class="sxs-lookup"><span data-stu-id="3df6b-105">Close the file before deleting it.</span></span>  
+-   <span data-ttu-id="c6713-105">Zamknij plik przed jego usunięciem.</span><span class="sxs-lookup"><span data-stu-id="c6713-105">Close the file before deleting it.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3df6b-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3df6b-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6713-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c6713-106">See also</span></span>
 
-- [<span data-ttu-id="3df6b-107">My.Computer.FileSystem.DeleteFile</span><span class="sxs-lookup"><span data-stu-id="3df6b-107">My.Computer.FileSystem.DeleteFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
-- [<span data-ttu-id="3df6b-108">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="3df6b-108">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)
+- [<span data-ttu-id="c6713-107">My.Computer.FileSystem.DeleteFile</span><span class="sxs-lookup"><span data-stu-id="c6713-107">My.Computer.FileSystem.DeleteFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.DeleteFile%2A)
+- [<span data-ttu-id="c6713-108">My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="c6713-108">My.Computer.FileSystem</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem)

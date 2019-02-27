@@ -1,7 +1,7 @@
 ---
 title: . Operator - C# odwołania
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/25/2019
 f1_keywords:
 - ._CSharpKeyword
 helpviewer_keywords:
@@ -9,47 +9,46 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: a59f69d0349a054c8c2a5b701b8f63df113a6580
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2661676d53deb874c5e5a90b4443b301730e09df
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333723"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836464"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="f87b3-103">.</span><span class="sxs-lookup"><span data-stu-id="f87b3-103">.</span></span> <span data-ttu-id="f87b3-104">operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="f87b3-104">operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="387b3-103">.</span><span class="sxs-lookup"><span data-stu-id="387b3-103">.</span></span> <span data-ttu-id="387b3-104">operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="387b3-104">operator (C# Reference)</span></span>
 
-<span data-ttu-id="f87b3-105">Operator kropki (`.`) służy do uzyskiwania dostępu do elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="f87b3-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="f87b3-106">Określa on element członkowski typu lub przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="f87b3-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="f87b3-107">Operator kropki umożliwia na przykład dostęp do określonych metod w ramach biblioteki klas .NET Framework:</span><span class="sxs-lookup"><span data-stu-id="f87b3-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>
+<span data-ttu-id="387b3-105">Kropki (.), `.`, jest zwykle używany podczas dostępu do elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="387b3-105">The dot, `.`, is typically used for member access.</span></span>
 
-[!code-csharp[csRefOperators#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#16)]
+<span data-ttu-id="387b3-106">Możesz użyć `.` token w celu uzyskania dostępu do członka przestrzeni nazw lub typ, jak w poniższych przykładach pokazano:</span><span class="sxs-lookup"><span data-stu-id="387b3-106">You use the `.` token to access a member of a namespace or a type, as the following examples demonstrate:</span></span>
 
-<span data-ttu-id="f87b3-108">Na przykład rozważmy następujące klasy:</span><span class="sxs-lookup"><span data-stu-id="f87b3-108">For example, consider the following class:</span></span>
+- <span data-ttu-id="387b3-107">Użyj `.` dostępu zagnieżdżone przestrzenie nazw w przestrzeni nazw, w poniższym przykładzie z do [ `using` dyrektywy](../keywords/using-directive.md) pokazuje:</span><span class="sxs-lookup"><span data-stu-id="387b3-107">Use `.` to access a nested namespace within a namespace, as the following example of a [`using` directive](../keywords/using-directive.md) shows:</span></span>
 
-[!code-csharp[csRefOperators#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#17)]
+  [!code-csharp[nested namespaces](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#NestedNamespace)]
 
-[!code-csharp[csRefOperators#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#18)]
+- <span data-ttu-id="387b3-108">Użyj `.` do formularza *kwalifikowana nazwa* uzyskiwać dostęp do typu, w przestrzeni nazw, co ilustruje poniższy kod:</span><span class="sxs-lookup"><span data-stu-id="387b3-108">Use `.` to form a *qualified name* to access a type within a namespace, as the following code shows:</span></span>
 
-<span data-ttu-id="f87b3-109">Zmienna `s` ma dwa elementy członkowskie, `a` i `b`; Aby uzyskać do nich dostęp, użyj operatora kropka:</span><span class="sxs-lookup"><span data-stu-id="f87b3-109">The variable `s` has two members, `a` and `b`; to access them, use the dot operator:</span></span>
+  [!code-csharp[qualified name](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#QualifiedName)]
 
-[!code-csharp[csRefOperators#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#19)]
+  <span data-ttu-id="387b3-109">Użyj [ `using` dyrektywy](../keywords/using-directive.md) powoduje użycie kwalifikowane nazwy są opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="387b3-109">Use the [`using` directive](../keywords/using-directive.md) to make the use of qualified names optional.</span></span>
 
-<span data-ttu-id="f87b3-110">Kropka (.) jest również używana do formułowania nazw kwalifikowanych określających na przykład przestrzeń nazw lub interfejs, do których należą te nazwy.</span><span class="sxs-lookup"><span data-stu-id="f87b3-110">The dot is also used to form qualified names, which are names that specify the namespace or interface, for example, to which they belong.</span></span>
+- <span data-ttu-id="387b3-110">Użyj `.` dostęp do [elementy członkowskie typu](../../programming-guide/classes-and-structs/index.md#members)statycznych i niestatycznych, co ilustruje poniższy kod:</span><span class="sxs-lookup"><span data-stu-id="387b3-110">Use `.` to access [type members](../../programming-guide/classes-and-structs/index.md#members), static and non-static, as the following code shows:</span></span>
 
-[!code-csharp[csRefOperators#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#20)]
+  [!code-csharp-interactive[type members](~/samples/snippets/csharp/language-reference/operators/MemberAccessExamples.cs#TypeMemberAccess)]
 
-<span data-ttu-id="f87b3-111">Dyrektywa using sprawia, że część kwalifikacji nazwy jest opcjonalna:</span><span class="sxs-lookup"><span data-stu-id="f87b3-111">The using directive makes some name qualification optional:</span></span>
+<span data-ttu-id="387b3-111">Można również użyć `.` do wywołania [— metoda rozszerzenia](../../programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="387b3-111">You can also use `.` to invoke an [extension method](../../programming-guide/classes-and-structs/extension-methods.md).</span></span>
 
-[!code-csharp[csRefOperators#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#21)]
+## <a name="operator-overloadability"></a><span data-ttu-id="387b3-112">Overloadability — operator</span><span class="sxs-lookup"><span data-stu-id="387b3-112">Operator overloadability</span></span>
 
-<span data-ttu-id="f87b3-112">Jednak gdy identyfikator jest niejednoznaczny, kwalifikacja nazwy jest wymagana:</span><span class="sxs-lookup"><span data-stu-id="f87b3-112">But when an identifier is ambiguous, it must be qualified:</span></span>
+<span data-ttu-id="387b3-113">Operator `.` nie mogą być przeciążone.</span><span class="sxs-lookup"><span data-stu-id="387b3-113">The operator `.` cannot be overloaded.</span></span>
 
-[!code-csharp[csRefOperators#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#22)]
+## <a name="c-language-specification"></a><span data-ttu-id="387b3-114">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="387b3-114">C# language specification</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="f87b3-113">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="f87b3-113">C# language specification</span></span>
+<span data-ttu-id="387b3-115">Aby uzyskać więcej informacji, zobacz [dostęp do elementu członkowskiego](~/_csharplang/spec/expressions.md#member-access) części [ C# specyfikacji języka](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="387b3-115">For more information, see the [Member access](~/_csharplang/spec/expressions.md#member-access) section of the [C# language specification](../language-specification/index.md).</span></span>
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+## <a name="see-also"></a><span data-ttu-id="387b3-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="387b3-116">See also</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f87b3-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f87b3-114">See also</span></span>
-
-- [<span data-ttu-id="f87b3-115">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="f87b3-115">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="f87b3-116">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="f87b3-116">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="f87b3-117">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="f87b3-117">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="387b3-117">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="387b3-117">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="387b3-118">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="387b3-118">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="387b3-119">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="387b3-119">C# Operators</span></span>](index.md)
+- <span data-ttu-id="387b3-120">[?. i? Operatory]](null-conditional-operators.md)</span><span class="sxs-lookup"><span data-stu-id="387b3-120">[?. and ?[] operators](null-conditional-operators.md)</span></span>

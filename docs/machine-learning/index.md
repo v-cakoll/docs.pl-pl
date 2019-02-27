@@ -17,7 +17,7 @@ Aby zainstalować strukturę ML.NET i zacząć tworzyć za jej pomocą, skorzyst
 
 Aby dowiedzieć się więcej o strukturze ML.NET, zobacz [Co to jest struktura ML.NET?](what-is-mldotnet.md)
 
-Aby poznać podstawy, zobacz [podstawowe pojęcia do trenowania modelu w strukturze ML.NET](basic-concepts-model-training-in-mldotnet.md).
+Aby poznać podstawy, zobacz [Podstawowe pojęcia dotyczące trenowania modelu w strukturze ML.NET](basic-concepts-model-training-in-mldotnet.md).
 
 ## <a name="tutorials"></a>Samouczki
 

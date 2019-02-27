@@ -20,7 +20,7 @@ ML.NET to bezpłatna, wieloplatformowa struktura open source do uczenia maszynow
 
 Uczenie maszynowe to technika badania danych, która dzięki przetwarzaniu istniejących danych jest w stanie przewidzieć przyszłe zachowania, rezultaty i trendy. Za pomocą uczenia maszynowego programy mogą się uczyć, nie będąc jawnie programowane.
 
-Dzięki prognozom lub z usługi machine learning ułatwia aplikacji i urządzeń pozwalają na sprawną. Podczas zakupów w Internecie uczenie maszynowe wspomaga proces rekomendowania innych produktów, które mogą być oparte na została zakupiona. Gdy z kartą kredytową, uczenie maszynowe porównuje transakcję z bazą danych transakcji i ułatwia wykrycie oszustwa. Twoje robot odkurzający sprząta pomieszczenie, uczenie maszynowe pomaga mu zdecydować, czy zadanie jest wykonywane.
+Dzięki prognozom uzyskanym za pomocą uczenia maszynowego aplikacje mogą być bardziej inteligentne. Podczas zakupów online uczenie maszynowe może pomóc w rekomendowaniu innych produktów, które mogą Ci się spodobać, na podstawie tych już kupionych. W przypadku użycia karty kredytowej, sztuczna inteligencja porównuje transakcje z bazą danych transakcji i ułatwia wykrycie oszustwa. Kiedy twój robot sprzątający odkurza pomieszczenie, uczenie maszynowe pomaga mu zdecydować, czy zadanie zostało wykonane.
 
 
 ## <a name="short-videos-on-data-science"></a>Krótkie wideo dotyczące analizy danych 

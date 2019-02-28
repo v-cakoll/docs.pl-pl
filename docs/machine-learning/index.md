@@ -33,7 +33,7 @@ Aby poznać podstawy, zobacz [Podstawowe pojęcia dotyczące trenowania modelu w
 
 [Tworzenie aplikacji do dopasowywania graczy do jednej rozgrywki za pomocą Infer.NET i programowania probabilistycznego](how-to-guides/matchup-app-infer-net.md) – poradnik ten pokazuje, jak stworzyć uproszczony system dopasowywania graczy do jednej rozgrywki, podobny do użytego w grach na konsolę Xbox.
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>Zasoby
 
 [Słownik pojęć na temat uczenia maszynowego](resources/glossary.md) – znajdziesz tutaj wyjaśnienie kluczowych pojęć.
 

@@ -1,6 +1,6 @@
 ---
 title: Co to jest ML.NET i jak rozumiemy podstawy uczenia maszynowego?
-description: Więcej informacji o strukturze ML.NET, struktura learning maszyny bezpłatny, open source i dla wielu platform, która umożliwia tworzenie niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET.
+description: Więcej informacji o ML.NET, bezpłatnej, wieloplatformowej strukturze open source do uczenia maszynowego, która umożliwia tworzenie niestandardowych rozwiązań za pomocą sztucznej inteligencji i integrowanie ich z aplikacjami .NET.
 author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
@@ -27,11 +27,11 @@ Dzięki prognozom uzyskanym za pomocą uczenia maszynowego aplikacje mogą być 
 
 Skorzystaj z krótkiego wprowadzenia do podstaw uczenia maszynowego i nauki o danych w dziale *Analiza danych dla początkujących* w pięciu krótkich filmach przygotowanych przez najlepszych analityków. Te filmy dotyczą podstaw, jednak są przydatne niezależnie od tego, czy jesteś tylko amatorem nauki o danych, czy pracujesz już jako analityk.
 
-* Wideo 1: [5 pytań, analiza danych daje odpowiedzi](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 s 14 min)*.
+* Wideo 1: [5 pytań na które odpowiada nauka o danych](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-the-5-questions-data-science-answers) *(5 min 14 s)*.
 
 * Wideo 2: [Czy dane są gotowe do analizy danych?](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-is-your-data-ready-for-data-science) *(4 min 56 sek.)*
 
-* Wideo 3: [Zadaj pytanie, można odpowiedzieć za pomocą danych](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 min 17 sek.)*
+* Wideo 3: [Zadaj pytanie, na które można odpowiedzieć za pomocą danych](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-ask-a-question-you-can-answer-with-data) *(4 min 17 sek.)*
 
 * Wideo 4: [Prognozowanie odpowiedzi za pomocą prostego modelu](https://docs.microsoft.com/azure/machine-learning/studio/data-science-for-beginners-predict-an-answer-with-a-simple-model) *(7 min 42 sek.)*
 

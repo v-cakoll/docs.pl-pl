@@ -13,7 +13,7 @@
 ### [Kiedy należy wdrażać kontenery systemu Windows w usłudze Service Fabric](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md)
 ### [Kiedy należy wdrażać kontenery systemu Windows w usłudze Azure Container Service (ACS-Kubernetes)](./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
 ### [Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach](./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md)
-### [Kompilowanie odpornych usług gotowych do użycia w chmurze: obsługa przejściowych błędów w chmurze](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+### [Tworzenie odpornych usług gotowych do pracy w chmurze: Obsługa przejściowych błędów w chmurze](./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
 ### [Modernizowanie aplikacji za pomocą monitorowania i telemetrii](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md)
 ### [Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłego dostarczania/ciągłej integracji i metodyki DevOps w chmurze](./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)
 ### [Scenariusze migracji do chmury hybrydowej](./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)

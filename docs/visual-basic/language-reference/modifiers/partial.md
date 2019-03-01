@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 8f8e7e992ce312f7f7bf2c9dbad4d14fbb095de1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1464421866ee22f27f9cf0a3611bc09a631c004
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690712"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975839"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Wskazuje częściową definicję typu deklaracji typu.  
@@ -89,7 +89,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 ## <a name="example"></a>Przykład  
  Poniższy przykład dzieli definicję klasy `sampleClass` na dwie deklaracje, z których każdy definiuje innego `Sub` procedury.  
   
- [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/VisualBasic/partial_1.vb)]  
+ [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  
   
  Dwie definicje częściowe w poprzednim przykładzie może być w tym samym pliku źródłowym lub w dwóch innych plików źródłowych.  
   

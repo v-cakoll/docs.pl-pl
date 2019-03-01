@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: d309e4fb09bc0b8af87422bc84427528deb29e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2654860269bc57cf6aed814760414c6ccb6383da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710317"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968767"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Instrukcje: Deklarowanie wyliczeń (Visual Basic)
 Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Nie można zadeklarować wyliczenie wewnątrz metody. Aby określić odpowiedni poziom dostępu, użyj `Private`, `Protected`, `Friend`, lub `Public`.  
@@ -26,21 +26,21 @@ Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Ni
   
 1.  Zapis deklarację, że obejmuje poziom dostępu do kodu, `Enum` — słowo kluczowe i prawidłową nazwą, tak jak w poniższych przykładach, z których każdy deklaruje inną `Enum`.  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
+     [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
 2.  Definiowanie stałych w wyliczeniu. Domyślnie pierwszej stałej wyliczenia jest inicjowany do `0`, i kolejne stałe są inicjowane na wartość jeden więcej niż poprzedniego — stała. Na przykład, poniższy wyliczenie `Days`, zawiera stałą o nazwie `Sunday` wartością `0`, stałą o nazwie `Monday` wartością `1`, stałą o nazwie `Tuesday` z wartością `2`i tak dalej.  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
+     [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
 3.  Można jawnie przypisać wartości do stałe, wyliczenia, korzystając z instrukcji przypisania. Możesz przypisać dowolnej wartości liczby całkowitej, łącznie z liczbami ujemnymi. Na przykład może być stałe przy użyciu wartości mniejsze od zera do reprezentowania warunków błędów. W poniższym wyliczenia, stała `Invalid` jawnie jest przypisywana wartość `–1`i stałą `Sunday` jest przypisywana wartość `0`. Ponieważ jest on pierwszy stała wyliczenia `Saturday` również jest ustawiana na wartość `0`. Wartość `Monday` jest `1` (jeden więcej niż wartość `Sunday`); wartość `Tuesday` jest `2`i tak dalej.  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
+     [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Aby zadeklarować wyliczenie jako jawnego typu  
   
 -   Określ typ wyliczenia przy użyciu `As` klauzuli, jak pokazano w poniższym przykładzie.  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
+     [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

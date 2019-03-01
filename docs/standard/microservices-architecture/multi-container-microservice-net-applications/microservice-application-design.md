@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Do
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8b2372ab5d58898b7a5730e118cc710d09a9bf92
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130497"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981884"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji opartej na mikrousługach
 
@@ -61,7 +61,7 @@ Mikrousługi są opracowane i wdrażane jako kontenery, niezależnie od siebie n
 
 Każda mikrousługa ma własną bazę danych, dzięki któremu można w pełni całkowicie niezależna od innych mikrousług. Gdy jest to konieczne, spójności między bazami danych z różnych mikrousług odbywa się przy użyciu zdarzeń integracji na poziomie aplikacji (za pośrednictwem magistrali zdarzeń logicznych), jako obsługiwane w poleceniu i podział odpowiedzialności zapytania (CQRS). Z tego powodu, ograniczeń biznesowych należy Uwzględniaj spójność ostateczną, między wiele mikrousług i związanych z bazami danych.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>ramach aplikacji eShopOnContainers: Odwołanie do stosowania platformy .NET Core i mikrousług, wdrażać za pomocą kontenerów
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: Odwołanie do stosowania platformy .NET Core i mikrousług, wdrażać za pomocą kontenerów
 
 Dzięki czemu można skupić się na temat architektury i technologii, zamiast myśleć o domeny hypothetic biznesowych, która może być, wybraliśmy domeny dobrze znanych firm — to znaczy, uproszczone handlu elektronicznego (e Sklep) aplikację która przedstawia informacje o katalogu produkty, przyjmuje zamówień klientów, sprawdza spisu i wykonuje funkcje innych firm. Ten kod źródłowy aplikacji opartych na kontenerach jest dostępna w [ramach aplikacji eShopOnContainers](https://aka.ms/MicroservicesArchitecture) repozytorium GitHub.
 
@@ -158,7 +158,7 @@ Istnieje wiele wzorców architektonicznych, używany przez oprogramowanie archit
 
 - Proste CRUD, jednowarstwowa, pojedynczej warstwy.
 
-- [Tradycyjny N-warstwowe](https://msdn.microsoft.com/library/ee658109.aspx#Layers).
+- [Tradycyjny N-warstwowe](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10)).
 
 - [Domain-Driven projektu N-warstwowe](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 

@@ -5,17 +5,17 @@ ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: 32f434d9813b08254b72b713ec2f9a1bc9d1b06d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7269f925b3fc78eea04249984697899b1997c3fb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725015"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976710"
 ---
 # <a name="nested-types-c-programming-guide"></a>Zagnieżdżone typy (Przewodnik programowania w języku C#)
 Typ zdefiniowany w [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) nosi nazwę typu zagnieżdżonego. Na przykład:  
   
-[!code-csharp[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
+ [!code-csharp[csProgGuideObjects#68](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#68)]  
   
 Niezależnie od tego, czy zewnętrzny typ jest klasą lub strukturą, zagnieżdżone typy domyślnie [prywatnej](../../../csharp/language-reference/keywords/private.md); są one dostępne tylko z ich typem zawierającym. W poprzednim przykładzie `Nested` klasa jest niedostępna dla typów zewnętrznych. 
 
@@ -29,17 +29,17 @@ Można również określić [modyfikator dostępu](../../language-reference/keyw
   
 Poniższy przykład wykonuje `Nested` publiczne klasy:
   
-[!code-csharp[csProgGuideObjects#69](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_2.cs)]  
+ [!code-csharp[csProgGuideObjects#69](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#69)]  
   
  Typ zagnieżdżony lub wewnętrzny, można uzyskać dostęp do typu zawierającego lub zewnętrznego. Aby uzyskać dostęp zgodny z typem, przekaż go jako argumentu do konstruktora typu zagnieżdżonego. Na przykład:  
   
- [!code-csharp[csProgGuideObjects#70](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_3.cs)]  
+ [!code-csharp[csProgGuideObjects#70](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#70)]  
   
  Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich, które są dostępne dla zawierającego ją typu. Będzie miał dostęp do prywatnych i chronionych członków typu zawierającego, włączając wszelkie elementy chronione dziedziczone.  
   
  W poprzedniej deklaracji pełną nazwą klasy `Nested` jest `Container.Nested`. Jest to nazwa, użyty do utworzenia nowego wystąpienia klasy zagnieżdżonej, w następujący sposób:  
   
- [!code-csharp[csProgGuideObjects#71](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_4.cs)]  
+ [!code-csharp[csProgGuideObjects#71](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#71)]  
   
 ## <a name="see-also"></a>Zobacz także
 

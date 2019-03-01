@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 54a8a65db6e1f532cd21e36eeb5b98670efd4289
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 262812f5e18bb9c46ea5ec573adab914f19eef43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506397"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979484"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów (Visual Basic)
 Jeśli procedura ma [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru nie można zdefiniować przeciążoną wersją, biorąc Jednowymiarowa tablica dla tablicy parametrów. Aby uzyskać więcej informacji, zobacz "Niejawne przeciążenia dla parametru ParamArray" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
@@ -37,13 +37,13 @@ Jeśli procedura ma [ParamArray](../../../../visual-basic/language-reference/mod
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano zdefiniowane za pomocą procedury [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru, a następnie zbiór równoważny, procedur przeciążona.  
   
- [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
   
- [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#70)]  
   
  Nie można przeciążyć procedury z listą parametrów, który przyjmuje tablicę jednowymiarową dla tablicy parametrów. Można jednak użyć podpisy niejawne przeładowania. Następujące deklaracje pokazują to.  
   
- [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
+ [!code-vb[VbVbcnProcedures#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#71)]  
   
  Kod w przeciążone wersje nie trzeba sprawdzić, czy kod wywołujący podano jeden lub więcej wartości dla `ParamArray` parametr, lub jeśli tak, jak wiele. Visual Basic przekazuje sterowanie do wersji pasujących do wywoływania listy argumentów.  
   

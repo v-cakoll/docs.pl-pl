@@ -5,12 +5,12 @@ helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 2b31dedbdd33ddfb3c15863a45b93148fd722faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e3cfca9a84ef56ceb9ac0785af039f9b24603e2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707755"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971991"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>Instrukcje: Analizowanie ścieżek pliku w Visual Basic
 <xref:Microsoft.VisualBasic.FileIO.FileSystem> Obiektu udostępnia szereg metod przydatne podczas analizowania ścieżki do plików.  
@@ -27,13 +27,13 @@ ms.locfileid: "54707755"
   
 -   Użyj <xref:System.IO.FileInfo.DirectoryName%2A> i <xref:System.IO.FileInfo.Name%2A> właściwości <xref:System.IO.FileInfo> obiektu, aby określić nazwę i ścieżkę pliku. W tym przykładzie określa nazwę i ścieżkę i wyświetla je.  
   
-     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#54)]  
   
 ### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>Aby połączyć nazwę i katalog, aby utworzyć pełną ścieżkę pliku  
   
 -   Użyj `CombinePath` metodę dostarczania katalogu i nazwa. W tym przykładzie pobiera ciągi `folderPath` i `fileName` utworzony w poprzednim przykładzie, łączy je i wyświetla wynik.  
   
-     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

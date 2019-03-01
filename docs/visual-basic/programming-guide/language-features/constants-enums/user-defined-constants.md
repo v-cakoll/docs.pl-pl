@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: dc940105bbeb5e54819b8df5d5b3c831c7a6e145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527318"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975943"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Stałe zdefiniowane przez użytkownika (Visual Basic)
 Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, który nie jest zmieniany. Stałe przechowywać wartości, które jak wskazuje nazwa, pozostają stałe w trakcie wykonywania aplikacji. Można użyć stałe, które są definiowane przez formanty lub składników, którymi pracujesz, lub możesz utworzyć swój własny. Stałe utworzone samodzielnie są określane jako *zdefiniowanych przez użytkownika*.  
@@ -24,15 +24,15 @@ Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, któr
 ## <a name="const-statement-usage"></a>Const — instrukcja użycia  
  A `Const` instrukcji może reprezentować matematyczne lub daty/godziny ilość:  
   
- [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
+ [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
  On również zdefiniować `String` stałe:  
   
- [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
+ [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
  Wyrażenie po prawej stronie znaku równości ( `=` ) jest często liczbą lub ciągiem literału, ale również może być wyrażeniem, które powoduje liczbą lub ciągiem (mimo że to wyrażenie nie może zawierać wywołania funkcji). Możesz nawet określić stałe pod względem wcześniej zdefiniowanego stałe:  
   
- [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
+ [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
 ## <a name="scope-of-user-defined-constants"></a>Zakres stałe zdefiniowane przez użytkownika  
  A `Const` zakres instrukcji jest taka sama, jak Zmienna zadeklarowana w tej samej lokalizacji. Należy określić zakres, w dowolnym z następujących sposobów:  
@@ -50,8 +50,8 @@ Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, któr
 ### <a name="avoiding-circular-references"></a>Unikanie odwołań cyklicznych  
  Ponieważ stałe można zdefiniować pod względem inne stałe, jest możliwe utworzenie przypadkowo *cyklu*, lub odwołanie cykliczne, między co najmniej dwóch stałych. Cykl występuje, gdy masz co najmniej dwa publiczne stałe, z których każdy jest określana zgodnie z drugiej strony, jak w poniższym przykładzie:  
   
- [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
-[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
+ [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
+[!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
  W przypadku cyklu Visual Basic generuje błąd kompilatora.  
   

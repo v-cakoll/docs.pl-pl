@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: f9201aa4b2aa9280b9b3a4e0a2badf25ea819088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02a7c5c9859352aa07bfaa741b80b7fd18d1da4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684752"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979908"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace — Operator (Visual Basic)
 Pobiera <xref:System.Xml.Linq.XNamespace> obiekt, który odpowiada określony prefiks przestrzeni nazw XML.  
@@ -39,7 +39,7 @@ GetXmlNamespace(xmlNamespacePrefix)
 ## <a name="example"></a>Przykład  
  Następujący przykład importuje `ns` jako prefiks przestrzeni nazw XML. Następnie używa prefiksu przestrzeni nazw tworzenie literałów XML i dostępem pierwszy węzeł podrzędny o nazwie kwalifikowanej `ns:phone`. Następnie przekazuje tego węzła podrzędnego do `ShowName` podprocedury, który konstruuje nazwa kwalifikowana za pomocą `GetXmlNamespace` operatora. `ShowName` Podprocedury następnie przekazuje kwalifikowanej nazwy, która <xref:System.Xml.Linq.XNode.Ancestors%2A> metodę, aby uzyskać element nadrzędny `ns:contact` węzła.  
   
- [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/getxmlnamespace-operator_1.vb)]  
+ [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
  Gdy wywołujesz `TestGetXmlNamespace.RunSample()`, wyświetla okno komunikatu, który zawiera następujący tekst:  
   

@@ -2,12 +2,12 @@
 title: Operacje kwantyfikatora (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 0f732cdb51ed4e26039fc8c1d02b95ad32f901e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 966bc958d6feac77ebe1c229bfe5dbb993031676
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551933"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976749"
 ---
 # <a name="quantifier-operations-visual-basic"></a>Operacje kwantyfikatora (Visual Basic)
 Operacje kwantyfikatora zwracają <xref:System.Boolean> wartość, która wskazuje, czy niektóre lub wszystkie elementy w sekwencji spełniają warunek.  
@@ -31,11 +31,11 @@ Operacje kwantyfikatora zwracają <xref:System.Boolean> wartość, która wskazu
   
  W poniższym przykładzie użyto `Aggregate` klauzuli i <xref:System.Linq.Enumerable.All%2A> metodę rozszerzenia, aby zwrócić ze zbioru osób, których zwierzęta są wszystkie starsze niż określona wieku.  
   
- [!code-vb[CsLINQAnyAll#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/quantifier-operations_1.vb)]  
+ [!code-vb[CsLINQAnyAll#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#1)]  
   
  W następnym przykładzie użyto `Aggregate` klauzuli i <xref:System.Linq.Enumerable.Any%2A> metodę rozszerzenia, aby zwrócić z kolekcji, te osoby, które mają co najmniej jeden domowe, która jest starsza niż określona wieku.  
   
- [!code-vb[CsLINQAnyAll#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/quantifier-operations_2.vb)]  
+ [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Linq>

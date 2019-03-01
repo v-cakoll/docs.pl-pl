@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 6888531918dd932ba5acb3ec967303568606d5df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90f315bc9153fd79f12e3dcbbfe0f238f4090b25
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722008"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976879"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>Instrukcje: Przenieś plik w języku Visual Basic
 `My.Computer.FileSystem.MoveFile` Metoda może służyć do przenoszenia pliku do innego folderu. Struktura docelowa nie istnieje, zostanie utworzony.  
@@ -18,13 +18,13 @@ ms.locfileid: "54722008"
   
 -   Użyj `MoveFile` metodę, aby przenieść plik, określając nazwę pliku i lokalizację pliku źródłowego i pliku docelowego. W tym przykładzie przenosi plik o nazwie `test.txt` z `TestDir1` do `TestDir2`. Należy pamiętać, że nazwa pliku docelowego jest określony, nawet jeśli jest taka sama jak nazwa pliku źródłowego.  
   
-     [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#24)]  
   
 ### <a name="to-move-a-file-and-rename-it"></a>Aby przenieść plik i zmień jego nazwę  
   
 -   Użyj `MoveFile` metodę, aby przenieść plik, określając nazwę pliku źródłowego i lokalizacji, lokalizacji docelowej i Nowa nazwa w lokalizacji docelowej. W tym przykładzie przenosi plik o nazwie `test.txt` z `TestDir1` do `TestDir2` i zmienia ją `nexttest.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  

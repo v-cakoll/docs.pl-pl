@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc04d9a0504e7cd79703b97441caa5ac84eda94
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655676"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978114"
 ---
 # <a name="fields-c-programming-guide"></a>Pola (Przewodnik programowania w języku C#)
 A *pola* jest zmienna dowolnego typu, który jest zadeklarowany bezpośrednio w [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md). Pola są *członków* z ich typem zawierającym.  
@@ -23,15 +23,15 @@ A *pola* jest zmienna dowolnego typu, który jest zadeklarowany bezpośrednio w 
   
  Pola są deklarowane w bloku klasy, określając poziom dostępu, następuje pole typu pola, a następnie nazwę pola. Na przykład:  
   
- [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
  Aby uzyskać dostęp do pola w obiekcie, dodaj kropkę po nazwę obiektu, a następnie nazwę pola, podobnie jak w `objectname.fieldname`. Na przykład:  
   
- [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
  Pola można podać wartości początkowej za pomocą operatora przypisania, gdy pole jest zadeklarowane. Aby automatycznie przypisać `day` pole `"Monday"`, na przykład może deklarować `day` jak w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
  Pola są inicjowane od razu, przed wywołaniem konstruktora wystąpienia obiektu. Jeśli Konstruktor przypisuje wartości pola, zastąpi dowolną wartość podana podczas deklarację pola. Aby uzyskać więcej informacji, zobacz [korzystanie z konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   

@@ -1,43 +1,47 @@
 ---
 title: '* Operator - C# odwołania'
 ms.custom: seodec18
-ms.date: 04/04/2018
+ms.date: 02/26/2019
 f1_keywords:
 - '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: f4490c4632d9344eb879ea55c20787b838781d91
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: a5e120d26614f1e38cc2f2db02949552140b594e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333736"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977347"
 ---
 # <a name="-operator-c-reference"></a>* — operator (C# odwołania)
 
-Operator mnożenia (`*`) oblicza iloczyn argumentów. Wszystkie typy liczbowe zostały wstępnie zdefiniowane operatorów mnożenia.
+`*` Operator jest obsługiwany w dwóch formach: operatora jednoargumentowego operatora pośredniego wskaźnika lub operatora mnożenia danych binarnych.
 
-`*` Służy również jako operator wyłuskania, która umożliwia odczytywanie i zapisywanie do wskaźnika.
+## <a name="pointer-indirection-operator"></a>Operatora pośredniego wskaźnika
 
-## <a name="remarks"></a>Uwagi
+Użyj jednoargumentowego `*` operator można uzyskać zmiennej, na który wskazuje operand typu wskaźnika. Aby uzyskać więcej informacji, zobacz [porady: uzyskiwanie wartości zmiennej wskaźnikowej](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md).
 
-`*` Operator służy także do deklarowania typów wskaźnika i celu wyłuskania wskaźników. Ten operator należy używać tylko w kontekstach niebezpieczne wskazywane przez użycie [niebezpieczne](../keywords/unsafe.md) — słowo kluczowe która wymaga [/ unsafe](../compiler-options/unsafe-compiler-option.md) — opcja kompilatora.  Operator wyłuskania jest również nazywany operatora pośredniego.
+Operatora pośredniego wskaźnika `*` wymaga [niebezpieczne](../keywords/unsafe.md) kontekstu.
 
-Typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia pliku binarnego `*` — operator (zobacz [operator](../keywords/operator.md)). Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania, jest również niejawnie przeciążona.
+## <a name="multiplication-operator"></a>Operator mnożenia
 
-## <a name="example"></a>Przykład
+Dla typów liczbowych `*` operator Oblicza iloczyn argumentów:
 
-[!code-csharp-interactive[csRefOperators#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#50)]
+[!code-csharp-interactive[multiplication](~/samples/snippets/csharp/language-reference/operators/MultiplicationExamples.cs#Multiply)]
 
-## <a name="example"></a>Przykład
+## <a name="operator-overloadability"></a>Overloadability — operator
 
-[!code-csharp[csRefOperators#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#51)]
+Typy zdefiniowane przez użytkownika może [przeciążenia](../keywords/operator.md) dane binarne `*` operatora. Gdy dane binarne `*` operator jest przeciążony, [operator przypisania mnożenia](multiplication-assignment-operator.md) `*=` jest również niejawnie przeciążona.
+
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz [operację wskaźnika pośredniego](~/_csharplang/spec/unsafe-code.md#pointer-indirection) i [operator mnożenia](~/_csharplang/spec/expressions.md#multiplication-operator) sekcje [ C# specyfikacji języka](../language-specification/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [Niebezpieczny kod i wskaźniki](../../programming-guide/unsafe-code-pointers/index.md)
 - [Operatory języka C#](index.md)
+- [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)

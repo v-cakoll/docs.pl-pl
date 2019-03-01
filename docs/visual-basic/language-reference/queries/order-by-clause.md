@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: c467b46347539a3cc6c4abfabc368ce494985b95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d9055796687f828cc173a78feb9918cbf70bbd8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560944"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976372"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By — Klauzula (Visual Basic)
 Określa porządek sortowania dla wyniku kwerendy.  
@@ -38,17 +38,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## <a name="example"></a>Przykład  
  Następujące zapytanie używa wyrażenia `From` klauzulę, aby zadeklarować zmienną zakresu `book` dla `books` kolekcji. `Order By` Klauzuli sortowania wyników zapytania cena Rosnąco (ustawienie domyślne). Sklepu iBook książek z tej samej cenie są sortowane według tytułu w kolejności rosnącej. `Select` Wybiera klauzuli `Title` i `Price` właściwości jako wartości zwracane przez zapytanie.  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>Przykład  
  Następujące zapytanie używa wyrażenia `Order By` klauzuli sortowania wyników zapytania według ceny w kolejności malejącej. Sklepu iBook książek z tej samej cenie są sortowane według tytułu w kolejności rosnącej.  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>Przykład  
  Następujące zapytanie używa wyrażenia `Select` klauzuli wybierz tytuł książki, cen, Data opublikowania i autora. Następnie wypełnia `Title`, `Price`, `PublishDate`, i `Author` pola zmienna zakresu dla nowego zakresu. `Order By` Klauzuli porządkuje nowej zmiennej zakresu nazwisko autora, tytuł książki i ceny. Każda kolumna jest sortowana w kolejności domyślnej (rosnąco).  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

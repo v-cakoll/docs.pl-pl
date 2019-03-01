@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e40890835ddd50d25106e318ee05a874ce355d9b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667482"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977802"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Instrukcje: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych (Visual Basic)
 Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić identyczną funkcjonalność różnych typów danych. Aby to zrobić, należy określić co najmniej jeden *parametry typu* w definicji. Klasy mogą następnie służyć jako szablon dla obiektów, które używają różnych typów danych. Nosi nazwę klasy zdefiniowanej w ten sposób *klasy generycznej*.  
@@ -64,7 +64,7 @@ Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić
   
      W poniższym przykładzie zdefiniowano klasę, która zarządza listą bardzo proste. Przechowuje listę w tablicy wewnętrznej `items`oraz przy użyciu kodu można zadeklarować typ danych elementów listy. Sparametryzowania konstruktora umożliwia przy użyciu kodu, aby ustawić górną granicę `items`, i ustawia domyślny konstruktor, to do 9 (w sumie 10 elementów).  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
      Można zadeklarować klasy z `simpleList` do przechowywania listy `Integer` wartości innej klasy do przechowywania listy `String` wartości, a druga do przechowywania `Date` wartości. Z wyjątkiem typu danych listy elementów członkowskich obiekty utworzone na podstawie tych klas zachowują się identycznie.  
   
@@ -72,7 +72,7 @@ Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić
   
      Możesz przetestować klasy `simpleList` następującym kodem.  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

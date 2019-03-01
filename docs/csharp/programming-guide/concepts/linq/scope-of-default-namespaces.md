@@ -2,14 +2,14 @@
 title: Zakres domyślnych przestrzeni nazw w języku C# 1
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 77345bfb2a4814c8cd38405c4481bea86fa84823
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc86e2e58eb936106807aba21b2953f52101cbc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613860"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979713"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>Zakres domyślnych przestrzeni nazw w języku C#
+# <a name="scope-of-default-namespaces-in-c"></a>Zakres domyślnych przestrzeni nazw w języku C\#
 Domyślne obszary nazw, reprezentowany w drzewie XML nie są uwzględnione w zakresie zapytania. Jeśli masz plik XML, który znajduje się w domyślnej przestrzeni nazw, nadal należy zadeklarować <xref:System.Xml.Linq.XNamespace> zmienną i łączą je z nazwą lokalną, można utworzyć kwalifikowane nazwy ma być używany w zapytaniu.  
   
  Jedną z najbardziej typowych problemów podczas wykonywania zapytań dotyczących drzew XML jest, że jeśli drzewa XML ma domyślny obszar nazw, deweloper czasami zapisuje zapytanie tak, jakby plik XML nie znajdowały się w przestrzeni nazw.  

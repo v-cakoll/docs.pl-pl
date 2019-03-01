@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 413c9331611d3406c13df58f25db1ef0255339b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc5262d62d32ad3f79c4f4e2c4d9f862dbce3727
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517672"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976892"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Rozwiązywanie problemów związanych z współdziałaniem (Visual Basic)
 Gdy współdziałania między COM i kodu zarządzanego z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], może wystąpić co najmniej jeden z następujących typowych problemów.  
@@ -57,11 +57,11 @@ Gdy współdziałania między COM i kodu zarządzanego z [!INCLUDE[dnprdnshort](
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> Tworzenie wystąpienia klasy .NET Framework  
  Ogólnie rzecz biorąc, Utwórz wystąpienie [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] przy użyciu `New` instrukcję, określając nazwę klasy. Klasa COM, reprezentowane przez zestaw międzyoperacyjny jest jeden przypadek, w którym można użyć `New` instrukcji przy użyciu interfejsu. Jeśli nie używasz klasy COM za pomocą `Inherits` instrukcji, tak samo jak klasy, można użyć interfejsu. Poniższy kod przedstawia sposób tworzenia `Command` obiektu w projekcie, który zawiera odwołanie do obiektu ActiveX firmy Microsoft danych 2.8 obiektów biblioteki modelu COM:  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
+ [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
  Jednak jeśli używasz klasy modelu COM jako podstawy dla klasy pochodnej, należy użyć międzyoperacyjny klasę, która reprezentuje klasę modelu COM, zgodnie z poniższym kodem:  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
+ [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
 >  Zestawy międzyoperacyjne niejawnie implementować interfejsy, które reprezentują klasy COM. Nie należy próbować użyć `Implements` spowoduje instrukcję, aby zaimplementować te interfejsy lub komunikat o błędzie.  
@@ -81,19 +81,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Visual Basic .NET wymaga zawsze tworzenia wystąpień obiektów COM przed użyciem ich metod. Aby korzystać z tych metod w języku Visual Basic, Zadeklaruj zmienną odpowiednią klasę i użyj słowa kluczowego new, aby przypisać obiekt do zmiennej obiektu. `Shared` — Słowo kluczowe może służyć, jeśli chcesz upewnić się, że tylko jedno wystąpienie tej klasy jest tworzona.  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
+ [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> Nieobsługiwane błędy w obsłudze zdarzeń  
  Jednym z typowych problemów międzyoperacyjny polega na błędy w procedurze obsługi zdarzeń, obsługujące zdarzenia generowane przez obiekty COM. Takie błędy są ignorowane, chyba że specjalnie sprawdzania błędów przy użyciu `On Error` lub `Try...Catch...Finally` instrukcji. Na przykład poniższy przykład pochodzi z projektu języka Visual Basic .NET, który zawiera odwołanie do obiektu ActiveX firmy Microsoft danych 2.8 obiektów biblioteki modelu COM.  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
+ [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
  W tym przykładzie zgłasza błąd, zgodnie z oczekiwaniami. Jednak jeśli zostanie podjęta w tym samym przykładzie bez `Try...Catch...Finally` bloku, błąd jest ignorowany, jak w przypadku korzystania `OnError Resume Next` instrukcji. Bez obsługi błędów, dzielenie przez zero dyskretnie kończy się niepowodzeniem. Ponieważ takie błędy nigdy nie zgłaszać błędy nieobsługiwany wyjątek, jest ważne, że używasz pewnego rodzaju obsługi wyjątków w procedury obsługi zdarzeń, które obsługują zdarzenia z obiektami COM.  
   
 ### <a name="understanding-com-interop-errors"></a>Informacje o błędach międzyoperacyjnego modelu COM  
  Bez obsługi błędów wywołań międzyoperacyjnych często generować błędy, które zapewniają trochę informacji. Możliwe, używaj ze strukturą obsługę błędów do Podaj więcej informacji na temat problemów, kiedy się pojawią. Może to być szczególnie przydatne podczas debugowania aplikacji. Na przykład:  
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
+ [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
  Informacje, takie jak opis błędu HRESULT i źródłem błędów COM można znaleźć, sprawdzając zawartość obiektu wyjątku.  
   
@@ -113,11 +113,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Jeśli masz dostęp do procedury wywoływana, możesz uniknąć tego błędu, za pomocą `ByVal` — słowo kluczowe do deklarowania parametry, które akceptują `ReadOnly` właściwości. Na przykład:  
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
+ [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
  Jeśli nie masz dostępu do kodu źródłowego dla procedury wywoływana, możesz wymusić właściwości, które mają być przekazane przez wartość, dodając dodatkowy zestaw nawiasów wokół procedury wywołującej. Na przykład w projekcie, który zawiera odwołanie do obiektu ActiveX firmy Microsoft danych 2.8 obiektów biblioteki modelu COM, należy użyć:  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
+ [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> Wdrażanie zestawów, które uwidaczniają międzyoperacyjności  
  Wdrażanie zestawów, które uwidaczniają interfejsów COM przedstawiono niektóre wyzwania. Na przykład potencjalny problem występuje, gdy aplikacje oddzielne odwoływać się do tego samego zestawu COM. Ta sytuacja jest typowa, gdy nowa wersja zestawu jest zainstalowany i starą wersję zestawu nadal jest używany przez inną aplikację. Po odinstalowaniu zestawu, który udostępnia bibliotekę DLL, użytkownik może przypadkowo był dostępny dla innych zestawów.  

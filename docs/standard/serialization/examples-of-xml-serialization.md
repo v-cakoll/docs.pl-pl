@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: fd01842bdb3a3b168c00e0366dd6fe4c2daf7121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204811"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974370"
 ---
 # <a name="examples-of-xml-serialization"></a>Przykłady serializacji XML
 Serializacji XML może zająć więcej niż jeden formularz z proste i złożone. Na przykład serializacji klasę, która po prostu składa się z pola publiczne i właściwości, jak pokazano na [wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md). Poniższe przykłady kodu adresów różnych scenariuszy zaawansowanych, w tym sposób użycia serializacji XML do generowania strumień XML, który jest zgodny z określonego dokumentu schematu XML (XSD).  
@@ -119,7 +119,7 @@ private void SerializeNode(string filename){
 ```  
   
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>Serializacji klasę, która zawiera pole zwracający obiekt złożony  
- Jeśli właściwość lub pole zwraca obiekt złożony (takich jak tablica lub wystąpienia klasy), [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) konwertuje go do elementu zagnieżdżone w głównym dokumentu XML. Na przykład pierwszą klasą w poniższym przykładzie zwraca wystąpienie klasy sekundy.  
+ Jeśli właściwość lub pole zwraca obiekt złożony (takich jak tablica lub wystąpienia klasy), <xref:System.Xml.Serialization.XmlSerializer> konwertuje go do elementu zagnieżdżone w głównym dokumentu XML. Na przykład pierwszą klasą w poniższym przykładzie zwraca wystąpienie klasy sekundy.  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -767,6 +767,6 @@ public class Test
 - [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [Atrybuty kontrolujące serializację XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [Klasy XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [Klasy XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
 - [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

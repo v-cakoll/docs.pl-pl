@@ -2,12 +2,12 @@
 title: Zkratka
 description: Dowiedz się więcej o byref i typami byref podobne w F#, które są używane do programowania niskiego poziomu.
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611584"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976554"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -105,7 +105,7 @@ Wszystkie te reguły, które są razem oznaczają, że właściciel `inref` wska
 
 Celem `outref<'T>` jest, aby wskazać, że wskaźnik powinni czytać tylko z. Nieoczekiwanie `outref<'T>` zezwolenia na odczytywanie podstawowych wartości niezależnie od jego nazwę. Jest to na potrzeby zgodności. Semantycznie `outref<'T>` nie różni się od `byref<'T>`.
 
-### <a name="interop-with-c"></a>Współdziałanie z języka C# #
+### <a name="interop-with-c"></a>Współdziałanie z języka C\#
 
 C# obsługuje `in ref` i `out ref` słów kluczowych, oprócz `ref` zwraca. W poniższej tabeli przedstawiono, jak F# interpretuje co C# emituje:
 

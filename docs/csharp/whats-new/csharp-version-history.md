@@ -3,14 +3,14 @@ title: Historia języka C# — Przewodnik po języku C#
 description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186231"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981936"
 ---
-# <a name="the-history-of-c"></a>Historia języka C# #
+# <a name="the-history-of-c"></a>Historia języka c\#
 
 Ten artykuł zawiera historię każdej wersji głównej programu C# języka. C# Zespół jest w dalszym ciągu wprowadzanie innowacji i dodania nowych funkcji. Szczegóły stanów funkcji języka, w tym funkcje uznane za dla przyszłych wydaniach można znaleźć [w repozytorium dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) w witrynie GitHub.
 
@@ -19,11 +19,11 @@ Ten artykuł zawiera historię każdej wersji głównej programu C# języka. C# 
 
 C# Narzędzia do kompilacji należy wziąć pod uwagę najnowszej wersji języka głównych domyślną wersję językową. Może to być punktowe między głównymi wersjami, szczegółowo opisanych w innych artykułach w tej sekcji. Korzystanie z najnowszych funkcji w wersji punktu należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybierz wersję. Zostały trzy punktowe od C# 7.0:
 
-* [C#7.3](csharp-7-3.md):
+* [C# 7.3](csharp-7-3.md):
   - C#7.3 jest obecnie dostępna w [Visual Studio 2017 w wersji 15.7](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [zestawu SDK platformy .NET Core 2.1 2.1.300 RC1](../../core/whats-new/index.md).
-* [C#7.2](csharp-7-2.md):
+* [C# 7.2](csharp-7-2.md):
   - C#7.2 jest obecnie dostępna w [programu Visual Studio 2017 w wersji 15.5](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
-* [C#7.1](csharp-7-1.md):
+* [C# 7.1](csharp-7-1.md):
   - Te funkcje zostały dodane w [programu Visual Studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
 
 ## <a name="c-version-10"></a>C# w wersji 1.0

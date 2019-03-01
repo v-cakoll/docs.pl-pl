@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506722"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979968"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 
@@ -62,7 +62,7 @@ Ciągi standardowego formatu liczb są obsługiwane przez:
 |„G” lub „g”|Ogólne|Wynik: Im więcej zwarta Notacja stałoprzecinkowa lub naukowa.<br /><br /> Obsługiwane przez: Wszystkich typów liczbowych.<br /><br /> Specyfikator dokładności: Liczba cyfr znaczących.<br /><br /> Domyślny Specyfikator dokładności: Zależy od typu liczbowego.<br /><br /> Więcej informacji: [Specyfikator formatu ogólnego ("G")](#GFormatString).|-123.456 ("G", en US) ->-123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |„N” lub „n”|Wartość liczbowa|Wynik: Cyfry całkowite i dziesiętne, separatory grup i separator dziesiętny z opcjonalnym znakiem minus.<br /><br /> Obsługiwane przez: Wszystkich typów liczbowych.<br /><br /> Specyfikator dokładności: Odpowiednią liczbę miejsc dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: Zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Specyfikator formatu numerycznego ("N")](#NFormatString).|1234.567 ("N", en US) -> 1234,57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en US) ->-1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> 234,560-1|  
 |„P” lub „p”|Wartość procentowa|Wynik: Liczba pomnożona przez 100 i wyświetlana z symbolem procentu.<br /><br /> Obsługiwane przez: Wszystkich typów liczbowych.<br /><br /> Specyfikator dokładności: Odpowiednią liczbę miejsc dziesiętnych.<br /><br /> Domyślny Specyfikator dokładności: Zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Specyfikatora formatu procenta ("P")](#PFormatString).|1 ("P", en US) -> 100.00%<br /><br /> 1 ("P", fr-FR) -> 100,00%<br /><br /> -0.39678 ("P1", en US) ->-39.7%<br /><br /> -0.39678 ("P1", fr-FR) -> - 39,7%|  
-|„R” lub „r”|Wartość dwustronna|Wynik: Ciąg, który można dwustronnie konwertować na identyczny numer.<br /><br /> Obsługiwane przez: <xref:System.Single>, <xref:System.Double>, i <xref:System.Numerics.BigInteger>.<br /><br /> Uwaga: Zalecane w przypadku <xref:System.Numerics.BigInteger> tylko typu. Aby uzyskać <xref:System.Double> typów, użyj "G17"; w przypadku <xref:System.Single> typów, użyj "G9". </br> Specyfikator dokładności: Ignorowane.<br /><br /> Więcej informacji: [Specyfikator formatu Round-trip ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|„R” lub „r”|Wartość dwustronna|Wynik: Ciąg, który można dwustronnie konwertować na identyczny numer.<br /><br /> Obsługiwane przez: <xref:System.Single>, <xref:System.Double>, i <xref:System.Numerics.BigInteger>.<br /><br /> Uwaga: Zalecane w przypadku <xref:System.Numerics.BigInteger> tylko typu. Aby uzyskać <xref:System.Double> typów, użyj "G17"; w przypadku <xref:System.Single> typów, użyj "G9". <br> Specyfikator dokładności: Ignorowane.<br /><br /> Więcej informacji: [Specyfikator formatu Round-trip ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |„X” lub „x”|Wartość szesnastkowa|Wynik: Ciąg szesnastkowy.<br /><br /> Obsługiwane przez: Tylko typy całkowite.<br /><br /> Specyfikator dokładności: Liczba cyfr w ciągu wynikowym.<br /><br /> Więcej informacji: [Szesnastkowego ("X") specyfikator formatu](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |Jakikolwiek inny pojedynczy znak|Nieznany specyfikator|Wynik: Zgłasza <xref:System.FormatException> w czasie wykonywania.||  
   

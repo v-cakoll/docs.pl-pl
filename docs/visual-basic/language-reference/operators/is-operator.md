@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a78189a6b82100665ac07b9d7c89590613ec1e1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4b23bb2d81d1f5272a5813123681da7406c3368
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745626"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980345"
 ---
 # <a name="is-operator-visual-basic"></a>Is — Operator (Visual Basic)
 Porównuje dwie zmienne odwołań do obiektów.  
@@ -46,7 +46,7 @@ result = object1 Is object2
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Is` operatora porównania pary odwołania do obiektu. Wyniki są przypisane do `Boolean` wartość reprezentującą informację, czy dwa obiekty są identyczne.  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
  Jak pokazano w powyższym przykładzie, można użyć `Is` operatora, aby przetestować zarówno z wczesnym wiązaniem i rozpoznanie późnego wiązania obiektów.  
   

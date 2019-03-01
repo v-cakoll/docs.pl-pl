@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b69fc668a63d1b4f834d5aa65ae8e27854d73e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595581"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978504"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Typy ogólne w Visual Basic (Visual Basic)
 A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosowuje się do wykonywania funkcji dla różnych typów danych. Po zdefiniowaniu klasy ogólnej lub procedura ma definiuje oddzielnych wersji dla każdego typu danych, dla którego możesz chcieć wykonać tę funkcję.  
@@ -55,7 +55,7 @@ Ustaw jako ogólnego narzędzia śrubokręt
   
  Na przykład możesz chcieć tworzenie i używanie klasy kolejki, która działa na określony typ danych, takich jak `String`. Można zadeklarować klasy z <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
  Teraz możesz używać `stringQ` wyłącznie w `String` wartości. Ponieważ `stringQ` dla konkretnego `String` zamiast trwa lotniczych `Object` wartości, nie masz późne powiązania lub typ konwersji. To pozwala zaoszczędzić czas wykonywania i zmniejsza błędy czasu wykonywania.  
   
@@ -64,15 +64,15 @@ Ustaw jako ogólnego narzędzia śrubokręt
 ## <a name="example-of-a-generic-class"></a>Przykład klasy ogólnej  
  Poniższy przykład pokazuje szkielet definicją klasy ogólnej.  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
  W poprzednim szkielet `t` jest *parametr typu*, oznacza to, symbol zastępczy dla typu danych, które podasz, kiedy Deklarujesz klasę. Gdzie indziej w kodzie, można zadeklarować różne wersje `classHolder` podając różne typy danych dla `t`. Poniższy przykład przedstawia dwa oświadczenia.  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
  Poprzedni instrukcje deklarują *skonstruowany klasy*, w którym określonego typu zastępuje parametr typu. Ta zastępowania są propagowane w całym kodzie w obrębie klasy skonstruowany. Poniższy przykład pokazuje, jakie `processNewItem` procedura wygląda podobnie jak w `integerClass`.  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
  Aby uzyskać pełniejszy przykład, zobacz [jak: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
@@ -110,7 +110,7 @@ Ustaw jako ogólnego narzędzia śrubokręt
 ### <a name="example-of-a-constraint"></a>Przykład ograniczenie  
  W poniższym przykładzie pokazano szkielet definicję klasy z ograniczeniem, która wymaga argumentu typu do zaimplementowania <xref:System.IComparable>.  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
  Jeśli kolejne kod próbuje utworzyć klasę z `itemManager` dostarczenie typ, który nie implementuje <xref:System.IComparable>, kompilator sygnalizuje błąd.  
   
@@ -132,7 +132,7 @@ Ustaw jako ogólnego narzędzia śrubokręt
 ### <a name="example-of-multiple-constraints"></a>Przykład wielu ograniczeń  
  Poniższy przykład pokazuje szkielet definicji klasy ogólnej z listą ograniczeń dla parametru typu. W kodzie, który tworzy wystąpienie tej klasy, argument typu musi implementować zarówno <xref:System.IComparable> i <xref:System.IDisposable> interfejsy, jako typów referencyjnych i udostępnić dostępny konstruktora bez parametrów.  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>Ważne terminy  
  Typy ogólne wprowadzenie i są używane następujące pojęcia:  

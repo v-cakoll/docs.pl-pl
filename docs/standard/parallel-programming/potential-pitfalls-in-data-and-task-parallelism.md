@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513428"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971952"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potencjalne pułapki związane z równoległością danych i zadań
 W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> może zapewnić znaczne ulepszenia wydajności za pośrednictwem zwykłych sekwencyjne pętli. Jednak pracy zrównoleglić pętlę wprowadza złożoności, który może prowadzić do problemów, które sekwencyjnego kodu nie są jako wspólne lub nie zostaną napotkane w ogóle. W tym temacie wymieniono niektóre rozwiązania, aby uniknąć podczas pisania pętli równoległych.  
@@ -52,10 +52,10 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
 >  Możesz sprawdzić to samodzielnie, wstawiając wywołania niektórych <xref:System.Console.WriteLine%2A> w zapytaniach. Chociaż ta metoda jest używana w przykładach dokumentacji w celach demonstracyjnych, nie należy używać go w pętlach równoległych Jeśli to konieczne.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Należy pamiętać o problemów koligacji wątku  
- Niektóre technologie, na przykład współdziałanie COM dla składników Single-Threaded apartamentu (STA), Windows Forms i Windows Presentation Foundation (WPF), nakładają ograniczenia koligacji wątku, które wymagają kod wymagany do uruchomienia w określonym wątku. Na przykład w Windows Forms i WPF formant może zostać oceniony jedynie w wątku, na którym została utworzona. Oznacza to, na przykład nie można zaktualizować formantu listy z równoległą pętlą o ile nie skonfigurowano harmonogramu wątków do zaplanowania pracy tylko w wątku interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [jak: Harmonogramu pracy nad wątku interfejsu użytkownika](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663).  
+ Niektóre technologie, na przykład współdziałanie COM dla składników Single-Threaded apartamentu (STA), Windows Forms i Windows Presentation Foundation (WPF), nakładają ograniczenia koligacji wątku, które wymagają kod wymagany do uruchomienia w określonym wątku. Na przykład w Windows Forms i WPF formant może zostać oceniony jedynie w wątku, na którym została utworzona. Oznacza to, na przykład nie można zaktualizować formantu listy z równoległą pętlą o ile nie skonfigurowano harmonogramu wątków do zaplanowania pracy tylko w wątku interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [określając kontekst synchronizacji](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Należy zachować ostrożność podczas oczekiwania w delegatów, które są wywoływane przez elementu Parallel.Invoke  
- W pewnych okolicznościach Biblioteka zadań równoległych będą wbudowane zadanie, co oznacza, że jest ono uruchamiane zadanie na aktualnie wykonywany wątek. (Aby uzyskać więcej informacji, zobacz [harmonogramów zadań](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).) Tego rodzaju optymalizacji wydajności może prowadzić do zakleszczenia w niektórych przypadkach. Na przykład dwa zadania może uruchomić tego samego obiektu delegowanego kodu, które sygnalizują, gdy wystąpi zdarzenie, a następnie czeka na innych zadań w celu sygnalizowania, że. Jeśli drugie zadanie jest śródwierszowa, w tym samym wątku, który jako pierwszy, a pierwszy przechodzi w stan oczekiwania, drugie zadanie nigdy nie będą mogli sygnalizują jego zdarzenia. Aby uniknąć wystąpienia zdarzenia, można określić limit czasu operacji oczekiwania, lub użyj wątku jawne konstruktory ułatwiające, upewnij się, że jedno zadanie nie można zablokować, drugi.  
+ W pewnych okolicznościach Biblioteka zadań równoległych będą wbudowane zadanie, co oznacza, że jest ono uruchamiane zadanie na aktualnie wykonywany wątek. (Aby uzyskać więcej informacji, zobacz [harmonogramów zadań](xref:System.Threading.Tasks.TaskScheduler).) Tego rodzaju optymalizacji wydajności może prowadzić do zakleszczenia w niektórych przypadkach. Na przykład dwa zadania może uruchomić tego samego obiektu delegowanego kodu, które sygnalizują, gdy wystąpi zdarzenie, a następnie czeka na innych zadań w celu sygnalizowania, że. Jeśli drugie zadanie jest śródwierszowa, w tym samym wątku, który jako pierwszy, a pierwszy przechodzi w stan oczekiwania, drugie zadanie nigdy nie będą mogli sygnalizują jego zdarzenia. Aby uniknąć wystąpienia zdarzenia, można określić limit czasu operacji oczekiwania, lub użyj wątku jawne konstruktory ułatwiające, upewnij się, że jedno zadanie nie można zablokować, drugi.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Nie należy zakładać, że iteracji ForEach, dla i równolegle uruchomić zawsze ForAll  
  Ważne jest, aby pamiętać, że poszczególnych iteracji w <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> lub <xref:System.Linq.ParallelEnumerable.ForAll%2A> pętli może, ale nie trzeba wykonywać równolegle. W związku z tym należy unikać pisania żadnego kodu, który zależy od pod kątem poprawności na równoległe wykonywanie iteracji lub wykonywania iteracji w określonej kolejności. Na przykład ten kod jest prawdopodobnie zakleszczenie:  

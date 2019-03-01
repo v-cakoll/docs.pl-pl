@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: ea2cad121a6722b2cb59e29831f90648ad4cff78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10d1d25f830ff563cf70369e7b9d4c66f639c121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664697"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969794"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Instrukcje: Rejestruje wyjątki w języku Visual Basic
 Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informacji o wyjątkach, które występują w aplikacji. Te przykłady pokazują, jak używać `My.Application.Log.WriteException` metody do rejestrowania wyjątków, które można jawnie przechwycić i wyjątki, które są nieobsługiwane.  
@@ -21,25 +21,25 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
   
 1.  Utwórz metodę, która będzie generować informacje o wyjątku.  
   
-     [!code-vb[VbVbalrMyApplicationLog#9](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
 2.  Użyj `Try...Catch` bloku, aby przechwycić wyjątek.  
   
-     [!code-vb[VbVbalrMyApplicationLog#6](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_2.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
 3.  Umieść kod, który można wygenerować wyjątek `Try` bloku.  
   
      Usuń znaczniki komentarza `Dim` i `MsgBox` wierszy, aby spowodować, że <xref:System.NullReferenceException> wyjątku.  
   
-     [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
 4.  W `Catch` blokowania, należy użyć `My.Application.Log.WriteException` metodę, aby zapisać informacje o wyjątku.  
   
-     [!code-vb[VbVbalrMyApplicationLog#8](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_4.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
      Poniższy przykład pokazuje kompletny kod dla rejestrowania obsługiwanego wyjątku.  
   
-     [!code-vb[VbVbalrMyApplicationLog#10](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_5.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
   
 ### <a name="to-log-an-unhandled-exception"></a>Do logowania się nieobsłużonego wyjątku  
   
@@ -59,11 +59,11 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
   
 6.  Dodaj `My.Application.Log.WriteException` metody `UnhandledException` programu obsługi zdarzeń.  
   
-     [!code-vb[VbVbalrMyApplicationLog#4](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_6.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
      Poniższy przykład pokazuje kompletny kod dla rejestrowania nieobsługiwany wyjątek.  
   
-     [!code-vb[VbVbalrMyApplicationLog#5](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_7.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>

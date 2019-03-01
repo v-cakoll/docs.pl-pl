@@ -7,12 +7,12 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: 77673256caba640f1340fc8218bea020f5fc04f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcba1651c736b58b2c95bac21f086c46417629df
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696376"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980753"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Instrukcje: Określanie, czy ciąg reprezentuje wartość numeryczną (C# Programming Guide)
 Aby ustalić, czy ciąg jest prawidłową reprezentacją określonego typu liczbowego, używa się statycznej `TryParse` metodę, która jest zaimplementowana przez wszystkich pierwotnych typów liczbowych, a także typy takie jak <xref:System.DateTime> i <xref:System.Net.IPAddress>. Poniższy przykład pokazuje, jak ustalić, czy jest nieprawidłowy "108" warunki [int](../../../csharp/language-reference/keywords/int.md).  
@@ -31,7 +31,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## <a name="example"></a>Przykład  
  W poniższych przykładach pokazano sposób użycia `TryParse` za pomocą ciągów reprezentujących `long`, `byte`, i `decimal` wartości.  
   
- [!code-csharp[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
+ [!code-csharp[csProgGuideStrings#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#14)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Pierwotny liczbowe również typy implementują `Parse` statyczną metodę, która zgłasza wyjątek, jeśli ciąg nie jest prawidłową liczbą. `TryParse` jest zazwyczaj bardziej efektywne, ponieważ po prostu zwraca wartość false, jeśli liczba jest nieprawidłowa.  

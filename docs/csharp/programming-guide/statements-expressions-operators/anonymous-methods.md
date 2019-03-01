@@ -7,27 +7,27 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: ba80626a777f9f2d813694abf3deda0ef0c93606
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55a39bb311d4f0a71f111db4975abf317d63d479
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732524"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979674"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Metody anonimowe (Przewodnik programowania w języku C#)
 W wersjach C# przed 2.0, jedynym sposobem, aby zadeklarować [delegować](../../../csharp/language-reference/keywords/delegate.md) było jednoczesne używanie [o nazwie metody](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# w wersji 2.0 wprowadzono metod anonimowych, a w języku C# 3.0 i nowszych wyrażenia lambda zastępują metody anonimowe jako preferowanym sposobem pisania kodu wbudowanego. Jednak informacje dotyczące metod anonimowych, w tym temacie dotyczą także wyrażeń lambda. Istnieje jeden przypadek, w którym metoda anonimowa udostępnia funkcje, nie można odnaleźć w wyrażeniach lambda. Metody anonimowe umożliwiają pominąć listę parametrów. Oznacza to, że metoda anonimowa mogą być konwertowane na obiektów delegowanych z różnymi podpisami. Nie jest to możliwe za pomocą wyrażenia lambda. Aby uzyskać konkretne informacje na temat wyrażeń lambda, zobacz [wyrażeń Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  Tworzenie metod anonimowych jest zasadniczo sposób przekazania bloku kodu jako parametr delegata. Poniżej przedstawiono dwa przykłady:  
   
- [!code-csharp[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#6)]  
   
- [!code-csharp[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
+ [!code-csharp[csProgGuideDelegates#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#5)]  
   
  Za pomocą metod anonimowych, zmniejszasz kodowanie obciążenie, przy użyciu programu Tworzenie wystąpień obiektów delegowanych, ponieważ nie trzeba tworzyć oddzielnych metodach.  
   
  Na przykład określając blok kodu, zamiast delegata może być przydatne w sytuacji, mając do utworzenia metody mogą wydawać się niepotrzebne koszty. Dobrym przykładem może być, po uruchomieniu nowego wątku. Ta klasa tworzy wątek i również zawiera kod, który wątek wykonuje bez tworzenia dodatkową metodę dla delegata.  
   
- [!code-csharp[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
+ [!code-csharp[csProgGuideDelegates#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#7)]  
   
 ## <a name="remarks"></a>Uwagi  
  Zakres parametry metoda anonimowa jest *anonimowe bloku metody*.  
@@ -36,7 +36,7 @@ W wersjach C# przed 2.0, jedynym sposobem, aby zadeklarować [delegować](../../
   
  Zmienne lokalne i parametry, których zakres zawiera deklarację metody anonimowej, są nazywane *zewnętrzne* zmienne metody anonimowej. Na przykład w następujących segment kodu `n` jest zewnętrzna zmienna:  
   
- [!code-csharp[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
+ [!code-csharp[csProgGuideDelegates#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#8)]  
   
  Odwołanie do zewnętrznej zmiennej `n` jest nazywany *przechwycone* po utworzeniu obiektu delegowanego. W przeciwieństwie do zmiennych lokalnych okres istnienia zmiennej przechwyconej rozszerza, dopóki nie kwalifikuje się do wyrzucania elementów bezużytecznych delegatów, które odwołują się metody anonimowe.  
   

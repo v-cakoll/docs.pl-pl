@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565907"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971640"
 ---
 # <a name="function-statement-visual-basic"></a>Function — Instrukcja (Visual Basic)
 Deklaruje nazwę, parametry i kod, który definiuje `Function` procedury.  
@@ -193,11 +193,11 @@ End Function
   
  `Return` Instrukcji jednocześnie przypisuje wartość zwracaną i kończy działanie funkcji, co ilustruje poniższy przykład.  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
  Poniższy przykład przypisuje wartość zwracaną do nazwy funkcji `myFunction` , a następnie używa `Exit Function` instrukcji, aby zwrócić.  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
  `Exit Function` i `Return` instrukcji powodują natychmiastowego wyjścia z `Function` procedury. Dowolną liczbę `Exit Function` i `Return` instrukcji może występować w dowolnym miejscu w ramach procedury i możesz mieszać `Exit Function` i `Return` instrukcji.  
   
@@ -240,19 +240,19 @@ End Function
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Function` instrukcję, aby zadeklarować nazwę, parametry i kod, który tworzą treści `Function` procedury. `ParamArray` Modyfikator umożliwia funkcji zaakceptować zmienną liczbę argumentów.  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia wywoływanie funkcji zadeklarowanej w poprzednim przykładzie.  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie `DelayAsync` jest `Async` `Function` zawierający typ zwracany <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ma `Return` instrukcję, która zwraca liczbę całkowitą. W związku z tym funkcja deklaracji `DelayAsync` musi mieć typ zwracany `Task(Of Integer)`. Ponieważ typem zwracanym jest `Task(Of Integer)`, oceny `Await` wyrażenia w `DoSomethingAsync` tworzy liczbą całkowitą. Zostało to przedstawione w tej instrukcji: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Procedura to przykład `Async Sub` procedury. Ponieważ `DoSomethingAsync` jest `Async` funkcji, zadanie do wywołań `DoSomethingAsync` musi być oczekiwana, tak jak pokazano w następującej instrukcji: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Procedury muszą być zdefiniowane przy użyciu `Async` modyfikator ponieważ ma ona `Await` wyrażenia.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Sub, instrukcja](sub-statement.md)

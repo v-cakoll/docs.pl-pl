@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: 09821e9b1985913b7433b070ae19c4818265926e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1368e3bcf91026abf4928ab554ff970331f86ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585405"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969742"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>Analizowanie plików tekstowych za pomocą obiektu TextFieldParser (Visual Basic)
 `TextFieldParser` Obiekt umożliwia analizowanie i procesu bardzo dużego pliku, który mają strukturę jako kolumn rozdzielana szerokości tekstu, takie jak pliki dziennika lub informacje o bazie danych w starszej wersji. Podczas analizowania pliku tekstowego z `TextFieldParser` przypomina Iterowanie pliku tekstowego, podczas gdy metody parse do wyodrębniania pól tekstu jest podobne do metod manipulowania ciąg do tokenizacji ciągów rozdzielanych.  
@@ -19,11 +19,11 @@ ms.locfileid: "54585405"
 ## <a name="parsing-different-types-of-text-files"></a>Analizy różnych typów plików tekstowych  
  Pliki tekstowe mogą mieć pola różnych szerokości, takich jak przecinek lub miejsce na karcie rozdzielane. Zdefiniuj `TextFieldType` i ogranicznik, jak w poniższym przykładzie, który używa `SetDelimiters` metodę, aby zdefiniować pliku tekstowego, rozdzielanego znakami tabulacji:  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
   
  Inne pliki tekstowe mogą mieć szerokościami pól, które zostały usunięte. W takich przypadkach należy zdefiniować `TextFieldType` jako `FixedWidth` i zdefiniuj szerokości każdego pola, jak w poniższym przykładzie. W tym przykładzie użyto `SetFieldWidths` metody do definiowania kolumn tekstu: pierwsza kolumna jest 5 znaki dwubajtowe, drugi to 10, trzecia będzie 11 i czwarta to o zmiennej szerokości.  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#22)]  
   
  Po zdefiniowaniu format można pętli pliku przy użyciu `ReadFields` metodę, aby przetworzyć każdy wiersz z osobna.  
   

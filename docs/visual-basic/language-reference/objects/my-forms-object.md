@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 17042f60eb27c41640ef5d8c927c7acc5bc73183
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ee93814a4f06c39099c50617a10b8974c6f1555
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712629"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974006"
 ---
 # <a name="myforms-object"></a>My.Forms — Obiekt
 Udostępnia właściwości do uzyskiwania dostępu do wystąpienia każdego formularza Windows zadeklarowana w bieżącym projekcie.  
@@ -46,7 +46,7 @@ Udostępnia właściwości do uzyskiwania dostępu do wystąpienia każdego form
 ## <a name="example"></a>Przykład  
  Ten przykład umożliwia zmianę tytuł domyślnego `SidebarMenu` formularza.  
   
- [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
+ [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]  
   
  W tym przykładzie do pracy, projekt musi mieć formularz o nazwie `SidebarMenu`.  
   

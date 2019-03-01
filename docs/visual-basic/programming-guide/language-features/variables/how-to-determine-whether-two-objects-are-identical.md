@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 62d73b6c3d706d9990be7783f0f3461fc0783d9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1fdc5f69b8552ee10131c7408673457fffe16ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512973"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976853"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Instrukcje: Określanie, czy dwa obiekty są jednakowe (Visual Basic)
 W języku Visual Basic dwóch odwołań do zmiennych są traktowane jako identyczne, jeśli ich wskaźniki są takie same, oznacza to, jeśli obie zmienne wskazywać tego samego wystąpienia klasy w pamięci. Na przykład w aplikacji Windows Forms, warto wykonania porównania, aby określić, czy bieżące wystąpienie (`Me`) jest taka sama jak konkretnego wystąpienia, takie jak `Form2`.  
@@ -42,7 +42,7 @@ W języku Visual Basic dwóch odwołań do zmiennych są traktowane jako identyc
 ## <a name="example"></a>Przykład  
  Następujący przykład sprawdza pary `Object` zmienne, aby zobaczyć, jeśli wskazują na to samo wystąpienie klasy.  
   
- [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/VisualBasic/how-to-determine-whether-two-objects-are-identical_1.vb)]  
+ [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
  Poprzedni przykład wyświetla następujące dane wyjściowe.  
   

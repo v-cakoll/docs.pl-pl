@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: e28ff83d673951a978e24d9c89621fbbe950f50e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066354"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975215"
 ---
 # <a name="whats-new-in-net-core-21"></a>What's new in .NET Core 2.1
 
@@ -131,7 +131,7 @@ Publikowanie niezależne opiera się na wersje środowiska uruchomieniowego w wi
 
 Przy użyciu zestawu .NET Core 2.0 SDK, samodzielne aplikacje są publikowane w środowisku uruchomieniowym .NET Core 2.0.0 chyba że inna wersja jest określona za pomocą `RuntimeFrameworkVersion` właściwości. Za pomocą to nowe zachowanie nie jest już należy ustawić tę właściwość, aby wybrać wyższą wersję środowiska uruchomieniowego niezależna aplikacji. To najłatwiejsza metoda przechodzenia do przodu jest zawsze publikowanie przy użyciu zestawu SDK platformy .NET Core 2.1 (v 2.1.300).
 
-Aby uzyskać więcej informacji, zobacz [niezależna deploymnet środowiska uruchomieniowego przenoszenia do przodu](../deploying/runtime-patch-selection.md).
+Aby uzyskać więcej informacji, zobacz [niezależna wdrażania środowiska uruchomieniowego przenoszenia do przodu](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Windows Compatibility Pack
 
 Jeśli przeniesiesz istniejący kod z programu .NET Framework i .NET Core, możesz użyć [systemie Windows Compatibility Pack](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Zapewnia dostęp do 20 000 więcej interfejsów API, niż jest dostępnych w programie .NET Core. Te interfejsy API i obejmuje dodatkowe typy w <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw, <xref:System.Diagnostics.EventLog> klasy, usługi WMI, liczniki wydajności, usług Windows i Windows rejestru typów i członków.

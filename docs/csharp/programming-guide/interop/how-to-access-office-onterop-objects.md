@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 5868d8782d093a4d3d566708684d3adeb39020ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d646a73cc8616821372c5a0078b595291829ac27
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695117"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970194"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji (C# Programming Guide)
 Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu API usługi Office. Nowe funkcje obejmują argumentów nazwanych i opcjonalnych, nowy typ o nazwie `dynamic`oraz możliwość przekazywania argumentów do parametrów odwołania w metodach COM tak, jakby były one wartości parametrów.  
@@ -60,17 +60,17 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 2.  Dodaj następujący kod `using` dyrektywy na górze pliku kodu.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]  
   
 ## <a name="to-create-a-list-of-bank-accounts"></a>Aby utworzyć listę kont bankowych  
   
 1.  Wklej poniższą definicję klasy do **Program.cs**w obszarze `Program` klasy.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_2.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]  
   
 2.  Dodaj następujący kod do `Main` metodę w celu utworzenia `bankAccounts` lista, która zawiera dwa konta.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]  
   
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Do deklarowania metody, które Eksportuje informacje o koncie do programu Excel  
   
@@ -82,19 +82,19 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 2.  Dodaj następujący kod na końcu `DisplayInExcel`. Kod wstawia wartości na pierwszych dwóch kolumn będących jej pierwszego wiersza arkusza.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_5.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]  
   
 3.  Dodaj następujący kod na końcu `DisplayInExcel`. `foreach` Pętli umieszcza informacje z listy kont do kolumn pierwszych dwóch następujących po sobie wierszy arkusza.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_6.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]  
   
 4.  Dodaj następujący kod na końcu `DisplayInExcel` można dostosowywać szerokość kolumn w celu dopasowania do zawartości.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]  
   
      Wcześniejszych wersjach języka C# wymaga jawnego rzutowania dla tych operacji, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, i `AutoFit` nadaje się program Excel <xref:Microsoft.Office.Interop.Excel.Range> metody. Poniższe wiersze pokazują rzutowania.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
      [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]i nowsze wersje, konwertuje zwracanego `Object` do `dynamic` automatycznie, jeśli odwołuje się zestaw [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora lub ekwiwalentnie, jeśli programu Excel **Osadź typy współdziałania**właściwość jest ustawiona na wartość true. Wartość true, to wartością domyślną dla tej właściwości.  
   
@@ -102,7 +102,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 1.  Dodaj następujący wiersz na końcu `Main`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_9.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]  
   
 2.  Naciśnij kombinację klawiszy CTRL + F5.  
   
@@ -126,11 +126,11 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 2.  Na koniec należy dodać następującą instrukcję `Main`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_12.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]  
   
 3.  Na koniec należy dodać następującą instrukcję `DisplayInExcel`. `Copy` Metoda dodaje arkusz do Schowka.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#12](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_13.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]  
   
 4.  Naciśnij kombinację klawiszy CTRL + F5.  
   
@@ -144,7 +144,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
      W [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], osadzanie informacji o typie, zamiast korzystać z zestawów PIA jest zachowanie domyślne. Z powodu tej wartości domyślnej kilka poprzednich przykładach są uproszczone, ponieważ jawne Rzutowanie nie jest wymagane. Na przykład deklaracja `worksheet` w `DisplayInExcel` jest zapisywany jako `Excel._Worksheet workSheet = excelApp.ActiveSheet` zamiast `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Wywołania `AutoFit` w tej samej metody również wymaga jawnego rzutowania bez domyślnego, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, i `AutoFit` jest metodą programu Excel. Poniższy kod przedstawia rzutowania.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
 2.  Aby zmienić domyślny i używanie zestawów PIA, zamiast osadzanie informacji o typie, rozwiń węzeł **odwołania** w węźle **Eksploratora rozwiązań** , a następnie wybierz **Microsoft.Office.Interop.Excel** lub **Microsoft.Office.Interop.Word**.  
   
@@ -156,17 +156,17 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
 1.  Zastąp dwa wywołania `AutoFit` w `DisplayInExcel` przy użyciu następujących instrukcji.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]  
   
      <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> Metoda zawiera siedem wartości parametrów, z których wszystkie są opcjonalne. Argumenty nazwane i opcjonalne umożliwiają argumenty dla żadnego, niektórych lub wszystkich z nich. W poprzednich instrukcji, argument jest dostarczany tylko dla jednego z parametrów, `Format`. Ponieważ `Format` jest pierwszym parametrem na liście parametrów, nie należy podać nazwę parametru. Jednak instrukcja może być łatwiejsze do zrozumienia, jeśli nazwa parametru jest uwzględniany, jak pokazano w poniższym kodzie.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]  
   
 2.  Naciśnij klawisze CTRL + F5, aby wyświetlić wynik. Inne formaty są wymienione w <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> wyliczenia.  
   
 3.  Porównaj z instrukcją w kroku 1, z użyciem następujący kod, który wyświetla argumenty, które są wymagane w [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i jego wcześniejsze wersje.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#17](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_16.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia kompletny przykład.  

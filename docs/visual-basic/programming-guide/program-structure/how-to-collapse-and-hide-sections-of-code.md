@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: 1282269f06f89645c213f3daaa1bd29e95a44d35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668720"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980129"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Instrukcje: Zwijanie i ukrywanie fragmentów kodu (Visual Basic)
 `#Region` Dyrektywy umożliwia zwijanie i ukrywanie fragmentów kodu w plikach języka Visual Basic. `#Region` Dyrektywy umożliwia określenie blok kodu, który będzie można rozszerzać lub Zwiń, korzystając z edytora kodu Visual Studio. Możliwość selektywnego Ukryj kod sprawia, że pliki w zarządzaniu i czytelne. Aby uzyskać więcej informacji, zobacz [konspekt](/visualstudio/ide/outlining).  
@@ -22,7 +22,7 @@ ms.locfileid: "54668720"
   
 -   Umieść części kodu między `#Region` i `#End Region` instrukcje, jak w poniższym przykładzie:  
   
-     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
+     [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   
      `#Region` Bloku można używać wiele razy w pliku kodu; w związku z tym, użytkownicy mogą definiować własne bloki procedur i klas, które z kolei mogą zostać zwinięty. `#Region` bloki mogą być zagnieżdżone w innych `#Region` bloków.  
   

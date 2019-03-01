@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: a3f4657b22fe0a9186e339d00cd9341e55405244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528878"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980779"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Instrukcje: Definiowanie wielu wersji procedury (Visual Basic)
 Procedurę można zdefiniować w wielu wersjach, *przeciążenie* go przy użyciu tej samej nazwie, ale inną listą parametrów dla każdej wersji. Przeciążanie ma na celu zdefiniować kilka wersji ściśle powiązanych procedury bez konieczności odróżnić je według nazwy.  
@@ -33,7 +33,7 @@ Procedurę można zdefiniować w wielu wersjach, *przeciążenie* go przy użyci
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie zdefiniowano `Sub` procedury, aby transakcję przed saldo odbiorcy. Używa ona `Overloads` — słowo kluczowe, aby zdefiniować dwie wersje procedury, taki, który akceptuje klientów według nazwy i innych przez numer konta.  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
  Kod wywołujący można uzyskać identyfikator klienta jako `String` lub `Integer`, a następnie użyć tej samej instrukcji wywołujące w obu przypadkach.  
   

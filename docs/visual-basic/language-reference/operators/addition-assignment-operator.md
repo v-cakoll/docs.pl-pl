@@ -10,12 +10,12 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: cfe987929099fc73ba3af9fe92b5871275c5396e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fdf5cd422cf2a4081372bc14e74ed7463393520
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617554"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979856"
 ---
 # <a name="-operator-visual-basic"></a>+= — Operator (Visual Basic)
 Dodaje wartość wyrażenia liczbowego wartość liczbową zmiennej lub właściwości, a następnie przypisuje wynik do zmiennej lub właściwości. Może również służyć do łączenia `String` wyrażenie `String` zmiennej lub właściwości i przypisz wynik do zmiennej lub właściwości.  
@@ -51,9 +51,9 @@ variableorproperty += expression
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `+=` operatora łączenia wartości jednej zmiennej z inną. Pierwsza część używa `+=` z Zmienne liczbowe, aby dodać jedną wartość na inny. Druga część używa `+=` z `String` zmienne do łączenia jednej wartości z inną. W obu przypadkach wynik jest przypisany do pierwszej zmiennej.  
   
- [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#7)]  
   
- [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#8)]  
   
  Wartość `num1` jest teraz 13 i wartość `str1` jest teraz "103".  
   

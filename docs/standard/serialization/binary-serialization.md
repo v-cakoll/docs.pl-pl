@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: 820a43e3c766c7abc47e21ad9d8c6e9d7a1d749e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 81d79ec0add7f8b73cced5c64a470fa9d699063c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269838"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972407"
 ---
 # <a name="binary-serialization"></a>Serializacja binarna
 
@@ -372,8 +372,8 @@ Opisuje mechanizm serializacji XML, który jest dołączony do aparatu PLików w
 - [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)\
 Opisuje bezpiecznego wskazówek kodowania, które należy wykonać podczas pisania kodu, który będzie wykonywać serializacji.
 
-- [Obiekty zdalne](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)\
+- [Wywołaniem funkcji zdalnych .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
 Opis różnych metod komunikacji dostępnych w programie .NET Framework do komunikacji zdalnej.
 
-- [Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)\
+- [Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 Zawiera tematy, które opisują, a wyjaśniają, jak program usług sieci Web XML utworzone za pomocą programu ASP.NET.

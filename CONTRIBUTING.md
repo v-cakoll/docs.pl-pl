@@ -107,7 +107,7 @@ Twój temat zawiera również linki do przykładu. Link bezpośrednio do folderu
 
 Aby uzyskać więcej informacji, zobacz [Readme przykłady](https://github.com/dotnet/samples/blob/master/README.md).
 
-## <a name="the-c-interactive-experience"></a>C# Interaktywnego środowiska #
+## <a name="the-c-interactive-experience"></a>C# Interaktywnego środowiska
 
 Krótkie przykłady kodu w C# służy `csharp-interactive` tagu języka, aby określić C# próbki, która działa w przeglądarce. (Użyj przykłady kodu wbudowanego `csharp-interactive` tag fragmenty uwzględnione ze źródła do używania `code-csharp-interactive` tagu.) Te przykłady kodu wyświetlenia okna Kod i dane wyjściowe w artykule. W oknie danych wyjściowych Wyświetla wszelkie dane wyjściowe wykonania kodu interaktywnego po użytkownik ma uruchomienia przykładu. 
 

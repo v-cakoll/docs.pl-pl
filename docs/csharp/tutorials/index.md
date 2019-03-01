@@ -1,19 +1,13 @@
 ---
-title: Samouczki języka C#
-description: Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.
+title: 'Samouczki języka C#'
+description: 'Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.'
 ms.date: 10/25/2018
-ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084670"
 ---
 # <a name="c-tutorials"></a>Samouczki języka C#
 
 Witamy w C# samouczków. One rozpoczynać się interakcyjne lekcji, które można uruchomić w przeglądarce. Kolejnych samouczkach, pomagając w bardziej zaawansowanych samouczków pracy z narzędziami programistycznymi .NET do tworzenia C# programy na komputerze.
 
-## <a name="introduction-to-c-interactive-tutorials"></a>Wprowadzenie do C# interaktywne samouczki #
+## <a name="introduction-to-c-interactive-tutorials"></a>Wprowadzenie do C# interaktywne samouczki
 
 Pierwszy lekcji opisano C# pojęć przy użyciu małych fragmentów kodu. Poznasz podstawy C# składni i sposób pracy z typami danych, takich jak ciągi, liczby i wartości logiczne. To wszystkie interaktywne, a użytkownik będzie pisanie i uruchamianie kodu w ciągu kilku minut. Te lekcje pierwszy założono nie uprzednia umiejętność programowania lub C# języka.
 
@@ -47,7 +41,7 @@ Ten samouczek zakłada, Zakończono lekcje wymienionych powyżej.
 
 Wprowadzających samouczków po lekcji Witaj, świecie są dostępne w środowisku projektowym lokalnego. Na koniec każdego samouczka zdecyduj, czy chcesz kontynuować z następnej lekcji online lub na własnym komputerze. Brak łącza, które ułatwiają konfigurowanie środowiska i przejdź do następnego samouczka na komputerze.
 
-## <a name="explore-new-features-in-c"></a>Poznaj nowe funkcjeC# #
+## <a name="explore-new-features-in-c"></a>Eksploruj nowe funkcje w języku C\#
 
 Wypróbuj nowe funkcje w [ C# 6](../whats-new/csharp-6.md) w tym [możliwość interaktywnego eksplorowania](exploration/csharp-6.yml).
 

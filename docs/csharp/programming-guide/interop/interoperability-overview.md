@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 8ad6b5767c349379121352930341be5b916131e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 499efae13a0805ba161cd9db160d697b496183c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502069"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974708"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarządzanego i niezarządzanego kodu.  
@@ -30,7 +30,7 @@ Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarzą
 ## <a name="c-interop"></a>międzyoperacyjność C++  
  Za pomocą międzyoperacyjności języka C++, znany także jako ją po prostu działa (IJW), do opakowania natywnych klasy języka C++, dzięki czemu mogą być używane przez kod, który został utworzony w języku C# lub innym języku .NET Framework. Aby to zrobić, pisanie kodu C++, aby opakować natywnej biblioteki DLL lub składnika COM. W przeciwieństwie do innych językach .NET Framework [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] ma współdziałanie pomocy technicznej, że umożliwia kodu zarządzanego i niezarządzanego zlokalizowanym w tej samej aplikacji, a nawet w tym samym pliku. Następnie utworzysz kodu C++ za pomocą **/CLR** przełącznika kompilatora, aby utworzyć zestaw zarządzany. Na koniec Dodaj odwołanie do zestawu w projekcie języka C# i używać opakowanej obiektów, tak jak w przypadku innych klas zarządzanych.  
   
-## <a name="exposing-com-components-to-c"></a>Udostępnianie składników COM do języka C#  
+## <a name="exposing-com-components-to-c"></a>Udostępnianie składników COM do C\#
  Mogą wykorzystywać składnika modelu COM z projektu języka C#. Ogólne kroki są następujące:  
   
 1.  Zlokalizuj składnik COM, aby użyć i zarejestrować ją. Użyj regsvr32.exe zarejestrować lub wyrejestrować — Zarejestruj bibliotekę DLL modelu COM.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 3cfb238317e14df8d663bc96ddf46e863c7b98be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 722e913403276cad48cf35a2d1923f74270feada
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663878"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975709"
 ---
 # <a name="constants-c-programming-guide"></a>Stałe (Przewodnik programowania w języku C#)
 Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmieniają się przez cały okres istnienia programu. Stałe są uznane za pomocą [const](../../../csharp/language-reference/keywords/const.md) modyfikator. Tylko C# wbudowanych typów (z wyłączeniem <xref:System.Object?displayProperty=nameWithType>) mogą być deklarowane jako `const`. Aby uzyskać listę wbudowanych typów, zobacz [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md). Typy zdefiniowane przez użytkownika, w tym klasy, struktury i tablic, nie może być `const`. Użyj [tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md) modyfikator, aby utworzyć klasy, struktury lub tablica, która jest inicjowany jeden raz w czasie wykonywania (na przykład w konstruktorze), a następnie nie można jej zmienić.  
@@ -22,7 +22,7 @@ Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmie
   
  Stałe muszą być zainicjowane, ponieważ są one zgłoszone. Na przykład:  
   
- [!code-csharp[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_1.cs)]  
+ [!code-csharp[csProgGuideObjects#64](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#64)]  
   
  W tym przykładzie stała `months` zawsze 12, a nie można zmienić nawet przez samej klasy. W rzeczywistości, gdy kompilator napotka stałych identyfikatora w kodzie źródłowym języka C# (na przykład `months`), zastępuje bezpośrednio do kodu języka pośredniego (IL), który tworzy wartości literału. Ponieważ nie istnieje żaden adres zmiennej skojarzone ze stałą w czasie wykonywania, `const` pola nie mogą być przekazywane przez odwołanie i nie są wyświetlane jako l wartości w wyrażeniu.  
   
@@ -31,17 +31,17 @@ Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmie
   
  Kilka stałych tego samego typu mogą być deklarowane w tym samym czasie, na przykład:  
   
- [!code-csharp[csProgGuideObjects#65](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_2.cs)]  
+ [!code-csharp[csProgGuideObjects#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#65)]  
   
  Wyrażenie, które służy do inicjowania stałą mogą odwoływać się do innej stałej, jeśli nie powoduje to powstanie odwołania cyklicznego. Na przykład:  
   
- [!code-csharp[csProgGuideObjects#66](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_3.cs)]  
+ [!code-csharp[csProgGuideObjects#66](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#66)]  
   
  Stałe może być oznaczona jako [publicznych](../../../csharp/language-reference/keywords/public.md), [prywatnej](../../../csharp/language-reference/keywords/private.md), [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), [chronionych wewnętrznych](../../../csharp/language-reference/keywords/protected-internal.md)lub [prywatny chroniony](../../../csharp/language-reference/keywords/private-protected.md). Następujące modyfikatory dostępu definiują, jak użytkownicy klasy mogą uzyskać dostępu do stałej. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).   
   
  Stałe są dostępne, tak jakby [statyczne](../../../csharp/language-reference/keywords/static.md) pola, ponieważ wartość stałej jest taka sama dla wszystkich wystąpień tego typu. Nie używaj `static` — słowo kluczowe do deklarowania je. Wyrażeń, które nie znajdują się w klasie, która definiuje stałą, należy użyć nazwy klasy, kropka i nazwę stałej można uzyskać dostępu do stałej. Na przykład:  
   
- [!code-csharp[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
+ [!code-csharp[csProgGuideObjects#67](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#67)]  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

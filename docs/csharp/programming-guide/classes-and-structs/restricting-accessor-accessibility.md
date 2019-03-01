@@ -10,17 +10,17 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 3e097b2208b69f21347c49e253e59a9c14f30e51
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 24df3a78487cf054a2682b3fbdf8d78b37c4ea6b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219430"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979453"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ograniczanie dostępności metody dostępu (Przewodnik programowania w języku C#)
 [Uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustaw](../../../csharp/language-reference/keywords/set.md) noszą nazwę porcjach właściwości lub indeksatora *Akcesory*. Domyślnie te metody dostępu mają ten sam poziom widoczności lub dostęp do właściwości lub indeksatora, do której należą. Aby uzyskać więcej informacji, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). Jednak czasami jest przydatne ograniczyć dostęp do jednej z tych metod dostępu. Zwykle wymaga to, ograniczenie dostępności `set` akcesor przy zachowaniu `get` publicznie dostępne metody dostępu. Na przykład:  
   
- [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
  W tym przykładzie właściwość o nazwie `Name` definiuje `get` i `set` metody dostępu. `get` Akcesor odbiera poziom ułatwień dostępu właściwości, `public` while, w tym przypadku `set` akcesor jawnie jest ograniczony przez zastosowanie [chronione](../../../csharp/language-reference/keywords/protected.md) modyfikator dostępu do Metoda dostępu sam.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "56219430"
 ## <a name="access-modifiers-on-overriding-accessors"></a>Modyfikatory dostępu w przypadku przesłaniania metody dostępu  
  Gdy zastąpisz właściwość lub indeksator przesłoniętych metod dostępu muszą być dostępne dla kodu nadrzędnych. Ponadto dostępność właściwości/indeksatora i jego metod dostępu muszą być zgodne, odpowiedni zastąpione właściwości/indeksatora i jego metod dostępu. Na przykład:  
   
- [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#7)]  
   
 ## <a name="implementing-interfaces"></a>Implementowanie interfejsów.  
  Gdy używasz metody dostępu do zaimplementowania interfejsu akcesor nie może mieć modyfikatora dostępu. Jednak jeśli zaimplementować interfejs za pomocą jedną metodę dostępu, takich jak `get`, inne metody dostępu może mieć modyfikatora dostępu, jak w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
+ [!code-csharp[csProgGuideIndexers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#8)]  
   
 ## <a name="accessor-accessibility-domain"></a>Domena dostępności metody dostępu  
  Użycie modyfikatora dostępu dla metody dostępu, [domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md) metody dostępu jest określana przez ten modyfikator.  
@@ -55,7 +55,7 @@ ms.locfileid: "56219430"
   
  W przykładzie pokazano również, modyfikator dostępu ograniczające, takich jak `private` lub `protected`na `set` akcesor `Name` właściwość `DerivedClass` uniemożliwia dostęp do metody dostępu i generuje błąd, po przypisaniu do go.  
   
- [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
+ [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   
 ## <a name="comments"></a>Komentarze  
  Należy zauważyć, że jeżeli wymienisz deklaracji `new private string Id` przez `new public string Id`, otrzymasz dane wyjściowe:  

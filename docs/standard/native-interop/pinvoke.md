@@ -4,12 +4,12 @@ description: Dowiedz się, jak wywoływać funkcje natywne za pośrednictwem met
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: f243fee2b246afff36732d469c6295d7e4b2fd87
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416238"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981260"
 ---
 # <a name="platform-invoke-pinvoke"></a>Wywołanie platformy (P/Invoke)
 
@@ -242,5 +242,5 @@ Zarówno poprzednich przykładach są zależne od parametrów, a w obu przypadka
 ## <a name="more-resources"></a>Inne zasoby
 
 *   [PInvoke.net wiki](https://www.pinvoke.net/) doskonałe witryny typu Wiki przy użyciu informacji o typowych interfejsów API systemu Win32 i sposobie ich wywoływania.
-*   [P/Invoke w witrynie MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
+*   [P/Invoke w witrynie MSDN](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [Dokumentacja narzędzia mono w P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)

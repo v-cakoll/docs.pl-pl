@@ -2,12 +2,12 @@
 title: Wejściowy zestaw znaków (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641203"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976762"
 ---
 # <a name="input-character-set-entity-sql"></a>Wejściowy zestaw znaków (jednostka SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] akceptuje znaków UNICODE zakodowanych w formacie UTF-16.  
@@ -24,9 +24,9 @@ ms.locfileid: "54641203"
   
  Słowa kluczowe, wyrażenia i znaków interpunkcyjnych może być dowolnym znakiem UTF-16, który normalizuje do Latin. Na przykład wybór w japońskich strona kodowa jest nieprawidłowa — słowo kluczowe.  
   
- Słowa kluczowe, wyrażenia i znaków interpunkcyjnych może być tylko znaki alfabetu łacińskiego. `SELECT` w japońskich strona kodowa nie jest słowem kluczowym. +,-, *, /, = (,), ", [,] i innych konstrukcją języka pierwszej klasy, nie są podane w tym miejscu może zawierać tylko znaki alfabetu łacińskiego.  
+ Słowa kluczowe, wyrażenia i znaków interpunkcyjnych może być tylko znaki alfabetu łacińskiego. `SELECT` w japońskich strona kodowa nie jest słowem kluczowym. +,-, \*, /, = (,), ", [,] i innych konstrukcją języka pierwszej klasy, nie są podane w tym miejscu może zawierać tylko znaki alfabetu łacińskiego.  
   
- Proste identyfikatory mogą być tylko znaki alfabetu łacińskiego. Pozwala to uniknąć niejednoznaczności podczas porównywania, ponieważ oryginalne wartości są porównywane. Na przykład ABC będzie różnić się w w strony kodowe kalendarza japońskiego i łacińskiego.  
+ Proste identyfikatory mogą być tylko znaki alfabetu łacińskiego. Pozwala to uniknąć niejednoznaczności podczas porównywania, ponieważ oryginalne wartości są porównywane. Na przykład ABC będzie różnić się w strony kodowe kalendarza japońskiego i łacińskiego.  
   
 ## <a name="see-also"></a>Zobacz także
 - [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

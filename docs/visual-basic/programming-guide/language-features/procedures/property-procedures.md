@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: e61cf907ac2c5c04aa86c03a73bda7fcfcb8122d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710485"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971536"
 ---
 # <a name="property-procedures-visual-basic"></a>Procedury własności (Visual Basic)
 Procedury właściwości jest szereg instrukcji, które manipulowania właściwości niestandardowych dla modułu, klasy lub struktury. Procedury własności są również nazywane *Akcesory właściwości*.  
@@ -99,11 +99,11 @@ End Property
 ### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołanie  
  Następująca właściwość przechowuje pełną nazwę w postaci dwie nazwy składowych, imię i nazwisko. Podczas wywoływania kodu odczytuje `fullName`, `Get` procedury łączy dwie nazwy składowych i zwraca pełną nazwę. Gdy kod wywołujący przypisuje nową pełną nazwę, `Set` procedury próbuje podzielenie go na dwie nazwy składowych. Jeśli nie znajdzie spację, przechowuje on wszystkie jako imię.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  W poniższym przykładzie przedstawiono typowe wywołania procedur właściwość `fullName`.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Procedury](./index.md)

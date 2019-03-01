@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 6aabdf9956365548d3f0cdf0cd046343d8129f04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e368c9399aee94888252953752f5be00352c8c98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560748"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981520"
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Właściwość wydaje się być pola, uzyskanie dostępu do właściwości wymaga takiej samej składni. Właściwość implementujący klasę, jest co najmniej dwóch bloków kodu, reprezentujący [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu i/lub [ustaw](../../../csharp/language-reference/keywords/set.md) metody dostępu. Blok kodu dla `get` metody dostępu jest wykonywany, gdy właściwość jest do odczytu; kod zablokować na `set` metody dostępu jest wykonywany, gdy właściwość jest przypisywana nowa wartość. Właściwość bez `set` metody dostępu jest traktowane jako tylko do odczytu. Właściwość bez `get` metody dostępu jest traktowane jako tylko do zapisu. Właściwość, która ma obu metod dostępu jest do odczytu i zapisu.  
@@ -23,7 +23,7 @@ Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Wła�
   
  Właściwości są zadeklarowane w bloku klasy, określając poziom dostępu do pola, następuje typu właściwości, następuje nazwa właściwości i następuje blok kodu, który deklaruje `get`— metody dostępu i/lub `set` metody dostępu. Na przykład:  
   
- [!code-csharp[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
+ [!code-csharp[csProgGuideProperties#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#7)]  
   
  W tym przykładzie `Month` jest zadeklarowana jako właściwość tak, `set` dostępu można upewnij się, że `Month` wartość od 1 do 12. `Month` Właściwość używa prywatnego pola do śledzenia wartości rzeczywistej. Rzeczywista lokalizacja danych właściwości jest często określana jako wartość właściwości "magazyn zapasowy." Jest to typowe dla właściwości, aby używać pól prywatnych jako magazyn zapasowy. Pole jest oznaczony prywatnych, aby upewnić się, że tylko można ją zmienić, wywołując właściwości. Aby uzyskać więcej informacji na temat ograniczeń dostępu publicznego i prywatnego, zobacz [modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
@@ -32,32 +32,32 @@ Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Wła�
 ## <a name="the-get-accessor"></a>Metody dostępu get  
  Treść `get` akcesor przypomina metody. Aplikacja musi zwracać wartość typu właściwości. Wykonanie `get` metody dostępu jest odpowiednikiem odczytywania wartości pola. Na przykład, gdy przekazujących zmiennej prywatnej z `get` metody dostępu i optymalizacje są włączone, wywołanie `get` metody dostępu jest śródwierszowa przez kompilator, więc nie ma żadnych obciążenie wywołania metody. Jednak wirtualnej `get` metody dostępu nie może być śródwierszowa, ponieważ kompilator nie zna w czasie kompilacji, która metoda może faktycznie wywołana w czasie wykonywania. Poniżej przedstawiono `get` metodę dostępu, która zwraca wartość pola prywatnego `name`:  
   
- [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
+ [!code-csharp[csProgGuideProperties#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#8)]  
   
  Gdy odwołujesz się właściwości, z wyjątkiem jako element docelowy przypisania `get` metody dostępu jest wywoływany ma zostać odczytana wartość właściwości. Na przykład:  
   
- [!code-csharp[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
+ [!code-csharp[csProgGuideProperties#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#9)]  
   
  `get` Dostępu może kończyć się [zwracają](../../../csharp/language-reference/keywords/return.md) lub [throw](../../../csharp/language-reference/keywords/throw.md) poufności i kontroli, nie można wykonać przepływu off treści metody dostępu.  
   
  To zły stylu programowania, aby zmienić stan obiektu przy użyciu `get` metody dostępu. Na przykład, następujące metody dostępu daje efekt uboczny zmiany stanu obiektu za każdym razem, gdy który `number` uzyskiwania dostępu do pola.  
   
- [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
+ [!code-csharp[csProgGuideProperties#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#10)]  
   
  `get` Dostępu może służyć do zwrócenia wartości pola lub do obliczenia, go i przywrócić go. Na przykład:  
   
- [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
+ [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]  
   
  W poprzednich segment kodu, jeśli wartość nie należy przypisywać `Name` właściwości zwróci wartość, nie dotyczy.  
   
 ## <a name="the-set-accessor"></a>Zestaw metody dostępu  
  `set` Akcesor podobne metody, którego typem zwracanym jest [void](../../../csharp/language-reference/keywords/void.md). Niejawny parametr o nazwie `value`, którego typem jest typ właściwości. W poniższym przykładzie `set` metody dostępu jest dodawany do `Name` właściwości:  
   
- [!code-csharp[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
+ [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]  
   
  Podczas przypisywania wartości do właściwości `set` metody dostępu jest wywoływany przy użyciu argumentu, który zawiera nową wartość. Na przykład:  
   
- [!code-csharp[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
+ [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]  
   
  Jest to błąd, aby użyć nazwy parametru niejawne `value`, dla deklaracji zmiennej lokalnej w `set` metody dostępu.  
   
@@ -81,24 +81,24 @@ Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Wła�
 ## <a name="example"></a>Przykład  
  W tym przykładzie przedstawiono sposób dostępu do właściwości w klasie bazowej, które zostały ukryte przez inną właściwość, która ma taką samą nazwę w klasie pochodnej.  
   
- [!code-csharp[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
+ [!code-csharp[csProgGuideProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#3)]  
   
  Poniżej przedstawiono ważne punkty w poprzednim przykładzie:  
   
 -   Właściwość `Name` w klasie pochodnej ukrywa właściwość `Name` w klasie bazowej. W takim przypadku `new` modyfikator jest używany w deklaracji właściwości w klasie pochodnej:  
   
-     [!code-csharp[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
+     [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
 -   Rzutowanie `(Employee)` służy do dostępu do ukrytych właściwości w klasie bazowej:  
   
-     [!code-csharp[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
+     [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   
      Aby uzyskać więcej informacji na temat elementów członkowskich ukrywanie zobacz [new — modyfikator](../../../csharp/language-reference/keywords/new-modifier.md).  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie dwie klasy `Cube` i `Square`, implementowanie klasy abstrakcyjnej `Shape`i zastąp jego abstrakcyjny `Area` właściwości. Zwróć uwagę na użycie [zastąpienia](../../../csharp/language-reference/keywords/override.md) modyfikator we właściwościach. Program akceptuje po stronie jako dane wejściowe i oblicza obszarów kwadratowych i modułów. Również akceptuje obszaru jako dane wejściowe i oblicza odpowiedniego po stronie kwadratowych i modułów.  
   
- [!code-csharp[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
+ [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]  
   
 ## <a name="see-also"></a>Zobacz także
 

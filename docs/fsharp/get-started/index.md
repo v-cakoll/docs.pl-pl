@@ -1,15 +1,9 @@
 ---
-title: Rozpoczynanie pracy z usługąF#
-description: Dowiedz się, jak rozpocząć pracę z F# języka programowania.
+title: 'Rozpoczynanie pracy z usługąF#'
+description: 'Dowiedz się, jak rozpocząć pracę z F# języka programowania.'
 ms.date: 12/08/2018
-ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170824"
 ---
-# <a name="get-started-with-f"></a>Rozpoczynanie pracy z usługąF# #
+# <a name="get-started-with-f"></a>Wprowadzenie do F\#
 
 Możesz rozpocząć pracę z F# na komputerze lub w trybie online.
 
@@ -17,7 +11,7 @@ Możesz rozpocząć pracę z F# na komputerze lub w trybie online.
 
 Istnieje wiele przewodniki na temat sposobu instalowania i używania F# po raz pierwszy na swojej maszynie.  Skorzystaj z poniższej tabeli, aby pomóc w podejmowaniu decyzji:
 
-| System operacyjny | Preferuj programu Visual Studio | Preferuj programu Visual Studio Code | Preferuj wiersza polecenia |
+| System operacyjny | Prefer Visual Studio | Prefer Visual Studio Code | Preferuj wiersza polecenia |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
 | Windows | [Rozpoczynanie pracy z programem Visual Studio](get-started-visual-studio.md) | [Rozpoczynanie pracy z usługą Visual Studio Code i Ionide](get-started-vscode.md) | [Wprowadzenie do interfejsu wiersza polecenia platformy .NET Core](get-started-command-line.md) |
 | macOS | [Rozpoczynanie pracy z programem VS dla komputerów Mac](get-started-with-visual-studio-for-mac.md) | [Rozpoczynanie pracy z usługą Visual Studio Code i Ionide](get-started-vscode.md) | [Wprowadzenie do interfejsu wiersza polecenia platformy .NET Core](get-started-command-line.md) |

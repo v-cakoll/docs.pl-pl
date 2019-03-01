@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 11ea1ed6bb96a477ec8351e7d865e6119e83eb80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c28712a3969c8b0143f90b1e733738bf74464d9a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672961"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980480"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Instrukcje: Przesłanianie metody ToString (C# Programming Guide)
 Każdej klasy lub struktury w języku C# dziedziczy niejawnie <xref:System.Object> klasy. W związku z tym, każdy obiekt w języku C# pobiera <xref:System.Object.ToString%2A> metody, która zwraca reprezentację ciągu tego obiektu. Na przykład, wszystkie zmienne typu `int` mają `ToString` metody, która pozwala na zwrócenie ich zawartość jako ciąg:  
   
- [!code-csharp[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#37)]  
   
  Podczas tworzenia niestandardowej klasy lub struktury, należy zastąpić <xref:System.Object.ToString%2A> metody w celu zapewnienia informacji na temat danego typu kodu klienta.  
   
@@ -41,7 +41,7 @@ Każdej klasy lub struktury w języku C# dziedziczy niejawnie <xref:System.Objec
   
      Możesz przetestować `ToString` metody, jak pokazano w poniższym przykładzie kodu:  
   
-     [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
+     [!code-csharp[csProgGuideInheritance#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#38)]  
   
 ## <a name="see-also"></a>Zobacz także
 

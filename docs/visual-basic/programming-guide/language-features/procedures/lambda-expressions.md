@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 3d2cab1c40b1a84e9a3b6bed885b2a0020e53f01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529479"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974812"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda — Wyrażenia (Visual Basic)
 A *wyrażenia lambda* jest funkcji lub podprocedury bez nazwy, który może służyć wszędzie tam, gdzie obiekt delegowany jest prawidłowy. Wyrażenia lambda może być funkcji lub podprocedury i może być w jednym lub wielu linii. Wyrażenie lambda można przekazać wartości z bieżącego zakresu.  
@@ -26,19 +26,19 @@ A *wyrażenia lambda* jest funkcji lub podprocedury bez nazwy, który może słu
   
  Poniższy przykład jest wyrażenie lambda, która zwiększa jej argument i zwraca wartość. W przykładzie pokazano oba jeden wiersz i wielowierszowe składnia wyrażenia lambda dla funkcji.  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
+ [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
  Poniższy przykład jest wyrażenie lambda, która zapisuje wartości do konsoli. W przykładzie pokazano oba jeden wiersz i wielowierszowe składnia wyrażenia lambda do procedurę.  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
  Należy zauważyć, że w poprzednich przykładach wyrażenia lambda są przypisane do nazwy zmiennej. Zawsze, gdy odwołujesz się do zmiennej, można wywołać wyrażenia lambda. Można również zadeklarować i wywołać Wyrażenie lambda, w tym samym czasie, jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
+ [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
  Wyrażenia lambda mogą być zwracane jako wartość wywołania funkcji (jak pokazano w przykładzie w [kontekstu](#context) w dalszej części tego tematu), lub przekazany jako argument do parametru, która przyjmuje typ delegata, jak pokazano w poniższym przykład.  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
+ [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
   
 ## <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda  
  Składnia wyrażenia lambda przypomina standardowej funkcji lub podprocedury. Różnice są następujące:  
@@ -114,7 +114,7 @@ End Class
   
  Dostęp do zmiennych lokalnych i parametrów w zakresie zawierającym mogą wykraczać poza okres istnienia tego zakresu. Tak długo, jak obiekt delegowany odwołujące się do wyrażenia lambda nie jest dostępna dla wyrzucania elementów bezużytecznych, dostęp do zmiennych w środowisku, oryginalnym są zachowywane. W poniższym przykładzie zmienna `target` jest lokalną grupą `makeTheGame`, metody, w którym wyrażenie lambda `playTheGame` jest zdefiniowana. Należy zauważyć, że wyrażenie lambda zwrócone przypisane do `takeAGuess` w `Main`, wciąż ma dostęp do zmiennej lokalnej `target`.  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
+ [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
   
  W poniższym przykładzie pokazano szeroką gamę prawa dostępu zagnieżdżonym wyrażeniem lambda. Gdy wyrażenie lambda zwracany jest wykonywany z `Main` jako `aDel`, uzyskuje dostęp do tych elementów:  
   
@@ -128,16 +128,16 @@ End Class
   
 -   Parametr wyrażenia lambda, w którym jest zagnieżdżona: `level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
+ [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
 ## <a name="converting-to-a-delegate-type"></a>Konwertowanie do typu delegata  
  Wyrażenia lambda mogą być niejawnie konwertowane na typ delegata zgodne. Aby uzyskać informacje na temat ogólnych wymagań dotyczących zgodności, zobacz [swobodna konwersja delegatów](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Na przykład, poniższy przykład kodu pokazuje Wyrażenie lambda, która niejawnie konwertuje `Func(Of Integer, Boolean)` lub pasujący podpis delegata.  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
+ [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   
  Poniższy przykład kodu pokazuje Wyrażenie lambda, która niejawnie konwertuje `Sub(Of Double, String, Double)` lub pasujący podpis delegata.  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
+ [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
   
  Podczas przypisywania wyrażenia lambda do delegatów i przekazywane jako argumenty do procedur, można określić nazwy parametrów, ale Pomiń typy danych, umożliwiając typy podejmowane na podstawie obiektu delegowanego.  
   
@@ -145,11 +145,11 @@ End Class
   
 -   W poniższym przykładzie zdefiniowano Wyrażenie lambda, które zwraca `True` Jeśli przypisaną wartością argumentu dopuszcza wartości null i `False` gdy jego wartość jest `Nothing`.  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
+     [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
 -   W poniższym przykładzie zdefiniowano Wyrażenie lambda, które zwraca indeks ostatniego elementu w tablicy.  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
+     [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Procedury](./index.md)

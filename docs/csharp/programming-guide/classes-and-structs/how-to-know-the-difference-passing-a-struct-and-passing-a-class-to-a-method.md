@@ -7,12 +7,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: f131f647d5335a011c5f446f847ed43fda019ade
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9664a3e5b5a68ae44bb129c9c550011683c81f16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559288"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981300"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody (C# Programming Guide)
 W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../csharp/language-reference/keywords/struct.md) do metody różni się od przekazywanie [klasy](../../../csharp/language-reference/keywords/class.md) wystąpienia do metody. W tym przykładzie oba argumenty (wystąpienia struktury i klasy) są przekazywane przez wartość, a obie metody Zmień wartość pola jednego argumentu. Jednak wyniki z dwóch metod nie są takie same ponieważ przekazywana jest, jeśli przekazujesz struktury różni się od co to jest przekazywana, jeśli przekazujesz wystąpienia klasy.  
@@ -24,7 +24,7 @@ W poniższym przykładzie pokazano, jak przekazywanie [struktury](../../../cshar
  Poniższy przykład ilustruje różnicę. Wartość `willIChange` pola wystąpienia klasy zostanie zmieniony przez wywołanie metody `ClassTaker` ponieważ metoda używa adresu w parametrze można znaleźć określonego pola wystąpienia klasy. `willIChange` Pola struktury w przypadku wywołania metody nie jest zmieniany przez wywołanie metody `StructTaker` ponieważ wartość argumentu jest kopią struktury, nie kopia jego adres. `StructTaker` zmiany kopii i kopii zostaną utracone podczas wywołania `StructTaker` zostało zakończone.  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
+ [!code-csharp[csProgGuideObjects#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#32)]  
   
 ## <a name="see-also"></a>Zobacz także
 

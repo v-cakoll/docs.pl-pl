@@ -10,33 +10,33 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722022"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969196"
 ---
 # <a name="type-promotion-visual-basic"></a>Promocja typu (Visual Basic)
 Kiedy Deklarujesz element programowania w module, Visual Basic promuje jego zakres, do obszaru nazw, zawierającej moduł. Jest to nazywane *wpisz podwyższania poziomu*.  
   
  Poniższy kod przedstawia definicję szkielet modułu i dwa elementy członkowskie tego modułu.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
  W ramach `projModule`, programowania elementy zadeklarowane na poziomie modułu są promowane do `projNamespace`. W powyższym przykładzie `basicEnum` i `innerClass` są promowane, ale `numberSub` jest, ponieważ nie zadeklarowano na poziomie modułu.  
   
 ## <a name="effect-of-type-promotion"></a>Efekt promocja typu  
  Promocja typu powoduje, ciąg kwalifikacji nie musi zawierać nazwę modułu. Poniższy przykład wykonuje dwa wywołania do procedury w poprzednim przykładzie.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
  W powyższym przykładzie pierwsze wywołanie używa ciągów pełną kwalifikacji. Jednak nie jest to konieczne ze względu na typ podwyższania poziomu. Drugi wywołują również uzyskuje dostęp do modułu elementy członkowskie bez uwzględniania `projModule` w ciągach kwalifikacji.  
   
 ## <a name="defeat-of-type-promotion"></a>Zakłócające promocja typu  
  Jeśli przestrzeń nazw ma już element członkowski o takiej samej nazwie jako członek modułu, promocji typu jest bezcelowe dla tego elementu członkowskiego modułu. Poniższy przykład pokazuje szkielet definicji wyliczenia i modułu w ramach tej samej przestrzeni nazw.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
  W powyższym przykładzie Visual Basic nie można podwyższyć poziomu klasa `abc` do `thisNameSpace` ponieważ wyliczenie o takiej samej nazwie na poziomie przestrzeni nazw już istnieje. Aby uzyskać dostęp do `abcSub`, należy użyć ciągu pełnej kwalifikacji `thisNamespace.thisModule.abc.abcSub`. Jednak klasy `xyz` nadal jest podwyższany, oraz uzyskiwać dostęp `xyzSub` przy użyciu krótszego ciągu kwalifikacji `thisNamespace.xyz.xyzSub`.  
   
@@ -45,7 +45,7 @@ Kiedy Deklarujesz element programowania w module, Visual Basic promuje jego zakr
   
  **Konsekwencje.** Zakłócające promocji typu częściowa definicja może spowodować nieoczekiwane wyniki, a nawet błędy kompilatora. Poniższy przykład pokazuje szkielet definicje częściowe klasy, z których jedna jest wewnątrz modułu.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
  W poprzednim przykładzie, deweloper może oczekiwać kompilator, aby scalić dwie definicje częściowe `sampleClass`. Jednak kompilator nie bierze pod uwagę promocji częściowa definicja wewnątrz `sampleModule`. W rezultacie próby kompilacji dwie odrębne i niezależne klasy, o nazwie `sampleClass` , ale z kwalifikacji różnych ścieżek.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543451"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980948"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Wpływ kultury na ciągi w Visual Basic
 Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przeprowadzenie ciąg konwersje i porównań.  
@@ -44,7 +44,7 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
   
  Aby przekonwertować datę na ciąg kultury, należy przekazać <xref:System.Globalization.CultureInfo> obiektu do obiektu daty <xref:System.DateTime.ToString%28System.IFormatProvider%29> metody. Na przykład, poniższy kod wyświetla "07/04/2005 00:00:00", niezależnie od ustawień kultury aplikacji.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Literały daty są zawsze interpretowane zgodnie z kulturą angielskiego.  
@@ -60,11 +60,11 @@ Tej strony Pomocy opisano, jak Visual Basic używa informacji o kulturze przepro
   
  `StrComp` Funkcji zwraca liczbę całkowitą, wskazującą, związek między dwa ciągi w porównaniu na podstawie kolejności sortowania. Wartość dodatnia wynik wskazuje, czy pierwszy ciąg jest większy niż drugi ciąg. Wynik ujemny wskazuje pierwszy ciąg jest mniejszy, wartość zero wskazuje równości pomiędzy ciągi.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  Można również użyć [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] partner `StrComp` funkcji <xref:System.String.Compare%2A?displayProperty=nameWithType> metody. Jest to statyczne, przeciążone metody klasy bazowej ciągu. W poniższym przykładzie pokazano, jak ta metoda jest używana:  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  W przypadku bardziej precyzyjną kontrolę nad jak porównania są wykonywane, można użyć dodatkowych przeciążenia <xref:System.String.Compare%2A> metody. Za pomocą <xref:System.String.Compare%2A?displayProperty=nameWithType> metody, można użyć `comparisonType` argumentu, aby określić typ porównania do użycia.  
   

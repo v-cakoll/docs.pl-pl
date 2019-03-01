@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 90072a3cadccd0c66b66f0ec5ff2dafd3d62eaeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5151265235868c2a7991bee61b26a4a0da09f901
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490861"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978101"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operatory łączenia w Visual Basic
 Concatenation — operatory Dołącz do wielu ciągów w jeden ciąg. Istnieją dwa operatory łączenia, `+` i `&`. Zarówno przeprowadzenie operacji łączenia podstawowe, jak w poniższym przykładzie pokazano.  
@@ -27,7 +27,7 @@ Dim y As String = "Mic" + "ro" + "soft"
   
  Te operatory również można łączyć ze sobą `String` zmiennych, jak w poniższym przykładzie pokazano.  
   
- [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#76)]  
   
 ## <a name="differences-between-the-two-concatenation-operators"></a>Różnice między dwa operatory łączenia  
  [+ — Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) ma głównym celem dodanie dwóch liczb. Jednak można również połączyć operandy liczbową argumentów ciągu. `+` Operator ma złożonego zestawu reguł, które określają, czy dodawanie, łączenie, zasygnalizować błąd kompilatora lub zgłosić środowiska wykonawczego <xref:System.InvalidCastException> wyjątku.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600495"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972199"
 ---
 # <a name="expressions-c-programming-guide"></a>Wyrażenia (Przewodnik programowania w języku C#)
 *Wyrażenie* jest sekwencją jednego lub większej liczbie operandów i zero lub więcej operatorów, które mogą być obliczane do pojedynczej wartości, obiektu, metody lub przestrzeni nazw. Wyrażenia może składać się z wartością literału, wywołanie metody, operatora i jego operandy lub *prostej nazwie*. Proste nazwy mogą być nazwa zmiennej, składowej typu, parametru metody, przestrzeń nazw lub typu.  
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>Literały i proste nazwy  
  Najprostsza dwa rodzaje wyrażeń są literały i proste nazwy. Literał jest wartością stałą, która nie ma nazwy. Na przykład w poniższym przykładzie kodu zarówno `5` i `"Hello World"` wartości literału:  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  Aby uzyskać więcej informacji na temat literały, zobacz [typy](../../../csharp/language-reference/keywords/types.md).  
   
  W poprzednim przykładzie zarówno `i` i `s` to proste nazwy, określających zmiennych lokalnych. Gdy te zmienne są używane w wyrażeniu, nazwa zmiennej daje w wyniku wartość, która jest obecnie przechowywanych w zmiennej lokalizacji w pamięci. Jest to pokazane w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>Wyrażenia wywołania  
  W poniższym przykładzie kodu, wywołanie `DoWork` to wyrażenie wywołania.  
   

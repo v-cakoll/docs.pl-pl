@@ -3,17 +3,17 @@ title: Monitorowanie usług konteneryzowanych aplikacji
 description: Dowiedz się, niektóre kluczowe aspekty monitorowania kontenera architektury
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 925db543617deb28590cf6631ebbda3ee96836c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221189"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975748"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorowanie usług konteneryzowanych aplikacji
 
-Koniecznie dla aplikacji, podzielić na wiele kontenerów oraz mikrousług ma możliwości monitorowania i analizy zachowania aplikacji.
+Koniecznie dla aplikacji, podzielić na wiele kontenerów oraz mikrousług sposób monitorowanie i analizowanie zachowanie całej aplikacji.
 
 ## <a name="microsoft-application-insights"></a>Microsoft Application Insights
 
@@ -25,76 +25,56 @@ W odniesieniu do platformy Docker, możesz wykresu zdarzenia cyklu życia i licz
 
 ![przykład](./media/image1.png)
 
-Rysunek 6-1. Monitorowanie hostów platformy Docker i kontenerów w usłudze Application Insights
+**Rysunek 6-1**. Monitorowanie hostów platformy Docker i kontenerów w usłudze Application Insights
 
 Po uruchomieniu [obrazu platformy Docker programu Application Insights](https://hub.docker.com/r/microsoft/applicationinsights/) na hoście platformy Docker, korzystają z następujących wartości:
 
--   Cykl życia telemetrii dotyczącej wszystkie kontenery działające na hoście — uruchamianie, zatrzymywanie i tak dalej.
+- Cykl życia telemetrii dotyczącej wszystkie kontenery działające na hoście — uruchamianie, zatrzymywanie i tak dalej.
 
--   Liczniki wydajności dla wszystkich kontenerów: Procesor CPU, pamięci, użycie sieci i więcej.
+- Liczniki wydajności dla wszystkich kontenerów: Procesor CPU, pamięci, użycie sieci i więcej.
 
--   Jeśli zainstalowano także [zestawu SDK usługi Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) w aplikacji działających w kontenerach, wszystkie dane telemetryczne aplikacji, które będą miały dodatkowych właściwości identyfikowanie kontenera i hostów maszyn. Tak na przykład w przypadku wystąpienia aplikacji działających w więcej niż jednego hosta, możesz łatwo będzie filtrującą dane telemetrii aplikacji przez hosta.
+- Jeśli zainstalowano także [zestawu SDK usługi Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) w aplikacji działających w kontenerach, wszystkie dane telemetryczne aplikacji, które będą miały dodatkowych właściwości identyfikowanie kontenera i hostów maszyn. Tak na przykład w przypadku wystąpienia aplikacji działających w więcej niż jednego hosta, możesz łatwo będzie filtrującą dane telemetrii aplikacji przez hosta.
 
 ### <a name="setting-up-application-insights-to-monitor-docker-applications-and-docker-hosts"></a>Konfigurowanie usługi Application Insights do monitorowania aplikacji platformy Docker i hostów platformy Docker
 
-Aby utworzyć zasób usługi Application Insights, postępuj zgodnie z instrukcjami artykuły znajdujące się w opisane poniżej. Witryna Azure Portal utworzy skrypt niezbędne dla Ciebie.
+Aby utworzyć zasób usługi Application Insights, postępuj zgodnie z instrukcjami artykuły znajdujące się w opisane poniżej. Witryna Azure portal utworzy skrypt niezbędne dla Ciebie.
 
--   **Monitorowanie aplikacji Docker w usłudze Application Insights:**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+- **Monitorowanie aplikacji Docker w usłudze Application Insights:** \
+  <https://docs.microsoft.com/azure/application-insights/app-insights-docker>
 
--   **Obraz platformy Docker Insights aplikacji w usłudze Docker Hub i Github:**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) i <https://github.com/Microsoft/ApplicationInsights-Docker>
+- **Obraz platformy Docker Insights aplikacji w usłudze Docker Hub i GitHub:** \
+  <https://hub.docker.com/r/microsoft/applicationinsights/> i \
+  <https://github.com/Microsoft/ApplicationInsights-Docker>
 
--   **Konfigurowanie usługi Application Insights dla platformy ASP.NET**  
-[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+- **Konfigurowanie usługi Application Insights dla aplikacji sieci web platformy ASP.NET i ASP.NET Core** \
+  <https://docs.microsoft.com/azure/application-insights/app-insights-asp-net>
 
--   **Usługa Application Insights dla stron sieci web:**  
-<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
+- **Usługa Application Insights dla stron sieci web:**  
+  <https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
-## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
+## <a name="security-backup-and-monitoring-services"></a>Zabezpieczenia, kopia zapasowa i monitorowania usług
 
-[Pakiet Operations Management Suite](https://microsoft.com/oms) jest uproszczone rozwiązanie zarządzania IT, która zapewnia usługi log analytics, automation, backup i site recovery. Na podstawie [zapytania](https://blogs.technet.microsoft.com/msoms/2016/01/21/easy-microsoft-operations-management-suite-search-queries/) w pakiecie Operations Management Suite można podnieść [alerty](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-monitoring-alerts) i ustaw korygowania za pośrednictwem [usługi Azure Automation](https://docs.microsoft.com/azure/automation/). Integruje się także bezproblemowo z istniejącymi rozwiązaniami zarządzania, aby zapewnić pojedynczy widok okienka z szkła. Pakiet Operations Management Suite pomaga i zarządzanie nimi oraz ochrona lokalnej infrastruktury chmury.
+Istnieje wiele zadań pomocy technicznej z dużą liczbą szczegółowe informacje, które trzeba obsługiwać, aby upewnić się, że infrastruktura i aplikacje znajdują się w górnym więcej warunek do obsługi wymagań biznesowych i sytuacji staje się bardziej skomplikowane, w obszarze mikrousług, więc należy sposób ma wysokiego poziomu i szczegółowe widoki, gdy trzeba podjąć działania.
 
-### <a name="operations-management-suitehttpsmicrosoftcomoms-container-solution-for-docker"></a>[Pakiet Operations Management Suite](https://microsoft.com/oms) rozwiązania kontenerów dla platformy Docker
+Platforma Azure oferuje narzędzia do zarządzania i zapewnić spójny widok cztery krytyczne aspekty w chmurze i lokalnych zasobów:
 
-Oprócz dostarcza wartościowych usług swój własny, rozwiązanie kontenera pakiet zarządzania Operations mogą zarządzać i monitorować hostów platformy Docker i kontenerów, pokazując informacji na temat której kontenerów i hostach kontenerów, które są uruchomione kontenery albo nie powiodło się i dzienniki demona i kontener platformy Docker wysyłane do *stdout* i *stderr*. Pokazuje także metryki wydajności, takie jak procesor CPU, pamięci, sieci i magazynu dla kontenera i hosty, które ułatwiają rozwiązywanie problemów i Znajdź zasobożernymi kontenerów.
+- **Zabezpieczenia**. Za pomocą [usługi Azure Security Center](https://azure.microsoft.com/services/security-center/).
+  - Uzyskaj pełną widoczność i kontrolę nad ich zabezpieczeniami maszyn wirtualnych, aplikacji i obciążeń.
+  - Scentralizuj Zarządzanie swoimi zasadami zabezpieczeń oraz Zintegruj istniejące procesy i narzędzia.
+  - Wykrywaj rzeczywiste zagrożenia za pomocą zaawansowanych analiz.
 
-![](./media/image2.png)
+- **Kopia zapasowa**. Za pomocą [usługa Azure Backup](https://azure.microsoft.com/services/backup/).
+  - Unikaj firm kosztownych przerw w działaniu, cele zapewniania zgodności i chronić dane przed oprogramowaniem wymuszającym okup i błędami ludzkimi.
+  - Zachowaj dane kopii zapasowej szyfrowane podczas przesyłania i magazynowanych.
+  - Zapewnia dostęp na podstawie uwierzytelniania wieloskładnikowego, aby zapobiec nieautoryzowanemu użyciu.
 
-Rysunek 6-2: Informacje o kontenerach Docker, wyświetlane przez pakiet Operations Management Suite
+- **Monitorowanie**. Za pomocą [monitorowania platformy Azure](https://azure.microsoft.com/solutions/monitoring/), [usługi Log Analytics](https://azure.microsoft.com/services/log-analytics/), i [usługi Application Insights](https://azure.microsoft.com/services/application-insights/).
+  - Zyskaj pełny wgląd w kondycję i wydajność obciążeń platformy Azure, aplikacji i infrastruktury.
+  - Zbieranie danych z dowolnego źródła i uzyskuj szczegółowe informacje na maszyny wirtualne, kontenery i aplikacje.
+  - Zawiera informacje potrzebne przy użyciu zapytania interakcyjne oraz wyszukiwanie pełnotekstowe. 
+  - Analiza głównej przyczyny za pomocą zaawansowanej Analityki, w tym algorytmów uczenia maszynowego.
 
-Usługa Application Insights i pakietu Operations Management Suite skupić się na monitorowaniu działań związanych z; Jednak usługi Application Insights skupia się więcej na temat monitorowania same aplikacje dzięki gotowej do tego zestawu SDK w ramach aplikacji. Jednak pakietu Operations Management Suite znacznie bardziej koncentruje się na infrastrukturze na hostach, a także oferuje dokładnej analizy dzienników w dużej skali przy jednoczesnym zapewnieniu systemu bardzo elastyczny opartych na danych/zapytania wyszukiwania.
-
-Ponieważ pakietu Operations Management Suite jest zaimplementowany jako usługa w chmurze, możesz mieć ona działa szybko przy minimalnych inwestycjach w usługi infrastruktury. Nowe funkcje są dostarczane automatycznie, eliminuje konieczność konserwacji i uaktualniania kosztów.
-
-Za pomocą rozwiązania kontenera programu Operations Management Suite, możesz wykonać następujące czynności:
-
--   Scentralizuj i korelowanie milionów dzienniki z kontenerów platformy Docker na dużą skalę
-
--   Zobacz informacje o wszystkich hostach kontenerów w jednej lokalizacji
-
--   Kontenery, które są uruchomione, obrazu są one uruchamiane i gdzie są one uruchamiane
-
--   Szybkie diagnozowanie kontenerów "hałaśliwego sąsiada", które mogą powodować problemy na hostach kontenerów
-
--   Zobacz dziennik inspekcji dla działań w kontenerach
-
--   Rozwiązywanie problemów, wyświetlania i przeszukiwania scentralizowanych dzienników bez komunikacji zdalnej do hostów platformy Docker
-
--   Znajdź kontenerów, które mogą być "hałaśliwym sąsiadów" i konsumencki nadmiar zasobów na hoście
-
--   Wyświetl scentralizowane procesora CPU, pamięci, magazynu i informacje użycia i wydajności sieci dla kontenerów
-
--   Generowanie testu kontenery platformy Docker za pomocą usługi Azure Automation
-
-Informacje o wydajności można wyświetlić za pomocą uruchamiania zapytań, takich jak typ = Perf, jak pokazano w rysunek 6-3.
-
-![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
-
-Rysunek 6-3: Metryki wydajności hostów platformy Docker, wyświetlane przez pakiet Operations Management Suite
-
-Zapisywanie zapytań jest również standardowych funkcji w pakiecie Operations Management Suite i mogą pomóc zachować zapytań Ci się znaleźć przydatne i odkrywanie trendów w Twoim systemie.
-
-**Więcej informacji o** można znaleźć informacje dotyczące instalowania i konfigurowania platformy Docker z rozwiązania containers w [pakietu Operations Management Suite](https://microsoft.com/oms), przejdź do <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
+- **Zasobów lokalnych**. Za pomocą [prawdziwie spójna chmura hybrydowa](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
 
 >[!div class="step-by-step"]
 >[Poprzednie](manage-production-docker-environments.md)

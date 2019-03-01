@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 54ad162a1a720a1645a3b413e6518d2ccfd37bbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595919"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979937"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Literał elementu XML (Visual Basic)
 
@@ -119,7 +119,7 @@ Literał, która reprezentuje <xref:System.Xml.Linq.XElement> obiektu.
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak utworzyć prosty element XML, który ma dwa pustych elementów zagnieżdżonych.  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]  
   
  W przykładzie wyświetlono następujący tekst. Należy zauważyć, że literału zachowuje strukturę pustych elementów.  
   
@@ -133,7 +133,7 @@ Literał, która reprezentuje <xref:System.Xml.Linq.XElement> obiektu.
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak za pomocą wyrażenia osadzone nazwy elementu i utworzyć atrybuty.  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]  
   
  Ten kod wyświetla następujący tekst:  
   
@@ -144,7 +144,7 @@ Literał, która reprezentuje <xref:System.Xml.Linq.XElement> obiektu.
 ## <a name="example"></a>Przykład  
  Poniższy przykład deklaruje `ns` jako prefiks przestrzeni nazw XML. Następnie używa prefiksu przestrzeni nazw, aby utworzyć literał XML i wyświetla formularz końcowego elementu.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  Ten kod wyświetla następujący tekst:  
   

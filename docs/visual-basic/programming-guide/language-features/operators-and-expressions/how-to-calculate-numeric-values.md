@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560753"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974305"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Instrukcje: Obliczanie wartości liczbowych (Visual Basic)
 Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyrażenia liczbowego* to wyrażenie, które zawiera literały, stałe i zmienne reprezentujące wartości liczbowe i operatory, które działają w tych wartości.  
@@ -43,7 +43,7 @@ Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyraż
   
 -   Aby przypisać wartość reprezentowane przez wyrażenie liczbowe do zmiennej, tak jak pokazano w poniższym przykładzie, można użyć instrukcji przypisania.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
      W poprzednim przykładzie wartość wyrażenia po prawej stronie operatora równa (`=`) jest przypisany do zmiennej `j` po lewej stronie operatora, dzięki czemu `j` daje w wyniku 276.  
   
@@ -56,7 +56,7 @@ Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyraż
   
 -   Użyj nawiasów, aby ująć operacje, które mają zostać wykonane jako pierwsze. Poniższy przykład przedstawia dwa różne wyniki przy użyciu tych samych argumentów i operatorów.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
      W powyższym przykładzie obliczeń dla `j` wykonuje operator dodawania (`+`) pierwszego ponieważ nawiasów wokół `(67 + i)` zastępują normalny priorytet i wartość przypisana do `j` jest 276 (4 razy 69). Obliczeń dla `k` wykonuje operatorów w ich normalnym priorytecie (`*` przed `+`), a wartość przypisana do `k` jest 270 (268 plus 2).  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506254"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975150"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Pisanie pierwszego zapytania LINQ (Visual Basic)
 A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są wyrażone w język kwerendy dedykowanych. Wraz z upływem czasu różnych języków zostały opracowane dla różnych typów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML. Dzięki temu niezbędne dla deweloperów aplikacji dowiedzieć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, która jest obsługiwana.  
@@ -34,7 +34,7 @@ A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytan
 > [!NOTE]
 >  Na [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), upewnij się, że **Option infer** ustawiono **na**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  Dane wyjściowe:  
   
@@ -47,7 +47,7 @@ A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytan
   
  Jeśli źródło danych nie obsługuje już <xref:System.Collections.Generic.IEnumerable%601>, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy jest potrzebne do zaimplementowania funkcji *standardowych operatorów zapytań* dla tego źródła danych. Na przykład [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obsługuje pracę podczas ładowania dokumentu XML do odpytywalnego <xref:System.Xml.Linq.XElement> typ, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji na temat standardowych operatorów zapytań, zobacz [standardowe operatory zapytań — Przegląd (Visual Basic)](standard-query-operators-overview.md).  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
  Za pomocą [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], należy najpierw utworzyć obiektowo relacyjny mapowanie w czasie projektowania, ręcznie lub za pomocą [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) w programie Visual Studio. Piszesz zapytania dotyczące obiektów, a także w czasie wykonywania [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] obsługuje komunikację z bazą danych. W poniższym przykładzie `customers` reprezentuje określoną tabelę w bazie danych i <xref:System.Data.Linq.Table%601> obsługuje ogólny <xref:System.Linq.IQueryable%601>.  
   
@@ -67,7 +67,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Gdy jest wykonywany w poniższym przykładzie zwraca wszystkie liczby parzyste z tablicę liczb całkowitych `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  Wyrażenie zapytania zawiera trzy klauzule: `From`, `Where`, i `Select`. Określoną funkcję i cel każdej klauzuli wyrażenie zapytania, które zostało omówione w [podstawowe operacje zapytań (Visual Basic)](basic-query-operations.md). Aby uzyskać więcej informacji, zobacz [zapytania](../../../../visual-basic/language-reference/queries/index.md). Należy pamiętać, że w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], definicja kwerendy często są przechowywane w zmiennej i wykonane później. Zapytanie zmiennych, takich jak `evensQuery` w poprzednim przykładzie, musi być typem odpytywalnym. Typ `evensQuery` jest `IEnumerable(Of Integer)`, przypisanego przez kompilator przy użyciu wnioskowanie o typie lokalnym.  
   
@@ -79,13 +79,13 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 ### <a name="deferred-execution"></a>Wykonanie odroczone  
  Typowa [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania podobne do pokazanego na poprzednim przykładzie, w którym `evensQuery` jest zdefiniowana. Tworzy zapytanie, ale nie jest wykonywane go natychmiast. Zamiast tego, definicja kwerendy jest przechowywana w zmiennej zapytania `evensQuery`. Wykonaj zapytanie później, zwykle za pomocą `For Each` pętli, która zwraca sekwencję wartości lub stosując operator standardowego zapytania, takie jak `Count` lub `Max`. Ten proces jest nazywany *wykonanie odroczone*.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
  Dla sekwencji wartości, uzyskujesz dostęp do tych danych przy użycie zmiennej iteracyjnej w `For Each` pętli (`number` w poprzednim przykładzie). Ponieważ zmienna zapytania `evensQuery`, przechowuje definicji zapytania, a nie wyniki zapytania może wykonywać kwerendę tak często, jak za pomocą zmiennej zapytania więcej niż jeden raz. Na przykład Niewykluczone, że bazy danych w aplikacji, który jest stale aktualizowana przez oddzielną aplikację. Po utworzeniu zapytania, które pobierają dane z tej bazy danych, można użyć `For Each` pętli do wykonania zapytania wielokrotnie, pobieranie najnowszych danych z każdym razem, gdy.  
   
  Poniższy przykład pokazuje, jak odroczonego wykonania działania. Po `evensQuery2` został zdefiniowany i jest wykonywany z `For Each` pętli, jak w poprzednich przykładach, niektóre elementy w źródle danych `numbers` są zmieniane. Następnie sekundy `For Each` pętli przebiegów `evensQuery2` ponownie. Wyniki różnią się po raz drugi, ponieważ `For Each` pętla jest wykonywana zapytanie ponownie, używając nowych wartości w `numbers`.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
  Dane wyjściowe:  
   
@@ -102,15 +102,15 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Następujące zapytanie zwraca liczbę liczb parzystych w tablicy liczb całkowitych. Definicja zapytania nie jest zapisywane, a `numEvens` to prosta `Integer`.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
  Ten sam efekt można osiągnąć za pomocą `Aggregate` metody.  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
  Możesz też wymusić wykonanie zapytania, wywołując `ToList` lub `ToArray` metody zapytania (natychmiastowa) lub zmienna zapytania (odroczona), jak pokazano w poniższym kodzie.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
  W poprzednich przykładach `evensQuery3` jest zapytaniem zmiennej, ale `evensList` się listę i `evensArray` jest tablicą.  
   

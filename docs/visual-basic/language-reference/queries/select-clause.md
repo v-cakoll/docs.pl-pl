@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591fa664c56383cf8a7b3492e524a9738e065f8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519011"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979609"
 ---
 # <a name="select-clause-visual-basic"></a>Select — Klauzula (Visual Basic)
 Definiuje wyniku zapytania.  
@@ -36,20 +36,20 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  `Select` Klauzuli można odwoływać się do żadnych zmiennych w bieżącym zakresie. Obejmuje to zmienne zakresu określonej w `From` — klauzula (lub `From` klauzule). Obejmuje również wszelkie nowe zmienne utworzone za pomocą aliasu przez `Aggregate`, `Let`, `Group By`, lub `Group Join` klauzule lub zmiennych z poprzedniego `Select` klauzula w wyrażeniu zapytania. `Select` Klauzuli mogą również obejmować wartości statyczne. Na przykład, poniższy przykład kodu pokazuje wyrażenie zapytania, w którym `Select` klauzuli definiuje wynik zapytania jako nowy typ anonimowy z cztery elementy członkowskie: `ProductName`, `Price`, `Discount`, i `DiscountedPrice`. `ProductName` i `Price` wartości elementów członkowskich są pobierane z zmiennej zakresu produktu, który jest zdefiniowany w `From` klauzuli. `DiscountedPrice` Wartość elementu członkowskiego jest obliczany w `Let` klauzuli. `Discount` Element członkowski jest wartość statyczną.  
   
- [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
  `Select` Klauzuli wprowadzono nowy zestaw zmiennych zakresu klauzule kolejnych zapytań i poprzedniej zmiennych zakresu nie są już w zakresie. Ostatni `Select` klauzula w wyrażeniu zapytania określa wartość zwracaną przez zapytanie. Na przykład następujące zapytanie zwraca firmy nazwy i kolejność Identyfikatora dla każdego zamówienia klienta, dla których suma przekracza 500. Pierwszy `Select` klauzula identyfikuje zmienne zakresu `Where` klauzuli, a druga `Select` klauzuli. Drugi `Select` klauzula identyfikuje wartości zwracane przez kwerendy w postaci nowym typem anonimowym.  
   
- [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
  Jeśli `Select` klauzula identyfikuje jeden element, aby powrócić, wyrażenia zapytania zwraca kolekcję typ ten pojedynczy element. Jeśli `Select` klauzula identyfikuje wielu elementów do zwrócenia, wyrażenia zapytania zwraca kolekcję nowym typem anonimowym, w oparciu o wybrane elementy. Na przykład, następujące dwa zapytania zwracają kolekcje dwa różne typy na podstawie `Select` klauzuli. Pierwsze zapytanie zwraca kolekcję nazwy firmy jako ciągi. Drugie zapytanie zwraca kolekcję `Customer` obiektów wypełniane przy użyciu nazwy firmy i informacje o adresie.  
   
- [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Przykład  
  Następujące zapytanie używa wyrażenia `From` klauzulę, aby zadeklarować zmienną zakresu `cust` dla `customers` kolekcji. `Select` Klauzula wybiera nazwę klienta i wartość Identyfikatora i wypełnia `CompanyName` i `CustomerID` kolumn nowej zmiennej zakresu. `For Each` Instrukcji pętli każdego zwróconego obiektu i wyświetla `CompanyName` i `CustomerID` kolumnach dla każdego rekordu.  
   
- [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
+ [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

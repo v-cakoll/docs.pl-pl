@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613847"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976333"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Instrukcje: Iteracyjne przeglądanie drzewa katalogów (C# Programming Guide)
 Wyrażenie "Iterowanie drzewa katalogów" oznacza, że dostęp do każdego pliku w każdej zagnieżdżonej podkatalogu w folderze określonym katalogu głównym, na dowolnym poziomie. Zawsze, nie trzeba otwierać każdego pliku. Możesz po prostu pobrać nazwę pliku lub podkatalog jako `string`, lub można pobrać dodatkowe informacje w formie <xref:System.IO.FileInfo?displayProperty=nameWithType> lub <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> obiektu.  
@@ -41,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  Określonego wyjątki, które są obsługiwane i określonej akcji, które są wykonywane na każdym pliku lub folderu, są dostarczane jako fikcyjne. Należy zmodyfikować pod kątem wymagań dotyczących tego kodu. Zobacz komentarze w kodzie, aby uzyskać więcej informacji.  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak iteracja plików i folderów w drzewie katalogu bez użycia rekursji. Ta metoda korzysta z ogólnego <xref:System.Collections.Generic.Stack%601> typ kolekcji, który jest ostatni w stosie pierwszy LIFO ().  
   
  Określonego wyjątki, które są obsługiwane i określonej akcji, które są wykonywane na każdym pliku lub folderu, są dostarczane jako fikcyjne. Należy zmodyfikować pod kątem wymagań dotyczących tego kodu. Zobacz komentarze w kodzie, aby uzyskać więcej informacji.  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  Zazwyczaj jest zbyt czasochłonne przetestować każdy folder w celu ustalenia, czy aplikacja ma uprawnienia do otwierania go. W związku z tym, przykładowy kod zawiera tylko część operacji w `try/catch` bloku. Możesz zmodyfikować `catch` zablokować tak, aby podczas dostępu do folderu, próby podniesienia poziomu uprawnień użytkownika, a następnie ponownie uzyskać dostęp. Zgodnie z zasadą przechwytywać tylko te wyjątki, które może obsłużyć bez opuszczania aplikacji w nieznanym stanie.  
   

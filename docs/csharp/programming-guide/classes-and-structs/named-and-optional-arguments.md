@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 57a368f6aadee608297124a9cc72dc76b0e36f30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c816b9e5e2ed24f60962797428d4b28033068885
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681914"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978634"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza argumentów nazwanych i opcjonalnych. *Argumenty nazwane* umożliwiają określenie argumentu dla parametru określonego argumentu można skojarzyć z nazwą parametru, a nie za pomocą parametru pozycji na liście parametrów. *Argumenty opcjonalne* umożliwia pominięcie argumentów dla niektórych parametrów. Obu tych technik może służyć za pomocą metod, indeksatorów, konstruktorów i delegatów.  
@@ -76,7 +76,7 @@ ms.locfileid: "54681914"
   
  Opcjonalne parametry są definiowane na końcu listy parametrów po wszelkie wymagane parametry. Obiekt wywołujący dostarcza argumentu jednego z kolejnych następujące parametry opcjonalne, wymagają podania dla wszystkich poprzednich parametry opcjonalne argumenty. Rozdzielana przecinkami przerwy na liście argumentów nie są obsługiwane. Na przykład w poniższym kodzie metodę wystąpienia `ExampleMethod` jest zdefiniowana za pomocą jednego wymagany i dwa parametry opcjonalne.  
   
- [!code-csharp[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#15)]  
   
  Następujące wywołanie `ExampleMethod` powoduje błąd kompilatora, ponieważ argument zostanie podany, trzeci parametr, ale nie do drugiego.  
   
@@ -97,7 +97,7 @@ Parametry opcjonalne w ExampleMethod
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie, Konstruktor `ExampleClass` ma jeden parametr, który jest opcjonalny. Metodę wystąpienia `ExampleMethod` ma jeden parametr wymagany, `required`i dwa parametry opcjonalne, `optionalstr` i `optionalint`. Kod w `Main` pokazano różne sposoby, w którym można wywołać konstruktora i metody.  
   
- [!code-csharp[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/optional.cs#2)]  
   
 ## <a name="com-interfaces"></a>Interfejsy modelu COM  
  Argumenty nazwane i opcjonalne oraz obsługę obiektów dynamicznych i inne ulepszenia znacznie poprawić współdziałanie z interfejsów API modelu COM, takich jak interfejsy API usługi Automation pakietu Office.  
@@ -109,11 +109,11 @@ Autoformat — parametry
   
  W języku C# 3.0 i wcześniejszych wersjach argument jest wymagany dla każdego parametru, jak pokazano w poniższym przykładzie.  
   
- [!code-csharp[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#3)]  
   
  Jednak znacznie upraszczają wywołanie `AutoFormat` przy użyciu argumentów nazwanych i opcjonalnych, wprowadzona w języku C# 4.0. Nazwę i opcjonalne argumenty umożliwiają pominięcia argumentu dla parametru opcjonalnego, jeśli nie chcesz zmienić wartość domyślną parametru. W poniższym wywołaniu określono wartość tylko dla jednego z siedmiu parametrów.  
   
- [!code-csharp[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
  Aby uzyskać więcej informacji i przykładów, zobacz [jak: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) i [jak: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
   

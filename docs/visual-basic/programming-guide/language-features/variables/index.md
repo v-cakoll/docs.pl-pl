@@ -2,15 +2,9 @@
 title: Zmienne w Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- variables [Visual Basic]
-- values [Visual Basic], storing
+  - 'variables [Visual Basic]'
+  - 'values [Visual Basic], storing'
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: 50b82285d31d40adfce07a61cd7902cdb2809a52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672230"
 ---
 # <a name="variables-in-visual-basic"></a>Zmienne w Visual Basic
 Często muszą przechowywać wartości, wykonując obliczenia za pomocą Visual Basic. Na przykład możesz chcieć obliczanie kilka wartości, porównaj je i wykonywania różnych operacji na nich w zależności od wyniku porównania. Należy zachować wartości, jeśli chcesz je porównywać.  
@@ -23,7 +17,7 @@ Często muszą przechowywać wartości, wykonując obliczenia za pomocą Visual 
 ## <a name="assigning-values"></a>Przypisywanie wartości  
  Instrukcje przypisania służy do wykonywania obliczeń i przypisz wynik do zmiennej, co ilustruje poniższy przykład.  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Znak równości (`=`) w tym przykładzie jest operatora przypisania nie był operator równości. Wartość jest przypisany do zmiennej `applesSold`.  

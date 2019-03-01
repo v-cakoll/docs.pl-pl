@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-ms.openlocfilehash: 0ea1e03168da12564f148f525af977f29a43bec8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ae4eb16727b2b297088170ada04cfd07d6c7a0a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265288"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980116"
 ---
 # <a name="-operator-visual-basic"></a>>>= — Operator (Visual Basic)
 Wykonuje arytmetyczne przesunięcie w prawo na wartość zmiennej lub właściwości, a następnie przypisuje wynik do zmiennej lub właściwości.  
@@ -46,7 +46,7 @@ variableorproperty >>= amount
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `>>=` operatora przesunięcia wzorca bitowego `Integer` zmiennej bezpośrednio przez określony przedział i przypisz wynik do zmiennej.  
   
- [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [>>, operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)

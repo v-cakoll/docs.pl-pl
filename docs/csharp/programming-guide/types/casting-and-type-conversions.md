@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: d16841afda1f1f434d86a6e5572272123c007df8
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: c697dbb36da7d3300803fe78ba6a9f82ba6b686c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674818"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981780"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Konwersje rzutowania i typ (C# Programming Guide)
 
@@ -55,7 +55,7 @@ Base b = d; // Always OK.
 
  Jednakże, jeśli konwersja nie może być nawiązywane bez ryzyka utraty informacji, kompilator wymaga jednak wykonania jawnej konwersji, która jest wywoływana *rzutowania*. Rzutowanie jest sposób jawnie informowania kompilator zamierzasz wprowadzić konwersji i że masz świadomość, może dojść do utraty danych. Aby wykonać rzutowanie, należy określić typ, który jest Rzutowanie na w nawiasach wartość lub zmienną, które ma zostać przekonwertowany. Poniższy program rzutowania [double](../../../csharp/language-reference/keywords/double.md) do [int](../../../csharp/language-reference/keywords/int.md). Program nie zostanie skompilowany bez rzutowania.  
   
- [!code-csharp[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
+ [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
  Aby uzyskać listę jawnych konwersji liczbowych, które mogą zobaczyć [Explicit Numeric Conversions Table](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).  
   

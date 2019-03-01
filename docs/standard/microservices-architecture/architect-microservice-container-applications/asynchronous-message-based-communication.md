@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Op
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148902"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969365"
 ---
 # <a name="asynchronous-message-based-communication"></a>Oparta na komunikatach komunikacji asynchronicznej
 
@@ -77,7 +77,7 @@ Wyzwanie w przypadku implementowania architektury oparte na zdarzeniach między 
 
 - Za pomocą [wyszukiwania dziennik transakcji](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Przy użyciu pełnej [określania źródła zdarzeń](https://msdn.microsoft.com/library/dn589792.aspx) wzorca.
+- Przy użyciu pełnej [określania źródła zdarzeń](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) wzorca.
 
 - Za pomocą [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/): Tabela transakcji bazy danych jako kolejki komunikatów, który ma być base, aby składnik Twórca zdarzenia, który może utworzyć zdarzenia i opublikujesz je.
 

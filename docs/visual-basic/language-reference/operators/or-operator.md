@@ -15,12 +15,12 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: c2af3864ef19dbf835397968af0913cd62994305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbfc94ad70695e9a785375f2460f9f9d8f3a20c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494434"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977542"
 ---
 # <a name="or-operator-visual-basic"></a>Or — Operator (Visual Basic)
 Dokonuje logicznego rozłączenia dwóch `Boolean` wyrażeń lub bitowego rozłączenia dwóch wyrażeń liczbowych.  
@@ -77,14 +77,14 @@ result = expression1 Or expression2
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Or` operatora, aby wykonać łączną sumę logiczną na dwóch wyrażeń. Wynik jest `Boolean` wartość wskazującą, czy jest jeden z dwóch wyrażeń `True`.  
   
- [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
  Poprzedni przykład generuje wyniki `True`, `True`, i `False`, odpowiednio.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Or` operatora, aby wykonać łączną sumę logiczną na poszczególnych bity dwóch wyrażeń liczbowych. Bit we wzorcu wynik jest ustawiona, jeśli albo odpowiednich bitów w operandów jest ustawiona na 1.  
   
- [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
  Poprzedni przykład generuje wyniki, 10, 14 oraz 14, odpowiednio.  
   

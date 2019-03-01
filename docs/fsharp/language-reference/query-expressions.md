@@ -1,15 +1,15 @@
 ---
-title: Wyrażenia zapytań
+title: Wyrażenia kwerend
 description: Dowiedz się więcej o obsłudze wyrażenia zapytań LINQ w F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611376"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977988"
 ---
-# <a name="query-expressions"></a>Wyrażenia zapytań
+# <a name="query-expressions"></a>Wyrażenia kwerend
 
 > [!NOTE]
 > Łączy dokumentacja interfejsu API, w tym artykule spowoduje przejście do MSDN.  Dokumentacja interfejsu API w witrynie docs.microsoft.com nie została ukończona.
@@ -511,7 +511,7 @@ W poniższej tabeli przedstawiono niektóre typowe zapytania Transact-SQL i ich 
     <th>F#(Z uwzględnieniem wielkości liter) w wyrażeniu zapytania</th>
   </tr>
 <tr><td>
-Zaznacz wszystkie pola z tabeli.</br>
+Zaznacz wszystkie pola z tabeli.<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>
@@ -2431,5 +2431,5 @@ end
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka F#](index.md)
-- [LINQ.querybuilder — klasa](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [Linq.QueryBuilder Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
 - [Wyrażenia obliczeń](Computation-Expressions.md)

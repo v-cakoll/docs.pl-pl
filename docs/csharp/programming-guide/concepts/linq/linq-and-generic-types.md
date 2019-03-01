@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 02540db02d8e413ec254c0642d106ca41b263376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe29bb14b85b74c249a5d9b7f8c2802ef991b13d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662520"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977815"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ i typy ogólne (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania są oparte na typach ogólnych, które zostały wprowadzone w wersji 2.0 programu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Nie potrzebujesz dogłębnej znajomości ogólne przed rozpoczęciem pisania zapytań. Jednak warto zrozumieć dwa podstawowe pojęcia:  
@@ -25,14 +25,14 @@ ms.locfileid: "54662520"
 ## <a name="ienumerablet-variables-in-linq-queries"></a>Interfejs IEnumerable < T\> zmiennych w zapytaniach LINQ  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Zmienne zapytania o typach <xref:System.Collections.Generic.IEnumerable%601> lub typ pochodny, takie jak <xref:System.Linq.IQueryable%601>. Po wyświetleniu zmienna zapytania, który jest `IEnumerable<Customer>`, oznacza jedynie, że zapytania, gdy jest wykonywany dadzą Sekwencja zero lub więcej `Customer` obiektów.  
   
- [!code-csharp[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#34)]  
   
  Aby uzyskać więcej informacji, zobacz [relacje typu w operacjach zapytań LINQ](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md).  
   
 ## <a name="letting-the-compiler-handle-generic-type-declarations"></a>Umożliwienie deklaracje typu ogólnego uchwyt kompilatora  
  Jeśli wolisz, możesz uniknąć ogólna składnia przy użyciu [var](../../../../csharp/language-reference/keywords/var.md) — słowo kluczowe. `var` — Słowo kluczowe nakazuje kompilatorowi wywnioskowania typu zmiennej zapytania, analizując źródło danych określone w `from` klauzuli. Poniższy przykład generuje ten sam kod skompilowany, jak w poprzednim przykładzie:  
   
- [!code-csharp[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  
   
  `var` — Słowo kluczowe jest przydatne w przypadku, gdy typ zmiennej jest oczywisty lub gdy nie jest to ważne, jawnie określić zagnieżdżonych typów ogólnych, takich jak te, które są produkowane przez grupy zapytań. Ogólnie rzecz biorąc, zalecamy użycie `var`, należy pamiętać, że może sprawić, że Twój kod trudniejsze dla innych użytkowników. Aby uzyskać więcej informacji, zobacz [niejawnie wpisane zmienne lokalne](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

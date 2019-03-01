@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42a42ee0fe5029dfe8340701595ba9dfab9a026d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680410"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972797"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Instrukcje: Store kluczy asymetrycznych w kontenerze kluczy
-Klucze asymetryczne prywatnej nigdy nie powinny być przechowywane, verbatim lub w postaci zwykłego tekstu, na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat kontenerów kluczy, zobacz [kontenery kluczy RSA poziomie użytkownika i na poziomie maszyny opis](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
+Klucze asymetryczne prywatnej nigdy nie powinny być przechowywane, verbatim lub w postaci zwykłego tekstu, na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat kontenerów kluczy, zobacz [kontenery kluczy RSA poziomie użytkownika i na poziomie maszyny opis](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Aby utworzyć to klucz asymetryczny i zapisać ją w kontenerze kluczy  
   

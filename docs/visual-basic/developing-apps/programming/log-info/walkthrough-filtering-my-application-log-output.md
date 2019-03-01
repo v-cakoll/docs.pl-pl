@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e17f332365aeeb26601763f9459dccc8d6a078af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f1f0efd6190ac0ced0f83db747e3c4eb81c4975
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572516"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978322"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Przewodnik: Filtrowanie danych wyjściowych My.Application.Log (Visual Basic)
 W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.Application.Log` obiektu, aby kontrolować, jakie informacje są przekazywane z `Log` obiekt do odbiorników i jakie informacje są zapisywane przez odbiorniki. Możesz zmienić sposób rejestrowania, nawet po zakończeniu tworzenia aplikacji, ponieważ informacje o konfiguracji są przechowywane w pliku konfiguracji aplikacji.  
@@ -27,7 +27,7 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
 3.  W <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń dla Button1, Dodaj następujący kod:  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
 4.  Uruchom aplikację w debugerze.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 519b10cfa374290a2d924cce2bd3e39683ca080f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731130"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979102"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacje typu w operacjach zapytań (Visual Basic)
 Zmienne używane w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] zapytania operacje są silnie typizowane i muszą być zgodne ze sobą. Silne wpisywanie jest używany w źródle danych, samo zapytanie i wykonywania zapytań. Na poniższej ilustracji identyfikuje terminy używane do opisu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Aby uzyskać więcej informacji na temat części zapytania zobacz [podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -28,7 +28,7 @@ Części zapytania LINQ
   
  Visual Basic sprawia, że silne wpisywanie wygodne implementując wnioskowanie o typie lokalnym, znany także jako *niejawnego wpisywania*. Czy funkcja jest używana w poprzednim przykładzie, a będzie ono używane w całym widoczne [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] przykłady i dokumentację. W języku Visual Basic wnioskowanie o typie lokalnym odbywa się przy użyciu `Dim` instrukcję bez `As` klauzuli. W poniższym przykładzie `city` jest silnie typizowane jako ciąg.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Wnioskowanie o typie lokalnym działa tylko wtedy, gdy `Option Infer` ustawiono `On`. Aby uzyskać więcej informacji, zobacz [Option Infer — instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
@@ -37,16 +37,16 @@ Części zapytania LINQ
   
  Może być konieczne określenie jawnego typu zmiennej zakresu, który nie jest zgodny z typem zwracanym ze źródła danych. Rodzaj zmiennej zakresu można określić za pomocą `As` klauzuli. Jednak powoduje to błąd, jeśli konwersja jest [konwersja zawężająca](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) i `Option Strict` ustawiono `On`. Dlatego zaleca się wykonania konwersji na wartościach pobranych ze źródła danych. Można przekonwertować wartości ze źródła danych do typu zmiennej zakresu jawne przy użyciu <xref:System.Linq.Enumerable.Cast%2A> metody. Można również rzutować wartości wybranych w `Select` klauzuli w celu jawnego typu, która różni się od typu zmiennej zakresu. Te punkty zostały zilustrowane w poniższym kodzie.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]  
   
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Zapytania, które zwracają elementy całego źródła danych  
  W poniższym przykładzie przedstawiono [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania operacji, która zwraca sekwencję elementów wybranych z danymi źródłowymi. Źródło, `names`, zawiera tablicę ciągów i wynik zapytania jest sekwencja zawierających ciągi rozpoczynające się od litery M.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]  
   
  To jest odpowiednikiem następującego kodu, ale jest znacznie krótsze i łatwiejsze do zapisania. Poleganie na wnioskowanie o typie lokalnym w zapytaniach jest preferowany styl w języku Visual Basic.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]  
   
  W obu poprzednich przykładach kodu istnieją następujące relacje, czy typy są określone jawnie lub niejawnie.  
   

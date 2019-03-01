@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 55b1829537224118de9870fa696ec2b1689d5066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603072"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981585"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 
@@ -20,11 +20,11 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
   
  Poniższa instrukcja języka C# zawiera jeden operator jednoargumentowy i jeden argument operacji. Operator inkrementacji `++`, modyfikuje wartość argumentu operacji `y`.  
   
- [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#5)]  
   
  Następująca instrukcja języka C# zawiera dwa operatory dwuargumentowe, z których każdy przyjmuje dwa argumenty operacji. Operator przypisania `=`, ma zmienną całkowitą `y` i wyrażenie `2 + 3` jako argumentów. Wyrażenie `2 + 3` zawiera dodatkowy operator i dwa operandy `2` i `3`.  
   
- [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#6)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>Operatory, obliczenia i pierwszeństwo operatorów
 
@@ -113,12 +113,12 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
   
 |Kategoria|Wyrażenie|Opis|  
 |--------------|----------------|-----------------|  
-|AND logiczne|x [ & ](../../../csharp/language-reference/operators/and-operator.md) y|Bitowe AND dla wartości całkowitych, logiczne AND dla wartości binarnych|  
-|XOR logiczne|x [ ^ ](../../../csharp/language-reference/operators/xor-operator.md) y|Liczba całkowita iloczynu bitowego XOR, logiczne XOR logiczne|  
-|OR logiczne|x [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) y|Liczba całkowita bitowego lub logiczną logiczne OR|  
-|AND warunkowe|x [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa true|  
-|OR warunkowe|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa false|  
-|Łączenie wartości null|x [?](../../../csharp/language-reference/operators/null-coalescing-operator.md) t|Wynikiem jest wartość y, jeśli x ma wartość null; w przeciwnym razie wynikiem jest wartość x|  
+|Logicznego AND|x [ & ](../../../csharp/language-reference/operators/and-operator.md) y|Bitowe AND dla wartości całkowitych, logiczne AND dla wartości binarnych|  
+|Logicznego XOR|x [ ^ ](../../../csharp/language-reference/operators/xor-operator.md) y|Liczba całkowita iloczynu bitowego XOR, logiczne XOR logiczne|  
+|Logicznego OR|x [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) y|Liczba całkowita bitowego lub logiczną logiczne OR|  
+|Warunkowego AND|x [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa true|  
+|Warunkowego OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa false|  
+|Łączenia wartości null|x [?](../../../csharp/language-reference/operators/null-coalescing-operator.md) t|Wynikiem jest wartość y, jeśli x ma wartość null; w przeciwnym razie wynikiem jest wartość x|  
 |Warunkowe|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|Wynikiem jest wartość y, gdy wartość x jest równa true, lub z, gdy wartość x jest równa false|  
   
  **Operatory przypisania i anonimowe**  

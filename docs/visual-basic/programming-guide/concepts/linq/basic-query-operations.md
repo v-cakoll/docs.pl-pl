@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ca92324dec1d4fa8885a610a6e246640f4a5752
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585620"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973031"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Podstawowe operacje zapytań (Visual Basic)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia w języku Visual Basic i niektóre typowe rodzaje operacji, które można wykonywać w zapytaniu. Więcej informacji znajduje się w następujących tematach:  
@@ -34,7 +34,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinqext](~/includes/vb
 ## <a name="specifying-the-data-source-from"></a>Określanie źródła danych (z)  
  W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, pierwszym krokiem jest określenie źródła danych, które chcesz zbadać. W związku z tym `From` podklauzul zawsze wykorzystasz. Operatory zapytań wybierz i kształtów wyników na podstawie typu źródła.  
   
- [!code-vb[VbLINQBasicOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_1.vb)]  
+ [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
  `From` Klauzula Określa źródło danych `customers`, a *zmiennej zakresu*, `cust`. Zmienna zakresu przypomina Zmienna iteracji pętli, z tą różnicą, że w wyrażeniu zapytania wystąpi nie rzeczywiste iteracji. Jeśli zapytanie jest wykonywane, często za pomocą `For Each` pętli, zmienna zakresu służy jako punkt odniesienia, aby każdy element w `customers`. Ponieważ kompilator może wywnioskować typ `cust`, nie trzeba określić ręcznie. Przykłady zapytań napisane i bez jawnych typowań, zobacz [relacje typu w operacjach zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
@@ -43,7 +43,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinqext](~/includes/vb
 ## <a name="filtering-data-where"></a>Filtrowanie danych (gdzie)  
  Prawdopodobnie najbardziej typowych operacji zapytania jest stosowanie filtru w postaci wyrażenia logicznego. Zapytanie jest następnie zwraca tylko te elementy, dla których wyrażenie jest prawdziwe. Element `Where` jest używana do wykonywania filtrowania. Filtr określa, które elementy w źródle danych, które mają zostać objęte wynikowa sekwencja. W poniższym przykładzie dołączono tych klientów, którzy mają adres w Londynie.  
   
- [!code-vb[VbLINQBasicOps#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_2.vb)]  
+ [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
   
  Można użyć operatorów logicznych, takich jak `And` i `Or` połączyć wyrażenia filtru w `Where` klauzuli. Na przykład aby zwrócić tylko tych klientów, którzy są z Londynu, i której nazwa to Devon, należy użyć następującego kodu:  
   
@@ -62,7 +62,7 @@ Where cust.City = "London" Or cust.City = "Paris"
 ## <a name="ordering-data-order-by"></a>Szeregowanie danych (porządkuj wg)  
  Często jest wygodne posortować dane zwrócone w określonej kolejności. `Order By` Klauzuli spowoduje, że elementy w zwracanej sekwencji sortowania na określone pole lub pola. Na przykład poniższe zapytanie sortuje wyniki na podstawie `Name` właściwości. Ponieważ `Name` jest ciągiem, zwrócone dane zostaną posortowane alfabetycznie, od A do Z.  
   
- [!code-vb[VbLINQBasicOps#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_3.vb)]  
+ [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
   
  Aby uporządkować wyniki w odwrotnej kolejności od Z do A, należy użyć `Order By...Descending` klauzuli. Wartość domyślna to `Ascending` podczas ani `Ascending` ani `Descending` jest określony.  
   
@@ -73,11 +73,11 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Aby pobrać kolekcję, która składa się z pełną `Customer` obiektów, zaznacz sama zmienna zakresu:  
   
- [!code-vb[VbLINQBasicOps#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_4.vb)]  
+ [!code-vb[VbLINQBasicOps#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#4)]  
   
  Jeśli `Customer` wystąpienie jest dużego obiektu, który ma wiele pól i wszystkie opcje, które mają zostać pobrane to nazwa, możesz wybrać `cust.Name`, jak pokazano w poniższym przykładzie. Wnioskowanie o typie lokalnym rozpoznaje, spowoduje to zmianę typu wyniku z kolekcji `Customer` obiekty kolekcji ciągów.  
   
- [!code-vb[VbLINQBasicOps#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_5.vb)]  
+ [!code-vb[VbLINQBasicOps#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#5)]  
   
  Aby wybrać wiele pól ze źródła danych, dostępne są dwie opcje:  
   
@@ -91,30 +91,30 @@ Where cust.City = "London" Or cust.City = "Paris"
   
 -   Definiowanie typu nazwanego, który zawiera określonego pola, które chcesz uwzględnić w wyniku i tworzenie i Inicjowanie wystąpienia typu w `Select` klauzuli. Użyj tej opcji tylko wtedy, gdy trzeba użyć poszczególnych wyników spoza kolekcji, w której są zwracane, lub jeśli trzeba przekazać je jako parametry w wywołaniach metod. Typ `londonCusts5` w poniższym przykładzie jest IEnumerable (Of NamePhone).  
   
-     [!code-vb[VbLINQBasicOps#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_7.vb)]  
+     [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   
-     [!code-vb[VbLINQBasicOps#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_8.vb)]  
+     [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
  Aby uzyskać więcej informacji o sposobie używania `Select` klauzuli w języku Visual Basic, zobacz [wybierz klauzuli](../../../../visual-basic/language-reference/queries/select-clause.md).  
   
 ## <a name="joining-data-join-and-group-join"></a>Przyłączanie danych (łączenie i łączenie grupy)  
  Można połączyć więcej niż jednego źródła danych w `From` klauzuli na kilka sposobów. Na przykład poniższy kod używa dwóch źródeł danych i niejawnie łączy właściwości z obu z nich w wyniku. Zapytanie wybiera studentów, w których nazwiska rozpoczynać się od samogłosek.  
   
- [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
+ [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
   
 > [!NOTE]
 >  Ten kod można uruchomić za pomocą listy studentów utworzone w [jak: Utwórz listę elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md).  
   
  `Join` — Słowo kluczowe jest odpowiednikiem `INNER JOIN` w języku SQL. Łączy dwie kolekcje na podstawie dopasowania wartości kluczy między elementami w dwóch kolekcjach. Zapytanie zwraca całości lub części elementów kolekcji, które pasują do wartości klucza. Na przykład poniższy kod duplikuje Akcja poprzedniego łączenia niejawnego.  
   
- [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
+ [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
  `Group Join` Podobnie jak łączy kolekcje w jedną hierarchiczną kolekcję `LEFT JOIN` w języku SQL. Aby uzyskać więcej informacji, zobacz [klauzuli Join](../../../../visual-basic/language-reference/queries/join-clause.md) i [Group Join — klauzula](../../../../visual-basic/language-reference/queries/group-join-clause.md).  
   
 ## <a name="grouping-data-group-by"></a>Grupowanie danych (grupuj według)  
  Możesz dodać `Group By` klauzuli do grupowania elementów w wyniku zapytania zgodnie z co najmniej jednego pola elementów. Na przykład poniższy kod grupy uczniów według klasy, roku.  
   
- [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
+ [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
   
  Jeśli można uruchomić ten kod przy użyciu listy studentów utworzone w [jak: Tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md), dane wyjściowe z `For Each` instrukcja jest:  
   
@@ -148,7 +148,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Odmiany pokazano w poniższym kodzie porządkuje lat klasy, a następnie porządkuje według nazwiska uczniów w każdym roku.  
   
- [!code-vb[VbLINQBasicOps#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_12.vb)]  
+ [!code-vb[VbLINQBasicOps#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#12)]  
   
  Aby uzyskać więcej informacji na temat `Group By`, zobacz [grupy przez klauzulę](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   

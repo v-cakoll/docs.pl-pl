@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e49c24a4b98a5287ec27b1667f45055d9a94d53
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 949cf322be4b7981a8c569f24abd1d9e29fa5ae6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903415"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973148"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping — Metoda
 Pobiera tablicę wystąpień "cor_debug_il_to_native_map —", które reprezentują mapowań od przesunięcia języka pośredniego (MSIL) firmy Microsoft do natywnych przesunięć.  
@@ -63,4 +63,4 @@ HRESULT GetILToNativeMapping (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebugCode, interfejs1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+- [Icordebugcode — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)

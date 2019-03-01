@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730740"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981273"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatory arytmetyczne w Visual Basic
 Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytmetyczne, które obejmują obliczanie wartości liczbowych, reprezentowane przez literały, zmienne, innych wyrażeń, funkcji i wywołania właściwości i stałe. Również sklasyfikowane za pomocą operatorów arytmetycznych są bit-shift — operatory, które działają na poziomie pojedynczych bitów operandu- and -shift ich wzorców bitowych do lewej lub prawej strony.  
@@ -26,29 +26,29 @@ Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytme
 ## <a name="arithmetic-operations"></a>Operacje arytmetyczne  
  Należy dodać dwie wartości w wyrażeniu wraz z [+ — Operator](../../../../visual-basic/language-reference/operators/addition-operator.md), lub jeden z innego za pomocą odejmowania [-— Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), tak jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
  Używa również negacji [-— Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), ale przy użyciu tylko jeden argument w poniższym przykładzie pokazano.  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
  Użyj mnożenia i dzielenia [* — Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) i [/ — Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md), odpowiednio, tak jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
  Używa potęgowania [^ — Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), tak jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
  Dzielenie liczby całkowitej wykonuje się za pomocą [\ — Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Dzielenie liczby całkowitej Zwraca iloraz, czyli liczba całkowita, która reprezentuje liczbę razy dzielnik można podzielić dzielna bez uwzględnienia reszta. Dzielnik i dzielna muszą być typami całkowitoliczbowymi (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, i `ULong`) dla tego operatora. Wszystkie pozostałe typy musi zostać przekonwertowana na typ całkowitoliczbowy najpierw. W poniższym przykładzie pokazano dzielenie liczby całkowitej.  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
  Arytmetycznego modulo odbywa się przy użyciu [Mod — Operator](../../../../visual-basic/language-reference/operators/mod-operator.md). Ten operator zwraca resztę z dzielenia dzielnik do dzielna całkowitą liczbę razy. W przypadku dzielnik i dzielna typów całkowitych, zwrócona wartość jest typu całkowitego. Dzielnik i dzielna są typy zmiennoprzecinkowe, zwrócona wartość jest również zmiennoprzecinkowych. W poniższym przykładzie pokazano to zachowanie.  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Próba dzielenia przez Zero  
  Dzielenie przez zero ma różne wyniki w zależności od typów danych związane. W całkowitego podziałów (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zgłasza <xref:System.DivideByZeroException> wyjątku. W operacji dzielenia na `Decimal` lub `Single` typu danych [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] generuje również <xref:System.DivideByZeroException> wyjątku.  
@@ -80,7 +80,7 @@ Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytme
   
  Poniższy przykład przenosi `Integer` wartości po lewej stronie i w prawo.  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
  Arytmetycznego przesunięcia nigdy nie generują wyjątki przepełnienia.  
   

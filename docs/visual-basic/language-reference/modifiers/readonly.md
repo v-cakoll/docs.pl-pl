@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 741374cc375e33868239161af23a38af7680b290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4f13964c09b60d02cd5e9f5fc9e2998d7758c3d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684070"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979310"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Określa, że zmiennej lub właściwości mogą być odczytywane, ale nie jest zapisywany.  
@@ -53,7 +53,7 @@ Określa, że zmiennej lub właściwości mogą być odczytywane, ale nie jest z
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie zdefiniowano `ReadOnly` właściwości daty, na którym został zatrudniony pracownika. Magazyny klasy wartość wewnętrznie jako `Private` zmiennej, a tylko kod wewnątrz klasy może zmienić tę wartość. Jednak właściwość jest `Public`, i wszelki kod, który mogą uzyskiwać dostęp do tej klasy może być odczytana właściwość.  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
  `ReadOnly` Modyfikator mogą być używane w tych kontekstach:  
   

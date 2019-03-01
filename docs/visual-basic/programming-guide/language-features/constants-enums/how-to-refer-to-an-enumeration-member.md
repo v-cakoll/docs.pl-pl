@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: efaaecb231b340798012206a0f23fde0ad4cdbeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4f7ede26329ed97c65be8218be78aa40b1294e9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602003"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976268"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Instrukcje: Odnoszą się do elementu członkowskiego wyliczenia (Visual Basic)
 Wyliczenia zapewniają wygodny sposób pracy z zestawami pokrewnych stałych i skojarzyć wartości stałych o nazwach. Na przykład można zadeklarować wyliczenie zbiór stałe całkowite skojarzone z dni tygodnia, a w kodzie następnie używać nazwy dni, a nie ich wartości całkowitych.  
@@ -23,7 +23,7 @@ Wyliczenia zapewniają wygodny sposób pracy z zestawami pokrewnych stałych i s
   
 -   Kwalifikują się nazwę składowej wyliczenia. Na przykład, poniższy przykład przypisuje `Saturday` członkiem `FirstDayOfWeek` wyliczenia do zmiennej `DayValue`.  
   
-     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-refer-to-an-enumeration-member_1.vb)]  
+     [!code-vb[VbEnumsTask#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#19)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Instrukcje: Deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)

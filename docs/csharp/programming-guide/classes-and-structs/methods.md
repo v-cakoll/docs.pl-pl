@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: fa863a5606c7526ae32bc28a0cfeaa91f8c7b539
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6e85a4dfdf562c0a479b19224e11e919da8716d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712158"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980363"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 Metoda jest blokiem kodu, który zawiera szereg instrukcji. Program powoduje, że instrukcji do wykonania przez wywołanie metody i określenie argumentów wymaganej metody. W języku C# co instrukcja wykonanych odbywa się w kontekście metody. Metoda główna jest punktem wejścia dla każdej aplikacji C# i jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program zostanie uruchomiony.  
@@ -27,12 +27,12 @@ Metoda jest blokiem kodu, który zawiera szereg instrukcji. Program powoduje, ż
   
  Parametry metody są ujęte w nawiasy i są oddzielone przecinkami. Pustych nawiasów zwykłych wskazują, że metoda nie wymaga parametrów. Ta klasa zawiera cztery metody:  
   
- [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#40)]  
   
 ## <a name="method-access"></a>Dostęp do metody  
  Wywołanie metody do obiektu jest jak uzyskiwanie dostępu do pola. Po nazwie obiektu Dodaj okres, nazwy metody i nawiasy. Argumenty są wyświetlane w nawiasach i są oddzielone przecinkami. Metody `Motorcycle` klasy, w związku z tym może być wywoływana tak jak w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#41)]  
   
 ## <a name="method-parameters-vs-arguments"></a>Parametry metody programu vs. Argumenty  
  Definicja metody określa nazwy i typy parametrów, które są wymagane. Podczas wywoływania kod wywołuje metody, zapewnia konkretnych wartości nazywanych argumentami dla każdego parametru. Argumenty muszą być zgodne z typem parametru, ale nazwa argumentu (jeśli istnieje) używane w wywoływanym kodzie nie musi być taka sama jak parametr o nazwie zdefiniowany w metodzie. Na przykład:  
@@ -46,11 +46,11 @@ Metoda jest blokiem kodu, który zawiera szereg instrukcji. Program powoduje, ż
   
  Tworzenie typu odwołania za pomocą `class` — słowo kluczowe, co ilustruje poniższy przykład.  
   
- [!code-csharp[csProgGuideObjects#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]  
   
  Teraz Jeśli przekażesz obiekt, który jest na podstawie tego typu do metody, odwołanie do obiektu jest przekazywany. Poniższy przykład przekazuje obiekt typu `SampleRefType` metody `ModifyObject`.  
   
- [!code-csharp[csProgGuideObjects#75](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]  
   
  Przykład jest zasadniczo tak samo jak w poprzednim przykładzie, w tym przekazaniem argumentu przez wartość do metody. Jednak ponieważ używany jest typ odwołania, wynik jest inny. Ze zmianami, które znajduje się w `ModifyObject` do `value` pola parametru, `obj`, zmienia się również `value` pole argumentu, `rt`w `TestRefType` metody. `TestRefType` Metoda Wyświetla 33 jako dane wyjściowe.  
   
@@ -70,13 +70,13 @@ public ref double GetEstimatedDistance()
 
 `return` — Słowo kluczowe również zatrzymuje wykonywanie metody. Jeśli typ zwracany jest `void`, `return` instrukcji bez wartości nadal jest użyteczne do zatrzymywania wykonywania metody. Bez `return` — słowo kluczowe, metoda wykonywanie zostanie przerwane po osiągnięciu końca bloku kodu. Metody z innym niż void zwrotu typu są wymagane do użycia `return` — słowo kluczowe w celu zwrócenia wartości. Na przykład użyć tych dwóch metod `return` — słowo kluczowe, aby zwrócić liczb całkowitych:  
   
- [!code-csharp[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#44)]  
   
  Aby użyć wartości zwrócone z metody, wywoływania metody użyć wywołania metody które się dowolnym wartością tego samego typu może być wystarczające. Można także przypisać zwracana wartość do zmiennej. Na przykład poniższe dwa przykłady kodu osiągnięcia tego samego celu:  
   
- [!code-csharp[csProgGuideObjects#45](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_7.cs)]  
+ [!code-csharp[csProgGuideObjects#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#45)]  
   
- [!code-csharp[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
+ [!code-csharp[csProgGuideObjects#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#46)]  
   
  Za pomocą zmiennej lokalnej, w tym przypadku `result`, aby przechowywać wartość jest opcjonalna. Może ułatwić czytelność kodu lub może być konieczne, jeśli chcesz przechować oryginalnej wartości argumentu dla całego zakresu metody.  
 
@@ -124,7 +124,7 @@ public static void FillMatrix(int[,] matrix)
   
  `startButton_Click` Metody jest przykładem metodzie asynchronicznej, która ma typ zwracany void. Ponieważ `DoSomethingAsync` to metoda asynchroniczna, zadanie do wywołań `DoSomethingAsync` musi być oczekiwana, co pokazuje poniższa instrukcja: `await DoSomethingAsync();`. `startButton_Click` Metoda musi być zdefiniowana za pomocą `async` modyfikator ponieważ metoda ma `await` wyrażenia.  
   
- [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
+ [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]  
   
  Metoda async nie może deklarować [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametry, ale może wywoływać metody, które mają takie parametry.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: ca282acbe6831f2189d83faa2f83d32d420d9b53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640969"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977555"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic
 A *właściwość domyślna* jest właściwością klasy lub struktury, których Twój kod może uzyskać dostęp bez określania go. Podczas wywoływania kodu nazwy klasy lub struktury, ale nie właściwości i kontekst zezwala na dostęp do właściwości, Visual Basic jest rozpoznawana jako dostęp do tej klasy lub struktury domyślnej właściwości jeśli taka istnieje.  
@@ -32,43 +32,43 @@ A *właściwość domyślna* jest właściwością klasy lub struktury, których
   
 3.  Określ co najmniej jeden parametr dla właściwości. Nie można zdefiniować domyślnej właściwości, które nie wymaga co najmniej jednego argumentu.  
   
-     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
+     [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
 ### <a name="to-call-a-default-property"></a>Aby wywoływanie w właściwości domyślnej  
   
 1.  Zadeklaruj zmienną typu zawierającego klasy lub struktury.  
   
-     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
+     [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
 2.  Użyj nazwy zmiennej wyłącznie w wyrażeniu, w których zwykle zawierałoby nazwę właściwości.  
   
-     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
+     [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
 3.  Postępuj zgodnie z nazwą zmiennej listy argumentów w nawiasach. Domyślna właściwość musi mieć co najmniej jednego argumentu.  
   
-     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
+     [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
 4.  Aby pobrać wartość właściwości domyślne, za pomocą nazwę zmiennej listy argumentów, w wyrażeniu lub równości (`=`) Zaloguj się w instrukcji przypisania.  
   
-     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
+     [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
 5.  Aby ustawić właściwości wartość domyślna, nazwa zmiennej za pomocą listy argumentów, po lewej stronie instrukcji przypisania.  
   
-     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
+     [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
 6.  Zawsze można określić nazwę właściwości domyślnej wraz z nazwą zmiennej, tak jak dostęp do wszystkich innych właściwości.  
   
-     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
+     [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład deklaruje właściwości domyślnej klasy.  
   
- [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
+ [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak wywoływanie w właściwości domyślnej `myProperty` klasy `class1`. Instrukcje przypisania trzy przechowywać wartości w `myProperty`i <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> wywołanie odczytuje wartości.  
   
- [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
+ [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
   
  Najczęściej właściwości domyślnej jest <xref:Microsoft.VisualBasic.Collection.Item%2A> właściwość różnych klas kolekcji.  
   

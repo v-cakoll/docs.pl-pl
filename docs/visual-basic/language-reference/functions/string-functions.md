@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612024"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981455"
 ---
 # <a name="string-functions-visual-basic"></a>Funkcje ciągów (Visual Basic)
 W poniższej tabeli wymieniono funkcje, które zapewnia Visual Basic możliwość wyszukiwania ciągów i manipulowania nimi.  
@@ -51,27 +51,27 @@ W poniższej tabeli wymieniono funkcje, które zapewnia Visual Basic możliwoś�
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `UCase` funkcja zwraca wersję z wielkimi literami ciągu.  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `LTrim` funkcję, aby odjąć wiodące spacje oraz `RTrim` funkcji końcowe spacje od zmiennej ciągu. Używa ona `Trim` funkcję, aby rozłożyć oba rodzaje miejsca do magazynowania.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `Mid` funkcja zwraca określoną liczbę znaków z ciągu.  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `Len` aby wrócić liczbę znaków w ciągu.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `InStr` funkcję, aby wrócić położenie pierwszego wystąpienia jednego ciągu w innym.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Przykład  
  Ten przykład pokazuje różne przypadki użycia `Format` funkcji do formatowania wartości przy użyciu zarówno `String` formatów i formatów zdefiniowanych przez użytkownika. Dla separatora daty (`/`), separatora godziny (`:`) oraz wskaźników AM/PM (`t` i `tt`), rzeczywiste formatowanie wyniku wyświetlanego w systemie zależy od ustawień regionalnych w kodzie. Gdy godziny i daty są wyświetlane w środowisku programistycznym, krótki format czasu i krótki format daty kodu są używane.  
@@ -79,7 +79,7 @@ W poniższej tabeli wymieniono funkcje, które zapewnia Visual Basic możliwoś�
 > [!NOTE]
 >  Dla ustawień regionalnych, które używają zegara 24-godzinnego, wskaźniki AM/PM (`t` i `tt`) nie będą niczego wyświetlać.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

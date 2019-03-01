@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638122"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977581"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub — Procedury (Visual Basic)
 A `Sub` procedura jest szereg instrukcji ujęta w `Sub` i `End Sub` instrukcji. `Sub` Procedura wykonuje zadanie, a następnie przekazuje sterowanie do kodu wywołującego, ale nie zwraca wartości do wywołującego kodu.  
@@ -30,7 +30,7 @@ A `Sub` procedura jest szereg instrukcji ujęta w `Sub` i `End Sub` instrukcji. 
 ## <a name="declaration-syntax"></a>Składnia deklaracji  
  Składnia do deklarowania `Sub` procedura jest następująca:  
   
- `[` *Modyfikatory* `] Sub` *subname* `[(` *listaparametrów*  `)]`  
+ `[` *Modyfikatory* `] Sub` *subname* `[(` *listaparametrów* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -43,11 +43,11 @@ A `Sub` procedura jest szereg instrukcji ujęta w `Sub` i `End Sub` instrukcji. 
   
  Składnia dla każdego parametru na liście parametrów jest w następujący sposób:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *Nazwa parametru*`As`*typu danych*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *Nazwa parametru*`As`*typu danych*  
   
  Jeśli parametr jest opcjonalny, należy również podać wartości domyślnej w ramach swojej deklaracji. Składnia określająca wartość domyślna jest następująca:  
   
- `Optional [ByVal | ByRef]`  *Nazwa parametru*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *Nazwa parametru*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>Parametry jako zmienne lokalne  
  Jeśli kontrola przechodzi do procedury, każdy parametr jest traktowany jako zmienna lokalna. Oznacza to, że jego okres istnienia jest taka sama, jak ta procedura, a jej zakres jest całej procedury.  
@@ -66,11 +66,11 @@ A `Sub` procedura jest szereg instrukcji ujęta w `Sub` i `End Sub` instrukcji. 
 ### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołanie  
  Następujące `Sub` procedura opisuje operator komputera zadań, która aplikacja ma wykonać i wyświetla również sygnaturę czasową. Zamiast duplikowania ten kod na początku każdego zadania, po prostu wywołuje aplikację `tellOperator` z różnych lokalizacji. Każde wywołanie przekazuje ciąg w `task` argument, który identyfikuje zadanie jest uruchamiane.  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  W poniższym przykładzie przedstawiono typowe wywołanie `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Procedury](./index.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719979"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977859"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi — funkcja
 Tworzy lub aktualizuje wystąpienia istniejącej klasy. Wystąpienie jest zapisywany do repozytorium WMI. 
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli ustawiona, usługi WMI nie przechowuje żadnych kwalifikatorów z **zmieniony** wersja. </br> W przeciwnym razie zestawu, zakłada się, że ten obiekt nie jest zlokalizowana, a wszystkie kwalifikatory są storedwith tego wystąpienia. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli ustawiona, usługi WMI nie przechowuje żadnych kwalifikatorów z **zmieniony** wersja. <br> W przeciwnym razie zestawu, zakłada się, że ten obiekt nie jest zlokalizowana, a wszystkie kwalifikatory są storedwith tego wystąpienia. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Utwórz wystąpienie, jeśli on nie istnieje, lub go zastąpić, jeśli już istnieje. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aktualizuj wystąpienia. Wystąpienie musi istnieć przez wywołanie zakończy się powodzeniem. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Utwórz wystąpienie. Wywołanie zakończy się niepowodzeniem, jeśli wystąpienie już istnieje. |

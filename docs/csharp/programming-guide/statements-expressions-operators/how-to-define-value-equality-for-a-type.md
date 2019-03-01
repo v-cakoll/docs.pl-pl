@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71f404fd0881a1da761d3f53daac03805a01f18f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589324"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970756"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Instrukcje: Definiowanie równości wartości dla typu (C# Programming Guide)
 Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć niestandardowych definicji równości wartość (lub odpowiednik) dla typu. Zazwyczaj równość wartości zaimplementować w sytuacji, gdy oczekiwano obiektów tego typu do dodania do kolekcji jakieś lub w przypadku, gdy ich głównym celem jest zapisanie zestawu pól lub właściwości. Swojej definicji równości wartość można oprzeć na porównanie wszystkie pola i właściwości w typie lub można utworzyć definicję na podzbiorze. Jednak w obu przypadkach, a w klas i struktur, implementacji należy wykonać pięć gwarancje równoważności:  
@@ -57,7 +57,7 @@ Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć ni
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak zaimplementować równość wartości w strukturze (typ wartości):  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  Dla struktur, domyślna Implementacja klasy <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (czyli wersji zastąpione w <xref:System.ValueType?displayProperty=nameWithType>) przeprowadza sprawdzanie równość wartości przy użyciu odbicia do porównywania wartości każdego pola w typie. Gdy implementujący zastępuje wirtualny `Equals` metody w strukturze, celem jest, aby zapewnić bardziej wydajny sposób sprawdzanie równość wartości i, opcjonalnie, na podstawie na pewien podzbiór właściwości lub pola struktury.  
   

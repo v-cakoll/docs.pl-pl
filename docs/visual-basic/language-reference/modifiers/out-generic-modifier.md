@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 367cbd373df2a38a56e5362f66bedd5c0ec24efb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9e7f3f97657a1d7de2a53502e99721f0e96a15f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522766"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977334"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modyfikator ogólny) (Visual Basic)
 Dla parametrów typu genetycznego `Out` — słowo kluczowe Określa, że typ jest kowariantny.  
@@ -48,12 +48,12 @@ Dla parametrów typu genetycznego `Out` — słowo kluczowe Określa, że typ je
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak deklarować, rozszerzanie i implementować interfejs ogólny kowariantny. Pokazano również, jak używać niejawna konwersja dla klas, które implementują interfejs kowariantny.  
   
- [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#3)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak deklarować, Utwórz wystąpienie i wywołania kowariantne Delegat ogólny. Pokazuje również, jak można użyć niejawnej konwersji na typy delegatów.  
   
- [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

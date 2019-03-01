@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564321"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978658"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Składnia zapytania i metody w technologii LINQ (C#)
 Większość zapytań w wprowadzające Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) dokumentacji są tworzone za pomocą składni deklaratywne zapytań LINQ. Jednak składnia zapytania muszą być przetłumaczone do wywołania metody dla platformy .NET środowisko uruchomieniowe języka wspólnego (CLR), gdy kod jest kompilowany. Te wywołania metody wywołania standardowych operatorów zapytań, które mają nazwy, takie jak `Where`, `Select`, `GroupBy`, `Join`, `Max`, i `Average`. Możesz je wywołać bezpośrednio przy użyciu składni metody zamiast składni zapytań.  
@@ -20,7 +20,7 @@ Większość zapytań w wprowadzające Language Integrated Query ([!INCLUDE[vbte
 ## <a name="standard-query-operator-extension-methods"></a>Metody rozszerzające standardowy operator zapytań  
  W poniższym przykładzie przedstawiono prosty *wyrażeniu zapytania* i semantycznie równoważne zapytania zapisane jako *kwerendy oparte na metodzie*.  
   
- [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#22)]  
   
  Dane wyjściowe z dwóch przykładach jest identyczna. Widać, że typ zmiennej zapytania jest taka sama w obu formach: <xref:System.Collections.Generic.IEnumerable%601>.  
   

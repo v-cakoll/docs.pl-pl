@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 6fc08e9f16753dc853daff0120661603571d9db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717977"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973525"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Instrukcje: Wywoływanie programu do obsługi zdarzeń w języku Visual Basic
 *Zdarzeń* jest akcja lub zdarzenie — takich jak myszy kliknij lub limit środków przekroczyła — który jest rozpoznawany przez inny składnik programu i dla którego można napisać kod odpowiedzi. *Programu obsługi zdarzeń* znajduje się kod pisany w celu reagowania na zdarzenie.  
@@ -36,7 +36,7 @@ ms.locfileid: "54717977"
   
      W poniższym przykładzie zdefiniowano zdarzenia i `WithEvents` zmiennej, która odwołuje się do klasy, która wywołuje zdarzenia. Obsługa zdarzeń `Sub` używa procedury `Handles` klauzuli, aby określić klasy i obsługi zdarzeń.  
   
-     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]  
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>Aby wywołać procedurę obsługi zdarzeń za pomocą AddHandler  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54717977"
   
      W poniższym przykładzie zdefiniowano `Sub` procedury, aby obsłużyć <xref:System.Windows.Forms.Form.Closing> zdarzeń formularza. Następnie używa [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md) skojarzyć `catchClose` procedury jako program obsługi zdarzeń dla <xref:System.Windows.Forms.Form.Closing>.  
   
-     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]  
   
      Usuń skojarzenie program obsługi zdarzenia ze zdarzenia, wykonując [RemoveHandler — instrukcja](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   

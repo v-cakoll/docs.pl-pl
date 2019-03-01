@@ -4,12 +4,12 @@ description: Dowiedz się, obsługa środowiska uruchomieniowego .NET Core z kod
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 994cc82745d2c473f1126eae9a889c899f5e741a
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583852"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980376"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Napisać niestandardowego hosta platformy .NET Core do kontrolowania środowiska uruchomieniowego .NET z kodu natywnego
 
@@ -68,7 +68,7 @@ Przed rozpoczęciem środowisko uruchomieniowe, jest wymagane do przygotowania n
 
 Wspólne właściwości obejmują:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` Jest to lista zestawu ścieżek (rozdzielonych przez ';' na Windows i ":" w systemie Linux), której środowisko uruchomieniowe będzie resovle domyślnie. Niektóre hosty ma ustaloną manifesty listę zestawów, które mogą oni ładować. Inne umieści wszystkie biblioteki w określonych lokalizacjach (obok *coreclr.dll*, na przykład) na tej liście.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Jest to lista zestawu ścieżek (rozdzielonych przez ';' na Windows i ":" w systemie Linux), której środowisko uruchomieniowe będzie mieć możliwość rozpoznania domyślnie. Niektóre hosty ma ustaloną manifesty listę zestawów, które mogą oni ładować. Inne umieści wszystkie biblioteki w określonych lokalizacjach (obok *coreclr.dll*, na przykład) na tej liście.
 * `APP_PATHS` To jest lista ścieżek do sondowania w dla zestawu, jeśli nie można znaleźć na liście zestawów (TPA) TPM. Ponieważ host nie ma większą kontrolę nad tym, którzy zestawy są ładowane przy użyciu listy elementu TPA, jest najlepszym rozwiązaniem dla hostów, aby określić zestawy, które spełniają oczekiwane obciążenia i wyświetlać je w sposób jawny. Jeśli potrzebne jest badania w czasie wykonywania, jednak tej właściwości można włączyć tego scenariusza.
 *  `APP_NI_PATHS` Ta lista jest podobne do APP_PATHS, z tą różnicą, że oznaczało ma być ścieżek, które będzie sondowany dla obrazów natywnych.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Ta właściwość jest lista ścieżek, które moduł ładujący powinien sondowania podczas wyszukiwania dla bibliotek natywnych wywoływanym za pośrednictwem p/invoke.

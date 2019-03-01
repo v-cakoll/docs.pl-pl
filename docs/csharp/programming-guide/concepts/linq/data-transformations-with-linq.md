@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 2e679e0ef18623aa2fdc312ff8ec6598ad239171
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ca40b59552c320e9bb2978869fb4a89d44ecb40
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635926"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976918"
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] dotyczy nie tylko podczas pobierania danych. Należy również zaawansowane narzędzie do przekształcania danych. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, można użyć sekwencji źródłowej, jak dane wejściowe i zmodyfikuj go na wiele sposobów, aby utworzyć nową sekwencję danych wyjściowych. Można zmodyfikować sekwencji bez modyfikowania samych elementów, sortowania i grupowania. Ale być może z najbardziej zaawansowanych funkcji [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania jest możliwość tworzenia nowych typów. Jest to realizowane w [wybierz](../../../../csharp/language-reference/keywords/select-clause.md) klauzuli. Na przykład należy wykonać następujące zadania:  
@@ -33,7 +33,7 @@ ms.locfileid: "54635926"
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Łączenie wielu danych wejściowych w jedną sekwencję wyjściową  
  Możesz użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytanie, aby utworzyć sekwencję wyjściową, który zawiera elementy z więcej niż jednej sekwencji wejściowych. Poniższy przykład pokazuje, jak połączyć dwie struktury danych w pamięci, ale te same zasady można zastosować do łączenia danych ze źródła XML lub SQL lub zestawu danych. Załóżmy następujące typy dwóch klas:  
   
- [!code-csharp[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
   
  Poniższy kod przedstawia zapytanie:  
   

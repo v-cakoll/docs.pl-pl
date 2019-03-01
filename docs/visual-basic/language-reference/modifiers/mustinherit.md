@@ -10,12 +10,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 7a246e2565ec6d96e828654fef74500c4cf896b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124262695f9333ce31c4097662688e0fe30f300d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627671"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969534"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Określa, że klasa może być używana tylko jako klasa bazowa i że nie można utworzyć obiektu bezpośrednio z niej.  
@@ -36,7 +36,7 @@ Określa, że klasa może być używana tylko jako klasa bazowa i że nie można
 ## <a name="example"></a>Przykład  
  Poniższy przykład ilustruje wymuszonego dziedziczenia i zastępowania wymuszone. Klasa bazowa `shape` definiuje zmienną `acrossLine`. Klasy `circle` i `square` dziedziczyć `shape`. Dziedziczą definicji `acrossLine`, ale one należy zdefiniować funkcję `area` ponieważ to obliczenie jest inna dla każdego rodzaju kształtu.  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
  Można zadeklarować `shape1` i `shape2` typu `shape`. Jednak nie można utworzyć obiektu z `shape` ponieważ brakuje funkcjonalność funkcji `area` i jest oznaczony jako `MustInherit`.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d32bc0a0fa3841746e93c8f21ba07776fc29816d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493423"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977932"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w C#, F# i Visual Basic nie ma żadnej widocznej różnicy między wywołanie metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  
@@ -21,13 +21,13 @@ Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów 
   
  Poniższy przykład pokazuje sposób wywoływania standardowego operatora zapytania `OrderBy` metody w tablicy liczb całkowitych. Wyrażenie w nawiasach to wyrażenie lambda. Wiele standardowych operatorów zapytań przyjmuje wyrażenia lambda jako parametry, ale nie jest to wymagane dla metod rozszerzenia. Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]  
   
  Metody rozszerzenia są zdefiniowane jako metody statyczne, ale są wywoływane przy użyciu składni metod wystąpienia. Ich pierwszy parametr określa, jakiego typu metoda działa, i ten parametr jest poprzedzony przez [to](../../../csharp/language-reference/keywords/this.md) modyfikator. Metody rozszerzające są w zakresie wyłącznie wtedy, gdy jawnie importujesz przestrzeń nazw do kodu źródłowego za pomocą `using` dyrektywy.  
   
  W poniższym przykładzie pokazano metodę rozszerzenia zdefiniowaną dla <xref:System.String?displayProperty=nameWithType> klasy. Należy zauważyć, że zdefiniowano ją wewnątrz niezagnieżdżonej nieogólnej klasy statycznej:  
   
- [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#4)]  
   
  `WordCount` — Metoda rozszerzenia może być wprowadzana do zakresu za pomocą `using` dyrektywy:  
   

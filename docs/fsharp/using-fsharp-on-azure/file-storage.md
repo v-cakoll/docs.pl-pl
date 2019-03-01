@@ -1,18 +1,18 @@
 ---
-title: Rozpoczynanie pracy z usługą Azure File storage przy użyciu języka F#
+title: Rozpoczynanie pracy z usługą Azure File storage przy użyciuF#
 description: Store danych plików w chmurze za pomocą usługi Azure File storage i instalowanie udziału plików w chmurze z maszyny wirtualnej (VM) platformy Azure lub z aplikacji w środowisku lokalnym systemem Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e772da5f81d2e6827295d0dfe150934a415eb3bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569346"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969599"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure File storage przy użyciu języka F# #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure File storage przy użyciu F\#
 
-Usługa Azure File storage to usługa, która oferuje udziały plików w chmurze przy użyciu standardowych [protokołu bloku komunikatów serwera (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Obsługiwane są zarówno protokół SMB 2.1, jak i protokołu SMB 3.0. Za pomocą usługi Azure File storage można migrować starsze aplikacje korzystające z udziałów plików na platformę Azure, szybko i bez kosztownych modyfikacji oprogramowania. Aplikacje działające w usłudze Azure virtual machines lub cloud services lub z klientów lokalnych można zainstalować udział plików w chmurze, tak samo, jak aplikacja na komputerze instalująca typowy udział SMB. Dowolna liczba składników aplikacji, a następnie można zainstalować i jednocześnie dostęp do udziału pliku magazynu.
+Usługa Azure File storage to usługa, która oferuje udziały plików w chmurze przy użyciu standardowych [protokołu bloku komunikatów serwera (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Obsługiwane są wersje 2.1 i 3.0 protokołu SMB. W usłudze Magazyn plików Azure można migrować starsze aplikacje korzystające z udziałów plików na platformę Azure szybko i bez kosztownych modyfikacji oprogramowania. Aplikacje uruchomione na maszynach wirtualnych lub w ramach usług w chmurze platformy Azure, a także na klientach lokalnych mogą instalować udziały plików w chmurze tak samo jak aplikacja na komputerze instalująca typowy udział SMB. Dowolna liczba składników aplikacji może następnie równocześnie zainstalować udział Magazynu plików i uzyskiwać do niego dostęp.
 
 Omówienie usługi file storage można znaleźć [przewodnik platformy .NET dla usługi file storage](/azure/storage/storage-dotnet-how-to-use-files).
 
@@ -21,9 +21,9 @@ Omówienie usługi file storage można znaleźć [przewodnik platformy .NET dla 
 Aby użyć tego przewodnika, należy najpierw [Tworzenie konta usługi Azure storage](/azure/storage/storage-create-storage-account).
 Należy także klucz dostępu do magazynu dla tego konta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz skrypt F# i Rozpocznij języka F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Tworzenie F# skrypt i uruchomić F# interaktywne
 
-Przykłady w tym artykule może służyć w aplikacji F# lub skryptu F#. Aby utworzyć skrypt F#, Utwórz plik o `.fsx` rozszerzenia, na przykład `files.fsx`, w środowisku projektowym F#.
+Przykłady w tym artykule mogą być używane w jednej F# aplikacji lub F# skryptu. Aby utworzyć F# skrypt, Utwórz plik o `.fsx` rozszerzenia, na przykład `files.fsx`w usługi F# środowiska deweloperskiego.
 
 Następnie użyj [Menedżera pakietów](package-management.md) takich jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) zainstalował `WindowsAzure.Storage` pakietów i odwołań `WindowsAzure.Storage.dll` w skrypcie za pomocą `#r`dyrektywy.
 

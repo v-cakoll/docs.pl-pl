@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: c4f05e80fff386a5b0628c01605784c32d7ddaf5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 12898d5cd10d9ecca4ec0fd1f7d06be0761b57b8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261324"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978556"
 ---
 # <a name="summary-c-programming-guide"></a>\<Podsumowanie > (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -35,7 +35,7 @@ ms.locfileid: "55261324"
  Kompiluj przy użyciu [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku. Aby utworzyć dokumentację na podstawie pliku generowanych przez kompilator, można utworzyć narzędzie niestandardowe, lub użyj narzędzia takiego jak [DocFX](https://dotnet.github.io/docfx/) lub [Sandcastle](https://github.com/EWSoftware/SHFB).  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
  Poprzedni przykład tworzy następującego pliku XML.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "55261324"
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak wprowadzić `cref` odwołanie do typu ogólnego.  
   
- [!code-csharp[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
+ [!code-csharp[csProgGuideDocComments#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#11)]  
   
  Poprzedni przykład tworzy następującego pliku XML.  
   

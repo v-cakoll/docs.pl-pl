@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 3cb11079241da4815c6e7bde4a76123965a95514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d90b81049197fbbf4a767b17399d3e9c80be0f7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712525"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975475"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Przeciążanie procedury (Visual Basic)
 *Przeciążanie* procedury oznacza zdefiniowaniem go w wielu wersjach, przy użyciu takiej samej nazwie, ale listy różnych parametrów. Przeciążanie ma na celu zdefiniować kilka wersji ściśle powiązanych procedury bez konieczności odróżnić je według nazwy. Można to zrobić przez zróżnicowanie listy parametrów.  
@@ -67,12 +67,12 @@ ms.locfileid: "54712525"
 ## <a name="multiple-versions-of-a-procedure"></a>Wielu wersji procedury  
  Załóżmy, że piszesz `Sub` procedury, aby transakcję przed saldo odbiorcy, a ma być dostępna do odwoływania się do klienta, według nazwy lub numer konta. Aby to umożliwić, należy zdefiniować dwa różne `Sub` procedury jak w poniższym przykładzie:  
   
- [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]  
   
 ### <a name="overloaded-versions"></a>Przeciążone wersje  
  Alternatywą jest nazwa jednej procedury przeciążenia. Możesz użyć [przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe, aby zdefiniować wersję procedurę dla każdej listy parametrów w następujący sposób:  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
 #### <a name="additional-overloads"></a>Dodatkowe przeciążenia  
  Jeśli chcesz również zaakceptować ilości transakcji, albo `Decimal` lub `Single`, można dodatkowo przeciążenia `post` umożliwia dla tej odmiany. Jeśli tak, to nie do poszczególnych przeciążeń w poprzednim przykładzie należałoby cztery `Sub` procedury, wszystkie o takiej samej nazwie, ale z czterech różnych podpisów.  
@@ -80,9 +80,9 @@ ms.locfileid: "54712525"
 ## <a name="advantages-of-overloading"></a>Korzyści wynikające z przeciążenia  
  Zaletą przeciążanie procedury trwa elastyczność wywołania. Do użycia `post` procedury zadeklarowane w poprzednim przykładzie, kod wywołujący można uzyskać identyfikator klienta jako `String` lub `Integer`, a następnie wywołać tę samą procedurę w obu przypadkach. Ilustruje to poniższy przykład:  
   
- [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
- [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Procedury](./index.md)

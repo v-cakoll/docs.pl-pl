@@ -4,12 +4,12 @@ description: Dowiedz się, jak wykrywać i eliminowanie luk w zabezpieczeniach c
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066182"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974292"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Chronometraż luk, wraz z trybie CBC odszyfrowanie symetryczne, za pomocą wypełnienia
 
@@ -92,7 +92,7 @@ Aplikacje, które są nie można zmienić ich format wiadomości, ale wykonać n
   - To także nie uniemożliwia odzyskiwanie zwykłego tekstu w sytuacjach, w których osoba atakująca może przekształcić tego samego zwykłego tekstu do zaszyfrowania wiele razy z przesunięciem inny komunikat.
 - Brama oceny Rozmoczenie sygnału czasu wywołania odszyfrowywania:
   - Obliczanie czasu wstrzymania musi mieć co najmniej przekraczające maksymalną ilość czasu, jaki zajęłoby operacji odszyfrowywania każdego segmentu danych, który zawiera dopełnienie.
-  - Obliczeń czasu powinna być podejmowana zgodnie z zaleceniami w [uzyskiwania sygnatury czasowe o wysokiej rozdzielczości](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), nie za pomocą <xref:System.Environment.TickCount?displayProperty=nameWithType> (zależnie od roll-over/przepełnienie) lub usunięcie dwóch system sygnatur czasowych (zależnie od korekty NTP błędy).
+  - Obliczeń czasu powinna być podejmowana zgodnie z zaleceniami w [uzyskiwania sygnatury czasowe o wysokiej rozdzielczości](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), nie za pomocą <xref:System.Environment.TickCount?displayProperty=nameWithType> (zależnie od roll-over/przepełnienie) lub usunięcie dwóch system sygnatur czasowych (zależnie od korekty NTP błędy).
   - Obliczeń czasu musi być z uwzględnieniem operacji odszyfrowywania, w tym wszystkie potencjalne wyjątki w zarządzane lub aplikacji w języku C++, nie tylko o na końcu.
   - W przypadku powodzenia lub niepowodzenia ustalono jeszcze, brama chronometrażu musi zwracać błąd, po jego wygaśnięciu.
 - Usługi, które wykonują nieuwierzytelnione odszyfrowywania powinny mieć monitorowania w miejscu, aby wykryć, czy powódź komunikatów "nieprawidłowy" stał się za pośrednictwem.
@@ -103,7 +103,7 @@ Aplikacje, które są nie można zmienić ich format wiadomości, ale wykonać n
 Dla programów skompilowana kryptografii Windows: Dalej Biblioteka Generation (CNG):
 
 - Wywołanie odszyfrowywania ma na celu [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), określanie `BCRYPT_BLOCK_PADDING` flagi.
-- Uchwytu klucza został zainicjowany przez wywołanie metody [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) z [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) równa `BCRYPT_CHAIN_MODE_CBC`.
+- Uchwytu klucza został zainicjowany przez wywołanie metody [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) z [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) równa `BCRYPT_CHAIN_MODE_CBC`.
   - Ponieważ `BCRYPT_CHAIN_MODE_CBC` jest zachowaniem domyślnym, wpływ na kod nie może mieć przypisany żadnej wartości dla `BCRYPT_CHAINING_MODE`.
 
 Dla programów skompilowana starsze Cryptographic API Windows:

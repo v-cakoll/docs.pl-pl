@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 4b8ffbe018872c3ae467fb9bf15e3b03595fd640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659777"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979830"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast — Operator (Visual Basic)
 Wprowadza operację konwersji typu, na podstawie dziedziczenie lub wdrożenia.  
@@ -37,7 +37,7 @@ Wprowadza operację konwersji typu, na podstawie dziedziczenie lub wdrożenia.
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano dwa przypadki użycia `DirectCast`, taki, który nie powiedzie się w czasie wykonywania i jedną, zakończy się pomyślnie.  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
  W powyższym przykładzie środowiska wykonawczego typu `q` jest `Double`. `CType` zakończy się pomyślnie, ponieważ `Double` mogą być konwertowane na `Integer`. Jednak pierwszy `DirectCast` zakończy się niepowodzeniem w czasie wykonywania, ponieważ typ środowiska wykonawczego `Double` nie ma dziedziczenia relacji z `Integer`, nawet jeśli istnieje konwersji. Drugi `DirectCast` powiedzie się, ponieważ są konwertowane typu <xref:System.Windows.Forms.Form> na typ <xref:System.Windows.Forms.Control>, z którego <xref:System.Windows.Forms.Form> dziedziczy.  
   

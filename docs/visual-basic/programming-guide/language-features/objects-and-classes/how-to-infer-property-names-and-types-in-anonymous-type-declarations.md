@@ -6,17 +6,17 @@ helpviewer_keywords:
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 67cc9e85d249365a7b4b7636c99766087314622d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5f960b9f043cc886e5b5ac0307ed807c1602f43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596865"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971765"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Instrukcje: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego (Visual Basic)
 Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać typy danych właściwości. Typy wszystkich właściwości są wnioskowane. W poniższym przykładzie typy `Name` i `Price` są dedukowane bezpośrednio z wartości, które są używane do ich inicjowania.  
   
- [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
  Typy anonimowe można również wnioskowanie nazw właściwości i typów z innych źródeł. Sekcje zawierają listę okoliczności, w którym możliwe jest wnioskowania i przykłady sytuacji, gdy nie jest.  
   
@@ -26,19 +26,19 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
 -   W nazwach zmiennych. Typ anonimowy `anonProduct` będzie mieć dwie właściwości `productName` i `productPrice`. Typy danych będą identyczne ze zmiennych oryginalnego `String` i `Double`, odpowiednio.  
   
-     [!code-vb[VbVbalrAnonymousTypes#11](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]  
   
 -   Właściwość lub pole nazw innych obiektów. Na przykład, rozważmy `car` obiektu `CarClass` typ, który zawiera `Name` i `ID` właściwości. Aby utworzyć nowe wystąpienie typu anonimowego `car1`, za pomocą `Name` i `ID` właściwości, które są inicjowane z wartościami z `car` obiektu, można napisać następujące czynności:  
   
-     [!code-vb[VbVbalrAnonymousTypes#34](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]  
   
      Poprzednie deklaracja jest równoważna dłużej wiersz kodu, który definiuje typ anonimowy `car2`.  
   
-     [!code-vb[VbVbalrAnonymousTypes#35](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_4.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]  
   
 -   Od nazw składowych XML.  
   
-     [!code-vb[VbVbalrAnonymousTypes#12](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_5.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]  
   
      Wynikowy typ `anon` miałby jedną właściwość `Book`, typu <xref:System.Collections.IEnumerable>(z XElement).  
   
@@ -50,7 +50,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      Zmienna `anon2` w poniższym kodzie jest typ anonimowy, który ma jedną właściwość, znakiem o nazwie `First`. Ten kod wyświetli się literą "E", list, który jest zwracany przez funkcję <xref:System.Linq.Enumerable.First%2A>.  
   
-     [!code-vb[VbVbalrAnonymousTypes#13](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_6.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#13)]  
   
 ## <a name="inference-failures"></a>Błędy wnioskowania  
   
@@ -78,7 +78,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      Ten błąd można rozwiązać, przypisując wynik wyrażenia do nazwy właściwości.  
   
-     [!code-vb[VbVbalrAnonymousTypes#14](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_7.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
 -   Wnioskowanie o wiele właściwości tworzy dwa lub więcej właściwości, które mają taką samą nazwę. Przywołujący deklaracji w wcześniejszych przykładów, nie możesz wyświetlać listy zarówno `product.Name` i `car1.Name` jako właściwości tego samego typu anonimowego. Jest to spowodowane wywnioskowane identyfikator dla każdego z nich będzie `Name`.  
   
@@ -88,7 +88,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      Problem można rozwiązać przez przypisywanie wartości do nazw różne właściwości.  
   
-     [!code-vb[VbVbalrAnonymousTypes#36](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_8.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#36)]  
   
      Pamiętaj, że zmiany w przypadku, gdy (zmiany między wielkie i małe litery) nie należy wprowadzać nazwy dwóch odrębnych.  
   
@@ -106,7 +106,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      W tym przykładzie można rozwiązać problem, odwracając kolejność, w którym są zadeklarowane właściwości.  
   
-     [!code-vb[VbVbalrAnonymousTypes#15](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_9.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
 -   Nazwa właściwości typu anonimowego jest taka sama jak nazwa składowej <xref:System.Object>. Na przykład następująca deklaracja nie powiedzie się, ponieważ `Equals` to metoda <xref:System.Object>.  
   
@@ -118,7 +118,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      Aby naprawić ten problem, należy zmienić nazwy właściwości:  
   
-     [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

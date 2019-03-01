@@ -1,15 +1,9 @@
 ---
-title: Odwołanie interakcyjne F# (fsi.exe)
-description: Dowiedz się, jak F# Interactive (fsi.exe) jest używany do uruchamiania F# kodu interaktywnego w konsoli lub wykonać F# skryptów.
+title: 'Odwołanie interakcyjne F# (fsi.exe)'
+description: 'Dowiedz się, jak F# Interactive (fsi.exe) jest używany do uruchamiania F# kodu interaktywnego w konsoli lub wykonać F# skryptów.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611064"
 ---
-# <a name="interactive-programming-with-f"></a>Interaktywny, programowanie za pomocąF# #
+# <a name="interactive-programming-with-f"></a>Interaktywne programowania w języku F\#
 
 > [!NOTE]
 > W tym artykule opisano aktualnie środowisko Windows tylko.  Będzie inaczej.
@@ -44,7 +38,7 @@ W przypadku otwarciu projektu, który odwołuje się do niektórych bibliotek mo
 Możesz kontrolować F# argumenty interaktywne wiersza polecenia (Opcje), dostosowując ustawienia. Na **narzędzia** menu, wybierz opcję **opcje...** , a następnie rozwiń węzeł  **F# narzędzia**. Są dwa ustawienia, które mogą być zmieniane F# Opcje interakcyjne i **64-bitowych F# Interactive** ustawienie, które ma zastosowanie tylko wtedy, gdy są uruchomione F# Interactive na komputerze 64-bitowym. To ustawienie określa, czy chcesz uruchomić dedykowanych 64-bitowej wersji fsi.exe lub fsianycpu.exe, która korzysta z architektury maszyny w celu ustalenia, czy można uruchomić jako proces 32-bitową lub 64-bitowych.
 
 
-## <a name="scripting-with-f"></a>Obsługa skryptów w programieF# #
+## <a name="scripting-with-f"></a>Obsługa skryptów w programie F\#
 Skrypty za pomocą rozszerzenia pliku **.fsx** lub **.fsscript**. Zamiast kompilowanie kodu źródłowego, a następnie uruchamiając skompilowanego zestawu, można po prostu uruchomisz **fsi.exe** i określ nazwę pliku skryptu na F# kod źródłowy, a F# interaktywne odczytuje kod i wykonuje rzeczywistą czas.
 
 
@@ -60,7 +54,7 @@ Niektóre dyrektywy są dostępne w przypadku, gdy są wykonywanie skryptów w F
 |**#load**|Odczytuje plik źródłowy, kompiluje go i uruchamia go.|
 |**#quit**|Kończy F# interaktywnej sesji.|
 |**#r**|Odwołuje się do zestawu.|
-|**#time ["włączone"&#124;"wyłączone"]**|Przez siebie **#time** przełącza, czy mają być wyświetlane informacje o wydajności. Po jej włączeniu F# Interactive mierzy czasu rzeczywistego, czas procesora CPU i informacje o kolekcji wyrzucania elementów dla każdej sekcji kodu, który jest interpretowany i wykonywane.|
+|**#time ["on"&#124;"off"]**|Przez siebie **#time** przełącza, czy mają być wyświetlane informacje o wydajności. Po jej włączeniu F# Interactive mierzy czasu rzeczywistego, czas procesora CPU i informacje o kolekcji wyrzucania elementów dla każdej sekcji kodu, który jest interpretowany i wykonywane.|
 
 Po określeniu pliki lub ścieżki w F# Interactive, oczekiwano literału ciągu. W związku z tym pliki i ścieżki muszą być ujęte w znaki cudzysłowu i znaków ucieczki zwykle zastosowania. Ponadto, możesz użyć znaku, aby spowodować @ F# Interactive zinterpretować ciąg, który zawiera ścieżkę jako ciąg verbatim. Powoduje to, że F# Interactive, aby ignorować wszystkie znaki ucieczki.
 

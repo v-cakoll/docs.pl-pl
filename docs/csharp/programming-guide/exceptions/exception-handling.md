@@ -6,23 +6,23 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 79b07891d794200507cdb97a869992ef093aff23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648766"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979869"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Obsługa wyjątków (Przewodnik programowania w języku C#)
 A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest używany przez programistów C# do kodu partycji, który może mieć wpływ wyjątku. Skojarzone [catch](../../../csharp/language-reference/keywords/try-catch.md) bloki są używane do obsługi wszystkich wyjątków wynikowe. A [na koniec](../../../csharp/language-reference/keywords/try-finally.md) blok zawiera kod, który jest wykonywany niezależnie od tego, czy wyjątek jest zgłaszany w `try` bloku, np. przy zwalnianiu zasobów, które są przydzielane w `try` bloku. A `try` bloku wymaga co najmniej jednym skojarzone `catch` bloków lub `finally` bloku i / lub.  
   
  W poniższych przykładach pokazano `try-catch` instrukcji `try-finally` instrukcji, a `try-catch-finally` instrukcji.  
   
- [!code-csharp[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#6)]  
   
- [!code-csharp[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
+ [!code-csharp[csProgGuideExceptions#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#7)]  
   
- [!code-csharp[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#8)]  
   
  A `try` block bez `catch` lub `finally` bloku powoduje błąd kompilatora.  
   
@@ -37,11 +37,11 @@ A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest
   
 -   Można tworzyć i wyjątku nowe, bardziej szczegółowe.  
   
-     [!code-csharp[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
+     [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
 -   Chcesz częściowo obsługi wyjątku przed przekazaniem go celu obsługi dodatkowych. W poniższym przykładzie `catch` blok jest używany, aby dodać wpis do dziennika błędów przed ponownego zgłaszania wyjątku.  
   
-     [!code-csharp[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
+     [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Bloki finally  
  A `finally` bloku pozwala na czyszczenie akcje, które są wykonywane w `try` bloku. Jeśli jest obecny, `finally` blok jest wykonywany po ostatniej, `try` blok i wszystkie dopasowane `catch` bloku. A `finally` bloku zawsze działa, niezależnie od tego, czy wyjątek jest zgłaszany lub `catch` znajduje się blok odpowiadał typowi wyjątku.  
@@ -50,7 +50,7 @@ A [spróbuj](../../../csharp/language-reference/keywords/try-catch.md) blok jest
   
  W poniższym przykładzie `finally` blok jest używany do zamknięcia pliku, który jest otwierany w `try` bloku. Należy zauważyć, że stan dojście do pliku jest zaznaczone, przed zamknięciem pliku. Jeśli `try` bloku nie można otworzyć pliku, uchwyt pliku nadal ma wartość `null` i `finally` bloku nie podejmuje próby zamknij go. Alternatywnie Jeśli plik jest otwarty pomyślne `try` bloku, `finally` bloku Zamyka otwarty plik.  
   
- [!code-csharp[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
+ [!code-csharp[csProgGuideExceptions#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#11)]  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 

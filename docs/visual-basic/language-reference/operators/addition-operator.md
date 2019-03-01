@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: da0c6f492b068c9caa50468ead47cdc08559bfce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 448ca9d52d820029464b75a616dc032a7cc41f59
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576359"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979649"
 ---
 # <a name="-operator-visual-basic"></a>+ — Operator (Visual Basic)
 Dodaje dwie liczby i zwraca wartość dodatnią wyrażenia liczbowego. Można również do łączenia dwóch ciągów wyrażeń.  
@@ -88,23 +88,23 @@ expression1 + expression2
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `+` operator dodawania numerów. Jeśli argumenty operacji są wartości liczbowe, Visual Basic oblicza wynik arytmetyczne. Wynik arytmetyczny reprezentuje sumę dwóch argumentów operacji.  
   
- [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  
   
  Można również użyć `+` operatora łączenia ciągów. Jeśli argumenty operacji są oba ciągi, Visual Basic łączy je. Wynik łączenia reprezentuje pojedynczy ciąg składający się z zawartości dwóch argumentów operacji jeden po drugim.  
   
  Jeśli argumenty operacji są mieszane typy, wynik zależy od ustawienia [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md). Poniższy przykład ilustruje wynik po `Option Strict` jest `On`.  
   
- [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class3.vb#53)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
+ [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
+[!code-vb[VbVbalrOperators#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#51)]  
   
  Poniższy przykład ilustruje wynik po `Option Strict` jest `Off`.  
   
- [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
+ [!code-vb[VbVbalrOperators#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#54)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
+ [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
+[!code-vb[VbVbalrOperators#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#52)]  
   
  Aby usunąć niejednoznaczność, należy użyć `&` operator zamiast `+` dla łączenia.  
   

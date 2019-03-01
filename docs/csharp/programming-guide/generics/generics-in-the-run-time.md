@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d45d64d608c117ef5f1477ac55a39c192374d7ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587271"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981481"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Typy ogólne w czasie wykonywania (Przewodnik programowania w języku C#)
 W przypadku typu ogólnego lub metody jest kompilowany na język Microsoft intermediate language (MSIL), zawiera metadane, które identyfikuje go jako parametrów typu. Jak kod w języku MSIL dla typu ogólnego jest używany różni się w oparciu czy parametr typu podana jest wartość typu lub typów referencyjnych.  
@@ -19,11 +19,11 @@ W przypadku typu ogólnego lub metody jest kompilowany na język Microsoft inter
   
  Na przykład załóżmy, że kodu programu zadeklarowana stosu, który jest konstruowany liczb całkowitych:  
   
- [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#42)]  
   
  W tym momencie środowisko wykonawcze zgłasza wersji specjalistycznej metody <xref:System.Collections.Generic.Stack%601> klasy, która ma całkowitą odpowiednio zastąpiony parametrem. Teraz zawsze, gdy kod program używa stosu liczb całkowitych, wyspecjalizowany powtórnych czasu wykonywania wygenerowany <xref:System.Collections.Generic.Stack%601> klasy. W poniższym przykładzie są tworzone dwa wystąpienia stosu liczb całkowitych i one współdzielić jedno wystąpienie `Stack<int>` kodu:  
   
- [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#43)]  
   
  Jednak Załóżmy, że oznacza innego <xref:System.Collections.Generic.Stack%601> klasy przy użyciu innego typu wartości, takich jak `long` lub struktury zdefiniowany przez użytkownika jako jego parametr jest tworzony w innym punkcie w kodzie. W rezultacie środowisko wykonawcze zgłasza inna wersja tego typu ogólnego i zastępuje `long` w odpowiednich miejscach w kodzie MSIL. Konwersje są już potrzebne, ponieważ każdy wyspecjalizowane klasy ogólnej natywnie zawiera typ wartości.  
   
@@ -31,17 +31,17 @@ W przypadku typu ogólnego lub metody jest kompilowany na język Microsoft inter
   
  Załóżmy, że masz dwa typy referencyjne `Customer` klasy i `Order` klasy, a także Załóżmy, że utworzony stos `Customer` typów:  
   
- [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#47)]  
   
- [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#44)]  
   
  W tym momencie środowisko wykonawcze zgłasza wersji specjalistycznej metody <xref:System.Collections.Generic.Stack%601> klasy, która przechowuje odwołania do obiektów, które są wypełniane później zamiast przechowywania danych. Załóżmy, że następny wiersz kodu tworzy stosu innego typu odwołania, który nosi nazwę `Order`:  
   
- [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#45)]  
   
  W odróżnieniu od z typami wartości innego wyspecjalizowany wersję <xref:System.Collections.Generic.Stack%601> klasa nie jest tworzona dla `Order` typu. Zamiast tego wystąpienia wersji specjalistycznej metody <xref:System.Collections.Generic.Stack%601> klasa jest tworzona i `orders` zmienna jest ustawiona na odwoływać się do niego. Załóżmy, że następnie napotkał wiersz kodu, aby utworzyć stos `Customer` typu:  
   
- [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#46)]  
   
  Podobnie jak w przypadku użycia poprzedniej <xref:System.Collections.Generic.Stack%601> utworzone za pomocą klasy `Order` wpisz inną instancję wyspecjalizowane <xref:System.Collections.Generic.Stack%601> klasa jest tworzona. Wskaźniki, które są w niej zawarte są ustawione na odwołanie to obszar pamięci rozmiar `Customer` typu. Ponieważ liczba typów referencyjnych może się różnić w sposób bardzo popularny od kolejnych programu implementacji języka C#, typów ogólnych znacznie zmniejsza ilość kodu przez ograniczenie do jednej liczby klas wyspecjalizowanych utworzony przez kompilator dla klas ogólnych typów referencyjnych.  
   

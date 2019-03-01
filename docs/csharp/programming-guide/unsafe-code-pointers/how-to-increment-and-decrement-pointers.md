@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: ead179c3711a5e63bbdc2ec2b5644d5991b82ee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 358decb73666d5a5ef7c0fa828168d90d2c22c1e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573273"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973707"
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Porady: inkrementacja i dekrementacja wskaźników (C# Programming Guide)
 
@@ -35,9 +35,9 @@ p--;
 ## <a name="example"></a>Przykład  
  W tym przykładzie krok po kroku przez tablicę przez zwiększenie wskaźnika przez rozmiar `int`. Z każdego kroku możesz wyświetlić adres i zawartość elementu tablicy.  
   
- [!code-csharp[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_1.cs)]  
+ [!code-csharp[csProgGuidePointers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#3)]  
   
- [!code-csharp[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_2.cs)]  
+ [!code-csharp[csProgGuidePointers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#13)]  
   
 **Wartości: 0 @ adres: 12860272**
 **wartości: 1 @ adres: 12860276**

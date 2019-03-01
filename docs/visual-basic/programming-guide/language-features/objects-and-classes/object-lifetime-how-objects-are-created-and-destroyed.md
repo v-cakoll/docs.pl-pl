@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: dc05b3acda5183ddc9a7c0bdddf08a3934c298f6
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738919"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979466"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektów: Jak obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  
@@ -42,11 +42,11 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
   
  Aby utworzyć konstruktor dla klasy, należy utworzyć procedurę o nazwie `Sub New` w dowolnym miejscu definicji klasy. Aby utworzyć sparametryzowania konstruktora, określ nazwy i typy danych argumentów `Sub New` tak samo jak należy określić argumenty dla innej procedury, zgodnie z poniższym kodem:  
   
- [!code-vb[VbVbalrOOP#42](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_1.vb)]  
+ [!code-vb[VbVbalrOOP#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#42)]  
   
  Konstruktory często są przeciążone, zgodnie z poniższym kodem:  
   
- [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
+ [!code-vb[VbVbalrOOP#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/WhidbeyStuff.vb#116)]  
   
  Podczas definiowania klasy pochodzącej od innej klasy w pierwszym wierszu konstruktora musi być wywołaniem do konstruktora klasy bazowej, chyba że klasa bazowa ma dostępny konstruktor, który nie przyjmuje żadnych parametrów. Wywołania do klasy bazowej, zawierający powyżej konstruktora, na przykład będzie `MyBase.New(s)`. W przeciwnym razie `MyBase.New` jest opcjonalna, i wywołuje ona niejawnie środowiska uruchomieniowego języka Visual Basic.  
   

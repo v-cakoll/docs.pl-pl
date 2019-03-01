@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: f792109f1d1117b5b112e06da1510938e4b8a5ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580502"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975397"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Przewodnik: Deklarowanie i wywoływanie zdarzeń (Visual Basic)
 W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o nazwie `Widget`. Po wykonaniu kroków, warto przeczytać temat Pomocnika [instruktażu: Obsługa zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), który pokazuje, jak używać zdarzeń z `Widget` obiektów, aby zapewnić informacje o stanie w aplikacji.  
@@ -46,7 +46,7 @@ W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o na
   
 -   Użyj `Event` — słowo kluczowe, aby zadeklarować zdarzenia w `Widget` klasy. Należy zauważyć, że zdarzenie może mieć `ByVal` i `ByRef` argumentów, jako `Widget`firmy `PercentDone` pokazuje zdarzenia:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
  Gdy obiekt wywołujący odbiera `PercentDone` zdarzenia `Percent` argument zawiera procent wykonania zadania. `Cancel` Argument może być równa `True` anulować metodę, która wywołała zdarzenie.  
   
@@ -59,11 +59,11 @@ W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o na
   
 1.  Aby uprościć dostęp do `Timer` Dodaj właściwość używana przez tę klasę `Imports` instrukcji na górze sekcji deklaracji klasy modułu, powyżej `Class Widget` instrukcji.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
 2.  Dodaj następujący kod do `Widget` klasy:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
  Gdy Twoja aplikacja wywołuje `LongTask` metody `Widget` klasy wywołuje `PercentDone` zdarzeń co `MinimumInterval` sekund. Po powrocie z zdarzenia `LongTask` sprawdza, czy `Cancel` argumentów została ustawiona na `True`.  
   

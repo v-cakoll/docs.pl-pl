@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModule, interfejs1
+title: ICorDebugModule — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca28f16f0430e793ad0b91b01db609f835f0a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fd8314c018653703a262c8c43e6113886c25047
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671255"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978686"
 ---
-# <a name="icordebugmodule-interface1"></a>ICorDebugModule, interfejs1
+# <a name="icordebugmodule-interface"></a>ICorDebugModule — Interfejs
+
 Reprezentuje wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) moduł, który jest plikiem wykonywalnym lub biblioteki dołączanej (dynamicznie DLL).  
   
 ## <a name="methods"></a>Metody  

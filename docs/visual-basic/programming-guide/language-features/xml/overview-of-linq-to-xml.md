@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 13997b8588e11eb3600a6fd838e0514069d0e62a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2f9ca8fe453f120dd52f4c4b20e75b9f933b251
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539029"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974123"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Przegląd LINQ to XML w Visual Basic
 Visual Basic zapewnia obsługę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przy użyciu literałów XML i właściwości osi XML. Dzięki temu można używać składni znana i wygodna do pracy z danymi XML w kodzie języka Visual Basic. *Literały XML* umożliwiają objęcie XML bezpośrednio w kodzie. *Właściwości osi XML* umożliwiają dostęp do węzłów podrzędnych, węzły podrzędne i atrybuty literał XML. Aby uzyskać więcej informacji, zobacz [literały XML-Przegląd](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) i [uzyskiwania dostępu do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
@@ -25,21 +25,21 @@ Visual Basic zapewnia obsługę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md
 ## <a name="creating-xml"></a>Tworzenie XML  
  Istnieją dwa sposoby tworzenia drzew XML w Visual Basic. Można zadeklarować literału bezpośrednio w kodzie XML lub użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] interfejsów API, aby utworzyć drzewo. Oba procesy Włącz kod w celu odzwierciedlenia końcowego struktury drzewa XML. Na przykład poniższy kod tworzy XML element:  
   
- [!code-vb[VbXmlSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_1.vb)]  
+ [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  Aby uzyskać więcej informacji, zobacz [tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
 ## <a name="accessing-and-navigating-xml"></a>Uzyskiwanie dostępu do ani nawigować XML  
  Zapewnia właściwości osi XML do uzyskiwania dostępu i przechodząc struktury XML w Visual Basic. Te właściwości zostanie umożliwiony dostęp do elementów XML oraz atrybuty przez określenie nazwy elementów podrzędnych XML. Alternatywnie, możesz jawnie wywołać [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] metody nawigacji i lokalizowania elementów i atrybutów. Na przykład poniższy kod używa właściwości osi XML do odwoływania się do atrybuty i elementy podrzędne elementu XML. Przykład kodu wykorzystuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytanie w celu pobierania elementów podrzędnych i zwracania je jako elementy XML, efektywnie wykonywanie transformacji.  
   
- [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_2.vb)]  
+ [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
  Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
 ## <a name="xml-namespaces"></a>Obszary nazw XML  
  Visual Basic można określić alias dla globalnej przestrzeni nazw XML przy użyciu `Imports` instrukcji. Poniższy przykład pokazuje, jak używać `Imports` instrukcję, aby zaimportować obszar nazw XML:  
   
- [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_3.vb)]  
+ [!code-vb[VbXMLSamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#1)]  
   
  Gdy dostęp do właściwości osi XML i deklarowanie literałów XML do dokumentów XML i elementy, można użyć aliasu przestrzeni nazw XML.  
   
@@ -50,16 +50,16 @@ Visual Basic zapewnia obsługę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md
 ### <a name="using-xml-namespaces-in-xml-literals"></a>Używanie przestrzeni nazw XML w literałach XML  
  Poniższy przykład pokazuje, jak utworzyć <xref:System.Xml.Linq.XElement> obiekt, który korzysta z globalnej przestrzeni nazw `ns`:  
   
- [!code-vb[VbXMLSamples#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_4.vb)]  
+ [!code-vb[VbXMLSamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#2)]  
   
  Kompilator języka Visual Basic tłumaczy literały XML, które zawiera aliasy obszaru nazw XML na równoważne kod, który używa notacji XML przy użyciu przestrzeni nazw XML, za pomocą `xmlns` atrybutu. Po skompilowaniu kodu w poprzedniej sekcji przykład generuje zasadniczo tego samego pliku wykonywalnego kodu w poniższym przykładzie:  
   
- [!code-vb[VbXMLSamples#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_5.vb)]  
+ [!code-vb[VbXMLSamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#3)]  
   
 ### <a name="using-xml-namespaces-in-xml-axis-properties"></a>Właściwości osi XML przy użyciu przestrzeni nazw XML  
  Zadeklarowane w literałach XML obszary nazw XML nie są dostępne do użycia w właściwości osi XML. Jednak globalnej przestrzeni nazw może być używany z właściwości osi XML. Użyj dwukropka do oddzielenia prefiks przestrzeni nazw XML na podstawie nazwy elementu lokalnego. Poniżej znajduje się przykład:  
   
- [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
+ [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667391"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976047"
 ---
 # <a name="lifetime-in-visual-basic"></a>Okres istnienia w Visual Basic
 *Okres istnienia* zadeklarowanych elementów to okres, podczas którego jest dostępny do użytku. Zmienne są tylko elementy, które mają okres istnienia. W tym celu kompilator traktuje parametry procedury, a funkcja zwraca jako specjalnych przypadków zmiennych. Okres istnienia zmiennej reprezentuje czas, w którym może zawierać wartości. Wartość można zmienić za pośrednictwem jego okres istnienia, ale zawsze zawiera niektóre wartości.  
@@ -58,7 +58,7 @@ ms.locfileid: "54667391"
  Poniższy przykład deklaruje zmienną z [statyczne](../../../../visual-basic/language-reference/modifiers/static.md) — słowo kluczowe. (Należy pamiętać, że nie ma potrzeby `Dim` — słowo kluczowe podczas [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) używa modyfikujący, takich jak `Static`.)  
   
 ### <a name="code"></a>Kod  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Komentarze  
  W poprzednim przykładzie, zmienna `applesSold` nadal istnieje po procedurze `runningTotal` powraca do kodu wywołującego. Przy następnym `runningTotal` jest wywoływana, `applesSold` zachowuje jej wcześniej obliczoną wartość.  

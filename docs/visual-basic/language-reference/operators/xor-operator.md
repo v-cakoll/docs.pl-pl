@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: af6589206232f01b572cd2b965ba1a0f36d462e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc3df1fdee5405445b4534a6982383c49b369b01
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527123"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980441"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor — Operator (Visual Basic)
 Wykonuje logiczne wykluczenie na dwóch `Boolean` wyrażeń lub bitowego wykluczenia dwóch wyrażeń liczbowych.  
@@ -78,14 +78,14 @@ result = expression1 Xor expression2
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Xor` operatora wykonywanego wykluczenie logiczne (rozłączenie logiczne wyłączne) na dwóch wyrażeń. Wynik jest `Boolean` wartość wskazującą, czy jest dokładnie jedno wyrażenie `True`.  
   
- [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
  Poprzedni przykład generuje wyniki `False`, `True`, i `False`, odpowiednio.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Xor` operatora wykonywanego wykluczenie logiczne (rozłączenie logiczne wyłączne) na poszczególnych bity dwóch wyrażeń liczbowych. Bit we wzorcu wynik jest ustawiona, jeśli dokładnie jeden z odpowiednich bitów w operandów jest ustawiona na 1.  
   
- [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
  Poprzedni przykład generuje wyniki, 2, 12 i 14, odpowiednio.  
   

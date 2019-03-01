@@ -3,14 +3,14 @@ title: Rozpoczynanie pracy z usługą Azure Blob storage przy użyciuF#
 description: Store danych bez struktury w chmurze za pomocą usługi Azure Blob storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664994"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981910"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure Blob storage przy użyciuF# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure Blob storage za pomocą F\#
 
 Usługa Azure Blob storage to usługa, która przechowuje dane niestrukturalne w chmurze w postaci obiektów blob. Magazyn obiektów blob można przechowywać dowolnego typu dane tekstowe lub binarne, takie jak dokument, plik multimedialny lub Instalator aplikacji. Magazyn obiektów blob jest również określany jako magazyn obiektów.
 

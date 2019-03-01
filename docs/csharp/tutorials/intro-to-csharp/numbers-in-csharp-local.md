@@ -3,14 +3,14 @@ title: Liczby w elemencie C# — wprowadzenie do C# samouczek
 description: Dowiedz się, C# eksplorując typy liczbowe, ich właściwości i metody.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 52feb91fc011902f1e30f6b747512a7e0908bfbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197460"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978621"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipulowanie liczb całkowitych i zmiennoprzecinkowych punkt wC# #
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipulowanie liczb całkowitych i zmiennoprzecinkowych w języku C\#
 
 Ten samouczek zawiera informacje na temat typów liczbowych w C# interaktywnie. Napiszesz niewielką ilość kodu, a następnie będzie skompilować i uruchomić ten kod. Samouczek zawiera serię lekcji dotyczących liczb i operacji matematycznych w C#. Te lekcje umożliwiają poznanie podstaw języka C#.
 
@@ -273,7 +273,7 @@ Console.WriteLine(third);
 
 Należy pamiętać, że `0.3` powtarzanie nie jest dokładnie taka sama jak `1/3`.
 
-***Wyzwanie***
+***Challenge***
 
 Spróbuj innych obliczeń z dużą liczbą, małymi liczbami, mnożeniem i dzieleniem za pomocą `double` typu.  Spróbuj bardziej skomplikowanych obliczeń.
 
@@ -305,7 +305,7 @@ Console.WriteLine(c / d);
 
 Należy zauważyć, że matematyczne liczbach typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego. 
 
-***Wyzwanie***
+***Challenge***
 
 Teraz, gdy różne typy liczbowe, należy napisać kod obliczający pole koła o promieniu jest kosztuje 2,50 cm. Należy pamiętać, że pole koła to promień pomnożony pomnożonej przez PI. Wskazówka: platforma .NET zawiera stałą dla liczby PI — <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości. 
 

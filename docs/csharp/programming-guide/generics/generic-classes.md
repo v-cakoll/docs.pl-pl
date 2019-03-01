@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 2115b0be2ee2e989b10d2d1834a51efb0b7e2ebb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651789"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970223"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Klasy ogólne (Przewodnik programowania w języku C#)
 Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określonego typu danych. Jest najbardziej popularnym zastosowaniem klas ogólnych kolekcji, takich jak połączonej listy, tabele zbędnych danych, stosów, kolejek, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji są wykonywane w zasadzie taki sam sposób niezależnie od rodzaju przechowywanych danych.  
@@ -40,27 +40,27 @@ Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określoneg
   
  Reguły dotyczące parametrów typu i ograniczenia dotyczą kilka zachowanie klasy generycznej, szczególnie w odniesieniu do dziedziczenia i elementów członkowskich ułatwień dostępu. Przed kontynuowaniem należy poznać niektóre terminy. Dla klasy ogólnej `Node<T>,` kod klienta może odwoływać się do klasy albo poprzez określenie argument typ, Utwórz zamknięte skonstruowanego typu (`Node<int>`). Alternatywnie można pozostawić, parametr typu nie zostanie podany, na przykład po określeniu rodzajowego klasy podstawowej, aby utworzyć otwartą skonstruowany typ (`Node<T>`). Klasy ogólne może dziedziczyć z konkretnej, zamknięte zbudowane lub Otwórz skonstruowanych klasach bazowych:  
   
- [!code-csharp[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#16)]  
   
  Innymi słowy, betonu inne niż ogólne, klasy mogą dziedziczyć z zamknięty skonstruowanych klasach bazowych, ale nie otwieranie skonstruowany klasy lub parametry typu, ponieważ nie ma żadnego sposobu, w czasie wykonywania w przypadku kodu klienta podać argument typu wymagane do utworzenia wystąpienia Klasa bazowa.  
   
- [!code-csharp[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#17)]  
   
  Klasy ogólne, które dziedziczą z Otwórz typy utworzone, musisz podać argumenty typu parametrów typu klasy bazowej, które nie są współdzielone przez klasy dziedziczącej, jak pokazano w poniższym kodzie:  
   
- [!code-csharp[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#18)]  
   
  Klasy ogólne, które dziedziczą z Otwórz typy utworzone musi określić ograniczeń, które są podzbiorem, lub w sposób sugerujący ograniczenia dotyczące typu podstawowego:  
   
- [!code-csharp[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#19)]  
   
  Typy ogólne można użyć wielu parametrów typu i ograniczenia, w następujący sposób:  
   
- [!code-csharp[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#20)]  
   
  Otwórz typy utworzone skonstruowany i zamknięte może służyć jako parametry metody:  
   
- [!code-csharp[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#21)]  
   
  Jeśli ogólne klasy implementuje interfejs, wszystkie wystąpienia tej klasy może być rzutowany tego interfejsu.  
   

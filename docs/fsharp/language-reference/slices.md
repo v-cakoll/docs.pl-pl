@@ -2,12 +2,12 @@
 title: Wycinki (F#)
 description: Dowiedz się więcej o tym, jak używać wycinków dla istniejących F# typów danych i jak zdefiniować własne wycinki dla innych typów danych.
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684180"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970115"
 ---
 # <a name="slices"></a>Wycinki
 
@@ -95,7 +95,7 @@ F# Podstawowej biblioteki nie definiuje `GetSlice`macierzy 3W. Jeśli użytkowni
 
 F# Podstawowej biblioteki definiuje wycinki dla ograniczony zestaw typów. Jeśli chcesz zdefiniować wycinki dla większej liczby typów danych, możesz to zrobić w definicji typu lub rozszerzenie typu.
 
-Na przykład Oto, jak można zdefiniować wycinki dla <xref:System.ArraySegment`1> klasy umożliwiające manipulowanie danymi wygodne:
+Na przykład Oto, jak można zdefiniować wycinki dla <xref:System.ArraySegment%601> klasy umożliwiające manipulowanie danymi wygodne:
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Korzystanie ze śródwierszowaniem, aby uniknąć pakowania, jeśli to konieczne
 
-Jeśli definiujesz wycinki dla typu, który jest faktycznie struktury, zalecamy możesz `inline` `GetSlice` elementu członkowskiego. F# Kompilatora natychmiast optymalizuje Argumenty opcjonalne, unikając dowolnych alokacji sterty w wyniku tworzenia wycinków. Jest to niezwykle ważne w przypadku tworzenia wycinków konstrukcji, takich jak <xref:System.Span`1> , nie może być zostać przydzielony na stosie.
+Jeśli definiujesz wycinki dla typu, który jest faktycznie struktury, zalecamy możesz `inline` `GetSlice` elementu członkowskiego. F# Kompilatora natychmiast optymalizuje Argumenty opcjonalne, unikając dowolnych alokacji sterty w wyniku tworzenia wycinków. Jest to niezwykle ważne w przypadku tworzenia wycinków konstrukcji, takich jak <xref:System.Span%601> nie można przydzielić na stosie.
 
 ```fsharp
 open System

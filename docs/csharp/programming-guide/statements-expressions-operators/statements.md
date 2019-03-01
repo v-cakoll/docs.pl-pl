@@ -6,19 +6,19 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 12c4561e9e2c2a9e3a211351b70fd83b8ca7bccd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640852"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971510"
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
 Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obejmują zadeklarowania zmiennych, przypisywania wartości, wywoływanie metod, zapętlenie przez kolekcje i gałęzi do jednej lub drugiej bloku kodu, w zależności od danego warunku. Kolejność, w którym wykonywane są instrukcje w programie nosi nazwę przepływu sterowania lub przepływem wykonania. Przepływ sterowania, mogą się różnić w każdym uruchomieniu programu, w zależności od tego, jak program reaguje na dane wejściowe, że będzie ona otrzymywać w czasie wykonywania.  
   
  Użycie instrukcji może składać się z jednego wiersza kodu, który kończy się średnikiem lub serię instrukcji jeden wiersz w bloku. Blok instrukcji jest ujęty w {} nawiasy kwadratowe i mogą zawierać zagnieżdżonych bloków. Poniższy kod pokazuje dwa przykłady instrukcji jeden wiersz i blok instrukcji wielowierszowe:  
   
- [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
+ [!code-csharp[csProgGuideStatements#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#1)]  
   
 ## <a name="types-of-statements"></a>Typów instrukcji  
  W poniższej tabeli wymieniono różne rodzaje instrukcji w języku C# i ich skojarzone słów kluczowych, za pomocą łącza do tematów, które zawierają więcej informacji:  
@@ -43,43 +43,43 @@ Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obej
 
 Poniższy kod przedstawia przykłady deklaracji zmiennych z lub bez początkowego przydziału i deklaracji stałej z inicjalizacją niezbędne.
 
-[!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]
+ [!code-csharp[csProgGuideStatements#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#23)]
 
 ## <a name="expression-statements"></a>Instrukcje wyrażeń
 
 Poniższy kod przedstawia przykładowe instrukcje wyrażeń, łącznie z przypisania, utworzenie obiektu za pomocą przydziałów i wywołanie metody.
 
-[!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]
+ [!code-csharp[csProgGuideStatements#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#24)]
 
 ## <a name="the-empty-statement"></a>Pusta instrukcja
 
 W poniższych przykładach pokazano dwa zastosowania pustą instrukcję:
 
-[!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]
+ [!code-csharp[csProgGuideStatements#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#25)]
 
 ## <a name="embedded-statements"></a>Osadzone instrukcje
 
  Niektóre instrukcje, w tym [czy](../../../csharp/language-reference/keywords/do.md), [podczas](../../../csharp/language-reference/keywords/while.md), [dla](../../../csharp/language-reference/keywords/for.md), i [foreach](../../../csharp/language-reference/keywords/foreach-in.md), zawsze mają osadzona instrukcja, który następuje po nich. To osadzona instrukcja może być pojedynczą instrukcję lub wiele instrukcji ujęta w {} nawiasów kwadratowych w bloku instrukcji. Osadzone instrukcje nawet jednego wiersza mogą być ujęte w {} nawiasy kwadratowe, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
+ [!code-csharp[csProgGuideStatements#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#26)]  
   
  Osadzona instrukcja, która nie jest ujęty w {} nawiasy kwadratowe nie może być instrukcji deklaracji lub instrukcji oznaczonej etykietą. Jest to pokazane w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
+ [!code-csharp[csProgGuideStatements#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#27)]  
   
  W bloku, aby naprawić błąd, należy umieścić osadzona instrukcja:  
   
- [!code-csharp[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
+ [!code-csharp[csProgGuideStatements#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#28)]  
   
 ## <a name="nested-statement-blocks"></a>Zagnieżdżona instrukcja bloków  
  Może być zagnieżdżony bloków instrukcji, jak pokazano w poniższym kodzie:  
   
- [!code-csharp[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
+ [!code-csharp[csProgGuideStatements#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#29)]  
   
 ## <a name="unreachable-statements"></a>Instrukcji jest nieosiągalny  
  Kompilator Określa, że przepływ sterowania nigdy nie może osiągnąć określonej instrukcji w żadnym, powoduje wygenerowanie ostrzeżenia CS0162, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
+ [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   

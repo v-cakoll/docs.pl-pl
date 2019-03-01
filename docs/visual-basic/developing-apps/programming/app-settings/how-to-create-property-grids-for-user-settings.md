@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: ac4e1511026047ee70234d638eb8b1689dbd6056
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c528b2a0ada0f638f2f901ba7638771e0f4b3dda
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717860"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969053"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Instrukcje: Tworzenie siatek właściwości dla ustawień użytkownika w języku Visual Basic
 Można utworzyć siatki właściwości, dla ustawień użytkownika, definiując <xref:System.Windows.Forms.PropertyGrid> kontrola przy użyciu właściwości ustawienia użytkownika `My.Settings` obiektu.  
@@ -37,11 +37,11 @@ Można utworzyć siatki właściwości, dla ustawień użytkownika, definiując 
   
 3.  Ustaw `My.Settings` obiektu jako wybranego obiektu siatki właściwości.  
   
-     [!code-vb[VbVbalrMyResources#11](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_1.vb)]  
+     [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
 4.  Skonfiguruj siatki właściwości, aby pokazać tylko ustawienia użytkownika.  
   
-     [!code-vb[VbVbalrMyResources#12](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_2.vb)]  
+     [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   
     > [!NOTE]
     >  Wyświetlanie tylko ustawień zakresu aplikacji, należy użyć <xref:System.Configuration.ApplicationScopedSettingAttribute> atrybutu zamiast <xref:System.Configuration.UserScopedSettingAttribute>.  

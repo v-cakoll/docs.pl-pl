@@ -1,13 +1,7 @@
 ---
-title: Programowanie asynchroniczne z async i await (C#)
+title: 'Programowanie asynchroniczne z async i await (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 011ddf8e9769471f37f073b4440a909afc5e404f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759512"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programowanie asynchroniczne z async i await (C#)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -230,7 +224,7 @@ Asynchroniczne API w programowaniu Windows Runtime mieć jedną z następującyc
    
   
 ##  <a name="BKMK_NamingConvention"></a> Konwencje nazewnictwa  
- Umownie, dołączasz "Asynchroniczny" do nazw metod mających `async` modyfikator.  
+Zgodnie z Konwencją, metody, które często oczekujący typy zwracane (np. `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`) powinny mieć nazwy, które kończą się "Async". Metody, które na początku operacji asynchronicznej, ale nie zwracają oczekujący typ nie powinny mieć nazwy, które kończyć się znakiem "Async", ale mogą rozpoczynać się od "Begin", "Start" lub niektórych innych zlecenie sugerują, ta metoda nie zwraca ani nie zgłosić wyniku operacji.
   
  Można zignorować konwencję, gdy zdarzenie, klasa bazowa lub kontrakt interfejsu sugeruje inną nazwę. Na przykład nie należy zmieniać nazw wspólnej procedury obsługi zdarzeń, takich jak `Button1_Click`.  
   

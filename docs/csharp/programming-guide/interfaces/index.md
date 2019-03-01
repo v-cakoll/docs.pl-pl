@@ -15,7 +15,7 @@ Korzystając z interfejsów, można na przykład zawierać zachowanie z wielu ź
   
 Zdefiniuj interfejs, za pomocą [interfejsu](../../language-reference/keywords/interface.md) — słowo kluczowe. jak w poniższym przykładzie pokazano.  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 Nazwa struktury musi być prawidłową C# [nazwa identyfikatora](../inside-a-program/identifier-names.md). Według Konwencji nazwy interfejsu rozpoczynają się od wielkiej litery `I`.
 

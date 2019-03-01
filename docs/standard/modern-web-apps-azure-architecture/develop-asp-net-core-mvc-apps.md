@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827882"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978335"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie platformy ASP.NET Core MVC aplikacji
 
@@ -172,7 +172,7 @@ Oddzielenie aplikacji, od szczegółów implementacji na innym sposobem jest mik
 
 ### <a name="feature-organization"></a>Funkcja organizacji
 
-Domyślnie aplikacje platformy ASP.NET Core organizowanie ich strukturę folderów w celu uwzględnienia kontrolery i widoki i często modele widoków. Kod po stronie klienta do obsługi tych struktur po stronie serwera są zwykle przechowywane osobno w folderze wwwroot. Jednak duże aplikacje mogą wystąpić problemy z tej organizacji, ponieważ często nad dowolnym dana funkcja wymaga przechodzenie między te foldery. Pobiera to bardziej trudne, wraz z rozwojem liczbę plików i podfolderów w folderze każdego skutkuje dużym stopniem przewijanie w Eksploratorze rozwiązań. Jedno rozwiązanie tego problemu jest zorganizowanie kod aplikacji przez _funkcji_ zamiast według typu pliku. Ten styl organizacji jest zwykle określane jako funkcja foldery lub [funkcji wycinki](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx) (Zobacz również: [Wycinki pionowy](https://deviq.com/vertical-slices/)).
+Domyślnie aplikacje platformy ASP.NET Core organizowanie ich strukturę folderów w celu uwzględnienia kontrolery i widoki i często modele widoków. Kod po stronie klienta do obsługi tych struktur po stronie serwera są zwykle przechowywane osobno w folderze wwwroot. Jednak duże aplikacje mogą wystąpić problemy z tej organizacji, ponieważ często nad dowolnym dana funkcja wymaga przechodzenie między te foldery. Pobiera to bardziej trudne, wraz z rozwojem liczbę plików i podfolderów w folderze każdego skutkuje dużym stopniem przewijanie w Eksploratorze rozwiązań. Jedno rozwiązanie tego problemu jest zorganizowanie kod aplikacji przez _funkcji_ zamiast według typu pliku. Ten styl organizacji jest zwykle określane jako funkcja foldery lub [funkcji wycinki](https://msdn.microsoft.com/magazine/mt763233.aspx) (Zobacz również: [Wycinki pionowy](https://deviq.com/vertical-slices/)).
 
 Platforma ASP.NET Core MVC obsługuje obszary, w tym celu. Obszary można utworzyć oddzielne zestawy kontrolery i widoki folderów (a także żadnych modeli skojarzone) w każdym folderze obszaru. Rysunek 7-1 przedstawiono przykład struktury folderów, korzystać z obszarów.
 
@@ -311,7 +311,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Możesz dowiedzieć się więcej o implementacji filtry i pobrać przykładowy pracy z artykuł w witrynie MSDN [Real World ASP.NET Core MVC filtry](https://msdn.microsoft.com/magazine/mt767699.aspx).
+Możesz dowiedzieć się więcej o implementacji filtry i pobrać przykładowy pracy z artykuł w witrynie MSDN [rzeczywistych platformy ASP.NET Core MVC filtry](https://msdn.microsoft.com/magazine/mt767699.aspx).
 
 > ### <a name="references--structuring-applications"></a>Odwołania — struktury aplikacji
 >

@@ -1,23 +1,17 @@
 ---
-title: Typy — C# przewodnik programowania
+title: 'Typy — C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- value types [C#]
-- reference types [C#]
-- types [C#]
-- C# language, data types
-- common type system [C#]
-- data types [C#]
-- C# language, types
-- strong typing [C#]
+  - 'value types [C#]'
+  - 'reference types [C#]'
+  - 'types [C#]'
+  - 'C# language, data types'
+  - 'common type system [C#]'
+  - 'data types [C#]'
+  - 'C# language, types'
+  - 'strong typing [C#]'
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5d24e28b6a685cf4934c06c72ffbc8aa29748faa
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739319"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 ## <a name="types-variables-and-values"></a>Typy, zmienne i wartości  
@@ -39,7 +33,7 @@ ms.locfileid: "55739319"
   
  Kompilator używa informacji o typie, aby upewnić się, że wszystkie operacje, które są wykonywane w kodzie są *bezpieczny*. Na przykład, jeśli zadeklarować zmienną typu [int](../../../csharp/language-reference/keywords/int.md), kompilator umożliwi dodatkowo użycia zmiennej operacjach dodawania i odejmowania. Jeśli próbujesz wykonać te same operacje na zmiennej typu [bool](../../../csharp/language-reference/keywords/bool.md), kompilator generuje błąd, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideTypes#42](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]  
   
 > [!NOTE]
 >  Programiści C i C++, zwróć uwagę, że w języku C# [bool](../../../csharp/language-reference/keywords/bool.md) nie jest konwertowany na [int](../../../csharp/language-reference/keywords/int.md).  
@@ -49,11 +43,11 @@ ms.locfileid: "55739319"
 ### <a name="specifying-types-in-variable-declarations"></a>Określanie typów w deklaracjach zmiennych  
  Kiedy Deklarujesz zmienną lub stałą w programie, należy określić jej typ lub użyć [var](../../../csharp/language-reference/keywords/var.md) — słowo kluczowe, aby umożliwić kompilatorowi wydedukować typ. Poniższy przykład pokazuje kilka deklaracji zmiennych, korzystających z wbudowanych typów liczbowych i złożonych typów zdefiniowanych przez użytkownika:  
   
- [!code-csharp[csProgGuideTypes#36](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]  
   
  Typy parametrów metody i wartości zwracane są określone w oznaczeniu metody. Następująca sygnatura przedstawia metodę, która wymaga [int](../../../csharp/language-reference/keywords/int.md) jako argument wejściowy i zwraca ciąg:  
   
- [!code-csharp[csProgGuideTypes#35](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]  
   
  Po zadeklarowaniu zmiennej nie może być ponownie zadeklarowany z nowym typem i nie można przypisać wartość, która nie jest zgodna z deklarowanym typem. Na przykład nie można zadeklarować [int](../../../csharp/language-reference/keywords/int.md) a następnie przypisać jej wartości logicznej [true](../../../csharp/language-reference/keywords/true-literal.md). Jednakże wartości można przekonwertować do innych typów, na przykład gdy są one przypisane do nowych zmiennych lub przekazywane jako argumenty tej metody. A *konwersja typu* która nie powoduje utraty danych jest realizowane automatycznie przez kompilator. Wymaga konwersji, która może spowodować utratę danych *rzutowania* w kodzie źródłowym.  
   
@@ -104,13 +98,13 @@ char c = 'Z';
   
  Możesz użyć [struktury](../../../csharp/language-reference/keywords/struct.md) — słowo kluczowe, aby utworzyć własne typy niestandardowych wartości. Typowo, struct jest używany jako kontener dla mniejszego zestawu powiązanych zmiennych, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideObjects#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
  Aby uzyskać więcej informacji na temat struktur, zobacz [struktury](../../../csharp/programming-guide/classes-and-structs/structs.md). Aby uzyskać więcej informacji na temat typów wartości na platformie .NET, zobacz [typów wartości](../../../csharp/language-reference/keywords/value-types.md).  
   
  Inna Kategoria typu wartości jest [wyliczenia](../../../csharp/language-reference/keywords/enum.md). Wyliczenie definiuje zestaw nazwanych stałych liczbach całkowitych. Na przykład <xref:System.IO.FileMode?displayProperty=nameWithType> wyliczenia w bibliotece klas programu .NET zawiera zestaw nazwanych stałych liczb całkowitych, które określają, jak można otworzyć pliku. Jest on zdefiniowany jak pokazano w poniższym przykładzie:  
  
- [!code-csharp[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]  
   
  `System.IO.FileMode.Create` Stała ma wartość 2. Jednak nazwa jest bardziej istotna dla ludzi czytających kod źródłowy i tego powodu lepiej jest używać wyliczenia zamiast stałej liczby literału. Aby uzyskać więcej informacji, zobacz <xref:System.IO.FileMode?displayProperty=nameWithType>.  
   
@@ -133,7 +127,7 @@ IMyInterface iface = new MyClass();
   
  Wszystkie tablice są typami odwołań, nawet jeśli ich elementy są typami wartości. Tablice niejawnie pochodzą od <xref:System.Array?displayProperty=nameWithType> klasy, ale deklarujes zje i używasz ich z uproszczoną skłądnią, która jest dostarczana przez C#, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideTypes#45](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_6.cs)]  
+ [!code-csharp[csProgGuideTypes#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#45)]  
   
  Typy odwołań w pełni obsługują dziedziczenie. Kiedy tworzysz klasę, możesz dziedziczyć od innego interfejsu lub klasy, która nie jest zdefiniowana jako [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md), a inne klasy mogą dziedziczyć od Twojej klasy i zastępować Twoje wirtualne metody. Aby uzyskać więcej informacji na temat tworzenia własnych klas, zobacz [klas i struktur](../../../csharp/programming-guide/classes-and-structs/index.md). Aby uzyskać więcej informacji dotyczących dziedziczenia i metod wirtualnych, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  
   
@@ -142,7 +136,7 @@ IMyInterface iface = new MyClass();
   
  Ponieważ wpisywane są literały, a wszystkie typy ostatecznie pochodzą z <xref:System.Object?displayProperty=nameWithType>, można pisać i kompilować następujący kod:  
   
- [!code-csharp[csProgGuideTypes#37](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideTypes#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#37)]  
   
 ## <a name="generic-types"></a>Typy ogólne  
  Typ może być zadeklarowany z co najmniej jeden *parametry typu* obsługujących jako symbolu zastępczego dla rzeczywistego typu ( *konkretne typu*), kod klienta zapewni podczas tworzenia wystąpienia typu. Typy takie są nazywane *typów ogólnych*. Na przykład typ .NET <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ma jeden parametr typu, który zgodnie z Konwencją, otrzymuje nazwę *T*. Podczas tworzenia wystąpienia typu, należy określić typ obiektów, które zawierać będzie lista, przykładowo ciąg:  

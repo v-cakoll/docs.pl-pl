@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: f5222d51ff2f60dd31ec52a8d5d6d52f37e02443
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739205"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973629"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Wprowadzenie do LINQ w Visual Basic
 Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic i dostarcza proste oraz wydajne narzędzia podczas pracy z danymi wszelkiego rodzaju. Zamiast wysyłania kwerendy do bazy danych w celu przetworzenia lub posługiwanie się różną składnią kwerendy dla każdego typu danych, które przeszukujesz, LINQ wprowadza kwerendy jako część języka Visual Basic. Używa zunifikowaną składnię, bez względu na typ danych.  
@@ -26,12 +26,12 @@ Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic
   
  Na przykład poniższy kod pokazuje zapytanie LINQ, która zwraca listę klientów z kolekcji i grup, które je na podstawie ich lokalizacji.  
   
- [!code-vb[VbVbalrIntroToLINQ#1](codesnippet/VisualBasic/introduction-to-linq_1.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#1)]  
   
 ## <a name="running-the-examples"></a>Uruchamianie przykładów  
  Aby uruchomić przykłady we wstępie i w [struktura zapytania LINQ](#structure-of-a-linq-query) sekcji, Dołącz następujący kod, który zwróci listę klientów i zamówień.  
   
- [!code-vb[VbVbalrIntroToLINQ#31](codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#31)]  
   
 ## <a name="linq-providers"></a>Dostawcy LINQ  
  A *dostawcy LINQ* mapuje zapytań LINQ Visual Basic do źródła danych, którego dotyczy kwerenda. Kiedy piszesz zapytanie LINQ, dostawca zapytanie i przekształca je w poleceń, które źródła danych będą mogli wykonać. Dostawca konwertuje również dane ze źródła do obiektów, które tworzą wyników zapytania. Na koniec Konwertuje obiekty do danych podczas wysyłania aktualizacji do źródła danych.  
@@ -50,23 +50,23 @@ Language-Integrated Query (LINQ) umożliwia wykonywanie zapytań do Visual Basic
   
  Wyrażenie zapytania zaczyna się od `From` klauzuli. Ta klauzula identyfikuje dane źródłowe dla zapytania i zmienne, które służą do odwoływania się do każdego elementu Źródło danych indywidualnie. Te zmienne nazywane są *należeć do zakresu zmiennych* lub *zmienne iteracji*. `From` Klauzula jest wymagana dla zapytania, z wyjątkiem `Aggregate` zapytań, gdzie `From` klauzula jest opcjonalne. Po, zakres i źródła zapytania są identyfikowane w `From` lub `Aggregate` zdań, może zawierać dowolną kombinację zdań zapytania w celu doprecyzowania zapytania. Aby uzyskać szczegółowe informacje dotyczące klauzul kwerendy Zobacz operatory zapytań LINQ w Visual Basic w dalszej części tego tematu. Na przykład poniższe zapytanie identyfikuje kolekcję źródłową danych klienta jako `customers` zmienną i zmienną iteracji o nazwie `cust`.  
   
- [!code-vb[VbVbalrIntroToLINQ#2](codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
  W tym przykładzie jest poprawnym zapytaniem siebie. jednak zapytanie staje się mocniejsze po dodaniu większej liczby klauzul zapytania, aby udoskonalić wynik. Na przykład można dodać `Where` klauzuli, aby filtrować wynik według co najmniej jedną wartość. Wyrażenia kwerendy są jednowierszowym kodem; klauzule dodatkowe kwerendy można dołączyć tylko na końcu zapytania. Możesz rozbić zapytanie w wielu wierszach tekstu, aby polepszyć czytelność za pomocą znaku podkreślenia (\_) znak kontynuacji wiersza. Poniższy przykład kodu pokazuje przykład zapytania, które obejmuje `Where` klauzuli.  
   
- [!code-vb[VbVbalrIntroToLINQ#3](codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#3)]  
   
  Innym potęrżnym zdaniem zapytania jest `Select` zdanie, które pozwala zwrócić tylko wybrane pola ze źródła danych. Zapytania LINQ zwracają przeliczalne kolekcje obiektów silnie typizowanych. Zapytanie może zwracać kolekcją typów anonimowych lub nazwanych. Możesz użyć `Select` klauzulę, aby zwrócić tylko jedno pole ze źródła danych. Gdy to zrobisz, typ zwracanej kolekcji jest typem tego pojedynczego pola. Można również użyć `Select` klauzulę, aby zwrócić wiele pól ze źródła danych. Gdy to zrobisz, typ zwracanej kolekcji jest nowym typem anonimowym. Można również przeprowadzać Dopasowywanie pola zwróconych przez zapytanie do pól określonego typu nazwanego. Poniższy przykład kodu pokazuje wyrażenie zapytania, które zwraca kolekcję typów anonimowe, mających członków wypełnionych danymi z wybranych pól ze źródła danych.  
   
- [!code-vb[VbVbalrIntroToLINQ#4](codesnippet/VisualBasic/introduction-to-linq_5.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#4)]  
   
  Zapytania LINQ można również połączyć wiele źródeł danych i zwrócenia pojedynczego wyniku. Można to zrobić za pomocą co najmniej jeden `From` zdań, lub za pomocą `Join` lub `Group Join` klauzul zapytania. Poniższy przykład kodu pokazuje wyrażenie zapytania, które łączy dane klienta i zamówienia i zwraca kolekcję typów anonimowych, zawierające dane klienta i zamówienia.  
   
- [!code-vb[VbVbalrIntroToLINQ#5](codesnippet/VisualBasic/introduction-to-linq_6.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#5)]  
   
  Możesz użyć `Group Join` klauzulę, aby utworzyć hierarchiczny wynik zapytania, który zawiera kolekcję obiektów klienta. Każdy obiekt klienta ma właściwość, która zawiera zbiór wszystkich zamówień tego klienta. Poniższy przykład kodu pokazuje wyrażenie zapytania, które łączy dane klienta i zamówienia w postaci wyniku hierarchicznego i zwraca kolekcję typów anonimowych. Zapytanie zwraca typ, który zawiera `CustomerOrders` właściwość, która zawiera kolekcję danych zamówienia dla klienta. Obejmuje również `OrderTotal` właściwość, która zawiera sumę dla wszystkich zamówień tego klienta. (To zapytanie jest równoważne z LEFT OUTER JOIN).  
   
- [!code-vb[VbVbalrIntroToLINQ#6](codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
  Istnieje kilka dodatkowych operatorów zapytań LINQ, które można użyć do utworzenia mocnych wyrażeń zapytania. Następna sekcji tego tematu omawia różne klauzule zapytań, które można uwzględnić w wyrażeniu zapytania. Aby uzyskać szczegółowe informacje dotyczące klauzul kwerendy w języku Visual Basic, zobacz [zapytania](../../../../visual-basic/language-reference/queries/index.md).  
   
@@ -78,13 +78,13 @@ Klasy w <xref:System.Linq> przestrzeni nazw i inne obszary nazw obsługi zapyta�
 
 Albo [ `From` klauzuli](../../../../visual-basic/language-reference/queries/from-clause.md) lub `Aggregate` zdanie jest wymagane do rozpoczęcia zapytania. A `From` klauzula Określa, kolekcji źródłowej i zmienną iteracji dla zapytania. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#7](codesnippet/VisualBasic/introduction-to-linq_8.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
 ### <a name="select-clause"></a>Select — Klauzula
 
 Opcjonalna. A [ `Select` klauzuli](../../../../visual-basic/language-reference/queries/select-clause.md) deklaruje zestaw zmiennych iteracji dla zapytania. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#8](codesnippet/VisualBasic/introduction-to-linq_9.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
 Jeśli `Select` klauzuli nie zostanie określona, zmienne iteracji dla zapytania składają się ze zmiennych iteracji, określony przez `From` lub `Aggregate` klauzuli.
 
@@ -92,83 +92,83 @@ Jeśli `Select` klauzuli nie zostanie określona, zmienne iteracji dla zapytania
 
 Opcjonalna. A [ `Where` klauzuli](../../../../visual-basic/language-reference/queries/where-clause.md) określa warunek filtrowania dla zapytania. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#9](codesnippet/VisualBasic/introduction-to-linq_10.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
 ### <a name="order-by-clause"></a>Klauzula Order By]
 
 | Opcjonalnie. [ `Order By` Klauzuli](../../../../visual-basic/language-reference/queries/order-by-clause.md) określa porządek sortowania dla kolumn w zapytaniu. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#10](codesnippet/VisualBasic/introduction-to-linq_11.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
 ### <a name="join-clause"></a>Join — Klauzula
 
 Opcjonalna. A [ `Join` klauzuli](../../../../visual-basic/language-reference/queries/join-clause.md) łączy dwie kolekcje w jedną kolekcję. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#11](codesnippet/VisualBasic/introduction-to-linq_12.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#11)]
 
 ### <a name="group-by-clause"></a>Group By — Klauzula
 
 Opcjonalna. A [ `Group By` klauzuli](../../../../visual-basic/language-reference/queries/group-by-clause.md) grupuje elementy wyników zapytań. Może służyć do zastosowania funkcji agregujących do każdej grupy. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#12](codesnippet/VisualBasic/introduction-to-linq_13.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#12)]
 
 ### <a name="group-join-clause"></a>Group Join — Klauzula
 
 Opcjonalna. A [ `Group Join` klauzuli](../../../../visual-basic/language-reference/queries/group-join-clause.md) łączy dwie kolekcje w jedną hierarchiczną kolekcję. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#13](codesnippet/VisualBasic/introduction-to-linq_14.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#13)]
 
 ### <a name="aggregate-clause"></a>Aggregate — Klauzula
 
 Albo [ `Aggregate` klauzuli](../../../../visual-basic/language-reference/queries/aggregate-clause.md) lub `From` zdanie jest wymagane do rozpoczęcia zapytania. `Aggregate` Klauzuli stosuje jedną lub więcej funkcji agregujących do kolekcji. Na przykład, można użyć `Aggregate` klauzuli, aby obliczyć sumę wszystkich elementów zwróconych przez kwerendę, tak jak w poniższym przykładzie.
 
-[!code-vb[VbVbalrIntroToLINQ#14](codesnippet/VisualBasic/introduction-to-linq_15.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
 Można również użyć `Aggregate` klauzulę, aby zmodyfikować zapytanie. Na przykład, można użyć `Aggregate` klauzuli w celu wykonywania obliczeń na kolekcji powiązanych zapytań. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#15](codesnippet/VisualBasic/introduction-to-linq_16.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
 ### <a name="let-clause"></a>Let — Klauzula
 
 Opcjonalna. A [ `Let` klauzuli](../../../../visual-basic/language-reference/queries/let-clause.md) oblicza wartość i przypisuje go do nowej zmiennej w zapytaniu. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#16](codesnippet/VisualBasic/introduction-to-linq_17.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#16)]
 
 ### <a name="distinct-clause"></a>Distinct — Klauzula
 
 Opcjonalna. A `Distinct` klauzuli ogranicza wartości bieżącej zmiennej iteracji w celu wyeliminowania zduplikowanych wartości w wynikach kwerendy. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#17](codesnippet/VisualBasic/introduction-to-linq_18.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#17)]
 
 ### <a name="skip-clause"></a>Skip — Klauzula
 
 Opcjonalna. A [ `Skip` klauzuli](../../../../visual-basic/language-reference/queries/skip-clause.md) pomija określoną liczbę elementów w kolekcji, a następnie zwraca pozostałe elementy. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#18](codesnippet/VisualBasic/introduction-to-linq_19.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#18)]
 
 ### <a name="skip-while-clause"></a>Skip While — Klauzula
 
 Opcjonalna. A [ `Skip While` klauzuli](../../../../visual-basic/language-reference/queries/skip-while-clause.md) omija elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` , a następnie zwraca pozostałe elementy. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#19](codesnippet/VisualBasic/introduction-to-linq_20.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#19)]
 
 ### <a name="take-clause"></a>Take — Klauzula
 
 Opcjonalna. A [ `Take` klauzuli](../../../../visual-basic/language-reference/queries/take-clause.md) zwraca określoną liczbę elementów sąsiadujących z początku kolekcji. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#20](codesnippet/VisualBasic/introduction-to-linq_21.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#20)]
 
 ### <a name="take-while-clause"></a>Take While — Klauzula
 
 Opcjonalna. A [ `Take While` klauzuli](../../../../visual-basic/language-reference/queries/take-while-clause.md) zawiera elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` i pomija pozostałe elementy. Na przykład:
 
-[!code-vb[VbVbalrIntroToLINQ#21](codesnippet/VisualBasic/introduction-to-linq_22.vb)]
+ [!code-vb[VbVbalrIntroToLINQ#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#21)]
   
 ## <a name="use-additional-linq-query-features"></a>Korzystanie z dodatkowych funkcji zapytania LINQ  
   
 Można użyć dodatkowych funkcji zapytania LINQ, wywołując elementy wyliczalnych lub odpytywalnych typów dostarczonych przez LINQ. Te dodatkowe możliwości można użyć poprzez wywołanie konkretnego operatora zapytania w wyniku wyrażenia zapytania. Na przykład w poniższym przykładzie użyto <xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType> metodę, aby połączyć dwa wyniki zapytań w jeden wynik zapytania. Używa ona <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> metodę, aby zwrócić wynik kwerendy w postaci listy ogólnej.
   
- [!code-vb[VbVbalrIntroToLINQ#22](codesnippet/VisualBasic/introduction-to-linq_23.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#22)]  
   
  Aby uzyskać szczegółowe informacje o dodatkowych możliwościach LINQ, zobacz [standardowe operatory zapytań — Przegląd](../../concepts/linq/standard-query-operators-overview.md).  
   
@@ -207,7 +207,7 @@ Można użyć dodatkowych funkcji zapytania LINQ, wywołując elementy wyliczaln
   
  Poniższy przykład kodu pokazuje, jak utworzyć XML element, dostęp do jego elementów podrzędnych i atrybutów i zbadać zawartość elementu za pomocą LINQ.  
   
- [!code-vb[VbXmlSamples#8](../../../language-reference/operators/codesnippet/VisualBasic/introduction-to-linq_24.vb)]  
+ [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
  Aby uzyskać więcej informacji, zobacz [XML](../xml/index.md).  
   

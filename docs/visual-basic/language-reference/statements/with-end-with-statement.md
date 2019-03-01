@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: a3762e3bf0978feeb1155f8cc8249a77f0a497df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9d2ce983398f34747f09d4ffd2cc8fa9e6b2b53
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535272"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968260"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With — Instrukcja (Visual Basic)
 Wykonuje szereg instrukcji, które wielokrotnie odwołują się do pojedynczego obiektu lub struktury, dzięki czemu instrukcje mogą używać uproszczonej składni podczas uzyskiwania dostępu do członków obiektu lub struktury.  Korzystając ze struktury możesz jedynie odczytać wartości członków lub wywoływać metody i wystąpi błąd, jeśli zostanie podjęta próba przypisania wartości do członków struktury używanych w `With...End With` instrukcji.  
@@ -72,12 +72,12 @@ End With
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie każdy `With` bloku wykonuje serię instrukcji na pojedynczym obiekcie.  
   
- [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
+ [!code-vb[VbVbalrWithStatement#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#2)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład zagnieżdża instrukcje `With…End With` instrukcji. W ramach zagnieżdżonej `With` instrukcji, składnia odnosi się do obiektu wewnętrznego.  
   
- [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
+ [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Collections.Generic.List%601>

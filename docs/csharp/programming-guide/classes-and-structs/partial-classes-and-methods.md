@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 5fdb3de03eaa60a4d29d5a0c7e4082a6806b0ec9
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7e91d77393c4d2980cce73a92589b752124e8077
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441674"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965205"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Klasy częściowe i metody (Przewodnik programowania w języku C#)
 Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywords/class.md), [struktury](../../../csharp/language-reference/keywords/struct.md), [interfejsu](../../../csharp/language-reference/keywords/interface.md) lub metody za pośrednictwem dwóch lub więcej plików źródłowych. Każdy plik źródłowy zawiera sekcję definicji typu lub metody, a wszystkie elementy są łączone, podczas kompilowania aplikacji.  
@@ -26,7 +26,7 @@ Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywor
   
 -   Aby podzielić definicji klasy, należy użyć [częściowe](../../../csharp/language-reference/keywords/partial-type.md) modyfikator — słowo kluczowe, jak pokazano poniżej:  
   
- [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]  
   
  `partial` Słowo kluczowe wskazuje, że inne części klasy, struktury, lub interfejsu może być zdefiniowany w przestrzeni nazw. Wszystkie części muszą używać `partial` — słowo kluczowe. Wszystkie części muszą być dostępne w kompilacji do końcowego typu formularza. Wszystkie części muszą mieć identyczną dostępność, takich jak `public`, `private`i tak dalej.  
   
@@ -39,15 +39,15 @@ Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywor
   
  Poniższy przykład pokazuje, że zagnieżdżone typy mogą być częściowe, nawet jeśli są one zagnieżdżone w obrębie typu nie jest częściowe sam.  
   
- [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#25)]  
   
  W czasie kompilacji atrybuty z definicji typu częściowego są scalane. Na przykład należy wziąć pod uwagę następujące deklaracje:  
   
- [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#23)]  
   
  Są one równoważnymi następujące deklaracje:  
   
- [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#24)]  
   
  Poniżej są scalane z definicji typu częściowego:  
   
@@ -63,24 +63,24 @@ Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywor
   
  Na przykład należy wziąć pod uwagę następujące deklaracje:  
   
- [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#21)]  
   
  Są one równoważnymi następujące deklaracje:  
   
- [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]  
   
 ### <a name="restrictions"></a>Ograniczenia  
  Istnieje kilka reguł, które należy wykonać podczas pracy z częściowych definicji klasy:  
   
 -   Wszystkie definicje typu częściowego, należy traktować jako części tego samego typu, muszą zostać zmodyfikowane za pomocą `partial`. Na przykład następujące deklaracje klas wygenerowanie błędu:  
   
-     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]  
   
 -   `partial` Modyfikator może się pojawić tylko bezpośrednio przed słowa kluczowe `class`, `struct`, lub `interface`.  
   
 -   Zagnieżdżone typy częściowe są dozwolone w definicji typu częściowego, jak pokazano w poniższym przykładzie:  
   
-     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#19)]  
   
 -   Wszystkie definicje typu częściowego, należy traktować jako części tego samego typu musi być zdefiniowany w tym samym zestawie i tego samego modułu (plik .exe lub .dll). Definicje częściowe nie mogą obejmować wiele modułów.  
   
@@ -114,7 +114,7 @@ Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywor
  W poniższym przykładzie, pola i Konstruktor klasy `Coords`, są deklarowane w jedną definicję klasy częściowe i elementu członkowskiego, `PrintCoords`, jest zadeklarowany w innej definicji częściowej klasy.  
   
 ### <a name="code"></a>Kod  
- [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+ [!code-csharp[csProgGuideObjects#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#17)]  
   
 ## <a name="example-2"></a>Przykład 2  
   
@@ -122,7 +122,7 @@ Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywor
  Poniższy przykład pokazuje, że możesz również tworzyć częściowej struktury i interfejsy.  
   
 ### <a name="code"></a>Kod  
- [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+ [!code-csharp[csProgGuideObjects#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#18)]  
   
 ## <a name="partial-methods"></a>Metody częściowe  
  Częściowe klasy lub struktury może zawierać metody częściowej. Jedną część klasy zawiera podpis metody. Opcjonalne wdrożenia może być zdefiniowana w części tej samej lub innej części. Jeśli wdrożenia nie jest podany, następnie metoda i wszystkie wywołania do metody są usuwane w czasie kompilacji.  

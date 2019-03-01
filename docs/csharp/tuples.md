@@ -3,14 +3,14 @@ title: Typy krotki — Przewodnik po języku C#
 description: Dowiedz się więcej o krotki nazwane i nienazwane typy w języku C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332757"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971414"
 ---
-# <a name="c-tuple-types"></a>Typy krotek języka C# #
+# <a name="c-tuple-types"></a>Typy krotek języka C#
 
 C# kolekcje są typy definiujące przy użyciu składni lekkiej. Zalety obejmują prostsze składni reguł podczas konwersji na podstawie liczby (nazywane kardynalności) i typy elementów i spójne zasady kopii, testy równości i przydziałów. Jako to z kompromisem krotek nie obsługują niektórych idiomy zorientowane obiektowo, skojarzone z dziedziczenia. Możesz uzyskać omówienie w sekcji na [krotek, co jest nowego w języku C# 7.0](whats-new/csharp-7.md#tuples) artykułu.
 

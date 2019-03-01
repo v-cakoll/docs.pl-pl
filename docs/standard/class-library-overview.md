@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555183"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970574"
 ---
 # <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
 
@@ -96,8 +96,8 @@ Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów war
 ||<xref:System.UInt16>|16-bitowa liczba całkowita bez znaku.<br /><br /> Niezgodne ze specyfikacją CLS.|**UShort**|**ushort**|**short bez znaku**|**uint16**|  
 ||<xref:System.UInt32>|32-bitowa liczba całkowita bez znaku.<br /><br /> Niezgodne ze specyfikacją CLS.|**UInteger**|**uint**|**unsigned int**<br /> —lub—<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64-bitowej nieoznaczonej liczby całkowitej.<br /><br /> Niezgodne ze specyfikacją CLS.|**ULong**|**ulong**|**__int64 bez znaku**|**uint64**|  
-|Liczba zmiennoprzecinkowa|<xref:System.Single>|Liczba zmiennoprzecinkowa (32-bitowy) pojedynczej precyzji.|**Single**|**float**|**float**|**float32**</br> lub</br>**single**|  
-||<xref:System.Double>|Liczba zmiennoprzecinkowa (64-bitowy) podwójnej precyzji.|**Double**|**double**|**double**|**float**</br> lub </br> **double**|  
+|Liczba zmiennoprzecinkowa|<xref:System.Single>|Liczba zmiennoprzecinkowa (32-bitowy) pojedynczej precyzji.|**Single**|**float**|**float**|**float32**<br> lub<br>**single**|  
+||<xref:System.Double>|Liczba zmiennoprzecinkowa (64-bitowy) podwójnej precyzji.|**Double**|**double**|**double**|**float**<br> lub <br> **double**|  
 |Logiczne|<xref:System.Boolean>|Wartość logiczna (true lub false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Inne|<xref:System.Char>|Znak Unicode (16-bitowe).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Wartość dziesiętna (128-bitowe).|**Decimal**|**decimal**|**Decimal**|**decimal**|  

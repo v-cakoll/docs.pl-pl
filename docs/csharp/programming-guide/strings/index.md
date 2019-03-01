@@ -1,17 +1,11 @@
 ---
-title: Parametry - C# przewodnik programowania
+title: 'Parametry - C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, strings
-- strings [C#]
+  - 'C# language, strings'
+  - 'strings [C#]'
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236365"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartością tekstową. Wewnętrznie, tekst jest przechowywany jako sekwencyjną kolekcją tylko do odczytu z <xref:System.Char> obiektów. Brak nie znaku zakończenia o wartości null na końcu ciągu języka C#; w związku z tym ciąg języka C# może zawierać dowolną liczbę osadzone znaki null ('\0'). <xref:System.String.Length%2A> Właściwość ciągu reprezentuje liczbę `Char` obiektów zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punkty kodowe Unicode w ciągu, należy użyć <xref:System.Globalization.StringInfo> obiektu.  
@@ -31,22 +25,22 @@ Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartości�
 ## <a name="immutability-of-string-objects"></a>Niezmienność obiektów w postaci ciągów  
  Obiektów w postaci ciągów są *niezmienne*: nie można zmienić po ich utworzeniu. Wszystkie <xref:System.String> metody i operatory C#, które pojawiają się zmodyfikować ciągu rzeczywistości zwracają wyniki w nowym obiekcie ciągu. W poniższym przykładzie gdy zawartość `s1` i `s2` są łączone w celu utworzenia pojedynczego ciągu, niezmodyfikowanego są dwa ciągi oryginalnej. `+=` Operatora, tworzy nowy ciąg, który zawiera połączone zawartość. Nowy obiekt jest przypisany do zmiennej `s1`, a oryginalny obiekt, który został przypisany do `s1` wydane do wyrzucania elementów bezużytecznych, ponieważ nie inne zmienna zawiera odwołanie do niej.  
   
- [!code-csharp[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
   
  Ponieważ ciąg "modyfikacji" jest faktycznie nowe tworzenia ciągu, należy zachować ostrożność podczas tworzenia odwołania do ciągów. Jeśli utworzenie odwołania do ciągu, a następnie "Modyfikuj" oryginalny ciąg odwołania będzie nadal wskaż oryginalnego obiektu zamiast nowy obiekt, który został utworzony podczas modyfikacji ciągu. Poniższy kod ilustruje ten problem:  
   
- [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
  Aby uzyskać więcej informacji na temat tworzenia nowych ciągów, które są oparte na modyfikacje, takich jak wyszukiwanie i zamienianie operacji w oryginalnym ciągu, zobacz [jak: Modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Literały ciągów znaków zwykłych i Verbatim  
  Używaj literałów ciągów regularne, gdy należy osadzić znaki ucieczki dostarczana przez C#, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideStrings#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#3)]  
   
  Na użytek ciągi verbatim zwiększenie wygody działania i zwiększenia czytelności, gdy ciąg tekstu zawiera ukośnik odwrotny znaków, na przykład w ścieżkach plików. Ponieważ ciągi verbatim Zachowaj znaki nowego wiersza, jako część ciąg tekstu, ich może służyć do zainicjowania ciągi wielowierszowe. Aby osadzić znak cudzysłowu wewnątrz ciąg verbatim, należy użyć podwójnego cudzysłowu. Jedne z typowych zastosowań ciągi verbatim można znaleźć w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideStrings#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#4)]  
   
 ## <a name="string-escape-sequences"></a>Sekwencje ucieczki w ciągu  
   
@@ -131,7 +125,7 @@ string s = String.Empty;
 |[Instrukcje: Modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md)|Ilustruje techniki Przekształcanie ciągów i modyfikowania zawartości ciągów.|  
 |[Instrukcje: Porównywanie ciągów](../../how-to/compare-strings.md)|Pokazuje, jak przeprowadzić porządkowe i kultury określonej porównania ciągów.|  
 |[Instrukcje: Łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby, aby dołączyć wielu ciągów w jeden.|
-|[Instrukcje: Analizowanie ciągów za pomocą funkcji String.Split ](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób korzystania `String.Split` metodę, aby przeanalizować ciągi.|  
+|[Instrukcje: Analizowanie ciągów za pomocą funkcji String.Split](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób korzystania `String.Split` metodę, aby przeanalizować ciągi.|  
 |[Instrukcje: Wyszukiwanie ciągów](../../how-to/search-strings.md)|Opis sposobu użycia wyszukać określony tekst lub wzorców w ciągach.|  
 |[Instrukcje: Określanie, czy ciąg reprezentuje wartość numeryczną](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie przeanalizować składni ciągu, aby zobaczyć, czy ma prawidłową wartość liczbową.|  
 |[Interpolacja ciągów](../../language-reference/tokens/interpolated.md)|Zawiera opis funkcji interpolacji ciągu, która udostępnia wygodne Składnia na ciągi formatu.|

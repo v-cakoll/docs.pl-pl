@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 9d6360358b08dc0602cbdfe352bb69caee25c7bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fc447e00ca46f251a895f0de82118a11310a8d9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591989"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972654"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider — Informacje o składniku (Formularze systemu Windows)
 Formularze Windows [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) składnik jest używany do kojarzenia pomocy HTML 1.x pliku pomocy (plik chm z HTML Help Workshop, lub do pliku .htm) za pomocą aplikacji Windows. Możesz podać pomoc na wiele sposobów:  
@@ -34,7 +34,7 @@ Formularze Windows [HelpProvider](../../../../docs/framework/winforms/controls/h
  Jeśli <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> nie został ustawiony, należy użyć <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> zapewnienie tekst pomocy. Jeśli ustawisz zarówno <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> i ciąg pomocy na podstawie pomocy <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> mają wyższy priorytet.  
   
 > [!NOTE]
->  Mogą wystąpić problemy przy użyciu ścieżki względnej podczas określenie ścieżki do pliku pomocy w <xref:System.Windows.Forms.Help.ShowHelp%2A> metody lub <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> właściwość <xref:System.Windows.Forms.HelpProvider> kontroli. Jako takie Pamiętaj określić plik pomocy za pomocą ścieżki bezwzględnej.  
+>  Mogą wystąpić problemy przy użyciu ścieżki względnej, określając ścieżkę do pliku pomocy w <xref:System.Windows.Forms.Help.ShowHelp%2A> metody lub <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> właściwość <xref:System.Windows.Forms.HelpProvider> kontroli. Jako takie Pamiętaj określić plik pomocy za pomocą ścieżki bezwzględnej.  
   
 ## <a name="see-also"></a>Zobacz także
 - [Systemy Pomocy w aplikacjach Windows Forms](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)

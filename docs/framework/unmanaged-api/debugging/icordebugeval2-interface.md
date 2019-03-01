@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEval2, interfejs1
+title: ICorDebugEval2 — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEval2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c50dc8e40b6565ae1bf3a5d83f4deb80d2bf0a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4315c9f5296e8c3ffc9d8241b929c71c2448db6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712986"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965868"
 ---
-# <a name="icordebugeval2-interface1"></a>ICorDebugEval2, interfejs1
+# <a name="icordebugeval2-interface"></a>ICorDebugEval2 — Interfejs
+
 Rozszerza "ICorDebugEval" w celu zapewnienia obsługi typów ogólnych.  
   
 ## <a name="methods"></a>Metody  

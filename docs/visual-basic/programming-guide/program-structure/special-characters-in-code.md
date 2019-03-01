@@ -30,12 +30,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 1541ac1793c9f3c082b688fecd4eb82fb5b59590
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17b5fcc2be2730abfd7ee0090f9f34053e81c5f8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726731"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971900"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Znaki specjalne w Code (Visual Basic)
 Czasami trzeba używać znaków specjalnych w kodzie, czyli niedozwolone znaki numeryczne lub alfabetycznego. Interpunkcja i znaki specjalne w zestawie znaków języka Visual Basic mają różne przypadki z organizowania tekstu do definiowania zadań, które kompilator lub skompilowany program wykonuje. Nie należy określać operacji do wykonania.  
@@ -43,14 +43,14 @@ Czasami trzeba używać znaków specjalnych w kodzie, czyli niedozwolone znaki n
 ## <a name="parentheses"></a>Nawiasy  
  Użyj nawiasów, gdy zdefiniowania procedury, takich jak `Sub` lub `Function`. Wszystkie listy argumentów procedury należy ująć w nawiasy. Możesz także użyć nawiasów za wprowadzanie argumentów lub zmienne w grupy logiczne, szczególnie, aby zastąpić domyślną kolejność pierwszeństwa operatorów w wyrażeniu złożone. Ilustruje to poniższy przykład.  
   
- [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
  Następujące wykonywanie poprzedniego kodu, a wartość `d` 8.225 i wartość `e` to 3. Obliczanie dla `d` używa priorytet domyślny `/` za pośrednictwem `+` i jest odpowiednikiem `d = b + (c / a)`. Nawiasy w obliczaniu `e` zastąpić domyślny priorytet.  
   
 ## <a name="separators"></a>Separatorach  
  Separatory czy sugeruje nazwy: oddzielają sekcje kodu. W języku Visual Basic separatorem jest dwukropek (`:`). Separatory należy użyć uwzględnić wiele instrukcji w jednym wierszu, a nie oddzielnych wierszach. To pozwala zaoszczędzić miejsce i poprawia czytelność kodu. Poniższy przykład pokazuje trzy instrukcje rozdzielone średnikami.  
   
- [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
  Aby uzyskać więcej informacji, zobacz [jak: Przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
@@ -59,7 +59,7 @@ Czasami trzeba używać znaków specjalnych w kodzie, czyli niedozwolone znaki n
 ## <a name="concatenation"></a>Połączenie (konkatenacja)  
  Użyj `&` operator *łączenia*, lub ze sobą łączenia ciągów. Nie należy mylić z `+` operatora, który dodaje wartości liczbowych. Jeśli używasz `+` operatora do łączenia podczas działania w przypadku wartości numerycznych, można uzyskać niepoprawnych wyników. Poniższy przykład przedstawia to.  
   
- [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_3.vb)]  
+ [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
  Następujące wykonywanie poprzedniego kodu, a wartość `resultA` 21.01 i wartość `resultB` jest "10.0111".  
   
@@ -69,12 +69,12 @@ Czasami trzeba używać znaków specjalnych w kodzie, czyli niedozwolone znaki n
 ### <a name="dot--operator"></a>Kropka (.) Operator  
  Użyj `.` operator dla klasy, struktury, interfejs lub wyliczenie jako operator dostępu do elementu członkowskiego. Element członkowski może być pola, właściwości, zdarzenia lub metody. Ilustruje to poniższy przykład.  
   
- [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_4.vb)]  
+ [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
 ### <a name="exclamation-point--operator"></a>Wykrzyknika (!) Operator  
  Użyj `!` operatora tylko na klasę lub interfejs jako operator dostępu do słownika. Klasa lub interfejs musi mieć właściwość domyślną, która akceptuje pojedynczy `String` argumentu. Identyfikator natychmiast po `!` operator staje się wartość argumentu przekazanego do właściwości domyślnej jako ciąg. Poniższy przykład przedstawia to.  
   
- [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_5.vb)]  
+ [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
  Trzy wiersze w danych wyjściowych `MsgBox` wyświetlanie wszystkich wartości `32856`. Pierwszy wiersz używa tradycyjny dostęp do właściwości `index`, drugi wykorzystuje fakt, `index` jest domyślną właściwością klasy `hasDefault`, a trzeci używa dostęp do słownika do klasy.  
   

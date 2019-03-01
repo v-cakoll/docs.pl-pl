@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835515"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967168"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Tworzenie aplikacji platformy ASP.NET Core 2.1 wdrażane jako kontenery systemu Linux do programu orchestrator AKS/Kubernetes
 
@@ -29,7 +29,7 @@ Poniższe przykłady zapoznaj się z tworzenia aplikacji platformy ASP.NET Core 
 
 Platforma ASP.NET Core to platforma deweloperska ogólnego przeznaczenia obsługiwane przez firmę Microsoft i społeczności platformy .NET w witrynie GitHub. Jest dla wielu platform, obsługi Windows, macOS i Linux i mogą być używane w urządzeń, chmury i scenariuszach osadzonych IoT.
 
-W tym przykładzie użyto prosty projekt oparty na podstawie interfejsu API sieci Web programu Visual Studio szablonu, więc nie potrzebujesz żadnej wiedzy dodatkowe do utworzenia przykładu. Musisz utworzyć projekt przy użyciu standardowego szablonu, który zawiera wszystkie elementy, aby uruchomić małych projektów za pomocą interfejsu API REST, przy użyciu technologii ASP.NET Core 2.1.
+W tym przykładzie użyto prostego projektu, który opiera się na szablon interfejsu API sieci Web programu Visual Studio, więc nie potrzebujesz żadnej wiedzy dodatkowe do tworzenia przykładu. Musisz utworzyć projekt przy użyciu standardowego szablonu, który zawiera wszystkie elementy, aby uruchomić małych projektów za pomocą interfejsu API REST, przy użyciu technologii ASP.NET Core 2.1.
 
 ![Dodaj okno nowego projektu w programie Visual Studio, wybierając aplikację sieci Web programu ASP.NET Core.](media/create-aspnet-core-application.png)
 

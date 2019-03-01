@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: e52e5857d9fbe70cbd71ec91f8aa0c49b0e85df8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552310"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965556"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Używanie przestrzeni nazw (Przewodnik programowania w języku C#)
 Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposoby. Po pierwsze klas .NET Framework umożliwia organizowanie jego wiele klas przestrzenie nazw. Po drugie deklarowania własne przestrzenie nazw może kontrolować zakres klasy i metody nazwy w dużych projektach programowania.  
@@ -23,32 +23,32 @@ Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposob
   
  Na przykład, w tym wierszu:  
   
- [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]  
+ [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
   
  Na początku programu programisty należy użyć kodu:  
   
- [!code-csharp[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]  
+ [!code-csharp[csProgGuide#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#31)]  
   
  Zamiast:  
   
- [!code-csharp[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]  
+ [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
 ## <a name="namespace-aliases"></a>Aliasy Namespace  
  [Użycie dyrektywy](../../../csharp/language-reference/keywords/using-directive.md) może również służyć do tworzenia aliasów [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md). Na przykład jeśli używasz poprzednio wpisaną przestrzeni nazw, która zawiera zagnieżdżone przestrzenie nazw, możesz zechcieć do deklarowania aliasem, aby umożliwić odwoływanie się do jednego w szczególności, jak w poniższym przykładzie skrót:  
   
- [!code-csharp[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
+ [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>Używanie przestrzeni nazw do zakresu kontroli  
  `namespace` Słowo kluczowe jest używane do deklarowania zakresu. Możliwość tworzenia zakresów w obrębie projektu ułatwia organizowanie kodu i pozwala na tworzenie typów globalnie unikatowa. W poniższym przykładzie klasę o nazwie `SampleClass` jest zdefiniowany w dwie przestrzenie nazw, jednej zagnieżdżone wewnątrz innych. [. Operator](../../../csharp/language-reference/operators/member-access-operator.md) jest używany do odróżnienia, która metoda jest wywoływana.  
   
- [!code-csharp[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
+ [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
 ## <a name="fully-qualified-names"></a>W pełni kwalifikowane nazwy  
  Obszary nazw i typy mają unikatowe tytuły opisanego przez w pełni kwalifikowanych nazw, które wskazują logicznej hierarchii. Na przykład instrukcja `A.B` oznacza, że `A` jest nazwą przestrzeni nazw lub typu, i `B` zagnieździć go.  
   
  W poniższym przykładzie istnieją zagnieżdżonych klas i przestrzenie nazw. W pełni kwalifikowana nazwa jest wskazywane jako komentarz następujące każdej jednostki.  
   
- [!code-csharp[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]  
+ [!code-csharp[csProgGuideNamespaces#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#9)]  
   
  W poprzednim segment kodu:  
   
@@ -62,27 +62,27 @@ Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposob
   
  Korzystając z poprzedniego segmentu kodu, można dodać nowy element członkowski klasy `C3`, do przestrzeni nazw `N1.N2` w następujący sposób:  
   
- [!code-csharp[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]  
+ [!code-csharp[csProgGuideNamespaces#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#10)]  
   
  Ogólnie rzecz biorąc, użyj `::` można odwoływać się do aliasu przestrzeni nazw lub `global::` można odwoływać się do globalnej przestrzeni nazw i `.` kwalifikowania typów ani elementów członkowskich.  
   
  Jest to błąd, aby użyć `::` z aliasem, który odwołuje się do typu, a nie przestrzeń nazw. Na przykład:  
   
- [!code-csharp[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
+ [!code-csharp[csProgGuideNamespaces#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#11)]  
   
- [!code-csharp[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]  
+ [!code-csharp[csProgGuideNamespaces#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#12)]  
   
  Należy pamiętać, że wyraz `global` nie jest wstępnie zdefiniowanej w alias; w związku z tym, `global.X` nie ma żadnego specjalnego znaczenia. Uzyskuje, specjalne, co oznacza tylko wtedy, gdy jest używana z `::`.  
   
  Kompilator ostrzeżenie CS0440 jest generowany, jeśli zdefiniujesz aliasu o nazwie global ponieważ `global::` zawsze odwołuje się do globalnej przestrzeni nazw, a nie do aliasu. Na przykład następujące polecenie generuje ostrzeżenie:  
   
- [!code-csharp[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]  
+ [!code-csharp[csProgGuideNamespaces#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#13)]  
   
  Za pomocą `::` dobrym pomysłem jest z użyciem aliasów i chroni przed nieoczekiwanego wprowadzenia dodatkowych typów. Na przykład rozważmy następujący przykład:  
   
- [!code-csharp[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]  
+ [!code-csharp[csProgGuideNamespaces#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#14)]  
   
- [!code-csharp[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]  
+ [!code-csharp[csProgGuideNamespaces#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#15)]  
   
  To działa, ale jeśli typu o nazwie `Alias` zostały następnie zostać wprowadzony `Alias.` czy zamiast tego powiązania do tego typu. Za pomocą `Alias::Exception` ubezpieczycielom, `Alias` jest traktowana jako alias przestrzeni nazw, a nie mylone z typem.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Iteracja po katalogach plików z wykorzystaniem klas równoległych'
+title: 'Instrukcje: Iteracja katalogów plików przy użyciu klas równoległych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c1ec270159430434adc074f1fa6ca92ec3c4a455
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45596379"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965270"
 ---
-# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Porady: Iteracja po katalogach plików z wykorzystaniem klas równoległych
-W wielu przypadkach, iteracja po plikach jest operacją, która może zostać łatwo zrównoleglona. Temat [porady: iterowanie katalogów plików przy użyciu PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) pokazuje najprostszy sposób wykonania tego zadania dla wielu scenariuszy. Jednak mogą pojawić się komplikacje, gdy w kodzie trzeba sobie poradzić z wieloma rodzajami wyjątków, które mogą zostać zgłoszone podczas dostępu do systemu plików. W poniższym przykładzie pokazano jedno z podejść do problemu. Użyto w nim iteracji opartej na stosie, aby przejść przez wszystkie pliki i foldery w określonym katalogu, co umożliwia przechwytywanie i obsługę różnych wyjątków w kodzie. Oczywiście sposób obsługi wyjątków zależy od dewelopera.  
+# <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Instrukcje: Iteracja katalogów plików przy użyciu klas równoległych
+W wielu przypadkach, iteracja po plikach jest operacją, która może zostać łatwo zrównoleglona. Temat [jak: Iteracja katalogów plików przy użyciu PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) pokazuje najprostszy sposób wykonania tego zadania dla wielu scenariuszy. Jednak mogą pojawić się komplikacje, gdy w kodzie trzeba sobie poradzić z wieloma rodzajami wyjątków, które mogą zostać zgłoszone podczas dostępu do systemu plików. W poniższym przykładzie pokazano jedno z podejść do problemu. Użyto w nim iteracji opartej na stosie, aby przejść przez wszystkie pliki i foldery w określonym katalogu, co umożliwia przechwytywanie i obsługę różnych wyjątków w kodzie. Oczywiście sposób obsługi wyjątków zależy od dewelopera.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie iteracja po katalogach jest wykonywana sekwencyjnie, ale przetwarzanie plików jest równoległe. Prawdopodobnie jest to najlepsze podejście, gdy stosunek liczby plików do liczby katalogów jest wysoki. Możliwe jest również zrównoleglenie iteracji po katalogach i sekwencyjny dostęp do każdego pliku. Zrównoleglanie obu pętli będzie prawdopodobnie nieskuteczne, dopóki nie określisz komputera docelowego z dużą liczbą procesorów. Jednak we wszystkich przypadkach należy dokładnie przetestować aplikację, aby określić najlepsze podejście.  
@@ -30,7 +30,7 @@ W wielu przypadkach, iteracja po plikach jest operacją, która może zostać ł
   
  W przykładzie użyto zmiennej lokalnej `fileCount` do utrzymywania licznika całkowitej liczby przetworzonych plików. Ponieważ dostęp do zmiennej może być uzyskiwany współbieżnie, przez wiele zadań, jest on synchronizowany przez wywołanie metody <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>.  
   
- Zauważ, że jeśli w głównym wątku zgłoszony zostanie wyjątek, wątki uruchomione w metodzie <xref:System.Threading.Tasks.Parallel.ForEach%2A> mogą kontynuować działanie. Aby zatrzymać te wątki, możesz ustawić zmienną logiczną w metodach obsługi wyjątków i sprawdzać jej wartość podczas każdej iteracji pętli równoległej. Jeśli wartość wskazuje, że zgłoszony został wyjątek, użyj zmiennej <xref:System.Threading.Tasks.ParallelLoopState>, aby zatrzymać lub przerwać pętlę. Aby uzyskać więcej informacji, zobacz [porady: zatrzymywanie lub przerywanie równoległej pętli for](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).  
+ Zauważ, że jeśli w głównym wątku zgłoszony zostanie wyjątek, wątki uruchomione w metodzie <xref:System.Threading.Tasks.Parallel.ForEach%2A> mogą kontynuować działanie. Aby zatrzymać te wątki, możesz ustawić zmienną logiczną w metodach obsługi wyjątków i sprawdzać jej wartość podczas każdej iteracji pętli równoległej. Jeśli wartość wskazuje, że zgłoszony został wyjątek, użyj zmiennej <xref:System.Threading.Tasks.ParallelLoopState>, aby zatrzymać lub przerwać pętlę. Aby uzyskać więcej informacji, zobacz [jak: Zatrzymywanie lub przerywanie równoległej pętli for](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: c57ba732c5139d7ead85372323f9433bd3137622
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67ade9ae41e90d8320e1b798ccfcd89cef8055a3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570216"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966427"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Implementacja interfejsu jawnego (Przewodnik programowania w języku C#)
 Jeśli [klasy](../../../csharp/language-reference/keywords/class.md) implementuje dwa interfejsy, które zawierają element członkowski o tym samym podpisie, a następnie wykonywania tego elementu członkowskiego w klasie spowoduje, że oba interfejsy do użycia tego elementu członkowskiego jako ich implementacji. W poniższym przykładzie, wszystkie wywołania do `Paint` wywołania tej samej metody.  
@@ -20,7 +20,7 @@ Jeśli [klasy](../../../csharp/language-reference/keywords/class.md) implementuj
   
  Jeśli dwa [interfejsu](../../../csharp/language-reference/keywords/interface.md) elementy członkowskie nie wykonuj tę samą funkcję, jednak może to spowodować niepoprawne implementację jeden lub oba interfejsy. Można jawnie implementować składowej interfejsu — tworzenie składowej klasy, która jest wywoływana tylko za pośrednictwem interfejsu i specyficzne dla tego interfejsu. Jest to realizowane za pomocą nazw składowej klasy o nazwie interfejsu i kropką. Na przykład:  
   
- [!code-csharp[csProgGuideInheritance#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#40)]  
   
  Składowa klasy `IControl.Paint` jest dostępna tylko `IControl` interfejsu, a `ISurface.Paint` jest dostępna tylko `ISurface`. Zarówno implementacje metod są niezależne i nie będzie dostępny bezpośrednio w klasie. Na przykład:  
   
@@ -28,11 +28,11 @@ Jeśli [klasy](../../../csharp/language-reference/keywords/class.md) implementuj
   
  Jawna implementacja jest również używany do rozpoznawania przypadki, w której dwa interfejsy zadeklarować inne elementy członkowskie o takiej samej nazwie, takie jak właściwości i metody:  
   
- [!code-csharp[csProgGuideInheritance#42](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#42)]  
   
  Aby zaimplementować obu interfejsów, klasa ma używać jawnych implementacji P właściwości lub metody P i / lub, aby uniknąć błąd kompilatora. Na przykład:  
   
- [!code-csharp[csProgGuideInheritance#43](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/explicit-interface-implementation_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#43)]  
   
 ## <a name="see-also"></a>Zobacz także
 

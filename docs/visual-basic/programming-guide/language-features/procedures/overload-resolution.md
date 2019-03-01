@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 734cc521fe2e8b7af5ca594ced8c3a0a22603af7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525953"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966232"
 ---
 # <a name="overload-resolution-visual-basic"></a>Rozpoznanie przeciążenia (Visual Basic)
 Gdy kompilator języka Visual Basic napotyka wywołanie procedury, która jest zdefiniowana w kilku przeciążone wersje, kompilator należy zdecydować, której przeciążenia do wywołania. Dzieje się tak, wykonując następujące czynności:  
@@ -41,9 +41,9 @@ Rozpoznawanie między przeciążone wersje
   
  Poniższy przykład ilustruje ten proces rozpoznawania przeciążenia.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  W pierwszym wywołaniu kompilator eliminuje pierwsze przeciążenie, ponieważ typ pierwszego argumentu (`Short`) powoduje zawężenie typu odpowiadającego mu parametru (`Byte`). Następnie eliminuje trzecie przeciążenie ponieważ każdy argument typu w drugie przeciążenie (`Short` i `Single`) rozszerza się na odpowiedni typ w trzecie przeciążenie (`Integer` i `Single`). Drugie przeciążenie wymaga mniej rozszerzenia, dlatego kompilator używa go na potrzeby wywołania.  
   

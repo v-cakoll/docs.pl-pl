@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: bbc18a8b25e0de128cc2c1828213212adad108ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06188560163491284eab0dcfc4bba6b029e65ce8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719498"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969287"
 ---
 # <a name="iterator-visual-basic"></a>Iterator (Visual Basic)
 Określa, że funkcja lub `Get` metody dostępu jest iteratorem.  
@@ -41,12 +41,12 @@ Określa, że funkcja lub `Get` metody dostępu jest iteratorem.
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano funkcji iteratora. Funkcja iteratora ma `Yield` instrukcji, która znajduje się wewnątrz [dla... Następny](../../../visual-basic/language-reference/statements/for-next-statement.md) pętli. Każda iteracja [dla każdego](../../../visual-basic/language-reference/statements/for-each-next-statement.md) treść instrukcji w `Main` tworzy wywołanie `Power` funkcji iteratora. Każde wywołanie funkcji iteratora przechodzi do następnego wykonania `Yield` instrukcję, która występuje w ciągu następnej iteracji `For…Next` pętli.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano `Get` metodę dostępu, która jest iteratorem. `Iterator` Modyfikator znajduje się w deklaracji właściwości.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
  Aby uzyskać więcej przykładów, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
   

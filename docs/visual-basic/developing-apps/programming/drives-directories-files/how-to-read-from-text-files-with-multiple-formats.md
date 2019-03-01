@@ -11,12 +11,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: fd48f77a299c5d29a32f96e4e063e262ad20fd18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 589b5f94358cf9ce58e47a8a0eaec187aface98d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678502"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964750"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Instrukcje: Odczyt z plików tekstowych w wielu formatach w Visual Basic
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> Obiekt umożliwia łatwe oraz efektywne analizowanie strukturyzowanych plików tekstowych, takie jak dzienniki. Pozwala na przetwarzanie plików w wielu formatach za pomocą `PeekChars` metodę, aby określić format każdego wiersza, ponieważ przeanalizować za pomocą pliku.  
@@ -36,24 +36,24 @@ ms.locfileid: "54678502"
   
 2.  Zdefiniuj oczekiwanego formatu i format używany przy zwróci błąd. Ostatni wpis w każdej macierzy -1, w związku z tym ostatnim polu zakłada się, że o zmiennej szerokości. Dzieje się tak, gdy ostatni wpis w tablicy jest mniejsza lub równa 0.  
   
-     [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
+     [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
 3.  Utwórz nową <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> obiekt, definiujący szerokości i format.  
   
-     [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
+     [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
 4.  W pętli poprzez wierszy, testowanie pod kątem formatu przed przeczytaniem.  
   
-     [!code-vb[VbFileIORead#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_3.vb)]  
+     [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
 5.  Błędy zapisu do konsoli.  
   
-     [!code-vb[VbFileIORead#7](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_4.vb)]  
+     [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   
 ## <a name="example"></a>Przykład  
  Oto kompletny przykład, która odczytuje z pliku `testfile.txt`.  
   
- [!code-vb[VbFileIORead#8](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_5.vb)]  
+ [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  

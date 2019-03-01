@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179432"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965621"
 ---
 # <a name="xml-and-soap-serialization"></a>Serializacja XML i SOAP
 
@@ -34,7 +34,7 @@ Udostępnia ogólne definicji serializacji, zwłaszcza serializacji XML.
 [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)  
 Instrukcje krok po kroku dotyczący dla serializacji obiektu.
 
-[Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)  
+[Instrukcje: Deserializacji obiektu](how-to-deserialize-an-object.md)  
 Instrukcje krok po kroku deserializacji obiektu.
 
 [Przykłady serializacji XML](examples-of-xml-serialization.md)  
@@ -49,10 +49,10 @@ Opisuje sposób kontroluje serializacji przy użyciu atrybutów.
 [Atrybuty kontrolujące serializację XML](attributes-that-control-xml-serialization.md)  
 Wyświetla listę atrybutów, które są używane do kontrolowania serializacji XML.
 
-[Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+[Instrukcje: Określ nazwę elementu alternatywny Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
 Przedstawia informacje o zaawansowanym scenariuszu prezentujący do generowania wielu strumieni XML przez zastąpienie serializacji.
 
-[Instrukcje: Kontrola serializacji klas pochodnych](how-to-control-serialization-of-derived-classes.md)  
+[Instrukcje: Kontrola serializacji w klasach pochodnych](how-to-control-serialization-of-derived-classes.md)  
 Zawiera przykładowy sposób kontroluje serializacji w klasach pochodnych.
 
 [Instrukcje: Kwalifikowanie elementu XML i nazw atrybutów XML](how-to-qualify-xml-element-and-xml-attribute-names.md)  
@@ -61,10 +61,10 @@ Opisuje sposób definiowania i kontrolować sposób, w których XML obszary nazw
 [Serializacja XML z usługami internetowymi XML](xml-serialization-with-xml-web-services.md)  
 W tym artykule wyjaśniono, jak serializacji XML jest używany w usługach sieci Web XML.
 
-[Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+[Instrukcje: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
 Opisuje sposób używania <xref:System.Xml.Serialization.XmlSerializer> klasy w celu utworzenia zakodowany strumieni XML protokołu SOAP, które są zgodne z części 5 dokumentu World Wide Web Consortium (W3C) [proste obiektu dostępu protokołu (protokołu SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/).
 
-[Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP](how-to-override-encoded-soap-xml-serialization.md)  
+[Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML](how-to-override-encoded-soap-xml-serialization.md)  
 Opisuje proces zastępowanie serializacji obiektów XML jako komunikaty protokołu SOAP.
 
 [Atrybuty kontrolujące zakodowaną serializację SOAP](attributes-that-control-encoded-soap-serialization.md)  
@@ -73,21 +73,18 @@ Wyświetla listę atrybutów, które są używane do kontrolowania serializacji 
 [\<system.xml.serialization> Element](system-xml-serialization-element.md)  
 Element konfiguracji najwyższego poziomu do sterowania serializacji XML.
 
-[\<dateTimeSerialization > Element](datetimeserialization-element.md)  
+[\<dateTimeSerialization> Element](datetimeserialization-element.md)  
 Określa tryb serializacji <xref:System.DateTime> obiektów.
 
-[\<schemaImporterExtensions > Element](schemaimporterextensions-element.md)  
+[\<schemaImporterExtensions> Element](schemaimporterextensions-element.md)  
 Zawiera typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.
 
-[\<Dodaj >, Element dla \<schemaImporterExtensions >](add-element-for-schemaimporterextensions.md)  
+[\<add> Element for \<schemaImporterExtensions>](add-element-for-schemaimporterextensions.md)  
 Dodaje typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Zaawansowanych technologii.](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
-Łącza do dodatkowych informacji zadań związanych z projektowaniem zaawansowane i techniki programistyczne w programie .NET Framework.
-
-[Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+[Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))  
 Zawiera tematy, które opisują, a wyjaśniają, jak program usług XML sieci Web za pomocą programu ASP.NET.
 
 ## <a name="see-also"></a>Zobacz także

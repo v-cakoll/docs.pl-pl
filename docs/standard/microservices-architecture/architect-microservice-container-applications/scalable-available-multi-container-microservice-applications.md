@@ -4,12 +4,12 @@ description: Odkryj opcje do organizowania mikrousług i wielokontenerowych apli
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307438"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980233"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
 
@@ -137,9 +137,11 @@ Jak pokazano na rysunku 4-26 najbardziej różnicowych funkcji w Azure Dev miejs
 
 W zasadzie można skonfigurować miejsce na udostępnionym deweloperów na platformie Azure. Każdy deweloper może skupić się na ich części aplikacji, można iteracyjne tworzenie kodu wstępnego zatwierdzenia w miejsce deweloperów, która już zawiera wszystkich innych usług i zasobów, które zależą od ich scenariuszy w chmurze. Zależności są zawsze aktualne, a deweloperzy pracują nad w sposób, który odzwierciedla produkcji.
 
-Usługa Azure Dev spacje wprowadza pojęcie obszarem, co pozwala na pracę w izolacji i bez obawiać się, że przerwanie członków zespołu. Ta funkcja opiera się na adres URL przed poprawki, więc jeśli za pomocą dowolnego prefiksu przestrzeni dev w adresie URL, dla każdego kontenera żądania, będzie działać specjalnej wersji kontenera jest wdrażana dla miejsca jest ona istnieje. W przeciwnym razie zostaną uruchomione globalnego/skonsolidowane wersji.
+Usługa Azure Dev spacje wprowadza pojęcie obszarem, co pozwala na pracę w izolacji względne i bez obawiać się, że przerwanie pracy zespołu. Każdą spację dev jest częścią hierarchiczna struktura, która pozwala zastąpić jedną mikrousługi (lub wielu) z obszaru głównego dev "top", przy użyciu własnych mikrousług prac w toku.
 
-Możesz zobaczyć [strony typu wiki w ramach aplikacji eShopOnContainers na miejsca do magazynowania Azure Dev](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS), aby uzyskać praktyczne widok na konkretny przykład.
+Ta funkcja jest oparta na prefiksy URL, używając dowolnego prefiksu przestrzeni dev w adresie url, żądanie jest udostępniany z mikrousług docelowy, jeśli istnieje w przestrzeni adresowej deweloperów, w przeciwnym razie jest ona przesyłana dalej do pierwszego wystąpienia mikrousług docelowej znaleziony w hierarchii , po pewnym czasie wprowadzenie do obszaru głównego dev u góry.
+
+Możesz zobaczyć [strony typu wiki w ramach aplikacji eShopOnContainers na miejsca do magazynowania Azure Dev](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS), aby uzyskać praktyczne widok na konkretny przykład.
 
 Aby uzyskać więcej informacji Sprawdź artykuł [programowanie zespołowe za pomocą usługi Azure Dev miejsca do magazynowania](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6984e7e9f8695ff5bccdde01171733e740a5d6a7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737666"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965959"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub — Instrukcja (Visual Basic)
 Deklaruje nazwę, parametry i kod, który definiuje `Sub` procedury.  
@@ -217,14 +217,14 @@ End Sub
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Sub` instrukcji, aby zdefiniować nazwę, parametry i kod, który tworzą treści `Sub` procedury.  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie `DelayAsync` jest `Async` `Function` zawierający typ zwracany <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ma `Return` instrukcję, która zwraca liczbę całkowitą. W związku z tym, funkcja deklaracji `DelayAsync` musi mieć typ zwracany `Task(Of Integer)`. Ponieważ typem zwracanym jest `Task(Of Integer)`, oceny `Await` wyrażenia w `DoSomethingAsync` tworzy liczbą całkowitą, co pokazuje poniższa instrukcja: `Dim result As Integer = Await delayTask`.  
   
  `startButton_Click` Procedura to przykład `Async Sub` procedury. Ponieważ `DoSomethingAsync` jest `Async` funkcji, zadanie do wywołań `DoSomethingAsync` musi być oczekiwana, co pokazuje poniższa instrukcja: `Await DoSomethingAsync()`. `startButton_Click` `Sub` Procedury muszą być zdefiniowane przy użyciu `Async` modyfikator ponieważ ma ona `Await` wyrażenia.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Implements, instrukcja](implements-statement.md)

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 695f356f44bfd6ea5ad3c0a977ec31ddfbea2b05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f4778b69963c7b0df14308b3cb6312555647b92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668226"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967779"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key` — Słowo kluczowe pozwala na określenie zachowania w przypadku właściwości anonimowych typów. Tylko właściwości wyznaczone jako właściwości klucza wziąć udział w testach równości pomiędzy wystąpień typu anonimowego lub obliczania wartości Kod skrótu. Nie można zmienić wartości właściwości klucza.  
   
  Właściwości typu anonimowego wyznaczyć jako właściwość klucza poprzez umieszczenie słowa kluczowego `Key` przed jej deklaracją listy inicjowania. W poniższym przykładzie `Airline` i `FlightNo` są właściwościami klucza, ale `Gate` nie jest.  
   
- [!code-vb[VbVbalrAnonymousTypes#26](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#26)]  
   
  Po utworzeniu nowego typu anonimowego dziedziczy bezpośrednio z <xref:System.Object>. Kompilator zastępuje trzy dziedziczone elementy członkowskie: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, i <xref:System.Object.ToString%2A>. Kod zastąpienia, który jest generowany dla <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A> na podstawie właściwości klucza. Jeśli nie ma żadnych kluczy właściwości w typie <xref:System.Object.GetHashCode%2A> i <xref:System.Object.Equals%2A> nie są zastępowane.  
   
-## <a name="equality"></a>Równość  
+## <a name="equality"></a>Równości  
  Dwa wystąpienia typu anonimowego są takie same, jeśli są one wystąpień tego samego typu i wartości ich właściwości klucza są takie same. W poniższych przykładach `flight2` jest równa `flight1` z poprzedniego przykładu, ponieważ są one wystąpień tego samego anonimowy typ i mają pasujących wartości ich właściwości klucza. Jednak `flight3` nie jest równa `flight1` ponieważ ma ona inną wartość dla klucza właściwości `FlightNo`. Wystąpienie `flight4` nie jest taki sam jak `flight1` ponieważ one wyznaczyć różnych właściwości jako właściwości klucza.  
   
- [!code-vb[VbVbalrAnonymousTypes#27](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_2.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#27)]  
   
  Jeśli dwa wystąpienia są uznane za pomocą tylko niekluczowych właściwości, identyczne nazwę, typ, kolejność i wartości, dwa wystąpienia nie są równe. Wystąpienie bez właściwości klucza jest równe tylko do samego siebie.  
   
@@ -38,20 +38,20 @@ ms.locfileid: "54668226"
   
  Wystąpienia typu anonimowego, które mają takie same wartości wszystkich właściwości klucza mają taką samą wartość kodu wyznaczania wartości skrótu, nawet jeśli niekluczowych właściwości nie mają pasujących wartości. Poniższa instrukcja zwraca `True`.  
   
- [!code-vb[VbVbalrAnonymousTypes#37](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_3.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#37)]  
   
  Wystąpienia typu anonimowego, które mają różne wartości dla co najmniej jedną właściwość klucza mają wartości kodu inny skrót. Poniższa instrukcja zwraca `False`.  
   
- [!code-vb[VbVbalrAnonymousTypes#38](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_4.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#38)]  
   
  Wystąpienia typów anonimowych, które określają różne właściwości jako właściwości klucza nie są wystąpieniami tego samego typu. Mają one różne wartości skrótów kodu wartości, nawet wtedy, gdy nazwy i wartości wszystkich właściwości są takie same. Poniższa instrukcja zwraca `False`.  
   
- [!code-vb[VbVbalrAnonymousTypes#39](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_5.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
 ## <a name="read-only-values"></a>Wartości tylko do odczytu  
  Nie można zmienić wartości właściwości klucza. Na przykład w `flight1` w wcześniejszych przykładach `Airline` i `FlightNo` pola są tylko do odczytu, ale `Gate` można zmienić.  
   
- [!code-vb[VbVbalrAnonymousTypes#28](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_6.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Definicja typu anonimowego](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)

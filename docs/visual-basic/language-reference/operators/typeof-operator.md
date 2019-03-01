@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 2695f517c42fb944d21f57aec829bbf8a864af17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27fdef4012d4724d45b4e990ce449bdfe09feaa6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596738"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965062"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf — Operator (Visual Basic)
 Porównuje zmienną obiektu odwołania do typu danych.  
@@ -58,7 +58,7 @@ result = TypeOf objectexpression IsNot typename
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `TypeOf`... `Is` wyrażeń, które umożliwiają przetestowanie zgodności typu dwóch obiektów zmienne odwołania z różnych typów danych.  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
  Zmienna `refInteger` ma typ środowiska wykonawczego `Integer`. Jest to zgodne z `Integer` , ale nie z `Double`. Zmienna `refForm` ma typ środowiska wykonawczego <xref:System.Windows.Forms.Form>. Jest to zgodne z <xref:System.Windows.Forms.Form> , ponieważ jego typ, jest z <xref:System.Windows.Forms.Control> ponieważ <xref:System.Windows.Forms.Form> dziedziczy <xref:System.Windows.Forms.Control>i <xref:System.ComponentModel.IComponent> ponieważ <xref:System.Windows.Forms.Form> dziedziczy <xref:System.ComponentModel.Component>, który implementuje <xref:System.ComponentModel.IComponent>. Jednak `refForm` nie jest zgodny z <xref:System.Windows.Forms.Label>.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 7c20292a906ecfbf08311a616e05a02cd8f8a25c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5fbf74f30e5fc6abd9e1c5542eaadc7e3fcf552
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731702"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977568"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, który kontroluje, czy mogą być używane z innym kodem w swoim zestawie lub innych zestawów. Następujące modyfikatory dostępu służy do określania dostępność typu lub elementu członkowskiego, gdy trzeba je zadeklarować:  
@@ -33,7 +33,7 @@ Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, któ
   
  Poniższe przykłady pokazują, jak określić modyfikatorów dostępu dla typów i elementów członkowskich:  
   
- [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
  Nie wszystkie modyfikatory dostępu mogą być używane przez wszystkie typy lub elementy członkowskie we wszystkich kontekstach, a w niektórych przypadkach dostępność składowej typu jest ograniczony przez dostępność jej typ zawierający. Poniższe sekcje zawierają więcej szczegółów na temat ułatwień dostępu.  
   
@@ -59,7 +59,7 @@ Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, któ
   
  Aby ustawić poziom dostępu dla elementu członkowskiego klasy lub struktury, Dodaj słowo kluczowe odpowiednie do deklaracji elementu członkowskiego, jak pokazano w poniższym przykładzie.  
   
- [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
 >  Poziom chronionych wewnętrznych ułatwień dostępu oznacza, że nie chronionych i wewnętrznych, chronionych i wewnętrznych. Innymi słowy chronionych wewnętrznych elementu członkowskiego jest możliwy z dowolnej klasy w tym samym zestawie, łącznie z klas pochodnych. Aby ograniczyć dostępność do tylko klasy pochodne z tego samego zestawu, Zadeklaruj samej klasy wewnętrznej i zadeklarować składowych jako chroniony. Ponadto począwszy od C# 7.2, możesz użyć modyfikator dostępu prywatnego chronionych aby osiągnąć ten sam wynik nie jest potrzebne zapewnienie klasa zawierająca wewnętrzny.  

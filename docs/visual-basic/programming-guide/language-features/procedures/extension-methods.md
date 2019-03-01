@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: c34108b9eb53da77a48afb5d270dce9a32289c99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731117"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970551"
 ---
 # <a name="extension-methods-visual-basic"></a>Metody rozszerzeń (Visual Basic)
 Metody rozszerzające umożliwiają programistom dodawanie niestandardowych funkcji do typów danych, które są już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzające umożliwiają napisanie metody, która może być wywoływany tak, jakby jego była wystąpieniem metody istniejącego typu.  
@@ -27,17 +27,17 @@ Metody rozszerzające umożliwiają programistom dodawanie niestandardowych funk
 ### <a name="description"></a>Opis  
  W poniższym przykładzie zdefiniowano `Print` rozszerzenie <xref:System.String> — typ danych. Metoda używa `Console.WriteLine` do wyświetlenia ciągu. Wartość parametru `Print` metody `aString`, ustala, że metoda rozszerza <xref:System.String> klasy.  
   
- [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
  Należy zauważyć, że definicja metody rozszerzenia jest oznaczona atrybutem rozszerzenia `<Extension()>`. Oznaczanie modułu, w którym metoda jest określona jest opcjonalne, ale każda metoda rozszerzenia musi być oznaczona. <xref:System.Runtime.CompilerServices> muszą być importowane w celu uzyskania dostępu do atrybutu rozszerzenia.  
   
  Metody rozszerzenia mogą być deklarowane tylko w modułach. Zazwyczaj moduł, w którym zdefiniowano metody rozszerzenia nie jest tym samym module, w którym jest wywoływana. Zamiast tego modułu, który zawiera metodę rozszerzająca jest importowany, jeśli wymagane jest, aby wprowadzić dane do zakresu. Po tym jak moduł zawierający `Print` jest w zakresie, można wywołać metody, tak jakby był metodą instancji zwykłej, która nie przyjmuje żadnych argumentów, takich jak `ToUpper`:  
   
- [!code-vb[VbVbalrExtensionMethods#2](./codesnippet/VisualBasic/extension-methods_2.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]  
   
  Następny przykład `PrintAndPunctuate`, również jest rozszerzeniem <xref:System.String>, tym razem zdefiniowane za pomocą dwóch parametrów. Pierwszy parametr `aString`, ustala, że metoda rozszerzenia rozszerza <xref:System.String>. Drugi parametr `punc`, ma być ciągiem znaków interpunkcyjnych, który jest przekazywany jako argument przy wywołaniu metody. Metoda wyświetla ciąg, a następnie znaków interpunkcyjnych.  
   
- [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
   
  Metoda jest wywoływana przez wysłanie argumentu ciągu dla `punc`: `example.PrintAndPunctuate(".")`  
   
@@ -111,7 +111,7 @@ End Module
   
  Metody rozszerzenia nie są uwzględniane w późnym wiązaniu. W poniższym przykładzie instrukcja `anObject.PrintMe()` zgłasza <xref:System.MissingMemberException> wyjątek, ten sam wyjątek zostałby wyświetlony, gdyby drugi `PrintMe` definicja metody rozszerzenia zostały usunięte.  
   
- [!code-vb[VbVbalrExtensionMethods#9](./codesnippet/VisualBasic/extension-methods_4.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class6.vb#9)]  
   
 ## <a name="best-practices"></a>Najlepsze praktyki  
  Metody rozszerzenia zapewniają wygodny, zaawansowany sposób rozszerzenia istniejącego typu. Aby ich używać, istnieją pewne kwestie do rozważenia. Te zagadnienia dotyczą głównie autorów bibliotek klas, ale mogą mieć wpływ na dowolnej aplikacji, która wykorzystuje metody rozszerzeń.  
@@ -131,23 +131,23 @@ End Module
 ## <a name="extension-methods-instance-methods-and-properties"></a>Metody rozszerzające, wystąpienia metod i właściwości  
  Gdy w zakresie metoda wystąpień posiada oznaczenie, które są zgodne z argumentami instrukcji wywołania, metoda wystąpienia jest wybierana mieszcząca wszystkich metod rozszerzenia. Metoda instancji ma pierwszeństwo, nawet jeśli metoda rozszerzenia ma lepsze dopasowanie. W poniższym przykładzie `ExampleClass` zawiera metodę instancji o nazwie `ExampleMethod` posiadającą jeden parametr typu `Integer`. Metoda rozszerzenia `ExampleMethod` rozszerza `ExampleClass`, i ma jeden parametr typu `Long`.  
   
- [!code-vb[VbVbalrExtensionMethods#4](./codesnippet/VisualBasic/extension-methods_5.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]  
   
  Pierwsze wywołanie `ExampleMethod` w poniższym kodzie wywołuje metodę rozszerzenia, ponieważ `arg1` jest `Long` i jest zgodny tylko z `Long` parametru w metodzie rozszerzenia. Drugie wywołanie `ExampleMethod` ma `Integer` argument `arg2`, i wywołuje metodę wystąpienia.  
   
- [!code-vb[VbVbalrExtensionMethods#5](./codesnippet/VisualBasic/extension-methods_6.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]  
   
  Teraz Odwróć typy danych parametrów w dwóch metod:  
   
- [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#6)]  
   
  Tym razem z kodem w `Main` wywołuje metodę wystąpienia w obu przypadkach. Jest to spowodowane zarówno `arg1` i `arg2` umożliwiać konwersję rozszerzającą do `Long`, i metoda wystąpienia ma pierwszeństwo przez metoda rozszerzenia w obu przypadkach.  
   
- [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class5.vb#7)]  
   
  W związku z tym metody rozszerzenia nie może zastąpić istniejącej metody wystąpienia. Jednakże gdy metoda rozszerzająca ma taką samą nazwę jak metoda wystąpienia, ale podpisy nie będą w konflikcie, obie metody są dostępne. Na przykład jeśli klasa `ExampleClass` zawiera metodę o nazwie `ExampleMethod` która nie przyjmuje argumentów, metody rozszerzające o tej samej nazwie, ale różnych dopuszczalne są, jak pokazano w poniższym kodzie.  
   
- [!code-vb[VbVbalrExtensionMethods#8](./codesnippet/VisualBasic/extension-methods_9.vb)]  
+ [!code-vb[VbVbalrExtensionMethods#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Module3.vb#8)]  
   
  Dane wyjściowe z tego kodu jest następująca:  
   

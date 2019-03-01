@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 9be3200300de308a70559536905d1e118a4a5fe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616202"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967376"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie zestawu, który zawiera jego deklarację.  
@@ -40,7 +40,7 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
 ## <a name="example"></a>Przykład  
  Następujące klasy używa `Friend` modyfikator, aby zezwolić na inne elementy programowania, w ramach tego samego zestawu dostęp do niektórych elementów członkowskich.  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Użycie  
  Możesz użyć `Friend` modyfikator w tych kontekstach:  

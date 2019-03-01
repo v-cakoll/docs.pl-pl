@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: ded8d334c45a29e7a892b32f51d4bb1246079ecd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38c60245ff2c0b08ee731da6c1f88c30e1af8e3f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646165"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965830"
 ---
 # <a name="option-infer-statement"></a>Option Infer — Instrukcja
 Umożliwia użycie wnioskowania o typie lokalnym w zadeklarowania zmiennych.  
@@ -86,12 +86,12 @@ Funkcje IntelliSense dostępne podczas Option Infer jest wyłączona
 ## <a name="example"></a>Przykład  
  W poniższych przykładach pokazano sposób, w jaki `Option Infer` instrukcji umożliwia wnioskowanie o typie lokalnym.  
   
- [!code-vb[VbVbalrTypeInference#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#6)]  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano, że typu run-time może się różnić, gdy zmienna jest identyfikowany jako `Object`.  
   
- [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729762"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971172"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Typy anonimowe (Przewodnik programowania w języku C#)
 Typy anonimowe umożliwiają wygodne do hermetyzacji zbiór właściwości tylko do odczytu w jeden obiekt bez konieczności jawne zdefiniowanie typu najpierw. Nazwa typu jest generowanych przez kompilator i nie jest dostępna na poziomie kodu źródłowego. Typ każdej właściwości jest wnioskowany przez kompilator.  
@@ -36,7 +36,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  Jeśli nie określisz nazwy elementów członkowskich w typu anonimowego, kompilator zapewnia składowe typu anonimowego taką samą nazwę jak właściwość używana do ich inicjowania. Należy podać nazwę właściwości, który jest inicjowany za pomocą wyrażenia, jak pokazano w poprzednim przykładzie. W poniższym przykładzie są nazwami właściwości typu anonimowego `Color` i `Price`.  
   
- [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
  Zazwyczaj, gdy używasz typu anonimowego można zainicjować zmiennej został zadeklarowany zmiennej jako niejawnie typizowanej zmiennej lokalnej za pomocą [var](../../../csharp/language-reference/keywords/var.md). Nie można określić nazwę typu w deklaracji zmiennej, ponieważ tylko kompilator ma dostęp do podstawowej nazwy typu anonimowego. Aby uzyskać więcej informacji na temat `var`, zobacz [niejawnie wpisane zmienne lokalne](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

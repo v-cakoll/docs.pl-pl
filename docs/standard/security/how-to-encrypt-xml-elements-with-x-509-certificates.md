@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19edbebb4dcc4ad48c28ee427084510f8d743c5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 060bc53efa175314e00f487776c43124c39f33c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637836"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970977"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Instrukcje: Szyfrowanie elementów XML za pomocą certyfikatów X.509
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby zaszyfrować element w dokumencie XML.  Szyfrowanie XML to standardowy sposób wymiany ani nie przechowują zaszyfrowane dane XML, nie martwiąc się o łatwo odczytywanych danych.  Aby uzyskać więcej informacji na temat standardowych szyfrowanie XML, zobacz specyfikację World Wide Web Consortium (W3C) dla szyfrowanie XML znajdujący się w <https://www.w3.org/TR/xmldsig-core/>.  
   
  Szyfrowanie XML umożliwia zastąpienie dowolnego elementu XML lub dokumentów za pomocą <`EncryptedData`> element, który zawiera zaszyfrowane dane XML. <`EncryptedData`> Element może zawierać elementy podrzędne, które zawierają informacje o kluczach i procesem stosowanym podczas szyfrowania.  Szyfrowanie XML umożliwia dokumentu zawiera wiele elementów zaszyfrowanych i umożliwia elementu do zaszyfrowania wiele razy.  Przykład kodu w tej procedurze przedstawiono sposób tworzenia <`EncryptedData`> element wraz z kilku elementów podrzędnych, w które można użyć później, podczas odszyfrowywania.  
   
- W tym przykładzie szyfruje elementu XML za pomocą dwóch kluczy.  Generuje testu X.509 certyfikatu za pomocą [Certificate Creation Tool (Makecert.exe)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) i zapisuje certyfikat do magazynu certyfikatów.  Przykład następnie programowo pobiera certyfikat i używa go do zaszyfrowania — element XML przy użyciu <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> metody.  Wewnętrznie <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> metoda tworzy klucz oddzielną sesję i używa go do zaszyfrowania dokumentu XML. Ta metoda szyfruje klucz sesji i zapisuje go wraz z zaszyfrowanego pliku XML, w ramach nowego <`EncryptedData`> element.  
+ W tym przykładzie szyfruje elementu XML za pomocą dwóch kluczy. Generuje testu X.509 certyfikatu za pomocą [Certificate Creation Tool (Makecert.exe)](/windows/desktop/SecCrypto/makecert) i zapisuje certyfikat do magazynu certyfikatów. Przykład następnie programowo pobiera certyfikat i używa go do zaszyfrowania — element XML przy użyciu <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> metody. Wewnętrznie <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> metoda tworzy klucz oddzielną sesję i używa go do zaszyfrowania dokumentu XML. Ta metoda szyfruje klucz sesji i zapisuje go wraz z zaszyfrowanego pliku XML, w ramach nowego <`EncryptedData`> element.  
   
  Aby odszyfrować XML element, wystarczy wywołać <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> metody, która automatycznie pobiera certyfikat X.509 z magazynu i wykonuje niezbędne odszyfrowywania.  Aby uzyskać więcej informacji na temat odszyfrować element XML, która została zaszyfrowana przy użyciu tej procedury, zobacz [jak: Odszyfrowywanie elementów XML za pomocą certyfikatów X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md).  
   
@@ -36,7 +36,7 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>Aby zaszyfrować element XML z certyfikatem X.509  
   
-1.  Użyj [Certificate Creation Tool (Makecert.exe)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) do generowania certyfikatu X.509 testu i umieść go w magazynie użytkownika lokalnego.  Należy wygenerować klucz wymiany, i należy klucz możliwy do eksportu. Uruchom następujące polecenie:  
+1.  Użyj [Certificate Creation Tool (Makecert.exe)](/windows/desktop/SecCrypto/makecert) do generowania certyfikatu X.509 testu i umieść go w magazynie użytkownika lokalnego.  Należy wygenerować klucz wymiany, i należy klucz możliwy do eksportu. Uruchom następujące polecenie:  
   
     ```  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  

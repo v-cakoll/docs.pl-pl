@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: 435dfe497cde5a08bce8825eaf6fa73daab4348b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 927f2598e064ddcda30a13d811bc4a986207b23d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671190"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969014"
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>Instrukcje: Pobierz plik w języku Visual Basic
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> Metoda może służyć do pobrania pliku zdalnego i zapisz go do określonej lokalizacji. Jeśli `ShowUI` parametr ma wartość `True`, pojawia się okno dialogowe pokazujące postęp pobierania oraz zezwalanie użytkownikom na anulowanie operacji. Domyślnie nie są zastępowane istniejące pliki o tej samej nazwie; Jeśli chcesz zastąpić istniejące pliki, ustaw `overwrite` parametr `True`.  
@@ -37,19 +37,19 @@ ms.locfileid: "54671190"
   
 -   Użyj `DownloadFile` metody do pobierania plików, określając lokalizację pliku docelowego jako ciąg lub identyfikator URI i określając lokalizację, w którym będzie przechowywany plik. W tym przykładzie pobiera plik `WineList.txt` z `http://www.cohowinery.com/downloads` i zapisuje go do `C:\Documents and Settings\All Users\Documents`:  
   
-     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#9)]  
   
 ### <a name="to-download-a-file-specifying-a-time-out-interval"></a>Aby pobrać plik, określając interwał limitu czasu  
   
 -   Użyj `DownloadFile` metody do pobierania plików, określanie lokalizacji pliku docelowego jako ciąg lub identyfikator URI, określając lokalizację, w którym będzie przechowywany plik i określanie interwału limitu czasu w milisekundach (wartość domyślna to 1000). W tym przykładzie pobiera plik `WineList.txt` z `http://www.cohowinery.com/downloads` i zapisuje go do `C:\Documents and Settings\All Users\Documents`, określając 500 milisekund interwał limitu czasu:  
   
-     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#10)]  
   
 ### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>Aby pobrać plik, podając nazwę użytkownika i hasło  
   
 -   Użyj `DownLoadFile` metody do pobierania plików, określając lokalizację pliku docelowego jako ciąg lub identyfikator URI i określając lokalizację, w którym będzie przechowywany w pliku, nazwę użytkownika i hasło. W tym przykładzie pobiera plik `WineList.txt` z `http://www.cohowinery.com/downloads` i zapisuje go do `C:\Documents and Settings\All Users\Documents`, z nazwą użytkownika `anonymous` i pustego hasła.  
   
-     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#11)]  
   
     > [!IMPORTANT]
     >  Protokół FTP, używany przez `DownLoadFile` metoda wysyła informacje, w tym hasła w postaci zwykłego tekstu i nie powinny być używane do przesyłania informacji poufnych.  

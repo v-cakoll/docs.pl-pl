@@ -1,5 +1,5 @@
 ---
-title: GetScope, metoda1
+title: GetScope — Metoda
 ms.date: 03/30/2017
 api_name:
 - IALink.GetScope
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 782697536f5e01fa29830a64e47d960a47fe4eae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5798fc488cf4453b6abcf00a7169b1ec0b529ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663144"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965374"
 ---
-# <a name="getscope-method1"></a>GetScope, metoda1
+# <a name="getscope-method"></a>GetScope — Metoda
 Pobiera zakres importu.  
   
 ## <a name="syntax"></a>Składnia  

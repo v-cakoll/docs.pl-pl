@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 329b4f68874d29d141001800ed326a454a878ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18e35bab219003439136bc5d88f4b2f0ea6cdd1c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502901"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965751"
 ---
 # <a name="inherits-statement"></a>Inherits — Instrukcja
 Powoduje, że bieżącą klasę lub interfejs dziedziczy atrybuty, zmiennych, właściwości, procedur i zdarzeń z innej klasy lub zestawu interfejsów.  
@@ -54,12 +54,12 @@ Inherits basetypenames
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Inherits` instrukcję, aby pokazać, jak klasę o nazwie `thisClass` może dziedziczyć wszystkie elementy członkowskie klasa bazowa o nazwie `anotherClass`.  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje dziedziczenie z wielu interfejsów.  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
  Interfejs o nazwie `thisInterface` zawiera teraz wszystkie definicje w <xref:System.IComparable>, <xref:System.IDisposable>, i <xref:System.IFormattable> interfejsów dziedziczone elementy Członkowskie zapewniają odpowiednio specyficznych dla typu porównanie dwóch obiektów, zwalniając przydzielone zasoby oraz wartość obiektu jako `String`. Klasa, która implementuje `thisInterface` musi implementować każdy członek każdy interfejs podstawowy.  
   

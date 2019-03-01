@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 3f40177b717452f316672c29c6455faf33e01b4d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 531cac9bfec24577c22cb52962b2ac1eb740c5c8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282714"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975501"
 ---
 # <a name="summary-visual-basic"></a>\<Podsumowanie > (Visual Basic)
 Określa podsumowanie elementu członkowskiego.  
@@ -35,7 +35,7 @@ Określa podsumowanie elementu członkowskiego.
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `<summary>` tag do opisania `ResetCounter` metody i `Counter` właściwości.  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)

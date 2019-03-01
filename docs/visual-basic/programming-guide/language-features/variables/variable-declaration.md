@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a23d16d4ef4e90041e320c52381fa34b8b33d2d4
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fc531bb619ed54cf35d2e89b8e6df3ec7175f3f9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738750"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973551"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Deklaracja zmiennej w Visual Basic
 Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcji deklaracji zmiennych jest [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Jej lokalizacja i zawartości należy określić charakterystyki zmiennej.  
@@ -66,7 +66,7 @@ Dim l, m As Long, x, y As Single
 ## <a name="local-type-inference"></a>Wnioskowanie o typie lokalnym  
  *Wnioskowanie o typie* służy do określania typów danych zmiennych lokalnych zadeklarowana bez `As` klauzuli. Kompilator wnioskuje typ zmiennej z typu wyrażenia inicjowania. Dzięki temu można deklarować zmienne bez jawne określenie typu. W poniższym przykładzie zarówno `num1` i `num2` są silnie typizowane jako liczby całkowite.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
  Jeśli chcesz używać w przypadku wnioskowanie o typie lokalnym `Option Infer` musi być równa `On`. Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) i [Option Infer — instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   

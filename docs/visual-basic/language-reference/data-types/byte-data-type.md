@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 8c9787d52667dc026d3fe62ac7f4b3de7e838a93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 217778a21fb9f231f448436ca5a68c42e5837566
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519791"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977529"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte — typ danych (Visual Basic)
 Przechowuje 8-bitowa (1-bajtowe) liczb całkowitych bez znaku z zakresu wartości z zakresu od 0 do 255.
@@ -62,7 +62,7 @@ Dim number As Byte = &H_6A
 
  W poniższym przykładzie `b` jest `Byte` zmiennej. Instrukcje pokazują zakres zmiennej i stosowania operatory przesunięcia bitowego w odniesieniu do niego.
 
-[!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 
 ## <a name="see-also"></a>Zobacz także
 

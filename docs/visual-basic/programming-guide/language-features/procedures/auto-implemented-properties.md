@@ -9,27 +9,27 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: fdf5b8bcc53a49b31fa0fb2b71dc2702a4900503
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495465"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967207"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Właściwości zaimplementowane automatycznie (Visual Basic)
 *Właściwości zaimplementowane automatycznie* umożliwiają szybko określić właściwość klasy bez konieczności pisania kodu w celu `Get` i `Set` właściwości. Podczas pisania kodu dotyczący automatycznie implementowanej właściwości, kompilator Visual Basic automatycznie tworzy pole prywatne do przechowania zmiennej właściwość, oprócz tworzenia skojarzonego `Get` i `Set` procedur.  
   
  Przy użyciu automatycznie implementowanych właściwości właściwość, łącznie z wartości domyślnej, może być zadeklarowana w jednym wierszu. Poniższy przykład przedstawia trzy deklaracje właściwości.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
  Automatycznie implementowana właściwość jest równoważna z właściwością, dla których wartość właściwości jest przechowywana w pole prywatne. Poniższy przykład kodu pokazuje właściwości zaimplementowane automatycznie.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
  Poniższy przykład kodu pokazuje równoważny kod w poprzednim przykładzie automatycznie implementowanej właściwości.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
  Poniższy kod Pokaż Implementowanie właściwości tylko do odczytu:  
   
@@ -63,7 +63,7 @@ End Class
 ## <a name="initializing-an-auto-implemented-property"></a>Inicjowanie automatycznie implementowana właściwość  
  Dowolne wyrażenie, który może służyć do inicjowania pola jest prawidłowy dla automatycznie implementowanej właściwości inicjowania. Podczas inicjowania automatycznie implementowana właściwość wyrażenie jest obliczane i przekazywane do `Set` procedury dla właściwości. W poniższych przykładach kodu pokazano niektóre automatycznie implementowanych właściwości, które zawierają wartości początkowe.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
  Nie można zainicjować automatycznie implementowana właściwość, która jest elementem członkowskim `Interface`, czy taki, który jest oznaczony jako `MustOverride`.  
   
@@ -71,7 +71,7 @@ End Class
   
  Kiedy Deklarujesz automatycznie implementowanej właściwości w postaci tablicy, nie można określić granice tablicy jawnego. Jednakże można podać wartość za pomocą inicjatora tablicy, jak pokazano w poniższych przykładach.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Definicje właściwości, które wymagają standardowej składni  
  Właściwości zaimplementowane automatycznie to wygodne, które obsługują wiele scenariuszy programowania. Istnieją jednak sytuacje, w których nie można używać właściwości zaimplementowane automatycznie i zamiast tego należy użyć wzorca, lub *rozwinięte*, składnia właściwości.  

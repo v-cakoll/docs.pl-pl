@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731529"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967532"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Wywoływanie właściwości lub metody za pomocą nazwy ciągu (Visual Basic)
 W większości przypadków dostęp do właściwości i metod obiektu w czasie projektowania i napisać kod, aby je obsłużyć. Jednak w niektórych przypadkach użytkownik może nie wiedzieć o właściwości i metod obiektu z wyprzedzeniem lub po prostu chcesz elastyczność umożliwienie użytkownikowi końcowemu określić właściwości lub wykonywanie metod w czasie wykonywania.  
@@ -35,11 +35,11 @@ W większości przypadków dostęp do właściwości i metod obiektu w czasie pr
   
  Załóżmy, że możesz dodać odwołania do zestawu, który zawiera klasę o nazwie `MathClass`, która zawiera nową funkcję o nazwie `SquareRoot`, jak pokazano w poniższym kodzie:  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
+ [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
  Aplikacja może używać formantów pól tekstowych do kontroli, która metoda zostanie wywołana i jego argumenty. Na przykład jeśli `TextBox1` zawiera wyrażenie, które ma zostać obliczone, i `TextBox2` jest używana, wprowadź nazwę funkcji, można użyć poniższego kodu do wywołania `SquareRoot` funkcji na wyrażeniu w `TextBox1`:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
+ [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
  W przypadku wprowadzenia "64" na `TextBox1`, "SquareRoot" w `TextBox2`, a następnie wywołać `CallMath` procedurę, pierwiastek kwadratowy liczby w parametrze `TextBox1` jest oceniany. Wywołuje kod w przykładzie `SquareRoot` funkcji (który przyjmuje ciąg, który zawiera wyrażenie, które ma zostać obliczone jako wymaganego argumentu) i zwraca "8" w `TextBox1` (pierwiastek kwadratowy liczby 64). Oczywiście, jeśli użytkownik wprowadzi nieprawidłowy ciąg w `TextBox2`, jeśli ciąg zawiera nazwę właściwości zamiast metody lub jeśli metoda dodatkowe wymaganego argumentu, występuje błąd w czasie wykonywania. Trzeba dodać niezawodny kod obsługi błędów, gdy używasz `CallByName` przewidywać to lub inne błędy.  
   

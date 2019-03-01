@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 085a5f27225589989cf5b9d4b5871226624843ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d17d1d456752095dcc895eba291cd53745f9467d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554979"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968156"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Przewodnik: Pisanie zapytań w języku C# (LINQ)
 W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywania wyrażenia zapytań LINQ.  
@@ -67,7 +67,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
      Należy zauważyć, że zapytania zmienna zakresu `student`, służy jako punkt odniesienia do każdego `Student` w źródle, zapewniając dostęp do elementu członkowskiego dla każdego obiektu.  
   
- [!code-csharp[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#12)]  
   
 ## <a name="execute-the-query"></a>Wykonanie zapytania  
   
@@ -81,7 +81,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 2.  Po dodaniu tego kodu, skompilować i uruchomić aplikację, aby zobaczyć wyniki w parametrze **konsoli** okna.  
   
- [!code-csharp[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
 #### <a name="to-add-another-filter-condition"></a>Aby dodać inny warunek filtru  
   
@@ -121,11 +121,11 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 1.  Grupowanie jest zaawansowaną możliwością w wyrażeniach zapytań. Zapytanie z klauzulą grupy tworzy sekwencję grup, a każda grupa sam zawiera `Key` i sekwencji, który składa się z wszystkich członków tej grupy. Następujące zapytanie nowe grupy uczniów przy użyciu pierwszej litery swoje nazwisko jako klucz.  
   
-     [!code-csharp[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
+     [!code-csharp[CsLINQGettingStarted#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#14)]  
   
 2.  Należy pamiętać, że typ zapytania zostanie zmieniona. Teraz wytwarza sekwencję grupy, które mają `char` typ jako klucz i sekwencję `Student` obiektów. Ponieważ typ zapytania została zmieniona, poniższy kod zmiany `foreach` wykonywania pętli również:  
   
-     [!code-csharp[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
+     [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
 3.  Uruchom aplikację i wyświetlić wyniki w **konsoli** okna.  
   
@@ -135,7 +135,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 1.  Jawne kodowania `IEnumerables` z `IGroupings` może szybko stać się uciążliwe. Można napisać tego samego zapytania i `foreach` pętli za pomocą znacznie więcej wygodnie `var`. `var` — Słowo kluczowe nie zmienia typów obiektów; po prostu nakazuje kompilatorowi wywnioskowania typów. Zmiana rodzaju `studentQuery` , a zmienna iteracji `group` do `var` i ponownie uruchom zapytanie. Należy pamiętać, że w wewnętrzny `foreach` pętli, Zmienna iteracji nadal jest wpisana jako `Student`, a zapytanie działa tak jak wcześniej. Zmiana `s` zmiennej iteracji w celu `var` i ponownie uruchom zapytanie. Zobaczysz, że uzyskać te same wyniki.  
   
-     [!code-csharp[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
+     [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
      Aby uzyskać więcej informacji na temat [var](../../../../csharp/language-reference/keywords/var.md), zobacz [niejawnie wpisane zmienne lokalne](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
@@ -143,7 +143,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 1.  Po uruchomieniu poprzednie zapytanie, można zauważyć, że grupy nie są w kolejności alfabetycznej. Aby zmienić to ustawienie, należy podać `orderby` klauzula po `group` klauzuli. Do użycia, ale `orderby` klauzuli, musisz najpierw identyfikator, który służy jako punkt odniesienia do grup utworzonych przez `group` klauzuli. Podaj identyfikator przy użyciu `into` — słowo kluczowe w następujący sposób:  
   
-     [!code-csharp[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
+     [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   
      Po uruchomieniu tego zapytania, widoczne będą grupy teraz są sortowane w kolejności alfabetycznej.  
   
@@ -151,7 +151,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 1.  Możesz użyć `let` — słowo kluczowe, aby wprowadzić identyfikator dla dowolnego wyniku wyrażenia w wyrażeniu zapytania. Ten identyfikator może być udogodnienie, jak w poniższym przykładzie, lub można go zwiększyć wydajność dzięki przechowywaniu wyniki wyrażenia, tak aby nie ma zostać obliczona wiele razy.  
   
-     [!code-csharp[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
+     [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
      Aby uzyskać więcej informacji, zobacz [let, klauzula](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -159,17 +159,17 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 1.  Zgodnie z opisem w [składnia zapytania a składnia metody w technologii LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), niektórych operacji zapytań może być wyrażone tylko przy użyciu składni metody. Poniższy kod oblicza łączny wynik dla każdego `Student` w sekwencji źródłowej, a następnie wywołania `Average()` metody wyników tej kwerendy, aby obliczyć średnią ocenę klasy.
   
-     [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
+     [!code-csharp[csLINQGettingStarted#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#19)]  
   
 #### <a name="to-transform-or-project-in-the-select-clause"></a>Aby przekształcić lub zaprojektować w klauzuli wyboru  
   
 1.  Jest bardzo często zapytanie w celu utworzenia sekwencji, w której elementy różnią się od elementów w sekwencji źródłowej. Usuń komentarz z poprzedniej kwerendy i wykonywanie pętlę metodyki lub zastąp go następującym kodem. Należy pamiętać, że zapytanie zwraca sekwencję ciągów (nie `Students`), a ten fakt znajduje odzwierciedlenie w `foreach` pętli.  
   
-     [!code-csharp[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
+     [!code-csharp[csLINQGettingStarted#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#20)]  
   
 2.  Kodu we wcześniejszej części tego przewodnika wskazane, to około 334 wynik klasy średniej. Aby utworzyć sekwencję `Students` których łączny wynik jest większa niż średnia klasy wraz z ich `Student ID`, można użyć typu anonimowego w `select` instrukcji:  
   
-     [!code-csharp[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
+     [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>Następne kroki  
  Po przejściu na podstawowych aspektów pracy z zapytaniami w języku C#, jesteś gotowy do odczytu, dokumentację i przykłady dla określonego typu dostawcy LINQ, który Cię interesuje:  

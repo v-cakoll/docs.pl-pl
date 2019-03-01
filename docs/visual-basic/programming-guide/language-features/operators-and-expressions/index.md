@@ -2,20 +2,14 @@
 title: Operatory i wyrażenia w Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- operators [Visual Basic], operands
-- operators [Visual Basic]
-- operands [Visual Basic], definition
-- Visual Basic code, operators
-- Visual Basic code, expressions
-- operands
-- expressions [Visual Basic]
+  - 'operators [Visual Basic], operands'
+  - 'operators [Visual Basic]'
+  - 'operands [Visual Basic], definition'
+  - 'Visual Basic code, operators'
+  - 'Visual Basic code, expressions'
+  - operands
+  - 'expressions [Visual Basic]'
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 9d63a458ed747db0a63d2c648460a1a21f7cfbc8
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738997"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operatory i wyrażenia w Visual Basic
 *Operator* jest element kodu, który wykonuje operację na elementy kodu, które zawierają wartości. Elementy wartości obejmują zmienne, stałe, literały, właściwości, zwraca z `Function` i `Operator` procedur i wyrażeń.  
@@ -58,7 +52,7 @@ ms.locfileid: "55738997"
   
  Wiele operatorów może wykonywać akcje w pojedyncze wyrażenie lub instrukcję, tak jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
  W powyższym przykładzie Visual Basic wykonuje operacje w wyrażeniu po prawej stronie operatora przypisania (`=`), następnie przypisuje wynikowej wartości do zmiennej `x` po lewej stronie. Nie ma żadnego limitu praktyczne liczby operatorów, które mogą być połączone w wyrażeniu, ale zrozumienie [pierwszeństwo operatorów w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) jest niezbędne do zapewnienia, że otrzymujesz oczekiwanych wyników.  
   

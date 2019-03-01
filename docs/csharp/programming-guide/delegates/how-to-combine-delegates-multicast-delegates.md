@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [C#], combining
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
-ms.openlocfilehash: ebfcba4d2ebebe2697aa01b7109bbf50b8f144e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 426b9f91d3e3328522ec5c7ab043d5074ececc43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631558"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970116"
 ---
 # <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Instrukcje: Łączenie obiektów delegowanych (obiekty delegowane multiemisji) (C# Programming Guide)
 W tym przykładzie pokazano, jak utworzyć obiekty delegowane multiemisji. Przydatne właściwość [delegować](../../../csharp/language-reference/keywords/delegate.md) obiektów jest, że wiele obiektów można przypisać do wystąpienia jednego delegata za pomocą `+` operatora. Delegat multiemisji zawiera listę przypisanych delegatów. Po wywołaniu delegata multiemisji wywołuje delegatów na liście w kolejności. Można łączyć tylko obiektów delegowanych z tego samego typu.  
@@ -19,7 +19,7 @@ W tym przykładzie pokazano, jak utworzyć obiekty delegowane multiemisji. Przyd
  `-` Operator może służyć do usuwania delegata składnika delegatów multiemisji.  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[csProgGuideDelegates#11](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-combine-delegates-multicast-delegates_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#11)]  
   
 ## <a name="see-also"></a>Zobacz także
 

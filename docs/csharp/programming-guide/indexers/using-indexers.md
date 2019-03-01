@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: a6e2ea41c463d5e6959ce7f05a3547ef24f08765
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74e4375464cc515a281922cb1d5b5b0d1dd1954
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601938"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969411"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Używanie indeksatorów (C# Programming Guide)
 
@@ -53,7 +53,7 @@ Poniższy przykład pokazuje sposób deklarowania pola tablicy prywatnej `temps`
   
  Należy zauważyć, że dostęp indeksatora jest sprawdzane, na przykład w `Console.Write` instrukcji [uzyskać](../../../csharp/language-reference/keywords/get.md) zostanie wywołana metoda dostępu. W związku z tym jeśli nie `get` istnieje dostępu, wystąpi błąd kompilacji.  
   
-[!code-csharp[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#1)]  
   
 ## <a name="indexing-using-other-values"></a>Indeksowanie przy użyciu innych wartości
 

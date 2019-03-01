@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746276"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968728"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next — Instrukcja (Visual Basic)
 Powtarza grupę instrukcji określoną liczbę razy.  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  W poniższym przykładzie `index` zmienną rozpoczyna się od wartości 1 i jest zwiększany przy każdej iteracji pętli, kończące się po wartości `index` osiągnie 5.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  W poniższym przykładzie `number` zmienną rozpoczyna się od 2 i została zmniejszona o 0,25 w każdej iteracji pętli, kończące się po wartości `number` będzie wynosić 0. `Step` Argument `-.25` zmniejsza wartość 0,25 w każdej iteracji pętli.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  A [podczas... Kończy While, instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md) lub [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md) działa dobrze, jeśli nie znasz wcześniej ile razy należy uruchomić instrukcje w pętli. Jednak gdy spodziewasz się uruchomić pętli określoną liczbę razy, `For`... `Next` pętla jest lepszym rozwiązaniem. Liczba iteracji, należy określić podczas wpisywania w pętli.  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>Zagnieżdżanie pętle  
  Można zagnieżdżać `For` pętli przez umieszczenie pętli w innym. W poniższym przykładzie pokazano zagnieżdżonych `For`... `Next` struktur, które mają kroku różne wartości. Zewnętrzna Pętla tworzy ciąg dla każdej iteracji pętli. Wewnętrzny pętli zmniejsza zmienną licznika pętli dla każdej iteracji pętli.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  Podczas zagnieżdżania pętli, każdej pętli musi mieć unikatową `counter` zmiennej.  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>Przykład  
  Poniższy przykład usuwa wszystkie elementy z listy ogólnej. Zamiast [For Each... Następna instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md), w przykładzie pokazano `For`... `Next` instrukcja, która dokonuje iteracji w kolejności malejącej. W przykładzie użyto tej techniki, ponieważ `removeAt` metoda powoduje, że elementy po usuniętym elemencie muszą mieć niższą wartość indeksu.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład wykonuje iterację przez wyliczenie, które są zadeklarowane za pomocą [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie parametrów instrukcji użycie klasy, która ma przeciążenia `+`, `-`, `>=`, i `<=` operatorów.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Collections.Generic.List%601>

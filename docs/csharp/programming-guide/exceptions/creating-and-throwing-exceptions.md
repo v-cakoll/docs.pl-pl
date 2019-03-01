@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: dfa3b60e0c76e377a52243c534139d6c9025d46e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bfefccb32152cdb1aa1fdb156fbbd875c352218
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573337"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970925"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Tworzenie i zgłaszanie wyjątków (Przewodnik programowania w języku C#)
 Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania programu. Obiekty wyjątków, które opisują błąd są tworzone a następnie *zgłoszony* z [throw](../../../csharp/language-reference/keywords/throw.md) — słowo kluczowe. Środowisko uruchomieniowe wyszukuje następnie najbardziej zgodne obsługi wyjątków.  
@@ -24,19 +24,19 @@ Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania p
   
      Na przykład, jeśli parametr do metody ma nieprawidłową wartość:  
   
-     [!code-csharp[csProgGuideExceptions#12](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_1.cs)]  
+     [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
 -   Nieodpowiednie do obiektu rozmowy, na podstawie stanu obiektu.  
   
      Przykładem może próbować zapis pliku tylko do odczytu. W przypadkach, gdy stan obiektu nie zezwala na operację, należy zgłaszać wystąpienie <xref:System.InvalidOperationException> lub obiektu oparte na typem pochodnym tej klasy. Jest to przykład metody, która zgłasza <xref:System.InvalidOperationException> obiektu:  
   
-     [!code-csharp[csProgGuideExceptions#13](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_2.cs)]  
+     [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
 -   Gdy argument do metody, powoduje wyjątek.  
   
      W tym przypadku oryginalnego wyjątku powinien zostać przechwycony i <xref:System.ArgumentException> można utworzyć wystąpienia. Oryginalny wyjątek powinien zostać przekazany do konstruktora obiektu <xref:System.ArgumentException> jako <xref:System.Exception.InnerException%2A> parametru:  
   
-     [!code-csharp[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
+     [!code-csharp[csProgGuideExceptions#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#14)]  
   
  Wyjątki zawiera właściwość o nazwie <xref:System.Exception.StackTrace%2A>. Ten ciąg zawiera nazwę metody na bieżący stos wywołań, wraz z pliku nazwa i numer wiersza gdzie dla każdej metody wystąpił wyjątek. A <xref:System.Exception.StackTrace%2A> obiekt zostanie utworzony automatycznie przez środowisko uruchomieniowe języka wspólnego (CLR) od momentu `throw` instrukcji, tak aby musi być zgłaszane wyjątki od punktu, w którym powinna zacząć się ślad stosu.  
   

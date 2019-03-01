@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73b7f8b8460e4cdfad5e1dbc669447ec6fe01b8f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605136"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969508"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Wprowadzenie do kwerend LINQ (C#)
 A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań. Czas dla różnych rodzajów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML zostały opracowane w różnych językach. Dlatego programiści musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które muszą obsługiwać. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] upraszcza tę sytuację oferując spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze pracujesz z obiektami. Użyj tych samych podstawowych schematów kodowania do wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych SQL, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych, kolekcjach .NET i innych formatach, do których [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny.  
@@ -39,7 +39,7 @@ A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytan
   
  Typ odpytywalny nie wymaga modyfikacji ani specjalnego traktowania, aby pełnić rolę [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] źródła danych. Jeśli źródło danych nie jest jeszcze w pamięci jako typ odpytywalny [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy musi reprezentowania je jako takie. Na przykład [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ładuje dokument XML do odpytywalnego <xref:System.Xml.Linq.XElement> typu:  
   
- [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
  Za pomocą [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], należy najpierw utworzyć obiektowo relacyjny mapowanie w czasie projektowania ręcznie lub za pomocą [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) w programie Visual Studio. Piszesz zapytania dotyczące obiektów, a także w czasie wykonywania [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] obsługuje komunikację z bazą danych. W poniższym przykładzie `Customers` reprezentuje określoną tabelę w bazie danych, a typ wyniku zapytania <xref:System.Linq.IQueryable%601>, pochodzi z <xref:System.Collections.Generic.IEnumerable%601>.  
   
@@ -71,7 +71,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>Wykonanie odroczone  
  Jak wspomniano wcześniej, zmienna kwerendy przechowuje tylko polecenia kwerendy. Rzeczywiste wykonanie zapytania jest odroczone do czasu iteracji nad zmienną kwerendy w `foreach` instrukcji. Takie podejście jest określany jako *wykonanie odroczone* i została przedstawiona w poniższym przykładzie:  
   
- [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#4)]  
   
  `foreach` Instrukcja jest również, gdzie pobierane są wyniki zapytania. Na przykład w poprzednim zapytaniu Zmienna iteracji `num` przechowuje każdą wartości (jedną na raz) w zwracanej sekwencji.  
   
@@ -80,11 +80,11 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>Wymuszanie natychmiastowego wykonania  
  Zapytania, które wykonują funkcje agregacji w zakresie elementów źródła najpierw muszą przejść przez te elementy. Przykłady takich zapytań `Count`, `Max`, `Average`, i `First`. Działają one bez wyraźnej `foreach` instrukcji ponieważ samo zapytanie musi użyć `foreach` celu zwrócenia wyników. Należy zauważyć, tego rodzaju zapytania nie zwracać pojedynczą wartość, `IEnumerable` kolekcji. Następujące zapytanie zwraca liczbę liczb parzystych w tablicy źródłowej:  
   
- [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#5)]  
   
  Aby wymusić natychmiastowe wykonanie dowolnego zapytania i buforowanie jego wyników, należy wywołać <xref:System.Linq.Enumerable.ToList%2A> lub <xref:System.Linq.Enumerable.ToArray%2A> metody.  
   
- [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#6)]  
   
  Można również wymusić wykonanie przez umieszczenie `foreach` pętli natychmiast po wyrażeniu zapytania. Jednakże wywołując `ToList` lub `ToArray` , również buforujesz wszystkie dane w jednym obiekcie kolekcji.  
   

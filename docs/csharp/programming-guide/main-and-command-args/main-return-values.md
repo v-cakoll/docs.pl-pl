@@ -5,22 +5,22 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: bd2111953bbc31799b3472f62e704667195e2532
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e41b92239f0ba1a94190262c337f09eedaddab31
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738485"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965725"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() — zwracane wartości (C# Programming Guide)
 
 `Main` Metoda może zwracać `void`:
 
-[!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
+ [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
 Może również zwracać `int`:
 
-[!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
+ [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
 Jeśli wartość zwracana z `Main` nie jest używany, zwracając `void` umożliwia nieco prostsze kodu. Jednak zwracanie całkowitą Włącza program do komunikowania się informacje o stanie do innych programów lub skryptów, które wywołują pliku wykonywalnego. Wartość zwrotną z elementu `Main` jest traktowany jako kod zakończenia procesu. W poniższym przykładzie pokazano, jak wartość zwracana z `Main` można uzyskać dostęp.
 
@@ -30,7 +30,7 @@ W tym przykładzie użyto [platformy .NET Core](../../../core/index.md) narzędz
 
 Modyfikowanie `Main` method in Class metoda *program.cs* w następujący sposób:
 
-[!code-csharp[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
+ [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
 Gdy program jest wykonywana w Windows, wszelkie wartość zwracana z `Main` funkcji jest przechowywana w zmiennej środowiskowej. Ta zmienna środowiskowa można pobrać przy użyciu `ERRORLEVEL` z pliku wsadowego lub `$LastExitCode` za pomocą programu powershell.
 

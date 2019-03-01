@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 9c2ed926d21bf73b9b93863e5c3a3ed9ccc950aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19d607b1a132cd84aa2763b8e7b4c642f868abcd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634080"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968780"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Instrukcje: Kopiowanie plików z określonym wzorcem do katalogu w Visual Basic
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> Metoda zwraca zbiór ciągów reprezentujących nazwy ścieżek plików tylko do odczytu. Możesz użyć `wildCards` parametru do określenia określonego wzorca.  
@@ -25,20 +25,20 @@ ms.locfileid: "54634080"
   
 1.  Użyj `GetFiles` metodę, aby zwrócić listę plików. W tym przykładzie zwraca wszystkie .rtf — pliki w określonym katalogu.  
   
-     [!code-vb[VbFileIOMisc#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_1.vb)]  
+     [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
 2.  Użyj `CopyFile` metodę, aby skopiować pliki. W tym przykładzie kopiuje pliki do katalogu o nazwie `testdirectory`.  
   
-     [!code-vb[VbVbcnMyFileSystem#88](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
 3.  Zamknij `For` instrukcję, określając `Next` instrukcji.  
   
-     [!code-vb[VbVbcnMyFileSystem#89](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia powyżej fragmenty w pełnej postaci, kopiuje wszystkie pliki .rtf w określonym katalogu do katalogu o nazwie `testdirectory`.  
   
- [!code-vb[VbFileIOMisc#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_4.vb)]  
+ [!code-vb[VbFileIOMisc#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#37)]  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Następujące warunki mogą spowodować wyjątek:  

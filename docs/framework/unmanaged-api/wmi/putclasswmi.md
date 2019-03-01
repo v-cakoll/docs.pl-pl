@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614513"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972810"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi — funkcja
 Tworzy nową klasę lub aktualizuje istniejący zestaw.  
@@ -49,7 +49,7 @@ HRESULT PutClassWmi (
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, usługa WMI nie przechowuje żadnych kwalifikatorów zmienionych wersji. </br> W przeciwnym razie zestawu, zakłada się, że ten obiekt nie jest zlokalizowana, a wszystkie kwalifikatory są storedwith tego wystąpienia. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, usługa WMI nie przechowuje żadnych kwalifikatorów zmienionych wersji. <br> W przeciwnym razie zestawu, zakłada się, że ten obiekt nie jest zlokalizowana, a wszystkie kwalifikatory są storedwith tego wystąpienia. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Jeśli nie istnieje, lub go zastąpić, jeśli już istnieje, należy utworzyć klasę. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aktualizacja klasy. Klasa musi istnieć przez wywołanie zakończy się powodzeniem. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Utwórz klasę. Wywołanie zakończy się niepowodzeniem, jeśli klasa już istnieje. |

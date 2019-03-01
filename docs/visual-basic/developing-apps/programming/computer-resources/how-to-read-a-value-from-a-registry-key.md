@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: f731492ba794cffebe97b93fc6b9c9f5fd8eacdf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35fa839f80f422f334e96d7c5bf0bbd5f12484ad
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748093"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966934"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Instrukcje: Odczytywanie wartości z klucza rejestru w Visual Basic
 `GetValue` Metody `My.Computer.Registry` obiekt może służyć do odczytywania wartości w rejestrze systemu Windows.  
@@ -28,7 +28,7 @@ ms.locfileid: "54748093"
   
 -   Użyj `GetValue` metody, określając ścieżkę i nazwę) można odczytać wartości z klucza rejestru. Poniższy przykład odczytuje wartość `Name` z `HKEY_CURRENT_USER\Software\MyApp` i wyświetla go w oknie komunikatu.  
   
-     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
+     [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
  Ten przykład kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu, znajduje się w **systemu operacyjnego Windows > rejestru**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54748093"
   
 -   Użyj `GetValue` metodę, aby pobrać wartość. Poniższy kod sprawdza, czy wartość istnieje i zwraca komunikat, jeśli nie jest.  
   
-     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
+     [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Rejestr zawiera najwyższego poziomu lub główne klucze, które są używane do przechowywania danych. Na przykład klucz główny HKEY_LOCAL_MACHINE służy do przechowywania ustawień maszyn na poziomie używanych przez wszystkich użytkowników, podczas gdy HKEY_CURRENT_USER służy do przechowywania danych specyficznych dla poszczególnych użytkowników.  

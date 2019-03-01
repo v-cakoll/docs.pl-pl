@@ -3,14 +3,14 @@ title: Dopasowanie wzorca — Przewodnik po języku C#
 description: Dowiedz się więcej o wyrażeniach w języku C# dopasowania do wzorca
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522029"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969985"
 ---
-# <a name="pattern-matching"></a>Dopasowanie wzorca #
+# <a name="pattern-matching"></a>Dopasowanie wzorca
 
 Wzorce testowania, czy wartość nie ma określonej *kształt*i może *wyodrębnić* informacji z wartości, gdy ma ona odpowiedniego kształtu. Dopasowanie wzorca zapewnia bardziej zwięzły widok składni dla algorytmów używanych już dziś. Można już utworzyć algorytmami przy użyciu istniejących Składnia dopasowania do wzorca. Piszesz `if` lub `switch` instrukcji, które testują wartości. Następnie gdy te wyrażenia są zgodne, wyodrębnić i korzystać z tej wartości. Nowe elementy składni są rozszerzeniami do instrukcji, które znasz już: `is` i `switch`. Te nowe rozszerzenia łączyć testowania wartość i wyodrębnianie informacji.
 
@@ -36,7 +36,7 @@ Przed C# 7.0, będziesz potrzebować w celu przetestowania każdego typu w szere
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-Powyższy kod to wyrażenie klasycznego *wpisz wzór*: testujesz zmiennej do określenia jej typ i wykonywania różnych akcji, na podstawie tego typu.
+Powyższy kod to wyrażenie klasycznego *wpisz wzór*: Jesteś badania zmiennej, aby określić jej typ i wykonywania różnych akcji, na podstawie tego typu.
 
 Ten kod staje się prostszy przy użyciu rozszerzeń `is` wyrażenie można przypisać zmiennej Jeśli test zakończy się pomyślnie:
 
@@ -111,7 +111,7 @@ Specjalnego zachowania w przypadku `null` wzorzec jest interesująca ponieważ s
 
 Wprowadzenie `var` jako jedno z wyrażeń dopasowanie wprowadza nowe reguły do dopasowania do wzorca.
 
-Pierwsza reguła jest to, że `var` znajduje się za deklaracją typ reguły wnioskowania: typ jest wnioskowany być typu statycznego wyrażenia switch. Od tej zasady zawsze zgodny typ.
+Pierwsza reguła jest to, że `var` znajduje się za deklaracją typ reguły wnioskowania: Typ jest wnioskowany być typu statycznego wyrażenia switch. Od tej zasady zawsze zgodny typ.
 
 Druga reguła jest to, że `var` deklaracja nie ma sprawdzanie wartości null, który zawiera inne typu wzorzec wyrażenia. Oznacza to, zmienna może mieć wartości null i sprawdzanie wartości null jest to konieczne w takiej sytuacji.
 

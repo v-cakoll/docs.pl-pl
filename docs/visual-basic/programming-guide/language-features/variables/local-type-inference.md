@@ -12,17 +12,17 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: f4edc879af9539a40269336bed97fe206920992a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62f46f8f9691dd260e4a4c40c0ffccbce4c5beb7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706751"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973408"
 ---
 # <a name="local-type-inference-visual-basic"></a>Wnioskowanie o typie lokalnym (Visual Basic)
 Kompilator języka Visual Basic używa *wnioskowanie o typie* Aby określić typy danych zmiennych lokalnych zadeklarowana bez `As` klauzuli. Kompilator wnioskuje typ zmiennej z typu wyrażenia inicjowania. Dzięki temu można deklarować zmienne bez jawne określenie typu, jak pokazano w poniższym przykładzie. W wyniku deklaracji zarówno `num1` i `num2` są silnie typizowane jako liczby całkowite.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
  
 > [!NOTE]
 >  Jeśli nie chcesz `num2` w poprzednim przykładzie, aby wpisać jako `Integer`, można określić inny typ za pomocą deklaracji, takich jak `Dim num3 As Object = 3` lub `Dim num4 As Double = 3`.  
@@ -40,23 +40,23 @@ Kompilator języka Visual Basic używa *wnioskowanie o typie* Aby określić typ
 ## <a name="examples"></a>Przykłady  
  Wnioskowanie o typie występuje, gdy zmienna lokalna jest zadeklarowana bez `As` klauzuli i zainicjowane. Kompilator używa typ przypisaną wartością początkową jako typ zmiennej. Na przykład, każda następujące wiersze kodu deklaruje zmienną typu `String`.  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]  
   
  Poniższy kod przedstawia dwa sposoby równoważne do utworzenia tablicy liczb całkowitych.  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]  
   
  Jest łatwa w użyciu wnioskowanie o typie, aby określić typ zmienna sterująca pętli. W poniższym kodzie, kompilator wnioskuje, że `number` jest `Integer` ponieważ `someNumbers2` z poprzedniego przykładu jest tablicy liczb całkowitych.  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]  
   
  Wnioskowanie o typie lokalnym mogą być używane w `Using` instrukcje, aby ustanowić wpisz nazwę zasobu, tak jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]  
   
  Również można wywnioskować typu zmiennej na podstawie wartości zwracane funkcji, tak jak pokazano w poniższym przykładzie. Zarówno `pList1` i `pList2` są tablicami procesów, ponieważ `Process.GetProcesses` zwraca tablicę procesów.  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]  
   
 ## <a name="option-infer"></a>Option Infer  
  `Option Infer` Umożliwia określenie, czy wnioskowanie o typie lokalnym jest dozwolone w określonym pliku. Aby włączyć lub Blokuj opcję, należy wpisać jedną z następujących instrukcji na początku pliku.  

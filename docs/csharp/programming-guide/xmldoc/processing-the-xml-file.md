@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: d834cfaf566868d7fee280b613a6ef15dc7f0b1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1015e5b69f7701f772bc853bba53873fd065a996
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576918"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967935"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby dowiedzieć się, jak oznaczyć swój kod, zobacz [tagi zalecane dla komentarzy do dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Ciąg Identyfikatora jednoznacznie identyfikuje konstrukcja. Programy, które przetwarzają pliku XML można umożliwia zidentyfikowanie odpowiadający element metadanych/odbicie .NET Framework dokumentacja dotyczy ciąg Identyfikatora.  
@@ -79,7 +79,7 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie, któ
 ## <a name="examples"></a>Przykłady  
  W poniższych przykładach pokazano, jak identyfikator ciągi dla klasy i zostanie wygenerowany, jego członków:  
   
- [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
+ [!code-csharp[csProgGuidePointers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#21)]  
   
 ## <a name="see-also"></a>Zobacz także
 

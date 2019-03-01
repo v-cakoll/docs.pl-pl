@@ -6,12 +6,12 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 39a34539fbd9623d4ae3c6bddf55e50e3502db61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3563b0ffd5360c575404ead81e0e847ccab46f0c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692353"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972433"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Instrukcje: Konwertowanie tablicy typu byte na liczbę całkowitą (C# Programming Guide)
 W tym przykładzie pokazano, jak używać <xref:System.BitConverter> klasy Konwertowanie tablicy bajtów, które mają [int](../../../csharp/language-reference/keywords/int.md) i z powrotem na tablicę bajtów. Być może trzeba przekonwertować z bajtów typu danych wbudowane po odczycie bajtów z sieci, na przykład. Oprócz [toint32 — (bajtów\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) metody w przykładzie w poniższej tabeli wymieniono metody <xref:System.BitConverter> klasy, aby konwertować bajtów (z tablicy bajtów) do innych typów wbudowanych.  
@@ -35,7 +35,7 @@ W tym przykładzie pokazano, jak używać <xref:System.BitConverter> klasy Konwe
 > [!NOTE]
 >  Dane wyjściowe mogą się różnić w zależności od endianess architektury Twojego komputera.  
   
- [!code-csharp[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
+ [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie <xref:System.BitConverter.GetBytes%28System.Int32%29> metody <xref:System.BitConverter> klasy jest wywoływana w celu przekonwertowania `int` na tablicę bajtów.  
@@ -43,7 +43,7 @@ W tym przykładzie pokazano, jak używać <xref:System.BitConverter> klasy Konwe
 > [!NOTE]
 >  Dane wyjściowe mogą się różnić w zależności od endianess architektury Twojego komputera.  
   
- [!code-csharp[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
+ [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]  
   
 ## <a name="see-also"></a>Zobacz także
 

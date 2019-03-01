@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75776e0d78bc1d8a834333ea4c3cc0a9291d1ed1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681069"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965023"
 ---
 # <a name="implements-statement"></a>Implements — Instrukcja
 Określa jedną lub więcej interfejsów lub składowych interfejsu, które muszą zostać zaimplementowane w klasie lub definicji struktury, w której występuje.  
@@ -46,14 +46,14 @@ Implements interfacename.interfacemember [, ...]
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak używać `Implements` instrukcję, aby implementować członków interfejsu. Definiuje interfejs o nazwie `ICustomerInfo` zdarzenie, właściwości i procedury. Klasa `customerInfo` implementuje wszystkie elementy członkowskie zdefiniowane w interfejsie.  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
  Należy pamiętać, że klasa `customerInfo` używa `Implements` instrukcji na oddzielne źródło wiersza kodu, aby wskazać, że klasa implementuje wszystkie elementy członkowskie `ICustomerInfo` interfejsu. Następnie używa każdego elementu członkowskiego w klasie `Implements` słowa kluczowego jako części swojej deklaracji elementu członkowskiego, aby wskazać implementuje tej składowej interfejsu.  
   
 ## <a name="example"></a>Przykład  
  Poniższe dwie procedury pokazują, jak można użyć interfejsu implementowany w poprzednim przykładzie. Aby przetestować wdrożenia, należy dodać te procedury do projektu i wywołania `testImplements` procedury.  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 82dc3e851f1f98ca689acc21f03cbbe68a4e974e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686676"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965915"
 ---
 # <a name="if-operator-visual-basic"></a>If — Operator (Visual Basic)
 Zastosowań zwarcia warunkowo zwracać jedną z dwóch wartości. `If` Operator może być wywoływana z trzech argumentów lub dwóch argumentów.  
@@ -40,11 +40,11 @@ If( [argument1,] argument2, argument3 )
   
  `If` Operator, który jest wywoływana z trzech argumentów działa jak `IIf` funkcji z tą różnicą, że używa zwarcia. `IIf` Funkcja zawsze daje w wyniku wszystkich trzech argumentów, natomiast `If` operator, który ma trzy argumenty oblicza tylko dwa z nich. Pierwszy `If` argument jest obliczane i wynikiem jest rzutowany jako `Boolean` wartość `True` lub `False`. Jeśli wartość jest `True`, `argument2` jest oceniana i zwracana jest jego wartość, ale `argument3` nie jest oceniany. Jeśli wartość `Boolean` wyrażenie jest `False`, `argument3` jest oceniana i zwracana jest jego wartość, ale `argument2` nie jest oceniany. Poniższe przykłady ilustrują użycie `If` gdy są używane trzy argumenty:  
   
- [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
  W poniższym przykładzie pokazano wartość zwarcia. W przykładzie pokazano dwie próby dzielenia zmiennej `number` przez zmienną `divisor` , z wyjątkiem kiedy `divisor` wynosi zero. W takim przypadku powinna zostać zwrócona wartość 0, a nie powinny być podejmowane próby można wykonać podziału, ponieważ spowoduje to błąd czasu wykonywania. Ponieważ `If` zwarcia używa wyrażenia, ocenia ono drugiego i trzeciego argumentu, w zależności od wartości pierwszego argumentu. Jeśli pierwszy argument ma wartość true, dzielnik nie jest równa zeru i bezpiecznie obliczyć drugi argument i wykonać podziału. Jeśli pierwszy argument ma wartość false, trzeci argument jest oceniana i zwracana jest wartość 0. W związku z tym kiedy dzielnik jest 0, nie są podejmowane próby do dzielenia i nie wyniki błędów. Jednak ponieważ `IIf` nie używa zwarcia, obliczany jest drugi argument, nawet wtedy, gdy jest to pierwszy argument ma wartość false. Powoduje to błąd dzielenia przez zero w czasie wykonywania.  
   
- [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
 ## <a name="if-operator-called-with-two-arguments"></a>Jeśli Operator o nazwie z dwóch argumentów  
  Pierwszy argument `If` można pominąć. Dzięki temu operatora, który można wywołać za pomocą tylko dwa argumenty. Poniższa lista dotyczy tylko wtedy, gdy `If` operator jest wywoływana z dwóch argumentów.  
@@ -58,7 +58,7 @@ If( [argument1,] argument2, argument3 )
   
  Gdy `Boolean` argument zostanie pominięty, pierwszy argument musi być odwołanie lub typ dopuszczający wartość null. Jeśli pierwszy argument daje w wyniku `Nothing`, jest zwracana wartość drugiego argumentu. We wszystkich innych przypadkach zwracana jest wartość pierwszego argumentu. W poniższym przykładzie pokazano, jak działa ta ocena.  
   
- [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
+ [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>

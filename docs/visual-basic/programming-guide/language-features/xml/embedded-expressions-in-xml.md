@@ -8,19 +8,19 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: c02b6ea0895d8b22ac71d0cb3ea6950861de47df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678762"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965790"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Wyrażenia osadzone w XML (Visual Basic)
 Wyrażenia osadzone umożliwiają tworzenie literałów XML, które zawierają wyrażenia, które są oceniane w czasie wykonywania. Składnia wyrażenia osadzone jest `<%=` `expression` `%>`, która jest taka sama jak składnia używane w [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
  Na przykład można utworzysz XML element literału, łącząc osadzone wyrażenia zawierające tekst dosłowny zawartości.  
   
- [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
+ [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
  Jeśli `isbnNumber` zawiera całkowitą 12345 i `modifiedDate` zawiera datę 3/5/2006, kiedy ten kod jest wykonywany, wartość `book` jest:  
   
@@ -44,27 +44,27 @@ Wyrażenia osadzone umożliwiają tworzenie literałów XML, które zawierają w
   
 -   Przykład wyrażenia osadzone w nazwa elementu XML:  
   
-     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
+     [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
 -   Przykład wyrażenia osadzone w zawartości elementu XML:  
   
-     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
+     [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
 -   Przykład wyrażenia osadzone w nazwie atrybutu elementu XML:  
   
-     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
+     [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
 -   Przykład wyrażenia osadzone w wartości atrybutu elementu XML:  
   
-     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
+     [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
 -   Przykład wyrażenia osadzone w atrybucie — element XML:  
   
-     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
+     [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
 -   Przykład wyrażenia osadzone w głównym elementem dokumentu XML:  
   
-     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
+     [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
  Po włączeniu `Option Strict`, kompilator sprawdza, czy typ każdego osadzone wyrażenia rozszerza się na wymagany typ. Jedynym wyjątkiem jest, aby uzyskać element główny dokumentu XML, który jest weryfikowany, gdy kod działa. Jeśli kompilujesz bez `Option Strict`, możesz osadzić wyrażeń o typie `Object` i ich typ jest weryfikowana w czasie wykonywania.  
   

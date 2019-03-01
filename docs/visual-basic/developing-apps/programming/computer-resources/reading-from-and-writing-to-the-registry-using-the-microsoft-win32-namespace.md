@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-ms.openlocfilehash: d55bd991587016aee48a522b69fdbdb5d4041512
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b88257dcdd80c5ec5e81e0c3c20822157907fa5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530830"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966271"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Odczytywanie z oraz zapisywanie do rejestru za pomocą przestrzeni nazw Microsoft.Win32 (Visual Basic)
 Mimo że `My.Computer.Registry` powinna obejmować potrzeb podstawowe, gdy Programowanie w odniesieniu do rejestru, można również użyć <xref:Microsoft.Win32.Registry> i <xref:Microsoft.Win32.RegistryKey> klas w <xref:Microsoft.Win32> przestrzeń nazw [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
@@ -33,11 +33,11 @@ Mimo że `My.Computer.Registry` powinna obejmować potrzeb podstawowe, gdy Progr
 ## <a name="reading-a-value-from-the-registry"></a>Odczytywanie wartości z rejestru  
  Poniższy kod przedstawia sposób odczytywania ciągu z HKEY_CURRENT_USER.  
   
- [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_1.vb)]  
+ [!code-vb[VbResourceTasks#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#20)]  
   
  Poniższy kod odczytuje przyrostów, a następnie zapisuje ciąg do HKEY_CURRENT_USER.  
   
- [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_2.vb)]  
+ [!code-vb[VbResourceTasks#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.SystemException>

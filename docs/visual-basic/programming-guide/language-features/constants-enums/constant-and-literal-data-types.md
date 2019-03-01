@@ -9,19 +9,19 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: d85ff343587e8689a4859a09c8dc80932374a82e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269045dcfec14fafe878c2716490c93e79efe3d7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498651"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978219"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Stała i typy literałów (Visual Basic)
 Literał jest wartość, która jest wyrażona w swoim imieniu, a nie jako wartość zmiennej lub wyniku wyrażenia, takie jak numer 3 lub ciąg "Hello". Stałe są znaczącą nazwę, która zajmuje miejsce literału i zachowuje ta sama wartość w całym programie, w przeciwieństwie do zmiennej, którego wartość może ulec zmianie.  
   
  Gdy [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) jest `Off` i [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) jest `On`, należy jawnie zadeklarować wszystkich stałych o typie danych. W poniższym przykładzie typ danych `MyByte` jest jawnie zadeklarowana jako typ danych `Byte`:  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
  Gdy `Option Infer` jest `On` lub `Option Strict` jest `Off`, stałej można zadeklarować bez określania typu danych za pomocą `As` klauzuli. Kompilator Określa typ stałej z typu wyrażenia. Liczbowe literał liczby całkowitej jest rzutowany domyślnie `Integer` typu danych. Domyślny typ danych liczb zmiennoprzecinkowych jest `Double`i słowa kluczowe `True` i `False` określ `Boolean` stałej.  
   
@@ -39,11 +39,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  Aby w poprzednim przykładzie działają, można dołączyć `D` wpisz znak literału, który powoduje, że może być reprezentowana jako `Decimal`:  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#2)]  
   
  Poniższy przykład pokazuje poprawne użycie typu znaki i znaki otaczającej:  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#3)]  
   
  Pokazano w poniższej tabeli otaczającego znaki i znaki typu, które są dostępne w języku Visual Basic.  
   

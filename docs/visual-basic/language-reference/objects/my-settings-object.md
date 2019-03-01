@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 293e7cd6449b8a35b5e42b4823a4412e0d6a3f14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d6d56e4a1eddcb687fe042568509ba489aa8bb3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628165"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973473"
 ---
 # <a name="mysettings-object"></a>My.Settings — Obiekt
 Udostępnia właściwości i metody dostępu do ustawień aplikacji.  
@@ -55,7 +55,7 @@ Udostępnia właściwości i metody dostępu do ustawień aplikacji.
 ## <a name="example"></a>Przykład  
  W tym przykładzie jest wyświetlana wartość ustawienia `Nickname`.  
   
- [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
   
  Aby ten przykład działał, aplikacja musi mieć ustawienie `Nickname` typu `String`.  
   

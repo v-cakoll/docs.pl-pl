@@ -1,13 +1,13 @@
 ---
-title: Mappings1 typu danych Oracle
+title: Mapowanie typu danych Oracle
 ms.date: 03/30/2017
 ms.assetid: ec34ae21-bbbb-4adb-b672-83865e2a8451
-ms.openlocfilehash: 91e8dce0891489b8dbe127e2d327dd2e6f5e9935
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5e13b0ff4f9c3d5cc145abd4f0bcc3d8e717ca1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544318"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965778"
 ---
 # <a name="oracle-data-type-mappings"></a>Mapowanie typu danych Oracle
 W poniższej tabeli przedstawiono typy danych Oracle i ich mapowań <xref:System.Data.OracleClient.OracleDataReader>.  

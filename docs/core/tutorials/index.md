@@ -1,16 +1,10 @@
 ---
 title: Samouczki programu .NET core
-description: Wykonaj samouczki zawierające platformy .NET Core do tworzenia aplikacji i bibliotek na komputerach Mac, Linux i Windows.
+description: 'Wykonaj samouczki zawierające platformy .NET Core do tworzenia aplikacji i bibliotek na komputerach Mac, Linux i Windows.'
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168751"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Dowiedz się, .NET Core oraz narzędzia .NET Core SDK, eksplorując te samouczki
 
@@ -25,8 +19,7 @@ Następujące samouczki są dostępne dla zapoznać się z platformą .NET Core.
 - [Tworzenie biblioteki klas w języku Visual Basic](vb-library-with-visual-studio.md)
 - [Testowanie biblioteki klas](testing-library-with-visual-studio.md)
 - [Korzystanie z biblioteki klas](consuming-library-with-visual-studio.md)
-- [Tworzenie kompletna C# rozwiązania .NET Core w Windows](using-on-windows-full-solution.md)
-- [Usługi Azure Cosmos DB: Wprowadzenie do interfejsu API SQL i .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB: Wprowadzenie do interfejsu API SQL i .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Tworzenie aplikacji za pomocą programu Visual Studio Code
 
@@ -48,7 +41,6 @@ Następujące samouczki są dostępne dla zapoznać się z platformą .NET Core.
 - [Unit Testing w programie .NET Core za pomocą polecenia dotnet test](../testing/unit-testing-with-dotnet-test.md)
 - [Testy jednostkowe w narzędziu MSTest i .NET Core](../testing/unit-testing-with-mstest.md)
 - [Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](libraries.md)
-- [Jak zarządzać wersjami zależności pakietu dla platformy .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hostowanie platformy .NET Core z kodu natywnego](netcore-hosting.md)
 - [Tworzenie szablonu niestandardowego dla polecenia dotnet new](create-custom-template.md)
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: eac637c0fcaaded25a54332b2f1188876ef5f29a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e059f471f78262320f1968c12192de710876aef4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711885"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966583"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameter — Tablice (Visual Basic)
 Zwykle nie można wywołać procedury z więcej argumentów niż określa deklaracja procedury. Jeśli potrzebujesz nieokreśloną liczbę argumentów, można zadeklarować *tablicy parametrów*, co pozwala procedurę, aby zaakceptować tablicy wartości parametru. Nie trzeba znać liczbę elementów w tablicy parametrów podczas definiowania procedury. Rozmiar tablicy jest określana indywidualnie przy każdym wywołaniu procedury.  
@@ -48,13 +48,13 @@ Zwykle nie można wywołać procedury z więcej argumentów niż określa deklar
 ## <a name="example"></a>Przykład  
  Poniższy przykład definiuje i wywołuje funkcję `calcSum`. `ParamArray` Modyfikator parametru `args` włącza funkcję zaakceptować zmienną liczbę argumentów.  
   
- [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-arrays_1.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
  Poniższy przykład definiuje procedurę z tablicą parametrów i wyświetla wartości wszystkie elementy tablicy przekazane do tablicy parametrów.  
   
- [!code-vb[VbVbcnProcedures#48](./codesnippet/VisualBasic/parameter-arrays_2.vb)]  
+ [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   
- [!code-vb[VbVbcnProcedures#49](./codesnippet/VisualBasic/parameter-arrays_3.vb)]  
+ [!code-vb[VbVbcnProcedures#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#49)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>

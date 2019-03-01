@@ -9,12 +9,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
-ms.openlocfilehash: a221c878fd2a44a9d4cd65d7a297b296cd6aed20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e5d31df7d507c16b5a84bd1816f12f384e9dab
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667105"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972966"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>Instrukcje: Tworzenie kopii pliku w tym samym katalogu w Visual Basic
 Użyj `My.Computer.FileSystem.CopyFile` metoda kopiowania plików. Parametry umożliwiają Nadpisz istniejące pliki, Zmień nazwę pliku, wyświetlić postęp operacji i umożliwia użytkownikowi anulować operację.  
@@ -23,13 +23,13 @@ Użyj `My.Computer.FileSystem.CopyFile` metoda kopiowania plików. Parametry umo
   
 -   Użyj `CopyFile` metodę podawania pliku docelowego i lokalizacji. Poniższy przykład tworzy kopię `test.txt` o nazwie `test2.txt`.  
   
-     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>Aby utworzyć kopię pliku, w tym samym folderze, zastępując istniejące pliki  
   
 -   Użyj `CopyFile` metody dostarczenie pliku docelowego i lokalizację, a ustawienie `overwrite` do `True`. Poniższy przykład tworzy kopię `test.txt` o nazwie `test2.txt` i zastępuje wszelkie istniejące pliki o tej nazwie.  
   
-     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować zgłoszenie wyjątku:  

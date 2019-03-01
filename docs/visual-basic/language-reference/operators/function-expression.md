@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: b83bee06a3a001fd362a217907e783cb7ad293ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cecc7fc2356a265ca4a3d57c837298ec33efc60
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648118"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965842"
 ---
 # <a name="function-expression-visual-basic"></a>Function — Wyrażenie (Visual Basic)
 Deklaruje parametry i kod, który definiuje wyrażenie lambda funkcji.  
@@ -57,19 +57,19 @@ End Function
 ## <a name="example"></a>Przykład  
  W poniższych przykładach pokazano dwa sposoby tworzenia wyrażeń lambda proste. Używa pierwszego `Dim` Podaj nazwę dla tej funkcji. Aby wywołać funkcję, Wyślij w wartości parametru.  
   
- [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
+ [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
- [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
+ [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>Przykład  
  Alternatywnie można zadeklarować i uruchom funkcję w tym samym czasie.  
   
- [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
+ [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Przykład  
  Oto przykład wyrażenie lambda, która zwiększa jej argument i zwraca wartość. W przykładzie pokazano oba jeden wiersz i wielowierszowe składnia wyrażenia lambda dla funkcji. Aby uzyskać więcej przykładów, zobacz [wyrażeń Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
+ [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Przykład  
  Wyrażenia lambda podstawą wielu operatorów zapytań w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]i może służyć jawnie oparte na metodzie zapytania. W poniższym przykładzie przedstawiono typowe [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, następuje tłumaczenie zapytania do formatu metody.  

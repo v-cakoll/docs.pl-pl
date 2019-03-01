@@ -20,7 +20,7 @@ ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
 
  Może istnieć tylko jeden punkt wejścia w programie C#. Jeśli masz więcej niż jedną klasę, która ma `Main` metody, należy skompilować program jest połączony z **/main** opcję kompilatora, aby określić, które `Main` metoda do użycia jako punkt wejścia. Aby uzyskać więcej informacji, zobacz [/main (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/main-compiler-option.md).
 
- [!code-csharp[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
+ [!code-csharp[csProgGuideMain#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#17)]
 
 ## <a name="overview"></a>Omówienie
 

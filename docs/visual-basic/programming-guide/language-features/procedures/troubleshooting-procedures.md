@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 5ef0a485a0b114f465aac694970ec3350b26f35a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648550"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972004"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Procedury rozwiązywania problemów (Visual Basic)
 Ta strona zawiera listę typowych problemów występujących podczas pracy z procedurami.  
@@ -41,7 +41,7 @@ Ta strona zawiera listę typowych problemów występujących podczas pracy z pro
   
  **Właściwe podejście:** Aby móc modyfikować elementy w tablicy, która jest zwracana, należy zdefiniować tablicę wewnętrzny jako zmienna lokalna. Poniższy przykład skompiluje się bez błędów.  
   
- [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
   
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Argument nie jest modyfikowany przez wywołanie procedury  
  Jeśli zamierzasz zezwolić procedury można zmienić elementu programistycznego, bazowy argumentu w wywoływanym kodzie, musisz przekazać go przez odwołanie. Ale procedury mogą uzyskać dostęp do elementów argumentu typu odwołania, nawet wtedy, gdy przekazywane przez wartość.  
@@ -52,13 +52,13 @@ Ta strona zawiera listę typowych problemów występujących podczas pracy z pro
   
  W poniższym przykładzie zdefiniowano dwie procedury potrwać zmienną tablicową według wartości, które działają na jego elementach. Procedura `increase` po prostu dodaje je do każdego elementu. Procedura `replace` przypisuje nową tablicę z parametrem `a()` , a następnie dodaje je do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawowe zmienną tablicy w wywoływanym kodzie ponieważ `a()` zadeklarowano `ByVal`.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
  Poniższy przykład wykonuje wywołania `increase` i `replace`.  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  Pierwszy `MsgBox` wywołać Wyświetla "po increase(n): 11, 21, 31, 41". Ponieważ `n` jest typem referencyjnym `increase` można zmienić jej członków, nawet jeśli jest przekazywana `ByVal`.  
   
@@ -66,7 +66,7 @@ Ta strona zawiera listę typowych problemów występujących podczas pracy z pro
   
  **Właściwe podejście:** Aby można było zmodyfikować samego podstawowego elementu zmiennej, przekazać go przez odwołanie. Poniższy kod przedstawia zmiany w deklaracji `replace` która umożliwia zastąpienie jednej tablicy na inną w wywoływanym kodzie.  
   
- [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
   
 ## <a name="unable-to-define-an-overload"></a>Nie można zdefiniować przeciążenia  
  Jeśli chcesz zdefiniować przeciążoną wersję procedurę, musisz podać samą nazwę, ale inny podpis. Jeśli kompilator nie można odróżnić swojej deklaracji z przeciążenia z tym samym podpisie, spowoduje wygenerowanie błędu.  
@@ -108,9 +108,9 @@ Ta strona zawiera listę typowych problemów występujących podczas pracy z pro
   
  Poniższy przykład ilustruje procesu rozpoznawania przeciążenia.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  W pierwszym wywołaniu kompilator eliminuje pierwsze przeciążenie, ponieważ typ pierwszego argumentu (`Short`) powoduje zawężenie typu odpowiadającego mu parametru (`Byte`). Następnie eliminuje trzecie przeciążenie ponieważ każdy argument typu w drugie przeciążenie (`Short` i `Single`) rozszerza się na odpowiedni typ w trzecie przeciążenie (`Integer` i `Single`). Drugie przeciążenie wymaga mniej rozszerzenia, dlatego kompilator używa go na potrzeby wywołania.  
   
@@ -118,7 +118,7 @@ Ta strona zawiera listę typowych problemów występujących podczas pracy z pro
   
  **Właściwe podejście:** Aby umożliwić wywoływanie procedury przeciążenia bez niejasności, należy użyć [funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md) do dopasowania typy danych argumentów do typów parametrów. W poniższym przykładzie pokazano wywołanie `z` rozdzielczości, wymusza na drugie przeciążenie.  
   
- [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Przeciążenia rozdzielczość z opcjonalnymi i ParamArray-argumenty  
  Jeśli dwa przeciążenia procedury, posiadające identyczne oznaczenie, z tą różnicą, że ostatni parametr jest zadeklarowana [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) w jednym i [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) w innych, kompilator rozpoznaje wywołania tej procedury zgodnie z najlepiej dopasowany. Aby uzyskać więcej informacji, zobacz [rozdzielczość przeciążenia](./overload-resolution.md).  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: a4d5f12c5cf1ba89f7b505fb44c3f8fb19cb09d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 884c5ddf15deb49719915f10e107ba6a3431c4bc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669162"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965947"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Instrukcje: Dopasowanie ciągu do wzorca (Visual Basic)
 Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md) spełnia wzorzec, wówczas można użyć [takich jak Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -33,7 +33,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
      Poniższy przykład sprawdza czy `myString` składa się dokładnie z jednego znaku `H`.  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#70)]  
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Aby dopasować znak w wyrażeniu ciąg z symbolem wieloznacznym  
   
@@ -41,7 +41,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
      Poniższy przykład sprawdza czy `myString` składa się z jednego znaku `W` następuje dokładnie dwa znaki żadnych wartości.  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#71)]  
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Aby dopasować znak w wyrażeniu ciąg z listą znaków  
   
@@ -49,7 +49,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
      Poniższy przykład sprawdza czy `myString` składa się z dowolnym prawidłowym znakiem następuje z dokładnie jednym ze znaków `A`, `C`, lub `E`.  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#72)]  
   
      Należy pamiętać, że ta rozróżniana jest wielkość liter.  
   
@@ -59,7 +59,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
      Poniższy przykład sprawdza czy `myString` składa się ze znaków `num` następuje z dokładnie jednym ze znaków `i`, `j`, `k`, `l`, `m`, lub `n`.  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#73)]  
   
      Należy pamiętać, że ta rozróżniana jest wielkość liter.  
   
@@ -76,7 +76,7 @@ Jeśli chcesz sprawdzić, czy wyrażenie [String — typ danych](../../../../vis
   
      Następujący przykład sprawdza 7 cyfrowy numer telefonu `phoneNum` dla dokładnie trzech cyfr, spację, myślnik (`–`), okres (`.`), lub nie znaku, a następnie dokładnie cztery cyfry.  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Operatory porównania](../../../../visual-basic/language-reference/operators/comparison-operators.md)

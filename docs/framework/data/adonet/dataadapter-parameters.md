@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: 5d91b6d0a2dc31a80d49f8e033043cf44e5c77e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcc4c5485e59456d75c0f183e9b53b457072ab94
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679828"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965859"
 ---
 # <a name="dataadapter-parameters"></a>Parametry elementu DataAdapter
 <xref:System.Data.Common.DbDataAdapter> Ma cztery właściwości, które są używane do pobierania danych z i aktualizować dane do źródła danych: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> właściwość zwraca dane ze źródła danych; i <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, i <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> właściwości są używane do zarządzania zmiany w źródle danych. `SelectCommand` Właściwość musi być ustawiona przed wywołaniem `Fill` metody `DataAdapter`. `InsertCommand`, `UpdateCommand`, Lub `DeleteCommand` właściwości musi być ustawiona przed `Update` metody `DataAdapter` jest wywoływana w zależności od tego, jakie zmiany zostały wprowadzone do danych w <xref:System.Data.DataTable>. Załóżmy, że wiersze zostały dodane `InsertCommand` musi być ustawiona przed wywołaniem `Update`. Gdy `Update` przetwarza wierszy wstawionych, zaktualizowanych lub usuniętych `DataAdapter` używa odpowiednich `Command` właściwości przetwarzania akcji. Aktualne informacje na temat zmodyfikowanych wierszy jest przekazywany do `Command` obiektu za pomocą `Parameters` kolekcji.  
   
- Po zaktualizowaniu wiersza w źródle danych, należy wywołać instrukcji UPDATE, który używa do identyfikowania wiersza w tabeli, unikatowy identyfikator aktualizacji. Unikatowy identyfikator jest zazwyczaj wartość klucz podstawowy. Instrukcja UPDATE używa parametrów, które zawierają zarówno Unikatowy identyfikator, kolumny i wartości, które mają zostać zaktualizowane, jak pokazano w następującej instrukcji języka Transact-SQL.  
+ Po zaktualizowaniu wiersza w źródle danych, możesz wywołać instrukcji UPDATE, który używa unikatowego identyfikatora do identyfikowania wiersza w tabeli do zaktualizowania. Unikatowy identyfikator jest zazwyczaj wartość klucz podstawowy. Instrukcja UPDATE używa parametrów, które zawierają zarówno Unikatowy identyfikator, kolumny i wartości, które mają zostać zaktualizowane, jak pokazano w następującej instrukcji języka Transact-SQL.  
   
 ```sql
 UPDATE Customers SET CompanyName = @CompanyName   

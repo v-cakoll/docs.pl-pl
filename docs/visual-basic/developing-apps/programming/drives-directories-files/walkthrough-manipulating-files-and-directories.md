@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adf5884c759d4dd4267dba732d8b9f39c63cd320
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709734"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973395"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Przewodnik: Manipulowanie plikami i katalogami w Visual Basic
 Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją opisuje sposób tworzenia mała aplikacja, która zawiera listę i sprawdza, czy pliki tekstowe, w katalogu. Dla każdego pliku zaznaczony tekst aplikacji zawiera atrybuty pliku i pierwszego wiersza zawartości. Istnieje możliwość zapisywania informacji w pliku dziennika.  
@@ -43,7 +43,7 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
   
 4.  Dodaj formanty w poniższej tabeli do formularza i ustaw odpowiednie wartości ich właściwości.  
   
-    |Formant|Właściwość|Wartość|  
+    |formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nazwa**|`filesListBox`|  
     |**Przycisk**|**Nazwa**<br /><br /> **Text**|`browseButton`<br /><br /> **Przeglądaj**|  
@@ -57,13 +57,13 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
   
 2.  Dodaj następujący kod do `Click` programu obsługi zdarzeń.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      `FolderBrowserDialog1.ShowDialog` Wywołanie zostanie otwarta **przeglądanie w poszukiwaniu folderu** okno dialogowe. Po użytkownik klika **OK**, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> właściwość jest wysyłany jako argument do `ListFiles` metody, która jest dodawana w następnym kroku.  
   
 3.  Dodaj następujący kod `ListFiles` metody.  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
      Ten kod najpierw wyczyści **ListBox**.  
   
@@ -83,7 +83,7 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
   
 2.  Dodaj następujący kod do `Click` programu obsługi zdarzeń.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
      Kod sprawdza, czy element jest zaznaczony na `ListBox`. Następnie uzyskuje wpis ścieżki pliku z `ListBox`. <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> Metoda jest używana w celu sprawdzenia, czy plik nadal istnieje.  
   
@@ -91,7 +91,7 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
   
 3.  Dodaj następujący kod `GetTextForOutput` metody.  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
      Kod używa <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> metodę, aby uzyskać plik parametrów. Parametry pliku są dodawane do <xref:System.Text.StringBuilder>.  
   
@@ -107,7 +107,7 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
   
 1.  Dodaj następujący kod na końcu `examineButton_Click` programu obsługi zdarzeń.  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
      Kod ustawia ścieżka pliku dziennika, aby umieścić ten plik dziennika w tym samym katalogu co w przypadku wybranego pliku. Tekst wpisu dziennika jest ustawiona na bieżącą datę i godzinę, o których następuje informacji o pliku.  
   
@@ -123,7 +123,7 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
   
 2.  Dodaj następujący kod do narzędzia obsługi zdarzeń.  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      Ten kod ustawia domyślny katalog przeglądarkę folderów w bieżącym katalogu.  
   
@@ -135,7 +135,7 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
   
 1.  Dodaj następujący kod `SetEnabled` metody.  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      `SetEnabled` Metoda włącza lub wyłącza kontrolek, w zależności od tego, czy element jest zaznaczony na `ListBox`.  
   
@@ -157,7 +157,7 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
 ## <a name="full-example-using-systemio"></a>Pełny przykład za pomocą System.IO  
  W poniższym przykładzie równoważne użyto klas z <xref:System.IO> przestrzeni nazw, zamiast `My.Computer.FileSystem` obiektów.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.IO>

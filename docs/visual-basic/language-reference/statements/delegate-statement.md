@@ -7,12 +7,12 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 1ed2dc91d1a2ea9bade11902aac553e24c0607ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0fb524961cd04b73a8b83094880d5eaa206fe9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583668"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965803"
 ---
 # <a name="delegate-statement"></a>Delegate — Instrukcja
 Używane do deklarowania delegata. Delegat jest typem referencyjnym, który odwołuje się do `Shared` metody typu lub metod wystąpień obiektu. Każda procedura ze zgodnymi typy parametrów i zwrotu może służyć do utworzenia wystąpienia tej klasy delegatu. Procedurę można następnie później wywołać za pośrednictwem wystąpienia delegata.  
@@ -62,7 +62,7 @@ Używane do deklarowania delegata. Delegat jest typem referencyjnym, który odwo
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Delegate` instrukcję, aby zadeklarować delegata na potrzeby świadczenia na dwie liczby i zwraca liczbę. `DelegateTest` Metoda przyjmuje wystąpienie delegata tego typu i używa go do wykonywania operacji pary numerów.  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)

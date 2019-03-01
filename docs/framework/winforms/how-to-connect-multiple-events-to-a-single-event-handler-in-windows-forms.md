@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 527e2c594f236f94ce23e4fd21238b8605af308c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502446"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967870"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Instrukcje: Łączenie wielu zdarzeń jedną procedurą obsługi zdarzeń w formularzach Windows Forms
 W projekcie aplikacji może okazać się niezbędne do obsługi pojedynczego zdarzenia na użytek wielu zdarzeń lub ma wiele zdarzeń, wykonaj tę samą procedurę. Na przykład często jest zaawansowane oszczędność czasu do polecenia podnieść te same zdarzenia, jak przycisk w formularzu, jeśli eksponowanie taką samą funkcjonalność. Można to zrobić, korzystając z widoku zdarzenia w oknie właściwości w C# lub za pomocą `Handles` — słowo kluczowe i **Nazwa klasy** i **nazwę metody** list rozwijanych w edytorze kodu języka Visual Basic.  
@@ -46,7 +46,7 @@ W projekcie aplikacji może okazać się niezbędne do obsługi pojedynczego zda
   
 6.  Dodaj odpowiedni kod do obsługi zdarzeń.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Aby połączyć wiele zdarzeń do obsługi pojedynczego zdarzenia wC#  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Aby połączyć wiele zdarzeń do obsługi pojedynczego zdarzenia w języku C\#
   
 1.  Wybierz kontrolkę, do którego chcesz się połączyć program obsługi zdarzeń.  
   

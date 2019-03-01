@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618912"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965713"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Rozwiązywanie problemów związanych ze zmiennymi w Visual Basic
 Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpić podczas pracy ze zmiennymi w Visual Basic.  
@@ -24,7 +24,7 @@ Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpi�
   
  Gdy [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) kontrola typów zestawów `On`, zmienna obiektu dostęp do metod i właściwości klasy, z którym trzeba je zadeklarować. Ilustruje to poniższy przykład.  
 
- [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
+ [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
  W tym przykładzie `p` można używać tylko członków <xref:System.Object> klasy, które nie obejmują `Left` właściwości. Z drugiej strony `q` został zadeklarowany jako typ <xref:System.Windows.Forms.Label>, dzięki czemu można użyć wszystkich metod i właściwości <xref:System.Windows.Forms.Label> klasy w <xref:System.Windows.Forms> przestrzeni nazw.  
   

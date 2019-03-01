@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Do
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 844d4bd8ac18bc31b5abeff5882df1f9a4acaab5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147265"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967974"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
 
@@ -78,7 +78,7 @@ W [wzorzec obserwatora](https://en.wikipedia.org/wiki/Observer_pattern), obiekt 
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Wzorzec publikowania/subskrybowania (Pub/Sub) 
 
-Celem [wzorca publikowania/subskrypcji](https://msdn.microsoft.com/library/ff649664.aspx) jest taka sama jak wzorzec obserwatora: chcesz powiadomić inne usługi, w przypadku wystąpienia określonych zdarzeń została wykonana. Ale ma jedną istotną różnicą między wzorców obserwatora i Pub/Sub. We wzorcu obserwatora emisji odbywa się bezpośrednio z obserwowalnymi na obserwatorów, dzięki czemu "znane" siebie nawzajem. Ale gdy przy użyciu wzorca publikowania/subskrybowania, jest trzecim składnikiem o nazwie brokera lub broker lub zdarzeń magistrali komunikatów, który jest znany wydawcy i subskrybenta. W związku z tym gdy przy użyciu wzorca publikowania/subskrybowania wydawcy i subskrybenci są dokładnie odłączone dzięki brokera magistrali lub wiadomości wymienionych zdarzeń.
+Celem [wzorca publikowania/subskrypcji](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) jest taka sama jak wzorzec obserwatora: chcesz powiadomić inne usługi, w przypadku wystąpienia określonych zdarzeń została wykonana. Ale ma jedną istotną różnicą między wzorców obserwatora i Pub/Sub. We wzorcu obserwatora emisji odbywa się bezpośrednio z obserwowalnymi na obserwatorów, dzięki czemu "znane" siebie nawzajem. Ale gdy przy użyciu wzorca publikowania/subskrybowania, jest trzecim składnikiem o nazwie brokera lub broker lub zdarzeń magistrali komunikatów, który jest znany wydawcy i subskrybenta. W związku z tym gdy przy użyciu wzorca publikowania/subskrybowania wydawcy i subskrybenci są dokładnie odłączone dzięki brokera magistrali lub wiadomości wymienionych zdarzeń.
 
 ### <a name="the-middleman-or-event-bus"></a>Service bus pośredników lub zdarzenie 
 

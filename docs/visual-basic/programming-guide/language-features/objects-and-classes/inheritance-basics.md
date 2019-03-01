@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551790"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970301"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Podstawowe informacje o dziedziczeniu (Visual Basic)
 `Inherits` Instrukcja jest używane do deklarowania nową klasę o nazwie *klasy pochodnej*zgodnie z istniejącej klasy, znane jako *klasy bazowej*. Klasy pochodne dziedziczenie i można rozszerzyć, właściwości, metody, zdarzenia, pola i stałe zdefiniowane w klasie bazowej. W poniższej sekcji opisano niektóre z reguł do obsługi dziedziczenia i modyfikatorów, których można użyć, aby zmienić sposób klasy dziedziczą lub są dziedziczone:  
@@ -62,14 +62,14 @@ ms.locfileid: "54551790"
   
  W poniższym przykładzie zdefiniowano klasę bazową `Payroll,` i Klasa pochodna `BonusPayroll`, który zastępuje metody dziedziczonej, `PayEmployee`. W procedurze `RunPayroll`, tworzy, a następnie przekazuje `Payroll` obiektu i `BonusPayroll` obiektu do funkcji, `Pay`, który wykonuje `PayEmployee` metoda obu obiektów.  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
+ [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
   
 ## <a name="the-mybase-keyword"></a>MyBase — słowo kluczowe  
  `MyBase` — Słowo kluczowe zachowuje się jak zmienna obiektu, który odwołuje się do klasy bazowej bieżącego wystąpienia klasy. `MyBase` często używane do dostępu do składowych klasy bazowej, które zostały zastąpione lub pada w klasie pochodnej. W szczególności `MyBase.New` służy do jawnie wywołać konstruktora klasy bazowej w konstruktorze klasy pochodnej.  
   
  Na przykład załóżmy, że projektujesz Klasa pochodna, która zastępuje metodę dziedziczone z klasy podstawowej. Zastąpione metody można wywołać metodę w klasie bazowej i zmodyfikować zwracanej wartości, jak pokazano na następujący fragment kodu:  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
+ [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
   
  Na poniższej liście opisano ograniczenia dotyczące używania `MyBase`:  
   

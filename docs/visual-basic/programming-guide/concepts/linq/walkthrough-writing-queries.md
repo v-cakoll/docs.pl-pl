@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666582"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971289"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Przewodnik: Pisanie zapytań w języku Visual Basic
 W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do zapisywania [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeniach zapytań. Przewodnik pokazuje, jak tworzyć zapytania na liście obiektów dla uczniów, jak uruchamiać zapytania i sposobu ich modyfikacji. Kilka funkcji, w tym inicjatorów obiektów, wnioskowanie o typie lokalnym i typy anonimowe dołączyć do nich zapytania.  
@@ -56,11 +56,11 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 1.  Znajdź miejsce w `Main` metoda projektu, który jest oznaczony w następujący sposób:  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
      Skopiuj poniższy kod, a następnie wklej je.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
 2.  Zatrzymaj wskaźnik myszy nad `studentQuery` w kodzie, aby sprawdzić, czy jest przypisany przez kompilator typu `IEnumerable(Of Student)`.  
   
@@ -71,7 +71,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 1.  Dodaj następujący kod `For Each` pętli poniżej zapytania w projekcie.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
 2.  Zatrzymaj wskaźnik myszy nad zmienna sterująca pętli `studentRecord` aby zobaczyć jego typu danych. Typ `studentRecord` jest `Student`, ponieważ `studentQuery` zwraca kolekcję `Student` wystąpień.  
   
@@ -102,7 +102,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 1.  Dodaj kod, w tej sekcji, aby wprowadzić identyfikator lokalny w wyrażeniu zapytania. Identyfikator lokalny będzie przechowywać wyniki pośrednie. W poniższym przykładzie `name` jest identyfikator, który przechowuje łączenia student imienia i nazwiska. Identyfikator lokalny może służyć do zapewnienia wygody, lub go może poprawić wydajność dzięki przechowywaniu wyniki wyrażenie, które w przeciwnym razie nalicza się wiele razy.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
 2.  Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
@@ -110,7 +110,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 1.  Dodaj zapytanie i `For Each` pętli w tej sekcji, aby utworzyć zapytanie, który wytwarza sekwencję, w której elementy różnią się od elementów w źródle. W poniższym przykładzie źródło to zbiór `Student` obiektów, ale tylko jeden element członkowski każdy obiekt jest zwracany: imię studentów, których nazwisko jest Garcia. Ponieważ `currentStudent.First` jest ciągiem, typ danych sekwencji zwróconej przez `studentQuery3` jest `IEnumerable(Of String)`, sekwencją ciągów. Tak samo jak wcześniejszych przykładach przydział danych w polu `studentQuery3` pozostanie do kompilatora, aby określić za pomocą wnioskowanie o typie lokalnym.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
 2.  Zatrzymaj wskaźnik myszy nad `studentQuery3` w kodzie, aby sprawdzić, czy jest przypisany typ `IEnumerable(Of String)`.  
   
@@ -122,14 +122,14 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
      Poniższy przykład tworzy zapytanie zwracające nazwą i ranga seniors, w której akademickich pozycję to od 1 do 10, w kolejności akademickich. W tym przykładzie typ `studentQuery4` musi wywnioskować, ponieważ `Select` klauzula Zwraca wystąpienie typu anonimowego, a typ anonimowy nie ma użytecznych nazw.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
 2.  Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
 ## <a name="additional-examples"></a>Dodatkowe przykłady  
  Teraz, gdy już rozumiesz podstawy, Oto lista dodatkowe przykłady ilustrują elastyczność i możliwości [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Każdy przykład jest poprzedzony przez krótki opis jego działania. Zatrzymaj wskaźnik myszy nad zmienną wyników kwerendy dla każdego zapytania zobaczyć wnioskowany typ. Użyj `For Each` pętli do wygenerowania wyników.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]  
   
 ## <a name="additional-information"></a>Dodatkowe informacje  
  Po przejściu na podstawowych pojęciach dotyczących pracy z zapytaniami, jesteś gotowy do odczytu dokumentację i przykłady dla określonego typu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy, który Cię interesuje:  

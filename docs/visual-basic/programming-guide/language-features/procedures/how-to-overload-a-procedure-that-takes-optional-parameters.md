@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 343ede485a0486567710a8bf34d85ea356c139fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52e31ba2f9d2f5cf87a5597a3c8d639816a75535
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694129"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972667"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)
 Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) parametrów, nie można zdefiniować przeciążoną wersją, dowolny z jej przeciążeń niejawne dopasowania. Aby uzyskać więcej informacji, zobacz "Niejawne przeciążenia dla opcjonalne parametry" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
@@ -38,11 +38,11 @@ Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/lan
   
      Poniższy przykład pokazuje zdefiniowane z opcjonalnym parametrem, równoważne zbiór dwie procedury przeciążone, a na końcu przykłady nieprawidłowych i prawidłowe przeciążone wersje procedury.  
   
-     [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
+     [!code-vb[VbVbcnProcedures#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#59)]  
   
-     [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_2.vb)]  
+     [!code-vb[VbVbcnProcedures#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#60)]  
   
-     [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
+     [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
 ## <a name="multiple-optional-parameters"></a>Wiele parametrów opcjonalnych  
  Procedury z więcej niż jeden parametr opcjonalny zwykle wymaga więcej niż dwie przeciążone wersje. Na przykład jeśli istnieją dwa parametry opcjonalne, a kod wywołujący może dostarczyć lub Pomiń każdej z nich niezależnie od innych, należy cztery przeciążone wersje: jeden dla każdej możliwej kombinacji podanych argumentów.  

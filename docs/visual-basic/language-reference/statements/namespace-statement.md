@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 1e7fb55cac1de747c620ea44f320ec9185bfbd3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1268982eb841327d72ce195992f8c4dcad4440a7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612154"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966180"
 ---
 # <a name="namespace-statement"></a>Namespace — Instrukcja
 Deklaruje nazwę przestrzeni nazw i powoduje, że kod źródłowy znajdujący się w deklaracji jest kompilowany w obrębie tej przestrzeni nazw.  
@@ -78,17 +78,17 @@ End Namespace
 ## <a name="example"></a>Przykład  
  Poniższy przykład deklaruje dwie przestrzenie nazw, jednej zagnieżdżone w innych.  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład deklaruje wiele zagnieżdżone przestrzenie nazw w jednym wierszu i jest równoważny do poprzedniego przykładu.  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład uzyskuje dostęp do klasy zdefiniowane w poprzednich przykładach.  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład definiuje szkielet nową klasę listy ogólnej i dodaje go do <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw.  

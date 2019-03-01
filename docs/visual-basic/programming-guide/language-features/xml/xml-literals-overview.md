@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: c6d2600b590e01fff062828f8e0f48d9cfad0190
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f0e50de6217e01a7bcb68ab27a9595d91981dd4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681394"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968832"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Literały XML - Przegląd (Visual Basic)
 *Literał XML* umożliwia włączenie XML bezpośrednio w kodzie języka Visual Basic. Literał składnia XML przedstawia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektów który jest podobny do składni XML 1.0. Ta funkcja ułatwia programistycznym tworzeniu elementów XML i dokumentów, ponieważ kod ma tę samą strukturę jako ostatecznego XML.  
@@ -26,11 +26,11 @@ ms.locfileid: "54681394"
 ## <a name="simple-literals"></a>Literały prosty  
  Możesz utworzyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektu w kodzie języka Visual Basic, wpisując lub wklejając w prawidłowym kodem XML. Literał elementu XML zwraca <xref:System.Xml.Linq.XElement> obiektu. Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) i [literały XML i specyfikacja XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). Poniższy przykład tworzy element XML, który ma kilka elementów podrzędnych.  
   
- [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  Można utworzyć dokumentu XML, uruchamiając literał za pomocą XML `<?xml version="1.0"?>`, jak pokazano w poniższym przykładzie. Literał dokumentu XML zwraca <xref:System.Xml.Linq.XDocument> obiektu. Aby uzyskać więcej informacji, zobacz [literał dokumentu XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
 >  Składnia literał XML w Visual Basic nie jest taka sama jak w składni Specyfikacja XML 1.0. Aby uzyskać więcej informacji, zobacz [literały XML i specyfikacja XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
@@ -47,12 +47,12 @@ ms.locfileid: "54681394"
   
  Na przykład w poniższym kodzie użyto osadzonego zapytania do tworzenia elementów XML z elementów członkowskich `phoneNumbers2` macierz, a następnie dodaj te elementy jako elementy podrzędne `contact2`.  
   
- [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
 ## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>Jak kompilator tworzy obiekty z literałów XML  
  Kompilator Visual Basic tłumaczy literałów XML na wywołania do równowartości [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] konstruktorów w celu zbudowania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektu. Na przykład, kompilator Visual Basic tłumaczenia w poniższym przykładzie kodu na wywołanie <xref:System.Xml.Linq.XProcessingInstruction> wywołania konstruktora dla instrukcji wersji XML, <xref:System.Xml.Linq.XElement> Konstruktor `<contact>`, `<name>`, i `<phone>` elementy i wywołania <xref:System.Xml.Linq.XAttribute> Konstruktor `type` atrybutu. W szczególności podane atrybuty w następującym przykładzie, kompilator Visual Basic wywoła <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> Konstruktor dwa razy. Pierwszy przekazują wartość `type` dla `name` parametr i wartość `home` dla `value` parametru. Drugi będzie również przekazać wartość `type` dla `name` parametru, ale wartość `work` dla `value` parametru.  
   
- [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Xml.Linq.XElement>

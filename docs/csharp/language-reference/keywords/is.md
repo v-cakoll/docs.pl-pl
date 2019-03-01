@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710355"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977061"
 ---
-# <a name="is-c-reference"></a>is (odwołanie w C#) #
+# <a name="is-c-reference"></a>is (odwołanie w C#)
 
 Sprawdza, czy obiekt jest zgodny z danego typu, lub (rozpoczynający się znakami języka C# 7.0) sprawdza się wyrażenie do wzorca.
 
-## <a name="testing-for-type-compatibility"></a>Testowanie zgodności typu ##
+## <a name="testing-for-type-compatibility"></a>Testowanie zgodności typu
 
 `is` — Słowo kluczowe ocenia zgodność z typem w czasie wykonywania. Określa, czy wystąpienie obiektu lub wyniku wyrażenia można przekonwertować na określony typ. Ma składnię
 
@@ -56,7 +56,7 @@ Poniższy przykład pokazuje, że `is` wyrażenie daje w wyniku `true` dla każd
 
 Począwszy od języka C# 7.0, można użyć dopasowywania do wzorca z [wpisz wzór](#type) napisać bardziej zwięzły widok kodu, który używa `is` instrukcji.
 
-## <a name="pattern-matching-with-is"></a>Dopasowywanie wzorca z `is` ##
+## <a name="pattern-matching-with-is"></a>Dopasowywanie wzorca z `is`
 
 Począwszy od C# 7.0, `is` i [Przełącz](../../../csharp/language-reference/keywords/switch.md) instrukcje obsługują dopasowywania do wzorca. `is` — Słowo kluczowe obsługuje następujące wzorce:
 
@@ -104,7 +104,7 @@ Równoważny kod bez dopasowywania do wzorca wymaga oddzielnych przypisania, kt�
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Wzór stałej ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Wzór stałej
 
 Podczas przeprowadzania dopasowywanie wzorca za wzór stałej `is` sprawdza, czy wyrażenie jest równe określonej stałej. W języku C# 6 i starszych wersji wzór stałej jest obsługiwana przez [Przełącz](switch.md) instrukcji. Począwszy od języka C# 7.0 nie jest obsługiwany przez `is` także instrukcji. Jego składnia jest następująca:
 

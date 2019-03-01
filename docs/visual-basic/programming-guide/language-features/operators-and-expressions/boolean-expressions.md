@@ -14,22 +14,22 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: a86df2734d315e5fed0784b0394bb305b15562a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562755"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965543"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Wyrażenia logiczne (Visual Basic)
 A *wyrażenia logicznego* jest wyrażeniem, którego wynikiem jest wartość [typ danych Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` lub `False`. `Boolean` wyrażenia może przybierać różne formy. Najprostszą jest bezpośrednie porównanie wartości `Boolean` zmienną `Boolean` literału, jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
 ## <a name="two-meanings-of-the--operator"></a>Dwa znaczenie = — Operator  
  Należy zauważyć, że instrukcja przypisania `newCustomer = True` wygląda tak samo jak w wyrażeniu w poprzednim przykładzie, ale wykonuje różne funkcje i jest używane w inny sposób. W powyższym przykładzie wyrażenie `newCustomer = True` reprezentuje wartość logiczną, a `=` znaku jest interpretowany jako operator porównania. W instrukcji autonomicznej `=` znaku jest interpretowany jako operator przypisania i przypisuje wartość po prawej stronie do zmiennej po lewej stronie. Ilustruje to poniższy przykład.  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
  Aby uzyskać więcej informacji, zobacz [porównania wartości](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) i [instrukcji](../../../../visual-basic/language-reference/statements/index.md).  
   
@@ -50,7 +50,7 @@ A *wyrażenia logicznego* jest wyrażeniem, którego wynikiem jest wartość [ty
 ## <a name="short-circuiting-operators"></a>Zwarcie operatorów  
  Operatory logiczne `AndAlso` i `OrElse` wykazują zachowanie nazywane *zwarcie*. Short-circuiting operator najpierw sprawdza lewy operand. Jeśli lewy operand określa wartość całe wyrażenie, wykonywania programu będzie kontynuowane bez oceny wyrażenie prawej krawędzi. Ilustruje to poniższy przykład.  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
  W powyższym przykładzie operator oblicza wyrażenie po lewej stronie, `45 < 12`. Ponieważ lewe wyrażenie daje w wyniku `False`, całe wyrażenie logiczne musi być `False`. Wykonanie programu więc pomija wykonywanie kodu w ramach `If` bloku bez oceny prawe wyrażenie `testFunction(3)`. W tym przykładzie nie mogą wywoływać `testFunction()` ponieważ po lewej stronie wyrażenia falsifies całe wyrażenie.  
   
@@ -59,7 +59,7 @@ A *wyrażenia logicznego* jest wyrażeniem, którego wynikiem jest wartość [ty
 ### <a name="comparison-with-non-short-circuiting-operators"></a>Porównanie z operatorami Circuiting krótki  
  Z drugiej strony, obie strony operatora logicznego są oceniane po operatorów logicznych `And` i `Or` są używane. Ilustruje to poniższy przykład.  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
  Poprzedni przykład wywołuje `testFunction()` nawet, jeśli wynikiem obliczenia wyrażenia po lewej stronie jest `False`.  
   

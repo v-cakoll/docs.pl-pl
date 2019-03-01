@@ -2,14 +2,14 @@
 title: Przewodnik po F#
 description: Sprawdź, niektóre najważniejsze funkcje w języku programowania w ten samouczek przy użyciu przykładów kodu F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145526"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968299"
 ---
-# <a name="tour-of-f"></a>Przewodnik po F# #
+# <a name="tour-of-f"></a>Przewodnik po F\#
 
 Najlepszym sposobem, aby dowiedzieć się więcej na temat języka F# jest do odczytu i zapisu w kodzie języka F#. Ten artykuł będzie pełnić rolę przez samouczek prowadzący przez niektóre kluczowe funkcje języka F# i zapewniają fragmenty kodu, które mogą być wykonywane na komputerze. Aby dowiedzieć się więcej na temat konfigurowania środowiska deweloperskiego, zapoznaj się z [wprowadzenie](tutorials/getting-started/index.md).
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-ms.openlocfilehash: f303687fb86e23191727df769af52811a93fe71e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56b156545fac2aba09d32139fdaad26da711e018
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715793"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966219"
 ---
 # <a name="playing-sounds-visual-basic"></a>Odtwarzanie dźwięków (Visual Basic)
 `My.Computer.Audio` Obiekt zapewnia metody do odtwarzania dźwięku.  
@@ -26,20 +26,20 @@ ms.locfileid: "54715793"
   
  W poniższym przykładzie `My.Computer.Audio.Play` metoda odtwarza dźwięk. Gdy `AudioPlayMode.WaitToComplete` jest określony, `My.Computer.Audio.Play` oczekuje na zakończenie przed kontynuowaniem wywoływanie kodu dźwięku. Korzystając z tego przykładu, należy upewnić się, że nazwa pliku odwołuje się do pliku dźwiękowego .wav, która znajduje się na komputerze  
   
- [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_1.vb)]  
+ [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
   
  W poniższym przykładzie `My.Computer.Audio.Play` metoda odtwarza dźwięk. Korzystając z tego przykładu, należy upewnić się, że zasoby aplikacji obejmują plik dźwiękowy wav, o nazwie wykres kaskadowy.  
   
- [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_2.vb)]  
+ [!code-vb[VbVbalrMyComputer#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#16)]  
   
 ## <a name="playing-looping-sounds"></a>Odtwarzanie dźwięków pętli  
  W poniższym przykładzie `My.Computer.Audio.Play` metoda odtwarza dźwięk określony w tle podczas `PlayMode.BackgroundLoop` jest określony. Korzystając z tego przykładu, należy upewnić się, że nazwa pliku odwołuje się do pliku dźwiękowego .wav, która znajduje się na komputerze.  
   
- [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_3.vb)]  
+ [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
   
  W poniższym przykładzie `My.Computer.Audio.Play` metoda odtwarza dźwięk określony w tle podczas `PlayMode.BackgroundLoop` jest określony. Korzystając z tego przykładu, należy upewnić się, że zasoby aplikacji obejmują plik dźwiękowy wav, o nazwie wykres kaskadowy.  
   
- [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
+ [!code-vb[VbVbalrMyComputer#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#12)]  
   
  W poprzednim przykładzie kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu, znajduje się w **aplikacji z formularzem Windows > dźwięk**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54715793"
   
  Poniższy przykład powoduje zatrzymanie dźwięk jest odtwarzany w tle.  
   
- [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
+ [!code-vb[VbVbalrMyComputer#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#18)]  
   
  W poprzednim przykładzie kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu, znajduje się w **aplikacji z formularzem Windows > dźwięk**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "54715793"
   
  W poniższym przykładzie użyto `My.Computer.Audio.PlaySystemSound` metodę, aby odtworzyć dźwięk systemu.  
   
- [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
+ [!code-vb[VbVbalrMyComputer#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:Microsoft.VisualBasic.Devices.Audio>

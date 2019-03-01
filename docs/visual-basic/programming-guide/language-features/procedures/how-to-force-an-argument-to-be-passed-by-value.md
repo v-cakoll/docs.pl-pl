@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706644"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970288"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Instrukcje: Wymuszanie argumentu być przekazywany przez wartość (Visual Basic)
 Deklaracja procedury określa mechanizm przekazywania. Jeśli parametr jest zadeklarowana [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic oczekuje przekazywania odpowiadający argument odwołania. Dzięki temu procedurę, aby zmienić wartość elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Jeśli chcesz chronić element podstawowy względem takie zmiany, można zastąpić `ByRef` wywołać mechanizm przekazywania w procedurze, umieszczając nazwę argumentu w nawiasach. Te nawiasy w niniejszym dokumencie stanowią nawiasów otaczający listę argumentów w wywołaniu.  
@@ -35,9 +35,9 @@ Deklaracja procedury określa mechanizm przekazywania. Jeśli parametr jest zade
 ## <a name="example"></a>Przykład  
  Poniższy przykład zastępuje `ByRef` deklaracji parametru. W wywołaniu, która wymusza `ByVal`, należy pamiętać, dwa poziomy nawiasów.  
   
- [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
- [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
  Gdy `str` jest ujęty w nawiasy dodatkowe w liście argumentów `setNewString` procedury nie można zmienić jego wartość w wywoływanym kodzie i `MsgBox` Wyświetla, "nie można zastąpić, jeśli przekazany ByVal". Gdy `str` nie jest ujęty w nawiasy dodatkowe procedury można go zmienić, i `MsgBox` Wyświetla "Jest nową wartość dla argumentu inString".  
   

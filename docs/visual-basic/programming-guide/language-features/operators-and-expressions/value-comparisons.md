@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724817"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965914"
 ---
 # <a name="value-comparisons-visual-basic"></a>Porównania wartości (Visual Basic)
 Operatory porównania może służyć do konstruowania wyrażeń, które Porównaj wartości liczbowe zmiennych. Zwraca te wyrażenia `Boolean` wartość oparta na czy wynik porównania ma wartość PRAWDA lub FAŁSZ. Przykłady takich wyrażeń.  
@@ -34,15 +34,15 @@ Operatory porównania może służyć do konstruowania wyrażeń, które Porówn
   
  Wyrażeń, Porównaj wartości, które są najczęściej używane w `If...Then` konstrukcje, jak w poniższym przykładzie.  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
  `=` Znak jest operator porównania, a także operator przypisania. Gdy jest używana jako operator porównania, ocenia to, czy wartość po lewej stronie jest równa wartości po prawej stronie, jak pokazano w poniższym przykładzie.  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
  Umożliwia także wyrażenia porównania dowolnym `Boolean` wartość jest wymagane, na przykład `If`, `While`, `Loop`, lub `ElseIf` instrukcji, lub podczas przypisywania do lub przekazanie wartości do `Boolean` zmiennej. W poniższym przykładzie przypisano wartości zwracanych przez wyrażenie porównania `Boolean` zmiennej.  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Wyrażenia logiczne](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)

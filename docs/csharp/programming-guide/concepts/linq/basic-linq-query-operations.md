@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8884f2ae230a92f48e93d9b5408ff241f874f92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728373"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968195"
 ---
 # <a name="basic-linq-query-operations-c"></a>Podstawowe operacje zapytań LINQ (C#)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania wyrażeń i niektóre typowe rodzaje operacji, które można wykonywać w zapytaniu. Więcej szczegółowych informacji znajduje się w następujących tematach:  
@@ -39,7 +39,7 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
 ## <a name="obtaining-a-data-source"></a>Uzyskanie źródła danych  
  W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, pierwszym krokiem jest określenie źródła danych. W języku C#, tak jak większość języków programowania zmiennej musi być zadeklarowany przed jego użyciem. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, `from` klauzuli, co nastąpi wcześniej w celu wprowadzenia źródła danych (`customers`) i *zmiennej zakresu* (`cust`).  
   
- [!code-csharp[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  Zmienna zakresu jest podobna do zmiennej iteracji w `foreach` pętli z tą różnicą, że nie rzeczywiste iteracji odbywa się w wyrażeniu zapytania. Po wykonaniu zapytania zmienna zakresu będzie służyć jako odwołanie do każdy element w `customers`. Ponieważ kompilator może wywnioskować typ `cust`, nie trzeba określić ręcznie. Zmienne dodatkowy zakres może zostać wprowadzony przez `let` klauzuli. Aby uzyskać więcej informacji, zobacz [let, klauzula](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -49,22 +49,22 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
 ## <a name="filtering"></a>Filtrowanie  
  Prawdopodobnie najbardziej typowych operacji zapytania polega na zastosowaniu filtrowania w postaci wyrażenia logicznego. Filtr powoduje, że zapytanie, aby zwrócić tylko te elementy, dla których wyrażenie jest prawdziwe. Wynik jest generowany przy użyciu `where` klauzuli. Filtr w praktyce określa, które elementy, które mają zostać wykluczone z sekwencji źródłowej. W poniższym przykładzie, tylko te `customers` mających adresu w Londynie są zwracane.  
   
- [!code-csharp[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
   
  Możesz użyć znanej języka C# logiczne `AND` i `OR` operatory do zastosowania jako wiele filtr wyrażeń zgodnie z potrzebami `where` klauzuli. Na przykład, aby zwrócić tylko w przypadku klientów z "Londyn" `AND` której nazwa to "Devon", należy napisać następujący kod:  
   
- [!code-csharp[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]  
+ [!code-csharp[csLINQGettingStarted#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#25)]  
   
  Aby zwrócić klienci z Londynu lub Paryż, należy napisać następujący kod:  
   
- [!code-csharp[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]  
+ [!code-csharp[csLINQGettingStarted#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#26)]  
   
  Aby uzyskać więcej informacji, zobacz [gdzie klauzula](../../../../csharp/language-reference/keywords/where-clause.md).  
   
 ## <a name="ordering"></a>Szeregowanie  
  Często jest wygodne, posortuj zwrócone dane. `orderby` Klauzuli spowoduje, że elementy w zwracanej sekwencji, która ma zostać posortowana według domyślny moduł porównujący dla typu posortowana. Na przykład, następujące zapytanie można rozszerzyć, aby posortować wyniki na podstawie `Name` właściwości. Ponieważ `Name` jest ciągiem, domyślny moduł porównujący przeprowadza sortowania alfabetycznego od A do Z.  
   
- [!code-csharp[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]  
+ [!code-csharp[csLINQGettingStarted#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#27)]  
   
  Aby uporządkować wyniki w odwrotnej kolejności od Z do A, należy użyć `orderby…descending` klauzuli.  
   
@@ -73,20 +73,20 @@ Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinq](~/includes/vbtec
 ## <a name="grouping"></a>Grupowanie  
  `group` Klauzuli umożliwiają grupowanie wyników według klucza, który określisz. Na przykład można określić, czy wyniki powinny być grupowane według `City` tak, aby wszyscy klienci z Londynu lub Paryż znajdują się w poszczególnych grupach. W tym przypadku `cust.City` jest kluczem.  
   
- [!code-csharp[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]  
+ [!code-csharp[csLINQGettingStarted#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#28)]  
   
  Zakończenia zapytanie o `group` klauzuli wyniki formę listę list. Każdy element na liście jest obiektem, który ma `Key` elementu członkowskiego i listę elementów, które są grupowane w ramach tego klucza. Podczas iteracji ciągu zapytania, który wytwarza sekwencję grup, należy użyć zagnieżdżoną `foreach` pętli. Zewnętrzna pętla wykonuje iterację na każdą grupę i wewnętrzną pętlę iteruje przez elementy członkowskie w każdej grupie.  
   
  Jeśli musi odwoływać się do wyniki operacji grupy, możesz użyć `into` — słowo kluczowe do tworzenia identyfikatorów, które mogą być dodatkowo przeszukiwane. Następujące zapytanie zwraca tylko te grupy, które zawierają więcej niż dwóch klientów:  
   
- [!code-csharp[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]  
+ [!code-csharp[csLINQGettingStarted#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#29)]  
   
  Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Łączenie  
  Operacje sprzężenia Tworzenie skojarzenia między sekwencjami nie są jawnie modelowane w źródłach danych. Na przykład można wykonywać na przyłączenie do znalezienia wszystkich klientów i dystrybutorów, którzy mają tej samej lokalizacji. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] `join` zawsze działa się klauzuli względem kolekcji obiektów zamiast tabel bazy danych dotyczące bezpośrednio.  
   
- [!code-csharp[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
+ [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
  W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] nie trzeba używać `join` tak często, jak to zrobić w języku SQL, ponieważ klucze obce w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] są reprezentowane w modelu obiektu jako właściwości używane do przechowywania kolekcji elementów. Na przykład `Customer` obiekt zawiera zbiór `Order` obiektów. Zamiast wykonywanie sprzężenia, używając zapisu kropkowego dostęp zamówienia:  
   

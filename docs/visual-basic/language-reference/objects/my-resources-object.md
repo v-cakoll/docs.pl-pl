@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 758d3334fd9d3b01e088246cf2fe28c5b03576d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065872"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973733"
 ---
 # <a name="myresources-object"></a>My.Resources — Obiekt
 Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji.  
@@ -53,29 +53,29 @@ Udostępnia właściwości i klasy do uzyskiwania dostępu do zasobów aplikacji
 ## <a name="example"></a>Przykład  
  W tym przykładzie Ustawia tytuł formularza do zasobu ciągu o nazwie `Form1Title` w plik zasobów aplikacji. Na przykład do pracy, aplikacja musi mieć ciągu o nazwie `Form1Title` w pliku zasobów.  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie ikony w postaci ikony o nazwie `Form1Icon` jest przechowywana w pliku zasobów aplikacji. Na przykład do pracy, aplikacja musi mieć ikony o nazwie `Form1Icon` w pliku zasobów.  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie obraz tła formularza zasób obrazu o nazwie `Form1Background`, która znajduje się w pliku zasobów aplikacji. W tym przykładzie do pracy, aplikacja musi mieć zasób obrazu o nazwie `Form1Background` w pliku zasobów.  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie odtwarza dźwięk, który jest przechowywany jako audio zasób o nazwie `Form1Greeting` pliku zasobów. Na przykład do pracy, aplikacja musi mieć audio zasób o nazwie `Form1Greeting` w pliku zasobów. `My.Computer.Audio.Play` Metoda jest dostępna tylko dla aplikacji Windows Forms.  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie pobiera kultury francuski wersję zasobu ciągu w aplikacji. Zasób o nazwie `Message`. Aby zmienić kulturę, `My.Resources` używa obiektu, w przykładzie użyto <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
  W tym przykładzie do pracy, aplikacja musi mieć ciągu o nazwie `Message` w jego zasobów plików i aplikacji powinny mieć kultury francuski wersję tego pliku zasobów, Resources.fr-FR.resx. Jeśli aplikacja nie ma wersji pliku zasobów kultury francuski `My.Resource` obiektu pobiera zasób z pliku zasobów kultury domyślnej.  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Zarządzanie zasobami aplikacji (.NET)](/visualstudio/ide/managing-application-resources-dotnet)

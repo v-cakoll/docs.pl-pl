@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 19eba101e2a91d1b0549e9e3eb86d0af94f2d1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32f16d7f52665182dd82966693baa50ac9551f87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619752"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972953"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join — Klauzula (Visual Basic)
 Łączy dwie kolekcje w jedną hierarchiczną kolekcję. Operacja łączenia jest oparta na zgodności kluczy.  
@@ -53,7 +53,7 @@ Group Join element [As type] In collection _
 ## <a name="example"></a>Przykład  
  Poniższy kod łączy dwie kolekcje przy użyciu `Group Join` klauzuli.  
   
- [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

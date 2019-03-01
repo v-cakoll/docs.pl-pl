@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: e2909040cc0cd38494ef0ffa16a4f361ca73925c
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 9352718371226279f0a468913040e48cbeed984d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204291"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971367"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref — Atrybut (Przewodnik programowania w języku C#)
 `cref` Atrybut w tagu XML dokumentacji oznacza "odwołanie do kodu." Określa, że tekst zawarty wewnątrz tagu jest element kodu, takie jak typ, metody lub właściwości. Dokumentacja narzędzi, takich jak [DocFX](https://dotnet.github.io/docfx/) i [Sandcastle](https://github.com/EWSoftware/SHFB) użyj `cref` atrybuty do automatycznego generowania hiperłącza do strony, gdzie jest udokumentowany typu lub elementu członkowskiego.  
@@ -18,7 +18,7 @@ ms.locfileid: "55204291"
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono `cref` atrybutów w [ \<zobacz >](../../../csharp/programming-guide/xmldoc/see.md) tagów.  
   
- [!code-csharp[csProgGuideDocComments#3](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/cref-attribute_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  
   
  Podczas kompilowania, program generuje następujący plik XML. Należy zauważyć, że `cref` atrybutu dla `GetZero` metody, na przykład przetransformowaniu przez kompilator, aby `"M:TestNamespace.TestClass.GetZero"`. Prefiks "M:" oznacza "method" i jest Konwencja, który jest rozpoznawany przez dokumentację narzędzia, takie jak DocFX i Sandcastle. Aby uzyskać pełną listę prefiksów, zobacz [przetwarzanie pliku XML](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md).  
   

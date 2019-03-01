@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess Interface1
+title: ICorDebugProcess — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3f64b466e0d356b540cc9d6f3db881e27ac4aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dc732a8e3419a7ca42f5180d1bd32128ec33417
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709822"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967519"
 ---
-# <a name="icordebugprocess-interface1"></a>ICorDebugProcess Interface1
+# <a name="icordebugprocess-interface"></a>ICorDebugProcess — Interfejs
 Reprezentuje proces, który wykonuje kod zarządzany. Ten interfejs jest podklasą icordebugcontroller —.  
   
 ## <a name="methods"></a>Metody  

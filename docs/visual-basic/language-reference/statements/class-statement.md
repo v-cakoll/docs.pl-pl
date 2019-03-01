@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 846dc49f15f48e5f7f68171e0f937678751c796b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc2d6a6b3e01cd7efa00763d3b9bf3a0026be6f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648667"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975878"
 ---
 # <a name="class-statement-visual-basic"></a>Class — Instrukcja (Visual Basic)
 Deklaruje nazwę klasy i wprowadza definicje zmiennych, właściwości, zdarzeń i procedur, które obejmuje ta klasa.  
@@ -105,7 +105,7 @@ End Class
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Class` instrukcji, aby zdefiniować klasę i kilku członków.  
   
- [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

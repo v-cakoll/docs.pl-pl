@@ -14,12 +14,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-ms.openlocfilehash: 42015e2a024ece75a920deb414d326c88f31249e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2548d7a686f3557d154fc4cc15f6fc8026ac46bf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528891"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968377"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>Instrukcje: Chronienie argumentu procedury przed zmianami wartości (Visual Basic)
 Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic, zawiera kod procedury bezpośrednie odwołanie do elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Pozwala to na procedurę, aby zmienić wartość bazowego argumentu w wywoływanym kodzie. W niektórych przypadkach kod wywołujący może mają być chronione przed takich zmian.  
@@ -29,11 +29,11 @@ Jeśli procedura deklaruje jako parametru [ByRef](../../../../visual-basic/langu
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia dwie procedury używające zmiennej tablicy i działać na jego elementach. `increase` Procedura dodaje po prostu jednym do każdego elementu. `replace` Procedury przypisuje nową tablicę z parametrem `a()` , a następnie dodaje je do każdego elementu. Jednak ponowne przypisanie nie ma wpływu na podstawowe zmienną tablicy w wywoływanym kodzie.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_2.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  Pierwszy `MsgBox` wywołać Wyświetla "po increase(n): 11, 21, 31, 41". Ponieważ tablicy `n` jest typem referencyjnym `increase` można zmienić jej członków, nawet jeśli jest mechanizm przekazywania `ByVal`.  
   

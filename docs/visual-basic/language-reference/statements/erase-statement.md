@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: cab3da4465b4671d203036c2d9bcd40662dc234a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5828e28b84ec62c7ed674757090806d73c61caea
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522443"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966739"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase — Instrukcja (Visual Basic)
 Służy do zwalniania zmiennych tablicy i cofania przydziału pamięci używanej dla ich elementów.  
@@ -35,7 +35,7 @@ Erase arraylist
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto instrukcji `Erase`, aby wyczyścić dwie tablice i zwolnić ich pamięć (odpowiednio 1000 i 100 elementów pamięci). Następnie instrukcja `ReDim` przypisuje nową instancję tablicy do tablicy trójwymiarowej.  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

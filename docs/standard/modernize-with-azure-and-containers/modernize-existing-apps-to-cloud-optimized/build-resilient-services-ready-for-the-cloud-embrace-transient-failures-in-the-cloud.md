@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128859"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971835"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Kompilowanie odpornych usług gotowych do chmury: Obsługa przejściowych błędów w chmurze
 
@@ -35,7 +35,7 @@ Odporna aplikacja jest podobny do przedstawionego w rysunek 4 – 9, powinny imp
 
 Można użyć tych technik, zarówno w zasobach HTTP, jak i zasobów bazy danych. W rysunek 4 – 9, aplikacja opiera się na architekturze 3-warstwowej, więc należy tych technik na poziomie usług (HTTP) i na poziomie warstwy danych (TCP). W aplikacji monolitycznej, który używa tylko jednej aplikacji warstwy oprócz bazy danych (nie dodatkowych usług lub mikrousług) Obsługa błędów przejściowych na poziomie połączenia bazy danych może być wystarczająca. W tym scenariuszu szczególną konfigurację połączenia z bazą danych jest wymagana.
 
-Podczas implementowania odporne na błędy wiadomości, do których dostęp do bazy danych, w zależności od wersji programu .NET, którego używasz, może być prosta (na przykład [przy użyciu platformy Entity Framework 6 lub nowszym](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx), jest to kwestia konfigurowania połączenie z bazą danych). Lub może być konieczne użycie dodatkowych bibliotek, takich jak [blok aplikacji obsługi błędów przejściowych](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (w przypadku wcześniejszych wersji programu .NET), lub nawet implementować własne biblioteki.
+Podczas implementowania odporne na błędy wiadomości, do których dostęp do bazy danych, w zależności od wersji programu .NET, którego używasz, może być prosta (na przykład [przy użyciu platformy Entity Framework 6 lub nowszym](/ef/ef6/fundamentals/connection-resiliency/retry-logic). Jest to kwestia konfigurowania połączenia z bazą danych). Lub może być konieczne użycie dodatkowych bibliotek, takich jak [blok aplikacji obsługi błędów przejściowych](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (w przypadku wcześniejszych wersji programu .NET), lub nawet implementować własne biblioteki.
 
 Podczas implementowania ponownych prób HTTP i wyłączniki, zalecenie dla platformy .NET jest użycie [Polly](https://github.com/App-vNext/Polly) biblioteki, która jest przeznaczony dla .NET Framework 4.0, .NET Framework 4.5 i .NET Standard 1.1, które obsługuje platformy .NET Core.
 
@@ -49,11 +49,11 @@ Aby dowiedzieć się, jak zaimplementować strategie dotyczące obsługi częśc
 
 -   **Entity Framework odporności, a następnie spróbuj ponownie logika połączenia (w wersji 6 i nowsze)**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
 -   **Blok obsługi błędów przejściowych w aplikacji**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
 -   **Biblioteki Polly odporne na błędy komunikacji HTTP**
 

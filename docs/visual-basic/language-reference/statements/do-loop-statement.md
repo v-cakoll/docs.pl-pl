@@ -20,12 +20,12 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 8c965dc89794654127e4b872c6aebf55c8902468
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7c7987508260a0181904feacf3782f66066309f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525153"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968208"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop — Instrukcja (Visual Basic)
 Powtarza blok instrukcji podczas `Boolean` warunek jest `True` lub dopóki warunek przestaje być `True`.  
@@ -89,22 +89,22 @@ Loop { While | Until } condition
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie instrukcje w pętli nadal działać do momentu `index` zmiennej jest większa niż 10. `Until` Klauzula jest na końcu pętli.  
   
- [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `While` klauzuli zamiast `Until` klauzuli i `condition` jest testowany na początku pętli, zamiast na końcu.  
   
- [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie `condition` pętla zatrzymuje się podczas `index` zmiennej jest większa niż 100. `If` Instrukcji w pętli, jednak powoduje `Exit Do` instrukcję, aby zatrzymanie pętli, gdy zmienna index jest większy niż 10.  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład odczytuje wszystkie wiersze w pliku tekstowym. <xref:System.IO.File.OpenText%2A> Metoda otwiera plik i zwraca <xref:System.IO.StreamReader> , odczytuje znaki. W `Do...Loop` warunku <xref:System.IO.StreamReader.Peek%2A> metody `StreamReader` Określa, czy istnieją dodatkowe znaki.  
   
- [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Struktury pętli](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

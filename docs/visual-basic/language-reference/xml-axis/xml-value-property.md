@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 54bd18b050ca58c286bfca3972b242348c61fe45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cf1dbb1d9dafa9c690b4043da5a6f36469e8d7a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737614"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965348"
 ---
 # <a name="xml-value-property-visual-basic"></a>Właściwość wartości XML (Visual Basic)
 Zapewnia dostęp do wartości pierwszego elementu w kolekcji <xref:System.Xml.Linq.XElement> obiektów.  
@@ -50,7 +50,7 @@ object.Value
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak używać <xref:System.Xml.Linq.XElement.Value%2A> właściwości dostępu do pierwszego węzła w zbiorze <xref:System.Xml.Linq.XElement> obiektów. W przykładzie użyto właściwości osi elementu podrzędnego można pobrać kolekcji wszystkie węzły podrzędne, o nazwie `phone` znajdujących się w `contact` obiektu.  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]  
   
  Ten kod wyświetla następujący tekst:  
   
@@ -59,7 +59,7 @@ object.Value
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak można uzyskać wartości atrybutu XML z kolekcją <xref:System.Xml.Linq.XAttribute> obiektów. W przykładzie użyto właściwości osi atrybutu, aby wyświetlić wartość `type` atrybutu dla wszystkich `phone` elementów.  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]  
   
  Ten kod wyświetla następujący tekst:  
   

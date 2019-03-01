@@ -7,12 +7,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: eeaf3b4a611944395269fcae045bab00d25f0167
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0673c9faceb3bd9fc71123a2ae22abbc7061c04
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561074"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970210"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Instrukcje: Deklarowanie obiektu za pomocą inicjatora obiektów (Visual Basic)
 Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w pojedynczej instrukcji. Ponadto należy zainicjować co najmniej jednego członka wystąpienia w tym samym czasie, bez wywoływania sparametryzowania konstruktora.  
@@ -21,7 +21,7 @@ Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w po
   
  Poniższa procedura przedstawia sposób tworzenia wystąpienia `Student` klasy na trzy różne sposoby. Klasa ma imię, nazwisko i właściwości klas, które roku, między innymi. Każdy z trzech deklaracje tworzy nowe wystąpienie klasy `Student`, z właściwością `First` ustawiona na "Jan", właściwość `Last` ustawiona na "Tucker", a wszystkie inne elementy członkowskie zestawu do wartości domyślnych. Wynik każdego zgłoszenia w procedurze jest równoważne z poniższego przykładu, który nie korzysta z inicjatora obiektu.  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#20)]  
   
  Na implementację `Student` klasy, zobacz [jak: Utwórz listę elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Możesz skopiować kod z tego tematu, aby skonfigurować klasy i tworzenie listy `Student` pracę z obiektami.  
   
@@ -37,7 +37,7 @@ Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w po
   
 3.  Na liście inicjowania obejmują każdej właściwości, którą chcesz zainicjować i przypisać jej wartość początkową. Nazwa właściwości jest poprzedzony przez okres.  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
      Można zainicjować co najmniej jednego członka klasy.  
   
@@ -51,11 +51,11 @@ Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w po
   
 6.  Typ `With` i następnie inicjatora obiektu można zainicjować co najmniej jednego członka nowego wystąpienia.  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
 7.  Można uprościć definicji w poprzednim kroku, pomijając `As Student`. Jeśli to zrobisz, kompilator Określa `student3` jest wystąpieniem `Student` przy użyciu wnioskowanie o typie lokalnym.  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
      Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   

@@ -2,12 +2,12 @@
 title: Przykład technologii serializacji typów ogólnych usług sieci Web
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 27e0a7621bc77b62e36a0bbbdfa25f0ec3778798
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59224df97d54ac089293068bbb5dfa3fe26a8d8c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636589"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971874"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Przykład technologii serializacji typów ogólnych usług sieci Web
 [Pobierz przykładowe](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -61,7 +61,7 @@ ms.locfileid: "54636589"
 2.  Typ `http://localhost/[virtual directory]/Service.asmx`, gdzie `[virtual directory]` reprezentuje katalog wirtualny utworzony podczas tworzenia przykładu.  
   
 ## <a name="remarks"></a>Uwagi  
- Przykład przedstawia domyślna strona programu ASP.NET, który zawiera łącza do definicji usługi sieci Web. Można dostosować wyświetlanie Oprócz modyfikowania kodu źródłowego dla usługi sieci Web. Aby uzyskać więcej informacji, zobacz [klientów usługi sieci Web XML budynku](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
+ Przykład przedstawia domyślna strona programu ASP.NET, który zawiera łącza do definicji usługi sieci Web. Można dostosować wyświetlanie Oprócz modyfikowania kodu źródłowego dla usługi sieci Web. Aby uzyskać więcej informacji, zobacz [klientów usługi sieci Web XML budynku](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w3h45ebk(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -69,4 +69,4 @@ ms.locfileid: "54636589"
 - <xref:System.Web.Services>
 - <xref:System.Xml.Serialization>
 - [Serializacja](../../../docs/standard/serialization/index.md)
-- [Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+- [Usługi sieci Web XML utworzone za pomocą platformy ASP.NET i klientów usługi sieci Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

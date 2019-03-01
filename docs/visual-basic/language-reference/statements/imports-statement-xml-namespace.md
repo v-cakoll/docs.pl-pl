@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cce1cc918b150fdf30449f127b1e2f0a73e6f6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655988"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973278"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports — Instrukcja (przestrzeń nazw XML)
 Importuje prefiksy przestrzeni nazw XML do użycia w literałach XML i właściwości osi XML.  
@@ -48,7 +48,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Przykład  
  Następujący przykład importuje, domyślnej przestrzeni nazw XML i zidentyfikowanego za prefiks przestrzeni nazw XML `ns`. Następnie tworzy ona literałach XML, które używają obu tych przestrzeni nazw.  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
+ [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]  
   
  Ten kod wyświetla następujący tekst:  
   
@@ -64,7 +64,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Przykład  
  Następujący przykład importuje prefiks przestrzeni nazw XML `ns`. Następnie tworzy literał XML używa prefiksu przestrzeni nazw, która wyświetla formularz końcowego elementu.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  Ten kod wyświetla następujący tekst:  
   
@@ -82,7 +82,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>Przykład  
  Następujący przykład importuje prefiks przestrzeni nazw XML `ns`. Następnie używa prefiksu przestrzeni nazw tworzenie literałów XML i dostępem pierwszy węzeł podrzędny o nazwie kwalifikowanej `ns:name`.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
+ [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
  Ten kod wyświetla następujący tekst:  
   

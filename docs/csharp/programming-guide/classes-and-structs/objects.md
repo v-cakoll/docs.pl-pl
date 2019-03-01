@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3391281ceeda031f6178f5909204624f3d6bb3dc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491745"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973564"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić, typ. Obiekt jest zasadniczo bloku pamięci, która została przydzielona i skonfigurowane zgodnie z planu. Program może tworzyć wiele obiektów w tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w nazwanej zmiennej lub w tablicy lub kolekcji. Kod klienta jest kodem, który używa tych zmiennych w celu wywołania metod i uzyskiwać dostęp do właściwości publiczne obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  
@@ -28,7 +28,7 @@ Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić
   
  Ponieważ struktury są typami wartości, zmienna obiektu struktura zawiera kopię całego obiektu. Można również tworzyć wystąpienia struktury za pomocą `new` operatora, ale nie jest wymagane, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
  Pamięć dla obu `p1` i `p2` jest przydzielony na stosie wątku. Że pamięć jest odzyskana wraz z typu lub metody, w którym jest zdeklarowana. To jest jednym z powodów dlaczego struktury są kopiowane w przydziale. Z drugiej strony pamięci przydzielonej do wystąpienia klasy jest automatycznie odzyskiwanego (bezużyteczne) przez środowisko uruchomieniowe języka wspólnego, gdy wszystkie odwołania do obiektu zniknie z zakresu. Nie jest możliwe w sposób deterministyczny zniszczenie obiektu klasy, jak w przypadku języka C++. Aby uzyskać więcej informacji dotyczących wyrzucania elementów bezużytecznych w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], zobacz [wyrzucania elementów bezużytecznych](../../../standard/garbage-collection/index.md).  
   
@@ -42,7 +42,7 @@ Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić
   
 -   Aby określić, czy pola wystąpienia w dwa wystąpienia struktury mają te same wartości, należy użyć <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> metody. Ponieważ wszystkie struktury niejawnie dziedziczą z <xref:System.ValueType?displayProperty=nameWithType>, wywołać metodę bezpośrednio na obiekcie, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  <xref:System.ValueType?displayProperty=nameWithType> Implementacji `Equals` używa odbicia, ponieważ muszą być możliwe ustalenie, jakie pola znajdują się w dowolnej struktury. Podczas tworzenia własnych struktur, Zastąp `Equals` metodę, aby zapewnić efektywne równości algorytm, który jest specyficzne dla danego typu.  
   

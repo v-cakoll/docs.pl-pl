@@ -5,17 +5,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 160d4a9f560479b3a66b2cf4d7712b24551fabee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558706"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964256"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Instrukcje: Utwórz nowe ustawienie w czasie projektowania
 Za pomocą projektanta ustawień, można utworzyć nowe ustawienie w czasie projektowania. Projektant ustawień jest interfejsem styl siatki, która pozwala na tworzenie nowych ustawień, a następnie określ właściwości tych ustawień. Należy określić nazwę, wartość, typie i zakresie dla nowych ustawień. Po utworzeniu to ustawienie jest dostępne w kodzie.  
   
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Aby utworzyć nowe ustawienie w czasie projektowania wC#  
+### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Aby utworzyć nowe ustawienie w czasie projektowania w języku C\#
   
 1.  W **Eksploratora rozwiązań**, rozwiń węzeł **właściwości** węzła projektu.  
   

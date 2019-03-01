@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655078"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968273"
 ---
 # <a name="type-list-visual-basic"></a>Lista typów (Visual Basic)
 Określa *parametry typu* dla *ogólny* elementu programistycznego. Wiele parametrów są oddzielone przecinkami. Poniżej przedstawiono składnię dla jednego typu parametru.  
@@ -80,17 +80,17 @@ Określa *parametry typu* dla *ogólny* elementu programistycznego. Wiele parame
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje szkielet definicji klasy generyczny słownik, w tym szkielet funkcję, aby dodać nowy wpis do słownika.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Przykład  
  Ponieważ `dictionary` jest ogólny, kod, który korzysta z niego można tworzyć wiele obiektów z niego, każdy mających taką samą funkcjonalność, ale na inny typ danych. W poniższym przykładzie pokazano wiersz kodu, który tworzy `dictionary` obiekt z `String` wpisów i `Integer` kluczy.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje równoważnych definicji szkielet wygenerowane w poprzednim przykładzie.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [z](../../../visual-basic/language-reference/statements/of-clause.md)

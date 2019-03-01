@@ -7,57 +7,57 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 45fa54d7f7a3e167ffe0545cc3edf6a24900b2b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3be28ee718675b1f6bebfaff03baaf561a6fff43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492965"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974071"
 ---
-# <a name="handles-clause-visual-basic"></a><span data-ttu-id="24457-102">Handles — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24457-102">Handles Clause (Visual Basic)</span></span>
-<span data-ttu-id="24457-103">Deklaruje, że procedura obsługuje określone zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="24457-103">Declares that a procedure handles a specified event.</span></span>  
+# <a name="handles-clause-visual-basic"></a><span data-ttu-id="9f3b5-102">Handles — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9f3b5-102">Handles Clause (Visual Basic)</span></span>
+<span data-ttu-id="9f3b5-103">Deklaruje, że procedura obsługuje określone zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-103">Declares that a procedure handles a specified event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24457-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="24457-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f3b5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9f3b5-104">Syntax</span></span>  
   
 ```  
 proceduredeclaration Handles eventlist  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="24457-105">Części</span><span class="sxs-lookup"><span data-stu-id="24457-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="9f3b5-105">Części</span><span class="sxs-lookup"><span data-stu-id="9f3b5-105">Parts</span></span>  
  `proceduredeclaration`  
- <span data-ttu-id="24457-106">`Sub` Deklaracja procedury dla procedury, która obsłuży zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="24457-106">The `Sub` procedure declaration for the procedure that will handle the event.</span></span>  
+ <span data-ttu-id="9f3b5-106">`Sub` Deklaracja procedury dla procedury, która obsłuży zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-106">The `Sub` procedure declaration for the procedure that will handle the event.</span></span>  
   
  `eventlist`  
- <span data-ttu-id="24457-107">Lista zdarzeń dla `proceduredeclaration` do obsługi, oddzielonych przecinkami.</span><span class="sxs-lookup"><span data-stu-id="24457-107">List of the events for `proceduredeclaration` to handle, separated by commas.</span></span> <span data-ttu-id="24457-108">Zdarzenia musi zostać wywołane, albo klasę bazową dla bieżącej klasy lub obiekt, który został zadeklarowany za pomocą `WithEvents` — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="24457-108">The events must be raised by either the base class for the current class, or by an object declared using the `WithEvents` keyword.</span></span>  
+ <span data-ttu-id="9f3b5-107">Lista zdarzeń dla `proceduredeclaration` do obsługi, oddzielonych przecinkami.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-107">List of the events for `proceduredeclaration` to handle, separated by commas.</span></span> <span data-ttu-id="9f3b5-108">Zdarzenia musi zostać wywołane, albo klasę bazową dla bieżącej klasy lub obiekt, który został zadeklarowany za pomocą `WithEvents` — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-108">The events must be raised by either the base class for the current class, or by an object declared using the `WithEvents` keyword.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="24457-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="24457-109">Remarks</span></span>  
- <span data-ttu-id="24457-110">Użyj `Handles` — słowo kluczowe na końcu deklaracja procedury, aby spowodować, że obsługa zdarzeń wywołanych przez zmienną obiektu zadeklarowane za pomocą `WithEvents` — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="24457-110">Use the `Handles` keyword at the end of a procedure declaration to cause it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span> <span data-ttu-id="24457-111">`Handles` — Słowo kluczowe można również w klasie pochodnej do obsługi zdarzeń z klasy bazowej.</span><span class="sxs-lookup"><span data-stu-id="24457-111">The `Handles` keyword can also be used in a derived class to handle events from a base class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f3b5-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9f3b5-109">Remarks</span></span>  
+ <span data-ttu-id="9f3b5-110">Użyj `Handles` — słowo kluczowe na końcu deklaracja procedury, aby spowodować, że obsługa zdarzeń wywołanych przez zmienną obiektu zadeklarowane za pomocą `WithEvents` — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-110">Use the `Handles` keyword at the end of a procedure declaration to cause it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span> <span data-ttu-id="9f3b5-111">`Handles` — Słowo kluczowe można również w klasie pochodnej do obsługi zdarzeń z klasy bazowej.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-111">The `Handles` keyword can also be used in a derived class to handle events from a base class.</span></span>  
   
- <span data-ttu-id="24457-112">Zarówno słowo kluczowe `Handles`, jak i instrukcja `AddHandler` umożliwiają określenie konkretnych procedur do obsługi konkretnych zdarzeń, ale występują tu pewne różnice.</span><span class="sxs-lookup"><span data-stu-id="24457-112">The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences.</span></span> <span data-ttu-id="24457-113">Słowa kluczowego `Handles` należy użyć podczas definiowania procedury, aby określić, że ma ona obsługiwać konkretne zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="24457-113">Use the `Handles` keyword when defining a procedure to specify that it handles a particular event.</span></span> <span data-ttu-id="24457-114">Instrukcja `AddHandler` łączy procedury ze zdarzeniami w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="24457-114">The `AddHandler` statement connects procedures to events at run time.</span></span> <span data-ttu-id="24457-115">Aby uzyskać więcej informacji, zobacz [AddHandler — instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span><span class="sxs-lookup"><span data-stu-id="24457-115">For more information, see [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span></span>  
+ <span data-ttu-id="9f3b5-112">Zarówno słowo kluczowe `Handles`, jak i instrukcja `AddHandler` umożliwiają określenie konkretnych procedur do obsługi konkretnych zdarzeń, ale występują tu pewne różnice.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-112">The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences.</span></span> <span data-ttu-id="9f3b5-113">Słowa kluczowego `Handles` należy użyć podczas definiowania procedury, aby określić, że ma ona obsługiwać konkretne zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-113">Use the `Handles` keyword when defining a procedure to specify that it handles a particular event.</span></span> <span data-ttu-id="9f3b5-114">Instrukcja `AddHandler` łączy procedury ze zdarzeniami w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-114">The `AddHandler` statement connects procedures to events at run time.</span></span> <span data-ttu-id="9f3b5-115">Aby uzyskać więcej informacji, zobacz [AddHandler — instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span><span class="sxs-lookup"><span data-stu-id="9f3b5-115">For more information, see [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span></span>  
   
- <span data-ttu-id="24457-116">Dla zdarzenia niestandardowe, aplikacja wywołuje zdarzenie `AddHandler` dostępu, jeśli zwiększy procedury jako program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="24457-116">For custom events, the application invokes the event's `AddHandler` accessor when it adds the procedure as an event handler.</span></span> <span data-ttu-id="24457-117">Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)</span><span class="sxs-lookup"><span data-stu-id="24457-117">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
+ <span data-ttu-id="9f3b5-116">Dla zdarzenia niestandardowe, aplikacja wywołuje zdarzenie `AddHandler` dostępu, jeśli zwiększy procedury jako program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-116">For custom events, the application invokes the event's `AddHandler` accessor when it adds the procedure as an event handler.</span></span> <span data-ttu-id="9f3b5-117">Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)</span><span class="sxs-lookup"><span data-stu-id="9f3b5-117">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="24457-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="24457-118">Example</span></span>  
- [!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
+## <a name="example"></a><span data-ttu-id="9f3b5-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="9f3b5-118">Example</span></span>  
+ [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
   
- <span data-ttu-id="24457-119">W poniższym przykładzie pokazano, jak używać klasy pochodnej `Handles` instrukcję, aby obsłużyć zdarzenie z klasy bazowej.</span><span class="sxs-lookup"><span data-stu-id="24457-119">The following example demonstrates how a derived class can use the `Handles` statement to handle an event from a base class.</span></span>  
+ <span data-ttu-id="9f3b5-119">W poniższym przykładzie pokazano, jak używać klasy pochodnej `Handles` instrukcję, aby obsłużyć zdarzenie z klasy bazowej.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-119">The following example demonstrates how a derived class can use the `Handles` statement to handle an event from a base class.</span></span>  
   
- [!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
+ [!code-vb[VbVbalrEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#3)]  
   
-## <a name="example"></a><span data-ttu-id="24457-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="24457-120">Example</span></span>  
- <span data-ttu-id="24457-121">Poniższy przykład zawiera dwa programy obsługi zdarzeń przycisku dla **aplikacji WPF** projektu.</span><span class="sxs-lookup"><span data-stu-id="24457-121">The following example contains two button event handlers for a **WPF Application** project.</span></span>  
+## <a name="example"></a><span data-ttu-id="9f3b5-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="9f3b5-120">Example</span></span>  
+ <span data-ttu-id="9f3b5-121">Poniższy przykład zawiera dwa programy obsługi zdarzeń przycisku dla **aplikacji WPF** projektu.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-121">The following example contains two button event handlers for a **WPF Application** project.</span></span>  
   
- [!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
+ [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
-## <a name="example"></a><span data-ttu-id="24457-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="24457-122">Example</span></span>  
- <span data-ttu-id="24457-123">Poniższy przykład jest równoważny do poprzedniego przykładu.</span><span class="sxs-lookup"><span data-stu-id="24457-123">The following example is equivalent to the previous example.</span></span> <span data-ttu-id="24457-124">`eventlist` w `Handles` klauzula zawiera zdarzenia dla obu przycisków.</span><span class="sxs-lookup"><span data-stu-id="24457-124">The `eventlist` in the `Handles` clause contains the events for both buttons.</span></span>  
+## <a name="example"></a><span data-ttu-id="9f3b5-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="9f3b5-122">Example</span></span>  
+ <span data-ttu-id="9f3b5-123">Poniższy przykład jest równoważny do poprzedniego przykładu.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-123">The following example is equivalent to the previous example.</span></span> <span data-ttu-id="9f3b5-124">`eventlist` w `Handles` klauzula zawiera zdarzenia dla obu przycisków.</span><span class="sxs-lookup"><span data-stu-id="9f3b5-124">The `eventlist` in the `Handles` clause contains the events for both buttons.</span></span>  
   
- [!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
+ [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
-## <a name="see-also"></a><span data-ttu-id="24457-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="24457-125">See also</span></span>
-- [<span data-ttu-id="24457-126">WithEvents</span><span class="sxs-lookup"><span data-stu-id="24457-126">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)
-- [<span data-ttu-id="24457-127">AddHandler, instrukcja</span><span class="sxs-lookup"><span data-stu-id="24457-127">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [<span data-ttu-id="24457-128">RemoveHandler, instrukcja</span><span class="sxs-lookup"><span data-stu-id="24457-128">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [<span data-ttu-id="24457-129">Event, instrukcja</span><span class="sxs-lookup"><span data-stu-id="24457-129">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="24457-130">RaiseEvent, instrukcja</span><span class="sxs-lookup"><span data-stu-id="24457-130">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
-- [<span data-ttu-id="24457-131">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="24457-131">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="9f3b5-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9f3b5-125">See also</span></span>
+- [<span data-ttu-id="9f3b5-126">WithEvents</span><span class="sxs-lookup"><span data-stu-id="9f3b5-126">WithEvents</span></span>](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [<span data-ttu-id="9f3b5-127">AddHandler, instrukcja</span><span class="sxs-lookup"><span data-stu-id="9f3b5-127">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [<span data-ttu-id="9f3b5-128">RemoveHandler, instrukcja</span><span class="sxs-lookup"><span data-stu-id="9f3b5-128">RemoveHandler Statement</span></span>](../../../visual-basic/language-reference/statements/removehandler-statement.md)
+- [<span data-ttu-id="9f3b5-129">Event, instrukcja</span><span class="sxs-lookup"><span data-stu-id="9f3b5-129">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="9f3b5-130">RaiseEvent, instrukcja</span><span class="sxs-lookup"><span data-stu-id="9f3b5-130">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [<span data-ttu-id="9f3b5-131">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="9f3b5-131">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

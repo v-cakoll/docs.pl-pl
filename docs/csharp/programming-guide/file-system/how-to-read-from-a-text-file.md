@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: f7ddfbec13fad073272c75c3e68a4f5c9c3eef9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 560453a81124a3ee52a2ffd794ddac026c7394a5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672243"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978023"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Instrukcje: Odczyt z pliku tekstowego (C# Programming Guide)
 Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statycznych <xref:System.IO.File.ReadAllText%2A> i <xref:System.IO.File.ReadAllLines%2A> z <xref:System.IO.File?displayProperty=nameWithType> klasy.  
@@ -26,7 +26,7 @@ Ten przykład odczytuje zawartość pliku tekstowego przy użyciu metod statyczn
 >  Pliki, które są używane w tym przykładzie są tworzone w temacie [jak: Zapis do pliku tekstowego](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
+ [!code-csharp[csFilesandFolders#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#4)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Skopiuj kod i wklej go w aplikacji konsolowej C#.  

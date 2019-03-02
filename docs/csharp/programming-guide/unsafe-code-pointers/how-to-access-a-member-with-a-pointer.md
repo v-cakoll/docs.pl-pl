@@ -5,37 +5,37 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-ms.openlocfilehash: 5b2658611be559240c0cce5b30c35c015ff37d7a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9762b9e2487c30b81b7ef6ae22827b64e3cb02e2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978790"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200354"
 ---
-# <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a><span data-ttu-id="c0ef4-102">Porady: uzyskiwanie dostępu do członka za pomocą wskaźnika (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="c0ef4-102">How to: access a member with a pointer (C# Programming Guide)</span></span>
-<span data-ttu-id="c0ef4-103">Do uzyskania dostępu do członka struktury, która jest zadeklarowana w niebezpiecznym kontekście, można używać operatora dostępu do elementu członkowskiego, jak pokazano w poniższym przykładzie, w którym `p` jest wskaźnikiem do [struktury](../../../csharp/language-reference/keywords/struct.md) zawierający element członkowski `x`.</span><span class="sxs-lookup"><span data-stu-id="c0ef4-103">To access a member of a struct that is declared in an unsafe context, you can use the member access operator as shown in the following example in which `p` is a pointer to a [struct](../../../csharp/language-reference/keywords/struct.md) that contains a member `x`.</span></span>  
+# <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a><span data-ttu-id="8b58b-102">Porady: uzyskiwanie dostępu do członka za pomocą wskaźnika (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="8b58b-102">How to: access a member with a pointer (C# Programming Guide)</span></span>
+<span data-ttu-id="8b58b-103">Do uzyskania dostępu do członka struktury, która jest zadeklarowana w niebezpiecznym kontekście, można używać operatora dostępu do elementu członkowskiego, jak pokazano w poniższym przykładzie, w którym `p` jest wskaźnikiem do [struktury](../../../csharp/language-reference/keywords/struct.md) zawierający element członkowski `x`.</span><span class="sxs-lookup"><span data-stu-id="8b58b-103">To access a member of a struct that is declared in an unsafe context, you can use the member access operator as shown in the following example in which `p` is a pointer to a [struct](../../../csharp/language-reference/keywords/struct.md) that contains a member `x`.</span></span>  
   
 ```  
 CoOrds* p = &home;  
 p -> x = 25; //member access operator ->  
 ```  
   
-## <a name="example"></a><span data-ttu-id="c0ef4-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="c0ef4-104">Example</span></span>  
- <span data-ttu-id="c0ef4-105">W tym przykładzie [struktury](../../../csharp/language-reference/keywords/struct.md), `CoOrds`, zawierający dwie współrzędne `x` i `y` jest zadeklarowana i uruchomiony.</span><span class="sxs-lookup"><span data-stu-id="c0ef4-105">In this example, a [struct](../../../csharp/language-reference/keywords/struct.md), `CoOrds`, that contains the two coordinates `x` and `y` is declared and instantiated.</span></span> <span data-ttu-id="c0ef4-106">Za pomocą operatora dostępu do elementu członkowskiego `->` i wskaźnik do wystąpienia `home`, `x` i `y` mają przypisane wartości.</span><span class="sxs-lookup"><span data-stu-id="c0ef4-106">By using the member access operator `->` and a pointer to the instance `home`, `x` and `y` are assigned values.</span></span>  
+## <a name="example"></a><span data-ttu-id="8b58b-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="8b58b-104">Example</span></span>  
+ <span data-ttu-id="8b58b-105">W tym przykładzie [struktury](../../../csharp/language-reference/keywords/struct.md), `CoOrds`, zawierający dwie współrzędne `x` i `y` jest zadeklarowana i uruchomiony.</span><span class="sxs-lookup"><span data-stu-id="8b58b-105">In this example, a [struct](../../../csharp/language-reference/keywords/struct.md), `CoOrds`, that contains the two coordinates `x` and `y` is declared and instantiated.</span></span> <span data-ttu-id="8b58b-106">Za pomocą operatora dostępu do elementu członkowskiego `->` i wskaźnik do wystąpienia `home`, `x` i `y` mają przypisane wartości.</span><span class="sxs-lookup"><span data-stu-id="8b58b-106">By using the member access operator `->` and a pointer to the instance `home`, `x` and `y` are assigned values.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c0ef4-107">Należy zauważyć, że wyrażenie `p->x` jest równoważne wyrażeniu `(*p).x`, i ten sam efekt można uzyskać przy użyciu jednej z dwóch wyrażeń.</span><span class="sxs-lookup"><span data-stu-id="c0ef4-107">Notice that the expression `p->x` is equivalent to the expression `(*p).x`, and you can obtain the same result by using either of the two expressions.</span></span>  
+>  <span data-ttu-id="8b58b-107">Należy zauważyć, że wyrażenie `p->x` jest równoważne wyrażeniu `(*p).x`, i ten sam efekt można uzyskać przy użyciu jednej z dwóch wyrażeń.</span><span class="sxs-lookup"><span data-stu-id="8b58b-107">Notice that the expression `p->x` is equivalent to the expression `(*p).x`, and you can obtain the same result by using either of the two expressions.</span></span>  
   
  [!code-csharp[csProgGuidePointers#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#9)]  
   
- [!code-csharp[csProgGuidePointers#10](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-access-a-member-with-a-pointer_2.cs)]  
+ [!code-csharp[csProgGuidePointers#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#10)]  
   
-## <a name="see-also"></a><span data-ttu-id="c0ef4-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c0ef4-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b58b-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8b58b-108">See also</span></span>
 
-- [<span data-ttu-id="c0ef4-109">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="c0ef4-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="c0ef4-110">Wyrażenia wskaźników</span><span class="sxs-lookup"><span data-stu-id="c0ef4-110">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
-- [<span data-ttu-id="c0ef4-111">Typy wskaźników</span><span class="sxs-lookup"><span data-stu-id="c0ef4-111">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
-- [<span data-ttu-id="c0ef4-112">Typy</span><span class="sxs-lookup"><span data-stu-id="c0ef4-112">Types</span></span>](../../../csharp/language-reference/keywords/types.md)
-- [<span data-ttu-id="c0ef4-113">unsafe</span><span class="sxs-lookup"><span data-stu-id="c0ef4-113">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)
-- [<span data-ttu-id="c0ef4-114">fixed, instrukcja</span><span class="sxs-lookup"><span data-stu-id="c0ef4-114">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)
-- [<span data-ttu-id="c0ef4-115">stackalloc</span><span class="sxs-lookup"><span data-stu-id="c0ef4-115">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
+- [<span data-ttu-id="8b58b-109">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="8b58b-109">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="8b58b-110">Wyrażenia wskaźników</span><span class="sxs-lookup"><span data-stu-id="8b58b-110">Pointer Expressions</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [<span data-ttu-id="8b58b-111">Typy wskaźników</span><span class="sxs-lookup"><span data-stu-id="8b58b-111">Pointer types</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="8b58b-112">Typy</span><span class="sxs-lookup"><span data-stu-id="8b58b-112">Types</span></span>](../../../csharp/language-reference/keywords/types.md)
+- [<span data-ttu-id="8b58b-113">unsafe</span><span class="sxs-lookup"><span data-stu-id="8b58b-113">unsafe</span></span>](../../../csharp/language-reference/keywords/unsafe.md)
+- [<span data-ttu-id="8b58b-114">fixed, instrukcja</span><span class="sxs-lookup"><span data-stu-id="8b58b-114">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)
+- [<span data-ttu-id="8b58b-115">stackalloc</span><span class="sxs-lookup"><span data-stu-id="8b58b-115">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)

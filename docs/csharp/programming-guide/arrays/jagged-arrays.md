@@ -6,69 +6,69 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 026132b99821c01e6b7a6c02ee571ae3144319c3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971822"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200679"
 ---
-# <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="3a3e6-102">Tablice nieregularne (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="3a3e6-102">Jagged Arrays (C# Programming Guide)</span></span>
+# <a name="jagged-arrays-c-programming-guide"></a><span data-ttu-id="49638-102">Tablice nieregularne (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="49638-102">Jagged Arrays (C# Programming Guide)</span></span>
 
-<span data-ttu-id="3a3e6-103">Nieregularna tablica to ta, której elementy są tablicami.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="3a3e6-104">Elementy tablicy nieregularnej może być inny wymiarów i rozmiarów.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="3a3e6-105">Nieregularna tablica jest czasami nazywane "tablicy tablic."</span><span class="sxs-lookup"><span data-stu-id="3a3e6-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="3a3e6-106">W poniższych przykładach pokazano sposób deklarowania, zainicjować i dostępu nierówne tablic.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  
+<span data-ttu-id="49638-103">Nieregularna tablica to ta, której elementy są tablicami.</span><span class="sxs-lookup"><span data-stu-id="49638-103">A jagged array is an array whose elements are arrays.</span></span> <span data-ttu-id="49638-104">Elementy tablicy nieregularnej może być inny wymiarów i rozmiarów.</span><span class="sxs-lookup"><span data-stu-id="49638-104">The elements of a jagged array can be of different dimensions and sizes.</span></span> <span data-ttu-id="49638-105">Nieregularna tablica jest czasami nazywane "tablicy tablic."</span><span class="sxs-lookup"><span data-stu-id="49638-105">A jagged array is sometimes called an "array of arrays."</span></span> <span data-ttu-id="49638-106">W poniższych przykładach pokazano sposób deklarowania, zainicjować i dostępu nierówne tablic.</span><span class="sxs-lookup"><span data-stu-id="49638-106">The following examples show how to declare, initialize, and access jagged arrays.</span></span>  
   
- <span data-ttu-id="3a3e6-107">Deklaracja tablicy jednowymiarowej, która ma trzy elementy, w każdej z nich jest Jednowymiarowa tablica liczb całkowitych jest następująca:</span><span class="sxs-lookup"><span data-stu-id="3a3e6-107">The following is a declaration of a single-dimensional array that has three elements, each of which is a single-dimensional array of integers:</span></span>  
+ <span data-ttu-id="49638-107">Deklaracja tablicy jednowymiarowej, która ma trzy elementy, w każdej z nich jest Jednowymiarowa tablica liczb całkowitych jest następująca:</span><span class="sxs-lookup"><span data-stu-id="49638-107">The following is a declaration of a single-dimensional array that has three elements, each of which is a single-dimensional array of integers:</span></span>  
   
  [!code-csharp[csProgGuideArrays#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#19)]  
   
- <span data-ttu-id="3a3e6-108">Przed użyciem `jaggedArray`, jego elementów musi być zainicjowany.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-108">Before you can use `jaggedArray`, its elements must be initialized.</span></span> <span data-ttu-id="3a3e6-109">Można zainicjować elementy następująco:</span><span class="sxs-lookup"><span data-stu-id="3a3e6-109">You can initialize the elements like this:</span></span>  
+ <span data-ttu-id="49638-108">Przed użyciem `jaggedArray`, jego elementów musi być zainicjowany.</span><span class="sxs-lookup"><span data-stu-id="49638-108">Before you can use `jaggedArray`, its elements must be initialized.</span></span> <span data-ttu-id="49638-109">Można zainicjować elementy następująco:</span><span class="sxs-lookup"><span data-stu-id="49638-109">You can initialize the elements like this:</span></span>  
   
  [!code-csharp[csProgGuideArrays#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#20)]  
   
- <span data-ttu-id="3a3e6-110">Każdy z elementów to Jednowymiarowa tablica liczb całkowitych.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-110">Each of the elements is a single-dimensional array of integers.</span></span> <span data-ttu-id="3a3e6-111">Pierwszy element jest tablica liczb całkowitych, 5, drugą jest wartość tablicy liczb całkowitych 4, a trzecia będzie tablicy liczb całkowitych 2.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-111">The first element is an array of 5 integers, the second is an array of 4 integers, and the third is an array of 2 integers.</span></span>  
+ <span data-ttu-id="49638-110">Każdy z elementów to Jednowymiarowa tablica liczb całkowitych.</span><span class="sxs-lookup"><span data-stu-id="49638-110">Each of the elements is a single-dimensional array of integers.</span></span> <span data-ttu-id="49638-111">Pierwszy element jest tablica liczb całkowitych, 5, drugą jest wartość tablicy liczb całkowitych 4, a trzecia będzie tablicy liczb całkowitych 2.</span><span class="sxs-lookup"><span data-stu-id="49638-111">The first element is an array of 5 integers, the second is an array of 4 integers, and the third is an array of 2 integers.</span></span>  
   
- <span data-ttu-id="3a3e6-112">Istnieje również możliwość użycia inicjatorów do wypełniania elementów tablicy przy użyciu wartości, w którym to przypadku nie trzeba rozmiar tablicy.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-112">It is also possible to use initializers to fill the array elements with values, in which case you do not need the array size.</span></span> <span data-ttu-id="3a3e6-113">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="3a3e6-113">For example:</span></span>  
+ <span data-ttu-id="49638-112">Istnieje również możliwość użycia inicjatorów do wypełniania elementów tablicy przy użyciu wartości, w którym to przypadku nie trzeba rozmiar tablicy.</span><span class="sxs-lookup"><span data-stu-id="49638-112">It is also possible to use initializers to fill the array elements with values, in which case you do not need the array size.</span></span> <span data-ttu-id="49638-113">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="49638-113">For example:</span></span>  
   
  [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   
- <span data-ttu-id="3a3e6-114">Można również zainicjować tablicy po deklaracji w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="3a3e6-114">You can also initialize the array upon declaration like this:</span></span>  
+ <span data-ttu-id="49638-114">Można również zainicjować tablicy po deklaracji w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="49638-114">You can also initialize the array upon declaration like this:</span></span>  
   
- [!code-csharp[csProgGuideArrays#22](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_4.cs)]  
+ [!code-csharp[csProgGuideArrays#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#22)]  
   
- <span data-ttu-id="3a3e6-115">Można użyć następujących skrócone formy.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-115">You can use the following shorthand form.</span></span> <span data-ttu-id="3a3e6-116">Należy zauważyć, że nie można pominąć `new` operator od inicjowania elementów ponieważ nie istnieje żadne inicjowanie domyślne elementy:</span><span class="sxs-lookup"><span data-stu-id="3a3e6-116">Notice that you cannot omit the `new` operator from the elements initialization because there is no default initialization for the elements:</span></span>  
+ <span data-ttu-id="49638-115">Można użyć następujących skrócone formy.</span><span class="sxs-lookup"><span data-stu-id="49638-115">You can use the following shorthand form.</span></span> <span data-ttu-id="49638-116">Należy zauważyć, że nie można pominąć `new` operator od inicjowania elementów ponieważ nie istnieje żadne inicjowanie domyślne elementy:</span><span class="sxs-lookup"><span data-stu-id="49638-116">Notice that you cannot omit the `new` operator from the elements initialization because there is no default initialization for the elements:</span></span>  
   
- [!code-csharp[csProgGuideArrays#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_5.cs)]  
+ [!code-csharp[csProgGuideArrays#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#23)]  
   
- <span data-ttu-id="3a3e6-117">Nieregularna tablica jest tablicy tablic, a zatem jej elementy są typami odwołań i są inicjowane na `null`.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-117">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
+ <span data-ttu-id="49638-117">Nieregularna tablica jest tablicy tablic, a zatem jej elementy są typami odwołań i są inicjowane na `null`.</span><span class="sxs-lookup"><span data-stu-id="49638-117">A jagged array is an array of arrays, and therefore its elements are reference types and are initialized to `null`.</span></span>  
   
- <span data-ttu-id="3a3e6-118">Aby uzyskać dostęp tablicy poszczególnych elementów, takich jak te przykłady:</span><span class="sxs-lookup"><span data-stu-id="3a3e6-118">You can access individual array elements like these examples:</span></span>  
+ <span data-ttu-id="49638-118">Aby uzyskać dostęp tablicy poszczególnych elementów, takich jak te przykłady:</span><span class="sxs-lookup"><span data-stu-id="49638-118">You can access individual array elements like these examples:</span></span>  
   
  [!code-csharp[csProgGuideArrays#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#24)]  
   
- <span data-ttu-id="3a3e6-119">Istnieje możliwość mieszać nieregularnej i tablice wielowymiarowe.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-119">It is possible to mix jagged and multidimensional arrays.</span></span> <span data-ttu-id="3a3e6-120">Poniżej przedstawiono deklaracji i inicjowania jednowymiarowej tablicy nieregularnej, która zawiera trzy elementy dwuwymiarową tablicę o różnych rozmiarach.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-120">The following is a declaration and initialization of a single-dimensional jagged array that contains three two-dimensional array elements of different sizes.</span></span> <span data-ttu-id="3a3e6-121">Aby uzyskać więcej informacji na temat tablice dwuwymiarowe, zobacz [tablic wielowymiarowych](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="3a3e6-121">For more information about two-dimensional arrays, see [Multidimensional Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).</span></span>  
+ <span data-ttu-id="49638-119">Istnieje możliwość mieszać nieregularnej i tablice wielowymiarowe.</span><span class="sxs-lookup"><span data-stu-id="49638-119">It is possible to mix jagged and multidimensional arrays.</span></span> <span data-ttu-id="49638-120">Poniżej przedstawiono deklaracji i inicjowania jednowymiarowej tablicy nieregularnej, która zawiera trzy elementy dwuwymiarową tablicę o różnych rozmiarach.</span><span class="sxs-lookup"><span data-stu-id="49638-120">The following is a declaration and initialization of a single-dimensional jagged array that contains three two-dimensional array elements of different sizes.</span></span> <span data-ttu-id="49638-121">Aby uzyskać więcej informacji na temat tablice dwuwymiarowe, zobacz [tablic wielowymiarowych](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="49638-121">For more information about two-dimensional arrays, see [Multidimensional Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md).</span></span>  
   
  [!code-csharp[csProgGuideArrays#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#25)]  
   
- <span data-ttu-id="3a3e6-122">Można uzyskać dostęp do poszczególnych elementów, przedstawione w tym przykładzie, który wyświetla wartość elementu `[1,0]` tablicy pierwszy (wartość `5`):</span><span class="sxs-lookup"><span data-stu-id="3a3e6-122">You can access individual elements as shown in this example, which displays the value of the element `[1,0]` of the first array (value `5`):</span></span>  
+ <span data-ttu-id="49638-122">Można uzyskać dostęp do poszczególnych elementów, przedstawione w tym przykładzie, który wyświetla wartość elementu `[1,0]` tablicy pierwszy (wartość `5`):</span><span class="sxs-lookup"><span data-stu-id="49638-122">You can access individual elements as shown in this example, which displays the value of the element `[1,0]` of the first array (value `5`):</span></span>  
   
  [!code-csharp[csProgGuideArrays#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#26)]  
   
- <span data-ttu-id="3a3e6-123">Metoda `Length` zwraca liczbę tablicami, zawarte w tablicy nieregularnej.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-123">The method `Length` returns the number of arrays contained in the jagged array.</span></span> <span data-ttu-id="3a3e6-124">Na przykład, przy założeniu, że zostały zadeklarowane poprzednią tablicę ten wiersz:</span><span class="sxs-lookup"><span data-stu-id="3a3e6-124">For example, assuming you have declared the previous array, this line:</span></span>  
+ <span data-ttu-id="49638-123">Metoda `Length` zwraca liczbę tablicami, zawarte w tablicy nieregularnej.</span><span class="sxs-lookup"><span data-stu-id="49638-123">The method `Length` returns the number of arrays contained in the jagged array.</span></span> <span data-ttu-id="49638-124">Na przykład, przy założeniu, że zostały zadeklarowane poprzednią tablicę ten wiersz:</span><span class="sxs-lookup"><span data-stu-id="49638-124">For example, assuming you have declared the previous array, this line:</span></span>  
   
  [!code-csharp[csProgGuideArrays#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#27)]  
   
- <span data-ttu-id="3a3e6-125">Zwraca wartość 3.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-125">returns a value of 3.</span></span>  
+ <span data-ttu-id="49638-125">Zwraca wartość 3.</span><span class="sxs-lookup"><span data-stu-id="49638-125">returns a value of 3.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3a3e6-126">Przykład</span><span class="sxs-lookup"><span data-stu-id="3a3e6-126">Example</span></span>
+## <a name="example"></a><span data-ttu-id="49638-126">Przykład</span><span class="sxs-lookup"><span data-stu-id="49638-126">Example</span></span>
 
- <span data-ttu-id="3a3e6-127">W tym przykładzie tworzy tablicę, której elementy są tablicami.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-127">This example builds an array whose elements are themselves arrays.</span></span> <span data-ttu-id="3a3e6-128">Każdy z elementów tablicy ma inny rozmiar.</span><span class="sxs-lookup"><span data-stu-id="3a3e6-128">Each one of the array elements has a different size.</span></span>  
+ <span data-ttu-id="49638-127">W tym przykładzie tworzy tablicę, której elementy są tablicami.</span><span class="sxs-lookup"><span data-stu-id="49638-127">This example builds an array whose elements are themselves arrays.</span></span> <span data-ttu-id="49638-128">Każdy z elementów tablicy ma inny rozmiar.</span><span class="sxs-lookup"><span data-stu-id="49638-128">Each one of the array elements has a different size.</span></span>  
   
  [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
-## <a name="see-also"></a><span data-ttu-id="3a3e6-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3a3e6-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="49638-129">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="49638-129">See also</span></span>
 
 - <xref:System.Array>
-- [<span data-ttu-id="3a3e6-130">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="3a3e6-130">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="3a3e6-131">Tablice</span><span class="sxs-lookup"><span data-stu-id="3a3e6-131">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)
-- [<span data-ttu-id="3a3e6-132">Tablice jednowymiarowe</span><span class="sxs-lookup"><span data-stu-id="3a3e6-132">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
-- [<span data-ttu-id="3a3e6-133">Tablice wielowymiarowe</span><span class="sxs-lookup"><span data-stu-id="3a3e6-133">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+- [<span data-ttu-id="49638-130">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="49638-130">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="49638-131">Tablice</span><span class="sxs-lookup"><span data-stu-id="49638-131">Arrays</span></span>](../../../csharp/programming-guide/arrays/index.md)
+- [<span data-ttu-id="49638-132">Tablice jednowymiarowe</span><span class="sxs-lookup"><span data-stu-id="49638-132">Single-Dimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)
+- [<span data-ttu-id="49638-133">Tablice wielowymiarowe</span><span class="sxs-lookup"><span data-stu-id="49638-133">Multidimensional Arrays</span></span>](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

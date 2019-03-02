@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 12e911fb899cb85121c129b762828cdda01e64f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 780a51e3e0f61f292c997202614e43a85dd90820
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193086"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57250926"
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>Instrukcje: Używanie klienta programu Windows Communication Foundation
 
@@ -135,22 +135,37 @@ Ukończono samouczek. Definicja kontraktu usługi, zaimplementować kontrakt us�
 Dane wyjściowe z GettingStartedHost powinien wyglądać następująco:
 
 ```text
-The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714
+The service is ready.
+Press <ENTER> to terminate service.
+
+Received Add(100,15.99)
+Return: 115.99
+Received Subtract(145,76.54)
+Return: 68.46
+Received Multiply(9,81.25)
+Return: 731.25
+Received Divide(22,7)
+Return: 3.14285714285714
 ```
 
 Dane wyjściowe z GettingStartedClient powinien wyglądać następująco:
 
 ```text
-Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+
+Press <ENTER> to terminate client.
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Kompilowanie klientów](../../../docs/framework/wcf/building-clients.md)
-- [Instrukcje: tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Instrukcje: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md)
 - [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Instrukcje: tworzenie kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Instrukcje: Tworzenie kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md)
 - [Host samodzielny](../../../docs/framework/wcf/samples/self-host.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: 7ae35ebeae030cc925f6c787c550941ed268e427
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261794"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251082"
 ---
 # <a name="basic-wcf-programming"></a>Podstawy programowania przy użyciu programu WCF
 W tej sekcji przedstawiono podstawy do tworzenia aplikacji Windows Communication Foundation (WCF).  
@@ -32,7 +32,7 @@ W tej sekcji przedstawiono podstawy do tworzenia aplikacji Windows Communication
  W tym artykule opisano podstawowe informacje dotyczące hostingu usług w aplikacji.  
   
  [Kompilowanie klientów](../../../docs/framework/wcf/building-clients.md)  
- W tym artykule opisano, jak uzyskać metadanych z usługi, konwertować, kod klienta WCF, obsługi problemów z zabezpieczeniami, tworzenia, konfigurowania i obsługi klienta platformy WCF.  
+ W tym artykule opisano, jak uzyskać metadanych z usługi, konwertować, kod klienta WCF, obsługi problemów z zabezpieczeniami, tworzenia, konfigurowania i obsługi klienta programu WCF.  
   
  [Wprowadzenie do rozszerzalności](../../../docs/framework/wcf/introduction-to-extensibility.md)  
  Zawiera opis sposobu rozszerzenia WCF w celu tworzenia niestandardowych rozwiązań.  

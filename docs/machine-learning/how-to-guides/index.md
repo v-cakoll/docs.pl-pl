@@ -1,22 +1,14 @@
 ---
 title: .NET machine learning przewodniki z instrukcjami — strukturze ML.NET
-description: Dowiedz się, jak wykonywać określone zadania na potrzeby niestandardowych tworzenie rozwiązań sztucznej Inteligencji i uczenia maszynowego integracji w aplikacjach .NET.
+description: 'Dowiedz się, jak wykonywać określone zadania na potrzeby niestandardowych tworzenie rozwiązań sztucznej Inteligencji i uczenia maszynowego integracji w aplikacjach .NET.'
 ms.custom: seodec18
-ms.date: 12/04/2018
-ms.openlocfilehash: edff20b36d11dec169e1a4318a473533c8664842
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235192"
+ms.date: 03/01/2019
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET machine learning przewodniki z instrukcjami — strukturze ML.NET
 
 W sekcji Przewodnik po strukturze ML.NET jak możesz znaleźć szybkich odpowiedzi na często zadawane pytania. W niektórych przypadkach artykuły mogą być wymienione w wielu sekcjach, aby były łatwe do znalezienia.
 
-## <a name="prepare-data"></a>Przygotowywanie danych
-
-### <a name="load-data"></a>Ładowanie danych
+## <a name="load-the-data"></a>Ładowanie danych
 
 * [Ładowanie danych za pomocą wiele kolumn z pliku CSV, machine learning przetwarzania.](load-data-from-mult-column-csv-ml-net.md)
 
@@ -24,9 +16,11 @@ W sekcji Przewodnik po strukturze ML.NET jak możesz znaleźć szybkich odpowied
 
 * [Ładowanie danych z pliku tekstowego, machine learning przetwarzania.](load-data-from-text-file-ml-net.md)
 
+### <a name="prepare-the-data"></a>Przygotowywanie danych
+
 * [Przetwarzanie wstępne danych szkoleniowych z normalizers do użycia podczas przetwarzania danych.](normalizers-preprocess-data-ml-net.md)
 
-## <a name="train-model"></a>Trenowanie modelu
+## <a name="train-the-model"></a>Uczenie modelu
 
 * [Szkolenie modelu uczenia maszynowego z danymi, które nie znajduje się w pliku tekstowym.](load-non-file-training-data-ml-net.md)
 
@@ -34,7 +28,7 @@ W sekcji Przewodnik po strukturze ML.NET jak możesz znaleźć szybkich odpowied
 
 * [Uczenie modelu regresji do przewidywania wartości przy użyciu strukturze ML.NET.](train-regression-model-ml-net.md)
 
-### <a name="evaluate-model-quality"></a>Oceń jakość modelu
+### <a name="evaluate-the-model-quality"></a>Oceń jakość modelu
 
 * [Oblicz metryki, aby ocenić jakość modelu.](verify-model-quality-ml-net.md)
 

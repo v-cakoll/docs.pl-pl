@@ -48,11 +48,12 @@ Zespoły tworzą podstawową jednostką wdrażania, kontroli wersji, ponownego u
 
 ## <a name="see-also"></a>Zobacz także
 
- - [Format pliku zestawu .NET](file-format.md)  
+ - [Format pliku zestawu .NET](file-format.md)
  - [Zestawy w środowisku uruchomieniowym CLR](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  - [Przyjazne zestawy (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [Przyjazne zestawy (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  - [Instrukcje: Ładowanie i zwalnianie zestawów (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Instrukcje: Ładowanie i zwalnianie zestawów (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
+ - [Instrukcje: Użycie i Unloadability zestawu debugowania w programie .NET Core](unloadability-howto.md)
  - [Instrukcje: Określić, czy plik jest zestawem (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  
  - [Instrukcje: Określić, czy plik jest zestawem (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md)  

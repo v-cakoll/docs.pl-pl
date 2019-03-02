@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ki
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479909"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251017"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -23,7 +23,7 @@ W większości przypadków w tym scenariuszu nie należy do migrowania istnieją
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Za pomocą biblioteki .NET innych firm lub pakiety NuGet nie są dostępne dla platformy .NET Core
 
-Szybko używają bibliotek innych firm [.NET Standard](../../net-standard.md), która umożliwia udostępnianie we wszystkich wersjach platformy .NET, w tym .NET Core kodu. Za pomocą platformy .NET Standard 2.0 biblioteki i nie tylko powierzchni interfejsu API zgodność dla różnych platform stało się znacznie większe i platformie .NET Core 2.x aplikacji można także bezpośrednio odwoływać się do istniejących bibliotek .NET Framework (zobacz [zgodności podkładki](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)).
+Szybko używają bibliotek innych firm [.NET Standard](../../net-standard.md), która umożliwia udostępnianie we wszystkich wersjach platformy .NET, w tym .NET Core kodu. Za pomocą platformy .NET Standard 2.0 biblioteki i nie tylko powierzchni interfejsu API zgodność dla różnych platform stało się znacznie większe i platformie .NET Core 2.x aplikacji można także bezpośrednio odwoływać się do istniejących bibliotek .NET Framework (zobacz [platformy .NET Framework 4.6.1 Obsługa .NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)).
 
 Ponadto [systemie Windows Compatibility Pack](../../../core/porting/windows-compat-pack.md) został wydany Listopada 2017 r. Aby rozszerzyć powierzchni interfejsu API dostępne dla platformy .NET Standard 2.0 na Windows. Ten pakiet umożliwia ponownej kompilacji większość istniejącego kodu .NET Standard 2.x z niewielkie modyfikacje, systemem Windows.
 

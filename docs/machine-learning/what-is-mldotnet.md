@@ -4,17 +4,17 @@ description: Więcej informacji o ML.NET, bezpłatnej, wieloplatformowej struktu
 author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
-ms.date: 11/06/2018
-ms.openlocfilehash: fb0ece94d77c76fddc667070a8aaef154fd2053a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 03/01/2019
+ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "53131574"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57250965"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Co to jest ML.NET i jak rozumiemy podstawy uczenia maszynowego?
 
-ML.NET to bezpłatna, wieloplatformowa struktura open source do uczenia maszynowego, która umożliwia tworzenie własnych niestandardowych rozwiązań i integrowanie ich z aplikacjami .NET. Za pomocą interfejsów API w ML.NET można zastosować sztuczną inteligencję w swoich aplikacjach, korzystając z umiejętności już nabytych na platformie .NET i bez opuszczania tej platformy.
+ML.NET to bezpłatna, wieloplatformowa struktura open source do uczenia maszynowego, która umożliwia tworzenie własnych niestandardowych rozwiązań i integrowanie ich z aplikacjami .NET. Za pomocą interfejsów API strukturze ML.NET można zastosować sztucznej Inteligencji w swoich aplikacjach, korzystając z umiejętności .NET, którą już posiadasz i bez opuszczania .NET.
 
 ## <a name="what-is-machine-learning"></a>Co to jest uczenie maszynowe?
 

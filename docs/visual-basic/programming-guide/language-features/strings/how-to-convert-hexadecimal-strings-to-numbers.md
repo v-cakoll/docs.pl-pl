@@ -8,12 +8,12 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: 76acee8913df35d4d071017078b38a3c474c3357
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8ef615b6874642fa9ad1b22fe9d7f7745d4ffde
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633826"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201004"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Instrukcje: Konwertowanie ciągów szestnastkowych na numery (Visual Basic)
 Ten przykład konwertuje ciąg szesnastkowy do liczby całkowitej przy użyciu <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> metody.  
@@ -24,7 +24,7 @@ Ten przykład konwertuje ciąg szesnastkowy do liczby całkowitej przy użyciu <
   
      Pierwszy argument <xref:System.Convert.ToInt32(System.String,System.Int32)> metody jest ciąg do przekonwertowania. Drugi argument opisuje jakie podstawowa, liczba jest będzie wyrażana; szesnastkowa to podstawa 16.  
   
-     [!code-vb[HexConversion](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
+     [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]  
 
 - Należy zwrócić uwagę na to, że ciąg szesnastkowy ma następujące ograniczenia:
 

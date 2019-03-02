@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 2bd0b7e0d927e53f70515cfa124034a4cacc5ce7
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332250"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200887"
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Tematy zawarte w tej sekcji są przeznaczone do umożliwiają szybkie narażenia na Windows Communication Foundation (WCF) środowisko programowania. Mają zostać wykonane zgodnie z kolejnością na liście w dolnej części tego tematu. Ten samouczek umożliwia poznanie wprowadzające kroków wymaganych do tworzenia aplikacji usługi i klienta WCF. Usługa udostępnia jeden lub więcej punktów końcowych, z których każdy ujawnia co najmniej jednej operacji usługi. *Punktu końcowego* usługi Określa adres, gdzie można znaleźć usługi, powiązania, który zawiera informacje opisujące, jak klientowi komunikowanie się z usługą i kontrakt definiujący funkcje udostępniane przez usługę do swoich klientów.
@@ -33,7 +33,7 @@ Aby uzyskać bardziej szczegółowe informacje o sposobie tworzenia usług i kli
 
  [Instrukcje: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
 
- Opisuje sposób implementacji kontraktu usługi. Po definiowanie kontraktu musi być implementowane za pomocą klasy usługi.
+ Opisuje sposób implementacji kontraktu usługi. Po zdefiniowaniu kontraktu musi być implementowane za pomocą klasy usługi.
 
  [Instrukcje: Hostowanie i uruchamianie podstawowej usługi](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
 

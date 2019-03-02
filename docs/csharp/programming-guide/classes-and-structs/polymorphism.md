@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 6150074df9b921b4eb62169951122f5718e4f13d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969963"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203392"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
 Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektowo, po hermetyzacji i dziedziczenia. Polimorfizm jest wyrazem greckim, co oznacza "wiele kształcie" i ma dwa różne aspekty:  
@@ -28,7 +28,7 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
   
  Najpierw należy utworzyć klasę bazową, która wywołuje `Shape`i klas pochodnych, takich jak `Rectangle`, `Circle`, i `Triangle`. Nadaj `Shape` wywołuje metodę wirtualną klasy `Draw`, i zastąpienie go w każdej klasie pochodnej, aby narysować określonych kształtów, klasa reprezentuje. Utwórz `List<Shape>` obiektu i dodać do niego koła, trójkąt i prostokąt. Aby zaktualizować powierzchni do rysowania, użyj [foreach](../../../csharp/language-reference/keywords/foreach-in.md) pętli do iteracji przez listę i wywołania `Draw` metody na każdym `Shape` obiektu na liście. Mimo że każdy obiekt na liście ma zadeklarowany typ `Shape`, jest typu run-time (wersja przesłonięte metody w każdej klasie pochodnej), który zostanie wywołany.  
   
- [!code-csharp[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#50)]  
   
  W języku C# polimorficznych jest każdego typu, ponieważ dziedziczy wszystkie typy, w tym typy zdefiniowane przez użytkownika <xref:System.Object>.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 639a0db5bcc5c5b322618ed9119c582374447d34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c698ffc8d1bc68b2ebcbdf4578ab5926d4743516
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979973"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203473"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Konstruktory wystąpień (Przewodnik programowania w języku C#)
 Konstruktory wystąpień są używane do Utwórz i zainicjuj wszystkie zmienne elementu członkowskiego wystąpienia, gdy używasz [nowe](../../../csharp/language-reference/keywords/new.md) wyrażenie do utworzenia obiektu [klasy](../../../csharp/language-reference/keywords/class.md). Można zainicjować [statyczne](../../../csharp/language-reference/keywords/static.md) klasy lub statycznych zmiennych w niestatycznych klas, należy zdefiniować Konstruktor statyczny. Aby uzyskać więcej informacji, zobacz [konstruktorów statycznych](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -42,7 +42,7 @@ Konstruktory wystąpień są używane do Utwórz i zainicjuj wszystkie zmienne e
 ## <a name="example-1"></a>Przykład 1  
  W poniższym przykładzie pokazano klasę z klasy dwa konstruktory, bez argumentów i jeden z dwóch argumentów.  
   
- [!code-csharp[csProgGuideObjects#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/instance-constructors_5.cs)]  
+ [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>Przykład 2  
  W tym przykładzie klasa `Person` nie ma żadnych konstruktorów, w których przypadku domyślnego konstruktora jest dostarczana automatycznie, a pola są inicjowane do wartości domyślnych.  

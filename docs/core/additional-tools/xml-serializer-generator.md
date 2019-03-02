@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5b41b6e5d747cd99a80930bb64e36839af4ab66
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244781"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211900"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Za pomocą Generator serializatora XML firmy Microsoft na platformie .NET Core
 
@@ -34,8 +34,8 @@ Do ukończenia tego samouczka:
 
 > [!TIP]
 > Należy zainstalować Edytor kodu? Spróbuj [programu Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)!
-  
-## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Generator serializatora XML firmy Microsoft jest używany w aplikacji konsoli .NET Core 
+
+## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>Generator serializatora XML firmy Microsoft jest używany w aplikacji konsoli .NET Core
 
 Następujące instrukcje pokazują, jak użyć Generator serializatora XML w aplikacji konsolowej .NET Core.
 
@@ -49,7 +49,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>Dodaj odwołanie do pakietu Microsoft.XmlSerializer.Generator w projekcie moja_aplikacja
 
-Użyj [ `dotnet add package` ](../tools//dotnet-add-package.md) polecenie, aby dodać odwołanie w projekcie. 
+Użyj [ `dotnet add package` ](../tools//dotnet-add-package.md) polecenie, aby dodać odwołanie w projekcie.
 
 Wpisz:
 
@@ -107,7 +107,7 @@ Nadal w elemencie *MyApp* folder, uruchom aplikację za pośrednictwem [ `dotnet
 W oknie konsoli, należy wpisać następujące polecenie:
 
 ```console
-$ dotnet run
+dotnet run
 ```
 
 > [!NOTE]
@@ -116,7 +116,7 @@ $ dotnet run
 > [!IMPORTANT]
 > Polecenia i kroki opisane w tym samouczku do uruchamiania aplikacji są używane tylko w czasie projektowania. Gdy wszystko będzie gotowe do wdrożenia aplikacji, zapoznaj się z różnych [strategie wdrażania](../deploying/index.md) dla aplikacji platformy .NET Core i [ `dotnet publish` ](../tools/dotnet-publish.md) polecenia.
 
-Jeśli wszystko, co zakończy się powodzeniem, zestaw o nazwie *MyApp.XmlSerializers.dll* jest generowany w folderze wyjściowym. 
+Jeśli wszystko, co zakończy się powodzeniem, zestaw o nazwie *MyApp.XmlSerializers.dll* jest generowany w folderze wyjściowym.
 
 Gratulacje! masz tylko:
 > [!div class="checklist"]

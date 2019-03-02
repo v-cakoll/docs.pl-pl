@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: def49bc4264f2cae8e17d5f00ff12ad41674da2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540614"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212524"
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
-Usługa *tożsamość punktu końcowego*jest wartością wygenerowany na podstawie usługi sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po klient inicjuje komunikację do punktu końcowego i usługa uwierzytelnia klienta, klient porównuje wartości tożsamości punktu końcowego z procesu uwierzytelniania punktu końcowego, zwrócona wartość. Jeśli są zgodne, klient jest pewność, że skontaktuje się z punktem końcowym usługi oczekiwane. Ta opcja działa jako ochrony przed *wyłudzania informacji* poprzez uniemożliwienie nastąpi przekierowanie do punktu końcowego hostowanego przez usługę złośliwego klienta.  
+Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podstawie usługi sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po klient inicjuje komunikację do punktu końcowego i usługa uwierzytelnia klienta, klient porównuje wartości tożsamości punktu końcowego z procesu uwierzytelniania punktu końcowego, zwrócona wartość. Jeśli są zgodne, klient jest pewność, że skontaktuje się z punktem końcowym usługi oczekiwane. Ta opcja działa jako ochrony przed *wyłudzania informacji* poprzez uniemożliwienie nastąpi przekierowanie do punktu końcowego hostowanego przez usługę złośliwego klienta.  
   
  Aby uzyskać przykładową aplikację prezentującą ustawienie tożsamości, zobacz [tożsamość usług — przykład](../../../../docs/framework/wcf/samples/service-identity-sample.md). Aby uzyskać więcej informacji na temat punktów końcowych oraz adresy punktów końcowych, zobacz [adresy](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   

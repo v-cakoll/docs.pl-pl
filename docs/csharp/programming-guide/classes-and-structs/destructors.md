@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652168"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202889"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizatory (C# Programming Guide)
 Finalizatory (są one również nazywane **destruktory**) są używane do wykonywania wszelkich niezbędnych końcowego oczyszczania, gdy wystąpienie klasy są gromadzone przez moduł odśmiecania pamięci.  
@@ -31,7 +31,7 @@ Finalizatory (są one również nazywane **destruktory**) są używane do wykony
   
  Na przykład Oto deklaracja finalizatora dla `Car` klasy.
   
- [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
 
 Finalizator może też być implementowany jako definicja treści wyrażenia, co ilustruje poniższy przykład.
 
@@ -81,7 +81,7 @@ protected override void Finalize()
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy trzy klasy, które w łańcuchu dziedziczenia. Klasa `First` jest klasą bazową `Second` jest tworzony na podstawie `First`, i `Third` jest tworzony na podstawie `Second`. Wszystkie trzy mają finalizatory. W `Main`, tworzone jest wystąpienie klasy najbardziej pochodnego. Po uruchomieniu program, zwróć uwagę, że finalizatory dla trzech klas są wywoływane automatycznie i w kolejności, z najbardziej pochodnego do najmniej pochodnego.  
   
- [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
 ## <a name="c-language-specification"></a>specyfikacja języka C#  
 

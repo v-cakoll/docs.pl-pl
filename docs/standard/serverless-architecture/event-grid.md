@@ -4,12 +4,12 @@ description: Usługa Azure Event Grid to rozwiązanie bez użycia serwera do nie
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145894"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212186"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -101,7 +101,7 @@ Główną zaletą używania usługi Event Grid jest automatyczne komunikaty gene
 | Blob Storage | Microsoft.Storage.BlobCreated | Wywoływane, gdy zostanie utworzony obiekt blob. |
 | | Microsoft.Storage.BlobDeleted | Wywoływane, gdy obiekt blob zostanie usunięty. |
 | Usługa Event Hubs | Microsoft.EventHub.CaptureFileCreated | Wywoływane, gdy tworzony jest plik przechwytywania.
-| Usługa IoT Hub | Microsoft.Devices.DeviceCreated | Opublikowane po zarejestrowaniu urządzenia do usługi IoT hub. |
+| IoT Hub | Microsoft.Devices.DeviceCreated | Opublikowane po zarejestrowaniu urządzenia do usługi IoT hub. |
 | | Microsoft.Devices.DeviceDeleted | Opublikowana, gdy urządzenie zostanie usunięty z usługi IoT hub. |
 | Grupy zasobów | Microsoft.Resources.ResourceWriteSuccess | Wywoływane, gdy zasób utworzyć lub zaktualizować operacji powiedzie się. |
 | | Microsoft.Resources.ResourceWriteFailure | Wywoływane, gdy tworzenie zasobu lub operacja aktualizacji nie powiedzie się. |
@@ -124,13 +124,13 @@ W tym rozdziale opisano bezserwerowej platformy Azure, które składa się z us�
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Analiza usługi Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure: Udostępnij swoją aplikację w chmurze przy użyciu bezserwerowej usługi Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
 * [Schemat zdarzeń w usłudze Azure Event Grid](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
 * [Dokumentacja usługi Azure Functions](https://docs.microsoft.com/azure/azure-functions)
 * [Pojęcia powiązania i Wyzwalacze usługi Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
 * [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
-* [Usługi Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
+* [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
 * [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 * [Porównanie funkcji wersji 1.x i 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 * [Nawiązywanie połączenia z lokalnymi źródłami danych za pomocą bramy danych lokalnych platformy Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)

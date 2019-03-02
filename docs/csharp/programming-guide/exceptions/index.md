@@ -1,18 +1,12 @@
 ---
-title: Wyjątki i obsługa wyjątków — C# przewodnik programowania
+title: 'Wyjątki i obsługa wyjątków — C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- exception handling [C#]
-- exceptions [C#]
-- C# language, exceptions
+  - 'exception handling [C#]'
+  - 'exceptions [C#]'
+  - 'C# language, exceptions'
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 79b369c8aef0e231611b99e70deb15f8a61fa715
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527565"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Wyjątki i obsługa wyjątków (Przewodnik programowania w języku C#)
 Obsługa funkcji pomocy wyjątków języka C# zajmuje nieoczekiwane lub wyjątkowych sytuacji, które występują, gdy program jest uruchomiony. Używa obsługi wyjątków `try`, `catch`, i `finally` słów kluczowych obsługi błędów w przypadku podjęcia decyzji, że jest uzasadnione, aby to zrobić, a potem wyczyścić zasoby, aby spróbować akcje, które mogą się nie powieść. Wyjątki mogą być generowane przez środowisko uruchomieniowe języka wspólnego (CLR) .NET Framework lub żadnych bibliotek innych firm lub przez kod aplikacji. Wyjątki są tworzone za pomocą `throw` — słowo kluczowe.  
@@ -21,7 +15,7 @@ Obsługa funkcji pomocy wyjątków języka C# zajmuje nieoczekiwane lub wyjątko
   
  W tym przykładzie metoda sprawdza dzielenie przez zero i przechwytuje błędu. Bez obsługi wyjątków, ten program będzie kończyć się **dividebyzeroexception — został nieobsługiwany** błędu.  
   
- [!code-csharp[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
+ [!code-csharp[csProgGuideExceptions#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#18)]  
   
 ## <a name="exceptions-overview"></a>Wyjątki — omówienie  
  Wyjątki mają następujące właściwości:  

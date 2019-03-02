@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: e368c9399aee94888252953752f5be00352c8c98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981520"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200393"
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Właściwość wydaje się być pola, uzyskanie dostępu do właściwości wymaga takiej samej składni. Właściwość implementujący klasę, jest co najmniej dwóch bloków kodu, reprezentujący [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu i/lub [ustaw](../../../csharp/language-reference/keywords/set.md) metody dostępu. Blok kodu dla `get` metody dostępu jest wykonywany, gdy właściwość jest do odczytu; kod zablokować na `set` metody dostępu jest wykonywany, gdy właściwość jest przypisywana nowa wartość. Właściwość bez `set` metody dostępu jest traktowane jako tylko do odczytu. Właściwość bez `get` metody dostępu jest traktowane jako tylko do zapisu. Właściwość, która ma obu metod dostępu jest do odczytu i zapisu.  
@@ -76,7 +76,7 @@ Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Wła�
 ## <a name="example"></a>Przykład  
  W przykładzie pokazano właściwości wystąpienia statyczne i tylko do odczytu. Przyjmuje nazwę pracowników z klawiatury, zwiększa `NumberOfEmployees` 1, a pracownik Wyświetla nazwę i numer.  
   
- [!code-csharp[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
+ [!code-csharp[csProgGuideProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#2)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie przedstawiono sposób dostępu do właściwości w klasie bazowej, które zostały ukryte przez inną właściwość, która ma taką samą nazwę w klasie pochodnej.  

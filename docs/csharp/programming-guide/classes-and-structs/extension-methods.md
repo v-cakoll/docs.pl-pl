@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: d32bc0a0fa3841746e93c8f21ba07776fc29816d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977932"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202226"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w C#, F# i Visual Basic nie ma żadnej widocznej różnicy między wywołanie metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  
@@ -64,7 +64,7 @@ using System.Linq;
   
  Gdy kompilator nie może odnaleźć metody wystąpienia mającej pasujący podpis, tworzy powiązanie z pasującą metodą rozszerzenia, jeśli taka istnieje.  
   
- [!code-csharp[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
 ## <a name="general-guidelines"></a>Ogólne wskazówki  
  Ogólnie zalecane jest, aby implementować metody rozszerzenia oszczędnie i tylko wtedy, gdy jest to konieczne. Jeśli to możliwe, kod klienta, który musi rozszerzyć istniejący typ, powinien to zrobić przez utworzenie nowego typu, który będzie typem pochodnym istniejącego typu. Aby uzyskać więcej informacji, zobacz [dziedziczenia](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 71f404fd0881a1da761d3f53daac03805a01f18f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970756"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203113"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Instrukcje: Definiowanie równości wartości dla typu (C# Programming Guide)
 Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć niestandardowych definicji równości wartość (lub odpowiednik) dla typu. Zazwyczaj równość wartości zaimplementować w sytuacji, gdy oczekiwano obiektów tego typu do dodania do kolekcji jakieś lub w przypadku, gdy ich głównym celem jest zapisanie zestawu pól lub właściwości. Swojej definicji równości wartość można oprzeć na porównanie wszystkie pola i właściwości w typie lub można utworzyć definicję na podzbiorze. Jednak w obu przypadkach, a w klas i struktur, implementacji należy wykonać pięć gwarancje równoważności:  
@@ -48,7 +48,7 @@ Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć ni
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak zaimplementować równość wartości w klasie (typ odwołania).  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  W klasach (typy referencyjne) Domyślna implementacja obu <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> metody wykonuje porównanie równości odwołań, nie sprawdzanie równości wartości. Gdy implementujący zastępuje metodę wirtualną, celem jest zapewnienie semantyka porównania wartości.  
   

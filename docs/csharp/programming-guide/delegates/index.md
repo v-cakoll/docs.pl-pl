@@ -1,24 +1,18 @@
 ---
-title: Delegaty - C# przewodnik programowania
+title: 'Delegaty - C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, delegates
-- delegates [C#]
+  - 'C# language, delegates'
+  - 'delegates [C#]'
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 1c272dd9ab4f810a0eb1a1064b4c7731873d2c80
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675377"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaty (Przewodnik programowania w języku C#)
 A [delegować](../../../csharp/language-reference/keywords/delegate.md) to typ, który reprezentuje odwołania do metod z określoną listą parametrów i typ zwracany. Podczas tworzenia wystąpienia delegata można skojarzyć jego wystąpienie z dowolną metodą mającą zgodny podpis i zwracany typ. Za pośrednictwem wystąpienia delegata można wywołać metodę.  
   
  Delegaty służą do przekazywania metod jako argumentów do innych metod. Programy obsługi zdarzeń to po prostu metody, które są wywoływane za pośrednictwem delegatów. Użytkownik tworzy metodę niestandardową, a klasa, taka jak formant systemu Windows, może wywołać tę metodę, gdy wystąpi określone zdarzenie. W poniższym przykładzie pokazano deklarację delegata:  
   
- [!code-csharp[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideDelegates#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#20)]  
   
  Do delegata można przypisać każdą metodę z dowolnej dostępnej klasy lub struktury, która pasuje do typu delegata. Może to być metoda statyczna lub metoda wystąpienia. Umożliwia to programowe zmienianie wywołań metod, a także podłączanie nowego kodu do istniejących klas.  
   

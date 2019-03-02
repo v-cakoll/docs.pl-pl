@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: adbaf22e5a9e5ac826a341cc8c602085db04dd46
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965491"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203720"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Używanie wyjątków (Przewodnik programowania w języku C#)
 W języku C# błędów w programie w czasie wykonywania są propagowane przez program za pomocą mechanizmu o nazwie wyjątków. Wyjątki są zgłaszane przez kod, który wystąpi błąd i przechwycony przez kod, który można rozwiązać problem. Wyjątki mogą zostać wygenerowane przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) lub kodu w programie. Gdy wyjątek jest generowany, rozprzestrzenia się górę stosu wywołań, dopóki `catch` znajduje się instrukcji, dla wyjątku. Nieobsłużone wyjątki są obsługiwane przez wyjątek ogólny program obsługi, dostarczone przez system, który wyświetla okno dialogowe.  
@@ -28,7 +28,7 @@ W języku C# błędów w programie w czasie wykonywania są propagowane przez pr
   
  A `try` instrukcji może zawierać więcej niż jedną `catch` bloku. Pierwszy `catch` zostaje wykonana instrukcja, która może obsłużyć wyjątek; wszystkie następujące `catch` instrukcji, nawet jeśli są one zgodne, są ignorowane. W związku z tym, catch bloki zawsze powinny być uporządkowane od najbardziej określonego (lub najbardziej pochodnego) do najmniej specyficznych. Na przykład:  
   
- [!code-csharp[csProgGuideExceptions#3](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/using-exceptions_3.cs)]  
+ [!code-csharp[csProgGuideExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#3)]  
   
  Przed `catch` blok jest wykonywany, środowisko uruchomieniowe sprawdza, czy `finally` bloków. `Finally` bloki Włącz programisty wyczyścić stan niejednoznaczny, który może pozostać za pośrednictwem z przerwane `try` bloku, lub zwolnij wszystkie zasoby zewnętrzne (na przykład grafiki obsługuje połączenia z bazą danych lub strumieni plików) bez konieczności oczekiwania na wyrzucanie elementów Moduł zbierający w środowisku uruchomieniowym do sfinalizowania obiektów. Na przykład:  
   

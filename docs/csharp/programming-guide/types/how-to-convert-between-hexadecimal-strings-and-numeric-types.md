@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 231f89370d76bbc40769109b42f0b0f0fc47706c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ed943948888110b76df9c9ce22b4e9b6f4bb679f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966050"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200380"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Instrukcje: Konwertowanie ciągów szesnastkowych, które typy liczbowe (C# Programming Guide)
 Te przykłady pokazują, jak wykonywać następujące zadania:  
@@ -31,12 +31,12 @@ Te przykłady pokazują, jak wykonywać następujące zadania:
 ## <a name="example"></a>Przykład  
  W tym przykładzie generuje wartość szesnastkowa każdego znaku w `string`. Najpierw analizuje `string` do tablicy znaków. Następnie wywołuje <xref:System.Convert.ToInt32%28System.Char%29> przy każdym znaku, aby uzyskać jego wartości numerycznej. Na koniec formatuje liczbę jako jej reprezentacji szesnastkowej w `string`.  
   
- [!code-csharp[csProgGuideTypes#30](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-between-hexadecimal-strings-and-numeric-types_1.cs)]  
+ [!code-csharp[csProgGuideTypes#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#30)]  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie analizuje `string` dla szesnastkowej wartości, a także generuje znak odpowiadający każdej wartości szesnastkowych. Najpierw wywołuje [podziału (Char\[\])](xref:System.String.Split(System.Char[])) metodę, aby uzyskać każdej wartości szesnastkowych, jako użytkownik indywidualny `string` w tablicy. Następnie wywołuje <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> można przekonwertować wartości szesnastkowych na wartość dziesiętną reprezentowane jako [int](../../../csharp/language-reference/keywords/int.md). Pokazuje dwa różne sposoby uzyskiwania znak odpowiadający kod znaku. Pierwszą techniką używa <xref:System.Char.ConvertFromUtf32%28System.Int32%29>, która zwraca znak odpowiadający argument liczby całkowitej jako `string`. Druga metoda jawnie rzutuje `int` do [char](../../../csharp/language-reference/keywords/char.md).  
   
- [!code-csharp[csProgGuideTypes#31](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-between-hexadecimal-strings-and-numeric-types_2.cs)]  
+ [!code-csharp[csProgGuideTypes#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#31)]  
   
 ## <a name="example"></a>Przykład  
  Konwertuj szesnastkowego w inny sposób w tym przykładzie `string` do liczby całkowitej, wywołując <xref:System.Int32.Parse%28System.String%2CSystem.Globalization.NumberStyles%29> metody.  

@@ -33,7 +33,7 @@ Gdy klasa lub struktura implementuje interfejs, klasy lub struktury musi zapewni
   
 W poniższym przykładzie pokazano implementację <xref:System.IEquatable%601> interfejsu. Klasy implementującej `Car`, należy podać implementacja <xref:System.IEquatable%601.Equals%2A> metody.  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 Właściwości i indeksatorów w klasie, można zdefiniować dodatkowe metody dostępu właściwości lub indeksatora, który jest zdefiniowany w interfejsie. Na przykład interfejs może zadeklarować właściwości, która ma [uzyskać](../../language-reference/keywords/get.md) metody dostępu. Klasa, która implementuje interfejs można zadeklarować tej właściwości przy użyciu zarówno `get` i [ustaw](../../language-reference/keywords/set.md) metody dostępu. Jednakże jeśli właściwość lub indeksator używa jawnych implementacji, metod dostępu muszą być zgodne. Aby uzyskać więcej informacji dotyczących jawnych implementacji, zobacz [jawnej implementacji interfejsu](explicit-interface-implementation.md) i [właściwości interfejsu](../classes-and-structs/interface-properties.md).  
 

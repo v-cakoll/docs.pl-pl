@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 3391281ceeda031f6178f5909204624f3d6bb3dc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e028ecd6e448237d192894c4a02233c1e0dd4c0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973564"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201498"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić, typ. Obiekt jest zasadniczo bloku pamięci, która została przydzielona i skonfigurowane zgodnie z planu. Program może tworzyć wiele obiektów w tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w nazwanej zmiennej lub w tablicy lub kolekcji. Kod klienta jest kodem, który używa tych zmiennych w celu wywołania metod i uzyskiwać dostęp do właściwości publiczne obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  
@@ -24,7 +24,7 @@ Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić
   
  Wystąpienia klas są tworzone za pomocą [operatora new](../../../csharp/language-reference/keywords/new-operator.md). W poniższym przykładzie `Person` jest typem i `person1` i `person 2` wystąpienia lub obiektów tego typu.  
   
- [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
  Ponieważ struktury są typami wartości, zmienna obiektu struktura zawiera kopię całego obiektu. Można również tworzyć wystąpienia struktury za pomocą `new` operatora, ale nie jest wymagane, jak pokazano w poniższym przykładzie:  
   

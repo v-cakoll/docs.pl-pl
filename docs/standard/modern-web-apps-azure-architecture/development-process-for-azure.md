@@ -4,19 +4,19 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827477"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202109"
 ---
 # <a name="development-process-for-azure"></a>Proces programistyczny dla platformy Azure
 
 > _"W chmurze użytkowników indywidualnych i małych firmach mogą przyciąganie ich palców i natychmiast skonfigurować usługi klasy korporacyjnej."_  
 > _-Roy Stephan_
 
- ## <a name="vision"></a>Obraz
+## <a name="vision"></a>Obraz
 
 > *Twórz dobrze zaprojektowanego aplikacje ASP .NET Core lubisz, za pomocą programu Visual Studio lub wiersz polecenia dotnet i programu Visual Studio Code lub Edytor wybór.*
 

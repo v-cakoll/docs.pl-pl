@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 73b7f8b8460e4cdfad5e1dbc669447ec6fe01b8f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2202641d56a151de2eebe08d4c100c37fb399e5d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969508"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201667"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Wprowadzenie do kwerend LINQ (C#)
 A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań. Czas dla różnych rodzajów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML zostały opracowane w różnych językach. Dlatego programiści musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które muszą obsługiwać. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] upraszcza tę sytuację oferując spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze pracujesz z obiektami. Użyj tych samych podstawowych schematów kodowania do wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych SQL, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych, kolekcjach .NET i innych formatach, do których [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny.  
@@ -28,7 +28,7 @@ A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytan
   
  Poniższy przykład pokazuje, jak trzy części operacji zapytania są wyrażone w kodzie źródłowym. W przykładzie użyto tablicę liczb całkowitych jako źródła danych dla wygody; Jednak te same pojęcia dotyczą innych źródeł danych również. W tym przykładzie jest określana w pozostałej części tego tematu.  
   
- [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
  Poniższa ilustracja przedstawia pełną operację zapytania. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wykonywanie kwerendy różni się od samego zapytania; innymi słowy nie pobrano żadnych danych tylko przez utworzenie zmiennej zapytania.  
   

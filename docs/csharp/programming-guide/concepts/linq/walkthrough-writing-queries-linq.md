@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: d17d1d456752095dcc895eba291cd53745f9467d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 083f6c05f433436530326cd02b99cd98f86e8606
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968156"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202421"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Przewodnik: Pisanie zapytań w języku C# (LINQ)
 W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywania wyrażenia zapytań LINQ.  
@@ -53,7 +53,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 -   Dodaj `Student` klasy i zainicjowany listę uczniów `Program` klasy w projekcie.  
   
-     [!code-csharp[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
+     [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Aby dodać nowego studenta do listy studentów  
   

@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 0d324cadee556552098710310cce7f192b9b4d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7422267d6ce067ed30d0fbd4be8de2fd122b4a90
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975163"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200640"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Używanie konstruktorów (Przewodnik programowania w języku C#)
 Gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzone, jego konstruktor jest wywoływany. Konstruktory mają taką samą nazwę jak klasy lub struktury, a zwykle inicjują członków danych nowego obiektu.  
   
  W poniższym przykładzie klasę o nazwie `Taxi` jest zdefiniowana za pomocą prostego konstruktora. Ta klasa jest następnie utworzone za pomocą [nowe](../../../csharp/language-reference/keywords/new.md) operatora. `Taxi` Konstruktor jest wywoływany przez `new` operator natychmiast po pamięci zarezerwowanej dla nowego obiektu.  
   
- [!code-csharp[csProgGuideObjects#53](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
  Wywoływany jest konstruktor, który nie przyjmuje żadnych parametrów *domyślnego konstruktora*. Konstruktory domyślne są wywoływane zawsze wtedy, gdy jest tworzone wystąpienie obiektu za pomocą `new` operatora i żadne argumenty, które zostały udostępnione firmie `new`. Aby uzyskać więcej informacji, zobacz [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
@@ -70,9 +70,9 @@ Console.WriteLine("{0}, {1}", a, b);
   
  W klasie pochodnej, jeśli Konstruktor klasy bazowej nie jest jawnie wywoływana przy użyciu `base` — słowo kluczowe, Konstruktor domyślny, jeśli istnieje, jest wywoływana niejawnie. Oznacza to, że następujące deklaracje Konstruktor jest praktycznie taki sam:  
   
- [!code-csharp[csProgGuideObjects#58](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_6.cs)]  
+ [!code-csharp[csProgGuideObjects#58](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#58)]  
   
- [!code-csharp[csProgGuideObjects#57](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_7.cs)]  
+ [!code-csharp[csProgGuideObjects#57](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#57)]  
   
  Jeśli klasa bazowa nie oferuje domyślnego konstruktora, klasy pochodnej musi utworzyć jawnym wywołaniem konstruktora bazowego przy użyciu `base`.  
   

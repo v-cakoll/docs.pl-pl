@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: d2ee0c2a38ffeef3d2d0b339b98e48c25227d96c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 719e4463806c9c7e8b5407f2494c3b548ffa43e8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973265"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200783"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tablice jednowymiarowe (Przewodnik programowania w języku C#)
 
@@ -32,8 +32,10 @@ Można zadeklarować tablicy jednowymiarowej pięciu liczb całkowitych, jak pok
  [!code-csharp[csProgGuideArrays#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#6)]  
   
  Tablica ciągów mogą być inicjowane w taki sam sposób. Poniżej przedstawiono deklaracją tablicy ciągów gdzie każdy element tablicy jest inicjowany przez nazwę dnia:  
-  
- [!code-csharp[csProgGuideArrays#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_4.cs)]  
+ 
+ ```csharp
+ string[] weekDays = new string[] { "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" };
+ ```
   
  Podczas inicjowania tablicy po deklaracji, można użyć następujących skrótów klawiaturowych:  
   

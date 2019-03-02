@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 1ca40b59552c320e9bb2978869fb4a89d44ecb40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: be488b262764480b519e291727a21830d7a18e8f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976918"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201433"
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] dotyczy nie tylko podczas pobierania danych. Należy również zaawansowane narzędzie do przekształcania danych. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, można użyć sekwencji źródłowej, jak dane wejściowe i zmodyfikuj go na wiele sposobów, aby utworzyć nową sekwencję danych wyjściowych. Można zmodyfikować sekwencji bez modyfikowania samych elementów, sortowania i grupowania. Ale być może z najbardziej zaawansowanych funkcji [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania jest możliwość tworzenia nowych typów. Jest to realizowane w [wybierz](../../../../csharp/language-reference/keywords/select-clause.md) klauzuli. Na przykład należy wykonać następujące zadania:  
@@ -37,7 +37,7 @@ ms.locfileid: "56976918"
   
  Poniższy kod przedstawia zapytanie:  
   
- [!code-csharp[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
+ [!code-csharp[CSLinqGettingStarted#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#8)]  
   
  Aby uzyskać więcej informacji, zobacz [klauzuli join](../../../../csharp/language-reference/keywords/join-clause.md) i [klauzuli select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56976918"
 ## <a name="transforming-in-memory-objects-into-xml"></a>Przekształcanie obiektów w pamięci do formatu XML  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania ułatwiają do przekształcania danych między strukturami danych w pamięci, baz danych SQL, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych i XML strumienie lub dokumenty. Poniższy przykład przekształca obiektów w strukturze danych w pamięci do elementów XML.  
   
- [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   
  Kod generuje następujące dane wyjściowe XML:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "56976918"
 > [!NOTE]
 >  Wywoływanie metod w wyrażeniach zapytań nie jest obsługiwana, jeśli zapytanie zostanie zamieniona na innej domeny. Na przykład nie można wywołać zwykłych metodę języka C# w [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] ponieważ program SQL Server ma Brak kontekstu dla niego. Można jednak procedurom składowanym w mapie do metod i wywołać te. Aby uzyskać więcej informacji, zobacz [procedur składowanych](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
- [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
+ [!code-csharp[CsLINQGettingStarted#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#10)]  
   
 ## <a name="see-also"></a>Zobacz także
 

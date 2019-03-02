@@ -2,15 +2,9 @@
 title: Zdarzenia (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- events [Visual Basic], about events
-- events [Visual Basic]
+  - 'events [Visual Basic], about events'
+  - 'events [Visual Basic]'
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 08bd3b3c7ff5608193de0cdc1a869e0918c9e96e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065794"
 ---
 # <a name="events-visual-basic"></a>Zdarzenia (Visual Basic)
 Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które są wykonywane w kolejności, w rzeczywistości większość programów są oparte na zdarzeniach — czyli przepływem wykonania jest określana przez zewnętrzne wystąpienia o nazwie *zdarzenia*.  
@@ -23,12 +17,12 @@ Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które 
 ### <a name="declaring-events"></a>Deklarowanie zdarzeń  
  Możesz zadeklarować zdarzenia w obrębie klasy, struktury, moduły i interfejsy, za pomocą `Event` — słowo kluczowe, jak w poniższym przykładzie:  
   
- [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
+ [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>Wywoływanie zdarzeń  
  Zdarzenie jest jak wiadomość informującą, że wystąpiło coś, co jest ważne. Czynność emituje komunikat jest nazywany *wywoływanie* zdarzenia. W języku Visual Basic wywoływanie zdarzeń za pomocą `RaiseEvent` instrukcji, jak w poniższym przykładzie:  
   
- [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
+ [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
  Zdarzenia musi zostać podniesiony w zakresie klasy, modułu lub struktury, gdzie są one zgłoszone. Na przykład klasa pochodna nie mogą wywoływać zdarzeń dziedziczone z klasy podstawowej.  
   
@@ -49,7 +43,7 @@ Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które 
 ### <a name="withevents-and-the-handles-clause"></a>WithEvents i Klauzula Handles  
  `WithEvents` Instrukcji i `Handles` klauzuli zapewniają deklaratywną metodę określania procedury obsługi zdarzeń. Zdarzenie zgłaszane przez obiekt zadeklarowane za pomocą `WithEvents` — słowo kluczowe może być obsługiwany przez wszystkie procedury z `Handles` instrukcji dla tego zdarzenia, jak pokazano w poniższym przykładzie:  
   
- [!code-vb[VbVbalrEvents#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_3.vb)]  
+ [!code-vb[VbVbalrEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#1)]  
   
  `WithEvents` Instrukcji i `Handles` klauzuli są często najlepszym wyborem dla procedury obsługi zdarzeń, ponieważ używają składni deklaratywnej ułatwia obsługę zdarzeń dla kodu, odczytywania i debugowania. Należy jednak pamiętać o następujących ograniczeniach stosowania `WithEvents` zmiennych:  
   
@@ -65,18 +59,18 @@ Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które 
   
  W niektórych przypadkach takich jak za pomocą zdarzenia związane z formularze lub kontrolki, Visual Basic automatycznie zastępczych się program obsługi zdarzeń pusty i kojarzy ją z zdarzenie. Na przykład po dwukrotnym kliknięciu przycisku w formularzu w trybie projektowania Visual Basic tworzy program obsługi zdarzeń pusty i `WithEvents` zmiennej dla przycisku polecenia tak jak w poniższym kodzie:  
   
- [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
+ [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
 ### <a name="addhandler-and-removehandler"></a>AddHandler i RemoveHandler  
  `AddHandler` Instrukcji jest podobna do `Handles` w klauzuli, że oba pozwalają na określenie procedury obsługi zdarzeń. Jednak `AddHandler`, który jest używany z `RemoveHandler`, zapewnia większą elastyczność niż `Handles` klauzuli, dzięki czemu możesz dynamicznie dodać, usunąć, a zmiany obsługi zdarzenia powiązanego ze zdarzeniem. Jeśli chcesz obsługiwać lub udostępnione zdarzenia ze struktury, należy użyć `AddHandler`.  
   
  `AddHandler` przyjmuje dwa argumenty: Nazwa zdarzenia z nadawcą zdarzenia, takie jak formant i na wyrażenie obliczane do delegata. Nie trzeba jawnie określić klasa obiektu delegowanego, korzystając z `AddHandler`, ponieważ `AddressOf` instrukcja zawsze zwraca odwołanie do obiektu delegowanego. Poniższy przykład kojarzy program obsługi zdarzeń do zdarzenia wygenerowane przez obiekt:  
   
- [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
+ [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
  `RemoveHandler`, rozłącza którego zdarzenie, aby program obsługi zdarzeń korzysta z tej samej składni jako `AddHandler`. Na przykład:  
   
- [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
+ [!code-vb[VbVbalrEvents#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#29)]  
   
  W poniższym przykładzie program obsługi zdarzeń jest skojarzony ze zdarzeniem, a zdarzenie jest wywoływane. Program obsługi zdarzeń przechwytuje zdarzenia i zostanie wyświetlony komunikat.  
   
@@ -84,16 +78,16 @@ Projekt programu Visual Studio mogą wizualizować jako szereg procedur, które 
   
  Na koniec drugiego obsługi zdarzeń jest usuwany, a zdarzenie jest wywoływane raz trzeci. Ponieważ istnieje już program obsługi zdarzeń skojarzone ze zdarzeniem, nie podjęto żadnej akcji.  
   
- [!code-vb[VbVbalrEvents#38](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_7.vb)]  
+ [!code-vb[VbVbalrEvents#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class2.vb#38)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>Obsługa zdarzeń dziedziczone z klasy podstawowej  
  *Klasy pochodne*— klasy, które dziedziczą właściwości z klasy bazowej — można obsługiwać zdarzenia wywoływane przez ich przy użyciu klasy bazowej `Handles MyBase` instrukcji.  
   
-#### <a name="to-handle-events-from-a-base-class"></a>Do obsługi zdarzeń z klasy bazowej  
+### <a name="to-handle-events-from-a-base-class"></a>Do obsługi zdarzeń z klasy bazowej  
   
 -   Zadeklaruj program obsługi zdarzeń w klasie pochodnej, dodając `Handles MyBase.` *eventname* instrukcję, aby wiersz deklaracja procedury obsługi zdarzeń, gdzie *eventname* nazywa się zdarzenie w Klasa bazowa, które obsługujesz. Na przykład:  
   
-     [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
+     [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   

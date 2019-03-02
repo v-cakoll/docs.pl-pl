@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f551b94e16fc7cecf768feff43e4d084c04a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b11452e34a802e84a12eb1832234ae5ab60aa992
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966154"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203551"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> Element
 Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppContext> Aby klasa zapewniała mechanizm rezygnacji z nowych funkcji.  
@@ -88,6 +88,7 @@ Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppCont
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Wyłącza alerty po stronie serwera SslStream TLS.|.NET framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Formanty czy [klasa DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) serializuje niektórych znaków kontrolnych opartych na standardach wersji ECMAScript 6 i V8. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Serializacja znaki kontrolne przy użyciu elementu DataContractJsonSerializer](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Formanty czy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obsługuje wiele dostosowań lub tylko jednego dopasowania dla strefy czasowej. Jeśli `true`, używa ona <xref:System.TimeZoneInfo> typ do serializacji i deserializacji danych daty i godziny; w przeciwnym razie używa <xref:System.TimeZone> typ, który nie obsługuje wielu reguł dopasowania.|.NET Framework 4.6.2|
+|`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|Formanty czy <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> większy rozmiar tablicy jest używany podczas obiektu serializacji i deserializacji. Ustaw ten przełącznik `true` do poprawy wydajności serializacji i deserializacji obiektu dużych wykresów obiektów według typów, takich jak <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Formanty czy <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> Konstruktor Ustawia nowy obiekt <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> właściwość o istniejące odwołanie do obiektu. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Konstruktor ClaimsIdentity](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Formanty czy próba ponownego użycia <xref:System.Security.Cryptography.AesCryptoServiceProvider> zgłasza odszyfrowujący <xref:System.Security.Cryptography.CryptographicException>. Aby uzyskać więcej informacji, zobacz [odszyfrowujący AesCryptoServiceProvider zapewnia wielokrotnego użytku przekształcenie](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Formanty czy wartość [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) właściwość [IntPtr](xref:System.IntPtr) czy reprezentuje lokalizację w pamięci okna obsługi, lub czy jest to uchwyt okna (HWND). Aby uzyskać więcej informacji, zobacz [środki zaradcze: CspParameters.ParentWindowHandle oczekuje HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET framework 4.7|   

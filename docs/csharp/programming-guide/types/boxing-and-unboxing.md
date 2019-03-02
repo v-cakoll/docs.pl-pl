@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 333f8709fa3247be22c068b52e2fa937483acd3b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8340d05b18c4fb19e9ba8f8ecffa5657b7febd79
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973109"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201758"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Konwersja boxing i konwersja unboxing (Przewodnik programowania w języku C#)
 OPAKOWYWANIE to proces konwersji [typu wartości](../../../csharp/language-reference/keywords/value-types.md) typowi `object` lub dowolny typ interfejsu implementowany przez ten typ wartości. Gdy środowisko CLR opakowuje typ wartości, otacza wartość wewnątrz elementu System.Object i zapisuje go w zarządzanym stosie. Rozpakowywanie wyodrębnia typ wartości z obiektu. OPAKOWYWANIE jest niejawne; Rozpakowywanie jest jawne. Pojęcie pakowania i rozpakowywania źródłową C# postrzega system typów, w którym wartość dowolnego typu może być traktowana jako obiekt.  
@@ -59,7 +59,7 @@ Konwersja boxing
  Ten przykład konwertuje zmienną całkowitą `i` do obiektu `o` za pomocą pakowania. Następnie wartość przechowywana w zmiennej `i` zostało zmienione z `123` do `456`. W przykładzie pokazano, że oryginalny typ wartości i spakowany obiekt Użyj lokalizacji pamięci i dlatego mogą przechowywać różne wartości.  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
+ [!code-csharp[csProgGuideTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#16)]  
   
 ## <a name="unboxing"></a>Rozpakowywanie  
  Rozpakowywanie to konwersja jawna z typu `object` do [typu wartości](../../../csharp/language-reference/keywords/value-types.md) lub z typu interfejsu na typ wartości, która implementuje interfejs. Operacja rozpakowania składa się z:  

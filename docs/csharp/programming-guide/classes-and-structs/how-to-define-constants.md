@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: cf57589df2eb375f34d175939a7f685a4abf59a2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a85e7728512922be38658c07314229c26b2461fd
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975423"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201472"
 ---
 # <a name="how-to-define-constants-in-c"></a>Instrukcje: Definiowanie stałych w C\#
 Stałe są pola, których wartości są ustawione na czas kompilacji i nie można go zmienić. Użyj stałych zapewnienie nazw opisowych, zamiast literałów numerycznych ("numery magic") dla specjalnych wartości.  
@@ -23,7 +23,7 @@ Stałe są pola, których wartości są ustawione na czas kompilacji i nie możn
  Aby określić stałe całkowite inne niż, jednym z podejść jest aby je pogrupować w jednej klasie statycznej o nazwie `Constants`. Wymaga to czy wszystkie odwołania do stałych być poprzedzona nazwą klasy, jak pokazano w poniższym przykładzie.  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
+ [!code-csharp[csProgGuideObjects#89](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#89)]  
   
  Użycie kwalifikatora Nazwa klasy pomaga upewnić się, że Ty i inni korzystającymi z stała zna jest stała i nie może być modyfikowany.  
   

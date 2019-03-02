@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 47bd7184e26a643aa8ff17b3e0a0507ab7978216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfd0602ef92f9b0f84a8e1434ef834a328d60f03
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540288"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200276"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Instrukcje: Zdarzenia implementowania interfejsu (C# Programming Guide)
 [Interfejsu](../../../csharp/language-reference/keywords/interface.md) można zadeklarować [zdarzeń](../../../csharp/language-reference/keywords/event.md). Poniższy przykład pokazuje, jak zdarzenia implementowania interfejsu w klasie. Zasadniczo reguły są takie same, jak podczas implementowania metody interfejsu dowolnej właściwości.  
@@ -56,7 +56,7 @@ Poniższy przykład pokazuje, jak obsługiwać mniej znane sytuacji, w którym k
   
 Podając własne metody dostępu, można określić, czy dwa zdarzenia są reprezentowane przez te same zdarzenia w klasie lub różnych zdarzeń. Na przykład jeśli zdarzenia powinien być wywoływany w różnym czasie zgodnie ze specyfikacją interfejsu, można skojarzyć każde zdarzenie z oddzielnych implementacją w klasie. W poniższym przykładzie subskrybentów określenie `OnDraw` otrzymają przez rzutowanie odwołanie kształtu do każdego zdarzenia `IShape` lub `IDrawingObject`.  
   
- [!code-csharp[WrapTwoInterfaceEvents](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs#everything)]
+ [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 42fa96ade5eee63d8d1eddff481ac230c92936e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6a990dbf26ac1a6bdc642442b9f4b75c05ee9635
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972888"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200120"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Konstruktory statyczne (Przewodnik programowania w języku C#)
 Statyczny Konstruktor jest wykorzystywany do inicjacji dowolne [statyczne](../../../csharp/language-reference/keywords/static.md) danych, lub do wykonania określonej akcji, która musi zostać wykonana tylko raz. Jest wywoływana automatycznie przed pierwsze wystąpienie jest tworzone lub żadnych statycznych składowych są wywoływane.  
@@ -37,7 +37,7 @@ Statyczny Konstruktor jest wykorzystywany do inicjacji dowolne [statyczne](../..
 ## <a name="example"></a>Przykład  
  W tym przykładzie klasa `Bus` ma Konstruktor statyczny. Po pierwsze wystąpienie `Bus` zostanie utworzony (`bus1`), statyczny Konstruktor jest wywoływane w celu zainicjowania klasy. Przykładowe dane wyjściowe weryfikuje, że Konstruktor statyczny działa tylko jeden raz, nawet jeśli dwa wystąpienia `Bus` są tworzone, to jest uruchamiane przed uruchomieniem konstruktora wystąpienia.  
   
- [!code-csharp[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]  
   
 ## <a name="see-also"></a>Zobacz także
 

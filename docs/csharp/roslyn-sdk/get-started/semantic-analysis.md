@@ -3,12 +3,12 @@ title: Rozpoczynanie pracy z usługą analiza semantyki
 description: Ten samouczek zawiera omówienie pracy z semantycznego analizy przy użyciu zestawu .NET SDK kompilatora.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 669f11377edfa707133f7ad8df72117942d504fa
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484621"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202577"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Rozpoczynanie pracy z usługą analiza semantyki
 
@@ -117,7 +117,7 @@ Aby ukończyć ten samouczek, utworzymy kwerenda LINQ, która tworzy sekwencję 
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-Tego źródła sekwencja zawiera wszystkie elementy członkowskie, w tym jej właściwości i pola, więc filtrować za pomocą <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> metodę, aby znaleźć elementy, które są <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType> obiektów:
+Tego źródła sekwencja zawiera wszystkie elementy członkowskie, w tym jej właściwości i pola, więc filtrować za pomocą <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> metodę, aby znaleźć elementy, które są <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> obiektów:
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 

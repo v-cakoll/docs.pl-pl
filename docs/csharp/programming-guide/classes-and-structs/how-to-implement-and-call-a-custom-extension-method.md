@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 1bac65ec5aef2846b2b310a65ffbefd5433e93bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4b77bf0a44ce58db632e0c58982dba7178f9272
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652222"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203431"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Instrukcje: Implementowanie i wywołanie niestandardowej metody rozszerzenia (C# Programming Guide)
 W tym temacie pokazano, jak można implementować własne metody rozszerzenia dla dowolnego typu platformy .NET. Kod klienta można użyć metody rozszerzenia przez dodanie odwołania do biblioteki DLL, która je zawiera i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywę, który określa obszar nazw, w którym zdefiniowano metody rozszerzenia.  
@@ -34,7 +34,7 @@ W tym temacie pokazano, jak można implementować własne metody rozszerzenia dl
 ## <a name="example"></a>Przykład  
  Poniższy przykład implementuje metodę rozszerzenia o nazwie `WordCount` w `CustomExtensions.StringExtension` klasy. Metoda działa na <xref:System.String> klasy, która jest określony jako pierwszy parametr metody. `CustomExtensions` Przestrzeni nazw jest importowany do przestrzeni nazw aplikacji, a metoda jest wywoływana wewnątrz `Main` metody.  
   
- [!code-csharp[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Aby uruchomić ten kod, skopiuj i wklej go do programu Visual C# projekt aplikacji konsoli, która została utworzona w programie Visual Studio. Domyślnie ten projekt jest przeznaczony dla wersji 3.5 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], i ma odwołania do System.Core.dll i `using` dyrektywy dla System.Linq. Jeśli co najmniej jeden z tych wymagań brakuje z projektu, możesz je dodać ręcznie.  

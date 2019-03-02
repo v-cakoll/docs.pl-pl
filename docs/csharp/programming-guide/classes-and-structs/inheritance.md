@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607020"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202356"
 ---
 # <a name="inheritance-c-programming-guide"></a>Dziedziczenie (Przewodnik programowania w języku C#)
 
@@ -35,7 +35,7 @@ Dziedziczenie klas
   
  Poniższy przykład pokazuje, jak pokazano na poprzedniej ilustracji relacje klas są wyrażone w języku C#. W przykładzie przedstawiono również sposób `WorkItem` zastępuje metodę wirtualną <xref:System.Object.ToString%2A?displayProperty=nameWithType>oraz sposób, w jaki `ChangeRequest` klasa dziedziczy `WorkItem` implementacji metody.  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Metody abstrakcyjne i wirtualnych  
  Kiedy klasę bazową deklaruje metodę jako [wirtualnego](../../../csharp/language-reference/keywords/virtual.md), klasa pochodna może [zastąpienia](../../../csharp/language-reference/keywords/override.md) metoda własną implementację. Jeśli klasa bazowa deklaruje element członkowski jako [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md), że metoda musi zostać zastąpiona w dowolnym nieabstrakcyjnej klasie dziedziczącej bezpośrednio z tej klasy. Jeśli klasa pochodna sama jest abstrakcyjna dziedziczy członków abstrakcyjnych bez ich wdrażania. Abstrakcyjna i wirtualnych elementów członkowskich stanowią podstawę polimorfizm, czyli podstawowy drugiego charakterystyka programowanie zorientowane obiektowo. Aby uzyskać więcej informacji, zobacz [polimorfizm](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

@@ -1041,6 +1041,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 - Flowchart, Projektant działań lub innych Projektanci działań przepływu pracy mogą być wyświetlane wszystkie obiekty w ich domyślne lokalizacje, w przeciwieństwie do wartości właściwości dołączone.
 
+<a name="clickonce-1" />
 
 ### <a name="clickonce"></a>ClickOnce
 

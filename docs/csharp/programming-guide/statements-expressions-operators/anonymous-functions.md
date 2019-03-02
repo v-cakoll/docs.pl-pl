@@ -3,16 +3,16 @@ title: Funkcje anonimowe - C# przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- lambda expressions [C#], as anonymus functions
+- lambda expressions [C#], as anonymous functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 5500e93dc2369273d296b557e22bbe20cc589d91
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f7ab471514cd437b7b1816d7e0bde30459f281a9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967155"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203327"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funkcje anonimowe (Przewodnik programowania w języku C#)
 Funkcja anonimowa jest "inline" instrukcję lub wyrażenie, który może służyć wszędzie tam, gdzie oczekiwany jest typ delegatu. Służy on do zainicjowania delegat nazwany lub przekazać je zamiast typu delegat nazwany, jako parametr metody.  

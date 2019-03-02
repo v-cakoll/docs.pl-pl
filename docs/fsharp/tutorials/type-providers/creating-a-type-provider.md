@@ -2,12 +2,12 @@
 title: 'Samouczek: Tworzenie dostawcy typów'
 description: Dowiedz się, jak tworzyć własne F# dostawców w typów F# 3.0, sprawdzając kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji.
 ms.date: 05/16/2016
-ms.openlocfilehash: b16981b70db0896805754c60afa96a07623a1263
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: bd19cfa4c8b64e429bbd3af87949b39cb78012ba
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223211"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203668"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
@@ -702,7 +702,7 @@ type public CheckedRegexProvider() as this =
                     parameters = [ProvidedParameter("input", typeof<string>)], 
                     returnType = matchTy, 
                     invokeCode = fun args -> <@@ ((%%args.[0]:obj) :?> Regex).Match(%%args.[1]) :> obj @@>)
-                matchMeth.AddXmlDoc "Searches the specified input string for the first occurence of this regular expression"
+                matchMeth.AddXmlDoc "Searches the specified input string for the first occurrence of this regular expression"
 
                 ty.AddMember matchMeth
 
@@ -1122,9 +1122,9 @@ Dostawcy typów można wywołać za pomocą następujących narzędzi:
 
 - FSC.exe ( F# kompilatora wiersza polecenia)
 
-- fsi.exe ( F# interaktywne kompilatora)
+- fsi.exe (The F# Interactive compiler)
 
-- Devenv.exe (Visual Studio)
+- devenv.exe (Visual Studio)
 
 Dostawcy typów można debugować często najłatwiej przy użyciu fsc.exe w pliku skryptu testu (na przykład script.fsx). Można uruchomić debugera z poziomu wiersza polecenia.
 

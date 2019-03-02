@@ -3,12 +3,12 @@ title: Zapis w bezpieczny i skuteczny C# kodu
 description: Najnowsze ulepszenia C# języka umożliwiają pisanie weryfikowalny kod bezpieczny, że wydajność była poprzednio skojarzona z niebezpieczny kod.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 35d9cf89d8ba2ddb673554a76eb33ae59b178b42
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245686"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203462"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Zapis w bezpieczny i skuteczny C# kodu
 
@@ -129,7 +129,7 @@ Typy wartości są kopiowane, gdy przekazywane do metody o nazwie, jeśli nie ok
 
 Dodaj `in` modyfikator do przekazywania argumentu przez odwołanie i Zadeklaruj swoje założenia projektowe, aby przekazywać argumentów przez odwołanie, aby uniknąć niepotrzebnego kopiowania. Nie zamierzasz zmodyfikować obiekt używany w roli tego argumentu.
 
-Praktyka ta często zwiększa wydajność w przypadku typów wartości tylko do odczytu, które są większe niż <xref:System.IntPtr.Size?displayProperty=nameWithType>. Dla typów prostych (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` i `bool`, i `enum` typów), wszelkie potencjalne zwiększenie wydajności są minimial. W rzeczywistości limitu może obniżyć wydajność przy użyciu przekazywany przez odwołanie dla typów mniejszych niż <xref:System.IntPtr.Size?displayProperty=nameWithType>.
+Praktyka ta często zwiększa wydajność w przypadku typów wartości tylko do odczytu, które są większe niż <xref:System.IntPtr.Size?displayProperty=nameWithType>. Dla typów prostych (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, `double`, `decimal` i `bool`, i `enum` typów), wszelkie potencjalne zwiększenie wydajności są minimalne. W rzeczywistości limitu może obniżyć wydajność przy użyciu przekazywany przez odwołanie dla typów mniejszych niż <xref:System.IntPtr.Size?displayProperty=nameWithType>.
 
 Poniższy kod przedstawia przykład metody, które oblicza odległość między dwoma punktami w przestrzeni 3D.
 

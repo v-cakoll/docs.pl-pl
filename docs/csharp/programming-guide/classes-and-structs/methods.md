@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: f6e85a4dfdf562c0a479b19224e11e919da8716d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980363"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201168"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 Metoda jest blokiem kodu, który zawiera szereg instrukcji. Program powoduje, że instrukcji do wykonania przez wywołanie metody i określenie argumentów wymaganej metody. W języku C# co instrukcja wykonanych odbywa się w kontekście metody. Metoda główna jest punktem wejścia dla każdej aplikacji C# i jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program zostanie uruchomiony.  
@@ -37,7 +37,7 @@ Metoda jest blokiem kodu, który zawiera szereg instrukcji. Program powoduje, ż
 ## <a name="method-parameters-vs-arguments"></a>Parametry metody programu vs. Argumenty  
  Definicja metody określa nazwy i typy parametrów, które są wymagane. Podczas wywoływania kod wywołuje metody, zapewnia konkretnych wartości nazywanych argumentami dla każdego parametru. Argumenty muszą być zgodne z typem parametru, ale nazwa argumentu (jeśli istnieje) używane w wywoływanym kodzie nie musi być taka sama jak parametr o nazwie zdefiniowany w metodzie. Na przykład:  
   
- [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Przekazywanie poprzez odwołanie do programu vs. Przekazywanie poprzez wartość  
  Domyślnie gdy typ wartości jest przekazywany do metody, kopia jest przekazywany zamiast samego obiektu. W związku z tym zmiany do argumentu nie mają wpływu na kopię oryginalnego w przypadku wywołania metody. Typ wartości przez odwołanie można przekazać za pomocą słowa kluczowego ref. Aby uzyskać więcej informacji, zobacz [przekazywanie parametrów typu wartość](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md). Aby uzyskać listę typów wbudowanych wartości, zobacz [Tabela typów wartości](../../../csharp/language-reference/keywords/value-types-table.md).  

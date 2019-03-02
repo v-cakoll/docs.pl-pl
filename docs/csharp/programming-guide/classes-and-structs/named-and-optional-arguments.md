@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: c816b9e5e2ed24f60962797428d4b28033068885
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d31cec602516b7cf3e4b358fa4b3f10e167e6e17
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978634"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202739"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza argumentów nazwanych i opcjonalnych. *Argumenty nazwane* umożliwiają określenie argumentu dla parametru określonego argumentu można skojarzyć z nazwą parametru, a nie za pomocą parametru pozycji na liście parametrów. *Argumenty opcjonalne* umożliwia pominięcie argumentów dla niektórych parametrów. Obu tych technik może służyć za pomocą metod, indeksatorów, konstruktorów i delegatów.  
@@ -61,7 +61,7 @@ ms.locfileid: "56978634"
 ## <a name="example"></a>Przykład  
  Poniższy kod implementuje przykłady w tej sekcji oraz dodatkowe niektóre z nich.  
   
- [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/program.cs#1)]  
   
 ## <a name="optional-arguments"></a>Argumenty opcjonalne.  
  Definicję metody, konstruktora, indeksatora lub delegata można określić, że jej parametry są wymagane lub czy są opcjonalne. Każde wywołanie należy podać argumenty dla wszystkich wymaganych parametrów, ale można pominąć argumenty dla parametrów opcjonalnych.  

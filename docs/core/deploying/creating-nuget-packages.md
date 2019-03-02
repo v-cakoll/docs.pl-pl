@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 14e3dc265991634b4ef4814fb149f0aaebbcfab6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1add3470799b75ebb92c67eed3509523e510ab6c
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170057"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211796"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Jak utworzyć pakiet NuGet za pomocą narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 
@@ -28,13 +28,13 @@ Jeśli masz przechodnie zależności oznacza to, że projekt, który jest zależ
 Po upewnieniu się, pakiety zostaną przywrócone, możesz przejść do katalogu, w którym przebywa biblioteki:
 
 ```console
-$ cd src/SuperAwesomeLibrary`
+cd src/SuperAwesomeLibrary
 ```
 
 Następnie jest tylko jednego polecenia w wierszu polecenia:
 
 ```console
-$ dotnet pack
+dotnet pack
 ```
 
 Twoje `/bin/Debug` folder będzie teraz wyglądać następująco:
@@ -50,7 +50,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 Należy pamiętać, pozwoli to osiągnąć pakietu, który jest w stanie debugowane. Jeśli chcesz utworzyć pakiet NuGet przy użyciu wersji plików binarnych, wszystko, czego potrzebujesz, aby zrobić to dodanie `--configuration` (lub `-c`) Przełącz i użyj `release` jako argument.
 
 ```console
-$ dotnet pack --configuration release
+dotnet pack --configuration release
 ```
 
 Twoje `/bin` folderu będą teraz mieć `release` folder zawierający pakiet NuGet z plikami binarnymi wersji:
@@ -71,4 +71,4 @@ Ważne jest, aby pamiętać, że w żadnym punkcie nie jest `dotnet publish` zaa
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Szybki Start: Tworzenie i publikowanie pakietu](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
+- [Szybki start: Tworzenie i publikowanie pakietu](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

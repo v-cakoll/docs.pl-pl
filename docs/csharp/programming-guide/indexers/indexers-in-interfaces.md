@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 07f2297512d59492320e7ac31fd44c9b0a7bedd7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c56369b28f8e1bab1ca8e8c13ebd9710c8f1d9fb
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970691"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200107"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indeksatory w interfejsach (Przewodnik programowania w języku C#)
 Można zadeklarować indeksatorów w [interfejsu](../../../csharp/language-reference/keywords/interface.md). Metody dostępu interfejsu indeksatorów różnią się od metod dostępu [klasy](../../../csharp/language-reference/keywords/class.md) indeksatorów w następujący sposób:  
@@ -31,7 +31,7 @@ Można zadeklarować indeksatorów w [interfejsu](../../../csharp/language-refer
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak zaimplementować interfejs indeksatorów.  
   
- [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#4)]  
   
  W poprzednim przykładzie można użyć jawną implementacją członków przy użyciu w pełni kwalifikowana nazwa składowej interfejsu. Na przykład:  
   

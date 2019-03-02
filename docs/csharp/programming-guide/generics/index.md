@@ -1,22 +1,16 @@
 ---
-title: Ogólne — C# przewodnik programowania
+title: 'Ogólne — C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, generics
-- generics [C#]
+  - 'C# language, generics'
+  - 'generics [C#]'
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 662b388dd9c279969ed777e443df42784e20d4c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677202"
 ---
 # <a name="generics-c-programming-guide"></a>Typy ogólne (Przewodnik programowania w języku C#)
 Typy ogólne zostały dodane do wersji języka C# i środowisko uruchomieniowe języka wspólnego (CLR) w wersji 2.0. Ogólne wprowadzenie do programu .NET Framework pojęcia parametrami typu, które umożliwiają projektowanie klas i metod, które Odrocz specyfikację jeden lub więcej typów, dopóki klasy lub metody jest zadeklarowana i tworzone przez kod klienta. Na przykład za pomocą parametru typu generycznego T, można napisać jedną klasę, używaną przez inny kod klienta bez ponoszenia kosztów ani ryzyka rzutowania środowiska uruchomieniowego lub operacje na polach, jak pokazano poniżej:  
   
- [!code-csharp[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#1)]  
   
 ## <a name="generics-overview"></a>Przegląd typów ogólnych  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 2036ec8009cfc72a20bcd828d7bc0b252e620cab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d9b02a9c997ffcfdd61e277a6ed3779d8821831
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610831"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202460"
 ---
 # <a name="-operator-visual-basic"></a>/ — Operator (Visual Basic)
 Dzieli dwie liczby i zwraca wynik zmiennoprzecinkowych.  
@@ -76,7 +76,7 @@ expression1 / expression2
 ## <a name="example"></a>Przykład  
  W tym przykładzie użyto `/` operator przeprowadzić dzielenia liczb zmiennopozycyjnych. Wynik jest równy ilorazowi dwóch argumentów operacji.  
   
- [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
  Wyrażenia w poprzednim przykładzie wartości zwracanych z 2.5 i 3.333333. Należy pamiętać, że wynik zawsze zmiennoprzecinkowych (`Double`), nawet jeśli oba operandy są stałe całkowite.  
   

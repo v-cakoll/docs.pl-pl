@@ -5,16 +5,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: b74e4375464cc515a281922cb1d5b5b0d1dd1954
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6b129177e6eb916982a27ba76aca517b0642344c
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969411"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203301"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Używanie indeksatorów (C# Programming Guide)
 
-Indeksatory są wygody składni, które umożliwiają tworzenie [klasy](../../../csharp/language-reference/keywords/class.md), [struktury](../../../csharp/language-reference/keywords/struct.md), lub [interfejsu](../../../csharp/language-reference/keywords/interface.md) że aplikacje klienckie mogą uzyskać dostęp, podobnie jak tablica. Indeksatory najczęściej są implementowane w typach, której głównym celem jest hermetyzacji wewnętrznej kolekcji lub tablicy. Załóżmy na przykład, posiadasz klasę `TempRecord` reprezentujący temperaturę w Farenheit zarejestrowanej w 10 różnych razy w okresie 24-godzinnym. Klasa zawiera tablicę `temps` typu `float[]` do przechowywania wartości temperatury. Wdrażając indeksatora w tej klasie, klienci mogą uzyskiwać dostęp temperatur w `TempRecord` wystąpienia jako `float temp = tr[4]` zamiast jako `float temp = tr.temps[4]`. Notacja indeksator nie tylko upraszcza składnię dla aplikacji klienckich; zapewnia także klasa i jej przeznaczenie bardziej intuicyjne innym deweloperom zrozumieć.  
+Indeksatory są wygody składni, które umożliwiają tworzenie [klasy](../../../csharp/language-reference/keywords/class.md), [struktury](../../../csharp/language-reference/keywords/struct.md), lub [interfejsu](../../../csharp/language-reference/keywords/interface.md) że aplikacje klienckie mogą uzyskać dostęp, podobnie jak tablica. Indeksatory najczęściej są implementowane w typach, której głównym celem jest hermetyzacji wewnętrznej kolekcji lub tablicy. Załóżmy na przykład, posiadasz klasę `TempRecord` reprezentujący temperaturę w Fahrenheita zarejestrowanej w 10 różnych razy w okresie 24-godzinnym. Klasa zawiera tablicę `temps` typu `float[]` do przechowywania wartości temperatury. Wdrażając indeksatora w tej klasie, klienci mogą uzyskiwać dostęp temperatur w `TempRecord` wystąpienia jako `float temp = tr[4]` zamiast jako `float temp = tr.temps[4]`. Notacja indeksator nie tylko upraszcza składnię dla aplikacji klienckich; zapewnia także klasa i jej przeznaczenie bardziej intuicyjne innym deweloperom zrozumieć.  
   
 Aby zadeklarować indeksatora w klasie lub strukturze, użyj [to](../../../csharp/language-reference/keywords/this.md) — słowo kluczowe, co ilustruje poniższy przykład:
 
@@ -63,7 +63,7 @@ C#Typ parametru indeksatora na liczbę całkowitą nie są ograniczone. Na przyk
   
 Poniższy przykład deklaruje klasę, która przechowuje dni tygodnia. A `get` akcesor przyjmuje ciąg nazwy dnia i zwraca odpowiedniej liczby całkowitej. Na przykład "Niedziela" zwraca wartość 0, zwraca "Poniedziałek", 1 i tak dalej.  
   
-[!code-csharp[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#2)]  
   
 ## <a name="robust-programming"></a>Skuteczne programowanie
 

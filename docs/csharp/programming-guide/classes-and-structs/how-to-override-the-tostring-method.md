@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: c28712a3969c8b0143f90b1e733738bf74464d9a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fd73deb4682ec12b982740f6e9e9c1e38a5688a3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980480"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202434"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Instrukcje: Przesłanianie metody ToString (C# Programming Guide)
 Każdej klasy lub struktury w języku C# dziedziczy niejawnie <xref:System.Object> klasy. W związku z tym, każdy obiekt w języku C# pobiera <xref:System.Object.ToString%2A> metody, która zwraca reprezentację ciągu tego obiektu. Na przykład, wszystkie zmienne typu `int` mają `ToString` metody, która pozwala na zwrócenie ich zawartość jako ciąg:  
@@ -37,7 +37,7 @@ Każdej klasy lub struktury w języku C# dziedziczy niejawnie <xref:System.Objec
   
      Poniższy przykład zwraca nazwę klasy, oprócz danych określonej do konkretnego wystąpienia klasy.  
   
-     [!code-csharp[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
+     [!code-csharp[csProgGuideInheritance#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#36)]  
   
      Możesz przetestować `ToString` metody, jak pokazano w poniższym przykładzie kodu:  
   

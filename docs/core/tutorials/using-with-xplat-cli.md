@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: eaa2bd3327cf76522c74dad07a5a9e0e268a3b55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c57326f038eee4069de9064cb2798d2004b0dbdd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605958"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212173"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczęcie pracy z platformą .NET Core w Windows/Linux/macOS przy użyciu wiersza polecenia
 
@@ -30,13 +30,13 @@ Możesz [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/sa
 Otwórz wiersz polecenia i Utwórz folder o nazwie *Hello*. Przejdź do folderu, który został utworzony, a następnie wpisz następujące polecenie:
 
 ```console
-$ dotnet new console
-$ dotnet run
+dotnet new console
+dotnet run
 ```
 
 Zróbmy szybkiego przewodnika:
 
-1. `$ dotnet new console`
+1. `dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) Tworzy aktualnej `Hello.csproj` pliku projektu z zależnościami, które są niezbędne do tworzenia aplikacji konsolowej.  Tworzy również `Program.cs`, podstawowy plik zawierający punkt wejścia dla aplikacji.
 
@@ -59,12 +59,12 @@ Zróbmy szybkiego przewodnika:
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new` wywołania [ `dotnet restore` ](../tools/dotnet-restore.md) niejawnie. `dotnet restore` wywoła [NuGet](https://www.nuget.org/) (.NET package manager) w celu przywrócenia drzewo zależności. Analizuje NuGet *Hello.csproj* plików, pliki do pobrania zależności zdefiniowane w pliku (lub bierze ich z pamięci podręcznej na komputerze) i zapisuje *obj/project.assets.json* pliku, który jest konieczny do Skompiluj i uruchom aplikację przykładową. 
-   
+   `dotnet new` wywołania [ `dotnet restore` ](../tools/dotnet-restore.md) niejawnie. `dotnet restore` wywoła [NuGet](https://www.nuget.org/) (.NET package manager) w celu przywrócenia drzewo zależności. Analizuje NuGet *Hello.csproj* plików, pliki do pobrania zależności zdefiniowane w pliku (lub bierze ich z pamięci podręcznej na komputerze) i zapisuje *obj/project.assets.json* pliku, który jest konieczny do Skompiluj i uruchom aplikację przykładową.
+
    > [!IMPORTANT]
    > Jeśli używasz wersji 1.x platformy .NET Core SDK, musisz wywołać `dotnet restore` samodzielnie po wywołaniu `dotnet new`.
 
-2. `$ dotnet run`
+2. `dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) wywołania [ `dotnet build` ](../tools/dotnet-build.md) do upewnij się, że kompilacji, utworzone elementy docelowe, a następnie wywołania `dotnet <assembly.dll>` do uruchamiania aplikacji docelowej.
 
@@ -74,6 +74,7 @@ Zróbmy szybkiego przewodnika:
     ```
 
     Alternatywnie można również wykonać [ `dotnet build` ](../tools/dotnet-build.md) skompilować kod bez konieczności uruchamiania kompilacji aplikacji konsoli. Skutkuje to skompilowaną aplikację jako plik DLL, który można uruchomić z `dotnet bin\Debug\netcoreapp2.1\Hello.dll` na Windows (Użyj `/` systemów innych niż Windows). Jak zobaczysz później tematu można też określić argumenty do aplikacji.
+
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
     Hello World!

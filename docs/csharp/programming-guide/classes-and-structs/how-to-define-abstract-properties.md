@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: f66cc50933f7851d08ee422ef34c409bf851fad1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 98a535f68efc50c2ff7409d8eadf52f9e7549566
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981234"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201953"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Instrukcje: Definiowanie właściwości abstrakcyjnych (C# Programming Guide)
 Poniższy przykład pokazuje jak zdefiniować [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) właściwości. Deklaracja właściwości abstrakcyjne nie zawiera implementacji metody dostępu właściwości, ponieważ relacja ta stwierdza, że obsługuje właściwości klasy, ale pozostawia implementacji metody dostępu dla klasy pochodnej. Poniższy przykład demonstruje sposób implementacji właściwości abstrakcyjnych dziedziczone z klasy podstawowej.  
@@ -33,7 +33,7 @@ Poniższy przykład pokazuje jak zdefiniować [abstrakcyjne](../../../csharp/lan
 ## <a name="example"></a>Przykład  
  Ten plik deklaruje `Shape` klasę, która zawiera `Area` właściwość typu `double`.  
   
- [!code-csharp[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
 -   Modyfikatory we właściwości są umieszczane w sama deklaracja właściwości. Na przykład:  
   

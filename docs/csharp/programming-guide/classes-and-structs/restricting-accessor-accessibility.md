@@ -7,15 +7,15 @@ helpviewer_keywords:
 - read-only indexers [C#]
 - accessors [C#]
 - properties [C#], read-only
-- asymmetric accessor accesibility [C#]
+- asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: 24df3a78487cf054a2682b3fbdf8d78b37c4ea6b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c15b4939306b79f843b22dc808d88bf3d20ed555
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979453"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203707"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ograniczanie dostępności metody dostępu (Przewodnik programowania w języku C#)
 [Uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustaw](../../../csharp/language-reference/keywords/set.md) noszą nazwę porcjach właściwości lub indeksatora *Akcesory*. Domyślnie te metody dostępu mają ten sam poziom widoczności lub dostęp do właściwości lub indeksatora, do której należą. Aby uzyskać więcej informacji, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). Jednak czasami jest przydatne ograniczyć dostęp do jednej z tych metod dostępu. Zwykle wymaga to, ograniczenie dostępności `set` akcesor przy zachowaniu `get` publicznie dostępne metody dostępu. Na przykład:  

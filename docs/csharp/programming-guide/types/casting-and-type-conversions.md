@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: c697dbb36da7d3300803fe78ba6a9f82ba6b686c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 80ff658774c776545eb7d5158b4abd451f7fcf7d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981780"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201121"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Konwersje rzutowania i typ (C# Programming Guide)
 
@@ -40,7 +40,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
 
  Dla wbudowanych typów liczbowych można wprowadzić niejawną konwersję, gdy wartość ma być przechowywany można dopasować do zmiennej bez są obcięte lub zaokrąglony. Na przykład zmienna typu [długie](../../../csharp/language-reference/keywords/long.md) (64-bitowa liczba całkowita) można przechowywać wszystkie wartości [int](../../../csharp/language-reference/keywords/int.md) (32-bitowa liczba całkowita) można przechowywać. W poniższym przykładzie, kompilator niejawnie konwertuje wartość `num` po prawej stronie na typ `long` przed przypisaniem go do `bigNum`.  
   
- [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
+ [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
  Aby uzyskać pełną listę wszystkich niejawnych konwersji liczbowych, zobacz [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
@@ -81,7 +81,7 @@ Giraffe g2 = (Giraffe) a;
 
  W niektórych konwersji typu odwołania kompilator nie może określić, czy rzutowania będzie nieprawidłowa. Istnieje możliwość dla operacji rzutowania, skompilowany poprawnie Niepowodzenie w czasie wykonywania. Jak pokazano w poniższym przykładzie, typ rzutowania spowoduje kończy się niepowodzeniem w czasie wykonywania <xref:System.InvalidCastException> zostanie wygenerowany.  
   
- [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
+ [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
  C# zawiera [jest](../../../csharp/language-reference/keywords/is.md) i [jako](../../../csharp/language-reference/keywords/as.md) operatorów umożliwiających testowanie zgodności przed wykonaniem faktycznie rzutowania. Aby uzyskać więcej informacji, zobacz [jak: Bezpieczne rzutowanie za pomocą dopasowywania do wzorca, jak i operatory](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   

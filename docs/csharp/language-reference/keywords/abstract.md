@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 325be8851b63a252c381d943943937332ec91e6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a85cf00a8dd1b406c7e5185fd332a507a3ca7c83
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638044"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203525"
 ---
 # <a name="abstract-c-reference"></a>abstract (odwołanie w C#)
 `abstract` Modyfikator oznacza, że rzecz modyfikowanego ma implementacji brakujące lub niekompletne. Abstrakcyjna modyfikatora można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, że klasa jest przeznaczona do użycia wyłącznie jako klasa bazowa innych klas. Elementy członkowskie oznaczony jako abstrakcyjny lub zawarte w klasie abstrakcyjnej, muszą być zaimplementowane przez klasy, które pochodzą z klasy abstrakcyjnej.  
@@ -29,7 +29,7 @@ ms.locfileid: "54638044"
   
 -   Klasa abstrakcyjna może zawierać metody abstrakcyjne i metod dostępu.  
   
--   Nie można modyfikować klasy abstrakcyjnej jest [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md) modyfikator ponieważ dwie modyfikatorów mają znaczenie odwrotną. `sealed` Modyfikator zapobiega są dziedziczone przez klasy i `abstract` modyfikator wymaga klasy dziedziczone.  
+-   Nie można modyfikować klasy abstrakcyjnej jest [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md) modyfikator ponieważ modyfikatorów mają znaczenie odwrotną. `sealed` Modyfikator zapobiega są dziedziczone przez klasy i `abstract` modyfikator wymaga klasy dziedziczone.  
   
 -   Nieabstrakcyjnej klasy pochodnej z klasy abstrakcyjnej muszą zawierać rzeczywistej implementacji wszystkie odziedziczone metody abstrakcyjne i metod dostępu.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
-ms.openlocfilehash: a9af211df358b8c87cc9735f05d18c191b49500e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a4e292968cf1d30977b8cacdc8f77152e5cc770
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716198"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200965"
 ---
 # <a name="myrequest-object"></a>My.Request — Obiekt
 Pobiera <xref:System.Web.HttpRequest> obiektu dla żądanej strony.  
@@ -25,7 +25,7 @@ Pobiera <xref:System.Web.HttpRequest> obiektu dla żądanej strony.
 ## <a name="example"></a>Przykład  
  Poniższy przykład pobiera kolekcję nagłówków z `My.Request` obiektu i zastosowań `My.Response` obiektu do zapisania go do strony ASP.NET.  
   
- [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-request-object_1.aspx)]  
+ [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Web.HttpRequest>

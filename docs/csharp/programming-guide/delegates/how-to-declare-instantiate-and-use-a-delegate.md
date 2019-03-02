@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 55b8467415b8243327f6902479cd4739df20bb7b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975722"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202564"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Instrukcje: Deklarowanie, tworzenie wystąpień i użycie delegowania (C# Programming Guide)
 W języku C# 1.0 lub nowszy można zadeklarować delegatów, jak pokazano w poniższym przykładzie.  
@@ -38,7 +38,7 @@ W języku C# 1.0 lub nowszy można zadeklarować delegatów, jak pokazano w poni
  Użyj obiektów delegowanych promuje dobre rozdzielanie funkcji między księgarni bazy danych i kod klienta. Kod klienta nie ma informacji o jak książki są przechowywane lub jak kod księgarni znajduje drukowanego podręcznika książki. Kod księgarni nie ma informacji o jakie przetwarzanie jest realizowane na książki drukowanego podręcznika, po nich znajdzie.  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[csProgGuideDelegates#12](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_6.cs)]  
+ [!code-csharp[csProgGuideDelegates#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#12)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
   

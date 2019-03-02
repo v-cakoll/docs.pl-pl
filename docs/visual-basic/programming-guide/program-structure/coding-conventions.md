@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: e036792cf33082fa78cf243887b8ac7db7f8ad5a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 634e39e3e274b919f63ff1b4f3c7b0cd311beaf1
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981494"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201179"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic — Konwencje kodowania
 Microsoft rozwija przykłady i dokumentację, która jest zgodna z wytycznymi w tym temacie. Wykonanie tych samych konwencji kodowania możesz osiągnąć następujące korzyści:  
@@ -112,7 +112,7 @@ Microsoft rozwija przykłady i dokumentację, która jest zgodna z wytycznymi w 
   
 -   Do deklarowania i inicjowania tablic typów podstawowych danych, należy użyć składni {}. Na przykład użyj następującej składni:  
   
-     [!code-vb[VbVbalrGuidelines#12](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_10.vb)]  
+     [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
      Nie należy używać następującej składni:  
   

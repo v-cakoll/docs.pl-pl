@@ -1,14 +1,9 @@
 ---
-title: Jak artykułów (Przewodnik C#)
-description: Szybkie wskazówki i przykłady kodu krótki, ukierunkowane kolekcję
+title: 'Jak artykułów (Przewodnik C#)'
+description: 'Szybkie wskazówki i przykłady kodu krótki, ukierunkowane kolekcję'
 ms.date: 12/20/2017
-ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260194"
 ---
+
 # <a name="how-to-c"></a>Instrukcje (C#)
 
 W sposób części przewodnika C# można znaleźć szybkich odpowiedzi na często zadawane pytania. W niektórych przypadkach artykuły mogą być wymienione w wielu sekcjach. Chcieliśmy były łatwo dostępne dla wielu ścieżek wyszukiwania. 
@@ -113,7 +108,7 @@ LINQ umożliwia pisanie kodu, aby wysłać zapytanie dowolnego źródła danych,
 - [Sortowanie elementów źródła danych](../programming-guide/concepts/linq/how-to-sort-elements.md).
 - [Sortowanie elementów na wielu kluczach](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md).
 - [Kontrolowanie typu projekcji](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md).
-- [Liczba wystąpień wartość w sekwencji źródłowej](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
+- [Liczba wystąpień wartości w sekwencji źródłowej](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
 - [Obliczanie wartości pośrednich](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md).
 - [Scalanie danych z wielu źródeł](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md).
 - [Wyszukiwanie zestawu różnic między dwoma sekwencjami](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md).

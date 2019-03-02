@@ -16,7 +16,7 @@ Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartości�
 ## <a name="declaring-and-initializing-strings"></a>Deklarowanie i Inicjowanie ciągów  
  Można zadeklarować i zainicjować ciągi na różne sposoby, jak pokazano w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
  Należy zauważyć, że nie używasz [nowe](../../../csharp/language-reference/keywords/new-operator.md) operatora do utworzenia obiektu ciąg, z wyjątkiem sytuacji, gdy inicjowanie ciągu z tablicy znaków.  
   
@@ -84,16 +84,16 @@ Aby uzyskać więcej informacji na temat formatowania typów .NET, zobacz [typy 
 ## <a name="substrings"></a>Podciągów  
  Podciąg jest dowolną sekwencję znaków, który znajduje się w ciągu. Użyj <xref:System.String.Substring%2A> metodę, aby utworzyć nowy ciąg z części oryginalny ciąg. Jedno lub więcej wystąpień podciągu można wyszukiwać za pomocą <xref:System.String.IndexOf%2A> metody. Użyj <xref:System.String.Replace%2A> metodę, aby zastąpić wszystkie wystąpienia określony podciąg nowy ciąg. Podobnie jak <xref:System.String.Substring%2A> metody <xref:System.String.Replace%2A> rzeczywistości zwraca nowy ciąg, a nie zmodyfikuje oryginalny ciąg. Aby uzyskać więcej informacji, zobacz [porady: wyszukiwanie ciągów](../../how-to/search-strings.md) i [jak: Modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md).  
   
- [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
 ## <a name="accessing-individual-characters"></a>Uzyskiwanie dostępu do poszczególnych znaków  
  Za pomocą notacji tablicy i wartości indeksu można uzyskać dostęp tylko do odczytu do pojedynczych znaków, jak w poniższym przykładzie:  
   
- [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
  Jeśli <xref:System.String> metody nie udostępniają funkcje, które musi mieć, aby zmodyfikować pojedynczych znaków w ciągu, można użyć <xref:System.Text.StringBuilder> obiekt do zmodyfikowania poszczególne znaki "w miejscu", a następnie utwórz nowy ciąg do przechowywania wyników przy użyciu <xref:System.Text.StringBuilder> metody. W poniższym przykładzie przyjmijmy, że należy zmodyfikować oryginalny ciąg w określony sposób, a następnie zapisać wyniki do użycia w przyszłości:  
   
- [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>Ciągi zerowe i puste ciągi  
  Pusty ciąg jest wystąpieniem <xref:System.String?displayProperty=nameWithType> obiekt, który zawiera zero znaków. Puste ciągi są często używane w różnych scenariuszach programowania do reprezentowania pole tekstowe puste. Można wywoływać metody dla pustych ciągów, ponieważ są one prawidłowe <xref:System.String?displayProperty=nameWithType> obiektów. Puste ciągi są inicjowane w następujący sposób:  
@@ -104,12 +104,12 @@ string s = String.Empty;
   
  Z drugiej strony, pusty ciąg nie odwołuje się do wystąpienia <xref:System.String?displayProperty=nameWithType> obiekt i wszystkie próby wywołania metody wobec ciągiem o wartości null powoduje, że <xref:System.NullReferenceException>. Jednak można użyć ciągów o wartości null w operacji porównywania i łączenia z innymi ciągami. W poniższych przykładach pokazano niektóre przypadki, w których jest odwołanie do pusty ciąg, a nie powoduje zgłoszenie wyjątku:  
   
- [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>Używanie StringBuilder do tworzenia szybkich ciągu  
  Operacje na ciągach w programie .NET wysoce zoptymalizowane i w większości przypadków nie znacznie wpłynąć na wydajność. Jednak w niektórych scenariuszach, takich jak ścisłej pętli, które są wykonywane wiele setki lub tysiące razy, operacje na ciągach może wpłynąć na wydajność. <xref:System.Text.StringBuilder> Klasy tworzy buforu ciągu, który oferuje lepszą wydajność, jeśli program wykonuje wiele działań na ciągach. <xref:System.Text.StringBuilder> Ciągu umożliwia także ponowne przypisywanie poszczególnych znaków coś wbudowanych ciągu nie obsługuje typu danych. Ten kod, na przykład zmiany zawartości ciągu bez tworzenia nowego ciągu:  
   
- [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
  W tym przykładzie <xref:System.Text.StringBuilder> obiekt jest używany do tworzenia ciągu z zestawu typów liczbowych:  
   

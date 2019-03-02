@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: d646a73cc8616821372c5a0078b595291829ac27
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b928be1c4e291918b0d75d6efc40bb11cff91088
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970194"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203538"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Instrukcje: Dostęp do obiektów międzyoperacyjności pakietu Office przy użyciu Visual C# funkcji (C# Programming Guide)
 Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu API usługi Office. Nowe funkcje obejmują argumentów nazwanych i opcjonalnych, nowy typ o nazwie `dynamic`oraz możliwość przekazywania argumentów do parametrów odwołania w metodach COM tak, jakby były one wartości parametrów.  
@@ -78,7 +78,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
      Metoda <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> ma parametr opcjonalny służącą do konkretnego szablonu. Parametry opcjonalne nowego w programie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], umożliwiają pominięto argument dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument nie jest wysyłany w poniższym kodzie `Add` korzysta z domyślnego szablonu i utworzy nowy skoroszyt. Równoważne instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
 2.  Dodaj następujący kod na końcu `DisplayInExcel`. Kod wstawia wartości na pierwszych dwóch kolumn będących jej pierwszego wiersza arkusza.  
   
@@ -118,11 +118,11 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
   
      `PasteSpecial` Metoda Wstawia zawartość Schowka. Metoda ma siedem parametrów odwołania, które są opcjonalne. Poniższy kod określa argumenty dwa z nich: `Link`, aby utworzyć łącze do źródła zawartości Schowka i `DisplayAsIcon`, aby wyświetlić łącza w postaci ikony. W [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], możesz użyć nazwanych argumentów dla tych dwóch i Pomiń pozostałe. Mimo, że są to parametry odwołania, trzeba użyć `ref` — słowo kluczowe, lub aby utworzyć zmienne do wysyłania jako argumenty. Wartości można wysyłać bezpośrednio. W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i wcześniejszych wersjach, konieczne jest wysłanie zmiennych argumentów dla każdego parametru odwołania.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_10.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
      W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i jego wcześniejsze wersje języka, że wymagane jest bardziej skomplikowanym kodzie.  
   
-     [!code-csharp[csProgGuideOfficeHowTo#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_11.cs)]  
+     [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
 2.  Na koniec należy dodać następującą instrukcję `Main`.  
   
@@ -171,7 +171,7 @@ Visual C# zawiera funkcje, które ułatwiają dostęp do obiektów interfejsu AP
 ## <a name="example"></a>Przykład  
  Poniższy kod przedstawia kompletny przykład.  
   
- [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
+ [!code-csharp[csProgGuideOfficeHowTo#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/walkthrough.cs#18)]  
   
 ## <a name="see-also"></a>Zobacz także
 

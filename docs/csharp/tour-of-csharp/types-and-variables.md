@@ -3,12 +3,12 @@ title: C#Typy i zmienne — Przewodnik po przykładzie C# języka
 description: Informacje na temat definiowania typów i zadeklarowania zmiennych wC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 6880fa51ca30dadac901d2b86de189b59658d164
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583956"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212004"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -71,7 +71,7 @@ To znajduje się podsumowanie C#na typy liczbowe.
     - `double` : 64-bitowy, do zakresu od 5.0 x 10<sup>-324</sup> do wersji 1.7 x 10<sup>308</sup>, dokładności 15 cyfr
 * Wartość dziesiętna
     - `decimal` : 128 bitów — zakres jest co najmniej od -7,9 x 10<sup>-28</sup> do 7,9 x 10<sup>28</sup>, z dokładnością co najmniej 28-cyfrowy
-    
+
 C# programy użyj *wpisz deklaracje* do tworzenia nowych typów. Deklaracja typu Określa nazwę i elementy członkowskie nowego typu. Pięciu C#firmy kategorie typów są definiowane przez użytkownika: klasy, typy, typy struktury, typy interfejsów, typach wyliczeniowych i typy delegatów.
 
 A `class` typ definiuje strukturę danych, który zawiera elementy członkowskie danych (pola) i składowe funkcji (metody, właściwości i inne). Typy klas obsługuje pojedyncze dziedziczenie i polimorfizmu, mechanizmów, według której rozszerzać i specialize klas bazowych klas pochodnych.
@@ -115,6 +115,6 @@ Istnieje kilka rodzajów z *zmienne* w języku C#, w tym pól, elementy tablicy,
 * Typ delegata
     - A `null` odwołanie lub odwołanie do wystąpienia typu delegowanego zgodne
 
->[!div class="step-by-step"]
->[Poprzednie](program-structure.md)
->[dalej](expressions.md)
+> [!div class="step-by-step"]
+> [Poprzednie](program-structure.md)
+> [dalej](expressions.md)

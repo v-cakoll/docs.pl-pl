@@ -5,14 +5,14 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 97f30838d6bd61654daa800e891e3a79dd3f1297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617203"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202681"
 ---
-# <a name="methods"></a>Metody #
+# <a name="methods"></a>Metody
 
 Metoda jest blokiem kodu, który zawiera szereg instrukcji. Program powoduje, że instrukcji do wykonania przez wywołanie metody i określenie argumentów wymaganej metody. W języku C# co instrukcja wykonanych odbywa się w kontekście metody. `Main` Metoda jest punkt wejścia dla każdej aplikacji C# i jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony.
 
@@ -36,7 +36,8 @@ Ten temat zawiera następujące sekcje:
 - [Iteratory](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>Podpisy metod ##
+
+## <a name="method-signatures"></a>Podpisy metod
 
 Metody są deklarowane w `class` lub `struct` przez określenie:
 
@@ -58,7 +59,8 @@ W poniższym przykładzie zdefiniowano klasę o nazwie `Motorcycle` zawiera pię
 Należy pamiętać, że `Motorcycle` klasa zawiera metody przeciążonej, `Drive`. Dwie metody mają taką samą nazwę, ale należy zróżnicować za jego typy parametrów.
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>Wywołanie metody ##
+
+## <a name="method-invocation"></a>Wywołanie metody
 
 Metody mogą być albo *wystąpienia* lub *statyczne*. Wywoływanie metody wystąpienia wymaga utworzenia wystąpienia obiektu, a następnie wywołać metodę dla tego obiektu; Metoda wystąpienia działa na tego wystąpienia i jego danych. Wywołaj metodę statyczną, odwołując się do nazwy typu, do którego należy metoda; działania metod statycznych nie działają na dane wystąpienia. Próba wywołania metody statycznej za pomocą wystąpienia obiektu generuje błąd kompilatora.
 
@@ -80,8 +82,9 @@ Można wywołać metody za pomocą obu argumentów pozycyjnych i argumenty nazwa
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
- ## <a name="inherited-and-overridden-methods"></a>Metody dziedziczone i zastąpiona ##
+<a name="inherited"></a>
+
+## <a name="inherited-and-overridden-methods"></a>Metody dziedziczone i zastąpiona
 
 Oprócz elementów członkowskich, które są jawnie zdefiniowane w typie typ dziedziczy składowych zdefiniowanych w jej klas podstawowych. Ponieważ wszystkie typy w systemie typu zarządzanego dziedziczy bezpośrednio lub pośrednio z <xref:System.Object> klasy, wszystkie typy odziedziczenie jego elementów członkowskich, takich jak <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType>, i <xref:System.Object.ToString>. W poniższym przykładzie zdefiniowano `Person` klasy, są tworzone wystąpienia dwóch `Person` obiektów i wywołuje `Person.Equals` metodę pozwala ustalić, czy dwa obiekty są takie same. `Equals` Metody, jednak nie jest zdefiniowany w `Person` klasy; zostało ono odziedziczone <xref:System.Object>.
 
@@ -92,12 +95,14 @@ Typy można zastąpić dziedziczone elementy członkowskie przy użyciu `overrid
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>Przekazywanie parametrów ##
+
+## <a name="passing-parameters"></a>Przekazywanie parametrów
 
 Typy w języku C# są albo *typy wartości* lub *typy odwołań*. Aby uzyskać listę typów wbudowanych wartości, zobacz [typy i zmienne](./tour-of-csharp/types-and-variables.md). Domyślnie typy odwołań i typy wartości są przekazywane do metody przez wartość.
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>Przekazywanie parametrów przez wartość ###
+
+### <a name="passing-parameters-by-value"></a>Przekazywanie parametrów przez wartość
 
 Gdy typ wartości jest przekazywany do metody przez wartość, kopię obiektu, a nie sam obiekt jest przekazywany do metody. W związku z tym zmiany do obiektu w metodzie wywoływanej nie mają wpływu na oryginalny obiekt gdy sterowanie powraca do obiektu wywołującego.
 
@@ -112,7 +117,8 @@ W poniższym przykładzie zdefiniowano klasę (który jest typem referencyjnym) 
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>Przekazywanie parametrów przez odwołanie ###
+
+### <a name="passing-parameters-by-reference"></a>Przekazywanie parametrów przez odwołanie
 
 Należy podać parametr według odwołania, jeśli chcesz zmienić wartość argumentu w metodzie i ma na celu odzwierciedlenia tej zmiany, gdy sterowanie powraca do wywoływania metody. Aby przekazać parametr według odwołania, należy użyć [ `ref` ](language-reference/keywords/ref.md) lub [ `out` ](language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można również przekazać wartość przez odwołanie, aby unikać kopiowania, ale nadal zapobiec przy użyciu [ `in` ](language-reference/keywords/in-parameter-modifier.md) — słowo kluczowe.
 
@@ -127,7 +133,8 @@ Typowy wzorzec, który używa parametrów ref obejmuje zamianę wartości zmienn
 Przekazywanie parametrów typu Odwołanie umożliwia zmianę wartości samo odwołanie, a nie wartość jego poszczególne elementy lub pola.
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>Parameter — tablice ###
+
+### <a name="parameter-arrays"></a>Parameter — tablice
 
 Czasami wymagania Określ dokładna liczba argumentów do metody jest restrykcyjne. Za pomocą `params` — słowo kluczowe, aby wskazać, że parametr jest tablicą parametrów, musisz zezwolić na metodę do wywołania z różną liczbą argumentów. Parametr oznakowane za pomocą `params` — słowo kluczowe musi być typem tablicy, a musi być ostatnim parametrem na liście parametrów metody.
 
@@ -142,7 +149,8 @@ W poniższym przykładzie zdefiniowano metodę o nazwie `DoStringOperation` wyko
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>Opcjonalne parametry i argumenty ##
+
+## <a name="optional-parameters-and-arguments"></a>Opcjonalne parametry i argumenty
 
 Definicję metody można określić, że jej parametry są wymagane lub czy są opcjonalne. Domyślnie parametry są wymagane. Następujące parametry opcjonalne są określone przez dołączenie wartości domyślnej parametru w definicji metody. Gdy metoda jest wywoływana, jeśli nie dostarczono żadnego argumentu dla parametru opcjonalnego, w zamian jest używana wartość domyślna.
 
@@ -172,8 +180,9 @@ Ma wpływ na korzystanie z parametrów opcjonalnych *Rozpoznanie przeciążenia*
 - Jeśli zostanie znalezione więcej niż jeden Release candidate, zasady rozpoznawania przeciążenia preferowanych konwersje są stosowane do argumentów, które są jawnie określone. Pominięty Argumenty opcjonalne parametry są ignorowane.
 - Jeśli dwa kandydatów zostaną ocenione one równie dobrze, preferencji jest przesyłany do Release candidate, który nie ma parametrów opcjonalnych, które zostały pominięte argumentów w wywołaniu. Jest to konsekwencją Ogólne preferencji w przeciążeniu rozdzielczości dla kandydatów, które mają mniej parametrów.
 
- <a name="return"></a>
- ## <a name="return-values"></a>Zwracane wartości ##
+<a name="return"></a>
+
+## <a name="return-values"></a>Zwracane wartości
 
 Metody może zwrócić wartości do obiektu wywołującego. Jeśli nie jest zwracany typ (typu wymienionego przed nazwą metody) `void`, metoda może zwrócić wartość przy użyciu `return` — słowo kluczowe. Instrukcja zawierająca `return` — słowo kluczowe następuje zmiennej, stałej lub wyrażenia, który jest zgodny z typem zwracanym zwróci tę wartość do obiektu wywołującego metodę. Metody z innym niż void zwrotu typu są wymagane do użycia `return` — słowo kluczowe w celu zwrócenia wartości. `return` — Słowo kluczowe również zatrzymuje wykonywanie metody.
 
@@ -229,8 +238,9 @@ Jeśli metoda jest przekazywana tablicę jako argument i modyfikuje wartość po
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="extension"></a>
- ## <a name="extension-methods"></a>Metody rozszerzenia ##
+<a name="extension"></a>
+
+## <a name="extension-methods"></a>Metody rozszerzenia
 
 Zazwyczaj istnieją dwa sposoby, aby dodać metodę do istniejącego typu:
 
@@ -242,7 +252,8 @@ Metody rozszerzenia umożliwiają "Dodawanie" metody do istniejącego typu bez m
 Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](programming-guide/classes-and-structs/extension-methods.md).
 
 <a name="async"></a>
-## <a name="async-methods"></a>Metody asynchroniczne ##
+
+## <a name="async-methods"></a>Metody asynchroniczne
 
 Za pomocą funkcji asynchronicznych, można wywoływać metod asynchronicznych, bez za pomocą jawnego wywołania zwrotne lub ręcznego podziału kodu na wielu metod lub wyrażenia lambda.
 
@@ -262,7 +273,8 @@ Metoda async nie może deklarować [w](language-reference/keywords/in-parameter-
  Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [Asynchronous Programming with Async and Await](async.md), [Control Flow in Async Programs](programming-guide/concepts/async/control-flow-in-async-programs.md), i [Async Return Types](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>Elementy członkowskie z wyrażeniem ##
+
+## <a name="expression-bodied-members"></a>Elementy członkowskie z wyrażeniem
 
 Jest to często mają definicje metody, która po prostu zwrócenia natychmiast z wynikiem wyrażenia lub pojedynczą instrukcję jako treść metody, które mają.  Ma składnię skrót do definiowania takich metod za pomocą `=>`:
 
@@ -278,7 +290,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 Jeśli metoda zwraca `void` lub jest to metoda asynchroniczna treści metody musi być wyrażeniem — instrukcja (tak samo jak w przypadku wyrażenia lambda).  Właściwości i indeksatorów, muszą być w trybie tylko do odczytu i nie należy używać `get` akcesor — słowo kluczowe.
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Iteratory ##
+
+## <a name="iterators"></a>Iteratory
 
 Iterator wykonuje niestandardowych iteracji w kolekcji, takie jak listy lub tablicy. Używa iteratora [yield return](language-reference/keywords/yield.md) instrukcja zwraca każdy element w danym momencie. Gdy `yield return` osiągnięciu instrukcji bieżącą lokalizację zapamiętywane jest tak, aby obiekt wywołujący może żądać następnego elementu w sekwencji.
 
@@ -286,7 +299,7 @@ Zwracany typ iteratora, może być <xref:System.Collections.IEnumerable>, <xref:
 
 Aby uzyskać więcej informacji, zobacz [Iteratory](programming-guide/concepts/iterators.md).
 
-## <a name="see-also"></a>Zobacz także ##
+## <a name="see-also"></a>Zobacz także
 
 - [Modyfikatory dostępu](language-reference/keywords/access-modifiers.md)
 - [Klasy statyczne i statyczne elementy członkowskie klas](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976489"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203746"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error — Instrukcja (Visual Basic)
 Włącza procedurę obsługi błędów i określa lokalizację procedury w ramach procedury; można również wyłączyć procedury obsługi błędów.  
@@ -111,7 +111,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="example"></a>Przykład  
  W tym przykładzie najpierw zastosowano `On Error GoTo` instrukcję, aby określić lokalizację procedury obsługi błędów w procedurze. W tym przykładzie próba dzielenia przez zero generuje numer błędu 6. Obsługiwany jest błąd w procedurze obsługi błędów, a następnie zwróceniem sterowania do instrukcji, które spowodowały błąd. `On Error GoTo 0` Instrukcji powoduje wyłączenie wyłapywanie błędów. A następnie `On Error Resume Next` instrukcja jest używane, które mają być odroczone błąd generują pułapki, tak aby kontekst dla błędów generowanych podczas następnej instrukcji może być znane, w przypadku niektórych. Należy pamiętać, że `Err.Clear` jest używane do czyszczenia `Err` właściwości obiektu po obsługiwany jest błąd.  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
 ## <a name="requirements"></a>Wymagania  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

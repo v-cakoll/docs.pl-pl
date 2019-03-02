@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968028"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203444"
 ---
 # <a name="anonymous-types-visual-basic"></a>Typy anonimowe (Visual Basic)
 Visual Basic obsługuje typy anonimowe, które pozwalają na tworzenie obiektów bez konieczności pisania definicji klasy dla typu danych. Zamiast tego kompilator generuje klasę dla Ciebie. Klasa nie ma użytecznych nazw, dziedziczy bezpośrednio z <xref:System.Object>i zawiera właściwości określone w odwołaniu do obiektu. Ponieważ nazwa typu danych nie jest określona, nazywa się *typu anonimowego*.  
@@ -81,7 +81,7 @@ Visual Basic obsługuje typy anonimowe, które pozwalają na tworzenie obiektów
 ### <a name="read-only-values"></a>Wartości tylko do odczytu  
  Nie można zmienić wartości właściwości klucza. Na przykład w `prod8` w poprzednim przykładzie `Name` i `Price` pola są `read-only`, ale `OnHand` można zmienić.  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>Anonimowe typy w wyrażeniach zapytań  
  Wyrażenia zapytań nie zawsze należy wymagać utworzenia typy anonimowe. Jeśli to możliwe, używają istniejącego typu do przechowywania danych kolumny. Dzieje się tak, gdy kwerenda zwraca albo całego rekordy ze źródła danych lub tylko jedno pole z każdego rekordu. W poniższych przykładach kodu `customers` to zbiór obiektów `Customer` klasy. Klasa ma wiele właściwości i może zawierać co najmniej jeden z nich, które znajdują się w wyniku zapytania w dowolnej kolejności. W pierwszych dwóch przykładach nie typy anonimowe są wymagane, ponieważ zapytania wybierz elementy nazwane typy:  

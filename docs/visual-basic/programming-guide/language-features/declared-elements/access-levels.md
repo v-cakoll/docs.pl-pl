@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704657"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203629"
 ---
 # <a name="access-levels-in-visual-basic"></a>Poziomy dostępu w Visual Basic
 *Poziom dostępu* zadeklarowanych elementów jest w zakresie możliwości dostępu do niego, oznacza to, jaki kod ma uprawnienia do jego odczytu lub zapisanie w nim. Jest to ustalane nie tylko, jak zadeklarować elementu, ale z poziomem dostępu do kontenera elementu. Kod, który nie może uzyskać dostępu zawierającego element nie może uzyskać dostępu do dowolnego z jego zawartych elementów, nawet te zadeklarowane jako `Public`. Na przykład `Public` zmienną `Private` struktury jest możliwy z wewnątrz klasy, która zawiera strukturę, ale nie z spoza tej klasy.  
@@ -101,8 +101,9 @@ Aby użyć `Private Protected` modyfikator dostępu, należy dodać następując
 
 Aby uzyskać więcej informacji, zobacz [ustawienie wersji języka Visual Basic](../../../language-reference/configure-language-version.md).
 
- ## <a name="access-modifiers"></a>Modyfikatory dostępu  
- Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. W poniższej tabeli porównano modyfikatorami dostępu.  
+## <a name="access-modifiers"></a>Modyfikatory dostępu  
+
+Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. W poniższej tabeli porównano modyfikatorami dostępu.  
   
 |Modyfikator dostępu|Poziom dostępu przyznane|Elementy można zadeklarować za pomocą tego poziomu dostępu|Kontekst deklaracji, w którym można użyć ten modyfikator|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  

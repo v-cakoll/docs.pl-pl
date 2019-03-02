@@ -2,12 +2,12 @@
 title: Typy dopuszczające wartości null odwołań
 description: Ten artykuł zawiera omówienie typów referencyjnych dopuszczającego wartość null, dodane w C# 8. Dowiesz się, jak ta funkcja zapewnia zabezpieczenie przed wyjątków odwołanie o wartości null dla nowych i istniejących projektów.
 ms.date: 02/19/2019
-ms.openlocfilehash: f08e000edc29ed76c6539c27db005182396bfb5a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443164"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203278"
 ---
 # <a name="nullable-reference-types"></a>Typy dopuszczające wartości null odwołań
 
@@ -41,7 +41,7 @@ Kompilator używa analizy statycznej, aby określić, czy odwołanie dopuszczaj�
 name!.Length;
 ```
 
-Można znaleźć szczegółowe informacje dotyczące tego operatora w [wersję roboczą typy dopuszczające wartości null odwołań](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types-specification.md#the-null-forgiving-operator) propozycji specyfikację w witrynie GitHub.
+Można znaleźć szczegółowe informacje dotyczące tego operatora w [wersję roboczą typy dopuszczające wartości null odwołań](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) propozycji specyfikację w witrynie GitHub.
 
 ## <a name="nullability-of-types"></a>Dopuszczanie wartości null dla typów
 
@@ -122,6 +122,6 @@ Kompilator generuje ostrzeżenia, gdy użytkownik cofnie odwołanie zmiennej lub
 
 ## <a name="learn-more"></a>Dowiedz się więcej
 
-- [Specyfikacja Nullable odwołania do projektu](https://github.com/dotnet/csharplang/blob/master/proposals/nullable-reference-types-specification.md)
+- [Specyfikacja Nullable odwołania do projektu](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Wprowadzenie do samouczka odwołania dopuszczającego wartość null](tutorials/nullable-reference-types.md)
 - [Migrowanie istniejącej bazy kodu w celu odwołania dopuszczającego wartość null](tutorials/upgrade-to-nullable-references.md)

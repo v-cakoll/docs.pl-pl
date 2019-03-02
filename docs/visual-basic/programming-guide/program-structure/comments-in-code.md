@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 19cd2dbaa055ab6e927ef1ddc9623723ea8c5f2f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71f21a7c2ea1bcc24547a5a045c22c7156397103
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977503"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201680"
 ---
 # <a name="comments-in-code-visual-basic"></a>Komentarze w kodzie (Visual Basic)
 Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbol informuje kompilator języka Visual Basic, aby zignorować tekst następujący, lub *komentarz*. Komentarze to krótkie notatki wyjaśniające, dodane do kodu, aby ułatwić życie innym osobom, które go czytają.  
@@ -60,7 +60,7 @@ Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbo
 >  Można również dodawać komentarze do kodu, poprzedzając tekst między znakami dwóch `REM` — słowo kluczowe. Jednak `'` symboli i **komentarz**/**Odkomentuj** przyciski są łatwiejsze w użyciu i wymagają mniej miejsca i pamięci.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Dokumentowanie kodu przy użyciu komentarzy XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Podstawowe Intuicji - dokumentowanie kodu przy użyciu komentarzy XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [Instrukcje: Tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)

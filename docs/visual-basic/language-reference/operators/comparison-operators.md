@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: bf7ff1870a523903babd7140e0d8271f9946064b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a816b1097c0a9628bb2889d39be5c029beaa3c63
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628061"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200991"
 ---
 # <a name="comparison-operators-visual-basic"></a>Operatory porównania (Visual Basic)
 Dostępne są następujące operatory porównania zdefiniowany w języku Visual Basic.  
@@ -146,7 +146,7 @@ result = string Like pattern
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje różne przypadki użycia operatorów porównania relacyjnych, które umożliwia porównywanie wyrażeń. Operatory relacyjne porównania zwracają `Boolean` wynik, który reprezentuje informację określającą, czy podane wyrażenie daje w wyniku `True`. Po zastosowaniu `>` i `<` dokonywane jest porównanie operatorów na ciągi, przy użyciu normalnych alfabetycznej sortowania ciągów. To zamówienie mogą być zależne od ustawienia regionalne. Sortowanie jest rozróżniana wielkość liter lub nie jest zależny od [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) ustawienie.  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]  
   
  W powyższym przykładzie zwraca pierwszy porównania `False` i zwracają pozostałych porównań `True`.  
   

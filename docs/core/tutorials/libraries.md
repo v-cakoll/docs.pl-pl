@@ -4,12 +4,12 @@ description: Dowiedz się, jak utworzyć biblioteki .NET Core przy użyciu narz�
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169368"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212069"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Tworzenie bibliotek za pomocą narzędzi międzyplatformowych
 
@@ -25,10 +25,10 @@ Ponadto, jeśli chcesz obsługiwać starsze cele .NET Framework, należy zainsta
 
 | Wersja programu .NET Framework | Co do pobrania                                       |
 | ---------------------- | ------------------------------------------------------ |
-| 4.6.1                  | .NET framework 4.6.1 Targeting Pack                    |
+| 4.6.1                  | .NET Framework 4.6.1 Targeting Pack                    |
 | 4.6                    | .NET framework 4.6 Targeting Pack                      |
-| 4.5.2                  | .NET framework 4.5.2 Developer Pack                    |
-| 4.5.1                  | .NET framework 4.5.1 Developer Pack                    |
+| 4.5.2                  | .NET Framework 4.5.2 Developer Pack                    |
+| 4.5.1                  | .NET Framework 4.5.1 Developer Pack                    |
 | 4.5                    | Zestaw Windows Software Development Kit dla systemu Windows 8         |
 | 4.0                    | Windows SDK for Windows 7 i platformy .NET Framework 4         |
 | w wersji 2.0, 3.0 i 3.5      | Środowisko uruchomieniowe platformy .NET framework 3.5 z dodatkiem SP1 (lub wersji systemu Windows 8 i nowsze) |
@@ -58,9 +58,9 @@ Masz trzy podstawowe opcje podczas przeznaczonych dla platformy .NET Standard, w
     ```
 
 2. Można użyć mniejsze lub większe wersji programu .NET Standard, zmieniając wartość w `TargetFramework` węzła pliku projektu.
-    
+
     Wersje .NET standard są zgodne z poprzednimi wersjami. Oznacza to, że `netstandard1.0` systemem bibliotek `netstandard1.1` platform lub nowszy. Jednak nie ma żadnych zgodność z nowszymi wersjami — niższy platformy .NET Standard nie może odwoływać się tymi wyższy. Oznacza to, że `netstandard1.0` bibliotek nie odniesienia bibliotek przeznaczonych dla `netstandard1.1` lub nowszej. Wybierz pozycję standardowa wersja, która zawiera odpowiedniej kombinacji obsługę interfejsów API i platform do własnych potrzeb. Firma Microsoft zaleca `netstandard1.4` teraz.
-    
+
 3. Jeśli chcesz przeanalizować wersje programu .NET Framework 4.0 lub starszej, lub chcesz użyć interfejsu API, które są dostępne w .NET Framework, ale nie w programie .NET Standard (na przykład `System.Drawing`), powinien przeczytać poniższe sekcje i Dowiedz się, jak multitarget.
 
 ## <a name="how-to-target-the-net-framework"></a>Instrukcje dla środowiska .NET Framework
@@ -131,7 +131,7 @@ Plik projektu może wyglądać następująco:
 Można zauważyć trzy duże zmiany w tym miejscu:
 
 1. `TargetFramework` Węzeł został zastąpiony przez `TargetFrameworks`, i trzech krótkich nazw są wyrażone w.
-1. Brak `<ItemGroup>` węzeł `net40 ` docelowej ściąganie w jedno odwołanie do .NET Framework.
+1. Brak `<ItemGroup>` węzeł `net40` docelowej ściąganie w jedno odwołanie do .NET Framework.
 1. Brak `<ItemGroup>` węzeł `net45` docelowej ściąganie spowoduje dwa odwołania do .NET Framework.
 
 System kompilacji ma informacje o następujących symboli preprocesora używane w `#if` dyrektywy:
@@ -256,7 +256,7 @@ Jest ważne można było przetestować na wielu platformach. Można użyć dowol
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Sprawdź, że xUnit działa, wykonując `dotnet test` polecenia. Jeśli została wybrana opcja używania MSTest, modułu uruchamiającego MSTest konsoli należy uruchomić zamiast tego.
-    
+
 I to wszystko! Teraz możesz przetestować biblioteki, na wszystkich platformach przy użyciu narzędzia wiersza polecenia. Aby kontynuować testowanie Skoro masz wszystko, czego należy skonfigurować, testowanie biblioteki jest bardzo prosta:
 
 1. Wprowadź zmiany w bibliotece.
@@ -321,7 +321,7 @@ Spowoduje to dodanie trzy projekty powyżej i plik rozwiązania, które łączy 
 Jest najlepszym sposobem, aby odwoływać się do projektu Dodaj odwołanie do projektu przy użyciu interfejsu wiersza polecenia platformy .NET Core. Z **AwesomeLibrary.CSharp** i **AwesomeLibrary.FSharp** katalogi projektu, można uruchomić następujące polecenie:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Pliki projektu dla obu **AwesomeLibrary.CSharp** i **AwesomeLibrary.FSharp** będzie teraz odwołanie **AwesomeLibrary.Core** jako `ProjectReference` docelowej.  Można to sprawdzić, przeprowadzanie inspekcji plików projektu i sprawdzając następujące informacje w nich:

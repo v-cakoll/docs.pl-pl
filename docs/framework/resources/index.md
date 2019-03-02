@@ -2,23 +2,17 @@
 title: Zasoby w aplikacjach .NET
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221046"
 ---
 # <a name="resources-in-net-apps"></a>Zasoby w aplikacjach .NET
 Niemal każda aplikacja jakości produkcyjnej ma korzystać z zasobów. Zasób to wszelkie dane niewykonywalne, które są logicznie wdrażane za pomocą aplikacji. Zasób może być wyświetlany w aplikacji jako komunikaty o błędach lub jako część interfejsu użytkownika. Zasoby mogą zawierać dane w wielu formach, takich jak ciągi, obrazy i obiekty utrwalone. (Do zapisywania obiektów utrwalonego pliku zasobów, obiekty muszą podlegać serializacji.) Przechowywanie danych w pliku zasobów umożliwia zmianę danych bez konieczności ponownego kompilowania całej aplikacji. On również pozwala na przechowywanie danych w jednej lokalizacji i eliminuje konieczność łączenia się z zakodowanych danych przechowywanych w wielu lokalizacjach.  
@@ -27,10 +21,11 @@ Niemal każda aplikacja jakości produkcyjnej ma korzystać z zasobów. Zasób t
   
  Aby uzyskać informacje o zasobach w programie ASP.NET, zobacz [omówienie zasoby strony sieci Web programu ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
- ## <a name="creating-and-localizing-resources"></a>Tworzenia i lokalizowania zasobów  
- W aplikacji — zlokalizowane pliki zasobów można użyć jako repozytorium dla danych aplikacji, szczególnie w przypadku ciągów, które mogą zostać zakodowane w wielu miejscach w kodzie źródłowym. Najczęściej, możesz tworzyć zasoby jako tekstowy (txt) lub pliki XML (resx) i używać [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) do kompilowania ich do binarnych plików Resources. Te pliki mogą być następnie osadzony w pliku wykonywalnym aplikacji przez kompilator języka. Aby uzyskać więcej informacji na temat tworzenia zasobów, zobacz [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
-  
- Możesz również dostosować zasoby aplikacji dla określonych kultur. Dzięki temu można tworzyć (tłumaczenia) zlokalizowane wersje aplikacji. Opracowując aplikację, która używa zlokalizowanych zasobów należy wyznaczyć kultury, która służy jako kultury neutralnej lub rezerwowej, którego zasoby są używane, jeśli są dostępne nie odpowiednie zasoby. Zazwyczaj zasobów kultury neutralnej są przechowywane w pliku wykonywalnym aplikacji. Pozostałych zasobów poszczególnych kultur zlokalizowane są przechowywane w zestawach satelickich autonomicznych. Aby uzyskać więcej informacji, zobacz [tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
+## <a name="creating-and-localizing-resources"></a>Tworzenia i lokalizowania zasobów  
+
+W aplikacji — zlokalizowane pliki zasobów można użyć jako repozytorium dla danych aplikacji, szczególnie w przypadku ciągów, które mogą zostać zakodowane w wielu miejscach w kodzie źródłowym. Najczęściej, możesz tworzyć zasoby jako tekstowy (txt) lub pliki XML (resx) i używać [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) do kompilowania ich do binarnych plików Resources. Te pliki mogą być następnie osadzony w pliku wykonywalnym aplikacji przez kompilator języka. Aby uzyskać więcej informacji na temat tworzenia zasobów, zobacz [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
+
+Możesz również dostosować zasoby aplikacji dla określonych kultur. Dzięki temu można tworzyć (tłumaczenia) zlokalizowane wersje aplikacji. Opracowując aplikację, która używa zlokalizowanych zasobów należy wyznaczyć kultury, która służy jako kultury neutralnej lub rezerwowej, którego zasoby są używane, jeśli są dostępne nie odpowiednie zasoby. Zazwyczaj zasobów kultury neutralnej są przechowywane w pliku wykonywalnym aplikacji. Pozostałych zasobów poszczególnych kultur zlokalizowane są przechowywane w zestawach satelickich autonomicznych. Aby uzyskać więcej informacji, zobacz [tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
   
 ## <a name="packaging-and-deploying-resources"></a>Opakowanie i wdrażanie zasobów  
  Wdrażanie aplikacji zlokalizowanych zasobów w [zestawy satelickie](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Zestawu satelickiego zawiera zasoby, które pojedynczej kultury; nie zawiera żadnego kodu aplikacji. W modelu wdrażania zestawu satelickiego tworzenie aplikacji za pomocą zestawu jeden domyślny, (która jest zwykle zestawu głównego) i zestawu satelickiego jeden dla każdej kultury, obsługiwanego przez aplikację. Ponieważ zestawy satelickie nie są częścią zestawu głównego, można łatwo zastąpić lub aktualizacja odpowiadający określonej kultury bez zastępowania aplikacji w głównym zestawie zasobów.  

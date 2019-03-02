@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694974"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202603"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia dotyczące parametrów typu (C# Programming Guide)
 
-Ograniczenia informuje kompilator o możliwościach, którego argument typu musi mieć. Bez żadnych ograniczeń argument typu może być dowolnego typu. Kompilator, można założyć tylko członkowie <xref:System.Object?displayPropety=nameWithType>, czyli ultimate klasę bazową dla wszystkich typów .NET. Aby uzyskać więcej informacji, zobacz [Dlaczego warto korzystać z ograniczeniami](#why-use-constraints). Jeśli kod klienta próbuje utworzyć wystąpienie klasy przy użyciu typu, który nie jest dozwolona przez ograniczenie, wynikiem jest błąd w czasie kompilacji. Ograniczenia są określane za pomocą `where` kontekstowego słowa kluczowego. W poniższej tabeli wymieniono siedem typy ograniczeń:
+Ograniczenia informuje kompilator o możliwościach, którego argument typu musi mieć. Bez żadnych ograniczeń argument typu może być dowolnego typu. Kompilator, można założyć tylko członkowie <xref:System.Object?displayProperty=nameWithType>, czyli ultimate klasę bazową dla wszystkich typów .NET. Aby uzyskać więcej informacji, zobacz [Dlaczego warto korzystać z ograniczeniami](#why-use-constraints). Jeśli kod klienta próbuje utworzyć wystąpienie klasy przy użyciu typu, który nie jest dozwolona przez ograniczenie, wynikiem jest błąd w czasie kompilacji. Ograniczenia są określane za pomocą `where` kontekstowego słowa kluczowego. W poniższej tabeli wymieniono siedem typy ograniczeń:
 
 |Ograniczenia|Opis|
 |----------------|-----------------|

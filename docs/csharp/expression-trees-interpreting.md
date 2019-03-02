@@ -1,16 +1,16 @@
 ---
-title: Interpretowanie wyrażeń
+title: Interpreting Expressions
 description: Dowiedz się, jak napisać kod, aby sprawdzić strukturę drzewa wyrażenie.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506422"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201979"
 ---
-# <a name="interpreting-expressions"></a>Interpretowanie wyrażeń
+# <a name="interpreting-expressions"></a>Interpreting Expressions
 
 [Poprzednie — Wykonywanie wyrażeń](expression-trees-execution.md)
 
@@ -353,7 +353,7 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-Ten kod przedstawia jedna implementacja możliwe matematyczne *silnię* funkcji. Sposób moje recenzje ten kod wyróżnia dwa ograniczenia tworzenia drzew wyrażeń, przypisując wyrażeń lambda wyrażenia. Po pierwsze instrukcji wyrażenia lambda nie są dozwolone. Oznacza to, nie można użyć pętli, bloki, jeśli / inne instrukcje i inne kontrolowanie struktury typowe w języku C#. Jestem maksymalnie za pomocą wyrażeń. Po drugie nie można rekursywnie wywołania to samo wyrażenie.
+Ten kod przedstawia jedna implementacja możliwe matematyczne *silnię* funkcji. Sposób moje recenzje ten kod wyróżnia dwa ograniczenia dotyczące tworzenia drzew wyrażeń, przypisując wyrażeń lambda wyrażenia. Po pierwsze instrukcji wyrażenia lambda nie są dozwolone. Oznacza to, nie można użyć pętli, bloki, jeśli / inne instrukcje i inne kontrolowanie struktury typowe w języku C#. Jestem maksymalnie za pomocą wyrażeń. Po drugie nie można rekursywnie wywołania to samo wyrażenie.
 Było to możliwe, jeśli zostały już delegata, ale nie można wywołać ją w postaci drzewa wyrażeń. W sekcji [tworzenia drzew wyrażeń](expression-trees-building.md) dowiesz się, techniki, aby wyeliminować te ograniczenia.
 
 

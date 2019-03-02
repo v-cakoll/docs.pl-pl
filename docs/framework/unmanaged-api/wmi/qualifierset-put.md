@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694142"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201186"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put — funkcja
 Zapisuje kwalifikator o nazwie i wartości. Nowy kwalifikator zastępuje poprzednią wartość taką samą nazwę. Jeśli kwalifikatora nie istnieje, zostanie utworzony. 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Kwalifikator może zostać przesłonięta w pochodnej klasy lub wystąpienia. **Jest to wartość domyślna.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Kwalifikator jest propagowana do wystąpienia. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Kwalifikator jest propagowana do klas pochodnych. |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Nie można zastąpić kwalifikator w klasie pochodnej lub wystąpienia. |
-| "WBEM_FLAVOR_AMENDED | 0x80 | Kwalifikator jest zlokalizowana. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Nie można zastąpić kwalifikator w klasie pochodnej lub wystąpienia. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | Kwalifikator jest zlokalizowana. |
 
 ## <a name="return-value"></a>Wartość zwracana
 

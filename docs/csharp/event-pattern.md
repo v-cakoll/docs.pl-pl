@@ -3,12 +3,12 @@ title: Standardowe wzorce zdarzeń platformy .NET
 description: Więcej informacji na temat wzorce zdarzeń platformy .NET oraz jak utworzyć źródła zdarzeń w wersji standard i subskrybowanie i przetworzyć standardowych zdarzeń w kodzie.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129405"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201251"
 ---
 # <a name="standard-net-event-patterns"></a>Standardowe wzorce zdarzeń platformy .NET
 
@@ -47,7 +47,7 @@ Następnie należy utworzyć deklaracja zdarzenia w klasie FileSearcher. Wykorzy
 
 Spróbujmy Wypełnij klasy FileSearcher do wyszukiwania plików, które pasują do wzorca i zgłoś zdarzenie prawidłowe, gdy dopasowanie jest odnalezione.
 
-[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>Definiowanie i wywoływanie zdarzenia podobne do pól
 

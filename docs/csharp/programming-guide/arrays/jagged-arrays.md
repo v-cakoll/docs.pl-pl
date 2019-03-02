@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 026132b99821c01e6b7a6c02ee571ae3144319c3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9fc05c8bdebf9c1c6b613db0b6a121e06765ac00
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971822"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200679"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Tablice nieregularne (Przewodnik programowania w języku C#)
 
@@ -33,11 +33,11 @@ Nieregularna tablica to ta, której elementy są tablicami. Elementy tablicy nie
   
  Można również zainicjować tablicy po deklaracji w następujący sposób:  
   
- [!code-csharp[csProgGuideArrays#22](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_4.cs)]  
+ [!code-csharp[csProgGuideArrays#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#22)]  
   
  Można użyć następujących skrócone formy. Należy zauważyć, że nie można pominąć `new` operator od inicjowania elementów ponieważ nie istnieje żadne inicjowanie domyślne elementy:  
   
- [!code-csharp[csProgGuideArrays#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_5.cs)]  
+ [!code-csharp[csProgGuideArrays#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#23)]  
   
  Nieregularna tablica jest tablicy tablic, a zatem jej elementy są typami odwołań i są inicjowane na `null`.  
   

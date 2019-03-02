@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188186"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203655"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i składniki niezależne od języka
 
@@ -158,7 +158,7 @@ Ułatwienia dostępu | [Ułatwienia dostępu członków](#member-accessibility) 
 Ułatwienia dostępu | [Ułatwienia dostępu członków](#member-accessibility) | Widoczność i dostępność typów i elementów członkowskich jest taka, że typy w podpisie dowolnego elementu członkowskiego są widoczne i dostępne zawsze, gdy sam element członkowski jest widoczny i dostępny. Na przykład metoda publiczna, która jest widoczna spoza jej zestawu nie mają argumentem, którego typ jest widoczny tylko w obrębie zestawu. Widoczność i dostępność typów tworzących typ ogólny z wystąpieniami używany w podpisie dowolnego elementu członkowskiego jest widoczny i dostępny zawsze, gdy sam element członkowski jest widoczny i dostępny. Na przykład skonkretyzowany typ ogólny obecny w podpisie elementu członkowskiego, który jest widoczny na zewnątrz zestawu nie posiada argument rodzajowy, którego typ jest widoczny tylko w obrębie zestawu. | 12
 Tablice | [Tablice](#arrays) | Tablice powinny zawierać elementy o typie zgodnym ze specyfikacją CLS, a wszystkie wymiary tablicy powinny mieć dolne granice równe zero. Tylko fakt, że element jest tablicą i typem elementu tablicy jest wymagany dla rozróżnienia między przeciążeniami. Kiedy przeciążenie opiera się na dwóch lub większej liczbie typów tablicy typy elementu muszą być typami nazwanymi. | 16
 Atrybuty | [Atrybuty](#attributes) | Atrybuty powinny być typu [klasy System.Attribute](xref:System.Attribute), lub typu z niego dziedziczącego. | 41
-Atrybuty | [Atrybuty](#attributes) | Specyfikacja CLS zezwala tylko na podzestaw kodowań atrybutów niestandardowych. Jedyne typy, które mają się pojawiać w tych kodowaniach to (zobacz część IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [ System.Single](xref:System.Single), [System.Double](xref:System.Double), i każdy typ wyliczeniowy oparty na zgodny ze specyfikacją CLS podstawowym typie integer. | 34
+Atrybuty | [Atrybuty](#attributes) | Specyfikacja CLS zezwala tylko na podzestaw kodowań atrybutów niestandardowych. Jedyne typy, które mają się pojawiać w tych kodowaniach to (zobacz część IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [ System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double), i Typ wyliczeniowy oparty na zgodny ze specyfikacją CLS podstawowym typie integer. | 34
 Atrybuty | [Atrybuty](#attributes) | Specyfikacja CLS nie zezwala na Modyfikatory widoczne publicznie (`modreq`, zob. partycja II), ale zezwala na Modyfikatory opcjonalne (`modopt`, zob. partycja II) nie rozumie. | 35
 Konstruktorów | [Konstruktory](#constructors) | Konstruktor obiektu musi wywołać konstruktora pewnego wystąpienia klasy podstawowej zanim nastąpi dostęp do danych wystąpienia dziedziczonego. (To nie dotyczy typów wartości, które nie wymagają konstruktorów.)  | 21
 Konstruktorów | [Konstruktory](#constructors) | Konstruktor obiektu nie będzie wywoływany z wyjątkiem jako część tworzenia obiektu i obiekt nie może być inicjowany dwukrotnie. | 22
@@ -327,7 +327,7 @@ Typ zgodny ze specyfikacją CLS | Opis
 [Boolean](xref:System.Boolean) | Typ wartości true lub false 
 [Char](xref:System.Char) | Jednostka zakodowany kodu UTF-16
 [Decimal](xref:System.Decimal) | Liczba dziesiętna non--liczba zmiennoprzecinkowa
-[Pola IntPtr](xref:System.IntPtr) | Wskaźnik lub uchwyt rozmiaru zdefiniowanej platformy
+[IntPtr](xref:System.IntPtr) | Wskaźnik lub uchwyt rozmiaru zdefiniowanej platformy
 [Ciąg](xref:System.String) | Zbiór zero, jeden lub więcej obiektów Char 
  
 Typy wewnętrzne wymienione w poniższej tabeli nie są zgodne ze specyfikacją CLS.
@@ -339,7 +339,7 @@ Typ niezgodny | Opis | Alternatywa zgodna ze specyfikacją CLS
 [UInt16](xref:System.UInt16) | 16-bitowej nieoznaczonej liczby całkowitej | [Int32](xref:System.Int32)
 [UInt32](xref:System.UInt32) | 32-bitowej nieoznaczonej liczby całkowitej | [Int64](xref:System.Int64)
 [UInt64 —](xref:System.UInt64) | 64-bitowej nieoznaczonej liczby całkowitej | [Int64](xref:System.Int64) (możliwe przepełnienie), [BigInteger](xref:System.Numerics.BigInteger), lub [Double](xref:System.Double)
-[UIntPtr](xref:System.UIntPtr) | Nieoznaczony wskaźnik lub uchwyt | [Pola IntPtr](xref:System.IntPtr)
+[UIntPtr](xref:System.UIntPtr) | Nieoznaczony wskaźnik lub uchwyt | [IntPtr](xref:System.IntPtr)
  
  Biblioteka klas programu .NET Framework lub inne biblioteki klas może zawierać inne typy, które nie są zgodne ze specyfikacją CLS; na przykład: 
  
@@ -2058,7 +2058,7 @@ Konstruktory w klasach zgodnych ze specyfikacją CLS i struktury, należy wykona
 
 Właściwości typów zgodnych ze specyfikacją CLS muszą wykonać następujące czynności:
 
-* Właściwość musi posiadać setter i/lub metody pobierającej. W zestawie są one implementowane jako specjalne metody, co oznacza, że pojawią się one jako odrębne metody (metoda pobierająca o nazwie `get` \_ *propertyname* i metoda ustawiająca o `set*\_*propertyname*) marked as `jako SpecialName "w metadane zestawu. C# Kompilator wymusza tę regułę automatycznie, bez potrzeby stosowania [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) atrybutu. 
+* Właściwość musi posiadać setter i/lub metody pobierającej. W zestawie są one implementowane jako specjalne metody, co oznacza, że pojawią się one jako odrębne metody (metoda pobierająca o nazwie `get` \_ *propertyname* i metoda ustawiająca o `set` \_ *propertyname*) oznaczone jako `SpecialName` w metadanych zestawu. C# Kompilator wymusza tę regułę automatycznie, bez potrzeby stosowania <xref:System.CLSCompliantAttribute> atrybutu. 
 
 * Typ właściwości jest zwracany typ metody pobierającej oraz typ ostatniego argumentu metody ustawiającej. Te typy muszą być zgodne ze specyfikacją CLS i argumentów nie można przypisać do właściwości przez odwołanie (oznacza to, nie mogą być wskaźnikami zarządzanymi). 
 

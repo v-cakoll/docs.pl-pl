@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: bdc512ae1ac7fa51dec1307a9e759e5b1f97bf53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ee31f6f6c746c276428222aa1d3c33c55f34bf
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563200"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200458"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (C# Programming Guide)
 W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są zgodne ze standardem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wzorzec do klas i struktur. Wszystkie zdarzenia w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas są oparte na <xref:System.EventHandler> delegować, która została zdefiniowana w następujący sposób:  
@@ -72,7 +72,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano poprzednich krokach za pomocą niestandardowej klasy EventArgs i <xref:System.EventHandler%601> jako typ zdarzenia.  
   
- [!code-csharp[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
+ [!code-csharp[csProgGuideEvents#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#2)]  
   
 ## <a name="see-also"></a>Zobacz także
 

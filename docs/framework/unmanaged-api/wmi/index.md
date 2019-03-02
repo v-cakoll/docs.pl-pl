@@ -4,12 +4,6 @@ description: Zawiera podsumowanie programu .NET Framework niezarządzanych inter
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069514"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumentacja zarządzania Windows (WMI) oraz z liczników wydajności (niezarządzany wykaz interfejsów API)
 
@@ -73,5 +67,6 @@ Ten interfejs API obejmuje następujące funkcje:
 | [VerifyClient — funkcja](verifyclientkey.md) | Zapewnia, że klucz klienta ma poprawne zabezpieczeń. |
 | [WritePropertyValue — funkcja](writepropertyvalue.md) | Zapisuje określoną liczbę bajtów z właściwością identyfikowane przez dojście właściwości. |
 
- ## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
+
 [Niezarządzany wykaz interfejsów API](../index.md) 

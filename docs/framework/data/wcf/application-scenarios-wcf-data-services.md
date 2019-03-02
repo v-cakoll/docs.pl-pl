@@ -5,87 +5,89 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 380ebeaa4c6265cccfe0e264884f509292b31eab
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f0334f23a1b2bd454377d2f5b93e70495e693043
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093297"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212225"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scenariusze aplikacji (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje udostępnianie i wykorzystywanie danych jako podstawowy zestaw scenariuszy [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. W tym temacie punktów do tematów, które są istotne dla tych scenariuszy.  
-  
- Udostępnianie w relacyjnej bazie danych z bazy danych w postaci [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.  
- -   [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
-  
--   [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
-  
--   [Instrukcje: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
-  
- Udostępnianie dowolnych klas danych CLR jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.  
- -   [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
-  
--   [Instrukcje: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
-  
--   [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
-  
- Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienta opartego na programie .NET Framework.  
- -   [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
-  
--   [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
-  
--   [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
-  
- Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej opartych na technologii Silverlight.  
- -   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
-  
--   [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
-  
--   [Instrukcje: Powiązania usługi danych z kontrolkami (klienta Silverlight)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))  
-  
- Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej opartych na technologii AJAX.  
- -   [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
-  
--   [OData: Konwencje identyfikatora URI](https://go.microsoft.com/fwlink/?LinkId=185564)  
-  
--   [OData: JavaScript Object Notation (JSON) Format](https://go.microsoft.com/fwlink/?LinkId=185790)  
-  
- Tworzenie rozwiązania danych end-to-end, który używa [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] na przesyłanie danych między klientem i serwerem.  
- -   [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
-  
--   [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
-  
--   [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
-  
- Tworzenie aplikacji klienta opartego na programie .NET Framework, która przetwarza [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kanału informacyjnego asynchronicznie, aby uniknąć problemów z opóźnieniem na komputerze klienckim.  
- -   [Instrukcje: Wykonywanie asynchronicznych zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)  
-  
--   [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
-  
--   [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))  
-  
- Prezentowania i wykorzystywania [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kanał duży obiekt binarny, który jest dostępny i zmienić jako strumień.  
- -   [Dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
-  
--   [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
-  
- Powiąż [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych do kontrolek w aplikacji Windows Presentation Framework (WPF).  
- -   [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
-  
--   [Instrukcje: Powiąż dane z programu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
-  
--   [Instrukcje: Wiązanie danych przy użyciu źródła danych projektu](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)  
-  
- Przechwycić komunikaty przychodzące do usługi danych do wykonywania sprawdzania poprawności danych i filtrowania opartego na rolach zapytań.  
- -   [Instrukcje: Przechwytywanie wiadomości usługi danych](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)  
-  
--   [Interceptory](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)  
-  
- Tworzenie punktów końcowych usługi danych umożliwiające zachowania niestandardowych usług.  
- -   [Instrukcje: Definiowanie operacji usługi](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
-  
--   [Operacje usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
-  
+
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje udostępnianie i wykorzystywanie danych jako podstawowy zestaw scenariuszy [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. W tym temacie punktów do tematów, które są istotne dla tych scenariuszy.
+
+Udostępnianie w relacyjnej bazie danych z bazy danych w postaci [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.
+- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+
+- [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+
+- [Instrukcje: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)
+
+Udostępnianie dowolnych klas danych CLR jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.
+- [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+
+- [Instrukcje: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
+
+- [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+
+Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienta opartego na programie .NET Framework.
+- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+
+- [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+
+- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej opartych na technologii Silverlight.
+- [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+
+- [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
+
+- [Instrukcje: Powiązania usługi danych z kontrolkami (klienta Silverlight)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
+
+Używanie [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienckiej opartych na technologii AJAX.
+- [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+
+- [OData: Konwencje identyfikatora URI](https://go.microsoft.com/fwlink/?LinkId=185564)
+
+- [OData: JavaScript Object Notation (JSON) Format](https://go.microsoft.com/fwlink/?LinkId=185790)
+
+Tworzenie rozwiązania danych end-to-end, który używa [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] na przesyłanie danych między klientem i serwerem.
+- [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+
+- [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)
+
+- [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+Tworzenie aplikacji klienta opartego na programie .NET Framework, która przetwarza [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kanału informacyjnego asynchronicznie, aby uniknąć problemów z opóźnieniem na komputerze klienckim.
+- [Instrukcje: Wykonywanie asynchronicznych zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)
+
+- [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
+
+- [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+
+Prezentowania i wykorzystywania [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kanał duży obiekt binarny, który jest dostępny i zmienić jako strumień.
+- [Dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)
+
+- [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+
+Powiąż [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych do kontrolek w aplikacji Windows Presentation Framework (WPF).
+- [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+
+- [Instrukcje: Powiąż dane z programu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+
+- [Instrukcje: Wiązanie danych przy użyciu źródła danych projektu](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)
+
+Przechwycić komunikaty przychodzące do usługi danych do wykonywania sprawdzania poprawności danych i filtrowania opartego na rolach zapytań.
+- [Instrukcje: Przechwytywanie wiadomości usługi danych](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)
+
+- [Interceptory](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+
+Tworzenie punktów końcowych usługi danych umożliwiające zachowania niestandardowych usług.
+- [Instrukcje: Definiowanie operacji usługi](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+
+- [Operacje usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
 - [Zasoby](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

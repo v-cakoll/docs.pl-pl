@@ -4,12 +4,12 @@ description: Ten artykuł nauczy Cię sposobu włączania uzupełniania po naci�
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029609"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203340"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Jak włączyć uzupełnianie po naciśnięciu TABULATORA dla wiersza polecenia platformy .NET Core
 
@@ -17,7 +17,7 @@ Począwszy od programu .NET Core 2.0 SDK, interfejsu wiersza polecenia platformy
 
 [!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
 
-Po instalacji uzupełniania po naciśnięciu tabulatora dla interfejsu wiersza polecenia platformy .NET Core jest wyzwalany przez wpisanie `dotnet ` polecenie w powłoce, a następnie naciskając klawisz TAB. Bieżący wiersz polecenia są wysyłane do `dotnet complete` polecenia, a wyniki są przetwarzane przez powłoki. Wyniki można przetestować bez włączania uzupełniania po naciśnięciu tabulatora, wysyłając coś bezpośrednio do `dotnet complete` polecenia. Na przykład:
+Po instalacji uzupełniania po naciśnięciu tabulatora dla interfejsu wiersza polecenia platformy .NET Core jest wyzwalany przez wpisanie `dotnet` polecenie w powłoce, a następnie naciskając klawisz TAB. Bieżący wiersz polecenia są wysyłane do `dotnet complete` polecenia, a wyniki są przetwarzane przez powłoki. Wyniki można przetestować bez włączania uzupełniania po naciśnięciu tabulatora, wysyłając coś bezpośrednio do `dotnet complete` polecenia. Na przykład:
 
 ```
 > dotnet complete "dotnet a"

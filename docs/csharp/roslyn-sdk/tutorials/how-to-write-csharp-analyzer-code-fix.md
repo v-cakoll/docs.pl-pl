@@ -1,16 +1,16 @@
 ---
-title: 'Samouczek: Pisanie Twojego pierwszego analizator i poprawkę kodu'
+title: 'Samouczek: Zapisać swoje pierwsze analizator i poprawkę kodu'
 description: Ten samouczek zawiera instrukcje krok po kroku kompilacji analizator i poprawki kodu przy użyciu zestawu SDK kompilatora .NET (interfejsy API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398001"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201901"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Samouczek: Pisanie Twojego pierwszego analizator i poprawkę kodu
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Samouczek: Zapisać swoje pierwsze analizator i poprawkę kodu
 
 Zestaw SDK platformy kompilatora .NET zapewnia narzędzia potrzebne do tworzenia niestandardowych ostrzeżenia tego docelowego języka C# lub kod języka Visual Basic. Twoje **analizatora** zawiera kod, który rozpoznaje naruszenia reguły. Twoje **poprawki kodu** zawiera kod, który poprawia naruszenie. Reguły, które można zaimplementować może być cokolwiek — od struktury kodu w celu kodowania styl do konwencji nazewnictwa i nie tylko. Platforma kompilatora .NET zapewnia platformę na uruchamianie analizy, programistom pisania kodu i naprawianie kodu funkcji wszystkich interfejsie użytkownika Visual Studio: wyświetlanie faliste linie w edytorze podczas wypełniania Visual Studio liście błędów, tworzenia "żarówka" sugestie i wyświetlanie podglądu sugerowanej poprawki.
 
@@ -282,7 +282,7 @@ Następnie zastąp `TestMethod2` za pomocą tego testu, które gwarantuje, że D
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,
@@ -422,7 +422,7 @@ Pierwszy `foreach` pętli sprawdza, czy każdy deklaracja zmiennej za pomocą an
 
 ## <a name="add-the-final-polish"></a>Dodaj końcowego Polski
 
-Prawie gotowe. Istnieje kilka więcej warunków dla Twojego analizatora do obsługi. Program Visual Studio wywołuje analizatory podczas pisania kodu przez użytkownika. Często jest przypadek, który będzie analizatora użytkownika o nazwie do kodu, który nie kompilacji. Analizatora diagnostycznego `AnalyzeNode` metoda nie sprawdza, czy wartość stała jest konwertowany na typ zmiennej. Tak, bieżąca implementacja parametru trafem korzysta przekonwertuje nieprawidłową deklarację, takie jak int i = "abc" ' ze stałą lokalnego. Dodaj stałą typu string źródła dla tego warunku:
+To już prawie koniec. Istnieje kilka więcej warunków dla Twojego analizatora do obsługi. Program Visual Studio wywołuje analizatory podczas pisania kodu przez użytkownika. Często jest przypadek, który będzie analizatora użytkownika o nazwie do kodu, który nie kompilacji. Analizatora diagnostycznego `AnalyzeNode` metoda nie sprawdza, czy wartość stała jest konwertowany na typ zmiennej. Tak, bieżąca implementacja parametru trafem korzysta przekonwertuje nieprawidłową deklarację, takie jak int i = "abc" ' ze stałą lokalnego. Dodaj stałą typu string źródła dla tego warunku:
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 

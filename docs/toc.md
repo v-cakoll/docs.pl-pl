@@ -33,6 +33,7 @@
 ## [Obsługa i zgłaszanie wyjątków](standard/exceptions/)
 ## [Zestawy w środowisku .NET](standard/assembly/index.md)
 ### [Format pliku zestawu .NET](standard/assembly/file-format.md)
+### [Instrukcje: Użycie i debugowanie funkcji zwolnienia zestawu w programie .NET Core](standard/assembly/unloadability-howto.md)
 ## [Odzyskiwanie pamięci](standard/garbage-collection/)
 ## [Typy ogólne](standard/generics.md)
 ## [Delegaci i wyrażenia lambda](standard/delegates-lambdas.md)
@@ -268,9 +269,9 @@
 ## [Przewodnik po środowisku C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## Co nowego w języku C#
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0 — wersja zapoznawcza 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)

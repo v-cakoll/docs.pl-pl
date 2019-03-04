@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 6aa05aab5bbd012c31dc31be38c0b3eaea13dd27
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: HT
+ms.openlocfilehash: b08d119c0c7edb71ceab5c763c1359bf4c90cfec
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966193"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212537"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Transport Layer Security (TLS) najlepszych rozwiązań za pomocą programu .NET Framework
 
@@ -237,7 +237,7 @@ Za pomocą rejestru dla szczegółową kontrolę nad tym protokoły, które nego
 
 Rozpoczynać `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols` klucza rejestru. W tym kluczu można utworzyć wszystkie podklucze w zestawie `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1`, i `TLS 1.2`. W ramach każdej z tych podkluczach, można utworzyć podkluczy `Client` i/lub `Server`. W obszarze `Client` i `Server`, można utworzyć wartości DWORD `DisabledByDefault` (0 lub 1) i `Enabled` (0 lub 0xFFFFFFFF).
 
-## <a name="the-schusestrongcrypto-flag"></a>The SCH_USE_STRONG_CRYPTO flag
+## <a name="the-sch_use_strong_crypto-flag"></a>Flaga SCH_USE_STRONG_CRYPTO
 
 Gdy jest włączone (domyślnie przez `AppContext` przełączyć się, lub w rejestrze systemu Windows), .NET Framework używa `SCH_USE_STRONG_CRYPTO` Flaga, gdy aplikacja żąda protokołu zabezpieczeń TLS. `SCH_USE_STRONG_CRYPTO` Flagę można włączyć domyślnie za pomocą `AppContext` przełączyć, lub za pomocą rejestru. System operacyjny przekazuje flagi `Schannel`można wydać polecenie wyłączenia znanych stosowania słabych algorytmów kryptograficznych, cipher zestawów i wersji protokołu TLS/SSL, które może być inaczej włączona dla lepsze współdziałanie. Aby uzyskać więcej informacji, zobacz:
 

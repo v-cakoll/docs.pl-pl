@@ -1,5 +1,5 @@
 ---
-title: 'Przykład wyrażenia regularnego: wyszukiwanie wartości HREF'
+title: 'Przykładowe wyrażenie regularne: Wyszukiwanie wartości href'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582843"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975969"
 ---
-# <a name="regular-expression-example-scanning-for-hrefs"></a>Przykład wyrażenia regularnego: wyszukiwanie wartości HREF
+# <a name="regular-expression-example-scanning-for-hrefs"></a>Przykładowe wyrażenie regularne: Wyszukiwanie wartości href
 W poniższym przykładzie wyszukuje ciąg wejściowy i wyświetla wszystkie href = "...", wartości i ich lokalizacji w ciągu.  
   
 ## <a name="the-regex-object"></a>Obiekt Regex  
@@ -44,7 +44,7 @@ W poniższym przykładzie wyszukuje ciąg wejściowy i wyświetla wszystkie href
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
 |`=`|Dopasowuje znak równości.|  
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Pasuje do jednej z następujących czynności bez przypisywania wynik do przechwyconej grupy:<br /> <ul><li><p>Cudzysłów lub apostrof, w którym następuje zero lub więcej wystąpień dowolnego znaku innego niż cudzysłów lub apostrof, w którym następuje cudzysłów lub apostrof. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li><li><p>Co najmniej jeden znak inny niż biały. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Pasuje do jednej z następujących czynności bez przypisywania wynik do przechwyconej grupy:<br /> <ul><li><p>Cudzysłów lub apostrof, w którym następuje zero lub więcej wystąpień dowolnego znaku innego niż cudzysłów lub apostrof, w którym następuje cudzysłów lub apostrof. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li><li><p>Co najmniej jeden znak inny niż biały. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li></ul>|  
 |`(?<1>[^"']*)`|Przypisać zero lub więcej wystąpień dowolnego znaku innego niż cudzysłów lub apostrof grupa przechwytywania o nazwie `1`.|  
 |`(?<1>\S+)`|Przypisz co najmniej jeden znak inny niż biały do grupa przechwytywania o nazwie `1`.|  
   

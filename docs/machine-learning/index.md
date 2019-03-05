@@ -1,6 +1,6 @@
 ---
 title: Przewodnik po zawartości struktury ML.NET
-description: 'Dowiedz się, jak tworzyć niestandardowych rozwiązań sztucznej Inteligencji i integrowanie aplikacji .NET za pomocą strukturze ML.NET'
+description: 'Dowiedz się, jak tworzyć niestandardowe rozwiązania za pomocą sztucznej inteligencji i łączyć je z aplikacją .NET za pomocą struktury ML.NET'
 ms.date: 01/18/2019
 ms.custom: seodec18
 ---

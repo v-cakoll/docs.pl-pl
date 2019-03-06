@@ -13,88 +13,88 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547882"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377031"
 ---
 # <a name="the-ink-threading-model"></a>Model wątkowości typu atrament
-Jedną z zalet pismo odręczne na komputerze typu Tablet jest, że go wydaje się znacznie zapisu przy użyciu pióra regularnych i papieru.  W tym celu pióra zbiera dane wejściowe szybkością znacznie wyższa niż myszy i renderuje pismo odręczne jako zapisy użytkownika.  Wątek interfejsu użytkownika aplikacji nie jest wystarczające do zbierania danych pióra i odręcznego renderowania, ponieważ mogą zostać zablokowane.  Aby rozwiązać, to [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacja używa dwóch dodatkowych wątków, gdy użytkownik zapisuje odręczne.  
+Jest jedną z zalet pisma odręcznego na komputerze typu Tablet, może się wydawać, bardzo podobnie jak za pomocą regularnego pióra i dokument.  Aby to osiągnąć, Pióro zbiera dane wejściowe stawki znacznie wyższa niż myszy i renderuje pismo odręczne jako zapisy użytkownika.  Wątek interfejsu użytkownika aplikacji nie wystarcza do zbierania danych pióra i renderowanie pisma odręcznego, ponieważ może zostać zablokowany.  Aby rozwiązać tego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacja używa dwa dodatkowe wątki, gdy użytkownik zapisze pisma odręcznego.  
   
- Poniższa lista zawiera opis wątków, które uczestniczą w zbierania i renderowania elektroniczne pismo odręczne:  
+ Na poniższej liście opisano wątków, które wzięcia udziału w zbieraniu i cyfrowy atrament renderowania:  
   
--   Wątek pióra - wątku, który pobiera pióra.  (W rzeczywistości jest to puli wątków, ale w tym temacie odnosi się do niego jako wątku pióra).  
+-   Wątek pióra - wątku, który akceptuje dane wejściowe z pisaka  (W rzeczywistości jest to z puli wątków, ale w tym temacie odnosi się do niego jako wątek pióra).  
   
--   Wątek interfejsu użytkownika aplikacji - wątku, który określa interfejs użytkownika aplikacji.  
+-   Wątek interfejsu użytkownika aplikacji — wątku, który określa interfejs użytkownika aplikacji.  
   
--   Dynamiczne renderowanie wątku - wątku, który renderuje pismo odręczne, gdy użytkownik rysuje pociągnięcia. Wątek dynamicznego renderowania różni się od wątku, który renderuje inne elementy interfejsu użytkownika dla aplikacji, jak wspomniano w Windows Presentation Foundation [Model wątkowy](../../../../docs/framework/wpf/advanced/threading-model.md).  
+-   Wątek renderowania dynamicznego - wątku, który renderuje pismo odręczne, gdy użytkownik rysuje obrysu. Wątek renderowania dynamicznego różni się od wątku, który renderuje inne elementy interfejsu użytkownika dla aplikacji, jak wspomniano w programie Windows Presentation Foundation [Model wątkowy](threading-model.md).  
   
- Model pisma odręcznego jest taki sam, czy aplikacja używa <xref:System.Windows.Controls.InkCanvas> lub kontrolkę niestandardową, podobnie jak w [Tworzenie formantu danych wejściowych odręcznego](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).  Mimo że w tym temacie omówiono wątkowość w postaci liczby <xref:System.Windows.Controls.InkCanvas>, te same pojęcia zastosować podczas tworzenia niestandardowego formantu.  
+ Model pisma odręcznego jest taki sam, czy aplikacja używa <xref:System.Windows.Controls.InkCanvas> lub formant niestandardowy, podobne do pokazanego na [tworzenie kontrolki danych wejściowych pisma odręcznego](creating-an-ink-input-control.md).  Mimo że w tym temacie omówiono wielowątkowości w <xref:System.Windows.Controls.InkCanvas>, Zastosuj te same pojęcia, podczas tworzenia niestandardowego formantu.  
   
 ## <a name="threading-overview"></a>Wątkowość — omówienie  
  Na poniższym diagramie przedstawiono model wątkowości, gdy użytkownik rysuje pociągnięcia:  
   
- ![Model wątkowości podczas rysowania pociągnięcia. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
+ ![Model wątkowości podczas rysowania pociągnięcia. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Występuje, gdy użytkownik wprowadzi obrysu akcje  
+1.  Akcjami występującymi podczas, gdy użytkownik wprowadzi pociągnięcia  
   
-    1.  Gdy użytkownik wprowadzi pociągnięcia, punkty pióro mają w wątku pióra.  Pióro dodatków plug-in, łącznie z <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, Zaakceptuj punktów Pióro w wątku pióra i w sposób, aby zmodyfikować je przed <xref:System.Windows.Controls.InkCanvas> odbiera je.  
+    1.  Gdy użytkownik wprowadzi pociągnięcia, punkty pióra mają na wątek pióra.  Pióro dodatków plug-in, w tym <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>Zaakceptuj punktów pióra na wątek pióra i szansę zmodyfikuj je przed <xref:System.Windows.Controls.InkCanvas> otrzymuje je.  
   
-    2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Renderuje punktów Pióro w wątku renderowania dynamicznych. Dzieje się w tym samym czasie, co w poprzednim kroku.  
+    2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Renderuje punktów pióra na wątek renderowania dynamicznego. Dzieje się w tym samym czasie co w poprzednim kroku.  
   
-    3.  <xref:System.Windows.Controls.InkCanvas> Odbiera punktów Pióro w wątku interfejsu użytkownika.  
+    3.  <xref:System.Windows.Controls.InkCanvas> Otrzymuje punkty pióra przez wątek interfejsu użytkownika.  
   
-2.  Akcje występujące po zakończeniu obrysu użytkownika  
+2.  Akcje, które pojawiają się po użytkownik kończy pociągnięcia  
   
-    1.  Gdy użytkownik zakończy rysowania obrysu, <xref:System.Windows.Controls.InkCanvas> tworzy <xref:System.Windows.Ink.Stroke> obiektu i dodaje go do <xref:System.Windows.Controls.InkPresenter>, które statycznie renderuje.  
+    1.  Gdy użytkownik zakończy rysowania pociągnięcia <xref:System.Windows.Controls.InkCanvas> tworzy <xref:System.Windows.Ink.Stroke> obiektu i dodaje go do <xref:System.Windows.Controls.InkPresenter>, która statycznie renderuje.  
   
-    2.  Alerty wątku interfejsu użytkownika <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> obrysu statycznie renderowany, więc <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> spowoduje usunięcie jej wizualną reprezentację pociągnięć.  
+    2.  Alerty wątku interfejsu użytkownika <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renderowany obrysu statycznie, więc <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> usuwa jego wizualnej reprezentacji obiektu stroke.  
   
-## <a name="ink-collection-and-stylus-plug-ins"></a>Zbieranie pisma odręcznego i wtyczek pióra  
- Każdy <xref:System.Windows.UIElement> ma <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Obiekty w <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> odbierania i może być modyfikowana punktów Pióro w wątku pióra. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Obiektów uzyskuje punkty pióro zgodnie z ich kolejność, w <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
+## <a name="ink-collection-and-stylus-plug-ins"></a>Zbieranie pisma odręcznego i dodatki plug-in pióra  
+ Każdy <xref:System.Windows.UIElement> ma <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Obiekty w <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> odbierania i może być modyfikowana pióro punktów danych na wątek pióra. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Obiekty otrzymują punktów pióra, zgodnie z ich kolejność w <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>.  
   
- Na poniższym diagramie przedstawiono hipotetyczny sytuacji gdy <xref:System.Windows.UIElement.StylusPlugIns%2A> Kolekcja <xref:System.Windows.UIElement> zawiera `stylusPlugin1`, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, i `stylusPlugin2`, w tym kolejność.  
+ Na poniższym diagramie przedstawiono hipotetyczny problem gdzie <xref:System.Windows.UIElement.StylusPlugIns%2A> zbiór <xref:System.Windows.UIElement> zawiera `stylusPlugin1`, <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, i `stylusPlugin2`, w tej kolejności.  
   
- ![Kolejność wtyczek pióro wpływ na wyniki. ] (../../../../docs/framework/wpf/advanced/media/inkthreading-pluginorder.png "InkThreading_PluginOrder")  
+ ![Kolejność pióro wtyczki wpływają na dane wyjściowe. ](./media/inkthreading-pluginorder.png "InkThreading_PluginOrder")  
   
- Na poprzedni diagram następujące zachowanie odbywa się:  
+ Na poprzednim rysunku następujące zachowanie ma miejsce:  
   
 1.  `StylusPlugin1` Modyfikuje wartości x i y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> odbiera punktów pióro zmodyfikowane i renderuje je w wątku renderowania dynamicznych.  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> odbiera punktów zmodyfikowane pióra i renderuje je na wątek renderowania dynamicznego.  
   
-3.  `StylusPlugin2` odbiera punktów pióro zmodyfikowane i więcej Modyfikuje wartości x i y.  
+3.  `StylusPlugin2` odbiera punktów zmodyfikowane pióra i dalsze Modyfikuje wartości x i y.  
   
-4.  Aplikacja zbiera punktów Pióro i, gdy użytkownik zakończy obrysu, statycznie renderuje pociągnięć.  
+4.  Aplikacji umożliwia zbieranie informacji o punktach pióra i, gdy użytkownik zakończy obrysu statycznie renderuje obrysu.  
   
- Załóżmy, że `stylusPlugin1` ogranicza pióro punktów prostokąta i `stylusPlugin2` tłumaczy punktów pióro z prawej strony.  W poprzednim scenariuszu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> odbiera punkty pióro ograniczone, ale nie punkty przetłumaczonego pióra.  Gdy użytkownik wprowadzi obrysu, obrysu jest renderowany w granicach prostokąta, ale pociągnięcie nie pojawia się do tłumaczenia użytkownika wind pióra.  
+ Załóżmy, że `stylusPlugin1` ogranicza punktów pióro prostokąt i `stylusPlugin2` tłumaczy punktów pióro po prawej stronie.  W poprzednim scenariuszu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> otrzymuje punkty pióro ograniczony, ale nie wskazuje przetłumaczone pióra.  Gdy użytkownik wprowadzi obrysu, obrysu jest renderowany w granicach prostokąt, ale obrysu nie pojawia się do tłumaczenia użytkownika podnosi pióra.  
   
-### <a name="performing-operations-with-a-stylus-plug-in-on-the-ui-thread"></a>Wykonywanie operacji z pióra wtyczki w wątku interfejsu użytkownika  
- Ponieważ nie można wykonać dokładne testowanie trafień w wątku pióra, niektóre elementy czasami może pojawić się wprowadzania danych piórem przeznaczonych do innych elementów. Aby się upewnić, że dane wejściowe został poprawnie skierowany przed wykonaniem operacji należy subskrybować i wykonaj operację w <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, lub <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> metody. Te metody są wywoływane przez wątek aplikacji po dokładne testowanie trafień została wykonana. Aby subskrybować tych metod, należy wywołać <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> metody w metodzie, który występuje w wątku pióra.  
+### <a name="performing-operations-with-a-stylus-plug-in-on-the-ui-thread"></a>Wykonywanie operacji za pomocą pióra wtyczkę w wątku interfejsu użytkownika  
+ Ponieważ nie można wykonać dokładne testowania trafień na wątek pióra, niektóre elementy od czasu do czasu może pojawić się wejście pióra przeznaczonych do innych elementów. Jeśli musisz upewnić się, czy dane wejściowe został rozesłany prawidłowo, przed wykonaniem operacji subskrybować i wykonaj operację w <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusDownProcessed%2A>, <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusMoveProcessed%2A>, lub <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn.OnStylusUpProcessed%2A> metody. Te metody są wywoływane przez wątek aplikacji po dokładne testowania trafień została wykonana. Aby subskrybować tych metod, należy wywołać <xref:System.Windows.Input.StylusPlugIns.RawStylusInput.NotifyWhenProcessed%2A> metody w metodzie, która występuje na wątek pióra.  
   
- Na poniższym diagramie przedstawiono związek między pióra wątku i wątku interfejsu użytkownika w odniesieniu do zdarzeń pióra <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
+ Na poniższym diagramie przedstawiono relację między wątek pióra i wątku interfejsu użytkownika w odniesieniu do zdarzeń pióra <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>.  
   
- ![Modele wątkowości odręczne &#40;interfejsu użytkownika i pióra&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![Modele wątkowości pisma odręcznego &#40;interfejsu użytkownika i pióra&#41;](./media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
-## <a name="rendering-ink"></a>Renderowanie odręcznego  
- Jako użytkownik wprowadzi obrysu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renderuje pismo odręczne na oddzielnym wątku, więc odręcznego "przepływ" z pióra nawet wtedy, gdy wątek interfejsu użytkownika jest zajęty.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Utworzy w wątku renderowania dynamicznego drzewa wizualnego zbiera pióro punktów.  Gdy użytkownik zakończy obrysu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> zapyta otrzymywać powiadomienia, gdy aplikacja nie przebiegu renderowania dalej.  Zakończone przebiegu renderowania następnej aplikacji <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> czyści jego drzewie wizualnym.  Na poniższym diagramie przedstawiono ten proces.  
+## <a name="rendering-ink"></a>Renderowanie pisma odręcznego  
+ Jako użytkownik wprowadzi obrysu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renderuje pismo odręczne w oddzielnym wątku, więc pisma odręcznego pojawia się na "flow" z pióra nawet wtedy, gdy wątek interfejsu użytkownika jest zajęty.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Oparta na wątek renderowania dynamicznego drzewa wizualnego, zbiera dane punktów pióra.  Gdy użytkownik zakończy obrysu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> pyta otrzymywać powiadomienia, gdy aplikacja wykonuje następny przebieg renderowania.  Po jej zakończeniu przebiegu renderowania następnej <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> czyści jego drzewa wizualnego.  Na poniższym diagramie przedstawiono ten proces.  
   
- ![Wątkowość diagram odręczne](../../../../docs/framework/wpf/advanced/media/inkthreading-visualtree.png "InkThreading_VisualTree")  
+ ![Diagram wątkowości pisma odręcznego](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  Użytkownik rozpoczyna pociągnięć.  
+1.  Użytkownik rozpoczyna stroke.  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Tworzy drzewa wizualnego.  
+    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Tworzy drzewo wizualne.  
   
-2.  Użytkownik jest rysowania pociągnięć.  
+2.  Użytkownik jest rysowanie stroke.  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Kompilacje drzewa wizualnego.  
+    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Tworzy drzewo wizualne.  
   
-3.  Użytkownik kończy pociągnięć.  
+3.  Użytkownik kończy się stroke.  
   
-    1.  <xref:System.Windows.Controls.InkPresenter> Dodaje skok do jego drzewie wizualnym.  
+    1.  <xref:System.Windows.Controls.InkPresenter> Dodaje skok do jego drzewa wizualnego.  
   
     2.  Warstwa integracji nośnika (MIL) renderuje statycznie pociągnięć.  
   
-    3.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Czyści wizualnych.
+    3.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Czyści elementy wizualne.

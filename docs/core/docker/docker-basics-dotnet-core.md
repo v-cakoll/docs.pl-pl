@@ -4,12 +4,12 @@ description: W tym samouczku pokazano, jak utworzyć podstawową aplikację plat
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: addaabb41e57e03a5cf4ec5b2fa3b8b4f3089b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169589"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372922"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Jak konteneryzowanie aplikacji .NET Core
 
@@ -22,7 +22,7 @@ W trakcie tego samouczka dowiesz się:
 > * Jak utworzyć aplikację platformy .NET Core.
 > * Jak wdrożyć aplikację w kontenerze platformy Docker.
 
-## <a name="net-core-easiest-way-to-get-started"></a>.NET core: Najprostszym sposobem na rozpoczęcie pracy
+## <a name="net-core-easiest-way-to-get-started"></a>.NET Core: Najprostszym sposobem na rozpoczęcie pracy
 
 Przed utworzeniem obrazu platformy Docker, należy konteneryzowanie aplikacji. Można je utworzyć w systemie Linux, MacOS lub Windows. Najszybszym i najłatwiejszym sposobem wykonania tego zadania jest korzystanie z platformy .NET Core.
 
@@ -159,7 +159,7 @@ WORKDIR /app
 COPY *.csproj ./
 ```
 
-[ **Uruchom** ](https://docs.docker.com/engine/reference/builder/#run) instrukcji wykonuje wszystkie polecenia w nowej warstwie na podstawie bieżącego obrazu i zatwierdź wyniki. Zatwierdzony obraz wynikowy jest używana do następnego kroku w pliku Dockerfile. Będziemy działają **dotnet restore** można pobrać wymagane zależności pliku projektu C#. 
+[ **Uruchom** ](https://docs.docker.com/engine/reference/builder/#run) instrukcji wykonuje wszystkie polecenia w nowej warstwie na podstawie bieżącego obrazu i zatwierdź wyniki. Zatwierdzony obraz wynikowy jest używana do następnego kroku w pliku Dockerfile. Będziemy działają **dotnet restore** można pobrać wymagane zależności pliku projektu C#.
 
 ```Dockerfile
 RUN dotnet restore
@@ -263,7 +263,7 @@ Poniżej przedstawiono niektóre kolejne kroki, które należy wykonać:
 * [Docker for pakiety Azure Quickstarts](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Wdrażanie aplikacji na platformy Docker na platformie Azure](https://docs.docker.com/docker-for-azure/deploy/)
 
-> [!Note]
+> [!NOTE]
 > Jeśli nie masz subskrypcji platformy Azure, [Zarejestruj się dzisiaj](https://azure.microsoft.com/free/?b=16.48) bezpłatne konto 30-dniowej i Odbierz 200 USD środków na korzystanie z platformy Azure możesz wypróbować dowolną kombinację usług platformy Azure.
 
 ## <a name="docker-images-used-in-this-sample"></a>Obrazy platformy docker, używane w tym przykładzie
@@ -277,7 +277,7 @@ Następujące obrazy platformy Docker są używane w tym przykładzie
 * [Przykłady Docker w programie .NET core](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Plik Dockerfile kontenerów Windows](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Przykłady Docker w programie .NET framework](https://github.com/Microsoft/dotnet-framework-docker-samples)
-* [Platforma ASP.NET Core w witrynie DockerHub](https://hub.docker.com/r/microsoft/aspnetcore/)
+* [ASP.NET Core on DockerHub](https://hub.docker.com/r/microsoft/aspnetcore/)
 * [Przekształcać aplikacji .NET Core — samouczek platformy Docker](https://docs.docker.com/engine/examples/dotnetcore/)
 * [Praca z narzędzia Docker programu Visual Studio](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
 * [Wdrażanie obrazów platformy Docker z rejestru kontenerów platformy Azure w usłudze Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)

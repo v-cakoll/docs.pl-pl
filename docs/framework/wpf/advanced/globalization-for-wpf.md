@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: d7b544fcb308960ff86b83655d60cb1453b6571a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543818"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377368"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 W tym temacie przedstawiono problemy, które należy wiedzieć podczas pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji na rynek globalny. Globalizacja programistyczny są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] w `System.Globalization`.
@@ -47,7 +47,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Atrybut Language
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używa [XML: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) do reprezentowania atrybut language elementu.  Aby móc korzystać z <xref:System.Globalization.CultureInfo> klasy, wartość atrybutu language musi mieć jedną z nazw kultur wstępnie zdefiniowane przez <xref:System.Globalization.CultureInfo>. [XML: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) dziedziczona drzewa elementów (według reguł XML nie musi to być z powodu dziedziczenia właściwości zależności) i jego wartość domyślna to ciąg pusty, jeśli nie jest jawnie przypisane.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używa [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) do reprezentowania atrybut language elementu.  Aby móc korzystać z <xref:System.Globalization.CultureInfo> klasy, wartość atrybutu language musi mieć jedną z nazw kultur wstępnie zdefiniowane przez <xref:System.Globalization.CultureInfo>. [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) dziedziczona drzewa elementów (według reguł XML nie musi to być z powodu dziedziczenia właściwości zależności) i jego wartość domyślna to ciąg pusty, jeśli nie jest jawnie przypisane.
 
  Atrybut language jest bardzo przydatne w przypadku określenia dialekty. Na przykład francuski ma inną pisownię, słownictwo i Wymowa we Francji, Quebec, Belgia i Szwajcarii. Także chińskim, japońskiej i koreańskiej udostępnić punkty kodowe w [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], ale ideograficznych kształty są różne, i używają czcionki coś zupełnie innego.
 
@@ -151,7 +151,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 ### <a name="localizable-user-interface"></a>Interfejs użytkownika Lokalizowalny
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje używają [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do definiowania ich [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Umożliwia deweloperom określić hierarchię obiektów z zestawem właściwości i logiki. Podstawowym zastosowaniem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest opracowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, ale może służyć do określania hierarchii dowolnego [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów. Większość programistów używa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do określania ich stosowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] a reagują na interakcję z użytkownikiem za pomocą języka programowania, takiego jak C#.
 
- Z punktu widzenia zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku przeznaczona do opisania zależne od języka [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jest elementem zasobów i w związku z tym formatem końcowej dystrybucji musi być możliwy do zlokalizowania do obsługi języków obcych. Ponieważ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie może obsłużyć zdarzenia wiele [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacje zawierają bloki kodu, aby to zrobić. Aby uzyskać więcej informacji, zobacz [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Kod jest wycięte i kompilowane do różnych plików binarnych podczas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku jest stokenizowana na formularz BAML XAML. Formularz BAML pliki XAML, obrazy i inne typy obiektów zarządzanych zasobów są osadzone w głównym zestawie satelickim zestawem zasobów, która może być lokalizowana w innych językach, lub w, gdy lokalizacja nie jest wymagane.
+ Z punktu widzenia zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku przeznaczona do opisania zależne od języka [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jest elementem zasobów i w związku z tym formatem końcowej dystrybucji musi być możliwy do zlokalizowania do obsługi języków obcych. Ponieważ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie może obsłużyć zdarzenia wiele [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacje zawierają bloki kodu, aby to zrobić. Aby uzyskać więcej informacji, zobacz [Przegląd XAML (WPF)](xaml-overview-wpf.md). Kod jest wycięte i kompilowane do różnych plików binarnych podczas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku jest stokenizowana na formularz BAML XAML. Formularz BAML pliki XAML, obrazy i inne typy obiektów zarządzanych zasobów są osadzone w głównym zestawie satelickim zestawem zasobów, która może być lokalizowana w innych językach, lub w, gdy lokalizacja nie jest wymagane.
 
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje do obsługi wszystkich [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zasobów, w tym tabele ciągów, obrazy i tak dalej.
@@ -167,7 +167,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 
  Aby użyć wystąpienia zasób w aplikacji <xref:System.Resources.ResourceManager> i załaduj zasób, którego chcesz użyć. Poniższy przykład demonstruje, jak to zrobić.
 
- [!code-csharp[LocalizationResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+ [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
 
 <a name="using_clickonce"></a>
 ## <a name="using-clickonce-with-localized-applications"></a>Przy użyciu aplikacji ClickOnce za pomocą zlokalizowanych aplikacji
@@ -181,4 +181,4 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 ```
 
 ## <a name="see-also"></a>Zobacz także
-- [Przeglądanie globalizacji i lokalizacji WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+- [Przeglądanie globalizacji i lokalizacji WPF](wpf-globalization-and-localization-overview.md)

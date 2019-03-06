@@ -7,35 +7,35 @@ helpviewer_keywords:
 - graphics [WPF], brushes
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
-ms.openlocfilehash: b62830da6f48e07c60df731a8ba29998d6145217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557540"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373260"
 ---
 # <a name="brushes-how-to-topics"></a>Pędzle Tematy porad
-Poniższe tematy przedstawiają sposób zastosowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzle celu rysowania zawartości do ekranu.  
+W poniższych tematach pokazano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzli w celu rysowania zawartości ekranu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Animowanie koloru lub nieprzezroczystości elementu SolidColorBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [Animowanie położenia i koloru zatrzymania gradientu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [Tworzenie odbicia](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [Tworzenie różnych wzorów kafelkowych z użyciem elementu TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [Definiowanie pióra](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [Malowanie obszaru za pomocą rysowania](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [Malowanie obszaru za pomocą obrazu](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [Malowanie obszaru gradientem liniowym](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [Malowanie obszaru gradientem promieniowym](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [Malowanie obszaru jednolitym kolorem](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [Malowanie obszaru pędzlem systemowym](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [Malowanie obszaru za pomocą wideo](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [Malowanie obszaru za pomocą wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [Zachowywanie formatu obrazu użytego jako tło](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [Ustawianie wyrównania elementu TileBrush w poziomie i pionie](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [Ustawianie rozmiaru kafelka dla elementu TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [Przekształcanie pędzla](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [Używanie kolorów systemowych w gradiencie](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+ [Animowanie koloru lub nieprzezroczystości elementu SolidColorBrush](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [Animowanie położenia i koloru zatrzymania gradientu](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [Tworzenie odbicia](how-to-create-a-reflection.md)  
+ [Tworzenie różnych wzorów kafelkowych z użyciem elementu TileBrush](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [Definiowanie pióra](how-to-define-a-pen.md)  
+ [Malowanie obszaru za pomocą rysowania](how-to-paint-an-area-with-a-drawing.md)  
+ [Malowanie obszaru za pomocą obrazu](how-to-paint-an-area-with-an-image.md)  
+ [Malowanie obszaru gradientem liniowym](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [Malowanie obszaru gradientem promieniowym](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [Malowanie obszaru jednolitym kolorem](how-to-paint-an-area-with-a-solid-color.md)  
+ [Malowanie obszaru pędzlem systemowym](how-to-paint-an-area-with-a-system-brush.md)  
+ [Malowanie obszaru za pomocą wideo](how-to-paint-an-area-with-a-video.md)  
+ [Malowanie obszaru za pomocą wizualizacji](how-to-paint-an-area-with-a-visual.md)  
+ [Zachowywanie formatu obrazu użytego jako tło](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [Ustawianie wyrównania elementu TileBrush w poziomie i pionie](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [Ustawianie rozmiaru kafelka dla elementu TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [Przekształcanie pędzla](how-to-transform-a-brush.md)  
+ [Używanie kolorów systemowych w gradiencie](how-to-use-system-colors-in-a-gradient.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Media.Brush>  
@@ -51,6 +51,6 @@ Poniższe tematy przedstawiają sposób zastosowania [!INCLUDE[TLA#tla_winclient
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafika i multimedia](index.md)  
   
- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)

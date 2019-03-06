@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 73d854d601de05c2cb7dd6063e4a5f2907b09f47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578670"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372833"
 ---
 # <a name="base-elements-overview"></a>Przegląd Elementy bazy
 Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] są uzyskiwane z czterech klas, które są często określane w [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] przesłać dokumenty będące klasy bazowej elementów. Te klasy są <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, i <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Klasa również odnosi się, ponieważ jest wspólna klasa bazowa obu <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement>  
@@ -26,7 +26,7 @@ Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 ## <a name="choosing-which-element-to-derive-from"></a>Wybieranie który Element ma być z  
  Najbardziej praktycznym sposobem tworzenia niestandardowej klasy, która rozszerza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] polega na elementu pochodnego dla jednego z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klas, skąd jak najszerzej usługi żądanej funkcji za pośrednictwem istniejących klas hierarchii. W tej sekcji przedstawiono funkcje, które pochodzą z trzema pomóc zdecydować, która klasa dziedziczy po najważniejszych klasy elementu.  
   
- Przed zaimplementowaniem kontrolki, naprawdę czyli typowe przyczyny pochodząca od [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasy, prawdopodobnie chcesz pochodzi od klasy, która jest formantem praktyczne kontroli rodziny klasę bazową, lub na co najmniej z <xref:System.Windows.Controls.Control> klasy bazowej. Niektóre wskazówki i praktyczne przykłady, zobacz [omówienie tworzenia kontrolek](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Przed zaimplementowaniem kontrolki, naprawdę czyli typowe przyczyny pochodząca od [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasy, prawdopodobnie chcesz pochodzi od klasy, która jest formantem praktyczne kontroli rodziny klasę bazową, lub na co najmniej z <xref:System.Windows.Controls.Control> klasy bazowej. Niektóre wskazówki i praktyczne przykłady, zobacz [omówienie tworzenia kontrolek](../controls/control-authoring-overview.md).  
   
  Jeśli są nietworzenie kontrolki i muszą pochodzić od klasy, który znajduje się wyżej w hierarchii, następujące sekcje są przeznaczone jako przewodnika cechy, które są zdefiniowane w każdej klasie elementu podstawowego.  
   
@@ -38,67 +38,67 @@ Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.UIElement>, dziedziczą następujące funkcje oprócz tego są udostępniane przez <xref:System.Windows.DependencyObject>:  
   
--   Podstawowa pomoc techniczna dla wartości właściwości animowany. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Podstawowa pomoc techniczna dla wartości właściwości animowany. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
--   Podstawowe dane wejściowe zdarzenia pomocy technicznej i sterująca pomocy technicznej. Aby uzyskać więcej informacji, zobacz [przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md) i [polecenia Przegląd](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+-   Podstawowe dane wejściowe zdarzenia pomocy technicznej i sterująca pomocy technicznej. Aby uzyskać więcej informacji, zobacz [przegląd danych wejściowych](input-overview.md) i [polecenia Przegląd](commanding-overview.md).  
   
 -   Metody wirtualne, które może zostać zastąpiona w celu zawierają informacje, które system układu.  
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.FrameworkElement>, dziedziczą następujące funkcje oprócz tego są udostępniane przez <xref:System.Windows.UIElement>:  
   
--   Wsparcie dla scenorysów i stylów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style> i [Przegląd Scenorysy](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+-   Wsparcie dla scenorysów i stylów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style> i [Przegląd Scenorysy](../graphics-multimedia/storyboards-overview.md).  
   
--   Obsługa powiązań danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Obsługa powiązań danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../data/data-binding-overview.md).  
   
--   Pomoc techniczna dla odwołania do zasobów dynamicznej. Aby uzyskać więcej informacji, zobacz [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   Pomoc techniczna dla odwołania do zasobów dynamicznej. Aby uzyskać więcej informacji, zobacz [zasoby XAML](xaml-resources.md).  
   
--   Obsługa dziedziczenia wartości właściwości, a inne flagi w metadanych, które pomagają warunki raport o właściwościach framework usług, takich jak powiązania danych, stylów lub implementacji środowiska układu. Aby uzyskać więcej informacji, zobacz [metadane właściwości szablonu](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+-   Obsługa dziedziczenia wartości właściwości, a inne flagi w metadanych, które pomagają warunki raport o właściwościach framework usług, takich jak powiązania danych, stylów lub implementacji środowiska układu. Aby uzyskać więcej informacji, zobacz [metadane właściwości szablonu](framework-property-metadata.md).  
   
--   Pojęcie drzewo logiczne. Aby uzyskać więcej informacji, zobacz [drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).  
+-   Pojęcie drzewo logiczne. Aby uzyskać więcej informacji, zobacz [drzewa w WPF](trees-in-wpf.md).  
   
 -   Obsługa praktyczne wykonania poziomie struktury system układu WPF tym <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> przesłonięcie może wykryć, zmiany właściwości układu tego wpływu.  
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.ContentElement>, dziedziczą następujące funkcje oprócz tego są udostępniane przez <xref:System.Windows.DependencyObject>:  
   
--   Pomoc techniczna dla animacji. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Pomoc techniczna dla animacji. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
--   Podstawowe dane wejściowe zdarzenia pomocy technicznej i sterująca pomocy technicznej. Aby uzyskać więcej informacji, zobacz [przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md) i [polecenia Przegląd](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+-   Podstawowe dane wejściowe zdarzenia pomocy technicznej i sterująca pomocy technicznej. Aby uzyskać więcej informacji, zobacz [przegląd danych wejściowych](input-overview.md) i [polecenia Przegląd](commanding-overview.md).  
   
  Jeśli tworzysz klasę, która pochodzi od klasy <xref:System.Windows.FrameworkContentElement>, pobierz następujące funkcje oprócz tego są udostępniane przez <xref:System.Windows.ContentElement>:  
   
--   Wsparcie dla scenorysów i stylów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style> i [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Wsparcie dla scenorysów i stylów. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Style> i [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
--   Obsługa powiązań danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Obsługa powiązań danych. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../data/data-binding-overview.md).  
   
--   Pomoc techniczna dla odwołania do zasobów dynamicznej. Aby uzyskać więcej informacji, zobacz [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+-   Pomoc techniczna dla odwołania do zasobów dynamicznej. Aby uzyskać więcej informacji, zobacz [zasoby XAML](xaml-resources.md).  
   
--   Obsługa dziedziczenia wartości właściwości, a inne flagi w metadanych, które pomagają warunki raport o właściwościach framework usług, takich jak powiązania danych, stylów lub implementacji środowiska układu. Aby uzyskać więcej informacji, zobacz [metadane właściwości szablonu](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+-   Obsługa dziedziczenia wartości właściwości, a inne flagi w metadanych, które pomagają warunki raport o właściwościach framework usług, takich jak powiązania danych, stylów lub implementacji środowiska układu. Aby uzyskać więcej informacji, zobacz [metadane właściwości szablonu](framework-property-metadata.md).  
   
 -   Nie dziedziczą, dostęp do modyfikacji systemu układu (takie jak <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>). Układ systemu implementacje są dostępne tylko na <xref:System.Windows.FrameworkElement>. Jednak dziedziczy <xref:System.Windows.FrameworkElement.OnPropertyChanged%2A> przesłonięcie może wykryć zmiany właściwości, które mają wpływ na układ i zgłoś je do dowolnej zawartości hostów.  
   
- Modele zawartości są opisane dla różnych klas. Model zawartości dla klasy jest jeden składnik to możliwe, należy rozważyć, jeśli chcesz znaleźć odpowiedniej klasy, aby dziedziczyć. Aby uzyskać więcej informacji, zobacz [Model zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
+ Modele zawartości są opisane dla różnych klas. Model zawartości dla klasy jest jeden składnik to możliwe, należy rozważyć, jeśli chcesz znaleźć odpowiedniej klasy, aby dziedziczyć. Aby uzyskać więcej informacji, zobacz [Model zawartości WPF](../controls/wpf-content-model.md).  
   
 <a name="other_base_classes"></a>   
 ## <a name="other-base-classes"></a>Innych klas bazowych  
   
 ### <a name="dispatcherobject"></a>DispatcherObject  
- <xref:System.Windows.Threading.DispatcherObject> zapewnia obsługę [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wątkowości, model i włącza wszystkie obiekty stworzone dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje do skojarzenia z <xref:System.Windows.Threading.Dispatcher>. Nawet jeśli pochodzi od <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject>, lub <xref:System.Windows.Media.Visual>, należy rozważyć, wynikające z <xref:System.Windows.Threading.DispatcherObject> Aby uzyskać temu modelu wątkowości. Aby uzyskać więcej informacji, zobacz [Model wątkowy](../../../../docs/framework/wpf/advanced/threading-model.md).  
+ <xref:System.Windows.Threading.DispatcherObject> zapewnia obsługę [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wątkowości, model i włącza wszystkie obiekty stworzone dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje do skojarzenia z <xref:System.Windows.Threading.Dispatcher>. Nawet jeśli pochodzi od <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject>, lub <xref:System.Windows.Media.Visual>, należy rozważyć, wynikające z <xref:System.Windows.Threading.DispatcherObject> Aby uzyskać temu modelu wątkowości. Aby uzyskać więcej informacji, zobacz [Model wątkowy](threading-model.md).  
   
 ### <a name="visual"></a>Wizualne  
- <xref:System.Windows.Media.Visual> implementuje koncepcji 2D obiektu, który zwykle wymaga wizualnej prezentacji w przybliżeniu prostokątny obszar. Rzeczywiste renderowanie <xref:System.Windows.Media.Visual> odbywa się w innych klas (nie jest ona niezależna), ale <xref:System.Windows.Media.Visual> klasy zawiera znany typ, który jest używany przez procesy renderowania na różnych poziomach. <xref:System.Windows.Media.Visual> Test trafienia implementuje, ale nie uwidacznia zdarzenia, które zgłaszanie testowania trafień alarmów (zostały one <xref:System.Windows.UIElement>). Aby uzyskać więcej informacji, zobacz [programowanie warstwy Visual](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming.md).  
+ <xref:System.Windows.Media.Visual> implementuje koncepcji 2D obiektu, który zwykle wymaga wizualnej prezentacji w przybliżeniu prostokątny obszar. Rzeczywiste renderowanie <xref:System.Windows.Media.Visual> odbywa się w innych klas (nie jest ona niezależna), ale <xref:System.Windows.Media.Visual> klasy zawiera znany typ, który jest używany przez procesy renderowania na różnych poziomach. <xref:System.Windows.Media.Visual> Test trafienia implementuje, ale nie uwidacznia zdarzenia, które zgłaszanie testowania trafień alarmów (zostały one <xref:System.Windows.UIElement>). Aby uzyskać więcej informacji, zobacz [programowanie warstwy Visual](../graphics-multimedia/visual-layer-programming.md).  
   
 ### <a name="freezable"></a>Freezable  
- <xref:System.Windows.Freezable> symuluje niezmienności w obiektu modyfikowalnego przez nowe możliwości generowania kopii obiektu, gdy niezmienne obiektu jest wymagane lub konieczne ze względu na wydajność. <xref:System.Windows.Freezable> Typ zapewnia wspólnej podstawy dla niektórych elementów graficznych, takich jak geometrii i pędzle, a także animacji. Należy zwrócić uwagę <xref:System.Windows.Freezable> nie jest <xref:System.Windows.Media.Visual>; może on przechowywać właściwości, które stają się właściwości podrzędnych podczas <xref:System.Windows.Freezable> jest stosowany do wypełnienia wartości właściwości innego obiektu, i te właściwości mogą mieć wpływ na renderowania. Aby uzyskać więcej informacji, zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ <xref:System.Windows.Freezable> symuluje niezmienności w obiektu modyfikowalnego przez nowe możliwości generowania kopii obiektu, gdy niezmienne obiektu jest wymagane lub konieczne ze względu na wydajność. <xref:System.Windows.Freezable> Typ zapewnia wspólnej podstawy dla niektórych elementów graficznych, takich jak geometrii i pędzle, a także animacji. Należy zwrócić uwagę <xref:System.Windows.Freezable> nie jest <xref:System.Windows.Media.Visual>; może on przechowywać właściwości, które stają się właściwości podrzędnych podczas <xref:System.Windows.Freezable> jest stosowany do wypełnienia wartości właściwości innego obiektu, i te właściwości mogą mieć wpływ na renderowania. Aby uzyskać więcej informacji, zobacz [Przegląd obiektów Freezable](freezable-objects-overview.md).  
   
  <xref:System.Windows.Media.Animation.Animatable>  
   
  <xref:System.Windows.Media.Animation.Animatable> jest <xref:System.Windows.Freezable> pochodne klasy, która specjalnie przy użyciu właściwości nonanimated dodaje warstwę kontroli animacji i niektóre elementy członkowskie narzędzia, dzięki czemu można odróżnić obecnie animowany właściwości.  
   
-### <a name="control"></a>Formant  
+### <a name="control"></a>formant  
  <xref:System.Windows.Controls.Control> jest zamierzony klasę bazową dla typu obiektu, który różnorodnie jest określane jako kontrola lub składników, w zależności od technologii. Ogólnie rzecz biorąc [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasy kontrolki są klas, które reprezentują kontrolkę interfejsu użytkownika albo bezpośrednio ściśle uczestniczyć w kompozycji formantu. Funkcje podstawowe, <xref:System.Windows.Controls.Control> umożliwia jest szablonów kontrolki.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Controls.Control>
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
-- [Architektura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)
+- [Tworzenie kontrolek — omówienie](../controls/control-authoring-overview.md)
+- [Architektura WPF](wpf-architecture.md)

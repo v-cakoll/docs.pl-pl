@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527331"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379110"
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
 Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegany wartość rzeczywista dla aplikacji Windows Presentation Foundation (WPF).  
@@ -24,7 +24,7 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
  Bez wyłączania zasilania uruchamiania występuje, gdy większość na stronach głównych składników środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego zostały już załadowane w pamięci, co pozwala zaoszczędzić czas dostępu drogich dysków. Właśnie dlatego aplikacji zarządzanej rozpoczyna się szybciej, gdy jest uruchamiany po raz drugi.  
   
 ## <a name="implement-a-splash-screen"></a>Implementowanie ekran powitalny  
- W przypadkach, gdy jest istotne, nieuniknione opóźnienie między uruchomieniem aplikacji oraz wyświetlanie pierwszego interfejsu użytkownika, optymalizowanie czasu uruchamiania postrzegany przy użyciu *ekran powitalny*. Ta metoda Wyświetla obraz niemal natychmiast po użytkownik uruchamia aplikację. Gdy aplikacja jest gotowa do wyświetlenia jego pierwszego interfejsu użytkownika, stopniowo zmienia się na ekranie powitalnym. Począwszy od [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], możesz użyć <xref:System.Windows.SplashScreen> klasy do zaimplementowania ekran powitalny. Aby uzyskać więcej informacji, zobacz [dodać ekran powitalny do aplikacji WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ W przypadkach, gdy jest istotne, nieuniknione opóźnienie między uruchomieniem aplikacji oraz wyświetlanie pierwszego interfejsu użytkownika, optymalizowanie czasu uruchamiania postrzegany przy użyciu *ekran powitalny*. Ta metoda Wyświetla obraz niemal natychmiast po użytkownik uruchamia aplikację. Gdy aplikacja jest gotowa do wyświetlenia jego pierwszego interfejsu użytkownika, stopniowo zmienia się na ekranie powitalnym. Począwszy od [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], możesz użyć <xref:System.Windows.SplashScreen> klasy do zaimplementowania ekran powitalny. Aby uzyskać więcej informacji, zobacz [dodać ekran powitalny do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Możesz również wdrożyć ekranu powitalnego za pomocą natywnego grafiki Win32. Wyświetlanie implementacji przed <xref:System.Windows.Application.Run%2A> metoda jest wywoływana.  
   
@@ -53,7 +53,7 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
  Należy wziąć pod uwagę, unikając konfiguracji aplikacji. Na przykład jeśli aplikacja ma prostej konfiguracji wymagań i celów czasu uruchamiania ściśle, wpisy rejestru lub prostego pliku INI może być szybsze zamiast uruchamiania.  
   
 ## <a name="utilize-the-gac"></a>Korzystanie z pamięci podręcznej GAC  
- Zestaw nie jest zainstalowany w globalnej pamięci podręcznej zestawów (GAC), czy opóźnienia spowodowane tym, że weryfikacja skrótu zestawów o silnych nazwach i sprawdzania poprawności obrazów Ngen obraz natywny dla tego zestawu znajduje się na komputerze. Weryfikacja silnej nazwy jest pomijana dla wszystkich zestawów zainstalowane w GAC. Aby uzyskać więcej informacji, zobacz [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+ Zestaw nie jest zainstalowany w globalnej pamięci podręcznej zestawów (GAC), czy opóźnienia spowodowane tym, że weryfikacja skrótu zestawów o silnych nazwach i sprawdzania poprawności obrazów Ngen obraz natywny dla tego zestawu znajduje się na komputerze. Weryfikacja silnej nazwy jest pomijana dla wszystkich zestawów zainstalowane w GAC. Aby uzyskać więcej informacji, zobacz [Gacutil.exe (Global Assembly Cache Tool)](../../tools/gacutil-exe-gac-tool.md).  
   
 ## <a name="use-ngenexe"></a>Użyj Ngen.exe  
  Należy rozważyć użycie Native Image Generator (Ngen.exe) w swojej aplikacji. Użycie Ngen.exe oznacza, handlem użycia procesora CPU, więcej dostępu do dysku, ponieważ może być większe od obrazu MSIL obrazu natywnego wygenerowanego przez Ngen.exe.  
@@ -67,14 +67,14 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
 ### <a name="ngen-and-clickonce"></a>Ngen i technologii ClickOnce  
  Sposób, którą chcesz wdrożyć aplikację można również ustawić różnica w czasie ładowania. [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] wdrożenie aplikacji nie obsługuje polecenia Ngen. Jeśli zdecydujesz się użyć Ngen.exe dla aplikacji, należy użyć innego mechanizmu wdrażania, takich jak Instalator Windows.  
   
- Aby uzyskać więcej informacji, zobacz [Ngen.exe (Generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Aby uzyskać więcej informacji, zobacz [Ngen.exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>Rebasing i konflikty adresów biblioteki DLL  
  Użycie Ngen.exe, należy pamiętać, że zmienianie bazy może wystąpić, gdy obrazy natywne są ładowane do pamięci. Jeśli biblioteka DLL nie jest ładowany w swoim preferowanym adresem bazowym, ponieważ ten zakres adresów jest już przydzielony, moduł ładujący Windows załaduje go na inny adres, który może być czasochłonna operacja.  
   
  Aby sprawdzić, czy istnieją moduły, w których wszystkie strony są prywatne, można użyć narzędzia wirtualnego adresu zrzutu (Vadump.exe). Jeśli jest to możliwe, moduł może została zmieniona na inny adres. W związku z tym nie można współużytkować jego stron.  
   
- Aby uzyskać więcej informacji o tym, jak ustawić adres podstawowy, zobacz [Ngen.exe (Generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Aby uzyskać więcej informacji o tym, jak ustawić adres podstawowy, zobacz [Ngen.exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="optimize-authenticode"></a>Optymalizowanie Authenticode  
  Weryfikacja Authenticode dodaje do czasu uruchamiania. Zestawy z podpisem Authenticode trzeba można sprawdzić przy użyciu urzędu certyfikacji (CA). Ta weryfikacja może być czasochłonne, ponieważ może wymagać, nawiązywanie połączenia z siecią kilka razy pobieranie bieżącej listy odwołania certyfikatów. Zapewnia się także pewność, że pełny łańcuch prawidłowe certyfikaty na ścieżce zaufany główny urząd certyfikacji. To może dokonywać translacji na kilka sekund opóźnienia podczas ładowania zestawu.  
@@ -91,7 +91,7 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
 </configuration>  
 ```  
   
- Aby uzyskać więcej informacji, zobacz [ \<generatePublisherEvidence > Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Aby uzyskać więcej informacji, zobacz [ \<generatePublisherEvidence > Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Porównanie wydajności w systemie Windows Vista  
  Menedżer pamięci w Windows Vista ma technologia o nazwie wstępne ładowanie do pamięci. Wstępne ładowanie do pamięci analizuje wzorce użycia pamięci wraz z upływem czasu, aby określić zawartość pamięci optymalne dla określonego użytkownika. Działa ona nieprzerwanie do obsługi tej zawartości przez cały czas.  
@@ -127,6 +127,6 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [Dodawanie ekranu powitalnego do aplikacji WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [Dodawanie ekranu powitalnego do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

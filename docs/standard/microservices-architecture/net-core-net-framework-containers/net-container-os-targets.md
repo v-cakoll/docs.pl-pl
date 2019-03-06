@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ja
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479870"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374911"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Jakiego systemu operacyjnego docelowo z kontenerami .NET
 
@@ -21,7 +21,7 @@ W przypadku systemu Linux dystrybucje wielu są dostępne i jest obsługiwany w 
 
 W rysunek 3-1 można zobaczyć możliwe wersji systemu operacyjnego, w zależności od programu .NET framework używane.
 
-![Podczas wdrażania starszych aplikacji .NET Framework docelowa systemu Windows Server Core, zgodne ze starszych aplikacji i usług IIS, ma większy obraz. W przypadku wdrażania aplikacji .NET Core, można wskazać Windows Nano Server, który jest zoptymalizowany pod kątem chmury, używa Kestrel i jest mniejszy i rozpoczyna się szybciej. Można również przeznaczać systemu Linux, Debian Alpine i innych pomocniczych. Również używa Kestrel jest mniejszy i rozpoczyna się szybciej.](./media/image1.png)
+![Podczas wdrażania starszych aplikacji .NET Framework ma pod kątem systemu Windows Server Core, zgodne ze starszych aplikacji i usług IIS, ma większy obraz. W przypadku wdrażania aplikacji .NET Core, można wskazać Windows Nano Server, który jest zoptymalizowany pod kątem chmury, używa Kestrel i jest mniejszy i rozpoczyna się szybciej. Można również przeznaczać systemu Linux, Debian Alpine i innych pomocniczych. Również używa Kestrel jest mniejszy i rozpoczyna się szybciej.](./media/image1.png)
 
 **Rysunek 3-1.** Systemy operacyjne pod kątem w zależności od wersji programu .NET framework
 
@@ -57,6 +57,6 @@ Po dodaniu nazwy obrazu do pliku Dockerfile, można wybrać system operacyjny i 
 </tbody>
 </table>
 
->[!div class="step-by-step"]
->[Poprzednie](container-framework-choice-factors.md)
->[dalej](official-net-docker-images.md)
+> [!div class="step-by-step"]
+> [Poprzednie](container-framework-choice-factors.md)
+> [dalej](official-net-docker-images.md)

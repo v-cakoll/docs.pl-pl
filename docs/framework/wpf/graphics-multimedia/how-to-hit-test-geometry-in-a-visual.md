@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: 4faf7a131b688fd245c0e207c8bac0f077b06ed5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709055"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363803"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>Instrukcje: Przeprowadź test trafienia geometrii w Visual
 W tym przykładzie pokazano, jak przeprowadzić test trafień na obiekt wizualny, który składa się z co najmniej jeden <xref:System.Windows.Media.Geometry> obiektów.  
@@ -25,8 +25,8 @@ W tym przykładzie pokazano, jak przeprowadzić test trafień na obiekt wizualny
 > [!NOTE]
 >  W większości przypadków należy użyć <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> metodę pozwala ustalić, czy punkt przecina dowolne renderowanej zawartości wizualizacji.  
   
- [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
- [!code-vb[VisualsOverview#VisualsOverviewSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
+ [!code-csharp[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#visualsoverviewsnippet4)]
+ [!code-vb[VisualsOverview#VisualsOverviewSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#visualsoverviewsnippet4)]  
   
  <xref:System.Windows.Media.Geometry.FillContains%2A> Metodą jest przeciążona metoda, która pozwala na przeprowadzanie testu trafienia przy użyciu określonego <xref:System.Windows.Point> lub <xref:System.Windows.Media.Geometry>. Geometria jest malowania, obrysu można rozszerzyć poza granicami wypełnienia. W takim przypadku można wywołać <xref:System.Windows.Media.Geometry.StrokeContains%2A> oprócz <xref:System.Windows.Media.Geometry.FillContains%2A>.  
   
@@ -36,5 +36,5 @@ W tym przykładzie pokazano, jak przeprowadzić test trafień na obiekt wizualny
 >  W tym przykładzie nie bierze pod uwagę jakichkolwiek plików transformacji lub przycinania, które można stosować do geometrii. Ponadto w tym przykładzie nie będzie działać z kontrolkę ze stylem, ponieważ nie ma rysunki bezpośrednio związane z nią.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Test trafienia w warstwie wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
-- [Przeprowadzanie testu trafienia przy użyciu geometrii jako parametru](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)
+- [Test trafienia w warstwie wizualizacji](hit-testing-in-the-visual-layer.md)
+- [Przeprowadzanie testu trafienia przy użyciu geometrii jako parametru](how-to-hit-test-using-geometry-as-a-parameter.md)

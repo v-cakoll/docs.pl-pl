@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555792"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370764"
 ---
 # <a name="menu"></a>Menu
-A <xref:System.Windows.Controls.Menu> jest formant, który umożliwia hierarchiczna organizacja elementy skojarzone z poleceń lub procedury obsługi zdarzeń. Każdy <xref:System.Windows.Controls.Menu> może zawierać wiele <xref:System.Windows.Controls.MenuItem> kontrolki. Każdy <xref:System.Windows.Controls.MenuItem> można wywołać polecenia lub wywołanie `Click` obsługi zdarzeń. A <xref:System.Windows.Controls.MenuItem> może istnieć wiele <xref:System.Windows.Controls.MenuItem> elementy jako elementy podrzędne, tworzenie podmenu.  
+Element <xref:System.Windows.Controls.Menu> jest formant, który umożliwia hierarchiczna organizacja elementy związane z poleceń lub procedury obsługi zdarzeń. Każdy <xref:System.Windows.Controls.Menu> może zawierać więcej niż jednego <xref:System.Windows.Controls.MenuItem> kontrolki. Każdy <xref:System.Windows.Controls.MenuItem> można wywołać polecenie lub wywołaj `Click` programu obsługi zdarzeń. A <xref:System.Windows.Controls.MenuItem> mogą też istnieć wiele <xref:System.Windows.Controls.MenuItem> elementy jako elementy podrzędne, stanowiące podmenu.  
   
- Na poniższej ilustracji przedstawiono trzy różne stany formantu menu. Stan domyślny jest podczas żadnego urządzenia, takie jak wskaźnik myszy znajduje się na <xref:System.Windows.Controls.Menu>. Stan aktywny występuje, gdy wskaźnik myszy jest umieszczony nad <xref:System.Windows.Controls.Menu> i stan naciśnięcia występuje po kliknięciu przycisku myszy nad <xref:System.Windows.Controls.Menu>.  
+ Poniższa ilustracja przedstawia trzy różne stany formant menu. Stan domyślny to podczas żadnego urządzenia, np. wskaźnik myszy znajduje się na <xref:System.Windows.Controls.Menu>. Stan aktywny występuje, gdy wskaźnik myszy znajduje się na <xref:System.Windows.Controls.Menu> i stan naciśnięcia występuje po kliknięciu przycisku myszy nad <xref:System.Windows.Controls.Menu>.  
   
- ![Stany menu](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
+ ![Stany menu](./media/ss-ctl-menu.gif "SS_CTL_menu")  
 Menu w różnych stanach  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie menu](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [Omówienie menu](menu-overview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Menu>  

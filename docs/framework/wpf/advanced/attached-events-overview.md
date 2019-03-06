@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682959"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371674"
 ---
 # <a name="attached-events-overview"></a>Przegląd Załączone zdarzenia
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Definiuje składnika języka i typu zdarzenia o nazwie *dołączone zdarzenie*. Pojęcie dołączone zdarzenie umożliwia dodanie obsługi dla określonego zdarzenia do dowolnego elementu, a nie do elementu, który faktycznie definiuje lub dziedziczy zdarzenia. W tym przypadku obiekt potencjalnie podnoszonego zdarzenia ani docelowym wystąpienia obsługi definiuje lub w przeciwnym razie jego "właścicielem" zdarzenie.  
@@ -26,7 +26,7 @@ ms.locfileid: "54682959"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że użytkownik przeczytał [Przegląd zdarzeń kierowane](../../../../docs/framework/wpf/advanced/routed-events-overview.md) i [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ W tym temacie założono, że użytkownik przeczytał [Przegląd zdarzeń kierowane](routed-events-overview.md) i [Przegląd XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>Dołączone zdarzenie składni  
@@ -36,7 +36,7 @@ ms.locfileid: "54682959"
   
  Na przykład Oto [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] składnia dołączanie obsługi niestandardowych `NeedsCleaning` dołączone zdarzenie:  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Uwaga `aqua:` prefiks; prefiks jest niezbędne w tym przypadku ponieważ dołączone zdarzenie niestandardowe zdarzenie, które pochodzą z niestandardowych xmlns zamapowanego.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54682959"
   
  Ogólnie rzecz biorąc [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dołączone zdarzenie nie jest bardzo różnią się od [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia trasowanego. Różnice są, jak pochodzi zdarzenie oraz jego uwidaczniania przez klasę jako składową (która także ma wpływ na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Składnia programu obsługi).  
   
- Jednak jak wspomniano wcześniej, istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dołączone zdarzenia nie są szczególnie przeznaczone do obsługi w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Częściej celem zdarzenia jest włączyć element złożone zgłosić stan elementu nadrzędnego w składania, w którym zdarzenie jest zazwyczaj zgłaszany w kodzie i również opiera się na obsługę w klasie nadrzędnej odpowiednie klasy. Na przykład elementów w obrębie <xref:System.Windows.Controls.Primitives.Selector> powinny zgłaszać dołączonego <xref:System.Windows.Controls.Primitives.Selector.Selected> zdarzenie, które jest następnie klasy obsługiwane przez <xref:System.Windows.Controls.Primitives.Selector> klasy, a następnie potencjalnie przekonwertowane przez <xref:System.Windows.Controls.Primitives.Selector> klasy do innego zdarzenia trasowanego <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Aby uzyskać więcej informacji na temat obsługi klasy i zdarzenia trasowane, zobacz [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Jednak jak wspomniano wcześniej, istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dołączone zdarzenia nie są szczególnie przeznaczone do obsługi w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Częściej celem zdarzenia jest włączyć element złożone zgłosić stan elementu nadrzędnego w składania, w którym zdarzenie jest zazwyczaj zgłaszany w kodzie i również opiera się na obsługę w klasie nadrzędnej odpowiednie klasy. Na przykład elementów w obrębie <xref:System.Windows.Controls.Primitives.Selector> powinny zgłaszać dołączonego <xref:System.Windows.Controls.Primitives.Selector.Selected> zdarzenie, które jest następnie klasy obsługiwane przez <xref:System.Windows.Controls.Primitives.Selector> klasy, a następnie potencjalnie przekonwertowane przez <xref:System.Windows.Controls.Primitives.Selector> klasy do innego zdarzenia trasowanego <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Aby uzyskać więcej informacji na temat obsługi klasy i zdarzenia trasowane, zobacz [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Definiowanie zdarzeń dołączonych jako zdarzenia trasowanego  
@@ -80,10 +80,10 @@ ms.locfileid: "54682959"
   
  Na przykład, poniższy kod definiuje `NeedsCleaning` dołączone zdarzenie w klasie właściciela `Aquarium`przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dołączone zdarzenia strategii deklarowania dołączone zdarzenie jako zdarzenie trasowane.  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Należy pamiętać, że metoda ma być używany do ustanawiania pole identyfikatora dołączone zdarzenie <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, jest faktycznie tej samej metody, które jest używane do rejestrowania zdarzenia trasowanego niedołączonych. Zdarzenia dołączone a zdarzenia trasowane wszystkie są rejestrowane do scentralizowanego magazynu wewnętrznego. Ta implementacja magazynu zdarzeń umożliwia uwagę koncepcyjny "zdarzenia, jak interfejs", opisanej w [Przegląd zdarzeń kierowane](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Należy pamiętać, że metoda ma być używany do ustanawiania pole identyfikatora dołączone zdarzenie <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, jest faktycznie tej samej metody, które jest używane do rejestrowania zdarzenia trasowanego niedołączonych. Zdarzenia dołączone a zdarzenia trasowane wszystkie są rejestrowane do scentralizowanego magazynu wewnętrznego. Ta implementacja magazynu zdarzeń umożliwia uwagę koncepcyjny "zdarzenia, jak interfejs", opisanej w [Przegląd zdarzeń kierowane](routed-events-overview.md).  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>Wywoływanie WPF dołączone zdarzenie  
@@ -92,6 +92,6 @@ ms.locfileid: "54682959"
  Jednak jeśli definiujesz dołączone zdarzenia niestandardowego na podstawie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń dołączonych model oparty na <xref:System.Windows.RoutedEvent>, możesz użyć <xref:System.Windows.UIElement.RaiseEvent%2A> aby wywołać zdarzenie dołączonych za pomocą dowolnego <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement>. Podnoszenie zdarzenia trasowanego (dołączone, lub nie) wymaga zadeklarujesz konkretnego elementu w drzewie elementów jako źródło zdarzenia; to źródło jest zgłaszana jako <xref:System.Windows.UIElement.RaiseEvent%2A> obiektu wywołującego. Określanie, który element jest zgłaszana jako źródła w drzewie odpowiada z usługą  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+- [Szczegóły składni XAML](xaml-syntax-in-detail.md)
+- [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 80b15f076dfe7a7bbbe7e28d9d68f01255e47202
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b0edd459deaf68040e05209c6ecf2cb7cae12e8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828534"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369958"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>Metoda ISOSDacInterface::GetModuleData
 
@@ -39,9 +39,11 @@ HRESULT GetModuleData(
 
 ### <a name="parameters"></a>Parametry
 
-`moduleAddr` [in] Adres modułu można pobrać informacji o.
+`moduleAddr`\
+[in] Adres modułu można pobrać informacji o.
 
-`data` [out] [Struktury DacpModuleData](dacpmoduledata-structure.md) do przechowywania informacji załadowanym module.
+`data`\
+[out] [Struktury DacpModuleData](dacpmoduledata-structure.md) do przechowywania informacji załadowanym module.
 
 
 ## <a name="remarks"></a>Uwagi
@@ -57,5 +59,5 @@ Podana metoda jest częścią `ISOSDacInterface` interfejs i odnosi się do 13 g
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfejs ISOSDacInterface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Debugowanie](index.md)
+- [Interfejs ISOSDacInterface](isosdacinterface-interface.md)

@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372207"
 ---
 # <a name="resources-wpf"></a>Zasoby (WPF)
-Zasób jest obiekt, który mogą być ponownie używane w różnych miejscach w aplikacji. WPF obsługuje różnych typów zasobów. Te zasoby są głównie dwa typy zasobów: XAML zasobów i plików danych zasobów. Przykładami zasobów XAML pędzle i style. Pliki danych zasobów są pliki inne niż wykonywalne danych, które wymaga aplikacji.  
+Zasób jest obiektem, który może być ponownie używane w różnych miejscach w aplikacji. WPF obsługuje różnych typów zasobów. Te zasoby są głównie dwa typy zasobów: Zasoby XAML i pliki danych zasobów. Przykładami zasobów XAML pędzle i stylów. Pliki danych zasobów są plikami dane niewykonywalne, które aplikacja musi.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Zasoby XAML](xaml-resources.md)  
+ [Zasoby aplikacji WPF, zawartość i pliki danych](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [Pakowanie URI w WPF](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.ResourceDictionary>  
   
- [StaticResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [StaticResource, rozszerzenie znaczników](staticresource-markup-extension.md)  
   
- [DynamicResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [DynamicResource, rozszerzenie znaczników](dynamicresource-markup-extension.md)  
   
- [x:Key, dyrektywa](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [x:Key, dyrektywa](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [XAML w WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [XAML w WPF](xaml-in-wpf.md)

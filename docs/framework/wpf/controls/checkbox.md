@@ -7,25 +7,25 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550763"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377273"
 ---
-# <a name="checkbox"></a><span data-ttu-id="3e4da-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="3e4da-102">CheckBox</span></span>
-<span data-ttu-id="3e4da-103">Można użyć <xref:System.Windows.Controls.CheckBox> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aplikacji w celu reprezentowania opcje, które użytkownik można zaznaczyć lub wyczyścić.</span><span class="sxs-lookup"><span data-stu-id="3e4da-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="3e4da-104">Można użyć jednego pola wyboru lub w przypadku grupowania dwóch lub więcej pól wyboru.</span><span class="sxs-lookup"><span data-stu-id="3e4da-104">You can use a single check box or you can group two or more check boxes.</span></span>  
+# <a name="checkbox"></a><span data-ttu-id="03e41-102">CheckBox</span><span class="sxs-lookup"><span data-stu-id="03e41-102">CheckBox</span></span>
+<span data-ttu-id="03e41-103">Możesz użyć <xref:System.Windows.Controls.CheckBox> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aplikacji w taki sposób, aby przedstawić opcje, które użytkownik może zaznaczyć lub wyczyścić.</span><span class="sxs-lookup"><span data-stu-id="03e41-103">You can use a <xref:System.Windows.Controls.CheckBox> in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] of your application to represent options that a user can select or clear.</span></span> <span data-ttu-id="03e41-104">Można użyć jednego pola wyboru, lub grupować dwóch lub więcej pól wyboru.</span><span class="sxs-lookup"><span data-stu-id="03e41-104">You can use a single check box or you can group two or more check boxes.</span></span>  
   
- <span data-ttu-id="3e4da-105">Na poniższym rysunku przedstawiono różne <xref:System.Windows.Controls.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="3e4da-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
+ <span data-ttu-id="03e41-105">Na poniższym rysunku przedstawiono różne stany <xref:System.Windows.Controls.CheckBox>.</span><span class="sxs-lookup"><span data-stu-id="03e41-105">The following graphic shows the different states of a <xref:System.Windows.Controls.CheckBox>.</span></span>  
   
- <span data-ttu-id="3e4da-106">![Stany wyboru](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="3e4da-106">![CheckBox states](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
-<span data-ttu-id="3e4da-107">Formanty pola wyboru w różnych stanach</span><span class="sxs-lookup"><span data-stu-id="3e4da-107">CheckBox controls in different states</span></span>  
+ <span data-ttu-id="03e41-106">![Stany pola wyboru](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span><span class="sxs-lookup"><span data-stu-id="03e41-106">![CheckBox states](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")</span></span>  
+<span data-ttu-id="03e41-107">Zaznacz pole wyboru kontrolek w różnych stanach</span><span class="sxs-lookup"><span data-stu-id="03e41-107">CheckBox controls in different states</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="3e4da-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="3e4da-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="03e41-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="03e41-108">Reference</span></span>  
  <xref:System.Windows.Controls.CheckBox>  
   <xref:System.Windows.Controls.RadioButton>  
   <xref:System.Windows.Controls.Primitives.ButtonBase>  
   <xref:System.Windows.Controls.Primitives.RepeatButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="3e4da-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="3e4da-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="03e41-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="03e41-109">Related Sections</span></span>

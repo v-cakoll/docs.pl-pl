@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Button
 - Button control [WPF]
 ms.assetid: a9d8f5a5-c98c-463e-808a-5a4e63173098
-ms.openlocfilehash: e1f40edb88ce1d208ca97b29e4c7daaf0c82ed35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 277338ae11090fa3701135cd0ac761da0a887255
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551703"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362724"
 ---
-# <a name="button"></a><span data-ttu-id="7763a-102">Przycisk</span><span class="sxs-lookup"><span data-stu-id="7763a-102">Button</span></span>
-<span data-ttu-id="7763a-103">A <xref:System.Windows.Controls.Button> kontroli reaguje na dane wejściowe użytkownika z myszy, klawiatury, Pióro, lub inne urządzenie wejściowe i zgłasza <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="7763a-103">A <xref:System.Windows.Controls.Button> control reacts to user input from a mouse, keyboard, stylus, or other input device and raises a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span> <span data-ttu-id="7763a-104">A <xref:System.Windows.Controls.Button> jest podstawowy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] składnik, który może zawierać prostej zawartości, takich jak tekst i może również zawierać złożonych zawartości, takich jak obrazy i <xref:System.Windows.Controls.Panel> kontrolki.</span><span class="sxs-lookup"><span data-stu-id="7763a-104">A <xref:System.Windows.Controls.Button> is a basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] component that can contain simple content, such as text, and can also contain complex content, such as images and <xref:System.Windows.Controls.Panel> controls.</span></span>  
+# <a name="button"></a><span data-ttu-id="65cef-102">Przycisk</span><span class="sxs-lookup"><span data-stu-id="65cef-102">Button</span></span>
+<span data-ttu-id="65cef-103">A <xref:System.Windows.Controls.Button> kontrolka reaguje na dane wejściowe użytkownika z myszy, klawiatury, Pióro, lub inne urządzenie wejściowe i generuje <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="65cef-103">A <xref:System.Windows.Controls.Button> control reacts to user input from a mouse, keyboard, stylus, or other input device and raises a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event.</span></span> <span data-ttu-id="65cef-104">A <xref:System.Windows.Controls.Button> to podstawowy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] składnik, który może zawierać zawartość, proste, np. tekstu i może również zawierać złożonych zawartość, taką jak obrazy i <xref:System.Windows.Controls.Panel> kontrolki.</span><span class="sxs-lookup"><span data-stu-id="65cef-104">A <xref:System.Windows.Controls.Button> is a basic [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] component that can contain simple content, such as text, and can also contain complex content, such as images and <xref:System.Windows.Controls.Panel> controls.</span></span>  
   
- <span data-ttu-id="7763a-105">![Przycisk stanów](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span><span class="sxs-lookup"><span data-stu-id="7763a-105">![Button states](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span></span>  
+ <span data-ttu-id="65cef-105">![Stany przycisku](./media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span><span class="sxs-lookup"><span data-stu-id="65cef-105">![Button states](./media/ss-ctl-buttons.bmp "SS_CTL_buttons")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="7763a-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="7763a-106">In This Section</span></span>  
- [<span data-ttu-id="7763a-107">Tworzenie przycisku mającego obraz</span><span class="sxs-lookup"><span data-stu-id="7763a-107">Create a Button That Has an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-button-that-has-an-image.md)  
+## <a name="in-this-section"></a><span data-ttu-id="65cef-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="65cef-106">In This Section</span></span>  
+ [<span data-ttu-id="65cef-107">Tworzenie przycisku mającego obraz</span><span class="sxs-lookup"><span data-stu-id="65cef-107">Create a Button That Has an Image</span></span>](how-to-create-a-button-that-has-an-image.md)  
   
-## <a name="reference"></a><span data-ttu-id="7763a-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="7763a-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="65cef-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="65cef-108">Reference</span></span>  
  <xref:System.Windows.Controls.Button>  
  <xref:System.Windows.Controls.Primitives.ButtonBase>  
  <xref:System.Windows.Controls.RadioButton>  

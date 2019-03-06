@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a6596807b98e6c8b8624b5df18f78dbf8d0711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359695"
 ---
-# <a name="icordebugmodule2resolveassembly-method"></a><span data-ttu-id="8fe18-102">ICorDebugModule2::ResolveAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="8fe18-102">ICorDebugModule2::ResolveAssembly Method</span></span>
-<span data-ttu-id="8fe18-103">Usuwa zestaw odwołuje się token określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="8fe18-103">Resolves the assembly referenced by the specified metadata token.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="8fe18-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8fe18-104">Syntax</span></span>  
-  
-```  
-HRESULT ResolveAssembly (  
-    [in]  mdToken             tkAssemblyRef,  
-    [out] ICorDebugAssembly   **ppAssembly  
-);  
-```  
-  
-#### <a name="parameters"></a><span data-ttu-id="8fe18-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8fe18-105">Parameters</span></span>  
- `tkAsemblyRef`  
- <span data-ttu-id="8fe18-106">[in] `mdToken` Wartość, która odwołuje się do zestawu.</span><span class="sxs-lookup"><span data-stu-id="8fe18-106">[in] An `mdToken` value that references the assembly.</span></span>  
-  
- `ppAssembly`  
- <span data-ttu-id="8fe18-107">[out] Wskaźnik do adresu ICorDebugAssembly obiekt, który reprezentuje zestaw.</span><span class="sxs-lookup"><span data-stu-id="8fe18-107">[out] A pointer to the address of an ICorDebugAssembly object that represents the assembly.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="8fe18-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8fe18-108">Remarks</span></span>  
- <span data-ttu-id="8fe18-109">Jeśli zestaw nie jest już załadowany podczas `ResolveAssembly` jest nazywany HRESULT zostanie zwrócona wartość CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.</span><span class="sxs-lookup"><span data-stu-id="8fe18-109">If the assembly is not already loaded when `ResolveAssembly` is called, an HRESULT value of CORDBG_E_CANNOT_RESOLVE_ASSEMBLY is returned.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="8fe18-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8fe18-110">Requirements</span></span>  
- <span data-ttu-id="8fe18-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8fe18-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="8fe18-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8fe18-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="8fe18-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8fe18-113">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="8fe18-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8fe18-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+# <a name="icordebugmodule2resolveassembly-method"></a><span data-ttu-id="8bd0d-102">ICorDebugModule2::ResolveAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="8bd0d-102">ICorDebugModule2::ResolveAssembly Method</span></span>
+
+<span data-ttu-id="8bd0d-103">Usuwa zestaw odwołuje się token określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="8bd0d-103">Resolves the assembly referenced by the specified metadata token.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="8bd0d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8bd0d-104">Syntax</span></span>
+
+```cpp
+HRESULT ResolveAssembly (
+    [in]  mdToken             tkAssemblyRef,
+    [out] ICorDebugAssembly   **ppAssembly
+);
+```
+
+## <a name="parameters"></a><span data-ttu-id="8bd0d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8bd0d-105">Parameters</span></span>
+
+`tkAssemblyRef`\
+<span data-ttu-id="8bd0d-106">[in] `mdToken` Wartość, która odwołuje się do zestawu.</span><span class="sxs-lookup"><span data-stu-id="8bd0d-106">[in] An `mdToken` value that references the assembly.</span></span>
+
+`ppAssembly`\
+<span data-ttu-id="8bd0d-107">[out] Wskaźnik na adres obiektu ICorDebugAssembly, który reprezentuje zestaw.</span><span class="sxs-lookup"><span data-stu-id="8bd0d-107">[out] A pointer to the address of an ICorDebugAssembly object that represents the assembly.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="8bd0d-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8bd0d-108">Remarks</span></span>
+
+<span data-ttu-id="8bd0d-109">Jeśli zestaw nie jest już załadowany gdy `ResolveAssembly` nosi nazwę, wartość HRESULT zostanie zwrócona wartość CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.</span><span class="sxs-lookup"><span data-stu-id="8bd0d-109">If the assembly is not already loaded when `ResolveAssembly` is called, an HRESULT value of CORDBG_E_CANNOT_RESOLVE_ASSEMBLY is returned.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="8bd0d-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8bd0d-110">Requirements</span></span>
+
+<span data-ttu-id="8bd0d-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8bd0d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="8bd0d-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8bd0d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+<span data-ttu-id="8bd0d-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8bd0d-113">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="8bd0d-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bd0d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

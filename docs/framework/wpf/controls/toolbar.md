@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555432"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361931"
 ---
-# <a name="toolbar"></a><span data-ttu-id="16a51-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="16a51-102">ToolBar</span></span>
-<span data-ttu-id="16a51-103"><xref:System.Windows.Controls.ToolBar> Formant jest kontenerem dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji.</span><span class="sxs-lookup"><span data-stu-id="16a51-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
+# <a name="toolbar"></a><span data-ttu-id="d943d-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="d943d-102">ToolBar</span></span>
+<span data-ttu-id="d943d-103"><xref:System.Windows.Controls.ToolBar> Sterowania to kontener dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji.</span><span class="sxs-lookup"><span data-stu-id="d943d-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
   
- <span data-ttu-id="16a51-104">Na poniższych ilustracjach przedstawiono poziome i pionowe <xref:System.Windows.Controls.ToolBar> kontrolki.</span><span class="sxs-lookup"><span data-stu-id="16a51-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
+ <span data-ttu-id="d943d-104">Na poniższych ilustracjach przedstawiono poziome i pionowe <xref:System.Windows.Controls.ToolBar> kontrolki.</span><span class="sxs-lookup"><span data-stu-id="d943d-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
   
- <span data-ttu-id="16a51-105">![Poziomym pasku narzędzi](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="16a51-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
-<span data-ttu-id="16a51-106">Poziomy pasek narzędzi</span><span class="sxs-lookup"><span data-stu-id="16a51-106">Horizontal Toolbar</span></span>  
+ <span data-ttu-id="d943d-105">![Horizontal ToolBar](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="d943d-105">![Horizontal ToolBar](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
+<span data-ttu-id="d943d-106">Poziomy pasek narzędzi</span><span class="sxs-lookup"><span data-stu-id="d943d-106">Horizontal Toolbar</span></span>  
   
- <span data-ttu-id="16a51-107">![Pionowy pasek narzędzi](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="16a51-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
-<span data-ttu-id="16a51-108">Pionowy pasek narzędzi</span><span class="sxs-lookup"><span data-stu-id="16a51-108">Vertical Toolbar</span></span>  
+ <span data-ttu-id="d943d-107">![Vertical ToolBar](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="d943d-107">![Vertical ToolBar](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
+<span data-ttu-id="d943d-108">Pionowy pasek narzędzi</span><span class="sxs-lookup"><span data-stu-id="d943d-108">Vertical Toolbar</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="16a51-109">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="16a51-109">In This Section</span></span>  
- [<span data-ttu-id="16a51-110">ToolBar — omówienie</span><span class="sxs-lookup"><span data-stu-id="16a51-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [<span data-ttu-id="16a51-111">Kontrolki stylu na pasku ToolBar</span><span class="sxs-lookup"><span data-stu-id="16a51-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d943d-109">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d943d-109">In This Section</span></span>  
+ [<span data-ttu-id="d943d-110">ToolBar — omówienie</span><span class="sxs-lookup"><span data-stu-id="d943d-110">ToolBar Overview</span></span>](toolbar-overview.md)  
+  [<span data-ttu-id="d943d-111">Kontrolki stylu na pasku ToolBar</span><span class="sxs-lookup"><span data-stu-id="d943d-111">Style Controls on a ToolBar</span></span>](how-to-style-controls-on-a-toolbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="16a51-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="16a51-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d943d-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="d943d-112">Reference</span></span>  
  <xref:System.Windows.Controls.ToolBar>  
   <xref:System.Windows.Controls.ToolBarTray>  
   
-## <a name="related-sections"></a><span data-ttu-id="16a51-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="16a51-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="d943d-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="d943d-113">Related Sections</span></span>

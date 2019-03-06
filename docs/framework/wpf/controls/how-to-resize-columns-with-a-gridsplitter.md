@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GridSplitter control [WPF], resizing grid columns
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
-ms.openlocfilehash: 6bf09c41145aca8690fe3e80fd76a7a859713ad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93106ee25d98a056dfa5ba1a064c9803bebb072e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562144"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374131"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>Instrukcje: Zmień rozmiar kolumn przy użyciu GridSplitter
 W tym przykładzie przedstawiono sposób tworzenia pionowej <xref:System.Windows.Controls.GridSplitter> w celu rozpowszechniania odstęp między kolumnami w <xref:System.Windows.Controls.Grid> bez konieczności zmieniania wymiary <xref:System.Windows.Controls.Grid>.  
@@ -21,9 +21,9 @@ W tym przykładzie przedstawiono sposób tworzenia pionowej <xref:System.Windows
   
  Aby określić <xref:System.Windows.Controls.GridSplitter> który zmienia rozmiar przyległe kolumny w <xref:System.Windows.Controls.Grid>ustaw <xref:System.Windows.Controls.Grid.Column%2A> dołączona właściwość do jednej z kolumn, które chcesz zmienić. Jeśli Twoje <xref:System.Windows.Controls.Grid> ma więcej niż jeden wiersz, ustaw <xref:System.Windows.Controls.Grid.RowSpan%2A> dołączona właściwość liczby wierszy. Następnie ustaw <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> właściwości <xref:System.Windows.HorizontalAlignment.Left> lub <xref:System.Windows.HorizontalAlignment.Right> (wyrównanie, które można ustawić w zależności na dwie kolumny, które chcesz zmienić). Wreszcie, ustaw <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> właściwość <xref:System.Windows.VerticalAlignment.Stretch>.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterColumnOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterColumnOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplittercolumnoverlay)]  
   
- A <xref:System.Windows.Controls.GridSplitter> nie ma swoje własne kolumny mogą być zasłonięte przez inne formanty w czyste <xref:System.Windows.Controls.Grid>. Aby uzyskać więcej informacji na temat uniknąć tego problemu, zobacz [upewnij się, że GridSplitter jest widoczny](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ A <xref:System.Windows.Controls.GridSplitter> nie ma swoje własne kolumny mogą być zasłonięte przez inne formanty w czyste <xref:System.Windows.Controls.Grid>. Aby uzyskać więcej informacji na temat uniknąć tego problemu, zobacz [upewnij się, że GridSplitter jest widoczny](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
  **Jak utworzyć GridSplitter, która zajmuje kolumny**  
   
@@ -31,9 +31,9 @@ W tym przykładzie przedstawiono sposób tworzenia pionowej <xref:System.Windows
   
  Poniższy przykład pokazuje jak zdefiniować pionowej <xref:System.Windows.Controls.GridSplitter> , zajmuje kolumny i zmienia rozmiar kolumn po obu stronach.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Controls.GridSplitter>
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [Tematy z instrukcjami](gridsplitter-how-to-topics.md)

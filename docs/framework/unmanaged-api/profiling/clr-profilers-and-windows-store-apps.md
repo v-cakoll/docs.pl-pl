@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188823"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358551"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacje Windows Store
 
@@ -126,7 +126,7 @@ Po pierwsze należy poprosić użytkownika profilera aplikacji Windows Store, kt
 
 Możesz użyć <xref:Windows.Management.Deployment.PackageManager> klasy do generowania tej listy. `PackageManager` jest klasą Windows Runtime, która jest dostępna dla aplikacji klasycznych, a w rzeczywistości jest *tylko* dostępne dla aplikacji klasycznych.
 
-Poniższy przykład kodu z hipotetyczny interfejsu użytkownika Profiler zapisywane jako aplikacji klasycznej w języku C# yses `PackageManager` do generowania listy aplikacji Windows:
+Poniższy przykład kodu z hipotetyczny interfejsu użytkownika Profiler zapisywane jako aplikacji pulpitu w C# używa `PackageManager` do generowania listy aplikacji Windows:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ Rozważmy następujący fragment kodu:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ Istnieje kilka elementów, które będą potrzebne, aby uzyskać odpowiednie:
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ Dlatego należy wykonaj podobny do poniższego:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ Konsekwencje tego, jest zrozumieć różnice między wywołania synchroniczne i 
 
 Istotne jest, wywołania w wątkach, utworzonych przez Twój program profilujący są zawsze traktowane synchroniczne, nawet w przypadku tych wywołań z poza implementacją jednego z biblioteki DLL Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) metody. Co najmniej, które używane w przypadku. Teraz, gdy środowisko CLR wyłączył wątku Twój program profilujący do wątków zarządzanych ze względu na wywołania do [forcegc — metoda](icorprofilerinfo-forcegc-method.md), że wątek przestaje być uważany za swój profiler wątku. Jako takie, środowisko CLR wymusza bardziej rygorystyczne definicji co kwalifikuje się jako synchroniczne dla tego wątku — to znaczy, wywołanie muszą pochodzić od jednego z biblioteki DLL Profiler [ICorProfilerCallback](icorprofilercallback-interface.md) metody służące do kwalifikowania jako synchroniczna.
 
-Co to znaczy w praktyce? Większość [ICorProfilerInfo](icorprofilerinfo-interface.md) metody są tylko bezpieczne być wywoływana synchronicznie i natychmiast nie powiedzie się inaczej. Jeśli biblioteka DLL Profiler używa usługi [forcegc — metoda](icorprofilerinfo-forcegc-method.md) wątku dla innych wywołań dokonanych w zazwyczaj na utworzone przez profiler wątków (na przykład, aby [requestprofilerdetach —](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit —](icorprofilerinfo4-requestrejit-method.md), lub [requestrevert —](icorprofilerinfo4-requestrevert-method.md)), możesz zacząć występują problemy. Nawet funkcji asynchronicznej bezpiecznego takich jak [dostacksnapshot —](icorprofilerinfo2-dostacksnapshot-method.md) ma specjalne reguły, jeśli są wywoływane z wątków zarządzanych. (Wpis w blogu [przechodzenie po stosie Profiler: podstawy i nowszych](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) Aby uzyskać więcej informacji.)
+Co to znaczy w praktyce? Większość [ICorProfilerInfo](icorprofilerinfo-interface.md) metody są tylko bezpieczne być wywoływana synchronicznie i natychmiast nie powiedzie się inaczej. Jeśli biblioteka DLL Profiler używa usługi [forcegc — metoda](icorprofilerinfo-forcegc-method.md) wątku dla innych wywołań dokonanych w zazwyczaj na utworzone przez profiler wątków (na przykład, aby [requestprofilerdetach —](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit —](icorprofilerinfo4-requestrejit-method.md), lub [requestrevert —](icorprofilerinfo4-requestrevert-method.md)), możesz zacząć występują problemy. Nawet funkcji asynchronicznej bezpiecznego takich jak [dostacksnapshot —](icorprofilerinfo2-dostacksnapshot-method.md) ma specjalne reguły, jeśli są wywoływane z wątków zarządzanych. (Wpis w blogu [przechodzenie po stosie Profiler: Podstawy i nowszych](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) Aby uzyskać więcej informacji.)
 
 Dlatego zaleca się, który wątek Profiler DLL tworzy wywołanie [forcegc — metoda](icorprofilerinfo-forcegc-method.md) powinny być używane *tylko* na potrzeby wyzwalania wykazów globalnych i następnie odpowiadanie na wywołania zwrotne GC. Nie należy wywołać profilowania interfejsu API do wykonania innych zadań, takich jak stos próbkowania lub odłączanie.
 
@@ -398,7 +398,7 @@ Jednak zarządzanych aplikacji XAML Windows Store teraz intensywnie korzystają 
 
 Istnieje możliwość analizowania zarządzanym kodzie działającym wewnątrz aplikacji Windows Store za pomocą interfejsu CLR profilowania API. W rzeczywistości można wykonać istniejące programem profilującym, które tworzysz i wprowadzić pewne zmiany określonych, dzięki czemu można wskazać, aplikacje Windows Store. Interfejs użytkownika Profiler należy używać nowych interfejsów API do aktywowania aplikacji Windows Store w trybie debugowania. Upewnij się, że Profiler DLL wykorzystuje tylko tych interfejsów API odpowiednie dla aplikacji Windows Store. Mechanizm komunikacji między Profiler DLL i interfejsu użytkownika Profiler powinien być zapisywany z ograniczenia interfejsu API aplikacji Windows Store na uwadze i rozpoznawanie ograniczone uprawnienia w miejscu dla aplikacji Windows Store. Profiler DLL powinien wiedzieć o jak CLR traktuje Winmd, i jak moduł Garbage Collector zachowanie różni się w odniesieniu do zarządzanych wątków.
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>Zasoby
 
 **Środowisko uruchomieniowe języka wspólnego**
 
@@ -416,4 +416,4 @@ Istnieje możliwość analizowania zarządzanym kodzie działającym wewnątrz a
 
 - [Uzyskaj licencję dewelopera](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [Interfejs IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)
+- [IPackageDebugSettings Interface](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

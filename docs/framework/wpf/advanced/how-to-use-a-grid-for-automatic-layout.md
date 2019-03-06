@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 0eda70a7d8cc5abb70b5043cbaa1d4fc418bb1f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357485"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Instrukcje: Użyj siatki do automatycznego układu
 W tym przykładzie opisano, jak użyć siatki w ujęciu automatycznego układu do tworzenia aplikacji możliwych do zlokalizowania.  
@@ -22,13 +22,13 @@ W tym przykładzie opisano, jak użyć siatki w ujęciu automatycznego układu d
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak użyć siatki.  
   
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  Na poniższym rysunku przedstawiono dane wyjściowe przykładowego kodu.  
   
- ![Przykład Grid](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![Przykład Grid](./media/glob-grid.png "glob_grid")  
 Siatka  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
-- [Używanie automatycznego układu do utworzenia przycisku](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [Przegląd używania automatycznego układu](use-automatic-layout-overview.md)
+- [Używanie automatycznego układu do utworzenia przycisku](how-to-use-automatic-layout-to-create-a-button.md)

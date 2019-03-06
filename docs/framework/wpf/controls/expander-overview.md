@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 63fa061211e846a6b4d9c88cdf3c7c24e4aac3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693759"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369932"
 ---
 # <a name="expander-overview"></a>Przegląd Ekspander
 <xref:System.Windows.Controls.Expander> Kontroli umożliwia dostarczanie zawartości w obszarze rozwijania przypomina okna, która zawiera nagłówek.  
@@ -23,7 +23,7 @@ ms.locfileid: "54693759"
 ## <a name="creating-a-simple-expander"></a>Tworzenie prostego ekspandera  
  Poniższy przykład pokazuje, jak utworzyć prostą <xref:System.Windows.Controls.Expander> kontroli. Ten przykład tworzy <xref:System.Windows.Controls.Expander> który wygląda podobnie do ilustracji powyżej.  
   
- [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
  <xref:System.Windows.Controls.ContentControl.Content%2A> i <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> z <xref:System.Windows.Controls.Expander> może również zawierać złożonych zawartości, takich jak <xref:System.Windows.Controls.RadioButton> i <xref:System.Windows.Controls.Image> obiektów.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "54693759"
   
  **Ekspander w ScrollViewer**  
   
- ![Ekspander za pomocą paska przewijania](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Ekspander za pomocą paska przewijania](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
  Po umieszczeniu <xref:System.Windows.Controls.Expander> w kontrolce <xref:System.Windows.Controls.ScrollViewer>ustaw <xref:System.Windows.Controls.ScrollViewer> wymiaru właściwość, która odpowiada kierunek, w którym <xref:System.Windows.Controls.Expander> otwiera zawartość do rozmiaru <xref:System.Windows.Controls.Expander> obszar zawartości. Na przykład jeśli ustawisz <xref:System.Windows.Controls.Expander.ExpandDirection%2A> właściwość <xref:System.Windows.Controls.Expander> do <xref:System.Windows.Controls.ExpandDirection.Down> (obszar zawartości jest otwierany w dół), ustaw <xref:System.Windows.FrameworkElement.Height%2A> właściwość <xref:System.Windows.Controls.ScrollViewer> kontrolki wymagane wysokość obszaru zawartości. Jeśli zamiast tego wartość wysokości zawartości, <xref:System.Windows.Controls.ScrollViewer> to ustawienie nie jest rozpoznawane i dlatego nie zapewnia przewijanej treści.  
   
  Poniższy przykład pokazuje, jak utworzyć <xref:System.Windows.Controls.Expander> formant, który ma zawartość złożoną i zawiera <xref:System.Windows.Controls.ScrollViewer> kontroli. Ten przykład tworzy <xref:System.Windows.Controls.Expander> to podobnie do ilustracji na początku tej sekcji.  
   
- [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
+ [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
 ## <a name="using-the-alignment-properties"></a>Za pomocą właściwości wyrównania  
@@ -62,4 +62,4 @@ ms.locfileid: "54693759"
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [Tematy z instrukcjami](expander-how-to-topics.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - windows [WPF]
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
-ms.openlocfilehash: 04622255ea70d3d8161dc18919cb2833fe706639
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550780"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353858"
 ---
 # <a name="windows-in-wpf-applications"></a>Okna w aplikacjach WPF
-Użytkownicy korzystają z aplikacji za pośrednictwem systemu windows. Podstawowe celem okna jest hosta i wyświetlenie zawartości. Typ zawartości, że hosty okna zależy od typu danych, czy aplikacja działa przez, który może obejmować nośnika, Extensible Application Markup Language (XAML) strony, strony sieci Web, dokumentów, tabele bazy danych i rekordów i informacje o systemie.  
+Użytkownicy wchodzić w interakcje z aplikacjami za pośrednictwem systemu windows. Podstawowym celem okna jest hostowanie i wyświetlania zawartości. Typ zawartości, że hosty okna zależy od typu danych, czy aplikacja działa przez, które obejmują nośnik, Extensible Application Markup Language (XAML) strony, strony sieci Web, dokumentów, tabel bazy danych i rekordów i informacje o systemie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Okna WPF — omówienie](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [Okna dialogowe — omówienie](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [Okna WPF — omówienie](wpf-windows-overview.md)  
+ [Okna dialogowe — omówienie](dialog-boxes-overview.md)  
+ [Tematy z instrukcjami](window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Window>  
@@ -28,7 +28,7 @@ Użytkownicy korzystają z aplikacji za pośrednictwem systemu windows. Podstawo
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [Tworzenie i wdrażanie](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Zarządzanie aplikacjami — omówienie](application-management-overview.md)  
+  [Nawigacja — omówienie](navigation-overview.md)  
+  [Hosting](hosting-wpf-applications.md)  
+  [Tworzenie i wdrażanie](building-and-deploying-wpf-applications.md)

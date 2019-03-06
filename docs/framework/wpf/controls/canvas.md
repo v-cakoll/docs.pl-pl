@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553277"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351054"
 ---
 # <a name="canvas"></a>Kanwa
-<xref:System.Windows.Controls.Canvas> jest kontrolkę układu, która umożliwia bezwzględny elementów podrzędnych.  
+<xref:System.Windows.Controls.Canvas> jest kontrolkę układu, który umożliwia pozycjonowanie absolutne elementów podrzędnych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [Tematy z instrukcjami](canvas-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ ms.locfileid: "33553277"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Układ](../advanced/layout.md)  
   
- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](scrollviewer-overview.md)

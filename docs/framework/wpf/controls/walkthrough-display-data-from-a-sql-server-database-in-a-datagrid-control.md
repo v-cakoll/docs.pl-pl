@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 6cf56a853377a9c062009fb8a4082cd5380905c6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 022be17c946529583694afc0fe1c61b832aa03e4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748417"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351324"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Przewodnik: Wyświetlanie danych z bazy danych programu SQL Server w formancie DataGrid
 
@@ -37,7 +37,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 3.  W okienku zainstalowane szablony zaznacz **danych** i na liście szablonów wybierz **ADO.NET Entity Data Model**.
 
-     ![Szablon elementu modelu Entity Data Model ADO.NET](../../wcf/feature-details/media/ado-net-entity-data-model-item-template.png)
+     ![Szablon elementu modelu Entity Data Model ADO.NET](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
 
 4.  Nadaj plikowi nazwę `AdventureWorksModel.edmx` a następnie kliknij przycisk **Dodaj**.
 
@@ -53,13 +53,13 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
      Można wygenerować klas jednostek dla wszystkich tabel. Jednak w tym przykładzie możesz tylko pobierać dane z tych dwóch tabel.
 
-     ![Wybierz z tabel Product i ProductCategory](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")
+     ![Wybierz z tabel Product i ProductCategory](./media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")
 
 8. Kliknij przycisk **Zakończ**.
 
      W Projektancie jednostki wyświetlania obiektów Product i ProductCategory.
 
-     ![Modele jednostki Product i ProductCategory](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")
+     ![Modele jednostki Product i ProductCategory](./media/datagrid-sql-ef-step5.png "DataGrid_SQL_EF_Step5")
 
 ## <a name="retrieve-and-present-the-data"></a>Pobieranie i prezentowanie danych
 
@@ -69,9 +69,9 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 3.  W edytorze XAML, Dodaj następujący kod <xref:System.Windows.Controls.DataGrid> tag między `<Grid>` i `</Grid>` tagi do dodania <xref:System.Windows.Controls.DataGrid> o nazwie `dataGrid1`.
 
-     [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
+     [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
 
-     ![Okno z DataGrid](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
+     ![Okno z DataGrid](./media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
 
 4.  Wybierz <xref:System.Windows.Window>.
 
@@ -82,20 +82,20 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
     > [!NOTE]
     > Jeśli używasz języka Visual Basic w pierwszym wierszu pliku MainWindow.xaml, Zastąp `x:Class="DataGridSQLExample.MainWindow"` z `x:Class="MainWindow"`.
 
-     [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
+     [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
 
 6.  Otwórz plik związany z kodem (pliku MainWindow.xaml.vb lub MainWindow.xaml.cs) dla <xref:System.Windows.Window>.
 
 7.  Dodaj następujący kod, aby pobrać tylko określone wartości z połączonych tabel i ustawić <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> właściwość <xref:System.Windows.Controls.DataGrid> do wyników zapytania.
 
-     [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
-     [!code-vb[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
+     [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
+     [!code-vb[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
 
 8.  Uruchom przykład.
 
      Powinien zostać wyświetlony <xref:System.Windows.Controls.DataGrid> wyświetlającą dane.
 
-     ![DataGrid — przy użyciu danych z bazy danych SQL](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
+     ![DataGrid — przy użyciu danych z bazy danych SQL](./media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,12 +2,12 @@
 title: Atrybuty wspólne (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690907"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375405"
 ---
 # <a name="common-attributes-visual-basic"></a>Atrybuty wspólne (Visual Basic)
 W tym temacie opisano atrybuty, które są najczęściej używane w programach Visual Basic.  
@@ -22,7 +22,7 @@ W tym temacie opisano atrybuty, które są najczęściej używane w programach V
   
 -   [Atrybuty Visual Basic](#VB)  
   
-##  <a name="Global"></a> Atrybuty globalne  
+## <a name="Global"></a> Atrybuty globalne  
  Większość atrybuty są stosowane do elementów języka, takich jak klasy lub metody; Jednak niektóre atrybuty są globalne — odnoszą się do całego zestawu lub modułu. Na przykład <xref:System.Reflection.AssemblyVersionAttribute> atrybut może służyć do osadzania informacje o wersji w zespół, takich jak to:  
   
 ```vb  
@@ -74,7 +74,7 @@ W tym temacie opisano atrybuty, które są najczęściej używane w programach V
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Definiuje niestandardowy atrybut, który określa konfigurację zestawu (na przykład sprzedaży detalicznej lub debugowanie) w manifeście zestawu.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Określa przyjazną domyślny alias manifestu zestawu|  
   
-##  <a name="Obsolete"></a> Atrybut przestarzałe  
+## <a name="Obsolete"></a> Atrybut przestarzałe  
  `Obsolete` Atrybut oznacza jednostka program jako taki, który nie jest już zalecany do użycia. Każde użycie jednostki oznaczony jako przestarzały później, spowoduje wygenerowanie ostrzeżenia lub błędu, w zależności od sposobu skonfigurowania atrybutu. Na przykład:  
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  `Obsolete` Atrybut jest atrybutem jednorazowego użytku i mogą być stosowane do każda jednostka, która umożliwia atrybutów. `Obsolete` jest aliasem <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a> Atrybut Conditional  
+## <a name="Conditional"></a> Atrybut Conditional  
  `Conditional` Atrybutu sprawia, że wykonanie metody są zależne od identyfikatora przetwarzania wstępnego. `Conditional` Atrybut jest aliasem <xref:System.Diagnostics.ConditionalAttribute>i mogą być stosowane do metodę lub klasę atrybutów.  
   
  W tym przykładzie `Conditional` zostanie zastosowany do metody, aby włączyć lub wyłączyć wyświetlanie informacji diagnostycznych programów:  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> Caller — atrybuty informacji  
+## <a name="CallerInfo"></a> Caller — atrybuty informacji  
  Przy użyciu atrybutów informacji o obiekcie wywołującym można uzyskać informacje o obiekcie wywołującym metodę. Można uzyskać ścieżkę pliku kodu źródłowego, numer wiersza kodu źródłowego i nazwę elementu członkowskiego obiektu wywołującego.  
   
  Aby uzyskać informacje o wywołującym elementu członkowskiego, należy użyć atrybutów stosowanych do opcjonalnych parametrów. Każdy parametr opcjonalny określenie wartości domyślnej. W poniższej tabeli przedstawiono atrybuty informacji o obiekcie wywołującym, które są zdefiniowane w <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw:  
@@ -222,7 +222,7 @@ End Class
   
  Aby uzyskać więcej informacji na temat atrybutów informacji o obiekcie wywołującym zobacz [informacje o wywołującym (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a> Atrybuty Visual Basic  
+## <a name="VB"></a> Atrybuty Visual Basic  
  W poniższej tabeli przedstawiono atrybuty, które są specyficzne dla języka Visual Basic.  
   
 |Atrybut|Cel|  

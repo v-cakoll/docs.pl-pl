@@ -6,35 +6,35 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: cb8efd32302287de1d80ef68cf98bfa071b7feaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a45cf48c1d0cc097cea956d22fed2079e657a8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664684"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361645"
 ---
 # <a name="geometries-how-to-topics"></a>Geometrie Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia <xref:System.Windows.Media.Geometry> obiektów w aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Animowanie elementu EllipseGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [Animowanie rozmiaru elementu ArcSegment](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [Kontrolowanie wypełnienia kształtu złożonego](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [Tworzenie połączonej geometrii](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [Tworzenie kształtu złożonego](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Tworzenie krzywej Beziera trzeciego stopnia](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [Tworzenie linii przy użyciu elementu LineGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [Tworzenie obiektu LineSegment w elemencie PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [Tworzenie kształtu przy użyciu elementu PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [Tworzenie kształtu przy użyciu elementu StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [Tworzenie krzywej Beziera drugiego stopnia](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [Tworzenie łuku eliptycznego](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [Tworzenie wielu podścieżek w obrębie elementu PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [Definiowanie prostokąta przy użyciu elementu RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [Zaokrąglanie rogów elementu RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+ [Animowanie elementu EllipseGeometry](how-to-animate-an-ellipsegeometry.md)  
+ [Animowanie rozmiaru elementu ArcSegment](how-to-animate-the-size-of-an-arcsegment.md)  
+ [Kontrolowanie wypełnienia kształtu złożonego](how-to-control-the-fill-of-a-composite-shape.md)  
+ [Tworzenie połączonej geometrii](how-to-create-a-combined-geometry.md)  
+ [Tworzenie kształtu złożonego](how-to-create-a-composite-shape.md)  
+ [Tworzenie krzywej Beziera trzeciego stopnia](how-to-create-a-cubic-bezier-curve.md)  
+ [Tworzenie linii przy użyciu elementu LineGeometry](how-to-create-a-line-using-a-linegeometry.md)  
+ [Tworzenie obiektu LineSegment w elemencie PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [Tworzenie kształtu przy użyciu elementu PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [Tworzenie kształtu przy użyciu elementu StreamGeometry](how-to-create-a-shape-using-a-streamgeometry.md)  
+ [Tworzenie krzywej Beziera drugiego stopnia](how-to-create-a-quadratic-bezier-curve.md)  
+ [Tworzenie łuku eliptycznego](how-to-create-an-elliptical-arc.md)  
+ [Tworzenie wielu podścieżek w obrębie elementu PathGeometry](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [Definiowanie prostokąta przy użyciu elementu RectangleGeometry](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [Zaokrąglanie rogów elementu RectangleGeometry](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafika i multimedia](index.md)

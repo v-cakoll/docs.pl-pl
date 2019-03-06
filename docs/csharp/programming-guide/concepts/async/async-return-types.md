@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548257"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368184"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą być zwracane typy:
@@ -24,7 +24,7 @@ Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [Asynchr
   
 Każdy typ zwracany jest badany w jednej z następujących sekcji, a można znaleźć pełny przykład, który używa wszystkich trzech typów na końcu tego tematu.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Zadanie\<TResult\> zwracany typ  
+## <a name="BKMK_TaskTReturnType"></a> Zadanie\<TResult\> zwracany typ  
 <xref:System.Threading.Tasks.Task%601> Typ zwracany jest używany w metodzie asynchronicznej, która zawiera [zwracają](../../../../csharp/language-reference/keywords/return.md) instrukcji (C#), w której operator ma typ `TResult`.  
   
 W poniższym przykładzie `GetLeisureHours` metoda asynchroniczna `return` instrukcję, która zwraca liczbę całkowitą. Dlatego deklaracja metody musi określać typ zwracany `Task<int>`.  <xref:System.Threading.Tasks.Task.FromResult%2A> Metody asynchronicznej jest symbolem zastępczym dla operacji, która zwraca wartość typu ciąg.
@@ -40,7 +40,7 @@ Można lepiej zrozumieć, jak to się dzieje oddzielając wywołanie `GetLeisure
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> Zwracany typ Task  
+## <a name="BKMK_TaskReturnType"></a> Zwracany typ Task  
 Metody asynchroniczne, które nie zawierają `return` instrukcji lub które zawierają `return` instrukcję, która nie zwraca operandu są zazwyczaj ma typ zwracany <xref:System.Threading.Tasks.Task>. Takie metody zwracają `void` jeśli one były uruchamiane synchronicznie. Jeśli używasz <xref:System.Threading.Tasks.Task> zwracany typ metody asynchronicznej, wywoływania metody można użyć `await` operator wstrzymania uzupełniania wywołującego do momentu zakończenia wywołanej metody asynchronicznej.  
   
 W poniższym przykładzie `WaitAndApologize` metoda asynchroniczna nie zawiera `return` instrukcji, więc metoda ta zwraca <xref:System.Threading.Tasks.Task> obiektu. Dzięki temu `WaitAndApologize` oczekiwanie. Należy pamiętać, że <xref:System.Threading.Tasks.Task> nie zawiera typu `Result` właściwość ponieważ nie zwraca żadnej wartości.  
@@ -55,7 +55,7 @@ Poniższy kod oddziela wywoływanie metody `WaitAndApologize` metody z Oczekują
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Typ zwracany void
+## <a name="BKMK_VoidReturnType"></a> Typ zwracany void
 
 Możesz użyć `void` zwracany typ w procedurze obsługi zdarzeń asynchronicznych, które wymagają `void` typ zwracany. W przypadku metod innych niż procedury obsługi zdarzeń, które nie zwrócą wartość, powinna zwrócić <xref:System.Threading.Tasks.Task> zamiast tego, ponieważ metoda asynchroniczna zwraca `void` nie może być oczekiwany. Dowolny obiekt wywołujący taką metodę musi być w stanie kontynuować do zakończenia bez oczekiwania na zakończenie metody asynchronicznej, a obiekt wywołujący musi być niezależny od wartości lub wyjątków, które generuje metoda asynchroniczna.  
   

@@ -4,12 +4,12 @@ description: Dowiedz się, jak utworzyć aplikację platformy .NET Core, która 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: f2997c778b87ecd88c0fd2fadf491763066a4950
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739608"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363907"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Tworzenie aplikacji .NET Core za pomocą wtyczki
 
@@ -244,7 +244,7 @@ Prawie wszystkie wtyczki są bardziej skomplikowane niż proste "Hello World", a
 
 ## <a name="other-plugin-examples-in-the-sample"></a>Inne przykłady wtyczki w przykładzie
 
-`AssemblyDependencyResolver` Obiektu można również rozwiązać bibliotek natywnych uwzględnione w pakietach NuGet, a także zlokalizowanych zestawów satelickich. `UVPlugin` i `FrenchPlugin` przedstawione następujące scenariusze obejmujące odpowiednio.
+Pełnego kodu źródłowego w ramach tego samouczka można znaleźć w [repozytorium dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). Ukończone przykład obejmuje kilka innych przykładów `AssemblyDependencyResolver` zachowanie. Na przykład `AssemblyDependencyResolver` obiektu można również rozwiązać natywnych bibliotek, a także zlokalizowane zestawy satelickie uwzględnione w pakietach NuGet. `UVPlugin` i `FrenchPlugin` w repozytorium przykładów przedstawione następujące scenariusze obejmujące.
 
 ## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>Jak odwołanie do zestawu interfejsu wtyczki zdefiniowanych w pakiecie NuGet
 

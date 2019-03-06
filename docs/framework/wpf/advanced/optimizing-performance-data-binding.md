@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 156d248921499aa78c3638e45af113c5698bdacd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668018"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352025"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optymalizacja wydajności: Powiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
@@ -74,14 +74,14 @@ ms.locfileid: "54668018"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia danych można powiązać [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartości; jednak powiązania danych [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartości jest mniejsza niż powiązania danych [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów. Nie można konwertować [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiekt danych do pliku XML, jeśli jedynym celem jest przeznaczony dla wiązania danych.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planowanie wydajności aplikacji](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Zachowanie obiektu](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Inne zalecenia dotyczące wydajności](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
+- [Planowanie wydajności aplikacji](planning-for-application-performance.md)
+- [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)
+- [Układ i projekt](optimizing-performance-layout-and-design.md)
+- [Grafika 2D i obrazowanie](optimizing-performance-2d-graphics-and-imaging.md)
+- [Zachowanie obiektu](optimizing-performance-object-behavior.md)
+- [Zasoby aplikacji](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

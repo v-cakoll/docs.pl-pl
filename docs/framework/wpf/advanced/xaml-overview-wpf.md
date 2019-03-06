@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 784dcb88e92169ff8698234e59899cc4d58dd52c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc5e60b1a8059e58ce6d23801eb51d8b2eb414d6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563759"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379240"
 ---
 # <a name="xaml-overview-wpf"></a>Przegląd XAML (WPF)
 W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML można zapisać [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie opisano szczegółowo XAML jako implementowany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML, sama jest pojęciem języka większych niż [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -39,11 +39,11 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
   
  W poniższym przykładzie pokazano, jak można utworzyć przycisk w ramach [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. W tym przykładzie po prostu jest przeznaczona do umożliwiają wersję jak XAML reprezentuje typowe [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] programowania metafory (nie jest pełny przykład).  
   
- [!code-xaml[XAMLOvwSupport#DirtSimple](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
+ [!code-xaml[XAMLOvwSupport#DirtSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
   
 <a name="xaml_syntax_in_brief"></a>   
 ## <a name="xaml-syntax-in-brief"></a>Składnia XAML w skrócie  
- W poniższych sekcjach opisano podstawowe formy składnia XAML i podać przykład krótka adiustację. Poniższe sekcje nie są przeznaczone do zapewniają pełne informacje na temat każdego forma składni, np. jak te są reprezentowane w systemie typów zapasowy. Aby uzyskać więcej informacji o szczegóły składni XAML dla każdego formami składni opisanymi w tym temacie, zobacz [składnia XAML w szczegółów](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ W poniższych sekcjach opisano podstawowe formy składnia XAML i podać przykład krótka adiustację. Poniższe sekcje nie są przeznaczone do zapewniają pełne informacje na temat każdego forma składni, np. jak te są reprezentowane w systemie typów zapasowy. Aby uzyskać więcej informacji o szczegóły składni XAML dla każdego formami składni opisanymi w tym temacie, zobacz [składnia XAML w szczegółów](xaml-syntax-in-detail.md).  
   
  Wiele materiałów w kolejnych sekcjach zostanie podstawowych, w przypadku poprzedniego znajomość języka XML. Jest to konsekwencją podstawowe zasady projektowania z XAML.  Język XAML definiuje swój własny pojęcia, ale te pojęcia działa w obrębie formularza języka i znaczników XML.  
   
@@ -52,7 +52,7 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
   
  Składnia elementu obiekt zawsze rozpoczyna się od nawias otwierający (\<). To następuje nazwa typu potrzebne do utworzenia wystąpienia. (Nazwa prawdopodobnie może zawierać prefiks pojęcia, które zostaną wyjaśnione później.) Po tym można opcjonalnie zadeklarować atrybutów w elemencie obiektu. Aby ukończyć tagu elementu obiektu, kończy się zamykającego nawiasu ostrego (>). Zamiast tego można użyć samozamykającego formularz, który nie ma żadnej zawartości, Trwa uzupełnianie tagu ukośnikiem i zamykającego nawiasu ostrego w odstępie czasu (/ >). Na przykład Przyjrzyj się fragment kodu znaczników wcześniej pokazano ponownie:  
   
- [!code-xaml[XAMLOvwSupport#DirtSimple](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
+ [!code-xaml[XAMLOvwSupport#DirtSimple](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#dirtsimple)]  
   
  Określa obiekt dwa elementy: `<StackPanel>` (z zawartością, a tag zamykający w dalszej części), a `<Button .../>` (samozamykającego formularz, za pomocą kilku atrybutów). Elementy obiektu `StackPanel` i `Button` każdej mapie, aby nazwa klasy, który jest definiowany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i jest częścią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestawów. Po określeniu tagu elementu obiektu, utworzysz instrukcję dla XAML przetwarzanie w celu utworzenia nowego wystąpienia. Każde wystąpienie jest tworzony przez wywołanie konstruktora domyślnego typu podstawowego podczas analizowania i ładowania XAML.  
   
@@ -61,7 +61,7 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
   
  Składnia atrybutów jest najbardziej usprawnione składnia ustawienie właściwości i najbardziej intuicyjnej składni do użycia dla deweloperów, którzy korzystali z języków znaczników w przeszłości. Na przykład, następujący kod tworzy przycisk, który posiada czerwony tekst i niebieskim tle oprócz wyświetlany tekst określony jako `Content`.  
   
- [!code-xaml[XAMLOvwSupport#BlueRedButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbutton)]  
+ [!code-xaml[XAMLOvwSupport#BlueRedButton](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbutton)]  
   
 ### <a name="property-element-syntax"></a>Składnia elementu właściwości  
  Niektórych właściwości elementu obiektu składni atrybutów jest to możliwe, ponieważ obiektu lub informacje niezbędne do zapewnienia wartość właściwości nie może być odpowiednio wyrażany w cudzysłów i ciąg ograniczenia składni atrybutów. W takich przypadkach można używać różnych składni, znane jako składni elementu właściwości.  
@@ -70,7 +70,7 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
   
  Składnia atrybutów jest możliwe, przy użyciu składni atrybutu jest zazwyczaj bardziej wygodne i umożliwia bardziej zwarty znaczników, ale najczęściej jest to kwestia stylu, nie ograniczenia techniczne. W poniższym przykładzie pokazano te same właściwości ustawiany jak w poprzednim przykładzie atrybut w składni, ale tym razem przy użyciu składni elementu właściwości dla wszystkich właściwości `Button`.  
   
- [!code-xaml[XAMLOvwSupport#BlueRedButtonPE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbuttonpe)]  
+ [!code-xaml[XAMLOvwSupport#BlueRedButtonPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#blueredbuttonpe)]  
   
 ### <a name="collection-syntax"></a>Składnia kolekcji  
  Język XAML zawiera niektóre optymalizacje, które generują bardziej czytelny dla człowieka znaczników. Takiej optymalizacji jest to, że jeśli określona właściwość przyjmuje typ kolekcji, a następnie elementy, które deklarują w znacznikach jako elementy podrzędne w ramach tej właściwości wartość stają się częścią kolekcji. W tym przypadku kolekcję elementów podrzędnych do obiektu jest wartość zostanie ustawiona właściwość kolekcji.  
@@ -112,7 +112,7 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
   blue button</Button>  
 ```  
   
- Aby uzyskać więcej informacji na temat tego ograniczenia właściwości zawartości XAML, zobacz sekcję "Properties zawartości XAML" [składnia XAML w szczegółów](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Aby uzyskać więcej informacji na temat tego ograniczenia właściwości zawartości XAML, zobacz sekcję "Properties zawartości XAML" [składnia XAML w szczegółów](xaml-syntax-in-detail.md).  
   
 ### <a name="text-content"></a>Zawartość tekstowa  
  Niewielka liczba elementów XAML bezpośrednio może przetwarzać tekst jako swojej zawartości. Aby je włączyć, należy spełnić jedną z następujących przypadkach:  
@@ -153,53 +153,53 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
 ### <a name="attribute-syntax-events"></a>Składnia atrybutów (zdarzenia)  
  Składnia atrybutów może również dla elementów członkowskich, które są zdarzenia, a nie właściwości. W takim przypadku nazwa ten atrybut jest nazwa zdarzenia. W implementacji WPF zdarzenia dla XAML wartość atrybutu jest nazwą programu obsługi, która implementuje delegata tego zdarzenia. Na przykład, następujący kod przypisuje obsługi dla <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia <xref:System.Windows.Controls.Button> utworzone w znaczników:  
   
- [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
+ [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
   
- Brak zdarzeń i XAML w WPF ponad właśnie w tym przykładzie składni atrybutów. Na przykład, być może zastanawiasz się, jakie `ClickHandler` odwołujesz reprezentuje i jak jest zdefiniowany. Zostanie to wyjaśnione w przyszłych [zdarzeń i kodem XAML](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#events_and_xaml_codebehind) części tego tematu.  
+ Brak zdarzeń i XAML w WPF ponad właśnie w tym przykładzie składni atrybutów. Na przykład, być może zastanawiasz się, jakie `ClickHandler` odwołujesz reprezentuje i jak jest zdefiniowany. Zostanie to wyjaśnione w przyszłych [zdarzeń i kodem XAML](xaml-overview-wpf.md#events_and_xaml_codebehind) części tego tematu.  
   
 <a name="case_and_white space_in_xaml"></a>   
 ## <a name="case-and-white-space-in-xaml"></a>Wielkość liter i biały znak w XAML  
  XAML ogólnie rzecz biorąc jest uwzględniana wielkość liter. Do celów rozpoznawania typów zapasowy WPF XAML jest uwzględniana wielkość liter, przez te same zasady, że środowisko CLR jest uwzględniana wielkość liter. Elementów obiektu, elementy właściwości i nazw atrybutów muszą być wszystkie określone za pomocą liter małych i wielkich liter w porównaniu z według nazwy do bazowego typu w zestawie lub do składowej typu. Słowa kluczowe języka XAML i podstawowych są również z uwzględnieniem wielkości liter. Wartości nie są zawsze z uwzględnieniem wielkości liter. Uwzględnianie wielkości liter w wartości będzie zależeć od zachowania konwertera typu skojarzony z właściwością, która przyjmuje wartość lub typ wartości właściwości. Na przykład, właściwości, które przyjmują <xref:System.Boolean> typu może zająć, albo `true` lub `True` jako równoważne wartości, ale tylko wtedy, ponieważ natywnych analizatora WPF XAML typ konwersji ciągu na <xref:System.Boolean> już pozwala je jako odpowiedniki.  
   
- Procesory WPF XAML i serializatorów zignoruje lub porzucić wszystkie nonsignificant biały znak i będzie normalizacji żadnych istotnych białych. Jest to zgodne z zaleceniami domyślne zachowanie spacji specyfikacji XAML. To zachowanie jest zwykle tylko z wynikiem po określeniu parametrów w ramach właściwości zawartości XAML. Mówiąc najprościej XAML konwertuje znaki spacji, wysuw wiersza lub tabulatora do miejsca do magazynowania, a następnie zachowuje jedną spację, jeśli znalezione na końcu ciągu ciągłych. Pełne wyjaśnienie Obsługa białych XAML nie pasuje do tego tematu. Aby uzyskać więcej informacji, zobacz [biały znak przetwarzanie w XAML](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ Procesory WPF XAML i serializatorów zignoruje lub porzucić wszystkie nonsignificant biały znak i będzie normalizacji żadnych istotnych białych. Jest to zgodne z zaleceniami domyślne zachowanie spacji specyfikacji XAML. To zachowanie jest zwykle tylko z wynikiem po określeniu parametrów w ramach właściwości zawartości XAML. Mówiąc najprościej XAML konwertuje znaki spacji, wysuw wiersza lub tabulatora do miejsca do magazynowania, a następnie zachowuje jedną spację, jeśli znalezione na końcu ciągu ciągłych. Pełne wyjaśnienie Obsługa białych XAML nie pasuje do tego tematu. Aby uzyskać więcej informacji, zobacz [biały znak przetwarzanie w XAML](../../xaml-services/whitespace-processing-in-xaml.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Rozszerzenia znaczników  
  Rozszerzenia znaczników są koncepcji języka XAML. W przypadku zastosowania do podania wartości składni atrybutów, nawiasy klamrowe (`{` i `}`) wskazują użycie rozszerzenia znaczników. Użycie tych poleca XAML przetwarzania uciekały z ogólnych traktowanie wartości atrybutów jako ciąg literału lub wartość przekonwertować ciąg.  
   
- Najbardziej typowe rozszerzenia znaczników używane w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania aplikacji są [powiązania](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), który jest używany dla wyrażenia wiązania danych i odwołania do zasobów [staticresource —](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) i [Dynamicresource —](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md). Za pomocą rozszerzenia znaczników, można użyć składni atrybutów o podanie wartości właściwości, nawet jeśli ta właściwość nie obsługuje składni atrybutów ogólnie rzecz biorąc. Rozszerzenia znaczników często używają typów wyrażeń pośrednich do włączania funkcji, takich jak opóźnienie wartości lub odwołania do innych obiektów, które istnieją tylko w czasie wykonywania.  
+ Najbardziej typowe rozszerzenia znaczników używane w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania aplikacji są [powiązania](binding-markup-extension.md), który jest używany dla wyrażenia wiązania danych i odwołania do zasobów [staticresource —](staticresource-markup-extension.md) i [Dynamicresource —](dynamicresource-markup-extension.md). Za pomocą rozszerzenia znaczników, można użyć składni atrybutów o podanie wartości właściwości, nawet jeśli ta właściwość nie obsługuje składni atrybutów ogólnie rzecz biorąc. Rozszerzenia znaczników często używają typów wyrażeń pośrednich do włączania funkcji, takich jak opóźnienie wartości lub odwołania do innych obiektów, które istnieją tylko w czasie wykonywania.  
   
- Na przykład, następujący kod ustawia wartość <xref:System.Windows.FrameworkElement.Style%2A> właściwości przy użyciu składni atrybutów. <xref:System.Windows.FrameworkElement.Style%2A> Właściwość przyjmuje wystąpienie klasy <xref:System.Windows.Style> klasy, która domyślnie nie mogła zostać utworzona przez ciąg Składnia atrybutu. Ale w tym przypadku atrybut odwołuje się rozszerzeniem znacznika określonego [staticresource —](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md). Podczas przetwarzania tego rozszerzenia znaczników zwraca odwołanie do stylu, który został wcześniej uruchomiony jako zasób z kluczem w słowniku zasobów.  
+ Na przykład, następujący kod ustawia wartość <xref:System.Windows.FrameworkElement.Style%2A> właściwości przy użyciu składni atrybutów. <xref:System.Windows.FrameworkElement.Style%2A> Właściwość przyjmuje wystąpienie klasy <xref:System.Windows.Style> klasy, która domyślnie nie mogła zostać utworzona przez ciąg Składnia atrybutu. Ale w tym przypadku atrybut odwołuje się rozszerzeniem znacznika określonego [staticresource —](staticresource-markup-extension.md). Podczas przetwarzania tego rozszerzenia znaczników zwraca odwołanie do stylu, który został wcześniej uruchomiony jako zasób z kluczem w słowniku zasobów.  
   
- [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources)]  
-[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
-[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
+ [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources)]  
+[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
+[!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
   
- Aby uzyskać odwołanie lista wszystkie rozszerzenia znaczników dla XAML jest zaimplementowana w szczególności na platformie WPF, zobacz [WPF XAML rozszerzenia](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md). Aby uzyskać listę rozszerzeń znaczników, które są definiowane przez System.Xaml i są bardziej dostępna dla implementacji .NET Framework XAML, zobacz [Namespace XAML (x:) Funkcje języka](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Aby uzyskać więcej informacji na temat pojęć związanych z rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Aby uzyskać odwołanie lista wszystkie rozszerzenia znaczników dla XAML jest zaimplementowana w szczególności na platformie WPF, zobacz [WPF XAML rozszerzenia](wpf-xaml-extensions.md). Aby uzyskać listę rozszerzeń znaczników, które są definiowane przez System.Xaml i są bardziej dostępna dla implementacji .NET Framework XAML, zobacz [Namespace XAML (x:) Funkcje języka](../../xaml-services/xaml-namespace-x-language-features.md). Aby uzyskać więcej informacji na temat pojęć związanych z rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Konwertery typu  
- W [składnia XAML w skrócie](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief) sekcji stwierdzono, że wartość atrybutu musi być może ustawić przez ciąg. Podstawowa, natywnej obsługi jak ciągi są konwertowane na inne typy obiektów lub wartości pierwotnych opiera się na <xref:System.String> samego typu, dodatkowo do kodu natywnego przetwarzania dla niektórych typów takich jak <xref:System.DateTime> lub <xref:System.Uri>. Jednak wiele [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typy lub elementy członkowskie z tych typów rozszerzyć atrybutu podstawowego ciągu przetwarzania zachowanie w taki sposób, że wystąpienia bardziej złożonych typów obiektów można określić jako ciągi i atrybutów.  
+ W [składnia XAML w skrócie](xaml-overview-wpf.md#xaml_syntax_in_brief) sekcji stwierdzono, że wartość atrybutu musi być może ustawić przez ciąg. Podstawowa, natywnej obsługi jak ciągi są konwertowane na inne typy obiektów lub wartości pierwotnych opiera się na <xref:System.String> samego typu, dodatkowo do kodu natywnego przetwarzania dla niektórych typów takich jak <xref:System.DateTime> lub <xref:System.Uri>. Jednak wiele [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typy lub elementy członkowskie z tych typów rozszerzyć atrybutu podstawowego ciągu przetwarzania zachowanie w taki sposób, że wystąpienia bardziej złożonych typów obiektów można określić jako ciągi i atrybutów.  
   
  <xref:System.Windows.Thickness> Struktury jest przykładem typu, który został włączony dla XAML użycia konwersji typu. <xref:System.Windows.Thickness> Wskazuje pomiarów w obrębie zagnieżdżonych prostokąta i jest używana jako wartość właściwości, takie jak <xref:System.Windows.FrameworkElement.Margin%2A>. Umieszczając konwertera typów na <xref:System.Windows.Thickness>, wszystkie właściwości, które używają <xref:System.Windows.Thickness> łatwiej określić w XAML, ponieważ mogą być określone jako atrybuty. W poniższym przykładzie użyto składni atrybut i konwersji typu, aby podać wartość dla <xref:System.Windows.FrameworkElement.Margin%2A>:  
   
- [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
+ [!code-xaml[XAMLOvwSupport#MarginTCE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
  Poprzedni przykład atrybutu w składni jest odpowiednikiem następujących bardziej szczegółowy przykład składni, gdzie <xref:System.Windows.FrameworkElement.Margin%2A> zamiast tego jest ustawiony za pomocą właściwości elementu składni zawierający <xref:System.Windows.Thickness> element obiektu. Cztery klucza właściwości <xref:System.Windows.Thickness> są ustawione jako atrybuty w nowym wystąpieniu:  
   
- [!code-xaml[XAMLOvwSupport#MarginVerbose](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
+ [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
 >  Istnieje ograniczona liczba obiektów, gdzie konwersji typu jest tylko publiczne sposób, aby przypisać właściwość do tego typu nie angażując podklasy, ponieważ sam typ nie ma domyślnego konstruktora. Może to być na przykład <xref:System.Windows.Input.Cursor>.  
   
- Aby uzyskać więcej informacji na temat sposobu konwersji typu i jego użycia dla atrybutu składnia jest obsługiwana, zobacz [TypeConverters i XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+ Aby uzyskać więcej informacji na temat sposobu konwersji typu i jego użycia dla atrybutu składnia jest obsługiwana, zobacz [TypeConverters i XAML](typeconverters-and-xaml.md).  
   
 <a name="xaml_root_elements_and_xaml_namespaces"></a>   
 ## <a name="xaml-root-elements-and-xaml-namespaces"></a>Elementy główne XAML i przestrzeni nazw XAML  
  Plik XAML musi mieć tylko jeden element główny, aby obie sformułowany [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] plików i prawidłowy plik XAML. Typowe scenariusze WPF, możesz użyć elementu głównego, który ma znaczenie widocznych w modelu aplikacji WPF (na przykład <xref:System.Windows.Window> lub <xref:System.Windows.Controls.Page> dla strony sieci <xref:System.Windows.ResourceDictionary> dla zewnętrznego słownika lub <xref:System.Windows.Application> definicji aplikacji). W poniższym przykładzie pokazano element główny typowy plik XAML dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony z elementem głównym <xref:System.Windows.Controls.Page>.  
   
- [!code-xaml[XAMLOvwSupport#RootOnly](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly)]  
-[!code-xaml[XAMLOvwSupport#RootOnly2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly2)]  
+ [!code-xaml[XAMLOvwSupport#RootOnly](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly)]  
+[!code-xaml[XAMLOvwSupport#RootOnly2](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page2.xaml#rootonly2)]  
   
  Element główny zawiera też atrybuty `xmlns` i `xmlns:x`. Te atrybuty wskazuje procesora XAML, który XAML przestrzenie nazw zawierają definicje typów dla kopii typów odwołujących znaczników jako elementy. `xmlns` Atrybut specjalnie wskazuje domyślną przestrzeń nazw XAML. W domyślnej przestrzeni nazw XAML można określić elementów obiektu w znaczniku bez prefiksu. Dla większości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] scenariuszy aplikacji i dla prawie wszystkich przykłady zamieszczone w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sekcje [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)], domyślna przestrzeń nazw XAML jest mapowany na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przestrzeni nazw [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]. `xmlns:x` Atrybut wskazuje dodatkowych nazw XAML, który mapuje przestrzeń nazw języka XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)].  
   
@@ -212,17 +212,17 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
 ### <a name="the-x-prefix"></a>Prefiks x:  
  W poprzednim przykładzie element główny, prefiks `x:` został użyty do mapowania przestrzeni nazw XAML [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)], czyli dedykowanej przestrzeni nazw XAML, który obsługuje język XAML konstrukcji. To `x:` prefiks jest używany do mapowania tej przestrzeni nazw XAML szablonów dla projektów, przykłady i dokumentację w całym to [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Przestrzeń nazw XAML dla języka XAML zawiera kilka narzędzi programistycznych, które będą bardzo często używane w Twojej XAML. Poniżej przedstawiono listę najbardziej typowych `x:` narzędzi programistycznych, będzie używać prefiksu:  
   
--   [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md): Ustawia Unikatowy klucz dla każdego zasobu w <xref:System.Windows.ResourceDictionary> (lub podobny pojęcia słownika w innych platform). `x:Key` prawdopodobnie będziesz konta przez 90% `x:` użycia będą widoczne w Typowa aplikacja WPF znaczników.  
+-   [x: Key](../../xaml-services/x-key-directive.md): Ustawia Unikatowy klucz dla każdego zasobu w <xref:System.Windows.ResourceDictionary> (lub podobny pojęcia słownika w innych platform). `x:Key` prawdopodobnie będziesz konta przez 90% `x:` użycia będą widoczne w Typowa aplikacja WPF znaczników.  
   
--   [x: Class](../../../../docs/framework/xaml-services/x-class-directive.md): Określa [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzeni nazw i nazwę klasy dla klasy, która udostępnia związany z kodem dla strony XAML. Konieczne jest posiadanie klasy do obsługi związanym z kodem na model programowania WPF, a w związku z tym prawie zawsze widać `x:` mapowane, nawet jeśli nie ma żadnych zasobów.  
+-   [x: Class](../../xaml-services/x-class-directive.md): Określa [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] przestrzeni nazw i nazwę klasy dla klasy, która udostępnia związany z kodem dla strony XAML. Konieczne jest posiadanie klasy do obsługi związanym z kodem na model programowania WPF, a w związku z tym prawie zawsze widać `x:` mapowane, nawet jeśli nie ma żadnych zasobów.  
   
--   [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md): Określa nazwę obiektu w czasie wykonywania dla tego wystąpienia, która istnieje w czasie wykonywania kodu, po przetworzeniu elementu obiektu. Ogólnie rzecz biorąc, często użyje zdefiniowane WPF równoważne właściwość [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md). Takie właściwości mapowania specjalnie w celu CLR kopii właściwości i dlatego są bardziej wygodne do programowania aplikacji, gdzie jest często używana kodu w czasie wykonywania do znajdowania nazwanych elementów z XAML zainicjowane. Najczęściej jest taką właściwość <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Może być nadal używane [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) podczas równoważne poziomie struktury WPF <xref:System.Windows.FrameworkElement.Name%2A> właściwość nie jest obsługiwana w określonego typu. Dzieje się w niektórych scenariuszach animacji.  
+-   [x: Name](../../xaml-services/x-name-directive.md): Określa nazwę obiektu w czasie wykonywania dla tego wystąpienia, która istnieje w czasie wykonywania kodu, po przetworzeniu elementu obiektu. Ogólnie rzecz biorąc, często użyje zdefiniowane WPF równoważne właściwość [x: Name](../../xaml-services/x-name-directive.md). Takie właściwości mapowania specjalnie w celu CLR kopii właściwości i dlatego są bardziej wygodne do programowania aplikacji, gdzie jest często używana kodu w czasie wykonywania do znajdowania nazwanych elementów z XAML zainicjowane. Najczęściej jest taką właściwość <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>. Może być nadal używane [x: Name](../../xaml-services/x-name-directive.md) podczas równoważne poziomie struktury WPF <xref:System.Windows.FrameworkElement.Name%2A> właściwość nie jest obsługiwana w określonego typu. Dzieje się w niektórych scenariuszach animacji.  
   
--   [x: Static](../../../../docs/framework/xaml-services/x-static-markup-extension.md): Umożliwia odwołanie zwracające wartość statyczna, która nie jest właściwością zgodnego z XAML.  
+-   [x: Static](../../xaml-services/x-static-markup-extension.md): Umożliwia odwołanie zwracające wartość statyczna, która nie jest właściwością zgodnego z XAML.  
   
--   [x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md): Konstruuje <xref:System.Type> odwołanie oparte na nazwie typu. Służy do określania atrybutów, które przyjmują <xref:System.Type>, takich jak <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, chociaż często właściwość ma parametry natywnych-do-<xref:System.Type> konwersji w taki sposób, [x: Type](../../../../docs/framework/xaml-services/x-type-markup-extension.md) jest użycie rozszerzenia znaczników Opcjonalnie.  
+-   [x: Type](../../xaml-services/x-type-markup-extension.md): Konstruuje <xref:System.Type> odwołanie oparte na nazwie typu. Służy do określania atrybutów, które przyjmują <xref:System.Type>, takich jak <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>, chociaż często właściwość ma parametry natywnych-do-<xref:System.Type> konwersji w taki sposób, [x: Type](../../xaml-services/x-type-markup-extension.md) jest użycie rozszerzenia znaczników Opcjonalnie.  
   
- Istnieją dodatkowe programowania konstrukcje w `x:` prefiks/XAML przestrzeni nazw, które nie są jako wspólne. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+ Istnieją dodatkowe programowania konstrukcje w `x:` prefiks/XAML przestrzeni nazw, które nie są jako wspólne. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka](../../xaml-services/xaml-namespace-x-language-features.md).  
   
 <a name="custom_prefixes_and_custom_types_in_xaml"></a>   
 ## <a name="custom-prefixes-and-custom-types-in-xaml"></a>Prefiksy niestandardowe i niestandardowych typów w XAML  
@@ -243,9 +243,9 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
 </Page>  
 ```  
   
- Aby uzyskać więcej informacji na temat niestandardowych typów w XAML, zobacz [XAML klasy i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Aby uzyskać więcej informacji na temat niestandardowych typów w XAML, zobacz [XAML klasy i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md).  
   
- Aby uzyskać więcej informacji na temat sposobu związane z przestrzeni nazw XML i przestrzenie nazw kodu zapasowy w zestawach, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Aby uzyskać więcej informacji na temat sposobu związane z przestrzeni nazw XML i przestrzenie nazw kodu zapasowy w zestawach, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>Zdarzenia i kodem XAML  
@@ -253,35 +253,35 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
   
  W przykładach do tej pory wiesz już kilka przycisków, ale żaden z tych przycisków miał każde zachowanie logicznej jeszcze skojarzone z nimi. Zachowanie obiektu elementu Dodawanie podstawowym mechanizmem dodatku poziomu aplikacji jest aby użyć istniejącego zdarzenia klasy elementów i do zapisu określonego programu obsługi dla tego zdarzenia, które jest wywoływane, gdy zdarzenie jest zgłaszane w czasie wykonywania. Nazwa zdarzenia i nazwę programu obsługi, aby użyć są określone w znaczników, kod, który implementuje programu obsługi jest zdefiniowane w związanym z kodem.  
   
- [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
+ [!code-xaml[XAMLOvwSupport#ButtonWithCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml#buttonwithcodebehind)]  
   
- [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
- [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
+ [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
+ [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
   
  Zwróć uwagę, że plik związany z kodem używa przestrzeni nazw CLR `ExampleNamespace` i deklaruje `ExamplePage` jako częściowe klasy w tej przestrzeni nazw. To równoleżnikami `x:Class` wartość atrybutu `ExampleNamespace`.`ExamplePage` która została dostarczona w katalogu głównym znaczników. Kompilator znaczników WPF utworzy klasę częściową dla dowolnego skompilowany plik XAML, wyprowadzanie klasy z typem elementu głównego. Po podaniu związanym z kodem definiujący tej samej klasy częściowej wynikowy kod jest łączony w ramach tej samej przestrzeni nazw i klasy skompilowanej aplikacji.  
   
- Aby uzyskać więcej informacji na temat wymagań dotyczących programowania związane z kodem w WPF, zobacz sekcję "związany z kodem, program obsługi zdarzeń i ich wymagania klasy częściowej" [związanym z kodem i XAML w WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ Aby uzyskać więcej informacji na temat wymagań dotyczących programowania związane z kodem w WPF, zobacz sekcję "związany z kodem, program obsługi zdarzeń i ich wymagania klasy częściowej" [związanym z kodem i XAML w WPF](code-behind-and-xaml-in-wpf.md).  
   
- Jeśli chcesz utworzyć plik oddzielne związanym z kodem, możesz również wbudowany kod w pliku XAML. Wbudowany kod jest jednak mniej wszechstronna technika, która ma znaczące ograniczenia. Aby uzyskać więcej informacji, zobacz [związanym z kodem i XAML w WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ Jeśli chcesz utworzyć plik oddzielne związanym z kodem, możesz również wbudowany kod w pliku XAML. Wbudowany kod jest jednak mniej wszechstronna technika, która ma znaczące ograniczenia. Aby uzyskać więcej informacji, zobacz [związanym z kodem i XAML w WPF](code-behind-and-xaml-in-wpf.md).  
   
 ### <a name="routed-events"></a>Zdarzenia trasowane  
- Funkcja konkretnego zdarzenia, który ma podstawowe znaczenie dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest zdarzenie trasowane. Kierowane Włącz zdarzenia elementu, aby obsłużyć zdarzenie, który został zgłoszony przez inny element, tak długo, jak elementy są połączone za pomocą relacji drzewa. Podczas określania obsługi za pomocą atrybutu XAML zdarzeń, można posłuchaliśmy dla zdarzenia trasowanego i obsługiwane w dowolnym elemencie, w tym elementy, które nie umieszczaj danego zdarzenia w tabeli składowych klasy. Jest to realizowane przez kwalifikujących się atrybut nazwy zdarzenia będącego nazwą klasy. Na przykład element nadrzędny `StackPanel` w listę bieżących `StackPanel`  /  `Button` przykładu można zarejestrować program obsługi dla przycisku element podrzędny <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń przez określenie atrybutu `Button.Click` na `StackPanel` element Object z Twoją nazwą programu obsługi, jako wartość atrybutu. Aby uzyskać więcej informacji na temat sposobu trasowane pracy zdarzenia, zobacz [Przegląd zdarzeń kierowane](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Funkcja konkretnego zdarzenia, który ma podstawowe znaczenie dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest zdarzenie trasowane. Kierowane Włącz zdarzenia elementu, aby obsłużyć zdarzenie, który został zgłoszony przez inny element, tak długo, jak elementy są połączone za pomocą relacji drzewa. Podczas określania obsługi za pomocą atrybutu XAML zdarzeń, można posłuchaliśmy dla zdarzenia trasowanego i obsługiwane w dowolnym elemencie, w tym elementy, które nie umieszczaj danego zdarzenia w tabeli składowych klasy. Jest to realizowane przez kwalifikujących się atrybut nazwy zdarzenia będącego nazwą klasy. Na przykład element nadrzędny `StackPanel` w listę bieżących `StackPanel`  /  `Button` przykładu można zarejestrować program obsługi dla przycisku element podrzędny <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń przez określenie atrybutu `Button.Click` na `StackPanel` element Object z Twoją nazwą programu obsługi, jako wartość atrybutu. Aby uzyskać więcej informacji na temat sposobu trasowane pracy zdarzenia, zobacz [Przegląd zdarzeń kierowane](routed-events-overview.md).  
   
 <a name="x_name_and_xaml_named_elements"></a>   
 ## <a name="xaml-named-elements"></a>O nazwie elementów XAML  
- Domyślnie wystąpienie obiektu, do utworzenia wykresu obiektu przez przetwarzanie elementu obiektu XAML nie posiada unikatowego identyfikatora lub odwołanie do obiektu. Z kolei jeśli wywołujesz konstruktora w kodzie, prawie zawsze używać konstruktora wyniku Aby ustawić zmienną do skonstruowanego wystąpienia tak, aby później w kodzie można odwoływać się wystąpienia. Aby można było zapewnić standardowe dostęp do obiektów, które zostały utworzone za pośrednictwem definicji znaczników, XAML definiuje [atrybut x: Name](../../../../docs/framework/xaml-services/x-name-directive.md). Można ustawić wartość `x:Name` atrybutu w dowolnym elemencie obiektu. W swojej związanym z kodem identyfikator, który wybierzesz odpowiada zmienną instance, która odwołuje się do skonstruowanego wystąpienia. We wszystkich aspektach o nazwie elementy działają tak, jakby były one wystąpienia obiektu (nazwa odwołuje się do tego wystąpienia) i usługi związane z kodem można odwoływać się do nazwanych elementów do obsługi interakcji środowiska wykonawczego w aplikacji. To połączenie między wystąpieniami i zmienne odbywa się przez kompilator znaczników WPF XAML i więcej specjalnie obejmują funkcje i wzorców takich jak <xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A> , nie będzie omówiono szczegółowo w tym temacie.  
+ Domyślnie wystąpienie obiektu, do utworzenia wykresu obiektu przez przetwarzanie elementu obiektu XAML nie posiada unikatowego identyfikatora lub odwołanie do obiektu. Z kolei jeśli wywołujesz konstruktora w kodzie, prawie zawsze używać konstruktora wyniku Aby ustawić zmienną do skonstruowanego wystąpienia tak, aby później w kodzie można odwoływać się wystąpienia. Aby można było zapewnić standardowe dostęp do obiektów, które zostały utworzone za pośrednictwem definicji znaczników, XAML definiuje [atrybut x: Name](../../xaml-services/x-name-directive.md). Można ustawić wartość `x:Name` atrybutu w dowolnym elemencie obiektu. W swojej związanym z kodem identyfikator, który wybierzesz odpowiada zmienną instance, która odwołuje się do skonstruowanego wystąpienia. We wszystkich aspektach o nazwie elementy działają tak, jakby były one wystąpienia obiektu (nazwa odwołuje się do tego wystąpienia) i usługi związane z kodem można odwoływać się do nazwanych elementów do obsługi interakcji środowiska wykonawczego w aplikacji. To połączenie między wystąpieniami i zmienne odbywa się przez kompilator znaczników WPF XAML i więcej specjalnie obejmują funkcje i wzorców takich jak <xref:System.Windows.Markup.IComponentConnector.InitializeComponent%2A> , nie będzie omówiono szczegółowo w tym temacie.  
   
  Dziedziczenie elementów XAML na poziomie struktury WPF <xref:System.Windows.FrameworkElement.Name%2A> właściwość, która jest odpowiednikiem XAML zdefiniowane `x:Name` atrybutu. Niektóre inne klasy udostępniają odpowiedniki właściwości poziomu `x:Name`, która została również ogólnie zdefiniowana jako `Name` właściwości. Ogólnie rzecz biorąc, jeśli nie możesz znaleźć `Name` właściwości w tabeli składowych dla wybranego elementu/typu, użyj `x:Name` zamiast tego. `x:Name` Wartości zapewni identyfikatora elementu XAML, który może być używany w czasie wykonywania określonych podsystemów lub metody narzędziowe takich jak <xref:System.Windows.FrameworkElement.FindName%2A>.  
   
  Poniższy przykład ustawia <xref:System.Windows.FrameworkElement.Name%2A> na <xref:System.Windows.Controls.StackPanel> elementu. Następnie program obsługi na <xref:System.Windows.Controls.Button> w tym <xref:System.Windows.Controls.StackPanel> odwołania <xref:System.Windows.Controls.StackPanel> za pośrednictwem jego odwołania do wystąpienia `buttonContainer` jako ustawione przez <xref:System.Windows.FrameworkElement.Name%2A>.  
   
- [!code-xaml[XAMLOvwSupport#NamedE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede)]  
-[!code-xaml[XAMLOvwSupport#NamedE2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede2)]  
+ [!code-xaml[XAMLOvwSupport#NamedE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede)]  
+[!code-xaml[XAMLOvwSupport#NamedE2](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#namede2)]  
   
- [!code-csharp[XAMLOvwSupport#NameCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml.cs#namecode)]
- [!code-vb[XAMLOvwSupport#NameCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#namecode)]  
+ [!code-csharp[XAMLOvwSupport#NameCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml.cs#namecode)]
+ [!code-vb[XAMLOvwSupport#NameCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#namecode)]  
   
- Podobnie jak zmienna nazwy XAML dla wystąpienia podlega koncepcji zakresu, tak, aby nazwy można wymusić być unikatowe w obrębie niektórych zakres, który jest przewidywalne. Podstawowy kod znaczników, który definiuje stronę wskazuje, że jeden unikatowy namescope XAML z granicą namescope XAML jest głównym elementem tej strony. Jednak inne źródła znaczników mogą wchodzić w interakcje ze stroną w czasie wykonywania, takie jak style lub szablony w ramach stylów, i źródeł, takich znaczników często mają własne zakresy nazw XAML, która niekoniecznie nie są połączone z namescope XAML strony. Aby uzyskać więcej informacji na temat `x:Name` i zakresy nazw XAML, zobacz <xref:System.Windows.FrameworkElement.Name%2A>, [x: Name — dyrektywa](../../../../docs/framework/xaml-services/x-name-directive.md), lub [zakresy WPF XAML nazw](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+ Podobnie jak zmienna nazwy XAML dla wystąpienia podlega koncepcji zakresu, tak, aby nazwy można wymusić być unikatowe w obrębie niektórych zakres, który jest przewidywalne. Podstawowy kod znaczników, który definiuje stronę wskazuje, że jeden unikatowy namescope XAML z granicą namescope XAML jest głównym elementem tej strony. Jednak inne źródła znaczników mogą wchodzić w interakcje ze stroną w czasie wykonywania, takie jak style lub szablony w ramach stylów, i źródeł, takich znaczników często mają własne zakresy nazw XAML, która niekoniecznie nie są połączone z namescope XAML strony. Aby uzyskać więcej informacji na temat `x:Name` i zakresy nazw XAML, zobacz <xref:System.Windows.FrameworkElement.Name%2A>, [x: Name — dyrektywa](../../xaml-services/x-name-directive.md), lub [zakresy WPF XAML nazw](wpf-xaml-namescopes.md).  
   
 <a name="attached_properties_and_attached_events"></a>   
 ## <a name="attached-properties-and-attached-events"></a>Dołączone właściwości i zdarzenia dołączone  
@@ -295,11 +295,11 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
   
  W poniższym przykładzie pokazano <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> dołączona właściwość. <xref:System.Windows.Controls.DockPanel> Klasa definiuje metody dostępu dla <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> i dlatego jest właścicielem dołączona właściwość. <xref:System.Windows.Controls.DockPanel> Klasa zawiera także logiki, który iteruje po jego elementów podrzędnych i specjalnie sprawdza każdy element, dla ustaw wartość <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Jeśli wartość zostanie znaleziona, ta wartość jest używany podczas układ pozycjonować elementy podrzędne. Korzystanie z <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> dołączonej właściwości i tej możliwości pozycjonowania jest w rzeczywistości motywującego scenariusz <xref:System.Windows.Controls.DockPanel> klasy.  
   
- [!code-xaml[XAMLOvwSupport#DockAP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#dockap)]  
+ [!code-xaml[XAMLOvwSupport#DockAP](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#dockap)]  
   
- W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], większość lub wszystkie załączonych właściwości również są implementowane jako właściwości zależności. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
+ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], większość lub wszystkie załączonych właściwości również są implementowane jako właściwości zależności. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości dołączonych](attached-properties-overview.md).  
   
- Zdarzenia dołączone Użyj podobny *ownerType*. *eventName* formy Składnia atrybutu. Podobnie jak zdarzenia niedołączonych wartością atrybutu dołączone zdarzenia w XAML Określa nazwę metody obsługi, które jest wywoływane, gdy zdarzenie jest obsługiwane w elemencie. Dołączone zdarzenie użycia w programie WPF XAML są mniej typowe. Aby uzyskać więcej informacji, zobacz [Przegląd zdarzeń dołączonych](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Zdarzenia dołączone Użyj podobny *ownerType*. *eventName* formy Składnia atrybutu. Podobnie jak zdarzenia niedołączonych wartością atrybutu dołączone zdarzenia w XAML Określa nazwę metody obsługi, które jest wywoływane, gdy zdarzenie jest obsługiwane w elemencie. Dołączone zdarzenie użycia w programie WPF XAML są mniej typowe. Aby uzyskać więcej informacji, zobacz [Przegląd zdarzeń dołączonych](attached-events-overview.md).  
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>Typy podstawowe i XAML  
@@ -309,7 +309,7 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
 ## <a name="xaml-security"></a>Zabezpieczenia XAML  
  XAML jest językiem znaczników, który bezpośrednio reprezentuje tworzenia wystąpienia obiektu, jak i wykonywania. Elementy tworzone w XAML więc ten sam możliwość interakcji z zasobami systemu (na przykład sieci dostępu do pliku systemu We/Wy) jako równoważne, generowany jest kod.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] struktury zabezpieczeń [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Oznacza to, że [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obniżyła uprawnień Wykonywanie zawartości w strefie internet. "Luźno XAML" (stron XAML Nieskompilowane interpretowany w czasie ładowania przez Podgląd XAML) i [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] są zazwyczaj uruchamiane w ramach tej strefy internet i ten sam zestaw uprawnień.  Jednak XAML załadowane w pełni zaufanych aplikacji ma taki sam dostęp do zasobów systemowych, jak hostingu aplikacji. Aby uzyskać więcej informacji, zobacz [WPF częściowego zaufania zabezpieczeń](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] struktury zabezpieczeń [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Oznacza to, że [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obniżyła uprawnień Wykonywanie zawartości w strefie internet. "Luźno XAML" (stron XAML Nieskompilowane interpretowany w czasie ładowania przez Podgląd XAML) i [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] są zazwyczaj uruchamiane w ramach tej strefy internet i ten sam zestaw uprawnień.  Jednak XAML załadowane w pełni zaufanych aplikacji ma taki sam dostęp do zasobów systemowych, jak hostingu aplikacji. Aby uzyskać więcej informacji, zobacz [WPF częściowego zaufania zabezpieczeń](../wpf-partial-trust-security.md).  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>Ładowanie XAML z kodu  
@@ -317,20 +317,20 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
   
 <a name="whats_next"></a>   
 ## <a name="whats-next"></a>Jaka jest przyszłość  
- Ten temat zawiera wstęp do XAML składnia pojęcia i terminologia, ponieważ mają zastosowanie do platformy WPF. Aby uzyskać więcej informacji na temat terminy używane w tym miejscu, zobacz [składnia XAML w szczegółów](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Ten temat zawiera wstęp do XAML składnia pojęcia i terminologia, ponieważ mają zastosowanie do platformy WPF. Aby uzyskać więcej informacji na temat terminy używane w tym miejscu, zobacz [składnia XAML w szczegółów](xaml-syntax-in-detail.md).  
   
- Jeśli jeszcze nie zostało to zrobione, spróbuj ćwiczeń opisanych w temacie samouczka [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md). Podczas tworzenia aplikacji przetwarzających znaczników, opisanego przez samouczek ćwiczenie pomoże wzmocnienia wiele pojęcia opisane w tym temacie.  
+ Jeśli jeszcze nie zostało to zrobione, spróbuj ćwiczeń opisanych w temacie samouczka [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md). Podczas tworzenia aplikacji przetwarzających znaczników, opisanego przez samouczek ćwiczenie pomoże wzmocnienia wiele pojęcia opisane w tym temacie.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] korzysta z modelu konkretnej aplikacji, który jest oparty na <xref:System.Windows.Application> klasy. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] korzysta z modelu konkretnej aplikacji, który jest oparty na <xref:System.Windows.Application> klasy. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami — omówienie](../app-development/application-management-overview.md).  
   
- [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md) znajdziesz więcej szczegółów o tym, jak tworzyć aplikacje włącznie XAML w wierszu polecenia i [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
+ [Kompilowanie aplikacji WPF](../app-development/building-a-wpf-application-wpf.md) znajdziesz więcej szczegółów o tym, jak tworzyć aplikacje włącznie XAML w wierszu polecenia i [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)].  
   
- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) daje więcej informacji na temat wszechstronności odpowiedniej właściwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]i pojęcia związane z właściwości zależności.  
+ [Przegląd właściwości zależności](dependency-properties-overview.md) daje więcej informacji na temat wszechstronności odpowiedniej właściwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]i pojęcia związane z właściwości zależności.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [Namespace XAML (x:) Funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
-- [Rozszerzenia WPF XAML](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
-- [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
-- [Drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+- [Szczegóły składni XAML](xaml-syntax-in-detail.md)
+- [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)
+- [Namespace XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Rozszerzenia WPF XAML](wpf-xaml-extensions.md)
+- [Przegląd elementów podstawowych](base-elements-overview.md)
+- [Drzewa w WPF](trees-in-wpf.md)

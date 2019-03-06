@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 120e2ecdf5869200fa9280ce3fc0a2a3a76c667f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f0d01dffe0f8dad2b1e9af75d6642c68be3ee0f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748326"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379097"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
 Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] a .NET Framework zawierają kilka technologie wdrażania. Technologie wdrażania, które jest używane do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja jest zależna od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrożenia i jak są używane w połączeniu z wymagań związanych z wdrażaniem każdego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typu aplikacji.  
@@ -80,11 +80,11 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
 ### <a name="deploying-markup-only-xaml-applications"></a>Wdrażanie aplikacji tylko do znaczników XAML  
  Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są zazwyczaj publikowane na serwerach sieci Web, takie jak [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] strony i mogą być wyświetlane przy użyciu [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]. Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron uruchomić w piaskownicy częściowego zaufania zabezpieczeń bez ograniczeń, które są definiowane przez zestaw uprawnień strefy Internet. Dzięki temu równoważne izolowanym do [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]— na podstawie aplikacji sieci Web.  
   
- Aby uzyskać więcej informacji o zabezpieczeniach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , zobacz [zabezpieczeń](../../../../docs/framework/wpf/security-wpf.md).  
+ Aby uzyskać więcej informacji o zabezpieczeniach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , zobacz [zabezpieczeń](../security-wpf.md).  
   
  Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony mogą być zainstalowane do lokalnego systemu plików przy użyciu dowolnego polecenia XCopy lub [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Te strony można wyświetlić przy użyciu [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] lub w Eksploratorze Windows.  
   
- Aby uzyskać więcej informacji na temat XAML, zobacz [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Aby uzyskać więcej informacji na temat XAML, zobacz [Przegląd XAML (WPF)](../advanced/xaml-overview-wpf.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Deploying XAML Browser Applications  
@@ -97,7 +97,7 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
 -   *ApplicationName*. exe.manifest: Manifest aplikacji.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na temat manifesty wdrażania i aplikacji, zobacz [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+>  Aby uzyskać więcej informacji na temat manifesty wdrażania i aplikacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
  Te pliki są tworzone podczas [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] jest wbudowana. Aby uzyskać więcej informacji, zobacz [jak: Utwórz nowy projekt aplikacji przeglądarki WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Tylko znaczniki, takich jak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] najczęściej są publikowane na serwerze sieci Web oraz wyświetlać za pomocą [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
@@ -109,7 +109,7 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
   
  Domyślnie ClickOnce publikowanie aplikacji pliki z rozszerzeniem .deploy. Może być problematyczne, ale można go wyłączyć. Aby uzyskać więcej informacji, zobacz [serwera i problemy z konfiguracją klienta we wdrożeniach ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   
- Aby uzyskać więcej informacji o wdrażaniu [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], zobacz [WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+ Aby uzyskać więcej informacji o wdrażaniu [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], zobacz [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md).  
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Instalowanie programu .NET Framework  
@@ -121,8 +121,8 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
   
  Automatyczne wykrywanie .NET framework jest dostępna w [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], i [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] klienci, którzy mają [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] lub nowszej.  
   
- Aby uzyskać więcej informacji, zobacz [wdrażania aplikacji .NET Framework i](../../../../docs/framework/deployment/index.md).  
+ Aby uzyskać więcej informacji, zobacz [wdrażania aplikacji .NET Framework i](../../deployment/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
-- [Zabezpieczenia](../../../../docs/framework/wpf/security-wpf.md)
+- [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)
+- [Zabezpieczenia](../security-wpf.md)

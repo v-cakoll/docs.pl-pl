@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6dbaa9201d5c9cd902412797b2427ec488d014
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967376"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371414"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie zestawu, który zawiera jego deklarację.  
@@ -35,7 +35,7 @@ Określa, że co najmniej jeden zadeklarowany element programistyczny jest dost�
  Porównanie `Friend` , a druga modyfikatorach dostępu, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
->  Można określić, czy innego zestawu jest zestawu friend, co pozwala na dostęp do wszystkich typów i elementów członkowskich, które są oznaczone jako `Friend`. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+>  Można określić, czy innego zestawu jest zestawu friend, co pozwala na dostęp do wszystkich typów i elementów członkowskich, które są oznaczone jako `Friend`. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
   
 ## <a name="example"></a>Przykład  
  Następujące klasy używa `Friend` modyfikator, aby zezwolić na inne elementy programowania, w ramach tego samego zestawu dostęp do niektórych elementów członkowskich.  

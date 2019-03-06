@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: ed1f7781453503682648d740b57dd7af0a1715c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524133"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376377"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicjalizacja elementów obiektu poza drzewem obiektu
 Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inicjowania mają być opóźniane do procesów, które są zwykle oparte na ten element jest podłączony do drzewa logicznego lub drzewa wizualnego. W tym temacie opisano kroki, które mogą być wymagane, aby zainicjować element, który nie jest podłączony do obu drzewa.  
@@ -39,10 +39,10 @@ Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-
   
  W przykładzie pokazano tylko funkcji main. Funkcje `Rasterize` i `Save` (niewyświetlany) są funkcje narzędzia, które powinien zachować ostrożność, przetwarzanie obrazu i we/wy.  
   
- [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
- [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
+ [!code-csharp[InitializeElements#Main](~/samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
+ [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Drzewa w WPF](trees-in-wpf.md)
+- [Renderowanie grafiki WPF — przegląd](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)

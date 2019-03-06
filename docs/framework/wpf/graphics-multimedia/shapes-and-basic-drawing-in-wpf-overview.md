@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9852c811b00ee7f8d86b7c1daaaa28f28fa5a89f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665906"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372740"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Przegląd Kształty i podstawowe rysowanie w WPF
 Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.Shapes.Shape> obiektów. A <xref:System.Windows.Shapes.Shape> jest typem <xref:System.Windows.UIElement> pozwala narysować kształt na ekranie. Ponieważ są one elementy interfejsu użytkownika <xref:System.Windows.Shapes.Shape> obiekty mogą być używane wewnątrz <xref:System.Windows.Controls.Panel> elementów i większości kontrolek.  
@@ -41,28 +41,28 @@ Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.S
   
  <xref:System.Windows.Shapes.Line> Klasy umożliwia narysuj linię między dwoma punktami. Poniższy przykład pokazuje kilka sposobów, aby określić współrzędne wiersza i właściwości pociągnięcia.  
   
- [!code-xaml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
+ [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- [!code-cpp[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralline)]
- [!code-csharp[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralline)]
- [!code-vb[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralline)]  
+ [!code-cpp[shapesprocedural#ShapesProceduralLine](~/samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralline)]
+ [!code-csharp[shapesprocedural#ShapesProceduralLine](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralline)]
+ [!code-vb[shapesprocedural#ShapesProceduralLine](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralline)]  
   
  Na poniższej ilustracji przedstawiono renderowanych <xref:System.Windows.Shapes.Line>.  
   
- ![Wiersz ilustracji](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-line2.gif "shape_ovw_line2")  
+ ![Wiersz ilustracji](./media/shape-ovw-line2.gif "shape_ovw_line2")  
   
  Mimo że <xref:System.Windows.Shapes.Line> klasa dostarczać <xref:System.Windows.Shapes.Shape.Fill%2A> właściwość, ustawienie nie obowiązuje, ponieważ <xref:System.Windows.Shapes.Line> ma bez obszaru.  
   
  Jest innym kształcie wspólnej <xref:System.Windows.Shapes.Ellipse>.  Tworzenie <xref:System.Windows.Shapes.Ellipse> , definiując kształtu <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości. Aby narysować okrąg, należy określić <xref:System.Windows.Shapes.Ellipse> którego <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> wartości są równe.  
   
- [!code-xaml[ShapeOverviews#ShapesOVW1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
+ [!code-xaml[ShapeOverviews#ShapesOVW1](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
   
- [!code-csharp[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
- [!code-vb[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
+ [!code-csharp[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
+ [!code-vb[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
   
  Na poniższej ilustracji przedstawiono przykład renderowanych <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Ellipse illustration](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
+ ![Ellipse illustration](./media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
   
 <a name="paths"></a>   
 ## <a name="using-paths-and-geometries"></a>Przy użyciu ścieżek i geometrii  
@@ -76,13 +76,13 @@ Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.S
   
  W poniższym przykładzie <xref:System.Windows.Shapes.Path> używany do rysowania krzywą Beziera drugiego stopnia.  
   
- [!code-xaml[geometrysample#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
+ [!code-xaml[geometrysample#34](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
  Na poniższej ilustracji przedstawiono renderowanych kształtu.  
   
- ![Ilustracja przedstawiająca ścieżkę](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path2.gif "shape_ovw_path2")  
+ ![Ilustracja przedstawiająca ścieżkę](./media/shape-ovw-path2.gif "shape_ovw_path2")  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.PathGeometry> , a druga <xref:System.Windows.Media.Geometry> klas, zobacz [Przegląd Geometria](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.PathGeometry> , a druga <xref:System.Windows.Media.Geometry> klas, zobacz [Przegląd Geometria](geometry-overview.md).  
   
 <a name="pathdatastring"></a>   
 ### <a name="xaml-abbreviated-syntax"></a>XAML skróconej składni  
@@ -95,13 +95,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Na poniższej ilustracji przedstawiono renderowanych <xref:System.Windows.Shapes.Path>.  
   
- ![Ilustracja przedstawiająca ścieżkę](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
+ ![Ilustracja przedstawiająca ścieżkę](./media/shape-ovw-path.PNG "shape_ovw_path")  
   
  <xref:System.Windows.Shapes.Path.Data%2A> Ciągu atrybutu rozpocznie się za pomocą polecenia "moveto" wskazywanym przez M, która ustanawia punkt początkowy dla ścieżki w układzie współrzędnych <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.Shapes.Path> Parametry danych jest rozróżniana wielkość liter. Wielka litera M wskazuje bezwzględna lokalizacji dla nowego punktu bieżącego. Mała litera m wskazuje współrzędnych względnych. Pierwszy segment jest trzeciego stopnia początku krzywej Beziera na (100,200) i kończąc na (400,175), rysowane przy użyciu dwóch kontrolować punkty (100,25) i (400,350). Ten segment jest wskazywane za pomocą polecenia języka C w <xref:System.Windows.Shapes.Path.Data%2A> atrybut ciągu. Ponownie wielkiej litery C wskazuje ścieżkę bezwzględną; małe litery c wskazuje ścieżkę względną.  
   
  Drugi segment rozpoczyna się za pomocą polecenia poziomy bezwzględny "lineto" H, który określa linią z podrzędną poprzedniego punktu końcowego (400,175) do nowego punktu końcowego (280,175). Ponieważ polecenia poziomy "lineto", określona wartość jest *x*-koordynacji.  
   
- Informacje na temat składni pełną ścieżkę, zobacz <xref:System.Windows.Shapes.Path.Data%2A> odwołania i [Utwórz kształt używając PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md).  
+ Informacje na temat składni pełną ścieżkę, zobacz <xref:System.Windows.Shapes.Path.Data%2A> odwołania i [Utwórz kształt używając PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md).  
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>Malowanie kształtów  
@@ -122,7 +122,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Na poniższej ilustracji przedstawiono renderowanych <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Elipsy](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipsefill.PNG "shape_ovw_ellipsefill")  
+ ![Elipsy](./media/shape-ovw-ellipsefill.PNG "shape_ovw_ellipsefill")  
   
  Alternatywnie można użyć składni elementu właściwości jawnie utworzyć <xref:System.Windows.Media.SolidColorBrush> obiekt do rysowania kształtów jednolitym kolorem.  
   
@@ -145,13 +145,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Poniższa ilustracja przedstawia renderowanych kształtu.  
   
- ![Ilustracja SolidColorBrush](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
+ ![Ilustracja SolidColorBrush](./media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
   
- Umożliwia malowanie wypełnienia przy użyciu gradientów, obrazy, wzorców i lub obrys kształtu. Aby uzyskać więcej informacji, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Umożliwia malowanie wypełnienia przy użyciu gradientów, obrazy, wzorców i lub obrys kształtu. Aby uzyskać więcej informacji, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="stretchableshapessection"></a>   
 ## <a name="stretchable-shapes"></a>Kształty rozciągalne  
- <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, I <xref:System.Windows.Shapes.Rectangle> wszystkich klas <xref:System.Windows.Shapes.Shape.Stretch%2A> właściwości. Ta właściwość określa, jak <xref:System.Windows.Shapes.Shape> zawartość obiektu (kształt do narysowania) jest rozciągany tak, aby wypełnić <xref:System.Windows.Shapes.Shape> miejsca układ obiektu. A <xref:System.Windows.Shapes.Shape> ilość miejsca jest miejsca układ obiektu <xref:System.Windows.Shapes.Shape> jest przydzielany przez system układu z powodu albo jawnie <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> ustawienie lub z powodu jego <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> ustawienia. Aby uzyskać dodatkowe informacje na temat układu w oprogramowaniu Windows Presentation Foundation, zobacz [układ](../../../../docs/framework/wpf/advanced/layout.md) Przegląd.  
+ <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, I <xref:System.Windows.Shapes.Rectangle> wszystkich klas <xref:System.Windows.Shapes.Shape.Stretch%2A> właściwości. Ta właściwość określa, jak <xref:System.Windows.Shapes.Shape> zawartość obiektu (kształt do narysowania) jest rozciągany tak, aby wypełnić <xref:System.Windows.Shapes.Shape> miejsca układ obiektu. A <xref:System.Windows.Shapes.Shape> ilość miejsca jest miejsca układ obiektu <xref:System.Windows.Shapes.Shape> jest przydzielany przez system układu z powodu albo jawnie <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> ustawienie lub z powodu jego <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> ustawienia. Aby uzyskać dodatkowe informacje na temat układu w oprogramowaniu Windows Presentation Foundation, zobacz [układ](../advanced/layout.md) Przegląd.  
   
  Właściwości rozciągania ma jedną z następujących wartości:  
   
@@ -202,21 +202,21 @@ myPolygon.StrokeThickness = 2;
   
  W poniższym przykładzie <xref:System.Windows.Media.RotateTransform> służy do obracania kształtu o 45 stopni o kształtu lewym górnym rogu (0,0).  
   
- [!code-xaml[transformssample#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
+ [!code-xaml[transformssample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
   
  W następnym przykładzie innym kształcie jest obracany 45 stopni, ale tym razem go obraca się wokół punktu (25,50).  
   
- [!code-xaml[transformssample#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
+ [!code-xaml[transformssample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
   
  Poniższa ilustracja przedstawia wyniki dwóch transformacji.  
   
- ![Obroty 45 stopni z różnymi punktami](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
+ ![Obroty 45 stopni z różnymi punktami](./media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
   
  W poprzednich przykładach przekształcenia pojedynczego została zastosowana do każdego obiektu kształtu. Aby zastosować wiele przekształceń do kształtu (lub innego elementu interfejsu użytkownika), należy użyć <xref:System.Windows.Media.TransformGroup>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
+- [Geometria — przegląd](geometry-overview.md)
+- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Animacja — przegląd](animation-overview.md)

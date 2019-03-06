@@ -16,42 +16,43 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec91a1f6fba70e3c9706541dc641ddd019d44841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdb9f748279e4e74c0dbd1ced1f48e3a24b9904d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358421"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet — funkcja
+
 Pobiera kwalifikator, ustaw dla określonej właściwości.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 HRESULT GetPropertyQualifierSet (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszProperty,
    [out] IWbemQualifierSet  **ppQualSet
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametry
 
-`vFunc`  
+`vFunc`\
 [in] Ten parametr jest nieużywany.
 
-`ptr`  
+`ptr`\
 [in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
-`wszMethod`  
-[in] Nazwa właściwości. `wszProperty` musi wskazywać prawidłowy `LPCWSTR`. 
+`wszMethod`\
+[in] Nazwa właściwości. `wszProperty` musi wskazywać prawidłowy `LPCWSTR`.
 
-`ppQualSet`  
-[out] Otrzymuje wskaźnik interfejsu, który umożliwia dostęp do kwalifikatory właściwości. `ppQualSet` nie może być `null`. Jeśli wystąpi błąd, nowy obiekt nie jest zwracana i wskaźnik jest ustawiony na wskaż `null`. 
+`ppQualSet`\
+[out] Otrzymuje wskaźnik interfejsu, który umożliwia dostęp do kwalifikatory właściwości. `ppQualSet` nie może być `null`. Jeśli wystąpi błąd, nowy obiekt nie jest zwracana i wskaźnik jest ustawiony na wskaż `null`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -65,23 +66,25 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest `null`. |
 | `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | Funkcja podejmie próbę uzyskania kwalifikatorów właściwości systemu. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
-  
+
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) metody. 
+Ta funkcja zawija wywołanie do [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) metody.
 
-Wywołanie tej funkcji jest obsługiwana tylko wtedy, gdy bieżący obiekt jest definicją klasy modelu wspólnych informacji. Metoda manipulowania nie jest dostępna dla [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters wskazujące wystąpienia modelu CIM.
+Wywołanie tej funkcji jest obsługiwana tylko wtedy, gdy bieżący obiekt jest definicją klasy modelu wspólnych informacji. Metoda manipulowania nie jest dostępna dla [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wskaźniki prowadzące do wystąpienia modelu CIM.
 
 Ponieważ każda metoda może mieć własną kwalifikatory [wskaźnik IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) umożliwia obiekt wywołujący, dodawać, edytować lub usuwać kwalifikatory.
 
 Ponieważ właściwości systemu mieć nie kwalifikatorów, funkcja zwraca `WBEM_E_SYSTEM_PROPERTY` Jeśli użytkownik podejmie próbę uzyskania [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) wskaźnik dla właściwości systemu.
 
-## <a name="requirements"></a>Wymagania  
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** WMINet_Utils.idl  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** WMINet_Utils.idl
+
+**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

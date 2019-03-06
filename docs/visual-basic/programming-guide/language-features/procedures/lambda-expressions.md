@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974812"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363487"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda — Wyrażenia (Visual Basic)
 A *wyrażenia lambda* jest funkcji lub podprocedury bez nazwy, który może służyć wszędzie tam, gdzie obiekt delegowany jest prawidłowy. Wyrażenia lambda może być funkcji lub podprocedury i może być w jednym lub wielu linii. Wyrażenie lambda można przekazać wartości z bieżącego zakresu.  
@@ -109,7 +109,7 @@ End Class
   
  Aby uzyskać więcej informacji na temat sposobu tworzenia i używania metod asynchronicznych, zobacz [Asynchronous Programming with Async and Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a> Kontekst  
+## <a name="context"></a> Kontekst  
  Wyrażenie lambda udostępnia kontekst zakresu, w którym jest zdefiniowana. Ma on te same prawa dostępu, jak każdy kod napisany w zakresie zawierającym. Obejmuje to dostęp do zmiennych składowych, funkcje i subskrypcji, `Me`oraz parametry i zmienne lokalne w zakresie zawierającym.  
   
  Dostęp do zmiennych lokalnych i parametrów w zakresie zawierającym mogą wykraczać poza okres istnienia tego zakresu. Tak długo, jak obiekt delegowany odwołujące się do wyrażenia lambda nie jest dostępna dla wyrzucania elementów bezużytecznych, dostęp do zmiennych w środowisku, oryginalnym są zachowywane. W poniższym przykładzie zmienna `target` jest lokalną grupą `makeTheGame`, metody, w którym wyrażenie lambda `playTheGame` jest zdefiniowana. Należy zauważyć, że wyrażenie lambda zwrócone przypisane do `takeAGuess` w `Main`, wciąż ma dostęp do zmiennej lokalnej `target`.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: e88383126c1fb618b2a2a96bdf5998560864af50
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746445"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355184"
 ---
 # <a name="annotations-overview"></a>Przegląd Adnotacje
 Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie powszechnie używane czynnością, firma Microsoft niemal Zrób to dla przyznane. Te informacje o lub komentarze są "adnotacje" dodajemy do dokumentu do informacji lub aby wyróżnić elementy do późniejszego wykorzystania. Chociaż zapisywania notatki na drukowanych dokumentów jest proste i powszechnie używane, możliwość dodawania swoje komentarze do dokumentów elektronicznych zwykle jest bardzo ograniczona, jeśli jest dostępny w wszystkich.  
@@ -28,12 +28,12 @@ Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie po
   
  Na poniższej ilustracji przedstawiono kilka przykładów, wyróżnianie, notatki tekstu i pisma odręcznego Notatka adnotacji.  
   
- ![Wyróżnianie, tekstu i notatki sticky note adnotacji. ](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Wyróżnianie, tekstu i notatki sticky note adnotacji. ](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  Poniższy kod przedstawia metodę, która umożliwia włączenie obsługi adnotacji w aplikacji.  
   
- [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
- [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Najważniejsze funkcje  
@@ -41,17 +41,17 @@ Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie po
   
  Na poniższej ilustracji przedstawiono przykład adnotacji wyróżnienia.  
   
- ![Wyróżnianie adnotacji](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
+ ![Wyróżnianie adnotacji](./media/caf-callouts.png "CAF_Callouts")  
   
  Użytkownicy zazwyczaj tworzyć adnotacje polega na wybraniu jakiś tekst lub interesujący Cię element, a następnie kliknij prawym przyciskiem myszy, aby wyświetlić <xref:System.Windows.Controls.ContextMenu> opcji adnotacji.  W poniższym przykładzie przedstawiono [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] służy do deklarowania <xref:System.Windows.Controls.ContextMenu> za pomocą routingu poleceń, których użytkownicy mogą tworzyć i zarządzać nimi adnotacji.  
   
- [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>Zakotwiczanie danych  
  [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] Wiąże adnotacje do danych przez użytkownika, nie tylko do pozycji w widoku wyświetlania. W związku z tym jeśli widok dokumentu zmieni się, np. gdy użytkownik przewija lub zmienia rozmiar okna, adnotacja pozostaje z wybór danych, z którą jest powiązany. Na przykład poniższa ilustracja przedstawia zgłaszający na zaznaczanie tekstu adnotacji. Dokument wyświetlania zmian (Przewija, zmiany rozmiaru, skaluje lub przenoszone w inny sposób), adnotacji podświetlenie przenosi przy użyciu oryginalnego wybór danych.  
   
- ![Zakotwiczanie danych adnotacji](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")  
+ ![Zakotwiczanie danych adnotacji](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
 ## <a name="matching-annotations-with-annotated-objects"></a>Adnotacje zgodnego z adnotacjami obiektami  
@@ -59,8 +59,8 @@ Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie po
   
  Poniższy przykład demonstruje sposób implementacji programu obsługi zdarzeń, takie pola listy, która służy jako w okienku komentarze.  
   
- [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
- [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
  Inny przykładowy scenariusz obejmuje aplikacje, które umożliwiają wymianę adnotacje i notatki między czytnikami dokumentu za pośrednictwem poczty e-mail. Ta funkcja umożliwia tych aplikacji, można przejść czytelnika na stronie zawierającej adnotacji, są wymieniane.  
   
@@ -71,8 +71,8 @@ Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie po
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
-- [Schemat adnotacji](../../../../docs/framework/wpf/advanced/annotations-schema.md)
-- [ContextMenu — przegląd](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
-- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Schemat adnotacji](annotations-schema.md)
+- [ContextMenu — przegląd](../controls/contextmenu-overview.md)
+- [Przegląd poleceń](commanding-overview.md)
+- [Przegląd dokumentu przepływu](flow-document-overview.md)
 - [Instrukcje: Dodawanie polecenia do element MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

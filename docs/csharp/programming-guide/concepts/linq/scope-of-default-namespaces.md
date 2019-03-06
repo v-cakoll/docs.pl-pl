@@ -2,12 +2,12 @@
 title: Zakres domyślnych przestrzeni nazw w języku C# 1
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: dfc86e2e58eb936106807aba21b2953f52101cbc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d60f489f616a413e25bf5cd427bd467852a97c7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979713"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379448"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Zakres domyślnych przestrzeni nazw w języku C\#
 Domyślne obszary nazw, reprezentowany w drzewie XML nie są uwzględnione w zakresie zapytania. Jeśli masz plik XML, który znajduje się w domyślnej przestrzeni nazw, nadal należy zadeklarować <xref:System.Xml.Linq.XNamespace> zmienną i łączą je z nazwą lokalną, można utworzyć kwalifikowane nazwy ma być używany w zapytaniu.  
@@ -53,7 +53,7 @@ End of result set
 ## <a name="example"></a>Przykład  
  W tym przykładzie pokazano tworzenie obiektu XML w przestrzeni nazw i zapytanie, które są poprawnie kodowane.  
   
- W przeciwieństwie do kodowane niepoprawnie powyższym przykładzie właściwe podejście przy użyciu języka C# jest zadeklarowania i zainicjowania <xref:System.Xml.Linq.XNamespace> obiektu i z niej korzystać, podczas określania <xref:System.Xml.Linq.XName> obiektów. W tym przypadku argument <xref:System.Xml.Linq.XElement.Elements%2A> metodą jest <xref:System.Xml.Linq.XName> obiektu.  
+ W przeciwieństwie do kodowane niepoprawnie powyższym przykładzie właściwe podejście przy użyciu języka C# jest zadeklarowania i zainicjowania <xref:System.Xml.Linq.XNamespace> obiektu i z niej korzystać, podczas określania <xref:System.Xml.Linq.XName> obiektów. W tym przypadku argument <xref:System.Xml.Linq.XContainer.Elements%2A> metodą jest <xref:System.Xml.Linq.XName> obiektu.  
   
 ### <a name="code"></a>Kod  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: ba2f98d262f5c43dbd0c07d356556cdc3ec4b8dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589756"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365883"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Instrukcje: Zastąp metadane dla właściwości zależności
 W tym przykładzie pokazano, jak zastąpić domyślny metadane zależności właściwości pochodzący z klasy dziedziczonej, wywołując <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> metody i dostarczanie metadanych dla określonego typu.  
@@ -26,13 +26,13 @@ W tym przykładzie pokazano, jak zastąpić domyślny metadane zależności wła
   
  W poniższym przykładzie klasa niestandardowa `MyAdvancedStateControl` metadanych określone zastąpienia `StateProperty` przez `MyAdvancedStateControl` o nowe metadane właściwości. Na przykład, wartość domyślna `StateProperty` jest teraz `true` gdy właściwość jest wysyłane zapytanie na nowo skonstruowany `MyAdvancedStateControl` wystąpienia.  
   
- [!code-csharp[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
- [!code-vb[PropertySystemEsoterics#MyStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
-[!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
-[!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
+ [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]
+ [!code-vb[PropertySystemEsoterics#MyStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#mystatecontrol)]  
+[!code-csharp[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#myadvancedstatecontrol)]
+[!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.DependencyProperty>
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)
+- [Niestandardowe właściwości zależności](custom-dependency-properties.md)
+- [Tematy z instrukcjami](properties-how-to-topics.md)

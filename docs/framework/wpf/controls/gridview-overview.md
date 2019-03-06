@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 161c42254144fca0e76bfb5e4aa10f1afb5b11d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578536"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360202"
 ---
 # <a name="gridview-overview"></a>GridView — Przegląd
 <xref:System.Windows.Controls.GridView> tryb widoku to jeden z trybów wyświetlania dla <xref:System.Windows.Controls.ListView> kontroli. <xref:System.Windows.Controls.GridView> Klasy i jej klasy pomocnicze umożliwiają Ty i Twoi użytkownicy elementu przeglądać kolekcje w tabeli, która zwykle używa przyciski jako nagłówków kolumn interaktywne. W tym temacie przedstawiono <xref:System.Windows.Controls.GridView> klasy i opisano jego użycia.  
@@ -29,19 +29,19 @@ ms.locfileid: "54578536"
   
  **Widok GridView zawartości ListView**  
   
- ![Różne ListView](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
+ ![Różne ListView](./media/styledlistview.PNG "StyledListView")  
   
  <xref:System.Windows.Controls.GridView> kolumny są reprezentowane przez <xref:System.Windows.Controls.GridViewColumn> obiektów, które można automatycznie rozmiar do ich zawartości. Opcjonalnie można jawnie ustawić <xref:System.Windows.Controls.GridViewColumn> określonej szerokości. Można zmienić rozmiar kolumn przez przeciągnięcie uchwytu między nagłówków kolumn. Możesz również dynamicznie dodać, usunąć, Zastąp i zmienić kolejność kolumn, ponieważ ta funkcja jest wbudowana w <xref:System.Windows.Controls.GridView>. Jednak <xref:System.Windows.Controls.GridView> bezpośrednio nie można zaktualizować danych, który jest wyświetlany.  
   
  Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.GridView> wyświetlającą dane pracowników. W tym przykładzie <xref:System.Windows.Controls.ListView> definiuje `EmployeeInfoDataSource` jako <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Definicje właściwości <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> powiązać <xref:System.Windows.Controls.GridViewColumn> zawartości `EmployeeInfoDataSource` kategorii danych.  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  Na poniższej ilustracji przedstawiono tabelę w poprzednim przykładzie tworzona.  
   
  **GridView, która wyświetla dane z ItemsSource**  
   
- ![ListView z danymi wyjściowymi GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView z danymi wyjściowymi GridView](./media/listviewgridview.JPG "ListViewGridView")  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>Styl i układ widoku GridView  
@@ -55,7 +55,7 @@ ms.locfileid: "54578536"
   
  Aby określić wyrównanie zawartości w kolumnie <xref:System.Windows.Controls.GridView>, zdefiniuj <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>. Nie używaj <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> i <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> właściwości <xref:System.Windows.Controls.ListView> zawartość, która jest wyświetlana przy użyciu <xref:System.Windows.Controls.GridView>.  
   
- Aby określić właściwości szablonu i style nagłówków kolumn, użyj <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, i <xref:System.Windows.Controls.GridViewColumnHeader> klasy. Aby uzyskać więcej informacji, zobacz [omówienie szablony i style nagłówków kolumn GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md).  
+ Aby określić właściwości szablonu i style nagłówków kolumn, użyj <xref:System.Windows.Controls.GridView>, <xref:System.Windows.Controls.GridViewColumn>, i <xref:System.Windows.Controls.GridViewColumnHeader> klasy. Aby uzyskać więcej informacji, zobacz [omówienie szablony i style nagłówków kolumn GridView](gridview-column-header-styles-and-templates-overview.md).  
   
 <a name="AddingVisualElementstoaGridViewView"></a>   
 ### <a name="adding-visual-elements-to-a-gridview"></a>Dodawanie elementów wizualnych w kontrolce GridView  
@@ -65,7 +65,7 @@ ms.locfileid: "54578536"
   
 <a name="StylingRowsinaGridViewView"></a>   
 ### <a name="styling-rows-in-a-gridview"></a>Style wierszy w widoku GridView  
- Użyj <xref:System.Windows.Controls.GridViewRowPresenter> i <xref:System.Windows.Controls.GridViewHeaderRowPresenter> klasy formatowania i wyświetlania wierszy <xref:System.Windows.Controls.GridView>. Na przykład, jak do wierszy stylu w <xref:System.Windows.Controls.GridView> trybu wyświetlania, zobacz [styl wierszowi w ListView implementuje czy GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
+ Użyj <xref:System.Windows.Controls.GridViewRowPresenter> i <xref:System.Windows.Controls.GridViewHeaderRowPresenter> klasy formatowania i wyświetlania wierszy <xref:System.Windows.Controls.GridView>. Na przykład, jak do wierszy stylu w <xref:System.Windows.Controls.GridView> trybu wyświetlania, zobacz [styl wierszowi w ListView implementuje czy GridView](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
   
 <a name="AlignmentIssuesWhenUsingItemContainerStyle"></a>   
 ### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>Wyrównanie w problemy podczas używania ItemContainerStyle  
@@ -83,7 +83,7 @@ ms.locfileid: "54578536"
   
      Użytkownicy mogą zmienić kolejność kolumn w <xref:System.Windows.Controls.GridView> , naciskając klawisze lewy przycisk myszy jest przemieszczany nad nagłówek kolumny, a następnie przeciągając tę kolumnę do nowej pozycji. Gdy użytkownik przeciągnie nagłówek kolumny, zmiennoprzecinkowy wersję nagłówka jest wyświetlany oraz linia ciągła czarny, pokazujący miejsca do wstawienia w kolumnie.  
   
-     Jeśli chcesz zmodyfikować domyślny styl zmiennoprzecinkowy wersji nagłówka, należy określić <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.GridViewColumnHeader> typ wyzwalane, gdy <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> właściwość jest ustawiona na <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Aby uzyskać więcej informacji, zobacz [Tworzenie stylu dla nagłówka kolumny GridView przeciągnąć](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
+     Jeśli chcesz zmodyfikować domyślny styl zmiennoprzecinkowy wersji nagłówka, należy określić <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.GridViewColumnHeader> typ wyzwalane, gdy <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> właściwość jest ustawiona na <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Aby uzyskać więcej informacji, zobacz [Tworzenie stylu dla nagłówka kolumny GridView przeciągnąć](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
 -   **Zmień rozmiar kolumny do jego zawartości.**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54578536"
   
      Użytkownicy mogą wybrać jeden lub więcej elementów w <xref:System.Windows.Controls.GridView>.  
   
-     Jeśli chcesz zmienić <xref:System.Windows.Style> wybranego elementu, zobacz [używanie wyzwalaczy do zaznaczonego elementu w ListView, styl](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
+     Jeśli chcesz zmienić <xref:System.Windows.Style> wybranego elementu, zobacz [używanie wyzwalaczy do zaznaczonego elementu w ListView, styl](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
 -   **Przewiń do wyświetlania zawartości, który nie jest początkowo widoczne na ekranie.**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54578536"
   
 <a name="Obtaining_Other_Custom_Views"></a>   
 ## <a name="obtaining-other-custom-views"></a>Uzyskiwanie innych widoków niestandardowych  
- <xref:System.Windows.Controls.GridView> Klasy, która jest pochodną <xref:System.Windows.Controls.ViewBase> abstrakcyjna klasa, jest to tylko jeden z trybów widok dla <xref:System.Windows.Controls.ListView> klasy. Można utworzyć inne widoki niestandardowe dotyczące <xref:System.Windows.Controls.ListView> przez pochodząca od <xref:System.Windows.Controls.ViewBase> klasy. Na przykład niestandardowy tryb widoku zobacz [Tworzenie niestandardowego trybu widoku dla ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md).  
+ <xref:System.Windows.Controls.GridView> Klasy, która jest pochodną <xref:System.Windows.Controls.ViewBase> abstrakcyjna klasa, jest to tylko jeden z trybów widok dla <xref:System.Windows.Controls.ListView> klasy. Można utworzyć inne widoki niestandardowe dotyczące <xref:System.Windows.Controls.ListView> przez pochodząca od <xref:System.Windows.Controls.ViewBase> klasy. Na przykład niestandardowy tryb widoku zobacz [Tworzenie niestandardowego trybu widoku dla ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="GridViewSupportingClasses"></a>   
 ## <a name="gridview-supporting-classes"></a>Klasy obsługi widoku GridView  
@@ -136,6 +136,6 @@ ms.locfileid: "54578536"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Sortowanie kolumny GridView po kliknięciu nagłówka](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [ListView — omówienie](listview-overview.md)
+- [Sortowanie kolumny GridView po kliknięciu nagłówka](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [Tematy z instrukcjami](listview-how-to-topics.md)

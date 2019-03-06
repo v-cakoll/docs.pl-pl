@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716081"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354612"
 ---
 # <a name="blessiwbemservices-function"></a>Funkcja BlessIWbemServices
 Wskazuje, czy poświadczenia użytkownika zezwolić na dostęp do określonego [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) klasy.   
@@ -43,20 +43,23 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>Parametry
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] Wskaźnik do [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiektu, dla których wymagane są uprawnienia.
 
-`strUser`  
+`strUser`\
 [in] Nazwa użytkownika.
 
-`strPassword`  
+`strPassword`\
 [in] Hasło skojarzone z `strUser`.
 
-`strAuthority` [in] Nazwa domeny użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
+`strAuthority`\
+[in] Nazwa domeny użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
 
-`impLevel` [in] Poziom personifikacji.
+`impLevel`\
+[in] Poziom personifikacji.
 
-`authnLevel` [in] Poziom autoryzacji.
+`authnLevel`\
+[in] Poziom autoryzacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -71,6 +74,7 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `S_OK` | 0 | Wywołanie funkcji zakończyło się pomyślnie. | 
 
 ## <a name="requirements"></a>Wymagania  
+
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** WMINet_Utils.idl  
@@ -78,4 +82,5 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

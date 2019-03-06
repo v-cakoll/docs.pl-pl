@@ -4,12 +4,12 @@ description: Poznaj składniki inżynierów funkcji obsługiwanych w strukturze 
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415354"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355416"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Przekształcenia danych - strukturze ML.NET uczenia maszynowego
 
@@ -25,7 +25,7 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Grupy wartości skalarnej kolumny do wektora na podstawie identyfikatora grupy ciągłych. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Kolumny wektor UN-groups na sekwencje odwrotność transformacji grupy wierszy. |
 
-## <a name="conversions"></a>Konwersje 
+## <a name="conversions"></a>Konwersje
 
 | Transformacja | Definicja |
 | --- | --- |
@@ -36,7 +36,6 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Konwertuje klucz na kolumnę wektora. |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Zmiany podstawowy typ kolumny pod warunkiem, że można przekonwertować typu. |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Konwertuje wprowadzanie wartości (wyrazy, liczby itp.) do indeksowania w słowniku. |
-
 
 ## <a name="deep-learning"></a>Uczenie głębokie
 
@@ -49,17 +48,17 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 
 | Transformacja | Definicja |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Usuwa określony wykaz słowa ignorowane, porównując poszczególne tokeny (porównanie bez uwzględniania wielkości liter) w celu Stop-słowa.| 
-| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Trwa co najmniej jedną kolumnę ImageType i konwertuje je na odcienie szarości reprezentacja tego samego obrazu.|
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Usuwa określony wykaz słowa ignorowane, porównując poszczególne tokeny (porównanie bez uwzględniania wielkości liter) w celu Stop-słowa.|
+| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Trwa co najmniej jedną kolumnę ImageType i konwertuje je na reprezentację ten sam obraz w skali szarości.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Trwa co najmniej jedną kolumnę ReadOnlyMemory i ładuje je jako ImageType. |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Trwa co najmniej jedną kolumnę ImageType i konwertuje je do reprezentacji wektora.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Trwa co najmniej jedną kolumnę ImageType i zmienia rozmiar je do podanej wysokości i szerokości.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implementuje LightLDA, z implementacją z najnowocześniejszych ukrytego Bayesian alokacji.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Ładuje określone przekształcenia z pliku określonego modelu. Zezwala na przekształcenia "selekcjonowania" z łańcucha serializacji lub zastosowanie wstępnie przeszkolonych transformacji do widoku danych różnych (ale nadal zgodny). |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Tworzy zbiór liczników ngrams (sekwencji kolejnych wartości o długości 1-n) w przypadku danego wektora kluczy. Robi to, tworząc słownika ngrams i za pomocą identyfikatora w słowniku jako indeks w zbiorze. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Jest przekształcany kolekcja tekstowych tokenami (wektor ReadOnlyMemory) lub wektorów klucze wektorów liczbowych. Wektory funkcji są liczby ngrams (sekwencji kolejnych tokenów - słowa lub klucze - o długości 1-n). | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Włącza kolekcji tokenami tekstu (wektor ReadOnlyMemory) do wektorów liczbowych, za pomocą wyznaczania wartości skrótu. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Tworzy zbiór liczników ngrams (sekwencji kolejnych wyrazów o długości 1-n) w danego tekstu. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Tworzy zbiór liczników ngrams (sekwencji kolejnych wartości o długości 1-n) w przypadku danego wektora kluczy. Robi to, tworząc słownika ngrams i za pomocą identyfikatora w słowniku jako indeks w zbiorze. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Jest przekształcany kolekcja tekstowych tokenami (wektor ReadOnlyMemory) lub wektorów klucze wektorów liczbowych. Wektory funkcji są liczby ngrams (sekwencji kolejnych tokenów - słowa lub klucze - o długości 1-n). |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Włącza kolekcji tokenami tekstu (wektor ReadOnlyMemory) do wektorów liczbowych, za pomocą wyznaczania wartości skrótu. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Tworzy zbiór liczników ngrams (sekwencji kolejnych wyrazów o długości 1-n) w danego tekstu. |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Konwertuje wartość podzielonych na kategorie na tablicę wskaźnika przez tworzenie słownika kategorie na podstawie danych i za pomocą identyfikatora w słowniku jako indeks w tablicy |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Oblicza projekcji wektor funkcji na podobszar niski rangi. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Używa modelu wstępnie przetrenowane opinii, aby oceniać ciągów wejściowych. |
@@ -73,7 +72,7 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 
 | Transformacja | Definicja |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Jest to metoda rozszerzenia ma być używany z <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> aby można było używać pretrained [AlexNet](https://en.wikipedia.org/wiki/AlexNet) modelu. NuGet zawierający to rozszerzenie jest gwarantowana dołączenie pliku modelu binarnego. | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Jest to metoda rozszerzenia ma być używany z <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> aby można było używać pretrained [AlexNet](https://en.wikipedia.org/wiki/AlexNet) modelu. NuGet zawierający to rozszerzenie jest gwarantowana dołączenie pliku modelu binarnego. |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | Jest to metoda rozszerzenia ma być używany z <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> używania pretrained modelu ResNet18. NuGet zawierający to rozszerzenie jest gwarantowana dołączenie pliku modelu binarnego. |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | Jest to metoda rozszerzenia ma być używany z <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> używać pretrained ResNet50model. NuGet zawierający to rozszerzenie jest gwarantowana dołączenie pliku modelu binarnego. |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | Jest to metoda rozszerzenia ma być używany z <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> używania pretrained modelu ResNet101. NuGet zawierający to rozszerzenie jest gwarantowana dołączenie pliku modelu binarnego. |
@@ -116,7 +115,7 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Przybliża bootstrap próbkowania przy użyciu metody próbkowania Poissona. |
 | <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | Generuje losową Fouriera funkcji. |
 | <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Tokenizator zorientowane na znak, jeżeli tekst jest uważany za sekwencji znaków. |
-| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Optymalizacja Simplfies, aby ułatwić identyfikowanie wagi. |
+| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Upraszcza optymalizacji, która pomaga w identyfikacji wagi. |
 
 ## <a name="row-filters"></a>Filtry wierszy
 

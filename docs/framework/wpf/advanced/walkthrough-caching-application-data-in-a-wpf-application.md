@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 886a436f845aa4ba9662e75cbc9e534e915a4cfa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480065"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361177"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Przewodnik: Buforowanie danych aplikacji w aplikacji WPF
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.
@@ -322,12 +322,12 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 ## <a name="code-example"></a>Przykład kodu
  Po zakończeniu tego instruktażu kodu dla projektu, który został utworzony będą podobne do następującego przykładu.
 
- [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
- [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
+ [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
+ [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching>
-- [Buforowanie w aplikacjach .NET Framework](../../../../docs/framework/performance/caching-in-net-framework-applications.md)
+- [Buforowanie w aplikacjach .NET Framework](../../performance/caching-in-net-framework-applications.md)

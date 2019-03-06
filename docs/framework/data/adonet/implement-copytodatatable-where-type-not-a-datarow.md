@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
 ms.openlocfilehash: 1f79bd421d4c504556074468f8ab7e032d3eca43
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288161"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372866"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Instrukcje: Implementowanie CopyToDataTable\<T > gdzie ogólny typ T nie jest elementem DataRow
 <xref:System.Data.DataTable> Obiektu jest często używana do wiązania danych. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyniki zapytania i kopiuje dane do <xref:System.Data.DataTable>, która następnie umożliwia powiązanie danych. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metod, jednak działać tylko w odniesieniu <xref:System.Collections.Generic.IEnumerable%601> źródła gdzie parametr ogólny `T` typu <xref:System.Data.DataRow>. Mimo że jest to przydatne, nie zezwala tabel, które ma zostać utworzony z sekwencji typami skalarnymi, zapytania, które anonimowych typów projektów lub zapytania, które wykonują sprzężeń tabel.  

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - clocks [WPF], animation
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
-ms.openlocfilehash: f2888f28ad7723b7390d0e2339c2117e64e84ecd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554810"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361450"
 ---
 # <a name="clocks-how-to-topics"></a>Zegary Tematy porad
-W poniższych tematach opisano sposób użycia <xref:System.Windows.Media.Animation.Clock> obiekt, aby zachować informacje o stanie chronometrażu <xref:System.Windows.Media.Animation.Timeline>.  
+W poniższych tematach opisano sposób użycia <xref:System.Windows.Media.Animation.Clock> obiektu, aby zachować informacje o stanie chronometrażu dla <xref:System.Windows.Media.Animation.Timeline>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Animowanie właściwości przy użyciu elementu AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
- [Interakcyjne sterowanie zegarem](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
- [Synchroniczne wyszukiwanie zegara](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  
+ [Animowanie właściwości przy użyciu elementu AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [Interakcyjne sterowanie zegarem](how-to-interactively-control-a-clock.md)  
+ [Synchroniczne wyszukiwanie zegara](how-to-seek-a-clock-synchronously.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Media.Animation.Clock>  
@@ -34,6 +34,6 @@ W poniższych tematach opisano sposób użycia <xref:System.Windows.Media.Animat
  <xref:System.Windows.Media.Animation.Timeline>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animacja — przegląd](animation-overview.md)  
   
- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [Scenorysy — przegląd](storyboards-overview.md)

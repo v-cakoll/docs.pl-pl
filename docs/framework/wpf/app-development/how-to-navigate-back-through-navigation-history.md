@@ -1,5 +1,5 @@
 ---
-title: 'Porady: poruszanie się wstecz historii nawigacji'
+title: 'Instrukcje: Przejdź wstecz w historii nawigacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 7266c9486524e962a859c34c9be5ab8f6d7bf7d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c489a1593b3d1f22fe1ad6e648d3f8a3f7a6cd44
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199323"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377771"
 ---
-# <a name="how-to-navigate-back-through-navigation-history"></a>Porady: poruszanie się wstecz historii nawigacji
+# <a name="how-to-navigate-back-through-navigation-history"></a>Instrukcje: Przejdź wstecz w historii nawigacji
 Ten przykład ilustruje sposób przejścia do wpisów na spód historii nawigacji.  
   
 ## <a name="example"></a>Przykład  
@@ -23,8 +23,8 @@ Ten przykład ilustruje sposób przejścia do wpisów na spód historii nawigacj
   
  Po wstecz o jeden wpis wymaga najpierw sprawdzanie, czy znajdują się wpisy w historii przeglądania do tyłu, sprawdzając **CanGoBack** właściwości przed przechodząc kopii jeden wpis, wywołując **GoBack** Metoda. Jest to zilustrowane w poniższym przykładzie:  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
+ [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
  **CanGoBack** i **GoBack** są implementowane przez <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, i <xref:System.Windows.Navigation.NavigationService>.  
   

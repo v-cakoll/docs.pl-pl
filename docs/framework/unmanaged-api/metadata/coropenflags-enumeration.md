@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b63615e6a54ca6a07e26ebf33b613f2a27d7ac3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683621"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364423"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags — Wyliczenie
 Zawiera wartości flagi, które kontrolują zachowanie metadanych podczas otwierania plików manifestu.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|Wskazuje, że dla odczytu, które można otworzyć pliku wywołanie `QueryInterface` dla [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) nie może zostać wykonana.|  
 |`ofTakeOwnership`|Wskazuje, że pamięć została przydzielona za pomocą wywołania [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) i zostanie zwolniona w metadanych.|  
 |`ofNoTypeLib`|Nieaktualne. Ta flaga jest ignorowana.|  
-|`ofNoTransform`|Wskazuje, należy wyłączyć automatyczne transformacje plików winmd. Innymi słowy należy wyłączyć projekcji typu środowiska wykonawczego Windows, aby typ .NET Framework. Aby uzyskać więcej informacji, zobacz [poniżej składniki przy użyciu platformy .NET i środowiska wykonawczego Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Wskazuje, należy wyłączyć automatyczne transformacje plików winmd. Innymi słowy należy wyłączyć projekcji typu środowiska wykonawczego Windows, aby typ .NET Framework. Aby uzyskać więcej informacji, zobacz [środowiska uruchomieniowego Windows i środowisko CLR - poniżej składniki przy użyciu platformy .NET i środowiska wykonawczego Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Zarezerwowane do użytku wewnętrznego.|  
 |`ofReserved2`|Zarezerwowane do użytku wewnętrznego.|  
 |`ofReserved`|Zarezerwowane do użytku wewnętrznego.|  

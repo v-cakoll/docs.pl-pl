@@ -13,8 +13,8 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawiera także mechanizm transferu danych za pośrednictwem operacji przeciągania i upuszczania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Powiązanie danych](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [Przeciąganie i upuszczanie](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Powiązanie danych](data-binding-wpf.md)  
+ [Przeciąganie i upuszczanie](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Data>  
@@ -26,12 +26,12 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki](../../../../docs/framework/wpf/controls/index.md)  
+ [Kontrolki](../controls/index.md)  
   
- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)  
   
- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

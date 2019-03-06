@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746565"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365844"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 <a name="Introduction"></a> Program .NET Framework zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługuje rozszerzalność w dodatku. Ten dodatek model umożliwia tworzenie dodatków, które integrują się z oraz rozszerzanie funkcjonalności aplikacji. W niektórych przypadkach aplikacje wymagają także do wyświetlania interfejsu użytkownika, które są dostarczane przez dodatki. W tym temacie pokazano, jak WPF, rozszerzają model dodatku .NET Framework umożliwiają tych scenariuszy, architektura za go, jego zalety i jego pewne ograniczenia.  
@@ -56,7 +56,7 @@ ms.locfileid: "56746565"
   
 -   **Komunikacja**: Pozwalając dodatków i hostowanie aplikacji do komunikowania się ze sobą w granicach izolacji, wywoływanie metod i przekazując dane.  
   
--   **Zarządzanie okresem istnienia**: Ładowanie i zwalnianie domeny aplikacji i procesów w sposób zawsze przejrzyste i przewidywalne (zobacz [domen aplikacji](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Zarządzanie okresem istnienia**: Ładowanie i zwalnianie domeny aplikacji i procesów w sposób zawsze przejrzyste i przewidywalne (zobacz [domen aplikacji](../../app-domains/application-domains.md)).  
   
 -   **Przechowywanie wersji**: Zapewnienie, że dodatków i hostowania aplikacji może nadal komunikować się podczas tworzenia nowych wersji jednej.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746565"
   
 6.  Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.  
   
- Na przykład, który demonstruje sposób implementacji dodatku, który zwraca interfejs użytkownika, zobacz [utworzyć dodatek zwracającego interfejs użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Na przykład, który demonstruje sposób implementacji dodatku, który zwraca interfejs użytkownika, zobacz [utworzyć dodatek zwracającego interfejs użytkownika](how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>Dodatek jest interfejsem użytkownika  
@@ -148,7 +148,7 @@ ms.locfileid: "56746565"
   
 6.  Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.  
   
- Na przykład, który demonstruje sposób implementacji dodatku, który jest interfejsem użytkownika, zobacz [dodatku oznacza to tworzenie interfejsu użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Na przykład, który demonstruje sposób implementacji dodatku, który jest interfejsem użytkownika, zobacz [dodatku oznacza to tworzenie interfejsu użytkownika](how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Zwracanie wielu interfejsów użytkownika z dodatku  
@@ -219,7 +219,7 @@ ms.locfileid: "56746565"
   
 -   Po stronie aplikacja hosta WPF przepakowuje <xref:System.Windows.Interop.HwndSource> jako Wewnętrzna klasa WPF, która pochodzi od klasy <xref:System.Windows.Interop.HwndHost> i wykorzystuje <xref:System.AddIn.Contract.INativeHandleContract>. Wystąpienie tej klasy jest zwracany przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> aplikacji hosta.  
   
- <xref:System.Windows.Interop.HwndHost> istnieje, aby wyświetlać interfejsy użytkownika, identyfikowane za pomocą uchwytów okien, od interfejsów użytkownika WPF. Aby uzyskać więcej informacji, zobacz [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> istnieje, aby wyświetlać interfejsy użytkownika, identyfikowane za pomocą uchwytów okien, od interfejsów użytkownika WPF. Aby uzyskać więcej informacji, zobacz [WPF i Win32 — współdziałanie](../advanced/wpf-and-win32-interoperation.md).  
   
  Podsumowując <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> pozwalających uchwytu okna WPF UI przekazany z dodatku dla aplikacji hosta, gdzie jest hermetyzowany przez <xref:System.Windows.Interop.HwndHost> i wyświetlane w interfejsie użytkownika aplikacji hosta.  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746565"
   
 -   Interfejsy użytkownika dodatku wyświetlane z aplikacją hosta nie respektują zachowanie wycinka aplikacji hosta.  
   
--   Pojęcie *powietrznej* w współdziałanie scenariuszy ma również zastosowanie do dodatków (zobacz [regiony technologiczne — Przegląd](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
+-   Pojęcie *powietrznej* w współdziałanie scenariuszy ma również zastosowanie do dodatków (zobacz [regiony technologiczne — Przegląd](../advanced/technology-regions-overview.md)).  
   
 -   Interfejs użytkownika dla aplikacji hosta usług, takich jak dziedziczenie zasobów, powiązań danych i polecenia, nie są automatycznie dostępne dla dodatku interfejsów użytkownika. Aby zapewnić tych usług do dodatku, należy zaktualizować potoku.  
   
--   Dodatków interfejsu użytkownika nie można obracać, skalować, nierówne lub w przeciwnym razie wpływ transformacji (zobacz [przekształca Przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Dodatków interfejsu użytkownika nie można obracać, skalować, nierówne lub w przeciwnym razie wpływ transformacji (zobacz [przekształca Przegląd](../graphics-multimedia/transforms-overview.md)).  
   
 -   Zawartość wewnątrz interfejsy użytkownika dodatku renderowania za pomocą rysowania operacje z <xref:System.Drawing> przestrzeni nazw może obejmować przenikaniem alfa. Jednak zarówno dodatków interfejsu użytkownika, jak i hosta aplikacji interfejsu użytkownika, który go zawiera musi wskazywać 100% nieprzezroczyste; innymi słowy `Opacity` zarówno właściwość musi być równa 1.  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746565"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Optymalizacja wydajności  
- Domyślnie jeśli używanych jest wiele domen aplikacji, różnych zestawów .NET Framework, wymagane przez poszczególne aplikacje są wszystkie ładowane do domeny w tej aplikacji. W rezultacie czas wymagany do tworzenia nowych domen aplikacji i uruchamiania aplikacji w nich może wpłynąć na wydajność. Jednak .NET Framework umożliwia zmniejszenie czasu uruchomienia przez poinstruowanie aplikacjom udostępnianie zestawów w domenach aplikacji, jeśli są już załadowane. Możesz to zrobić przy użyciu <xref:System.LoaderOptimizationAttribute> atrybut, który należy zastosować do metody punktu wejścia (`Main`). W takim przypadku musisz podać tylko kod do implementacji definicji aplikacji (zobacz [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Domyślnie jeśli używanych jest wiele domen aplikacji, różnych zestawów .NET Framework, wymagane przez poszczególne aplikacje są wszystkie ładowane do domeny w tej aplikacji. W rezultacie czas wymagany do tworzenia nowych domen aplikacji i uruchamiania aplikacji w nich może wpłynąć na wydajność. Jednak .NET Framework umożliwia zmniejszenie czasu uruchomienia przez poinstruowanie aplikacjom udostępnianie zestawów w domenach aplikacji, jeśli są już załadowane. Możesz to zrobić przy użyciu <xref:System.LoaderOptimizationAttribute> atrybut, który należy zastosować do metody punktu wejścia (`Main`). W takim przypadku musisz podać tylko kod do implementacji definicji aplikacji (zobacz [Zarządzanie aplikacjami — omówienie](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.LoaderOptimizationAttribute>
 - [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Domeny aplikacji](../../../../docs/framework/app-domains/application-domains.md)
+- [Domeny aplikacji](../../app-domains/application-domains.md)
 - [Przegląd komunikacji zdalnej programu .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Tworzenie obiektów może być zastosowana zdalnie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [Tematy z instrukcjami](how-to-topics.md)

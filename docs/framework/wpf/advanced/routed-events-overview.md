@@ -15,19 +15,19 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 637cb6cfb343352561708a7d94e76e84e2ca7ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379214"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje zdarzenia trasowane terminologii, w tym artykule opisano sposób zdarzenia trasowane są przesyłane za pośrednictwem drzewa elementów, podsumowano, jak obsługiwać zdarzenia trasowane i wyjaśniono, jak tworzyć własne niestandardowe zdarzenia trasowane.
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że masz podstawową wiedzę na temat [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] i programowanie zorientowane obiektowo, a także pojęcia jak relacje między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy mogą być conceptualized jako drzewa. Aby można było wykonać instrukcje opisane w przykładach w tym temacie, należy również mieć świadomość [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i wiedzieć, jak napisać wykraczającego poza podstawowe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji lub stron. Aby uzyskać więcej informacji, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) i [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ W tym temacie założono, że masz podstawową wiedzę na temat [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] i programowanie zorientowane obiektowo, a także pojęcia jak relacje między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy mogą być conceptualized jako drzewa. Aby można było wykonać instrukcje opisane w przykładach w tym temacie, należy również mieć świadomość [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i wiedzieć, jak napisać wykraczającego poza podstawowe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji lub stron. Aby uzyskać więcej informacji, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md) i [Przegląd XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="routing"></a>   
 ## <a name="what-is-a-routed-event"></a>Co to jest zdarzenie trasowane?  
@@ -41,11 +41,11 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  Należy wziąć pod uwagę następujące drzewo prosty element:  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
  Ten element drzewa daje podobny do poniższego:  
   
- ![Tak, nie i przyciski "Anuluj"](../../../../docs/framework/wpf/advanced/media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
+ ![Tak, nie i przyciski "Anuluj"](./media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
   
  W tym drzewie uproszczone element źródła <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia jest jednym z <xref:System.Windows.Controls.Button> elementy i zależności <xref:System.Windows.Controls.Button> został kliknięty jest pierwszym elementem, który ma możliwość obsługi zdarzenia. Jednak jeśli żadna procedura obsługi nie jest dołączony do <xref:System.Windows.Controls.Button> działa na zdarzenie, a następnie zdarzenia będą pojawiać się do góry do <xref:System.Windows.Controls.Button> nadrzędnego w drzewie elementów, czyli <xref:System.Windows.Controls.StackPanel>. Ewentualnie bąbelków zdarzeń do <xref:System.Windows.Controls.Border>, a następnie poza do strony katalogu głównego drzewa elementów (niewyświetlany).  
   
@@ -60,8 +60,8 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  **Obsługi w liczbie pojedynczej punktami załącznika:** W [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], trzeba dołączyć wiele razy tę samą procedurę obsługi do przetwarzania zdarzeń, które może zostać wywołane z wieloma elementami. Zdarzenia trasowane umożliwiają dołączanie programu obsługi tylko raz, ponieważ został wyświetlony w poprzednim przykładzie, a następnie użyć logiki obsługi do określenia, zdarzenie pochodzenia w razie potrzeby. Na przykład może to być Obsługa pokazanych wcześniej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]:  
   
- [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
- [!code-vb[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
+ [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
+ [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
   
  **Obsługa klasy:** Kierowane zezwolenia zdarzeń statycznych program obsługi, który jest zdefiniowany w klasie. Ten program obsługi klasa ma możliwość obsługi zdarzenia przed obsługi wszelkich dołączonych wystąpienia.  
   
@@ -72,15 +72,15 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  W poniższym przykładzie pokazano deklarację dla niestandardowego `Tap` zdarzenie trasowane, łącznie z rejestracji i ujawniania <xref:System.Windows.RoutedEvent> pole identyfikatora i `add` i `remove` niedotyczące `Tap` [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzeń.  
   
- [!code-csharp[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
- [!code-vb[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
+ [!code-csharp[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
+ [!code-vb[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
   
 ### <a name="routed-event-handlers-and-xaml"></a>Programy obsługi zdarzeń trasowanych i XAML  
  Aby dodać program obsługi zdarzeń za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], został zadeklarowany Nazwa zdarzenia jako atrybut na element, który jest odbiornik zdarzeń. Wartość atrybutu jest nazwa metody obsługi zaimplementowano musi istnieć w klasie częściowej pliku CodeBehind.  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Składni dodawania standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] procedury obsługi zdarzeń jest taka sama dla Dodawanie obsługi zdarzeń trasowanych, ponieważ są naprawdę Dodawanie programów obsługi do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki zdarzeń, który zawiera implementację zdarzenia trasowanego poniżej. Aby uzyskać więcej informacji o dodawaniu programów obsługi zdarzeń w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], zobacz [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Składni dodawania standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] procedury obsługi zdarzeń jest taka sama dla Dodawanie obsługi zdarzeń trasowanych, ponieważ są naprawdę Dodawanie programów obsługi do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki zdarzeń, który zawiera implementację zdarzenia trasowanego poniżej. Aby uzyskać więcej informacji o dodawaniu programów obsługi zdarzeń w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], zobacz [Przegląd XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="routing_strategies"></a>   
 ## <a name="routing-strategies"></a>Strategie routingu  
@@ -114,30 +114,30 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
 ## <a name="adding-and-implementing-an-event-handler-for-a-routed-event"></a>Dodawanie i wdrażanie program obsługi zdarzeń dla zdarzenia trasowanego  
  Aby dodać program obsługi zdarzeń w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], po prostu Dodaj nazwę zdarzenia do elementu jako atrybut i ustawić wartość atrybutu jako nazwę programu obsługi zdarzeń, która implementuje delegata odpowiednie, jak w poniższym przykładzie.  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
  `b1SetColor` jest nazwą zaimplementowano program obsługi, który zawiera kod, który obsługuje <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. `b1SetColor` musi mieć taką samą sygnaturę jak <xref:System.Windows.RoutedEventHandler> delegata, która jest delegata obsługi zdarzeń dla <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. Pierwszy parametr wszystkich delegatów obsługi zdarzeń trasowanych określa element, do której jest dodawany program obsługi zdarzeń, a drugi parametr określa dane dla zdarzenia.  
   
-[!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
-[!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
+[!code-csharp[EventOvwSupport#SimpleHandlerA](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
+[!code-vb[EventOvwSupport#SimpleHandlerA](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
  <xref:System.Windows.RoutedEventHandler> jest delegata obsługi zdarzeń trasowanych w wersji basic. Zdarzenia trasowane, które są wyspecjalizowane w przypadku niektórych kontrolek lub scenariuszy delegatów dla procedur obsługi zdarzeń trasowanych również może stać się bardziej wyspecjalizowane, tak, aby ich mogą przesyłać dane zdarzenia wyspecjalizowanych. Na przykład w typowym scenariuszu danych wejściowych może obsługiwać <xref:System.Windows.UIElement.DragEnter> zdarzenia trasowanego. Należy zaimplementować programu obsługi <xref:System.Windows.DragEventHandler> delegować. Za pomocą delegowanego bardziej konkretny od pozostałych, może przetwarzać <xref:System.Windows.DragEventArgs> obsługi i odczytu <xref:System.Windows.DragEventArgs.Data%2A> właściwości, która zawiera ładunek Schowka operacji przeciągania.  
   
- Pełny przykład sposobu dodawania programu obsługi zdarzeń do elementu za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], zobacz [obsłużyć zdarzenie kierowane](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
+ Pełny przykład sposobu dodawania programu obsługi zdarzeń do elementu za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], zobacz [obsłużyć zdarzenie kierowane](how-to-handle-a-routed-event.md).  
   
  Dodawanie obsługi dla zdarzenia trasowanego w aplikację, która jest tworzona w kodzie jest bardzo proste. Zawsze można dodać procedury obsługi zdarzeń trasowanych za pośrednictwem metody pomocnika <xref:System.Windows.UIElement.AddHandler%2A> (czyli tej samej metody, wywołuje istniejących zapasowy `add`.) Jednak istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia trasowane reguły mają kopii implementacje `add` i `remove` Logic Apps, dzięki czemu programy obsługi dla zdarzenia trasowane, które mają zostać dodane przez składnię zdarzeń specyficznych dla języka, co jest bardziej intuicyjne działanie składnia niż metoda pomocnika. Poniżej przedstawiono przykład użycia metody pomocniczej:  
   
- [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
- [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
+ [!code-csharp[EventOvwSupport#AddHandlerCode](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
+ [!code-vb[EventOvwSupport#AddHandlerCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
  W następnym przykładzie pokazano C# składni operatora (Visual Basic ma składni operatora nieco inny ze względu na jego obsługę wyłuskanie):  
   
- [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
- [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
+ [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
+ [!code-vb[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
- Na przykład sposobu dodawania programu obsługi zdarzeń w kodzie zobacz [Dodaj kod za pomocą procedury obsługi zdarzeń](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md).  
+ Na przykład sposobu dodawania programu obsługi zdarzeń w kodzie zobacz [Dodaj kod za pomocą procedury obsługi zdarzeń](how-to-add-an-event-handler-using-code.md).  
   
- Jeśli używasz języka Visual Basic umożliwia także `Handles` — słowo kluczowe do dodania obsługi jako część deklaracji programu obsługi. Aby uzyskać więcej informacji, zobacz [Visual Basic i obsługa zdarzeń WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Jeśli używasz języka Visual Basic umożliwia także `Handles` — słowo kluczowe do dodania obsługi jako część deklaracji programu obsługi. Aby uzyskać więcej informacji, zobacz [Visual Basic i obsługa zdarzeń WPF](visual-basic-and-wpf-event-handling.md).  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>Obsługiwane koncepcji  
@@ -165,7 +165,7 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  Ten projekt koncepcyjny wspiera zachowania routingu, o których wspomniano wcześniej: trudniej jest (chociaż jest to możliwe, w kodzie lub style) można dołączyć programy obsługi dla zdarzenia trasowane, które są wywoływane, nawet jeśli poprzednie obsługi wzdłuż trasy już ustawił <xref:System.Windows.RoutedEventArgs.Handled%2A>do `true`.  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.RoutedEventArgs.Handled%2A>, obsługę klasy dla zdarzenia trasowanego i zalecenia dotyczące znajduje się w odpowiednich do oznaczania zdarzenia trasowanego jako <xref:System.Windows.RoutedEventArgs.Handled%2A>, zobacz [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.RoutedEventArgs.Handled%2A>, obsługę klasy dla zdarzenia trasowanego i zalecenia dotyczące znajduje się w odpowiednich do oznaczania zdarzenia trasowanego jako <xref:System.Windows.RoutedEventArgs.Handled%2A>, zobacz [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md).  
   
  W przypadku aplikacji jest dość często po prostu obsługi propagacji zdarzenia trasowanego w obiekcie, który spowodował jego i nie są związani z właściwości routingu zdarzeń na wszystkich. Jednak nadal jest dobrym rozwiązaniem, aby oznaczyć zdarzenia trasowanego jako obsługiwane w przypadku danych, aby zapobiec nieprzewidziane efekty uboczne, na wypadek element, który jest dalsze w górę drzewa elementów ma również dołączony do tego samego zdarzenia trasowane program obsługi.  
   
@@ -173,7 +173,7 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
 ## <a name="class-handlers"></a>Funkcje obsługi klas  
  Jeśli definiujesz klasy pochodnej w jakiś sposób z <xref:System.Windows.DependencyObject>, można również zdefiniować i dołączyć program obsługi klasy dla zdarzenia trasowanego, który jest elementem członkowskim zdarzenie zadeklarowane lub dziedziczone klasy. Klasa procedury obsługi są wywoływane przed obsługi odbiornika wszystkie wystąpienia, które są dołączone do wystąpienia tej klasy, zawsze wtedy, gdy zdarzenie trasowane osiągnie wystąpienie elementu w jego trasę.  
   
- Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty mają nieprzerwaną pracę obsługę klasy dla określonych zdarzeń trasowanych. To może nadać wygląd na zewnątrz zdarzenia trasowanego nigdy nie jest inicjowane, ale w rzeczywistości jest klasa obsługiwane i zdarzenia trasowanego nadal potencjalnie może zostać obsłużony przez inne programy obsługi wystąpienia, jeśli używasz niektórych technik. Ponadto wiele klas podstawowych i formanty ujawniać metod wirtualnych, które mogą służyć do zastępowania obsługę zachowanie klasy. Aby uzyskać więcej informacji, zarówno na sposób obejścia niepożądane klasy obsługi i definiowanie własnych klasy obsługi niestandardowej klasy, zobacz [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty mają nieprzerwaną pracę obsługę klasy dla określonych zdarzeń trasowanych. To może nadać wygląd na zewnątrz zdarzenia trasowanego nigdy nie jest inicjowane, ale w rzeczywistości jest klasa obsługiwane i zdarzenia trasowanego nadal potencjalnie może zostać obsłużony przez inne programy obsługi wystąpienia, jeśli używasz niektórych technik. Ponadto wiele klas podstawowych i formanty ujawniać metod wirtualnych, które mogą służyć do zastępowania obsługę zachowanie klasy. Aby uzyskać więcej informacji, zarówno na sposób obejścia niepożądane klasy obsługi i definiowanie własnych klasy obsługi niestandardowej klasy, zobacz [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events-in-wpf"></a>Zdarzenia dołączone w WPF  
@@ -181,15 +181,15 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] System wejściowy często używa dołączone zdarzenia. Jednak prawie wszystkich tych dołączone zdarzenia są przekazywane za pośrednictwem podstawowych elementów. Zdarzenia wejściowe są następnie wyświetlane jako odpowiednik niedołączonych kierowane zdarzenia, które należą do klasy bazowej elementów. Na przykład podstawowa dołączone zdarzenie <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> więcej łatwo są obsługiwane w przypadku dowolnego danego <xref:System.Windows.UIElement> przy użyciu <xref:System.Windows.UIElement.MouseDown> na tym <xref:System.Windows.UIElement> zamiast rozwiązywania problemów związanych ze składnią dołączone zdarzenie albo w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lub kodu.  
   
- Aby uzyskać więcej informacji na temat zdarzenia dołączone w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [Przegląd zdarzeń dołączonych](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Aby uzyskać więcej informacji na temat zdarzenia dołączone w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [Przegląd zdarzeń dołączonych](attached-events-overview.md).  
   
 <a name="Qualifying_Event_Names_in_XAML_for_Anticipated_Routing"></a>   
 ## <a name="qualified-event-names-in-xaml"></a>Nazwy kwalifikowane zdarzeń w XAML  
  Inny użycie składni, które przypomina *typename*. *eventName* dołączony składni zdarzenia, ale nie jest ściśle rzecz ujmując użycia dołączone zdarzenie jest po dołączeniu programy obsługi dla zdarzenia trasowane, które są wywoływane przez elementy podrzędne. Programy obsługi możesz dołączyć do wspólnego elementu nadrzędnego z zalet routingu zdarzeń, nawet jeśli nadrzędnego wspólnego może nie mieć odpowiednich zdarzenia trasowanego jako członka. Rozważmy następujący przykład ponownie:  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- W tym miejscu jest odbiornika elementu nadrzędnego, gdzie jest dodawany program obsługi <xref:System.Windows.Controls.StackPanel>. Jednak jest dodanie obsługi dla zdarzenia trasowanego został zadeklarowany, który zostanie wygenerowany przez <xref:System.Windows.Controls.Button> klasy (<xref:System.Windows.Controls.Primitives.ButtonBase> faktycznie, ale można <xref:System.Windows.Controls.Button> poprzez dziedziczenie). <xref:System.Windows.Controls.Button> jego "właścicielem" zdarzenia, ale obsługi zdarzenia trasowanego system zezwala dla dowolnego zdarzenia trasowane do podłączenia do dowolnego <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> odbiornika wystąpienia, które w przeciwnym razie można dołączyć detektory [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Domyślny obszar nazw xmlns te nazwy atrybutu kwalifikowaną zdarzeń zwykle jest ustawieniem domyślnym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przestrzeni nazw xmlns, ale można również określić prefiksem obszary nazw dla zdarzenia trasowanego niestandardowe. Aby uzyskać więcej informacji na temat xmlns zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ W tym miejscu jest odbiornika elementu nadrzędnego, gdzie jest dodawany program obsługi <xref:System.Windows.Controls.StackPanel>. Jednak jest dodanie obsługi dla zdarzenia trasowanego został zadeklarowany, który zostanie wygenerowany przez <xref:System.Windows.Controls.Button> klasy (<xref:System.Windows.Controls.Primitives.ButtonBase> faktycznie, ale można <xref:System.Windows.Controls.Button> poprzez dziedziczenie). <xref:System.Windows.Controls.Button> jego "właścicielem" zdarzenia, ale obsługi zdarzenia trasowanego system zezwala dla dowolnego zdarzenia trasowane do podłączenia do dowolnego <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> odbiornika wystąpienia, które w przeciwnym razie można dołączyć detektory [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Domyślny obszar nazw xmlns te nazwy atrybutu kwalifikowaną zdarzeń zwykle jest ustawieniem domyślnym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przestrzeni nazw xmlns, ale można również określić prefiksem obszary nazw dla zdarzenia trasowanego niestandardowe. Aby uzyskać więcej informacji na temat xmlns zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>Zdarzenia wejściowe WPF  
@@ -199,7 +199,7 @@ W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient
   
  Ilustracją jak danych wejściowych do przetwarzania zdarzeń, działa należy wziąć pod uwagę następujące przykładowe dane wejściowe zdarzenia. Na poniższej ilustracji drzewa `leaf element #2` jest źródłem zarówno `PreviewMouseDown` i następnie `MouseDown` zdarzeń.  
   
- ![Diagram routingu zdarzeń](../../../../docs/framework/wpf/advanced/media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
+ ![Diagram routingu zdarzeń](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
 Dane wejściowe zdarzenia Propagacja i tunelowanie  
   
  Kolejność przetwarzania zdarzeń jest następująca:  
@@ -222,35 +222,35 @@ Dane wejściowe zdarzenia Propagacja i tunelowanie
   
  Zazwyczaj gdy dane wejściowe zdarzenia jest oznaczony <xref:System.Windows.RoutedEventArgs.Handled%2A>, dodatkowo nie są wywoływane programy obsługi. Zazwyczaj zdarzenia wejściowe należy oznaczyć jako obsłużony, tak szybko, jak program obsługi zostanie wywołana, odnoszący się do obsługi usługi specyficzne dla aplikacji logicznej znaczenie dane wejściowe zdarzenia.  
   
- Wyjątek niniejszych ogólne dotyczące <xref:System.Windows.RoutedEventArgs.Handled%2A> stan to, że dane wejściowe procedury obsługi zdarzeń, które są zarejestrowane w celu ignorowania celowo <xref:System.Windows.RoutedEventArgs.Handled%2A> stanu danych zdarzeń nadal będzie można wywołać wzdłuż albo trasy. Aby uzyskać więcej informacji, zobacz [Podgląd zdarzeń](../../../../docs/framework/wpf/advanced/preview-events.md) lub [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Wyjątek niniejszych ogólne dotyczące <xref:System.Windows.RoutedEventArgs.Handled%2A> stan to, że dane wejściowe procedury obsługi zdarzeń, które są zarejestrowane w celu ignorowania celowo <xref:System.Windows.RoutedEventArgs.Handled%2A> stanu danych zdarzeń nadal będzie można wywołać wzdłuż albo trasy. Aby uzyskać więcej informacji, zobacz [Podgląd zdarzeń](preview-events.md) lub [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md).  
   
  Model danych udostępnionych zdarzeń między tunelowania i Propagacja zdarzeń i sekwencyjny wywoływanie pierwszy tunelowania, następnie Propagacja zdarzeń, nie jest pojęcia, które jest zazwyczaj spełniony dla wszystkich zdarzeń trasowanych. Zachowanie w szczególności jest implementowany przez jak [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] urządzenia wejściowe możliwość pozyskiwania i połączyć pary dane wejściowe zdarzenia. Implementowanie zdarzenia wejściowe to zaawansowany scenariusz, ale można również wykonać modelu dla danych wejściowych zdarzeń.  
   
- Niektóre klasy zdecydować się na dojście-do-klasy niektórych zdarzeń wejściowych, zwykle z zamiarem, definiują na nowo określonego zdarzenia wejściowe oparte na użytkownika oznacza w obrębie tej kontrolki i wywoływanie nowe zdarzenie. Aby uzyskać więcej informacji, zobacz [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Niektóre klasy zdecydować się na dojście-do-klasy niektórych zdarzeń wejściowych, zwykle z zamiarem, definiują na nowo określonego zdarzenia wejściowe oparte na użytkownika oznacza w obrębie tej kontrolki i wywoływanie nowe zdarzenie. Aby uzyskać więcej informacji, zobacz [oznaczanie zdarzeń trasowanych jako Handled oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md).  
   
- Aby uzyskać więcej informacji na temat danych wejściowych i sposób interakcji dane wejściowe i zdarzenia w typowych scenariuszy aplikacji, zobacz [przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md).  
+ Aby uzyskać więcej informacji na temat danych wejściowych i sposób interakcji dane wejściowe i zdarzenia w typowych scenariuszy aplikacji, zobacz [przegląd danych wejściowych](input-overview.md).  
   
 <a name="events_styles"></a>   
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetters i EventTriggers  
  Style, może zawierać niektóre wstępnie zadeklarować [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] obsługi składni języka znaczników przy użyciu zdarzeń <xref:System.Windows.EventSetter>. Stosowania stylu odwołania program obsługi jest dodawany do wystąpienia ze stylem. Można zadeklarować <xref:System.Windows.EventSetter> tylko dla zdarzenia trasowanego. Oto przykład. Należy pamiętać, że `b1SetColor` metoda z odwołaniem w tym miejscu znajduje się w pliku związanym z kodem.  
   
- [!code-xaml[EventOvwSupport#XAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
+ [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
   
  Zaletą uzyskane w tym miejscu jest styl mogących zawierać wiele innych informacji, które można zastosować do dowolnego przycisku w aplikacji i równoważy <xref:System.Windows.EventSetter> część stylu promuje ponowne wykorzystanie kodu, nawet na poziomie znaczników. Ponadto <xref:System.Windows.EventSetter> przenosi nazwy metod dla programów obsługi krok dalej od ogólnego znaczników aplikacji i strony.  
   
- Inny wyspecjalizowane składnia, która łączy routingiem zdarzeń i animacji funkcje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest <xref:System.Windows.EventTrigger>. Podobnie jak w przypadku <xref:System.Windows.EventSetter>, mogą być używane tylko zdarzenia trasowane do <xref:System.Windows.EventTrigger>. Zazwyczaj <xref:System.Windows.EventTrigger> jest zadeklarowany jako część stylu, ale <xref:System.Windows.EventTrigger> mogą być także zadeklarowane na poziomie strony elementów w ramach <xref:System.Windows.FrameworkElement.Triggers%2A> kolekcji lub w <xref:System.Windows.Controls.ControlTemplate>. <xref:System.Windows.EventTrigger> Pozwala na określenie <xref:System.Windows.Media.Animation.Storyboard> czy działa w każdym przypadku, gdy zdarzenie trasowane osiągnie elementu w jego trasę deklaruje <xref:System.Windows.EventTrigger> dla tego zdarzenia. Zaletą <xref:System.Windows.EventTrigger> na tylko obsługi zdarzenia i powodują, że jej uruchamiania istniejących scenorys jest to, że <xref:System.Windows.EventTrigger> zapewnia lepszą kontrolę nad scenorysu i jego zachowanie w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [użyć wyzwalaczy zdarzeń, aby kontrolować Scenorys po uruchomieniu](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ Inny wyspecjalizowane składnia, która łączy routingiem zdarzeń i animacji funkcje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest <xref:System.Windows.EventTrigger>. Podobnie jak w przypadku <xref:System.Windows.EventSetter>, mogą być używane tylko zdarzenia trasowane do <xref:System.Windows.EventTrigger>. Zazwyczaj <xref:System.Windows.EventTrigger> jest zadeklarowany jako część stylu, ale <xref:System.Windows.EventTrigger> mogą być także zadeklarowane na poziomie strony elementów w ramach <xref:System.Windows.FrameworkElement.Triggers%2A> kolekcji lub w <xref:System.Windows.Controls.ControlTemplate>. <xref:System.Windows.EventTrigger> Pozwala na określenie <xref:System.Windows.Media.Animation.Storyboard> czy działa w każdym przypadku, gdy zdarzenie trasowane osiągnie elementu w jego trasę deklaruje <xref:System.Windows.EventTrigger> dla tego zdarzenia. Zaletą <xref:System.Windows.EventTrigger> na tylko obsługi zdarzenia i powodują, że jej uruchamiania istniejących scenorys jest to, że <xref:System.Windows.EventTrigger> zapewnia lepszą kontrolę nad scenorysu i jego zachowanie w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [użyć wyzwalaczy zdarzeń, aby kontrolować Scenorys po uruchomieniu](../graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
 <a name="more_about"></a>   
 ## <a name="more-about-routed-events"></a>Więcej informacji na temat zdarzenia trasowane  
- W tym temacie omówiono przede wszystkim zdarzeń trasowanych z punktu widzenia zawierająca opis podstawowych pojęć i podzielimy się wskazówkami na temat i odpowiedzieć na zdarzenia trasowane, które są już obecne w różnych elementów podstawowych i kontrolek. Jednak można utworzyć własne zdarzenia trasowanego na klasę niestandardową oraz niezbędne wsparcie, takie jak klas danych zdarzeń wyspecjalizowanych i delegatów. Właściciel zdarzenia trasowanego może być dowolną klasę, ale zdarzenia trasowane musi być wywołane przez i obsługiwane przez <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> klasy pochodne była użyteczna. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz [Utwórz niestandardowe zdarzenie kierowane](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ W tym temacie omówiono przede wszystkim zdarzeń trasowanych z punktu widzenia zawierająca opis podstawowych pojęć i podzielimy się wskazówkami na temat i odpowiedzieć na zdarzenia trasowane, które są już obecne w różnych elementów podstawowych i kontrolek. Jednak można utworzyć własne zdarzenia trasowanego na klasę niestandardową oraz niezbędne wsparcie, takie jak klas danych zdarzeń wyspecjalizowanych i delegatów. Właściciel zdarzenia trasowanego może być dowolną klasę, ale zdarzenia trasowane musi być wywołane przez i obsługiwane przez <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> klasy pochodne była użyteczna. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz [Utwórz niestandardowe zdarzenie kierowane](how-to-create-a-custom-routed-event.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
-- [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [Słabe wzorce zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)
+- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
+- [Przegląd danych wejściowych](input-overview.md)
+- [Przegląd poleceń](commanding-overview.md)
+- [Niestandardowe właściwości zależności](custom-dependency-properties.md)
+- [Drzewa w WPF](trees-in-wpf.md)
+- [Słabe wzorce zdarzeń](weak-event-patterns.md)

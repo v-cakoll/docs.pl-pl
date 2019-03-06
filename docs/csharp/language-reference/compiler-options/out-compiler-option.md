@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 62a8835361e2e55d3d970cf3ae7cd2699e3c79fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725743"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362360"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opcje kompilatora C#)
 **-Out** opcja określa nazwę pliku wyjściowego.  
@@ -45,7 +45,7 @@ ms.locfileid: "54725743"
   
  Wszystkie moduły, utworzony jako część kompilacji stają się pliki skojarzone z dowolnego złożenia, również jest generowany w kompilacji. Użyj [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić manifest zestawu, aby wyświetlić skojarzone pliki.  
   
- Out — opcja kompilatora jest wymagana dla pliku exe jako obiekt docelowy zestaw przyjazny. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Out — opcja kompilatora jest wymagana dla pliku exe jako obiekt docelowy zestaw przyjazny. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Przyjazne zestawy](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Przyjazne zestawy](../../../standard/assembly/friend-assemblies.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

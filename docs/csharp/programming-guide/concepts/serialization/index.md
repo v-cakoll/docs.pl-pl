@@ -1,12 +1,6 @@
 ---
-title: Serializacja (C#)
+title: 'Serializacja (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858320"
 ---
 # <a name="serialization-c"></a>Serializacja (C#)
 
@@ -68,12 +62,12 @@ Jeśli chcesz, aby obiekt mógł zostać przeprowadzona w niestandardowy sposób
 
 Serializacja projektanta jest specjalną forma serializacji, która obejmuje rodzaj trwałość obiektów skojarzonych z narzędziami programistycznymi. Serializacja projektanta jest procesem konwertowania wykresu obiektu do pliku źródłowego, który później może służyć do odzyskania wykresu obiektu. Plik źródłowy może zawierać kod, znaczników lub nawet informacji o tabeli SQL.
 
-##  <a name="BKMK_RelatedTopics"></a> Tematy pokrewne i przykłady  
+## <a name="BKMK_RelatedTopics"></a> Tematy pokrewne i przykłady  
 [Przewodnik: Przechowywanie obiektu w programie Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 Pokazuje, jak serializacji może służyć do utrwalenia danych obiektu między wystąpieniami, co pozwala na przechowywanie wartości i pobierać je podczas następnego, które jest tworzone wystąpienie obiektu.
 
-[Porady: odczytywanie danych o obiektach z pliku XML (C#)](how-to-read-object-data-from-an-xml-file.md)  
+[Instrukcje: Odczytywanie danych o obiektach z pliku XML (C#)](how-to-read-object-data-from-an-xml-file.md)  
  Pokazuje, jak odczytywanie danych o obiektach, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.
 
-[Porady: zapis danych obiektu do pliku XML (C#)](how-to-write-object-data-to-an-xml-file.md)  
+[Instrukcje: Zapisywania obiektów danych do pliku XML (C#)](how-to-write-object-data-to-an-xml-file.md)  
 Przedstawia sposób zapisania obiektu z klasy do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.

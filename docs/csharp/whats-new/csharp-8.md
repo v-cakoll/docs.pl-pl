@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
-ms.openlocfilehash: 1aa5a200f84b35fda3c33a900655249d07000e8e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: c04ea514c1730de8e4ceabbd6fc0e9a12fdbfb3c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835437"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376510"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -269,11 +269,11 @@ Dowiedz się więcej na temat funkcji w przeglądzie [typy dopuszczające warto�
 
 Począwszy od C# 8.0, możesz utworzyć i wykorzystują strumienie asynchronicznie. Metody, która zwraca strumień asynchroniczny ma trzy właściwości:
 
-1. Została zadeklarowana przy użyciu `async` modyfikator.
+1. Jest zadeklarowana za pomocą `async` modyfikator.
 1. Zwraca <xref:System.Collections.Generic.IAsyncEnumerable%601>.
 1. Metoda zawiera `yield return` instrukcji, aby zwrócić kolejne elementy w strumieniu asynchronicznym.
 
-Korzystanie z strumień asynchroniczny wymaga dodania `await` — słowo kluczowe przed `foreach` — słowo kluczowe podczas wyliczania elementów strumienia. Dodawanie `await` — słowo kluczowe wymaga metody, która wylicza strumień asynchroniczny, które mają zostać zadeklarowane za pomocą `async` modyfikator i zwracać typ, jest dozwolony dla `async` metody. Zwykle oznacza to, zwracając <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Może to być także <xref:System.Threading.Tasks.ValueTask> lub <xref:System.Threading.Tasks.ValueTask%601>. Metoda może wykorzystywać i generuje strumień asynchroniczny, oznacza to, co spowoduje przywrócenie <xref:System.Collections.Generic.IAsyncEnumerable%601>. Poniższy kod generuje sekwencji z zakresu od 1 do 20, oczekiwanie 100 ms między generowania poszczególnych liczb:
+Korzystanie z strumień asynchroniczny wymaga dodania `await` — słowo kluczowe przed `foreach` — słowo kluczowe podczas wyliczania elementów strumienia. Dodawanie `await` — słowo kluczowe wymaga metody, która wylicza strumień asynchroniczny, które mają zostać zadeklarowane za pomocą `async` modyfikator i zwracać typ, jest dozwolony dla `async` metody. Zwykle oznacza to, zwracając <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Może to być także <xref:System.Threading.Tasks.ValueTask> lub <xref:System.Threading.Tasks.ValueTask%601>. Metoda może wykorzystywać i generuje strumień asynchroniczny, oznacza to, co spowoduje przywrócenie <xref:System.Collections.Generic.IAsyncEnumerable%601>. Poniższy kod generuje sekwencji z zakresu od 0 do 19 oczekiwania 100 ms między generowania poszczególnych liczb:
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()

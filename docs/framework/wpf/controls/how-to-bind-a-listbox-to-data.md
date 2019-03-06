@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], ListBox control
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
-ms.openlocfilehash: 6d37cda057ea1e7ca6761363857a2647da37afee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cbcb0fb859605c33e2d92559b4a47aa1725472c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650655"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372884"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a>Instrukcje: Powiąż ListBox z danymi
 Twórca aplikacji może utworzyć <xref:System.Windows.Controls.ListBox> formantów bez określania zawartość każdej <xref:System.Windows.Controls.ListBoxItem> oddzielnie. Powiązanie danych można użyć, aby powiązać dane do poszczególnych elementów.  
@@ -19,10 +19,10 @@ Twórca aplikacji może utworzyć <xref:System.Windows.Controls.ListBox> formant
  Poniższy przykład pokazuje, jak utworzyć <xref:System.Windows.Controls.ListBox> który wypełnia <xref:System.Windows.Controls.ListBoxItem> elementów przez powiązanie danych do źródła danych o nazwie *kolory*. W takim przypadku nie jest konieczne użycie <xref:System.Windows.Controls.ListBoxItem> tagów, aby określić zawartość każdego elementu.  
   
 ## <a name="example"></a>Przykład  
- [!code-xaml[ListBoxEvent#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
-[!code-xaml[ListBoxEvent#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
+ [!code-xaml[ListBoxEvent#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#7)]  
+[!code-xaml[ListBoxEvent#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.Controls.ListBoxItem>
-- [Kontrolki](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [Kontrolki](../advanced/optimizing-performance-controls.md)

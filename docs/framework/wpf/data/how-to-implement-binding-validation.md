@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: e752ad5c3160ac7b73adac55b02a06bf802190ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678359"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368548"
 ---
 # <a name="how-to-implement-binding-validation"></a>Instrukcje: Implementuj powiązaną walidację
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> i wyzwalacz stylu, aby przekazać wizualną opinię, aby poinformować użytkownika, gdy wprowadzono nieprawidłową wartość oparte na niestandardowej reguły walidacji.  
@@ -19,24 +19,24 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Controls.Validati
 ## <a name="example"></a>Przykład  
  Zawartość tekstu <xref:System.Windows.Controls.TextBox> w poniższym przykładzie jest powiązany z `Age` własności (typu int) obiektu źródłowego powiązania o nazwie `ods`. Powiązanie jest ustawiane, aby zastosować regułę sprawdzania poprawności, o nazwie `AgeRangeRule` tak, aby po użytkownik wprowadzi znaki nienumeryczne lub wartość, która jest mniejsza niż 21 lub większa niż 130, czerwony wykrzyknik pojawia się obok pola tekstowego i podpowiedzi z komunikatem o błędzie gdzie n użytkownik przesunie wskaźnik myszy nad polem tekstowym.  
   
- [!code-xaml[BindValidation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
+ [!code-xaml[BindValidation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#2)]  
   
  W poniższym przykładzie pokazano implementację `AgeRangeRule`, który dziedziczy z <xref:System.Windows.Controls.ValidationRule> i zastępuje <xref:System.Windows.Controls.ValidationRule.Validate%2A> metody. Metoda Int32.Parse() jest wywoływana na wartości, aby upewnić się, że nie zawiera nieprawidłowych znaków. <xref:System.Windows.Controls.ValidationRule.Validate%2A> Metoda zwraca <xref:System.Windows.Controls.ValidationResult> oznacza to, jeśli wartość jest prawidłowa na podstawie tego, czy wyjątek zostaje przechwycony podczas analizowania i tego, czy wartość wieku znajduje się poza dolną i górną granicę.  
   
- [!code-csharp[BindValidation#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
+ [!code-csharp[BindValidation#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/AgeRangeRule.cs#3)]  
   
  Poniższy przykład pokazuje niestandardowy <xref:System.Windows.Controls.ControlTemplate> `validationTemplate` tworząca czerwony wykrzyknik, aby powiadomić użytkownika o błąd sprawdzania poprawności. Szablony kontrolek są używane do przedefiniowania wyglądu formantu.  
   
- [!code-xaml[BindValidation#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
+ [!code-xaml[BindValidation#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#4)]  
   
  Jak pokazano w poniższym przykładzie <xref:System.Windows.Controls.ToolTip> pokazujący, że komunikat o błędzie jest tworzony przy użyciu stylu o nazwie `textBoxInError`. Jeśli wartość <xref:System.Windows.Controls.Validation.HasError%2A> jest `true`, wyzwalacz ustawia podpowiedzi bieżącego <xref:System.Windows.Controls.TextBox> do jej pierwszego błędu walidacji. <xref:System.Windows.Data.Binding.RelativeSource%2A> Ustawiono <xref:System.Windows.Data.RelativeSourceMode.Self>odwołujący się do bieżącego elementu.  
   
- [!code-xaml[BindValidation#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
+ [!code-xaml[BindValidation#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BindValidation/CSharp/Window1.xaml#5)]  
   
  Aby uzyskać kompletny przykład, zobacz [powiązania przykładowych weryfikacji](https://go.microsoft.com/fwlink/?LinkID=159972).  
   
- Należy pamiętać, że jeśli nie podasz niestandardowe <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> domyślnego szablonu błąd wydaje się przekazać wizualną opinię do użytkownika, gdy występuje błąd weryfikacji. Zobacz "Sprawdzanie poprawności danych" w [Przegląd wiązanie danych](../../../../docs/framework/wpf/data/data-binding-overview.md) Aby uzyskać więcej informacji. Ponadto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wbudowane walidację, który przechwytuje wyjątki, które są generowane podczas aktualizacji właściwości źródła powiązania. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.ExceptionValidationRule>.  
+ Należy pamiętać, że jeśli nie podasz niestandardowe <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> domyślnego szablonu błąd wydaje się przekazać wizualną opinię do użytkownika, gdy występuje błąd weryfikacji. Zobacz "Sprawdzanie poprawności danych" w [Przegląd wiązanie danych](data-binding-overview.md) Aby uzyskać więcej informacji. Ponadto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wbudowane walidację, który przechwytuje wyjątki, które są generowane podczas aktualizacji właściwości źródła powiązania. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

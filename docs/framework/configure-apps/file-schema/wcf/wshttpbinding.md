@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
 ms.openlocfilehash: d22065abcb04209ebd1ad51b41bfc9167af6d4c9
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758979"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352896"
 ---
 # <a name="wshttpbinding"></a>\<wsHttpBinding>
 Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie odpowiednie dla kontraktów na usługę non-duplex. Powiązanie implementuje następujące specyfikacje: WS-Reliable Messaging w zakresie niezawodności i WS-Security do uwierzytelniania i zabezpieczeń wiadomości. Transport, jest protokół HTTP i kodowanie komunikatu jest Text/XML kodowania.  

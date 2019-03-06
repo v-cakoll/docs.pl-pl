@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542590"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361216"
 ---
 # <a name="events-wpf"></a>Zdarzenia (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadza kierowane zdarzenia, które mogą być wywoływane programy obsługi, które istnieją na różnych odbiorników w drzewie elementu aplikacji.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadza zdarzenia trasowane, które mogą być wywoływane programy obsługi, które istnieją na różnych odbiorników w drzewie elementów aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Przegląd zdarzeń dołączonych](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [Zdarzenia okresu istnienia obiektu](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Podgląd zdarzeń](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [Zdarzenia zmiany właściwości](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Obsługa zdarzeń Visual Basic oraz WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Słabe wzorce zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Przegląd zdarzeń trasowanych](routed-events-overview.md)  
+ [Przegląd zdarzeń dołączonych](attached-events-overview.md)  
+ [Zdarzenia okresu istnienia obiektu](object-lifetime-events.md)  
+ [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)  
+ [Podgląd zdarzeń](preview-events.md)  
+ [Zdarzenia zmiany właściwości](property-change-events.md)  
+ [Obsługa zdarzeń Visual Basic oraz WPF](visual-basic-and-wpf-event-handling.md)  
+ [Słabe wzorce zdarzeń](weak-event-patterns.md)  
+ [Tematy z instrukcjami](events-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542590"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Architektura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML w WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Elementy podstawowe](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Drzewo elementów i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Właściwości](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Dane wejściowe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Zasoby](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Model zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [Model wątkowości](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [Architektura WPF](wpf-architecture.md)  
+  [XAML w WPF](xaml-in-wpf.md)  
+  [Elementy podstawowe](base-elements.md)  
+  [Drzewo elementów i serializacja](element-tree-and-serialization.md)  
+  [Właściwości](properties-wpf.md)  
+  [Dane wejściowe](input-wpf.md)  
+  [Zasoby](resources-wpf.md)  
+  [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)  
+  [Model zawartości WPF](../controls/wpf-content-model.md)  
+  [Model wątkowości](threading-model.md)

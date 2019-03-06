@@ -9,12 +9,12 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 27cecf3c50737e8d6c18f8505d8ec1d8393dbe33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24ffffc959891b6dab45350c6cda02adcc4f619a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619690"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362893"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Wprowadzenie do obiektu GlyphRun i elementu glifu
 W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:System.Windows.Documents.Glyphs> elementu.  
@@ -39,7 +39,7 @@ W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:Syste
 3.  Reprezentacja dokumentu ustalonym formacie, w tym klientów we wcześniejszych wersjach programu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i innych urządzeń komputerowych.  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> są przeznaczone do drukowania scenariuszy i prezentacji dokumentów o stałym formacie. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia kilka elementów ogólny układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenariuszy, takich jak <xref:System.Windows.Controls.Label> i <xref:System.Windows.Controls.TextBlock>. Aby uzyskać więcej informacji na temat układu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariuszy, zobacz [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md).  
+>  <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> są przeznaczone do drukowania scenariuszy i prezentacji dokumentów o stałym formacie. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia kilka elementów ogólny układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenariuszy, takich jak <xref:System.Windows.Controls.Label> i <xref:System.Windows.Controls.TextBlock>. Aby uzyskać więcej informacji na temat układu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariuszy, zobacz [Typografia w WPF](typography-in-wpf.md).  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>Obiektu GlyphRun  
@@ -53,7 +53,7 @@ W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:Syste
 ## <a name="the-glyphs-element"></a>Elementu glifu  
  <xref:System.Windows.Documents.Glyphs> Element reprezentuje dane wyjściowe <xref:System.Windows.Media.GlyphRun> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Poniższa składnia znaczników jest używana do opisywania <xref:System.Windows.Documents.Glyphs> elementu.  
   
- [!code-xaml[GlyphsOvwSample1#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
  Następujące definicje właściwości odpowiadają pierwsze cztery atrybutów w znaczniku próbki.  
   
@@ -86,15 +86,15 @@ W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:Syste
 ## <a name="glyph-metrics"></a>Metryki glifów  
  Każdy symbol definiuje metryki, określające, jak wyrównuje z innymi <xref:System.Windows.Documents.Glyphs>. Poniższa ilustracja definiuje różne właściwości związane z typografią dwa znaki inny symbol.  
   
- ![Diagraf miar symboli](../../../../docs/framework/wpf/advanced/media/glyph-example.png "glyph_example")  
+ ![Diagraf miar symboli](./media/glyph-example.png "glyph_example")  
   
 <a name="text_glyphrunovw_glyphsmarkup"></a>   
 ## <a name="glyphs-markup"></a>Symbole znaczników  
  Poniższy przykład kodu pokazuje, jak używać różnych właściwości obiektu <xref:System.Windows.Documents.Glyphs> element [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[GlyphsOvwSamp2#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
+ [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Typografia w WPF](typography-in-wpf.md)
+- [Dokumenty w WPF](documents-in-wpf.md)
+- [Text](optimizing-performance-text.md)

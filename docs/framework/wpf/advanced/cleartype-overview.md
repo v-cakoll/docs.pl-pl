@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719225"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355158"
 ---
 # <a name="cleartype-overview"></a>ClearType — Przegląd
 Ten temat zawiera omówienie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] technologii znaleziony w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -28,12 +28,12 @@ Ten temat zawiera omówienie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharp
   
  Dwa poniższe przykłady pokazują, jak zacząć symbole na krawędzi podrzędnych pikseli stosowania pozycjonowanie podrzędnych pikseli. Przykład po lewej stronie jest renderowany przy użyciu wcześniejszej wersji [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] modułu renderowania, która nie zastosowana pozycjonowanie podrzędnych pikseli. Przykład po prawej stronie jest renderowany przy użyciu nowej wersji [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] modułu renderowania, za pomocą rozmieszczania podrzędnych pikseli. Należy zauważyć, jak każdy **e** i **l** obrazie po prawej stronie jest renderowany nieco inaczej, ponieważ każdy uruchamia się na różnych pikseli podrzędnych. Podczas wyświetlania tekstu normalnego rozmiaru na ekranie, różnica ta jest niezauważalne ze względu na wysoki kontrast obrazu symbolu. Jest to możliwe tylko ze względu na kolor zaawansowane filtrowanie zawartym w [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)].  
   
- ![Tekst wyświetlany w dwóch wersjach ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![Tekst wyświetlany w dwóch wersjach ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 Tekst wyświetlany w starszych i nowszych wersjach ClearType  
   
  Dwa poniższe przykłady porównać dane wyjściowe z wcześniej [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] renderowania przy użyciu nowej wersji [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] modułu renderowania. Pozycjonowanie subpixel wyświetlane po prawej stronie, znacznie zwiększa odstępy typu na ekranie, zwłaszcza w małych rozmiarów, gdzie różnica między podrzędnych pikseli i całego pikseli reprezentuje znaczna część szerokość symbolu. Należy pamiętać, że odstępów między literami więcej nawet w przypadku drugi obraz. Zbiorcza zaletą podrzędnych pikseli pozycjonowanie na ogólny wygląd ekranu tekstu znacznie zwiększa się i reprezentuje znaczne zmiany w [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] technologii.  
   
- ![Tekst wyświetlany za pomocą wcześniejszej wersji ClearType](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![Tekst wyświetlany za pomocą wcześniejszej wersji ClearType](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 Tekst w starszych i nowszych wersjach ClearType  
   
 <a name="y-direction_antialiasing"></a>   
@@ -42,14 +42,14 @@ Tekst w starszych i nowszych wersjach ClearType
   
  Poniższy przykład pokazuje wpływ o bez antialiasingu kierunku y. W tym przypadku nieregularnej krawędzie u góry i u dołu litery są widoczne.  
   
- ![Tekst z nierówne krawędzie na płytka krzywych](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![Tekst z nierówne krawędzie na płytka krzywych](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Tekst z nierówne krawędzie na płytka krzywych  
   
  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia antialiasingu na poziomie kierunku y do wygładzania nagłych żadnych nieregularne krawędzi. Jest to szczególnie ważne, zwiększających czytelność języki wschodnioazjatyckie, gdzie ideogramy ma prawie taką samą ilość poziome i pionowe krzywych skrócona.  
   
  Poniższy przykład pokazuje wpływ antialiasingu kierunku y. W tym przypadku to krzywa Pokaż górnej i dolnej części literę.  
   
- ![Tekst z ClearType y&#45;kierunek ochrony przed złośliwym&#45;aliasów](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Tekst z ClearType y&#45;kierunek ochrony przed złośliwym&#45;aliasów](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Tekst z antialiasingu kierunku y ClearType  
   
 <a name="hardware_acceleration"></a>   
@@ -67,4 +67,4 @@ Tekst z antialiasingu kierunku y ClearType
  [PowerToy ClearType Tuner](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Ustawienia rejestru ClearType](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+- [Ustawienia rejestru ClearType](cleartype-registry-settings.md)

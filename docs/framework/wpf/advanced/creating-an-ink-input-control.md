@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: c49dfb8eaf5a91c7ebdf10833b229c4b05a7ce56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 329bad9d5e0fa24f66fbd63def4936cb047e62e3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664814"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378070"
 ---
 # <a name="creating-an-ink-input-control"></a>Tworzenie formantu danych wejściowych atramentu
 Można utworzyć formant niestandardowy, dynamicznie i statycznie renderowanie pisma odręcznego. Oznacza to renderowanie pisma odręcznego, jak użytkownik rysuje pociągnięcia, powodując pisma odręcznego się "flow" z pióra i wyświetlić pisma odręcznego po nim jest dodawany do kontroli, za pomocą pióra, wklejonych ze Schowka, albo załadować z pliku. Aby powodować dynamiczne renderowanie pisma odręcznego, musisz użyć kontrolki <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Statycznie renderowanie pisma odręcznego, konieczne jest przesłonięcie metody zdarzeń pióra (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, i <xref:System.Windows.UIElement.OnStylusUp%2A>) do zbierania <xref:System.Windows.Input.StylusPoint> dane, tworzyć pociągnięć i dodać je do <xref:System.Windows.Controls.InkPresenter> (która renderuje pismo odręczne na formancie).  
@@ -42,30 +42,30 @@ Można utworzyć formant niestandardowy, dynamicznie i statycznie renderowanie p
   
 1.  Wyprowadzić klasę z <xref:System.Windows.Controls.Control> lub jednej z klas pochodnych <xref:System.Windows.Controls.Control>, takich jak <xref:System.Windows.Controls.Label>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
-    [!code-csharp[AdvancedInkTopicsSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#14)]  
-    [!code-csharp[AdvancedInkTopicsSamples#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#15)]  
+     [!code-csharp[AdvancedInkTopicsSamples#20](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
+    [!code-csharp[AdvancedInkTopicsSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#14)]  
+    [!code-csharp[AdvancedInkTopicsSamples#15](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#15)]  
   
 2.  Dodaj <xref:System.Windows.Controls.InkPresenter> klasy i zestaw <xref:System.Windows.Controls.ContentControl.Content%2A> nową właściwość <xref:System.Windows.Controls.InkPresenter>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#16)]  
+     [!code-csharp[AdvancedInkTopicsSamples#16](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#16)]  
   
 3.  Dołącz <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> z <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.Controls.InkPresenter> przez wywołanie metody <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> metodę i Dodaj <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.UIElement.StylusPlugIns%2A> kolekcji. Dzięki temu <xref:System.Windows.Controls.InkPresenter> do wyświetlenia pismo odręczne, ponieważ dane punktu pióra są zbierane przez Twoją kontrolą.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#17)]  
-    [!code-csharp[AdvancedInkTopicsSamples#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#18)]  
+     [!code-csharp[AdvancedInkTopicsSamples#17](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#17)]  
+    [!code-csharp[AdvancedInkTopicsSamples#18](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#18)]  
   
 4.  Zastąp <xref:System.Windows.UIElement.OnStylusDown%2A> metody.  W przypadku tej metody Przechwytywanie pióra wywołaniem <xref:System.Windows.Input.Stylus.Capture%2A>. Przechwytując Pióro, będą nadal otrzymywać kontroli nad <xref:System.Windows.UIElement.StylusMove> i <xref:System.Windows.UIElement.StylusUp> zdarzenia, nawet jeśli opuszczeniu przez pióro granic formantu. Nie jest ściśle wymagane, ale prawie zawsze żądane środowisko pracy użytkownika. Utwórz nową <xref:System.Windows.Input.StylusPointCollection> zbieranie <xref:System.Windows.Input.StylusPoint> danych. Na koniec należy dodać początkowy zestaw <xref:System.Windows.Input.StylusPoint> danych <xref:System.Windows.Input.StylusPointCollection>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#7)]  
+     [!code-csharp[AdvancedInkTopicsSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#7)]  
   
 5.  Zastąpienie <xref:System.Windows.UIElement.OnStylusMove%2A> metody i Dodaj <xref:System.Windows.Input.StylusPoint> danych <xref:System.Windows.Input.StylusPointCollection> obiektu, który został utworzony wcześniej.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#8)]  
+     [!code-csharp[AdvancedInkTopicsSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#8)]  
   
 6.  Zastąp <xref:System.Windows.UIElement.OnStylusUp%2A> metody i Utwórz nowy <xref:System.Windows.Ink.Stroke> z <xref:System.Windows.Input.StylusPointCollection> danych. Dodaj nowy <xref:System.Windows.Ink.Stroke> zostanie utworzony w celu <xref:System.Windows.Controls.InkPresenter.Strokes%2A> zbiór <xref:System.Windows.Controls.InkPresenter> i zwolnij Przechwytywanie pióra.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
+     [!code-csharp[AdvancedInkTopicsSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
 <a name="EnablingYourControlToAcceptInputTromTheMouse"></a>   
 ## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Instrukcje: Włączanie kontroli nad do przyjmowania danych wejściowych z myszy  
@@ -73,22 +73,22 @@ Można utworzyć formant niestandardowy, dynamicznie i statycznie renderowanie p
   
 1.  Zastąp <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> i Utwórz nowy <xref:System.Windows.Input.StylusPointCollection> uzyskiwanie położenie kursora myszy, gdy zdarzenie wystąpiło i tworzenie <xref:System.Windows.Input.StylusPoint> przy użyciu punktu danych, a następnie dodaj <xref:System.Windows.Input.StylusPoint> do <xref:System.Windows.Input.StylusPointCollection>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#11)]  
+     [!code-csharp[AdvancedInkTopicsSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#11)]  
   
 2.  Zastąp <xref:System.Windows.UIElement.OnMouseMove%2A> metody. Pobierz położenie kursora myszy, gdy zdarzenie wystąpiło i Utwórz <xref:System.Windows.Input.StylusPoint> przy użyciu punktu danych.  Dodaj <xref:System.Windows.Input.StylusPoint> do <xref:System.Windows.Input.StylusPointCollection> obiektu, który został utworzony wcześniej.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#12)]  
+     [!code-csharp[AdvancedInkTopicsSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#12)]  
   
 3.  Zastąp <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A> metody.  Utwórz nową <xref:System.Windows.Ink.Stroke> z <xref:System.Windows.Input.StylusPointCollection> danych i Dodaj nowy <xref:System.Windows.Ink.Stroke> zostanie utworzony w celu <xref:System.Windows.Controls.InkPresenter.Strokes%2A> zbiór <xref:System.Windows.Controls.InkPresenter>.  
   
-     [!code-csharp[AdvancedInkTopicsSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#13)]  
+     [!code-csharp[AdvancedInkTopicsSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#13)]  
   
 <a name="PuttingItTogether"></a>   
 ## <a name="putting-it-together"></a>Umieszczenie go razem  
  Poniższy przykład jest formant niestandardowy, który zbiera pisma odręcznego, gdy użytkownik używa myszy lub pióra.  
   
- [!code-csharp[AdvancedInkTopicsSamples#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
-[!code-csharp[AdvancedInkTopicsSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#6)]  
+ [!code-csharp[AdvancedInkTopicsSamples#20](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
+[!code-csharp[AdvancedInkTopicsSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#6)]  
   
 <a name="UsingAdditionalPluginsAndDynamicRenderers"></a>   
 ## <a name="using-additional-plug-ins-and-dynamicrenderers"></a>Za pomocą dodatkowych dodatków plug-in i DynamicRenderers  
@@ -99,5 +99,5 @@ Można utworzyć formant niestandardowy, dynamicznie i statycznie renderowanie p
  Można utworzyć formant, który służy do zbierania i renderuje pismo odręczne poprzez zastąpienie metody zdarzeń pióra. Tworząc własne kontrolki, pochodząca własne <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> klasy i wstawiania ich do <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, możesz wdrożyć niemal dowolne zachowanie imaginable z cyfrowy atrament. Masz dostęp do <xref:System.Windows.Input.StylusPoint> dane ponieważ jest generowany, dzięki czemu możesz dostosować <xref:System.Windows.Input.Stylus> danych wejściowych i renderować ją na ekranie jako odpowiedni dla aplikacji. Ponieważ masz takiego niskiego poziomu dostępu do <xref:System.Windows.Input.StylusPoint> danych, można zaimplementować kolekcji pisma odręcznego i renderować ją z optymalną wydajnością aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zaawansowana obsługa pisma odręcznego](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Zaawansowana obsługa pisma odręcznego](advanced-ink-handling.md)
 - [Uzyskiwania dostępu i manipulowania piórem](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

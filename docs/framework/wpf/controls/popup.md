@@ -9,24 +9,24 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551755"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370660"
 ---
 # <a name="popup"></a>Okno podręczne
-<xref:System.Windows.Controls.Primitives.Popup> Kontroli Wyświetla zawartość w osobnym oknie, który jest wyświetlany nad bieżące okno aplikacji.  
+<xref:System.Windows.Controls.Primitives.Popup> Kontrolka Wyświetla zawartość w osobnym oknie, które pojawia się za pośrednictwem bieżącego okna aplikacji.  
   
- Na poniższej ilustracji pokazano <xref:System.Windows.Controls.Primitives.Popup> formant, który znajduje się w odniesieniu do <xref:System.Windows.Controls.Button> oznacza to jego elementu nadrzędnego.  
+ Poniższa ilustracja przedstawia <xref:System.Windows.Controls.Primitives.Popup> formant, który jest umieszczony w odniesieniu do <xref:System.Windows.Controls.Button> oznacza to jego obiektu nadrzędnego.  
   
- ![Ilustracja podręcznego](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")  
+ ![Rysunek podręcznym](./media/popuppicture.JPG "PopupPicture")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Okno podręczne — omówienie](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Zachowanie położenia okna podręcznego](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [Okno podręczne — omówienie](popup-overview.md)  
+ [Zachowanie położenia okna podręcznego](popup-placement-behavior.md)  
+ [Tematy z instrukcjami](popup-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Primitives.Popup>  

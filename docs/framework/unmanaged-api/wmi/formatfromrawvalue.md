@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 420a02d2f7757c52d6e8ff92a9ca30e44938cd18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bef18468ef02e37b857316cd9fa2bf4cf5f9e9b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546442"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369343"
 ---
 # <a name="formatfromrawvalue-function"></a>Funkcja FormatFromRawValue
-Konwertuje jedną wartość danych pierwotnych wydajności w określonym formacie lub dwóch wartości danych pierwotnych wydajności, jeśli Konwersja formatu jest oparte na czasie.   
-  
+Konwertuje jedną wartość danych pierwotnych wydajności w określonym formacie lub dwóch wartości danych pierwotnych wydajności, jeśli Konwersja formatu jest oparte na czasie. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+## <a name="syntax"></a>Składnia
+
+```
 int FormatFromRawValue (
    [in] uint                    dwCounterType, 
    [in] uint                    dwFormat, 
@@ -39,14 +39,14 @@ int FormatFromRawValue (
    [in] PDH_RAW_COUNTER*        pRawValue2,
    [out] PDH_FMT_COUNTERVALUE*  pFmtValue
 ); 
-```  
+```
 
 ## <a name="parameters"></a>Parametry
 
-`dwCounterType`  
+`dwCounterType`\
 [in] Typ licznika. Aby uzyskać listę typów liczników, zobacz [typy licznika wydajności WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` mogą być dowolnego typu liczników, z wyjątkiem `PERF_LARGE_RAW_FRACTION` i `PERF_LARGE_RAW_BASE`. 
 
-`dwFormat`  
+`dwFormat`\
 [in] Format, do którego można przekonwertować pierwotnych danych wydajności. Może to być jedna z następujących wartości:
 
 |Stała  |Wartość  |Opis |
@@ -62,14 +62,16 @@ Jedną z poprzednimi wartościami może być operacja logiczna przy użyciu jedn
 | `PDH_FMT_NOSCALE` | 0x00001000 | Nie należy stosować ten licznik skalowania czynników. |
 | `PDH_FMT_1000` | 0x00002000 | Za 1000, należy pomnożyć wartość końcową. | 
 
-`pTimeBase`  
+`pTimeBase`\
 [in] Wskaźnik do podstawowego czasu, jeśli jest to niezbędne do konwersji formatów. Jeśli podstawowy informacje o czasie nie jest niezbędne do konwersji formatów, wartość tego parametru jest ignorowana.
 
-`pRawValue1` [in] Wskaźnik do [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) strukturę, która reprezentuje wartość wydajność pierwotna.
+`pRawValue1`\ [in] wskaźnik do [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) strukturę, która reprezentuje wartość wydajność pierwotna.
 
-`pRawValue2` [in] Wskaźnik do [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) strukturę, która reprezentuje wartość drugiego wydajność pierwotna. Jeśli drugiej wartości pierwotnych wydajności nie jest konieczne, ten parametr powinien być `null`.
+`pRawValue2`\
+[in] Wskaźnik do [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) strukturę, która reprezentuje wartość drugiego wydajność pierwotna. Jeśli drugiej wartości pierwotnych wydajności nie jest konieczne, ten parametr powinien być `null`.
 
-`pFmtValue` [out] Wskaźnik do [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) struktury, który odbiera wartość wydajności sformatowany.
+`pFmtValue`\
+[out] Wskaźnik do [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) struktury, który odbiera wartość wydajności sformatowany.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -80,17 +82,19 @@ Następujące wartości są zwracane przez tę funkcję:
 | `ERROR_SUCCESS` | 0 | Wywołanie funkcji zakończy się pomyślnie. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Wymagany argument jest brakujące lub nieprawidłowe. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | Dojście nie jest prawidłowym obiektem PDH. |
-  
+
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja zawija wywołanie do [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) funkcji.
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Biblioteka:** PerfCounter.dll  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Biblioteka:** PerfCounter.dll
+
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

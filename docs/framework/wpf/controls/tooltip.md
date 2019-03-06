@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556981"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367573"
 ---
 # <a name="tooltip"></a>ToolTip
-Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>.  
+Etykietka narzędzia jest niewielkie okno podręczne, który pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>.  
   
- Na poniższej ilustracji przedstawiono wskaźnika myszy, który wskazuje **Zamknij**<xref:System.Windows.Controls.Button>, który następnie wyświetla jego zidentyfikowanie <xref:System.Windows.Controls.ToolTip>.  
+ Na poniższej ilustracji przedstawiono wskaźnik myszy, który wskazuje na **Zamknij**<xref:System.Windows.Controls.Button>, który następnie wyświetla jego identyfikacji <xref:System.Windows.Controls.ToolTip>.  
   
- Przycisk Zamknij, aby z jego etykietka narzędzia wyświetlana  
+ Przycisk Zamknij z jego etykietka narzędzia wyświetlana  
   
- ![Zrzut ekranu przedstawiający etykietkę narzędzia](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
+ ![Zrzut ekranu przedstawiający etykietkę narzędzia](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ToolTip — omówienie](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [ToolTip — omówienie](tooltip-overview.md)  
+  [Tematy z instrukcjami](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ToolTip>  
@@ -34,5 +34,5 @@ Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wska
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Okno podręczne — omówienie](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Okno podręczne — omówienie](popup-overview.md)  
+  [Tematy z instrukcjami](popup-how-to-topics.md)

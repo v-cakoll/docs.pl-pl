@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
-ms.openlocfilehash: 4b23287abebafd6583d77362c4b4ef12f504f7df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551768"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378920"
 ---
 # <a name="adorners"></a>Moduły definiowania układu
-Ta sekcja zawiera informacje na temat definiowania układu oraz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework modułu definiowania układu kodu.  
+Ta sekcja zawiera informacje na temat definiowania i [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework moduł definiowania układu kodu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Moduły indeksowania układu — omówienie](../../../../docs/framework/wpf/controls/adorners-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
+ [Moduły indeksowania układu — omówienie](adorners-overview.md)  
+ [Tematy z instrukcjami](adorners-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

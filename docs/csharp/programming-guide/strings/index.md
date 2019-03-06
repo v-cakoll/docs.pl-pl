@@ -113,7 +113,7 @@ string s = String.Empty;
   
  W tym przykładzie <xref:System.Text.StringBuilder> obiekt jest używany do tworzenia ciągu z zestawu typów liczbowych:  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Ciągi i metod rozszerzeń LINQ  
  Ponieważ <xref:System.String> typ implementuje <xref:System.Collections.Generic.IEnumerable%601>, można użyć metody rozszerzenia zdefiniowane w <xref:System.Linq.Enumerable> klasy na ciągi. Aby uniknąć zaśmiecania visual, te metody są wykluczane z technologii IntelliSense dla <xref:System.String> typu, ale są jednak dostępne. Można również użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach dla ciągów zapytań. Aby uzyskać więcej informacji, zobacz [LINQ i ciągi](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md).  

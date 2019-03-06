@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 67978e49a8c23c4b25234ecbb3639c696c7232f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 072e775d11d44dfbca27f1616889e388ae61d467
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655650"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366000"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
 
@@ -36,9 +36,10 @@ HRESULT EndEnumMethodInstancesByAddress(
 );
 ```
 
-### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
-`handle` [out] Dojście do wyliczania wystąpień metody.
+`handle`\
+[out] Dojście do wyliczania wystąpień metody.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -53,6 +54,6 @@ Podana metoda jest częścią `IXCLRDataProcess` interfejs i odnosi się do 29 g
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyliczenie CLRDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfejs IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Wyliczenie CLRDataSourceType](clrdatasourcetype-enumeration.md)
+- [Debugowanie](index.md)
+- [Interfejs IXCLRDataProcess](ixclrdataprocess-interface.md)

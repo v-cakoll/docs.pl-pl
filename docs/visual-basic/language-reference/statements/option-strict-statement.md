@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981546"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355132"
 ---
 # <a name="option-strict-statement"></a>Option Strict — Instrukcja
 Ogranicza niejawne konwersje typów danych można tylko konwersje rozszerzające nie zezwalają na późne wiązanie i nie zezwalają na niejawnego wpisywania, które spowodowało, że `Object` typu.  
@@ -113,7 +113,7 @@ Option Strict { On | Off }
   
 2.  Na **skompilować** kartę, należy ustawić wartość w **Option Strict** pole.  
   
-###  <a name="conditions"></a> Aby ustawić konfiguracje ostrzeżenie w środowisku IDE  
+### <a name="conditions"></a> Aby ustawić konfiguracje ostrzeżenie w środowisku IDE  
  Kiedy używasz [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) zamiast `Option Strict` instrukcji, masz dodatkową kontrolę nad warunki, które generują błędy. **Konfiguracje ostrzeżenie** części **kompilowania strony** ma ustawienia, które odnoszą się do trzech warunków, które powodują błąd kompilacji podczas `Option Strict` znajduje się na. Te ustawienia są następujące:  
   
 -   **Niejawna konwersja**  

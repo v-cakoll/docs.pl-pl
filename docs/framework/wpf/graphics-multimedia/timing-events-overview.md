@@ -8,48 +8,48 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 58861a036d95fcef41da455b25ad71d6e6afaef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726822"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379578"
 ---
 # <a name="timing-events-overview"></a>Przegląd Zdarzenia chronometrażu
 W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostępne na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiektów.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Aby zrozumieć, w tym temacie, należy wiedzieć, jak utworzyć i używać animacji. Aby rozpocząć pracę z animacji, zobacz [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Aby zrozumieć, w tym temacie, należy wiedzieć, jak utworzyć i używać animacji. Aby rozpocząć pracę z animacji, zobacz [Przegląd animacja](animation-overview.md).  
   
  Istnieje wiele sposobów, aby animować właściwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Używanie obiektów scenorysu** (znaczników i kodu): Możesz użyć <xref:System.Windows.Media.Animation.Storyboard> obiektów Rozmieść i rozpowszechniania animacji jeden lub więcej obiektów. Aby uzyskać przykład, zobacz [animować właściwość przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md).  
+-   **Używanie obiektów scenorysu** (znaczników i kodu): Możesz użyć <xref:System.Windows.Media.Animation.Storyboard> obiektów Rozmieść i rozpowszechniania animacji jeden lub więcej obiektów. Aby uzyskać przykład, zobacz [animować właściwość przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Za pomocą lokalnego animacji** (tylko kod): Można zastosować <xref:System.Windows.Media.Animation.AnimationTimeline> obiektów bezpośrednio do właściwości one animować. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
+-   **Za pomocą lokalnego animacji** (tylko kod): Można zastosować <xref:System.Windows.Media.Animation.AnimationTimeline> obiektów bezpośrednio do właściwości one animować. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md).  
   
--   **Za pomocą zegary** (tylko kod): Można jawnie zarządzać zegara tworzenia i dystrybucji zegary animacji, samodzielnie.  Aby uzyskać przykład, zobacz [animować właściwość przy użyciu AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md).  
+-   **Za pomocą zegary** (tylko kod): Można jawnie zarządzać zegara tworzenia i dystrybucji zegary animacji, samodzielnie.  Aby uzyskać przykład, zobacz [animować właściwość przy użyciu AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
   
  Ponieważ można ich używać w kodzie znaczników oraz kod, użyj na potrzeby przykładów w tym omówieniu <xref:System.Windows.Media.Animation.Storyboard> obiektów. Jednakże pojęcia opisane mogą dotyczyć innych metod animowanie właściwości.  
   
 ### <a name="what-is-a-clock"></a>Co to jest zegar?  
- Oś czasu, przez siebie, naprawdę nic nie robi innych niż opisują odcinek czasu. Jest oś czasu <xref:System.Windows.Media.Animation.Clock> obiekt, który wykonuje rzeczywistą pracę: Ta funkcja obsługuje związany stan czasu wykonywania dla osi czasu. W większości przypadków, takie jak kiedy przy użyciu scenorysy zegar jest tworzona automatycznie dla osi czasu. Można również utworzyć <xref:System.Windows.Media.Animation.Clock> jawnie przy użyciu <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> metody. Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Animation.Clock> obiekty, zobacz [Animacja i System chronometrażu w — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Oś czasu, przez siebie, naprawdę nic nie robi innych niż opisują odcinek czasu. Jest oś czasu <xref:System.Windows.Media.Animation.Clock> obiekt, który wykonuje rzeczywistą pracę: Ta funkcja obsługuje związany stan czasu wykonywania dla osi czasu. W większości przypadków, takie jak kiedy przy użyciu scenorysy zegar jest tworzona automatycznie dla osi czasu. Można również utworzyć <xref:System.Windows.Media.Animation.Clock> jawnie przy użyciu <xref:System.Windows.Media.Animation.Timeline.CreateClock%2A> metody. Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Animation.Clock> obiekty, zobacz [Animacja i System chronometrażu w — Przegląd](animation-and-timing-system-overview.md).  
   
 ## <a name="why-use-events"></a>Dlaczego warto używać zdarzeń?  
  Z wyjątkiem jednego (wyszukiwanie wyrównane do ostatniej najmniejszej), wszystkie operacje interaktywne chronometrażu są asynchroniczne. Nie ma możliwości można dowiedzieć się, dokładnie gdy będą one wykonywanie. Może to stanowić problem w przypadku innego kodu, który jest zależny od czasu wykonania operacji. Załóżmy, że chcesz zatrzymać osi czasu, który animowane prostokąta. Po zatrzymaniu osi czasu, możesz zmienić kolor prostokąta.  
   
- [!code-csharp[events_procedural#NeedForEventsFragment](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
- [!code-vb[events_procedural#NeedForEventsFragment](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
+ [!code-csharp[events_procedural#NeedForEventsFragment](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#needforeventsfragment)]
+ [!code-vb[events_procedural#NeedForEventsFragment](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#needforeventsfragment)]  
   
  W poprzednim przykładzie drugi wiersz kodu może być wykonywany przed zatrzymaniem scenorysu. To, ponieważ zatrzymywanie jest operacją asynchroniczną. Informuje osi czasu lub zegara, aby zatrzymać tworzy "żądanie zatrzymania" przedstawię który nie jest przetwarzany aż do znaczników dalej aparatu chronometrażu.  
   
  Wykonywanie polecenia po ukończeniu osi czasu, należy użyć zdarzenia chronometrażu. W poniższym przykładzie program obsługi zdarzeń służy do po scenorysu zatrzymuje odtwarzanie, zmienić kolor prostokąta.  
   
- [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
- [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
-[!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
-[!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
+ [!code-csharp[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#registerforstoryboardcurrentstateinvalidatedevent)]
+ [!code-vb[events_procedural#RegisterForStoryboardCurrentStateInvalidatedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#registerforstoryboardcurrentstateinvalidatedevent)]  
+[!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
+[!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- Aby uzyskać pełniejszy przykład, zobacz [zmiany stanu odbierania powiadomień podczas zegara](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md).  
+ Aby uzyskać pełniejszy przykład, zobacz [zmiany stanu odbierania powiadomień podczas zegara](how-to-receive-notification-when-clock-state-changes.md).  
   
 ## <a name="public-events"></a>Zdarzenia publiczne  
  <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obu klas zapewnia pięć zdarzenia chronometrażu. W poniższej tabeli wymieniono te zdarzenia i ze zdarzeniami wyzwalającymi je.  
@@ -77,6 +77,6 @@ W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostęp
  Podczas rejestrowania się <xref:System.Windows.Media.Animation.Timeline.Completed> zdarzeń na osi czasu, na przykład, możesz teraz faktycznie informuje system rejestracji <xref:System.Windows.Media.Animation.Clock.Completed> zdarzenia każdego zegara, który jest tworzony dla osi czasu. W kodzie, należy zarejestrować dla tego zdarzenia przed <xref:System.Windows.Media.Animation.Clock> jest tworzona dla tej osi czasu; w przeciwnym razie nie będziesz otrzymywać powiadomienia. Dzieje się to automatycznie w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; analizator automatycznie rejestruje zdarzenia przed <xref:System.Windows.Media.Animation.Clock> zostanie utworzony.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
-- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Zachowania chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)

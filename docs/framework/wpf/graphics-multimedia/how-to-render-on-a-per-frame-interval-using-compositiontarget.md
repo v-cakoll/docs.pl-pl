@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 919e39dbe96a1a72ce517d59dcb239636f5aa692
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511228"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353208"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Instrukcje: Renderuj w interwałach klatek z użyciem CompositionTarget
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aparat animacji udostępnia wiele funkcji do tworzenia opartych na klatkach animacji. Istnieją jednak scenariuszy aplikacji, w których potrzebujesz bardziej szczegółowej kontroli nad renderowania na zasadzie na ramki. <xref:System.Windows.Media.CompositionTarget> Obiekt zapewnia możliwość tworzenia niestandardowe animacje oparte na wywołanie zwrotne poszczególnych klatkach.  
@@ -26,20 +26,20 @@ ms.locfileid: "54511228"
 ## <a name="example"></a>Przykład  
  <xref:System.Windows.Media.CompositionTarget.Rendering> Zdarzenia generowane podczas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proces renderowania. W poniższym przykładzie pokazano, jak zarejestrować <xref:System.EventHandler> delegować statycznej <xref:System.Windows.Media.CompositionTarget.Rendering> metody <xref:System.Windows.Media.CompositionTarget>.  
   
- [!code-csharp[CompositionTargetSample#CompositionTarget1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget1)]
- [!code-vb[CompositionTargetSample#CompositionTarget1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget1)]  
+ [!code-csharp[CompositionTargetSample#CompositionTarget1](~/samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget1)]
+ [!code-vb[CompositionTargetSample#CompositionTarget1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget1)]  
   
  Twoja metoda programu obsługi zdarzeń renderowania służy do tworzenia niestandardowego rysowania zawartości. Ta metoda obsługi zdarzeń jest wywoływana raz na klatkę. Każdym razem, gdy program [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] marshals danych utrwalonych renderowania, w drzewie wizualnym między do składu wykres scen, Twoja metoda programu obsługi zdarzeń jest wywoływana. Ponadto zmiany do drzewa wizualnego wymuszenia aktualizacji do wykresu sceny kompozycji, jest również nazywany metodę programu obsługi zdarzeń. Należy pamiętać, że Twoja metoda programu obsługi zdarzeń jest wywoływana po obliczeniu układu. Jednak można modyfikować układ w metodzie obsługi zdarzeń, co oznacza, że taki układ zostanie obliczona ponownie przed renderowaniem.  
   
  Poniższy przykład pokazuje, jak możesz podać niestandardowy Rysowanie w <xref:System.Windows.Media.CompositionTarget> metody obsługi zdarzeń. W tym przypadku kolor tła <xref:System.Windows.Controls.Canvas> jest rysowany przy użyciu wartości koloru w oparciu o współrzędnych położenie kursora myszy. Po przesunięciu myszy wewnątrz <xref:System.Windows.Controls.Canvas>, jego zmiany kolorów w tle. Ponadto średnia szybkość klatek jest obliczana, na podstawie bieżący czas i całkowitą liczbę ramek renderowany.  
   
- [!code-csharp[CompositionTargetSample#CompositionTarget2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget2)]
- [!code-vb[CompositionTargetSample#CompositionTarget2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget2)]  
+ [!code-csharp[CompositionTargetSample#CompositionTarget2](~/samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget2)]
+ [!code-vb[CompositionTargetSample#CompositionTarget2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget2)]  
   
- Użytkownik może stwierdzić, uruchamia niestandardowy rysunek przy różnych prędkościach na różnych komputerach. Jest to spowodowane niestandardowy rysunek nie jest szybkość klatek niezależne. W zależności od systemu, są uruchomione i obciążenie systemu <xref:System.Windows.Media.CompositionTarget.Rendering> zdarzeń może zostać wywołana różną liczbę razy na sekundę. Aby uzyskać informacje na temat określania możliwości sprzętu grafiki i wydajności na urządzeniu z systemem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, zobacz [poziomy renderowania grafiki](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Użytkownik może stwierdzić, uruchamia niestandardowy rysunek przy różnych prędkościach na różnych komputerach. Jest to spowodowane niestandardowy rysunek nie jest szybkość klatek niezależne. W zależności od systemu, są uruchomione i obciążenie systemu <xref:System.Windows.Media.CompositionTarget.Rendering> zdarzeń może zostać wywołana różną liczbę razy na sekundę. Aby uzyskać informacje na temat określania możliwości sprzętu grafiki i wydajności na urządzeniu z systemem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, zobacz [poziomy renderowania grafiki](../advanced/graphics-rendering-tiers.md).  
   
  Dodawanie lub usuwanie renderowania <xref:System.EventHandler> po zakończeniu zdarzenia delegata, gdy zdarzenie jest uruchamiana zostanie opóźnione aż do wyzwalania. Jest to zgodne z jak <xref:System.MulticastDelegate>— na podstawie zdarzenia są obsługiwane w środowiska uruchomieniowego języka wspólnego (CLR). Należy również zauważyć, że renderowanie zdarzeń nie ma gwarancji, można wywołać w określonej kolejności. Jeśli masz wiele <xref:System.EventHandler> delegatów, które zależą od określonej kolejności, należy zarejestrować pojedynczy <xref:System.Windows.Media.CompositionTarget.Rendering> zdarzeń i multipleksować delegatów prawidłowo kolejność samodzielnie.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Media.CompositionTarget>
-- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)

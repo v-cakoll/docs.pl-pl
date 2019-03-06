@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], TextBlock
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
-ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555902"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358915"
 ---
 # <a name="textblock"></a>TextBlock
-<xref:System.Windows.Controls.TextBlock> Kontroli zapewnia elastyczne tekst obsługę [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Element jest przeznaczony głównie kierunku basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariusze, które nie wymagają więcej niż jednego akapitu tekstu.  
+<xref:System.Windows.Controls.TextBlock> Kontroli zapewnia obsługę tekst elastyczny [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Element jest przeznaczona głównie basic [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariusze, które nie wymagają więcej niż jeden akapit.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [TextBlock — omówienie](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+ [TextBlock — omówienie](textblock-overview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Label>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Dokumenty w WPF](../advanced/documents-in-wpf.md)  
   
- [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Przegląd dokumentu przepływu](../advanced/flow-document-overview.md)

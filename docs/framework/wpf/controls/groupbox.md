@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: e7e73523f9c7038fdcec64f66567dc41a75d5e2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811a29f6575681504a8dcf72257c82d288558a12
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550842"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358928"
 ---
 # <a name="groupbox"></a>GroupBox
-<xref:System.Windows.Controls.GroupBox> Formant jest <xref:System.Windows.Controls.HeaderedContentControl> udostępniająca kontener zatytułowana [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] zawartości.  
+<xref:System.Windows.Controls.GroupBox> Formant jest <xref:System.Windows.Controls.HeaderedContentControl> zapewniającej, kontener zatytułowanym [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] zawartości.  
   
- Na poniższej ilustracji pokazano <xref:System.Windows.Controls.GroupBox> zawierający <xref:System.Windows.Controls.TabControl> i <xref:System.Windows.Controls.Button> ujęte w <xref:System.Windows.Controls.StackPanel>.  
+ Poniższa ilustracja przedstawia <xref:System.Windows.Controls.GroupBox> zawierający <xref:System.Windows.Controls.TabControl> i <xref:System.Windows.Controls.Button> ujęte w <xref:System.Windows.Controls.StackPanel>.  
   
- ![Obiekt GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "Obiekt GroupBoxImage")  
+ ![Obiekt GroupBoxImage](./media/groupboximage.JPG "Obiekt GroupBoxImage")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Definiowanie szablonu GroupBox](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
+ [Definiowanie szablonu GroupBox](how-to-define-a-groupbox-template.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.GroupBox>  

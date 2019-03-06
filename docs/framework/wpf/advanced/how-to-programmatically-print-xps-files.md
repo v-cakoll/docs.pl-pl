@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 53cc58b3e30b91e8694a8090f3cc85cf0b3c0af6
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372727"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Instrukcje: Za pomocą programowania drukuj pliki XPS
 Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> metodę, aby wydrukować [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików bez otwierania <xref:System.Windows.Controls.PrintDialog> lub w zasadzie dowolnego [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] na wszystkich.  
@@ -43,8 +43,8 @@ Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A
   
  Rodzaje przykładu znajduje się w `static` **BatchXPSPrinter.PrintXPS** metody. Po utworzeniu serwera wydruku i kolejki, metoda monituje użytkownika o katalogu zawierającego [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] plików. Po upewnieniu się, istnienie katalogu i obecności \*XPS, pliki w nim, metoda dodaje każdego takiego pliku do kolejki wydruku. W przykładzie założono, że drukarka jest bez XPSDrv, dzięki czemu możemy kończy się sukcesem `false` do ostatniego parametru <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metody. Z tego powodu metody zostanie przeprowadzona Weryfikacja [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] znaczników w pliku, zanim spróbuje przekonwertować języka opisu strony drukarki. Jeśli sprawdzanie poprawności nie powiedzie się, jest zgłaszany wyjątek. Przykładowy kod będzie przechwycić wyjątek, Powiadom użytkownika o nim i przejdź do następnego przetwarzania [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pliku.  
   
- [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
- [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
+ [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
+ [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
  Jeśli używasz XPSDrv drukarki, a następnie można ustawić ostatni parametr `true`. W takim przypadku od [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] jest język opisu strony drukarki, metoda wyśle plik do drukarki, bez sprawdzania poprawności jej lub podczas konwertowania go do innego języka opisu strony. Jeśli wiadomo w czasie projektowania tego, czy aplikacja będzie korzystać z drukarek XPSDrv, można zmodyfikować aplikację, aby odczytywać <xref:System.Printing.PrintQueue.IsXpsDevice%2A> właściwości i gałąź, zgodnie z tego, co znajduje.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: a2aa1d09b922809f42fe14bd674c2a87b9e5a3f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 7009f56c25ff63729f0b0170503c2f356dc91301
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747798"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352922"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Przewodnik: Włączanie przeciągania i upuszczania w kontrolce użytkownika
 
@@ -46,7 +46,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
      Ten kod znaczników tworzy interfejs użytkownika dla aplikacji testowej.
 
-     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsStep1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep1xaml)]
 
 ## <a name="add-a-new-user-control-to-the-project"></a>Dodaj nową kontrolkę użytkownika do projektu
  W tej sekcji dodasz nowy formant użytkownika do projektu.
@@ -63,7 +63,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 4.  Dodaj następujący kod do katalogu głównego <xref:System.Windows.Controls.Grid> utworzyć kontrolkę użytkownika proste jasnoniebieski okrąg jako jego interfejsie użytkownika.
 
-     [!code-xaml[DragDropWalkthrough#EllipseXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
+     [!code-xaml[DragDropWalkthrough#EllipseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
 
 5.  Otwórz Circle.xaml.cs lub Circle.xaml.vb.
 
@@ -71,8 +71,8 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
      Aby umożliwić kontrolki użytkownika, który ma być kopiowany, dodajesz metodę konstruktora kopiowania w pliku związanym z kodem. W kontrolce użytkownika uproszczone okrąg możesz zostaną skopiowane tylko wypełnienia i rozmiar kontrolki użytkownika.
 
-     [!code-csharp[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
-     [!code-vb[DragDropWalkthrough#CopyCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
+     [!code-csharp[DragDropWalkthrough#CopyCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#copyctor)]
+     [!code-vb[DragDropWalkthrough#CopyCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#copyctor)]
 
 ## <a name="add-the-user-control-to-the-main-window"></a>Dodaj kontrolkę użytkownika do głównego okna
 
@@ -86,11 +86,11 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 3.  W pierwszym <xref:System.Windows.Controls.StackPanel>, Dodaj następujące XAML, aby utworzyć dwa wystąpienia kontrolki użytkownika okrąg w pierwszym panelu.
 
-     [!code-xaml[DragDropWalkthrough#CirclesXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
+     [!code-xaml[DragDropWalkthrough#CirclesXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
 
      Pełne XAML panelu wygląda podobnie do poniższego.
 
-     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]
 
 ## <a name="implement-drag-source-events-in-the-user-control"></a>Implementowanie zdarzenia źródła przeciągania w kontrolce użytkownika
  W tej sekcji spowoduje przesłonięcie <xref:System.Windows.UIElement.OnMouseMove%2A> metody i zainicjuj operację przeciągania i upuszczania.
@@ -103,8 +103,8 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 2.  Dodaj następujący kod <xref:System.Windows.UIElement.OnMouseMove%2A> należy przesłonić, aby zapewnić obsługę klasy dla <xref:System.Windows.UIElement.MouseMove> zdarzeń.
 
-     [!code-csharp[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
-     [!code-vb[DragDropWalkthrough#OnMouseMove](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
+     [!code-csharp[DragDropWalkthrough#OnMouseMove](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
+     [!code-vb[DragDropWalkthrough#OnMouseMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
 
      To <xref:System.Windows.UIElement.OnMouseMove%2A> zastąpienie wykonuje następujące zadania:
 
@@ -128,7 +128,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 6.  Przeciąganie i upuszczanie koła na <xref:System.Windows.Controls.TextBox>. Kolor wypełnienia koła reprezentację ciągu jest dołączany do <xref:System.Windows.Controls.TextBox>.
 
-     ![Ciąg reprezentujący kolor wypełnienia koła](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop_ColorString")
+     ![Ciąg reprezentujący kolor wypełnienia koła](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
 Domyślnie kursor zmieni się podczas operacji przeciągania i upuszczania, aby wskazać, będzie miał wpływ, jaki usunięcie danych. Można dostosować zwrotnych użytkownikowi obsługi <xref:System.Windows.UIElement.GiveFeedback> zdarzeń i ustawianie różnych kursora.
 
@@ -138,8 +138,8 @@ Domyślnie kursor zmieni się podczas operacji przeciągania i upuszczania, aby 
 
 2.  Dodaj następujący kod <xref:System.Windows.UIElement.OnGiveFeedback%2A> należy przesłonić, aby zapewnić obsługę klasy dla <xref:System.Windows.UIElement.GiveFeedback> zdarzeń.
 
-     [!code-csharp[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
-     [!code-vb[DragDropWalkthrough#OnGiveFeedback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
+     [!code-csharp[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
+     [!code-vb[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
 
      To <xref:System.Windows.UIElement.OnGiveFeedback%2A> zastąpienie wykonuje następujące zadania:
 
@@ -151,7 +151,7 @@ Domyślnie kursor zmieni się podczas operacji przeciągania i upuszczania, aby 
 
 4.  Przeciągnij jeden z okręgów kontroluje za pośrednictwem paneli, okrąg, a <xref:System.Windows.Controls.TextBox>. Zauważ, że kursory są teraz kursorów niestandardowych, które określiłeś w <xref:System.Windows.UIElement.OnGiveFeedback%2A> zastąpienia.
 
-     ![Przeciąganie i upuszczanie za pomocą niestandardowych kursorów](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop_CustomCursor")
+     ![Przeciąganie i upuszczanie za pomocą niestandardowych kursorów](./media/dragdrop-customcursor.png "DragDrop_CustomCursor")
 
 5.  Zaznacz tekst `green` z <xref:System.Windows.Controls.TextBox>.
 
@@ -166,7 +166,7 @@ Domyślnie kursor zmieni się podczas operacji przeciągania i upuszczania, aby 
 
 2.  W przypadku otwarcia <xref:System.Windows.Controls.UserControl> tagów, należy dodać <xref:System.Windows.UIElement.AllowDrop%2A> właściwości i ustaw ją na `true`.
 
-     [!code-xaml[DragDropWalkthrough#UCTagXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
+     [!code-xaml[DragDropWalkthrough#UCTagXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
 
 <xref:System.Windows.UIElement.OnDrop%2A> Metoda jest wywoływana, gdy <xref:System.Windows.UIElement.AllowDrop%2A> właściwość jest ustawiona na `true` i dane ze źródła przeciągania został upuszczony na formant użytkownika okrąg. W przypadku tej metody spowoduje przetwarzania danych, który został upuszczony i zastosować je do koła.
 
@@ -176,8 +176,8 @@ Domyślnie kursor zmieni się podczas operacji przeciągania i upuszczania, aby 
 
 2.  Dodaj następujący kod <xref:System.Windows.UIElement.OnDrop%2A> należy przesłonić, aby zapewnić obsługę klasy dla <xref:System.Windows.UIElement.Drop> zdarzeń.
 
-     [!code-csharp[DragDropWalkthrough#OnDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
-     [!code-vb[DragDropWalkthrough#OnDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
+     [!code-csharp[DragDropWalkthrough#OnDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
+     [!code-vb[DragDropWalkthrough#OnDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
 
      To <xref:System.Windows.UIElement.OnDrop%2A> zastąpienie wykonuje następujące zadania:
 
@@ -197,7 +197,7 @@ Domyślnie kursor zmieni się podczas operacji przeciągania i upuszczania, aby 
 
 5.  Przeciągnij tekst do kontrolki okrąg i upuść go. Koło zmienia się od niebieskiego na zielony.
 
-     ![Konwertowanie ciągu pędzel](../../../../docs/framework/wpf/advanced/media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
+     ![Konwertowanie ciągu pędzel](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
 6.  Wpisz tekst `green` w <xref:System.Windows.Controls.TextBox>.
 
@@ -217,8 +217,8 @@ Po danych jest przeciągany nad kontrolki użytkownika koła, formant powinien P
 
 2.  Dodaj następujący kod <xref:System.Windows.UIElement.OnDragOver%2A> należy przesłonić, aby zapewnić obsługę klasy dla <xref:System.Windows.UIElement.DragOver> zdarzeń.
 
-     [!code-csharp[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
-     [!code-vb[DragDropWalkthrough#OnDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
+     [!code-csharp[DragDropWalkthrough#OnDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
+     [!code-vb[DragDropWalkthrough#OnDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
 
      To <xref:System.Windows.UIElement.OnDragOver%2A> zastąpienie wykonuje następujące zadania:
 
@@ -242,13 +242,13 @@ Po danych jest przeciągany nad kontrolki użytkownika koła, formant powinien P
 
 2.  W klasie Circle zadeklarować prywatnej <xref:System.Windows.Media.Brush> zmiennej o nazwie `_previousFill` i zainicjować jej do `null`.
 
-     [!code-csharp[DragDropWalkthrough#Brush](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
-     [!code-vb[DragDropWalkthrough#Brush](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
+     [!code-csharp[DragDropWalkthrough#Brush](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
+     [!code-vb[DragDropWalkthrough#Brush](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
 
 3.  Dodaj następujący kod <xref:System.Windows.UIElement.OnDragEnter%2A> należy przesłonić, aby zapewnić obsługę klasy dla <xref:System.Windows.UIElement.DragEnter> zdarzeń.
 
-     [!code-csharp[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
-     [!code-vb[DragDropWalkthrough#OnDragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
+     [!code-csharp[DragDropWalkthrough#OnDragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
+     [!code-vb[DragDropWalkthrough#OnDragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
 
      To <xref:System.Windows.UIElement.OnDragEnter%2A> zastąpienie wykonuje następujące zadania:
 
@@ -260,8 +260,8 @@ Po danych jest przeciągany nad kontrolki użytkownika koła, formant powinien P
 
 4.  Dodaj następujący kod <xref:System.Windows.UIElement.OnDragLeave%2A> należy przesłonić, aby zapewnić obsługę klasy dla <xref:System.Windows.UIElement.DragLeave> zdarzeń.
 
-     [!code-csharp[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
-     [!code-vb[DragDropWalkthrough#OnDragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
+     [!code-csharp[DragDropWalkthrough#OnDragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
+     [!code-vb[DragDropWalkthrough#OnDragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
 
      To <xref:System.Windows.UIElement.OnDragLeave%2A> zastąpienie wykonuje następujące zadania:
 
@@ -273,7 +273,7 @@ Po danych jest przeciągany nad kontrolki użytkownika koła, formant powinien P
 
 7.  Przeciągnij tekst nad formantem koła, bez usuwania go. Koło zmienia się od niebieskiego na zielony.
 
-     ![Efekty przeciągnij&#45;i&#45;porzucić operacji](../../../../docs/framework/wpf/advanced/media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
+     ![Efekty przeciągnij&#45;i&#45;porzucić operacji](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
 
 8.  Przeciągnij tekst od kontroli okrąg. Koło zmienia się z zielonym kopii na niebieski.
 
@@ -285,14 +285,14 @@ W tej sekcji możesz włączyć paneli, które hostowanie kontrolki użytkownika
 
 2.  Jak pokazano w poniższym XAML, we wszystkich <xref:System.Windows.Controls.StackPanel> formantów, Dodaj programy obsługi dla <xref:System.Windows.UIElement.DragOver> i <xref:System.Windows.UIElement.Drop> zdarzenia. Nazwa <xref:System.Windows.UIElement.DragOver> programu obsługi zdarzeń `panel_DragOver`i nadaj <xref:System.Windows.UIElement.Drop> programu obsługi zdarzeń `panel_Drop`.
 
-     [!code-xaml[DragDropWalkthrough#PanelsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
+     [!code-xaml[DragDropWalkthrough#PanelsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
 
 3.  Otwórz MainWindows.xaml.cs lub MainWindow.xaml.vb.
 
 4.  Dodaj następujący kod do <xref:System.Windows.UIElement.DragOver> programu obsługi zdarzeń.
 
-     [!code-csharp[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
-     [!code-vb[DragDropWalkthrough#PanelDragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
+     [!code-csharp[DragDropWalkthrough#PanelDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
+     [!code-vb[DragDropWalkthrough#PanelDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
 
      To <xref:System.Windows.UIElement.DragOver> program obsługi zdarzeń wykonuje następujące zadania:
 
@@ -304,8 +304,8 @@ W tej sekcji możesz włączyć paneli, które hostowanie kontrolki użytkownika
 
 5.  Dodaj następujący kod do <xref:System.Windows.UIElement.Drop> programu obsługi zdarzeń.
 
-     [!code-csharp[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
-     [!code-vb[DragDropWalkthrough#PanelDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
+     [!code-csharp[DragDropWalkthrough#PanelDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
+     [!code-vb[DragDropWalkthrough#PanelDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
 
      To <xref:System.Windows.UIElement.Drop> program obsługi zdarzeń wykonuje następujące zadania:
 
@@ -329,8 +329,8 @@ W tej sekcji możesz włączyć paneli, które hostowanie kontrolki użytkownika
 
 10. Przeciągnij formant koło z panelu jest do innego panelu i upuść go podczas naciśnięcie **Ctrl** klucza. Koło jest kopiowana, a kopia zostanie dodany do <xref:System.Windows.Controls.Panel.Children%2A> zbiór odbieranie panelu.
 
-     ![Przeciąganie okrąg w trakcie naciskania klawisza CTRL](../../../../docs/framework/wpf/advanced/media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
+     ![Przeciąganie okrąg w trakcie naciskania klawisza CTRL](./media/dragdrop-paneldrop.png "DragDrop_PanelDrop")
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd przeciągania i upuszczania](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+- [Przegląd przeciągania i upuszczania](drag-and-drop-overview.md)

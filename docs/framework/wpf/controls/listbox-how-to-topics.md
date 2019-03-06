@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: f4d6b8d9ac3b092e18b87dbf9e8965bfdb064ae0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 0895b80f230d2c67ab0723c7935ae20443327a41
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746983"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363439"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox — Tematy porad
 Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.ListBox> formantu, aby wyświetlić można wybierać listy elementów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Powiązywanie ListBox z danymi](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [Pobieranie elementu ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
+ [Powiązywanie ListBox z danymi](how-to-bind-a-listbox-to-data.md)  
+ [Pobieranie elementu ListBoxItem](how-to-get-a-listboxitem.md)  
  [Instrukcje: Dodawanie danych do ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))  
- [Poprawianie wydajności przesuwania w kontrolce ListBox](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+ [Poprawianie wydajności przesuwania w kontrolce ListBox](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ListBox>  

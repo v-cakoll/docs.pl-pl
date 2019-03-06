@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577129"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356724"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Instrukcje: Określ źródło wiążące
 W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, który można uzyskać danych z. W tym temacie opisano różne sposoby określania źródło wiążące.  
@@ -24,16 +24,16 @@ W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, k
   
  W poniższym przykładzie kontekst danych zostanie nawiązane dla elementu głównego aplikacji. Dzięki temu wszystkie elementy podrzędne, które dziedziczy ten kontekst danych. Dane dla wiązania pochodzą z klasą danych niestandardowych `NetIncome`, do których odwołuje się bezpośrednio za pomocą mapowania i podany klucz zasobu `incomeDataSource`.  
   
- [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
-[!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
+ [!code-xaml[DirectionalBinding#DataContext1](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
+[!code-xaml[DirectionalBinding#DataContext2](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
  W poniższym przykładzie pokazano definicję `NetIncome` klasy.  
   
- [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
- [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
+ [!code-csharp[DirectionalBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
+ [!code-vb[DirectionalBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  Powyższy przykład tworzy wystąpienie obiektu w znacznikach i używa go jako zasób. Jeśli chcesz powiązać z obiektu, który utworzono już wystąpienie w kodzie, musisz ustawić `DataContext` właściwość programowo. Aby uzyskać przykład, zobacz [wprowadzić dostępne dane do powiązania w XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).  
+>  Powyższy przykład tworzy wystąpienie obiektu w znacznikach i używa go jako zasób. Jeśli chcesz powiązać z obiektu, który utworzono już wystąpienie w kodzie, musisz ustawić `DataContext` właściwość programowo. Aby uzyskać przykład, zobacz [wprowadzić dostępne dane do powiązania w XAML](how-to-make-data-available-for-binding-in-xaml.md).  
   
  Alternatywnie Jeśli chcesz określić źródło na swoje indywidualne powiązania jawnie, masz następujące opcje. Te pierwszeństwo kontekstu danych dziedziczonych.  
   
@@ -46,7 +46,7 @@ W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, k
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [Dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Powiązanie deklaracji — omówienie](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Dziedziczenie wartości właściwości](../advanced/property-value-inheritance.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Powiązanie deklaracji — omówienie](binding-declarations-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

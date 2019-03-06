@@ -7,20 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555123"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351271"
 ---
 # <a name="stackpanel-how-to-topics"></a>StackPanel — Tematy porad
-W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.StackPanel> element na stosie zawartości poziomo czy pionowo.  
+Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.StackPanel> elementu stosu zawartości poziomo czy pionowo.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wybieranie między StackPanel i DockPanel](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [Tworzenie StackPanel](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [Wyrównywanie w poziomie lub w pionie zawartości w kontrolce StackPanel](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [Wybieranie między StackPanel i DockPanel](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [Tworzenie StackPanel](how-to-create-a-stackpanel.md)  
+ [Wyrównywanie w poziomie lub w pionie zawartości w kontrolce StackPanel](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.St
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Układ](../advanced/layout.md)  
   
- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](scrollviewer-overview.md)

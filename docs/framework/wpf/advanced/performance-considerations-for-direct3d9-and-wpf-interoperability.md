@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608865"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356731"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Zagadnienia dotyczące współdziałania Direct3D9 i WPF
 Może obsługiwać zawartości Direct3D9 przy użyciu <xref:System.Windows.Interop.D3DImage> klasy. Hosting zawartości Direct3D9 może mieć wpływ na wydajność aplikacji. W tym temacie opisano najlepsze rozwiązania w celu zoptymalizowania wydajności, gdy hosting zawartości Direct3D9 w aplikacji Windows Presentation Foundation (WPF). Te najlepsze rozwiązania obejmują sposób używania <xref:System.Windows.Interop.D3DImage> i najlepsze rozwiązania, gdy używasz Windows Vista, Windows XP, i wyświetla wielu monitorów.  
   
 > [!NOTE]
->  Aby uzyskać przykłady kodu, które pokazują tych najlepszych rozwiązań, zobacz [WPF i Direct3D9 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+>  Aby uzyskać przykłady kodu, które pokazują tych najlepszych rozwiązań, zobacz [WPF i Direct3D9 — współdziałanie](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="use-d3dimage-sparingly"></a>Użyj D3DImage oszczędnie  
  Zawartości Direct3D9 hostowanych w <xref:System.Windows.Interop.D3DImage> wystąpienia nie jest renderowana jako wysoka jak w przypadku czystego aplikacji Direct3D. Kopiowanie powierzchni i opróżnianie buforu polecenia mogą być kosztowne operacje. Jako liczba <xref:System.Windows.Interop.D3DImage> zwiększa wystąpień opróżniania więcej występuje i spadku wydajności. Dlatego należy używać <xref:System.Windows.Interop.D3DImage> rzadko.  
@@ -47,7 +47,7 @@ Może obsługiwać zawartości Direct3D9 przy użyciu <xref:System.Windows.Inter
 ## <a name="best-practices-for-multi-monitor-displays"></a>Najlepsze rozwiązania dotyczące wielu monitorów  
  Jeśli używasz komputera, który ma wiele monitorów, należy przestrzegać opisany wcześniej najlepszych rozwiązań. Istnieją również pewne dodatkowe zagadnienia dotyczące konfiguracji wielu monitorów.  
   
- Podczas tworzenia buforu zapasowego jest tworzona na określonym urządzeniem i karty, ale frontonu buforu dla WPF mogą być wyświetlane na żadnej karcie. Kopiowanie między kart, aby zaktualizować frontonu buforu może być bardzo kosztowna. W Windows Vista, który jest skonfigurowany do używania WDDM z wielu kart wideo i `IDirect3DDevice9Ex` urządzenia, jeśli bufor frontonu znajduje się na inną kartę, ale mimo to ta sama karta wideo, nie ma żadnego pogorszenia wydajności. W systemie Windows XP i XDDM z wieloma kartami wideo, istnieje jednak spadek istotnie poprawiającą wydajność podczas pierwszej buforu jest wyświetlany na inną kartę niż buforu zapasowego. Aby uzyskać więcej informacji, zobacz [WPF i Direct3D9 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+ Podczas tworzenia buforu zapasowego jest tworzona na określonym urządzeniem i karty, ale frontonu buforu dla WPF mogą być wyświetlane na żadnej karcie. Kopiowanie między kart, aby zaktualizować frontonu buforu może być bardzo kosztowna. W Windows Vista, który jest skonfigurowany do używania WDDM z wielu kart wideo i `IDirect3DDevice9Ex` urządzenia, jeśli bufor frontonu znajduje się na inną kartę, ale mimo to ta sama karta wideo, nie ma żadnego pogorszenia wydajności. W systemie Windows XP i XDDM z wieloma kartami wideo, istnieje jednak spadek istotnie poprawiającą wydajność podczas pierwszej buforu jest wyświetlany na inną kartę niż buforu zapasowego. Aby uzyskać więcej informacji, zobacz [WPF i Direct3D9 — współdziałanie](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="performance-summary"></a>Podsumowanie wydajności  
  W poniższej tabeli przedstawiono wydajność aktualizację usługi buffer frontonu w zależności od systemu operacyjnego, format pikseli i lockability powierzchni. Bufor przód i Wstecz bufor są zakłada się, że na tej samej karcie. W zależności od konfiguracji karty aktualizacje sprzętu są zazwyczaj znacznie szybsze niż aktualizacji oprogramowania.  
@@ -61,6 +61,6 @@ Może obsługiwać zawartości Direct3D9 przy użyciu <xref:System.Windows.Inter
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Interop.D3DImage>
-- [WPF i Direct3D9 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [Przewodnik: Tworzenie zawartości Direct3D9 dla hostingu w WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Przewodnik: Hosting zawartości Direct3D9 w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [WPF i Direct3D9 — współdziałanie](wpf-and-direct3d9-interoperation.md)
+- [Przewodnik: Tworzenie zawartości Direct3D9 dla hostingu w WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Przewodnik: Hosting zawartości Direct3D9 w WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

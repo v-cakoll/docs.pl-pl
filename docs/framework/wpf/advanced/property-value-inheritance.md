@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: e6b16bc3fc482e0f640f8b2d083392e6f94de618
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520589"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359887"
 ---
 # <a name="property-value-inheritance"></a>Przejęcie wartości właściwości
 Dziedziczenie wartości właściwości jest funkcją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] właściwości systemu. Dziedziczenie wartości właściwości umożliwia elementy podrzędne w drzewie elementów, aby uzyskać wartość określonej właściwości z obiektu nadrzędnego elementom dziedziczenie tę wartość, jak go w dowolnym miejscu została ustawiona w najbliższym elemencie nadrzędnym. Element nadrzędny może także uzyskać wartość poprzez dziedziczenie wartości właściwości, więc system potencjalnie recurses aż do głównej strony. Dziedziczenie wartości właściwości nie jest to domyślne zachowanie systemu właściwości; Właściwość, należy ustanowić z ustawieniem określonego metadanych aby spowodować, że tę właściwość można zainicjować dziedziczenie wartości właściwości dla elementów podrzędnych.  
@@ -30,7 +30,7 @@ Dziedziczenie wartości właściwości jest funkcją [!INCLUDE[TLA#tla_winclient
 ## <a name="making-a-custom-property-inheritable"></a>Tworzenie niestandardowe właściwości dziedziczonych  
  Zmieniając właściwości niestandardowych metadanych, można również ustawić niestandardowe właściwości dziedziczonych. Należy jednak pamiętać, że wyznaczanie właściwość jako dziedziczne mają pewne zagadnienia związane z wydajnością. W przypadkach, w którym tej właściwości nie ma ustalonych wartości lokalnej lub wartości uzyskanej za pomocą stylów, szablonów i powiązania danych właściwości dziedziczonych udostępnia wartości właściwości przypisane do wszystkich elementów podrzędnych w drzewie logicznym.  
   
- Do tworzenia właściwości uczestniczą w dziedziczeniu wartości, Utwórz niestandardową dołączona właściwość, zgodnie z opisem w [rejestrowanie dołączonych właściwości](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md). Zarejestrowanie właściwości metadanych (<xref:System.Windows.FrameworkPropertyMetadata>) i wybierz opcję "Inherits" w ustawieniach Opcje w ramach tych metadanych. Również upewnij się, że właściwość ma wartość domyślną ustanowionych ponieważ teraz odziedziczą tę wartość. Mimo, że właściwość jest zarejestrowany, jak dołączone, również można utworzyć właściwości "opakowanie" dla dostępu pobierania/ustawiania na typ właściciela tak samo jak dla właściwości zależności "nie dołączony". Po wykonaniu tej czynności, można ustawić albo właściwości dziedziczonych przy użyciu otoki właściwość direct na typ właściciela lub typy pochodne lub ustawić przy użyciu składni dołączonej właściwości na dowolnym <xref:System.Windows.DependencyObject>.  
+ Do tworzenia właściwości uczestniczą w dziedziczeniu wartości, Utwórz niestandardową dołączona właściwość, zgodnie z opisem w [rejestrowanie dołączonych właściwości](how-to-register-an-attached-property.md). Zarejestrowanie właściwości metadanych (<xref:System.Windows.FrameworkPropertyMetadata>) i wybierz opcję "Inherits" w ustawieniach Opcje w ramach tych metadanych. Również upewnij się, że właściwość ma wartość domyślną ustanowionych ponieważ teraz odziedziczą tę wartość. Mimo, że właściwość jest zarejestrowany, jak dołączone, również można utworzyć właściwości "opakowanie" dla dostępu pobierania/ustawiania na typ właściciela tak samo jak dla właściwości zależności "nie dołączony". Po wykonaniu tej czynności, można ustawić albo właściwości dziedziczonych przy użyciu otoki właściwość direct na typ właściciela lub typy pochodne lub ustawić przy użyciu składni dołączonej właściwości na dowolnym <xref:System.Windows.DependencyObject>.  
   
  Zachowuje się podobnie jak właściwości globalne; są dołączone właściwości Możesz sprawdzić wartość na dowolnym <xref:System.Windows.DependencyObject> i uzyskać prawidłowy wynik. Typowy scenariusz w przypadku dołączonych właściwości jest do ustawiania wartości właściwości dla elementów podrzędnych, a ten scenariusz jest bardziej skuteczne, jeśli w danym właściwość jest dołączona właściwość, która występuje zawsze niejawnie jako dołączoną właściwość dla każdego elementu (<xref:System.Windows.DependencyObject>) w drzewie.  
   
@@ -42,6 +42,6 @@ Dziedziczenie wartości właściwości jest funkcją [!INCLUDE[TLA#tla_winclient
  Dziedziczenie właściwości polega na przechodzić przez drzewo elementów. To drzewo stanowi często zbliżony do drzewa logicznego. Jednak zawsze, gdy dołączysz obiektem poziomu core WPF w znaczniku, który definiuje obrębu drzewa, takie jak <xref:System.Windows.Media.Brush>, utworzono nieciągły drzewo logiczne. Wartość true drzewo logiczne nie obejmuje koncepcyjnie za pośrednictwem <xref:System.Windows.Media.Brush>, ponieważ drzewo logiczne jest pojęciem poziomie struktury WPF. Widać to odzwierciedlone w wynikach, korzystając z metody <xref:System.Windows.LogicalTreeHelper>. Jednak dziedziczenie wartości właściwości można wypełnić tę lukę w drzewie logicznym i nadal można przekazać wartości odziedziczone przez, tak długo, jak właściwości dziedziczonych został zarejestrowany jako dołączoną właściwość i nie zamierzonego granic blokowanie dziedziczenia (takie jak <xref:System.Windows.Controls.Frame>) zostanie osiągnięty.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Następstwo wartości właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [Metadane zależności właściwości](dependency-property-metadata.md)
+- [Przegląd właściwości dołączonych](attached-properties-overview.md)
+- [Następstwo wartości właściwości zależności](dependency-property-value-precedence.md)

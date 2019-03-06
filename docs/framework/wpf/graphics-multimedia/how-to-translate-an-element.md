@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 75b8f72647b1597396fde5d21f8378d3ce586a25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ff606e495eb37e0e74150bb5ad20f11744b74ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672876"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354911"
 ---
 # <a name="how-to-translate-an-element"></a>Instrukcje: Przesuń element
 W tym przykładzie pokazano, jak do tłumaczenia (przenoszenie) elementu za pomocą <xref:System.Windows.Media.TranslateTransform>.  
@@ -21,9 +21,9 @@ W tym przykładzie pokazano, jak do tłumaczenia (przenoszenie) elementu za pomo
  W poniższym przykładzie użyto <xref:System.Windows.Media.TranslateTransform> aby przejść do kolejnego elementu 50 pikseli na prawo do 50 pikseli.  
   
 ## <a name="example"></a>Przykład  
- [!code-xaml[transformsSample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
+ [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
  Aby uzyskać pełny przykład, zobacz [przykładowych przekształceń 2-D](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Przekształcenia — przegląd](transforms-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 3032a0ca19f919344a3f73ea8689a222896093f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523723"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377103"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalizacja atrybutów i komentarzy
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarzy są właściwościami, wewnątrz [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod źródłowy, dostarczone przez deweloperów, które zapewniają reguły i wskazówki dla lokalizacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarzy zawierają dwa zestawy danych: atrybuty przeglądu możliwości lokalizacji i komentarze w dowolnej lokalizacji. Możliwości zlokalizowania atrybuty są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacji interfejsu API, aby wskazać, które zasoby mają być lokalizowany. Wszystkie informacje, które aplikacja chce, aby uwzględnić znajdują się w dowolnej postaci komentarze.  
@@ -100,7 +100,7 @@ ms.locfileid: "54523723"
  Localization.Comments zawiera ciągów dotyczące wartości docelowej. Deweloperzy aplikacji mogą dodawać informacje, aby zapewnić lokalizatorzy wskazówek na temat sposób przekształcania tekstu aplikacji. Format komentarze może być dowolnym ciągiem, ujęte w "()". Użyj "\\" jako znak ucieczki dla znaków.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Używanie automatycznego układu do utworzenia przycisku](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [Używanie siatki do automatycznego układu](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
-- [Lokalizowanie aplikacji](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+- [Globalizacja dla WPF](globalization-for-wpf.md)
+- [Używanie automatycznego układu do utworzenia przycisku](how-to-use-automatic-layout-to-create-a-button.md)
+- [Używanie siatki do automatycznego układu](how-to-use-a-grid-for-automatic-layout.md)
+- [Lokalizowanie aplikacji](how-to-localize-an-application.md)

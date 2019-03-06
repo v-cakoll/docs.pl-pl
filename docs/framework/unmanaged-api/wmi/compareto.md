@@ -16,84 +16,86 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717652"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376237"
 ---
-# <a name="compareto-function"></a><span data-ttu-id="ab308-103">Funkcja CompareTo</span><span class="sxs-lookup"><span data-stu-id="ab308-103">CompareTo function</span></span>
-<span data-ttu-id="ab308-104">Porównuje obiekt do innego obiektu zarządzania Windows.</span><span class="sxs-lookup"><span data-stu-id="ab308-104">Compares an object to another Windows management object.</span></span>  
+# <a name="compareto-function"></a><span data-ttu-id="bf839-103">Funkcja CompareTo</span><span class="sxs-lookup"><span data-stu-id="bf839-103">CompareTo function</span></span>
+
+<span data-ttu-id="bf839-104">Porównuje obiekt do innego obiektu zarządzania Windows.</span><span class="sxs-lookup"><span data-stu-id="bf839-104">Compares an object to another Windows management object.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a><span data-ttu-id="ab308-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="ab308-105">Syntax</span></span>  
-  
-```
+
+## <a name="syntax"></a><span data-ttu-id="bf839-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="bf839-105">Syntax</span></span>
+
+```cpp
 HRESULT CompareTo (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              flags,
-   [in] IWbemClassObject* pCompareTo 
-); 
-```  
+   [in] IWbemClassObject* pCompareTo
+);
+```
 
-## <a name="parameters"></a><span data-ttu-id="ab308-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="ab308-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="bf839-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="bf839-106">Parameters</span></span>
 
-`vFunc`  
-<span data-ttu-id="ab308-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="ab308-107">[in] This parameter is unused.</span></span>
+`vFunc`\
+<span data-ttu-id="bf839-107">[in] Ten parametr jest nieużywany.</span><span class="sxs-lookup"><span data-stu-id="bf839-107">[in] This parameter is unused.</span></span>
 
-`ptr`  
-<span data-ttu-id="ab308-108">[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="ab308-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+`ptr`\
+<span data-ttu-id="bf839-108">[in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="bf839-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
-`flags`  
-<span data-ttu-id="ab308-109">[in] Bitowa kombinacja flagi określające właściwości obiektu do rozważenia do porównania.</span><span class="sxs-lookup"><span data-stu-id="ab308-109">[in] A bitwise combination of the flags that specify the object characteristics to consider for the comparison.</span></span> <span data-ttu-id="ab308-110">Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.</span><span class="sxs-lookup"><span data-stu-id="ab308-110">See the [Remarks](#remarks) section for more information.</span></span>
+`flags`\
+<span data-ttu-id="bf839-109">[in] Bitowa kombinacja flagi określające właściwości obiektu do rozważenia do porównania.</span><span class="sxs-lookup"><span data-stu-id="bf839-109">[in] A bitwise combination of the flags that specify the object characteristics to consider for the comparison.</span></span> <span data-ttu-id="bf839-110">Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.</span><span class="sxs-lookup"><span data-stu-id="bf839-110">See the [Remarks](#remarks) section for more information.</span></span>
 
-`pCompareTo`  
+`pCompareTo`\
+<span data-ttu-id="bf839-111">[in] Obiekt do porównania.</span><span class="sxs-lookup"><span data-stu-id="bf839-111">[in] The object for comparison.</span></span> <span data-ttu-id="bf839-112">`pCompareTo` musi być prawidłowym [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia klasy nie może być `null`.</span><span class="sxs-lookup"><span data-stu-id="bf839-112">`pCompareTo` must be a valid [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance; it cannot be `null`.</span></span>
 
-<span data-ttu-id="ab308-111">[in] Obiekt do porównania.</span><span class="sxs-lookup"><span data-stu-id="ab308-111">[in] The object for comparison.</span></span> <span data-ttu-id="ab308-112">`pcompareTo` musi być prawidłowym [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia klasy nie może być `null`.</span><span class="sxs-lookup"><span data-stu-id="ab308-112">`pcompareTo` must be a valid [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance; it cannot be `null`.</span></span>
+## <a name="return-value"></a><span data-ttu-id="bf839-113">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="bf839-113">Return value</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="ab308-113">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ab308-113">Return value</span></span>
+<span data-ttu-id="bf839-114">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="bf839-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-<span data-ttu-id="ab308-114">Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:</span><span class="sxs-lookup"><span data-stu-id="ab308-114">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
-
-|<span data-ttu-id="ab308-115">Stała</span><span class="sxs-lookup"><span data-stu-id="ab308-115">Constant</span></span>  |<span data-ttu-id="ab308-116">Wartość</span><span class="sxs-lookup"><span data-stu-id="ab308-116">Value</span></span>  |<span data-ttu-id="ab308-117">Opis</span><span class="sxs-lookup"><span data-stu-id="ab308-117">Description</span></span>  |
+|<span data-ttu-id="bf839-115">Stała</span><span class="sxs-lookup"><span data-stu-id="bf839-115">Constant</span></span>  |<span data-ttu-id="bf839-116">Wartość</span><span class="sxs-lookup"><span data-stu-id="bf839-116">Value</span></span>  |<span data-ttu-id="bf839-117">Opis</span><span class="sxs-lookup"><span data-stu-id="bf839-117">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | <span data-ttu-id="ab308-118">0x80041001</span><span class="sxs-lookup"><span data-stu-id="ab308-118">0x80041001</span></span> | <span data-ttu-id="ab308-119">Wystąpił nieokreślony błąd.</span><span class="sxs-lookup"><span data-stu-id="ab308-119">An unspecified error has occurred.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="ab308-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="ab308-120">0x80041008</span></span> | <span data-ttu-id="ab308-121">Parametr jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="ab308-121">A parameter is invalid.</span></span> |
-| `WBEM_E_UNEXPECTED` | <span data-ttu-id="ab308-122">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="ab308-122">0x8004101d</span></span> | <span data-ttu-id="ab308-123">Drugie wywołanie `BeginEnumeration` został utworzony bez interwencyjnego wywołania [ `EndEnumeration` ](endenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="ab308-123">A second call to `BeginEnumeration` was made without an intervening call to [`EndEnumeration`](endenumeration.md).</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="ab308-124">0</span><span class="sxs-lookup"><span data-stu-id="ab308-124">0</span></span> | <span data-ttu-id="ab308-125">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="ab308-125">The function call was successful.</span></span>  |
-| `WBEM_S_DIFFERENT` | <span data-ttu-id="ab308-126">0x40003</span><span class="sxs-lookup"><span data-stu-id="ab308-126">0x40003</span></span> | <span data-ttu-id="ab308-127">Obiekty są różne.</span><span class="sxs-lookup"><span data-stu-id="ab308-127">The objects are different.</span></span> |
-| `WBEM_S_SAME` | <span data-ttu-id="ab308-128">0</span><span class="sxs-lookup"><span data-stu-id="ab308-128">0</span></span> | <span data-ttu-id="ab308-129">Obiekty są takie same oparte na porównanie flag.</span><span class="sxs-lookup"><span data-stu-id="ab308-129">The objects are the same based on the comparison flags.</span></span> |
-  
-## <a name="remarks"></a><span data-ttu-id="ab308-130">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ab308-130">Remarks</span></span>
+| `WBEM_E_FAILED` | <span data-ttu-id="bf839-118">0x80041001</span><span class="sxs-lookup"><span data-stu-id="bf839-118">0x80041001</span></span> | <span data-ttu-id="bf839-119">Wystąpił nieokreślony błąd.</span><span class="sxs-lookup"><span data-stu-id="bf839-119">An unspecified error has occurred.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="bf839-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="bf839-120">0x80041008</span></span> | <span data-ttu-id="bf839-121">Parametr jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="bf839-121">A parameter is invalid.</span></span> |
+| `WBEM_E_UNEXPECTED` | <span data-ttu-id="bf839-122">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="bf839-122">0x8004101d</span></span> | <span data-ttu-id="bf839-123">Drugie wywołanie `BeginEnumeration` został utworzony bez interwencyjnego wywołania [ `EndEnumeration` ](endenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="bf839-123">A second call to `BeginEnumeration` was made without an intervening call to [`EndEnumeration`](endenumeration.md).</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="bf839-124">0</span><span class="sxs-lookup"><span data-stu-id="bf839-124">0</span></span> | <span data-ttu-id="bf839-125">Wywołanie funkcji zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="bf839-125">The function call was successful.</span></span>  |
+| `WBEM_S_DIFFERENT` | <span data-ttu-id="bf839-126">0x40003</span><span class="sxs-lookup"><span data-stu-id="bf839-126">0x40003</span></span> | <span data-ttu-id="bf839-127">Obiekty są różne.</span><span class="sxs-lookup"><span data-stu-id="bf839-127">The objects are different.</span></span> |
+| `WBEM_S_SAME` | <span data-ttu-id="bf839-128">0</span><span class="sxs-lookup"><span data-stu-id="bf839-128">0</span></span> | <span data-ttu-id="bf839-129">Obiekty są takie same oparte na porównanie flag.</span><span class="sxs-lookup"><span data-stu-id="bf839-129">The objects are the same based on the comparison flags.</span></span> |
 
-<span data-ttu-id="ab308-131">Ta funkcja zawija wywołanie do [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) metody.</span><span class="sxs-lookup"><span data-stu-id="ab308-131">This function wraps a call to the [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) method.</span></span>
+## <a name="remarks"></a><span data-ttu-id="bf839-130">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bf839-130">Remarks</span></span>
 
-<span data-ttu-id="ab308-132">Flagi, które mogą być przekazywane jako `lEnumFlags` argument są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie.</span><span class="sxs-lookup"><span data-stu-id="ab308-132">The flags that can be passed as the `lEnumFlags` argument are defined in the *WbemCli.h* header file, or you can define them as constants in your code.</span></span> <span data-ttu-id="ab308-133">Należy określić cech zaangażowanych w porównaniu, określając bitową kombinację następujących flag:</span><span class="sxs-lookup"><span data-stu-id="ab308-133">You can specify the individual characteristics involved in the comparison by specifying a bitwise combination of the following flags:</span></span>
+<span data-ttu-id="bf839-131">Ta funkcja zawija wywołanie do [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) metody.</span><span class="sxs-lookup"><span data-stu-id="bf839-131">This function wraps a call to the [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) method.</span></span>
 
-|<span data-ttu-id="ab308-134">Stała</span><span class="sxs-lookup"><span data-stu-id="ab308-134">Constant</span></span>  |<span data-ttu-id="ab308-135">Wartość</span><span class="sxs-lookup"><span data-stu-id="ab308-135">Value</span></span>  |<span data-ttu-id="ab308-136">Opis</span><span class="sxs-lookup"><span data-stu-id="ab308-136">Description</span></span>  |
+<span data-ttu-id="bf839-132">Flagi, które mogą być przekazywane jako `lEnumFlags` argument są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie.</span><span class="sxs-lookup"><span data-stu-id="bf839-132">The flags that can be passed as the `lEnumFlags` argument are defined in the *WbemCli.h* header file, or you can define them as constants in your code.</span></span> <span data-ttu-id="bf839-133">Należy określić cech zaangażowanych w porównaniu, określając bitową kombinację następujących flag:</span><span class="sxs-lookup"><span data-stu-id="bf839-133">You can specify the individual characteristics involved in the comparison by specifying a bitwise combination of the following flags:</span></span>
+
+|<span data-ttu-id="bf839-134">Stała</span><span class="sxs-lookup"><span data-stu-id="bf839-134">Constant</span></span>  |<span data-ttu-id="bf839-135">Wartość</span><span class="sxs-lookup"><span data-stu-id="bf839-135">Value</span></span>  |<span data-ttu-id="bf839-136">Opis</span><span class="sxs-lookup"><span data-stu-id="bf839-136">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | <span data-ttu-id="ab308-137">2</span><span class="sxs-lookup"><span data-stu-id="ab308-137">2</span></span> | <span data-ttu-id="ab308-138">Ignoruj źródło (serwer i przestrzeni nazw, które pochodzą z).</span><span class="sxs-lookup"><span data-stu-id="ab308-138">Ignore the source (the server and the namespace they came from).</span></span> |
-| `WBEM_FLAG_IGNORE_QUALIFIERS` | <span data-ttu-id="ab308-139">1</span><span class="sxs-lookup"><span data-stu-id="ab308-139">1</span></span> | <span data-ttu-id="ab308-140">Ignoruj wszystkie Kwalifikatory (w tym **klucz** i **dynamiczne**)</span><span class="sxs-lookup"><span data-stu-id="ab308-140">Ignore all qualifiers (including **Key** and **Dynamic**)</span></span> |
-| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | <span data-ttu-id="ab308-141">4</span><span class="sxs-lookup"><span data-stu-id="ab308-141">4</span></span> | <span data-ttu-id="ab308-142">Pomiń domyślne wartości właściwości.</span><span class="sxs-lookup"><span data-stu-id="ab308-142">Ignore default values of properties.</span></span> <span data-ttu-id="ab308-143">Ta flaga ma zastosowanie tylko do porównania z klas.</span><span class="sxs-lookup"><span data-stu-id="ab308-143">This flag only applies to comparison of classes.</span></span> |
-| `WBEM_FLAG_IGNORE_FLAVOR` | <span data-ttu-id="ab308-144">0x20</span><span class="sxs-lookup"><span data-stu-id="ab308-144">0x20</span></span> | <span data-ttu-id="ab308-145">Ignorowanie kwalifikatora odmian.</span><span class="sxs-lookup"><span data-stu-id="ab308-145">Ignore qualifier flavors.</span></span> <span data-ttu-id="ab308-146">Ta flaga nadal uwzględnia kwalifikatorów, ale ignoruje różnice wersji, takich jak zasady propagacji i zastąpić ograniczenia.</span><span class="sxs-lookup"><span data-stu-id="ab308-146">This flag still takes qualifiers into account, but ignores flavor distinctions such as propagation rules and override restrictions.</span></span> |
-| `WBEM_FLAG_IGNORE_CASE` | <span data-ttu-id="ab308-147">0x10</span><span class="sxs-lookup"><span data-stu-id="ab308-147">0x10</span></span> | <span data-ttu-id="ab308-148">Ignoruj wielkość liter przy porównywaniu wartości ciągu.</span><span class="sxs-lookup"><span data-stu-id="ab308-148">Ignore case in comparing string values.</span></span> <span data-ttu-id="ab308-149">Dotyczy to zarówno do ciągów i wartość kwalifikatora.</span><span class="sxs-lookup"><span data-stu-id="ab308-149">This applies both to strings and qualifier values.</span></span> <span data-ttu-id="ab308-150">Porównanie nazw właściwości i kwalifikator zawsze jest rozróżniana wielkość liter, niezależnie od tego, czy ta flaga jest ustawiona.</span><span class="sxs-lookup"><span data-stu-id="ab308-150">The comparison of property and qualifier names is always case-sensitive regardless of whether this flag is set.</span></span> |
-| `WBEM_FLAG_IGNORE_CLASS` | <span data-ttu-id="ab308-151">0x8</span><span class="sxs-lookup"><span data-stu-id="ab308-151">0x8</span></span> | <span data-ttu-id="ab308-152">Przyjęto założenie, czy obiekty są porównywane są instanes tej samej klasy.</span><span class="sxs-lookup"><span data-stu-id="ab308-152">Assume that the objects being compared are instanes of the same class.</span></span> <span data-ttu-id="ab308-153">W związku z tym ta flaga porównuje dotyczącego wystąpienia wyłącznie informacyjne.</span><span class="sxs-lookup"><span data-stu-id="ab308-153">Consequently, this flag compares instance-related information only.</span></span> <span data-ttu-id="ab308-154">Użyj tej flagi w celu zoptymalizowania wydajności.</span><span class="sxs-lookup"><span data-stu-id="ab308-154">Use this flags to optimize performance.</span></span> <span data-ttu-id="ab308-155">Jeśli obiekty nie są tego samego rodzaju, wyniki są niezdefiniowane.</span><span class="sxs-lookup"><span data-stu-id="ab308-155">If the objects are not of the same class, the results are undefined.</span></span> |
+| `WBEM_FLAG_IGNORE_OBJECT_SOURCE` | <span data-ttu-id="bf839-137">2</span><span class="sxs-lookup"><span data-stu-id="bf839-137">2</span></span> | <span data-ttu-id="bf839-138">Ignoruj źródło (serwer i przestrzeni nazw, które pochodzą z).</span><span class="sxs-lookup"><span data-stu-id="bf839-138">Ignore the source (the server and the namespace they came from).</span></span> |
+| `WBEM_FLAG_IGNORE_QUALIFIERS` | <span data-ttu-id="bf839-139">1</span><span class="sxs-lookup"><span data-stu-id="bf839-139">1</span></span> | <span data-ttu-id="bf839-140">Ignoruj wszystkie Kwalifikatory (w tym **klucz** i **dynamiczne**)</span><span class="sxs-lookup"><span data-stu-id="bf839-140">Ignore all qualifiers (including **Key** and **Dynamic**)</span></span> |
+| `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | <span data-ttu-id="bf839-141">4</span><span class="sxs-lookup"><span data-stu-id="bf839-141">4</span></span> | <span data-ttu-id="bf839-142">Pomiń domyślne wartości właściwości.</span><span class="sxs-lookup"><span data-stu-id="bf839-142">Ignore default values of properties.</span></span> <span data-ttu-id="bf839-143">Ta flaga ma zastosowanie tylko do porównania z klas.</span><span class="sxs-lookup"><span data-stu-id="bf839-143">This flag only applies to comparison of classes.</span></span> |
+| `WBEM_FLAG_IGNORE_FLAVOR` | <span data-ttu-id="bf839-144">0x20</span><span class="sxs-lookup"><span data-stu-id="bf839-144">0x20</span></span> | <span data-ttu-id="bf839-145">Ignorowanie kwalifikatora odmian.</span><span class="sxs-lookup"><span data-stu-id="bf839-145">Ignore qualifier flavors.</span></span> <span data-ttu-id="bf839-146">Ta flaga nadal uwzględnia kwalifikatorów, ale ignoruje różnice wersji, takich jak zasady propagacji i zastąpić ograniczenia.</span><span class="sxs-lookup"><span data-stu-id="bf839-146">This flag still takes qualifiers into account, but ignores flavor distinctions such as propagation rules and override restrictions.</span></span> |
+| `WBEM_FLAG_IGNORE_CASE` | <span data-ttu-id="bf839-147">0x10</span><span class="sxs-lookup"><span data-stu-id="bf839-147">0x10</span></span> | <span data-ttu-id="bf839-148">Ignoruj wielkość liter przy porównywaniu wartości ciągu.</span><span class="sxs-lookup"><span data-stu-id="bf839-148">Ignore case in comparing string values.</span></span> <span data-ttu-id="bf839-149">Dotyczy to zarówno do ciągów i wartość kwalifikatora.</span><span class="sxs-lookup"><span data-stu-id="bf839-149">This applies both to strings and qualifier values.</span></span> <span data-ttu-id="bf839-150">Porównanie nazw właściwości i kwalifikator zawsze jest rozróżniana wielkość liter, niezależnie od tego, czy ta flaga jest ustawiona.</span><span class="sxs-lookup"><span data-stu-id="bf839-150">The comparison of property and qualifier names is always case-sensitive regardless of whether this flag is set.</span></span> |
+| `WBEM_FLAG_IGNORE_CLASS` | <span data-ttu-id="bf839-151">0x8</span><span class="sxs-lookup"><span data-stu-id="bf839-151">0x8</span></span> | <span data-ttu-id="bf839-152">Przyjęto założenie, czy obiekty są porównywane są wystąpienia tej samej klasy.</span><span class="sxs-lookup"><span data-stu-id="bf839-152">Assume that the objects being compared are instances of the same class.</span></span> <span data-ttu-id="bf839-153">W związku z tym ta flaga porównuje dotyczącego wystąpienia wyłącznie informacyjne.</span><span class="sxs-lookup"><span data-stu-id="bf839-153">Consequently, this flag compares instance-related information only.</span></span> <span data-ttu-id="bf839-154">Użyj tej flagi w celu zoptymalizowania wydajności.</span><span class="sxs-lookup"><span data-stu-id="bf839-154">Use this flags to optimize performance.</span></span> <span data-ttu-id="bf839-155">Jeśli obiekty nie są tego samego rodzaju, wyniki są niezdefiniowane.</span><span class="sxs-lookup"><span data-stu-id="bf839-155">If the objects are not of the same class, the results are undefined.</span></span> |
 
-<span data-ttu-id="ab308-156">Lub można określić pojedynczej flagi złożonego w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="ab308-156">Or you can specify a single composite flag as follows:</span></span>
+<span data-ttu-id="bf839-156">Lub można określić pojedynczej flagi złożonego w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="bf839-156">Or you can specify a single composite flag as follows:</span></span>
 
-|<span data-ttu-id="ab308-157">Stała</span><span class="sxs-lookup"><span data-stu-id="ab308-157">Constant</span></span>  |<span data-ttu-id="ab308-158">Wartość</span><span class="sxs-lookup"><span data-stu-id="ab308-158">Value</span></span>  |<span data-ttu-id="ab308-159">Opis</span><span class="sxs-lookup"><span data-stu-id="ab308-159">Description</span></span>  |
+|<span data-ttu-id="bf839-157">Stała</span><span class="sxs-lookup"><span data-stu-id="bf839-157">Constant</span></span>  |<span data-ttu-id="bf839-158">Wartość</span><span class="sxs-lookup"><span data-stu-id="bf839-158">Value</span></span>  |<span data-ttu-id="bf839-159">Opis</span><span class="sxs-lookup"><span data-stu-id="bf839-159">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_COMPARISON_INCLUDE_ALL` | <span data-ttu-id="ab308-160">0</span><span class="sxs-lookup"><span data-stu-id="ab308-160">0</span></span> | <span data-ttu-id="ab308-161">Należy wziąć pod uwagę wszystkie funkcje do porównania.</span><span class="sxs-lookup"><span data-stu-id="ab308-161">Consider all features in the comparison.</span></span> |
+|`WBEM_COMPARISON_INCLUDE_ALL` | <span data-ttu-id="bf839-160">0</span><span class="sxs-lookup"><span data-stu-id="bf839-160">0</span></span> | <span data-ttu-id="bf839-161">Należy wziąć pod uwagę wszystkie funkcje do porównania.</span><span class="sxs-lookup"><span data-stu-id="bf839-161">Consider all features in the comparison.</span></span> |
 
-## <a name="requirements"></a><span data-ttu-id="ab308-162">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ab308-162">Requirements</span></span>  
- <span data-ttu-id="ab308-163">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab308-163">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="ab308-164">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ab308-164">**Header:** WMINet_Utils.idl</span></span>  
-  
- <span data-ttu-id="ab308-165">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ab308-165">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="ab308-166">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ab308-166">See also</span></span>
-- [<span data-ttu-id="ab308-167">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="ab308-167">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="requirements"></a><span data-ttu-id="bf839-162">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bf839-162">Requirements</span></span>
+
+<span data-ttu-id="bf839-163">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bf839-163">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="bf839-164">**Nagłówek:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="bf839-164">**Header:** WMINet_Utils.idl</span></span>
+
+<span data-ttu-id="bf839-165">**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="bf839-165">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="bf839-166">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bf839-166">See also</span></span>
+
+- [<span data-ttu-id="bf839-167">Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="bf839-167">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

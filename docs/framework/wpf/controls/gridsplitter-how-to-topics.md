@@ -7,24 +7,24 @@ helpviewer_keywords:
 - GridSplitter control [WPF], how-to topics
 - controls [WPF], GridSplitter
 ms.assetid: db0da67a-954f-42e6-bbf7-4e16b8cbb210
-ms.openlocfilehash: 5f9616f92d6b2dcaf2d8681572c45e379069a26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 800898a4b6fc655785c7db0d9463c34e5eeaa0b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354417"
 ---
-# <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="aec83-102">GridSplitter — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="aec83-102">GridSplitter How-to Topics</span></span>
-<span data-ttu-id="aec83-103">W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.GridSplitter> formantu.</span><span class="sxs-lookup"><span data-stu-id="aec83-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  
+# <a name="gridsplitter-how-to-topics"></a><span data-ttu-id="c1398-102">GridSplitter — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="c1398-102">GridSplitter How-to Topics</span></span>
+<span data-ttu-id="c1398-103">Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.GridSplitter> kontroli.</span><span class="sxs-lookup"><span data-stu-id="c1398-103">The topics in this section describe how to use the <xref:System.Windows.Controls.GridSplitter> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="aec83-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="aec83-104">In This Section</span></span>  
- [<span data-ttu-id="aec83-105">Zmienianie rozmiaru wierszy przy użyciu GridSplitter</span><span class="sxs-lookup"><span data-stu-id="aec83-105">Resize Rows with a GridSplitter</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
- [<span data-ttu-id="aec83-106">Zmienianie rozmiaru kolumn przy użyciu GridSplitter</span><span class="sxs-lookup"><span data-stu-id="aec83-106">Resize Columns with a GridSplitter</span></span>](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
- [<span data-ttu-id="aec83-107">Upewnianie się, że kontrolka GridSplitter jest widoczna</span><span class="sxs-lookup"><span data-stu-id="aec83-107">Make Sure That a GridSplitter Is Visible</span></span>](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c1398-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c1398-104">In This Section</span></span>  
+ [<span data-ttu-id="c1398-105">Zmienianie rozmiaru wierszy przy użyciu GridSplitter</span><span class="sxs-lookup"><span data-stu-id="c1398-105">Resize Rows with a GridSplitter</span></span>](how-to-resize-rows-with-a-gridsplitter.md)  
+ [<span data-ttu-id="c1398-106">Zmienianie rozmiaru kolumn przy użyciu GridSplitter</span><span class="sxs-lookup"><span data-stu-id="c1398-106">Resize Columns with a GridSplitter</span></span>](how-to-resize-columns-with-a-gridsplitter.md)  
+ [<span data-ttu-id="c1398-107">Upewnianie się, że kontrolka GridSplitter jest widoczna</span><span class="sxs-lookup"><span data-stu-id="c1398-107">Make Sure That a GridSplitter Is Visible</span></span>](how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
-## <a name="reference"></a><span data-ttu-id="aec83-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="aec83-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c1398-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="c1398-108">Reference</span></span>  
  <xref:System.Windows.Controls.GridSplitter>  
   
  <xref:System.Windows.Controls.Grid>  
   
-## <a name="related-sections"></a><span data-ttu-id="aec83-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="aec83-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c1398-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c1398-109">Related Sections</span></span>

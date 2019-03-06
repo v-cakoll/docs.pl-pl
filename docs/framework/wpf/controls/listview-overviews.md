@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551063"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370335"
 ---
 # <a name="listview-overviews"></a>ListViewprzeglądy
-Tematy w tej sekcji opisano, jak używać <xref:System.Windows.Controls.ListView> formantu.  
+Tematy w tej sekcji pokazano, jak używać <xref:System.Windows.Controls.ListView> kontroli.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [GridView — style i szablony nagłówków kolumn — omówienie](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [ListView — omówienie](listview-overview.md)  
+ [GridView — omówienie](gridview-overview.md)  
+ [GridView — style i szablony nagłówków kolumn — omówienie](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ListView>  
@@ -28,4 +28,4 @@ Tematy w tej sekcji opisano, jak używać <xref:System.Windows.Controls.ListView
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Tematy z instrukcjami](listview-how-to-topics.md)

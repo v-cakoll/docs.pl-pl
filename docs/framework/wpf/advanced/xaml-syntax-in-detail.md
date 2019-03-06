@@ -29,15 +29,15 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 33e811369d7f1d419eb593b430ab939279d3713b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510198"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367963"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
-W tym temacie opisano terminy, które są używane do opisywania elementy składni XAML. Te warunki są często stosowane w pozostałej części tej dokumentacji, zarówno dla dokumentacji WPF specjalnie i dla innych platform, które używają XAML lub włączane przez obsługę języka XAML na poziomie System.Xaml podstawowe pojęcia dotyczące XAML. W tym temacie omówiono w podstawowej terminologii opisanymi w temacie [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+W tym temacie opisano terminy, które są używane do opisywania elementy składni XAML. Te warunki są często stosowane w pozostałej części tej dokumentacji, zarówno dla dokumentacji WPF specjalnie i dla innych platform, które używają XAML lub włączane przez obsługę języka XAML na poziomie System.Xaml podstawowe pojęcia dotyczące XAML. W tym temacie omówiono w podstawowej terminologii opisanymi w temacie [Przegląd XAML (WPF)](xaml-overview-wpf.md).  
   
 
   
@@ -68,11 +68,11 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
  Na przykład, poniższy przykład jest składnia elementu obiektu, który tworzy nowe wystąpienie klasy <xref:System.Windows.Controls.Button> klasy, a także określa <xref:System.Windows.FrameworkElement.Name%2A> atrybut i wartości dla tego atrybutu:  
   
- [!code-xaml[XAMLOvwSupport#SyntaxOE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxoe)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxOE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxoe)]  
   
  Poniższy przykład jest składnia elementu obiektu, który również uwzględnia Składnia właściwości zawartości XAML. Tekst wewnętrzny zawartych w będzie służyć do ustawiania <xref:System.Windows.Controls.TextBox> właściwość zawartości XAML, <xref:System.Windows.Controls.TextBox.Text%2A>.  
   
- [!code-xaml[XAMLOvwSupport#ThisIsATextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
+ [!code-xaml[XAMLOvwSupport#ThisIsATextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
   
 ### <a name="content-models"></a>Modele zawartości  
  Klasa może obsługiwać użycia jako element obiektu XAML w kontekście składni, ale ten element będzie działać tylko prawidłowo w aplikacji lub strony, gdy znajduje się w oczekiwanej pozycji drzewo ogólnej zawartości modelu lub elementu. Na przykład <xref:System.Windows.Controls.MenuItem> zwykle tylko będzie umieszczona jako element podrzędny elementu <xref:System.Windows.Controls.Primitives.MenuBase> klasy pochodnej, takich jak <xref:System.Windows.Controls.Menu>. Zawartość, modele dla określonych elementów są udokumentowane w ramach uwagi na stronach klasy dla kontrolek i innych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klas, które mogą być używane jako elementów XAML.  
@@ -88,7 +88,7 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
  Składnią atrybutu jest składnia znaczników XAML, która ustawia wartości dla właściwości od zadeklarowania atrybutu dla istniejącego elementu obiektu. Nazwa atrybutu musi odpowiadać nazwie elementu członkowskiego CLR właściwości klasy, która będzie tworzyć kopię elementu odpowiedniego obiektu. Nazwa atrybutu następuje operatora przypisania (=). Wartość atrybutu musi być ciąg ujęty w cudzysłów.  
   
 > [!NOTE]
->  Przemienne cudzysłowów służy do umieszczenia na literalny znak cudzysłowu w ciągu atrybutu. Na przykład można użyć apostrofy jako środek do deklarowania ciąg, który zawiera znaku podwójnego cudzysłowu, znajdujący się w nim. Czy korzystasz z pojedynczym lub podwójnym cudzysłowie, należy użyć pasującą parę dla otwierające i zamykające ciągu wartości atrybutu. Istnieją również sekwencje ucieczki lub innych technik dotyczące obejścia ograniczeń dla znaków nałożonych przez dowolnego określonego składnia XAML. Zobacz [jednostki znaków XML i XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md).  
+>  Przemienne cudzysłowów służy do umieszczenia na literalny znak cudzysłowu w ciągu atrybutu. Na przykład można użyć apostrofy jako środek do deklarowania ciąg, który zawiera znaku podwójnego cudzysłowu, znajdujący się w nim. Czy korzystasz z pojedynczym lub podwójnym cudzysłowie, należy użyć pasującą parę dla otwierające i zamykające ciągu wartości atrybutu. Istnieją również sekwencje ucieczki lub innych technik dotyczące obejścia ograniczeń dla znaków nałożonych przez dowolnego określonego składnia XAML. Zobacz [jednostki znaków XML i XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  Aby można było, można skonfigurować za pomocą składni atrybutów, właściwości muszą być publiczne i musi być zapisywalny. Wartość właściwości w systemie typów zapasowy musi być typem wartości lub musi być typu odwołania, które mogą być tworzone lub przywoływany przez procesor XAML podczas uzyskiwania dostępu do odpowiedniego kopii typu.  
   
@@ -130,11 +130,11 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
  Ewentualnie można odwoływać się do dołączoną właściwość lub dołączone zdarzenie, niezależnie od elementu obiektu zawierającego. (Dołączone właściwości zostały omówione w następnej sekcji).  
   
- Możesz też nazwać dowolne zdarzenie, z dowolnego obiektu, który jest dostępny za pośrednictwem domyślnej przestrzeni nazw za pomocą *typeName*. *Zdarzenie* częściowo kwalifikowane nazwy; ta składnia obsługuje dołączanie programy obsługi zdarzeń trasowanych gdzie program obsługi jest przeznaczona do obsługi zdarzenia, routing z elementów podrzędnych, ale element nadrzędny nie również ma tego zdarzenia w swojej tabeli elementów członkowskich. Ta składnia przypomina składnię dołączone zdarzenie, ale zdarzeń w tym miejscu nie jest spełniony, dołączone zdarzenie. Zamiast tego odwołuje się zdarzenie o kwalifikowanej nazwie. Aby uzyskać więcej informacji, zobacz [Przegląd zdarzeń kierowane](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Możesz też nazwać dowolne zdarzenie, z dowolnego obiektu, który jest dostępny za pośrednictwem domyślnej przestrzeni nazw za pomocą *typeName*. *Zdarzenie* częściowo kwalifikowane nazwy; ta składnia obsługuje dołączanie programy obsługi zdarzeń trasowanych gdzie program obsługi jest przeznaczona do obsługi zdarzenia, routing z elementów podrzędnych, ale element nadrzędny nie również ma tego zdarzenia w swojej tabeli elementów członkowskich. Ta składnia przypomina składnię dołączone zdarzenie, ale zdarzeń w tym miejscu nie jest spełniony, dołączone zdarzenie. Zamiast tego odwołuje się zdarzenie o kwalifikowanej nazwie. Aby uzyskać więcej informacji, zobacz [Przegląd zdarzeń kierowane](routed-events-overview.md).  
   
- W niektórych scenariuszach nazwy właściwości czasami są dostarczane jako wartość atrybutu, a nie nazwa atrybutu. Nazwa tej właściwości może również obejmować kwalifikatorów, takich jak właściwości określone w formie *ownerType*. *dependencyPropertyName*. Ten scenariusz jest typowy podczas zapisywania style lub szablony w XAML. Przetwarzanie reguł dla nazw właściwości podana jako wartość atrybutu różnią się i są zarządzane przez typ właściwości ustawiany lub zachowania określonego podsystemu WPF. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ W niektórych scenariuszach nazwy właściwości czasami są dostarczane jako wartość atrybutu, a nie nazwa atrybutu. Nazwa tej właściwości może również obejmować kwalifikatorów, takich jak właściwości określone w formie *ownerType*. *dependencyPropertyName*. Ten scenariusz jest typowy podczas zapisywania style lub szablony w XAML. Przetwarzanie reguł dla nazw właściwości podana jako wartość atrybutu różnią się i są zarządzane przez typ właściwości ustawiany lub zachowania określonego podsystemu WPF. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../controls/styling-and-templating.md).  
   
- Użycie innej nazwy właściwości jest, gdy wartość atrybutu w tym artykule opisano relację właściwość właściwości. Ta funkcja jest używana do wiązania danych i dla celów scenorysu i został włączony przez <xref:System.Windows.PropertyPath> klasa i jej konwertera typów. Aby uzyskać bardziej szczegółowy opis semantyka wyszukiwania, zobacz [PropertyPath, składnia XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
+ Użycie innej nazwy właściwości jest, gdy wartość atrybutu w tym artykule opisano relację właściwość właściwości. Ta funkcja jest używana do wiązania danych i dla celów scenorysu i został włączony przez <xref:System.Windows.PropertyPath> klasa i jej konwertera typów. Aby uzyskać bardziej szczegółowy opis semantyka wyszukiwania, zobacz [PropertyPath, składnia XAML](propertypath-xaml-syntax.md).  
   
 <a name="property_element_syntax"></a>   
 ## <a name="property-element-syntax"></a>Składnia elementu właściwości  
@@ -144,11 +144,11 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
  Na przykład poniżej przedstawiono składnię elementu właściwości <xref:System.Windows.FrameworkElement.ContextMenu%2A> właściwość <xref:System.Windows.Controls.Button>.  
   
- [!code-xaml[XAMLOvwSupport#ContextMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
+ [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- Wartość w elemencie właściwości można również nadać jako tekst wewnętrzny, w przypadkach, gdy jest określony typ właściwości jest typu wartości pierwotnej, takich jak <xref:System.String>, lub wyliczeniem, której nazwa jest określona. Te dwa sposoby użycia są dość rzadko, ponieważ każdy z tych przypadków można również użyć prostsze składni atrybutów. Jeden scenariusz do wypełniania elementu właściwości przy użyciu parametrów jest dla właściwości, które nie są właściwość zawartości XAML, ale nadal są używane do reprezentacji tekst interfejsu użytkownika, a poszczególne elementy odstępu, takie jak znaki wysuwu wiersza są wymagane do pojawiają się w tym tekście interfejsu użytkownika. Składnia atrybutu nie można zachować znaki wysuwu wiersza, ale można składni elementu właściwości, tak długo, jak znaczące zachowywanie białych jest aktywna (Aby uzyskać więcej informacji, zobacz [biały znak przetwarzanie w XAML](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)). Inny scenariusz polega na tak, aby [x: Uid — dyrektywa](../../../../docs/framework/xaml-services/x-uid-directive.md) można zastosować do elementu właściwości i tym samym Oznacz wartości w, zgodnie z wartością, który powinien być zlokalizowany w WPF danych wyjściowych BAML lub innych technik.  
+ Wartość w elemencie właściwości można również nadać jako tekst wewnętrzny, w przypadkach, gdy jest określony typ właściwości jest typu wartości pierwotnej, takich jak <xref:System.String>, lub wyliczeniem, której nazwa jest określona. Te dwa sposoby użycia są dość rzadko, ponieważ każdy z tych przypadków można również użyć prostsze składni atrybutów. Jeden scenariusz do wypełniania elementu właściwości przy użyciu parametrów jest dla właściwości, które nie są właściwość zawartości XAML, ale nadal są używane do reprezentacji tekst interfejsu użytkownika, a poszczególne elementy odstępu, takie jak znaki wysuwu wiersza są wymagane do pojawiają się w tym tekście interfejsu użytkownika. Składnia atrybutu nie można zachować znaki wysuwu wiersza, ale można składni elementu właściwości, tak długo, jak znaczące zachowywanie białych jest aktywna (Aby uzyskać więcej informacji, zobacz [biały znak przetwarzanie w XAML](../../xaml-services/whitespace-processing-in-xaml.md)). Inny scenariusz polega na tak, aby [x: Uid — dyrektywa](../../xaml-services/x-uid-directive.md) można zastosować do elementu właściwości i tym samym Oznacz wartości w, zgodnie z wartością, który powinien być zlokalizowany w WPF danych wyjściowych BAML lub innych technik.  
   
- Element właściwości nie jest uwzględniona w drzewie logicznym WPF. Element właściwości jest po prostu specjalna składnia do ustawiania właściwości i nie jest element, który ma wystąpień lub wspierającą obiektu. (Aby uzyskać szczegółowe informacje dotyczące koncepcji drzewo logiczne, zobacz [drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).)  
+ Element właściwości nie jest uwzględniona w drzewie logicznym WPF. Element właściwości jest po prostu specjalna składnia do ustawiania właściwości i nie jest element, który ma wystąpień lub wspierającą obiektu. (Aby uzyskać szczegółowe informacje dotyczące koncepcji drzewo logiczne, zobacz [drzewa w WPF](trees-in-wpf.md).)  
   
  W przypadku których są obsługiwane zarówno atrybut, jak i właściwość składnia elementu właściwości dwóch składni ogólnie ma ten sam wynik, ale precyzyjnie, takie jak obsługa białych mogą się nieznacznie różnić składni.  
   
@@ -160,11 +160,11 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
 -   Typ implementuje <xref:System.Collections.IDictionary>.  
   
--   Typ pochodzi z <xref:System.Array> (Aby uzyskać więcej informacji na temat tablic w XAML, zobacz [x: Array — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-array-markup-extension.md).)  
+-   Typ pochodzi z <xref:System.Array> (Aby uzyskać więcej informacji na temat tablic w XAML, zobacz [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md).)  
   
  Jeśli typ właściwości to kolekcja, następnie typu wywnioskowanego kolekcji nie musi być określona w znaczników jako elementu obiektu. Zamiast tego elementów, które mają stać się elementów w kolekcji są określane jako jeden lub więcej elementów podrzędnych elementu właściwości. Każdego takiego elementu jest oceniany na obiekt podczas ładowania i dodawane do kolekcji, wywołując `Add` metody dorozumianych kolekcji. Na przykład <xref:System.Windows.Style.Triggers%2A> właściwość <xref:System.Windows.Style> przyjmuje typ kolekcji wyspecjalizowane <xref:System.Windows.TriggerCollection>, który implementuje <xref:System.Collections.IList>. Nie jest konieczne do utworzenia wystąpienia <xref:System.Windows.TriggerCollection> element obiektu w znaczniku. Zamiast tego należy określić co najmniej jedną <xref:System.Windows.Trigger> elementów jako elementów w obrębie `Style.Triggers` elementu właściwości, gdzie <xref:System.Windows.Trigger> (lub klasę pochodną) jest typu oczekiwanego typu elementu dla silnie typizowanym i niejawne <xref:System.Windows.TriggerCollection>.  
   
- [!code-xaml[XAMLOvwSupport#SyntaxPECollection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxpecollection)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxPECollection](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxpecollection)]  
   
  Właściwość może być typem kolekcji i właściwość zawartości XAML dla tego typu i pochodne typy, która została omówiona w następnej sekcji tego tematu.  
   
@@ -231,7 +231,7 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
 ## <a name="content-properties-and-collection-syntax-combined"></a>Właściwości zawartości i składnię kolekcji, w połączeniu  
  Aby zaakceptować więcej niż element pojedynczy obiekt jako zawartość, typ właściwości zawartości specjalnie należy typem kolekcji. Podobnie jak w składni elementu właściwości dla kolekcji typów, procesor XAML należy określić typy, które są typy kolekcji. Jeśli element ma właściwości zawartości XAML, typ właściwości zawartości XAML jest kolekcją, dorozumianych kolekcji nie muszą być określone w znacznikach jako elementu obiektu i właściwość zawartości XAML nie musi być określona jako el właściwości ement. W związku z tym jawnego modelu zawartości w znaczniku teraz może mieć więcej niż jeden element podrzędny przypisany jako zawartość. Poniżej przedstawiono składnię zawartości <xref:System.Windows.Controls.Panel> klasy pochodnej. Wszystkie <xref:System.Windows.Controls.Panel> klasy pochodne ustanowić właściwości zawartości XAML można <xref:System.Windows.Controls.Panel.Children%2A>, która wymaga wartości typu <xref:System.Windows.Controls.UIElementCollection>.  
   
- [!code-xaml[XAMLOvwSupport#SyntaxContent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
  Należy pamiętać, że żaden element właściwości dla <xref:System.Windows.Controls.Panel.Children%2A> ani element dla <xref:System.Windows.Controls.UIElementCollection> jest wymagany w znaczniku. Jest to funkcja projektowania XAML aby rekursywnie zawiera elementy, które definiują [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] są bardziej intuicyjne reprezentowana jako drzewo elementów zagnieżdżonych z relacjami element natychmiastowego nadrzędny podrzędny, bez interwencji tagów elementu właściwości lub Obiekty kolekcji. W rzeczywistości <xref:System.Windows.Controls.UIElementCollection> nie może być określona wyraźnie w znaczników jako elementu obiektu zgodnie z projektem. Ponieważ jedynym przeznaczeniem jest jako niejawnej kolekcji <xref:System.Windows.Controls.UIElementCollection> nie ujawnia publicznego konstruktora domyślnego i dlatego nie można utworzyć wystąpienia jako elementu obiektu.  
   
@@ -246,7 +246,7 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
 ## <a name="xaml-namespaces"></a>Przestrzeń nazw XAML  
  Żaden z powyższych przykładach składni określona przestrzeń nazw XAML innej niż domyślna przestrzeń nazw XAML. W przypadku typowych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, wartość domyślna przestrzeń nazw XAML jest określony jako [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przestrzeni nazw. Można określić XAML przestrzenie nazw, innym niż domyślna przestrzeń nazw XAML i nadal używać podobnej składni. Jednak następnie wszędzie gdzie klasa nosi, który nie jest dostępny w ramach domyślnej przestrzeni nazw XAML, nazwa tej klasy musi być poprzedzona z prefiks przestrzeni nazw XAML jako mapowany do odpowiedniego przestrzeń nazw środowiska CLR. Na przykład `<custom:Example/>` jest składnia elementu obiektu do utworzenia wystąpienia wystąpienie `Example` klasy, w którym przestrzeń nazw środowiska CLR zawierający klasy (i prawdopodobnie informacje zestawu zewnętrznego, które zawiera typy zapasowy) został poprzednio zamapowany na `custom` prefiks.  
   
- Aby uzyskać więcej informacji na temat przestrzeni nazw XAML, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Aby uzyskać więcej informacji na temat przestrzeni nazw XAML, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Rozszerzenia znaczników  
@@ -256,13 +256,13 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- W tym miejscu `StaticResource` identyfikuje <xref:System.Windows.StaticResourceExtension> klasy dostarcza implementację rozszerzenia znaczników. Ciąg dalej `MyStyle` jest używany jako dane wejściowe dla innych niż domyślne <xref:System.Windows.StaticResourceExtension> konstruktora, gdzie parametr pobrane z parametrów rozszerzenia deklaruje żądany <xref:System.Windows.ResourceKey>. `MyStyle` oczekuje się [x: Key](../../../../docs/framework/xaml-services/x-key-directive.md) wartość <xref:System.Windows.Style> definiowany jako zasób. [Staticresource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) użycia żądań, że zasób służyć do zapewnienia <xref:System.Windows.Style> wartość właściwości przy użyciu logiki wyszukiwania zasobów statycznych w czasie ładowania.  
+ W tym miejscu `StaticResource` identyfikuje <xref:System.Windows.StaticResourceExtension> klasy dostarcza implementację rozszerzenia znaczników. Ciąg dalej `MyStyle` jest używany jako dane wejściowe dla innych niż domyślne <xref:System.Windows.StaticResourceExtension> konstruktora, gdzie parametr pobrane z parametrów rozszerzenia deklaruje żądany <xref:System.Windows.ResourceKey>. `MyStyle` oczekuje się [x: Key](../../xaml-services/x-key-directive.md) wartość <xref:System.Windows.Style> definiowany jako zasób. [Staticresource — rozszerzenie znaczników](staticresource-markup-extension.md) użycia żądań, że zasób służyć do zapewnienia <xref:System.Windows.Style> wartość właściwości przy użyciu logiki wyszukiwania zasobów statycznych w czasie ładowania.  
   
- Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Aby uzyskać odwołanie rozszerzenia znaczników i innych XAML programowania funkcje dostępne w ogólne implementacji .NET, XAML, zobacz [Namespace XAML (x:) Funkcje języka](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). Rozszerzenia znaczników charakterystyczne dla WPF, zobacz [WPF XAML rozszerzenia](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
+ Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md). Aby uzyskać odwołanie rozszerzenia znaczników i innych XAML programowania funkcje dostępne w ogólne implementacji .NET, XAML, zobacz [Namespace XAML (x:) Funkcje języka](../../xaml-services/xaml-namespace-x-language-features.md). Rozszerzenia znaczników charakterystyczne dla WPF, zobacz [WPF XAML rozszerzenia](wpf-xaml-extensions.md).  
   
 <a name="attached_properties"></a>   
 ## <a name="attached-properties"></a>Dołączone właściwości  
- Właściwości dołączone są koncepcji programowania, wprowadzona w XAML, zgodnie z którą właściwości może być właścicielem i zdefiniowane przez określonego typu, ale ustawiony jako atrybutów lub elementów właściwości dowolnego elementu. Podstawowy scenariusz, dołączone właściwości są przeznaczone do jest umożliwienie elementy podrzędne w strukturze znaczników do informacji w raporcie na element nadrzędny bez konieczności model obiektowy szerokim zakresie udostępnionym dla wszystkich elementów. Z drugiej strony dołączone właściwości mogą być używane przez elementy nadrzędne informacji raportu, aby elementy podrzędne. Aby uzyskać więcej informacji na temat celem dołączone właściwości oraz tworzyć własne dołączonych właściwości, zobacz [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
+ Właściwości dołączone są koncepcji programowania, wprowadzona w XAML, zgodnie z którą właściwości może być właścicielem i zdefiniowane przez określonego typu, ale ustawiony jako atrybutów lub elementów właściwości dowolnego elementu. Podstawowy scenariusz, dołączone właściwości są przeznaczone do jest umożliwienie elementy podrzędne w strukturze znaczników do informacji w raporcie na element nadrzędny bez konieczności model obiektowy szerokim zakresie udostępnionym dla wszystkich elementów. Z drugiej strony dołączone właściwości mogą być używane przez elementy nadrzędne informacji raportu, aby elementy podrzędne. Aby uzyskać więcej informacji na temat celem dołączone właściwości oraz tworzyć własne dołączonych właściwości, zobacz [Przegląd właściwości dołączonych](attached-properties-overview.md).  
   
  Dołączone właściwości użyj składni, która przypomina pozornie składni elementu właściwości, w tym również określić *typeName*. *propertyName* kombinacji. Istnieją dwie ważne różnice:  
   
@@ -296,29 +296,29 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
 ### <a name="full-typenamemembername-qualified-attributes"></a>Pełna typeName.memberName kwalifikowana atrybutów  
  *TypeName*. *memberName* tworzą dla atrybutu faktycznie działa więcej niż tylko wielkością liter zdarzenia trasowanego powszechnie. Ale w innych sytuacjach formularza jest zbędny, a nie należy go, jeśli tylko do celów styl znaczników i czytelności. W poniższym przykładzie odwołania do każdego z trzech <xref:System.Windows.Controls.Control.Background%2A> atrybutu są całkowicie równoważne:  
   
- [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
+ [!code-xaml[XAMLOvwSupport#TypeNameProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
  `Button.Background` działa, ponieważ kwalifikowaną wyszukiwania dla tej właściwości na <xref:System.Windows.Controls.Button> zakończy się pomyślnie (<xref:System.Windows.Controls.Control.Background%2A> został odziedziczony z kontrolki) i <xref:System.Windows.Controls.Button> jest klasa elementu obiekt lub klasa bazowa. `Control.Background` działa, ponieważ <xref:System.Windows.Controls.Control> klasa faktycznie definiuje <xref:System.Windows.Controls.Control.Background%2A> i <xref:System.Windows.Controls.Control> jest <xref:System.Windows.Controls.Button> klasy bazowej.  
   
  Jednak następujące *typeName*. *memberName* przykład użycia elementu form nie działa i jest wyświetlany związku z tym komentarzem:  
   
- [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
+ [!code-xaml[XAMLOvwSupport#TypeNameBadProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
  <xref:System.Windows.Controls.Label> jest innej klasy pochodnej z <xref:System.Windows.Controls.Control>, a jeśli Gdybyśmy ustawili `Label.Background` w ramach <xref:System.Windows.Controls.Label> element obiektu to użycie będą działały. Jednak ponieważ <xref:System.Windows.Controls.Label> nie jest klasa lub klasa bazowa <xref:System.Windows.Controls.Button>, określonego zachowania procesora XAML jest następnie przetwarzanie `Label.Background` jako dołączona właściwość. `Label.Background` nie jest dostępna dołączoną właściwość, a to użycie nie powiedzie się.  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName właściwości elementów  
  W analogiczny sposób jak *typeName*. *memberName* formularz działa w przypadku składni atrybutów *baseTypeName*. *memberName* składni działa w przypadku składni elementu właściwości. Na przykład działa w następującej składni:  
   
- [!code-xaml[XAMLOvwSupport#GoofyPE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
+ [!code-xaml[XAMLOvwSupport#GoofyPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
   
  W tym miejscu podano element właściwości jako `Control.Background` mimo, że element właściwości zawarte w `Button`.  
   
  Podobnie jak w przypadku, ale *typeName*. *memberName* formularz dla atrybutów, *baseTypeName*. *memberName* jest niska stylu w znacznikach i należy jej unikać.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Namespace XAML (x:) Funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
-- [Rozszerzenia WPF XAML](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [TypeConverters i XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)
-- [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Namespace XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Rozszerzenia WPF XAML](wpf-xaml-extensions.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)
+- [TypeConverters i XAML](typeconverters-and-xaml.md)
+- [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)

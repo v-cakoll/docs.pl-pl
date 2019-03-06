@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539032"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367881"
 ---
 # <a name="advanced-ink-handling"></a>Zaawansowana obsługa atramentu
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Jest dostarczany z <xref:System.Windows.Controls.InkCanvas>, i jest elementem można umieścić w aplikacji, aby natychmiast uruchomić gromadzenie i wyświetlanie odręczne. Jednak jeśli <xref:System.Windows.Controls.InkCanvas> formant nie ma dostatecznie małe i poziom kontroli, można zachować kontrolę na wyższym poziomie, dostosowując własnych kolekcji odręczne i klasy renderowania odręczne przy użyciu <xref:System.Windows.Input.StylusPlugIns>.  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Jest dostarczany z <xref:System.Windows.Controls.InkCanvas>, i jest elementem można umieścić w aplikacji, aby natychmiast rozpocząć zbieranie i wyświetlanie pisma odręcznego. Jednak jeśli <xref:System.Windows.Controls.InkCanvas> kontroli nie zapewniają wystarczająco poprawnie poziom kontroli, można zachować kontrolę na wyższym poziomie, dostosowując własnych kolekcji pisma odręcznego i klas renderowanie pisma odręcznego przy użyciu <xref:System.Windows.Input.StylusPlugIns>.  
   
- <xref:System.Windows.Input.StylusPlugIns> Klasy mechanizm umożliwiający implementowanie kontrolę niskiego poziomu nad <xref:System.Windows.Input.Stylus> dane wejściowe i dynamicznie renderowania odręczne. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasa udostępnia mechanizm do implementowania niestandardowych zachowania i zastosować je w strumieniu danych przesyłanych przez pióro urządzenie pod kątem uzyskania optymalnej wydajności. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, Specjalistycznej <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, pozwala na dostosowanie dynamiczne renderowanie odręczne danych w czasie rzeczywistym co oznacza, że <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> rysuje elektroniczne pismo odręczne natychmiast jako <xref:System.Windows.Input.StylusPoint> dane są generowane, więc prawdopodobnie "przebiegu" z pióra urządzenie.  
+ <xref:System.Windows.Input.StylusPlugIns> Klasy zapewniają mechanizm implementowania kontrolę niskiego poziomu nad <xref:System.Windows.Input.Stylus> dane wejściowe i dynamiczne renderowanie pisma odręcznego. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasa udostępnia mechanizm do implementowania niestandardowe zachowanie i zastosować je do strumienia danych pochodzących z urządzeń pióro pod kątem optymalnej wydajności. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, Wyspecjalizowana <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, pozwala na dynamiczne Dostosowywanie renderowanie pisma odręcznego danych w czasie rzeczywistym co oznacza, że <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> rysuje cyfrowy atrament natychmiast <xref:System.Windows.Input.StylusPoint> danych jest generowany, więc pojawia się ono "flow" z pisaka urządzenie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Niestandardowe renderowanie — pismo odręczne](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Przechwytywanie danych wejściowych z pisaka](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Tworzenie kontrolki danych wejściowych pisma odręcznego](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [Model wątkowości typu pismo odręczne](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Niestandardowe renderowanie — pismo odręczne](custom-rendering-ink.md)  
+  [Przechwytywanie danych wejściowych z pisaka](intercepting-input-from-the-stylus.md)  
+  [Tworzenie kontrolki danych wejściowych pisma odręcznego](creating-an-ink-input-control.md)  
+  [Model wątkowości typu pismo odręczne](the-ink-threading-model.md)

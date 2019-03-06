@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 95871b6a8d11ad4086735bd3315c360885d027dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f024ddd0be023f77408e3106bc0a4465d068074
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555469"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358291"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Instrukcje: Udostępnij dane do powiązania w XAML
 W tym temacie omówiono różne sposoby, które można udostępnić dane do powiązania w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], w zależności od potrzeb aplikacji.  
@@ -21,13 +21,13 @@ W tym temacie omówiono różne sposoby, które można udostępnić dane do powi
 ## <a name="example"></a>Przykład  
  Jeśli masz [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów, które chcesz powiązać z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], jeden ze sposobów, które można udostępnić obiektu dla powiązania jest do definiowania go jako zasób i nadaj mu `x:Key`. W poniższym przykładzie użytkownik ma `Person` obiektu z właściwością ciągu o nazwie `PersonName`. `Person` Obiektu (w wierszu wyświetlane wyróżnione zawierający `<src>` elementu) jest zdefiniowany w przestrzeni nazw o nazwie `SDKSample`.  
   
- [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
+ [!code-xaml[SimpleBinding#Instantiation](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
  Następnie możesz powiązać <xref:System.Windows.Controls.TextBlock> formantu do obiektu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], jak wyróżniony wiersz zawiera `<TextBlock>` pokazuje element. 
   
  Alternatywnie, można użyć <xref:System.Windows.Data.ObjectDataProvider> klasy, jak w poniższym przykładzie:  
   
- [!code-xaml[ObjectDataProvider}](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
+ [!code-xaml[ObjectDataProvider}](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
   
  Zdefiniuj powiązanie taki sam sposób, jak wyróżniony wiersz, który zawiera `<TextBlock>` pokazuje element.  
   
@@ -35,13 +35,13 @@ W tym temacie omówiono różne sposoby, które można udostępnić dane do powi
   
  Jednak jeśli dokonywane jest wiązanie obiektu, który został już utworzony, musisz ustawić `DataContext` w kodzie, jak w poniższym przykładzie.  
   
- [!code-csharp[ADODataSet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ADODataSet#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[ADODataSet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ADODataSet#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ADODataSet/VisualBasic/Window1.xaml.vb#1)]  
   
- Aby uzyskać dostęp do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane dotyczące korzystania z wiązania <xref:System.Windows.Data.XmlDataProvider> klasy, zobacz [powiązania danych XML przy użyciu XMLDataProvider i zapytań XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md). Aby uzyskać dostęp do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane dotyczące korzystania z wiązania <xref:System.Windows.Data.ObjectDataProvider> klasy, zobacz [Powiąż z dokumentem, elementem x lub LINQ dla wyników zapytań XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
+ Aby uzyskać dostęp do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane dotyczące korzystania z wiązania <xref:System.Windows.Data.XmlDataProvider> klasy, zobacz [powiązania danych XML przy użyciu XMLDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md). Aby uzyskać dostęp do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane dotyczące korzystania z wiązania <xref:System.Windows.Data.ObjectDataProvider> klasy, zobacz [Powiąż z dokumentem, elementem x lub LINQ dla wyników zapytań XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).  
   
- Aby uzyskać informacje o wiele sposobów, można określić dane, w której dokonywane jest wiązanie, zobacz [określić źródło wiążące](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md). Więcej informacji o jakie typy danych można powiązać i jak implementować własne [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów dla powiązania, zobacz [wiązanie źródeł — omówienie](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+ Aby uzyskać informacje o wiele sposobów, można określić dane, w której dokonywane jest wiązanie, zobacz [określić źródło wiążące](how-to-specify-the-binding-source.md). Więcej informacji o jakie typy danych można powiązać i jak implementować własne [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów dla powiązania, zobacz [wiązanie źródeł — omówienie](binding-sources-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

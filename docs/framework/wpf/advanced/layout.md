@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738829"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369854"
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system układu. Zrozumienie, jak i kiedy układ obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,22 +41,22 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Poniższa ilustracja przedstawia układu prostego.  
   
- ![Typowa siatka, brak nałożonego pola. ](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![Typowa siatka, brak nałożonego pola. ](./media/boundingbox1.png "boundingbox1")  
   
  Ten układ można osiągnąć za pomocą następujących [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  Pojedynczy <xref:System.Windows.Controls.TextBlock> element znajduje się w obrębie <xref:System.Windows.Controls.Grid>. Gdy tekst wypełnia tylko lewym górnym rogu pierwszej kolumny, a ilość miejsca przydzielonego dla <xref:System.Windows.Controls.TextBlock> jest faktycznie znacznie większa. Pole dowolnego <xref:System.Windows.FrameworkElement> mogą być pobierane przy użyciu <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> metody. Na poniższej ilustracji przedstawiono obwiedni <xref:System.Windows.Controls.TextBlock> elementu.  
   
- ![Pole TextBlock jest teraz widoczne. ](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![Pole TextBlock jest teraz widoczne. ](./media/boundingbox2.png "boundingbox2")  
   
  Jak to przedstawiono w żółtą prostokącie ilość miejsca przydzielonego dla <xref:System.Windows.Controls.TextBlock> element jest faktycznie znacznie większe niż wygląda na to. Jako dodatkowe elementy są dodawane do <xref:System.Windows.Controls.Grid>, tego przydziału można powiększyć lub pomniejszyć, w zależności od typu i rozmiaru elementów, które są dodawane.  
   
  Gniazdo układ <xref:System.Windows.Controls.TextBlock> jest tłumaczony na <xref:System.Windows.Shapes.Path> przy użyciu <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> metody. Ta technika może być przydatne do wyświetlania obwiedni elementu.  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>System układu  
@@ -122,7 +122,7 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 -   Należy pamiętać o zmianie wartości właściwości, które wymusi aktualizacji cyklicznej przez system układu.  
   
-     Właściwości zależności, których wartości może spowodować, że system układu można zainicjować są oznaczone przy użyciu flag publicznych. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> i <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> zapewnia wskazówki przydatne do właściwości, które wymusi zmiany wartości cyklicznej aktualizacji przez system układu. Ogólnie rzecz biorąc, powinien mieć żadnych właściwości, która może mieć wpływ na rozmiar elementu obwiedni <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flagi jest ustawiona na wartość true. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+     Właściwości zależności, których wartości może spowodować, że system układu można zainicjować są oznaczone przy użyciu flag publicznych. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> i <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> zapewnia wskazówki przydatne do właściwości, które wymusi zmiany wartości cyklicznej aktualizacji przez system układu. Ogólnie rzecz biorąc, powinien mieć żadnych właściwości, która może mieć wpływ na rozmiar elementu obwiedni <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flagi jest ustawiona na wartość true. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](dependency-properties-overview.md).  
   
 -   Jeśli to możliwe, użyj <xref:System.Windows.UIElement.RenderTransform%2A> zamiast <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
@@ -146,11 +146,11 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Jaka jest przyszłość  
- Zrozumienie, jak elementy są mierzone i uporządkowane jest pierwszym krokiem w układzie opis. Aby uzyskać więcej informacji o dostępnych <xref:System.Windows.Controls.Panel> elementów, zobacz [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą wpływać na układ, zobacz [wyrównanie, marginesy i dopełnienie Przegląd](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md). Na przykład niestandardowy <xref:System.Windows.Controls.Panel> elementu, zobacz [niestandardowe promieniowego przykładowe panelu](https://go.microsoft.com/fwlink/?LinkID=159982). Gdy wszystko jest gotowe do zebranie wszystkich aplikacji lekki, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Zrozumienie, jak elementy są mierzone i uporządkowane jest pierwszym krokiem w układzie opis. Aby uzyskać więcej informacji o dostępnych <xref:System.Windows.Controls.Panel> elementów, zobacz [Przegląd panele](../controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą wpływać na układ, zobacz [wyrównanie, marginesy i dopełnienie Przegląd](alignment-margins-and-padding-overview.md). Na przykład niestandardowy <xref:System.Windows.Controls.Panel> elementu, zobacz [niestandardowe promieniowego przykładowe panelu](https://go.microsoft.com/fwlink/?LinkID=159982). Gdy wszystko jest gotowe do zebranie wszystkich aplikacji lekki, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Przegląd wyrównania, marginesów i wypełnień](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [Panele — omówienie](../controls/panels-overview.md)
+- [Przegląd wyrównania, marginesów i wypełnień](alignment-margins-and-padding-overview.md)
+- [Układ i projekt](optimizing-performance-layout-and-design.md)

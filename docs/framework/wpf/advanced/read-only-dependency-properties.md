@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 256790880e6fcf3bd2492d3f3f00b532f6a31eea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568140"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379015"
 ---
 # <a name="read-only-dependency-properties"></a>Właściwości zależności tylko do odczytu
 W tym temacie opisano właściwości zależności tylko do odczytu, w tym istniejących właściwości zależności tylko do odczytu i scenariuszy i techniki tworzenia właściwości niestandardowej zależności tylko do odczytu.  
@@ -19,7 +19,7 @@ W tym temacie opisano właściwości zależności tylko do odczytu, w tym istnie
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że rozumiesz podstawowe scenariusze Implementowanie właściwości zależności i sposób stosowania metadanych właściwości zależności niestandardowej. Zobacz [niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) i [metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) dla kontekstu.  
+ W tym temacie założono, że rozumiesz podstawowe scenariusze Implementowanie właściwości zależności i sposób stosowania metadanych właściwości zależności niestandardowej. Zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md) i [metadane zależności właściwości](dependency-property-metadata.md) dla kontekstu.  
   
 <a name="existing"></a>   
 ## <a name="existing-read-only-dependency-properties"></a>Istniejące właściwości zależności tylko do odczytu  
@@ -31,7 +31,7 @@ W tym temacie opisano właściwości zależności tylko do odczytu, w tym istnie
 ## <a name="creating-custom-read-only-dependency-properties"></a>Tworzenie niestandardowe tylko do odczytu właściwości zależności  
  Upewnij się, zapoznaj się z sekcją powyżej dotyczące Dlaczego właściwości zależności tylko do odczytu nie będzie działać w wielu scenariuszach typowe właściwości zależności. Ale jeśli jest to odpowiedni scenariusz, możesz utworzyć własne właściwości zależności tylko do odczytu.  
   
- Większa część procesu tworzenia właściwości zależności tylko do odczytu jest taki sam, jak opisano w [niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) i [implementować właściwość zależności](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md) tematów. Istnieją trzy ważne różnice:  
+ Większa część procesu tworzenia właściwości zależności tylko do odczytu jest taki sam, jak opisano w [niestandardowe właściwości zależności](custom-dependency-properties.md) i [implementować właściwość zależności](how-to-implement-a-dependency-property.md) tematów. Istnieją trzy ważne różnice:  
   
 -   Podczas rejestrowania Twoja własność, wywołaj <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> metody zamiast normalnych <xref:System.Windows.DependencyProperty.Register%2A> metodę rejestracji właściwości.  
   
@@ -41,9 +41,9 @@ W tym temacie opisano właściwości zależności tylko do odczytu, w tym istnie
   
  Niezależnie od prywatnych pola lub wartość ma zapasowy swoje właściwości zależności tylko do odczytu oczywiście można pełni zapisywalny, za pomocą dowolną logikę wymaganą zdecydujesz się. Jednak jest to najprostszy sposób ustaw właściwość początkowo lub jako część logiki czasu wykonywania do korzystania z systemu właściwości [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], zamiast obejście system właściwości i ustawienia bezpośrednio do pola prywatnego pomocniczego. W szczególności, ma podpis <xref:System.Windows.DependencyObject.SetValue%2A> , które akceptuje parametr typu <xref:System.Windows.DependencyPropertyKey>. Jak i gdzie tę wartość ustawiono programowo w ramach logiki aplikacji będzie miało wpływ na sposób możesz ustawić dostęp na <xref:System.Windows.DependencyPropertyKey> tworzone podczas pierwszej rejestracji właściwość zależności. Jeśli obsługiwać tę logikę w klasie można wprowadzić prywatnej lub jeśli chcesz, należy ustawić z innych części zestawu można ustawić jego wewnętrznych. Jedno z podejść jest wywołanie <xref:System.Windows.DependencyObject.SetValue%2A> w ramach programu obsługi zdarzeń klasy istotne zdarzenia, informujący o wystąpienia klasy, który musi zostać zmienione wartości właściwości przechowywanej. Innym rozwiązaniem jest powiązanie właściwości zależności za pomocą sparowane <xref:System.Windows.PropertyChangedCallback> i <xref:System.Windows.CoerceValueCallback> wywołania zwrotne w ramach tych właściwości metadanych podczas rejestracji.  
   
- Ponieważ <xref:System.Windows.DependencyPropertyKey> jest prywatny i nie jest propagowany przez system właściwość poza swój kod, ma właściwości zależności tylko do odczytu, lepiej ustawienia zabezpieczeń niż właściwość zależności odczytu i zapisu. Dla właściwości zależności odczytu i zapisu pole identyfikacyjne jest jawnie lub niejawnie publiczny i więc właściwość jest szeroko do ustawienia. Aby uzyskać więcej szczegółowych informacji, zobacz [zabezpieczenia właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-security.md).  
+ Ponieważ <xref:System.Windows.DependencyPropertyKey> jest prywatny i nie jest propagowany przez system właściwość poza swój kod, ma właściwości zależności tylko do odczytu, lepiej ustawienia zabezpieczeń niż właściwość zależności odczytu i zapisu. Dla właściwości zależności odczytu i zapisu pole identyfikacyjne jest jawnie lub niejawnie publiczny i więc właściwość jest szeroko do ustawienia. Aby uzyskać więcej szczegółowych informacji, zobacz [zabezpieczenia właściwości zależności](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)
+- [Niestandardowe właściwości zależności](custom-dependency-properties.md)
+- [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)

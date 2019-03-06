@@ -1,5 +1,5 @@
 ---
-title: Jak uzyskać przezroczystość lub półprzezroczystość elementu interfejsu użytkownika
+title: 'Instrukcje: Uzyskaj przezroczystość lub półprzezroczystość elementu interfejsu użytkownika'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UIElements [WPF], transparency
@@ -7,35 +7,35 @@ helpviewer_keywords:
 - transparency of UIElements [WPF]
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
-ms.openlocfilehash: 7bf79848edb84a5bd93d1196fbe0b3196d159ff3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1de9a7e11fee241ecb71242e9808e77b7e5e63b0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545314"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370530"
 ---
-# <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Jak uzyskać przezroczystość lub półprzezroczystość elementu interfejsu użytkownika
-W tym przykładzie pokazano, jak utworzyć <xref:System.Windows.UIElement> przezroczysty lub półprzezroczysty. Do uczynienia elementu przezroczystym lub półprzezroczystym, ustaw jej <xref:System.Windows.UIElement.Opacity%2A> właściwości. Wartość `0.0` powoduje, że element jest całkowicie przezroczysty podczas wartość `1.0` powoduje, że element jest całkowicie przezroczystości. Wartość `0.5` powoduje, że element 50% nieprzezroczystych i tak dalej. Element <xref:System.Windows.UIElement.Opacity%2A> ustawiono `1.0` domyślnie.  
+# <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Instrukcje: Uzyskaj przezroczystość lub półprzezroczystość elementu interfejsu użytkownika
+W tym przykładzie pokazano, jak wprowadzić <xref:System.Windows.UIElement> przezroczystym lub półprzezroczystym. Do uczynienia elementu przezroczystym lub półprzezroczystym, ustaw jego <xref:System.Windows.UIElement.Opacity%2A> właściwości. Wartość `0.0` sprawia, że element jest całkowicie przezroczysty podczas wartość `1.0` sprawia, że element jest całkowicie nieprzezroczysty. Wartość `0.5` sprawia, że element 50% nieprzezroczystych i tak dalej. Element <xref:System.Windows.UIElement.Opacity%2A> ustawiono `1.0` domyślnie.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie <xref:System.Windows.UIElement.Opacity%2A> przycisku do `0.25`, ustawianie zawartością (w tym przypadku tekst przycisku) 25% nieprzezroczystego.  
+ Poniższy przykład ustawia <xref:System.Windows.UIElement.Opacity%2A> przycisku, aby `0.25`, co on i jego zawartości (w tym przypadku tekst przycisku) 25% nieprzezroczystości.  
   
- [!code-xaml[brushsamples_snip#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/OpacityExample.xaml#2)]  
+ [!code-xaml[brushsamples_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/OpacityExample.xaml#2)]  
   
- [!code-csharp[brushsamples_procedural_snip#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#2)]  
+ [!code-csharp[brushsamples_procedural_snip#2](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#2)]  
   
  Jeśli element zawartości mają swoje własne <xref:System.Windows.UIElement.Opacity%2A> ustawienia, te wartości są mnożone przed zawierającego elementy <xref:System.Windows.UIElement.Opacity%2A>.  
   
- Poniższy przykład przedstawia przycisk <xref:System.Windows.UIElement.Opacity%2A> do `0.25`i <xref:System.Windows.UIElement.Opacity%2A> z <xref:System.Windows.Controls.Image> kontroli objętych przycisk, aby `0.5`. W związku z tym obraz pojawia się 12,5% nieprzezroczyste: 0,25 * 0,5 = 0,125.  
+ W poniższym przykładzie ustawiono przycisku <xref:System.Windows.UIElement.Opacity%2A> do `0.25`i <xref:System.Windows.UIElement.Opacity%2A> z <xref:System.Windows.Controls.Image> kontroli zawarte w przycisk, aby `0.5`. W rezultacie obraz jest wyświetlany 12,5% nieprzezroczysty: 0.25 * 0.5 = 0.125.  
   
- [!code-xaml[brushsamples_snip#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/OpacityExample.xaml#3)]  
+ [!code-xaml[brushsamples_snip#3](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/OpacityExample.xaml#3)]  
   
- [!code-csharp[brushsamples_procedural_snip#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#3)]  
+ [!code-csharp[brushsamples_procedural_snip#3](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#3)]  
   
- Innym sposobem kontrolować nieprzezroczystość elementu jest skonfigurowanie nieprzezroczystość <xref:System.Windows.Media.Brush> który malowany element. Takie podejście umożliwia selektywne alter nieprzezroczystość części elementu i zapewnia korzyści wydajności w przypadku elementu <xref:System.Windows.UIElement.Opacity%2A> właściwości. W poniższym przykładzie <xref:System.Windows.Media.Brush.Opacity%2A> z <xref:System.Windows.Media.SolidColorBrush> używana do malowania przycisku <xref:System.Windows.Controls.Control.Background%2A> ma ustawioną wartość `0.25`. W związku z tym pędzel tła jest 25% nieprzezroczyste, przy zachowaniu jego zawartości (tekst przycisku) przezroczystości 100%.  
+ Innym sposobem na kontrolowanie nieprzezroczystość elementu jest aby ustawić nieprzezroczystość <xref:System.Windows.Media.Brush> , malowany element. Takie podejście umożliwia selektywne zmienić nieprzezroczystość części elementu oraz zapewnia korzyści w wydajności przy użyciu elementu <xref:System.Windows.UIElement.Opacity%2A> właściwości. Poniższy przykład ustawia <xref:System.Windows.Media.Brush.Opacity%2A> z <xref:System.Windows.Media.SolidColorBrush> używany do rysowania przycisku <xref:System.Windows.Controls.Control.Background%2A> ustawiono `0.25`. W rezultacie pędzel tła jest 25% nieprzezroczyste, ale jego zawartość (tekst przycisku) pozostają nieprzezroczyste w 100%.  
   
- [!code-xaml[brushsamples_snip#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/OpacityExample.xaml#4)]  
+ [!code-xaml[brushsamples_snip#4](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/OpacityExample.xaml#4)]  
   
- [!code-csharp[brushsamples_procedural_snip#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#4)]  
+ [!code-csharp[brushsamples_procedural_snip#4](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#4)]  
   
- Może też kontrolować nieprzezroczystość poszczególnych kolorów w pędzla. Aby uzyskać więcej informacji na temat kolorów i pędzle, zobacz [Malowanie z kolorami i przegląd gradienty](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Na przykład przedstawiający sposób Animuj przezroczystość elementu zobacz [Animuj przezroczystość pędzla lub Element](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md).
+ Może także kontrolować nieprzezroczystość poszczególnych kolory pędzla. Aby uzyskać więcej informacji na temat kolorów i pędzle, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md). Aby uzyskać przykład pokazujący sposób animować nieprzezroczystość elementu, zobacz [animować nieprzezroczystość elementu lub pędzla](../graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md).

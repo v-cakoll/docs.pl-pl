@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544235"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350751"
 ---
 # <a name="input-wpf"></a>Dane wejściowe (WPF)
-Windows Presentation Foundation (WPF) obsługuje kilka typów danych wejściowych. Tych danych wejściowych łącznie z tekstem, touch, mysz, polecenia, fokus, touch, przeciągnij i upuść i elektroniczne pismo odręczne. W tej sekcji opisano tematów związanych z danych wejściowych na platformie WPF.  
+Windows Presentation Foundation (WPF) obsługuje kilka typów danych wejściowych. Te dane wejściowe zawiera tekst, touch, mysz i poleceń, a także fokus, touch, przeciągnij i upuść i cyfrowy atrament. W tej sekcji opisano tematów związanych z danych wejściowych na platformie WPF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Przegląd fokusu](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Style dla fokusu w kontrolkach i styl FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [Przewodnik: tworzenie pierwszej aplikacji dotykowej](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [Cyfrowy atrament](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Przegląd danych wejściowych](input-overview.md)  
+ [Przegląd poleceń](commanding-overview.md)  
+ [Przegląd fokusu](focus-overview.md)  
+ [Style dla fokusu w kontrolkach i styl FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [Przewodnik: Tworzenie pierwszej aplikacji dotykowej](walkthrough-creating-your-first-touch-application.md)  
+ [Tematy z instrukcjami](input-and-commands-how-to-topics.md)  
+ [Cyfrowy atrament](digital-ink.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) obsługuje kilka typów danych wejściowyc
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki](../../../../docs/framework/wpf/controls/index.md)  
-  [Zdarzenia](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [Kontrolki](../controls/index.md)  
+  [Zdarzenia](events-wpf.md)

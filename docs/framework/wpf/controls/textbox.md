@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 18f5b6b826d1c5c7ff6fe3087b839eb6947dc695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a261b72fe3205c9a03292f1f6bbcebdcf8649b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649352"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356978"
 ---
 # <a name="textbox"></a>TextBox
 <xref:System.Windows.Controls.TextBox> Kontroli zapewnia obsługę wprowadzanie tekstu podstawowego w aplikacjach WPF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [TextBox — omówienie](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+ [TextBox — omówienie](textbox-overview.md)  
+ [Tematy z instrukcjami](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.TextBox>  
@@ -32,4 +32,4 @@ ms.locfileid: "54649352"
   
 ## <a name="see-also"></a>Zobacz także
 - [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [TextBox — style i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+- [TextBox — style i szablony](textbox-styles-and-templates.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: a484ba1e5d0c7a51e7e4c3edbf341bf40345fd2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633926"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366611"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 Dalej w tym temacie opisano obecności i celem dwóch mapowań przestrzeni nazw XAML, jak często występuje w tagu głównego pliku XAML w WPF. On również zawiera opis sposobu tworzenia podobnych mapowania dla za pomocą elementów, które są zdefiniowane we własnym kodzie i/lub w ramach oddzielne zestawy.  
@@ -40,7 +40,7 @@ Dalej w tym temacie opisano obecności i celem dwóch mapowań przestrzeni nazw 
   
  Relacja między tych deklaracji jest to, że `x:` mapowanie prefiksu obsługuje funkcje wewnętrzne, które są częścią definicji języka XAML, i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest jedna implementacja używa XAML jako język, który definiuje słownictwa używanego w jego obiekty dla XAML. Ponieważ słownictwa WPF użycia będzie znacznie częściej niż użycia funkcji wewnętrznych XAML, słownictwa WPF jest mapowany jako domyślny.  
   
- `x:` Konwencji prefiks mapowanie obsługi wewnętrznych elementów języka XAML następuje szablonów projektu przykładowego kodu i dokumentacji języka funkcji w ramach tej [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Przestrzeń nazw XAML definiuje wiele najczęściej używanych funkcji, które są niezbędne, nawet w przypadku podstawowych aplikacji WPF. Na przykład, aby można było dołączyć wszelkie związane z kodem w pliku XAML, za pośrednictwem klasy częściowej, musisz nazwać tę klasę jako `x:Class` atrybutu w elemencie głównym odpowiedniego pliku XAML. Lub dowolnego elementu zgodnie z definicją w strony XAML, który uzyskiwany jest dostęp zgodnie z kluczem zasobu powinny mieć `x:Key` ustawić atrybutu w elemencie zagrożona. Aby uzyskać więcej informacji na temat tych i innych aspektów XAML, zobacz [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) lub [składnia XAML w szczegółów](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ `x:` Konwencji prefiks mapowanie obsługi wewnętrznych elementów języka XAML następuje szablonów projektu przykładowego kodu i dokumentacji języka funkcji w ramach tej [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Przestrzeń nazw XAML definiuje wiele najczęściej używanych funkcji, które są niezbędne, nawet w przypadku podstawowych aplikacji WPF. Na przykład, aby można było dołączyć wszelkie związane z kodem w pliku XAML, za pośrednictwem klasy częściowej, musisz nazwać tę klasę jako `x:Class` atrybutu w elemencie głównym odpowiedniego pliku XAML. Lub dowolnego elementu zgodnie z definicją w strony XAML, który uzyskiwany jest dostęp zgodnie z kluczem zasobu powinny mieć `x:Key` ustawić atrybutu w elemencie zagrożona. Aby uzyskać więcej informacji na temat tych i innych aspektów XAML, zobacz [Przegląd XAML (WPF)](xaml-overview-wpf.md) lub [składnia XAML w szczegółów](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Mapowanie niestandardowej klasy i zestawy  
@@ -115,7 +115,7 @@ End Namespace
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] używa projektanta przestrzeni nazw, który zazwyczaj jest mapowany na prefiksie `d:`. Więcej ostatnie szablony projektu dla WPF wstępnie mogą być mapowane na tę przestrzeń nazw XAML w celu obsługi wymiany XAML między [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] i innych środowisk projektowych. Ta przestrzeń nazw XAML projektu jest używany do widoczny przy obsłudze często stanie projektu podczas roundtripping interfejsu użytkownika opartego na XAML w projektancie. Jest również używany do funkcji takich jak `d:IsDataSource`, umożliwiają one środowiska uruchomieniowego źródeł danych w projektancie.  
   
- Inny prefiks może zostać wyświetlony mapowane jest `mc:`. `mc:` dotyczy zgodność znaczników i polega na wykorzystaniu wzorca zgodność znaczników, który nie jest koniecznie specyficzne dla XAML. Do pewnego stopnia zgodności znaczników, funkcji może być używane do wymiany XAML między struktur lub innych granice wykonania zapasowy wykorzystują współdziałanie kontekst schematu XAML, zapewniają zgodność dla trybów ograniczone w projektantach i tak dalej. Aby uzyskać więcej informacji na temat pojęć zgodności znaczników i ich relacje z WPF, zobacz [zgodność znaczników (mc:) Funkcje języka](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md).  
+ Inny prefiks może zostać wyświetlony mapowane jest `mc:`. `mc:` dotyczy zgodność znaczników i polega na wykorzystaniu wzorca zgodność znaczników, który nie jest koniecznie specyficzne dla XAML. Do pewnego stopnia zgodności znaczników, funkcji może być używane do wymiany XAML między struktur lub innych granice wykonania zapasowy wykorzystują współdziałanie kontekst schematu XAML, zapewniają zgodność dla trybów ograniczone w projektantach i tak dalej. Aby uzyskać więcej informacji na temat pojęć zgodności znaczników i ich relacje z WPF, zobacz [zgodność znaczników (mc:) Funkcje języka](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF i ładowania zestawu  
  Kontekst schematu WPF XAML integruje się z modelem aplikacji WPF, który z kolei używa zdefiniowane CLR koncepcji <xref:System.AppDomain>. Poniższa sekwencja opisuje, jak kontekst schematu XAML interpretuje jak ładować zestawy lub znaleźć typów w czasie wykonywania lub czasie projektowania na podstawie związane z użyciem WPF <xref:System.AppDomain> i inne czynniki.  
@@ -138,4 +138,4 @@ End Namespace
   
 ## <a name="see-also"></a>Zobacz także
 - [Informacje o przestrzeni nazw XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)

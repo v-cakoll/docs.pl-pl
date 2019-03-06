@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: 55007575435ada809b8fba43d08abdd2ce9ddd73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570619"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352571"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Instrukcje: Określ źródło przekształcenia przy użyciu wartości względnych
 Ten przykład pokazuje, jak określić źródło przy użyciu wartości względnych <xref:System.Windows.UIElement.RenderTransform%2A> mający zastosowanie do <xref:System.Windows.FrameworkElement>.  
@@ -23,23 +23,23 @@ Ten przykład pokazuje, jak określić źródło przy użyciu wartości względn
   
  Poniższa ilustracja przedstawia wynik transformacji, na przykład, który następuje po.  
   
- ![Przekształcona przy użyciu RenderTransform przycisku](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![Przekształcona przy użyciu RenderTransform przycisku](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 45 stopni obrót w prawo wokół przy użyciu RenderTransform właściwość  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  W poniższym przykładzie użyto również <xref:System.Windows.Media.RotateTransform> wymienić <xref:System.Windows.Controls.Button> 45 stopni zgodnie ze wskazówkami zegara, ale w tym przykładzie <xref:System.Windows.UIElement.RenderTransformOrigin%2A> przycisku (0,5, 0,5). W rezultacie obrót zastosowano do środka przycisk, a nie do lewego górnego rogu.  
   
  Poniższa ilustracja przedstawia wynik transformacji, na przykład, który następuje po.  
   
- ![Przycisk przekształcony o jej środka](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![Przycisk przekształcony o jej środka](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 45 stopni przy użyciu RenderTransform właściwość RenderTransformOrigin z (0,5, 0,5)  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
- Aby uzyskać więcej informacji na temat przekształcania <xref:System.Windows.FrameworkElement> obiekty, zobacz [przekształca Przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+ Aby uzyskać więcej informacji na temat przekształcania <xref:System.Windows.FrameworkElement> obiekty, zobacz [przekształca Przegląd](transforms-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Media.Transform>
-- [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Przekształcenia — przegląd](transforms-overview.md)
+- [Tematy z instrukcjami](transformations-how-to-topics.md)

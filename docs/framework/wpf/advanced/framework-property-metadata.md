@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: 73ac80786b95c214cbba5924301b21f9c6e32837
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379279"
 ---
 # <a name="framework-property-metadata"></a>Metadane właściwości szablonu
 Opcje metadane właściwości struktury są zgłaszane właściwości elementów obiektu uważane za w ramach WPF poziomie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] architektury. Ogólnie rzecz biorąc oznaczenia poziomie struktury WPF pociąga za sobą tej funkcji, np. renderowania wiązania danych, a właściwość systemu uściślenia są obsługiwane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prezentacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] i plików wykonywalnych. Metadane właściwości szablonu zostaje przesłane zapytanie przez te systemy, aby określić właściwości specyficzne dla funkcji właściwości określonego elementu.  
@@ -19,7 +19,7 @@ Opcje metadane właściwości struktury są zgłaszane właściwości elementów
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Należy również przeczytanie [metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](dependency-properties-overview.md). Należy również przeczytanie [metadane zależności właściwości](dependency-property-metadata.md).  
   
 <a name="What_Is_Communicated_by_Framework_Property"></a>   
 ## <a name="what-is-communicated-by-framework-property-metadata"></a>Co to jest przekazywane przez metadane właściwości szablonu  
@@ -32,11 +32,11 @@ Opcje metadane właściwości struktury są zgłaszane właściwości elementów
 -   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Domyślnie właściwości zależności nie dziedziczą wartości. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> Umożliwia ścieżki dziedziczenia także przechodzić do drzewa wizualnego, co jest niezbędne w niektórych scenariuszach składania kontroli.  
   
     > [!NOTE]
-    >  Termin "inherits" w kontekście właściwości wartości oznacza, że coś specyficzne dla właściwości zależności; oznacza, że elementy podrzędne mogą dziedziczą zależności rzeczywiste wartości właściwości z elementów nadrzędnych ze względu na możliwość poziomie struktury WPF [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Go nie ma nic wspólnego bezpośrednio z kodu zarządzanego typów i elementów członkowskich dziedziczenie przez typy pochodne. Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+    >  Termin "inherits" w kontekście właściwości wartości oznacza, że coś specyficzne dla właściwości zależności; oznacza, że elementy podrzędne mogą dziedziczą zależności rzeczywiste wartości właściwości z elementów nadrzędnych ze względu na możliwość poziomie struktury WPF [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Go nie ma nic wspólnego bezpośrednio z kodu zarządzanego typów i elementów członkowskich dziedziczenie przez typy pochodne. Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](property-value-inheritance.md).  
   
--   Właściwości powiązania danych raportowania (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). Domyślnie właściwości zależności w ramach obsługuje powiązanie danych, z zachowaniem powiązania jednokierunkowe. Powiązanie danych można wyłączyć, gdyby nie scenariusz szkody (ponieważ mają one być elastyczny i rozszerzalny, nie ma wiele przykładów tych właściwości w domyślnym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]). Możesz ustawić powiązanie dwukierunkowe domyślny dla właściwości, które integrowanie kontroli zachowania oraz jego fragmentów (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> znajduje się przykład) lub Jeśli powiązanie dwustronne jest scenariusz typowe i oczekiwany dla użytkowników (<xref:System.Windows.Controls.TextBox.Text%2A> znajduje się przykład). Tylko zmiana metadanych związanych z powiązania danych wpływa na domyślny; na podstawie na powiązanie zawsze można zmienić tej wartości domyślnej. Szczegółowe informacje na temat trybów powiązania i powiązania ogólnie rzecz biorąc, [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Właściwości powiązania danych raportowania (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). Domyślnie właściwości zależności w ramach obsługuje powiązanie danych, z zachowaniem powiązania jednokierunkowe. Powiązanie danych można wyłączyć, gdyby nie scenariusz szkody (ponieważ mają one być elastyczny i rozszerzalny, nie ma wiele przykładów tych właściwości w domyślnym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]). Możesz ustawić powiązanie dwukierunkowe domyślny dla właściwości, które integrowanie kontroli zachowania oraz jego fragmentów (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> znajduje się przykład) lub Jeśli powiązanie dwustronne jest scenariusz typowe i oczekiwany dla użytkowników (<xref:System.Windows.Controls.TextBox.Text%2A> znajduje się przykład). Tylko zmiana metadanych związanych z powiązania danych wpływa na domyślny; na podstawie na powiązanie zawsze można zmienić tej wartości domyślnej. Szczegółowe informacje na temat trybów powiązania i powiązania ogólnie rzecz biorąc, [Data Binding Overview](../data/data-binding-overview.md).  
   
--   Raportowanie, czy właściwości powinny być umieszczanych w dzienniku przez aplikacje lub usługi, które obsługują rejestrowanie (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Ogólne elementy rejestrowanie nie jest domyślnie włączona, ale selektywnie jest włączony dla niektórych kontrolek wejściowych użytkownika. Ta właściwość jest przeznaczona do przeczytania przez rejestrowanie usługi, w tym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacja rejestrowania i jest zwykle ustawiana tylko dla kontrolek użytkownika, takich jak opcje wybrane przez użytkownika w obrębie listy, które powinny być zachowywany kroki nawigacji. Aby uzyskać informacje o arkuszu, zobacz [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   Raportowanie, czy właściwości powinny być umieszczanych w dzienniku przez aplikacje lub usługi, które obsługują rejestrowanie (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Ogólne elementy rejestrowanie nie jest domyślnie włączona, ale selektywnie jest włączony dla niektórych kontrolek wejściowych użytkownika. Ta właściwość jest przeznaczona do przeczytania przez rejestrowanie usługi, w tym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementacja rejestrowania i jest zwykle ustawiana tylko dla kontrolek użytkownika, takich jak opcje wybrane przez użytkownika w obrębie listy, które powinny być zachowywany kroki nawigacji. Aby uzyskać informacje o arkuszu, zobacz [Nawigacja — omówienie](../app-development/navigation-overview.md).  
   
 <a name="Reading_FrameworkPropertyMetadata"></a>   
 ## <a name="reading-frameworkpropertymetadata"></a>Odczytywanie FrameworkPropertyMetadata  
@@ -74,6 +74,6 @@ Opcje metadane właściwości struktury są zgłaszane właściwości elementów
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
-- [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Metadane zależności właściwości](dependency-property-metadata.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)
+- [Niestandardowe właściwości zależności](custom-dependency-properties.md)

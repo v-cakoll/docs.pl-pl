@@ -7,19 +7,19 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: d0d6df69-daf9-4cf3-b7f9-ffee588037a3
-ms.openlocfilehash: 66b410c42214719ce688f8965e7a38143a115326
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f68eafba64f45a77687d09d2e1ab709a76c0e33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537476"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353130"
 ---
 # <a name="digital-ink"></a>Cyfrowy atrament
-W tej sekcji omówiono używanie elektroniczne pismo odręczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tradycyjnie znalezione tylko w zestawie SDK komputerze typu Tablet, elektroniczne pismo odręczne jest teraz dostępna w podstawowej Windows Presentation Foundation. Oznacza to, że pełni funkcjonalnymi aplikacje komputerów typu Tablet można teraz tworzyć przy użyciu możliwości Windows Presentation Foundation.  
+W tej sekcji omówiono używanie cyfrowy atrament w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tradycyjnie znalezione tylko w zestawie SDK komputerze typu Tablet, cyfrowy atrament jest teraz dostępna w obszarach podstawowych Windows Presentation Foundation. Oznacza to, że w pełni funkcjonalnego komputerów typu Tablet aplikacji mogą teraz tworzyć, korzystając z możliwości systemu Windows Presentation Foundation.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienia](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+ [Omówienia](digital-ink-overviews.md)  
+  [Tematy z instrukcjami](digital-ink-how-to-topics.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)
+ [Windows Presentation Foundation](../index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 7e35fd1753f7136d7be1e2190b4bed5116e46aba
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 9e7cc41602e7e86d328767db257e6dbaa7e8fed1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746156"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370504"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
 Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu Windows Presentation Foundation (WPF) mają bogaty zestaw nowych Zarządzanie systemem drukowania i wydruku [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Za pomocą [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych rozszerzeń systemu drukowania są również dostępne dla programistów tworzących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperzy korzystający z niezarządzanego kodu. W ramach tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku.  
@@ -31,7 +31,7 @@ Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu
 ## <a name="about-xps"></a>Temat XPS  
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] jest format dokumentu elektronicznego, format pliku buforu i języka opisu strony. Jest format Otwórz dokument, który używa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]i innych standardów branżowych, do tworzenia dokumentów dla wielu platform. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Upraszcza to proces, za pomocą którego cyfrowe dokumenty są utworzone, udostępniony, drukowane, wyświetlać i archiwizowane. Aby uzyskać dodatkowe informacje na temat [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], zobacz [dokumenty XPS](/windows/desktop/printdocs/documents).  
   
- Kilka technik do drukowania [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] na podstawie zawartości przy użyciu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zostały przedstawione w [programowe drukowanie plików XPS](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Może okazać się przydatne odwołać te przykłady podczas przeglądu zawartości znajdujących się w tym temacie. (Deweloperzy niezarządzany kod powinien zostać wyświetlony dokumentacji [funkcja MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Windows Forms deweloperzy muszą używać [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] w <xref:System.Drawing.Printing> przestrzeni nazw, który nie obsługuje pełnej [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku, ale obsługa ma ścieżkę drukowania hybrydowego GDI do plików XPS. Zobacz **architektura ścieżka wydruku** poniżej.)  
+ Kilka technik do drukowania [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] na podstawie zawartości przy użyciu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zostały przedstawione w [programowe drukowanie plików XPS](how-to-programmatically-print-xps-files.md). Może okazać się przydatne odwołać te przykłady podczas przeglądu zawartości znajdujących się w tym temacie. (Deweloperzy niezarządzany kod powinien zostać wyświetlony dokumentacji [funkcja MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Windows Forms deweloperzy muszą używać [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] w <xref:System.Drawing.Printing> przestrzeni nazw, który nie obsługuje pełnej [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżka wydruku, ale obsługa ma ścieżkę drukowania hybrydowego GDI do plików XPS. Zobacz **architektura ścieżka wydruku** poniżej.)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Ścieżka wydruku XPS  
@@ -66,13 +66,13 @@ Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu
   
  Poniższa ilustracja przedstawia podsystem wydruku i definiuje fragmenty, dostarczone przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]i fragmenty zdefiniowane przez producentów sprzętu i oprogramowania.  
   
- ![The XPS Print System](../../../../docs/framework/wpf/advanced/media/xpsprint.PNG "XPSPrint")  
+ ![The XPS Print System](./media/xpsprint.PNG "XPSPrint")  
   
 ### <a name="basic-xps-printing"></a>Drukowanie plików XPS podstawowe  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiuje zarówno podstawowe i zaawansowane [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Dla tych aplikacji, które nie wymagają rozbudowane drukowanie dostosowywania lub dostęp do pełnego [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] zestawu funkcji podstawowych drukowania Pomoc techniczna jest dostępna. Podstawowa pomoc techniczna drukowania jest dostępna za pośrednictwem formantu w oknie dialogowym drukowania, który wymaga minimalnej konfiguracji i funkcje powszechnie znane [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Wiele [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] funkcji dostępnych za pomocą tego uproszczony model drukowania.  
   
 #### <a name="printdialog"></a>PrintDialog  
- <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Kontrola zapewnia jeden punkt wejścia dla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], konfiguracji i [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] przesyłania zadania. Aby uzyskać informacje o sposobie tworzenia instancji i korzystanie z kontrolki, zobacz [Wywołaj okno dialogowe Drukuj](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
+ <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Kontrola zapewnia jeden punkt wejścia dla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], konfiguracji i [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] przesyłania zadania. Aby uzyskać informacje o sposobie tworzenia instancji i korzystanie z kontrolki, zobacz [Wywołaj okno dialogowe Drukuj](how-to-invoke-a-print-dialog.md).  
   
 ### <a name="advanced-xps-printing"></a>Zaawansowane XPS, drukowanie  
  Aby dostęp do pełnego zestawu [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] funkcje zaawansowane drukowania [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] musi być używana. Kilka istotnych [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] są opisane bardziej szczegółowo poniżej. Aby uzyskać pełną listę [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżka wydruku [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], zobacz <xref:System.Windows.Xps> i <xref:System.Printing> odwołania do przestrzeni nazw.  
@@ -82,27 +82,27 @@ Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu
   
  Poniższy przykład pokazuje sposób wykonywania zapytań <xref:System.Printing.PrintCapabilities> drukarki i utworzyć <xref:System.Printing.PrintTicket> przy użyciu kodu.  
   
- [!code-cpp[xpscreate#PrinterCapabilities](../../../../samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
- [!code-csharp[xpscreate#PrinterCapabilities](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
- [!code-vb[xpscreate#PrinterCapabilities](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
+ [!code-cpp[xpscreate#PrinterCapabilities](~/samples/snippets/cpp/VS_Snippets_Wpf/XpsCreate/CPP/XpsCreate.cpp#printercapabilities)]
+ [!code-csharp[xpscreate#PrinterCapabilities](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsCreate/CSharp/XpsCreate.cs#printercapabilities)]
+ [!code-vb[xpscreate#PrinterCapabilities](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsCreate/visualbasic/xpscreate.vb#printercapabilities)]  
   
 #### <a name="printserver-and-printqueue"></a>PrintServer i PrintQueue  
  <xref:System.Printing.PrintServer> Klasa reprezentuje serwer wydruku sieci i <xref:System.Printing.PrintQueue> klasa reprezentuje drukarki i danych wyjściowych kolejki zadań skojarzonych z nim. Razem te [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] umożliwia zaawansowane zarządzanie zadaniami drukowania na serwerze. A <xref:System.Printing.PrintServer>, lub jeden z jej klas pochodnych, jest używany do zarządzania <xref:System.Printing.PrintQueue>. <xref:System.Printing.PrintQueue.AddJob%2A> Metoda służy do wstawiania nowego zadania drukowania do kolejki.  
   
  Poniższy przykład przedstawia sposób tworzenia <xref:System.Printing.LocalPrintServer> i uzyskiwać dostęp do domyślnej <xref:System.Printing.PrintQueue> przy użyciu kodu.  
   
- [!code-csharp[xpsprint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
- [!code-vb[xpsprint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+ [!code-csharp[xpsprint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[xpsprint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
 #### <a name="xpsdocumentwriter"></a>XpsDocumentWriter  
  <xref:System.Windows.Xps.XpsDocumentWriter>, Za pomocą jego wielu <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> i <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metod, używany do zapisywania [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów do <xref:System.Printing.PrintQueue>. Na przykład <xref:System.Windows.Xps.XpsDocumentWriter.Write%28System.Windows.Documents.FixedPage%2CSystem.Printing.PrintTicket%29> używana jest metoda danych wyjściowych [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentu i <xref:System.Printing.PrintTicket> synchronicznie. <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%28System.Windows.Documents.FixedDocument%2CSystem.Printing.PrintTicket%29> Używana jest metoda danych wyjściowych [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentu i <xref:System.Printing.PrintTicket> asynchronicznie.  
   
  Poniższy przykład przedstawia sposób tworzenia <xref:System.Windows.Xps.XpsDocumentWriter> przy użyciu kodu.  
   
- [!code-csharp[XpsPrint#PrintQueueSnip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
- [!code-vb[XpsPrint#PrintQueueSnip](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
+ [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
+ [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
- <xref:System.Printing.PrintQueue.AddJob%2A> Metody udostępniają metody drukowania. Zobacz [programowe drukowanie plików XPS](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Aby uzyskać szczegółowe informacje.  
+ <xref:System.Printing.PrintQueue.AddJob%2A> Metody udostępniają metody drukowania. Zobacz [programowe drukowanie plików XPS](how-to-programmatically-print-xps-files.md). Aby uzyskać szczegółowe informacje.  
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>Ścieżka wydruku GDI  
@@ -142,8 +142,8 @@ W przypadku aplikacji, które nie wymagają [!INCLUDE[TLA2#tla_metro](../../../.
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/printing-how-to-topics.md)
-- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Tematy z instrukcjami](printing-how-to-topics.md)
+- [Dokumenty w WPF](documents-in-wpf.md)
 - [XPS Documents](/windows/desktop/printdocs/documents)
-- [Serializacja dokumentu i przechowywanie](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Serializacja dokumentu i przechowywanie](document-serialization-and-storage.md)
 - [Konwerter (MXDC) dokumentów XPS firmy Microsoft](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

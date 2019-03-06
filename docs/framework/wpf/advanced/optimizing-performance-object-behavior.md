@@ -11,12 +11,12 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 45e93e1ce7d4cca21019cd0be4547bdaa220c301
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631220"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352688"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Optymalizacja wydajności: Zachowanie obiektu
 Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektów ułatwi Ci odpowiednie kompromis między funkcjonalność i wydajność.  
@@ -27,16 +27,16 @@ Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Nie usuwanie programów obsługi zdarzeń w obiektach może zachować aktywności obiektów  
  Delegat, który przekazuje obiekt, do jej zdarzenia jest skutecznym odniesieniem do tego obiektu. W związku z tym programy obsługi zdarzeń można przechowywać obiekty aktywności dłużej niż oczekiwano. Wykonywanie czyszczenia obiekt, który został zarejestrowany do nasłuchiwania zdarzeń obiektu, jest istotne, aby usunąć ten delegat przed zwolnieniem obiektu. Utrzymywanie zbędnych obiektów aktywności powoduje zwiększenie użycia pamięci aplikacji. Jest to szczególnie istotne w przypadku, gdy obiekt jest głównym drzewa logicznego lub drzewo wizualne.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wprowadza wzorzec odbiornika zdarzeń słabych dla zdarzenia, które mogą być przydatne w sytuacjach, w których trudno jest śledzić relacje okres istnienia obiektów między źródłem i odbiornika. Niektóre istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia, użyj tego wzorca. W przypadku wdrażania obiektów zdarzeń niestandardowych, ten wzorzec może być użytkowania do Ciebie. Aby uzyskać więcej informacji, zobacz [słabe wzorce zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wprowadza wzorzec odbiornika zdarzeń słabych dla zdarzenia, które mogą być przydatne w sytuacjach, w których trudno jest śledzić relacje okres istnienia obiektów między źródłem i odbiornika. Niektóre istniejące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia, użyj tego wzorca. W przypadku wdrażania obiektów zdarzeń niestandardowych, ten wzorzec może być użytkowania do Ciebie. Aby uzyskać więcej informacji, zobacz [słabe wzorce zdarzeń](weak-event-patterns.md).  
   
  Istnieje kilka narzędzi, takich jak Profiler CLR i Praca Ustaw przeglądarkę, który można zawiera informacje na temat użycia pamięci przez określony proces. Profiler CLR obejmuje pewną liczbę bardzo przydatne widoki profil alokacji, w tym histogram przydzielonych typów, alokacji i wywołanie wykresów, przedstawiający wyrzucania elementów bezużytecznych różnych generacji i wynikowego stanu sterty zarządzanej po osi czasu te kolekcje i drzewo wywołań alokacji na metody i załadowań zestawów. Aby uzyskać więcej informacji, zobacz [Centrum deweloperów .NET Framework](https://go.microsoft.com/fwlink/?LinkId=117435).  
   
 <a name="DPs_and_Objects"></a>   
 ## <a name="dependency-properties-and-objects"></a>Właściwości zależności i obiekty  
- Ogólnie rzecz biorąc, uzyskiwanie dostępu do właściwości zależności <xref:System.Windows.DependencyObject> nie jest wolniejsze niż dostęp do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwości. W trakcie małej wydajności w czasie ustawiania wartości właściwości wartość jest tak szybko, jak uzyskać korzyści z [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwości. Przesunięcie małe obciążenie jest fakt, że właściwości zależności obsługuje niezawodne funkcje, takie jak powiązania danych, animacji, dziedziczenie i stylów. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Ogólnie rzecz biorąc, uzyskiwanie dostępu do właściwości zależności <xref:System.Windows.DependencyObject> nie jest wolniejsze niż dostęp do [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwości. W trakcie małej wydajności w czasie ustawiania wartości właściwości wartość jest tak szybko, jak uzyskać korzyści z [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwości. Przesunięcie małe obciążenie jest fakt, że właściwości zależności obsługuje niezawodne funkcje, takie jak powiązania danych, animacji, dziedziczenie i stylów. Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](dependency-properties-overview.md).  
   
 ### <a name="dependencyproperty-optimizations"></a>Optymalizacje DependencyProperty  
- Należy dokładnie zdefiniować właściwości zależności w aplikacji. Jeśli Twoje <xref:System.Windows.DependencyProperty> wpływa na renderować obraz tylko opcje metadanych typu, a nie inne opcje metadanych takich jak <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, należy oznaczyć w związku z tym poprzez zastąpienie jej metadane. Aby uzyskać więcej informacji o zastępowanie i uzyskiwanie metadanych właściwości modelu, zobacz [metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ Należy dokładnie zdefiniować właściwości zależności w aplikacji. Jeśli Twoje <xref:System.Windows.DependencyProperty> wpływa na renderować obraz tylko opcje metadanych typu, a nie inne opcje metadanych takich jak <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>, należy oznaczyć w związku z tym poprzez zastąpienie jej metadane. Aby uzyskać więcej informacji o zastępowanie i uzyskiwanie metadanych właściwości modelu, zobacz [metadane zależności właściwości](dependency-property-metadata.md).  
   
  Może być bardziej efektywne, gdy obsługi zmiany właściwości unieważnienie miary, rozmieszczanie i ręczne renderowanie przebiegów Jeśli nie wszystkie zmiany właściwości rzeczywiście wpływa na miarę, rozmieszczanie i renderowania. Na przykład można zdecydować, w celu ponownego renderowania w tle, tylko wtedy, gdy wartość jest większa niż limit zestawu. W tym przypadku procedury obsługi zmiany właściwości tylko spowoduje unieważnienie renderowania, gdy wartość przekracza ustalony limit.  
   
@@ -54,14 +54,14 @@ Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
 <a name="Freezable_Objects"></a>   
 ## <a name="freezable-objects"></a>Obiekty freezable  
- A <xref:System.Windows.Freezable> to specjalny typ obiektu, który ma dwa stany: odblokowany i zablokowane. Blokowanie obiektów w miarę możliwości zwiększa wydajność aplikacji i zmniejsza jej zestawu roboczego. Aby uzyskać więcej informacji, zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ A <xref:System.Windows.Freezable> to specjalny typ obiektu, który ma dwa stany: odblokowany i zablokowane. Blokowanie obiektów w miarę możliwości zwiększa wydajność aplikacji i zmniejsza jej zestawu roboczego. Aby uzyskać więcej informacji, zobacz [Przegląd obiektów Freezable](freezable-objects-overview.md).  
   
  Każdy <xref:System.Windows.Freezable> ma <xref:System.Windows.Freezable.Changed> zdarzenia, które jest wywoływane zawsze wtedy, gdy zmienia się. Powiadomienia o zmianach, są jednak kosztowna pod względem wydajności aplikacji.  
   
  Rozważmy następujący przykład, w których każdy <xref:System.Windows.Shapes.Rectangle> używa tych samych <xref:System.Windows.Media.Brush> obiektu:  
   
- [!code-csharp[Performance#PerformanceSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
- [!code-vb[Performance#PerformanceSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
+ [!code-csharp[Performance#PerformanceSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet2)]
+ [!code-vb[Performance#PerformanceSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet2)]  
   
  Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera program obsługi zdarzeń dla <xref:System.Windows.Media.SolidColorBrush> obiektu <xref:System.Windows.Freezable.Changed> zdarzeń w celu unieważnienia <xref:System.Windows.Shapes.Rectangle> obiektu <xref:System.Windows.Shapes.Shape.Fill%2A> właściwości. W tym przypadku każdym <xref:System.Windows.Media.SolidColorBrush> musi wyzwalać jego <xref:System.Windows.Freezable.Changed> zdarzenia jest wymagany do wywołania funkcji wywołania zwrotnego dla każdego <xref:System.Windows.Shapes.Rectangle>— gromadzenia te wywołania funkcji wywołania zwrotnego powodować spadek istotnie poprawiającą wydajność. Ponadto jest bardzo wydajności dużej ilości Dodawanie i usuwanie programów obsługi na tym etapie, ponieważ aplikacja musi przechodzić przez całą listę, aby to zrobić. Jeśli scenariusz aplikacji nigdy się nie zmienia <xref:System.Windows.Media.SolidColorBrush>, będzie ponoszenia kosztów utrzymywania <xref:System.Windows.Freezable.Changed> procedury obsługi zdarzeń niepotrzebnie.  
   
@@ -74,28 +74,28 @@ Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
  Poniższy przykład kodu ilustruje tę koncepcję:  
   
- [!code-csharp[Performance#PerformanceSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet3)]
- [!code-vb[Performance#PerformanceSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
+ [!code-csharp[Performance#PerformanceSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet3)]
+ [!code-vb[Performance#PerformanceSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet3)]  
   
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>Zmiany programów obsługi na odblokowanej obiektów Freezable może zachować aktywności obiektów  
  Delegat, który przekazuje obiekt <xref:System.Windows.Freezable> obiektu <xref:System.Windows.Freezable.Changed> zdarzeń jest skutecznym odniesieniem do tego obiektu. W związku z tym <xref:System.Windows.Freezable.Changed> procedury obsługi zdarzeń można zachować obiektów aktywności dłużej niż oczekiwano. Podczas wykonywania oczyszczania obiektu, który został zarejestrowany do nasłuchiwania <xref:System.Windows.Freezable> obiektu <xref:System.Windows.Freezable.Changed> zdarzeń, ważne jest aby usunąć ten delegat przed zwolnieniem obiektu.  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] również przechwytuje <xref:System.Windows.Freezable.Changed> zdarzenia wewnętrznie. Na przykład, wszystkie właściwości zależności, które przejście <xref:System.Windows.Freezable> zgodnie z wartością będzie nasłuchiwać <xref:System.Windows.Freezable.Changed> zdarzeń automatycznie. <xref:System.Windows.Shapes.Shape.Fill%2A> Właściwość, która przyjmuje <xref:System.Windows.Media.Brush>, ilustruje tę koncepcję.  
   
- [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
- [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
+ [!code-csharp[Performance#PerformanceSnippet4](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
+ [!code-vb[Performance#PerformanceSnippet4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
   
  Na przypisanie `myBrush` do `myRectangle.Fill`, obiekt delegowany, wskazując powrót do <xref:System.Windows.Shapes.Rectangle> obiekt zostanie dodany do <xref:System.Windows.Media.SolidColorBrush> obiektu <xref:System.Windows.Freezable.Changed> zdarzeń. Oznacza to, poniższy kod faktycznie nie wprowadza `myRect` odśmiecaniu pamięci:  
   
- [!code-csharp[Performance#PerformanceSnippet5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
- [!code-vb[Performance#PerformanceSnippet5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
+ [!code-csharp[Performance#PerformanceSnippet5](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet5)]
+ [!code-vb[Performance#PerformanceSnippet5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet5)]  
   
  W tym przypadku `myBrush` nadal może być utrzymywanie `myRectangle` aktywności i będzie wywołania zwrotnego do niego po jego jego <xref:System.Windows.Freezable.Changed> zdarzeń. Należy pamiętać, że przypisanie `myBrush` do <xref:System.Windows.Shapes.Shape.Fill%2A> nową właściwość <xref:System.Windows.Shapes.Rectangle> będzie po prostu dodać innego programu obsługi zdarzeń do `myBrush`.  
   
  Zalecany sposób, aby wyczyścić te typy obiektów, jest usunięcie <xref:System.Windows.Media.Brush> z <xref:System.Windows.Shapes.Shape.Fill%2A> właściwość, która z kolei spowoduje usunięcie <xref:System.Windows.Freezable.Changed> programu obsługi zdarzeń.  
   
- [!code-csharp[Performance#PerformanceSnippet6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
- [!code-vb[Performance#PerformanceSnippet6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
+ [!code-csharp[Performance#PerformanceSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet6)]
+ [!code-vb[Performance#PerformanceSnippet6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet6)]  
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>Wirtualizacja interfejsu użytkownika  
@@ -111,12 +111,12 @@ Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planowanie wydajności aplikacji](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Inne zalecenia dotyczące wydajności](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
+- [Planowanie wydajności aplikacji](planning-for-application-performance.md)
+- [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)
+- [Układ i projekt](optimizing-performance-layout-and-design.md)
+- [Grafika 2D i obrazowanie](optimizing-performance-2d-graphics-and-imaging.md)
+- [Zasoby aplikacji](optimizing-performance-application-resources.md)
+- [Tekst](optimizing-performance-text.md)
+- [Powiązanie danych](optimizing-performance-data-binding.md)
+- [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)

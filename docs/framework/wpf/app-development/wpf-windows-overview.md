@@ -28,25 +28,25 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 5cc7c54b78e291c25f1eda62942545acbb893091
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733457"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373113"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Presentation Foundation (WPF) za pośrednictwem systemu windows. Głównym celem okna jest do hostowania zawartości, która wizualizuje dane oraz umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemem windows w aplikacje autonomiczne.  
   
 > [!NOTE]
->  Hostowana w przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, w tym [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] i utracić wprowadzone [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] stron, nie udostępniają ich własnych systemu windows. Zamiast tego są hostowane w systemie windows, dostarczone przez [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Zobacz [WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+>  Hostowana w przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, w tym [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] i utracić wprowadzone [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] stron, nie udostępniają ich własnych systemu windows. Zamiast tego są hostowane w systemie windows, dostarczone przez [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Zobacz [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md).  
   
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Klasy okna  
  Na poniższym rysunku przedstawiono części składowe okna.  
   
- ![Elementy okna](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Elementy okna](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
   
  Okno jest podzielony na dwóch obszarach: obszaru nieklienckiego i obszaru klienta.  
   
@@ -82,16 +82,16 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Ogólnie rzecz biorąc, jednak wygląd okna jest implementowany przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i jego zachowanie jest implementowany przy użyciu związanym z kodem, jak pokazano w poniższym przykładzie.  
   
- [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
- [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
  Aby włączyć [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku znaczników i pliku związanego z kodem pracy zespołowej, wymagane są następujące:  
   
 -   W znaczniku `Window` element musi zawierać `x:Class` atrybutu. Podczas kompilowania aplikacji, istnienie `x:Class` w znaczniku pliku powoduje, że [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] utworzyć `partial` klasę pochodzącą od <xref:System.Windows.Window> i ma nazwę, która jest określona przez `x:Class` atrybutu. Wymaga to dodania [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] deklarację przestrzeni nazw dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] schematu ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Wygenerowany `partial` klasy implementuje `InitializeComponent` metody, która jest wywoływana, aby rejestrować zdarzenia i ustawić właściwości, które są implementowane w znacznikach.  
   
--   Związane z kodem, klasy musi być `partial` klasy o takiej samej nazwie, który jest określony przez `x:Class` atrybutu w kodzie znaczników oraz jego musi pochodzić od klasy <xref:System.Windows.Window>. Dzięki temu pliku związanego z kodem, który ma zostać skojarzony z `partial` klasy, który jest generowany dla pliku znaczników Po skompilowaniu aplikację (zobacz [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
+-   Związane z kodem, klasy musi być `partial` klasy o takiej samej nazwie, który jest określony przez `x:Class` atrybutu w kodzie znaczników oraz jego musi pochodzić od klasy <xref:System.Windows.Window>. Dzięki temu pliku związanego z kodem, który ma zostać skojarzony z `partial` klasy, który jest generowany dla pliku znaczników Po skompilowaniu aplikację (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
   
 -   W związanym z kodem <xref:System.Windows.Window> klasy należy zaimplementować konstruktora, który wywołuje `InitializeComponent` metody. `InitializeComponent` jest implementowana przez znaczniki użytkownika wygenerowany plik `partial` klasy, aby rejestrować zdarzenia i ustawić właściwości, które są zdefiniowane w znacznikach.  
   
@@ -100,10 +100,10 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  W przypadku tej konfiguracji w miejscu możesz skupić się na temat definiowania wygląd okna [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i wdrażanie jej zachowanie w związanym z kodem. W poniższym przykładzie pokazano okna za pomocą przycisku, zaimplementować w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i program obsługi zdarzeń dla przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń, zaimplementowane w związanym z kodem.  
   
- [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
- [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
- [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
+ [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
+ [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurowanie definicji okna dla programu MSBuild  
@@ -125,7 +125,7 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 </Project>  
 ```  
   
- Aby uzyskać informacje dotyczące tworzenia aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , zobacz [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+ Aby uzyskać informacje dotyczące tworzenia aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] , zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Okres istnienia okna  
@@ -136,9 +136,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 ### <a name="opening-a-window"></a>Otwierając okno  
  Aby otworzyć okno, należy najpierw utworzyć jego wystąpienie, które przedstawiono w poniższym przykładzie.  
   
- [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
+ [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
   
- [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
+ [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
   
  W tym przykładzie `MarkupAndCodeBehindWindow` zostanie uruchomiony podczas uruchamiania aplikacji, która pojawia się po <xref:System.Windows.Application.Startup> zdarzenie jest wywoływane.  
   
@@ -146,18 +146,18 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Na koniec otwierania okna przez wywołanie metody <xref:System.Windows.Window.Show%2A> metody; wynik jest wyświetlany na poniższej ilustracji.  
   
- ![Okno otwierane przez wywołanie metody Window.Show](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Okno otwierane przez wywołanie metody Window.Show](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
   
  Okno, w którym jest otwarta przez wywołanie <xref:System.Windows.Window.Show%2A> jest oknem niemodalnym, co oznacza, że aplikacja działa w trybie który pozwala użytkownikom na uaktywnienie innych okien w tej samej aplikacji.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A> jest wywoływana, aby otworzyć systemu windows, takich jak okna dialogowe w trybie modalnym. Zobacz [Przegląd okien dialogowych](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) Aby uzyskać więcej informacji.  
+>  <xref:System.Windows.Window.ShowDialog%2A> jest wywoływana, aby otworzyć systemu windows, takich jak okna dialogowe w trybie modalnym. Zobacz [Przegląd okien dialogowych](dialog-boxes-overview.md) Aby uzyskać więcej informacji.  
   
  Gdy <xref:System.Windows.Window.Show%2A> jest wywoływana, okno wykonuje pracę inicjowania z przed wyświetleniem ustanowienia infrastruktury, który umożliwia odbieranie danych wejściowych użytkownika. Po zainicjowaniu okna <xref:System.Windows.Window.SourceInitialized> zdarzenie jest zgłaszane i pokazaniem okna.  
   
  Jako skrót <xref:System.Windows.Application.StartupUri%2A> można ustawić, aby określić pierwsze okno, który jest otwierany automatycznie podczas uruchamiania aplikacji.  
   
- [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
   
  Po uruchomieniu aplikacji, okna określony przez wartość <xref:System.Windows.Application.StartupUri%2A> jest otwarty modelessly; wewnętrznie, okno jest otwierane przez wywołanie jego <xref:System.Windows.Window.Show%2A> metody.  
   
@@ -171,8 +171,8 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Niektóre okna wymagają relacji z oknem, które otwiera je. Na przykład [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] aplikacja może otworzyć właściwości systemu windows i okien narzędzi, których typowe zachowanie ma na celu obejmują okna, w której zostały utworzone. Ponadto tych okien powinien zawsze zamknąć, zminimalizować, maksymalizacji i przywracania w połączeniu z okna, w której zostały utworzone. Takiej relacji można nawiązać, wprowadzając jedno okno *własnych* inny i odbywa się przez ustawienie <xref:System.Windows.Window.Owner%2A> właściwość *należące do okna* z odwołaniem do *właściciela okno*. Jest to pokazane w poniższym przykładzie.  
   
- [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
- [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
+ [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
+ [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
   
  Po ustanowieniu własności:  
   
@@ -213,10 +213,10 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Jednym z typowych powodów obsługi <xref:System.Windows.Window.Activated> i <xref:System.Windows.Window.Deactivated> jest pozwala włączać i wyłączać funkcje, które można uruchamiać tylko, gdy okno jest aktywne. Na przykład niektóre okna wyświetlania zawartości interaktywnej, która wymaga danych wejściowych użytkownika stałej lub uwagi, łącznie z gier i odtwarzacze wideo. Poniższy przykład to uproszczona odtwarzacz wideo, który pokazuje, jak obsługiwać <xref:System.Windows.Window.Activated> i <xref:System.Windows.Window.Deactivated> Aby zaimplementować to zachowanie.  
   
- [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
- [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
   
  Innych typów aplikacji nadal może uruchomić kod w tle, gdy okno jest dezaktywowany. Na przykład klienta poczty e-mail mogą nadal sondowania na serwerze poczty e-mail, gdy użytkownik korzysta z innych aplikacji. Aplikacje, takie jak te często udostępniają inne lub dodatkowe zachowanie podczas dezaktywacji głównego okna. W odniesieniu do domyślnego programu poczty może to oznaczać zarówno dodawania nowego elementu poczty w skrzynce odbiorczej i ikona powiadomień na pasku zadań. Ikona powiadomień muszą wyświetlane tylko wtedy, gdy okno poczty nie jest aktywne, w którym można ustalić, sprawdzając <xref:System.Windows.Window.IsActive%2A> właściwości.  
   
@@ -247,17 +247,17 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Aby zamknąć okno w odpowiedzi na jeden z tych mechanizmów niestandardowe, należy wywołać <xref:System.Windows.Window.Close%2A> metody. Poniższy przykład implementuje możliwości, aby zamknąć okno, wybierając **zakończenia** na **pliku** menu.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
- [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
   
  Po zamknięciu okna, zgłasza dwa zdarzenia: <xref:System.Windows.Window.Closing> i <xref:System.Windows.Window.Closed>.  
   
  <xref:System.Windows.Window.Closing> jest wywoływane przed okno zostanie zamknięte i zapewnia mechanizm, w jakim oknie można zapobiec zamknięcia. Jednym z typowych powodów zapobiec zamknięcia okna jest, czy zawartości okna zawiera zmodyfikowanych danych. W takiej sytuacji <xref:System.Windows.Window.Closing> zdarzenia mogą być obsługiwane w celu ustalenia, czy danych został zmieniony, a jeśli tak, aby poprosić użytkownika, czy kontynuować zamknięciu okna bez zapisywania danych do anulowania zamknięcia okna. W poniższym przykładzie przedstawiono kluczowe aspekty obsługi <xref:System.Windows.Window.Closing>.  
   
- [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
- [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
+ [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
+ [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
  
   
  <xref:System.Windows.Window.Closing> Programu obsługi zdarzeń jest przekazywany <xref:System.ComponentModel.CancelEventArgs>, który implementuje `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość, która jest ustawiona na `true` zapobiegające zamknięcia okna.  
@@ -284,11 +284,11 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 ### <a name="window-lifetime-events"></a>Zdarzenia okresu istnienia okna  
  Poniższa ilustracja przedstawia kolejność zdarzeń jednostki w okres istnienia okna.  
   
- ![Okres istnienia okna](../../../../docs/framework/wpf/app-development/media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Okres istnienia okna](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
   
  Poniższa ilustracja przedstawia kolejność zdarzeń jednostki w okres istnienia okna, która jest wyświetlana bez aktywacji (<xref:System.Windows.Window.ShowActivated%2A> ustawiono `false` przed pokazaniem okna).  
   
- ![Window Lifetime &#40;Window.ShowActivated &#61; False&#41;](../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Window Lifetime &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Położenie okna  
@@ -308,7 +308,7 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 ### <a name="topmost-windows-and-z-order"></a>Windows najwyższego poziomu i porządek osi z  
  Oprócz znaku x i y lokalizacji, okno również ma miejsce w przypadku wymiaru z określa jej położenie w pionie względem innych okien. Jest to nazywane okna porządek osi z, a istnieją dwa typy: Normalny porządek i porządek najwyższego poziomu. Położenie okna w *normalne porządek* zależy od tego, czy jest aktualnie aktywne lub nie. Domyślnie okno znajduje się w normalnej kolejności. Położenie okna w *najwyższym porządku* również zależy od tego, czy jest aktualnie aktywne lub nie. Ponadto systemu windows w najwyższym porządku zawsze znajdują się powyżej systemu windows w normalnej kolejności. Okno znajduje się w najwyższym porządku, ustawiając jego <xref:System.Windows.Window.Topmost%2A> właściwość `true`.  
   
- [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
   
  W ramach każdej kolejności z aktualnie aktywnego okna pojawi się przede wszystkim innych okien w tej samej kolejności.  
   
@@ -318,11 +318,11 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, i <xref:System.Windows.FrameworkElement.MaxWidth%2A> służą do zarządzania zakresem szerokości, które mogą mieć jego okres istnienia okna i są skonfigurowane, jak pokazano w poniższym przykładzie.  
   
- [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
   
  Wysokość okna jest zarządzana przez <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.MaxHeight%2A>i są skonfigurowane, jak pokazano w poniższym przykładzie.  
   
- [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
   
  Ponieważ różne wartości szerokości, jak i wysokość wartości należy określić zakres, jest możliwe dla szerokości i wysokości okna z możliwością zmiany rozmiaru się znajdować w dowolnym miejscu w obrębie określonego zakresu dla odpowiedniego wymiaru. Aby wykryć, jego bieżące szerokość i wysokość, należy sprawdzić <xref:System.Windows.FrameworkElement.ActualWidth%2A> i <xref:System.Windows.FrameworkElement.ActualHeight%2A>, odpowiednio.  
   
@@ -338,12 +338,12 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Poniższy przykład pokazuje okno automatycznie rozmiarów do określonych jego zawartość w pionie i poziomie, przy pierwszym wyświetleniu.  
   
- [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
   
  Poniższy przykład pokazuje, jak ustawić <xref:System.Windows.Window.SizeToContent%2A> właściwości w kodzie, aby określić, jak zmienia rozmiar okna dopasowana do jego zawartości.
   
- [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
- [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
+ [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
+ [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
   
 <a name="OrderOfPrecedence"></a>   
 ## <a name="order-of-precedence-for-sizing-properties"></a>Kolejność pierwszeństwa właściwości ustalania rozmiaru  
@@ -392,7 +392,7 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Poniższy przykład pokazuje, jak utworzyć okno które zostanie wyświetlone jako zmaksymalizowany po jego otwarciu.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
   
  Ogólnie rzecz biorąc, należy ustawić <xref:System.Windows.Window.WindowState%2A> skonfigurować początkowy stan okna. Gdy zostanie wyświetlone okno o zmiennym rozmiarze, użytkownicy można naciśnij przycisk Minimalizuj, maksymalizować i przywracać przycisków na pasku tytułu okna, aby zmienić stan okna.  
   
@@ -419,7 +419,7 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Podobnie jak w przypadku <xref:System.Windows.Window.WindowStyle%2A>, tryb zmiany rozmiaru okna jest mało prawdopodobne zmienić jego okres istnienia, oznacza to, czy będzie prawdopodobnie ustawisz go z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
   
- [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
   
  Należy zauważyć, że może wykryć, czy okno jest zmaksymalizowane, zminimalizowane lub przywrócone, sprawdzając <xref:System.Windows.Window.WindowState%2A> właściwości.  
   
@@ -439,22 +439,22 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Efekt te style okna ramowego zostały zilustrowane na poniższym rysunku.  
   
- ![Style okna ramowego](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Style okna ramowego](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
   
  Możesz ustawić <xref:System.Windows.Window.WindowStyle%2A> za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników lub innego kodu; ponieważ jest to raczej nie ulegnie zmianie w okresie istnienia okna, najprawdopodobniej skonfigurujesz go za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>Styl okna niż prostokątny  
  Istnieją również sytuacji, w którym obramowania style, które <xref:System.Windows.Window.WindowStyle%2A> umożliwia posiadania nie są wystarczające. Na przykład, warto utworzyć aplikację z innych niż prostokątne obramowania, takich jak [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] używa.  
   
  Na przykład należy wziąć pod uwagę okna bąbelków mowy pokazano na poniższej ilustracji.  
   
- ![Okno nieprostokątne](../../../../docs/framework/wpf/app-development/media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Okno nieprostokątne](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
   
  Okna tego typu mogą być tworzone przez ustawienie <xref:System.Windows.Window.WindowStyle%2A> właściwości <xref:System.Windows.WindowStyle.None>i za pomocą specjalnych obsługują <xref:System.Windows.Window> ma przezroczystości.  
   
- [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
   
  Ta kombinacja wartości powoduje, że okno do renderowania całkowicie przezroczysty. W tym stanie nie można użyć okna obszaru nieklienckiego zakończeń (Zamknij menu, przyciski Minimalizuj, Maksymalizuj i przywracania i tak dalej). W związku z tym należy podać własne.  
   
@@ -462,11 +462,11 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 ### <a name="task-bar-presence"></a>Obecność na pasku zadań  
  Domyślny wygląd okna zawiera przycisk paska zadań, tak jak pokazano na poniższej ilustracji.  
   
- ![Okno z przyciskiem paska zadań](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+ ![Okno z przyciskiem paska zadań](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
   
- Niektóre typy systemu windows nie mają przycisk paska zadań, takich jak komunikatów i okien dialogowych (zobacz [Przegląd okien dialogowych](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Można kontrolować, czy przycisk paska zadań dla okna jest pokazywane, ustawiając <xref:System.Windows.Window.ShowInTaskbar%2A> właściwości (`true` domyślnie).  
+ Niektóre typy systemu windows nie mają przycisk paska zadań, takich jak komunikatów i okien dialogowych (zobacz [Przegląd okien dialogowych](dialog-boxes-overview.md)). Można kontrolować, czy przycisk paska zadań dla okna jest pokazywane, ustawiając <xref:System.Windows.Window.ShowInTaskbar%2A> właściwości (`true` domyślnie).  
   
- [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń  
@@ -474,18 +474,18 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Jednak to znajduje się poza zestaw uprawnień udzielonych aplikacji, które są uruchomione w Internet lub lokalny intranet strefy przy użyciu [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]. W związku z tym, użytkownicy będą otrzymywać [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] ostrzeżenie o zabezpieczeniach i konieczne będzie podniesienie poziomu zestawu uprawnień dla aplikacji na w pełni zaufany.  
   
- Ponadto [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] domyślnie nie można wyświetlić systemu windows lub w oknach dialogowych. Do dyskusji na temat zagadnień dotyczących zabezpieczeń aplikacji autonomicznych, zobacz [strategia zabezpieczeń WPF - zabezpieczenia platformy](../../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
+ Ponadto [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] domyślnie nie można wyświetlić systemu windows lub w oknach dialogowych. Do dyskusji na temat zagadnień dotyczących zabezpieczeń aplikacji autonomicznych, zobacz [strategia zabezpieczeń WPF - zabezpieczenia platformy](../wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Inne rodzaje Windows  
- <xref:System.Windows.Navigation.NavigationWindow> to okno, który jest przeznaczony do hostowania zawartości można nawigować. Aby uzyskać więcej informacji, zobacz [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
+ <xref:System.Windows.Navigation.NavigationWindow> to okno, który jest przeznaczony do hostowania zawartości można nawigować. Aby uzyskać więcej informacji, zobacz [Nawigacja — omówienie](navigation-overview.md)).  
   
- Okna dialogowe są okna, które są często używane do zbierania informacji od użytkownika do ukończenia funkcji. Na przykład, gdy użytkownik chce, aby otworzyć plik, **Otwórz plik** okno dialogowe jest zwykle wyświetlany przez aplikację można pobrać nazwy pliku od użytkownika. Aby uzyskać więcej informacji, zobacz [Przegląd okien dialogowych](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+ Okna dialogowe są okna, które są często używane do zbierania informacji od użytkownika do ukończenia funkcji. Na przykład, gdy użytkownik chce, aby otworzyć plik, **Otwórz plik** okno dialogowe jest zwykle wyświetlany przez aplikację można pobrać nazwy pliku od użytkownika. Aby uzyskać więcej informacji, zobacz [Przegląd okien dialogowych](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [Okna dialogowe — omówienie](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)
-- [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [Okna dialogowe — omówienie](dialog-boxes-overview.md)
+- [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)

@@ -2,18 +2,13 @@
 title: Tablice w Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149903"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Tablice w Visual Basic
 
 Tablica to zbiór wartości, które są określane jako *elementy*, które są logicznie powiązane ze sobą. Na przykład tablicy może składać się z liczby studentów każdej grupy zaszeregowania w liceum; Każdy element tablicy jest liczba uczniów w jednej klasy korporacyjnej. Podobnie Tablica może składać się z ocen studenta dla klasy; Każdy element tablicy jest jednej klasy korporacyjnej.
@@ -87,7 +82,7 @@ Można zdefiniować rozmiar tablicy na kilka sposobów:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-W przypadku istniejącej tablicy można ponownie zdefiniować jej rozmiar za pomocą [ `Redim` ](../../../language-reference/statements/redim-statement.md) instrukcji. Można określić, że `Redim` instrukcji przechowywać wartości, które znajdują się w tablicy, lub można określić, że utworzona pusta tablica. W poniższym przykładzie pokazano różne sposoby zastosowania `Redim` instrukcję, aby zmienić rozmiar istniejącej tablicy.
+W przypadku istniejącej tablicy można ponownie zdefiniować jej rozmiar za pomocą [ `ReDim` ](../../../language-reference/statements/redim-statement.md) instrukcji. Można określić, że `ReDim` instrukcji przechowywać wartości, które znajdują się w tablicy, lub można określić, że utworzona pusta tablica. W poniższym przykładzie pokazano różne sposoby zastosowania `ReDim` instrukcję, aby zmienić rozmiar istniejącej tablicy.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ W poniższym przykładzie użyto tablicę miesięcy, której każdy element jest
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-Poprzedni przykład przypisuje wartości do tablicy nieregularnej, na podstawie element po elemencie przy użyciu `For...Next` pętli. Można także przypisać wartości do elementów tablicy nieregularnej, przy użyciu zagnieżdżonych literałów tablicy. Jednak próbę użycia zagnieżdżonych literałów tablicy (na przykład ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) generuje błąd kompilatora [BC30568](../../../,,/../misc/bc30568.md). Aby poprawić ten błąd, należy umieścić wewnętrzne literały tablicowe w nawiasach. Nawiasy wymuszają wyrażeniu literalnym tablicy, mogło zostać ocenione, a wyniki są używane z zewnętrznym literałem tablicy, jak pokazano w poniższym przykładzie.
+Poprzedni przykład przypisuje wartości do tablicy nieregularnej, na podstawie element po elemencie przy użyciu `For...Next` pętli. Można także przypisać wartości do elementów tablicy nieregularnej, przy użyciu zagnieżdżonych literałów tablicy. Jednak próbę użycia zagnieżdżonych literałów tablicy (na przykład `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generuje błąd kompilatora [BC30568](../../../,,/../misc/bc30568.md). Aby poprawić ten błąd, należy umieścić wewnętrzne literały tablicowe w nawiasach. Nawiasy wymuszają wyrażeniu literalnym tablicy, mogło zostać ocenione, a wyniki są używane z zewnętrznym literałem tablicy, jak pokazano w poniższym przykładzie.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Liczba macierzy można także połączyć w jedną większe. Aby to zrobić, nal
 > [!NOTE]
 > W tej sekcji omówiono w nim dołączenie do tablicy ciągów w jeden ciąg. Aby uzyskać informacji na temat dołączania tablicę ciągów, zobacz <xref:System.String.Join%2A?displayProperty=nameWithType> metody.
 
-Przed skopiowaniem elementów tablic do nowej tablicy, należy się najpierw upewnić już zainicjować tablicy, aby był wystarczająco duży, aby accompodate nowej tablicy. Można to zrobić na jeden z dwóch sposobów:
+Przed skopiowaniem elementów tablic do nowej tablicy, należy się najpierw upewnić już zainicjować tablicy, aby był wystarczająco dużą do obsługi nowej tablicy. Można to zrobić na jeden z dwóch sposobów:
 
 - Użyj [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) instrukcję, aby dynamicznie rozwiń tablicy przed dodaniem nowych elementów. Jest to najprostszy technika, ale może powodować spadek wydajności i zużycia zbyt dużej ilości pamięci, kopiując duże tablice.
 - Oblicz sumę elementów potrzebnych do nowej tablicy dużych, a następnie dodaj elementy tablicy każdego źródła do niego.
@@ -299,9 +294,9 @@ Aby uzyskać więcej informacji na temat kolekcji, zobacz [kolekcje](../../conce
 |Termin|Definicja|
 |----------|----------------|
 |[Wymiary tablic w języku Visual Basic](../../language-features/arrays/array-dimensions.md)|Wyjaśnia rangę i wymiary w tablicach.|
-|[Jak: Inicjowanie zmiennej tablicy w języku Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Zawiera opis sposobu wypełniania tablic z wartościami początkowymi.|
-|[Jak: Sortowanie tablicy w języku Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Pokazuje jak alfabetycznie sortować elementy tablicy.|
-|[Jak: Przypisywanie tablicy do innej tablicy](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|W tym artykule opisano zasady i czynności podczas przypisywania tablicy do innej zmiennej tablicy.|
+|[Instrukcje: Inicjowanie zmiennej tablicy w języku Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Zawiera opis sposobu wypełniania tablic z wartościami początkowymi.|
+|[Instrukcje: Sortowanie tablicy w języku Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Pokazuje jak alfabetycznie sortować elementy tablicy.|
+|[Instrukcje: Przypisywanie tablicy do innej tablicy](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|W tym artykule opisano zasady i czynności podczas przypisywania tablicy do innej zmiennej tablicy.|
 |[Rozwiązywanie problemów związanych z tablicami](../../language-features/arrays/troubleshooting-arrays.md)|W tym artykule omówiono niektóre typowe problemy, które występują podczas pracy z tablicami.|
 
 ## <a name="see-also"></a>Zobacz także

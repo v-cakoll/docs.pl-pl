@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 6fffd94a4b9ca531af58138b7613e0b3c5364c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498414"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352584"
 ---
 # <a name="async-return-types-visual-basic"></a>Asynchroniczne typy zwracane (Visual Basic)
 Metody asynchroniczne mają trzy możliwe zwracane typy: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>oraz typ void. W języku Visual Basic, zwrócony typ void jest napisany w postaci [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedury. Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -17,7 +17,7 @@ Metody asynchroniczne mają trzy możliwe zwracane typy: <xref:System.Threading.
 > [!NOTE]
 >  Aby uruchomić przykład, konieczne jest posiadanie programu Visual Studio 2012 lub nowszego oraz programu .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Zwracany typ Task(T)  
+## <a name="BKMK_TaskTReturnType"></a> Zwracany typ Task(T)  
  <xref:System.Threading.Tasks.Task%601> Typ zwracany jest używany w metodzie asynchronicznej, która zawiera [zwracają](../../../../visual-basic/language-reference/statements/return-statement.md) instrukcji, w której operator ma typ `TResult`.  
   
  W poniższym przykładzie `TaskOfT_MethodAsync` metoda asynchronicza zawiera instrukcję return, która zwraca liczbę całkowitą. Dlatego deklaracja metody musi określać typ zwracany `Task(Of Integer)`.  
@@ -79,7 +79,7 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a> Zwracany typ Task  
+## <a name="BKMK_TaskReturnType"></a> Zwracany typ Task  
  Metody asynchroniczne, które nie zawierają instrukcji return lub zawierają instrukcję return, która nie zwraca operandu są zazwyczaj ma typ zwracany <xref:System.Threading.Tasks.Task>. Takie metody byłyby [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedur, gdyby były one napisane, aby były uruchamiane synchronicznie. Jeśli używasz `Task` zwracany typ metody asynchronicznej, wywoływania metody można użyć `Await` operator wstrzymania uzupełniania wywołującego do momentu zakończenia wywołanej metody asynchronicznej.  
   
  W poniższym przykładzie metoda asynchroniczna `Task_MethodAsync` nie zawiera instrukcji return. Dlatego należy określić typ zwracany `Task` dla metody, które umożliwia `Task_MethodAsync` oczekiwanie. Definicja `Task` nie zawiera typu `Result` właściwość do przechowywania wartości zwracanej.  
@@ -121,7 +121,7 @@ textBox1.Text &= String.Format(vbCrLf & "Application can continue working while 
 Await simpleTask  
 ```  
   
-##  <a name="BKMK_VoidReturnType"></a> Typ zwracany void  
+## <a name="BKMK_VoidReturnType"></a> Typ zwracany void  
  Podstawowym zastosowaniem `Sub` procedury znajduje się w procedury obsługi zdarzeń, gdy istnieje bez zwrotu typu (nazywane zwracać typ void w innych językach). Zwracany typ void również mogą być używane do zastępowania metod zwracających wartość void lub dla metod, które wykonują czynności, które można skategoryzować jako "fire and forget." Jednak powinna zwrócić `Task` wszędzie tam, gdzie to możliwe, ponieważ metoda async zwraca void nie może być oczekiwany. Dowolny obiekt wywołujący taką metodę musi być w stanie kontynuować do zakończenia bez oczekiwania na zakończenie metody asynchronicznej, a obiekt wywołujący musi być niezależny od wartości lub wyjątków, które generuje metoda asynchroniczna.  
   
  Obiekt wywołujący metodę async zwraca void nie może przechwytywać wyjątków, które są generowane przez tę metodę, i takie nieobsłużone wyjątki mogą może spowodować awarię aplikacji. Jeśli wystąpi wyjątek w metodzie asynchronicznej, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>, wyjątek jest przechowywany w zwróconym zadaniu i ponownie zgłaszany, gdy zadanie jest oczekiwane. Dlatego upewnij się, że każda metoda asynchroniczna, która może spowodować wyjątek ma typ zwracany <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> i że trwa oczekiwanie na wywołania metody.  
@@ -145,7 +145,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub  
 ```  
   
-##  <a name="BKMK_Example"></a> Kompletny przykład  
+## <a name="BKMK_Example"></a> Kompletny przykład  
  Poniższy projekt Windows Presentation Foundation (WPF) zawiera przykłady kodu z tego tematu.  
   
  Aby uruchomić projekt, należy wykonać następujące czynności:  

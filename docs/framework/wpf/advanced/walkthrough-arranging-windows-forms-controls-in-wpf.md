@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 5947168fabfe8ec22203029d9ec89b9719728413
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfb0aba2798179c31674377104bbff633b6f48fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697624"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367196"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Przewodnik: Kontrolek rozmieszczanie Windows Forms w WPF
 W tym instruktażu dowiesz się, jak używać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji układu, aby zorganizować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek w aplikacji hybrydowych.  
@@ -80,7 +80,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 5.  W <xref:System.Windows.Controls.Grid> Ustaw element <xref:System.Windows.Controls.Grid.ShowGridLines%2A> właściwość `true` i zdefiniowanie pięciu wierszy i trzy kolumny.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
   
 ## <a name="using-default-layout-settings"></a>Przy użyciu domyślnych ustawień układu  
  Domyślnie <xref:System.Windows.Forms.Integration.WindowsFormsHost> element obsługuje układ hostowanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli.  
@@ -89,7 +89,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Formant jest widoczny w <xref:System.Windows.Controls.Canvas>. Hostowanej kontroli ma rozmiar na podstawie jego zawartości i <xref:System.Windows.Forms.Integration.WindowsFormsHost> element ma rozmiar umożliwiających obsługiwanego formantu.  
   
@@ -100,7 +100,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
   
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. Dwa nowe formanty przycisku mają rozmiar do wyświetlenia dłuższy ciąg tekstowy i większy rozmiar czcionki prawidłowo i <xref:System.Windows.Forms.Integration.WindowsFormsHost> zmieniany jest rozmiar elementów do uwzględnienia hostowanej kontrolki.  
   
@@ -111,7 +111,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
   
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element jest umieszczany 20 pikseli od górnej krawędzi komórki siatki i 20 pikseli od lewej strony.  
   
@@ -122,7 +122,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
   
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element jest ustawiony na wartość o rozmiarze 50 pikseli szerokości i 70 pikseli, który jest mniejszy niż domyślne ustawienia układu. Zawartość [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli jest nieco inaczej rozmieszczone odpowiednio.  
   
@@ -135,14 +135,14 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
   
 2.  W Eksploratorze rozwiązań kliknij dwukrotnie opcję MainWindow.xaml. w języku VB lub MainWindow.xaml.cs, aby otworzyć go w edytorze kodu.  
   
 3.  Skopiuj następujący kod do `MainWindow` definicji klasy.  
   
-     [!code-csharp[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
-     [!code-vb[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]
+     [!code-csharp[WpfLayoutHostingWfWithXaml#101](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
+     [!code-vb[WpfLayoutHostingWfWithXaml#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]
 
 4.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.
 
@@ -153,7 +153,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Za pośrednictwem elementu label jest malowany element.
 
@@ -165,7 +165,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#9](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element jest zadokowany na prawej krawędzi <xref:System.Windows.Controls.DockPanel> elementu.
 
@@ -176,12 +176,12 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#10](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]
 
 2.  W MainWindow.xaml.vb lub MainWindow.xaml.cs Skopiuj poniższy kod do definicji klasy.
 
-     [!code-csharp[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
-     [!code-vb[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]
+     [!code-csharp[WpfLayoutHostingWfWithXaml#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
+     [!code-vb[WpfLayoutHostingWfWithXaml#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]
 
 3.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.
 
@@ -196,7 +196,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elementu elastycznego jest wyśrodkowane wiersz siatki, ale nie jest rozciągana w celu wypełnienia dostępnego miejsca. Jeśli okno jest wystarczająco duży, może zostać wyświetlony co najmniej dwóch miesięcy, wyświetlane przez hostowanej <xref:System.Windows.Forms.MonthCalendar> kontroli, ale te jest wyśrodkowywana w wierszu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aparatu układu centra elementy, które nie może mieć rozmiar w celu wypełnienia dostępnego miejsca.
 
@@ -207,7 +207,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. Hostowanej formantem i jego otaczających elementów są skalowane przez współczynnik 0,5. Czcionka obsługiwanego formantu nie jest skalowana.
 
@@ -220,7 +220,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. Nie jest obracany hostowanej kontroli, ale jego otaczających elementów są obracane kąt 180 stopni. Może być konieczne zmiany rozmiaru okna, aby wyświetlić elementy.
 
@@ -232,8 +232,8 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
-    [!code-xaml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
+    [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. Wypełnienie i margines ustawienia są stosowane do obsługiwanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek w taki sam sposób, które mają zostać zastosowane w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
@@ -244,17 +244,17 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 1.  Skopiuj poniższy XAML do <xref:System.Windows.Controls.Grid> elementu.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#16](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]
 
 2.  W MainWindow.xaml.vb lub MainWindow.xaml.cs skopiuj następujący kod do definicji klasy.
 
-     [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
-     [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]
+     [!code-csharp[WpfLayoutHostingWfWithXaml#103](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
+     [!code-vb[WpfLayoutHostingWfWithXaml#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]
 
 3.  Dodaj wywołanie do `InitializeFlowLayoutPanel` metody w konstruktorze.
 
-     [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
-     [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
+     [!code-csharp[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
+     [!code-vb[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
 4.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Wstawia element <xref:System.Windows.Controls.DockPanel>, i <xref:System.Windows.Forms.FlowLayoutPanel> rozmieszcza jego formantów podrzędnych w domyślnym <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
@@ -262,7 +262,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Windows rozmieszczanie formantów formularzy w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -16,59 +16,63 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bfa846aa66345e23e085ca148c7e3f492c529f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d9e7b52c9061a1a7b470f9d4abf735e605087dc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576346"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352077"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob — Funkcja
-Pobiera skrót zestawu pod adresem określonym pamięci, przy użyciu określonego algorytmu skrótu.  
-  
- Ta funkcja jest przestarzała. Użyj [ICLRStronName::GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) metody zamiast tego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-HRESULT GetHashFromBlob (  
-    [in]  BYTE    *pbBlob,  
-    [in]  DWORD   cchBlob,  
-    [in, out] unsigned int   *piHashAlg,  
-    [out] BYTE    *pbHash,  
-    [in]  DWORD   cchHash,  
-    [out] DWORD   *pchHash  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `pbBlob`  
- [in] Wskaźnik na adres bloku pamięci, aby zostać obliczona wartość skrótu.  
-  
- `cchBlob`  
- [in] Długość w bajtach, bloku pamięci.  
-  
- `piHashAlg`  
- [out w] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślny algorytm.  
-  
- `pbHash`  
- [out] Bufor zwrócone wyznaczania wartości skrótu.  
-  
- `cchHash`  
- [in] Żądany maksymalny rozmiar `pbHash`.  
-  
- `pchHash`  
- [out] Rozmiar w bajtach zwracanego `pbHash`.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** StrongName.h  
-  
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Pobiera skrót zestawu pod adresem określonym pamięci, przy użyciu określonego algorytmu skrótu.
+
+Ta funkcja jest przestarzała. Użyj [iclrstrongname::gethashfromblob —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) metody zamiast tego.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT GetHashFromBlob (
+    [in]  BYTE    *pbBlob,
+    [in]  DWORD   cchBlob,
+    [in, out] unsigned int   *piHashAlg,
+    [out] BYTE    *pbHash,
+    [in]  DWORD   cchHash,
+    [out] DWORD   *pchHash
+);
+```
+
+## <a name="parameters"></a>Parametry
+
+`pbBlob`\
+[in] Wskaźnik na adres bloku pamięci, aby zostać obliczona wartość skrótu.
+
+`cchBlob`\
+[in] Długość w bajtach, bloku pamięci.
+
+`piHashAlg`\
+[out w] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślny algorytm.
+
+`pbHash`\
+[out] Bufor zwrócone wyznaczania wartości skrótu.
+
+`cchHash`\
+[in] Żądany maksymalny rozmiar `pbHash`.
+
+`pchHash`\
+[out] Rozmiar w bajtach zwracanego `pbHash`.
+
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** StrongName.h
+
+**Biblioteka:** Dołączony jako zasób w MsCorEE.dll
+
+**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>Zobacz także
-- [GetHashFromBlob, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md)
-- [ICLRStrongName, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [GetHashFromBlob, metoda](../hosting/iclrstrongname-gethashfromblob-method.md)
+- [ICLRStrongName, interfejs](../hosting/iclrstrongname-interface.md)

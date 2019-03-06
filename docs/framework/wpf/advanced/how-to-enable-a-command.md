@@ -8,15 +8,15 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-ms.openlocfilehash: 904d5a3404b693c383731eda01e9e43b2d5126fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a24a7a31154de58051677ba41496fcf4da3f2568
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622068"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355067"
 ---
 # <a name="how-to-enable-a-command"></a>Instrukcje: Włącz polecenie
-Poniższy przykład ilustruje sposób użycia polecenia w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  W przykładzie pokazano, jak skojarzyć <xref:System.Windows.Input.RoutedCommand> do <xref:System.Windows.Controls.Button>, Utwórz <xref:System.Windows.Input.CommandBinding>i utworzyć procedury obsługi zdarzeń, które implementują <xref:System.Windows.Input.RoutedCommand>.  Aby uzyskać więcej informacji na temat polecenia, zobacz [polecenia Przegląd](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+Poniższy przykład ilustruje sposób użycia polecenia w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  W przykładzie pokazano, jak skojarzyć <xref:System.Windows.Input.RoutedCommand> do <xref:System.Windows.Controls.Button>, Utwórz <xref:System.Windows.Input.CommandBinding>i utworzyć procedury obsługi zdarzeń, które implementują <xref:System.Windows.Input.RoutedCommand>.  Aby uzyskać więcej informacji na temat polecenia, zobacz [polecenia Przegląd](commanding-overview.md).  
   
 ## <a name="example"></a>Przykład  
  Pierwszą część kodu tworzy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], który składa się z <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.StackPanel>i tworzy <xref:System.Windows.Input.CommandBinding> który kojarzy programy obsługi poleceń z <xref:System.Windows.Input.RoutedCommand>.  
@@ -27,17 +27,17 @@ Poniższy przykład ilustruje sposób użycia polecenia w [!INCLUDE[TLA#tla_winc
   
  Bez <xref:System.Windows.Input.CommandBinding> nie ma żadnych logiki polecenia, tylko mechanizm wywołać polecenie.  Gdy <xref:System.Windows.Controls.Button> po kliknięciu <xref:System.Windows.Input.CommandManager.PreviewExecuted> <xref:System.Windows.RoutedEvent> jest zgłaszane w elemencie docelowym polecenia, a następnie <xref:System.Windows.Input.CommandManager.Executed> <xref:System.Windows.RoutedEvent>.  Te zdarzenia przechodzić przez drzewo elementów, wyszukiwanie <xref:System.Windows.Input.CommandBinding> na tym konkretnym poleceniem.  Warto zauważyć, że ponieważ <xref:System.Windows.RoutedEvent> tunel i bąbelkowych za pośrednictwem drzewa elementów, należy zachować ostrożność w przypadku gdy <xref:System.Windows.Input.CommandBinding> jest umieszczany.   Jeśli <xref:System.Windows.Input.CommandBinding> znajduje się na element równorzędny w elemencie docelowym polecenia lub w innym węźle, który nie znajduje się na trasa <xref:System.Windows.RoutedEvent>, <xref:System.Windows.Input.CommandBinding> nie jest dostępna.  
   
- [!code-xaml[EnableCloseCommand#CloseCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
+ [!code-xaml[EnableCloseCommand#CloseCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml#closecommandbinding)]  
   
- [!code-csharp[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandbindingcodebehind)]
- [!code-vb[EnableCloseCommand#CloseCommandBindingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandbindingcodebehind)]  
+ [!code-csharp[EnableCloseCommand#CloseCommandBindingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandbindingcodebehind)]
+ [!code-vb[EnableCloseCommand#CloseCommandBindingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandbindingcodebehind)]  
   
  Następna sekcja kod implementuje <xref:System.Windows.Input.CommandManager.Executed> i <xref:System.Windows.Input.CommandBinding.CanExecute> procedury obsługi zdarzeń.  
   
  <xref:System.Windows.Input.CommandManager.Executed> Obsługi wyjątku wywołuje metodę, aby zamknąć otwartego pliku.  <xref:System.Windows.Input.CommandBinding.CanExecute> Obsługi wyjątku wywołuje metodę, aby określić, czy plik jest otwarty.  Jeśli plik jest otwarty, <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> ustawiono `true`; w przeciwnym razie jest równa `false`.  
   
- [!code-csharp[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
- [!code-vb[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
+ [!code-csharp[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
+ [!code-vb[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Przegląd poleceń](commanding-overview.md)

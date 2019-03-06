@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825956"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352597"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Metoda ISOSDacInterface::GetMethodDescData
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
-`methodDesc` [in] Adres MethodDesc.
+`methodDesc`\
+[in] Adres MethodDesc.
 
-`ip` [in] Adres IP metody.
+`ip`\
+[in] Adres IP metody.
 
-`data` [out] Dane skojarzone z MethodDesc w postaci zwracanej przez wewnętrznych interfejsach API.
+`data`\
+[out] Dane skojarzone z MethodDesc w postaci zwracanej przez wewnętrznych interfejsach API.
 
-`cRevertedRejitVersions` [out] Numer wersji przywróconym rejit.
+`cRevertedRejitVersions`\
+[out] Numer wersji przywróconym rejit.
 
-`rgRevertedRejitData` [out] Dane związane z wersjami przywróconym rejit jak zwrócony z wewnętrznych interfejsach API.
+`rgRevertedRejitData`\
+[out] Dane związane z wersjami przywróconym rejit jak zwrócony z wewnętrznych interfejsach API.
 
-`pcNeededRevertedRejitData` [out] Liczba bajtów potrzebnych do przechowania danych skojarzonych z przywróconym wersje ReJit.
+`pcNeededRevertedRejitData`\
+[out] Liczba bajtów potrzebnych do przechowania danych skojarzonych z przywróconym wersje ReJit.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -68,5 +74,5 @@ Podana metoda jest częścią `ISOSDacInterface` interfejs i odnosi się do 20 g
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfejs ISOSDacInterface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Debugowanie](index.md)
+- [Interfejs ISOSDacInterface](isosdacinterface-interface.md)

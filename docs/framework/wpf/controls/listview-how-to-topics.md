@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], how-to topics
 ms.assetid: aafce40c-9bfe-45ec-86a3-599616a11276
-ms.openlocfilehash: 0e99793a1c8ec179ee01744f8618ff6463766704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2665fc60e1366f30fb7f3621bb0669db1ea3db0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374248"
 ---
 # <a name="listview-how-to-topics"></a>ListView — Tematy porad
-W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.ListView> formantu, aby wyświetlić zbiór elementów danych.  
+Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.ListView> formantu, aby wyświetlić zbiór elementów danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Sortowanie kolumny GridView po kliknięciu nagłówka](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [Tworzenie niestandardowego trybu widoku dla kontrolki ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [Używanie szablonów do nadawania stylu kontrolce ListView korzystającej z GridView](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [Tworzenie stylu dla przeciąganego nagłówka kolumny kontrolki GridView](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [Wyświetlanie zawartości kontrolki ListView przy użyciu kontrolki GridView](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [Używanie wyzwalaczy do nadawania stylu wybranym elementom w kontrolce ListView](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [Tworzenie kontrolki ListViewItems za pomocą kontrolki CheckBox](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [Wyświetlanie danych za pomocą GridViewRowPresenter](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [Grupowanie elementów w kontrolce ListView z implementacją GridView](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [Nadawanie stylu wierszowi w kontrolce ListView z implementacją GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [Zmienianie wyrównania w poziomie kolumny w kontrolce ListView](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [Obsługiwanie zdarzenia MouseDoubleClick dla każdego elementu w kontrolce ListView](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+ [Sortowanie kolumny GridView po kliknięciu nagłówka](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [Tworzenie niestandardowego trybu widoku dla kontrolki ListView](how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [Używanie szablonów do nadawania stylu kontrolce ListView korzystającej z GridView](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [Tworzenie stylu dla przeciąganego nagłówka kolumny kontrolki GridView](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [Wyświetlanie zawartości kontrolki ListView przy użyciu kontrolki GridView](how-to-display-listview-contents-by-using-a-gridview.md)  
+ [Używanie wyzwalaczy do nadawania stylu wybranym elementom w kontrolce ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [Tworzenie kontrolki ListViewItems za pomocą kontrolki CheckBox](how-to-create-listviewitems-with-a-checkbox.md)  
+ [Wyświetlanie danych za pomocą GridViewRowPresenter](how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [Grupowanie elementów w kontrolce ListView z implementacją GridView](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [Nadawanie stylu wierszowi w kontrolce ListView z implementacją GridView](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [Zmienianie wyrównania w poziomie kolumny w kontrolce ListView](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [Obsługiwanie zdarzenia MouseDoubleClick dla każdego elementu w kontrolce ListView](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ListView>  
@@ -39,4 +39,4 @@ W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Li
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)
+ [ListView — omówienie](listview-overview.md)

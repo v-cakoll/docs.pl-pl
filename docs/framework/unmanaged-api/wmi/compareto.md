@@ -16,43 +16,43 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa46cf1fde4306af562248b4c12b048e3d8e2a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717652"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376237"
 ---
 # <a name="compareto-function"></a>Funkcja CompareTo
-Porównuje obiekt do innego obiektu zarządzania Windows.  
+
+Porównuje obiekt do innego obiektu zarządzania Windows.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Składnia  
-  
-```
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 HRESULT CompareTo (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              flags,
-   [in] IWbemClassObject* pCompareTo 
-); 
-```  
+   [in] IWbemClassObject* pCompareTo
+);
+```
 
 ## <a name="parameters"></a>Parametry
 
-`vFunc`  
+`vFunc`\
 [in] Ten parametr jest nieużywany.
 
-`ptr`  
+`ptr`\
 [in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
-`flags`  
+`flags`\
 [in] Bitowa kombinacja flagi określające właściwości obiektu do rozważenia do porównania. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
-`pCompareTo`  
-
-[in] Obiekt do porównania. `pcompareTo` musi być prawidłowym [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia klasy nie może być `null`.
+`pCompareTo`\
+[in] Obiekt do porównania. `pCompareTo` musi być prawidłowym [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia klasy nie może być `null`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -66,7 +66,7 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Obiekty są różne. |
 | `WBEM_S_SAME` | 0 | Obiekty są takie same oparte na porównanie flag. |
-  
+
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja zawija wywołanie do [IWbemClassObject::CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) metody.
@@ -80,7 +80,7 @@ Flagi, które mogą być przekazywane jako `lEnumFlags` argument są zdefiniowan
 | `WBEM_FLAG_IGNORE_DEFAULT_VALUES` | 4 | Pomiń domyślne wartości właściwości. Ta flaga ma zastosowanie tylko do porównania z klas. |
 | `WBEM_FLAG_IGNORE_FLAVOR` | 0x20 | Ignorowanie kwalifikatora odmian. Ta flaga nadal uwzględnia kwalifikatorów, ale ignoruje różnice wersji, takich jak zasady propagacji i zastąpić ograniczenia. |
 | `WBEM_FLAG_IGNORE_CASE` | 0x10 | Ignoruj wielkość liter przy porównywaniu wartości ciągu. Dotyczy to zarówno do ciągów i wartość kwalifikatora. Porównanie nazw właściwości i kwalifikator zawsze jest rozróżniana wielkość liter, niezależnie od tego, czy ta flaga jest ustawiona. |
-| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Przyjęto założenie, czy obiekty są porównywane są instanes tej samej klasy. W związku z tym ta flaga porównuje dotyczącego wystąpienia wyłącznie informacyjne. Użyj tej flagi w celu zoptymalizowania wydajności. Jeśli obiekty nie są tego samego rodzaju, wyniki są niezdefiniowane. |
+| `WBEM_FLAG_IGNORE_CLASS` | 0x8 | Przyjęto założenie, czy obiekty są porównywane są wystąpienia tej samej klasy. W związku z tym ta flaga porównuje dotyczącego wystąpienia wyłącznie informacyjne. Użyj tej flagi w celu zoptymalizowania wydajności. Jeśli obiekty nie są tego samego rodzaju, wyniki są niezdefiniowane. |
 
 Lub można określić pojedynczej flagi złożonego w następujący sposób:
 
@@ -88,12 +88,14 @@ Lub można określić pojedynczej flagi złożonego w następujący sposób:
 |---------|---------|---------|
 |`WBEM_COMPARISON_INCLUDE_ALL` | 0 | Należy wziąć pod uwagę wszystkie funkcje do porównania. |
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** WMINet_Utils.idl  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** WMINet_Utils.idl
+
+**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

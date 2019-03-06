@@ -7,23 +7,23 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546167"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356242"
 ---
 # <a name="resources-how-to-topics"></a>Zasoby Tematy porad
-Tematy w tej sekcji opisano, jak korzystać z zasobów systemu Windows Presentation Foundation (WPF).  
+Tematy w tej sekcji opisano, jak korzystać z zasobów Windows Presentation Foundation (WPF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Definiowanie zasobu i odwoływanie się do niego](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Używanie zasobów aplikacji](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [Używanie elementu SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Używanie kluczy czcionek systemowych](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [Używanie elementu SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [Używanie kluczy parametrów systemowych](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Definiowanie zasobu i odwoływanie się do niego](how-to-define-and-reference-a-resource.md)  
+ [Używanie zasobów aplikacji](how-to-use-application-resources.md)  
+ [Używanie elementu SystemFonts](how-to-use-systemfonts.md)  
+ [Używanie kluczy czcionek systemowych](how-to-use-system-fonts-keys.md)  
+ [Używanie elementu SystemParameters](how-to-use-systemparameters.md)  
+ [Używanie kluczy parametrów systemowych](how-to-use-system-parameters-keys.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
@@ -35,4 +35,4 @@ Tematy w tej sekcji opisano, jak korzystać z zasobów systemu Windows Presentat
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+ [Zasoby XAML](xaml-resources.md)

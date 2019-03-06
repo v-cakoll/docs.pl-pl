@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: ae69481a884610d6253ee9a45bc3139cabac7e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557696"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360579"
 ---
 # <a name="data-binding-how-to-topics"></a>Powiązanie danych Tematy porad
-Tematy w tej sekcji opisano sposób korzystania z wiązania danych do powiązania elementów do danych z różnych źródeł danych w formie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów i XML.  
+Tematy w tej sekcji opisano sposób korzystania z wiązania danych w elementy można powiązać dane z różnych źródeł danych w postaci wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów i XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie prostego powiązania](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [Określanie obiektu źródłowego powiązania](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [Udostępnianie danych do powiązania w XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [Kontrolowanie momentu aktualizowania źródła tekstu kontrolki TextBox](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [Określanie kierunku powiązania](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [Powiązywanie z wyliczeniem](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [Powiązywanie właściwości dwóch kontrolek](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [Implementowanie powiązanej walidacji](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Implementowanie logiki walidacji w obiektach niestandardowych](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [Pobieranie obiektu wiążącego z powiązanej własności docelowej](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [Implementowanie CompositeCollection](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [Konwertowanie powiązanych danych](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [Tworzenie powiązania w kodzie](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [Pobieranie widoku domyślnego kolekcji danych](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [Przechodzenie do obiektów w danych CollectionView](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [Filtrowanie danych w widoku](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [Sortowanie danych w widoku](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [Sortowanie i grupowanie danych przy użyciu widoku w XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Używanie wzorca szczegółowego z danymi hierarchicznymi](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [Używanie wzorca szczegółowego z danymi hierarchicznymi XML](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [Uzyskiwanie wartości na podstawie listy powiązanych elementów](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [Implementowanie powiadomienia o zmianie właściwości](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [Tworzenie i powiązywanie z ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [Implementowanie PriorityBinding](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [Powiązywanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [Powiązywanie z dokumentem X, elementem X lub LINQ dla wyników zapytań XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [Używanie przestrzeni nazw XML w powiązaniu danych](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [Powiązywanie ze źródłem danych ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
- [Powiązywanie z metodą](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [Konfigurowanie powiadomienie o aktualizacji powiązań](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [Czyszczenie powiązań](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [Powiązywanie z usługą internetową](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [Powiązywanie z wynikami zapytania LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [Tworzenie prostego powiązania](how-to-create-a-simple-binding.md)  
+ [Określanie obiektu źródłowego powiązania](how-to-specify-the-binding-source.md)  
+ [Udostępnianie danych do powiązania w XAML](how-to-make-data-available-for-binding-in-xaml.md)  
+ [Kontrolowanie momentu aktualizowania źródła tekstu kontrolki TextBox](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [Określanie kierunku powiązania](how-to-specify-the-direction-of-the-binding.md)  
+ [Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [Powiązywanie z wyliczeniem](how-to-bind-to-an-enumeration.md)  
+ [Powiązywanie właściwości dwóch kontrolek](how-to-bind-the-properties-of-two-controls.md)  
+ [Implementowanie powiązanej walidacji](how-to-implement-binding-validation.md)  
+ [Implementowanie logiki walidacji w obiektach niestandardowych](how-to-implement-validation-logic-on-custom-objects.md)  
+ [Pobieranie obiektu wiążącego z powiązanej własności docelowej](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [Implementowanie CompositeCollection](how-to-implement-a-compositecollection.md)  
+ [Konwertowanie powiązanych danych](how-to-convert-bound-data.md)  
+ [Tworzenie powiązania w kodzie](how-to-create-a-binding-in-code.md)  
+ [Pobieranie widoku domyślnego kolekcji danych](how-to-get-the-default-view-of-a-data-collection.md)  
+ [Przechodzenie do obiektów w danych CollectionView](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [Filtrowanie danych w widoku](how-to-filter-data-in-a-view.md)  
+ [Sortowanie danych w widoku](how-to-sort-data-in-a-view.md)  
+ [Sortowanie i grupowanie danych przy użyciu widoku w XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [Używanie wzorca szczegółowego z danymi hierarchicznymi](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [Używanie wzorca szczegółowego z danymi hierarchicznymi XML](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [Uzyskiwanie wartości na podstawie listy powiązanych elementów](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [Implementowanie powiadomienia o zmianie właściwości](how-to-implement-property-change-notification.md)  
+ [Tworzenie i powiązywanie z ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md)  
+ [Implementowanie PriorityBinding](how-to-implement-prioritybinding.md)  
+ [Powiązywanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [Powiązywanie z dokumentem X, elementem X lub LINQ dla wyników zapytań XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [Używanie przestrzeni nazw XML w powiązaniu danych](how-to-use-xml-namespaces-in-data-binding.md)  
+ [Powiązywanie ze źródłem danych ADO.NET](how-to-bind-to-an-ado-net-data-source.md)  
+ [Powiązywanie z metodą](how-to-bind-to-a-method.md)  
+ [Konfigurowanie powiadomienie o aktualizacji powiązań](how-to-set-up-notification-of-binding-updates.md)  
+ [Czyszczenie powiązań](how-to-clear-bindings.md)  
+ [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](how-to-find-datatemplate-generated-elements.md)  
+ [Powiązywanie z usługą internetową](how-to-bind-to-a-web-service.md)  
+ [Powiązywanie z wynikami zapytania LINQ](how-to-bind-to-the-results-of-a-linq-query.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Data>  
@@ -64,6 +64,6 @@ Tematy w tej sekcji opisano sposób korzystania z wiązania danych do powiązani
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Powiązanie danych](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [Powiązanie danych](data-binding-wpf.md)  
   
- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)

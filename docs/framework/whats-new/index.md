@@ -11,6 +11,7 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 ---
+
 # What's new in .NET Framework <a name="introduction"></a>
 
 Ten artykuł zawiera podsumowanie kluczowych nowych funkcji i ulepszeń w następujących wersjach systemu .NET Framework:
@@ -110,6 +111,7 @@ using (DSA dsa = DSA.Create(2048))
    // Other code to execute using the dsa instance.
 }
 ```
+
 ```vb
 Using dsa = DSA.Create(2048)
    ' Other code to execute using the dsa instance.
@@ -138,6 +140,7 @@ private static byte[] DeriveKey(string password, out int iterations, out byte[] 
    }
 }
 ```
+
 ```vb
 Private Shared Function DeriveKey(password As String, ByRef iterations As Integer,
                                   ByRef salt AS Byte(), ByRef algorithm As HashAlgorithmName) As Byte()
@@ -181,6 +184,7 @@ Począwszy od programu .NET Framework 4.7.2, <xref:System.Security.Cryptography.
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
 ```
+
 ```vb
 Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 ```
@@ -252,6 +256,7 @@ Możesz ustawić SameSite dla <xref:System.Web.HttpCookie> obiektu w następują
 var c = new HttpCookie("secureCookie", "same origin");
 c.SameSite = SameSiteMode.Lax;
 ```
+
 ```vb
 Dim c As New HttpCookie("secureCookie", "same origin")
 c.SameSite = SameSiteMode.Lax
@@ -352,6 +357,7 @@ Asystent diagnostycznych, który umożliwia edycję w oryginale *MyRD.xaml* mo�
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
 ```
+
 ```vb
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
@@ -719,23 +725,24 @@ public interface ISessionStateModule : IHttpModule {
 <a name="Strings" />
 
 ### <a name="character-categories"></a>Kategorii znaków
- Znaki w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] są klasyfikowane na podstawie [standardu Unicode, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], znaki były klasyfikowane na podstawie kategorii znaków Unicode 6.3.
 
- Obsługa Unicode 8.0 jest ograniczona do klasyfikacji znaków, w ramach <xref:System.Globalization.CharUnicodeInfo> klas i typów i metod, które polegać na niej. Obejmują one <xref:System.Globalization.StringInfo> klasy przeciążone <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> metody i [klasy znaku](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) rozpoznawane przez aparat wyrażeń regularnych systemu .NET Framework.  Znakowe i porównywanie i sortowanie nie mają wpływu tej zmiany i nadal korzysta ze w podstawowym systemie operacyjnym lub w systemach Windows 7 na znak danych dostarczane przez program .NET Framework.
+Znaki w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] są klasyfikowane na podstawie [standardu Unicode, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], znaki były klasyfikowane na podstawie kategorii znaków Unicode 6.3.
 
- Zmiany w kategorii znaków Unicode 6.0, 7.0 Unicode, zobacz [Unicode Standard, wersja 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/) w witrynie sieci Web konsorcjum Unicode. Aby zmiany z Unicode 7.0 Unicode 8.0, zobacz [Unicode Standard, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) w witrynie sieci Web konsorcjum Unicode.
+Obsługa Unicode 8.0 jest ograniczona do klasyfikacji znaków, w ramach <xref:System.Globalization.CharUnicodeInfo> klas i typów i metod, które polegać na niej. Obejmują one <xref:System.Globalization.StringInfo> klasy przeciążone <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> metody i [klasy znaku](../../../docs/standard/base-types/character-classes-in-regular-expressions.md) rozpoznawane przez aparat wyrażeń regularnych systemu .NET Framework.  Znakowe i porównywanie i sortowanie nie mają wpływu tej zmiany i nadal korzysta ze w podstawowym systemie operacyjnym lub w systemach Windows 7 na znak danych dostarczane przez program .NET Framework.
+
+Zmiany w kategorii znaków Unicode 6.0, 7.0 Unicode, zobacz [Unicode Standard, wersja 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/) w witrynie sieci Web konsorcjum Unicode. Aby zmiany z Unicode 7.0 Unicode 8.0, zobacz [Unicode Standard, wersja 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) w witrynie sieci Web konsorcjum Unicode.
 
 <a name="Crypto462" />
 
 ### <a name="cryptography"></a>Kryptografia
 
- **Obsługa X509 certyfikatów zawierających DSA FIPS 186 3**
+**Obsługa X509 certyfikatów zawierających DSA FIPS 186 3**
 
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Alokowanej dla DSA (algorytmu Digital Signature Algorithm) X509 certyfikatów, których klucze FIPS może przekraczać limitu 1024-bitowy 186-2.
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Alokowanej dla DSA (algorytmu Digital Signature Algorithm) X509 certyfikatów, których klucze FIPS może przekraczać limitu 1024-bitowy 186-2.
 
- Oprócz obsługi większych rozmiarów klucza standardu FIPS 186-3, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] pozwala na korzystanie z sygnaturami z rodziny SHA-2 algorytmów wyznaczania wartości skrótu (SHA256, SHA384 i SHA512). FIPS 186 3 w pomoc techniczna jest świadczona przez nowy <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> klasy.
+Oprócz obsługi większych rozmiarów klucza standardu FIPS 186-3, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] pozwala na korzystanie z sygnaturami z rodziny SHA-2 algorytmów wyznaczania wartości skrótu (SHA256, SHA384 i SHA512). FIPS 186 3 w pomoc techniczna jest świadczona przez nowy <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> klasy.
 
- Zgodnie z najnowszych zmian w <xref:System.Security.Cryptography.RSA> klasy w .NET Framework 4.6 i <xref:System.Security.Cryptography.ECDsa> klasy w .NET Framework 4.6.1 <xref:System.Security.Cryptography.DSA> abstrakcyjna klasa bazowa w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ma dodatkowe metody, aby umożliwić wywołującym użyć tej funkcji funkcje bez rzutowania. Możesz wywołać <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> metodę rozszerzenia, aby zarejestrować dane, co ilustruje poniższy przykład.
+Zgodnie z najnowszych zmian w <xref:System.Security.Cryptography.RSA> klasy w .NET Framework 4.6 i <xref:System.Security.Cryptography.ECDsa> klasy w .NET Framework 4.6.1 <xref:System.Security.Cryptography.DSA> abstrakcyjna klasa bazowa w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ma dodatkowe metody, aby umożliwić wywołującym użyć tej funkcji funkcje bez rzutowania. Możesz wywołać <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> metodę rozszerzenia, aby zarejestrować dane, co ilustruje poniższy przykład.
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -775,11 +782,11 @@ public static bool VerifyDataDsaSha384(byte[] data, byte[] signature, X509Certif
 End Function
 ```
 
- **Zwiększenia przejrzystości dla danych wejściowych do procedury wyprowadzania klucza ECDiffieHellman**
+**Zwiększenia przejrzystości dla danych wejściowych do procedury wyprowadzania klucza ECDiffieHellman**
 
- .NET Framework 3.5 dodano obsługę Ellipic krzywej Diffie'ego-Hellmana klucz Umowy z trzech różnych procedur funkcja wyprowadzania klucza (KDF). Dane wejściowe procedury i procedur, zostały skonfigurowane za pomocą właściwości na <xref:System.Security.Cryptography.ECDiffieHellmanCng> obiektu. Ale ponieważ nie każda procedura Odczyt wszystkich właściwości danych wejściowych, wystarczającą ilość miejsca na pomyłek w przeszłości dewelopera.
+.NET Framework 3.5 dodano obsługę Elliptic krzywej Diffie'ego-Hellmana klucz Umowy z trzech różnych procedur funkcja wyprowadzania klucza (KDF). Dane wejściowe procedury i procedur, zostały skonfigurowane za pomocą właściwości na <xref:System.Security.Cryptography.ECDiffieHellmanCng> obiektu. Ale ponieważ nie każda procedura Odczyt wszystkich właściwości danych wejściowych, wystarczającą ilość miejsca na pomyłek w przeszłości dewelopera.
 
- Aby rozwiązać ten w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zostały dodane do następujących trzech metod <xref:System.Security.Cryptography.ECDiffieHellman> klasy bazowej na wyraźniej reprezentują tych procedur KDF i ich dane wejściowe:
+Aby rozwiązać ten w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zostały dodane do następujących trzech metod <xref:System.Security.Cryptography.ECDiffieHellman> klasy bazowej na wyraźniej reprezentują tych procedur KDF i ich dane wejściowe:
 
 |Metoda ECDiffieHellman|Opis|
 |----------------------------|-----------------|
@@ -787,11 +794,11 @@ End Function
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Pochodzi materiału klucza przy użyciu formuły<br /><br /> HMAC (hmacKey, secretPrepend &#124; &#124; *x* &#124; &#124; secretAppend)<br /><br /> HMAC (hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> gdzie *x* jest obliczana wynikiem algorytmu Diffie-Hellman WE.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyTls%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Pochodzi materiału klucza przy użyciu Algorytm wyprowadzania pseudolosową — funkcja (PRF) protokołu TLS.|
 
- **Obsługa szyfrowania symetrycznego klucza trwały**
+**Obsługa szyfrowania symetrycznego klucza trwały**
 
- Biblioteka kryptografii Windows (CNG) dodano obsługę do przechowywania kluczy symetrycznych utrwalonych i przy użyciu kluczy symetrycznych przechowywane sprzętu i [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] mades możliwe dla deweloperów skorzystać z tej funkcji.  Ponieważ pojęcie nazw kluczy i kluczy dostawcy jest specyficzne dla implementacji, za pomocą tej funkcji wymaga przy użyciu konstruktora typy konkretną implementację zamiast podejście preferowanych fabryki (np. wywołanie `Aes.Create`).
+Biblioteka kryptografii Windows (CNG) dodano obsługę do przechowywania kluczy symetrycznych utrwalonych i przy użyciu kluczy symetrycznych przechowywane sprzętu i [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] mades możliwe dla deweloperów skorzystać z tej funkcji.  Ponieważ pojęcie nazw kluczy i kluczy dostawcy jest specyficzne dla implementacji, za pomocą tej funkcji wymaga przy użyciu konstruktora typy konkretną implementację zamiast podejście preferowanych fabryki (np. wywołanie `Aes.Create`).
 
- Obsługa szyfrowania symetrycznego klucza utrwalone istnieje AES (<xref:System.Security.Cryptography.AesCng>) i algorytmu 3DES (<xref:System.Security.Cryptography.TripleDESCng>) algorytmów. Na przykład:
+Obsługa szyfrowania symetrycznego klucza utrwalone istnieje AES (<xref:System.Security.Cryptography.AesCng>) i algorytmu 3DES (<xref:System.Security.Cryptography.TripleDESCng>) algorytmów. Na przykład:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -830,11 +837,11 @@ Public Shared Function EncryptDataWithPersistedKey(data As Byte(), iv As Byte())
 End Function
 ```
 
- **Obsługa SignedXml wyznaczania wartości skrótu SHA-2**
+**Obsługa SignedXml wyznaczania wartości skrótu SHA-2**
 
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Dodaje obsługę <xref:System.Security.Cryptography.Xml.SignedXml> klasy dla metody podpis algorytm RSA-SHA256, RSA SHA384 i RSA SHA512 PKCS #1 SHA256, SHA384 i SHA512 odwołania i algorytmami skrótu.
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Dodaje obsługę <xref:System.Security.Cryptography.Xml.SignedXml> klasy dla metody podpis algorytm RSA-SHA256, RSA SHA384 i RSA SHA512 PKCS #1 SHA256, SHA384 i SHA512 odwołania i algorytmami skrótu.
 
- Stałe identyfikatora URI są narażone na <xref:System.Security.Cryptography.Xml.SignedXml>:
+Stałe identyfikatora URI są narażone na <xref:System.Security.Cryptography.Xml.SignedXml>:
 
 |Pole SignedXml|Stała|
 |---------------------|--------------|
@@ -851,15 +858,15 @@ End Function
 
 ### <a name="sqlclient"></a>SqlClient
 
- .NET framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) obejmuje następujące nowe funkcje w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
+.NET framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) obejmuje następujące nowe funkcje w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
 
- **Pula połączeń i limitów czasu z bazami danych Azure SQL**
+**Pula połączeń i limitów czasu z bazami danych Azure SQL**
 
- Po buforowanie połączeń jest włączona i limit czasu lub inny błąd logowania wystąpi, wyjątek jest buforowana i pamięci podręcznej wyjątek jest generowany na kolejne próba kolejnych 5 sekund do 1 minuty.  Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia puli (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
+Po buforowanie połączeń jest włączona i limit czasu lub inny błąd logowania wystąpi, wyjątek jest buforowana i pamięci podręcznej wyjątek jest generowany na kolejne próba kolejnych 5 sekund do 1 minuty.  Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia puli (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
 
- To zachowanie nie jest pożądane, podczas nawiązywania połączenia z baz danych SQL Azure, ponieważ próby nawiązania połączenia może zakończyć się niepowodzeniem z błędami przejściowymi, które zwykle są szybkiego odzyskania. Aby lepiej zoptymalizować proces ponawiania prób połączenia połączenia puli blokowania okres, w którym zachowanie jest usuwany, gdy błąd połączenia z bazami danych SQL Azure.
+To zachowanie nie jest pożądane, podczas nawiązywania połączenia z baz danych SQL Azure, ponieważ próby nawiązania połączenia może zakończyć się niepowodzeniem z błędami przejściowymi, które zwykle są szybkiego odzyskania. Aby lepiej zoptymalizować proces ponawiania prób połączenia połączenia puli blokowania okres, w którym zachowanie jest usuwany, gdy błąd połączenia z bazami danych SQL Azure.
 
- Dodawanie nowej `PoolBlockingPeriod` — słowo kluczowe pozwala wybrać okres blokowania najodpowiedniejsza dla twojej aplikacji. Wartości:
+Dodawanie nowej `PoolBlockingPeriod` — słowo kluczowe pozwala wybrać okres blokowania najodpowiedniejsza dla twojej aplikacji. Wartości:
 
 `Auto`
 
@@ -881,9 +888,9 @@ Połączenia czasu blokowania puli jest zawsze włączona.
 
 Połączenia czasu blokowania puli jest zawsze wyłączona.
 
- **Ulepszenia dla Always Encrypted**
+**Ulepszenia dla Always Encrypted**
 
- Klient SQL wprowadzono dwa ulepszenia dla funkcji Always Encrypted:
+Klient SQL wprowadzono dwa ulepszenia dla funkcji Always Encrypted:
 
 - Aby poprawić wydajność sparametryzowanych zapytań dotyczących kolumny szyfrowanej bazy danych, teraz są buforowane metadane szyfrowania parametrów zapytania. Za pomocą <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=nameWithType> właściwością `true` (czyli wartość domyślna), jeśli tego samego zapytania jest wywoływana wiele razy, klient pobiera parametr metadane z serwera tylko raz.
 
@@ -892,13 +899,14 @@ Połączenia czasu blokowania puli jest zawsze wyłączona.
 <a name="WCF" />
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
- W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Communication Foundation została rozszerzona w następujących obszarach:
 
- **Obsługa zabezpieczeń transportu WCF certyfikaty przechowywane przy użyciu CNG**
+W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Communication Foundation została rozszerzona w następujących obszarach:
 
- Zabezpieczenia transportu usługi WCF obsługuje certyfikaty przechowywane przy użyciu biblioteki kryptografii Windows (CNG). W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ta obsługa jest ograniczona do korzystania z certyfikatów z kluczem publicznym, zawierającej wykładnika nie więcej niż 32 bity długości. Gdy odpowiedniej aplikacji [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ta funkcja jest domyślnie włączone.
+**Obsługa zabezpieczeń transportu WCF certyfikaty przechowywane przy użyciu CNG**
 
- W przypadku aplikacji, których platformą docelową [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] i starszych, ale są uruchomione na [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], można włączyć tę funkcję, dodając następujący wiersz do [ \<środowiska uruchomieniowego >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) części pliku app.config lub web.config plik.
+Zabezpieczenia transportu usługi WCF obsługuje certyfikaty przechowywane przy użyciu biblioteki kryptografii Windows (CNG). W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ta obsługa jest ograniczona do korzystania z certyfikatów z kluczem publicznym, zawierającej wykładnika nie więcej niż 32 bity długości. Gdy odpowiedniej aplikacji [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ta funkcja jest domyślnie włączone.
+
+W przypadku aplikacji, których platformą docelową [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] i starszych, ale są uruchomione na [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], można włączyć tę funkcję, dodając następujący wiersz do [ \<środowiska uruchomieniowego >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) części pliku app.config lub web.config plik.
 
 ```xml
 <AppContextSwitchOverrides
@@ -918,9 +926,9 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
- **Lepsza obsługa wielu reguł dopasowania czasu letniego przez klasę klasa DataContractJsonSerializer**
+**Lepsza obsługa wielu reguł dopasowania czasu letniego przez klasę klasa DataContractJsonSerializer**
 
- Klienci mogą użyć ustawienia konfiguracji aplikacji, aby określić, czy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasy obsługuje wiele reguł dopasowania dla jednej strefie czasowej. Jest to funkcja opcjonalna. Aby ją włączyć, należy dodać następujące ustawienie do pliku app.config:
+Klienci mogą użyć ustawienia konfiguracji aplikacji, aby określić, czy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasy obsługuje wiele reguł dopasowania dla jednej strefie czasowej. Jest to funkcja opcjonalna. Aby ją włączyć, należy dodać następujące ustawienie do pliku app.config:
 
 ```xml
 <runtime>
@@ -934,14 +942,14 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 **Najlepsze dopasowanie NetNamedPipeBinding**
 
- Usługi WCF zawiera nowe ustawienie aplikacji, które można ustawić na aplikacje klienckie, aby upewnić się, że zawsze łączą się z service nasłuchiwania na identyfikator URI, który najlepiej pasuje do jednej, ich żądanie. To ustawienie aplikacji jest równa `false` (ustawienie domyślne), jest możliwe dla klientów używających <xref:System.ServiceModel.NetNamedPipeBinding> próbuje nawiązać połączenie z usługą nasłuchuje na identyfikator URI, który jest podciągiem żądanego identyfikatora URI.
+Usługi WCF zawiera nowe ustawienie aplikacji, które można ustawić na aplikacje klienckie, aby upewnić się, że zawsze łączą się z service nasłuchiwania na identyfikator URI, który najlepiej pasuje do jednej, ich żądanie. To ustawienie aplikacji jest równa `false` (ustawienie domyślne), jest możliwe dla klientów używających <xref:System.ServiceModel.NetNamedPipeBinding> próbuje nawiązać połączenie z usługą nasłuchuje na identyfikator URI, który jest podciągiem żądanego identyfikatora URI.
 
- Na przykład klient próbuje nawiązać połączenie z usługa nasłuchuje na `net.pipe://localhost/Service1`, lecz nasłuchuje innej usługi na tym komputerze, na którym działa z uprawnieniami administratora na `net.pipe://localhost`. To ustawienie aplikacji jest równa `false`, klient podejmował próbę połączenia z usługą problem. Po ustawieniu ustawienia aplikacji na `true`, klient będzie zawsze łączyć z najlepiej dopasowaną usługi.
+Na przykład klient próbuje nawiązać połączenie z usługa nasłuchuje na `net.pipe://localhost/Service1`, lecz nasłuchuje innej usługi na tym komputerze, na którym działa z uprawnieniami administratora na `net.pipe://localhost`. To ustawienie aplikacji jest równa `false`, klient podejmował próbę połączenia z usługą problem. Po ustawieniu ustawienia aplikacji na `true`, klient będzie zawsze łączyć z najlepiej dopasowaną usługi.
 
 > [!NOTE]
 > Klienci korzystający z <xref:System.ServiceModel.NetNamedPipeBinding> znaleźć usług w oparciu o adres podstawowy usługi (jeśli istnieje) zamiast adresu pełną punktu końcowego. Aby upewnić się, to ustawienie zawsze działa usługa należy używać unikatowy adres podstawowy.
 
- Aby włączyć tę zmianę, Dodaj następujące ustawienie aplikacji do pliku App.config lub Web.config aplikacji klienta:
+Aby włączyć tę zmianę, Dodaj następujące ustawienie aplikacji do pliku App.config lub Web.config aplikacji klienta:
 
 ```xml
 <configuration>
@@ -951,9 +959,9 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 </configuration>
 ```
 
- **Protokół SSL 3.0 nie jest domyślnym protokołem**
+**Protokół SSL 3.0 nie jest domyślnym protokołem**
 
- Korzystając z zabezpieczeń transportu i poświadczeń typu certyfikatu NetTcp, SSL 3.0 nie jest już domyślny protokół używany do negocjowania bezpiecznego połączenia. W większości przypadków należy bez wpływu na istniejące aplikacje, ponieważ protokół TLS 1.0 znajduje się na liście protokół NetTcp. Wszyscy istniejący klienci powinno być możliwe negocjowania połączenia przy użyciu w co najmniej protokół TLS 1.0. Jeśli Ssl3 jest wymagane, użyj jednej z następujących mechanizmów konfiguracji Aby dodać go do listy wynegocjowanym protokołów.
+Korzystając z zabezpieczeń transportu i poświadczeń typu certyfikatu NetTcp, SSL 3.0 nie jest już domyślny protokół używany do negocjowania bezpiecznego połączenia. W większości przypadków należy bez wpływu na istniejące aplikacje, ponieważ protokół TLS 1.0 znajduje się na liście protokół NetTcp. Wszyscy istniejący klienci powinno być możliwe negocjowania połączenia przy użyciu w co najmniej protokół TLS 1.0. Jeśli Ssl3 jest wymagane, użyj jednej z następujących mechanizmów konfiguracji Aby dodać go do listy wynegocjowanym protokołów.
 
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols%2A?displayProperty=nameWithType> Właściwości
 
@@ -966,17 +974,18 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 <a name="WPF462" />
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
- W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Presentation Foundation została rozszerzona w następujących obszarach:
 
- **Sortowanie grup**
+W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Presentation Foundation została rozszerzona w następujących obszarach:
 
- Aplikacja, która używa <xref:System.Windows.Data.CollectionView> obiektu do grupowania danych teraz można jawnie zadeklarować sposób sortowania grupy. Jawne sortowania adresów problem nieintuicyjnych kolejności pojawia się po aplikacji dynamicznie dodaje lub usuwa grupy lub zmianie wartości właściwości elementu zaangażowanych w grupowaniu. Może również zwiększyć wydajność procesu tworzenia grup, przenosząc porównania właściwości grupowania sortowania pełnym zbiorem do sortowania grup.
+**Sortowanie grup**
 
- Do obsługi sortowania grupy, nowe <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> i <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> właściwości opisują sposób sortowania kolekcji grupy utworzone przez <xref:System.ComponentModel.GroupDescription> obiektu. To jest odpowiednikiem sposób o identycznej nazwie <xref:System.Windows.Data.ListCollectionView> właściwości opisują sposób sortowania elementów danych.
+Aplikacja, która używa <xref:System.Windows.Data.CollectionView> obiektu do grupowania danych teraz można jawnie zadeklarować sposób sortowania grupy. Jawne sortowania adresów problem nieintuicyjnych kolejności pojawia się po aplikacji dynamicznie dodaje lub usuwa grupy lub zmianie wartości właściwości elementu zaangażowanych w grupowaniu. Może również zwiększyć wydajność procesu tworzenia grup, przenosząc porównania właściwości grupowania sortowania pełnym zbiorem do sortowania grup.
 
- Dwie nowe właściwości statycznej z <xref:System.Windows.Data.PropertyGroupDescription> klasy <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> i <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>, może służyć do najbardziej typowe przypadki.
+Do obsługi sortowania grupy, nowe <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> i <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> właściwości opisują sposób sortowania kolekcji grupy utworzone przez <xref:System.ComponentModel.GroupDescription> obiektu. To jest odpowiednikiem sposób o identycznej nazwie <xref:System.Windows.Data.ListCollectionView> właściwości opisują sposób sortowania elementów danych.
 
- Na przykład następujące dane grupy XAML od wieku, sortować grupy wiekowe, w kolejności rosnącej i grupowanie elementów w każdej grupie wiekowej według nazwiska.
+Dwie nowe właściwości statycznej z <xref:System.Windows.Data.PropertyGroupDescription> klasy <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> i <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>, może służyć do najbardziej typowe przypadki.
+
+Na przykład następujące dane grupy XAML od wieku, sortować grupy wiekowe, w kolejności rosnącej i grupowanie elementów w każdej grupie wiekowej według nazwiska.
 
 ```xaml
 <GroupDescriptions>
@@ -992,19 +1001,19 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 </SortDescriptions>
 ```
 
- **Klawiatura programowa obsługa**
+**Klawiatura programowa obsługa**
 
- Elastyczne Obsługa klawiatury umożliwia fokus śledzenie w aplikacjach WPF przez automatyczne wywołanie i odrzucanie nowe klawiatura programowa w systemie Windows 10, po odebraniu wprowadzanie dotykowe przez kontrolkę, która może przyjąć tekstowych danych wejściowych.
+Elastyczne Obsługa klawiatury umożliwia fokus śledzenie w aplikacjach WPF przez automatyczne wywołanie i odrzucanie nowe klawiatura programowa w systemie Windows 10, po odebraniu wprowadzanie dotykowe przez kontrolkę, która może przyjąć tekstowych danych wejściowych.
 
- W poprzednich wersjach programu .NET Framework aplikacje WPF nie mogą skorzystać fokus śledzenia bez konieczności wyłączania WPF pióra/obsługi wprowadzania dotykowego gestu.  W wyniku aplikacji WPF, należy wybrać pełnej obsługi wprowadzania dotykowego WPF lub zależą od podwyższenia poziomu myszy Windows.
+W poprzednich wersjach programu .NET Framework aplikacje WPF nie mogą skorzystać fokus śledzenia bez konieczności wyłączania WPF pióra/obsługi wprowadzania dotykowego gestu.  W wyniku aplikacji WPF, należy wybrać pełnej obsługi wprowadzania dotykowego WPF lub zależą od podwyższenia poziomu myszy Windows.
 
- **Rozpoznawanie wartości DPI monitora**
+**Rozpoznawanie wartości DPI monitora**
 
- Do obsługi najnowszych rozprzestrzenianie wysokiej rozdzielczości DPI i rozdzielczości DPI hybrydowego środowiska w przypadku aplikacji WPF, platformy WPF w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] umożliwia rozpoznawanie monitora. Zobacz [przewodnik dla deweloperów i przykłady](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) w serwisie GitHub, aby uzyskać więcej informacji na temat włączania aplikacji WPF stać się świadome DPI monitora.
+Do obsługi najnowszych rozprzestrzenianie wysokiej rozdzielczości DPI i rozdzielczości DPI hybrydowego środowiska w przypadku aplikacji WPF, platformy WPF w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] umożliwia rozpoznawanie monitora. Zobacz [przewodnik dla deweloperów i przykłady](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) w serwisie GitHub, aby uzyskać więcej informacji na temat włączania aplikacji WPF stać się świadome DPI monitora.
 
- W poprzednich wersjach programu .NET Framework aplikacje WPF to system-DPI. Innymi słowy interfejs użytkownika aplikacji jest skalowana przez system operacyjny, zgodnie z potrzebami, w zależności od wartości DPI monitora, na którym aplikacja jest renderowany. ,
+W poprzednich wersjach programu .NET Framework aplikacje WPF to system-DPI. Innymi słowy interfejs użytkownika aplikacji jest skalowana przez system operacyjny, zgodnie z potrzebami, w zależności od wartości DPI monitora, na którym aplikacja jest renderowany. ,
 
- Dla aplikacji działających w ramach [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], rozpoznawanie wartości DPI monitora zmian w aplikacjach WPF można wyłączyć przez dodanie instrukcji konfiguracji do [ \<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji konfiguracji aplikacji, plików w następujący sposób:
+Dla aplikacji działających w ramach [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], rozpoznawanie wartości DPI monitora zmian w aplikacjach WPF można wyłączyć przez dodanie instrukcji konfiguracji do [ \<runtime >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) sekcji konfiguracji aplikacji, plików w następujący sposób:
 
 ```xml
 <runtime>
@@ -1015,27 +1024,28 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 <a name="WF462" />
 
 ### <a name="windows-workflow-foundation-wf"></a>Program Windows Workflow Foundation (WF)
- W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Workflow Foundation została rozszerzona w następującym obszarze:
 
- **Obsługa wyrażeń języka C# i technologii IntelliSense w Projektancie WF Re-hosted**
+W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Workflow Foundation została rozszerzona w następującym obszarze:
 
- Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF obsługuje wyrażeń języka C# w obu projektanta programu Visual Studio i przepływy pracy kodu. Re-hosted projektanta przepływu pracy jest kluczowym elementem WF umożliwiający projektanta przepływów pracy w aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation udostępnia możliwość obsługi wyrażeń języka C# i technologii IntelliSense w Projektancie przepływu pracy Re-hosted. Aby uzyskać więcej informacji, zobacz [blogu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
+**Obsługa wyrażeń języka C# i technologii IntelliSense w Projektancie WF Re-hosted**
 
- `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` W wersjach programu .NET Framework w wersjach wcześniejszych niż [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], funkcja IntelliSense programu WF projektanta został przerwany, gdy klient ponownie kompiluje projekt przepływu pracy w programie Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływów pracy nie znajdują się w Projektancie i ostrzeżenia z technologii IntelliSense dla brakujących typy przepływów pracy są wyświetlane w **lista błędów** okna. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Rozwiązuje ten problem i sprawia, że funkcja IntelliSense niedostępne.
+Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF obsługuje wyrażeń języka C# w obu projektanta programu Visual Studio i przepływy pracy kodu. Re-hosted projektanta przepływu pracy jest kluczowym elementem WF umożliwiający projektanta przepływów pracy w aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation udostępnia możliwość obsługi wyrażeń języka C# i technologii IntelliSense w Projektancie przepływu pracy Re-hosted. Aby uzyskać więcej informacji, zobacz [blogu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
- **Aplikacje V1 przepływu pracy śledzenia przepływu pracy na teraz być uruchamiane w trybie FIPS**
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` W wersjach programu .NET Framework w wersjach wcześniejszych niż [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], funkcja IntelliSense programu WF projektanta został przerwany, gdy klient ponownie kompiluje projekt przepływu pracy w programie Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływów pracy nie znajdują się w Projektancie i ostrzeżenia z technologii IntelliSense dla brakujących typy przepływów pracy są wyświetlane w **lista błędów** okna. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Rozwiązuje ten problem i sprawia, że funkcja IntelliSense niedostępne.
 
- Maszyny z włączonym trybem zgodności ze standardem FIPS można teraz pomyślnie uruchomić przepływ pracy w wersji 1 stylu aplikacji za pomocą przepływu pracy śledzenia na. Aby realizacji tego scenariusza, należy wprowadzić następującą zmianę do pliku app.config:
+**Aplikacje V1 przepływu pracy śledzenia przepływu pracy na teraz być uruchamiane w trybie FIPS**
+
+Maszyny z włączonym trybem zgodności ze standardem FIPS można teraz pomyślnie uruchomić przepływ pracy w wersji 1 stylu aplikacji za pomocą przepływu pracy śledzenia na. Aby realizacji tego scenariusza, należy wprowadzić następującą zmianę do pliku app.config:
 
 ```xml
 <add key="microsoft:WorkflowRuntime:FIPSRequired" value="true" />
 ```
 
- Jeśli w tym scenariuszu nie jest włączona, uruchamianie aplikacji w dalszym ciągu wygeneruje wyjątek z komunikatem "Ta implementacja nie jest częścią systemu Windows Platform FIPS zatwierdzone algorytmy kryptograficzne."
+Jeśli w tym scenariuszu nie jest włączona, uruchamianie aplikacji w dalszym ciągu wygeneruje wyjątek z komunikatem "Ta implementacja nie jest częścią systemu Windows Platform FIPS zatwierdzone algorytmy kryptograficzne."
 
- **Ulepszenia przepływu pracy podczas używania aktualizacji dynamicznej z projektanta przepływów pracy w usłudze Visual Studio**
+**Ulepszenia przepływu pracy podczas używania aktualizacji dynamicznej z projektanta przepływów pracy w usłudze Visual Studio**
 
- Projektant przepływu pracy, FlowChart, Projektant działań i innych projektantów działań przepływu pracy teraz pomyślnie ładowanie i wyświetlanie przepływów pracy, które zostały zapisane po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> metody. W wersjach programu .NET Framework przed [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], podczas ładowania pliku XAML w programie Visual Studio dla przepływu pracy, który został zapisany po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> może spowodować następujące problemy:
+Projektant przepływu pracy, FlowChart, Projektant działań i innych projektantów działań przepływu pracy teraz pomyślnie ładowanie i wyświetlanie przepływów pracy, które zostały zapisane po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> metody. W wersjach programu .NET Framework przed [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], podczas ładowania pliku XAML w programie Visual Studio dla przepływu pracy, który został zapisany po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> może spowodować następujące problemy:
 
 - Projektant przepływu pracy nie można poprawnie załadować plik XAML (gdy <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> znajduje się na końcu wiersza).
 
@@ -1050,14 +1060,16 @@ ClickOnce został zaktualizowany do obsługi protokołu TLS 1.1 i TLS 1.2, opró
 <a name="UWPConvert" />
 
 ### <a name="converting-windows-forms-and-wpf-apps-to--uwp-apps"></a>Konwertowanie Windows Forms i WPF aplikacji do aplikacji platformy uniwersalnej systemu Windows
- Windows oferuje teraz możliwości, aby przenieść istniejące aplikacje pulpitu Windows, w tym aplikacje WPF i Windows Forms do uniwersalnej platformy Windows (UWP). Ta technologia działa jak most, umożliwiając stopniowo migracji istniejącej bazie kodu do platformy uniwersalnej systemu Windows, a tym samym dostosowanie aplikacji do wszystkich urządzeń z systemem Windows 10.
 
- Przekonwertowane aplikacje komputerowe uzyskać podobny do aplikacji tożsamości aplikacji platformy uniwersalnej systemu Windows, co sprawia, że interfejsy API platformy uniwersalnej systemu Windows jest dostępny, aby włączyć funkcje, takie jak żywych kafelków i powiadomienia tożsamość aplikacji. Aplikacja będzie nadal działać tak jak poprzednio i działa jako aplikacja pełnego zaufania. Po przekonwertowaniu aplikacji, można dodać do istniejącego procesu pełnego zaufania, aby dodać interfejs użytkownika adaptacyjne procesu kontenera aplikacji. Gdy wszystkie funkcje są przenoszone do procesu kontenera aplikacji, proces pełnego zaufania, można je usunąć i w nowej aplikacji platformy uniwersalnej systemu Windows mogą być udostępniane do wszystkich urządzeń z systemem Windows 10.
+Windows oferuje teraz możliwości, aby przenieść istniejące aplikacje pulpitu Windows, w tym aplikacje WPF i Windows Forms do uniwersalnej platformy Windows (UWP). Ta technologia działa jak most, umożliwiając stopniowo migracji istniejącej bazie kodu do platformy uniwersalnej systemu Windows, a tym samym dostosowanie aplikacji do wszystkich urządzeń z systemem Windows 10.
+
+Przekonwertowane aplikacje komputerowe uzyskać podobny do aplikacji tożsamości aplikacji platformy uniwersalnej systemu Windows, co sprawia, że interfejsy API platformy uniwersalnej systemu Windows jest dostępny, aby włączyć funkcje, takie jak żywych kafelków i powiadomienia tożsamość aplikacji. Aplikacja będzie nadal działać tak jak poprzednio i działa jako aplikacja pełnego zaufania. Po przekonwertowaniu aplikacji, można dodać do istniejącego procesu pełnego zaufania, aby dodać interfejs użytkownika adaptacyjne procesu kontenera aplikacji. Gdy wszystkie funkcje są przenoszone do procesu kontenera aplikacji, proces pełnego zaufania, można je usunąć i w nowej aplikacji platformy uniwersalnej systemu Windows mogą być udostępniane do wszystkich urządzeń z systemem Windows 10.
 
 <a name="Debug462" />
 
 ### <a name="debugging-improvements"></a>Ulepszenia debugowania
- *Niezarządzane debugowanie API* została rozszerzona w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] celu przeprowadzenia dodatkowej analizy po <xref:System.NullReferenceException> jest generowany, aby była możliwość określenia, które zmienna w jednym wierszu kodu źródłowego jest `null`.   Aby zapewnić obsługę tego scenariusza, następujące interfejsy API zostały dodane do niezarządzanego interfejsu API debugowania.
+
+*Niezarządzane debugowanie API* została rozszerzona w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] celu przeprowadzenia dodatkowej analizy po <xref:System.NullReferenceException> jest generowany, aby była możliwość określenia, które zmienna w jednym wierszu kodu źródłowego jest `null`.   Aby zapewnić obsługę tego scenariusza, następujące interfejsy API zostały dodane do niezarządzanego interfejsu API debugowania.
 
 - [ICorDebugCode4](../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md), i [ICorDebugVariableHomeEnum](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) interfejsów, które ujawniają natywnych domach zarządzane zmienne. Dzięki temu debugery wykonasz jakieś analizy przepływu kodu podczas <xref:System.NullReferenceException> występuje i przeanalizuj informacje wstecz pochodzące ustalenie zarządzanych zmiennej, która odnosi się do natywnych lokalizacji, który był `null`.
 
@@ -1092,49 +1104,52 @@ Aby uzyskać więcej informacji na temat [!INCLUDE[net_v461](../../../includes/n
 <a name="Crypto" />
 
 ### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>Kryptografia: Obsługa X509 certyfikatów zawierających ECDSA
- .NET Framework 4.6 dodanie obsługi RSACng X509 certyfikatów. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Dodaje obsługę ECDSA (Elliptic krzywej algorytmu Digital Signature Algorithm) X509 certyfikatów.
 
- ECDSA oferuje lepszą wydajność i jest bardziej bezpieczne algorytmu kryptograficznego, niż RSA, zapewniając doskonałym wyborem, gdzie zabezpieczeń TLS (Transport Layer), wydajności i skalowalności jest istotna. Wdrożenia programu .NET Framework opakowuje wywołania do istniejących funkcji Windows.
+.NET Framework 4.6 dodanie obsługi RSACng X509 certyfikatów. [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] Dodaje obsługę ECDSA (Elliptic krzywej algorytmu Digital Signature Algorithm) X509 certyfikatów.
 
- Poniższy przykład kodu pokazuje, jak łatwo jest do generowania podpisu dla strumienia bajtów przy użyciu certyfikatów X 509 uwzględnione w nowej funkcji obsługi ECDSA [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
+ECDSA oferuje lepszą wydajność i jest bardziej bezpieczne algorytmu kryptograficznego, niż RSA, zapewniając doskonałym wyborem, gdzie zabezpieczeń TLS (Transport Layer), wydajności i skalowalności jest istotna. Wdrożenia programu .NET Framework opakowuje wywołania do istniejących funkcji Windows.
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
- [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+Poniższy przykład kodu pokazuje, jak łatwo jest do generowania podpisu dla strumienia bajtów przy użyciu certyfikatów X 509 uwzględnione w nowej funkcji obsługi ECDSA [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
 
- Zapewnia to oznaczone kontrastu w kodzie, potrzebne do generowania podpisu w .NET Framework 4.6.
+[!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
+[!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
- [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+Zapewnia to oznaczone kontrastu w kodzie, potrzebne do generowania podpisu w .NET Framework 4.6.
+
+[!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
+[!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461" />
 
 ### <a name="adonet"></a>ADO.NET
- Poniżej zostały dodane do zestawu ADO.NET:
+
+Poniżej zostały dodane do zestawu ADO.NET:
 
 **Zawsze zaszyfrowane obsługę sprzętu chronione klucze**
 
- Platforma ADO.NET teraz obsługuje przechowywania kluczy głównych kolumny Always Encrypted natywnie w sprzętowych modułach zabezpieczeń (HSM). Dzięki temu klienci mogą korzystać z kluczy asymetrycznych przechowywanych w sprzętowych modułach zabezpieczeń bez konieczności pisania dostawców magazynu klucz główny kolumny niestandardowej i rejestrowania ich w aplikacjach.
+Platforma ADO.NET teraz obsługuje przechowywania kluczy głównych kolumny Always Encrypted natywnie w sprzętowych modułach zabezpieczeń (HSM). Dzięki temu klienci mogą korzystać z kluczy asymetrycznych przechowywanych w sprzętowych modułach zabezpieczeń bez konieczności pisania dostawców magazynu klucz główny kolumny niestandardowej i rejestrowania ich w aplikacjach.
 
- Klienci muszą zainstalować dostawcę usług Kryptograficznych udostępnionych przez dostawcę modułu HSM lub dostawcy magazynu kluczy CNG na serwery aplikacji lub komputerów klienckich, aby uzyskiwać dostęp do danych są zawsze szyfrowane, chronione przy użyciu kluczy głównych kolumny przechowywane w module HSM.
+Klienci muszą zainstalować dostawcę usług Kryptograficznych udostępnionych przez dostawcę modułu HSM lub dostawcy magazynu kluczy CNG na serwery aplikacji lub komputerów klienckich, aby uzyskiwać dostęp do danych są zawsze szyfrowane, chronione przy użyciu kluczy głównych kolumny przechowywane w module HSM.
 
- **Ulepszone <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> zachowanie połączenia dla funkcji AlwaysOn**
+**Ulepszone <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> zachowanie połączenia dla funkcji AlwaysOn**
 
 Klient SQL teraz automatycznie zapewnia szybsze połączenia do grupy dostępności AlwaysOn (AG). Przezroczysty wykryje, czy aplikacja nawiązuje połączenie z zawsze włączonej grupy dostępności (grupy dostępności) w innej podsieci, szybko odnajduje bieżącego aktywnego serwera i zapewnia połączenie z serwerem. We wcześniejszych wersjach, aplikacja nie miała można ustawić parametrów połączenia do uwzględnienia `"MultisubnetFailover=true"` do wskazania, że połączenia do grupy dostępności (AlwaysOn). Bez ustawienia połączenia — słowo kluczowe na `true`, aplikacja może wystąpić limit czasu podczas nawiązywania połączenia zawsze włączonej grupy dostępności. W tej wersji aplikacja wykonuje *nie* należy ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> do `true` dłużej. Aby uzyskać więcej informacji na temat Obsługa SqlClient dla zawsze włączonych grup dostępności, zobacz [Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
- Windows Presentation Foundation zawiera szereg udoskonaleń i zmian.
 
- **Lepsza wydajność**
+Windows Presentation Foundation zawiera szereg udoskonaleń i zmian.
 
- Opóźnienie w wyzwalanie zdarzeń touch został rozwiązany w [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]. Ponadto, wpisując <xref:System.Windows.Controls.RichTextBox> kontroli nie blokuje wątku renderowania podczas wprowadzania szybkie.
+**Lepsza wydajność**
 
- **Ulepszenia sprawdzanie pisowni**
+Opóźnienie w wyzwalanie zdarzeń touch został rozwiązany w [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]. Ponadto, wpisując <xref:System.Windows.Controls.RichTextBox> kontroli nie blokuje wątku renderowania podczas wprowadzania szybkie.
 
- Moduł sprawdzania pisowni w WPF została zaktualizowana na Windows 8.1 i nowsze wersje, aby korzystać z systemu operacyjnego obsługują sprawdzanie pisowni dodatkowych języków.  Nie ma zmian w funkcji z systemem Windows wersjach wcześniejszych niż Windows 8.1.
+**Ulepszenia sprawdzanie pisowni**
 
- Tak jak w poprzednich wersjach programu .NET Framework, w tym języku <xref:System.Windows.Controls.TextBox> kontrolować ora <xref:System.Windows.Controls.RichTextBox> blok zostanie wykryty przez wyszukiwanie informacji w następującej kolejności:
+Moduł sprawdzania pisowni w WPF została zaktualizowana na Windows 8.1 i nowsze wersje, aby korzystać z systemu operacyjnego obsługują sprawdzanie pisowni dodatkowych języków.  Nie ma zmian w funkcji z systemem Windows wersjach wcześniejszych niż Windows 8.1.
+
+Tak jak w poprzednich wersjach programu .NET Framework, w tym języku <xref:System.Windows.Controls.TextBox> kontrolować ora <xref:System.Windows.Controls.RichTextBox> blok zostanie wykryty przez wyszukiwanie informacji w następującej kolejności:
 
 - `xml:lang`, jeśli jest obecny.
 
@@ -1142,13 +1157,13 @@ Klient SQL teraz automatycznie zapewnia szybsze połączenia do grupy dostępno�
 
 - Bieżąca kultura wątku.
 
- Aby uzyskać dodatkowe informacje na temat obsługi języków w programie WPF, zobacz [WPF wpis w blogu na temat funkcji programu .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=691819).
+Aby uzyskać dodatkowe informacje na temat obsługi języków w programie WPF, zobacz [WPF wpis w blogu na temat funkcji programu .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=691819).
 
- **Dodatkowa obsługa słowników niestandardowych na użytkownika**
+**Dodatkowa obsługa słowników niestandardowych na użytkownika**
 
- W [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], WPF rozpoznaje słowników niestandardowych, które są zarejestrowane w globalnie. Ta możliwość jest dostępnych dodatkowo oprócz możliwość rejestrowania, je-control.
+W [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], WPF rozpoznaje słowników niestandardowych, które są zarejestrowane w globalnie. Ta możliwość jest dostępnych dodatkowo oprócz możliwość rejestrowania, je-control.
 
- W poprzednich wersjach programu WPF słowników niestandardowych nie rozpoznał wykluczone słowa i listy Autokorekty. Są one obsługiwane w Windows 8.1 i Windows 10 przy użyciu plików, które można umieścić w obszarze `%AppData%\Microsoft\Spelling\<language tag>` katalogu.  Następujące reguły stosuje się do tych plików:
+W poprzednich wersjach programu WPF słowników niestandardowych nie rozpoznał wykluczone słowa i listy Autokorekty. Są one obsługiwane w Windows 8.1 i Windows 10 przy użyciu plików, które można umieścić w obszarze `%AppData%\Microsoft\Spelling\<language tag>` katalogu.  Następujące reguły stosuje się do tych plików:
 
 - Pliki powinny mają rozszerzenia .dic (w przypadku słowa dodane), .exc (w przypadku wykluczonych słowa) lub .acl (w przypadku Autokorekty).
 
@@ -1163,16 +1178,17 @@ Klient SQL teraz automatycznie zapewnia szybsze połączenia do grupy dostępno�
 
 **Przykłady**
 
- Istnieje kilka przykładów WPF w [WPF-Microsoft-Samples](https://github.com/Microsoft/WPF-Samples) repozytorium GitHub. Pomóż nam udoskonalać nasze przykłady, wysyłając żądania ściągnięcia lub otwierania [problem w usłudze GitHub](https://github.com/Microsoft/WPF-Samples/issues).
+Istnieje kilka przykładów WPF w [WPF-Microsoft-Samples](https://github.com/Microsoft/WPF-Samples) repozytorium GitHub. Pomóż nam udoskonalać nasze przykłady, wysyłając żądania ściągnięcia lub otwierania [problem w usłudze GitHub](https://github.com/Microsoft/WPF-Samples/issues).
 
- **Rozszerzenia programu DirectX**
+**Rozszerzenia programu DirectX**
 
- Obejmuje WPF [pakietu NuGet](https://go.microsoft.com/fwlink/?LinkID=691342) zapewniający nowych wdrożeń <xref:System.Windows.Interop.D3DImage> ułatwia dla Ciebie na potrzeby współdziałania z DX10 i Dx11 zawartości. Kod ten pakiet był otwarty źródło i jest dostępny [w serwisie GitHub](https://github.com/Microsoft/WPFDXInterop).
+Obejmuje WPF [pakietu NuGet](https://go.microsoft.com/fwlink/?LinkID=691342) zapewniający nowych wdrożeń <xref:System.Windows.Interop.D3DImage> ułatwia dla Ciebie na potrzeby współdziałania z DX10 i Dx11 zawartości. Kod ten pakiet był otwarty źródło i jest dostępny [w serwisie GitHub](https://github.com/Microsoft/WPFDXInterop).
 
 <a name="WWF461" />
 
 ### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: Transakcje
- <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> Metoda teraz umożliwia korzystanie z Menedżera transakcji rozproszonych, innym niż MSDTC mógł wypromować transakcji. Można to zrobić, określając identyfikator GUID transakcji promoter do nowego <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> przeciążenia. Jeśli operacja się powiedzie, istnieją ograniczenia nakładane na możliwości transakcji. Gdy promoter transakcji MSDTC nie jest zarejestrowana, następujące metody throw <xref:System.Transactions.TransactionPromotionException> ponieważ te metody wymagają promocji do usługi MSDTC:
+
+<xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> Metoda teraz umożliwia korzystanie z Menedżera transakcji rozproszonych, innym niż MSDTC mógł wypromować transakcji. Można to zrobić, określając identyfikator GUID transakcji promoter do nowego <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> przeciążenia. Jeśli operacja się powiedzie, istnieją ograniczenia nakładane na możliwości transakcji. Gdy promoter transakcji MSDTC nie jest zarejestrowana, następujące metody throw <xref:System.Transactions.TransactionPromotionException> ponieważ te metody wymagają promocji do usługi MSDTC:
 
 - <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>
 
@@ -1182,9 +1198,9 @@ Klient SQL teraz automatycznie zapewnia szybsze połączenia do grupy dostępno�
 
 - <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A?displayProperty=nameWithType>
 
- Gdy promoter transakcji MSDTC nie jest zarejestrowana, należy użyć dla przyszłych trwałych rejestracji przy użyciu protokołów, które definiuje. <xref:System.Guid> Promoter transakcji można uzyskać za pomocą <xref:System.Transactions.Transaction.PromoterType%2A> właściwości. Gdy transakcja promuje, zapewnia promoter transakcji <xref:System.Byte> tablica reprezentująca token o podwyższonym poziomie. Aplikację można uzyskać Podwyższono poziom token dla transakcji innym niż MSDTC promowane z <xref:System.Transactions.Transaction.GetPromotedToken%2A> metody.
+Gdy promoter transakcji MSDTC nie jest zarejestrowana, należy użyć dla przyszłych trwałych rejestracji przy użyciu protokołów, które definiuje. <xref:System.Guid> Promoter transakcji można uzyskać za pomocą <xref:System.Transactions.Transaction.PromoterType%2A> właściwości. Gdy transakcja promuje, zapewnia promoter transakcji <xref:System.Byte> tablica reprezentująca token o podwyższonym poziomie. Aplikację można uzyskać Podwyższono poziom token dla transakcji innym niż MSDTC promowane z <xref:System.Transactions.Transaction.GetPromotedToken%2A> metody.
 
- Użytkownicy o nowym <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> przeciążenia wykonaj sekwencję wywołań w kolejności dla operacji podwyższenia poziomu, która powinna zakończyć się powodzeniem. Te reguły są opisane w dokumentacji metody.
+Użytkownicy o nowym <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> przeciążenia wykonaj sekwencję wywołań w kolejności dla operacji podwyższenia poziomu, która powinna zakończyć się powodzeniem. Te reguły są opisane w dokumentacji metody.
 
 <a name="Profile461" />
 
@@ -1198,19 +1214,21 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
 - Lepsze Instrumentacji z interfejsem ICorProfiler.
 
-   Profilerzy, którzy korzystają z `ICorProfiler` interfejsów API funkcji ReJit Instrumentation dynamicznego można również zmodyfikować niektóre metadane. Wcześniej tych narzędzi można instrumentować IL w dowolnym momencie, ale metadane mogą być modyfikowane tylko w czasie ładowania modułu. IL odwołuje się do metadanych, to ograniczone, ponieważ rodzaje instrumentacji, który może zostać wykonana. Firma Microsoft ma zniesione niektóre z tych ograniczeń, dodając [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) metody w celu obsługi podzbiór zmiany metadanych po moduł ładuje się, w szczególności, dodając nowe `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec`, i `UserString` rekordów. Ta zmiana umożliwia o wiele szerszy zakres podpowiadania instrumentacji.
+   Profilerzy, którzy korzystają z `ICorProfiler` ReJit interfejsów API funkcji Instrumentation dynamicznego można również zmodyfikować niektóre metadane. Wcześniej tych narzędzi można instrumentować IL w dowolnym momencie, ale metadane mogą być modyfikowane tylko w czasie ładowania modułu. IL odwołuje się do metadanych, to ograniczone, ponieważ rodzaje instrumentacji, który może zostać wykonana. Firma Microsoft ma zniesione niektóre z tych ograniczeń, dodając [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) metody w celu obsługi podzbiór zmiany metadanych po moduł ładuje się, w szczególności, dodając nowe `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec`, i `UserString` rekordów. Ta zmiana umożliwia o wiele szerszy zakres podpowiadania instrumentacji.
 
 <a name="NGEN461" />
 
 ### <a name="native-image-generator-ngen-pdbs"></a>Pliki PDB (NGEN) Generator obrazu natywnego
- Śledzenie zdarzeń między komputerami umożliwia klientom profilu programu na komputerze A i przyjrzeć danych profilowania za pomocą mapowania wiersz źródła na maszynę B. przy użyciu poprzednich wersji programu .NET Framework, użytkownik może spowodować skopiowanie wszystkich modułów i obrazy natywne z profilowanych Maszyna do maszyny analizy, która zawiera PDB IL można utworzyć mapowania źródła native. Podczas tego procesu może działać dobrze w przypadku, gdy pliki są stosunkowo mały, takie jak w przypadku aplikacji telefonicznej, pliki mogą bardzo dużych systemach pulpitu i będzie wymagać dużo czasu, aby skopiować.
 
- Przy użyciu plików PDB Ngen NGen można utworzyć pliku PDB, który zawiera mapowania IL do natywnego bez zależności w pliku PDB IL. W naszym scenariuszu śledzenia zdarzeń między komputerami wszystko, co jest potrzebne jest kopiowanie obrazu natywnego pliku PDB, który jest generowany przez maszyny od A do B maszyny i użyj [debugowanie interfejsów dostępu do interfejsu API](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) odczytać mapowania źródła IL IL PDB i natywnych obraz w pliku PDB IL do macierzystego mapowania. Połączenie obu mapowania zapewnia mapowanie źródła native. Ponieważ obraz natywny plik PDB jest znacznie mniejszy niż wszystkie moduły, a obrazy natywne, proces kopiowania od maszyny, A do B maszyny jest znacznie wyższa.
+Śledzenie zdarzeń między komputerami umożliwia klientom profilu programu na komputerze A i przyjrzeć danych profilowania za pomocą mapowania wiersz źródła na maszynę B. przy użyciu poprzednich wersji programu .NET Framework, użytkownik może spowodować skopiowanie wszystkich modułów i obrazy natywne z profilowanych Maszyna do maszyny analizy, która zawiera PDB IL można utworzyć mapowania źródła native. Podczas tego procesu może działać dobrze w przypadku, gdy pliki są stosunkowo mały, takie jak w przypadku aplikacji telefonicznej, pliki mogą bardzo dużych systemach pulpitu i będzie wymagać dużo czasu, aby skopiować.
+
+Przy użyciu plików PDB Ngen NGen można utworzyć pliku PDB, który zawiera mapowania IL do natywnego bez zależności w pliku PDB IL. W naszym scenariuszu śledzenia zdarzeń między komputerami wszystko, co jest potrzebne jest kopiowanie obrazu natywnego pliku PDB, który jest generowany przez maszyny od A do B maszyny i użyj [debugowanie interfejsów dostępu do interfejsu API](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) odczytać mapowania źródła IL IL PDB i natywnych obraz w pliku PDB IL do macierzystego mapowania. Połączenie obu mapowania zapewnia mapowanie źródła native. Ponieważ obraz natywny plik PDB jest znacznie mniejszy niż wszystkie moduły, a obrazy natywne, proces kopiowania od maszyny, A do B maszyny jest znacznie wyższa.
 
 <a name="v46" />
 
 ## <a name="whats-new-in-net-2015"></a>What's new in .NET 2015
- Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET Core. Niektóre nowe funkcje dotyczą zarówno i inne funkcje są specyficzne dla [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] lub [!INCLUDE[net_core](../../../includes/net-core-md.md)].
+
+Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET Core. Niektóre nowe funkcje dotyczą zarówno i inne funkcje są specyficzne dla [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] lub [!INCLUDE[net_core](../../../includes/net-core-md.md)].
 
 - **ASP.NET Core**
 
@@ -1552,7 +1570,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
      Pakietów .NET core, takich jak kolekcje niezmienialne [interfejsów API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639), a sieć interfejsów API, takich jak te znajdujące się w <xref:System.Net.Http> przestrzeni nazw są teraz dostępne jako pakiety "open source" na [GitHub](https://github.com/). Aby uzyskać dostęp do kodu, zobacz [CoreFx w serwisie GitHub](https://github.com/dotnet/corefx). Aby uzyskać więcej informacji i sposobu współtworzenia te pakiety, zobacz [platformy .NET Core i Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md), [strony głównej platformy .NET w witrynie GitHub](https://github.com/dotnet/home).
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="v452" />
 
@@ -1625,12 +1643,13 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
      Metoda może być używany przez rejestracji, który został wcześniej utworzony przez <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> w odpowiedzi na <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> metody. Sprawdza, czy `System.Transactions` mógł wypromować transakcji do transakcji MSDTC i na "konwersję" awansowanie rejestracji trwałej rejestracji. Po pomyślnym ukończeniu działania tej metody <xref:System.Transactions.IPromotableSinglePhaseNotification> interfejsu nie jest już się odwołuje `System.Transactions`, oraz wszelkich kolejnych powiadomień zostanie wyświetlony na podany <xref:System.Transactions.ISinglePhaseNotification> interfejsu. Funkcja rejestracji danego musi działać jako trwałej rejestracji, obsługując rejestrowanie transakcji i odzyskiwania. Zapoznaj się <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> Aby uzyskać szczegółowe informacje. Ponadto rejestracji musi obsługiwać <xref:System.Transactions.ISinglePhaseNotification>.  Ta metoda może *tylko* można wywołać podczas przetwarzania <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> wywołania. Jeśli tak nie jest <xref:System.Transactions.TransactionException> wyjątku.
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="v451" />
 
 ## <a name="whats-new-in-the-net-framework-451"></a>What's new in .NET Framework 4.5.1
- **Aktualizuje kwietnia 2014**:
+
+**Aktualizuje kwietnia 2014**:
 
 - [Visual Studio 2013 Update 2](https://go.microsoft.com/fwlink/p/?LinkId=393658) obejmuje aktualizacje szablony Portable Class Library do obsługi tych scenariuszy:
 
@@ -1648,7 +1667,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
 - [Źródła programu .NET Framework odwołanie](https://referencesource.microsoft.com/) udostępnia nowe funkcje przeglądania i ulepszone funkcje. Teraz możesz przejść do kodu źródłowego .NET Framework do trybu online, [Pobierz odwołania](https://referencesource.microsoft.com/download.html) przeglądania w trybie offline i krok po kroku źródła (w tym poprawki i aktualizacje) podczas debugowania. Aby uzyskać więcej informacji, zobacz wpis na blogu [nowy wygląd na potrzeby źródło odwołania .NET](https://blogs.msdn.microsoft.com/dotnet/2014/02/24/a-new-look-for-net-reference-source/).
 
- Najważniejsze nowe funkcje i ulepszenia w programie .NET Framework 4.5.1 obejmują:
+Najważniejsze nowe funkcje i ulepszenia w programie .NET Framework 4.5.1 obejmują:
 
 - Automatyczne przekierowywanie powiązań zestawów. Począwszy od programu Visual Studio 2013, gdy kompilujesz aplikację, który jest przeznaczony dla [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], przekierowania powiązań mogą być dodawane do pliku konfiguracji aplikacji Jeśli Twoja aplikacja lub jej składniki odwołują się do wielu wersji tego samego zestawu. Można również włączyć tę funkcję dla projektów przeznaczonych dla starszych wersji programu .NET Framework. Aby uzyskać więcej informacji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
@@ -1658,7 +1677,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
 - Dodatkowe ulepszenia wydajności, takie jak zawieszenie aplikacji ASP.NET, wielordzeniowe ulepszenia JIT i szybsze uruchamiani aplikacji po .NET Framework aktualizacji. Aby uzyskać więcej informacji, zobacz [ogłoszenie .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/) i [ASP.NET app suspend usprawnia](https://blogs.msdn.microsoft.com/dotnet/2013/10/09/asp-net-app-suspend-responsive-shared-net-web-hosting/) wpis w blogu.
 
- Ulepszenia do formularzy Windows Forms obejmują:
+Ulepszenia do formularzy Windows Forms obejmują:
 
 - Zmiany rozmiaru kontrolek Windows Forms. Umożliwia ustawienie rozdzielczości DPI systemu rozmiar składniki formanty (na przykład, ikony, które są wyświetlane w siatce właściwości), rezygnując się przy użyciu wpisu w pliku konfiguracyjnym aplikacji (app.config) dla aplikacji. Ta funkcja jest obecnie obsługiwane w następujących kontrolkach formularzy Windows:
 
@@ -1674,7 +1693,7 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
     </appSettings>
     ```
 
- Ulepszenia podczas debugowania aplikacji .NET Framework w programie Visual Studio 2013 obejmują:
+Ulepszenia podczas debugowania aplikacji .NET Framework w programie Visual Studio 2013 obejmują:
 
 - Wartości zwracane w debugerze programu Visual Studio. Podczas debugowania zarządzanej aplikacji w programie Visual Studio 2013, okno Autos Wyświetla typy zwracane i wartości dla metod. Te informacje są dostępne dla pulpitu, Windows Store i aplikacji Windows Phone. Aby uzyskać więcej informacji, zobacz [Sprawdź wartości zwracanych z wywołań metod](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn32325728%v=vs.120%29).
 
@@ -1684,11 +1703,11 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
 - Lepsza obsługa wyjątków dla składników środowiska wykonawczego Windows. W [!INCLUDE[win81](../../../includes/win81-md.md)], wyjątki z aplikacji Windows Store zapisują informacje o błędzie, który spowodował wyjątek, nawet w granicach języka. Informacje o tej funkcji w sekcji "Tworzenie aplikacji Windows Store" [ogłoszenie .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
- Począwszy od programu Visual Studio 2013, można użyć [z przewodnikiem narzędzia optymalizacji zarządzanym profilem (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) zoptymalizować [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
+Począwszy od programu Visual Studio 2013, można użyć [z przewodnikiem narzędzia optymalizacji zarządzanym profilem (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) zoptymalizować [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
 
- Aby uzyskać nowe funkcje w programie ASP.NET 4.5.1, zobacz [ASP.NET and Web Tools dla programu Visual Studio 2013 Release Notes](/aspnet/visual-studio/overview/2013/release-notes).
+Aby uzyskać nowe funkcje w programie ASP.NET 4.5.1, zobacz [ASP.NET and Web Tools dla programu Visual Studio 2013 Release Notes](/aspnet/visual-studio/overview/2013/release-notes).
 
- [Powrót do początku](#introduction)
+[Powrót do początku](#introduction)
 
 <a name="v45" />
 
@@ -1727,7 +1746,8 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 - Wsparcie typu reflection podzielone między <xref:System.Type> i <xref:System.Reflection.TypeInfo> klasy. Zobacz [odbicia w .NET Framework dla aplikacji Windows Store](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md).
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
- W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Managed Extensibility Framework (MEF) udostępnia następujące nowe funkcje:
+
+W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Managed Extensibility Framework (MEF) udostępnia następujące nowe funkcje:
 
 - Obsługa typów ogólnych.
 
@@ -1737,22 +1757,25 @@ Niezarządzany API profilowania zostało ulepszone w następujący sposób:
 
 - Podzbiór środowiska MEF, którego można używać podczas tworzenia [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Ten podzbiór jest dostępny jako [pakiet do pobrania](https://go.microsoft.com/fwlink/?LinkId=256238) w galerii NuGet. Aby zainstalować pakiet, otwórz projekt w programie Visual Studio, wybierz polecenie **Zarządzaj pakietami NuGet** z **projektu** menu, a następnie wyszukaj w trybie online `Microsoft.Composition` pakietu.
 
- Aby uzyskać więcej informacji, zobacz [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md).
+Aby uzyskać więcej informacji, zobacz [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md).
 
 ### <a name="asynchronous-file-operations"></a>Asynchroniczne operacje na plikach
- W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], nowe funkcje asynchroniczne zostały dodane do języków C# i Visual Basic. Te funkcje Dodawanie modelu opartego na zadaniach do wykonywania operacji asynchronicznych. Aby użyć tego nowego modelu, należy użyć metody asynchronicznej klas we/wy. Zobacz [asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md).
+
+W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], nowe funkcje asynchroniczne zostały dodane do języków C# i Visual Basic. Te funkcje Dodawanie modelu opartego na zadaniach do wykonywania operacji asynchronicznych. Aby użyć tego nowego modelu, należy użyć metody asynchronicznej klas we/wy. Zobacz [asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md).
 
 <a name="tools" />
 
 ### <a name="tools"></a>Narzędzia
- W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Generator plików zasobów (Resgen.exe) umożliwia utworzenie pliku .resw do użytku w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji z pliku Resources osadzonego w zestawie programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
 
- Zarządzane profilowana Optymalizacja (Mpgo.exe) pozwala na poprawę czas uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepustowości poprzez optymalizację zestawów obrazu natywnego. Narzędzie wiersza polecenia generuje dane profilów dla zestawów natywnych obrazów aplikacji. Zobacz [Mpgo.exe (narzędzie optymalizacji sterowanej zarządzanym profilem)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od programu Visual Studio 2013, możesz użyć Mpgo.exe do optymalizacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
+W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Generator plików zasobów (Resgen.exe) umożliwia utworzenie pliku .resw do użytku w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji z pliku Resources osadzonego w zestawie programu .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
+
+Zarządzane profilowana Optymalizacja (Mpgo.exe) pozwala na poprawę czas uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepustowości poprzez optymalizację zestawów obrazu natywnego. Narzędzie wiersza polecenia generuje dane profilów dla zestawów natywnych obrazów aplikacji. Zobacz [Mpgo.exe (narzędzie optymalizacji sterowanej zarządzanym profilem)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od programu Visual Studio 2013, możesz użyć Mpgo.exe do optymalizacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
 
 <a name="parallel" />
 
 ### <a name="parallel-computing"></a>Obliczenia równoległe
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Zawiera kilka nowych funkcji i udoskonaleń do obliczeń równoległych. Obejmują one lepszą wydajność, zwiększoną kontrolę, Ulepszona obsługa programowania asynchronicznego, nową bibliotekę przepływu danych i lepszą obsługę równoległych analiz debugowania i wydajności. Zobacz wpis [nowości w równoległości obliczeń w .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) w Programowanie równoległe z bloga platformy .NET.
+
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Zawiera kilka nowych funkcji i udoskonaleń do obliczeń równoległych. Obejmują one lepszą wydajność, zwiększoną kontrolę, Ulepszona obsługa programowania asynchronicznego, nową bibliotekę przepływu danych i lepszą obsługę równoległych analiz debugowania i wydajności. Zobacz wpis [nowości w równoległości obliczeń w .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) w Programowanie równoległe z bloga platformy .NET.
 
 <a name="web" />
 
@@ -1785,7 +1808,8 @@ Ponadto [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] obejmuje następuj�
 <a name="client" />
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
- W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Presentation Foundation (WPF) zawiera zmiany i udoskonalenia w następujących obszarach:
+
+W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Presentation Foundation (WPF) zawiera zmiany i udoskonalenia w następujących obszarach:
 
 - Nowy <xref:System.Windows.Controls.Ribbon.Ribbon> formant, który umożliwia implementację interfejsu użytkownika wstążki, który jest hostem kart, Menu aplikacji i paska narzędzi Szybki dostęp.
 
@@ -1808,7 +1832,8 @@ Ponadto [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] obejmuje następuj�
 <a name="windows_communication_foundation" />
 
 ### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
- W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], następujące funkcje zostały dodane do ułatwi zapis i konserwację aplikacji Windows Communication Foundation (WCF):
+
+W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], następujące funkcje zostały dodane do ułatwi zapis i konserwację aplikacji Windows Communication Foundation (WCF):
 
 - Uproszczenie wygenerowanych plików konfiguracyjnych.
 
@@ -1844,12 +1869,13 @@ Ponadto [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] obejmuje następuj�
 
 - Obsługa usług WCF, które używają zinternacjonalizowanych nazw domen (IDN).
 
- Aby uzyskać więcej informacji, zobacz [What's New in Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=228173).
+Aby uzyskać więcej informacji, zobacz [What's New in Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=228173).
 
 <a name="windows_workflow_foundation" />
 
 ### <a name="windows-workflow-foundation-wf"></a>Program Windows Workflow Foundation (WF)
- W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kilka nowych funkcji dodanych do Windows Workflow Foundation (WF), w tym:
+
+W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], kilka nowych funkcji dodanych do Windows Workflow Foundation (WF), w tym:
 
 - Stan przepływów pracy maszyny, które zostały najpierw wprowadzone w ramach programu .NET Framework 4.0.1 ([platformy aktualizacji 1 dla programu .NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=215092)). Ta aktualizacja zawierała kilka nowych klas i działań, które umożliwiły deweloperom tworzenie przepływów pracy automatu stanów. Te klasy i działania zostały zaktualizowane dla [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] do uwzględnienia:
 

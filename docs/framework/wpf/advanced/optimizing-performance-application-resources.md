@@ -9,17 +9,17 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: fa412a4f900179c22868b2ef3e7429e7dc2acc9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507554"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352402"
 ---
 # <a name="optimizing-performance-application-resources"></a>Optymalizacja wydajności: Zasoby aplikacji
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pozwala na udostępnianie zasobów aplikacji, aby może obsługiwać spójnego wyglądu i zachowania, które znajdują się w podobnych elementów. Ten temat zawiera kilka zaleceń, w tym obszarze, które mogą pomóc poprawić wydajność aplikacji.  
   
- Aby uzyskać więcej informacji na temat zasobów, zobacz [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Aby uzyskać więcej informacji na temat zasobów, zobacz [zasoby XAML](xaml-resources.md).  
   
 ## <a name="sharing-resources"></a>Udostępnianie zasobów  
  Jeśli aplikacja używa niestandardowych formantów i definiuje zasoby w <xref:System.Windows.ResourceDictionary> (lub węzeł zasoby XAML), zalecane jest, albo zdefiniowania zasoby na <xref:System.Windows.Application> lub <xref:System.Windows.Window> obiekt poziom lub zdefiniuj je w motyw domyślny dla Kontrolki niestandardowe. Definiowanie zasobów w niestandardowej kontrolce <xref:System.Windows.ResourceDictionary> nakłada wpływ na wydajność dla każdego wystąpienia tej kontrolki. Na przykład w przypadku operacji intensywnie pędzla, które zdefiniowano jako część definicji zasobu formantu niestandardowego i wiele wystąpień formantu niestandardowego zestaw roboczy aplikacji znacznie wzrośnie.  
@@ -31,7 +31,7 @@ ms.locfileid: "54507554"
   
  W poniższym przykładzie znaczników ilustruje tę sytuację:  
   
- [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
 ## <a name="use-static-resources-when-possible"></a>Użyj zasobów statycznych, gdy jest to możliwe  
  Zasób statyczny zawiera wartość dla każdego atrybutu właściwość XAML, sprawdzając odwołanie do zasobu już zdefiniowane. Zachowanie wyszukiwania dla tego zasobu jest analogiczne do wyszukiwania w czasie kompilacji.  
@@ -40,15 +40,15 @@ ms.locfileid: "54507554"
   
  W poniższym przykładzie znaczników pokazano sposób użycia obu typów zasobów:  
   
- [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planowanie wydajności aplikacji](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Zachowanie obiektu](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Inne zalecenia dotyczące wydajności](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
+- [Planowanie wydajności aplikacji](planning-for-application-performance.md)
+- [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)
+- [Układ i projekt](optimizing-performance-layout-and-design.md)
+- [Grafika 2D i obrazowanie](optimizing-performance-2d-graphics-and-imaging.md)
+- [Zachowanie obiektu](optimizing-performance-object-behavior.md)
+- [Text](optimizing-performance-text.md)
+- [Powiązanie danych](optimizing-performance-data-binding.md)
+- [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)

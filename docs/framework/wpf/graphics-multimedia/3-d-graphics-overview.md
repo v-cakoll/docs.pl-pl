@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 237c354d1a5207d4d038097f7e1348379c44382d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9f3d21d14a8eac862186a41bd8771cffb7375c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653255"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352870"
 ---
 # <a name="3-d-graphics-overview"></a>Przegląd Grafika 3-D
 <a name="introduction"></a> [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Funkcji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwia deweloperom rysowania, przekształcania i animować grafika 3-D w kodzie znaczników i procedur. Deweloperzy mogą łączyć [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] i [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] grafiki, tworzyć zaawansowane kontrolki, ilustrują złożonych danych i poszerz możliwości użytkownika środowisko interfejsu aplikacji. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Obsługa w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie ma na celu zapewnienie platformy programowania gier w pełni funkcjonalne. Ten temat zawiera omówienie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system grafiki.  
@@ -29,7 +29,7 @@ ms.locfileid: "54653255"
 ## <a name="3-d-coordinate-space"></a>3-przestrzeni współrzędnych  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Współrzędnych dla [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafiki lokalizuje punkt początkowy w lewym górnym rogu obszaru renderowania (zazwyczaj ekranu). W [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] system dodatnie wartości osi x mają kontynuować po prawej stronie i wartości dodatnie y przejść w dół.  W [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] współrzędnych, jednak źródła znajduje się w środku obszaru renderowania przy użyciu wartości dodatnie osi x z prawej strony, ale wartości dodatnie y kontynuowanie zamiast tego w górę i na zewnątrz wartości dodatnie osi z ze źródła do przeglądarki.  
   
- ![Współrzędnych](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-1.png "CoordSystem-1")  
+ ![Współrzędnych](./media/coordsystem-1.png "CoordSystem-1")  
 Reprezentacje konwencjonalne układ współrzędnych 2W i 3W  
   
  Obszar zdefiniowany przez te osi jest nieruchomy układem odniesienia dla [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] obiekty w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Tworzenie modeli, w tym miejscu i utworzyć światła i aparaty fotograficzne, aby je wyświetlić, warto odróżnienia lokalnego układem odniesienia tworzone dla każdego modelu, jeśli zastosujesz przekształcenia do niego stacjonarnych układem odniesienia lub "miejsca na świecie,". Pamiętaj również, że obiekty w przestrzeni świata mogą różnić się całkowicie lub być niewidoczne na wszystkich, w zależności od jasny i aparatu ustawienia, ale pozycja kamery nie zmienia lokalizację obiektów w przestrzeni świata.  
@@ -42,18 +42,18 @@ Reprezentacje konwencjonalne układ współrzędnych 2W i 3W
   
  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> i <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> właściwości <xref:System.Windows.Media.Media3D.ProjectionCamera> ograniczyć zakres aparatu projekcji. Aparaty fotograficzne, mogą być umieszczony w dowolnym miejscu w scenie, istnieje możliwość, że aparat, który faktycznie został umieszczony wewnątrz modelu lub bardzo blisko modelu, co utrudnia odróżniać obiekty prawidłowo.  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> Pozwala określić minimalną odległość z aparatu, po przekroczeniu którego będzie nie rysowany obiektów.  Z drugiej strony <xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A> umożliwia określenie odległości od aparatu po przekroczeniu których obiektów nie będą pobierane, który zapewnia, że obiektów zbyt daleko rozpoznawalnych nie będą uwzględniane w scenie.  
   
- ![Ustawienia aparatu fotograficznego](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-6.png "CoordSystem 6")  
+ ![Ustawienia aparatu fotograficznego](./media/coordsystem-6.png "CoordSystem 6")  
 Położenie kamery  
   
  <xref:System.Windows.Media.Media3D.OrthographicCamera> Określa prostopadły rzut [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] modelu do [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] visual powierzchni. Podobnie jak inne aparaty fotograficzne Określa położenie wyświetlania kierunku i kierunek "w górę". W odróżnieniu od <xref:System.Windows.Media.Media3D.PerspectiveCamera>, jednak <xref:System.Windows.Media.Media3D.OrthographicCamera> opisuje projekcji, który nie obejmuje foreshortening perspektywy. Innymi słowy <xref:System.Windows.Media.Media3D.OrthographicCamera> Opisuje okno wyświetlania, którego boki są równolegle, zamiast jednego którego boki spotykają się w punkcie aparatu. Na poniższej ilustracji przedstawiono ten sam model, jak wyświetlać za pomocą <xref:System.Windows.Media.Media3D.PerspectiveCamera> i <xref:System.Windows.Media.Media3D.OrthographicCamera>.  
   
- ![Rzutowanie prostopadłe i perspektywiczne](../../../../docs/framework/wpf/graphics-multimedia/media/camera-projections4.png "Camera_projections4")  
+ ![Rzutowanie prostopadłe i perspektywiczne](./media/camera-projections4.png "Camera_projections4")  
 Perspektywy i prostopadły prognozy  
   
  Poniższy kod przedstawia niektóre ustawienia typowe aparatu.  
   
- [!code-csharp[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexampleinline1)]
- [!code-vb[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexampleinline1)]  
+ [!code-csharp[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Basic3DShapeExample.cs#basic3dshapecodeexampleinline1)]
+ [!code-vb[3dgallery_procedural_snip#Basic3DShapeCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexampleinline1)]  
   
 <a name="models_meshes"></a>   
 ## <a name="model-and-mesh-primitives"></a>Model i podstawowych siatki  
@@ -64,7 +64,7 @@ Perspektywy i prostopadły prognozy
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Udostępnia obecnie system <xref:System.Windows.Media.Media3D.MeshGeometry3D> klasy, która umożliwia określenie dowolnego geometrii; obecnie nie obsługuje wstępnie zdefiniowanych [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] podstawowych, takich jak obszary i formularze trzeciego stopnia. Rozpocznij tworzenie <xref:System.Windows.Media.Media3D.MeshGeometry3D> przez określenie listy wierzchołków trójkąt jako jego <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> właściwości. Każdy wierzchołek jest określony jako <xref:System.Windows.Media.Media3D.Point3D>.  (W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], określić tę właściwość jako listę liczb pogrupowane w trzy, które reprezentują współrzędne każdego wierzchołka.) W zależności od jego geometrii Twojej sieci może składać się z wielu trójkątów, niektóre z nich udostępnianie tych samych rogi (wierzchołków). Aby narysować siatkę poprawnie, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] potrzebuje informacji o tym, które wierzchołki są współużytkowane przez które trójkąty. Te informacje zostaną podane, określając listę wskaźników trójkąt przy użyciu <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> właściwości. Ta lista określa kolejność, w jakiej punkty określone w <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> listy określi trójkąt.  
   
- [!code-xaml[basic3d#Basic3DXAML3DN3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
+ [!code-xaml[basic3d#Basic3DXAML3DN3](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn3)]  
   
  W powyższym przykładzie <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> lista określa osiem wierzchołki, aby zdefiniować moduł w kształcie siatki. <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> Właściwość określa listę grup dwunastu trzech indeksów.  Każdy numer na liście odnosi się do przesunięcie <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> listy.  Na przykład, określony przez pierwsze trzy wierzchołki <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> listy są (1,1,0) (0,1,0) i (0,0,0). Pierwszych trzech indeksów, określony przez <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A> listy są 0, 2 i 1, które odpowiadają pierwszym, trzeci i drugie punktów w <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A> listy. W rezultacie pierwszy trójkąt, który tworzy model sześcianu będzie składać się z (1,1,0) do (0,1,0) do (0,0,0), a pozostałe trójkąty jedenaście zależą podobnie.  
   
@@ -74,11 +74,11 @@ Perspektywy i prostopadły prognozy
   
  Poniższy przykład przedstawia sposób tworzenia jednej powierzchni modelu modułu w kodzie proceduralnym. Należy pamiętać, że można narysować cały moduł jako pojedynczy GeometryModel3D; w tym przykładzie rysuje Ściana sześcianu jako odrębne model, aby można było zastosować oddzielne tekstury do każdej twarzy później.  
   
- [!code-csharp[3doverview#3DOverview3DN6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
- [!code-vb[3doverview#3DOverview3DN6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
+ [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
+ [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
   
- [!code-csharp[3doverview#3DOverview3DN7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn7)]
- [!code-vb[3doverview#3DOverview3DN7](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn7)]  
+ [!code-csharp[3doverview#3DOverview3DN7](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn7)]
+ [!code-vb[3doverview#3DOverview3DN7](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn7)]  
   
 <a name="materials"></a>   
 ## <a name="applying-materials-to-the-model"></a>Stosowanie materiałów do modelu  
@@ -99,12 +99,12 @@ Perspektywy i prostopadły prognozy
   
  W poniższych przykładach kodu pokazano, jak stosowanie jednolitego koloru i rysowania jako pędzle, aby [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] modeli.  
   
- [!code-xaml[basic3d#Basic3DXAML3DN5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
+ [!code-xaml[basic3d#Basic3DXAML3DN5](~/samples/snippets/xaml/VS_Snippets_Wpf/Basic3D/XAML/Window1.xaml#basic3dxaml3dn5)]  
   
- [!code-xaml[3doverview#3DOverview3DN9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
+ [!code-xaml[3doverview#3DOverview3DN9](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/app.xaml#3doverview3dn9)]  
   
- [!code-csharp[3doverview#3DOverview3DN8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]
- [!code-vb[3doverview#3DOverview3DN8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
+ [!code-csharp[3doverview#3DOverview3DN8](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn8)]
+ [!code-vb[3doverview#3DOverview3DN8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn8)]  
   
 <a name="lights"></a>   
 ## <a name="illuminating-the-scene"></a>Dostępne na scenie  
@@ -122,16 +122,16 @@ Perspektywy i prostopadły prognozy
   
  Światła są <xref:System.Windows.Media.Media3D.Model3D> obiektów, dzięki czemu może przekształcić i animować właściwości światła, w tym pozycji, kolorów, kierunku i zakresu.  
   
- [!code-xaml[hittest3d#HitTest3D3DN6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml#hittest3d3dn6)]  
+ [!code-xaml[hittest3d#HitTest3D3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml#hittest3d3dn6)]  
   
- [!code-csharp[basic3d#Basic3D3DN11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn11)]
- [!code-vb[basic3d#Basic3D3DN11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn11)]  
+ [!code-csharp[basic3d#Basic3D3DN11](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn11)]
+ [!code-vb[basic3d#Basic3D3DN11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn11)]  
   
- [!code-csharp[basic3d#Basic3D3DN12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn12)]
- [!code-vb[basic3d#Basic3D3DN12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn12)]  
+ [!code-csharp[basic3d#Basic3D3DN12](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn12)]
+ [!code-vb[basic3d#Basic3D3DN12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn12)]  
   
- [!code-csharp[basic3d#Basic3D3DN13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn13)]
- [!code-vb[basic3d#Basic3D3DN13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn13)]  
+ [!code-csharp[basic3d#Basic3D3DN13](~/samples/snippets/csharp/VS_Snippets_Wpf/Basic3D/CSharp/Window1.xaml.cs#basic3d3dn13)]
+ [!code-vb[basic3d#Basic3D3DN13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Basic3D/visualbasic/window1.xaml.vb#basic3d3dn13)]  
   
 <a name="transforms"></a>   
 ## <a name="transforming-models"></a>Przekształcanie modeli  
@@ -139,27 +139,27 @@ Perspektywy i prostopadły prognozy
   
  Każdy obiekt modelu ma <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> właściwości, za pomocą którego można przenosić, ponownie poznaniu lub zmienić rozmiar modelu.  Po zastosowaniu przekształcenia skutecznie przesunięcia wszystkie punkty modelu niezależnie od wektora lub wartość określoną przez transformacji. Innymi słowy, zostały przekształcone współrzędnych miejsca, w którym model jest zdefiniowana, ("model miejsca"), ale nie zostały zmienione wartości, które tworzą geometrii modelu w układzie współrzędnych całej sceny ("miejsca na świecie").  
   
- Aby uzyskać więcej informacji na temat przekształcania modeli, zobacz [Przegląd przekształcenia 3-D](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md).  
+ Aby uzyskać więcej informacji na temat przekształcania modeli, zobacz [Przegląd przekształcenia 3-D](3-d-transformations-overview.md).  
   
 <a name="animations"></a>   
 ## <a name="animating-models"></a>Animowanie modeli  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Implementacji bierze udział w tym samym systemie czasu i animacji, co [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafiki. Oznacza to aby animować scenę 3-D, animować właściwości jego modeli. Można animować właściwości elementów podstawowych bezpośrednio, ale jest zazwyczaj łatwiejsze animować przekształceń, które Zmienianie położenia lub wyglądu modeli. Ponieważ przekształcenia można zastosować do <xref:System.Windows.Media.Media3D.Model3DGroup> obiektów oraz poszczególne modele, istnieje możliwość, stosuje się jeden zestaw animacji do elementu podrzędnego Model3DGroup i inny zestaw animacji do grupy obiektów podrzędnych. Można również uzyskać różne efektów wizualnych przez animowanie właściwości oświetlenia swoje sceny. Na koniec można animować projekcji, sama przez animowanie położenia kamery lub pole widzenia. Informacje o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system chronometrażu i animacji, zobacz [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md), [Przegląd Scenorysy](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md), i [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)tematów.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Implementacji bierze udział w tym samym systemie czasu i animacji, co [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] grafiki. Oznacza to aby animować scenę 3-D, animować właściwości jego modeli. Można animować właściwości elementów podstawowych bezpośrednio, ale jest zazwyczaj łatwiejsze animować przekształceń, które Zmienianie położenia lub wyglądu modeli. Ponieważ przekształcenia można zastosować do <xref:System.Windows.Media.Media3D.Model3DGroup> obiektów oraz poszczególne modele, istnieje możliwość, stosuje się jeden zestaw animacji do elementu podrzędnego Model3DGroup i inny zestaw animacji do grupy obiektów podrzędnych. Można również uzyskać różne efektów wizualnych przez animowanie właściwości oświetlenia swoje sceny. Na koniec można animować projekcji, sama przez animowanie położenia kamery lub pole widzenia. Informacje o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system chronometrażu i animacji, zobacz [Przegląd animacja](animation-overview.md), [Przegląd Scenorysy](storyboards-overview.md), i [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)tematów.  
   
  Animowanie obiektu w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], Tworzenie osi czasu, zdefiniuj animacji (czyli tak naprawdę zmianę niektórych wartości właściwości wraz z upływem czasu) i określa właściwość, do którego należy zastosować animacji. Ponieważ wszystkie obiekty w [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] sceny są elementami podrzędnymi <xref:System.Windows.Controls.Viewport3D>, właściwości objęte wszystkie animacje, który chcesz zastosować do sceny są właściwości właściwości Viewport3D.  
   
  Załóżmy, że chcesz, aby model prawdopodobnie luzu w miejscu. Można także zastosować <xref:System.Windows.Media.Media3D.RotateTransform3D> modelu, animować osi jego obrotu z wektora jednego do drugiego. Poniższy przykład kodu pokazuje, stosując Vector3DAnimation właściwości osi Rotation3D transformacji, zakładając, że RotateTransform3D, aby być jednym z kilku zastosowane do modelu z TransformGroup przekształcenia.  
   
- [!code-csharp[3doverview#3DOverview3DN1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn1)]
- [!code-vb[3doverview#3DOverview3DN1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn1)]  
+ [!code-csharp[3doverview#3DOverview3DN1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn1)]
+ [!code-vb[3doverview#3DOverview3DN1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn1)]  
   
- [!code-csharp[3doverview#3DOverview3DN3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn3)]
- [!code-vb[3doverview#3DOverview3DN3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn3)]  
+ [!code-csharp[3doverview#3DOverview3DN3](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn3)]
+ [!code-vb[3doverview#3DOverview3DN3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn3)]  
   
- [!code-csharp[3doverview#3DOverview3DN4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn4)]
- [!code-vb[3doverview#3DOverview3DN4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn4)]  
+ [!code-csharp[3doverview#3DOverview3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn4)]
+ [!code-vb[3doverview#3DOverview3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn4)]  
   
- [!code-csharp[3doverview#3DOverview3DN5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn5)]
- [!code-vb[3doverview#3DOverview3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn5)]  
+ [!code-csharp[3doverview#3DOverview3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn5)]
+ [!code-vb[3doverview#3DOverview3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn5)]  
   
 <a name="animations1"></a>   
 ## <a name="add-3-d-content-to-the-window"></a>Dodawanie zawartości 3-w do okna  
@@ -167,15 +167,15 @@ Perspektywy i prostopadły prognozy
   
  Na koniec należy dodać <xref:System.Windows.Controls.Viewport3D> do okna. Gdy <xref:System.Windows.Controls.Viewport3D> jest uwzględniony, ponieważ zawartość elementu układu, takich jak kanwy, określić rozmiar Viewport3D, ustawiając jego <xref:System.Windows.FrameworkElement.Height%2A> i <xref:System.Windows.FrameworkElement.Width%2A> właściwości (odziedziczone <xref:System.Windows.FrameworkElement>).  
   
- [!code-xaml[hostingwpfusercontrolinwf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
+ [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>
 - <xref:System.Windows.Media.Media3D.Material>
-- [Przekształcenia 3D — przegląd](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)
-- [Maksymalizowanie wydajności 3D WPF](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Przekształcenia 3D — przegląd](3-d-transformations-overview.md)
+- [Maksymalizowanie wydajności 3D WPF](maximize-wpf-3d-performance.md)
+- [Tematy z instrukcjami](3-d-graphics-how-to-topics.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)

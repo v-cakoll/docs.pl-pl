@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 5384a49461886ba184a0a128467c864b37c0efc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667041"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374313"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Przechwycenie danych z pisaka
 <xref:System.Windows.Input.StylusPlugIns> Architektura zapewnia mechanizm implementowania kontrolę niskiego poziomu nad <xref:System.Windows.Input.Stylus> dane wejściowe i tworzenia cyfrowy atrament <xref:System.Windows.Ink.Stroke> obiektów. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasa udostępnia mechanizm do implementowania niestandardowe zachowanie i zastosować je do strumienia danych pochodzących z urządzeń pióra, aby uzyskać optymalną wydajność.  
@@ -47,10 +47,10 @@ ms.locfileid: "54667041"
   
  W poniższym przykładzie pokazano wtyczki, który ogranicza możliwość użycia wejście pióra, modyfikując <xref:System.Windows.Input.StylusPoint.X%2A> i <xref:System.Windows.Input.StylusPoint.Y%2A> wartości w <xref:System.Windows.Input.StylusPoint> dane ponieważ pochodzą z <xref:System.Windows.Input.Stylus> urządzenia.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
-[!code-vb[AdvancedInkTopicsSamples#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
+[!code-vb[AdvancedInkTopicsSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
 ## <a name="adding-your-plug-in-to-an-inkcanvas"></a>Dodawanie wtyczkę z elementem InkCanvas  
@@ -58,18 +58,18 @@ ms.locfileid: "54667041"
   
  Poniższy przykład pokazuje niestandardowy <xref:System.Windows.Controls.InkCanvas> która filtruje pisma odręcznego.  
   
- [!code-csharp[AdvancedInkTopicsSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
+ [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
  Jeśli dodasz `FilterInkCanvas` do aplikacji i uruchom go, można zauważyć pisma odręcznego jest ograniczone do regionu, do czasu, po użytkownik kończy pociągnięcia. Jest to spowodowane <xref:System.Windows.Controls.InkCanvas> ma <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> właściwość, która jest <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> i jest już członkiem <xref:System.Windows.UIElement.StylusPlugIns%2A> kolekcji. Niestandardowy <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> dodanym do <xref:System.Windows.UIElement.StylusPlugIns%2A> odbiera kolekcji <xref:System.Windows.Input.StylusPoint> dane po <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> odbiera dane. W rezultacie <xref:System.Windows.Input.StylusPoint> dane nie będą filtrowane do czasu, po użytkownik wind zakończenie pociągnięcia pióra. Aby filtrować pisma odręcznego, jak użytkownik wprowadzi go, należy wstawić `FilterPlugin` przed <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  
   
  Poniższy kod C# pokazuje niestandardowy <xref:System.Windows.Controls.InkCanvas> która filtruje pisma odręcznego, zgodnie z jej rysowania.  
   
- [!code-csharp[AdvancedInkTopicsSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
+ [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
 ## <a name="conclusion"></a>Wniosek  
  Przez wyprowadzanie własne <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> klasy i wstawiania ich do <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> kolekcji, można znacznie zwiększyć zachowanie cyfrowego pisma odręcznego. Masz dostęp do <xref:System.Windows.Input.StylusPoint> dane ponieważ jest generowany, dzięki czemu możesz dostosować <xref:System.Windows.Input.Stylus> danych wejściowych. Ponieważ masz takiego niskiego poziomu dostępu do <xref:System.Windows.Input.StylusPoint> danych, można zaimplementować kolekcji pisma odręcznego i renderowanie z optymalną wydajnością aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zaawansowana obsługa pisma odręcznego](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Zaawansowana obsługa pisma odręcznego](advanced-ink-handling.md)
 - [Uzyskiwania dostępu i manipulowania piórem](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

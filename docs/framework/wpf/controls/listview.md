@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 619f10b36aa55813824483c386b59778fd756118
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551240"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376224"
 ---
 # <a name="listview"></a>ListView
-<xref:System.Windows.Controls.ListView> Kontroli zapewnia infrastrukturę do wyświetlenia zbiór elementów danych w różnych układów lub widoków.  
+<xref:System.Windows.Controls.ListView> Control oferuje infrastrukturę do wyświetlenia zbiór elementów danych w różnych układów lub widoków.  
   
- Na poniższej ilustracji pokazano <xref:System.Windows.Controls.ListView>.  
+ Poniższa ilustracja przedstawia <xref:System.Windows.Controls.ListView>.  
   
- ![Element ListView z danych wyjściowych w widoku GridView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![ListView z danymi wyjściowymi GridView](./media/listviewgridview.JPG "ListViewGridView")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienia](../../../../docs/framework/wpf/controls/listview-overviews.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Omówienia](listview-overviews.md)  
+ [Tematy z instrukcjami](listview-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ListView>  
@@ -31,5 +31,5 @@ ms.locfileid: "33551240"
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [Powiązanie danych — omówienie](../data/data-binding-overview.md)  
+  [Szablonowanie danych — omówienie](../data/data-templating-overview.md)

@@ -7,281 +7,283 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: a69dad31e750143af8fee94de9ccdbfd609737fe
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: f261414c2fff7ee91c46eda889515fb789a42231
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204486"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352805"
 ---
-# <a name="getting-started-sample"></a><span data-ttu-id="6a56c-102">Wprowadzenie — przykład</span><span class="sxs-lookup"><span data-stu-id="6a56c-102">Getting Started Sample</span></span>
-<span data-ttu-id="6a56c-103">Wprowadzenie do przykładu demonstruje sposób implementacji typowych usług i typowego klienta za pomocą usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="6a56c-103">The Getting Started sample demonstrates how to implement a typical service and a typical client using Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="6a56c-104">Te przykładowe dane stanowią podstawę dla wszystkich przykładów podstawową technologię.</span><span class="sxs-lookup"><span data-stu-id="6a56c-104">This sample is the basis for all other basic technology samples.</span></span>  
-  
+# <a name="getting-started-sample"></a><span data-ttu-id="98c43-102">Wprowadzenie — przykład</span><span class="sxs-lookup"><span data-stu-id="98c43-102">Getting Started Sample</span></span>
+
+<span data-ttu-id="98c43-103">Wprowadzenie do przykładu demonstruje sposób implementacji typowych usług i typowego klienta za pomocą usługi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="98c43-103">The Getting Started sample demonstrates how to implement a typical service and a typical client using Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="98c43-104">Te przykładowe dane stanowią podstawę dla wszystkich przykładów podstawową technologię.</span><span class="sxs-lookup"><span data-stu-id="98c43-104">This sample is the basis for all other basic technology samples.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="6a56c-105">Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="6a56c-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
-  
+> <span data-ttu-id="98c43-105">Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.</span><span class="sxs-lookup"><span data-stu-id="98c43-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="6a56c-106">Przykłady może już być zainstalowany na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="6a56c-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="6a56c-107">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="6a56c-107">Check for the following (default) directory before continuing.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  <span data-ttu-id="6a56c-108">Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów.</span><span class="sxs-lookup"><span data-stu-id="6a56c-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6a56c-109">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="6a56c-109">This sample is located in the following directory.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`  
-  
- <span data-ttu-id="6a56c-110">Usługa opisuje operacje, które wykonuje w kontrakcie usługi, który publicznie udostępnia się jako metadane.</span><span class="sxs-lookup"><span data-stu-id="6a56c-110">The service describes the operations it performs in a service contract that it exposes publicly as metadata.</span></span> <span data-ttu-id="6a56c-111">Usługa również zawiera kod implementujący działania.</span><span class="sxs-lookup"><span data-stu-id="6a56c-111">The service also contains the code to implement the operations.</span></span>  
-  
- <span data-ttu-id="6a56c-112">Klient zawiera definicję kontraktu usługi i klasy serwera proxy do uzyskiwania dostępu do usługi.</span><span class="sxs-lookup"><span data-stu-id="6a56c-112">The client contains a definition of the service contract and a proxy class for accessing the service.</span></span> <span data-ttu-id="6a56c-113">Kod serwera proxy jest generowany na podstawie przy użyciu metadanych usługi [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="6a56c-113">The proxy code is generated from the service metadata using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>  
-  
- <span data-ttu-id="6a56c-114">Na [!INCLUDE[wv](../../../../includes/wv-md.md)], usługa jest hostowana w Windows Activation Service (WAS).</span><span class="sxs-lookup"><span data-stu-id="6a56c-114">On [!INCLUDE[wv](../../../../includes/wv-md.md)], the service is hosted in the Windows Activation Service (WAS).</span></span> <span data-ttu-id="6a56c-115">Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], jest hostowana w usłudze Internet Information Services (IIS) i programu ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="6a56c-115">On [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], it is hosted by Internet Information Services (IIS) and ASP.NET.</span></span> <span data-ttu-id="6a56c-116">Hosting w usługach IIS i WAS umożliwia usłudze aktywowany automatycznie, gdy jest on dostępny po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="6a56c-116">Hosting a service in IIS or WAS allows the service to be activated automatically when it is accessed for the first time.</span></span>  
-  
+> <span data-ttu-id="98c43-106">Przykłady może już być zainstalowany na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="98c43-106">The samples may already be installed on your computer.</span></span> <span data-ttu-id="98c43-107">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="98c43-107">Check for the following (default) directory before continuing.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> <span data-ttu-id="98c43-108">Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów.</span><span class="sxs-lookup"><span data-stu-id="98c43-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="98c43-109">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="98c43-109">This sample is located in the following directory.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
+
+<span data-ttu-id="98c43-110">Usługa opisuje operacje, które wykonuje w kontrakcie usługi, który publicznie udostępnia się jako metadane.</span><span class="sxs-lookup"><span data-stu-id="98c43-110">The service describes the operations it performs in a service contract that it exposes publicly as metadata.</span></span> <span data-ttu-id="98c43-111">Usługa również zawiera kod implementujący działania.</span><span class="sxs-lookup"><span data-stu-id="98c43-111">The service also contains the code to implement the operations.</span></span>
+
+<span data-ttu-id="98c43-112">Klient zawiera definicję kontraktu usługi i klasy serwera proxy do uzyskiwania dostępu do usługi.</span><span class="sxs-lookup"><span data-stu-id="98c43-112">The client contains a definition of the service contract and a proxy class for accessing the service.</span></span> <span data-ttu-id="98c43-113">Kod serwera proxy jest generowany na podstawie przy użyciu metadanych usługi [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="98c43-113">The proxy code is generated from the service metadata using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span>
+
+<span data-ttu-id="98c43-114">Na [!INCLUDE[wv](../../../../includes/wv-md.md)], usługa jest hostowana w Windows Activation Service (WAS).</span><span class="sxs-lookup"><span data-stu-id="98c43-114">On [!INCLUDE[wv](../../../../includes/wv-md.md)], the service is hosted in the Windows Activation Service (WAS).</span></span> <span data-ttu-id="98c43-115">Na [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], jest hostowana w usłudze Internet Information Services (IIS) i programu ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="98c43-115">On [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], it is hosted by Internet Information Services (IIS) and ASP.NET.</span></span> <span data-ttu-id="98c43-116">Hosting w usługach IIS i WAS umożliwia usłudze aktywowany automatycznie, gdy jest on dostępny po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="98c43-116">Hosting a service in IIS or WAS allows the service to be activated automatically when it is accessed for the first time.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="6a56c-117">Jeśli chcesz użyć rozpocząć pracę przy użyciu przykładu hostującym usługę w aplikacji konsoli usług IIS, zobacz [hosta samodzielnego](../../../../docs/framework/wcf/samples/self-host.md) próbki.</span><span class="sxs-lookup"><span data-stu-id="6a56c-117">If you would prefer to get started with a sample that hosts the service in a console application instead of IIS, see the [Self-Host](../../../../docs/framework/wcf/samples/self-host.md) sample.</span></span>  
-  
- <span data-ttu-id="6a56c-118">Usługi i klienta należy określić szczegóły dostępu w ustawieniach pliku konfiguracji, które zapewniają elastyczność w czasie wdrażania.</span><span class="sxs-lookup"><span data-stu-id="6a56c-118">The service and client specify access details in configuration file settings, which provide flexibility at the time of deployment.</span></span> <span data-ttu-id="6a56c-119">W tym definicji punktu końcowego, który określa adres, powiązania i umowy.</span><span class="sxs-lookup"><span data-stu-id="6a56c-119">This includes an endpoint definition that specifies an address, binding, and contract.</span></span> <span data-ttu-id="6a56c-120">Powiązanie określa transportu i zabezpieczenia szczegółowe informacje o jak usługa ma być dostępny.</span><span class="sxs-lookup"><span data-stu-id="6a56c-120">The binding specifies transport and security details for how the service is to be accessed.</span></span>  
-  
- <span data-ttu-id="6a56c-121">Usługa służy do konfigurowania zachowania w czasie wykonywania do publikowania metadanych.</span><span class="sxs-lookup"><span data-stu-id="6a56c-121">The service configures a run-time behavior to publish its metadata.</span></span>  
-  
- <span data-ttu-id="6a56c-122">Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".</span><span class="sxs-lookup"><span data-stu-id="6a56c-122">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="6a56c-123">Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia).</span><span class="sxs-lookup"><span data-stu-id="6a56c-123">The contract is defined by the `ICalculator` interface, which exposes math operations (add, subtract, multiply, and divide).</span></span> <span data-ttu-id="6a56c-124">Klient wysyła żądania do operacji matematycznych danego i odpowiedzi usługi z wynikiem.</span><span class="sxs-lookup"><span data-stu-id="6a56c-124">The client makes requests to a given math operation and the service replies with the result.</span></span> <span data-ttu-id="6a56c-125">Implementuje usługi `ICalculator` kontraktu, który jest zdefiniowany w poniższym kodzie.</span><span class="sxs-lookup"><span data-stu-id="6a56c-125">The service implements an `ICalculator` contract that is defined in the following code.</span></span>  
-  
-```vb  
-' Define a service contract.  
-    <ServiceContract(Namespace:="http://Microsoft.Samples.GettingStarted")>  
-     Public Interface ICalculator  
-        <OperationContract()>  
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double  
-        <OperationContract()>  
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double  
-        <OperationContract()>  
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double  
-        <OperationContract()>  
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
-    End Interface  
-```  
-  
-```csharp  
-// Define a service contract.  
-[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
-public interface ICalculator  
-{  
-    [OperationContract]  
-    double Add(double n1, double n2);  
-    [OperationContract]  
-    double Subtract(double n1, double n2);  
-    [OperationContract]  
-    double Multiply(double n1, double n2);  
-    [OperationContract]  
-    double Divide(double n1, double n2);  
-}  
-```  
-  
- <span data-ttu-id="6a56c-126">Wdrożenie usługi oblicza i zwraca odpowiedni wynik, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="6a56c-126">The service implementation calculates and returns the appropriate result, as shown in the following example code.</span></span>  
-  
-```vb  
-' Service class which implements the service contract.  
-Public Class CalculatorService  
-Implements ICalculator  
-Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add  
-Return n1 + n2  
-End Function  
-  
-Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract  
-Return n1 - n2  
-End Function  
-  
-Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply  
-Return n1 * n2  
-End Function  
-  
-Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide  
-Return n1 / n2  
-End Function  
-End Class  
-```  
-  
-```csharp  
-// Service class that implements the service contract.  
-public class CalculatorService : ICalculator  
-{  
-    public double Add(double n1, double n2)  
-    {  
-        return n1 + n2;  
-    }  
-    public double Subtract(double n1, double n2)  
-    {  
-        return n1 - n2;  
-    }  
-    public double Multiply(double n1, double n2)  
-    {  
-        return n1 * n2;  
-    }  
-    public double Divide(double n1, double n2)  
-    {  
-        return n1 / n2;  
-    }  
-}  
-```  
-  
- <span data-ttu-id="6a56c-127">Usługa udostępnia punkt końcowy do komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji (Web.config), jak pokazano na poniższej przykładowej konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="6a56c-127">The service exposes an endpoint for communicating with the service, defined using a configuration file (Web.config), as shown in the following sample configuration.</span></span>  
-  
-```xaml  
-<services>  
-    <service   
-        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-        behaviorConfiguration="CalculatorServiceBehavior">  
-        <!-- ICalculator is exposed at the base address provided by  
-         host: http://localhost/servicemodelsamples/service.svc.  -->  
-       <endpoint address=""  
-              binding="wsHttpBinding"  
-              contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-       ...  
-    </service>  
-</services>  
-```  
-  
- <span data-ttu-id="6a56c-128">Usługa udostępnia punkt końcowy pod podstawowym adresem udostępniane przez hosta usług IIS i WAS.</span><span class="sxs-lookup"><span data-stu-id="6a56c-128">The service exposes the endpoint at the base address provided by the IIS or WAS host.</span></span> <span data-ttu-id="6a56c-129">Powiązanie jest skonfigurowane przy użyciu standardowego <xref:System.ServiceModel.WSHttpBinding>, który zapewnia komunikacji HTTP i standardowych protokołów usług sieci Web do adresowania i zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="6a56c-129">The binding is configured with a standard <xref:System.ServiceModel.WSHttpBinding>, which provides HTTP communication and standard Web service protocols for addressing and security.</span></span> <span data-ttu-id="6a56c-130">Kontrakt jest `ICalculator` implementowane przez usługę.</span><span class="sxs-lookup"><span data-stu-id="6a56c-130">The contract is the `ICalculator` implemented by the service.</span></span>  
-  
- <span data-ttu-id="6a56c-131">Zgodnie z konfiguracją, usługi mogą być wyświetlane w `http://localhost/servicemodelsamples/service.svc` przez klienta na tym samym komputerze.</span><span class="sxs-lookup"><span data-stu-id="6a56c-131">As configured, the service can be accessed at `http://localhost/servicemodelsamples/service.svc` by a client on the same computer.</span></span> <span data-ttu-id="6a56c-132">W przypadku klientów na komputerach zdalnych w celu uzyskania dostępu do usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost.</span><span class="sxs-lookup"><span data-stu-id="6a56c-132">For clients on remote computers to access the service, a fully-qualified domain name must be specified instead of localhost.</span></span>  
-  
- <span data-ttu-id="6a56c-133">Struktura nie ujawnia metadanych domyślnie.</span><span class="sxs-lookup"><span data-stu-id="6a56c-133">The framework does not expose metadata by default.</span></span> <span data-ttu-id="6a56c-134">W efekcie usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i udostępnia punkt końcowy programu exchange (MEX) metadanych w `http://localhost/servicemodelsamples/service.svc/mex`.</span><span class="sxs-lookup"><span data-stu-id="6a56c-134">As such, the service turns on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> and exposes a metadata exchange (MEX) endpoint at `http://localhost/servicemodelsamples/service.svc/mex`.</span></span> <span data-ttu-id="6a56c-135">Następującej konfiguracji pokazuje to.</span><span class="sxs-lookup"><span data-stu-id="6a56c-135">The following configuration demonstrates this.</span></span>  
-  
-```xaml  
-<system.serviceModel>  
-  <services>  
-    <service   
-        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-        behaviorConfiguration="CalculatorServiceBehavior">  
-      ...  
-      <!-- the mex endpoint is explosed at  
-       http://localhost/servicemodelsamples/service.svc/mex -->  
-      <endpoint address="mex"  
-                binding="mexHttpBinding"  
-                contract="IMetadataExchange" />  
-    </service>  
-  </services>  
-  
-  <!--For debugging purposes set the includeExceptionDetailInFaults  
-   attribute to true-->  
-  <behaviors>  
-    <serviceBehaviors>  
-      <behavior name="CalculatorServiceBehavior">  
-        <serviceMetadata httpGetEnabled="True"/>  
-        <serviceDebug includeExceptionDetailInFaults="False" />  
-      </behavior>  
-    </serviceBehaviors>  
-  </behaviors>  
-</system.serviceModel>  
-```  
-  
- <span data-ttu-id="6a56c-136">Klient komunikuje się przy użyciu typu danego kontraktu za pomocą klasy klienta, który jest generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="6a56c-136">The client communicates using a given contract type by using a client class that is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="6a56c-137">Ta wygenerowanego klienta znajduje się w pliku generatedClient.cs lub generatedClient.vb.</span><span class="sxs-lookup"><span data-stu-id="6a56c-137">This generated client is contained in the file generatedClient.cs or generatedClient.vb.</span></span> <span data-ttu-id="6a56c-138">To narzędzie służy do pobierania metadanych dla danej usługi i generuje klienta do użycia przez aplikację kliencką do komunikowania się za pomocą typu danego kontraktu.</span><span class="sxs-lookup"><span data-stu-id="6a56c-138">This utility retrieves metadata for a given service and generates a client for use by the client application to communicate using a given contract type.</span></span> <span data-ttu-id="6a56c-139">Usługa hostowana musi być dostępny w celu generowania kodu klienta, ponieważ usługi służy do pobierania zaktualizowanych metadanych.</span><span class="sxs-lookup"><span data-stu-id="6a56c-139">The hosted service must be available to generate the client code, because the service is used to retrieve the updated metadata.</span></span>  
-  
- <span data-ttu-id="6a56c-140">Uruchom następujące polecenie w wierszu polecenia zestawu SDK w katalogu klienta można wygenerować typizowanego serwera proxy:</span><span class="sxs-lookup"><span data-stu-id="6a56c-140">Run the following command from the SDK command prompt in the client directory to generate the typed proxy:</span></span>  
-  
-```  
-svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs  
-```  
-  
- <span data-ttu-id="6a56c-141">Aby wygenerować klienta w języku Visual Basic typu następujących poleceń w wierszu polecenia zestawu SDK:</span><span class="sxs-lookup"><span data-stu-id="6a56c-141">To generate client in Visual Basic type the following from the SDK command prompt:</span></span>  
-  
- `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`  
-  
- <span data-ttu-id="6a56c-142">Za pomocą wygenerowanego klienta, ten klient uzyskuje dostęp punkt końcowy danej usługi, należy skonfigurować odpowiedni adres i powiązanie.</span><span class="sxs-lookup"><span data-stu-id="6a56c-142">By using the generated client, the client can access a given service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="6a56c-143">Jak usługa Klient korzysta z plikiem konfiguracyjnym (App.config) do określania punktu końcowego, z którym chce nawiązać połączenia.</span><span class="sxs-lookup"><span data-stu-id="6a56c-143">Like the service, the client uses a configuration file (App.config) to specify the endpoint with which it wants to communicate.</span></span> <span data-ttu-id="6a56c-144">Konfiguracja punktu końcowego klienta składa się z adresem bezwzględnym dla punktu końcowego usługi, powiązanie i umowy, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="6a56c-144">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following example.</span></span>  
-  
-```xaml  
-<client>  
-     <endpoint  
-         address="http://localhost/servicemodelsamples/service.svc"   
-         binding="wsHttpBinding"   
-         contract=" Microsoft.ServiceModel.Samples.ICalculator" />  
-</client>  
-```  
-  
- <span data-ttu-id="6a56c-145">Wdrożenie klienta tworzy klienta i korzysta z kontrolą typów interfejsu na rozpoczęcie komunikowania się z usługą, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="6a56c-145">The client implementation instantiates the client and uses the typed interface to begin communicating with the service, as shown in the following example code.</span></span>  
-  
-```vb  
-' Create a client  
-Dim client As New CalculatorClient()  
-  
-' Call the Add service operation.  
-            Dim value1 = 100.0R  
-            Dim value2 = 15.99R  
-            Dim result = client.Add(value1, value2)  
-Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)  
-  
-' Call the Subtract service operation.  
-value1 = 145.00R  
-value2 = 76.54R  
-result = client.Subtract(value1, value2)  
-Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result)  
-  
-' Call the Multiply service operation.  
-value1 = 9.00R  
-value2 = 81.25R  
-result = client.Multiply(value1, value2)  
-Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result)  
-  
-' Call the Divide service operation.  
-value1 = 22.00R  
-value2 = 7.00R  
-result = client.Divide(value1, value2)  
-Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)  
-  
-'Closing the client gracefully closes the connection and cleans up resources  
-```  
-  
-```csharp  
-// Create a client.  
-CalculatorClient client = new CalculatorClient();  
-  
-// Call the Add service operation.  
-double value1 = 100.00D;  
-double value2 = 15.99D;  
-double result = client.Add(value1, value2);  
-Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
-  
-// Call the Subtract service operation.  
-value1 = 145.00D;  
-value2 = 76.54D;  
-result = client.Subtract(value1, value2);  
-Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);  
-  
-// Call the Multiply service operation.  
-value1 = 9.00D;  
-value2 = 81.25D;  
-result = client.Multiply(value1, value2);  
-Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);  
-  
-// Call the Divide service operation.  
-value1 = 22.00D;  
-value2 = 7.00D;  
-result = client.Divide(value1, value2);  
-Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);  
-  
-//Closing the client releases all communication resources.  
-client.Close();  
-```  
-  
- <span data-ttu-id="6a56c-146">Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta.</span><span class="sxs-lookup"><span data-stu-id="6a56c-146">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="6a56c-147">Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.</span><span class="sxs-lookup"><span data-stu-id="6a56c-147">Press ENTER in the client window to shut down the client.</span></span>  
-  
-```  
-Add(100,15.99) = 115.99  
-Subtract(145,76.54) = 68.46  
-Multiply(9,81.25) = 731.25  
-Divide(22,7) = 3.14285714285714  
-  
-Press <ENTER> to terminate client.  
-```  
-  
- <span data-ttu-id="6a56c-148">Wprowadzenie do przykładu przedstawia standardowy sposób, aby utworzyć usługę i klienta.</span><span class="sxs-lookup"><span data-stu-id="6a56c-148">The Getting Started sample shows the standard way to create a service and client.</span></span> <span data-ttu-id="6a56c-149">Druga [podstawowe](../../../../docs/framework/wcf/samples/basic-sample.md) kompilacji w tym przykładzie, aby zademonstrować funkcje określonego produktu.</span><span class="sxs-lookup"><span data-stu-id="6a56c-149">The other [Basic](../../../../docs/framework/wcf/samples/basic-sample.md) build on this sample to demonstrate specific product features.</span></span>  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="6a56c-150">Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej</span><span class="sxs-lookup"><span data-stu-id="6a56c-150">To set up, build, and run the sample</span></span>  
-  
-1.  <span data-ttu-id="6a56c-151">Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6a56c-151">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
-  
-2.  <span data-ttu-id="6a56c-152">Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6a56c-152">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
-  
-3.  <span data-ttu-id="6a56c-153">Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="6a56c-153">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="6a56c-154">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6a56c-154">See also</span></span>
-- [<span data-ttu-id="6a56c-155">Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji</span><span class="sxs-lookup"><span data-stu-id="6a56c-155">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [<span data-ttu-id="6a56c-156">Instrukcje: Hostowanie usługi WCF w programie IIS</span><span class="sxs-lookup"><span data-stu-id="6a56c-156">How to: Host a WCF Service in IIS</span></span>](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+> <span data-ttu-id="98c43-117">Jeśli chcesz użyć rozpocząć pracę przy użyciu przykładu hostującym usługę w aplikacji konsoli usług IIS, zobacz [hosta samodzielnego](../../../../docs/framework/wcf/samples/self-host.md) próbki.</span><span class="sxs-lookup"><span data-stu-id="98c43-117">If you would prefer to get started with a sample that hosts the service in a console application instead of IIS, see the [Self-Host](../../../../docs/framework/wcf/samples/self-host.md) sample.</span></span>
+
+<span data-ttu-id="98c43-118">Usługi i klienta należy określić szczegóły dostępu w ustawieniach pliku konfiguracji, które zapewniają elastyczność w czasie wdrażania.</span><span class="sxs-lookup"><span data-stu-id="98c43-118">The service and client specify access details in configuration file settings, which provide flexibility at the time of deployment.</span></span> <span data-ttu-id="98c43-119">W tym definicji punktu końcowego, który określa adres, powiązania i umowy.</span><span class="sxs-lookup"><span data-stu-id="98c43-119">This includes an endpoint definition that specifies an address, binding, and contract.</span></span> <span data-ttu-id="98c43-120">Powiązanie określa transportu i zabezpieczenia szczegółowe informacje o jak usługa ma być dostępny.</span><span class="sxs-lookup"><span data-stu-id="98c43-120">The binding specifies transport and security details for how the service is to be accessed.</span></span>
+
+<span data-ttu-id="98c43-121">Usługa służy do konfigurowania zachowania w czasie wykonywania do publikowania metadanych.</span><span class="sxs-lookup"><span data-stu-id="98c43-121">The service configures a run-time behavior to publish its metadata.</span></span>
+
+<span data-ttu-id="98c43-122">Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".</span><span class="sxs-lookup"><span data-stu-id="98c43-122">The service implements a contract that defines a request-reply communication pattern.</span></span> <span data-ttu-id="98c43-123">Kontrakt jest definiowany przez `ICalculator` interfejs, który udostępnia operacje matematyczne (dodawania, odejmowania, mnożenia i dzielenia).</span><span class="sxs-lookup"><span data-stu-id="98c43-123">The contract is defined by the `ICalculator` interface, which exposes math operations (add, subtract, multiply, and divide).</span></span> <span data-ttu-id="98c43-124">Klient wysyła żądania do operacji matematycznych danego i odpowiedzi usługi z wynikiem.</span><span class="sxs-lookup"><span data-stu-id="98c43-124">The client makes requests to a given math operation and the service replies with the result.</span></span> <span data-ttu-id="98c43-125">Implementuje usługi `ICalculator` kontraktu, który jest zdefiniowany w poniższym kodzie.</span><span class="sxs-lookup"><span data-stu-id="98c43-125">The service implements an `ICalculator` contract that is defined in the following code.</span></span>
+
+```vb
+' Define a service contract.
+    <ServiceContract(Namespace:="http://Microsoft.Samples.GettingStarted")>
+     Public Interface ICalculator
+        <OperationContract()>
+        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
+        <OperationContract()>
+        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
+        <OperationContract()>
+        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
+        <OperationContract()>
+        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
+    End Interface
+```
+
+```csharp
+// Define a service contract.
+[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
+public interface ICalculator
+{
+    [OperationContract]
+    double Add(double n1, double n2);
+    [OperationContract]
+    double Subtract(double n1, double n2);
+    [OperationContract]
+    double Multiply(double n1, double n2);
+    [OperationContract]
+    double Divide(double n1, double n2);
+}
+```
+
+<span data-ttu-id="98c43-126">Wdrożenie usługi oblicza i zwraca odpowiedni wynik, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="98c43-126">The service implementation calculates and returns the appropriate result, as shown in the following example code.</span></span>
+
+```vb
+' Service class which implements the service contract.
+Public Class CalculatorService
+Implements ICalculator
+Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
+Return n1 + n2
+End Function
+
+Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
+Return n1 - n2
+End Function
+
+Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
+Return n1 * n2
+End Function
+
+Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
+Return n1 / n2
+End Function
+End Class
+```
+
+```csharp
+// Service class that implements the service contract.
+public class CalculatorService : ICalculator
+{
+    public double Add(double n1, double n2)
+    {
+        return n1 + n2;
+    }
+    public double Subtract(double n1, double n2)
+    {
+        return n1 - n2;
+    }
+    public double Multiply(double n1, double n2)
+    {
+        return n1 * n2;
+    }
+    public double Divide(double n1, double n2)
+    {
+        return n1 / n2;
+    }
+}
+```
+
+<span data-ttu-id="98c43-127">Usługa udostępnia punkt końcowy do komunikacji z usługą zdefiniowane przy użyciu pliku konfiguracji (Web.config), jak pokazano na poniższej przykładowej konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="98c43-127">The service exposes an endpoint for communicating with the service, defined using a configuration file (Web.config), as shown in the following sample configuration.</span></span>
+
+```xaml
+<services>
+    <service
+        name="Microsoft.ServiceModel.Samples.CalculatorService"
+        behaviorConfiguration="CalculatorServiceBehavior">
+        <!-- ICalculator is exposed at the base address provided by
+         host: http://localhost/servicemodelsamples/service.svc.  -->
+       <endpoint address=""
+              binding="wsHttpBinding"
+              contract="Microsoft.ServiceModel.Samples.ICalculator" />
+       ...
+    </service>
+</services>
+```
+
+<span data-ttu-id="98c43-128">Usługa udostępnia punkt końcowy pod podstawowym adresem udostępniane przez hosta usług IIS i WAS.</span><span class="sxs-lookup"><span data-stu-id="98c43-128">The service exposes the endpoint at the base address provided by the IIS or WAS host.</span></span> <span data-ttu-id="98c43-129">Powiązanie jest skonfigurowane przy użyciu standardowego <xref:System.ServiceModel.WSHttpBinding>, który zapewnia komunikacji HTTP i standardowych protokołów usług sieci Web do adresowania i zabezpieczeń.</span><span class="sxs-lookup"><span data-stu-id="98c43-129">The binding is configured with a standard <xref:System.ServiceModel.WSHttpBinding>, which provides HTTP communication and standard Web service protocols for addressing and security.</span></span> <span data-ttu-id="98c43-130">Kontrakt jest `ICalculator` implementowane przez usługę.</span><span class="sxs-lookup"><span data-stu-id="98c43-130">The contract is the `ICalculator` implemented by the service.</span></span>
+
+<span data-ttu-id="98c43-131">Zgodnie z konfiguracją, usługi mogą być wyświetlane w `http://localhost/servicemodelsamples/service.svc` przez klienta na tym samym komputerze.</span><span class="sxs-lookup"><span data-stu-id="98c43-131">As configured, the service can be accessed at `http://localhost/servicemodelsamples/service.svc` by a client on the same computer.</span></span> <span data-ttu-id="98c43-132">W przypadku klientów na komputerach zdalnych w celu uzyskania dostępu do usługi należy określić w pełni kwalifikowanej nazwy domeny zamiast nazwy localhost.</span><span class="sxs-lookup"><span data-stu-id="98c43-132">For clients on remote computers to access the service, a fully-qualified domain name must be specified instead of localhost.</span></span>
+
+<span data-ttu-id="98c43-133">Struktura nie ujawnia metadanych domyślnie.</span><span class="sxs-lookup"><span data-stu-id="98c43-133">The framework does not expose metadata by default.</span></span> <span data-ttu-id="98c43-134">W efekcie usługa włącza <xref:System.ServiceModel.Description.ServiceMetadataBehavior> i udostępnia punkt końcowy programu exchange (MEX) metadanych w `http://localhost/servicemodelsamples/service.svc/mex`.</span><span class="sxs-lookup"><span data-stu-id="98c43-134">As such, the service turns on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> and exposes a metadata exchange (MEX) endpoint at `http://localhost/servicemodelsamples/service.svc/mex`.</span></span> <span data-ttu-id="98c43-135">Następującej konfiguracji pokazuje to.</span><span class="sxs-lookup"><span data-stu-id="98c43-135">The following configuration demonstrates this.</span></span>
+
+```xaml
+<system.serviceModel>
+  <services>
+    <service
+        name="Microsoft.ServiceModel.Samples.CalculatorService"
+        behaviorConfiguration="CalculatorServiceBehavior">
+      ...
+      <!-- the mex endpoint is exposed at
+       http://localhost/servicemodelsamples/service.svc/mex -->
+      <endpoint address="mex"
+                binding="mexHttpBinding"
+                contract="IMetadataExchange" />
+    </service>
+  </services>
+
+  <!--For debugging purposes set the includeExceptionDetailInFaults
+   attribute to true-->
+  <behaviors>
+    <serviceBehaviors>
+      <behavior name="CalculatorServiceBehavior">
+        <serviceMetadata httpGetEnabled="True"/>
+        <serviceDebug includeExceptionDetailInFaults="False" />
+      </behavior>
+    </serviceBehaviors>
+  </behaviors>
+</system.serviceModel>
+```
+
+<span data-ttu-id="98c43-136">Klient komunikuje się przy użyciu typu danego kontraktu za pomocą klasy klienta, który jest generowany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span><span class="sxs-lookup"><span data-stu-id="98c43-136">The client communicates using a given contract type by using a client class that is generated by the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).</span></span> <span data-ttu-id="98c43-137">Ta wygenerowanego klienta znajduje się w pliku generatedClient.cs lub generatedClient.vb.</span><span class="sxs-lookup"><span data-stu-id="98c43-137">This generated client is contained in the file generatedClient.cs or generatedClient.vb.</span></span> <span data-ttu-id="98c43-138">To narzędzie służy do pobierania metadanych dla danej usługi i generuje klienta do użycia przez aplikację kliencką do komunikowania się za pomocą typu danego kontraktu.</span><span class="sxs-lookup"><span data-stu-id="98c43-138">This utility retrieves metadata for a given service and generates a client for use by the client application to communicate using a given contract type.</span></span> <span data-ttu-id="98c43-139">Usługa hostowana musi być dostępny w celu generowania kodu klienta, ponieważ usługi służy do pobierania zaktualizowanych metadanych.</span><span class="sxs-lookup"><span data-stu-id="98c43-139">The hosted service must be available to generate the client code, because the service is used to retrieve the updated metadata.</span></span>
+
+ <span data-ttu-id="98c43-140">Uruchom następujące polecenie w wierszu polecenia zestawu SDK w katalogu klienta można wygenerować typizowanego serwera proxy:</span><span class="sxs-lookup"><span data-stu-id="98c43-140">Run the following command from the SDK command prompt in the client directory to generate the typed proxy:</span></span>
+
+```
+svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs
+```
+
+<span data-ttu-id="98c43-141">Aby wygenerować klienta w języku Visual Basic typu następujących poleceń w wierszu polecenia zestawu SDK:</span><span class="sxs-lookup"><span data-stu-id="98c43-141">To generate client in Visual Basic type the following from the SDK command prompt:</span></span>
+
+`Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`
+
+<span data-ttu-id="98c43-142">Za pomocą wygenerowanego klienta, ten klient uzyskuje dostęp punkt końcowy danej usługi, należy skonfigurować odpowiedni adres i powiązanie.</span><span class="sxs-lookup"><span data-stu-id="98c43-142">By using the generated client, the client can access a given service endpoint by configuring the appropriate address and binding.</span></span> <span data-ttu-id="98c43-143">Jak usługa Klient korzysta z plikiem konfiguracyjnym (App.config) do określania punktu końcowego, z którym chce nawiązać połączenia.</span><span class="sxs-lookup"><span data-stu-id="98c43-143">Like the service, the client uses a configuration file (App.config) to specify the endpoint with which it wants to communicate.</span></span> <span data-ttu-id="98c43-144">Konfiguracja punktu końcowego klienta składa się z adresem bezwzględnym dla punktu końcowego usługi, powiązanie i umowy, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="98c43-144">The client endpoint configuration consists of an absolute address for the service endpoint, the binding, and the contract, as shown in the following example.</span></span>
+
+```xaml
+<client>
+     <endpoint
+         address="http://localhost/servicemodelsamples/service.svc"
+         binding="wsHttpBinding"
+         contract=" Microsoft.ServiceModel.Samples.ICalculator" />
+</client>
+```
+
+<span data-ttu-id="98c43-145">Wdrożenie klienta tworzy klienta i korzysta z kontrolą typów interfejsu na rozpoczęcie komunikowania się z usługą, jak pokazano w poniższym przykładowym kodzie.</span><span class="sxs-lookup"><span data-stu-id="98c43-145">The client implementation instantiates the client and uses the typed interface to begin communicating with the service, as shown in the following example code.</span></span>
+
+```vb
+' Create a client
+Dim client As New CalculatorClient()
+
+' Call the Add service operation.
+            Dim value1 = 100.0R
+            Dim value2 = 15.99R
+            Dim result = client.Add(value1, value2)
+Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
+
+' Call the Subtract service operation.
+value1 = 145.00R
+value2 = 76.54R
+result = client.Subtract(value1, value2)
+Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result)
+
+' Call the Multiply service operation.
+value1 = 9.00R
+value2 = 81.25R
+result = client.Multiply(value1, value2)
+Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result)
+
+' Call the Divide service operation.
+value1 = 22.00R
+value2 = 7.00R
+result = client.Divide(value1, value2)
+Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)
+
+'Closing the client gracefully closes the connection and cleans up resources
+```
+
+```csharp
+// Create a client.
+CalculatorClient client = new CalculatorClient();
+
+// Call the Add service operation.
+double value1 = 100.00D;
+double value2 = 15.99D;
+double result = client.Add(value1, value2);
+Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);
+
+// Call the Subtract service operation.
+value1 = 145.00D;
+value2 = 76.54D;
+result = client.Subtract(value1, value2);
+Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result);
+
+// Call the Multiply service operation.
+value1 = 9.00D;
+value2 = 81.25D;
+result = client.Multiply(value1, value2);
+Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result);
+
+// Call the Divide service operation.
+value1 = 22.00D;
+value2 = 7.00D;
+result = client.Divide(value1, value2);
+Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
+
+//Closing the client releases all communication resources.
+client.Close();
+```
+
+<span data-ttu-id="98c43-146">Po uruchomieniu przykładu, operacja żądań i odpowiedzi są wyświetlane w oknie konsoli klienta.</span><span class="sxs-lookup"><span data-stu-id="98c43-146">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="98c43-147">Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta.</span><span class="sxs-lookup"><span data-stu-id="98c43-147">Press ENTER in the client window to shut down the client.</span></span>
+
+```
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+
+Press <ENTER> to terminate client.
+```
+
+<span data-ttu-id="98c43-148">Wprowadzenie do przykładu przedstawia standardowy sposób, aby utworzyć usługę i klienta.</span><span class="sxs-lookup"><span data-stu-id="98c43-148">The Getting Started sample shows the standard way to create a service and client.</span></span> <span data-ttu-id="98c43-149">Druga [podstawowe](../../../../docs/framework/wcf/samples/basic-sample.md) kompilacji w tym przykładzie, aby zademonstrować funkcje określonego produktu.</span><span class="sxs-lookup"><span data-stu-id="98c43-149">The other [Basic](../../../../docs/framework/wcf/samples/basic-sample.md) build on this sample to demonstrate specific product features.</span></span>
+
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="98c43-150">Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej</span><span class="sxs-lookup"><span data-stu-id="98c43-150">To set up, build, and run the sample</span></span>
+
+1.  <span data-ttu-id="98c43-151">Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="98c43-151">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
+
+2.  <span data-ttu-id="98c43-152">Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="98c43-152">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
+
+3.  <span data-ttu-id="98c43-153">Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="98c43-153">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="98c43-154">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="98c43-154">See also</span></span>
+
+- [<span data-ttu-id="98c43-155">Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji</span><span class="sxs-lookup"><span data-stu-id="98c43-155">How to: Host a WCF Service in a Managed Application</span></span>](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [<span data-ttu-id="98c43-156">Instrukcje: Hostowanie usługi WCF w programie IIS</span><span class="sxs-lookup"><span data-stu-id="98c43-156">How to: Host a WCF Service in IIS</span></span>](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

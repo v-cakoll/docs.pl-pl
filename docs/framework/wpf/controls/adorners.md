@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF]
 ms.assetid: 5d5f656b-8e05-4839-9d53-b0324d902aa9
-ms.openlocfilehash: 4b23287abebafd6583d77362c4b4ef12f504f7df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b422294095425d163665f59f2bfb451da3158c8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551768"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378920"
 ---
-# <a name="adorners"></a><span data-ttu-id="b5b0d-102">Moduły definiowania układu</span><span class="sxs-lookup"><span data-stu-id="b5b0d-102">Adorners</span></span>
-<span data-ttu-id="b5b0d-103">Ta sekcja zawiera informacje na temat definiowania układu oraz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework modułu definiowania układu kodu.</span><span class="sxs-lookup"><span data-stu-id="b5b0d-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
+# <a name="adorners"></a><span data-ttu-id="bfbf5-102">Moduły definiowania układu</span><span class="sxs-lookup"><span data-stu-id="bfbf5-102">Adorners</span></span>
+<span data-ttu-id="bfbf5-103">Ta sekcja zawiera informacje na temat definiowania i [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework moduł definiowania układu kodu.</span><span class="sxs-lookup"><span data-stu-id="bfbf5-103">This section provides information about Adorners and the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b5b0d-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="b5b0d-104">In This Section</span></span>  
- [<span data-ttu-id="b5b0d-105">Moduły indeksowania układu — omówienie</span><span class="sxs-lookup"><span data-stu-id="b5b0d-105">Adorners Overview</span></span>](../../../../docs/framework/wpf/controls/adorners-overview.md)  
- [<span data-ttu-id="b5b0d-106">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="b5b0d-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/adorners-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="bfbf5-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="bfbf5-104">In This Section</span></span>  
+ [<span data-ttu-id="bfbf5-105">Moduły indeksowania układu — omówienie</span><span class="sxs-lookup"><span data-stu-id="bfbf5-105">Adorners Overview</span></span>](adorners-overview.md)  
+ [<span data-ttu-id="bfbf5-106">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="bfbf5-106">How-to Topics</span></span>](adorners-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="b5b0d-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="b5b0d-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="bfbf5-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="bfbf5-107">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -31,4 +31,4 @@ ms.locfileid: "33551768"
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="b5b0d-108">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="b5b0d-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="bfbf5-108">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="bfbf5-108">Related Sections</span></span>

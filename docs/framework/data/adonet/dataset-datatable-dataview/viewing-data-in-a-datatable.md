@@ -5,112 +5,114 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: 6c6f5f277689ba43590b106f3c78826e07911e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa8749550e10256ee0623714cc95e03a838655c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602666"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364492"
 ---
-# <a name="viewing-data-in-a-datatable"></a><span data-ttu-id="ca508-102">Wyświetlanie danych w elemencie DataTable</span><span class="sxs-lookup"><span data-stu-id="ca508-102">Viewing Data in a DataTable</span></span>
-<span data-ttu-id="ca508-103">Można uzyskać dostęp do zawartości <xref:System.Data.DataTable> przy użyciu **wierszy** i **kolumn** kolekcji **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="ca508-103">You can access the contents of a <xref:System.Data.DataTable> by using the **Rows** and **Columns** collections of the **DataTable**.</span></span> <span data-ttu-id="ca508-104">Można również użyć <xref:System.Data.DataTable.Select%2A> metody zwracanie podzbiorów danych w **DataTable** zgodnie z kryteriami, w tym kryteria wyszukiwania, porządek sortowania i wiersz stanu.</span><span class="sxs-lookup"><span data-stu-id="ca508-104">You can also use the <xref:System.Data.DataTable.Select%2A> method to return subsets of the data in a **DataTable** according to criteria including search criteria, sort order, and row state.</span></span> <span data-ttu-id="ca508-105">Ponadto można użyć <xref:System.Data.DataRowCollection.Find%2A> metody **kolekcji DataRowCollection** podczas wyszukiwania określonego wiersza przy użyciu wartości klucza podstawowego.</span><span class="sxs-lookup"><span data-stu-id="ca508-105">Additionally, you can use the <xref:System.Data.DataRowCollection.Find%2A> method of the **DataRowCollection** when searching for a particular row using a primary key value.</span></span>  
-  
- <span data-ttu-id="ca508-106">**Wybierz** metody **DataTable** zwraca zbiór <xref:System.Data.DataRow> obiekty spełniające określone kryteria.</span><span class="sxs-lookup"><span data-stu-id="ca508-106">The **Select** method of the **DataTable** object returns a set of <xref:System.Data.DataRow> objects that match the specified criteria.</span></span> <span data-ttu-id="ca508-107">**Wybierz** przyjmuje opcjonalne argumenty wyrażenia filtru wyrażenie sortowania i **DataViewRowState**.</span><span class="sxs-lookup"><span data-stu-id="ca508-107">**Select** takes optional arguments of a filter expression, sort expression, and **DataViewRowState**.</span></span> <span data-ttu-id="ca508-108">Wyrażenie filtru identyfikuje, które wierszy do zwrócenia na podstawie **DataColumn** wartości, takich jak `LastName = 'Smith'`.</span><span class="sxs-lookup"><span data-stu-id="ca508-108">The filter expression identifies which rows to return based on **DataColumn** values, such as `LastName = 'Smith'`.</span></span> <span data-ttu-id="ca508-109">Wyrażenie sortowania zgodna z konwencjami standardowa SQL do ustalania kolejności kolumn, na przykład `LastName ASC, FirstName ASC`.</span><span class="sxs-lookup"><span data-stu-id="ca508-109">The sort expression follows standard SQL conventions for ordering columns, for example `LastName ASC, FirstName ASC`.</span></span> <span data-ttu-id="ca508-110">Reguły dotyczące wyrażeń, zobacz <xref:System.Data.DataColumn.Expression%2A> właściwość **DataColumn** klasy.</span><span class="sxs-lookup"><span data-stu-id="ca508-110">For rules about writing expressions, see the <xref:System.Data.DataColumn.Expression%2A> property of the **DataColumn** class.</span></span>  
-  
+# <a name="viewing-data-in-a-datatable"></a><span data-ttu-id="6f326-102">Wyświetlanie danych w elemencie DataTable</span><span class="sxs-lookup"><span data-stu-id="6f326-102">Viewing Data in a DataTable</span></span>
+
+<span data-ttu-id="6f326-103">Można uzyskać dostęp do zawartości <xref:System.Data.DataTable> przy użyciu **wierszy** i **kolumn** kolekcji **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="6f326-103">You can access the contents of a <xref:System.Data.DataTable> by using the **Rows** and **Columns** collections of the **DataTable**.</span></span> <span data-ttu-id="6f326-104">Można również użyć <xref:System.Data.DataTable.Select%2A> metody zwracanie podzbiorów danych w **DataTable** zgodnie z kryteriami, w tym kryteria wyszukiwania, porządek sortowania i wiersz stanu.</span><span class="sxs-lookup"><span data-stu-id="6f326-104">You can also use the <xref:System.Data.DataTable.Select%2A> method to return subsets of the data in a **DataTable** according to criteria including search criteria, sort order, and row state.</span></span> <span data-ttu-id="6f326-105">Ponadto można użyć <xref:System.Data.DataRowCollection.Find%2A> metody **kolekcji DataRowCollection** podczas wyszukiwania określonego wiersza przy użyciu wartości klucza podstawowego.</span><span class="sxs-lookup"><span data-stu-id="6f326-105">Additionally, you can use the <xref:System.Data.DataRowCollection.Find%2A> method of the **DataRowCollection** when searching for a particular row using a primary key value.</span></span>
+
+<span data-ttu-id="6f326-106">**Wybierz** metody **DataTable** zwraca zbiór <xref:System.Data.DataRow> obiekty spełniające określone kryteria.</span><span class="sxs-lookup"><span data-stu-id="6f326-106">The **Select** method of the **DataTable** object returns a set of <xref:System.Data.DataRow> objects that match the specified criteria.</span></span> <span data-ttu-id="6f326-107">**Wybierz** przyjmuje opcjonalne argumenty wyrażenia filtru wyrażenie sortowania i **DataViewRowState**.</span><span class="sxs-lookup"><span data-stu-id="6f326-107">**Select** takes optional arguments of a filter expression, sort expression, and **DataViewRowState**.</span></span> <span data-ttu-id="6f326-108">Wyrażenie filtru identyfikuje, które wierszy do zwrócenia na podstawie **DataColumn** wartości, takich jak `LastName = 'Smith'`.</span><span class="sxs-lookup"><span data-stu-id="6f326-108">The filter expression identifies which rows to return based on **DataColumn** values, such as `LastName = 'Smith'`.</span></span> <span data-ttu-id="6f326-109">Wyrażenie sortowania zgodna z konwencjami standardowa SQL do ustalania kolejności kolumn, na przykład `LastName ASC, FirstName ASC`.</span><span class="sxs-lookup"><span data-stu-id="6f326-109">The sort expression follows standard SQL conventions for ordering columns, for example `LastName ASC, FirstName ASC`.</span></span> <span data-ttu-id="6f326-110">Reguły dotyczące wyrażeń, zobacz <xref:System.Data.DataColumn.Expression%2A> właściwość **DataColumn** klasy.</span><span class="sxs-lookup"><span data-stu-id="6f326-110">For rules about writing expressions, see the <xref:System.Data.DataColumn.Expression%2A> property of the **DataColumn** class.</span></span>
+
 > [!TIP]
->  <span data-ttu-id="ca508-111">Jeśli przeprowadzasz liczba wywołań **wybierz** metody **DataTable**, może zwiększyć wydajność, tworząc pierwszy <xref:System.Data.DataView> dla **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="ca508-111">If you are performing a number of calls to the **Select** method of a **DataTable**, you can increase performance by first creating a <xref:System.Data.DataView> for the **DataTable**.</span></span> <span data-ttu-id="ca508-112">Tworzenie **DataView** indeksuje wiersze z tabeli.</span><span class="sxs-lookup"><span data-stu-id="ca508-112">Creating the **DataView** indexes the rows of the table.</span></span> <span data-ttu-id="ca508-113">**Wybierz** metody, a następnie usees, które indeksować, znacznie skracając czas do generowania wyników kwerendy.</span><span class="sxs-lookup"><span data-stu-id="ca508-113">The **Select** method then usees that index, significantly reducing the time to generate the query result.</span></span> <span data-ttu-id="ca508-114">Aby uzyskać informacje o tworzeniu **DataView** dla **DataTable**, zobacz [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span><span class="sxs-lookup"><span data-stu-id="ca508-114">For information about creating a **DataView** for a **DataTable**, see [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span></span>  
-  
- <span data-ttu-id="ca508-115">**Wybierz** Metoda określa na podstawie której wersji wierszy do wyświetlenia lub modyfikowania <xref:System.Data.DataViewRowState>.</span><span class="sxs-lookup"><span data-stu-id="ca508-115">The **Select** method determines which version of the rows to view or manipulate based on a <xref:System.Data.DataViewRowState>.</span></span> <span data-ttu-id="ca508-116">W poniższej tabeli opisano możliwe **DataViewRowState** wartości wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="ca508-116">The following table describes the possible **DataViewRowState** enumeration values.</span></span>  
-  
-|<span data-ttu-id="ca508-117">Wartość DataViewRowState</span><span class="sxs-lookup"><span data-stu-id="ca508-117">DataViewRowState value</span></span>|<span data-ttu-id="ca508-118">Opis</span><span class="sxs-lookup"><span data-stu-id="ca508-118">Description</span></span>|  
-|----------------------------|-----------------|  
-|<span data-ttu-id="ca508-119">**CurrentRows**</span><span class="sxs-lookup"><span data-stu-id="ca508-119">**CurrentRows**</span></span>|<span data-ttu-id="ca508-120">Bieżące wiersze, w tym bez zmian, dodano i zmodyfikowane wiersze.</span><span class="sxs-lookup"><span data-stu-id="ca508-120">Current rows including unchanged, added, and modified rows.</span></span>|  
-|<span data-ttu-id="ca508-121">**Usunięto**</span><span class="sxs-lookup"><span data-stu-id="ca508-121">**Deleted**</span></span>|<span data-ttu-id="ca508-122">Usunięty wiersz.</span><span class="sxs-lookup"><span data-stu-id="ca508-122">A deleted row.</span></span>|  
-|<span data-ttu-id="ca508-123">**ModifiedCurrent**</span><span class="sxs-lookup"><span data-stu-id="ca508-123">**ModifiedCurrent**</span></span>|<span data-ttu-id="ca508-124">W bieżącej wersji, która to zmodyfikowana wersja oryginalnych danych.</span><span class="sxs-lookup"><span data-stu-id="ca508-124">A current version, which is a modified version of original data.</span></span> <span data-ttu-id="ca508-125">(Zobacz **ModifiedOriginal**.)</span><span class="sxs-lookup"><span data-stu-id="ca508-125">(See **ModifiedOriginal**.)</span></span>|  
-|<span data-ttu-id="ca508-126">**ModifiedOriginal**</span><span class="sxs-lookup"><span data-stu-id="ca508-126">**ModifiedOriginal**</span></span>|<span data-ttu-id="ca508-127">Oryginalna wersja wszystkie zmodyfikowane wiersze.</span><span class="sxs-lookup"><span data-stu-id="ca508-127">The original version of all modified rows.</span></span> <span data-ttu-id="ca508-128">Bieżąca wersja jest dostępna za pomocą **ModifiedCurrent**.</span><span class="sxs-lookup"><span data-stu-id="ca508-128">The current version is available using **ModifiedCurrent**.</span></span>|  
-|<span data-ttu-id="ca508-129">**Dodano**</span><span class="sxs-lookup"><span data-stu-id="ca508-129">**Added**</span></span>|<span data-ttu-id="ca508-130">Nowy wiersz.</span><span class="sxs-lookup"><span data-stu-id="ca508-130">A new row.</span></span>|  
-|<span data-ttu-id="ca508-131">**Brak**</span><span class="sxs-lookup"><span data-stu-id="ca508-131">**None**</span></span>|<span data-ttu-id="ca508-132">Brak.</span><span class="sxs-lookup"><span data-stu-id="ca508-132">None.</span></span>|  
-|<span data-ttu-id="ca508-133">**OriginalRows**</span><span class="sxs-lookup"><span data-stu-id="ca508-133">**OriginalRows**</span></span>|<span data-ttu-id="ca508-134">Oryginalny wierszy, w tym bez zmian i usunięte wiersze.</span><span class="sxs-lookup"><span data-stu-id="ca508-134">Original rows, including unchanged and deleted rows.</span></span>|  
-|<span data-ttu-id="ca508-135">**bez zmian**</span><span class="sxs-lookup"><span data-stu-id="ca508-135">**Unchanged**</span></span>|<span data-ttu-id="ca508-136">Niezmieniony.</span><span class="sxs-lookup"><span data-stu-id="ca508-136">An unchanged row.</span></span>|  
-  
- <span data-ttu-id="ca508-137">W poniższym przykładzie **DataSet** obiektu jest filtrowana, tak aby tylko pracujesz z wierszami, którego **DataViewRowState** ustawiono **CurrentRows**.</span><span class="sxs-lookup"><span data-stu-id="ca508-137">In the following example, the **DataSet** object is filtered so that you are only working with rows whose **DataViewRowState** is set to **CurrentRows**.</span></span>  
-  
-```vb  
-Dim column As DataColumn  
-Dim row As DataRow  
-  
-Dim currentRows() As DataRow = _  
-    workTable.Select(Nothing, Nothing, DataViewRowState.CurrentRows)  
-  
-If (currentRows.Length < 1 ) Then  
-  Console.WriteLine("No Current Rows Found")  
-Else  
-  For Each column in workTable.Columns  
-    Console.Write(vbTab & column.ColumnName)  
-  Next  
-  
-  Console.WriteLine(vbTab & "RowState")  
-  
-  For Each row In currentRows  
-    For Each column In workTable.Columns  
-      Console.Write(vbTab & row(column).ToString())  
-    Next  
-  
-    Dim rowState As String = _  
-        System.Enum.GetName(row.RowState.GetType(), row.RowState)  
-    Console.WriteLine(vbTab & rowState)  
-  Next  
-End If  
-```  
-  
-```csharp  
-DataRow[] currentRows = workTable.Select(  
-    null, null, DataViewRowState.CurrentRows);  
-  
-if (currentRows.Length < 1 )  
-  Console.WriteLine("No Current Rows Found");  
-else  
-{  
-  foreach (DataColumn column in workTable.Columns)  
-    Console.Write("\t{0}", column.ColumnName);  
-  
-  Console.WriteLine("\tRowState");  
-  
-  foreach (DataRow row in currentRows)  
-  {  
-    foreach (DataColumn column in workTable.Columns)  
-      Console.Write("\t{0}", row[column]);  
-  
-    Console.WriteLine("\t" + row.RowState);  
-  }  
-}  
-```  
-  
- <span data-ttu-id="ca508-138">**Wybierz** metoda może służyć do zwrócenia wierszy z różniących się **RowState** wartości lub wartości pól.</span><span class="sxs-lookup"><span data-stu-id="ca508-138">The **Select** method can be used to return rows with differing **RowState** values or field values.</span></span> <span data-ttu-id="ca508-139">Poniższy przykład zwraca **DataRow** tablica, która odwołuje się do wszystkich wierszy, które zostały usunięte, a następnie zwraca innego **DataRow** tablica, która odwołuje się do wszystkich wierszy, uporządkowane według **CustLName**, gdzie **CustID** kolumny jest większa niż 5.</span><span class="sxs-lookup"><span data-stu-id="ca508-139">The following example returns a **DataRow** array that references all rows that have been deleted, and returns another **DataRow** array that references all rows, ordered by **CustLName**, where the **CustID** column is greater than 5.</span></span> <span data-ttu-id="ca508-140">Aby uzyskać informacje o sposobie wyświetlania informacji w **usunięte** wiersza, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="ca508-140">For information about how to view the information in the **Deleted** row, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>  
-  
-```vb  
-' Retrieve all deleted rows.  
-Dim deletedRows() As DataRow = workTable.Select(Nothing, Nothing, DataViewRowState.Deleted)  
-  
-' Retrieve rows where CustID > 5, and order by CustLName.  
-Dim custRows() As DataRow = workTable.Select( _  
-    "CustID > 5", "CustLName ASC")  
-```  
-  
-```csharp  
-// Retrieve all deleted rows.  
-DataRow[] deletedRows = workTable.Select(  
-    null, null, DataViewRowState.Deleted);  
-  
-// Retrieve rows where CustID > 5, and order by CustLName.  
-DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="ca508-141">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ca508-141">See also</span></span>
+> <span data-ttu-id="6f326-111">Jeśli przeprowadzasz liczba wywołań **wybierz** metody **DataTable**, może zwiększyć wydajność, tworząc pierwszy <xref:System.Data.DataView> dla **DataTable**.</span><span class="sxs-lookup"><span data-stu-id="6f326-111">If you are performing a number of calls to the **Select** method of a **DataTable**, you can increase performance by first creating a <xref:System.Data.DataView> for the **DataTable**.</span></span> <span data-ttu-id="6f326-112">Tworzenie **DataView** indeksuje wiersze z tabeli.</span><span class="sxs-lookup"><span data-stu-id="6f326-112">Creating the **DataView** indexes the rows of the table.</span></span> <span data-ttu-id="6f326-113">**Wybierz** metoda następnie używa indeksu, znacznie skracając czas do generowania wyników kwerendy.</span><span class="sxs-lookup"><span data-stu-id="6f326-113">The **Select** method then uses that index, significantly reducing the time to generate the query result.</span></span> <span data-ttu-id="6f326-114">Aby uzyskać informacje o tworzeniu **DataView** dla **DataTable**, zobacz [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span><span class="sxs-lookup"><span data-stu-id="6f326-114">For information about creating a **DataView** for a **DataTable**, see [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).</span></span>
+
+<span data-ttu-id="6f326-115">**Wybierz** Metoda określa na podstawie której wersji wierszy do wyświetlenia lub modyfikowania <xref:System.Data.DataViewRowState>.</span><span class="sxs-lookup"><span data-stu-id="6f326-115">The **Select** method determines which version of the rows to view or manipulate based on a <xref:System.Data.DataViewRowState>.</span></span> <span data-ttu-id="6f326-116">W poniższej tabeli opisano możliwe **DataViewRowState** wartości wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="6f326-116">The following table describes the possible **DataViewRowState** enumeration values.</span></span>
+
+|<span data-ttu-id="6f326-117">Wartość DataViewRowState</span><span class="sxs-lookup"><span data-stu-id="6f326-117">DataViewRowState value</span></span>|<span data-ttu-id="6f326-118">Opis</span><span class="sxs-lookup"><span data-stu-id="6f326-118">Description</span></span>|
+|----------------------------|-----------------|
+|<span data-ttu-id="6f326-119">**CurrentRows**</span><span class="sxs-lookup"><span data-stu-id="6f326-119">**CurrentRows**</span></span>|<span data-ttu-id="6f326-120">Bieżące wiersze, w tym bez zmian, dodano i zmodyfikowane wiersze.</span><span class="sxs-lookup"><span data-stu-id="6f326-120">Current rows including unchanged, added, and modified rows.</span></span>|
+|<span data-ttu-id="6f326-121">**Usunięto**</span><span class="sxs-lookup"><span data-stu-id="6f326-121">**Deleted**</span></span>|<span data-ttu-id="6f326-122">Usunięty wiersz.</span><span class="sxs-lookup"><span data-stu-id="6f326-122">A deleted row.</span></span>|
+|<span data-ttu-id="6f326-123">**ModifiedCurrent**</span><span class="sxs-lookup"><span data-stu-id="6f326-123">**ModifiedCurrent**</span></span>|<span data-ttu-id="6f326-124">W bieżącej wersji, która to zmodyfikowana wersja oryginalnych danych.</span><span class="sxs-lookup"><span data-stu-id="6f326-124">A current version, which is a modified version of original data.</span></span> <span data-ttu-id="6f326-125">(Zobacz **ModifiedOriginal**.)</span><span class="sxs-lookup"><span data-stu-id="6f326-125">(See **ModifiedOriginal**.)</span></span>|
+|<span data-ttu-id="6f326-126">**ModifiedOriginal**</span><span class="sxs-lookup"><span data-stu-id="6f326-126">**ModifiedOriginal**</span></span>|<span data-ttu-id="6f326-127">Oryginalna wersja wszystkie zmodyfikowane wiersze.</span><span class="sxs-lookup"><span data-stu-id="6f326-127">The original version of all modified rows.</span></span> <span data-ttu-id="6f326-128">Bieżąca wersja jest dostępna za pomocą **ModifiedCurrent**.</span><span class="sxs-lookup"><span data-stu-id="6f326-128">The current version is available using **ModifiedCurrent**.</span></span>|
+|<span data-ttu-id="6f326-129">**Dodano**</span><span class="sxs-lookup"><span data-stu-id="6f326-129">**Added**</span></span>|<span data-ttu-id="6f326-130">Nowy wiersz.</span><span class="sxs-lookup"><span data-stu-id="6f326-130">A new row.</span></span>|
+|<span data-ttu-id="6f326-131">**Brak**</span><span class="sxs-lookup"><span data-stu-id="6f326-131">**None**</span></span>|<span data-ttu-id="6f326-132">Brak.</span><span class="sxs-lookup"><span data-stu-id="6f326-132">None.</span></span>|
+|<span data-ttu-id="6f326-133">**OriginalRows**</span><span class="sxs-lookup"><span data-stu-id="6f326-133">**OriginalRows**</span></span>|<span data-ttu-id="6f326-134">Oryginalny wierszy, w tym bez zmian i usunięte wiersze.</span><span class="sxs-lookup"><span data-stu-id="6f326-134">Original rows, including unchanged and deleted rows.</span></span>|
+|<span data-ttu-id="6f326-135">**bez zmian**</span><span class="sxs-lookup"><span data-stu-id="6f326-135">**Unchanged**</span></span>|<span data-ttu-id="6f326-136">Niezmieniony.</span><span class="sxs-lookup"><span data-stu-id="6f326-136">An unchanged row.</span></span>|
+
+<span data-ttu-id="6f326-137">W poniższym przykładzie **DataSet** obiektu jest filtrowana, tak aby tylko pracujesz z wierszami, którego **DataViewRowState** ustawiono **CurrentRows**.</span><span class="sxs-lookup"><span data-stu-id="6f326-137">In the following example, the **DataSet** object is filtered so that you are only working with rows whose **DataViewRowState** is set to **CurrentRows**.</span></span>
+
+```vb
+Dim column As DataColumn
+Dim row As DataRow
+
+Dim currentRows() As DataRow = _
+    workTable.Select(Nothing, Nothing, DataViewRowState.CurrentRows)
+
+If (currentRows.Length < 1 ) Then
+  Console.WriteLine("No Current Rows Found")
+Else
+  For Each column in workTable.Columns
+    Console.Write(vbTab & column.ColumnName)
+  Next
+
+  Console.WriteLine(vbTab & "RowState")
+
+  For Each row In currentRows
+    For Each column In workTable.Columns
+      Console.Write(vbTab & row(column).ToString())
+    Next
+
+    Dim rowState As String = _
+        System.Enum.GetName(row.RowState.GetType(), row.RowState)
+    Console.WriteLine(vbTab & rowState)
+  Next
+End If
+```
+
+```csharp
+DataRow[] currentRows = workTable.Select(
+    null, null, DataViewRowState.CurrentRows);
+
+if (currentRows.Length < 1 )
+  Console.WriteLine("No Current Rows Found");
+else
+{
+  foreach (DataColumn column in workTable.Columns)
+    Console.Write("\t{0}", column.ColumnName);
+
+  Console.WriteLine("\tRowState");
+
+  foreach (DataRow row in currentRows)
+  {
+    foreach (DataColumn column in workTable.Columns)
+      Console.Write("\t{0}", row[column]);
+
+    Console.WriteLine("\t" + row.RowState);
+  }
+}
+```
+
+<span data-ttu-id="6f326-138">**Wybierz** metoda może służyć do zwrócenia wierszy z różniących się **RowState** wartości lub wartości pól.</span><span class="sxs-lookup"><span data-stu-id="6f326-138">The **Select** method can be used to return rows with differing **RowState** values or field values.</span></span> <span data-ttu-id="6f326-139">Poniższy przykład zwraca **DataRow** tablica, która odwołuje się do wszystkich wierszy, które zostały usunięte, a następnie zwraca innego **DataRow** tablica, która odwołuje się do wszystkich wierszy, uporządkowane według **CustLName**, gdzie **CustID** kolumny jest większa niż 5.</span><span class="sxs-lookup"><span data-stu-id="6f326-139">The following example returns a **DataRow** array that references all rows that have been deleted, and returns another **DataRow** array that references all rows, ordered by **CustLName**, where the **CustID** column is greater than 5.</span></span> <span data-ttu-id="6f326-140">Aby uzyskać informacje o sposobie wyświetlania informacji w **usunięte** wiersza, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span><span class="sxs-lookup"><span data-stu-id="6f326-140">For information about how to view the information in the **Deleted** row, see [Row States and Row Versions](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).</span></span>
+
+```vb
+' Retrieve all deleted rows.
+Dim deletedRows() As DataRow = workTable.Select(Nothing, Nothing, DataViewRowState.Deleted)
+
+' Retrieve rows where CustID > 5, and order by CustLName.
+Dim custRows() As DataRow = workTable.Select( _
+    "CustID > 5", "CustLName ASC")
+```
+
+```csharp
+// Retrieve all deleted rows.
+DataRow[] deletedRows = workTable.Select(
+    null, null, DataViewRowState.Deleted);
+
+// Retrieve rows where CustID > 5, and order by CustLName.
+DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
+```
+
+## <a name="see-also"></a><span data-ttu-id="6f326-141">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6f326-141">See also</span></span>
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataViewRowState>
-- [<span data-ttu-id="ca508-142">Operowanie danymi w elemencie DataTable</span><span class="sxs-lookup"><span data-stu-id="ca508-142">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [<span data-ttu-id="ca508-143">Stany wiersza i wersje wiersza</span><span class="sxs-lookup"><span data-stu-id="ca508-143">Row States and Row Versions</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [<span data-ttu-id="ca508-144">ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych</span><span class="sxs-lookup"><span data-stu-id="ca508-144">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="6f326-142">Operowanie danymi w elemencie DataTable</span><span class="sxs-lookup"><span data-stu-id="6f326-142">Manipulating Data in a DataTable</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [<span data-ttu-id="6f326-143">Stany wiersza i wersje wiersza</span><span class="sxs-lookup"><span data-stu-id="6f326-143">Row States and Row Versions</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [<span data-ttu-id="6f326-144">ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych</span><span class="sxs-lookup"><span data-stu-id="6f326-144">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

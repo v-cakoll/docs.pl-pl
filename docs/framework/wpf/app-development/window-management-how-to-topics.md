@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
-ms.openlocfilehash: df22dcbc64bff95e2263ba11195146622b9d58cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550140"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351661"
 ---
-# <a name="window-management-how-to-topics"></a><span data-ttu-id="6a644-102">Okno zarządzania — tematy porad</span><span class="sxs-lookup"><span data-stu-id="6a644-102">Window Management How-to Topics</span></span>
-<span data-ttu-id="6a644-103">W następujących tematach opisano sposób zarządzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu windows.</span><span class="sxs-lookup"><span data-stu-id="6a644-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
+# <a name="window-management-how-to-topics"></a><span data-ttu-id="f7e05-102">Okno zarządzania — tematy porad</span><span class="sxs-lookup"><span data-stu-id="f7e05-102">Window Management How-to Topics</span></span>
+<span data-ttu-id="f7e05-103">Poniższe tematy przedstawiają sposób zarządzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu windows.</span><span class="sxs-lookup"><span data-stu-id="f7e05-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6a644-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="6a644-104">In This Section</span></span>  
- [<span data-ttu-id="6a644-105">Automatyczne dopasowywanie rozmiaru okna do jego zawartości</span><span class="sxs-lookup"><span data-stu-id="6a644-105">Automatically Size a Window to Fit Its Content</span></span>](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [<span data-ttu-id="6a644-106">Pobieranie wszystkich okien w aplikacji</span><span class="sxs-lookup"><span data-stu-id="6a644-106">Get all Windows in an Application</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [<span data-ttu-id="6a644-107">Pobieranie i ustawianie okna głównego aplikacji</span><span class="sxs-lookup"><span data-stu-id="6a644-107">Get and Set the Main Application Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [<span data-ttu-id="6a644-108">Otwieranie okna dialogowego</span><span class="sxs-lookup"><span data-stu-id="6a644-108">Open a Dialog Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [<span data-ttu-id="6a644-109">Otwieranie okna komunikatu</span><span class="sxs-lookup"><span data-stu-id="6a644-109">Open a Message Box</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [<span data-ttu-id="6a644-110">Otwieranie okna</span><span class="sxs-lookup"><span data-stu-id="6a644-110">Open a Window</span></span>](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [<span data-ttu-id="6a644-111">Zwracanie wyniku okna dialogowego</span><span class="sxs-lookup"><span data-stu-id="6a644-111">Return a Dialog Box Result</span></span>](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+## <a name="in-this-section"></a><span data-ttu-id="f7e05-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="f7e05-104">In This Section</span></span>  
+ [<span data-ttu-id="f7e05-105">Automatyczne dopasowywanie rozmiaru okna do jego zawartości</span><span class="sxs-lookup"><span data-stu-id="f7e05-105">Automatically Size a Window to Fit Its Content</span></span>](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [<span data-ttu-id="f7e05-106">Pobieranie wszystkich okien w aplikacji</span><span class="sxs-lookup"><span data-stu-id="f7e05-106">Get all Windows in an Application</span></span>](how-to-get-all-windows-in-an-application.md)  
+  [<span data-ttu-id="f7e05-107">Pobieranie i ustawianie okna głównego aplikacji</span><span class="sxs-lookup"><span data-stu-id="f7e05-107">Get and Set the Main Application Window</span></span>](how-to-get-and-set-the-main-application-window.md)  
+  [<span data-ttu-id="f7e05-108">Otwieranie okna dialogowego</span><span class="sxs-lookup"><span data-stu-id="f7e05-108">Open a Dialog Box</span></span>](how-to-open-a-dialog-box.md)  
+  [<span data-ttu-id="f7e05-109">Otwieranie okna komunikatu</span><span class="sxs-lookup"><span data-stu-id="f7e05-109">Open a Message Box</span></span>](how-to-open-a-message-box.md)  
+  [<span data-ttu-id="f7e05-110">Otwieranie okna</span><span class="sxs-lookup"><span data-stu-id="f7e05-110">Open a Window</span></span>](how-to-open-a-window.md)  
+  [<span data-ttu-id="f7e05-111">Zwracanie wyniku okna dialogowego</span><span class="sxs-lookup"><span data-stu-id="f7e05-111">Return a Dialog Box Result</span></span>](how-to-return-a-dialog-box-result.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="6a644-112">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="6a644-112">Related Sections</span></span>  
- [<span data-ttu-id="6a644-113">Zarządzanie aplikacjami — omówienie</span><span class="sxs-lookup"><span data-stu-id="6a644-113">Application Management Overview</span></span>](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="f7e05-112">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="f7e05-112">Related Sections</span></span>  
+ [<span data-ttu-id="f7e05-113">Zarządzanie aplikacjami — omówienie</span><span class="sxs-lookup"><span data-stu-id="f7e05-113">Application Management Overview</span></span>](application-management-overview.md)  
   
- [<span data-ttu-id="6a644-114">Nawigacja — omówienie</span><span class="sxs-lookup"><span data-stu-id="6a644-114">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [<span data-ttu-id="f7e05-114">Nawigacja — omówienie</span><span class="sxs-lookup"><span data-stu-id="f7e05-114">Navigation Overview</span></span>](navigation-overview.md)  
   
- [<span data-ttu-id="6a644-115">Hosting</span><span class="sxs-lookup"><span data-stu-id="6a644-115">Hosting</span></span>](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [<span data-ttu-id="f7e05-115">Hosting</span><span class="sxs-lookup"><span data-stu-id="f7e05-115">Hosting</span></span>](hosting-wpf-applications.md)  
   
- [<span data-ttu-id="6a644-116">Tworzenie i wdrażanie</span><span class="sxs-lookup"><span data-stu-id="6a644-116">Build and Deploy</span></span>](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [<span data-ttu-id="f7e05-116">Tworzenie i wdrażanie</span><span class="sxs-lookup"><span data-stu-id="f7e05-116">Build and Deploy</span></span>](building-and-deploying-wpf-applications.md)

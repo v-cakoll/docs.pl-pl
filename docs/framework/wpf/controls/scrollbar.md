@@ -7,20 +7,20 @@ helpviewer_keywords:
 - ScrollBar control [WPF]
 - controls [WPF], ScrollBar
 ms.assetid: 60f27d35-8f7b-4285-89d2-28336a4c073a
-ms.openlocfilehash: 9ae7334172b5cbc4ea7fb6be3caebcf2c47589ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 242dbdeeed5408815878aa30ef276019e1ccc2c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556006"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358850"
 ---
-# <a name="scrollbar"></a><span data-ttu-id="1ec5b-102">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="1ec5b-102">ScrollBar</span></span>
-<span data-ttu-id="1ec5b-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> służy do wyświetlania zawartości, która znajduje się poza bieżącym obszaru wyświetlania przez przesuwanie <xref:System.Windows.Controls.Primitives.Thumb> aby zawartość była widoczna.</span><span class="sxs-lookup"><span data-stu-id="1ec5b-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> allows you to view content that is outside of the current viewing area by sliding the <xref:System.Windows.Controls.Primitives.Thumb> to make the content visible.</span></span>  
+# <a name="scrollbar"></a><span data-ttu-id="7e3a0-102">ScrollBar</span><span class="sxs-lookup"><span data-stu-id="7e3a0-102">ScrollBar</span></span>
+<span data-ttu-id="7e3a0-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> służy do wyświetlania zawartości, która znajduje się poza bieżącym obszaru wyświetlania przez przesuwanie <xref:System.Windows.Controls.Primitives.Thumb> aby zawartość była widoczna.</span><span class="sxs-lookup"><span data-stu-id="7e3a0-103">A <xref:System.Windows.Controls.Primitives.ScrollBar> allows you to view content that is outside of the current viewing area by sliding the <xref:System.Windows.Controls.Primitives.Thumb> to make the content visible.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1ec5b-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="1ec5b-104">In This Section</span></span>  
- [<span data-ttu-id="1ec5b-105">Dostosowywanie rozmiaru miniatury na pasku ScrollBar</span><span class="sxs-lookup"><span data-stu-id="1ec5b-105">Customize the Thumb Size on a ScrollBar</span></span>](../../../../docs/framework/wpf/controls/how-to-customize-the-thumb-size-on-a-scrollbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7e3a0-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="7e3a0-104">In This Section</span></span>  
+ [<span data-ttu-id="7e3a0-105">Dostosowywanie rozmiaru miniatury na pasku ScrollBar</span><span class="sxs-lookup"><span data-stu-id="7e3a0-105">Customize the Thumb Size on a ScrollBar</span></span>](how-to-customize-the-thumb-size-on-a-scrollbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="1ec5b-106">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="1ec5b-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7e3a0-106">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="7e3a0-106">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   <xref:System.Windows.Controls.Primitives.Track>  
   <xref:System.Windows.Controls.Primitives.Thumb>  

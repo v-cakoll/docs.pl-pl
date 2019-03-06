@@ -8,21 +8,21 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 084354f2c567716c2ca083dddb4cd6628334d603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542577"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367469"
 ---
 # <a name="drag-and-drop"></a>Przeciągnij i opuść
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia bardzo elastyczne przeciągania i upuszczania infrastrukturę, która obsługuje przeciąganie i upuszczanie danych w obu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, a także innych [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplikacji.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia wysoce elastyczny przeciągania i infrastruktury listy, który obsługuje przeciąganie i upuszczanie danych w obu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, a także innych [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd przeciągania i upuszczania](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [Dane i obiekty danych](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [Przewodnik: włączanie przeciągania i upuszczania w kontrolce użytkownika](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [Przegląd przeciągania i upuszczania](drag-and-drop-overview.md)  
+ [Dane i obiekty danych](data-and-data-objects.md)  
+ [Przewodnik: Włączanie przeciągania i upuszczania w kontrolce użytkownika](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [Tematy z instrukcjami](drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.DataFormat>  

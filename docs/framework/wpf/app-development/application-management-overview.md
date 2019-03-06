@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 83291e82b15f4006ada95d00f6f4981fb7d6b552
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748105"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356510"
 ---
 # <a name="application-management-overview"></a>Przegląd Zarządzanie aplikacjami
 Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które mają zastosowanie do wdrożenia aplikacji i zarządzania. Ten temat zawiera omówienie funkcji w <xref:System.Windows.Application> klasa do tworzenia aplikacji i zarządzaniem nimi.  
@@ -40,19 +40,19 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 |Zadanie|Podejście|  
 |----------|--------------|  
 |Pobierz obiekt, który reprezentuje bieżącej aplikacji|Użyj <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> właściwości.|  
-|Dodaj ekran startowy aplikacji|Zobacz [dodać ekran powitalny do aplikacji WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).|  
+|Dodaj ekran startowy aplikacji|Zobacz [dodać ekran powitalny do aplikacji WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).|  
 |Uruchamianie aplikacji|Użyj <xref:System.Windows.Application.Run%2A?displayProperty=nameWithType> metody.|  
 |Zatrzymaj aplikację|Użyj <xref:System.Windows.Application.Shutdown%2A> metody <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> obiektu.|  
 |Pobierz argumenty z wiersza polecenia|Obsługa <xref:System.Windows.Application.Startup?displayProperty=nameWithType> zdarzeń i używania <xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType> właściwości. Aby uzyskać przykład, zobacz <xref:System.Windows.Application.Startup?displayProperty=nameWithType> zdarzeń.|  
 |Pobieranie i ustawianie kod zakończenia aplikacji|Ustaw <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType> właściwość <xref:System.Windows.Application.Exit?displayProperty=nameWithType> program obsługi zdarzeń lub wywołanie <xref:System.Windows.Application.Shutdown%2A> metody i przekaż liczbą całkowitą.|  
 |Wykrywanie oraz reagowanie na nieobsłużonych wyjątków|Obsługa <xref:System.Windows.Application.DispatcherUnhandledException> zdarzeń.|  
 |Pobieranie i ustawianie zasobów zakresu aplikacji|Użyj <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> właściwości.|  
-|Użyj słownika zasobów zakresu aplikacji|Zobacz [użyć słownika zasobów zakresu aplikacji](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md).|  
+|Użyj słownika zasobów zakresu aplikacji|Zobacz [użyć słownika zasobów zakresu aplikacji](how-to-use-an-application-scope-resource-dictionary.md).|  
 |Pobieranie i ustawianie właściwości z zakresu aplikacji|Użyj <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> właściwości.|  
-|Pobierz i Zapisz stan aplikacji|Zobacz [Utrwalaj i przywracaj właściwości zakresu aplikacji między sesjami aplikacji](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).|  
-|Zarządzaj pliki danych bez kodu, w tym pliki zasobów, pliki zawartości i pliki do witryny pochodzenia.|Zobacz [zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).|  
-|Zarządzanie systemem windows w aplikacje autonomiczne|Zobacz [Przegląd Windows WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).|  
-|Śledzenie i zarządzanie nawigacji|Zobacz [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md).|  
+|Pobierz i Zapisz stan aplikacji|Zobacz [Utrwalaj i przywracaj właściwości zakresu aplikacji między sesjami aplikacji](persist-and-restore-application-scope-properties.md).|  
+|Zarządzaj pliki danych bez kodu, w tym pliki zasobów, pliki zawartości i pliki do witryny pochodzenia.|Zobacz [zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md).|  
+|Zarządzanie systemem windows w aplikacje autonomiczne|Zobacz [Przegląd Windows WPF](wpf-windows-overview.md).|  
+|Śledzenie i zarządzanie nawigacji|Zobacz [Nawigacja — omówienie](navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   
 ## <a name="the-application-definition"></a>Definicja aplikacji  
@@ -63,16 +63,16 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  Poniższy przykład pokazuje, jak zaimplementować definicję aplikacji przy użyciu znaczników i związane z kodem:  
   
- [!code-xaml[ApplicationSnippets#ApplicationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
+ [!code-xaml[ApplicationSnippets#ApplicationXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
   
- [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
- [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
+ [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
+ [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
   
  Aby umożliwić pliku znaczników i pliku związanego z kodem pracy zespołowej, następujące ma miejsce:  
   
 - W znaczniku `Application` element musi zawierać `x:Class` atrybutu. Podczas kompilowania aplikacji, istnienie `x:Class` w znaczniku pliku powoduje, że program MSBuild utworzy `partial` klasę pochodzącą od <xref:System.Windows.Application> i ma nazwę, która jest określona przez `x:Class` atrybutu. Wymaga to dodawanie deklaracji przestrzeni nazw XML dla schematu XAML (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   Związane z kodem, klasy musi być `partial` klasy o takiej samej nazwie, który jest określony przez `x:Class` atrybutu w znacznikach i musi pochodzić od klasy <xref:System.Windows.Application>. Dzięki temu pliku związanego z kodem, który ma zostać skojarzony z `partial` klasy, który jest generowany dla pliku znaczników Po skompilowaniu aplikację (zobacz [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
+-   Związane z kodem, klasy musi być `partial` klasy o takiej samej nazwie, który jest określony przez `x:Class` atrybutu w znacznikach i musi pochodzić od klasy <xref:System.Windows.Application>. Dzięki temu pliku związanego z kodem, który ma zostać skojarzony z `partial` klasy, który jest generowany dla pliku znaczników Po skompilowaniu aplikację (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  Podczas tworzenia nowego projektu aplikacji WPF lub projektu aplikacja przeglądarki środowiska WPF przy użyciu programu Visual Studio, definicji aplikacji jest domyślnie włączone i jest definiowana za pomocą znaczników i związane z kodem.  
@@ -110,13 +110,13 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  Poniższy kod pokazuje, jak można uzyskać odwołanie do <xref:System.Windows.Application> obiektu dla bieżącego <xref:System.AppDomain>.  
   
- [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
- [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
+ [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
+ [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
  <xref:System.Windows.Application.Current%2A> Zwraca odwołanie do wystąpienia <xref:System.Windows.Application> klasy. Jeśli chcesz, aby odwołanie do usługi <xref:System.Windows.Application> klasy, należy rzutować wartość <xref:System.Windows.Application.Current%2A> właściwości, jak pokazano w poniższym przykładzie.  
   
- [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
- [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
+ [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
+ [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
   
  Możesz badać wartości <xref:System.Windows.Application.Current%2A> w dowolnym momencie w trakcie trwania <xref:System.Windows.Application> obiektu. Jednakże należy zachować ostrożność. Po <xref:System.Windows.Application> tworzenia wystąpienia klasy, ma okres, przez który stan <xref:System.Windows.Application> obiektu jest niespójny. W tym okresie <xref:System.Windows.Application> wykonuje różnych zadań inicjowania, które są wymagane przez kod, aby uruchomić, w tym ustanawiania infrastruktury aplikacji, ustawianie właściwości i rejestrowanie zdarzeń. Jeśli spróbujesz użyć <xref:System.Windows.Application> obiekt w tym okresie, Twój kod może mieć nieoczekiwane wyniki, szczególnie w przypadku, gdy jest to uzależnione od różnych <xref:System.Windows.Application> właściwości są ustawione.  
   
@@ -129,7 +129,7 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Ekran powitalny  
- Począwszy od [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], można określić obrazu do użycia w oknie uruchamiania lub *ekran powitalny*. <xref:System.Windows.SplashScreen> Klasy można łatwo wyświetlać okno uruchamiania podczas ładowania aplikacji. <xref:System.Windows.SplashScreen> Okna jest tworzony i wyświetlany przed <xref:System.Windows.Application.Run%2A> jest wywoływana. Aby uzyskać więcej informacji, zobacz [czas uruchamiania aplikacji](../../../../docs/framework/wpf/advanced/application-startup-time.md) i [dodać ekran powitalny do aplikacji WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Począwszy od [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], można określić obrazu do użycia w oknie uruchamiania lub *ekran powitalny*. <xref:System.Windows.SplashScreen> Klasy można łatwo wyświetlać okno uruchamiania podczas ładowania aplikacji. <xref:System.Windows.SplashScreen> Okna jest tworzony i wyświetlany przed <xref:System.Windows.Application.Run%2A> jest wywoływana. Aby uzyskać więcej informacji, zobacz [czas uruchamiania aplikacji](../advanced/application-startup-time.md) i [dodać ekran powitalny do aplikacji WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Uruchamianie aplikacji  
@@ -144,35 +144,35 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 ### <a name="showing-a-user-interface"></a>Wyświetlanie interfejsu użytkownika  
  Większość aplikacji Windows autonomiczny Otwórz <xref:System.Windows.Window> gdy zaczyna uruchomiona. <xref:System.Windows.Application.Startup> Procedura obsługi zdarzeń jest jedną lokalizację, z którego można to zrobić, jak pokazano w następującym kodem.  
   
- [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
+ [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
- [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
- [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
+ [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
+ [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
 >  Pierwszy <xref:System.Windows.Window> z myślą o uruchamianiu w samodzielnej aplikacji staje się okna głównego aplikacji domyślnie. To <xref:System.Windows.Window> odwołuje się obiekt <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> właściwości. Wartość <xref:System.Windows.Application.MainWindow%2A> właściwość można zmienić programowo Jeśli innego okna niż pierwszy uruchomiony <xref:System.Windows.Window> powinny być głównego okna.  
   
  Po pierwszym uruchomieniu XBAP najprawdopodobniej spowoduje przejście do <xref:System.Windows.Controls.Page>. Jest to pokazane w poniższym kodzie.  
   
- [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
+ [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
- [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
- [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
+ [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
+ [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
   
  Jeśli możesz obsługiwać <xref:System.Windows.Application.Startup> można otwierać tylko <xref:System.Windows.Window> ścieżkę fizyczną lub przejdź do <xref:System.Windows.Controls.Page>, można ustawić `StartupUri` zamiast tego atrybutu w znacznikach.  
   
  Poniższy przykład pokazuje, jak używać <xref:System.Windows.Application.StartupUri%2A> z samodzielnej aplikacji, aby otworzyć <xref:System.Windows.Window>.  
   
- [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
+ [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
  Poniższy przykład pokazuje, jak używać <xref:System.Windows.Application.StartupUri%2A> z XBAP, aby przejść do <xref:System.Windows.Controls.Page>.  
   
- [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
+ [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
  Ten kod znaczników ma taki sam skutek jak poprzedni kod do otwierania okna.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na pasku nawigacyjnym, zobacz [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  Aby uzyskać więcej informacji na pasku nawigacyjnym, zobacz [Nawigacja — omówienie](navigation-overview.md).  
   
  Wymagana jest obsługa <xref:System.Windows.Application.Startup> zdarzenie, aby otworzyć <xref:System.Windows.Window> Jeśli musisz utworzyć go za pomocą konstruktora innych niż domyślne wystąpienie, musisz ustawić jej właściwości lub subskrybować ze zdarzeniami, przed wyświetleniem lub trzeba przetworzyć żadnych argumentów wiersza polecenia, podano, gdy aplikacja została uruchomiona.  
   
@@ -184,14 +184,14 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  Podczas inicjowania aplikacji WPF pobiera argumenty wiersza polecenia systemu operacyjnego i przekazuje je do <xref:System.Windows.Application.Startup> programu obsługi zdarzeń za pośrednictwem <xref:System.Windows.StartupEventArgs.Args%2A> właściwość <xref:System.Windows.StartupEventArgs> parametru. Można pobrać i zapisać argumentów wiersza polecenia przy użyciu kodu, jak pokazano poniżej.  
   
- [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
+ [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
- [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
- [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
+ [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
+ [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
  Obsługuje kod <xref:System.Windows.Application.Startup> Aby sprawdzić, czy **/StartMinimized** podano argument wiersza polecenia — Jeśli tak, zostanie otwarte okno główne z <xref:System.Windows.WindowState> z <xref:System.Windows.WindowState.Minimized>. Należy pamiętać, że ponieważ <xref:System.Windows.Window.WindowState%2A> musi być ustawiona właściwość programowo, głównym <xref:System.Windows.Window> muszą być otwarte jawnie w kodzie.  
   
- XBAP nie można pobrać i przetworzyć argumenty wiersza polecenia, ponieważ będą uruchamiane za pomocą wdrażania ClickOnce (zobacz [wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)). Jednakże można pobrać i przetworzyć parametry ciągu zapytania z adresów URL, które są używane do ich uruchamiania.  
+ XBAP nie można pobrać i przetworzyć argumenty wiersza polecenia, ponieważ będą uruchamiane za pomocą wdrażania ClickOnce (zobacz [wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md)). Jednakże można pobrać i przetworzyć parametry ciągu zapytania z adresów URL, które są używane do ich uruchamiania.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>Aktywacja aplikacji i dezaktywacji  
@@ -213,10 +213,10 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  Poniższy kod przedstawia sposób obsługi <xref:System.Windows.Application.Activated> i <xref:System.Windows.Application.Deactivated> zdarzenia w celu określenia, czy aplikacja jest aktywna.  
   
- [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
+ [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
   
- [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
- [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
+ [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
+ [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
   
  A <xref:System.Windows.Window> również może być aktywowane i dezaktywowane. Zobacz <xref:System.Windows.Window.Activated?displayProperty=nameWithType> i <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType> Aby uzyskać więcej informacji.  
   
@@ -251,12 +251,12 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  Wartość domyślna <xref:System.Windows.Application.ShutdownMode%2A> jest <xref:System.Windows.ShutdownMode.OnLastWindowClose>, co oznacza, że aplikacja zostaje automatycznie zamknięty po zamknięciu ostatniego okna w aplikacji przez użytkownika. Jednak jeśli aplikacja powinna zamknięty, po zamknięciu okna głównego, WPF automatycznie wykonuje, jeśli ustawisz <xref:System.Windows.Application.ShutdownMode%2A> do <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Jest to pokazane w poniższym przykładzie.  
   
- [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
+ [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
  Jeśli masz warunki zamykania specyficzne dla aplikacji, można skonfigurować ustawienie <xref:System.Windows.Application.ShutdownMode%2A> do <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. W tym przypadku jest odpowiedzialny za zamknięcia aplikacji przez jawne wywołanie <xref:System.Windows.Application.Shutdown%2A> metody; w przeciwnym razie aplikacja nadal będzie działać, nawet jeśli wszystkie okna są zamknięte. Należy pamiętać, że <xref:System.Windows.Application.Shutdown%2A> jest wywoływana niejawnie po <xref:System.Windows.Application.ShutdownMode%2A> jest <xref:System.Windows.ShutdownMode.OnLastWindowClose> lub <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A> można ustawić XBAP, ale jest on ignorowany; XBAP jest wyłączana zawsze, gdy jest przejście od w przeglądarce lub w przypadku, gdy nastąpi zamknięcie okna przeglądarki, który jest hostem XBAP. Aby uzyskać więcej informacji, zobacz [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+>  <xref:System.Windows.Application.ShutdownMode%2A> można ustawić XBAP, ale jest on ignorowany; XBAP jest wyłączana zawsze, gdy jest przejście od w przeglądarce lub w przypadku, gdy nastąpi zamknięcie okna przeglądarki, który jest hostem XBAP. Aby uzyskać więcej informacji, zobacz [Nawigacja — omówienie](navigation-overview.md).  
   
 #### <a name="session-ending"></a>Trwa kończenie sesji  
  Warunki zamykania, które są opisane przez <xref:System.Windows.Application.ShutdownMode%2A> właściwości są specyficzne dla aplikacji. W niektórych przypadkach jednak aplikacji może zostać wyłączony w wyniku warunek zewnętrznych. Najbardziej typowe zewnętrznych warunek występuje, gdy użytkownik kończy sesję Windows przez następujące akcje:  
@@ -271,10 +271,10 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  Aby wykryć, po zakończeniu sesji programu Windows, można obsługiwać <xref:System.Windows.Application.SessionEnding> zdarzeń, jak pokazano w poniższym przykładzie.  
   
- [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
+ [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
- [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
- [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
+ [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
+ [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
  W tym przykładzie, sprawdza kod <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> właściwości w celu określenia, jak kończy się sesja Windows. Aby wyświetlić komunikat potwierdzenia dla użytkownika używa tej wartości. Jeśli użytkownik nie chce, aby zakończyć sesję, kod ustawia <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> do `true` zapobiegające kończenie sesji Windows.  
   
@@ -289,7 +289,7 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
  [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
  [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
- Aby uzyskać kompletny przykład, zobacz [utrwalanie i przywracanie właściwości zakresu aplikacji między sesjami aplikacji](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md).  
+ Aby uzyskać kompletny przykład, zobacz [utrwalanie i przywracanie właściwości zakresu aplikacji między sesjami aplikacji](persist-and-restore-application-scope-properties.md).  
   
  <xref:System.Windows.Application.Exit> mogą być obsługiwane przez aplikacje autonomiczne i aplikacji XBAP. Dla aplikacji XBAP <xref:System.Windows.Application.Exit> jest wywoływane, gdy komputer znajduje się w następujących okolicznościach:  
   
@@ -311,8 +311,8 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  Aby zmienić kod zakończenia, można wywołać <xref:System.Windows.Application.Shutdown%28System.Int32%29> przeciążenia, które przyjmuje argument liczby całkowitej jako kod zakończenia:  
   
- [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
- [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
+ [!code-csharp[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
+ [!code-vb[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
  Wykrywa wartość kodu zakończenia i zmień je, obsługując <xref:System.Windows.Application.Exit> zdarzeń. <xref:System.Windows.Application.Exit> Programu obsługi zdarzeń jest przekazywany <xref:System.Windows.ExitEventArgs> zapewniającą dostęp do kodu zakończenia z <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> właściwości. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Application.Exit>.  
   
@@ -323,7 +323,7 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 ### <a name="unhandled-exceptions"></a>Nieobsługiwane wyjątki  
  Czasami aplikacja może nastąpić w nietypowych warunków, takich jak kiedy występuje nieoczekiwany wyjątek. W takim przypadku aplikacja nie może mieć kod w celu wykrywania i przetwarzania wyjątku. Ten typ wyjątku jest nieobsługiwany wyjątek; zostanie wyświetlone powiadomienie podobne do przedstawionego na poniższym rysunku, przed zamknięciem aplikacji.  
   
- ![Nieobsługiwany wyjątek powiadomień](../../../../docs/framework/wpf/app-development/media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![Nieobsługiwany wyjątek powiadomień](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
   
  Z punktu widzenia środowisko użytkownika jest lepszym rozwiązaniem dla aplikacji uniknąć tego zachowania domyślnego, wykonując niektóre lub wszystkie z następujących czynności:  
   
@@ -337,8 +337,8 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
 [!code-xaml[detecting-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
-[!code-csharp[code-to-detect-unhandled-exceptions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
-[!code-vb[code-to-detect-unhandled-exceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
+[!code-csharp[code-to-detect-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
+[!code-vb[code-to-detect-unhandled-exceptions](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
   
  <xref:System.Windows.Application.DispatcherUnhandledException> Programu obsługi zdarzeń jest przekazywany <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> parametr zawierający informacje kontekstowe dotyczące nieobsłużony wyjątek, w tym wyjątków, sama (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>). Aby określić sposób obsługi wyjątku, można użyć tych informacji.  
   
@@ -350,17 +350,17 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 ### <a name="application-lifetime-events"></a>Zdarzenia okresu istnienia aplikacji  
  Aplikacje autonomiczne i aplikacji XBAP nie ma dokładnie tych samych okresy istnienia. Poniższa ilustracja przedstawia kluczowych zdarzeń w cyklu życia aplikacji autonomicznej i przedstawiono sekwencję, w którym są one inicjowane.  
   
- ![Aplikacja autonomiczna &#45; zdarzenia obiektu aplikacji](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
+ ![Aplikacja autonomiczna &#45; zdarzenia obiektu aplikacji](./media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
   
  Podobnie poniższy rysunek ilustruje kluczowe zdarzenia w okresie istnienia XBAP i przedstawiono sekwencję, w którym są one inicjowane.  
   
- ![XBAP &#45; zdarzenia obiektu aplikacji](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
+ ![XBAP &#45; zdarzenia obiektu aplikacji](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Application>
-- [Okna WPF — omówienie](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
-- [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md)
-- [Zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
-- [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [Okna WPF — omówienie](wpf-windows-overview.md)
+- [Nawigacja — omówienie](navigation-overview.md)
+- [Zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md)
+- [Pakowanie URI w WPF](pack-uris-in-wpf.md)
 - [Model aplikacji: Tematy porad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [Projektowanie aplikacji](../../../../docs/framework/wpf/app-development/index.md)
+- [Projektowanie aplikacji](index.md)

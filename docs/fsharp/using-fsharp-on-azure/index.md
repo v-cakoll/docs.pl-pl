@@ -4,6 +4,7 @@ description: 'Przewodnik dotyczący korzystania z usług Azure za pomocąF#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>Używanie języka F# na platformie Azure
 
 F#jest obracanym język programowania w chmurze i często służy do pisania aplikacji sieci web, usług w chmurze, w przypadku mikrousługi hostowane w chmurze i skalowalna przetwarzania danych.
@@ -87,7 +88,7 @@ Usługa Azure Notification Hubs może być używany z F# na dwa sposoby:
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Implementowanie elementów Webhook na platformie Azure dzięki F\#
 
-A [elementu Webhook](https://en.wikipedia.org/wiki/Webhook) jest wywołanie zwrotne wyzwalane za pośrednictwem żądania sieci web. Elementy Webhook są używane w witrynach, takich jak GitHub sygnału zdarzenia. 
+A [elementu Webhook](https://en.wikipedia.org/wiki/Webhook) jest wywołanie zwrotne wyzwalane za pośrednictwem żądania sieci web. Elementy Webhook są używane w witrynach, takich jak GitHub sygnału zdarzenia.
 
 Elementy Webhook, może być implementowany w F# i hostowanej na platformie Azure za pośrednictwem [funkcji platformy Azure w F# z powiązań elementów Webhook](/azure/azure-functions/functions-bindings-http-webhook).
 
@@ -109,7 +110,7 @@ Maszyny wirtualne platformy Azure może być programowo oraz zarządzania nimi z
 
 Podobnie, innych zasobów platformy Azure może również być wdrażania i zarządzania nimi z F# skryptów za pomocą tych samych składników. Na przykład możesz utworzyć konta magazynu, wdrażanie usług Azure Cloud Services, tworzenie wystąpień usługi Azure Cosmos DB i zarządzanie Azure niewłaściwa Hubs programowo z F# skryptów.
 
-Za pomocą F# skryptów do wdrażania zasobów i zarządzanie nimi nie jest zazwyczaj konieczne. Na przykład zasoby platformy Azure może również wdrożonej międzypaństwowymi, bezpośrednio z opisy szablonu JSON, które mogą być parametryzowane. Zobacz [szablonów usługi Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) wraz z przykładami takich jak [szablony szybkiego startu platformy Azure](https://azure.microsoft.com/resources/templates/).
+Za pomocą F# skryptów do wdrażania zasobów i zarządzanie nimi nie jest zazwyczaj konieczne. Na przykład zasoby platformy Azure również można wdrażać bezpośrednio z opisy szablonu JSON, które mogą być parametryzowane. Zobacz [szablonów usługi Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices) wraz z przykładami takich jak [szablony szybkiego startu platformy Azure](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Inne zasoby
 

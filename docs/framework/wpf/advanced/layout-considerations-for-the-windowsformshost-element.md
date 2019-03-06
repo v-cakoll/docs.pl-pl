@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: a399cc9742ff9b19aabd6dcee558f94147c88356
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625630"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366546"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Opcje układu dla elementu WindowsFormsHost
 W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.WindowsFormsHost> element wchodzi w interakcję z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
@@ -30,9 +30,9 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
   
 |Funkcja układ|Opis|  
 |--------------------|-----------------|  
-|Automatyczne określanie rozmiaru|Niektóre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] zmiany rozmiaru kontrolek się do prawidłowego wyświetlenia ich zawartość. Aby uzyskać więcej informacji, zobacz [AutoSize właściwość — omówienie](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
+|Automatyczne określanie rozmiaru|Niektóre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] zmiany rozmiaru kontrolek się do prawidłowego wyświetlenia ich zawartość. Aby uzyskać więcej informacji, zobacz [AutoSize właściwość — omówienie](../../winforms/controls/autosize-property-overview.md).|  
 |Zakotwiczanie i dokowanie|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Formanty obsługują pozycjonowanie i zmianę rozmiaru, oparte na kontenerze nadrzędnym. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
-|Skalowanie automatyczne|Kontrole kontenerów rozmiar nimi i ich elementy podrzędne na podstawie rozdzielczości urządzenia wyjściowego lub rozmiar w pikselach domyślna czcionka kontenera. Aby uzyskać więcej informacji, zobacz [automatyczne skalowanie w formularzach Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
+|Skalowanie automatyczne|Kontrole kontenerów rozmiar nimi i ich elementy podrzędne na podstawie rozdzielczości urządzenia wyjściowego lub rozmiar w pikselach domyślna czcionka kontenera. Aby uzyskać więcej informacji, zobacz [automatyczne skalowanie w formularzach Windows Forms](../../winforms/automatic-scaling-in-windows-forms.md).|  
 |Kontenery układów|<xref:System.Windows.Forms.FlowLayoutPanel> i <xref:System.Windows.Forms.TableLayoutPanel> formanty rozmiaru się zgodnie z ich zawartość i rozmieszczanie ich formantów podrzędnych.|  
   
 ## <a name="layout-limitations"></a>Ograniczenia układu  
@@ -73,7 +73,7 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
 |przepełnienia|Gdy <xref:System.Windows.Forms.Integration.WindowsFormsHost> konwertuje element `double` wartości `int` wartości, jest możliwe przepełnienie. Wartości, które są większe niż <xref:System.Int32.MaxValue> są ustawione na <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Właściwości związane z układem  
- Właściwości, które kontrolują zachowanie układu w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy są zmapowane odpowiednio przez <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu. Aby uzyskać więcej informacji, zobacz [Windows Forms i WPF właściwość mapowanie](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Właściwości, które kontrolują zachowanie układu w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy są zmapowane odpowiednio przez <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu. Aby uzyskać więcej informacji, zobacz [Windows Forms i WPF właściwość mapowanie](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>Zmian układu w formancie hostowanej  
  Zmian układu w hostowanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrola jest przekazywana do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wyzwolić aktualizacje układu. <xref:System.Windows.UIElement.InvalidateMeasure%2A> Metody <xref:System.Windows.Forms.Integration.WindowsFormsHost> zapewnia, że zmiany układu w formancie hostowanej spowodują [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparatu układu do uruchomienia.  
@@ -101,7 +101,7 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Przewodnik: Kontrolek rozmieszczanie Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Przewodnik: Kontrolek rozmieszczanie Windows Forms w WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Windows rozmieszczanie formantów formularzy w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Mapowanie właściwości Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)
+- [Migracja i współdziałanie](migration-and-interoperability.md)

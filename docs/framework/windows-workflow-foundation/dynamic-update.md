@@ -2,12 +2,12 @@
 title: Aktualizacja dynamiczna
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 63d780852f7deea8263f3c232ec9cc43b48a0526
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323126"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353702"
 ---
 # <a name="dynamic-update"></a>Aktualizacja dynamiczna
 Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów aplikacji, aby zaktualizować definicję przepływu pracy z istniejącym wystąpieniem przepływu pracy. Może to być do zaimplementowania poprawki, nowe wymagania, lub aby pomieścić nieoczekiwanych zmian. Ten temat zawiera omówienie funkcji aktualizacji dynamicznej wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -28,7 +28,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów 
   
  Ten temat zawiera omówienie procesu aktualizacji dynamicznej dodawania nowe działanie do utrwalonego wystąpienia skompilowanych Xaml przepływu pracy.  
   
-###  <a name="Prepare"></a> Przygotowanie definicji przepływu pracy dla aktualizacji dynamicznych  
+### <a name="Prepare"></a> Przygotowanie definicji przepływu pracy dla aktualizacji dynamicznych  
  Pierwszym krokiem w procesie aktualizacja dynamiczna jest przygotowanie definicji żądanego przepływu pracy dla aktualizacji. Jest to realizowane przez wywołanie <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> metody i przekazywanie w definicji przepływu pracy, aby zmodyfikować. Ta metoda sprawdza poprawność, a następnie przegląda drzewo przepływu pracy, aby zidentyfikować wszystkie obiekty, takie jak działania publiczne i zmienne, które trzeba oznakowane, więc porównania później z definicji przepływu pracy zmodyfikowane. Po jego ukończeniu drzewa przepływu pracy jest sklonowany i dołączony do oryginalnej definicji przepływu pracy. Po utworzeniu update map zaktualizowanej wersji definicji przepływu pracy jest porównywana z oryginalnej definicji przepływu pracy i mapy aktualizacji jest generowana na temat różnic.  
   
  Aby przygotować Xaml przepływu pracy dla aktualizacji dynamicznych, które mogą zostać załadowane do <xref:System.Activities.ActivityBuilder>, a następnie <xref:System.Activities.ActivityBuilder> jest przekazywana do <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.  
@@ -59,7 +59,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 > [!NOTE]
 >  Aby pobrać przykładowy kod, który towarzyszy w tym temacie, zobacz [aktualizacja dynamiczna przykładowy kod](https://go.microsoft.com/fwlink/?LinkId=227905).  
   
-###  <a name="Update"></a> Aktualizowanie definicji przepływu pracy, aby odzwierciedlić żądane zmiany  
+### <a name="Update"></a> Aktualizowanie definicji przepływu pracy, aby odzwierciedlić żądane zmiany  
  Po definicji przepływu pracy zostało przygotowane do aktualizacji, odpowiednich zmian będzie możliwe. Możesz można dodać lub usunąć działania, Dodaj, przenieść lub usunąć publiczny zmiennych, Dodaj lub usuń argumenty i wprowadzić zmiany w podpisie działania delegatach. Nie można usunąć uruchomione działanie ani zmienić podpis delegata uruchomione. Te zmiany mogą być nawiązywane przy użyciu kodu, lub w Projektancie ponownie hostowanej przepływu pracy. W poniższym przykładzie niestandardową `VerifyAppraisal` dodaniu działania do sekwencji, tworzącą treści `MortgageWorkflow` z poprzedniego przykładu.  
   
 ```csharp  
@@ -77,7 +77,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a> Tworzenie update map  
+### <a name="Create"></a> Tworzenie update map  
  Po definicji przepływu pracy, który został przygotowany dla aktualizacji został zmodyfikowany, można utworzyć mapy aktualizacji. Aby utworzyć mapę aktualizacja dynamiczna <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> metoda jest wywoływana. Spowoduje to zwrócenie <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> zawierający informacje środowiska uruchomieniowego trzeba zmodyfikować utrwalonego wystąpienia przepływu pracy, który może być załadowany i wznowiono z użyciem nową definicję przepływu pracy. W poniższym przykładzie jest tworzony dynamicznej mapy dla zmodyfikowanego `MortgageWorkflow` definicji z poprzedniego przykładu.  
   
 ```csharp  
@@ -106,7 +106,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a> Zastosuj mapy aktualizacji do wystąpień żądaną utrwalonych przepływów pracy  
+### <a name="Apply"></a> Zastosuj mapy aktualizacji do wystąpień żądaną utrwalonych przepływów pracy  
  Stosowanie aktualizacji mapy może odbywać się w dowolnym momencie po jej utworzeniu. Możesz to zrobić, następnie od razu przy użyciu <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> wystąpienia, który został zwrócony przez <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>, lub można to zrobić później za pomocą zapisana kopia mapowania aktualizacji. Aby zaktualizować wystąpienia przepływu pracy, załadować go do <xref:System.Activities.WorkflowApplicationInstance> przy użyciu <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>. Następnie należy utworzyć <xref:System.Activities.WorkflowApplication> przy użyciu definicji przepływu pracy zaktualizowane i żądany <xref:System.Activities.WorkflowIdentity>. To <xref:System.Activities.WorkflowIdentity> może być inny niż ten, który został użyty do utrwalenia oryginalny przepływ pracy i jest zazwyczaj w celu odzwierciedlenia czy utrwalonego wystąpienia zostały zmodyfikowane. Raz <xref:System.Activities.WorkflowApplication> jest utworzony, jest on ładowany za pomocą przeciążenia <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> przyjmującej <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>, a następnie zostały zwolnione w wyniku wywołania <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>. To ma zastosowanie aktualizacja dynamiczna i będzie się powtarzał wystąpienia zaktualizowanego przepływu pracy.  
   
 ```csharp  

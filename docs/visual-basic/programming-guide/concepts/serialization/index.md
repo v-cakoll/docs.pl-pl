@@ -2,12 +2,6 @@
 title: Serializacja (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-ms.openlocfilehash: 710975170d256982ea1a7190358155769ed6e2a7
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33653273"
 ---
 # <a name="serialization-visual-basic"></a>Serializacja (Visual Basic)
 Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można było zapisać obiekt lub przekazuje je do pamięci, bazie danych lub pliku. Głównym celem jest zapisanie stanu obiektu, aby można było utworzyć ponownie w razie. Zwrotny proces jest nazywany deserializacji.  
@@ -58,12 +52,12 @@ Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można by�
 ## <a name="designer-serialization"></a>Serializacja projektanta  
  Serializacja projektanta jest specjalną forma serializacji, która obejmuje typ trwałości obiektu zwykle skojarzone z narzędziami programistycznymi. Serializacja projektanta jest procesem konwertowania wykresu obiektu do pliku źródłowego, który później może służyć do odzyskania wykresu obiektu. Plik źródłowy może zawierać kod, znaczników lub nawet informacji o tabeli SQL.  
   
-##  <a name="BKMK_RelatedTopics"></a> Tematy pokrewne i przykłady  
+## <a name="BKMK_RelatedTopics"></a> Tematy pokrewne i przykłady  
  [Przewodnik: Przechowywanie obiektu w programie Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Pokazuje, jak serializacji może służyć do utrwalenia danych obiektu między wystąpieniami, co pozwala na przechowywanie wartości i pobierać je podczas następnego, które jest tworzone wystąpienie obiektu.  
   
- [Porady: odczytywanie danych o obiektach z pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+ [Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
  Pokazuje, jak odczytywanie danych o obiektach, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
   
- [Porady: zapis danych obiektu do pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+ [Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
  Przedstawia sposób zapisania obiektu z klasy do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.

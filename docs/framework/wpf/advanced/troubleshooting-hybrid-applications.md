@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 005cd017ae7702169aefb61a746c8adaba8118db
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748703"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370101"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Rozwiązywanie problemów aplikacji hybrydowych
 <a name="introduction"></a> W tym temacie wymieniono niektóre typowe problemy, które mogą wystąpić podczas tworzenia aplikacji hybrydowych, które używają zarówno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii.  
@@ -35,7 +35,7 @@ ms.locfileid: "56748703"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>Skalowanie  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mają różne modele skalowania. Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] skalowania przekształcenia są zrozumiałe dla [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek, ale inne osoby nie są. Na przykład skalowanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formant 0 będzie działać, ale jeśli zostanie podjęta próba skalowania tej samej kontrolki wartość niezerową, rozmiar formantu pozostaje 0. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące układu dla elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] mają różne modele skalowania. Niektóre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] skalowania przekształcenia są zrozumiałe dla [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek, ale inne osoby nie są. Na przykład skalowanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formant 0 będzie działać, ale jeśli zostanie podjęta próba skalowania tej samej kontrolki wartość niezerową, rozmiar formantu pozostaje 0. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>Adapter  
@@ -53,7 +53,7 @@ ms.locfileid: "56748703"
   
 <a name="property_mapping"></a>   
 ## <a name="property-mapping"></a>Mapowanie właściwości  
- Niektóre właściwości mapowania wymagać rozbudowane interpretacji do zestawiania różnych implementacji między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii. Mapowania właściwości Włącz swój kod, aby reagować na zmiany w czcionki, kolory i inne właściwości. Ogólnie rzecz biorąc, mapowania właściwości działają przez nasłuchiwanie w obu *właściwość*zmienione zdarzenia lub na*właściwość*zmienione wywołania i ustawienie odpowiednie właściwości kontrolki podrzędnej lub jego karty. Aby uzyskać więcej informacji, zobacz [Windows Forms i WPF właściwość mapowanie](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Niektóre właściwości mapowania wymagać rozbudowane interpretacji do zestawiania różnych implementacji między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii. Mapowania właściwości Włącz swój kod, aby reagować na zmiany w czcionki, kolory i inne właściwości. Ogólnie rzecz biorąc, mapowania właściwości działają przez nasłuchiwanie w obu *właściwość*zmienione zdarzenia lub na*właściwość*zmienione wywołania i ustawienie odpowiednie właściwości kontrolki podrzędnej lub jego karty. Aby uzyskać więcej informacji, zobacz [Windows Forms i WPF właściwość mapowanie](windows-forms-and-wpf-property-mapping.md).  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
 ## <a name="layout-related-properties-on-hosted-content"></a>Właściwości związane z układem hostowaną zawartość  
@@ -66,7 +66,7 @@ ms.locfileid: "56748703"
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- Nie należy ustawiać właściwości tych bezpośrednio na hostowaną zawartość. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące układu dla elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ Nie należy ustawiać właściwości tych bezpośrednio na hostowaną zawartość. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="navigation_applications"></a>   
 ## <a name="navigation-applications"></a>Aplikacje nawigacji  
@@ -76,7 +76,7 @@ ms.locfileid: "56748703"
 ## <a name="message-loop-interoperation"></a>Współdziałanie pętli komunikatów  
  Podczas pracy z [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] pętli komunikatów, wiadomości nie mogą być przetwarzane, zgodnie z oczekiwaniami. <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> Metoda jest wywoływana przez <xref:System.Windows.Forms.Integration.WindowsFormsHost> konstruktora. Metoda ta umożliwia dodanie filtru komunikatów w celu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pętli komunikatów. Wywołuje ten filtr <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> metoda Jeśli <xref:System.Windows.Forms.Control?displayProperty=nameWithType> docelowym komunikat i wykonuje translację/wysyłki wiadomości.  
   
- Jeśli wyświetlisz <xref:System.Windows.Window> w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] pętli komunikatów za pomocą <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, nie można niczego wpisywać, chyba że wywołanie <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> metody. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Metoda przyjmuje <xref:System.Windows.Window> i dodaje <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, który zmienia trasę komunikatów dotyczących klucza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pętli komunikatów. Aby uzyskać więcej informacji, zobacz [Windows Forms i architektura danych wejściowych współdziałania WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
+ Jeśli wyświetlisz <xref:System.Windows.Window> w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] pętli komunikatów za pomocą <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, nie można niczego wpisywać, chyba że wywołanie <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> metody. <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Metoda przyjmuje <xref:System.Windows.Window> i dodaje <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, który zmienia trasę komunikatów dotyczących klucza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pętli komunikatów. Aby uzyskać więcej informacji, zobacz [Windows Forms i architektura danych wejściowych współdziałania WPF](windows-forms-and-wpf-interoperability-input-architecture.md).  
   
 <a name="opacity_and_layering"></a>   
 ## <a name="opacity-and-layering"></a>Nieprzezroczystość i warstw  
@@ -88,7 +88,7 @@ ms.locfileid: "56748703"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Włączanie stylów wizualnych  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] style wizualizacji, na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantu może nie być włączona. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Metoda jest wywoływana w szablonie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji. Chociaż ta metoda nie jest wywoływany przez ustawienie domyślne, jeśli używasz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] do tworzenia projektu uzyskasz [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual style na kontrolki, jeśli jest dostępna wersja 6.0 Comctl32.dll. Należy wywołać <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metoda przed utworzeniem dojść w wątku. Aby uzyskać więcej informacji, zobacz [jak: Włączyć style Visual w aplikacji hybrydowej](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] style wizualizacji, na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantu może nie być włączona. <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Metoda jest wywoływana w szablonie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji. Chociaż ta metoda nie jest wywoływany przez ustawienie domyślne, jeśli używasz [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] do tworzenia projektu uzyskasz [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual style na kontrolki, jeśli jest dostępna wersja 6.0 Comctl32.dll. Należy wywołać <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metoda przed utworzeniem dojść w wątku. Aby uzyskać więcej informacji, zobacz [jak: Włączyć style Visual w aplikacji hybrydowej](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Licencjonowane formanty  
@@ -108,7 +108,7 @@ ms.locfileid: "56748703"
 ### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>Lista błędów w czasie projektowania jest wyświetlany, gdy obj folder zostanie usunięty  
  Jeśli obj folder zostanie usunięty, pojawi się lista błędów w czasie projektowania.  
   
- Podczas projektowania przy użyciu <xref:System.Windows.Forms.Integration.ElementHost>, Windows Forms Designer używa wygenerowane pliki w folderze debugowania lub wydania w folderze obj. projektu. Jeśli usuniesz te pliki, pojawi się lista błędów w czasie projektowania. Aby rozwiązać ten problem, ponownie skompiluj projekt. Aby uzyskać więcej informacji, zobacz [błędy czasu projektowania w programie Windows Forms Designer](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
+ Podczas projektowania przy użyciu <xref:System.Windows.Forms.Integration.ElementHost>, Windows Forms Designer używa wygenerowane pliki w folderze debugowania lub wydania w folderze obj. projektu. Jeśli usuniesz te pliki, pojawi się lista błędów w czasie projektowania. Aby rozwiązać ten problem, ponownie skompiluj projekt. Aby uzyskać więcej informacji, zobacz [błędy czasu projektowania w programie Windows Forms Designer](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
   
 <a name="elementhost_and_ime"></a>   
 ## <a name="elementhost-and-ime"></a>Elementhost — i edytora IME  
@@ -118,9 +118,9 @@ ms.locfileid: "56748703"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Współdziałanie w Projektancie WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Architektura danych wejściowych współdziałania dla Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Instrukcje: Włączyć style Visual w aplikacji hybrydowej](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
-- [Mapowanie właściwości Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Błędy czasu projektowania w narzędziu Projektant dla formularzy Windows Forms](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
-- [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Architektura danych wejściowych współdziałania dla Windows Forms i WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Instrukcje: Włączyć style Visual w aplikacji hybrydowej](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
+- [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)
+- [Błędy czasu projektowania w narzędziu Projektant dla formularzy Windows Forms](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Migracja i współdziałanie](migration-and-interoperability.md)

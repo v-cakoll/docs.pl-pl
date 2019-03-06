@@ -7,20 +7,20 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553926"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365272"
 ---
 # <a name="radiobutton"></a>RadioButton
-<xref:System.Windows.Controls.RadioButton> Formanty zwykle są zgrupowane umożliwiającą użytkownikom pojedynczego wyboru między kilka opcji; można wybrać tylko jeden przycisk naraz.  
+<xref:System.Windows.Controls.RadioButton> Formanty zwykle są zgrupowane razem do zaoferowania użytkownikom pojedynczego wyboru spośród kilku opcji; można wybrać tylko jeden przycisk w danym momencie.  
   
- Na poniższej ilustracji przedstawiono przykład <xref:System.Windows.Controls.RadioButton> formantu.  
+ Na poniższej ilustracji przedstawiono przykład <xref:System.Windows.Controls.RadioButton> kontroli.  
   
- ![Stany przycisku radiowego](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
-Typowy RadioButton  
+ ![Stany przycisku radiowego](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
+RadioButton — typowe  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  

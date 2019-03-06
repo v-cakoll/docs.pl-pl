@@ -1,5 +1,5 @@
 ---
-title: Jak otworzyć plik, który został upuszczony na formant RichTextBox
+title: 'Instrukcje: Otwórz plik, który został upuszczony na formant RichTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - RichTextBox [WPF], drag-and-drop
 - drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
-ms.openlocfilehash: f3c10ae76a9afcc04578c590cc57cd43c3ab7a1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ffa4c9919788060dc4524e127c181ee8282e6f9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547765"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378925"
 ---
-# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Jak otworzyć plik, który został upuszczony na formant RichTextBox
-W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, i <xref:System.Windows.Documents.FlowDocument> wszystkie formanty ma wbudowaną funkcję przeciągania i upuszczania. Wbudowanej funkcji umożliwia przeciągania i upuszczania tekstu w ramach i między formantami. Jednak nie umożliwia otwarcie pliku przez usunięcie pliku w formancie. Formanty również oznaczanie przeciągania i upuszczania, jako obsługi. W związku z tym domyślnie nie można dodać własne programy obsługi zdarzeń umożliwiają korzystanie z funkcji można otworzyć porzucone pliki.  
+# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Instrukcje: Otwórz plik, który został upuszczony na formant RichTextBox
+W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, i <xref:System.Windows.Documents.FlowDocument> wszystkich kontrolek posiada wbudowanej funkcji przeciągania i upuszczania. Wbudowane funkcje umożliwia przeciąganie i upuszczanie tekstu wewnątrz i pomiędzy kontrolki. Jednak nie umożliwia otwarcie pliku przez usunięcie plików na formancie. Te kontrolki również oznaczyć zdarzenia przeciągania i upuszczania, jako obsługiwane. Co w efekcie domyślnie nie można dodać własne programy obsługi zdarzeń do zapewnienia funkcji do otwierania plików porzuconych.  
   
- Aby dodać dodatkowe obsługę przeciągania i upuszczania w tych kontrolek, użyj <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> metody w celu dodania programu obsługi zdarzeń dla zdarzenia przeciągania i upuszczania. Ustaw `handledEventsToo` parametr `true` ma określony program obsługi, można wywołać dla kierowanego zdarzenia, który już został oznaczony jako obsługiwany przez inny element wzdłuż trasy zdarzenia.  
+ Aby dodać dodatkowe Obsługa przeciągania i upuszczania w tych kontrolek, należy użyć <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> metody w celu dodania usługi obsługi zdarzeń dla zdarzenia przeciągania i upuszczania. Ustaw `handledEventsToo` parametr `true` mieć określony program obsługi, można wywołać dla zdarzenia trasowanego, która już została oznaczona jako obsługiwane w innym elemencie wzdłuż trasy zdarzeń.  
   
 > [!TIP]
->  Można zastąpić wbudowanych funkcjonalność przeciągania i upuszczania <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, i <xref:System.Windows.Documents.FlowDocument> Obsługa wersji Podglądu zdarzeń przeciągania i upuszczania i oznaczenie Podgląd zdarzeń, ponieważ obsługiwane. Jednak to spowoduje wyłączenie wbudowanej funkcji przeciągania i upuszczania, a nie jest zalecane.  
+>  Możesz zastąpić wbudowanych funkcji przeciągania i upuszczania <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, i <xref:System.Windows.Documents.FlowDocument> przez obsługi wersje zapoznawcze zdarzenia przeciągania i upuszczania oraz oznaczanie zdarzenia (wersja zapoznawcza), jako obsługiwane. Jednak to spowoduje wyłączenie funkcji przeciągania i upuszczania wbudowane i nie jest zalecane.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak dodać obsługę <xref:System.Windows.DragDrop.DragOver> i <xref:System.Windows.DragDrop.Drop> zdarzeń na <xref:System.Windows.Controls.RichTextBox>. W tym przykładzie użyto <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> — metoda i zestawy `handledEventsToo` parametr `true` tak, aby programy obsługi zdarzeń zostanie wywołany, nawet jeśli <xref:System.Windows.Controls.RichTextBox> oznacza te zdarzenia, jako obsłużone. Kod obsługi zdarzeń dodaje funkcje do otwierania plików tekstowych, które są przenoszone na <xref:System.Windows.Controls.RichTextBox>.  
+ Poniższy przykład pokazuje, jak dodać procedury obsługi dla <xref:System.Windows.DragDrop.DragOver> i <xref:System.Windows.DragDrop.Drop> zdarzenia <xref:System.Windows.Controls.RichTextBox>. W tym przykładzie użyto <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> metody i zestawy `handledEventsToo` parametr `true` tak, aby programy obsługi zdarzeń zostanie wywołany, nawet jeśli <xref:System.Windows.Controls.RichTextBox> oznacza te zdarzenia, jako obsługiwane. Kod w procedurze obsługi zdarzeń dodaje funkcjonalność do otwierania pliku tekstowego, który został upuszczony na <xref:System.Windows.Controls.RichTextBox>.  
   
- Aby przetestować w tym przykładzie, przeciągnij plik tekstowy lub pliku RTF sformatowany (RTF) z Eksploratora Windows, aby <xref:System.Windows.Controls.RichTextBox>. Plik zostanie otwarty w <xref:System.Windows.Controls.RichTextBox>. Jeśli naciśniesz klawisz SHIFT przed zaniechaniem pliku, plik zostanie otwarty jako zwykły tekst.  
+ Aby przetestować w tym przykładzie, przeciągnij plik tekstowy lub plik RTF sformatowany (RTF) z Eksploratora Windows, aby <xref:System.Windows.Controls.RichTextBox>. Plik zostanie otwarty w <xref:System.Windows.Controls.RichTextBox>. Jeśli naciśniesz klawisz SHIFT przed zaniechaniem pliku, plik zostanie otwarty w postaci zwykłego tekstu.  
   
- [!code-xaml[DragDropSnippets#RtbXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
+ [!code-xaml[DragDropSnippets#RtbXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#rtbxaml)]  
   
- [!code-csharp[DragDropSnippets#RtbHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#rtbhandlers)]
- [!code-vb[DragDropSnippets#RtbHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#rtbhandlers)]
+ [!code-csharp[DragDropSnippets#RtbHandlers](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#rtbhandlers)]
+ [!code-vb[DragDropSnippets#RtbHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#rtbhandlers)]

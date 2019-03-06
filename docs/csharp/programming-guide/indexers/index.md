@@ -48,7 +48,7 @@ Począwszy od C# 7.0, zarówno get, jak i metody dostępu set mogą być impleme
   
 -   Indeksatory może mieć więcej niż jeden parametr formalny, na przykład podczas uzyskiwania dostępu do tablicy dwuwymiarowej.  
   
-##  <a name="BKMK_RelatedSections"></a> Sekcje pokrewne  
+## <a name="BKMK_RelatedSections"></a> Sekcje pokrewne  
   
 -   [Używanie indeksatorów](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

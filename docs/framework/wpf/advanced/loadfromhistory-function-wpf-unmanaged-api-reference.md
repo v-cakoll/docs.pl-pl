@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 42be46d836a299139bded938237fe2a06e9794a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 155b83b8b904350bd6faf73ea21d1db4f83085b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646936"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376133"
 ---
 # <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory, funkcja (niezarządzany wykaz interfejsów API WPF.)
 Ten interfejs API obsługuje infrastrukturę programu Windows Presentation Foundation (WPF) i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -37,7 +37,7 @@ HRESULT LoadFromHistory_export(
  Wskaźnik do kontekstu powiązania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [.NET Framework System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [.NET Framework System Requirements](../../get-started/system-requirements.md).  
   
  **DLL:**  
   
@@ -48,4 +48,4 @@ HRESULT LoadFromHistory_export(
  **Wersja programu .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Niezarządzane interfejsy API WPF — informacje](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [Niezarządzane interfejsy API WPF — informacje](wpf-unmanaged-api-reference.md)

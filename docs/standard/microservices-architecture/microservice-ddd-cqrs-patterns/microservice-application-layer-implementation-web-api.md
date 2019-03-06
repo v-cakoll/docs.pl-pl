@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Do
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 39aa2b9b97e9f683521193ad8e647c73bb4dd140
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152115"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353091"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementowanie warstwy aplikacji mikrousług przy użyciu interfejsu API sieci Web
 
@@ -38,15 +38,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -54,14 +54,14 @@ public class CreateOrderCommandHandler
     {
         // Create the Order AggregateRoot
         // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic 
+        // methods and constructor so validations, invariants, and business logic
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State, 
+        var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId, 
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -283,11 +283,11 @@ public class CreateOrderCommand
 }
 ```
 
-Po prostu klasy poleceń zawiera wszystkie dane, których potrzebują do przeprowadzania transakcji biznesowych za pomocą obiektów modelu domeny. W efekcie polecenia są po prostu struktur danych, które zawierają dane tylko do odczytu i nie zachowanie. Nazwa polecenia wskazuje jej przeznaczenie. W wielu językach, takich jak C\#, polecenia są reprezentowane jako klasy, ale nie mają wartość true, klasy, w tym sensie, rzeczywiste zorientowane obiektowo.
+Po prostu klasy poleceń zawiera wszystkie dane, których potrzebują do przeprowadzania transakcji biznesowych za pomocą obiektów modelu domeny. W efekcie polecenia są po prostu struktur danych, które zawierają dane tylko do odczytu i nie zachowanie. Nazwa polecenia wskazuje jej przeznaczenie. W wielu językach, takich jak C#, polecenia są reprezentowane jako klasy, ale nie mają wartość true, klasy, w tym sensie, rzeczywiste zorientowane obiektowo.
 
-Jako dodatkowe właściwości polecenia są niezmienne, ponieważ oczekiwane użycie jest, że są przetwarzane bezpośrednio przez model domeny. Nie ma potrzeby zmiany w okresie ich istnienia przewidywany. W języku C\# klasy, niezmienność można osiągnąć, nie ma żadnych metod ustawiających lub innych metod, które zmieniają stan wewnętrzny.
+Jako dodatkowe właściwości polecenia są niezmienne, ponieważ oczekiwane użycie jest, że są przetwarzane bezpośrednio przez model domeny. Nie ma potrzeby zmiany w okresie ich istnienia przewidywany. W C# klasy, niezmienność można osiągnąć, nie ma żadnych metod ustawiających lub innych metod, które zmieniają stan wewnętrzny.
 
-Należy pamiętać, że jeśli planowane lub oczekiwać poleceń będzie przechodzić przez proces serializacji deserializing właściwości muszą mieć prywatnej metody ustawiającej, należy sobie zdawać sprawę i `[DataMemeber]` (lub `[JsonProperty]`) atrybutów, w przeciwnym razie Deserializator nie będzie można odtworzenie obiektu w lokalizacji docelowej z wymaganymi wartościami.
+Należy pamiętać, że jeśli planowane lub oczekiwać poleceń będzie przechodzić przez proces serializacji deserializing właściwości muszą mieć prywatnej metody ustawiającej, należy sobie zdawać sprawę i `[DataMember]` (lub `[JsonProperty]`) atrybutów, w przeciwnym razie Deserializator nie będzie można odtworzenie obiektu w lokalizacji docelowej z wymaganymi wartościami.
 
 Na przykład klasy poleceń do tworzenia zamówienie przypomina prawdopodobnie pod względem danych kolejności, w której ma zostać utworzona, ale prawdopodobnie nie potrzebujesz tych atrybutów. Na przykład CreateOrderCommand ma identyfikator zamówienia, ponieważ kolejność nie został jeszcze utworzony.
 
@@ -315,7 +315,7 @@ Niektórzy deweloperzy wprowadzić w nich obiekty interfejsu użytkownika żąda
 
 Należy zaimplementować klasę programu obsługi określone polecenie dla każdego polecenia. To, jak wzorzec działa i jest to, gdzie będzie używać obiekt polecenia, obiektów domeny i obiektów repozytorium infrastruktury. Program obsługi poleceń w rzeczywistości to serce warstwy aplikacji w kontekście CQRS i DDD. Jednak logika domeny powinny być zawarte w obrębie klasy domeny — w ramach korzenie agregacji (głównych jednostek), jednostki podrzędne lub [usługi domenowe](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), ale nie w ramach programu obsługi poleceń jest klasa z aplikacji warstwy.
 
-Klasa procedury obsługi polecenia oferuje silnej kamień przechodzenia krok po kroku w taki sposób, aby osiągnąć pojedynczego Resposibility zasady (SRP) wymienionych w poprzedniej sekcji.
+Klasa procedury obsługi polecenia oferuje silnej kamień przechodzenia krok po kroku w taki sposób, aby osiągnąć pojedynczej odpowiedzialności zasady (SRP) opisane w poprzedniej sekcji.
 
 Program obsługi poleceń otrzymuje polecenie i uzyskuje wynik agregacji, która jest używana. Wynik powinien być pomyślne wykonanie polecenia lub wyjątek. W przypadku wyjątku stan systemu należy bez zmian.
 
@@ -348,15 +348,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -364,14 +364,14 @@ public class CreateOrderCommandHandler
     {
         // Create the Order AggregateRoot
         // Add child entities and value objects through the Order aggregate root
-        // methods and constructor so validations, invariants, and business logic 
+        // methods and constructor so validations, invariants, and business logic
         // make sure that consistency is preserved across the whole aggregate
-        var address = new Address(message.Street, message.City, message.State, 
+        var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId, 
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -480,7 +480,7 @@ Najpierw Przyjrzyjmy się kontrolkę webapi przykładowe faktycznie użycia obie
 ```csharp
 public class MyMicroserviceController : Controller
 {
-    public MyMicroserviceController(IMediator mediator, 
+    public MyMicroserviceController(IMediator mediator,
                                     IMyMicroserviceQueries microserviceQueries)
     // ...
 ```
@@ -489,11 +489,11 @@ Aby zobaczyć, że mediatora zapewnia czyste i zwarte Konstruktor kontrolera int
 
 ```csharp
 [Route("new")]
-[HttpPost] 
-public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand 
-                                                               runOperationCommand) 
+[HttpPost]
+public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
+                                                               runOperationCommand)
 {
-    var commandResult = await _mediator.SendAsync(runOperationCommand); 
+    var commandResult = await _mediator.SendAsync(runOperationCommand);
 
     return commandResult ? (IActionResult)Ok() : (IActionResult)BadRequest();
 }
@@ -506,17 +506,17 @@ W **ramach aplikacji eShopOnContainers**, stanowi przykład bardziej zaawansowan
 Niemniej jednak akcji przesyłania polecenie, aby MediatR jest bardzo podobne, jak pokazano w poniższym kodzie.
 
 ```csharp
-var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items,     
-                                                eventMsg.UserId, eventMsg.City, 
+var createOrderCommand = new CreateOrderCommand(eventMsg.Basket.Items,
+                                                eventMsg.UserId, eventMsg.City,
                                                 eventMsg.Street, eventMsg.State,
                                                 eventMsg.Country, eventMsg.ZipCode,
-                                                eventMsg.CardNumber, 
-                                                eventMsg.CardHolderName, 
+                                                eventMsg.CardNumber,
+                                                eventMsg.CardHolderName,
                                                 eventMsg.CardExpiration,
-                                                eventMsg.CardSecurityNumber,  
+                                                eventMsg.CardSecurityNumber,
                                                 eventMsg.CardTypeId);
 
-var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOrderCommand, 
+var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOrderCommand,
                                                                         eventMsg.RequestId);
 result = await _mediator.Send(requestCreateOrder);
 ```
@@ -545,14 +545,14 @@ Następnie commandhandler — obiekt dla IdentifiedCommand o nazwie [IdentifiedC
 
 ```csharp
 // IdentifiedCommandHandler.cs
-public class IdentifiedCommandHandler<T, R> : 
+public class IdentifiedCommandHandler<T, R> :
                                    IAsyncRequestHandler<IdentifiedCommand<T, R>, R>
                                    where T : IRequest<R>
 {
     private readonly IMediator _mediator;
     private readonly IRequestManager _requestManager;
 
-    public IdentifiedCommandHandler(IMediator mediator, 
+    public IdentifiedCommandHandler(IMediator mediator,
                                     IRequestManager requestManager)
     {
         _mediator = mediator;
@@ -575,10 +575,10 @@ public class IdentifiedCommandHandler<T, R> :
         {
             await _requestManager.CreateRequestForCommandAsync<T>(message.Id);
 
-            // Send the embeded business command to mediator 
-            // so it runs its related CommandHandler 
+            // Send the embedded business command to mediator
+            // so it runs its related CommandHandler
             var result = await _mediator.Send(message.Command);
-                
+
             return result;
         }
     }
@@ -599,15 +599,15 @@ public class CreateOrderCommandHandler
     private readonly IMediator _mediator;
 
     // Using DI to inject infrastructure persistence Repositories
-    public CreateOrderCommandHandler(IMediator mediator, 
-                                     IOrderRepository orderRepository, 
+    public CreateOrderCommandHandler(IMediator mediator,
+                                     IOrderRepository orderRepository,
                                      IIdentityService identityService)
     {
-        _orderRepository = orderRepository ?? 
+        _orderRepository = orderRepository ??
                           throw new ArgumentNullException(nameof(orderRepository));
-        _identityService = identityService ?? 
+        _identityService = identityService ??
                           throw new ArgumentNullException(nameof(identityService));
-        _mediator = mediator ?? 
+        _mediator = mediator ??
                                  throw new ArgumentNullException(nameof(mediator));
     }
 
@@ -616,10 +616,10 @@ public class CreateOrderCommandHandler
         // Add/Update the Buyer AggregateRoot
         var address = new Address(message.Street, message.City, message.State,
                                   message.Country, message.ZipCode);
-        var order = new Order(message.UserId, address, message.CardTypeId,  
-                              message.CardNumber, message.CardSecurityNumber, 
+        var order = new Order(message.UserId, address, message.CardTypeId,
+                              message.CardNumber, message.CardSecurityNumber,
                               message.CardHolderName, message.CardExpiration);
-            
+
         foreach (var item in message.OrderItems)
         {
             order.AddOrderItem(item.ProductId, item.ProductName, item.UnitPrice,
@@ -689,7 +689,7 @@ public class MediatorModule : Autofac.Module
                               typeof(CreateOrderCommand).GetTypeInfo().Assembly).
                                    AsClosedTypesOf(typeof(IAsyncRequestHandler<,>));
         // Other types registration
-        //...        
+        //...
         builder.RegisterGeneric(typeof(LoggingBehavior<,>)).
                                                    As(typeof(IPipelineBehavior<,>));
         builder.RegisterGeneric(typeof(ValidatorBehavior<,>)).
@@ -701,7 +701,7 @@ public class MediatorModule : Autofac.Module
 Czy [LoggingBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) klasy można zaimplementować jako następujący kod, który rejestruje informacje na temat obsługi polecenia wykonywane i tego, czy zakończyło się pomyślnie lub nie.
 
 ```csharp
-public class LoggingBehavior<TRequest, TResponse> 
+public class LoggingBehavior<TRequest, TResponse>
          : IPipelineBehavior<TRequest, TResponse>
 {
     private readonly ILogger<LoggingBehavior<TRequest, TResponse>> _logger;
@@ -724,7 +724,7 @@ Po prostu zaimplementowanie tej klasy zachowanie i rejestrując ją w potoku (w 
 Ramach aplikacji eShopOnContainers porządkowanie mikrousług ma zastosowanie również w drugim zachowanie dla podstawowe sprawdzanie poprawności, [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) klasy, która opiera się na [FluentValidation](https://github.com/JeremySkinner/FluentValidation) biblioteki, jak pokazano w Poniższy kod:
 
 ```csharp
-public class ValidatorBehavior<TRequest, TResponse> 
+public class ValidatorBehavior<TRequest, TResponse>
          : IPipelineBehavior<TRequest, TResponse>
 {
     private readonly IValidator<TRequest>[] _validators;
@@ -767,12 +767,12 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
         RuleFor(command => command.State).NotEmpty();
         RuleFor(command => command.Country).NotEmpty();
         RuleFor(command => command.ZipCode).NotEmpty();
-        RuleFor(command => command.CardNumber).NotEmpty().Length(12, 19); 
+        RuleFor(command => command.CardNumber).NotEmpty().Length(12, 19);
         RuleFor(command => command.CardHolderName).NotEmpty();
-        RuleFor(command => command.CardExpiration).NotEmpty().Must(BeValidExpirationDate).WithMessage("Please specify a valid card expiration date"); 
-        RuleFor(command => command.CardSecurityNumber).NotEmpty().Length(3); 
+        RuleFor(command => command.CardExpiration).NotEmpty().Must(BeValidExpirationDate).WithMessage("Please specify a valid card expiration date");
+        RuleFor(command => command.CardSecurityNumber).NotEmpty().Length(3);
         RuleFor(command => command.CardTypeId).NotEmpty();
-        RuleFor(command => command.OrderItems).Must(ContainOrderItems).WithMessage("No order items found"); 
+        RuleFor(command => command.OrderItems).Must(ContainOrderItems).WithMessage("No order items found");
     }
 
     private bool BeValidExpirationDate(DateTime dateTime)
@@ -835,6 +835,6 @@ W podobny sposób można zaimplementować innych zachowań dodatkowe aspekty lub
 - **Jeremy Skinner. FluentValidation.** Repozytorium GitHub. \
   [*https://github.com/JeremySkinner/FluentValidation*](https://github.com/JeremySkinner/FluentValidation)
 
->[!div class="step-by-step"]
->[Poprzednie](microservice-application-layer-web-api-design.md)
->[dalej](../implement-resilient-applications/index.md)
+> [!div class="step-by-step"]
+> [Poprzednie](microservice-application-layer-web-api-design.md)
+> [dalej](../implement-resilient-applications/index.md)

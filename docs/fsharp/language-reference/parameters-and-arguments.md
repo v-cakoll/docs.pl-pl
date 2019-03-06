@@ -2,12 +2,12 @@
 title: Parametry i argumenty
 description: Dowiedz się więcej o F# Obsługa języka dla Definiowanie parametrów i przekazanie argumentów do funkcji, metody i właściwości.
 ms.date: 05/16/2016
-ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583501"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352286"
 ---
 # <a name="parameters-and-arguments"></a>Parametry i argumenty
 
@@ -135,17 +135,17 @@ Na potrzeby C# i współdziałanie z języka Visual Basic można użyć atrybut�
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-Można również określić nowy obiekt jako wartość domyślna parametru. Na przykład `Foo` składowej może mieć opcjonalną `CanceallationToken` jako danych wejściowych zamiast tego:
+Można również określić nowy obiekt jako wartość domyślna parametru. Na przykład `Foo` składowej może mieć opcjonalną `CancellationToken` jako danych wejściowych zamiast tego:
 
 ```fsharp
 open System.Threading
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
         printfn "%A" ct
 ```

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: 93a04ce55a10f54a6770c279f1773491d7aa463f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740141"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370049"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Instrukcje: Zmień rozmiar wierszy przy użyciu GridSplitter
 W tym przykładzie pokazano, jak używać poziomej <xref:System.Windows.Controls.GridSplitter> Redystrybucja odstęp między dwa wiersze w <xref:System.Windows.Controls.Grid> bez konieczności zmieniania wymiary <xref:System.Windows.Controls.Grid>.  
@@ -23,9 +23,9 @@ W tym przykładzie pokazano, jak używać poziomej <xref:System.Windows.Controls
   
  Poniższy przykład pokazuje jak zdefiniować poziomy <xref:System.Windows.Controls.GridSplitter> który zmienia rozmiar sąsiadujących wierszy.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- A <xref:System.Windows.Controls.GridSplitter> , nie zajmują swój własny wiersz mogą być zasłonięte przez inne formanty w czyste <xref:System.Windows.Controls.Grid>. Aby uzyskać więcej informacji na temat uniknąć tego problemu, zobacz [upewnij się, że GridSplitter jest widoczny](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ A <xref:System.Windows.Controls.GridSplitter> , nie zajmują swój własny wiersz mogą być zasłonięte przez inne formanty w czyste <xref:System.Windows.Controls.Grid>. Aby uzyskać więcej informacji na temat uniknąć tego problemu, zobacz [upewnij się, że GridSplitter jest widoczny](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
  **Jak utworzyć GridSplitter, która zajmuje wiersz**  
   
@@ -33,9 +33,9 @@ W tym przykładzie pokazano, jak używać poziomej <xref:System.Windows.Controls
   
  Poniższy przykład pokazuje jak zdefiniować poziomy <xref:System.Windows.Controls.GridSplitter> , zajmuje wiersza i zmienia rozmiar wierszy po obu stronach.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Controls.GridSplitter>
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [Tematy z instrukcjami](gridsplitter-how-to-topics.md)

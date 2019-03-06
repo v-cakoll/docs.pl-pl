@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 25f5fb254ec6f952d7cafa2cb893e35daa0e9029
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573939"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375392"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable — Atrybut
 Określa, która [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] prefiksy przestrzeni nazw w pliku znaczników mogą być ignorowane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora. `mc:Ignorable` Atrybut obsługuje zgodność znaczników, zarówno dla mapowania niestandardowej przestrzeni nazw i [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przechowywania wersji.  
@@ -59,7 +59,7 @@ Określa, która [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-m
   
  W przypadku wdrażania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora, implementacji procesora nie trzeba zwiększyć, analizowania lub przetwarzania błędów na rozpoznawanie typu do celów dowolny element lub atrybut, który jest kwalifikowana za prefiks, który jest identyfikowany jako `mc:Ignorable`. Ale implementacji procesora nadal może zgłaszać wyjątki, które są wynikiem dodatkowej elementu nie można załadować lub być przetworzone, takich jak w przykładzie element podrzędny jednego z podanych wcześniej.  
   
- Domyślnie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora zignoruje zawartości w obrębie elementu zignorowane. Można jednak określić atrybut dodatkowe [MC: processcontent — atrybut](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md), jest wymagane dalsze przetwarzanie zawartości w obrębie elementu ignorowane przez następnego elementu nadrzędnego dostępne.  
+ Domyślnie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora zignoruje zawartości w obrębie elementu zignorowane. Można jednak określić atrybut dodatkowe [MC: processcontent — atrybut](mc-processcontent-attribute.md), jest wymagane dalsze przetwarzanie zawartości w obrębie elementu ignorowane przez następnego elementu nadrzędnego dostępne.  
   
  W atrybucie, przy użyciu co najmniej jeden znak spacji jako separator, na przykład można określić wiele prefiksów: `mc:Ignorable="ignore1 ignore2"`.  
 
@@ -67,6 +67,6 @@ Określa, która [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-m
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Markup.XamlReader>
-- [PresentationOptions:Freeze, atrybut](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
-- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [PresentationOptions:Freeze, atrybut](presentationoptions-freeze-attribute.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Dokumenty w WPF](documents-in-wpf.md)

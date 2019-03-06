@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: a5fbf74f30e5fc6abd9e1c5542eaadc7e3fcf552
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977568"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378055"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, który kontroluje, czy mogą być używane z innym kodem w swoim zestawie lub innych zestawów. Następujące modyfikatory dostępu służy do określania dostępność typu lub elementu członkowskiego, gdy trzeba je zadeklarować:  
@@ -44,7 +44,7 @@ Wszystkie typy i elementy członkowskie typu ma poziom ułatwień dostępu, któ
   
  Klasy pochodne nie może mieć większą dostępność niż typy podstawowe. Innymi słowy, nie może mieć klasę publiczną `B` pochodząca z klasą wewnętrzną `A`. Jeśli zezwolono na to, gdyż miałoby efekt podejmowanie `A` publiczne, ponieważ wszystkich chronionych i wewnętrznych członków `A` są dostępne w klasie pochodnej.  
   
- Można włączyć określonego innych zestawów, aby uzyskać dostęp do wewnętrznych typów, za pomocą parametru InternalsVisibleToAttribute. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../concepts/assemblies-gac/friend-assemblies.md).  
+ Można włączyć określonego innych zestawów, aby uzyskać dostęp do wewnętrznych typów, za pomocą parametru InternalsVisibleToAttribute. Aby uzyskać więcej informacji, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Klasy i dostępność składowej struktury  
  Członkowie klas (w tym zagnieżdżone klasy i struktury) mogą być deklarowane ze wszystkimi sześć typów dostępu. Składowe struktury nie można zadeklarować jako chroniony, ponieważ struktury nie obsługują dziedziczenia.  

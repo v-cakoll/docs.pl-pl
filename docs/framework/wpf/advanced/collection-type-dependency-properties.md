@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: 21f260262d434ffe3685b226193f2d6cd2125549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354898"
 ---
 # <a name="collection-type-dependency-properties"></a>Właściwości zależności typu kolekcji
 Ten temat zawiera wskazówki i sugerowane wzorce jak implementować właściwość zależności, gdzie typ właściwości jest typem kolekcji.  
@@ -32,20 +32,20 @@ Ten temat zawiera wskazówki i sugerowane wzorce jak implementować właściwoś
   
  Rozważmy następujący przykład. Poniższa sekcja przykładzie przedstawiono definicję klasy `Aquarium`. Definiuje właściwości zależności typu kolekcji `AquariumObjects`, ogólny, który używa <xref:System.Collections.Generic.List%601> to typ <xref:System.Windows.FrameworkElement> typu ograniczenia. W <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> wywołania dla właściwości zależności, metadane ustanawia wartość domyślna, która ma być nowy ogólny <xref:System.Collections.Generic.List%601>.  
   
- [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
- [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
  Jednak jeśli właśnie kod przedstawiony, tę wartość domyślną pojedynczej liście jest współdzielona przez wszystkie wystąpienia elementu `Aquarium`. Po uruchomieniu następujący kod testu, który jest przeznaczony do pokazania, jak można utworzyć dwa oddzielne `Aquarium` wystąpień, a następnie dodaj pojedynczy inny `Fish` do każdego z nich można zobaczyć Zaskakujące wyniki:  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
- [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
+ [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
+ [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
  Zamiast poszczególnych kolekcji o liczenia jedengo Każda kolekcja ma liczbę dwa! Jest to spowodowane każdego `Aquarium` dodano jego `Fish` jako kolekcji wartości domyślnej korzystaniem przez wywołanie konstruktora pojedynczego w metadanych i dlatego jest współużytkowana przez wszystkie wystąpienia. Ta sytuacja jest prawie nigdy nie należy.  
   
  Aby rozwiązać ten problem, możesz zresetować wartość właściwości zależności kolekcji do unikatowego wystąpienia, jako część wywołania konstruktora klasy. Ponieważ właściwość ma wartość właściwości zależności tylko do odczytu, możesz użyć <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> metodę, aby ustawić go przy użyciu <xref:System.Windows.DependencyPropertyKey> , jest dostępny tylko w klasie.  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
- [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
+ [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
+ [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
  Teraz po uruchomieniu, że takie same ponownie przetestuj kod, zostanie wyświetlona więcej oczekiwanych wyników, gdzie każdy `Aquarium` obsługiwane swoją własną unikatową kolekcję.  
   
@@ -58,8 +58,8 @@ Ten temat zawiera wskazówki i sugerowane wzorce jak implementować właściwoś
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.FreezableCollection%601>
-- [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+- [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)
+- [Niestandardowe właściwości zależności](custom-dependency-properties.md)
+- [Metadane zależności właściwości](dependency-property-metadata.md)

@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 548c6007d4ed685c521676de87c5a98f56a222a4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376991"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi — funkcja
-Tworzy połączenie za pomocą modelu DCOM do przestrzeni nazw usługi WMI na określonym komputerze.  
-  
+Tworzy połączenie za pomocą modelu DCOM do przestrzeni nazw usługi WMI na określonym komputerze.
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+## <a name="syntax"></a>Składnia
+
+```
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -43,25 +43,31 @@ HRESULT ConnectServerWmi (
    [in] DWORD              impLevel, 
    [in] DWORD              authLevel
 );
-```  
+```
 ## <a name="parameters"></a>Parametry
 
-`strNetworkResource` [in] Wskaźnik do prawidłowego `BSTR` zawierający ścieżkę obiektu poprawną przestrzeń nazw usługi WMI. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
+`strNetworkResource`\
+[in] Wskaźnik do prawidłowego `BSTR` zawierający ścieżkę obiektu poprawną przestrzeń nazw usługi WMI. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
-`strUser` [in] Wskaźnik do prawidłowego `BSTR` zawierający nazwę użytkownika. A `null` wartość wskazuje bieżącego kontekstu zabezpieczeń. Jeśli użytkownik znajduje się w innej domenie niż bieżąca `strUser` może również zawierać nazwę domeny i użytkownika, oddzielone ukośnikiem. `strUser` można też w formacie głównej nazwy (UPN) użytkownika, takie jak `userName@domainName`. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
+`strUser`\
+[in] Wskaźnik do prawidłowego `BSTR` zawierający nazwę użytkownika. A `null` wartość wskazuje bieżącego kontekstu zabezpieczeń. Jeśli użytkownik znajduje się w innej domenie niż bieżąca `strUser` może również zawierać nazwę domeny i użytkownika, oddzielone ukośnikiem. `strUser` można też w formacie głównej nazwy (UPN) użytkownika, takie jak `userName@domainName`. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
-`strPassword` [in] Wskaźnik do prawidłowego `BSTR` zawierającą hasło. A `null` wskazuje bieżącego kontekstu zabezpieczeń. Ciąg pusty ("") wskazuje prawidłowe hasło o zerowej długości.
+`strPassword`\
+[in] Wskaźnik do prawidłowego `BSTR` zawierającą hasło. A `null` wskazuje bieżącego kontekstu zabezpieczeń. Ciąg pusty ("") wskazuje prawidłowe hasło o zerowej długości.
 
-`strLocale` [in] Wskaźnik do prawidłowego `BSTR` oznacza to poprawne ustawienia regionalne na potrzeby pobierania informacji. W przypadku identyfikatorów ustawień regionalnych firmy Microsoft jest format ciągu "MS\_*xxx*", gdzie *xxx* jest ciągiem w postaci szesnastkowej, która wskazuje identyfikator ustawień regionalnych (LCID). Jeśli określono nieprawidłowe ustawienia regionalne, metoda zwraca `WBEM_E_INVALID_PARAMETER` z wyjątkiem na Windows 7, w których domyślne ustawienia regionalne serwera jest używana zamiast tego. Jeśli "null1, bieżących ustawień regionalnych jest używany. 
+`strLocale`\
+[in] Wskaźnik do prawidłowego `BSTR` oznacza to poprawne ustawienia regionalne na potrzeby pobierania informacji. W przypadku identyfikatorów ustawień regionalnych firmy Microsoft jest format ciągu "MS\_*xxx*", gdzie *xxx* jest ciągiem w postaci szesnastkowej, która wskazuje identyfikator ustawień regionalnych (LCID). Jeśli określono nieprawidłowe ustawienia regionalne, metoda zwraca `WBEM_E_INVALID_PARAMETER` z wyjątkiem na Windows 7, w których domyślne ustawienia regionalne serwera jest używana zamiast tego. Jeśli "null1, bieżących ustawień regionalnych jest używany. 
  
-`lSecurityFlags` [in] Flagi do przekazania do `ConnectServerWmi` metody. Wartość zero (0) dla tego parametru powoduje wywołanie `ConnectServerWmi` zwracanie tylko wtedy, gdy zostanie nawiązane połączenie z serwerem. Może to spowodować, że aplikacja nie odpowiada je na czas nieokreślony Jeśli serwer jest uszkodzony. Prawidłowe wartości to:
+`lSecurityFlags`\
+[in] Flagi do przekazania do `ConnectServerWmi` metody. Wartość zero (0) dla tego parametru powoduje wywołanie `ConnectServerWmi` zwracanie tylko wtedy, gdy zostanie nawiązane połączenie z serwerem. Może to spowodować, że aplikacja nie odpowiada je na czas nieokreślony Jeśli serwer jest uszkodzony. Prawidłowe wartości to:
 
 | Stała  | Wartość  | Opis  |
 |---------|---------|---------|
 | `CONNECT_REPOSITORY_ONLY` | 0x40 | Zarezerwowane do użytku wewnętrznego. Nie używać. |
 | `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` Zwraca wartość w ciągu dwóch minut lub szybciej. |
 
-`strAuthority` [in] Nazwa domeny użytkownika. Może mieć następujące wartości:
+`strAuthority`\
+[in] Nazwa domeny użytkownika. Może mieć następujące wartości:
 
 | Wartość | Opis |
 |---------|---------|
@@ -69,16 +75,16 @@ HRESULT ConnectServerWmi (
 | Protokołu Kerberos:*nazwa główna* | Jest używane uwierzytelnianie Kerberos, a ten parametr zawiera nazwa główna protokołu Kerberos. |
 | NTLMDOMAIN:*nazwy domeny* | Jest używane uwierzytelnianie programu NT LAN Manager, a ten parametr zawiera nazwę domeny uwierzytelnianie NTLM. |
 
-`pCtx`   
+`pCtx`\
 [in] Typowo, ten parametr jest `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wymagany przez dostawców klasy dynamicznej co najmniej jeden obiekt. 
 
-`ppNamespace`  
+`ppNamespace`\
 [out] Gdy funkcja zwróci wartość, otrzymuje wskaźnik [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiekt powiązany z określonego obszaru nazw. Jest ustawiona, aby wskazywał `null` po wystąpieniu błędu.
 
-`impLevel`  
+`impLevel`\
 [in] Poziom personifikacji.
 
-`authLevel`  
+`authLevel`\
 [in] Poziom autoryzacji.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -91,22 +97,24 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny do ukończenia tej operacji. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
-  
+
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja zawija wywołanie do [IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) metody.
 
- Lokalny dostęp do domyślnej przestrzeni nazw `strNetworkResource` może być ścieżką prosty obiekt: "root\default" lub "\\.\root\default". Aby uzyskać dostęp do domyślnej przestrzeni nazw na komputerze zdalnym za pomocą modelu COM lub zgodny z programem Microsoft sieci, należy dołączyć nazwę komputera: "\\myserver\root\default". Nazwa komputera może również być nazwy DNS lub adres IP. `ConnectServerWmi` Funkcji można też połączyć z komputerami z systemem IPv6 przy użyciu adresu IPv6.
+Lokalny dostęp do domyślnej przestrzeni nazw `strNetworkResource` może być ścieżką prosty obiekt: "root\default" lub "\\.\root\default". Aby uzyskać dostęp do domyślnej przestrzeni nazw na komputerze zdalnym za pomocą modelu COM lub zgodny z programem Microsoft sieci, należy dołączyć nazwę komputera: "\\myserver\root\default". Nazwa komputera może również być nazwy DNS lub adres IP. `ConnectServerWmi` Funkcji można też połączyć z komputerami z systemem IPv6 przy użyciu adresu IPv6.
 
 `strUser` Nie może być ciągiem pustym. Jeśli domena została określona w `strAuthority`, jego musi również być nieuwzględnione w `strUser`, lub funkcja zwraca `WBEM_E_INVALID_PARAMETER`.
 
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** WMINet_Utils.idl  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Nagłówek:** WMINet_Utils.idl
+
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

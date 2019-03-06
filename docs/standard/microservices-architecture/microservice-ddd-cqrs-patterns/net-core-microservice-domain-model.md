@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065911"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363023"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi za pomocą programu .NET Core 
 
@@ -171,11 +171,11 @@ Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pola p
 - **Vaughn Vernon. Modelowanie agregacji za pomocą zastosowania projektowania DDD i Entity Framework.** Należy zauważyć, że jest to *nie* Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Kodowanie dla projektowania opartego na domenie: Wskazówki dla deweloperów skoncentrowane na danych** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
+- **Julie Lerman. Punkty danych — kodowanie dla projektowania opartego na domenie: Wskazówki dla deweloperów skoncentrowane na danych** \
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. Jak utworzyć w pełni hermetyzowane modeli domeny** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 >[!div class="step-by-step"]
 >[Poprzednie](microservice-domain-model.md)

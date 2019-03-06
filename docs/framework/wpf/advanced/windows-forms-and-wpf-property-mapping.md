@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493706"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358564"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mapowanie właściwości Windows Forms i WPF
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] technologie mają dwa modele inną właściwość. *Mapowanie właściwości* obsługuje współdziałanie między dwoma architekturami i zapewnia następujące możliwości:  
@@ -49,7 +49,7 @@ ms.locfileid: "54493706"
   
  Dołączone właściwości elementów kontenera są w pełni obsługiwane przez <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu.  
   
- Aby uzyskać więcej informacji, zobacz [instruktażu: Mapowanie właściwości z użyciem elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
+ Aby uzyskać więcej informacji, zobacz [instruktażu: Mapowanie właściwości z użyciem elementu WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
   
 ## <a name="updates-to-parent-properties"></a>Aktualizacje właściwości nadrzędnej  
  Zmiany właściwości nadrzędnej większość spowodować powiadomień do kontroli podrzędny obiekt obsługiwany. Poniższa lista zawiera opis właściwości, które nie powodują powiadomienia, gdy zmienią się ich wartości.  
@@ -117,7 +117,7 @@ ms.locfileid: "54493706"
   
  <xref:System.Windows.Forms.Integration.ElementHost> Kontroli tłumaczy domyślne [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] właściwości w celu ich [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odpowiedniki przy użyciu poniższej tabeli translacji.  
   
- Aby uzyskać więcej informacji, zobacz [instruktażu: Mapowanie właściwości z użyciem formantu ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
+ Aby uzyskać więcej informacji, zobacz [instruktażu: Mapowanie właściwości z użyciem formantu ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md).  
   
 |Formularze Windows hostingu|Windows Presentation Foundation|Zachowanie współdziałanie|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "54493706"
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Współdziałanie WPF i Windows Forms](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [Przewodnik: Mapowanie właściwości z użyciem elementu WindowsFormsHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Przewodnik: Mapowanie właściwości z użyciem formantu ElementHost](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
+- [Współdziałanie WPF i Windows Forms](wpf-and-windows-forms-interoperation.md)
+- [Przewodnik: Mapowanie właściwości z użyciem elementu WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [Przewodnik: Mapowanie właściwości z użyciem formantu ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)

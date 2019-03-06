@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634587"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362018"
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation (WPF). Obejmuje większość najważniejszych podsystemów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]oraz opis sposobu interakcji. Szczegóły również niektóre wybory dokonane przez architektów z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -33,7 +33,7 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
   
  Główne składniki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zostały przedstawione na poniższej ilustracji. Czerwony części diagramu (PresentationFramework PresentationCore i milcore) są kodu głównych części [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Z tych opcji niezarządzanych składnika — milcore jest tylko jeden. Milcore są zapisywane w niezarządzanym kodzie w celu umożliwienia ścisłej integracji z programem [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Wszystkie wyświetlane w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] odbywa się za pośrednictwem [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] aparatu, co umożliwia wydajne sprzętu i oprogramowania renderowania. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wymagane jest także szczegółową kontrolę pamięci i wykonania. Aparat kompozycji w milcore jest bardzo poufnych i wymagane rezygnacji z wielu zalet wydajności [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] na wydajność.  
   
- ![Pozycja WPF w programie .NET Framework. ](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![Pozycja WPF w programie .NET Framework. ](./media/wpf-architect1.PNG "wpf_architect1")  
   
  Komunikacja między zarządzanymi i niezarządzanymi części [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] jest omówione w dalszej części tego tematu. Poniżej opisano w pozostałej części zarządzanego modelu programowania.  
   
@@ -71,7 +71,7 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
   
  Podczas programowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], możesz utworzyć <xref:System.Windows.Media.Visual> elementów i typy pochodne, które wewnętrznie komunikacji z drzewa kompozycji za pośrednictwem protokołu obsługi komunikatów. Każdy <xref:System.Windows.Media.Visual> w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] może utworzyć jeden, żaden lub kilka węzłów kompozycji.  
   
- ![Windows Presentation Foundation drzewa wizualnego. ](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Windows Presentation Foundation drzewa wizualnego. ](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  Jest bardzo ważne szczegóły architektury, należy zwrócić uwagę tutaj — całe drzewo elementów wizualnych i instrukcji rysowania są buforowane. W warunkach grafiki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] korzysta z zachowanej renderowania systemu. Dzięki temu system do odświeżenia wysokich częstotliwości odświeżania bez systemu kompozycji blokowania na wywołania zwrotne do kodu użytkownika. Pozwala to zapobiec wyglądu aplikacji nie odpowiada.  
   
@@ -149,6 +149,6 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Układ](../../../../docs/framework/wpf/advanced/layout.md)
-- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Układ](layout.md)
+- [Animacja — przegląd](../graphics-multimedia/animation-overview.md)

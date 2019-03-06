@@ -7,12 +7,12 @@ helpviewer_keywords:
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: e2356113457e8c9a6737132e9779e49c05a23d77
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd17dfeea85e2b404f7a284f93faceec63145b1f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149786"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355035"
 ---
 # <a name="how-to-create-a-complex-grid"></a>Jak utworzyć siatkę złożoną
 
@@ -24,11 +24,11 @@ W poniższym przykładzie zdefiniowano osiem wierszy i kolumn osiem przy użyciu
 
 W przykładzie użyto pionowy gradientów do <xref:System.Windows.Shapes.Shape.Fill%2A> kolumny i wiersze do poprawy wizualnej prezentacji i czytelności kalendarza. Różne <xref:System.Windows.Controls.TextBlock> elementy reprezentują dat i dni tygodnia. <xref:System.Windows.Controls.TextBlock> elementy są pozycjonowane absolutnie w komórkach ich za pomocą <xref:System.Windows.FrameworkElement.Margin%2A> właściwości i właściwości wyrównanie, które są zdefiniowane w stylu dla aplikacji.
 
-[!code-xaml[GridComplex#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
+[!code-xaml[GridComplex#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridComplex/CS/default.xaml#1)]
 
 Na poniższej ilustracji przedstawiono wynikowy formant kalendarza można dostosowywać:
 
-![Zrzut ekranu przedstawiający wynikowy formant](./media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
+![Zrzut ekranu przedstawiający wynikowy formant](././media/how-to-create-a-complex-grid/wpf-manual-calendar.png)
 
 ## <a name="see-also"></a>Zobacz także
 

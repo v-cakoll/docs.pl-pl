@@ -17,49 +17,54 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 493b4850436b3724287210878992d1d8ce8fe168
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66e51dc15f7d44ede26634571fa04c58e9735694
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589402"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364154"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction — Metoda
-Konfiguruje wywołanie do określonej funkcji.  
-  
- Ta metoda jest przestarzała w programie .NET Framework 2.0. Użyj [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) zamiast tego.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-HRESULT CallFunction (  
-    [in] ICorDebugFunction  *pFunction,  
-    [in] ULONG32            nArgs,  
-    [in, size_is(nArgs)] ICorDebugValue *ppArgs[]  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `pFunction`  
- [in] Wskaźnik do obiektu ICorDebugFunction, który określa funkcję, która ma zostać wywołana.  
-  
- `nArgs`  
- [in] Liczba argumentów funkcji.  
-  
- `ppArgs`  
- [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugValue, który określa argument, który zostanie przekazany do funkcji.  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli funkcja znajduje się wirtualny, `CallFunction` wykona wirtualnego wysyłania. Jeśli funkcja znajduje się w domenie innej aplikacji, przejście wystąpi tak długo, jak wszystkie argumenty mają również w tej domenie aplikacji.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platformy:** WindowSee [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** CorDebug.idl, CorDebug.h  
-  
- **Biblioteka:** CorGuids.lib  
-  
- **Wersje programu .NET framework:** 1.1, 1.0  
-  
+
+Konfiguruje wywołanie do określonej funkcji.
+
+Ta metoda jest przestarzała w programie .NET Framework 2.0. Użyj [ICorDebugEval2::CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) zamiast tego.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT CallFunction (
+    [in] ICorDebugFunction  *pFunction,
+    [in] ULONG32            nArgs,
+    [in, size_is(nArgs)] ICorDebugValue *ppArgs[]
+);
+```
+
+## <a name="parameters"></a>Parametry
+
+`pFunction`\
+[in] Wskaźnik do obiektu ICorDebugFunction, który określa funkcję, która ma zostać wywołana.
+
+`nArgs`\
+[in] Liczba argumentów funkcji.
+
+`ppArgs`\
+[in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugValue, który określa argument, który zostanie przekazany do funkcji.
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli funkcja znajduje się wirtualny, `CallFunction` wykona wirtualnego wysyłania. Jeśli funkcja znajduje się w domenie innej aplikacji, przejście wystąpi tak długo, jak wszystkie argumenty mają również w tej domenie aplikacji.
+
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** CorDebug.idl, CorDebug.h
+
+**Biblioteka:** CorGuids.lib
+
+**Wersje programu .NET framework:** 1.1, 1.0
+
 ## <a name="see-also"></a>Zobacz także
-- [CallParameterizedFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)
+
+- [CallParameterizedFunction, metoda](icordebugeval2-callparameterizedfunction-method.md)

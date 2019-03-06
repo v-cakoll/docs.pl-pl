@@ -8,27 +8,27 @@ helpviewer_keywords:
 - displaying a background image inside a text box to aid user input [WPF]
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
-ms.openlocfilehash: 1ab8c0f9274f4d461c9c2be04ec0aaca5e753c7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a2b48c6f580def98a47913c4909d0c57aca0974
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531135"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359428"
 ---
-# <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="7d6b8-102">Instrukcje: Dodaj znak wodny do TextBox</span><span class="sxs-lookup"><span data-stu-id="7d6b8-102">How to: Add a Watermark to a TextBox</span></span>
-<span data-ttu-id="7d6b8-103">Poniższy przykład pokazuje, jak użyteczność pomocy dotyczącej <xref:System.Windows.Controls.TextBox> , wyświetlając objaśnienia obraz tła wewnątrz <xref:System.Windows.Controls.TextBox> dopóki tekst danych wejściowych użytkownika, w tym momencie obraz jest usuwany.</span><span class="sxs-lookup"><span data-stu-id="7d6b8-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="7d6b8-104">Ponadto obraz tła jest przywracany ponownie, jeśli użytkownik usunie swoje dane wejściowe.</span><span class="sxs-lookup"><span data-stu-id="7d6b8-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="7d6b8-105">Zobacz na poniższej ilustracji.</span><span class="sxs-lookup"><span data-stu-id="7d6b8-105">See illustration below.</span></span>  
+# <a name="how-to-add-a-watermark-to-a-textbox"></a><span data-ttu-id="46ba5-102">Instrukcje: Dodaj znak wodny do TextBox</span><span class="sxs-lookup"><span data-stu-id="46ba5-102">How to: Add a Watermark to a TextBox</span></span>
+<span data-ttu-id="46ba5-103">Poniższy przykład pokazuje, jak użyteczność pomocy dotyczącej <xref:System.Windows.Controls.TextBox> , wyświetlając objaśnienia obraz tła wewnątrz <xref:System.Windows.Controls.TextBox> dopóki tekst danych wejściowych użytkownika, w tym momencie obraz jest usuwany.</span><span class="sxs-lookup"><span data-stu-id="46ba5-103">The following example shows how to aid usability of a <xref:System.Windows.Controls.TextBox> by displaying an explanatory background image inside of the <xref:System.Windows.Controls.TextBox> until the user inputs text, at which point the image is removed.</span></span> <span data-ttu-id="46ba5-104">Ponadto obraz tła jest przywracany ponownie, jeśli użytkownik usunie swoje dane wejściowe.</span><span class="sxs-lookup"><span data-stu-id="46ba5-104">In addition, the background image is restored again if the user removes their input.</span></span> <span data-ttu-id="46ba5-105">Zobacz na poniższej ilustracji.</span><span class="sxs-lookup"><span data-stu-id="46ba5-105">See illustration below.</span></span>  
   
- <span data-ttu-id="7d6b8-106">![Pole tekstowe z obrazem tła](../../../../docs/framework/wpf/controls/media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span><span class="sxs-lookup"><span data-stu-id="7d6b8-106">![A TextBox with a background image](../../../../docs/framework/wpf/controls/media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span></span>  
+ <span data-ttu-id="46ba5-106">![Pole tekstowe z obrazem tła](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span><span class="sxs-lookup"><span data-stu-id="46ba5-106">![A TextBox with a background image](./media/editing-textbox-using-background-image.png "Editing_TextBox_using_background_image")</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7d6b8-107">Przyczyna obrazu tła jest używany w tym przykładzie zamiast, po prostu manipulowanie <xref:System.Windows.Controls.TextBox.Text%2A> właściwość <xref:System.Windows.Controls.TextBox>, to, że obraz tła nie zakłóca powiązanie danych.</span><span class="sxs-lookup"><span data-stu-id="7d6b8-107">The reason a background image is used in this example rather then simply manipulating the <xref:System.Windows.Controls.TextBox.Text%2A> property of <xref:System.Windows.Controls.TextBox>, is that a background image will not interfere with data binding.</span></span>  
+>  <span data-ttu-id="46ba5-107">Przyczyna obrazu tła jest używany w tym przykładzie zamiast, po prostu manipulowanie <xref:System.Windows.Controls.TextBox.Text%2A> właściwość <xref:System.Windows.Controls.TextBox>, to, że obraz tła nie zakłóca powiązanie danych.</span><span class="sxs-lookup"><span data-stu-id="46ba5-107">The reason a background image is used in this example rather then simply manipulating the <xref:System.Windows.Controls.TextBox.Text%2A> property of <xref:System.Windows.Controls.TextBox>, is that a background image will not interfere with data binding.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7d6b8-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="7d6b8-108">Example</span></span>  
- [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
+## <a name="example"></a><span data-ttu-id="46ba5-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="46ba5-108">Example</span></span>  
+ [!code-xaml[TextBoxMiscSnippets_snip#TextBoxBackgroundExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml#textboxbackgroundexamplewholepage)]  
   
- [!code-csharp[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml.cs#textboxbackgroundcodeexamplewholepage)]
- [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
+ [!code-csharp[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/textbox_with_background_image.xaml.cs#textboxbackgroundcodeexamplewholepage)]
+ [!code-vb[TextBoxMiscSnippets_snip#TextBoxBackgroundCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/textbox_with_background_image.xaml.vb#textboxbackgroundcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="7d6b8-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7d6b8-109">See also</span></span>
-- [<span data-ttu-id="7d6b8-110">TextBox — omówienie</span><span class="sxs-lookup"><span data-stu-id="7d6b8-110">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [<span data-ttu-id="7d6b8-111">RichTextBox — omówienie</span><span class="sxs-lookup"><span data-stu-id="7d6b8-111">RichTextBox Overview</span></span>](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
+## <a name="see-also"></a><span data-ttu-id="46ba5-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="46ba5-109">See also</span></span>
+- [<span data-ttu-id="46ba5-110">TextBox — omówienie</span><span class="sxs-lookup"><span data-stu-id="46ba5-110">TextBox Overview</span></span>](textbox-overview.md)
+- [<span data-ttu-id="46ba5-111">RichTextBox — omówienie</span><span class="sxs-lookup"><span data-stu-id="46ba5-111">RichTextBox Overview</span></span>](richtextbox-overview.md)

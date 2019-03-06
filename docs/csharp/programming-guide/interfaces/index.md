@@ -62,7 +62,7 @@ Interfejs ma następujące właściwości:
  [Instrukcje: Jawne Implementowanie elementów dwóch interfejsów](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Zawiera przykład sposobu jawne Implementowanie elementów współpracuje z dziedziczenia.  
   
-##  <a name="BKMK_RelatedSections"></a> Sekcje pokrewne
+## <a name="BKMK_RelatedSections"></a> Sekcje pokrewne
 
 - [Właściwości interfejsu](../classes-and-structs/interface-properties.md)  
 - [Indeksatory w interfejsach](../indexers/indexers-in-interfaces.md)  

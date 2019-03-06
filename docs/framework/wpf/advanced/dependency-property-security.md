@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: eb27f3c902a0fb783d26d14d1ce494eebcffb999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532152"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364817"
 ---
 # <a name="dependency-property-security"></a>Zabezpieczenie właściwości zależności
 Właściwości zależności powinien ogólnie być uważane właściwości publiczne. Rodzaj [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości zapobiega możliwość zapewnienia gwarancje bezpieczeństwa informacji na temat wartości właściwości zależności.  
@@ -27,7 +27,7 @@ Właściwości zależności powinien ogólnie być uważane właściwości publi
   
  Jeśli piszesz właściwości zależności, należy zadeklarować otoki i <xref:System.Windows.DependencyProperty> identyfikator pola jako publiczne elementy członkowskie, tak aby obiekty wywołujące nie uzyskać nieprawdziwych informacji o poziomie dostępu true właściwości (ze względu na jej magazynu jest zaimplementowane jako właściwość zależności).  
   
- Dla właściwości zależności niestandardowej, należy zarejestrować swoje właściwości jako właściwości zależności tylko do odczytu, a to zapewnić skuteczne środki zapobieganie właściwością przez dowolną osobę, która nie zawiera odwołania do <xref:System.Windows.DependencyPropertyKey> dla tej właściwości. Aby uzyskać więcej informacji, zobacz [właściwości zależności tylko do odczytu](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md).  
+ Dla właściwości zależności niestandardowej, należy zarejestrować swoje właściwości jako właściwości zależności tylko do odczytu, a to zapewnić skuteczne środki zapobieganie właściwością przez dowolną osobę, która nie zawiera odwołania do <xref:System.Windows.DependencyPropertyKey> dla tej właściwości. Aby uzyskać więcej informacji, zobacz [właściwości zależności tylko do odczytu](read-only-dependency-properties.md).  
   
 > [!NOTE]
 >  Deklarowanie <xref:System.Windows.DependencyProperty> prywatnego pola Identyfikator jest niedozwolona, jego wielkiego można zmniejszyć bezpośrednio narażonych przestrzeni nazw, klasy niestandardowej, ale takiej właściwości nie powinny być uwzględniane w tym samym znaczeniu jako "private" [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] język definicje definiują ten poziom dostępu powodów opisanych w następnej sekcji.  
@@ -40,4 +40,4 @@ Właściwości zależności powinien ogólnie być uważane właściwości publi
  Żądanie do stosowania <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> , a oczekiwano niepowodzenia weryfikacji w przypadku niepowodzenia żądanie, aby uniemożliwić ustawiania właściwości nie jest mechanizm odpowiednie zabezpieczenia. Ustaw wartość unieważniania wymuszane za pośrednictwem <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> również można pominąć przez złośliwe obiekty wywołujące, jeśli działają tych wywołań w domenie aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Niestandardowe właściwości zależności](custom-dependency-properties.md)

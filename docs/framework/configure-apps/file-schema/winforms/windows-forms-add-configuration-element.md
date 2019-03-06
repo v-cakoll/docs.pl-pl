@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507372"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371375"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms, Dodaj Element konfiguracji
 
@@ -63,9 +63,9 @@ Brak.
 
 ## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Uwagi
 
-Począwszy od .NET Framework 4.7 `<System.Windows.Forms.ApplicationConfigurationSection>` elementu umożliwia skonfigurowanie aplikacji Windows Forms, aby wykorzystać funkcje dodane w najnowszych wersjach programu .NET Framework. 
+Począwszy od .NET Framework 4.7 `<System.Windows.Forms.ApplicationConfigurationSection>` elementu umożliwia skonfigurowanie aplikacji Windows Forms, aby wykorzystać funkcje dodane w najnowszych wersjach programu .NET Framework.
 
-`<System.Windows.Forms.ApplicationConfigurationSection>` Elementu umożliwia dodanie co najmniej jedną podrzędną `<add>` elementów, z których każdy definiuje ustawienia konfiguracji.  
+`<System.Windows.Forms.ApplicationConfigurationSection>` Elementu umożliwia dodanie co najmniej jedną podrzędną `<add>` elementów, z których każdy definiuje ustawienia konfiguracji.
 
 Aby uzyskać omówienie obsługi Windows Forms o wysokiej rozdzielczości, zobacz [wysokiej rozdzielczości DPI pomocy technicznej w formularzach Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
 
@@ -75,7 +75,7 @@ Aplikacje Windows Forms, z systemem w wersji Windows począwszy od systemu Windo
 
 - Obsługa dynamicznego scenariuszy DPI, w których użytkownik zmieni współczynnik skalowania lub DPI po aplikacji Windows Forms została uruchomiona.
 
-- Ulepszenia skalowanie i układ liczby formularzy Windows Forms kontroluje, takich jak <xref:System.Windows.Forms.MonthCalendar> kontroli i <xref:System.Windows.Forms.CheckedListBox> kontroli. 
+- Ulepszenia skalowanie i układ liczby formularzy Windows Forms kontroluje, takich jak <xref:System.Windows.Forms.MonthCalendar> kontroli i <xref:System.Windows.Forms.CheckedListBox> kontroli.
 
 Wysokie DPI awareness to funkcja opcjonalna; Domyślnie wartość `DpiAwareness` jest `false`. Możesz zdecydować się na Windows Forms pomocy technicznej dla świadomości DPI, ustawiając wartość tego klucza na potrzeby `PerMonitorV2` w pliku konfiguracyjnym aplikacji. Jeśli rozpoznawanie DPI jest włączone, wszystkie poszczególne funkcje DPI również są włączone. Należą do nich następujące elementy:
 
@@ -83,11 +83,11 @@ Wysokie DPI awareness to funkcja opcjonalna; Domyślnie wartość `DpiAwareness`
 
 - Dynamiczna obsługa rozdzielczości DPI, które są kontrolowane przez `EnableWindowsFormsHighDpiAutoResizing` klucza.
 
-- Jednego przebiegu skalowania formantu, który jest kontrolowany przez `Form.DisableSinglePassControlScaling` dla poszczególnych <xref:System.Windows.Forms.Form> kontroluje, przez `AnchorLayout.DisableSinglePassControlScaling` klucza dla formantów zakotwiczonej i przez `MonthCalendar.DisableSinglePassControlScaling` klucza dla <xref:System.Windows.Forms.MonthCalendar> kontroli 
+- Jednego przebiegu skalowania formantu, który jest kontrolowany przez `Form.DisableSinglePassControlScaling` dla poszczególnych <xref:System.Windows.Forms.Form> kontroluje, przez `AnchorLayout.DisableSinglePassControlScaling` klucza dla formantów zakotwiczonej i przez `MonthCalendar.DisableSinglePassControlScaling` klucza dla <xref:System.Windows.Forms.MonthCalendar> kontroli
 
-- Wysokiej rozdzielczości DPI skalowanie i układ ulepszenia, które jest kontrolowana przez `CheckListBox.DisableHighDpiImprovements` klucza dla <xref:System.Windows.Forms.CheckedListBox> kontrolować przez `DataGridView.DisableHighDpiImprovements` klucza dla <xref:System.Windows.Forms.DataGridView> kontroli i `Toolstrip.DisableHighDpiImprovements` klucza dla <xref:System.Windows.Forms.ToolStrip> kontroli.  
+- Wysokiej rozdzielczości DPI skalowanie i układ ulepszenia, które jest kontrolowana przez `CheckListBox.DisableHighDpiImprovements` klucza dla <xref:System.Windows.Forms.CheckedListBox> kontrolować przez `DataGridView.DisableHighDpiImprovements` klucza dla <xref:System.Windows.Forms.DataGridView> kontroli i `Toolstrip.DisableHighDpiImprovements` klucza dla <xref:System.Windows.Forms.ToolStrip> kontroli.
 
-Pojedynczy uczestnictwo ustawieniem domyślnym podać, ustawiając `DpiAwareness` do `PerMonitorV2` jest zazwyczaj właściwa w przypadku nowych aplikacji Windows Forms. Jednak można następnie zrezygnować z poszczególnych wysokiej ulepszenia DPI, dodając odpowiedniego klucza do pliku konfiguracji aplikacji. Na przykład aby móc korzystać z wszystkich nowych featuers DPI z wyjątkiem dynamiczna obsługa rozdzielczości DPI, należy dodać następujące do pliku konfiguracyjnego aplikacji:
+Pojedynczy uczestnictwo ustawieniem domyślnym podać, ustawiając `DpiAwareness` do `PerMonitorV2` jest zazwyczaj właściwa w przypadku nowych aplikacji Windows Forms. Jednak można następnie zrezygnować z poszczególnych wysokiej ulepszenia DPI, dodając odpowiedniego klucza do pliku konfiguracji aplikacji. Na przykład aby móc korzystać z wszystkich nowych funkcji DPI z wyjątkiem dynamiczna obsługa rozdzielczości DPI, należy dodać następujące do pliku konfiguracyjnego aplikacji:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -99,14 +99,14 @@ Pojedynczy uczestnictwo ustawieniem domyślnym podać, ustawiając `DpiAwareness
 Zwykle możesz zrezygnować z określonej funkcji, ponieważ wybrano będzie przetwarzał programowo.
 
 Aby uzyskać więcej informacji na zalety biorąc obsługa wysokiej rozdzielczości w aplikacjach Windows Forms, zobacz [wysokiej rozdzielczości DPI pomocy technicznej w formularzach Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
- 
+
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
-Począwszy od programu .NET Framework 4.7 kontrolek formularzy Windows Forms podniesienia liczby zdarzeń związanych ze zmianami w Skalowanie DPI. Obejmują one <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, i <xref:System.Windows.Forms.Form.DpiChanged> zdarzenia. Wartość `DisableDpiChangedMessageHandling` klucz określa, czy te zdarzenia są wywoływane w aplikacji Windows Forms. 
+Począwszy od programu .NET Framework 4.7 kontrolek formularzy Windows Forms podniesienia liczby zdarzeń związanych ze zmianami w Skalowanie DPI. Obejmują one <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, i <xref:System.Windows.Forms.Form.DpiChanged> zdarzenia. Wartość `DisableDpiChangedMessageHandling` klucz określa, czy te zdarzenia są wywoływane w aplikacji Windows Forms.
 
 ### <a name="single-pass-scaling"></a>Skalowanie jednego przebiegu
 
-Skalowanie w jednym lub wielu — dostęp próbny ma wpływ na postrzegany czas odpowiedzi interfejsu użytkownika i wygląd elementów interfejsu użytkownika, ponieważ są one skalowane. Począwszy od programu .NET Framework 4.7, formularze Windows używa skalowania w jednym przebiegu. W poprzednich wersjach programu .NET Framework skalowania została wykonana przy użyciu wielu przebiegów, które spowodowało niektóre formanty, które można skalować więcej niż było konieczne. Skalowanie z jednego przebiegu należy wyłączyć tylko wtedy, jeśli aplikacja jest zależna od starego zachowania.  
+Skalowanie w jednym lub wielu — dostęp próbny ma wpływ na postrzegany czas odpowiedzi interfejsu użytkownika i wygląd elementów interfejsu użytkownika, ponieważ są one skalowane. Począwszy od programu .NET Framework 4.7, formularze Windows używa skalowania w jednym przebiegu. W poprzednich wersjach programu .NET Framework skalowania została wykonana przy użyciu wielu przebiegów, które spowodowało niektóre formanty, które można skalować więcej niż było konieczne. Skalowanie z jednego przebiegu należy wyłączyć tylko wtedy, jeśli aplikacja jest zależna od starego zachowania.
 
 ## <a name="see-also"></a>Zobacz także
 

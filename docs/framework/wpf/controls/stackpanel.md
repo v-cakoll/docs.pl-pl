@@ -8,18 +8,18 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553744"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361238"
 ---
 # <a name="stackpanel"></a>StackPanel
-<xref:System.Windows.Controls.StackPanel> Element służy do stosu elementy podrzędne poziomo czy pionowo.  
+<xref:System.Windows.Controls.StackPanel> Element jest używany do stosu elementy podrzędne w poziomie lub pionie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [Tematy z instrukcjami](stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ ms.locfileid: "33553744"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Układ](../advanced/layout.md)  
   
- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](scrollviewer-overview.md)

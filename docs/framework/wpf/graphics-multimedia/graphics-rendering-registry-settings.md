@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 020570c66401661f55b82a0c7111b4ac53f9c884
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556158"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375353"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderującego ustawień rejestru, które wpływają na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -50,7 +50,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  **Wyłączyć opcję Przyspieszanie sprzętowe** pozwala wyłączyć przyspieszanie sprzętowe na potrzeby debugowania i testowania. Gdy pojawi się renderowania artefaktów w aplikacji, spróbuj wyłączyć przyspieszanie sprzętowe. Jeśli artefaktu znika, problem może być za pomocą sterownika wideo.  
   
- **Wyłączyć opcję Przyspieszanie sprzętowe** jest wartość typu DWORD, która jest równa 0 lub 1. Wartość 1 powoduje wyłączenie przyspieszanie sprzętowe. Wartość 0 umożliwia przyspieszanie sprzętowe, pod warunkiem system spełnia wymagania przyspieszanie sprzętowe; Aby uzyskać więcej informacji, zobacz [poziomy renderowania grafiki](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ **Wyłączyć opcję Przyspieszanie sprzętowe** jest wartość typu DWORD, która jest równa 0 lub 1. Wartość 1 powoduje wyłączenie przyspieszanie sprzętowe. Wartość 0 umożliwia przyspieszanie sprzętowe, pod warunkiem system spełnia wymagania przyspieszanie sprzętowe; Aby uzyskać więcej informacji, zobacz [poziomy renderowania grafiki](../advanced/graphics-rendering-tiers.md).  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Maksymalna wartość wielopróbkowego  
@@ -98,5 +98,5 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
  **Za pomocą opcji rasteryzatora odwołanie** przyjmuje wartość typu DWORD. Wartość 0 wskazuje, że rasteryzatora odwołania nie jest używany. Inne siły wartość niezerową [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używać rasteryzatora odwołania.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Warstwy renderowania grafiki](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
-- [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Warstwy renderowania grafiki](../advanced/graphics-rendering-tiers.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)

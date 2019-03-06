@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 7f619985e909b772d8c7b86d8393341999288cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496918"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373390"
 ---
 # <a name="inline-styles-and-templates"></a>Style i szablony wbudowane
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia <xref:System.Windows.Style> obiekty i szablonu (<xref:System.Windows.FrameworkTemplate> podklasy) jako sposób zdefiniować wygląd elementu w zasobach, dzięki czemu będzie można ich użyć wiele razy. Z tego powodu atrybutów w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] typy, które wymagają <xref:System.Windows.Style> i <xref:System.Windows.FrameworkTemplate> prawie zawsze zasobów odwołuje się do istniejącego — style i szablony, a nie zdefiniować nowe wbudowane.  
@@ -34,7 +34,7 @@ ms.locfileid: "54496918"
   
  Zwykle nie ma powodu do wbudowanej stylu lub szablonu, nawet jeśli zamierzasz używać stylu lub szablonu w tej lokalizacji. Większość elementów, które mogą przejąć stylu lub szablonu obsługują również właściwość zawartości oraz model zawartości. Jeśli używane są tylko niezależnie od drzewo logiczne Utwórz za pomocą stylów i szablonów raz, byłoby jeszcze łatwiej Wypełnij tę właściwość zawartości z elementami podrzędnymi równoważne, w znacznikach bezpośrednie. Spowoduje to całkowicie pominąć mechanizmy stylów i szablonów.  
   
- Możliwe, style i szablony są również innych składni włączane przez rozszerzenia znaczników, które zwracają obiekt. Dwa rozszerzenia, które mają możliwe scenariusze obejmują [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) i <xref:System.Windows.Data.Binding>.  
+ Możliwe, style i szablony są również innych składni włączane przez rozszerzenia znaczników, które zwracają obiekt. Dwa rozszerzenia, które mają możliwe scenariusze obejmują [TemplateBinding](templatebinding-markup-extension.md) i <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)

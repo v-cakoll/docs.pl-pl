@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547296"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375106"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
 <a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> określa struktury wizualnej i zachowanie visual kontrolki. Można dostosować wygląd kontrolki, zapewniając it nowej <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.Controls.ControlTemplate>, Zastąp wyglądu istniejącej kontrolki bez zmiany jego działanie. Na przykład, można zwiększyć przycisków w aplikacji round zamiast domyślnego prostokątnego kształtu, ale nadal zgłosi przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
@@ -26,16 +26,16 @@ ms.locfileid: "54547296"
   
  Pokazują następujące ilustracje <xref:System.Windows.Controls.Button> , który używa <xref:System.Windows.Controls.ControlTemplate> utworzonego w tym temacie.  
   
- ![Przycisk za pomocą szablonu kontrolki niestandardowej. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![Przycisk za pomocą szablonu kontrolki niestandardowej. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Przycisk, który używa szablonu kontrolki niestandardowej  
   
- ![Przycisk z ciemnoczerwonym obramowaniem. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![Przycisk z ciemnoczerwonym obramowaniem. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Przycisk, który używa szablonu kontrolki niestandardowej, a ma wskaźnik myszy nad nią  
   
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że rozumiesz, jak utworzyć i korzystać z formantów i stylów, zgodnie z opisem w [formantów](../../../../docs/framework/wpf/controls/index.md). Kwestie omówione w tym temacie dotyczą elementów, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, z wyjątkiem <xref:System.Windows.Controls.UserControl>. Nie można zastosować <xref:System.Windows.Controls.ControlTemplate> do <xref:System.Windows.Controls.UserControl>.  
+ W tym temacie założono, że rozumiesz, jak utworzyć i korzystać z formantów i stylów, zgodnie z opisem w [formantów](index.md). Kwestie omówione w tym temacie dotyczą elementów, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, z wyjątkiem <xref:System.Windows.Controls.UserControl>. Nie można zastosować <xref:System.Windows.Controls.ControlTemplate> do <xref:System.Windows.Controls.UserControl>.  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
 ## <a name="when-you-should-create-a-controltemplate"></a>Kiedy należy utworzyć ControlTemplate  
@@ -47,12 +47,12 @@ Przycisk, który używa szablonu kontrolki niestandardowej, a ma wskaźnik myszy
   
  Poniższa ilustracja przedstawia <xref:System.Windows.Controls.CheckBox> używającej domyślny <xref:System.Windows.Controls.ControlTemplate>.  
   
- ![Pole wyboru przy użyciu domyślnego szablonu kontrolki. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![Pole wyboru przy użyciu domyślnego szablonu kontrolki. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Zaznacz pole wyboru, która korzysta z domyślnego szablonu kontrolki  
   
  Poniższa ilustracja przedstawia <xref:System.Windows.Controls.CheckBox> , który używa niestandardowego <xref:System.Windows.Controls.ControlTemplate> umieścić zawartość <xref:System.Windows.Controls.CheckBox> powyżej Wskaźnik zaznaczenia i wyświetla X po <xref:System.Windows.Controls.CheckBox> jest zaznaczone.  
   
- ![Pole wyboru przy użyciu szablonu kontrolki niestandardowej. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+ ![Pole wyboru przy użyciu szablonu kontrolki niestandardowej. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 Zaznacz pole wyboru, który używa szablonu kontrolki niestandardowej  
   
  <xref:System.Windows.Controls.ControlTemplate> Dla <xref:System.Windows.Controls.CheckBox> w tym przykładzie jest dość złożone, więc w tym temacie używany prostsze przykładem tworzenia <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.Button>.  
@@ -71,14 +71,14 @@ Zaznacz pole wyboru, który używa szablonu kontrolki niestandardowej
   
 -   A <xref:System.Windows.Controls.ContentPresenter> wyświetlającą zawartości przycisku. <xref:System.Windows.Controls.ContentPresenter> Umożliwia dowolnego typu obiektu, który ma być wyświetlane.  
   
- [!code-xaml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
+ [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
 ### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>Zachowanie funkcji właściwości kontrolki za pomocą TemplateBinding  
- Podczas tworzenia nowego <xref:System.Windows.Controls.ControlTemplate>, nadal można użyć właściwości publiczne, aby zmienić wygląd formantu. [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) — rozszerzenie znaczników powiązania właściwości elementu, który znajduje się w <xref:System.Windows.Controls.ControlTemplate> na właściwość publiczną, która jest zdefiniowana przez kontrolkę. Kiedy używasz [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md), włączyć we właściwościach formantu jako parametry szablonu. Oznacza to, gdy właściwość kontrolki jest ustawiona, ta wartość jest przekazywane do elementu, który ma [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) na nim.  
+ Podczas tworzenia nowego <xref:System.Windows.Controls.ControlTemplate>, nadal można użyć właściwości publiczne, aby zmienić wygląd formantu. [TemplateBinding](../advanced/templatebinding-markup-extension.md) — rozszerzenie znaczników powiązania właściwości elementu, który znajduje się w <xref:System.Windows.Controls.ControlTemplate> na właściwość publiczną, która jest zdefiniowana przez kontrolkę. Kiedy używasz [TemplateBinding](../advanced/templatebinding-markup-extension.md), włączyć we właściwościach formantu jako parametry szablonu. Oznacza to, gdy właściwość kontrolki jest ustawiona, ta wartość jest przekazywane do elementu, który ma [TemplateBinding](../advanced/templatebinding-markup-extension.md) na nim.  
   
- Poniższy przykład jest powtarzany część poprzedni przykład, który używa [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) — rozszerzenie znaczników można powiązać właściwości elementów, które znajdują się w <xref:System.Windows.Controls.ControlTemplate> do właściwości publiczne, które są zdefiniowane przez przycisk.  
+ Poniższy przykład jest powtarzany część poprzedni przykład, który używa [TemplateBinding](../advanced/templatebinding-markup-extension.md) — rozszerzenie znaczników można powiązać właściwości elementów, które znajdują się w <xref:System.Windows.Controls.ControlTemplate> do właściwości publiczne, które są zdefiniowane przez przycisk.  
   
- [!code-xaml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
+ [!code-xaml[VSMButtonTemplate#TemplateBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
  W tym przykładzie <xref:System.Windows.Controls.Grid> ma jego <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> powiązane właściwości szablonu <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Ponieważ <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> jest szablonu powiązane, możesz utworzyć wiele przycisków, które używały tych samych <xref:System.Windows.Controls.ControlTemplate> i ustaw <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> różne wartości na przycisku. Jeśli <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> została szablonu nie jest powiązana z właściwością elementu w <xref:System.Windows.Controls.ControlTemplate>, ustawiając <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> przycisku, czy nie mają wpływu na wygląd.  
   
@@ -112,11 +112,11 @@ Zaznacz pole wyboru, który używa szablonu kontrolki niestandardowej
   
  Poniższy przykład tworzy dwa przyciski, które używają <xref:System.Windows.Controls.ControlTemplate> zdefiniowane w poprzednim przykładzie. Przykład ustawia <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, i <xref:System.Windows.Controls.Control.FontSize%2A> właściwości dla każdego przycisku. Ustawienie <xref:System.Windows.Controls.Control.Background%2A> właściwość ma efektu, ponieważ jest on powiązany w szablonie <xref:System.Windows.Controls.ControlTemplate>. Mimo że <xref:System.Windows.Controls.Control.Foreground%2A> i <xref:System.Windows.Controls.Control.FontSize%2A> właściwości nie są częścią szablonu powiązane, ich ustawienie ma wpływ, ponieważ ich wartości są dziedziczone.  
   
- [!code-xaml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
+ [!code-xaml[VSMButtonTemplate#ButtonDeclaration](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
  Poprzedni przykład generuje dane wyjściowe, która jest podobna do poniższej ilustracji.  
   
- ![Dwa przyciski, niebieski jednego i jeden purpurowy. ](../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP_ButtonTwo")  
+ ![Dwa przyciski, niebieski jednego i jeden purpurowy. ](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
 Dwa przyciski, za pomocą różnych kolorów tła  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
@@ -127,7 +127,7 @@ Dwa przyciski, za pomocą różnych kolorów tła
   
  W poniższym przykładzie przedstawiono <xref:System.Windows.VisualState> zmienia się wygląd <xref:System.Windows.Controls.Button> gdy wskaźnik myszy znajduje się nad nią. <xref:System.Windows.Media.Animation.Storyboard> Zmienia kolor obramowania przycisku, zmieniając kolor `BorderBrush`. Jeśli odwołujesz się do <xref:System.Windows.Controls.ControlTemplate> przykład na początku tego tematu, będzie przypominać, który `BorderBrush` nazywa się <xref:System.Windows.Media.SolidColorBrush> przypisany do <xref:System.Windows.Controls.Border.Background%2A> z <xref:System.Windows.Controls.Border>.  
   
- [!code-xaml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
+ [!code-xaml[VSMButtonTemplate#4](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
  Kontrolka jest odpowiedzialny za Definiowanie stanów jako część jej kontrakt formantu, która została omówiona szczegółowo w temacie [Dostosowywanie inne formanty, rozumiejąc kontrakt formantu](#customizing_other_controls_by_understanding_the_control_contract) w dalszej części tego tematu. Poniższa tabela zawiera listę stanów, które są określone dla <xref:System.Windows.Controls.Button>.  
   
@@ -147,20 +147,20 @@ Dwa przyciski, za pomocą różnych kolorów tła
 > [!NOTE]
 >  Pamiętaj ustawić <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> dołączona właściwość w katalogu głównym <xref:System.Windows.FrameworkElement> z <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-xaml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
+ [!code-xaml[VSMButtonTemplate#VisualStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
  Poprzedni przykład generuje dane wyjściowe podobne do poniższych ilustracjach.  
   
- ![Przycisk za pomocą szablonu kontrolki niestandardowej. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![Przycisk za pomocą szablonu kontrolki niestandardowej. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Przycisk, który używa szablonu kontrolki niestandardowej w normalnym stanie.  
   
- ![Przycisk z ciemnoczerwonym obramowaniem. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![Przycisk z ciemnoczerwonym obramowaniem. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Przycisk, który używa szablonu kontrolki niestandardowej w myszy nad stanu  
   
- ![Obramowanie jest niewidoczne po naciśnięciu przycisku. ](../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+ ![Obramowanie jest niewidoczne po naciśnięciu przycisku. ](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
 Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśnięciu  
   
- Aby znaleźć stanów wizualnych dla kontrolki, które są dołączone [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [style i szablony kontrolek](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Aby znaleźć stanów wizualnych dla kontrolki, które są dołączone [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [style i szablony kontrolek](control-styles-and-templates.md).  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
 ## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>Podczas przechodzenia między stanami, określając zachowanie kontrolki  
@@ -177,12 +177,12 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
 ### <a name="specifying-the-duration-of-a-transition"></a>Określanie czasu trwania przejścia  
  Można określić, jak długo trwa przejście przez ustawienie <xref:System.Windows.VisualTransition.GeneratedDuration%2A> właściwości. W poprzednim przykładzie przedstawiono <xref:System.Windows.VisualState> określająca, czy obramowanie przycisku staje się przezroczyste, po kliknięciu przycisku, ale animacji trwa zbyt długo, można zaobserwować, jeśli przycisk jest szybkie naciśnięcia, a. Możesz użyć <xref:System.Windows.VisualTransition> można określić ilość czasu zajmuje kontrolki, do którego nastąpi przejście do stanu po naciśnięciu. W poniższym przykładzie określono, że kontrolka ma jednej setnej części sekundy, aby przejść do stanu po naciśnięciu.  
   
- [!code-xaml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
+ [!code-xaml[VSMButtonTemplate#PressedTransition](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
 ### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>Określanie zmian wyglądu formantu podczas przejścia  
  <xref:System.Windows.VisualTransition> Zawiera <xref:System.Windows.Media.Animation.Storyboard> , która rozpoczyna się kontrolka przejścia między stanami. Na przykład można określić, że niektórych animacji występuje, gdy kontrolka przechodzi z `MouseOver` do stanu `Normal` stanu. Poniższy przykład tworzy <xref:System.Windows.VisualTransition> określający, że gdy użytkownik przesuwa wskaźnik myszy poza przycisk, obramowanie przycisku zmienia się na niebieski, a następnie na żółty, a następnie na czarny w wersji 1.5 w ciągu kilku sekund.  
   
- [!code-xaml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
+ [!code-xaml[VSMButtonTemplate#8](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
 ### <a name="specifying-when-a-visualtransition-is-applied"></a>Określanie, gdy jest stosowany obiekt VisualTransition  
  Element <xref:System.Windows.VisualTransition> można ograniczyć do dotyczą tylko w określonych stanach lub mogą być stosowane dowolny czas przejścia sterowania między stanami. W powyższym przykładzie <xref:System.Windows.VisualTransition> jest stosowana, gdy kontrolka przechodzi z `MouseOver` do stanu `Normal` stanu; w przykładzie wcześniej <xref:System.Windows.VisualTransition> jest stosowana, gdy kontrolka przechodzi w stan `Pressed` stanu. Gdy ograniczanie <xref:System.Windows.VisualTransition> jest stosowany przez ustawienie <xref:System.Windows.VisualTransition.To%2A> i <xref:System.Windows.VisualTransition.From%2A> właściwości. W poniższej tabeli opisano poziomy ograniczenie najbardziej restrykcyjne do najmniej restrykcyjna.  
@@ -196,7 +196,7 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
  Masz wiele <xref:System.Windows.VisualTransition> obiekty w <xref:System.Windows.VisualStateGroup> odwołujące się do takiego samego stanu, ale będą używane w kolejności, który określa poprzedniej tabeli. W poniższym przykładzie występują dwa <xref:System.Windows.VisualTransition> obiektów. Gdy kontrolka przechodzi z `Pressed` do stanu `MouseOver` stanu, <xref:System.Windows.VisualTransition> ma obydwa <xref:System.Windows.VisualTransition.From%2A> i <xref:System.Windows.VisualTransition.To%2A> zestaw jest używany. Gdy kontrolka przechodzi ze stanu, który nie jest `Pressed` do `MouseOver` stanu jest używany inny stan.  
   
- [!code-xaml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
+ [!code-xaml[VSMButtonTemplate#7](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
  <xref:System.Windows.VisualStateGroup> Ma <xref:System.Windows.VisualStateGroup.Transitions%2A> właściwość, która zawiera <xref:System.Windows.VisualTransition> obiekty, które są stosowane do <xref:System.Windows.VisualState> obiekty w <xref:System.Windows.VisualStateGroup>. Jako <xref:System.Windows.Controls.ControlTemplate> Autor, możesz mogą zawierać dowolne <xref:System.Windows.VisualTransition> ma. Jednak jeśli <xref:System.Windows.VisualTransition.To%2A> i <xref:System.Windows.VisualTransition.From%2A> właściwości są ustawione na nazwy stanu, które nie znajdują się w <xref:System.Windows.VisualStateGroup>, <xref:System.Windows.VisualTransition> jest ignorowana.  
   
@@ -210,7 +210,7 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
 -   Z `MouseOver` do stanu `Normal` stanu.  
   
- [!code-xaml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
+ [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
 ## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>Dostosowywanie innych formantów dzięki zrozumieniu kontrakt formantu  
@@ -229,25 +229,25 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
  W poniższym przykładzie przedstawiono <xref:System.Windows.TemplatePartAttribute> obiekty, które są określone na <xref:System.Windows.Controls.ComboBox> klasy. Logika <xref:System.Windows.Controls.ComboBox> spodziewa się znaleźć <xref:System.Windows.Controls.TextBox> o nazwie `PART_EditableTextBox` i <xref:System.Windows.Controls.Primitives.Popup> o nazwie `PART_Popup` w jego <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-csharp[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
- [!code-vb[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
+ [!code-csharp[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
+ [!code-vb[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
  W poniższym przykładzie pokazano uproszczony <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.ComboBox> zawierającej elementy, które są określone przez <xref:System.Windows.TemplatePartAttribute> obiektów na <xref:System.Windows.Controls.ComboBox> klasy.  
   
- [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
+ [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
 ### <a name="states-in-the-control-contract"></a>Stany w kontrakcie kontroli  
  Stany kontrolki są również częścią kontrakt formantu. Przykład tworzenia <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.Button> pokazuje, jak określić sposób wyświetlania <xref:System.Windows.Controls.Button> w zależności od jego stany. Możesz utworzyć <xref:System.Windows.VisualState> dla każdego określony stan i umieścić wszystkie <xref:System.Windows.VisualState> obiekty udziału <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> w <xref:System.Windows.VisualStateGroup>, zgodnie z opisem w [Zmienianie wyglądu formantu w zależności od jego stanu](#changing_the_appearance_of_a_control_depending_on_its_state) wcześniej w tym temat. Formanty innych firm, należy określić stanów przy użyciu <xref:System.Windows.TemplateVisualStateAttribute>, co pozwala projektanta narzędzi, takich jak Expression Blend, aby uwidocznić stanami formantu do tworzenia szablonów kontrolek.  
   
- Aby znaleźć kontrakt formantu dla formantów, które są dołączone [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [style i szablony kontrolek](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Aby znaleźć kontrakt formantu dla formantów, które są dołączone [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [style i szablony kontrolek](control-styles-and-templates.md).  
   
 ### <a name="properties-in-the-control-contract"></a>Właściwości w kontrakt formantu  
- Właściwości publiczne, które wizualnie wpływają na formant znajdują się również w kontrakcie kontroli. Można ustawić te właściwości, aby zmienić wygląd formantu bez tworzenia nowego <xref:System.Windows.Controls.ControlTemplate>. Można również użyć [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) — rozszerzenie znaczników można powiązać właściwości elementów, które znajdują się w <xref:System.Windows.Controls.ControlTemplate> do właściwości publiczne, które są definiowane przez <xref:System.Windows.Controls.Button>.  
+ Właściwości publiczne, które wizualnie wpływają na formant znajdują się również w kontrakcie kontroli. Można ustawić te właściwości, aby zmienić wygląd formantu bez tworzenia nowego <xref:System.Windows.Controls.ControlTemplate>. Można również użyć [TemplateBinding](../advanced/templatebinding-markup-extension.md) — rozszerzenie znaczników można powiązać właściwości elementów, które znajdują się w <xref:System.Windows.Controls.ControlTemplate> do właściwości publiczne, które są definiowane przez <xref:System.Windows.Controls.Button>.  
   
  Poniższy przykład zawiera kontrakt formantu przycisku.  
   
- [!code-csharp[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
- [!code-vb[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
+ [!code-csharp[VSMButtonTemplate#ButtonContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
+ [!code-vb[VSMButtonTemplate#ButtonContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
  Podczas tworzenia <xref:System.Windows.Controls.ControlTemplate>, często najłatwiej zaczynają się od istniejącej <xref:System.Windows.Controls.ControlTemplate> i wprowadzać zmiany. Możesz wykonać jedną z następujących czynności, aby zmienić istniejącego <xref:System.Windows.Controls.ControlTemplate>:  
   
@@ -259,7 +259,7 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
 ## <a name="complete-example"></a>Kompletny przykład  
  W poniższym przykładzie pokazano pełne <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> , opisanej w tym temacie.  
   
- [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
+ [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Tworzenie szablonów i stylów](styling-and-templating.md)

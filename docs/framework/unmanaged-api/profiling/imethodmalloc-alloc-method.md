@@ -17,41 +17,45 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54c38f9a9abc9a02ba4d84c9a41b2ef6b1f7cb69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a676989bdc6866f85fabe3e15b1e6b7b8b5a9a9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528566"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351258"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc — Metoda
-Próbuje przydzielić określonej ilości pamięci dla nowej treści funkcji Microsoft intermediate language (MSIL).  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-PVOID Alloc (  
-    [in] ULONG   cb  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `cb`  
- [in] Liczba bajtów do przydzielenia dla treści metody.  
-  
-## <a name="remarks"></a>Uwagi  
- Ilość przydzielonej pamięci rozpocznie się pod adresem większy niż adres podstawowy moduł, który jest skojarzony z tym alokatora. Innymi słowy każdy alokatora jest tworzona dla danego modułu i podejmie próbę przydzielenia pamięci na dodatnią przesunięcie z adresu podstawowego. Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większy niż adres podstawowy moduł, zwraca E_OUTOFMEMORY niezależnie od rzeczywistej ilości miejsca w pamięci.  
-  
- `Alloc` Metoda powinna służyć w połączeniu z [icorprofilerinfo::setilfunctionbody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platformy:** WindSee [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** CorProf.idl, CorProf.h  
-  
- **Biblioteka:** CorGuids.lib  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
+
+Próbuje przydzielić określonej ilości pamięci dla nowej treści funkcji Microsoft intermediate language (MSIL).
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+PVOID Alloc (
+    [in] ULONG   cb
+);
+```
+
+## <a name="parameters"></a>Parametry
+
+`cb`\
+[in] Liczba bajtów do przydzielenia dla treści metody.
+
+## <a name="remarks"></a>Uwagi
+
+ Ilość przydzielonej pamięci rozpocznie się pod adresem większy niż adres podstawowy moduł, który jest skojarzony z tym alokatora. Innymi słowy każdy alokatora jest tworzona dla danego modułu i podejmie próbę przydzielenia pamięci na dodatnią przesunięcie z adresu podstawowego. Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większy niż adres podstawowy moduł, zwraca E_OUTOFMEMORY niezależnie od rzeczywistej ilości miejsca w pamięci.
+
+ `Alloc` Metoda powinna służyć w połączeniu z [icorprofilerinfo::setilfunctionbody —](icorprofilerinfo-setilfunctionbody-method.md) metody.
+
+## <a name="requirements"></a>Wymagania
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Nagłówek:** CorProf.idl, CorProf.h
+
+ **Biblioteka:** CorGuids.lib
+
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
 ## <a name="see-also"></a>Zobacz także
-- [IMethodMalloc, interfejs](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)
+
+- [IMethodMalloc, interfejs](imethodmalloc-interface.md)

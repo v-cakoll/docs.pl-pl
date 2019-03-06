@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036029"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362019"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Ułatwianie debugowania na platformie .NET obrazu
 
@@ -34,7 +34,7 @@ Czasami trzeba zmienić zachowanie kompilatora JIT, tak aby generowany przez nie
 
 Na przykład, jeśli zestaw, który chcesz debugować jest nazywana *MyApp.exe*, możesz utworzyć plik tekstowy o nazwie *MyApp.ini*, w tym samym folderze co *MyApp.exe*, który zawiera te trzy wiersze:
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ Dla kompilacji detalicznej kompilatory nie ustawiają żadnej **DebuggableAttrib
 **DebuggableAttribute** ma zastosowanie do całego zestawu w czasie, a nie do poszczególnych modułów w zestawie. Narzędzia programistyczne w związku z tym muszą dołączać niestandardowe atrybuty do tokenu metadanych zestawu, jeśli zestawu została już utworzona, lub do klasy o nazwie **System.Runtime.CompilerServices.AssemblyAttributesGoHere**. Te promuje następnie narzędzie ALink **DebuggableAttribute** atrybuty z każdego modułu do zestawu staną się częścią. W przypadku konfliktu operacja ALink kończy się niepowodzeniem.
 
 > [!NOTE]
-> W programie .NET Framework w wersji 1.0 kompilator Microsoft Visual C++ dodaje **DebuggableAttribute** podczas **/CLR** i **/zi** określono opcje kompilatora. W wersji 1.1 programu .NET Framework, należy dodać **DebugabbleAttribute** ręcznie w kodzie albo użyć **/assemblydebug** — opcja konsolidatora.
+> W programie .NET Framework w wersji 1.0 kompilator Microsoft Visual C++ dodaje **DebuggableAttribute** podczas **/CLR** i **/zi** określono opcje kompilatora. W wersji 1.1 programu .NET Framework, należy dodać **DebuggableAttribute** ręcznie w kodzie albo użyć **/assemblydebug** — opcja konsolidatora.
 
 ## <a name="see-also"></a>Zobacz także
 

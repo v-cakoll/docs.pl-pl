@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725550"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374118"
 ---
 # <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizuj aplikację
 W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu locbaml — narzędzie.  
@@ -30,7 +30,7 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 ## <a name="requirements"></a>Wymagania  
  W trakcie tej dyskusji, której użyjesz [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], czyli kompilatora, które jest uruchamiane z wiersza polecenia.  
   
- Ponadto pojawi się instrukcja przy użyciu pliku projektu. Aby uzyskać instrukcje dotyczące sposobu używania [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] i pliki projektu, zobacz [tworzenie i wdrażanie](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
+ Ponadto pojawi się instrukcja przy użyciu pliku projektu. Aby uzyskać instrukcje dotyczące sposobu używania [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] i pliki projektu, zobacz [tworzenie i wdrażanie](../app-development/building-and-deploying-wpf-applications.md).  
   
  Wszystkie przykłady w tej dyskusji pełnić kultury en US (Angielski-Stany Zjednoczone). Dzięki temu można pracować kroki przykłady bez konieczności instalowania na inny język.  
   
@@ -137,13 +137,13 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
    2.  **Klucz zasobu**. Identyfikator zlokalizowanych zasobów.  
   
-   3.  **Kategoria**. Typ wartości. Zobacz [lokalizacja atrybutów i komentarzy](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   3.  **Kategoria**. Typ wartości. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
   
-   4.  **Czytelność**. Czy można odczytać wartości przez lokalizatorowi. Zobacz [lokalizacja atrybutów i komentarzy](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   4.  **Czytelność**. Czy można odczytać wartości przez lokalizatorowi. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
   
-   5.  **Modifiability**. Czy wartość może być modyfikowany przez lokalizatorowi. Zobacz [lokalizacja atrybutów i komentarzy](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   5.  **Modifiability**. Czy wartość może być modyfikowany przez lokalizatorowi. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
   
-   6.  **Komentarze**. Dodatkowy opis wartości w celu określenia, jak wartość jest zlokalizowana. Zobacz [lokalizacja atrybutów i komentarzy](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   6.  **Komentarze**. Dodatkowy opis wartości w celu określenia, jak wartość jest zlokalizowana. Zobacz [lokalizacja atrybutów i komentarzy](localization-attributes-and-comments.md).  
   
    7.  **Wartość**. Wartość tekstowa do translacji na żądaną kulturę.  
   
@@ -192,9 +192,9 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
     -   W aplikacji Dodaj następujący kod do pliku App.xaml.cs:  
   
-   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
-   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
-   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
+   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
+   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
+   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>Wskazówki dotyczące korzystania z locbaml —  
@@ -210,5 +210,5 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
  Teraz powinien mieć podstawową wiedzę na temat sposobu użycia locbaml — narzędzie.  Powinien móc plik, który zawiera UID. Za pomocą locbaml — narzędzie, można przeanalizować pliku można wyodrębnić możliwych do zlokalizowania zawartości, a po zawartość jest tłumaczona, powinno być możliwe wygenerowanie. resources.dll zawierający scala tłumaczonej zawartości. W tym temacie nie ma możliwości szczegóły każdego zdarzenia, ale masz teraz wiedzy koniecznych do używania locbaml — do lokalizowania aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Globalizacja dla WPF](globalization-for-wpf.md)
+- [Przegląd używania automatycznego układu](use-automatic-layout-overview.md)

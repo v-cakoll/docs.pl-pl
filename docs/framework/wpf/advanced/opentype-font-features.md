@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 5751efe0c6621425b8b54c642d51127118c0b6bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b96ad3266ce32a26af573a3a35392518055df37f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529791"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376952"
 ---
 # <a name="opentype-font-features"></a>OpenType funkcje czcionki
 W tym temacie omówiono niektóre kluczowe funkcje [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] technologia czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -38,7 +38,7 @@ W tym temacie omówiono niektóre kluczowe funkcje [!INCLUDE[TLA#tla_opentype](.
 -   Szerszy Obsługa formantu związane z typografią zaawansowanego.  
   
 > [!NOTE]
->  Zestaw Windows SDK zawiera zestaw przykładowych [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek, które można używać z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Czcionki te zapewniają większość funkcji przedstawionych w dalszej części tego tematu. Aby uzyskać więcej informacji, zobacz [przykład pakietu czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).  
+>  Zestaw Windows SDK zawiera zestaw przykładowych [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek, które można używać z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Czcionki te zapewniają większość funkcji przedstawionych w dalszej części tego tematu. Aby uzyskać więcej informacji, zobacz [przykład pakietu czcionek OpenType](sample-opentype-font-pack.md).  
   
  Zobacz [specyfikacji OpenType](https://go.microsoft.com/fwlink/?LinkId=96731) szczegóły dotyczące [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] format czcionek.  
   
@@ -64,31 +64,31 @@ W tym temacie omówiono niektóre kluczowe funkcje [!INCLUDE[TLA#tla_opentype](.
   
  Następujący tekst Wyświetla indeksów górnych Book Antiqua czcionki.  
   
- ![Tekst przy użyciu indeksów górnych OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont14.gif "opentypefont14")  
+ ![Tekst przy użyciu indeksów górnych OpenType](./media/opentypefont14.gif "opentypefont14")  
 Tekst przy użyciu indeksów górnych OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować indeks górny czcionki Book Antiqua, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
+ [!code-xaml[OpenTypeFontSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#12)]  
   
  Następujący tekst Wyświetla indeksy dolne Book Antiqua czcionki.  
   
- ![Tekst indeksy dolne OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont15.gif "opentypefont15")  
+ ![Tekst indeksy dolne OpenType](./media/opentypefont15.gif "opentypefont15")  
 Tekst indeksy dolne OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować indeksy dolne czcionki Book Antiqua, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
+ [!code-xaml[OpenTypeFontSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#13)]  
   
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>Zastosowań dekoracyjne indeksy górne i dolne  
  Indeks górny i dolny można również użyć do tworzenia efektów ozdobnych mieszanej wielkości liter tekstu. Następujący tekst Wyświetla czcionki Book Antiqua indeksach górnym i tekst. Należy pamiętać, zasady nie wpływają literami.  
   
- ![Tekst przy użyciu indeksy OpenType górne i dolne](../../../../docs/framework/wpf/advanced/media/opentypefont16.gif "opentypefont16")  
+ ![Tekst przy użyciu indeksy OpenType górne i dolne](./media/opentypefont16.gif "opentypefont16")  
 Tekst przy użyciu indeksy OpenType górne i dolne  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować indeks górny i dolny czcionek, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
+ [!code-xaml[OpenTypeFontSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#14)]  
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>W przypadku  
@@ -96,32 +96,32 @@ Tekst przy użyciu indeksy OpenType górne i dolne
   
  Następujący tekst, wyświetla standardowe wielkimi literami czcionki Pescadero, a następnie liter jako "SmallCaps" i "AllSmallCaps". W takich przypadkach taki sam rozmiar czcionki jest używany dla wszystkich trzech słów.  
   
- ![Tekst, wielkie litery OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
+ ![Tekst, wielkie litery OpenType](./media/opentypefont11.gif "opentypefont11")  
 Tekst, wielkie litery OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować w przypadku czcionek Pescadero, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu. Gdy używany jest format "SmallCaps", jest ignorowany wiodących wielkiej litery.  
   
- [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
+ [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
 ### <a name="titling-capitals"></a>Wersalików  
  Stolice tytułowe są jaśniejsze udział i wagi i jest przeznaczona do bardziej elegancki wygląd niż w przypadku normalnych. Stolice tytułowe są zazwyczaj używane w większego rozmiaru czcionki w nagłówkach. Następujący tekst wyświetlany w przypadku normalnych i tytułowe czcionki Pescadero. Zwróć uwagę, mniejszą niż szerokość stem, tekst w drugim wierszu.  
   
- ![Tekst przy użyciu OpenType wersalików](../../../../docs/framework/wpf/advanced/media/opentypefont20.gif "OpenTypeFont20")  
+ ![Tekst przy użyciu OpenType wersalików](./media/opentypefont20.gif "OpenTypeFont20")  
 Tekst przy użyciu wersalików OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować tytułowe w przypadku czcionek Pescadero, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet17](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet17)]  
   
 ### <a name="capital-spacing"></a>Odstępy kapitałowych  
  Odstępy kapitałowych to funkcja, która pozwala na dostarczenie więcej odstępów, korzystając z wielkimi literami w tekście. Wielkie litery zwykle są przeznaczone do programu blend z małych liter. Odstępy, który pojawia się atrakcyjny między i Wielkiej litery i małe litery, może być zbyt ściśle stosowania wpisany tylko wielkimi literami. Następujący tekst Wyświetla odstępy w normalnym i kapitałowych czcionki Pescadero.  
   
- ![Tekst przy użyciu odstępy kapitałowych OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont21.gif "OpenTypeFont21")  
+ ![Tekst przy użyciu odstępy kapitałowych OpenType](./media/opentypefont21.gif "OpenTypeFont21")  
 Tekst przy użyciu odstępy kapitałowych OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować kapitałowych odstępy czcionki Pescadero, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet18](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet18)]  
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Ligatur  
@@ -137,106 +137,106 @@ Tekst przy użyciu odstępy kapitałowych OpenType
   
  Następujący tekst Wyświetla standardowe ligatury symbole dla czcionki Perykles.  
   
- ![Tekst przy użyciu ligatury OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont04.gif "opentypefont04")  
+ ![Tekst przy użyciu ligatury OpenType](./media/opentypefont04.gif "opentypefont04")  
 Tekst standardowe ligatury OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować symbole standardowe ligatury czcionki Perykles, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
+ [!code-xaml[OpenTypeFontSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#4)]  
   
  Następujący tekst Wyświetla symbole poufnej ligatury Perykles czcionki.  
   
- ![Tekst przy użyciu ligatury OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont05.gif "opentypefont05")  
+ ![Tekst przy użyciu ligatury OpenType](./media/opentypefont05.gif "opentypefont05")  
 Tekst przy użyciu ligatury OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować symbole poufnej ligatury czcionki Perykles, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
+ [!code-xaml[OpenTypeFontSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#5)]  
   
  Domyślnie [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Włącz ligatury. Na przykład jeśli używasz czcionki Book Antiqua, ligatury "fi", "ff" i "mazowieckie" są wyświetlane jako symbol znaku połączone. Należy zauważyć, że pary znaków dla każdego standardowe ligatury stykają.  
   
- ![Tekst przy użyciu ligatury OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont06.gif "opentypefont06")  
+ ![Tekst przy użyciu ligatury OpenType](./media/opentypefont06.gif "opentypefont06")  
 Tekst standardowe ligatury OpenType  
   
  Jednak można wyłączyć ligatury standardowe funkcje, dzięki czemu standardowe ligatury, takie jak "ff" przedstawia jako dwa osobne symbole, a nie jako symbol znaku połączone.  
   
- ![Przy użyciu tekstu wyłączone ligatury OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont07.gif "opentypefont07")  
+ ![Przy użyciu tekstu wyłączone ligatury OpenType](./media/opentypefont07.gif "opentypefont07")  
 Tekst przy użyciu wyłączonych ligatury OpenType  
   
  W poniższym przykładzie znaczników pokazuje, jak wyłączyć ligatury standardowe symbole dla czcionki Book Antiqua, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
+ [!code-xaml[OpenTypeFontSamples#6](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#6)]  
   
 <a name="swashes"></a>   
 ## <a name="swashes"></a>Kaligraficzne  
  Kaligraficzne są symbole dekoracyjnych, korzystających z rozbudowanych ornamentacji często skojarzony kaligrafia. Następujący tekst, wyświetla standardowe i kaligraficzne symbole Pescadero czcionki.  
   
- ![Tekst z użyciem glifów standardowe i kaligraficzne OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")  
+ ![Tekst z użyciem glifów standardowe i kaligraficzne OpenType](./media/opentypefont08.gif "opentypefont08")  
 Tekst z użyciem glifów standardowe i kaligraficzne OpenType  
   
  Kaligraficzne są często używane jako to elementy dekoracyjne w krótkich fraz, takie jak Anonse zdarzeń. Następujący tekst używa kaligraficzne, aby podkreślić wielkie litery nazwy zdarzenia.  
   
- ![Tekst przy użyciu kaligraficzne OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont09.gif "opentypefont09")  
+ ![Tekst przy użyciu kaligraficzne OpenType](./media/opentypefont09.gif "opentypefont09")  
 Tekst przy użyciu kaligraficzne OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować kaligraficzne czcionek, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
+ [!code-xaml[OpenTypeFontSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#7)]  
   
 ### <a name="contextual-swashes"></a>Kontekstowe kaligraficzne  
  Niektóre kombinacje symboli kaligrafii może spowodować nieatrakcyjnych wygląd, takich jak wydłużeń nakładających się od liter sąsiadująco. Za pomocą kontekstowego firmy swash umożliwia glif swash zastępczych, który daje lepsze wygląd. Następujący tekst zawiera samego wyrazu, przed i po zastosowaniu swash kontekstowych.  
   
- ![Tekst kontekstowe symbole kaligraficzne OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont19.gif "OpenTypeFont19")  
+ ![Tekst kontekstowe symbole kaligraficzne OpenType](./media/opentypefont19.gif "OpenTypeFont19")  
 Tekst kontekstowe symbole kaligraficzne OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować kontekstowych swash czcionki Pescadero, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet16](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet16)]  
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Wersje alternatywne  
  Wersje alternatywne są symbole, które mogą zastąpić standardowa symbol. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki, takie jak Perykles czcionkę w poniższych przykładach, mogą zawierać alternatywne symbole, używających inny wygląd tekstu. Następujący tekst Wyświetla standardowe symbole Perykles czcionki.  
   
- ![Tekst standardowe symbole OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont01.gif "opentypefont01")  
+ ![Tekst standardowe symbole OpenType](./media/opentypefont01.gif "opentypefont01")  
 Tekst standardowe symbole OpenType  
   
  Perykles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki zawiera dodatkowe symbole, zapewniających stylistyczne do standardowego zestawu symbole. Następujący tekst Wyświetla stylistyczne alternatywne symbole.  
   
- ![Tekst stylistyczne alternatywne symbole OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")  
+ ![Tekst stylistyczne alternatywne symbole OpenType](./media/opentypefont02.gif "opentypefont02")  
 Tekst stylistyczne alternatywne symbole OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować stylistyczne alternatywnych symboli czcionki Perykles, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
+ [!code-xaml[OpenTypeFontSamples#2](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#2)]  
   
  Następujący tekst zawiera kilka innych stylistyczne alternatywnych symboli czcionki Perykles.  
   
- ![Tekst stylistyczne alternatywne symbole OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont03.gif "opentypefont03")  
+ ![Tekst stylistyczne alternatywne symbole OpenType](./media/opentypefont03.gif "opentypefont03")  
 Tekst stylistyczne alternatywne symbole OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować tych innego stylistyczne alternatywnych symboli.  
   
- [!code-xaml[OpenTypeFontSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
+ [!code-xaml[OpenTypeFontSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#3)]  
   
 ### <a name="random-contextual-alternates"></a>Losowe kontekstowe  
  Losowe kontekstowe zapewniają wiele symboli zastępczych dla pojedynczego znaku. Po wdrożeniu przy użyciu skryptu czcionki, tę funkcję można symulować pisma odręcznego za pomocą zestawu losowo wybranych symboli z niewielkimi różnicami w wyglądzie. Następujący tekst używa czcionki Lindsey losowe kontekstowe. Należy zauważyć, że literę "" różni się nieco w wyglądzie  
   
- ![Tekst przy użyciu losowego kontekstowe OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont23.gif "OpenTypeFont23")  
+ ![Tekst przy użyciu losowego kontekstowe OpenType](./media/opentypefont23.gif "OpenTypeFont23")  
 Tekst przy użyciu losowego kontekstowe OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować losowe kontekstowe czcionki Lindsey, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet20](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet20)]  
   
 ### <a name="historical-forms"></a>Historyczne formularzy  
  Formularze historyczne są konwencje związane z typografią wspólnych w przeszłości. Następujący tekst Wyświetla frazy "Boston, Massachusetts", za pomocą historycznych formularza symbole Book Antiqua czcionki.  
   
- ![Tekst historyczne formy OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont10.gif "opentypefont10")  
+ ![Tekst historyczne formy OpenType](./media/opentypefont10.gif "opentypefont10")  
 Tekst historyczne formy OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować historycznych formularzy dla czcionki Book Antiqua, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
+ [!code-xaml[OpenTypeFontSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#8)]  
   
 <a name="numerical_styles"></a>   
 ## <a name="numerical-styles"></a>Style liczb  
@@ -247,51 +247,51 @@ Tekst historyczne formy OpenType
   
  Następujący tekst Wyświetla ułamek style czcionki Book Antiqua.  
   
- ![Tekst przy użyciu OpenType ukośną i ułamki](../../../../docs/framework/wpf/advanced/media/opentypefont12.gif "opentypefont12")  
+ ![Tekst przy użyciu OpenType ukośną i ułamki](./media/opentypefont12.gif "opentypefont12")  
 Tekst przy użyciu OpenType ukośną i ułamki  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować ułamek style czcionki Book Antiqua, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
+ [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Stary rzymskie  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki pomocy technicznej ze starego Styl formatu liczb. Ten format jest użyteczny do wyświetlania liczb w style, które nie są już standardowych. Następujący tekst Wyświetla datę 18 wieku formaty liczb standardowe i stary styl czcionki Book Antiqua.  
   
- ![Tekst, w starym stylu antykwy OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont24.gif "OpenTypeFont24")  
+ ![Tekst, w starym stylu antykwy OpenType](./media/opentypefont24.gif "OpenTypeFont24")  
 Tekst, w starym stylu antykwy OpenType  
   
  Następujący tekst zawiera standardowe cyfry Book Antiqua czcionki, następuje w starym stylu antykwy.  
   
- ![Tekst przy użyciu OpenType stary styl zestawy liczb](../../../../docs/framework/wpf/advanced/media/opentypefont13.gif "opentypefont13")  
+ ![Tekst przy użyciu OpenType stary styl zestawy liczb](./media/opentypefont13.gif "opentypefont13")  
 Tekst przy użyciu OpenType stary styl zestawy liczb  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować starym stylu antykwy czcionki Book Antiqua, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
+ [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Proporcjonalne i tabelaryczne dane  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki obsługują funkcję rysunek proporcjonalne i tabelarycznym kontrolować wyrównanie szerokości, korzystając z cyfr. Rysunki proporcjonalna traktować poszczególnych liczb jako posiadające różne szerokość — "1" jest mniejsza niż "5". Dane tabelaryczne są traktowane jako równe szerokość cyfr, tak, aby były wyrównane w pionie, co zwiększa czytelność informacji o typie finansowych.  
   
  Następujący tekst Wyświetla dwóch liczb proporcjonalnych w pierwszej kolumnie przy użyciu czcionki Miramonte. Należy zanotować różnicę szerokość między cyfry "5" i "1". Druga kolumna zawiera ten sam dwóch wartości liczbowych przy użyciu szerokości dostosowane przy użyciu funkcji tabelarycznej rysunku.  
   
- ![Tekst przy użyciu OpenType proporcjonalne i tabelaryczne liczby](../../../../docs/framework/wpf/advanced/media/opentypefont22.gif "OpenTypeFont22")  
+ ![Tekst przy użyciu OpenType proporcjonalne i tabelaryczne liczby](./media/opentypefont22.gif "OpenTypeFont22")  
 Tekst, rysunki proporcjonalne i tabelarycznym OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować proporcjonalne i tabelaryczne dane czcionki Miramonte, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Przekreślone Zero  
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki obsługuje przekreślonych zero formatu liczb do wyróżnienia różnią się literą "O" i cyfry, "0". Przekreślonych zero liczb jest często używana dla identyfikatorów informacje finansowe i biznesowe.  
   
  Następujący tekst przedstawia przykładowy identyfikator zamówienia, przy użyciu czcionki Miramonte. Pierwszy wiersz używa standardowych cyfr. Drugi wiersz używane ukośną zero cyfr, aby zapewnić lepsze kontrast wielkiej litery "O".  
   
- ![Tekst przy użyciu OpenType ukośną zero cyfry](../../../../docs/framework/wpf/advanced/media/opentypefont17.gif "OpenTypeFont17")  
+ ![Tekst przy użyciu OpenType ukośną zero cyfry](./media/opentypefont17.gif "OpenTypeFont17")  
 Tekst przy użyciu OpenType ukośną zero cyfry  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować ukośną zero cyfry czcionki Miramonte, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu.  
   
- [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
+ [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet15](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#opentypefontsnippet15)]  
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>Klasa typografii  
@@ -299,17 +299,17 @@ Tekst przy użyciu OpenType ukośną zero cyfry
   
  Następujący tekst, wyświetla standardowe wielkimi literami czcionki Pescadero, a następnie liter jako "SmallCaps" i "AllSmallCaps". W takich przypadkach taki sam rozmiar czcionki jest używany dla wszystkich trzech słów.  
   
- ![Tekst, wielkie litery OpenType](../../../../docs/framework/wpf/advanced/media/opentypefont11.gif "opentypefont11")  
+ ![Tekst, wielkie litery OpenType](./media/opentypefont11.gif "opentypefont11")  
 Tekst, wielkie litery OpenType  
   
  W poniższym przykładzie znaczników pokazuje jak zdefiniować w przypadku czcionek Pescadero, za pomocą właściwości <xref:System.Windows.Documents.Typography> obiektu. Gdy używany jest format "SmallCaps", jest ignorowany wiodących wielkiej litery.  
   
- [!code-xaml[OpenTypeFontSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
+ [!code-xaml[OpenTypeFontSamples#9](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#9)]  
   
  Poniższy przykład kodu w ramach tego samego zadania, jak w poprzednim przykładzie znaczników.  
   
- [!code-csharp[TypographyCodeSnippets#TypographyCodeSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TypographyCodeSnippets/CSharp/Page1.xaml.cs#typographycodesnippet1)]
- [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
+ [!code-csharp[TypographyCodeSnippets#TypographyCodeSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/TypographyCodeSnippets/CSharp/Page1.xaml.cs#typographycodesnippet1)]
+ [!code-vb[TypographyCodeSnippets#TypographyCodeSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TypographyCodeSnippets/visualbasic/page1.xaml.vb#typographycodesnippet1)]  
   
 ### <a name="typography-class-properties"></a>Właściwości klasy typografii  
  W poniższej tabeli wymieniono właściwości, wartości i domyślne ustawienie opcji <xref:System.Windows.Documents.Typography> obiektu.  
@@ -363,6 +363,6 @@ Tekst, wielkie litery OpenType
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Documents.Typography>
 - [Specyfikacja OpenType](https://go.microsoft.com/fwlink/?LinkId=96731)
-- [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [Przykład pakietu czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)
-- [Pakowanie czcionek z aplikacjami](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+- [Typografia w WPF](typography-in-wpf.md)
+- [Przykład pakietu czcionek OpenType](sample-opentype-font-pack.md)
+- [Pakowanie czcionek z aplikacjami](packaging-fonts-with-applications.md)

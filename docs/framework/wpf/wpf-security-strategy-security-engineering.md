@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 2ab6981b85d5b0663fd8e464a840bfbe55f6d3b0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: bddb9bb2cf9a601ce7796d17483c1ab8fa6d7aa1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836594"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378962"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia zabezpieczeń WPF - projekt zabezpieczeń
 Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft, zapewniających produkcji bezpiecznego kodu. To kluczowy element wiarygodne technologie komputerowe [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Jest praktykę, który jest używany w połączeniu z standardowa inżynieryjnym ułatwiają dostarczanie bezpiecznego kodu. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Składa się z dziesięciu fazy, które łączą najlepsze rozwiązania z ujęcie w formalne ramy measurability oraz dodatkowe struktury, w tym:  
@@ -87,11 +87,11 @@ Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft, zapewniającyc
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Zarządzanie kodem krytycznym  
- Dla [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] tworzy piaskownicy zabezpieczeń przy użyciu .NET Framework — Obsługa znakowania i śledzenia kod zabezpieczenia krytyczny, który podnosi poziom uprawnień uprawnienia (zobacz **zabezpieczenia-krytyczny metodologii** w [WPF Strategia zabezpieczeń — zabezpieczenia platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Taki kod, na kod krytyczny dla bezpieczeństwa, biorąc pod uwagę wymagania dotyczące jakości wysokiego poziomu zabezpieczeń, odbiera dodatkowego poziomu źródła zarządzania kontrolą i bezpieczeństwem danych inspekcji. Około 5 – 10% z [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] składa się z kodu zabezpieczenia krytyczny, który zostanie oceniony przez dedykowany zespół recenzowania. Kod źródłowy i procesu ewidencjonowania jest zarządzana przez śledzenie kodu krytycznego dla zabezpieczeń i mapowanie każda jednostka krytyczny (czyli metodzie, która zawiera kod krytyczny) do znaku w stanie wyłączonym. Logowanie w stanie wyłączonym obejmują nazwy co najmniej jednego recenzenta. Każdy dzienną kompilacją zestawu [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] porównuje kod krytyczny jak w poprzednich kompilacji w celu wyszukania niezatwierdzonych zmian. Jeśli inżynier modyfikuje kod krytyczny bez zgody od zespołu recenzowania, jest zidentyfikowany i stała się natychmiast. Ten proces umożliwia aplikacji i konserwacji szczególnie wysoki poziom kontroli nad [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kodu w piaskownicy.  
+ Dla [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] tworzy piaskownicy zabezpieczeń przy użyciu .NET Framework — Obsługa znakowania i śledzenia kod zabezpieczenia krytyczny, który podnosi poziom uprawnień uprawnienia (zobacz **zabezpieczenia-krytyczny metodologii** w [WPF Strategia zabezpieczeń — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)). Taki kod, na kod krytyczny dla bezpieczeństwa, biorąc pod uwagę wymagania dotyczące jakości wysokiego poziomu zabezpieczeń, odbiera dodatkowego poziomu źródła zarządzania kontrolą i bezpieczeństwem danych inspekcji. Około 5 – 10% z [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] składa się z kodu zabezpieczenia krytyczny, który zostanie oceniony przez dedykowany zespół recenzowania. Kod źródłowy i procesu ewidencjonowania jest zarządzana przez śledzenie kodu krytycznego dla zabezpieczeń i mapowanie każda jednostka krytyczny (czyli metodzie, która zawiera kod krytyczny) do znaku w stanie wyłączonym. Logowanie w stanie wyłączonym obejmują nazwy co najmniej jednego recenzenta. Każdy dzienną kompilacją zestawu [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] porównuje kod krytyczny jak w poprzednich kompilacji w celu wyszukania niezatwierdzonych zmian. Jeśli inżynier modyfikuje kod krytyczny bez zgody od zespołu recenzowania, jest zidentyfikowany i stała się natychmiast. Ten proces umożliwia aplikacji i konserwacji szczególnie wysoki poziom kontroli nad [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kodu w piaskownicy.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zabezpieczenia](../../../docs/framework/wpf/security-wpf.md)
-- [Zabezpieczenie częściowej relacji zaufania WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [Strategia zabezpieczeń WPF — zabezpieczenia platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [Zabezpieczenia](security-wpf.md)
+- [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
+- [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
 - [Wiarygodne technologie komputerowe](https://www.microsoft.com/mscorp/twc/default.mspx)
 - [Zabezpieczenia w .NET](../../standard/security/index.md)

@@ -13,20 +13,20 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 4da833256183f10eb62b43c3f665d76a6fc2ba80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0796eae469f8a40e01e3de02c00149eb3f00c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711801"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374677"
 ---
 # <a name="collect-ink"></a>Zbieranie pisma odręcznego
 
-[Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) platformy zbiera cyfrowy atrament w ramach podstawowych jego funkcjonalność. W tym temacie omówiono metody do kolekcji pisma odręcznego w Windows Presentation Foundation (WPF).
+[Windows Presentation Foundation](../index.md) platformy zbiera cyfrowy atrament w ramach podstawowych jego funkcjonalność. W tym temacie omówiono metody do kolekcji pisma odręcznego w Windows Presentation Foundation (WPF).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby użyć poniższych przykładów, należy najpierw zainstalować program Visual Studio i [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Należy również zrozumieć sposób pisania aplikacji dla WPF. Aby uzyskać więcej informacji na temat rozpoczynania pracy przy użyciu platformy WPF, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aby użyć poniższych przykładów, należy najpierw zainstalować program Visual Studio i [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Należy również zrozumieć sposób pisania aplikacji dla WPF. Aby uzyskać więcej informacji na temat rozpoczynania pracy przy użyciu platformy WPF, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>Użyj elementu InkCanvas
 
@@ -34,15 +34,15 @@ Aby użyć poniższych przykładów, należy najpierw zainstalować program Visu
 
 Przy użyciu XAML, możesz skonfigurować zbieranie pisma odręcznego równie łatwo, jak dodawanie **InkCanvas** elementu z drzewa. W poniższym przykładzie dodano <xref:System.Windows.Controls.InkCanvas> do domyślnego projektu WPF w programie Visual Studio:
 
-[!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
+[!code-xaml[DigitalInkTopics#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
 
 **InkCanvas** elementu może również zawierać elementy podrzędne, dzięki czemu można dodać możliwości adnotacji pisma odręcznego prawie żadnego typu elementu XAML. Na przykład, umożliwiające dodanie funkcji pisma odręcznego do elementów tekstowych, po prostu Uczyń elementem podrzędnym elementu <xref:System.Windows.Controls.InkCanvas>:
 
-[!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
+[!code-xaml[DigitalInkTopics#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
 
 Dodano obsługę Oznaczanie obrazu z pisma odręcznego jest równie proste:
 
-[!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
+[!code-xaml[DigitalInkTopics#7](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
 
 ### <a name="inkcollection-modes"></a>Tryby InkCollection
 
@@ -58,8 +58,8 @@ Ustawienie trybu wyboru jest tak proste, jak ustawienie <xref:System.Windows.Con
 
 Poniższy kod ustawia tryb edycji, w oparciu o wartość <xref:System.Windows.Forms.CheckBox>:
 
-[!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
-[!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
+[!code-csharp[DigitalInkTopics#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
+[!code-vb[DigitalInkTopics#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
 
 #### <a name="drawingattributes"></a>DrawingAttributes
 
@@ -67,8 +67,8 @@ Użyj <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> właściwości, aby 
 
 Poniższy przykład umożliwia zmianę koloru wybranych pociągnięć czerwony:
 
-[!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
-[!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
+[!code-csharp[DigitalInkTopics#9](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
+[!code-vb[DigitalInkTopics#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
 
 ### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
 
@@ -78,11 +78,11 @@ Oprócz modyfikowania <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttr
 
 Następny przykład pokazuje, jak ustawić <xref:System.Windows.Ink.DrawingAttributes.Color%2A> właściwości. Aby użyć tego kodu, Utwórz nowy projekt WPF w programie Visual Studio o nazwie "HelloInkCanvas". Zastąp kod w *MainWindow.xaml* pliku następującym kodem:
 
-[!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
+[!code-xaml[HelloInkCanvas#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
 
 Następnie dodaj poniższe procedury obsługi zdarzeń przycisku do kodzie pliku wewnątrz klasy MainWindow:
 
-[!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
+[!code-csharp[HelloInkCanvas#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
 
 Po skopiowaniu tego kodu, naciśnij klawisz **F5** w programie Visual Studio, aby uruchomić program w debugerze.
 

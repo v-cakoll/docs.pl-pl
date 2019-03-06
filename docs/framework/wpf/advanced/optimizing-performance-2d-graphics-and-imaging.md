@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: d138f7ebc6fe62f03cd80189185c8ba73d3a2006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630817"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371401"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optymalizacja wydajności: Grafika 2D i obrazowanie
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia szeroką gamę grafika 2D i funkcji przetwarzania obrazów, które mogą być optymalizowane dla wymagań aplikacji. Ten temat zawiera informacje dotyczące optymalizacji wydajności w tych obszarach.  
@@ -49,7 +49,7 @@ ms.locfileid: "54630817"
   
  Ponieważ <xref:System.Windows.Shapes.Shape> obiektów pochodzić od <xref:System.Windows.FrameworkElement> klasy, ich użycie można dodać znacznie więcej zużycie pamięci w aplikacji. Jeśli tak naprawdę nie potrzebujesz <xref:System.Windows.FrameworkElement> funkcje graficzne zawartości, należy wziąć pod uwagę przy użyciu lekki <xref:System.Windows.Media.Drawing> obiektów.  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Drawing> obiekty, zobacz [Przegląd obiektów rysowania](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Drawing> obiekty, zobacz [Przegląd obiektów rysowania](../graphics-multimedia/drawing-objects-overview.md).  
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>Streamgeometry — obiekty  
@@ -57,13 +57,13 @@ ms.locfileid: "54630817"
   
  W poniższym przykładzie użyto składni atrybutów, aby utworzyć trójkątna <xref:System.Windows.Media.StreamGeometry> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.StreamGeometry> obiekty, zobacz [utworzyć kształt używając StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.StreamGeometry> obiekty, zobacz [utworzyć kształt używając StreamGeometry](../graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md).  
   
 <a name="DrawingVisual_Objects"></a>   
 ## <a name="drawingvisual-objects"></a>Obiekty DrawingVisual  
- <xref:System.Windows.Media.DrawingVisual> Obiektu to lekkie rysowania klasę, która jest używany do renderowania kształty, obrazy i tekst. Ta klasa jest uważany za uproszczone, ponieważ nie dostarcza obsługi układu lub zdarzeń, która zwiększa ich wydajność. Z tego powodu rysunki są doskonałe do tła i obiekty clipart. Aby uzyskać więcej informacji, zobacz [przy użyciu obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md).  
+ <xref:System.Windows.Media.DrawingVisual> Obiektu to lekkie rysowania klasę, która jest używany do renderowania kształty, obrazy i tekst. Ta klasa jest uważany za uproszczone, ponieważ nie dostarcza obsługi układu lub zdarzeń, która zwiększa ich wydajność. Z tego powodu rysunki są doskonałe do tła i obiekty clipart. Aby uzyskać więcej informacji, zobacz [przy użyciu obiektów DrawingVisual](../graphics-multimedia/using-drawingvisual-objects.md).  
   
 <a name="Images"></a>   
 ## <a name="images"></a>Obrazy  
@@ -77,15 +77,15 @@ ms.locfileid: "54630817"
   
 -   Jeśli to możliwe połączyć obrazy w pojedynczy obraz, takie jak pasek filmu składa się z wielu obrazów.  
   
--   Aby uzyskać więcej informacji, zobacz [Przegląd obrazowanie](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
+-   Aby uzyskać więcej informacji, zobacz [Przegląd obrazowanie](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  Gdy animowanie Skaluj wszelkie mapy bitowej, domyślny obraz o wysokiej jakości ponowne próbkowanie algorytm czasami mogą wykorzystywać wystarczających zasobów systemu, aby spowodować spadek współczynnik ramki, efektywnie powoduje animacji odtwarzanie przerywane. Ustawiając <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> właściwość <xref:System.Windows.Media.RenderOptions> obiekt <xref:System.Windows.Media.BitmapScalingMode.LowQuality> płynniejszą animację można utworzyć podczas skalowania mapy bitowej. <xref:System.Windows.Media.BitmapScalingMode.LowQuality> Tryb informuje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparat renderowania, aby przełączyć się z algorytmem zoptymalizowane pod kątem jakości jest algorytm zoptymalizowane pod kątem szybkości, podczas przetwarzania obrazów.  
   
  Poniższy przykład pokazuje, jak ustawić <xref:System.Windows.Media.BitmapScalingMode> dla obiektu obrazu.  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
- [!code-vb[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
  Domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie będzie buforować zawartość renderowanych <xref:System.Windows.Media.TileBrush> obiekty, takie jak <xref:System.Windows.Media.DrawingBrush> i <xref:System.Windows.Media.VisualBrush>. W scenariuszach statyczne gdzie zawartości ani korzystania z <xref:System.Windows.Media.TileBrush> w scenie ulega zmianie, to sens, ponieważ zmniejsza jego wykorzystanie pamięci wideo. Nie powoduje ona jak znacznie sens, kiedy <xref:System.Windows.Media.TileBrush> z zawartości statycznej jest używane w taki sposób, niestatycznej — na przykład, kiedy statycznego <xref:System.Windows.Media.DrawingBrush> lub <xref:System.Windows.Media.VisualBrush> jest mapowany na powierzchni obiektu rotacji 3D. Domyślne zachowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest ponownego renderowania zawartości całego <xref:System.Windows.Media.DrawingBrush> lub <xref:System.Windows.Media.VisualBrush> w każdej klatce, nawet jeśli zawartość jest niezmiennych.  
@@ -96,17 +96,17 @@ ms.locfileid: "54630817"
   
  Poniższy przykład pokazuje, jak za pomocą opcji wskazówka buforowania <xref:System.Windows.Media.DrawingBrush>.  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
- [!code-vb[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planowanie wydajności aplikacji](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Zachowanie obiektu](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Inne zalecenia dotyczące wydajności](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [Animacja — porady i wskazówki](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
+- [Planowanie wydajności aplikacji](planning-for-application-performance.md)
+- [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)
+- [Układ i projekt](optimizing-performance-layout-and-design.md)
+- [Zachowanie obiektu](optimizing-performance-object-behavior.md)
+- [Zasoby aplikacji](optimizing-performance-application-resources.md)
+- [Tekst](optimizing-performance-text.md)
+- [Powiązanie danych](optimizing-performance-data-binding.md)
+- [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)
+- [Animacja — porady i wskazówki](../graphics-multimedia/animation-tips-and-tricks.md)

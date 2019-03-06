@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 503e9cb0ea0fcfb34b326e80930f5ac829c3b4db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585201"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368730"
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
 Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] model kontroli znacząco zmniejsza potrzebę tworzenia nowego formantu. Jednak w niektórych przypadkach może być nadal należy utworzyć formant niestandardowy. W tym temacie omówiono funkcje, które zminimalizować potrzebę tworzenia formantu niestandardowego i innej kontrolki tworzenia modeli w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Również w tym temacie pokazano, jak utworzyć nowy formant.  
@@ -24,11 +24,11 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 ## <a name="alternatives-to-writing-a-new-control"></a>Alternatywy dla zapisywania nowego formantu  
  W przeszłości Jeśli chcesz uzyskać dostosowane środowisko z istniejącej kontrolki ograniczały użytkowników do zmiany standardowe właściwości kontrolki, takie jak kolor tła, szerokość obramowania i rozmiar czcionki. Dalej rozszerzać wygląd i zachowanie kontrolki poza tych wstępnie zdefiniowanych parametrów, należy utworzyć nowy formant, zwykle przez dziedziczenie z istniejącej kontrolki i zastąpienie metody, które są odpowiedzialne za narysowanie formantu.  Mimo że nadal jest opcją, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] umożliwia użytkownikowi dostosowywanie istniejących kontrolek przy użyciu rozbudowanych model zawartości, style, szablonów i wyzwalacze. Poniższa lista zawiera przykłady, jak te funkcje mogą być używane w taki sposób, aby tworzyć niestandardowe i spójne środowiska bez konieczności tworzenia nowego formantu.  
   
--   **Sformatowana zawartość.** Wiele standardowych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty obsługują sformatowanej zawartości. Na przykład właściwość content <xref:System.Windows.Controls.Button> typu <xref:System.Object>, więc teoretycznie niczego mogą być wyświetlane na <xref:System.Windows.Controls.Button>.  Aby wyświetlić obraz i tekst przycisku, można dodać obraz i <xref:System.Windows.Controls.TextBlock> do <xref:System.Windows.Controls.StackPanel> i przypisać <xref:System.Windows.Controls.StackPanel> do <xref:System.Windows.Controls.ContentControl.Content%2A> właściwości. Ponieważ formanty można wyświetlić [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy wizualne i dowolne dane, jest mniej wymagane, aby utworzyć nową kontrolkę lub zmodyfikować istniejącą kontrolkę do obsługi złożonych wizualizacji. Aby uzyskać więcej informacji na temat modelu zawartości dla <xref:System.Windows.Controls.Button> i innej zawartości modeli w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [Model zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
+-   **Sformatowana zawartość.** Wiele standardowych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty obsługują sformatowanej zawartości. Na przykład właściwość content <xref:System.Windows.Controls.Button> typu <xref:System.Object>, więc teoretycznie niczego mogą być wyświetlane na <xref:System.Windows.Controls.Button>.  Aby wyświetlić obraz i tekst przycisku, można dodać obraz i <xref:System.Windows.Controls.TextBlock> do <xref:System.Windows.Controls.StackPanel> i przypisać <xref:System.Windows.Controls.StackPanel> do <xref:System.Windows.Controls.ContentControl.Content%2A> właściwości. Ponieważ formanty można wyświetlić [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy wizualne i dowolne dane, jest mniej wymagane, aby utworzyć nową kontrolkę lub zmodyfikować istniejącą kontrolkę do obsługi złożonych wizualizacji. Aby uzyskać więcej informacji na temat modelu zawartości dla <xref:System.Windows.Controls.Button> i innej zawartości modeli w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], zobacz [Model zawartości WPF](wpf-content-model.md).  
   
 -   **Style.** A <xref:System.Windows.Style> to zbiór wartości, które reprezentują właściwości formantu. Przy użyciu stylów, można utworzyć wielokrotnego użytku reprezentacja kontroli żądany wygląd i zachowanie, bez konieczności pisania nowego formantu. Załóżmy na przykład chcesz wyświetlić wszystkie swoje <xref:System.Windows.Controls.TextBlock> kontrolki ma czerwony, Arial czcionki o rozmiarze czcionki 14. Można utworzyć styl jako zasób i odpowiednio ustawić odpowiednie właściwości. Następnie każdy <xref:System.Windows.Controls.TextBlock> sytuacja: dodajesz do Twojej aplikacji będą mieć tego samego wygląd.  
   
--   **Szablony danych.** A <xref:System.Windows.DataTemplate> pozwala dostosować sposób wyświetlania danych w formancie. Na przykład <xref:System.Windows.DataTemplate> może służyć do określenia, jak dane są wyświetlane w <xref:System.Windows.Controls.ListBox>.  Aby na przykład, zobacz [Przegląd Szablonowanie danych](../../../../docs/framework/wpf/data/data-templating-overview.md).  Oprócz Dostosowywanie wyglądu danych <xref:System.Windows.DataTemplate> może zawierać elementy interfejsu użytkownika, który zapewnia dużą elastyczność w niestandardowych interfejsów użytkownika.  Na przykład za pomocą <xref:System.Windows.DataTemplate>, możesz utworzyć <xref:System.Windows.Controls.ComboBox> , w której każdy element zawiera pole wyboru.  
+-   **Szablony danych.** A <xref:System.Windows.DataTemplate> pozwala dostosować sposób wyświetlania danych w formancie. Na przykład <xref:System.Windows.DataTemplate> może służyć do określenia, jak dane są wyświetlane w <xref:System.Windows.Controls.ListBox>.  Aby na przykład, zobacz [Przegląd Szablonowanie danych](../data/data-templating-overview.md).  Oprócz Dostosowywanie wyglądu danych <xref:System.Windows.DataTemplate> może zawierać elementy interfejsu użytkownika, który zapewnia dużą elastyczność w niestandardowych interfejsów użytkownika.  Na przykład za pomocą <xref:System.Windows.DataTemplate>, możesz utworzyć <xref:System.Windows.Controls.ComboBox> , w której każdy element zawiera pole wyboru.  
   
 -   **Szablony kontrolek.** Wiele kontrolek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] użyj <xref:System.Windows.Controls.ControlTemplate> do zdefiniowania kontrolki struktury i wygląd, który oddziela wyglądu formantu z funkcji kontroli. Znacznie można zmienić wygląd kontrolki poprzez zmianę definicji jego <xref:System.Windows.Controls.ControlTemplate>.  Na przykład załóżmy, że chcesz, aby formant, który wygląda jak sygnalizatora. Ten formant ma prosty interfejs użytkownika i funkcje.  Kontrolka jest trzy koła, tylko jeden z nich może być włączone w danym momencie. Po niektórych odbicie, należy być może należy pamiętać, że <xref:System.Windows.Controls.RadioButton> oferuje funkcje tylko jeden zaznaczony w danym momencie, ale domyślny wygląd <xref:System.Windows.Controls.RadioButton> nothing wygląda światła na sygnalizatora.  Ponieważ <xref:System.Windows.Controls.RadioButton> używa szablonu kontrolki do definiowania jego wygląd można łatwo zmienić definicję <xref:System.Windows.Controls.ControlTemplate> zgodnie z wymaganiami, kontrolki i używaj przycisków radiowych umożliwia Twojej sygnalizatora.  
   
@@ -37,7 +37,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 -   **Wyzwalacze.** A <xref:System.Windows.Trigger> dynamicznie zmieniać wygląd i zachowanie kontrolki bez tworzenia nowego formantu. Załóżmy na przykład, posiadasz wiele <xref:System.Windows.Controls.ListBox> formantów w aplikacji i elementy w każdym <xref:System.Windows.Controls.ListBox> jest pogrubiony i czerwony, gdy są zaznaczone. Twoje pierwsze instinct może być utworzyć klasę, która dziedziczy po elemencie <xref:System.Windows.Controls.ListBox> i zastąpić <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> metodę, aby zmienić wygląd wybranego elementu, ale lepszym rozwiązaniem jest dodanie wyzwalacza do styl <xref:System.Windows.Controls.ListBoxItem> zmienia się wygląd wybrany element. Wyzwalacz umożliwia zmianę wartości właściwości lub podjąć działania w oparciu o wartość właściwości. <xref:System.Windows.EventTrigger> Umożliwia akcje, kiedy wystąpi zdarzenie.  
   
- Aby uzyskać więcej informacji na temat style, szablonów i wyzwalaczy, zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Aby uzyskać więcej informacji na temat style, szablonów i wyzwalaczy, zobacz [Tworzenie szablonów i stylów](styling-and-templating.md).  
   
  Ogólnie rzecz biorąc Jeśli formant odzwierciedla funkcjonalność istniejącej kontrolki, ale formant będzie wyglądać inaczej, najpierw rozważ, czy można użyć dowolnej z metod opisanych w tej sekcji w celu zmiany wyglądu istniejącej kontrolki.  
   
@@ -72,7 +72,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 ### <a name="deriving-from-frameworkelement"></a>Wyprowadzanie z elementu FrameworkElement  
  Formanty, które wynikają z <xref:System.Windows.Controls.UserControl> lub <xref:System.Windows.Controls.Control> opierają się na tworzenie istniejące elementy. W wielu sytuacjach jest to dopuszczalne rozwiązanie, ponieważ każdy obiekt, który dziedziczy z <xref:System.Windows.FrameworkElement> mogą znajdować się w <xref:System.Windows.Controls.ControlTemplate>. Istnieją jednak czasy, kiedy wygląd formantu wymaga więcej niż funkcje kompozycji prosty element. W tych scenariuszach bazowanie składnika na <xref:System.Windows.FrameworkElement> jest najlepszym wyborem.  
   
- Istnieją dwie metody standardowego do kompilowania <xref:System.Windows.FrameworkElement>— na podstawie składników: bezpośrednie renderowanie i niestandardowych kompozycji elementu. Bezpośrednie renderowania obejmuje zastępowanie <xref:System.Windows.UIElement.OnRender%2A> metody <xref:System.Windows.FrameworkElement> i zapewniając <xref:System.Windows.Media.DrawingContext> operacje, które jawnie zdefiniować wizualizacji składnika. Jest to metoda posługują się <xref:System.Windows.Controls.Image> i <xref:System.Windows.Controls.Border>. Element niestandardowy kompozycji pociąga za sobą przy użyciu obiektów typu <xref:System.Windows.Media.Visual> do redagowania wygląd danego składnika. Aby uzyskać przykład, zobacz [przy użyciu obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track> Oto przykład kontrolki w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kompozycji elementu niestandardowego, który używa. Istnieje również możliwość mieszać bezpośrednie renderowania i niestandardowego elementu złożenia w tej samej kontrolki.  
+ Istnieją dwie metody standardowego do kompilowania <xref:System.Windows.FrameworkElement>— na podstawie składników: bezpośrednie renderowanie i niestandardowych kompozycji elementu. Bezpośrednie renderowania obejmuje zastępowanie <xref:System.Windows.UIElement.OnRender%2A> metody <xref:System.Windows.FrameworkElement> i zapewniając <xref:System.Windows.Media.DrawingContext> operacje, które jawnie zdefiniować wizualizacji składnika. Jest to metoda posługują się <xref:System.Windows.Controls.Image> i <xref:System.Windows.Controls.Border>. Element niestandardowy kompozycji pociąga za sobą przy użyciu obiektów typu <xref:System.Windows.Media.Visual> do redagowania wygląd danego składnika. Aby uzyskać przykład, zobacz [przy użyciu obiektów DrawingVisual](../graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track> Oto przykład kontrolki w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kompozycji elementu niestandardowego, który używa. Istnieje również możliwość mieszać bezpośrednie renderowania i niestandardowego elementu złożenia w tej samej kontrolki.  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>Korzyści wynikające z elementu FrameworkElement  
  Należy wziąć pod uwagę pochodząca od <xref:System.Windows.FrameworkElement> Jeśli dowolny z następujących warunków:  
@@ -112,16 +112,16 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
     -   Metadane dla właściwości. Metadane zawierają wartość domyślną właściwości <xref:System.Windows.CoerceValueCallback> i <xref:System.Windows.PropertyChangedCallback>.  
   
--   Zdefiniuj [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwość o nazwie `Value`, który ma taką samą nazwę, które jest używane do rejestrowania właściwości zależności poprzez implementację właściwości `get` i `set` metod dostępu. Należy pamiętać, że `get` i `set` wywoływać tylko metody dostępu <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> odpowiednio. Zalecane jest, że metody dostępu właściwości zależności nie zawierają dodatkowej logiki, ponieważ klienci i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można pominąć metody dostępu i wywołania <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Na przykład, gdy właściwość jest powiązana z danych źródłowych, właściwości `set` dostępu nie zostanie wywołana.  Zamiast opcji dodawania dodatkową logikę do pobierania i ustaw metody dostępu, użyj <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, i <xref:System.Windows.PropertyChangedCallback> delegatów odpowiadanie na lub sprawdź wartość, gdy zmienia się.  Aby uzyskać więcej informacji na temat tych wywołań zwrotnych, zobacz [zależność wartości wywołania zwrotnego i walidacji](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+-   Zdefiniuj [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwość o nazwie `Value`, który ma taką samą nazwę, które jest używane do rejestrowania właściwości zależności poprzez implementację właściwości `get` i `set` metod dostępu. Należy pamiętać, że `get` i `set` wywoływać tylko metody dostępu <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> odpowiednio. Zalecane jest, że metody dostępu właściwości zależności nie zawierają dodatkowej logiki, ponieważ klienci i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można pominąć metody dostępu i wywołania <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> bezpośrednio. Na przykład, gdy właściwość jest powiązana z danych źródłowych, właściwości `set` dostępu nie zostanie wywołana.  Zamiast opcji dodawania dodatkową logikę do pobierania i ustaw metody dostępu, użyj <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.CoerceValueCallback>, i <xref:System.Windows.PropertyChangedCallback> delegatów odpowiadanie na lub sprawdź wartość, gdy zmienia się.  Aby uzyskać więcej informacji na temat tych wywołań zwrotnych, zobacz [zależność wartości wywołania zwrotnego i walidacji](../advanced/dependency-property-callbacks-and-validation.md).  
   
 -   Zdefiniuj metodę <xref:System.Windows.CoerceValueCallback> o nazwie `CoerceValue`. `CoerceValue` zapewnia, że `Value` jest większa lub równa `MinValue` i mniejsza niż lub równa `MaxValue`.  
   
 -   Zdefiniuj metodę <xref:System.Windows.PropertyChangedCallback>o nazwie `OnValueChanged`. `OnValueChanged` Tworzy <xref:System.Windows.RoutedPropertyChangedEventArgs%601> obiektu i przygotowuje podnieść `ValueChanged` zdarzenia trasowanego. Zdarzenia trasowane zostały omówione w następnej sekcji.  
   
- [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
- [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
+ [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
+ [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
   
- Aby uzyskać więcej informacji, zobacz [niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Aby uzyskać więcej informacji, zobacz [niestandardowe właściwości zależności](../advanced/custom-dependency-properties.md).  
   
 ### <a name="use-routed-events"></a>Użyj zdarzenia trasowanego  
  Podobnie jak zależności właściwości rozszerzają pojęcie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] właściwości z dodatkowymi funkcjami, zdarzenia trasowane rozszerzają pojęcie standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzenia. Podczas tworzenia nowego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki, jest również dobrym rozwiązaniem do zaimplementowania zdarzenia jako zdarzenia trasowane, ponieważ zdarzenia trasowanego obsługuje następujące zachowanie:  
@@ -130,7 +130,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 -   Zdarzenia trasowane mogą być używane w <xref:System.Windows.EventSetter>, które umożliwia deweloperom aplikacji określenie program obsługi zdarzenia w stylu.  
   
--   Zdarzenia trasowane mogą być używane w <xref:System.Windows.EventTrigger>, która jest przydatne w przypadku animowanie właściwości przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+-   Zdarzenia trasowane mogą być używane w <xref:System.Windows.EventTrigger>, która jest przydatne w przypadku animowanie właściwości przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
  W poniższym przykładzie zdefiniowano zdarzenia trasowanego, wykonując następujące czynności:  
   
@@ -150,26 +150,26 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 -   Utwórz metodę chroniony, wirtualny o nazwie `OnValueChanged` która zgłasza `ValueChanged` zdarzeń.  
   
- [!code-csharp[UserControlNumericUpDown#RoutedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
- [!code-vb[UserControlNumericUpDown#RoutedEvent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
+ [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
+ [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]  
   
- Aby uzyskać więcej informacji, zobacz [Przegląd zdarzeń kierowane](../../../../docs/framework/wpf/advanced/routed-events-overview.md) i [Utwórz niestandardowe zdarzenie kierowane](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Aby uzyskać więcej informacji, zobacz [Przegląd zdarzeń kierowane](../advanced/routed-events-overview.md) i [Utwórz niestandardowe zdarzenie kierowane](../advanced/how-to-create-a-custom-routed-event.md).  
   
 ### <a name="use-binding"></a>Użyj powiązań  
  Oddzielenie interfejsu użytkownika formantu od jej logiki, należy wziąć pod uwagę przy użyciu powiązania danych. Jest to szczególnie ważne w przypadku określenia jej wyglądu formantu za pomocą <xref:System.Windows.Controls.ControlTemplate>. Gdy używasz wiązania danych, może być wyeliminować potrzebę odwoływać się do określonych części interfejsu użytkownika z kodu. To dobry pomysł, aby unikać odwoływania się do elementów, które znajdują się w <xref:System.Windows.Controls.ControlTemplate> ponieważ gdy kod odwołuje się do elementów, które znajdują się w <xref:System.Windows.Controls.ControlTemplate> i <xref:System.Windows.Controls.ControlTemplate> ulegnie zmianie, potrzeb odnośny element do uwzględnienia w nowym <xref:System.Windows.Controls.ControlTemplate>.  
   
  Następujące aktualizacje przykład <xref:System.Windows.Controls.TextBlock> z `NumericUpDown` kontroli, przypisanie nazwy do niego odwołuje się do pola tekstowego według nazwy w kodzie.  
   
- [!code-xaml[UserControlNumericUpDownSimple#UIRefMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml#uirefmarkup)]  
+ [!code-xaml[UserControlNumericUpDownSimple#UIRefMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml#uirefmarkup)]  
   
- [!code-csharp[UserControlNumericUpDownSimple#UIRefCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml.cs#uirefcode)]
- [!code-vb[UserControlNumericUpDownSimple#UIRefCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDownSimple/VisualBasic/NumericUpDown.xaml.vb#uirefcode)]  
+ [!code-csharp[UserControlNumericUpDownSimple#UIRefCode](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml.cs#uirefcode)]
+ [!code-vb[UserControlNumericUpDownSimple#UIRefCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDownSimple/VisualBasic/NumericUpDown.xaml.vb#uirefcode)]  
   
  W poniższym przykładzie użyto powiązania, aby osiągnąć ten sam efekt.  
   
- [!code-xaml[UserControlNumericUpDown#Binding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml#binding)]  
+ [!code-xaml[UserControlNumericUpDown#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml#binding)]  
   
- Aby uzyskać więcej informacji na temat tworzenia powiązań danych, zobacz [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Aby uzyskać więcej informacji na temat tworzenia powiązań danych, zobacz [Data Binding Overview](../data/data-binding-overview.md).  
   
 ### <a name="design-for-designers"></a>Projektowanie pod kątem projektantów  
  Aby uzyskać pomoc techniczną w przypadku kontrolek niestandardowych WPF w [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] (na przykład właściwość edytowaniu w programie w oknie dialogowym Właściwości), należy przestrzegać następujących wytycznych.  Aby uzyskać więcej informacji na temat tworzenia dla [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], zobacz [projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
@@ -186,7 +186,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 -   `Set` *PropertyName* i `Get` *PropertyName* musi kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> metod w zależności docelowego obiektu odpowiednio. Projektanci mogą uzyskiwać dostęp do dołączona właściwość wywoływania przez otoki metody lub wybierając bezpośrednie wywołanie do obiektu docelowego zależności.  
   
- Aby uzyskać więcej informacji na temat dołączone właściwości, zobacz [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
+ Aby uzyskać więcej informacji na temat dołączone właściwości, zobacz [Przegląd właściwości dołączonych](../advanced/attached-properties-overview.md).  
   
 ### <a name="define-and-use-shared-resources"></a>Definiowanie i korzystanie z zasobów udostępnionych  
  Może zawierać kontrolki z tego samego zestawu aplikacji, lub można spakować formantu w osobnym zestawie, który może być używany w wielu aplikacjach. W większości przypadków informacje omówione w tym temacie mają zastosowanie niezależnie od używanej metody.  Istnieje jednak jeden różnica warte odnotowania.  Po umieszczeniu formantu z tego samego zestawu jako aplikacja jest bezpłatna dodać zasoby globalne do pliku App.xaml. Jednak zestaw, który zawiera tylko formanty nie <xref:System.Windows.Application> obiekt skojarzony z nim, dlatego nie jest plik App.xaml.  
@@ -210,23 +210,23 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 #### <a name="defining-resources-at-the-element-level"></a>Definiowanie zasobów na poziomie elementu  
  Udostępnione zasoby na poziomie elementu, można zdefiniować, tworząc słownika zasobów niestandardowych i scalając kontroli nad słownika zasobów.  Przy użyciu tej metody możesz nazwać Twojego pliku zasobu, dowolnych znaków i może być w tym samym folderze co kontrolki. Zasoby na poziomie elementu, można również użyć zwykłe ciągi jako klucze. Poniższy przykład tworzy <xref:System.Windows.Media.LinearGradientBrush> plik zasobów o nazwie Dictionary1.xaml.  
   
- [!code-xaml[SharedResources#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]  
+ [!code-xaml[SharedResources#1](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]  
   
  Po zdefiniowaniu słownika, musisz scalić je z kontroli nad słownika zasobów.  Można to zrobić za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lub kodu.  
   
  Poniższy przykład scala słownika zasobów za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- [!code-xaml[SharedResources#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml#2)]  
+ [!code-xaml[SharedResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml#2)]  
   
  Wadą tego podejścia jest to, że <xref:System.Windows.ResourceDictionary> obiekt jest tworzony za każdym razem, możesz odwoływać się do niego.  Na przykład, jeśli masz 10 niestandardowe formanty w bibliotece i scalić słowniki zasobów udostępnionych, dla każdego formantu przy użyciu XAML, możesz utworzyć 10 identyczne <xref:System.Windows.ResourceDictionary> obiektów.  Można tego uniknąć, tworząc klasy statycznej, scala zasoby w kodzie i zwraca wynikowy <xref:System.Windows.ResourceDictionary>.  
   
  Poniższy przykład tworzy klasę, która zwraca wspólny <xref:System.Windows.ResourceDictionary>.  
   
- [!code-csharp[SharedResources#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/SharedDictionaryManager.cs#3)]  
+ [!code-csharp[SharedResources#3](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/SharedDictionaryManager.cs#3)]  
   
  Poniższy przykład scala zasobu udostępnionego z zasobami kontrolki niestandardowej w Konstruktorze kontrolki przed wywołaniem `InitializeComponent`.  Ponieważ `SharedDictionaryManager.SharedDictionary` jest właściwość statyczna <xref:System.Windows.ResourceDictionary> jest tworzony tylko jeden raz. Ponieważ słownik zasobów została scalona przed `InitializeComponent` została wywołana, zasoby są dostępne do formantu w jego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku.  
   
- [!code-csharp[SharedResources#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
+ [!code-csharp[SharedResources#4](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
   
 #### <a name="defining-resources-at-the-theme-level"></a>Definiowanie zasobów na poziomie motywu  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia tworzenie zasobów dla różnych motywy Windows.  Jako autor kontrolki można zdefiniować zasób dla określonych motyw Zmienianie wyglądu formantu w zależności od tego, jakie motyw jest używany. Na przykład wygląd <xref:System.Windows.Controls.Button> w klasycznym Windows motywu (motyw domyślny dla Windows 2000) różni się od <xref:System.Windows.Controls.Button> w motywie Windows Luna (motyw domyślny dla Windows XP) ponieważ <xref:System.Windows.Controls.Button> używa innego <xref:System.Windows.Controls.ControlTemplate> dla każdego motywu.  
@@ -248,27 +248,27 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
  Po umieszczeniu <xref:System.Windows.Controls.ControlTemplate> we wszystkich plików słowników zasobów specyficznych dla motywów, należy utworzyć Konstruktor statyczny dla formantu i wywołaniu <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> metody <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>, jak pokazano w poniższym przykładzie.  
   
- [!code-csharp[CustomControlNumericUpDownOneProject#StaticConstructor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/CSharp/NumericUpDown.cs#staticconstructor)]
- [!code-vb[CustomControlNumericUpDownOneProject#StaticConstructor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/visualbasic/numericupdown.vb#staticconstructor)]  
+ [!code-csharp[CustomControlNumericUpDownOneProject#StaticConstructor](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/CSharp/NumericUpDown.cs#staticconstructor)]
+ [!code-vb[CustomControlNumericUpDownOneProject#StaticConstructor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/visualbasic/numericupdown.vb#staticconstructor)]  
   
 ##### <a name="defining-and-referencing-keys-for-theme-resources"></a>Definiowanie i odwołania do kluczy dla motywu zasobów  
  Podczas definiowania zasobów na poziomie elementu, można przypisać ciąg jako klucz, a dostęp do zasobów za pomocą ciągu. Gdy zdefiniujesz zasób na poziomie motywu, należy użyć <xref:System.Windows.ComponentResourceKey> jako klucz.  W poniższym przykładzie zdefiniowano zasób w klasie generic.xaml.  
   
- [!code-xaml[ThemeResourcesControlLibrary#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/Themes/generic.xaml#5)]  
+ [!code-xaml[ThemeResourcesControlLibrary#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/Themes/generic.xaml#5)]  
   
  Poniższy przykład odwołuje się do zasobu, określając <xref:System.Windows.ComponentResourceKey> jako klucz.  
   
- [!code-xaml[ThemeResourcesControlLibrary#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/NumericUpDown.xaml#6)]  
+ [!code-xaml[ThemeResourcesControlLibrary#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/NumericUpDown.xaml#6)]  
   
 ##### <a name="specifying-the-location-of-theme-resources"></a>Określanie lokalizacji zasobów motywu  
  Aby znaleźć zasoby dla formantu, hostingu aplikacji musi wiedzieć, czy zestaw zawiera zasoby specyficzne dla formantu. Można osiągnąć, dodając <xref:System.Windows.ThemeInfoAttribute> do zestawu, który zawiera formant. <xref:System.Windows.ThemeInfoAttribute> Ma <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation%2A> właściwość, która określa lokalizację zasoby ogólne i <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A> właściwość, która określa lokalizację zasoby specyficzne dla motywu.  
   
  Poniższy przykład ustawia <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation%2A> i <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A> właściwości <xref:System.Windows.ResourceDictionaryLocation.SourceAssembly>, aby określić, czy z tego samego zestawu jako formant zasobów ogólnych i specyficznych dla motywów.  
   
- [!code-csharp[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
- [!code-vb[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
+ [!code-csharp[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
+ [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>Zobacz także
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)
+- [Pakowanie URI w WPF](../app-development/pack-uris-in-wpf.md)
+- [Niestandardowe dostosowywanie kontrolki](control-customization.md)

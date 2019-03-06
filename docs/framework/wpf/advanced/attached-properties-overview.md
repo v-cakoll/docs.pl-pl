@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706235"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370127"
 ---
 # <a name="attached-properties-overview"></a>Przegląd Właściwości dołączone
 
@@ -20,7 +20,7 @@ Dołączona właściwość to pojęcie z definicją XAML. Dołączona właściwo
 
 ## Wymagania wstępne <a name="prerequisites"></a>
 
-W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Aby skorzystać z przykładów w tym temacie, należy również zrozumieć XAML i wiedzieć, jak pisać aplikacje WPF.
+W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](dependency-properties-overview.md). Aby skorzystać z przykładów w tym temacie, należy również zrozumieć XAML i wiedzieć, jak pisać aplikacje WPF.
 
 ## Dlaczego warto korzystać z właściwości dołączone <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ W XAML, ustaw właściwości dołączone przy użyciu składni *AttachedProperty
 
 Oto przykład, jak można ustawić <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> w XAML:
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 Należy pamiętać, że użycie przypomina nieco właściwość statyczna; Zawsze sprawdzaj typ <xref:System.Windows.Controls.DockPanel> który jest właścicielem i rejestruje dołączona właściwość zamiast odwołujące się do dowolnego wystąpienia określonego przez nazwę.
 
-Ponadto ponieważ dołączoną właściwość w XAML jest atrybut, który jest ustawiony w znacznikach, ustalonej operacji ma wszystkie znaczenie. Nie można bezpośrednio pobrać właściwość w XAML, chociaż istnieją pewne mechanizmy pośrednich do porównywania wartości, takich jak wyzwalacze w stylach (Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)).
+Ponadto ponieważ dołączoną właściwość w XAML jest atrybut, który jest ustawiony w znacznikach, ustalonej operacji ma wszystkie znaczenie. Nie można bezpośrednio pobrać właściwość w XAML, chociaż istnieją pewne mechanizmy pośrednich do porównywania wartości, takich jak wyzwalacze w stylach (Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Dołączona właściwość wdrożenia na platformie WPF
 
@@ -64,8 +64,8 @@ Właściwości dołączone w WPF nie masz typowej [!INCLUDE[TLA2#tla_clr](../../
 
 Poniższy przykład pokazuje, jak można ustawić dołączonej właściwości w kodzie. W tym przykładzie `myCheckBox` jest wystąpieniem <xref:System.Windows.Controls.CheckBox> klasy.
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 Podobnie jak XAML zamierzone, Zapisz, jeśli `myCheckBox` nie była już dodana jako element podrzędny `myDockPanel` przez trzeci wiersz kodu, czwarty wiersz kodu nie może zgłosić wyjątek, ale wartość właściwości nie może mieć interakcji z <xref:System.Windows.Controls.DockPanel> nadrzędną, a tym samym Spowoduje to nic nie rób. Tylko <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> wartość zestawu na nie zawiera elementu podrzędnego w połączeniu z obecności <xref:System.Windows.Controls.DockPanel> elementu nadrzędnego spowoduje zachowanie obowiązujące w renderowanym aplikacji. (W tym przypadku użytkownik może ustawić dołączonej właściwości, a następnie dołączyć do drzewa. Lub możesz można dołączyć do drzewa, a następnie ustaw dołączona właściwość. Kolejność albo akcji zawiera ten sam wynik.)
 
@@ -73,7 +73,7 @@ Podobnie jak XAML zamierzone, Zapisz, jeśli `myCheckBox` nie była już dodana 
 
 Podczas rejestrowania właściwości <xref:System.Windows.FrameworkPropertyMetadata> jest ustawiona na określ cechy właściwości, takie jak czy właściwość wpływa na renderowanie, miary i tak dalej. Metadane dla dołączoną właściwość jest zwykle nie różni się od właściwości zależności. Jeśli w zastąpieniu dołączonej właściwości metadanych określać wartość domyślną, wartość ta wynosi wartość domyślną niejawne dołączona właściwość w wystąpieniach klas nadrzędnych. W szczególności wartość domyślna jest zgłaszany w przypadku niektórych przetwarzania zapytań dla wartości dołączoną właściwość za pośrednictwem `Get` dostępu metody dla tej właściwości, określając wystąpienie klasy, gdzie określone metadane, a wartość w tym dołączona właściwość była w przeciwnym razie nie jest ustawiona.
 
-Jeśli chcesz włączyć dziedziczenie wartości właściwości we właściwości, należy użyć załączonych właściwości, a nie właściwości niedołączonych zależności. Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).
+Jeśli chcesz włączyć dziedziczenie wartości właściwości we właściwości, należy użyć załączonych właściwości, a nie właściwości niedołączonych zależności. Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](property-value-inheritance.md).
 
 ## Niestandardowe dołączone właściwości <a name="custom"></a>
 
@@ -83,7 +83,7 @@ Dołączona właściwość możesz utworzyć po przyczynę ma ustawienie mechani
 
 Inny scenariusz użycia dołączoną właściwość jest klasa reprezentuje usługę, gdy chcesz, aby klasy, aby można było zintegrować usługę więcej w sposób przezroczysty.
 
-Jeszcze inny scenariusz polega na otrzymywanie pomocy projektanta WPF w usłudze Visual Studio, takie jak **właściwości** okna do edycji. Aby uzyskać więcej informacji, zobacz [omówienie tworzenia kontrolek](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
+Jeszcze inny scenariusz polega na otrzymywanie pomocy projektanta WPF w usłudze Visual Studio, takie jak **właściwości** okna do edycji. Aby uzyskać więcej informacji, zobacz [omówienie tworzenia kontrolek](../controls/control-authoring-overview.md).
 
 Jak wspomniano wcześniej, jeśli chcesz używać dziedziczenie wartości właściwości należy zarejestrować jako dołączona właściwość.
 
@@ -118,8 +118,8 @@ Podpis dla **Set_PropertyName_** metody dostępu muszą być:
 
 W poniższym przykładzie pokazano rejestrację właściwości zależności (przy użyciu <xref:System.Windows.DependencyProperty.RegisterAttached%2A> metody), jak również **Get_PropertyName_** i **Set_PropertyName_** metod dostępu. W tym przykładzie nazwa dołączonych właściwości jest `IsBubbleSource`. W związku z tym, musi nosić nazwę metody dostępu `GetIsBubbleSource` i `SetIsBubbleSource`.
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>Atrybuty dołączone właściwości
 
@@ -135,16 +135,16 @@ WPF definiuje kilka [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includ
 
 ## Dowiedz się więcej na temat dołączone właściwości <a name="more"></a>
 
--   Aby uzyskać więcej informacji na temat tworzenia dołączoną właściwość, zobacz [rejestrowanie dołączonych właściwości](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md).
+-   Aby uzyskać więcej informacji na temat tworzenia dołączoną właściwość, zobacz [rejestrowanie dołączonych właściwości](how-to-register-an-attached-property.md).
 
--   Zobacz więcej zaawansowanych scenariuszy użycia dla właściwości zależności i dołączonych właściwości [niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).
+-   Zobacz więcej zaawansowanych scenariuszy użycia dla właściwości zależności i dołączonych właściwości [niestandardowe właściwości zależności](custom-dependency-properties.md).
 
 -   Możesz także zarejestrować właściwość dołączonej właściwości, jak i właściwość zależności, ale nadal następnie udostępnić implementacje "otoki". W tym przypadku właściwość można ustawić w tym elemencie lub dowolnego elementu przy użyciu XAML dołączonych właściwości składni. Na przykład właściwość o odpowiedni scenariusz użycia zarówno standardowe, jak i dołączonych <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.DependencyProperty>
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Rejestrowanie dołączonej właściwości](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)
+- [Niestandardowe właściwości zależności](custom-dependency-properties.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Rejestrowanie dołączonej właściwości](how-to-register-an-attached-property.md)

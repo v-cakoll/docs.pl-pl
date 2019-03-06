@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524003"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351999"
 ---
 # <a name="property-change-events"></a>Zdarzenia zmiany właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definiuje kilka zdarzeń, które są wywoływane w odpowiedzi na zmianę wartości właściwości. Często właściwość jest właściwość zależności. Samego zdarzenia jest czasami zdarzenia trasowanego i czasami jest to standard [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Definicja zdarzenia różni się zależnie od scenariusza, ponieważ niektóre zmiany właściwości bardziej odpowiednie są przesyłane za pośrednictwem drzewo elementów, natomiast inne zmiany właściwości są zwykle tylko z kwestią do obiektu, gdy zmianie właściwości.  
@@ -33,7 +33,7 @@ ms.locfileid: "54524003"
   
  Ponieważ stara wartość i nowa wartość, może być kuszące do użycia tego programu obsługi zdarzeń jako moduł weryfikacji dla wartości właściwości. Jednak to nie zamiar projektowania większość zdarzenia zmiany właściwości. Ogólnie rzecz biorąc są udostępniane, dzięki czemu może działać na te wartości w innych obszarach logiki w kodzie, ale rzeczywistego zmieniania wartości z wewnątrz procedury obsługi zdarzeń nie jest zalecane wartości i może spowodować niezamierzone rekursji, w zależności od implementacji programu obsługi .  
   
- Jeśli Twoja własność jest właściwość zależności niestandardowej lub jeśli pracujesz z klasy pochodnej gdzie zdefiniowano kodu podczas tworzenia wystąpienia, jest znacznie lepiej mechanizm śledzenia zmian właściwości, które jest wbudowana w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system właściwości: wywołania zwrotne z systemu właściwości <xref:System.Windows.CoerceValueCallback> i <xref:System.Windows.PropertyChangedCallback>. Aby uzyskać więcej informacji na temat korzystania z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system właściwości do sprawdzania poprawności i wymuszenia, zobacz [zależność wartości wywołania zwrotnego i walidacji](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) i [niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Jeśli Twoja własność jest właściwość zależności niestandardowej lub jeśli pracujesz z klasy pochodnej gdzie zdefiniowano kodu podczas tworzenia wystąpienia, jest znacznie lepiej mechanizm śledzenia zmian właściwości, które jest wbudowana w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system właściwości: wywołania zwrotne z systemu właściwości <xref:System.Windows.CoerceValueCallback> i <xref:System.Windows.PropertyChangedCallback>. Aby uzyskać więcej informacji na temat korzystania z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system właściwości do sprawdzania poprawności i wymuszenia, zobacz [zależność wartości wywołania zwrotnego i walidacji](dependency-property-callbacks-and-validation.md) i [niestandardowe właściwości zależności](custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged Events  
  Jest kolejną parę typy, które są częścią scenariusza zdarzenie zmiany właściwości <xref:System.Windows.DependencyPropertyChangedEventArgs> i <xref:System.Windows.DependencyPropertyChangedEventHandler>. Zdarzenia zmiany właściwości nie są trasowane; są one standardowego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zdarzenia. <xref:System.Windows.DependencyPropertyChangedEventArgs> dane nietypowe zdarzenia typ raportowania, ponieważ nie pochodzi od <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> jest strukturą, nie klasę.  
@@ -59,8 +59,8 @@ ms.locfileid: "54524003"
   
  Wyzwalacze właściwości są ogólnie właściwe dla scenariuszy, w którym należy zmienić jedną lub więcej właściwości wyglądu, oparte na stanie innej właściwości w tym samym elemencie.  
   
- Aby dowiedzieć się więcej na temat wyzwalaczy właściwości, zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Aby dowiedzieć się więcej na temat wyzwalaczy właściwości, zobacz [Tworzenie szablonów i stylów](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)

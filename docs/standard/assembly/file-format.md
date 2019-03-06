@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 186b5cce7a3ab4924097a1212df9945b7e945367
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748761"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369077"
 ---
 # <a name="net-assembly-file-format"></a>Format pliku zestawu .NET
 
@@ -19,7 +19,7 @@ ms.locfileid: "56748761"
 
 > Każdy składnik interfejsu wiersza polecenia niesie ze sobą metadanych dla deklaracji, implementacji i określonego odwołania do tego składnika. Dlatego metadane specyficzne dla danego składnika jest określany jako metadane składnika i Wynikowy składnik jest nazywany można samoopisujące — ECMA 335 I.9.1, składniki i zestawy.
 
-Format jest w pełni określony i standaryzowane jako [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Wszystkie środowiska uruchomieniowe i Kompilatory języka .NET, użyj tego formatu. Obecność udokumentowane i rzadko aktualizowane format binarny został głównych korzyści (prawdopodobnie wymaganie) współdziałanie. Format ostatniej aktualizacji w sposób merytorycznych w 2005 r. (.NET 2.0), aby pomieścić typy ogólne i architektury procesora.
+Format jest w pełni określony i standaryzowane jako [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Wszystkie środowiska uruchomieniowe i Kompilatory języka .NET, użyj tego formatu. Obecność udokumentowane i rzadko aktualizowane format binarny został głównych korzyści (prawdopodobnie wymaganie) współdziałania. Format ostatniej aktualizacji w sposób merytorycznych w 2005 r. (.NET 2.0), aby pomieścić typy ogólne i architektury procesora.
 
 Format jest niezainteresowana Procesora i systemu operacyjnego. Został on użyty w ramach implementacji platformy .NET, przeznaczonych na wiele procesorów i mikroukłady. Sam format ma dziedzictwa Windows, ale jest implementable w dowolnym systemie operacyjnym. Prawdopodobnie największy wybór współdziałania w ramach systemu operacyjnego jest, że większość wartości są przechowywane w formacie little-endian. Nie ma określonych koligacji do rozmiaru wskaźnika maszyny (na przykład 32-bitowy, 64-bitowy).
 

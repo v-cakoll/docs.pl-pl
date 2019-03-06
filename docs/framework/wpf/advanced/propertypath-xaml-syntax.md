@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648767"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363517"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath — Składnia XAML
 <xref:System.Windows.PropertyPath> Obiekt obsługuje złożone wbudowane [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] składnię ustawiania różne właściwości, które przyjmują <xref:System.Windows.PropertyPath> typ jako ich wartość. Ten temat dokumenty <xref:System.Windows.PropertyPath> składni, jakie mają zastosowanie do powiązania i animacji składni.  
@@ -28,7 +28,7 @@ ms.locfileid: "54648767"
 ## <a name="propertypath-for-objects-in-data-binding"></a>Atrybut PropertyPath dla obiektów w powiązaniu danych  
  Wiązanie danych jest [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji zgodnie z którymi możesz powiązać docelowa wartość wskaźnika dowolną właściwość zależności. Jednak źródło powiązania danych nie musi być właściwość zależności; może być dowolnego typu właściwości, który jest rozpoznawany przez dostawcę odpowiednich danych. Ścieżki właściwości szczególnie są używane do <xref:System.Windows.Data.ObjectDataProvider>, używanej do uzyskiwania źródeł powiązania z [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i ich właściwości.  
   
- Należy pamiętać, że powiązania danych [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] nie używa <xref:System.Windows.PropertyPath>, ponieważ nie używa <xref:System.Windows.Data.Binding.Path%2A> w <xref:System.Windows.Data.Binding>. Zamiast tego należy użyć <xref:System.Windows.Data.Binding.XPath%2A> i określ prawidłową składnię języka XPath do [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] danych. <xref:System.Windows.Data.Binding.XPath%2A> jest również określona jako ciąg znaków, ale nie jest opisane w tym miejscu; zobacz [powiązania danych XML przy użyciu XMLDataProvider i zapytań XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
+ Należy pamiętać, że powiązania danych [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] nie używa <xref:System.Windows.PropertyPath>, ponieważ nie używa <xref:System.Windows.Data.Binding.Path%2A> w <xref:System.Windows.Data.Binding>. Zamiast tego należy użyć <xref:System.Windows.Data.Binding.XPath%2A> i określ prawidłową składnię języka XPath do [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] danych. <xref:System.Windows.Data.Binding.XPath%2A> jest również określona jako ciąg znaków, ale nie jest opisane w tym miejscu; zobacz [powiązania danych XML przy użyciu XMLDataProvider i zapytań XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).  
   
  Kluczem do zrozumienia ścieżki właściwości w powiązaniu danych to, czy możliwe jest określanie powiązania wartości pojedynczej właściwości lub zamiast tego można powiązać właściwości obiektu docelowego, przyjmujące list lub kolekcji. Jeśli dokonywane jest wiązanie kolekcji, na przykład powiązanie <xref:System.Windows.Controls.ListBox> rozwinie, w zależności od tego, ile elementów danych znajdują się w kolekcji, a następnie ścieżki właściwości powinny odwoływać się obiekt kolekcji, nie do poszczególnych kolekcji elementów. Aparat powiązanie danych będzie odpowiadał kolekcji używany jako źródło danych na typ elementu docelowego powiązania automatycznie, co spowoduje zachowanie, na przykład podczas wypełniania <xref:System.Windows.Controls.ListBox> z elementów tablicy.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "54648767"
 <object Path="propertyName/propertyNameX" .../>  
 ```  
   
- / W tym składnia jest używana do nawigacji w ramach obiektu źródłowego danych hierarchicznych i wiele kroków do hierarchii z kolejnych / znaki są obsługiwane. Konta przechodzenie źródłowej bieżącą pozycję wskaźnika rekordu jest określany przez synchronizację danych przy użyciu interfejsu użytkownika, jego widoku. Aby uzyskać szczegółowe informacje w powiązaniu z obiekty źródła danych hierarchicznych i koncepcji bieżący wskaźnik rekordu w powiązaniu danych, zobacz [Użyj wzorca szczegółowego z danymi hierarchicznymi](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) lub [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ / W tym składnia jest używana do nawigacji w ramach obiektu źródłowego danych hierarchicznych i wiele kroków do hierarchii z kolejnych / znaki są obsługiwane. Konta przechodzenie źródłowej bieżącą pozycję wskaźnika rekordu jest określany przez synchronizację danych przy użyciu interfejsu użytkownika, jego widoku. Aby uzyskać szczegółowe informacje w powiązaniu z obiekty źródła danych hierarchicznych i koncepcji bieżący wskaźnik rekordu w powiązaniu danych, zobacz [Użyj wzorca szczegółowego z danymi hierarchicznymi](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) lub [Data Binding Overview](../data/data-binding-overview.md).  
   
 > [!NOTE]
 >  Pozornie przypomina tej składni [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Wartość true [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] wyrażenie powiązanie [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] źródła danych nie jest używana jako <xref:System.Windows.Data.Binding.Path%2A> wartości, a zamiast tego należy używać w przypadku wzajemnie się wykluczają <xref:System.Windows.Data.Binding.XPath%2A> właściwości.  
@@ -142,7 +142,7 @@ or
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>Właściwości obiektu Ogólne zagadnienia dotyczące animacji  
- Aby uzyskać więcej informacji na temat animacji pojęć, zobacz [Przegląd Scenorysy](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md) i [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Aby uzyskać więcej informacji na temat animacji pojęć, zobacz [Przegląd Scenorysy](../graphics-multimedia/storyboards-overview.md) i [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
  Typ wartości lub właściwości jest animowany musi być albo <xref:System.Windows.Freezable> typu lub elementu podstawowego. Właściwość, która rozpoczyna się ścieżkę należy rozwiązać nazwę właściwości zależności, która istnieje na określonym <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> typu.  
   
@@ -168,7 +168,7 @@ or
   
  `propertyName2` musi być nazwą właściwości zależności, który istnieje w obiekcie, który jest wartością `propertyName`. Innymi słowy `propertyName2` musi istnieć jako właściwość zależności od typu, który jest `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>.  
   
- Pośrednie przeznaczonych dla animacji jest konieczne ze względu zastosowane style i szablony. Aby skierować je do animacji, konieczne będzie <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> na obiekt docelowy, a nazwa zostaje ustanowione przy [x: Name](../../../../docs/framework/xaml-services/x-name-directive.md) lub <xref:System.Windows.FrameworkElement.Name%2A>. Mimo że szablonu i elementy stylu także mogą mieć nazwy, te nazwy są prawidłowe tylko w ramach namescope stylów i szablonów. (Jeśli szablony i style udostępniona zakresy nazw zaznaczaniu aplikacji, nazwy nie może być unikatowe. Style i szablony dosłownie są współdzielone między wystąpieniami i będzie widoczny przy obsłudze często takich samych nazwach.) W związku z tym jeśli poszczególne właściwości elementu, który chcesz animować pochodzi ze stylu lub szablonu, należy uruchomić przy użyciu wystąpienia nazwanego elementu, który nie pochodzi z szablon stylu, a następnie wskazać do drzewa wizualnego, stylu lub szablonu zostanie dostarczona wartość właściwości chcesz animować.  
+ Pośrednie przeznaczonych dla animacji jest konieczne ze względu zastosowane style i szablony. Aby skierować je do animacji, konieczne będzie <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> na obiekt docelowy, a nazwa zostaje ustanowione przy [x: Name](../../xaml-services/x-name-directive.md) lub <xref:System.Windows.FrameworkElement.Name%2A>. Mimo że szablonu i elementy stylu także mogą mieć nazwy, te nazwy są prawidłowe tylko w ramach namescope stylów i szablonów. (Jeśli szablony i style udostępniona zakresy nazw zaznaczaniu aplikacji, nazwy nie może być unikatowe. Style i szablony dosłownie są współdzielone między wystąpieniami i będzie widoczny przy obsłudze często takich samych nazwach.) W związku z tym jeśli poszczególne właściwości elementu, który chcesz animować pochodzi ze stylu lub szablonu, należy uruchomić przy użyciu wystąpienia nazwanego elementu, który nie pochodzi z szablon stylu, a następnie wskazać do drzewa wizualnego, stylu lub szablonu zostanie dostarczona wartość właściwości chcesz animować.  
   
  Na przykład <xref:System.Windows.Controls.Panel.Background%2A> właściwość <xref:System.Windows.Controls.Panel> jest kompletna <xref:System.Windows.Media.Brush> (faktycznie <xref:System.Windows.Media.SolidColorBrush>) dostarczonej z szablonu motywu. Aby animować <xref:System.Windows.Media.Brush> całkowicie, musi być BrushAnimation (prawdopodobnie jednym dla każdego <xref:System.Windows.Media.Brush> typu) i nie ma żadnego takiego typu. Aby animować pędzla, zamiast tego animować właściwości określonego <xref:System.Windows.Media.Brush> typu. Należy uzyskać od <xref:System.Windows.Media.SolidColorBrush> do jego <xref:System.Windows.Media.SolidColorBrush.Color%2A> do zastosowania <xref:System.Windows.Media.Animation.ColorAnimation> istnieje. Ścieżka właściwości w tym przykładzie byłaby `Background.Color`.  
   
@@ -198,5 +198,5 @@ or
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.PropertyPath>
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Scenorysy — przegląd](../graphics-multimedia/storyboards-overview.md)

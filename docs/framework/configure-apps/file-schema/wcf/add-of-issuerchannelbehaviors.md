@@ -2,58 +2,62 @@
 title: <add> z <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 65c76cba696ae388d6184eaaa70a1f2f5a301e1c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c9937cb6302a194228461f3e2e06ecdf4d43269
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271801"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377758"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<Dodaj > z \<issuerChannelBehaviors >
-Dodaje zachowanie punktu końcowego, który będzie używany podczas komunikacji z usługą STS.  
-  
+
+Dodaje zachowanie punktu końcowego, który będzie używany podczas komunikacji z usługą STS.
+
 > [!NOTE]
->  Jeśli jakiekolwiek zachowanie punktu końcowego zawiera [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu, zostanie zgłoszony wyjątek.  
-  
- \<system.ServiceModel>  
-\<zachowania >  
-sekcja endpointBehaviors  
-\<zachowanie >  
-\<clientCredentials>  
-\<issuedToken >  
-\<issuerChannelBehaviors> Element  
-\<add>  
-  
-## <a name="syntax"></a>Składnia  
-  
-```xml  
+> Jeśli jakiekolwiek zachowanie punktu końcowego zawiera [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu, zostanie zgłoszony wyjątek.
+
+\<system.ServiceModel>\
+\<zachowania > \
+sekcja endpointBehaviors \<zachowanie > \
+\<clientCredentials>\
+\<issuedToken > \
+\<issuerChannelBehaviors > Element\
+\<add>
+
+## <a name="syntax"></a>Składnia
+
+```xml
 <add issuerAddress="string"
-     behaviorConfiguraton="string" />
-```  
-  
-## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne  
-  
-### <a name="attributes"></a>Atrybuty  
-  
-|Atrybut|Opis|  
-|---------------|-----------------|  
-|issuerAddress|Identyfikator URI do komunikacji z wystawcą tokenu zabezpieczenia.|  
-|behaviorConfiguration|Nazwa zachowania punktu końcowego zdefiniowana w pliku konfiguracyjnym.|  
-  
-### <a name="child-elements"></a>Elementy podrzędne  
- Brak.  
-  
-### <a name="parent-elements"></a>Elementy nadrzędne  
-  
-|Element|Opis|  
-|-------------|-----------------|  
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Zawiera kolekcję zachowań punktu końcowego klienta usługi Windows Communication Foundation (WCF) ma być używany podczas komunikacji z określonej usługi tokenu usługi.|  
-  
-## <a name="remarks"></a>Uwagi  
- `issuerAddress` zawiera identyfikator URI usługi tokenu zabezpieczającego, które klient chce się nawiązać połączenia z usługą. `behaviorConfiguration` Wskazuje zachowanie punktu końcowego, którego używa aplikacja w kanałach utworzone przez Windows Communication Foundation (WCF) można pobrać wystawionych tokenów z usługi tokenu zabezpieczeń.  
-  
+     behaviorConfiguration="string" />
+```
+
+## <a name="attributes-and-elements"></a>Atrybuty i elementy
+
+W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne
+
+### <a name="attributes"></a>Atrybuty
+
+|Atrybut|Opis|
+|---------------|-----------------|
+|issuerAddress|Identyfikator URI do komunikacji z wystawcą tokenu zabezpieczenia.|
+|behaviorConfiguration|Nazwa zachowania punktu końcowego zdefiniowana w pliku konfiguracyjnym.|
+
+### <a name="child-elements"></a>Elementy podrzędne
+
+Brak.
+
+### <a name="parent-elements"></a>Elementy nadrzędne
+
+|Element|Opis|
+|-------------|-----------------|
+|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Zawiera kolekcję zachowań punktu końcowego klienta usługi Windows Communication Foundation (WCF) ma być używany podczas komunikacji z określonej usługi tokenu usługi.|
+
+## <a name="remarks"></a>Uwagi
+
+`issuerAddress` zawiera identyfikator URI usługi tokenu zabezpieczającego, które klient chce się nawiązać połączenia z usługą. `behaviorConfiguration` Wskazuje zachowanie punktu końcowego, którego używa aplikacja w kanałach utworzone przez Windows Communication Foundation (WCF) można pobrać wystawionych tokenów z usługi tokenu zabezpieczeń.
+
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527643"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358525"
 ---
 # <a name="custom-animations-overview"></a>Przegląd Niestandardowe animacje
 W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji systemu, tworząc niestandardowe klatki kluczowe animacji klas, lub za pomocą wywołania zwrotnego w poszczególnych klatkach pomijają je.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Aby zrozumieć, w tym temacie, należy się zapoznać z różnymi typami animacje, udostępniane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aby uzyskać więcej informacji, zobacz animacje — Przegląd From/To/By [Przegląd Animacja kluczowych klatek](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)i [animacje ścieżki — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+ Aby zrozumieć, w tym temacie, należy się zapoznać z różnymi typami animacje, udostępniane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Aby uzyskać więcej informacji, zobacz animacje — Przegląd From/To/By [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)i [animacje ścieżki — Przegląd](path-animations-overview.md).  
   
- Ponieważ dziedziczyć klasy animacji <xref:System.Windows.Freezable> klasy, należy zapoznać się z <xref:System.Windows.Freezable> obiektów i jak można dziedziczyć <xref:System.Windows.Freezable>. Aby uzyskać więcej informacji, zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Ponieważ dziedziczyć klasy animacji <xref:System.Windows.Freezable> klasy, należy zapoznać się z <xref:System.Windows.Freezable> obiektów i jak można dziedziczyć <xref:System.Windows.Freezable>. Aby uzyskać więcej informacji, zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Rozszerzanie systemu animacji  
@@ -45,7 +45,7 @@ W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](..
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>Tworzenie niestandardowych klatek kluczowych  
- Tworzenie klasy niestandardowej klatka kluczowa jest najprostszym sposobem, aby rozszerzyć system animacji. Tej metody należy użyć, gdy użytkownik chce metodę różnych interpolacji animacji kluczowych klatek.  Zgodnie z opisem w [Przegląd Animacja kluczowych klatek](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), animacji kluczowych klatek używa klatek kluczowych obiektów, aby wygenerować jej wartości danych wyjściowych. Każdy obiekt w ramce klucza wykonuje trzy funkcje:  
+ Tworzenie klasy niestandardowej klatka kluczowa jest najprostszym sposobem, aby rozszerzyć system animacji. Tej metody należy użyć, gdy użytkownik chce metodę różnych interpolacji animacji kluczowych klatek.  Zgodnie z opisem w [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md), animacji kluczowych klatek używa klatek kluczowych obiektów, aby wygenerować jej wartości danych wyjściowych. Każdy obiekt w ramce klucza wykonuje trzy funkcje:  
   
 -   Określa wartość docelowej przy użyciu jego <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> właściwości.  
   
@@ -57,7 +57,7 @@ W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](..
   
  Pochodzi od  *\<typ >* ramki kluczowej klasy abstrakcyjnej i zaimplementować metodę InterpolateValueCore. Metoda InterpolateValueCore zwraca bieżącą wartość klatek kluczowych. Trwa dwa parametry: wartość poprzedniej ramki klucza i wartości postępu z zakresu od 0 do 1. Postęp 0 wskazuje klatek kluczowych właśnie zostało uruchomione, a wartość 1 oznacza, że klatek kluczowych został ukończony i powinna zwrócić wartość określoną przez jego <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> właściwości.  
   
- Ponieważ  *\<typ >* ramki kluczowej klasy dziedziczą <xref:System.Windows.Freezable> klasy, konieczne jest również przesłonięcie <xref:System.Windows.Freezable.CreateInstanceCore%2A> core, aby zwrócić nowe wystąpienie klasy. Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
+ Ponieważ  *\<typ >* ramki kluczowej klasy dziedziczą <xref:System.Windows.Freezable> klasy, konieczne jest również przesłonięcie <xref:System.Windows.Freezable.CreateInstanceCore%2A> core, aby zwrócić nowe wystąpienie klasy. Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
   
  Po utworzeniu niestandardowego  *\<typ >* Animacja klatki kluczowej, można jej używać z  *\<typ >* AnimationUsingKeyFrames dla tego typu.  
   
@@ -72,7 +72,7 @@ W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](..
   
  Pochodzi od  *\<typ >* klasy animacji i zaimplementuj metodę GetCurrentValueCore. Metoda GetCurrentValueCore zwraca bieżącą wartość animacji. Zajmuje trzy parametry: sugerowane wartości początkowej, sugerowana wartość końcową, a <xref:System.Windows.Media.Animation.AnimationClock>, którego używasz, aby określić postęp animacji.  
   
- Ponieważ  *\<typ >* podstawy animacji klasy dziedziczą <xref:System.Windows.Freezable> klasy, konieczne jest również przesłonięcie <xref:System.Windows.Freezable.CreateInstanceCore%2A> core, aby zwrócić nowe wystąpienie klasy. Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
+ Ponieważ  *\<typ >* podstawy animacji klasy dziedziczą <xref:System.Windows.Freezable> klasy, konieczne jest również przesłonięcie <xref:System.Windows.Freezable.CreateInstanceCore%2A> core, aby zwrócić nowe wystąpienie klasy. Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
   
  Aby uzyskać więcej informacji, zobacz w dokumentacji metody GetCurrentValueCore  *\<typ >* podstawy animacji klasy dla typu, który ma być animowany. Aby uzyskać przykład, zobacz [przykład animacji niestandardowych](https://go.microsoft.com/fwlink/?LinkID=159981)  
   
@@ -95,7 +95,7 @@ W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](..
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> — Zastąpić tę właściwość, aby wskazać <xref:System.Type> danych wyjściowych tworzy animacji.  
   
- Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
+ Jeśli klasa nie używa właściwości zależności do przechowywania swoich danych lub wymaga ona dodatkową inicjację po utworzeniu, może być konieczne zastąpienie dodatkowe metody; zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md) Aby uzyskać więcej informacji.  
   
  Zalecane paradygmat (używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji) jest użycie dwóch poziomach dziedziczenia:  
   
@@ -126,10 +126,10 @@ W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](..
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Techniki animacji właściwości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Animacje ścieżki — przegląd](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Techniki animacji właściwości — przegląd](property-animation-techniques-overview.md)
+- [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Animacje ścieżki — przegląd](path-animations-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)
 - [Przykład animacji niestandardowej](https://go.microsoft.com/fwlink/?LinkID=159981)

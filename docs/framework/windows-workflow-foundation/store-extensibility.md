@@ -1,20 +1,20 @@
 ---
-title: Rozszerzalność magazynu
+title: Rozszerzalność Store
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517923"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375431"
 ---
-# <a name="store-extensibility"></a>Rozszerzalność magazynu
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Umożliwia użytkownikom wspierania właściwości niestandardowych, specyficzne dla aplikacji, które mogą być używane w zapytaniu dla wystąpień w bazie danych trwałości. Fakt podwyższania właściwości powoduje, że wartości mają być dostępne w widoku specjalne w bazie danych. Te awansowanej właściwości (właściwości, które mogą być używane w zapytaniach użytkownika) mogą być typy proste, takie jak Int64, identyfikator Guid, typ String i DateTime lub serializacji typu binarnego (byte[]).  
+# <a name="store-extensibility"></a>Rozszerzalność Store
+<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Umożliwia użytkownikom promować właściwości niestandardowych, specyficzne dla aplikacji, które mogą być używane do wykonywania zapytań dla wystąpień w bazie danych trwałości. Działanie promocji właściwości powoduje, że wartości, które mają być dostępne w widoku specjalne w bazie danych. Te właściwości o podwyższonym poziomie (właściwości, które mogą być używane w kwerendach użytkownika) może być typów prostych, takich jak Int64, Guid, String i daty/godziny lub serializacji typu binary (byte[]).  
   
- <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Klasa ma <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> metodę, która służy do promowania właściwości jako właściwość, która może być używane w zapytaniach. Poniższy przykład jest przykładem end-to-end rozszerzalności magazynu.  
+ <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Klasa ma <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote%2A> metodę, która służy do promowania właściwość jako właściwość, które mogą być używane w zapytaniach. Poniższy przykład jest przykładem rozszerzalność magazynu end-to-end.  
   
-1.  W tym przykładowym scenariuszu dokumentu przetwarzania aplikacji (DP) ma przepływów pracy, w każdej z nich używa działań niestandardowych do przetwarzania dokumentu. Te przepływy pracy ustawić zmienne stanu, które muszą być widoczne dla użytkownika końcowego. Aby to osiągnąć, aplikacja DP udostępnia rozszerzenie wystąpienia typu <xref:System.Activities.Persistence.PersistenceParticipant>, używany do dostarczania zmienne stanu przez działania.  
+1.  W tym przykładowym scenariuszu dokument przetwarzania aplikacji (DP) zawiera przepływy pracy, z których każdy korzysta z działań niestandardowych do przetwarzania dokumentu. Te przepływy pracy mają zestaw zmienne stanu, które muszą być widoczne dla użytkownika końcowego. Aby to osiągnąć, aplikacja DP udostępnia rozszerzenie typu <xref:System.Activities.Persistence.PersistenceParticipant>, który jest używany przez działania umożliwiają określanie wartości zmienne stanu.  
   
     ```  
     class DocumentStatusExtension : PersistenceParticipant  
@@ -35,9 +35,9 @@ ms.locfileid: "33517923"
     application.Extensions.Add(documentStatusExtension);  
     ```  
   
-     Aby uzyskać więcej informacji o dodawaniu uczestnika trwałości niestandardowych, zobacz [uczestników trwałości](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) próbki.  
+     Aby uzyskać więcej informacji na temat dodawania niestandardowego uczestnika stanów trwałych, zobacz [uczestnicy stanów trwałych](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) próbki.  
   
-3.  Działania niestandardowe w aplikacji DP wypełniania różnych pól stanu w **Execute** metody.  
+3.  Niestandardowe działania w aplikacji, punkt dystrybucji wypełniania różnych pól Stan w **Execute** metody.  
   
     ```  
     public override void Execute(CodeActivityContext context)  
@@ -51,7 +51,7 @@ ms.locfileid: "33517923"
     }  
     ```  
   
-4.  Gdy wystąpienia przepływu pracy osiągnie punkt trwałości **obiektu CollectValues** metody **DocumentStatusExtension** uczestnika trwałości zapisuje te właściwości do danych trwałości Kolekcja.  
+4.  Gdy wystąpienie przepływu pracy osiąga punkt trwałości **CollectValues** metody **DocumentStatusExtension** uczestnika stanów trwałych zapisuje te właściwości do danych stanów trwałych Kolekcja.  
   
     ```  
     class DocumentStatusExtension : PersistenceParticipant  
@@ -75,7 +75,7 @@ ms.locfileid: "33517923"
     > [!NOTE]
     >  Te właściwości są przekazywane do **SqlWorkflowInstanceStore** przez platformę trwałości za pośrednictwem **SaveWorkflowCommand.InstanceData** kolekcji.  
   
-5.  Aplikacja DP inicjuje w magazynie wystąpień przepływu pracy SQL i wywołuje **Podnieś poziom** metodę, aby podwyższyć poziom tych danych.  
+5.  Aplikacja DP inicjuje Store wystąpienia przepływu pracy SQL i wywołuje **Podwyższ poziom** metodę, aby podwyższyć poziom tych danych.  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -91,9 +91,9 @@ ms.locfileid: "33517923"
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     Na podstawie tych informacji podwyższania poziomu **SqlWorkflowInstanceStore** umieszcza właściwości danych w kolumnach [InstancePromotedProperties](#InstancePromotedProperties) widoku.
+     Na podstawie tych informacji podwyższania poziomu **SqlWorkflowInstanceStore** umieszcza właściwości danych w kolumnach tabeli [InstancePromotedProperties](#InstancePromotedProperties) widoku.
   
-6.  Aby odpytać podzbiór danych z tabeli podwyższania poziomu, aplikacji DP dodaje dostosowany widok na widok podwyższania poziomu.  
+6.  Aby wysłać zapytanie podzbiór danych z tabeli podwyższania poziomu, aplikacji DP dodaje dostosowany widok na widok podwyższania poziomu.  
   
     ```  
     create view [dbo].[DocumentStatus] with schemabinding  
@@ -108,11 +108,11 @@ ms.locfileid: "33517923"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> Widok [System.Activities.DurableInstancing.InstancePromotedProperties]  
+## <a name="InstancePromotedProperties"></a> Widok [System.Activities.DurableInstancing.InstancePromotedProperties]  
   
 |Nazwa kolumny|Typ kolumny|Opis|  
 |-----------------|-----------------|-----------------|  
-|Identyfikator wystąpienia|Identyfikator GUID|Wystąpienie przepływu pracy, której należy ten podwyższania poziomu.|  
-|PromotionName|Nvarchar(400)|Nazwa samej promocji.|  
-|Wartość1, wartość2, Wartość3,..., Value32|sql_variant|Wartość awansowana samej właściwości. Większość typów pierwotnych danych SQL, z wyjątkiem binarnych obiektów blob i ciągi ponad 8000 bajtów długości można zmieścić w sql_variant.|  
-|Value35 Value33, Value34,..., Value64|Varbinary(max)|Wartość awansowanej właściwości, które są jawnie deklarowane jako varbinary(max).|
+|InstanceId|Identyfikator GUID|Wystąpienie przepływu pracy, który należy do tej promocji.|  
+|PromotionName|nvarchar(400)|Nazwa sam podwyższenia poziomu.|  
+|Wartość1, wartość2, Wartość3,..., Value32|sql_variant|Wartość o podwyższonym poziomie samej właściwości. Większość typów pierwotnych danych SQL, z wyjątkiem pliku binarnego obiekty BLOB i ponad 8000 bajtów długości ciągów mieści się w sql_variant.|  
+|Value35 Value33, Value34,..., Value64|Varbinary(max)|Wartość właściwości o podwyższonym poziomie, które są jawnie zadeklarowane jako varbinary(max).|

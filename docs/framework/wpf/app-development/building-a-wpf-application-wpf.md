@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 682563937de0bb907b97ee4237d33c76307493da
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745641"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364297"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), biblioteki (.dll) lub jako kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki w procesie kompilacji.  
@@ -32,7 +32,7 @@ Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!IN
 ## <a name="wpf-build-pipeline"></a>Potok kompilacji WPF  
  Gdy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] projekt jest kompilowany, kombinacja specyficzny dla języka i [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-określonych elementów docelowych są wywoływane. Proces wykonywania następujących elementów docelowych nosi nazwę potoku kompilacji, i przedstawiono podstawowe etapy według poniższej ilustracji.  
   
- ![Proces kompilacji WPF](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
+ ![Proces kompilacji WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
   
 <a name="Pre_Build_Initializations"></a>   
 ### <a name="pre-build-initializations"></a>Inicjalizacje sprzed kompilacji  
@@ -167,7 +167,7 @@ End Sub
 -   Nic nie jest ponownie kompilowany, (Jeśli w projekcie nic się nie zmieniło).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md)
 - [Odwołanie do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
-- [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [Pakowanie URI w WPF](pack-uris-in-wpf.md)
+- [Zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md)

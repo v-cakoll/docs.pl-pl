@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: bce4f059e76b0ebea29b023eba2e9e2f59813035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c90db5312d58cfba18910f299386e2884fb36ce6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636030"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360236"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Instrukcje: Znajdź TreeViewItem w TreeView
 <xref:System.Windows.Controls.TreeView> Kontrola zapewnia wygodny sposób prezentują dane hierarchiczne. Jeśli Twoje <xref:System.Windows.Controls.TreeView> jest powiązana ze źródłem danych <xref:System.Windows.Controls.TreeView.SelectedItem%2A> właściwość zapewnia wygodny sposób na szybkie pobranie obiektu wybranych danych. Zazwyczaj najlepiej pracować z obiektu źródłowego danych, ale czasami konieczne może być programowe Zmienianie danych zawierające <xref:System.Windows.Controls.TreeViewItem>. Na przykład, konieczne może być programowo rozwiń <xref:System.Windows.Controls.TreeViewItem>, lub wybierz inny element w <xref:System.Windows.Controls.TreeView>.  
@@ -29,17 +29,17 @@ ms.locfileid: "54636030"
 >  Poniższy przykład działa w przypadku każdej <xref:System.Windows.Controls.TreeView>, niezależnie od podstawowego modelu danych i wyszukiwań co <xref:System.Windows.Controls.TreeViewItem> aż do znalezienia obiektu. Inna technika, która ma lepszą wydajność jest wyszukiwanie modelu danych dla określonego obiektu, informacje o lokalizacji w hierarchii danych i następnie znajdź odpowiedni <xref:System.Windows.Controls.TreeViewItem> w <xref:System.Windows.Controls.TreeView>. Jednak technika, która ma lepszą wydajność wymaga wiedzy na temat modelu danych i nie mogą być uogólnione dla dowolnej podanej <xref:System.Windows.Controls.TreeView>.  
   
 ## <a name="code"></a>Kod  
- [!code-csharp[TreeViewFindTVI#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
- [!code-vb[TreeViewFindTVI#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
+ [!code-csharp[TreeViewFindTVI#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
+ [!code-vb[TreeViewFindTVI#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
  Poprzedni kod, który opiera się na niestandardowej <xref:System.Windows.Controls.VirtualizingStackPanel> który udostępnia metodę o nazwie `BringIntoView`. Poniższy kod definiuje niestandardową <xref:System.Windows.Controls.VirtualizingStackPanel>.  
   
- [!code-csharp[TreeViewFindTVI#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
- [!code-vb[TreeViewFindTVI#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
+ [!code-csharp[TreeViewFindTVI#2](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
+ [!code-vb[TreeViewFindTVI#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
  Następujące XAML przedstawia sposób tworzenia <xref:System.Windows.Controls.TreeView> , który używa niestandardowego <xref:System.Windows.Controls.VirtualizingStackPanel>.  
   
- [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
+ [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Poprawianie wydajności kontrolki TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)
+- [Poprawianie wydajności kontrolki TreeView](how-to-improve-the-performance-of-a-treeview.md)

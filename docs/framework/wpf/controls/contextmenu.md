@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550127"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354638"
 ---
 # <a name="contextmenu"></a>ContextMenu
-<xref:System.Windows.Controls.ContextMenu> Umożliwia kontrolki wyświetlającej <xref:System.Windows.Controls.Menu> jest specyficzna dla kontekstu kontrolki. Zazwyczaj <xref:System.Windows.Controls.ContextMenu> jest widoczna w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] za pośrednictwem prawym przyciskiem myszy lub klawiatury przycisku menu.  
+<xref:System.Windows.Controls.ContextMenu> Umożliwia kontrolę wyświetlić <xref:System.Windows.Controls.Menu> jest specyficzna dla kontekstu kontrolki. Zazwyczaj <xref:System.Windows.Controls.ContextMenu> jest widoczna w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] za pośrednictwem prawym przyciskiem myszy lub klawiatury przycisku menu.  
   
- Na poniższym rysunku przedstawiono <xref:System.Windows.Controls.ContextMenu> w dwóch różnych stanach: domyślny stan i stanie otwartym. Formant jest w stanie domyślnym zwinięty. Po naciśnięciu prawego przycisku myszy nad elementem nadrzędnym menu, formantu rozszerza i wyświetla elementów menu.  
+ Na poniższym rysunku przedstawiono <xref:System.Windows.Controls.ContextMenu> w dwóch różnych stanów: stan domyślny i stanie otwartym. W stanie domyślnym formant jest zwinięta. Po naciśnięciu prawego przycisku myszy nad elementem nadrzędnym menu, formant rozszerzy się i wyświetli elementów menu.  
   
- ![Stany ContextMenu](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
-ContextMenu w różnych stanach  
+ ![ContextMenu — informacje o stanach](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ContextMenu — w różnych stanach  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ContextMenu — przegląd](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [ContextMenu — przegląd](contextmenu-overview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ContextMenu>  

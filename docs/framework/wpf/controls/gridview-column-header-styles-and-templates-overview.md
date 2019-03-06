@@ -8,12 +8,12 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e5cf8a8b280a539feb73a54defbb0cd8c2c0f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590906"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366650"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Przegląd Style nagłówka kolumn i szablonów GridView
 To omówienie dotyczy kolejność pierwszeństwa dla właściwości, które umożliwia dostosowywanie nagłówek kolumny w <xref:System.Windows.Controls.GridView> tryb widoku <xref:System.Windows.Controls.ListView> kontroli.  
@@ -36,6 +36,6 @@ To omówienie dotyczy kolejność pierwszeństwa dla właściwości, które umo�
  <sup>1</sup>dla **właściwości szablonu nagłówka**, jeśli ustawisz szablonu i właściwości selektor szablonu, właściwości szablonu pierwszeństwo. Na przykład jeśli ustawisz zarówno <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> i <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> właściwości <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> właściwość, pierwszeństwo.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Tematy z instrukcjami](listview-how-to-topics.md)
+- [ListView — omówienie](listview-overview.md)
+- [GridView — omówienie](gridview-overview.md)

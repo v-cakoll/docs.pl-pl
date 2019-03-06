@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265353"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368171"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Nowości w WPF w wersji 4.5
 <a name="introduction"></a> Ten temat zawiera informacje o nowych i ulepszonych funkcji w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w wersji 4.5.  
@@ -115,15 +115,15 @@ ms.locfileid: "55265353"
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Ulepszona obsługa ustanawiania słabe odwołanie do zdarzenia  
- Implementacja wzorca zdarzeń słabych jest teraz łatwiejsze, ponieważ subskrybentów zdarzeń mogą brać udział w jej bez implementacji interfejsu dodatkowe.  Ogólny <xref:System.Windows.WeakEventManager> klasy umożliwia także subskrybentów do udziału w słaby wzorzec zdarzeń, jeśli jest to dedykowana <xref:System.Windows.WeakEventManager> nie istnieje dla określonych zdarzeń.  Aby uzyskać więcej informacji, zobacz [słabe wzorce zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ Implementacja wzorca zdarzeń słabych jest teraz łatwiejsze, ponieważ subskrybentów zdarzeń mogą brać udział w jej bez implementacji interfejsu dodatkowe.  Ogólny <xref:System.Windows.WeakEventManager> klasy umożliwia także subskrybentów do udziału w słaby wzorzec zdarzeń, jeśli jest to dedykowana <xref:System.Windows.WeakEventManager> nie istnieje dla określonych zdarzeń.  Aby uzyskać więcej informacji, zobacz [słabe wzorce zdarzeń](../advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Nowe metody dla klasy dyspozytora  
- Klasa dyspozytora definiuje nowych metod operacje synchroniczne i asynchroniczne.  Synchronicznej <xref:System.Windows.Threading.Dispatcher.Invoke%2A> metoda definiuje przeciążeń, które przyjmują <xref:System.Action> lub <xref:System.Func%601> parametru. Nowe metody asynchronicznej <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, pobiera również <xref:System.Action> lub <xref:System.Func%601> jako parametr wywołania zwrotnego i zwraca <xref:System.Windows.Threading.DispatcherOperation> lub <xref:System.Windows.Threading.DispatcherOperation%601>.   <xref:System.Windows.Threading.DispatcherOperation> i <xref:System.Windows.Threading.DispatcherOperation%601> klasy definiują <xref:System.Threading.Tasks.Task> właściwości.  Gdy wywołujesz <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, możesz użyć `await` — słowo kluczowe z oboma <xref:System.Windows.Threading.DispatcherOperation> lub skojarzonego <xref:System.Threading.Tasks.Task>. Jeśli musisz czekać synchronicznie <xref:System.Threading.Tasks.Task> zwracanym przez <xref:System.Windows.Threading.DispatcherOperation> lub <xref:System.Windows.Threading.DispatcherOperation%601>, wywołaj <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> — metoda rozszerzenia. Wywoływanie <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> spowoduje zakleszczenia Jeśli operacja jest kolejkowana w wątku wywołującego. Aby uzyskać więcej informacji o korzystaniu z <xref:System.Threading.Tasks.Task> do wykonywania operacji asynchronicznych, zobacz [równoległość zadań (Biblioteka zadań równoległych)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
+ Klasa dyspozytora definiuje nowych metod operacje synchroniczne i asynchroniczne.  Synchronicznej <xref:System.Windows.Threading.Dispatcher.Invoke%2A> metoda definiuje przeciążeń, które przyjmują <xref:System.Action> lub <xref:System.Func%601> parametru. Nowe metody asynchronicznej <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, pobiera również <xref:System.Action> lub <xref:System.Func%601> jako parametr wywołania zwrotnego i zwraca <xref:System.Windows.Threading.DispatcherOperation> lub <xref:System.Windows.Threading.DispatcherOperation%601>.   <xref:System.Windows.Threading.DispatcherOperation> i <xref:System.Windows.Threading.DispatcherOperation%601> klasy definiują <xref:System.Threading.Tasks.Task> właściwości.  Gdy wywołujesz <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>, możesz użyć `await` — słowo kluczowe z oboma <xref:System.Windows.Threading.DispatcherOperation> lub skojarzonego <xref:System.Threading.Tasks.Task>. Jeśli musisz czekać synchronicznie <xref:System.Threading.Tasks.Task> zwracanym przez <xref:System.Windows.Threading.DispatcherOperation> lub <xref:System.Windows.Threading.DispatcherOperation%601>, wywołaj <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> — metoda rozszerzenia. Wywoływanie <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> spowoduje zakleszczenia Jeśli operacja jest kolejkowana w wątku wywołującego. Aby uzyskać więcej informacji o korzystaniu z <xref:System.Threading.Tasks.Task> do wykonywania operacji asynchronicznych, zobacz [równoległość zadań (Biblioteka zadań równoległych)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Rozszerzenia znaczników dla zdarzeń  
  WPF 4.5 obsługuje rozszerzenia znaczników dla zdarzeń.  WPF nie definiuje rozszerzeniem znacznika ma być używany dla zdarzeń, może utworzyć rozszerzenie znaczników, który może służyć do zdarzeń są stron trzecich.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Co nowego w programie .NET Framework](../../../../docs/framework/whats-new/index.md)
+- [Co nowego w programie .NET Framework](../../whats-new/index.md)

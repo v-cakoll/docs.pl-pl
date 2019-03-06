@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576463"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363933"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Zależność wartości wywołania zwrotnego i walidacji
 W tym temacie opisano sposób tworzenia właściwości zależności za pomocą alternatywnych implementacji niestandardowych dla powiązanych właściwości funkcji, takich jak sprawdzanie poprawności oznaczania, wywołania zwrotne, które są wywoływane po każdej zmianie od wartości właściwości i zastępowaniem możliwe, poza wpływa na określenie wartości. W tym temacie omówiono również scenariusze, w których rozwijając domyślną właściwość dla systemu zachowania przy użyciu tych metod jest właściwe.  
@@ -25,14 +25,14 @@ W tym temacie opisano sposób tworzenia właściwości zależności za pomocą a
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że rozumiesz podstawowe scenariusze Implementowanie właściwości zależności i sposób stosowania metadanych właściwości zależności niestandardowej. Zobacz [niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) i [metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) dla kontekstu.  
+ W tym temacie założono, że rozumiesz podstawowe scenariusze Implementowanie właściwości zależności i sposób stosowania metadanych właściwości zależności niestandardowej. Zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md) i [metadane zależności właściwości](dependency-property-metadata.md) dla kontekstu.  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>Wywołania zwrotne weryfikacji  
  Wywołania zwrotne weryfikacji można przypisać do właściwości zależności, gdy najpierw zarejestrować. Wywołanie zwrotne weryfikacji nie jest częścią metadanych właściwości modelu; jest bezpośrednie wejście <xref:System.Windows.DependencyProperty.Register%2A> metody. W związku z tym po utworzeniu wywołanie zwrotne weryfikacji dla właściwości zależności nie może być zastąpiona przez nową metodę implementacji.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Wywołania zwrotne są implementowane w taki sposób, że są one udostępniane wartość obiektu. Zwracają `true` czy podana wartość jest nieprawidłowa dla właściwości; w przeciwnym razie zwracają `false`. Zakłada się, że właściwość jest poprawnego typu na typ zarejestrowany w systemie właściwości, sprawdzając typ w ramach wywołania zwrotne nie jest zazwyczaj wykonywane. Wywołania zwrotne są używane przez system właściwości w wielu różnych operacji. Obejmuje to inicjowania typu początkowej za pomocą wartości domyślnej, zmień programowy, wywołując <xref:System.Windows.DependencyObject.SetValue%2A>, lub próbuje przesłanianie metadanych z nową wartością domyślną, pod warunkiem. Jeśli wywołanie zwrotne weryfikacji jest wywoływane przez żaden z tych operacji, a następnie zwraca `false`, a następnie zostanie wygenerowany wyjątek. Autorzy aplikacji musi być przygotowana do obsługi tych wyjątków. Typowym zastosowaniem wywołania zwrotne sprawdzania poprawności jest sprawdzania poprawności wartości wyliczenia lub ograniczając wartości liczb całkowitych lub wartości podwójnej precyzji, gdy właściwość ustawia miar, które musi mieć wartość zero lub większą.  
   
@@ -40,8 +40,8 @@ W tym temacie opisano sposób tworzenia właściwości zależności za pomocą a
   
  Poniżej przedstawiono przykładowy kod dla scenariusza wywołanie zwrotne weryfikacji bardzo prosty: Sprawdzanie poprawności, która właściwość, która jest <xref:System.Double> pierwotny nie jest <xref:System.Double.PositiveInfinity> lub <xref:System.Double.NegativeInfinity>.  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>Coerce — wartość wywołania zwrotne i właściwości zmienione zdarzenia  
@@ -51,18 +51,18 @@ W tym temacie opisano sposób tworzenia właściwości zależności za pomocą a
   
  Poniżej znajduje się bardzo krótki przykład kodu dla tylko jednej z właściwości trzy zależności, które ilustrują tę relację. W przykładzie pokazano sposób, w jaki `CurrentReading` właściwość minimalny/maksymalny/bieżący zestaw powiązanych * odczytywanie właściwości jest zarejestrowany. Korzysta ona weryfikacji, jak pokazano w poprzedniej sekcji.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Wywołanie zwrotne zmiany właściwości dla aktualnie jest używany do przekazywania zmian do innych właściwości zależne, za pomocą jawnego wywołania zwrotne wartości coerce, które są zarejestrowane dla tych innych właściwości:  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  Wywołanie zwrotne wartość coerce sprawdza, czy wartości właściwości jest potencjalnie zależne od właściwości bieżącego i przekształca wynik dane bieżącą wartość, jeśli to konieczne:  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  Domyślne wartości właściwości nie są zmuszone. Wartość właściwości jest równa wartości domyślnej może wystąpić, jeśli wartość właściwości nadal ma początkową domyślną lub za pośrednictwem usuwając innych wartości przy użyciu <xref:System.Windows.DependencyObject.ClearValue%2A>.  
@@ -81,6 +81,6 @@ W tym temacie opisano sposób tworzenia właściwości zależności za pomocą a
  System właściwości będą traktować dowolny <xref:System.Windows.CoerceValueCallback> zwracającego wartość <xref:System.Windows.DependencyProperty.UnsetValue> w szczególnych przypadkach. Ten przypadek specjalny oznacza, że zmiana właściwości, które spowodowały <xref:System.Windows.CoerceValueCallback> wywołanego powinny zostać odrzucone przez system właściwości, a system właściwości zamiast tego powinien wysyłać raporty niezależnie od poprzedniej wartości, gdyby właściwość. Mechanizm ten może być przydatne do Sprawdź, czy zmiany właściwości, które były inicjowane asynchronicznie są ciągle ważny dla bieżącego stanu obiektu i pominąć zmiany, jeśli nie. Inny scenariusz możliwe polega na tym, że selektywnie można pominąć wartość, w zależności od tego, który składnik właściwości określenie wartości jest odpowiedzialny za raportowana. Aby to zrobić, można użyć <xref:System.Windows.DependencyProperty> przekazany jako dane wejściowe na potrzeby wywołania zwrotnego i identyfikator właściwości <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, a następnie przetwarzania <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Przegląd właściwości zależności](dependency-properties-overview.md)
+- [Metadane zależności właściwości](dependency-property-metadata.md)
+- [Niestandardowe właściwości zależności](custom-dependency-properties.md)

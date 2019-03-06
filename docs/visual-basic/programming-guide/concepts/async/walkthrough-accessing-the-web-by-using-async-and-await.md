@@ -2,12 +2,12 @@
 title: 'Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709497"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379123"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)
 Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą funkcji async/await. Można napisać kod asynchroniczny, który wygląda jak synchroniczny kod i pozwolić kompilatorowi obsługi funkcji wywołania zwrotnego trudne i kontynuacje, które kodu asynchronicznego zazwyczaj pociąga za sobą.  
@@ -47,7 +47,7 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Programu Visual Studio 2012 lub nowszym należy zainstalować na komputerze. Aby uzyskać więcej informacji, zobacz [witrynie internetowej firmy Microsoft](https://go.microsoft.com/fwlink/?LinkId=235233).  
   
-###  <a name="CreateWPFApp"></a> Aby utworzyć aplikację WPF  
+### <a name="CreateWPFApp"></a> Aby utworzyć aplikację WPF  
   
 1.  Uruchom program Visual Studio.  
   
@@ -61,8 +61,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
      Nowy projekt, który pojawia się w **Eksploratora rozwiązań**.  
   
-##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> Aby zaprojektować proste MainWindow WPF  
+## <a name="BKMK_DesignWPFMainWin"></a>   
+### <a name="MainWindow"></a> Aby zaprojektować proste MainWindow WPF  
   
 1.  W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
   
@@ -90,8 +90,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
      Aby uzyskać więcej informacji dotyczących projektanta XAML w WPF, zobacz [Tworzenie interfejsu użytkownika przy użyciu projektanta XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
   
-##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> Aby dodać odwołanie  
+## <a name="BKMK_AddReference"></a>   
+### <a name="AddRef"></a> Aby dodać odwołanie  
   
 1.  W **Eksploratora rozwiązań**, wyróżnij nazwę projektu.  
   
@@ -107,8 +107,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
 6.  Wybierz **OK** przycisk, aby zamknąć okno dialogowe.  
   
-##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> Aby dodać niezbędne instrukcje Importy  
+## <a name="BKMK_AddStatesandDirs"></a>   
+### <a name="ImportsState"></a> Aby dodać niezbędne instrukcje Importy  
   
 1.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.vb, a następnie wybierz **Wyświetl kod**.  
   
@@ -120,8 +120,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
     Imports System.IO  
     ```  
   
-##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> Aby utworzyć aplikację synchroniczne  
+## <a name="BKMK_CreatSynchApp"></a>   
+### <a name="synchronous"></a> Aby utworzyć aplikację synchroniczne  
   
 1.  W oknie projektu, MainWindow.xaml, kliknij dwukrotnie **Start** przycisk, aby utworzyć `startButton_Click` programu obsługi zdarzeń w MainWindow.xaml.vb.  
   
@@ -221,8 +221,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
     End Sub  
     ```  
   
-##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> Aby przetestować rozwiązaniu synchronicznym  
+## <a name="BKMK_TestSynchSol"></a>   
+### <a name="testSynch"></a> Aby przetestować rozwiązaniu synchronicznym  
   
 1.  Wybierz klawisz F5, aby uruchomić program, a następnie wybierz **Start** przycisku.  
   
@@ -247,8 +247,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
      Należy zauważyć, że zajmuje kilka sekund, aby wyświetlić liczby elementów. W tym czasie wątku interfejsu użytkownika jest blokowany, aż do żądanych zasobów do pobrania. W rezultacie nie można przenieść zmaksymalizować, zminimalizować lub nawet Zamknij okna, po dokonaniu wyboru **Start** przycisku. Tych działań zakończyć się niepowodzeniem, dopóki nie pojawiają się rozpocząć liczby bajtów. Jeśli witryna sieci Web nie odpowiada, masz żadne oznaki, witryn, które nie powiodło się. Trudno jest nawet zakończyć oczekiwanie i zamknięcie programu.  
   
-##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> Aby przekonwertować GetURLContents metody asynchronicznej  
+## <a name="BKMK_ConvertGtBtArr"></a>   
+### <a name="GetURLContents"></a> Aby przekonwertować GetURLContents metody asynchronicznej  
   
 1.  Aby konwertować synchroniczne rozwiązanie do asynchronicznego rozwiązania, najlepszym miejscem do rozpoczęcia jest w `GetURLContents` ponieważ wywołania <xref:System.Net.HttpWebRequest> metoda <xref:System.Net.HttpWebRequest.GetResponse%2A> i <xref:System.IO.Stream> metoda <xref:System.IO.Stream.CopyTo%2A> są, gdzie aplikacja uzyskuje dostęp do sieci web . .NET Framework ułatwia konwersję poprzez dostarczenie asynchronicznych wersji obu tych metod.  
   
@@ -329,8 +329,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
      Za pomocą tych kilku zmian konwersji `GetURLContents` metody asynchronicznej jest pełny.  
   
-##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> Aby przekonwertować SumPageSizes metody asynchronicznej  
+## <a name="BKMK_ConvertSumPagSzs"></a>   
+### <a name="SumPageSizes"></a> Aby przekonwertować SumPageSizes metody asynchronicznej  
   
 1.  Powtórz kroki z poprzedniej procedury, aby uzyskać `SumPageSizes`. Najpierw należy zmienić wywołanie `GetURLContents` do wywołania asynchronicznego.  
   
@@ -369,8 +369,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
      Konwersja `SumPageSizes` do `SumPageSizesAsync` zostało zakończone.  
   
-##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> Aby przekonwertować startButton_Click metody asynchronicznej  
+## <a name="BKMK_Cnvrtbttn1"></a>   
+### <a name="startButton"></a> Aby przekonwertować startButton_Click metody asynchronicznej  
   
 1.  W procedurze obsługi zdarzeń Zmień nazwę wywoływanej metody z `SumPageSizes` do `SumPageSizesAsync`, jeśli jeszcze tego nie zrobiłeś.  
   
@@ -415,8 +415,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
      Konwersja przetwarzania synchronicznego w celu asynchronicznego projektu zostało ukończone.  
   
-##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> Aby przetestować rozwiązania asynchroniczne  
+## <a name="BKMK_testAsynchSolution"></a>   
+### <a name="testAsynch"></a> Aby przetestować rozwiązania asynchroniczne  
   
 1.  Wybierz klawisz F5, aby uruchomić program, a następnie wybierz **Start** przycisku.  
   
@@ -426,8 +426,8 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
     -   Co najważniejsze wątek interfejsu użytkownika nie jest zablokowane podczas jej pliki do pobrania. Możesz przenieść lub zmienić rozmiar okna podczas pobierania zasobów sieci web liczone, a wyświetlane. Jeśli jeden z witryn sieci Web działa wolno lub nie odpowiada, możesz anulować operację, wybierając **Zamknij** przycisku (x czerwone pola w prawym górnym rogu).  
   
-##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> Aby zastąpić metodę GetURLContentsAsync za pomocą metody .NET Framework  
+## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
+### <a name="GetURLContentsAsync"></a> Aby zastąpić metodę GetURLContentsAsync za pomocą metody .NET Framework  
   
 1.  .NET Framework 4.5 zapewnia wiele metod asynchronicznych, których można użyć. Jeden z nich, <xref:System.Net.Http.HttpClient> metoda <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, wykonuje tylko potrzebne w ramach tego przewodnika. Można używać go zamiast `GetURLContentsAsync` metody, który został utworzony w wcześniejszym etapie procedury.  
   
@@ -452,7 +452,7 @@ Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą
   
      Zachowanie tej wersji programu project powinien odpowiadać zachowanie, które opisano procedury "Aby test asynchronicznego rozwiązania", ale o jeszcze mniejszym nakładzie pracy ze strony użytkownika.  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> Przykład  
+## <a name="BKMK_CompleteCodeExamples"></a> Przykład  
  Poniższy kod zawiera pełny przykład konwersja przez synchroniczny do asynchronicznego rozwiązania przy użyciu asynchroniczną `GetURLContentsAsync` metodę, która powstała z jednego. Należy zauważyć, że silnie przypomina oryginalnej, synchroniczne rozwiązanie.  
   
 ```vb  

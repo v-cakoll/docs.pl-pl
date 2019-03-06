@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550956"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359396"
 ---
 # <a name="canvas-how-to-topics"></a>Kanwa Tematy porad
-W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Canvas> element absolutnie położenie elementów podrzędnych.  
+Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.Canvas> absolutnie pozycjonować elementy podrzędne elementu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zawijanie obramowania wokół zawartości kanwy](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [Pobieranie lub ustawianie właściwości ustawienia kanwy](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [Tworzenie i używanie kanwy](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Używanie załączonych właściwości kanwy do ustawiania położenia elementów podrzędnych](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [Zmienianie rozmiaru kanwy przy użyciu kciuka](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Zawijanie obramowania wokół zawartości kanwy](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [Pobieranie lub ustawianie właściwości ustawienia kanwy](how-to-get-or-set-canvas-positioning-properties.md)  
+ [Tworzenie i używanie kanwy](how-to-create-and-use-a-canvas.md)  
+ [Używanie załączonych właściwości kanwy do ustawiania położenia elementów podrzędnych](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [Zmienianie rozmiaru kanwy przy użyciu kciuka](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Ca
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Układ](../advanced/layout.md)  
   
- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](scrollviewer-overview.md)

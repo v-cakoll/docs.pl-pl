@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DockPanel control [WPF], how-to topics
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
-ms.openlocfilehash: f5cac5055ed3d60f37955b20de923fe1735c3900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550657"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355553"
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel — Tematy porad
-W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.DockPanel> element położenie elementów podrzędnych wzdłuż krawędzi kontener układu.  
+Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.DockPanel> element, aby zmienić położenie elementów podrzędnych wzdłuż krawędzi kontener układu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Pobieranie lub ustawianie wartości dokowania](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [Tworzenie DockPanel](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [Rozdzielanie miejsca przy użyciu elementu DockPanel](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+ [Pobieranie lub ustawianie wartości dokowania](how-to-get-or-set-a-dock-value.md)  
+ [Tworzenie DockPanel](how-to-create-a-dockpanel.md)  
+ [Rozdzielanie miejsca przy użyciu elementu DockPanel](how-to-partition-space-by-using-the-dockpanel-element.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Do
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Układ](../advanced/layout.md)  
   
- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](scrollviewer-overview.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704020"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363428"
 ---
 # <a name="binding-declarations-overview"></a>Przegląd Wiązanie deklaracji
 W tym temacie omówiono różne sposoby, można zadeklarować powiązania.  
@@ -26,9 +26,9 @@ W tym temacie omówiono różne sposoby, można zadeklarować powiązania.
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Przed odczytaniem w tym temacie, należy się zapoznać się z pojęciem i użycie rozszerzenia znaczników. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Przed odczytaniem w tym temacie, należy się zapoznać się z pojęciem i użycie rozszerzenia znaczników. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md).  
   
- W tym temacie nie opisano pojęcia dotyczące powiązania danych. Omówienie koncepcji powiązań danych, zobacz [Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ W tym temacie nie opisano pojęcia dotyczące powiązania danych. Omówienie koncepcji powiązań danych, zobacz [Data Binding Overview](data-binding-overview.md).  
   
 <a name="BindinginXAML"></a>   
 ## <a name="declaring-a-binding-in-xaml"></a>Deklarowanie powiązania w XAML  
@@ -40,9 +40,9 @@ W tym temacie omówiono różne sposoby, można zadeklarować powiązania.
   
  Podczas tworzenia powiązania deklaracji ciągów w znaczniku, musi być dołączony do konkretnej zależności własności obiektu docelowego. Poniższy przykład pokazuje jak powiązać <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> właściwości przy użyciu rozszerzenia powiązania, określając <xref:System.Windows.Data.Binding.Source%2A> i <xref:System.Windows.Data.Binding.Path%2A> właściwości.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- Można określić większość właściwości <xref:System.Windows.Data.Binding> klasy w ten sposób. Aby uzyskać więcej informacji o rozszerzeniu powiązania, jak również jak w przypadku listy <xref:System.Windows.Data.Binding> Zobacz właściwości, których nie można ustawić przy użyciu rozszerzenia powiązania [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) Przegląd.  
+ Można określić większość właściwości <xref:System.Windows.Data.Binding> klasy w ten sposób. Aby uzyskać więcej informacji o rozszerzeniu powiązania, jak również jak w przypadku listy <xref:System.Windows.Data.Binding> Zobacz właściwości, których nie można ustawić przy użyciu rozszerzenia powiązania [Binding Markup Extension](../advanced/binding-markup-extension.md) Przegląd.  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>Składnia elementu obiektu  
@@ -50,11 +50,11 @@ W tym temacie omówiono różne sposoby, można zadeklarować powiązania.
   
  Oto przykład składnia elementu obiektu i użycie rozszerzenia znaczników:  
   
- [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
  Przykład wiąże <xref:System.Windows.Controls.TextBlock.Foreground%2A> właściwości przez zadeklarowanie powiązania za pomocą składni rozszerzenia. Powiązanie deklaracji pod kątem <xref:System.Windows.Controls.TextBlock.Text%2A> właściwość jest używana składnia elementu obiektu.  
   
- Aby uzyskać więcej informacji na temat różnych warunków, zobacz [składnia XAML w szczegółów](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
+ Aby uzyskać więcej informacji na temat różnych warunków, zobacz [składnia XAML w szczegółów](../advanced/xaml-syntax-in-detail.md).  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding i PriorityBinding  
@@ -64,10 +64,10 @@ W tym temacie omówiono różne sposoby, można zadeklarować powiązania.
 ## <a name="creating-a-binding-in-code"></a>Tworzenie powiązania w kodzie  
  Innym sposobem określenia powiązania jest do ustawiania właściwości bezpośrednio na <xref:System.Windows.Data.Binding> obiektu w kodzie. Poniższy przykład pokazuje, jak utworzyć <xref:System.Windows.Data.Binding> obiektu, a następnie określ właściwości w kodzie.  W tym przykładzie `TheConverter` jest obiektem, który implementuje <xref:System.Windows.Data.IValueConverter> interfejsu.  
   
- [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
- [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
+ [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- Jeśli obiekt, w której dokonywane jest wiązanie jest <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> może wywołać `SetBinding` metody na obiekcie bezpośrednio zamiast przy użyciu <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Aby uzyskać przykład, zobacz [Utwórz powiązanie w kodzie](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
+ Jeśli obiekt, w której dokonywane jest wiązanie jest <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> może wywołać `SetBinding` metody na obiekcie bezpośrednio zamiast przy użyciu <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Aby uzyskać przykład, zobacz [Utwórz powiązanie w kodzie](how-to-create-a-binding-in-code.md).  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>Składnia ścieżki wiązania  
@@ -119,14 +119,14 @@ W tym temacie omówiono różne sposoby, można zadeklarować powiązania.
   
 -   Jeśli nie ustawisz <xref:System.Windows.Data.Binding.ConverterCulture%2A>, korzysta z aparatu powiązania `Language` właściwości powiązania obiektu docelowego. W XAML to wartością domyślną jest "en US" lub dziedziczy wartości elementu głównego (lub dowolnego elementu), strony, jeśli został jawnie zdefiniowany.  
   
--   Tak długo, jak wiązanie ma już kontekstu danych (na przykład dziedziczone kontekstu danych pochodzących z elementu nadrzędnego) i niezależnie od element lub kolekcję, w zwracanym przez ten kontekst jest odpowiednia dla powiązania bez dalszych modyfikacji ścieżki, Powiązanie deklaracji może mieć wcale nie klauzule: `{Binding}` Często jest to sposób, w jaki określono wiązania danych style, której powiązanie podejmuje działania dotyczące kolekcji. Aby uzyskać więcej informacji, zobacz sekcję "Całe obiekty używane jako powiązania źródło" w [Przegląd wiązanie źródeł](../../../../docs/framework/wpf/data/binding-sources-overview.md).  
+-   Tak długo, jak wiązanie ma już kontekstu danych (na przykład dziedziczone kontekstu danych pochodzących z elementu nadrzędnego) i niezależnie od element lub kolekcję, w zwracanym przez ten kontekst jest odpowiednia dla powiązania bez dalszych modyfikacji ścieżki, Powiązanie deklaracji może mieć wcale nie klauzule: `{Binding}` Często jest to sposób, w jaki określono wiązania danych style, której powiązanie podejmuje działania dotyczące kolekcji. Aby uzyskać więcej informacji, zobacz sekcję "Całe obiekty używane jako powiązania źródło" w [Przegląd wiązanie źródeł](binding-sources-overview.md).  
   
 -   Wartość domyślna <xref:System.Windows.Data.Binding.Mode%2A> waha się między jednokierunkową i dwukierunkową, w zależności od właściwości zależności, który jest powiązany. Zawsze możesz zadeklarować tryb powiązania jawnie, aby upewnić się, że Twoje powiązanie żądane zachowanie. We właściwościach formantu ogólne, można edytować użytkownika takie jak <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> i <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>, domyślnie powiązania dwukierunkowe, natomiast inne właściwości domyślnie powiązania jednokierunkowe.  
   
 -   Wartość domyślna <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> wartości waha się między <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> i <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> zależności od tego, jak również właściwość zależności powiązane. Jest wartością domyślną dla większości właściwości zależności <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, podczas gdy <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> właściwość ma wartość domyślną <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [PropertyPath, składnia XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)
+- [PropertyPath, składnia XAML](../advanced/propertypath-xaml-syntax.md)

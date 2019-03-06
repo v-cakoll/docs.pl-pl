@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cac00ff96d0c7007bdd6135282c3f767217385e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566986"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352883"
 ---
 # <a name="execnotificationquerywmi-function"></a>Funkcja ExecNotificationQueryWmi
-Wykonuje zapytanie, aby odbierać zdarzenia. To wywołanie zwraca natychmiast, a obiekt wywołujący można sondować zwróconego modułu wyliczającego dla zdarzenia podczas ich dostarczania. Zwalnianie zwróconego modułu wyliczającego anuluje zapytania.  
+
+Wykonuje zapytanie, aby odbierać zdarzenia. To wywołanie zwraca natychmiast, a obiekt wywołujący można sondować zwróconego modułu wyliczającego dla zdarzenia podczas ich dostarczania. Zwalnianie zwróconego modułu wyliczającego anuluje zapytania.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 HRESULT ExecNotificationQueryWmi (
    [in] BSTR                    strQueryLanguage,
    [in] BSTR                    strQuery,
@@ -43,46 +44,47 @@ HRESULT ExecNotificationQueryWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametry
 
-`strQueryLanguage`    
+`strQueryLanguage`\
 [in] Ciąg z językiem prawidłowe zapytanie obsługiwane przez Windows Management. Musi to być "WQL" akronim języka WMI Query Language.
 
-`strQuery`  
+`strQuery`\
 [in] Tekst zapytania. Ten parametr nie może być `null`.
 
-`lFlags`   
-[in] Kombinacja następujące dwie flagi, które mają wpływ na zachowanie tej funkcji. Te wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie. 
+`lFlags`\
+[in] Kombinacja następujące dwie flagi, które mają wpływ na zachowanie tej funkcji. Te wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie.
 
 | Stała | Wartość  | Opis  |
 |---------|---------|---------|
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Flaga powoduje, że wywołanie półsynchronicznej. Jeśli ta flaga nie jest ustawiona, połączenie nie powiedzie się. Jest to spowodowane zdarzenia są odbierane w sposób ciągły, co oznacza, że użytkownik musi wykonać sondowanie zwróconego modułu wyliczającego. Blokowanie to wywołanie przez czas nieokreślony uniemożliwia który. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Funkcja zwraca tylko do przodu modułu wyliczającego. Zwykle tylko do przodu moduły wyliczające są realizowane szybciej i używać mniej pamięci niż moduły wyliczające konwencjonalnych, ale nie zezwalają na wywołania [klonowania](clone.md). |
 
-`pCtx`  
-[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanych zdarzeń. 
+`pCtx`\
+[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanych zdarzeń.
 
-`ppEnum`  
+`ppEnum`\
 [out] Jeśli żaden błąd nie wystąpi, otrzymuje wskaźnik, aby moduł wyliczający, który umożliwia obiektowi wywołującemu, można pobrać wystąpień w zestawie wyników zapytania. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
-`authLevel`  
+`authLevel`\
 [in] Poziom autoryzacji.
 
-`impLevel` [in] Poziom personifikacji.
+`impLevel`\
+[in] Poziom personifikacji.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Wskaźnik do [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiekt, który reprezentuje bieżącej przestrzeni nazw.
 
-`strUser`   
+`strUser`\
 [in] Nazwa użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
 
-`strPassword`   
+`strPassword`\
 [in] Hasło. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
 
-`strAuthority`   
+`strAuthority`\
 [in] Nazwa domeny użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -96,7 +98,7 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | Zapytanie Określa klasę, która nie istnieje. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Zażądano zbyt dużo precyzji podczas dostarczania zdarzeń. Większe tolerancji sondowania musi być określona. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Requess zapytania może dostarczyć więcej informacji, niż zarządzania Windows. To `HRESULT` jest zwracany, jeśli wyniki zapytania dotyczącego zdarzenia, w żądaniu skierowanym do sondowania wszystkie obiekty w przestrzeni nazw. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Zapytanie żąda informacji niż może zapewnić zarządzania Windows. To `HRESULT` jest zwracany, jeśli wyniki zapytania dotyczącego zdarzenia, w żądaniu skierowanym do sondowania wszystkie obiekty w przestrzeni nazw. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | Zapytania ma błąd składni. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Żądany język kwerendy nie jest obsługiwane. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Zapytanie jest zbyt złożony. |
@@ -105,7 +107,7 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącza wywołania (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
 | `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | Nie można przeanalizować zapytania. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
-  
+
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja zawija wywołanie do [IWbemServices::ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) metody.
@@ -116,12 +118,14 @@ Istnieją limity liczby `AND` i `OR` słów kluczowych, które mogą być używa
 
 Jeśli wywołanie funkcji zakończy się niepowodzeniem, można uzyskać dodatkowe informacje o błędzie, wywołując [geterrorinfo —](geterrorinfo.md) funkcji.
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** WMINet_Utils.idl  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** WMINet_Utils.idl
+
+**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -1,28 +1,28 @@
 ---
-title: Jak powiązać dane z InkCanvas
+title: 'Instrukcje: Powiąż dane z InkCanvas'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - InkCanvas [WPF], binding data to
 - binding data [WPF], to InkCanvas
 ms.assetid: 8d6b4d9e-ea7f-4412-ba83-3feccec5a515
-ms.openlocfilehash: 4081ae7dd6854934804062cfce60d10106c1e1d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d3fc0ed7b6176d7bc68bf20af42c311b5563908
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543173"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372948"
 ---
-# <a name="how-to-data-bind-to-an-inkcanvas"></a>Jak powiązać dane z InkCanvas
+# <a name="how-to-data-bind-to-an-inkcanvas"></a>Instrukcje: Powiąż dane z InkCanvas
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak można powiązać <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwość <xref:System.Windows.Controls.InkCanvas> do innego <xref:System.Windows.Controls.InkCanvas>.  
+ Poniższy przykład pokazuje jak powiązać <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwość <xref:System.Windows.Controls.InkCanvas> do innego <xref:System.Windows.Controls.InkCanvas>.  
   
- [!code-xaml[InkCanvasBindingSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#2)]  
+ [!code-xaml[InkCanvasBindingSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#2)]  
   
- W poniższym przykładzie pokazano, jak można powiązać <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> właściwości ze źródłem danych.  
+ Poniższy przykład pokazuje jak powiązać <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> właściwość ze źródłem danych.  
   
- [!code-xaml[InkCanvasBindingSnippet#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#3)]  
-[!code-xaml[InkCanvasBindingSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#4)]  
+ [!code-xaml[InkCanvasBindingSnippet#3](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#3)]  
+[!code-xaml[InkCanvasBindingSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window2.xaml#4)]  
   
- Poniższy przykład deklaruje dwa <xref:System.Windows.Controls.InkCanvas> obiektów w kodzie XAML i ustanawia powiązania danych między nimi i innych źródeł danych.  Pierwszy <xref:System.Windows.Controls.InkCanvas>o nazwie `ic`, jest powiązany z dwóch źródeł danych.  <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> i <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> właściwości `ic` są powiązane z <xref:System.Windows.Controls.ListBox> obiektów, które z kolei są powiązane z tablicami zdefiniowane w pliku XAML.  <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>, <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, I <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwości drugiego <xref:System.Windows.Controls.InkCanvas> powiązanych do pierwszej <xref:System.Windows.Controls.InkCanvas>, `ic`.  
+ Poniższy przykład deklaruje dwie <xref:System.Windows.Controls.InkCanvas> obiekty w XAML i ustanawia powiązanie danych między nimi i innymi źródłami danych.  Pierwszy <xref:System.Windows.Controls.InkCanvas>, co jest nazywane `ic`, jest powiązany z dwoma źródłami danych.  <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> i <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> właściwości `ic` są powiązane z <xref:System.Windows.Controls.ListBox> obiektów, które z kolei są powiązane z tablic zdefiniowane w XAML.  <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>, <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, I <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwości drugiego <xref:System.Windows.Controls.InkCanvas> są zobowiązane do pierwszego <xref:System.Windows.Controls.InkCanvas>, `ic`.  
   
- [!code-xaml[InkCanvasBindingSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window1.xaml#1)]
+ [!code-xaml[InkCanvasBindingSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasBindingSnippet/CS/Window1.xaml#1)]

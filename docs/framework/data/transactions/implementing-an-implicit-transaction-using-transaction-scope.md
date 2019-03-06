@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645850"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375249"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementowanie transakcji niejawnej przy użyciu zakresu transakcji
 <xref:System.Transactions.TransactionScope> Klasa udostępnia prosty sposób zaznaczania bloku kodu jako udział w transakcji, bez konieczności interakcji z transakcja. Zakres transakcji można wybrać i automatycznie zarządzać otoczenia transakcji. Z powodu jej łatwość użycia i wydajności zalecane jest, że używasz <xref:System.Transactions.TransactionScope> klasy podczas projektowania aplikacji transakcji.  
@@ -34,14 +34,15 @@ ms.locfileid: "54645850"
   
  Jeśli <xref:System.Transactions.TransactionScope> obiektu początkowo utworzona transakcja występuje rzeczywista praca z Zatwierdzanie transakcji przez Menedżera transakcji, po ostatnim wierszu kodu w **przy użyciu** bloku. Jeśli nie utworzył transakcji, zatwierdzanie występuje zawsze, gdy <xref:System.Transactions.CommittableTransaction.Commit%2A> jest wywoływana przez właściciela <xref:System.Transactions.CommittableTransaction> obiektu. W tym momencie Menedżer transakcji wywołuje zasobu menedżerów i wysłanie ich do zatwierdzania lub wycofywania na ich podstawie <xref:System.Transactions.TransactionScope.Complete%2A> metoda została wywołana na <xref:System.Transactions.TransactionScope> obiektu.  
   
- **Przy użyciu** instrukcji zapewnia, że <xref:System.Transactions.TransactionScope.Dispose%2A> metody <xref:System.Transactions.TransactionScope> obiektu jest wywoływana, nawet jeśli wystąpi wyjątek. <xref:System.Transactions.TransactionScope.Dispose%2A> Metody oznacza koniec zakresu transakcji. Wyjątki, które mogą występować po wywołaniu tej metody nie może mieć wpływ na transakcji. Ta metoda również przywraca otoczenia transakcji jej poprzedniego stanu.  
+ **Przy użyciu** instrukcji zapewnia, że <xref:System.Transactions.TransactionScope.Dispose%2A> metody <xref:System.Transactions.TransactionScope> obiektu jest wywoływana, nawet jeśli wystąpi wyjątek. 
+  <xref:System.Transactions.TransactionScope.Dispose%2A> Metody oznacza koniec zakresu transakcji. Wyjątki, które mogą występować po wywołaniu tej metody nie może mieć wpływ na transakcji. Ta metoda również przywraca otoczenia transakcji jej poprzedniego stanu.  
   
  Element <xref:System.Transactions.TransactionAbortedException> jest generowany, jeśli zakres tworzy transakcji, a transakcja została przerwana. Element <xref:System.Transactions.TransactionInDoubtException> jest generowany, gdy Menedżer transakcji nie może podjąć decyzję zatwierdzania. Nie wyjątku, jeśli transakcja została zatwierdzona.  
   
 ## <a name="rolling-back-a-transaction"></a>Wycofywanie transakcji  
  Jeśli chcesz wycofać transakcji, nie należy wywołać <xref:System.Transactions.TransactionScope.Complete%2A> metody w zakresie transakcji. Na przykład może zgłosić wyjątek w zakresie. Transakcji, w których uczestniczy w zostaną wycofane.  
   
-##  <a name="ManageTxFlow"></a> Zarządzanie przepływem transakcji przy użyciu TransactionScopeOption  
+## <a name="ManageTxFlow"></a> Zarządzanie przepływem transakcji przy użyciu TransactionScopeOption  
  Zakres transakcji można zagnieżdżać, wywołując metodę, która używa <xref:System.Transactions.TransactionScope> z w metodzie, która korzysta z własnym zakresie jako ma miejsce w przypadku `RootMethod` metody w poniższym przykładzie  
   
 ```csharp  

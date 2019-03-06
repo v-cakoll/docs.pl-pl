@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538877"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355611"
 ---
 # <a name="digital-ink-how-to-topics"></a>Cyfrowy atrament Tematy porad
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wybieranie pisma odręcznego w niestandardowym formancie](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [Dodawanie niestandardowych danych do danych pisma odręcznego](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [Usuwanie pisma odręcznego na niestandardowej kontrolce](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [Rozpoznawanie gestów w aplikacji](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [Pismo odręczne — przeciąganie i upuszczanie](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [Powiązywanie danych z elementem InkCanvas](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [Analizowanie pisma odręcznego za pomocą wskazówek analizy](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [Obracanie pisma odręcznego](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [Wyłączanie elementu RealTimeStylus dla aplikacji WPF](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+ [Wybieranie pisma odręcznego w niestandardowym formancie](how-to-select-ink-from-a-custom-control.md)  
+  [Dodawanie niestandardowych danych do danych pisma odręcznego](how-to-add-custom-data-to-ink-data.md)  
+  [Usuwanie pisma odręcznego na niestandardowej kontrolce](how-to-erase-ink-on-a-custom-control.md)  
+  [Rozpoznawanie gestów w aplikacji](how-to-recognize-application-gestures.md)  
+  [Pismo odręczne — przeciąganie i upuszczanie](how-to-drag-and-drop-ink.md)  
+  [Powiązywanie danych z elementem InkCanvas](how-to-data-bind-to-an-inkcanvas.md)  
+  [Analizowanie pisma odręcznego za pomocą wskazówek analizy](how-to-analyze-ink-with-analysis-hints.md)  
+  [Obracanie pisma odręcznego](how-to-rotate-ink.md)  
+  [Wyłączanie elementu RealTimeStylus dla aplikacji WPF](disable-the-realtimestylus-for-wpf-applications.md)

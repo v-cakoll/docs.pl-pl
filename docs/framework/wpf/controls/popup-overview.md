@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 693c4d0cf0847b90379d409427b173b2c4740311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616809"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358473"
 ---
 # <a name="popup-overview"></a>Przegląd Okna podręczne
 <xref:System.Windows.Controls.Primitives.Popup> Kontroli zapewnia sposób wyświetlania zawartości w oddzielnym oknie, który pojawia się za pośrednictwem bieżącego okna aplikacji względem wyznaczonego współrzędne elementu lub ekranu. W tym temacie przedstawiono <xref:System.Windows.Controls.Primitives.Popup> kontroli i zawiera informacje dotyczące jego użycia.  
@@ -22,27 +22,27 @@ ms.locfileid: "54616809"
  A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartość w osobnym oknie względem elementu lub na ekranie. Gdy <xref:System.Windows.Controls.Primitives.Popup> jest widoczny, <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> właściwość jest ustawiona na `true`.  
   
 > [!NOTE]
->  Element <xref:System.Windows.Controls.Primitives.Popup> nie jest automatycznie otwierany, gdy wskaźnik myszy porusza się za pośrednictwem jego obiektu nadrzędnego. Jeśli chcesz <xref:System.Windows.Controls.Primitives.Popup> Aby automatycznie otworzyć, użyj <xref:System.Windows.Controls.ToolTip> lub <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [ToolTip — Przegląd](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+>  Element <xref:System.Windows.Controls.Primitives.Popup> nie jest automatycznie otwierany, gdy wskaźnik myszy porusza się za pośrednictwem jego obiektu nadrzędnego. Jeśli chcesz <xref:System.Windows.Controls.Primitives.Popup> Aby automatycznie otworzyć, użyj <xref:System.Windows.Controls.ToolTip> lub <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [ToolTip — Przegląd](tooltip-overview.md).  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>Tworzenie okna podręcznego  
  Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.Primitives.Popup> kontrolować czyli element podrzędny elementu <xref:System.Windows.Controls.Button> kontroli. Ponieważ <xref:System.Windows.Controls.Button> może mieć tylko jeden element podrzędny, w tym przykładzie umieszcza w treści <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.Primitives.Popup> kontrolki w <xref:System.Windows.Controls.StackPanel>. Zawartość <xref:System.Windows.Controls.Primitives.Popup> pojawia się w <xref:System.Windows.Controls.TextBlock> formant, który wyświetla jego tekstu w osobnym oknie, które pojawia się nad oknem aplikacji u pokrewne <xref:System.Windows.Controls.Button> kontroli.  
   
- [!code-xaml[PopupSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
+ [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
- [!code-xaml[PopupSimple#CreatePopupCodeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
+ [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>Formanty, które implementują okna podręcznego  
  Możesz tworzyć <xref:System.Windows.Controls.Primitives.Popup> formanty do innych kontrolek. Następujące elementy sterujące zaimplementować <xref:System.Windows.Controls.Primitives.Popup> kontroli dla konkretnych zastosowań:  
   
--   <xref:System.Windows.Controls.ToolTip>. Jeśli chcesz utworzyć etykietka narzędzia elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [ToolTip — Przegląd](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>. Jeśli chcesz utworzyć etykietka narzędzia elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [ToolTip — Przegląd](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Aby utworzyć menu kontekstowe dla elementu, należy użyć <xref:System.Windows.Controls.ContextMenu> kontroli. Aby uzyskać więcej informacji, zobacz [ContextMenu — Przegląd](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>. Aby utworzyć menu kontekstowe dla elementu, należy użyć <xref:System.Windows.Controls.ContextMenu> kontroli. Aby uzyskać więcej informacji, zobacz [ContextMenu — Przegląd](contextmenu-overview.md).  
   
 -   <xref:System.Windows.Controls.ComboBox>. Jeśli chcesz utworzyć kontrolkę wyboru zawierającej pole listy rozwijanej, która może być pokazane lub ukryte, użyj <xref:System.Windows.Controls.ComboBox> kontroli.  
   
--   <xref:System.Windows.Controls.Expander>. Jeśli chcesz utworzyć kontrolkę wyświetlającą nagłówek o zwijany obszar, który wyświetla zawartość, należy użyć <xref:System.Windows.Controls.Expander> kontroli. Aby uzyskać więcej informacji, zobacz [Przegląd ekspander](../../../../docs/framework/wpf/controls/expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>. Jeśli chcesz utworzyć kontrolkę wyświetlającą nagłówek o zwijany obszar, który wyświetla zawartość, należy użyć <xref:System.Windows.Controls.Expander> kontroli. Aby uzyskać więcej informacji, zobacz [Przegląd ekspander](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Okno podręczne zachowania i wyglądu  
@@ -74,13 +74,13 @@ ms.locfileid: "54616809"
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>Definiowanie położenie okna podręcznego  
- Można umieścić okna podręcznego, ustawiając <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> właściwości. Aby uzyskać więcej informacji, zobacz [zachowanie położenia okna podręcznego](../../../../docs/framework/wpf/controls/popup-placement-behavior.md). Gdy <xref:System.Windows.Controls.Primitives.Popup> jest wyświetlany na ekranie, go nie powoduje zmiany położenia sam Jeśli zostaje przeniesiony, jego obiektu nadrzędnego.  
+ Można umieścić okna podręcznego, ustawiając <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty> właściwości. Aby uzyskać więcej informacji, zobacz [zachowanie położenia okna podręcznego](popup-placement-behavior.md). Gdy <xref:System.Windows.Controls.Primitives.Popup> jest wyświetlany na ekranie, go nie powoduje zmiany położenia sam Jeśli zostaje przeniesiony, jego obiektu nadrzędnego.  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>Dostosowywanie położenia okna podręcznego  
  Można dostosować położenie <xref:System.Windows.Controls.Primitives.Popup> kontroli, określając zestaw współrzędnych, które są względem <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> miejscu <xref:System.Windows.Controls.Primitives.Popup> się pojawić.  
   
- Aby dostosować położenie, należy ustawić <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Następnie zdefiniuj <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegata, która zwraca zestaw punktów możliwe umieszczanie i osi podstawowej (w kolejności preferencji) dla <xref:System.Windows.Controls.Primitives.Popup>. Punkt, który pokazuje największą część <xref:System.Windows.Controls.Primitives.Popup> to opcja wybrana automatycznie. Aby uzyskać przykład, zobacz [Określ niestandardowe położenie okna podręcznego](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md).  
+ Aby dostosować położenie, należy ustawić <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Następnie zdefiniuj <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegata, która zwraca zestaw punktów możliwe umieszczanie i osi podstawowej (w kolejności preferencji) dla <xref:System.Windows.Controls.Primitives.Popup>. Punkt, który pokazuje największą część <xref:System.Windows.Controls.Primitives.Popup> to opcja wybrana automatycznie. Aby uzyskać przykład, zobacz [Określ niestandardowe położenie okna podręcznego](how-to-specify-a-custom-popup-position.md).  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>Menu podręczne i drzewo wizualne  
@@ -96,5 +96,5 @@ ms.locfileid: "54616809"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Tematy z instrukcjami](popup-how-to-topics.md)
+- [Tematy z instrukcjami](tooltip-how-to-topics.md)

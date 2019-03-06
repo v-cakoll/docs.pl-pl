@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550763"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377273"
 ---
 # <a name="checkbox"></a>CheckBox
-Można użyć <xref:System.Windows.Controls.CheckBox> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aplikacji w celu reprezentowania opcje, które użytkownik można zaznaczyć lub wyczyścić. Można użyć jednego pola wyboru lub w przypadku grupowania dwóch lub więcej pól wyboru.  
+Możesz użyć <xref:System.Windows.Controls.CheckBox> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aplikacji w taki sposób, aby przedstawić opcje, które użytkownik może zaznaczyć lub wyczyścić. Można użyć jednego pola wyboru, lub grupować dwóch lub więcej pól wyboru.  
   
- Na poniższym rysunku przedstawiono różne <xref:System.Windows.Controls.CheckBox>.  
+ Na poniższym rysunku przedstawiono różne stany <xref:System.Windows.Controls.CheckBox>.  
   
- ![Stany wyboru](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
-Formanty pola wyboru w różnych stanach  
+ ![Stany pola wyboru](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+Zaznacz pole wyboru kontrolek w różnych stanach  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.CheckBox>  

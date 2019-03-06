@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd8992fc37c570b5ea20f8751bef729311bfb7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 402bbcb9ad5e462a55c5ec2716417f512f03ee19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718198"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373221"
 ---
 # <a name="execquerywmi-function"></a>Funkcja ExecQueryWmi
-Wykonuje zapytanie, aby pobrać obiekty.  
+
+Wykonuje zapytanie, aby pobrać obiekty.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 HRESULT ExecQueryWmi (
    [in] BSTR                    strQueryLanguage,
    [in] BSTR                    strQuery,
@@ -43,53 +44,54 @@ HRESULT ExecQueryWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametry
 
-`strQueryLanguage`    
+`strQueryLanguage`\
 [in] Ciąg z językiem prawidłowe zapytanie obsługiwane przez Windows Management. Musi to być "WQL" akronim języka WMI Query Language.
 
-`strQuery`  
+`strQuery`\
 [in] Tekst zapytania. Ten parametr nie może być `null`.
 
-`lFlags`   
-[in] Kombinacja flag, które mają wpływ na zachowanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie: 
+`lFlags`\
+[in] Kombinacja flag, które mają wpływ na zachowanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 | Stała | Wartość  | Opis  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, funkcja pobiera poprawionych kwalifikatorów, przechowywane w zlokalizowanych nazw ustawień regionalnych bieżącego połączenia. <br/> W przeciwnym razie zestawu, funkcja pobiera kwalifikatory przechowywanych w bezpośrednim przestrzeni nazw. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Flaga powoduje, że wywołanie półsynchronicznej. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Funkcja zwraca tylko do przodu modułu wyliczającego. Zwykle tylko do przodu moduły wyliczające są realizowane szybciej i używać mniej pamięci niż moduły wyliczające konwencjonalnych, ale nie zezwalają na wywołania [klonowania](clone.md). |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI zachowuje wskaźników do obiektów w enumration, dopóki ich wydaniu. | 
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI zachowuje wskaźników do obiektów w wyliczeniu, dopóki ich wydaniu. |
 | `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Zapewnia dowolnej zwracane obiekty mają wystarczającą ilość informacji w nich tak tej właściwości systemu, takie jak **__PATH**, **pobieranie właściwości __RELPATH**, i **__SERVER**, nie są `null`. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Ta flaga jest używana do tworzenia prototypów. Go nie jest wykonywane zapytanie, a zamiast tego zwraca obiekt, który wygląda jak obiekt wyniku typowe. |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | Powoduje, że bezpośredni dostęp do dostawcy dla klasy określona bez względu na swoją klasą nadrzędną lub podklasy. |
 
 Zalecane flagi są `WBEM_FLAG_RETURN_IMMEDIATELY` i `WBEM_FLAG_FORWARD_ONLY` uzyskać najlepszą wydajność.
 
-`pCtx`  
-[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy. 
+`pCtx`\
+[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy.
 
-`ppEnum`  
+`ppEnum`\
 [out] Jeśli żaden błąd nie wystąpi, otrzymuje wskaźnik, aby moduł wyliczający, który umożliwia obiektowi wywołującemu, można pobrać wystąpień w zestawie wyników zapytania. Zapytanie może mieć zestaw wyników z zerową wystąpień. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji.
 
-`authLevel`  
+`authLevel`\
 [in] Poziom autoryzacji.
 
-`impLevel` [in] Poziom personifikacji.
+`impLevel`\
+[in] Poziom personifikacji.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Wskaźnik do [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiekt, który reprezentuje bieżącej przestrzeni nazw.
 
-`strUser`   
+`strUser`\
 [in] Nazwa użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
 
-`strPassword`   
+`strPassword`\
 [in] Hasło. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
 
-`strAuthority`   
+`strAuthority`\
 [in] Nazwa domeny użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -109,7 +111,7 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącza wywołania (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Zapytanie Określa klasę, która nie istnieje. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
-  
+
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja zawija wywołanie do [IWbemServices::ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) metody.
@@ -120,12 +122,14 @@ Istnieją limity liczby `AND` i `OR` słów kluczowych, które mogą być używa
 
 Jeśli wywołanie funkcji zakończy się niepowodzeniem, można uzyskać dodatkowe informacje o błędzie, wywołując [geterrorinfo —](geterrorinfo.md) funkcji.
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** WMINet_Utils.idl  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** WMINet_Utils.idl
+
+**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

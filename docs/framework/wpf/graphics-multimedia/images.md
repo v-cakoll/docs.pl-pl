@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: 64d5ede4dcbe50beeec22ca7782d1dc8c24a27f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b59cd1c1ec2ee058811996c92e4b215c8872ff0b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687222"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372818"
 ---
 # <a name="images"></a>Obrazy
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia wbudowaną obsługę wielu formatów obrazów, renderowania obrazów o dużej wierności i rozszerzalność kodera-dekodera.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)  
+ [Obrazowanie — przegląd](imaging-overview.md)  
+ [Tematy z instrukcjami](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Image>  
@@ -31,5 +31,5 @@ ms.locfileid: "54687222"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Zobacz także
-- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafika i multimedia](index.md)

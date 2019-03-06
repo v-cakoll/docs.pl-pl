@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a561c5af868968624ee9ee81050d87b17c4591be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eb6b870beabb71e340b0ec39c489cedb02128cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624421"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366637"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Funkcja BlessIWbemServicesObject
-Wskazuje, czy poświadczenia użytkownika zezwolić na dostęp do określonego [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiektu.   
-  
+Wskazuje, czy poświadczenia użytkownika zezwolić na dostęp do określonego [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiektu. 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+## <a name="syntax"></a>Składnia
+
+```
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -39,24 +39,27 @@ HRESULT BlessIWbemServicesObject (
    [in] DWORD impLevel, 
    [in] DWORD authnLevel
 );
-```  
+```
 
 ## <a name="parameters"></a>Parametry
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] Wskaźnik do obiektu usługi WMI.
 
-`strUser`  
+`strUser`\
 [in] Nazwa użytkownika.
 
-`strPassword`  
+`strPassword`\
 [in] Hasło skojarzone z `strUser`.
 
-`strAuthority` [in] Nazwa domeny użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
+`strAuthority`\
+[in] Nazwa domeny użytkownika. Zobacz [ConnectServerWmi](connectserverwmi.md) funkcji, aby uzyskać więcej informacji.
 
-`impLevel` [in] Poziom personifikacji.
+`impLevel`\
+[in] Poziom personifikacji.
 
-`authnLevel` [in] Poziom autoryzacji.
+`authnLevel`\
+[in] Poziom autoryzacji.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -70,12 +73,14 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `E_OUTOFMEMORY` | 0x80000002 | Ma wystarczającej ilości pamięci do wykonania tej operacji. | 
 | `S_OK` | 0 | Wywołanie funkcji zakończyło się pomyślnie. | 
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** WMINet_Utils.idl  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+ **Nagłówek:** WMINet_Utils.idl
+
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ffc21ca3eed979e9b7cd419f63729d8520a54a5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720291"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369724"
 ---
 # <a name="cleartype-registry-settings"></a>Ustawienia rejestru ClearType
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] ustawień rejestru, które są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -18,7 +18,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje, które renderują tekst do korzystania z urządzenia wyświetlaną [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcji w celu zapewnienia rozszerzonego czytanie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowanie opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] który poprawia czytelność tekstu na istniejące LCD (należy zmienić.), takie jak ekranów komputerów przenośnych, ekrany Pocket PC i monitory płaskie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] działa, uzyskując dostęp do poszczególnych kolor pionowych elementy usługi stripe w każdy piksel ekran LCD. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], zobacz [ClearType — Przegląd](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje, które renderują tekst do korzystania z urządzenia wyświetlaną [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcji w celu zapewnienia rozszerzonego czytanie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowanie opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] który poprawia czytelność tekstu na istniejące LCD (należy zmienić.), takie jak ekranów komputerów przenośnych, ekrany Pocket PC i monitory płaskie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] działa, uzyskując dostęp do poszczególnych kolor pionowych elementy usługi stripe w każdy piksel ekran LCD. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], zobacz [ClearType — Przegląd](cleartype-overview.md).  
   
  Tekst, który jest renderowany przy użyciu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] mogą być wyświetlane podczas wyświetlania na różnych urządzeniach wyświetlających różne. Na przykład niewielka liczba monitorów zaimplementować kolorowe elementy usługi stripe w kolejności niebieski, zielony, red, a nie częściej czerwony, zielony, niebieski ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) kolejności.  
   
@@ -57,7 +57,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  Dla każdej nazwy urządzenia wyświetlaną dla użytkownika `ClearTypeLevel` wartość DWORD jest zdefiniowana. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] poziom.  
   
- ![ClearType ustawień w Edytorze rejestru](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![ClearType ustawień w Edytorze rejestru](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje renderowanie tekstu w jednym z albo dwóch trybów z lub bez [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Jeśli tekst jest renderowany bez [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], jest ona określana jako renderowania w skali szarości.  
@@ -75,7 +75,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  Dla każdej nazwy urządzenia wyświetlaną dla użytkownika `GammaLevel` wartość DWORD jest zdefiniowana. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru dla poziomu gamma.  
   
- ![ClearType ustawień w Edytorze rejestru](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType ustawień w Edytorze rejestru](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>Struktura pikseli  
@@ -99,7 +99,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  Dla każdej nazwy urządzenia wyświetlaną dla użytkownika `PixelStructure` wartość DWORD jest zdefiniowana. Poniższy zrzut ekranu przedstawia ustawienia edytora rejestru w strukturze pikseli.  
   
- ![ClearType ustawień w Edytorze rejestru](../../../../docs/framework/wpf/advanced/media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType ustawień w Edytorze rejestru](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>Poziom kontrast tekstu  
@@ -112,8 +112,8 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  Dla każdej nazwy urządzenia wyświetlaną dla użytkownika `TextContrastLevel` wartość DWORD jest zdefiniowana. Poniższy zrzut ekranu przedstawia Edytor rejestru ustawienie poziomie kontrast tekstu.  
   
- ![ClearType ustawień w Edytorze rejestru](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![ClearType ustawień w Edytorze rejestru](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 ## <a name="see-also"></a>Zobacz także
-- [ClearType — przegląd](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
+- [ClearType — przegląd](cleartype-overview.md)
 - [Antyaliasing ClearType](/windows/desktop/gdi/cleartype-antialiasing)

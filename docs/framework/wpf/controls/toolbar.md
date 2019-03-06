@@ -7,27 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555432"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361931"
 ---
 # <a name="toolbar"></a>ToolBar
-<xref:System.Windows.Controls.ToolBar> Formant jest kontenerem dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji.  
+<xref:System.Windows.Controls.ToolBar> Sterowania to kontener dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji.  
   
  Na poniższych ilustracjach przedstawiono poziome i pionowe <xref:System.Windows.Controls.ToolBar> kontrolki.  
   
- ![Poziomym pasku narzędzi](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
+ ![Horizontal ToolBar](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
 Poziomy pasek narzędzi  
   
- ![Pionowy pasek narzędzi](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
+ ![Vertical ToolBar](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
 Pionowy pasek narzędzi  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ToolBar — omówienie](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [Kontrolki stylu na pasku ToolBar](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [ToolBar — omówienie](toolbar-overview.md)  
+  [Kontrolki stylu na pasku ToolBar](how-to-style-controls-on-a-toolbar.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ToolBar>  

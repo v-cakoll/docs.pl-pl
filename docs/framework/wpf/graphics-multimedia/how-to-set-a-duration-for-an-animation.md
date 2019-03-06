@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 7a2edbd953f648d5555e5dc50469211a6da066de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497934"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351633"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Instrukcje: Ustaw czas trwania dla animacji
 A <xref:System.Windows.Media.Animation.Timeline> reprezentuje segment czasu i długość danego segmentu jest ustalany na osi czasu <xref:System.Windows.Duration>. Gdy <xref:System.Windows.Media.Animation.Timeline> osiągnie koniec jego trwania przestaje odtwarzania. Jeśli <xref:System.Windows.Media.Animation.Timeline> podrzędnych osi czasu, ma także odtwarzanie one zatrzymane. W przypadku animacji <xref:System.Windows.Duration> określa animacji czas przejścia z jej wartość początkową wartość końcową.  
@@ -21,8 +21,8 @@ A <xref:System.Windows.Media.Animation.Timeline> reprezentuje segment czasu i d�
  W poniższy przykład szerokości, wysokości i wypełnienia kolor <xref:System.Windows.Shapes.Rectangle> jest animowany. Czas trwania są ustawione na osi czasu animacji i kontener skutkuje efektów animacji, w tym kontrolowanie postrzegany szybkość animacji i zastępowanie czas trwania podrzędnych osi czasu z czasem trwania osi czasu w kontenerze.  
   
 ## <a name="example"></a>Przykład  
- [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
+ [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Duration>
-- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Animacja — przegląd](animation-overview.md)

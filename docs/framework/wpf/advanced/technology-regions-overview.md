@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 978cd428989aa76f82f01711ccfa566b57352f48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fc325f1b4bb4eca73e051732810c9d9853ff4d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695744"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352493"
 ---
 # <a name="technology-regions-overview"></a>Przegląd Regiony technologiczne
 Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lub DirectX, należy udostępnić obszary renderowania w typowych okien najwyższego poziomu. W tym temacie opisano problemy, które mogą mieć wpływ na prezentacji i danych wejściowych dla aplikacji współdziałanie WPF.  
@@ -25,23 +25,23 @@ Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lu
 ### <a name="region-examples"></a>Przykłady regionu  
  Na poniższej ilustracji przedstawiono aplikację, która jest napisana [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Każda technologia używa swój własny zestaw oddzielnych, nienakładających pikseli, a nie ma żadnych problemów regionu.  
   
- ![Okno które nie ma problemów powietrznej](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
+ ![Okno które nie ma problemów powietrznej](./media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
   
  Załóżmy, że ta aplikacja używa pozycji wskaźnika myszy do tworzenia animacji podejmowanych w celu renderowania za pośrednictwem dowolnego z tych trzech regionach. Niezależnie od tego, która technologia była odpowiedzialna za animacji, sam technologia ta naruszyłoby region pozostałe dwa. Poniższa ilustracja przedstawia próby renderowania okrąg WPF nad obszarem Win32.  
   
- ![Diagram międzyoperacyjności](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
+ ![Diagram międzyoperacyjności](./media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
   
  Naruszenie innego jest, Jeśli spróbujesz użyć przezroczystości/alfa mieszania między różnych technologii.  Na poniższej ilustracji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] narusza pole [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] i [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] regionów. Ponieważ pikseli, w tym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pola są półprzezroczyste, będą musieli się być własnością zarówno [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], który nie jest możliwe.  Dlatego jest to innego naruszenia i nie może zostać utworzony.  
   
- ![Diagram międzyoperacyjności](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
+ ![Diagram międzyoperacyjności](./media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
   
  Poprzednie trzy przykłady używane prostokątnych regionów, ale możliwe są różne kształty.  Na przykład region może mieć dziury. Poniższa ilustracja przedstawia [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] regionie prostokątny dziury to rozmiar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] regionów, w połączeniu.  
   
- ![Diagram międzyoperacyjności](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
+ ![Diagram międzyoperacyjności](./media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
   
  Regiony można też całkowicie nieprostokątne lub dowolnym kształcie describable przez [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] hrgn — (region).  
   
- ![Diagram międzyoperacyjności](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
+ ![Diagram międzyoperacyjności](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
   
 ## <a name="transparency-and-top-level-windows"></a>Przejrzystość i Windows najwyższego poziomu  
  Menedżer okien w Windows tylko naprawdę przetwarza [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] parametrów hWnd. W związku z tym co [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> jest właściwością HWND. <xref:System.Windows.Window> HWND należy przestrzegać zasad ogólnych dla dowolnego HWND. W tym HWND [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kodu można zrobić, niezależnie od ogólnej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] pomocy technicznej. Ale w przypadku interakcji z innych parametrów hWnd na komputerze stacjonarnym [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] należy przestrzegać [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] przetwarzaniem i renderowaniem reguły.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje okien przy użyciu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]— HRGNs okien i okien warstwowej dla alpha każdego piksela.  
@@ -61,6 +61,6 @@ Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lu
 -   Jeśli aplikacja jest uruchomiona [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], warstwie systemu windows, w górnej części [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] powierzchnie zmieniał kolor po [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] renderuje aplikacji.  (Sekwencji rzeczywiste renderowania jest to, że [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ukrywa okno warstwowej, następnie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] rysuje, a następnie [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] przywraca okna warstwowej).  Non -[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwowej windows również ma tego ograniczenia.  
   
 ## <a name="see-also"></a>Zobacz także
-- [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Przewodnik: Hosting zegara WPF w Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)
-- [Hosting zawartości Win32 w WPF](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)
+- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
+- [Przewodnik: Hosting zegara WPF w Win32](walkthrough-hosting-a-wpf-clock-in-win32.md)
+- [Hosting zawartości Win32 w WPF](hosting-win32-content-in-wpf.md)

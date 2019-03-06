@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609606"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353598"
 ---
 # <a name="use-automatic-layout-overview"></a>Przegląd Użyj automatycznego układu
 W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji przy użyciu możliwych do zlokalizowania [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. W przeszłości lokalizacja interfejs użytkownika był czasochłonny proces. Każdego z języków interfejsu użytkownika została dostosowana do wymagana korekta poszczególne piksele. Dzisiaj z właściwy projekt i po prawej stronie standardy, kodowania [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] można skonstruować tak, aby lokalizatorzy mają mniejsza Zmienianie rozmiaru i położenia celu. Podejścia do pisania aplikacji, które można łatwiej o zmienionym rozmiarze i zmienionym nosi nazwę automatycznego układu oraz można osiągnąć za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projektowania aplikacji.  
@@ -33,15 +33,15 @@ W tym temacie przedstawiono wskazówki dla deweloperów dotyczące programowania
 ## <a name="automatic-layout-and-controls"></a>Automatyczny układ i kontrolek  
  Układ automatyczny umożliwia aplikacji automatyczne dopasowanie rozmiaru formantu. Na przykład kontrolki można zmienić celu uwzględnienia długość ciągu. Ta funkcja umożliwia lokalizatorzy do tłumaczenia ciągów; muszą już nie zmienia rozmiar formantu w celu dopasowania do przetłumaczonego tekstu. Poniższy przykład tworzy przycisk z zawartości w języku angielskim.  
   
- [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
   
  W tym przykładzie jest wszystko, co trzeba zrobić, aby przycisk hiszpańskim, zmienianie tekstu. Na przykład  
   
- [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
  Na poniższym rysunku przedstawiono dane wyjściowe z przykładów kodu.  
   
- ![Ten sam przycisk z tekstem w różnych językach](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
+ ![Ten sam przycisk z tekstem w różnych językach](./media/globalizationbutton.png "GlobalizationButton")  
 Zmienny rozmiar przycisku automatycznie  
   
 <a name="autolayout_coding"></a>   
@@ -54,13 +54,13 @@ Zmienny rozmiar przycisku automatycznie
 
 - Użyj <xref:System.Windows.Controls.DockPanel>, <xref:System.Windows.Controls.StackPanel>, i <xref:System.Windows.Controls.Grid> położenie kontrolki.
 
-Aby uzyskać informacje o różnych typach paneli, zobacz [Przegląd panele](../../../../docs/framework/wpf/controls/panels-overview.md).
+Aby uzyskać informacje o różnych typach paneli, zobacz [Przegląd panele](../controls/panels-overview.md).
 
 **Nie należy ustawiać o stałym rozmiarze okna**
 
 - Użyj <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType>. Na przykład:
 
-   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+   [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
 
 **Dodaj <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
 
@@ -92,22 +92,22 @@ Aby uzyskać informacje o różnych typach paneli, zobacz [Przegląd panele](../
 ## <a name="automatic-layout-and-grids"></a>Automatyczny układ i siatki  
  <xref:System.Windows.Controls.Grid> Elementu, jest przydatne w przypadku automatycznego układu, ponieważ umożliwia deweloperom położenie elementów. A <xref:System.Windows.Controls.Grid> kontrolka jest w stanie dystrybucji dostępna ilość miejsca między jego elementów podrzędnych, za pomocą w układzie wierszy i kolumn. Elementy interfejsu użytkownika może obejmować wiele komórek. Ponadto istnieje możliwość mają siatki w obrębie siatki. Siatki są przydatne, ponieważ umożliwiają one tworzenie i umieść złożonego interfejsu użytkownika. Poniższy przykład demonstruje użycie siatki do pozycji niektóre przyciski i tekst. Należy zauważyć, że wysokość i szerokość komórek są ustawione na <xref:System.Windows.GridUnitType.Auto>; dlatego komórkę, która zawiera przycisk za pomocą obrazu jest dopasowywany obrazu.  
 
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  Na poniższym rysunku przedstawiono siatki produkowane przez poprzedniego kodu.  
   
- ![Przykład Grid](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![Przykład Grid](./media/glob-grid.png "glob_grid")  
 Siatka  
   
 <a name="autolay_grids_issharedsizescope"></a>   
 ## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>Automatyczny układ i siatki, przy użyciu właściwości IsSharedSizeScope  
  A <xref:System.Windows.Controls.Grid> element jest przydatne w zlokalizowanych aplikacjach w celu tworzenia formantów, które Dopasuj do zawartości. Jednak czasami chcesz służy do obsługi określonego rozmiaru, niezależnie od zawartości. Na przykład jeśli masz "OK", "Anuluj" i "Przeglądaj" przyciski, prawdopodobnie nie ma przyciski dopasowana zawartości. W tym przypadku <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> dołączoną właściwość przydaje się do udostępniania tego samego rozmiaru między wiele elementów siatki. W poniższym przykładzie pokazano sposób udostępniania danych między wieloma rozmiaru wierszy i kolumn <xref:System.Windows.Controls.Grid> elementów.  
   
- [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
+ [!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
   
- **Uwaga** cały przykładowy kod, można zobaczyć [udziału właściwości ustalania rozmiaru między siatkami](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ **Uwaga** cały przykładowy kod, można zobaczyć [udziału właściwości ustalania rozmiaru między siatkami](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Używanie automatycznego układu do utworzenia przycisku](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [Używanie siatki do automatycznego układu](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+- [Globalizacja dla WPF](globalization-for-wpf.md)
+- [Używanie automatycznego układu do utworzenia przycisku](how-to-use-automatic-layout-to-create-a-button.md)
+- [Używanie siatki do automatycznego układu](how-to-use-a-grid-for-automatic-layout.md)

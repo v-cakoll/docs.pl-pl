@@ -1,16 +1,16 @@
 ---
 title: Wskazówki dotyczące architektury .NET
-description: Więcej informacji na temat recoommended wskazówki dotyczące architektury, projektowania i tworzenia oprogramowania platformy .NET.
+description: Więcej informacji na temat zalecanych rozwiązań dotyczących architektury, projektowania i tworzenia oprogramowania platformy .NET.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.technology: dotnet-ebooks
-ms.openlocfilehash: cb96b56eb6ad76fc8809e46c86277a96fa7b85c8
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 9aeb950ea0eae8a5e52110802410caadcba368cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415874"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379591"
 ---
 # <a name="net-architecture-guidance"></a>Wskazówki dotyczące architektury .NET
 

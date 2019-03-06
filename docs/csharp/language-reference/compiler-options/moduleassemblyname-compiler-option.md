@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: bc1bc1376271b3a01d9b720dd85f812ea55cf34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665048"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361268"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname — (opcją kompilatora C#)
 Określa, których typy bez publicznego .netmodule mogą uzyskiwać dostęp do zestawu.  
@@ -39,7 +39,7 @@ Określa, których typy bez publicznego .netmodule mogą uzyskiwać dostęp do z
   
  Aby uzyskać więcej informacji na temat budowania .netmodule zobacz [-target: module (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Aby uzyskać więcej informacji na temat przyjaznych zestawów, zobacz [przyjaznych zestawów](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Aby uzyskać więcej informacji na temat przyjaznych zestawów, zobacz [przyjaznych zestawów](../../../standard/assembly/friend-assemblies.md).  
   
  Ta opcja nie jest dostępne z poziomu środowiska programistycznego; jest on dostępny tylko wtedy, podczas kompilowania z wiersza polecenia.  
   

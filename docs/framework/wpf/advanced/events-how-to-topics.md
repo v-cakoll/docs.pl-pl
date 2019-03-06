@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543530"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370978"
 ---
 # <a name="events-how-to-topics"></a>Zdarzenia Tematy porad
-Tematy w tej sekcji opisano sposób korzystanie ze zdarzeń w WPF.  
+Tematy w tej sekcji opisano sposób korzystanie ze zdarzeń w programie WPF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Dodawanie obsługi zdarzeń z użyciem kodu](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [Obsługa zdarzenia trasowanego](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Tworzenie niestandardowego zdarzenia trasowanego](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [Znajdowanie elementu źródłowego w obsłudze zdarzeń](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [Dodawanie obsługi klasy dla zdarzenia trasowanego](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+ [Dodawanie obsługi zdarzeń z użyciem kodu](how-to-add-an-event-handler-using-code.md)  
+ [Obsługa zdarzenia trasowanego](how-to-handle-a-routed-event.md)  
+ [Tworzenie niestandardowego zdarzenia trasowanego](how-to-create-a-custom-routed-event.md)  
+ [Znajdowanie elementu źródłowego w obsłudze zdarzeń](how-to-find-the-source-element-in-an-event-handler.md)  
+ [Dodawanie obsługi klasy dla zdarzenia trasowanego](how-to-add-class-handling-for-a-routed-event.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.RoutedEvent>  

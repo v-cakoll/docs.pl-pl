@@ -7,22 +7,22 @@ helpviewer_keywords:
 - data binding [WPF]
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
-ms.openlocfilehash: 441f14b09e3bd3ed745d38645ec23b9d040d419b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375197"
 ---
 # <a name="data-binding-wpf"></a>Powiązanie danych (WPF)
-Powiązanie danych systemu Windows Presentation Foundation (WPF) zawiera prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów i XML.  
+Powiązanie danych Windows Presentation Foundation (WPF) zawiera prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z wielu źródeł danych w postaci wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów i XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Wiązanie źródeł — omówienie](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Powiązanie deklaracji — omówienie](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Powiązanie danych — omówienie](data-binding-overview.md)  
+ [Wiązanie źródeł — omówienie](binding-sources-overview.md)  
+ [Szablonowanie danych — omówienie](data-templating-overview.md)  
+ [Powiązanie deklaracji — omówienie](binding-declarations-overview.md)  
+ [Tematy z instrukcjami](data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Data>  
@@ -34,8 +34,8 @@ Powiązanie danych systemu Windows Presentation Foundation (WPF) zawiera prosty 
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Przeciąganie i upuszczanie](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Przeciąganie i upuszczanie](../advanced/drag-and-drop.md)  
   
- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)  
   
- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

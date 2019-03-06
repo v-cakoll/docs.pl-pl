@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: e6bbf6aea1a98b7e1497101ea6a6121525f1c87f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6fe459ab00622860cd10e4e119e943e588f06b2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732027"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352955"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Współdziałanie WPF i Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] przedstawić dwie różne architektury służące do tworzenia interfejsów aplikacji. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Przestrzeń nazw zawiera klasy, które umożliwiają typowych scenariuszy współdziałanie. Są dwa klucza klasy, które implementują funkcje współdziałanie <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost>. W tym temacie opisano, jakie współdziałanie scenariusze są obsługiwane i scenariuszy, do których nie są obsługiwane.  
@@ -60,7 +60,7 @@ ms.locfileid: "54732027"
 ### <a name="ambient-properties"></a>Właściwości otoczenia  
  Niektóre właściwości otoczenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty mają [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] odpowiedniki. Te właściwości otoczenia są propagowane do obsługiwanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroluje i udostępniane jako właściwości publiczne na <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontroli. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Kontroli tłumaczy każdego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zmieniono właściwość do jego [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] równoważne.  
   
- Aby uzyskać więcej informacji, zobacz [Windows Forms i WPF właściwość mapowanie](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Aby uzyskać więcej informacji, zobacz [Windows Forms i WPF właściwość mapowanie](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="behavior"></a>Zachowanie  
  W poniższej tabeli opisano współdziałanie zachowanie.  
@@ -103,7 +103,7 @@ ms.locfileid: "54732027"
 ### <a name="ambient-properties"></a>Właściwości otoczenia  
  Niektóre właściwości otoczenia [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formanty mają [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] odpowiedniki. Te właściwości otoczenia są propagowane do obsługiwanej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontroluje i udostępniane jako właściwości publiczne na <xref:System.Windows.Forms.Integration.ElementHost> kontroli. <xref:System.Windows.Forms.Integration.ElementHost> Kontroli tłumaczy każdego [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] właściwości otoczenia jego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] równoważne.  
   
- Aby uzyskać więcej informacji, zobacz [Windows Forms i WPF właściwość mapowanie](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Aby uzyskać więcej informacji, zobacz [Windows Forms i WPF właściwość mapowanie](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="behavior"></a>Zachowanie  
  W poniższej tabeli opisano współdziałanie zachowanie.  
@@ -120,7 +120,7 @@ ms.locfileid: "54732027"
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Przewodnik: Hosting kontrolki Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Mapowanie właściwości Windows Forms i WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Przewodnik: Hosting kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)

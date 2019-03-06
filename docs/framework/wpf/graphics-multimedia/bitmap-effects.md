@@ -9,21 +9,21 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: fef5cec4da09f8cd1a29cb9ebaccc83ee7c48311
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb81644bc69edcd1465cf43224eb6af369b5fb3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555818"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373468"
 ---
 # <a name="bitmap-effects"></a>Efekty mapy bitowej
-Tematy w tej sekcji opisano sposób dotyczą efekty wizualne bitmapy przy użyciu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Tematy w tej sekcji opisano sposób stosowania efektów wizualnych do obrazy mapy bitowej przy użyciu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 > [!IMPORTANT]
->  W [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] lub nowszym, <xref:System.Windows.Media.Effects.BitmapEffect> klasa jest przestarzała. Jeśli spróbujesz użyć <xref:System.Windows.Media.Effects.BitmapEffect> klasy, wystąpi wyjątek przestarzałe. Aktualna alternatywa do <xref:System.Windows.Media.Effects.BitmapEffect> jest klasa <xref:System.Windows.Media.Effects.Effect> klasy. W większości przypadków <xref:System.Windows.Media.Effects.Effect> klasy jest znacznie szybsze.  
+>  W [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] lub nowszym, <xref:System.Windows.Media.Effects.BitmapEffect> klasa jest przestarzała. Jeśli spróbujesz użyć <xref:System.Windows.Media.Effects.BitmapEffect> klasy, wystąpi wyjątek przestarzały. Nieprzestarzała alternatywa do <xref:System.Windows.Media.Effects.BitmapEffect> klasa jest <xref:System.Windows.Media.Effects.Effect> klasy. W większości sytuacji <xref:System.Windows.Media.Effects.Effect> klasy jest znacznie szybsze.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Efekty mapy bitowej — przegląd](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ [Efekty mapy bitowej — przegląd](bitmap-effects-overview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
@@ -31,6 +31,6 @@ Tematy w tej sekcji opisano sposób dotyczą efekty wizualne bitmapy przy użyci
  <xref:System.Windows.Media.Effects>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafika i multimedia](index.md)  
   
- [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Obrazowanie — przegląd](imaging-overview.md)

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620230"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358070"
 ---
 # <a name="shapes-how-to-topics"></a>Kształty Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia <xref:System.Windows.Shapes.Shape> obiekty do rysowania kształtów podstawowych do ekranu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Rysowanie kształtu zamkniętego przy użyciu elementu wielobocznego](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [Rysowanie elipsy na okręgu](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [Rysowanie linii](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [Rysowanie wielokąta przy użyciu elementu wielokątnego](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [Rysowanie prostokąta](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [Modyfikowanie zakończenia na końcu linii lub segmentu](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [Rysowanie kształtu zamkniętego przy użyciu elementu wielobocznego](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [Rysowanie elipsy na okręgu](how-to-draw-an-ellipse-or-a-circle.md)  
+ [Rysowanie linii](how-to-draw-a-line.md)  
+ [Rysowanie wielokąta przy użyciu elementu wielokątnego](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [Rysowanie prostokąta](how-to-draw-a-rectangle.md)  
+ [Modyfikowanie zakończenia na końcu linii lub segmentu](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Shapes.Shape>
-- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Grafika i multimedia](index.md)

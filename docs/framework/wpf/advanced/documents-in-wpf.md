@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 00e983c907c0376b45d2342f393569d045cbf98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517737"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361372"
 ---
 # <a name="documents-in-wpf"></a>Dokumenty w WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje szeroką gamę funkcji dokumentu, które umożliwiają tworzenie zawartości o wysokiej wierności, która została zaprojektowana jako łatwiej uzyskuje się dostęp i odczytu niż w poprzednich generacji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Oprócz rozszerzone możliwości i jakość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] również udostępnia zintegrowane usługi do wyświetlania dokumentu, pakowania i zabezpieczeń. Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typów dokumentów i pakowania w usłudze dokumentu.  
@@ -27,7 +27,7 @@ ms.locfileid: "54517737"
   
  Naprawiono dokumenty są przeznaczone dla aplikacji, które wymagają precyzyjnego [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] prezentacji, niezależnie od ekranu lub drukarki sprzętu używanego. Typowe zastosowania Naprawiono dokumenty obejmują składu komputerowego, edytory tekstu i układu formularza, w którym gotowość do oryginalnego projektu strona ma kluczowe znaczenie. Jako część jej układ niezależnie od ekranu lub drukarki w użyciu dokładne pozycyjne rozmieszczenia elementów zawartości przechowuje stały dokumentu. Na przykład stały dokumentu wyświetlane na ekranie rozdzielczości 96 dpi zostanie wyświetlona strona dokładnie takie same, gdy jest wyprowadzana do 600 dpi drukarka laserowa jako, gdy jest ona dane wyjściowe do phototypesetter 4800 dpi. Układ strony pozostaje taki sam, we wszystkich przypadkach, gdy jakości dokumentu maksymalizuje do możliwości poszczególnych urządzeń.  
   
- Natomiast dokumenty przepływu zaprojektowano w celu zoptymalizowania wyświetlania i czytelności i najlepiej są wykorzystywane podczas czytelnej jest scenariusz użycia dokumentu głównego. Zamiast jest ustawiona na jeden układ wstępnie zdefiniowanych, dokumenty przepływu dynamicznie Dostosuj i przepełnieniem ich zawartości na podstawie zmiennych czasu wykonywania, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Strona sieci Web jest prosty przykład dokument przepływu, w którym zawartość strony jest dynamicznie sformatowane, aby dopasować bieżące okno. Dokumenty przepływu zoptymalizować wyświetlania i odczytu środowiska dla użytkownika, w oparciu o środowisko uruchomieniowe. Na przykład ten sam dokument przepływu będzie dynamicznie formatowania dla optymalnej czytelności 19-calowy rozdzielczości lub ekranu urządzenia PDA małych cala 2 x 3. Ponadto dokumenty przepływu ma szereg wbudowanych funkcji, w tym wyszukiwanie, wyświetlanie trybów, które optymalizują czytelności i możliwości zmiany rozmiaru i wygląd czcionek.  Zobacz [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md) ilustracje, przykłady i szczegółowe informacje na temat dokumenty przepływu.  
+ Natomiast dokumenty przepływu zaprojektowano w celu zoptymalizowania wyświetlania i czytelności i najlepiej są wykorzystywane podczas czytelnej jest scenariusz użycia dokumentu głównego. Zamiast jest ustawiona na jeden układ wstępnie zdefiniowanych, dokumenty przepływu dynamicznie Dostosuj i przepełnieniem ich zawartości na podstawie zmiennych czasu wykonywania, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Strona sieci Web jest prosty przykład dokument przepływu, w którym zawartość strony jest dynamicznie sformatowane, aby dopasować bieżące okno. Dokumenty przepływu zoptymalizować wyświetlania i odczytu środowiska dla użytkownika, w oparciu o środowisko uruchomieniowe. Na przykład ten sam dokument przepływu będzie dynamicznie formatowania dla optymalnej czytelności 19-calowy rozdzielczości lub ekranu urządzenia PDA małych cala 2 x 3. Ponadto dokumenty przepływu ma szereg wbudowanych funkcji, w tym wyszukiwanie, wyświetlanie trybów, które optymalizują czytelności i możliwości zmiany rozmiaru i wygląd czcionek.  Zobacz [Przegląd dokumentu przepływu](flow-document-overview.md) ilustracje, przykłady i szczegółowe informacje na temat dokumenty przepływu.  
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>Formantów dokumentów i układ tekstu  
@@ -40,7 +40,7 @@ ms.locfileid: "54517737"
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>Kontrole dokument przepływu  
- **Uwaga:** Aby uzyskać szczegółowe informacje na temat funkcji dokument przepływu i jak je utworzyć, zobacz [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
+ **Uwaga:** Aby uzyskać szczegółowe informacje na temat funkcji dokument przepływu i jak je utworzyć, zobacz [Przegląd dokumentu przepływu](flow-document-overview.md).  
   
  Wyświetlanie zawartości dokumentów przepływu jest obsługiwana przez trzy kontrolki: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, i <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54517737"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Tekst w interfejsie użytkownika  
- Oprócz dodawania tekstu do dokumentów, tekst oczywiście może służyć w interfejsie użytkownika aplikacji, takich jak formularze. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wiele kontrolek dla Rysowanie tekstu na ekranie. Każdy formant jest przeznaczona do innego scenariusza i ma swój własny listę funkcjami i ograniczeniami. Ogólnie rzecz biorąc <xref:System.Windows.Controls.TextBlock> element powinien być używany, gdy obsługa text ograniczony jest wymagane, na przykład krótkie zdanie w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> może służyć, gdy wymagana jest obsługa minimalnej ilości tekstu. Aby uzyskać więcej informacji, zobacz [TextBlock — Przegląd](../../../../docs/framework/wpf/controls/textblock-overview.md).  
+ Oprócz dodawania tekstu do dokumentów, tekst oczywiście może służyć w interfejsie użytkownika aplikacji, takich jak formularze. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wiele kontrolek dla Rysowanie tekstu na ekranie. Każdy formant jest przeznaczona do innego scenariusza i ma swój własny listę funkcjami i ograniczeniami. Ogólnie rzecz biorąc <xref:System.Windows.Controls.TextBlock> element powinien być używany, gdy obsługa text ograniczony jest wymagane, na przykład krótkie zdanie w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> może służyć, gdy wymagana jest obsługa minimalnej ilości tekstu. Aby uzyskać więcej informacji, zobacz [TextBlock — Przegląd](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Pakowanie dokumentu  
@@ -142,7 +142,7 @@ ms.locfileid: "54517737"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [Serializacja dokumentu i przechowywanie](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
+- [Text](optimizing-performance-text.md)
+- [Przegląd dokumentu przepływu](flow-document-overview.md)
+- [Przegląd drukowania](printing-overview.md)
+- [Serializacja dokumentu i przechowywanie](document-serialization-and-storage.md)

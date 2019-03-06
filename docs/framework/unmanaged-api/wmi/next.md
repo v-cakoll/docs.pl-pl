@@ -1,6 +1,6 @@
 ---
 title: Użycie funkcji Next (niezarządzany wykaz interfejsów API)
-description: Dalej funkcja retireves następną właściwość w wyliczeniu.
+description: Następna funkcja pobiera następną właściwość w wyliczeniu.
 ms.date: 11/06/2017
 api_name:
 - Next
@@ -16,54 +16,54 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c6e39c1bc4c2860e400e2708e588416eb5769bd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971887"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373204"
 ---
 # <a name="next-function"></a>Użycie funkcji Next
-Pobiera następną właściwość w wyliczenie, które zaczyna się od wywołania [Beingenumeration](beginenumeration.md).  
+Pobiera następną właściwość w wyliczenie, które zaczyna się od wywołania [Beingenumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 HRESULT Next (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              lFlags,
    [out] BSTR*            pstrName,
    [out] VARIANT*         pVal,
    [out] CIMTYPE*         pvtType,
-   [out] LONG*            plFlavor     
-); 
-```  
+   [out] LONG*            plFlavor
+);
+```
 
 ## <a name="parameters"></a>Parametry
 
-`vFunc`  
+`vFunc`\
 [in] Ten parametr jest nieużywany.
 
-`ptr`  
+`ptr`\
 [in] Wskaźnik do [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wystąpienia.
 
-`lFlags`  
+`lFlags`\
 [in] Zastrzeżone. Ten parametr musi być 0.
 
-`pstrName`  
+`pstrName`\
 [out] Nowy `BSTR` zawierający nazwę właściwości. Ten parametr zostanie ustawiony na `null` Jeśli nazwa nie jest wymagana.
 
-`pVal`  
-[out] A `VARIANT` wypełnione wartością właściwości. Ten parametr zostanie ustawiony na `null` Jeśli wartość nie jest wymagana. Jeśli funkcja zwraca kod błędu: `VARIANT` przekazany do `pVal` się po lewej stronie w niezmienionej postaci. 
+`pVal`\
+[out] A `VARIANT` wypełnione wartością właściwości. Ten parametr zostanie ustawiony na `null` Jeśli wartość nie jest wymagana. Jeśli funkcja zwraca kod błędu: `VARIANT` przekazany do `pVal` się po lewej stronie w niezmienionej postaci.
 
-`pvtType`  
-[out] Wskaźnik do `CIMTYPE` zmiennej ( `LONG` do jest umieszczany typ właściwości). Wartość tej właściwości może być `VT_NULL_VARIANT`, w którym to przypadku należy określić rzeczywisty typ właściwości. Ten parametr może być również `null`. 
+`pvtType`\
+[out] Wskaźnik do `CIMTYPE` zmiennej ( `LONG` do jest umieszczany typ właściwości). Wartość tej właściwości może być `VT_NULL_VARIANT`, w którym to przypadku należy określić rzeczywisty typ właściwości. Ten parametr może być również `null`.
 
-`plFlavor`  
-[out] `null`, lub wartość, która otrzymuje informacje o pochodzeniu właściwości. W sekcji [Uwagi] możliwych wartości. 
+`plFlavor`\
+[out] `null`, lub wartość, która otrzymuje informacje o pochodzeniu właściwości. W sekcji [Uwagi] możliwych wartości.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -75,10 +75,10 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Wystąpił brak wywołania [ `BeginEnumeration` ](beginenumeration.md) funkcji. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nie ma wystarczającej ilości pamięci jest dostępny rozpocząć nowe wyliczenie. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Zdalne wywoływanie procedur z przedziału od bieżącym procesem a usługą Windows Management nie powiodło się. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Zdalne wywołanie procedury między bieżącym procesem a usługą Windows Management nie powiodło się. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | Nie ma żadnych więcej właściwości w wyliczeniu. |
-  
+
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja zawija wywołanie do [IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next) metody.
@@ -95,12 +95,14 @@ Jeśli `plFlavor` nie `null`, `LONG` wartość otrzymuje informacje na temat źr
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Dla klasy: Właściwość jest dziedziczona z klasy nadrzędnej. <br> W przypadku wystąpienia: Właściwości, podczas gdy dziedziczone z klasy nadrzędnej, nie został zmodyfikowany przez to wystąpienie.  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Dla klasy: Właściwość należy do klasy pochodnej. <br> W przypadku wystąpienia: Ta właściwość jest modyfikowana przez wystąpienie; oznacza to, że podano wartość lub kwalifikator został dodany lub zmodyfikowany. |
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** WMINet_Utils.idl  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** WMINet_Utils.idl
+
+**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

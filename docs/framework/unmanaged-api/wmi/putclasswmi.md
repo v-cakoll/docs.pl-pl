@@ -16,40 +16,41 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f9d537f7713233d363f7d408b1cef0485d99d981
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972810"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365701"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi — funkcja
-Tworzy nową klasę lub aktualizuje istniejący zestaw.  
+
+Tworzy nową klasę lub aktualizuje istniejący zestaw.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+
+## <a name="syntax"></a>Składnia
+
+```cpp
 HRESULT PutClassWmi (
    [in] IWbemClassObject*    pObject,
    [in] long                 lFlags,
    [in] IWbemContext*        pCtx,
    [out] IWbemCallResult**   ppCallResult
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parametry
 
-`pObject`    
+`pObject`\
 [in] Wskaźnik do prawidłową definicją klasy. Jego musi być prawidłowo zainicjowany przy użyciu wartości wymaganej właściwości.
 
-`lFlags`   
-[in] Kombinacja flag, które mają wpływ na zachowanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie: 
+`lFlags`\
+[in] Kombinacja flag, które mają wpływ na zachowanie tej funkcji. Następujące wartości są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, usługa WMI nie przechowuje żadnych kwalifikatorów zmienionych wersji. <br> W przeciwnym razie zestawu, zakłada się, że ten obiekt nie jest zlokalizowana, a wszystkie kwalifikatory są storedwith tego wystąpienia. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Jeśli zestaw, usługa WMI nie przechowuje żadnych kwalifikatorów zmienionych wersji. <br> W przeciwnym razie zestawu, zakłada się, że ten obiekt nie jest zlokalizowana, a wszystkie kwalifikatory są przechowywane z tym wystąpieniem. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Jeśli nie istnieje, lub go zastąpić, jeśli już istnieje, należy utworzyć klasę. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aktualizacja klasy. Klasa musi istnieć przez wywołanie zakończy się powodzeniem. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Utwórz klasę. Wywołanie zakończy się niepowodzeniem, jeśli klasa już istnieje. |
@@ -57,12 +58,12 @@ HRESULT PutClassWmi (
 | `WBEM_FLAG_OWNER_UPDATE` | 0x10000 | Dostawców wypychania należy określić tę flagę podczas wywoływania `PutClassWmi` do wskazania, że ta klasa została zmieniona. |
 | `WBEM_FLAG_UPDATE_COMPATIBLE` | 0 | Umożliwia klasy do zaktualizowania, jeśli istnieją nie klasy pochodne oraz żadnych wystąpień tej klasy. Umożliwia także aktualizacje we wszystkich przypadkach, jeśli ta zmiana jest tylko do "nieważne" kwalifikatorów, takich jak kwalifikator opisu. Jeśli są wystąpienia klasy lub zmiany mają ważne kwalifikatorów, aktualizacja nie powiedzie się. |
 | `WBEM_FLAG_UPDATE_SAFE_MODE` | 0x20 | Umożliwia aktualizowanie klas, nawet jeśli występują podrzędnego klasy tak długo, jak zmiany nie powoduje konfliktów z klasy podrzędne. Ta flaga umożliwia na przykład nową właściwość do dodania do klasy bazowej, która nie została wcześniej wymienione w dowolnej klasy podrzędne. Jeśli klasa ma wystąpień, aktualizacja nie powiedzie się. |
-| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | Wymusza aktualizowanie klas, gdy klasy podrzędne powodujące konflikt. Na przykład ta flaga wymusza aktualizację, jeśli kwalifikator klasa jest zdefiniowana w klasie podrzędnej, a klasa bazowa próbuje dodać ten sam kwalifikator, który powoduje konflikt z jedną istniejących danych. W trybie wymuszania tym konflikt został rozwiązany przez usunięcie powodujące konflikt kwalifikator klasy podrzędnej. |
+| `WBEM_FLAG_UPDATE_FORCE_MODE` | 0x40 | Wymusza aktualizowanie klas, gdy klasy podrzędne powodujące konflikt. Na przykład ta flaga wymusza aktualizację, jeśli kwalifikator klasa jest zdefiniowana w klasie podrzędnych i klasa bazowa próbuje dodać ten sam kwalifikator który powoduje konflikt z istniejącą grupę. W trybie wymuszania tym konflikt został rozwiązany przez usunięcie powodujące konflikt kwalifikator klasy podrzędnej. |
 
-`pCtx`  
-[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy. 
+`pCtx`\
+[in] Ta wartość jest zazwyczaj `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wystąpienie, które mogą być używane przez dostawcę, który dostarcza żądanej klasy.
 
-`ppCallResult`  
+`ppCallResult`\
 [out] Jeśli `null`, ten parametr jest nieużywana. Jeśli `lFlags` zawiera `WBEM_FLAG_RETURN_IMMEDIATELY`, funkcja zwraca natychmiast za pomocą `WBEM_S_NO_ERROR`. `ppCallResult` Parametru otrzymuje wskaźnik do nowego [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) obiektu.
 
 ## <a name="return-value"></a>Wartość zwracana
@@ -84,21 +85,23 @@ Następujące wartości, które są zwracane przez tę funkcję, są zdefiniowan
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI został prawdopodobnie zatrzymane i ponowne uruchamianie. Wywołaj [ConnectServerWmi](connectserverwmi.md) ponownie. |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Procedury zdalnej łącza wywołania (procedur RPC) między bieżącym procesem a usługą WMI nie powiodło się. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
-  
+
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja zawija wywołanie do [IWbemServices::PutClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putclass) metody.
 
-Użytkownik nie może utworzyć klasy z nazwami będącymi zaczynać się ani kończyć znakiem podkreślenia chacater
+Użytkownik nie można utworzyć klasy z nazwami będącymi zaczynać się ani kończyć znakiem podkreślenia.
 
 Jeśli wywołanie funkcji zakończy się niepowodzeniem, można uzyskać dodatkowe informacje o błędzie, wywołując [geterrorinfo —](geterrorinfo.md) funkcji.
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** WMINet_Utils.idl  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** WMINet_Utils.idl
+
+**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

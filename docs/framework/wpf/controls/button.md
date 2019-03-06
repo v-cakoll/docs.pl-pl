@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], Button
 - Button control [WPF]
 ms.assetid: a9d8f5a5-c98c-463e-808a-5a4e63173098
-ms.openlocfilehash: e1f40edb88ce1d208ca97b29e4c7daaf0c82ed35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 277338ae11090fa3701135cd0ac761da0a887255
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551703"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362724"
 ---
 # <a name="button"></a>Przycisk
-A <xref:System.Windows.Controls.Button> kontroli reaguje na dane wejściowe użytkownika z myszy, klawiatury, Pióro, lub inne urządzenie wejściowe i zgłasza <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. A <xref:System.Windows.Controls.Button> jest podstawowy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] składnik, który może zawierać prostej zawartości, takich jak tekst i może również zawierać złożonych zawartości, takich jak obrazy i <xref:System.Windows.Controls.Panel> kontrolki.  
+A <xref:System.Windows.Controls.Button> kontrolka reaguje na dane wejściowe użytkownika z myszy, klawiatury, Pióro, lub inne urządzenie wejściowe i generuje <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. A <xref:System.Windows.Controls.Button> to podstawowy [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] składnik, który może zawierać zawartość, proste, np. tekstu i może również zawierać złożonych zawartość, taką jak obrazy i <xref:System.Windows.Controls.Panel> kontrolki.  
   
- ![Przycisk stanów](../../../../docs/framework/wpf/controls/media/ss-ctl-buttons.bmp "SS_CTL_buttons")  
+ ![Stany przycisku](./media/ss-ctl-buttons.bmp "SS_CTL_buttons")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie przycisku mającego obraz](../../../../docs/framework/wpf/controls/how-to-create-a-button-that-has-an-image.md)  
+ [Tworzenie przycisku mającego obraz](how-to-create-a-button-that-has-an-image.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Button>  

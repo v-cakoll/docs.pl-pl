@@ -11,15 +11,15 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: ff259dae06ef7347dd9fa3afbab68ae67e9146a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725534"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367986"
 ---
 # <a name="resources-and-code"></a>Zasoby i kod
-W tym omówieniu koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów można uzyskać dostępu do lub utworzone przy użyciu kodu zamiast [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] składni. Aby uzyskać więcej informacji na temat użycia zasobów ogólnych i zasobów z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] perspektywy składni, zobacz [zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+W tym omówieniu koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów można uzyskać dostępu do lub utworzone przy użyciu kodu zamiast [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] składni. Aby uzyskać więcej informacji na temat użycia zasobów ogólnych i zasobów z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] perspektywy składni, zobacz [zasoby XAML](xaml-resources.md).  
   
   
   
@@ -29,8 +29,8 @@ W tym omówieniu koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../..
   
  Poniżej przedstawiono przykładowy kod krótki wyszukuje zasób według klucza, która używa zwracanej wartości do ustawienia właściwości zaimplementowane jako <xref:System.Windows.Controls.Primitives.ButtonBase.Click> programu obsługi zdarzeń.  
   
- [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
- [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
+ [!code-csharp[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml.cs#resourceproceduralget)]
+ [!code-vb[PropertiesOvwSupport#ResourceProceduralGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page3.xaml.vb#resourceproceduralget)]  
   
  Alternatywną metodą w przypadku przypisywania odwołanie do zasobu jest <xref:System.Windows.FrameworkElement.SetResourceReference%2A>. Ta metoda przyjmuje dwa parametry: klucz zasobu oraz identyfikator dla właściwości określonej zależności, który jest dostępny w wystąpieniu elementu, do której można przypisać wartość zasobu. Funkcjonalnie ta metoda jest taki sam i ma tę zaletę nie wymaga żadnych Rzutowanie wartości zwracanych.  
   
@@ -44,8 +44,8 @@ W tym omówieniu koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../..
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>Użycie obiektów jako klucze  
- Większość użycia zasobów ustawi klucz zasobu jest ciąg. Jednak różne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji celowo nie należy używać typu string do określania kluczy należy zamiast tego parametru jest obiektem. Możliwość wystąpienia zasobu, można wprowadzić za pomocą obiektu jest używany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] styl i motyw pomocy technicznej. Style motywów, które stają się domyślnego stylu dla formantu inaczej niż stylem są każdego kluczach <xref:System.Type> kontrolki, do którego mają dotyczyć. Trwa kluczach typu zapewnia mechanizm niezawodne wyszukiwania, który działa na wystąpień każdego typu formantu, a typ można wykrywane przez odbicie i umożliwiający style klasy pochodne, nawet jeśli typ pochodny, w przeciwnym razie ma nie domyślnego stylu. Można określić <xref:System.Type> klucza dla zasobu zdefiniowanego w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przy użyciu [x: Type Markup Extension](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Podobne rozszerzenia istnieje inne użycia klucza typu, które obsługują [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje, takie jak [componentresourcekey — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
+ Większość użycia zasobów ustawi klucz zasobu jest ciąg. Jednak różne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji celowo nie należy używać typu string do określania kluczy należy zamiast tego parametru jest obiektem. Możliwość wystąpienia zasobu, można wprowadzić za pomocą obiektu jest używany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] styl i motyw pomocy technicznej. Style motywów, które stają się domyślnego stylu dla formantu inaczej niż stylem są każdego kluczach <xref:System.Type> kontrolki, do którego mają dotyczyć. Trwa kluczach typu zapewnia mechanizm niezawodne wyszukiwania, który działa na wystąpień każdego typu formantu, a typ można wykrywane przez odbicie i umożliwiający style klasy pochodne, nawet jeśli typ pochodny, w przeciwnym razie ma nie domyślnego stylu. Można określić <xref:System.Type> klucza dla zasobu zdefiniowanego w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przy użyciu [x: Type Markup Extension](../../xaml-services/x-type-markup-extension.md). Podobne rozszerzenia istnieje inne użycia klucza typu, które obsługują [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje, takie jak [componentresourcekey — rozszerzenie znaczników](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Zasoby XAML](xaml-resources.md)
+- [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)

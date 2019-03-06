@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: f1913832bf95d0ea7188637f5456e4ff8f24695e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718913"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360982"
 ---
 # <a name="fonts-wpf"></a>Czcionki (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] obejmuje obsługę prezentacji sformatowanego tekstu przy użyciu języka [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki. Przykładowy pakiet z [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki jest dołączana do [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Funkcje czcionki OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Pakowanie czcionek z aplikacjami](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [Przykład pakietu czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+ [Funkcje czcionki OpenType](opentype-font-features.md)  
+ [Pakowanie czcionek z aplikacjami](packaging-fonts-with-applications.md)  
+ [Przykład pakietu czcionek OpenType](sample-opentype-font-pack.md)  
+ [Tematy z instrukcjami](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Dokumenty w WPF](documents-in-wpf.md)
+- [Typografia w WPF](typography-in-wpf.md)

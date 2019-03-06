@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: 505f4d6998b54f5b3af7613184d2cbac90cb8548
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d362767b92799fa54f46e71724284a92b5bf7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656469"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358824"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Instrukcje: Konfiguruj Visual Studio, aby debugować aplikację przeglądarki XAML i wywołać usługę sieci Web
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] są uruchamiane w piaskownicy zabezpieczeń częściowego zaufania, który jest ograniczony do zestaw uprawnień strefy Internet. Ten zestaw uprawnień ogranicza wywołania usługi sieci Web, aby tylko usług, które znajdują się w sieci Web [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] aplikacji witryny pochodzenia. Gdy [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debugowania z programu Visual Studio 2005, jednak nie wydaje się mieć tej samej lokacji, z którego pochodzą, sieci Web obsługi odwołań. Wyjątki zabezpieczeń powoduje, że wywoływane, gdy [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] próbuje wywołać usługę sieci Web. Jednak program Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] projektu można skonfigurować w celu symulowania o tej samej lokacji źródła jako usługę sieci Web wywoływanych przez nią podczas debugowania. Dzięki temu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bezpiecznie wywołać usługę sieci Web bez powodowania wyjątki zabezpieczeń.
@@ -63,4 +63,4 @@ ms.locfileid: "54656469"
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 
 ## <a name="see-also"></a>Zobacz także
-- [Host WPF (PresentationHost.exe)](../../../../docs/framework/wpf/app-development/wpf-host-presentationhost-exe.md)
+- [Host WPF (PresentationHost.exe)](wpf-host-presentationhost-exe.md)

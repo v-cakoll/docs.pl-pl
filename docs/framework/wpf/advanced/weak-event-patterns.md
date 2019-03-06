@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632923"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367612"
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
 W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączone do źródła zdarzeń, nie jest niszczony w połączeniu z obiekt odbiornik, który jest dołączony program obsługi do źródła. Taka sytuacja może prowadzić do przecieków pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadzono szablon projektu, który może służyć do rozwiązania tego problemu, przesyłając klasy Menedżera dedykowane dla określonych zdarzeń i implementowania interfejsu na odbiorniki dla tego zdarzenia. Ten wzorzec projektowy jest znany jako *słaby wzorzec zdarzeń*.  
@@ -96,7 +96,7 @@ W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączo
   
      Ta klasa dziedziczy <xref:System.Windows.WeakEventManager> klasy.  
   
-     [!code-csharp[WeakEvents#WeakEventManagerTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
+     [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
 2.  Zastąp `SomeEventWeakEventManager` nazwa własną nazwą.  
   
@@ -133,5 +133,5 @@ W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączo
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
-- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)

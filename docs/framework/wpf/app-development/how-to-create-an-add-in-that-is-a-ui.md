@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510810"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366390"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Instrukcje: Utwórz dodatek, który jest interfejsem użytkownika
 Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Presentation Foundation (WPF), która jest hostowana przez oddzielną aplikację WPF.  
@@ -27,7 +27,7 @@ Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Present
   
 -   Znajomość środowiska .NET Framework — w modelu, w tym potoku dodatku i rozwoju hosta. Jeśli nie jesteś zaznajomiony z tych pojęć, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Aby uzyskać samouczek, który przedstawia implementację potoku dodatku i aplikacji hosta, zobacz [instruktażu: Tworzenie aplikacji rozszerzalnej](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Wiedza na temat rozszerzenia WPF model dodatku .NET Framework. Zobacz [Przegląd dodatki WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+-   Wiedza na temat rozszerzenia WPF model dodatku .NET Framework. Zobacz [Przegląd dodatki WPF](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Przykład  
  Aby utworzyć dodatek, który jest interfejsem użytkownika WPF wymaga określonego kodu dla każdy z segmentów potoku dodatku i aplikacji hosta.  
@@ -37,13 +37,13 @@ Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Present
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementowanie segmentów potoku kontraktu  
  Gdy dodatek jest interfejsem użytkownika, należy zaimplementować kontrakt dla dodatku <xref:System.AddIn.Contract.INativeHandleContract>. W tym przykładzie `IWPFAddInContract` implementuje <xref:System.AddIn.Contract.INativeHandleContract>, jak pokazano w poniższym kodzie.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementowanie segmentów potoku dodatku widoku  
  Ponieważ dodatek jest implementowany jako podklasą <xref:System.Windows.FrameworkElement> typu widoku dodatku musi również podklasy <xref:System.Windows.FrameworkElement>. Poniższy kod przedstawia widok dodatku kontraktu, zaimplementowane jako `WPFAddInView` klasy.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  W tym miejscu widoku dodatku jest tworzony na podstawie <xref:System.Windows.Controls.UserControl>. W związku z tym, Dodaj w interfejsie użytkownika powinien również pochodzić od <xref:System.Windows.Controls.UserControl>.  
   
@@ -51,12 +51,12 @@ Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Present
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementowanie segmentów potoku dodać strony karty  
  Podczas gdy kontrakt jest <xref:System.AddIn.Contract.INativeHandleContract>, dodatek jest <xref:System.Windows.FrameworkElement> (zgodnie z określonym segmentów potoku dodatku widoku). W związku z tym <xref:System.Windows.FrameworkElement> muszą zostać skonwertowane do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji. Ta praca jest wykonywana przez siebie w Dodaj kartę przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, jak pokazano w poniższym kodzie.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- W modelu dodatków gdzie dodatek zwraca interfejs użytkownika (zobacz [Tworzenie dodatku, zwraca interfejs użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), przekonwertować karty dodatku <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> również musi zostać wywołany w tym modelu, chociaż należy zaimplementować metodę, z którego można zapisywać jej wywołania kodu. Możesz to zrobić przez zastąpienie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> i wdrażanie kodu, który wywołuje <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Jeśli kod, który wywołuje <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> oczekuje <xref:System.AddIn.Contract.INativeHandleContract>. W tym przypadku obiekt wywołujący będzie adapter po stronie hosta, co zostało omówione w kolejnej podsekcji.  
+ W modelu dodatków gdzie dodatek zwraca interfejs użytkownika (zobacz [Tworzenie dodatku, zwraca interfejs użytkownika](how-to-create-an-add-in-that-returns-a-ui.md)), przekonwertować karty dodatku <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> również musi zostać wywołany w tym modelu, chociaż należy zaimplementować metodę, z którego można zapisywać jej wywołania kodu. Możesz to zrobić przez zastąpienie <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> i wdrażanie kodu, który wywołuje <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Jeśli kod, który wywołuje <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> oczekuje <xref:System.AddIn.Contract.INativeHandleContract>. W tym przypadku obiekt wywołujący będzie adapter po stronie hosta, co zostało omówione w kolejnej podsekcji.  
   
 > [!NOTE]
->  Musisz także Przesłoń <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> w tym modelu Włączanie przełączania między aplikacją hosta interfejsu użytkownika i interfejsu użytkownika dodatku. Aby uzyskać więcej informacji, zobacz temat "WPF dodatku ograniczenia" w [Przegląd dodatki WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+>  Musisz także Przesłoń <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> w tym modelu Włączanie przełączania między aplikacją hosta interfejsu użytkownika i interfejsu użytkownika dodatku. Aby uzyskać więcej informacji, zobacz temat "WPF dodatku ograniczenia" w [Przegląd dodatki WPF](wpf-add-ins-overview.md).  
   
  Ponieważ karta add w side implementuje interfejs, który pochodzi od klasy <xref:System.AddIn.Contract.INativeHandleContract>, trzeba będzie również zaimplementować <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, mimo że to jest ignorowany podczas <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> zostanie zastąpiona.  
   
@@ -106,4 +106,4 @@ Ten przykład przedstawia sposób tworzenia dodatku, który jest Windows Present
   
 ## <a name="see-also"></a>Zobacz także
 - [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Dodatki WPF — omówienie](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [Dodatki WPF — omówienie](wpf-add-ins-overview.md)

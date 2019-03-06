@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555403"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357758"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView — Tematy porad
-W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.TreeView> formantu, aby wyświetlić informacje w strukturze hierarchicznej.  
+Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.TreeView> sterowania do wyświetlania informacji w strukturze hierarchicznej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie prostej lub złożonej kontrolki TreeView](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [Używanie SelectedValue, SelectedValuePath i SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [Powiązywanie TreeView z danymi, które mają nieokreśloną głębokość](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [Poprawianie wydajności kontrolki TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [Znajdowanie elementu TreeViewItem w kontrolce TreeView](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [Tworzenie prostej lub złożonej kontrolki TreeView](how-to-create-simple-or-complex-treeviews.md)  
+  [Używanie SelectedValue, SelectedValuePath i SelectedItem](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [Powiązywanie TreeView z danymi, które mają nieokreśloną głębokość](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [Poprawianie wydajności kontrolki TreeView](how-to-improve-the-performance-of-a-treeview.md)  
+  [Znajdowanie elementu TreeViewItem w kontrolce TreeView](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.TreeView>  

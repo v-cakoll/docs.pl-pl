@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 967d0e67ed0ce106de291e1e47b7d72e06560342
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655962"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362607"
 ---
 # <a name="wpf-brushes-overview"></a>Przegląd Pędzle WPF
 Wszystko, co jest widoczne na ekranie jest widoczny, ponieważ został on malowane przez pędzla. Na przykład jest używany pędzel opisujący tło przycisku, tekst pierwszego planu i wypełnienie kształtu. W tym temacie przedstawiono koncepcję malowanie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzle oraz przykłady. Pędzle umożliwia malowanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] obiektów ze wszystkim z proste, pełne kolory do złożonych zestawów wzorców i obrazy.  
@@ -21,7 +21,7 @@ Wszystko, co jest widoczne na ekranie jest widoczny, ponieważ został on malowa
 ## <a name="painting-with-a-brush"></a>Malowanie przy użyciu pędzla  
  Element <xref:System.Windows.Media.Brush> "umożliwia malowanie" obszar za pomocą jego dane wyjściowe. Pędzle różnych mają różne typy danych wyjściowych. Niektóre pędzle Maluj obszar jednolitym kolorem, osoby z gradientu, wzorzec, obrazu lub rysunku. Poniższa ilustracja przedstawia przykłady każdego z różnych <xref:System.Windows.Media.Brush> typów.  
   
- ![Pędzel, typy](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brushtypes.jpg "graphicsmm_brushtypes")  
+ ![Pędzel, typy](./media/graphicsmm-brushtypes.jpg "graphicsmm_brushtypes")  
 Przykłady pędzla  
   
  Większość obiektów wizualnych umożliwiają określenie, jak są rysowane. W poniższej tabeli wymieniono niektóre typowe obiektów i właściwości, za pomocą których można użyć <xref:System.Windows.Media.Brush>.  
@@ -43,14 +43,14 @@ Przykłady pędzla
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.SolidColorBrush> namalować <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Rectangle>. Poniższa ilustracja przedstawia malowane prostokąta.  
   
- ![Prostokąt malowane przy użyciu SolidColorBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm_brush_ovw_solidcolorbrush")  
+ ![Prostokąt malowane przy użyciu SolidColorBrush](./media/graphicsmm-brush-ovw-solidcolorbrush.png "graphicsmm_brush_ovw_solidcolorbrush")  
 Prostokąt malowane przy użyciu SolidColorBrush  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmsolidcolorbrushexampleinline)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmsolidcolorbrushexampleinline)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.SolidColorBrush> klasy, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.SolidColorBrush> klasy, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithlineargradientbrush"></a>   
 ## <a name="paint-with-a-linear-gradient"></a>Malowanie gradientem liniowym  
@@ -58,14 +58,14 @@ Prostokąt malowane przy użyciu SolidColorBrush
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.LinearGradientBrush> namalować <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Rectangle>. Poniższa ilustracja przedstawia malowane prostokąta.  
   
- ![Prostokąt malowane przy użyciu LinearGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")  
+ ![Prostokąt malowane przy użyciu LinearGradientBrush](./media/graphicsmm-brush-ovw-lineargradientbrush.jpg "graphicsmm_brush_ovw_lineargradientbrush")  
 Prostokąt malowane przy użyciu LinearGradientBrush  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmlineargradientbrushexampleinline)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmlineargradientbrushexampleinline)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.LinearGradientBrush> klasy, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.LinearGradientBrush> klasy, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithradialgradientbrush"></a>   
 ## <a name="paint-with-a-radial-gradient"></a>Malowanie gradientem promieniowym  
@@ -73,14 +73,14 @@ Prostokąt malowane przy użyciu LinearGradientBrush
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.RadialGradientBrush> namalować <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Rectangle>. Poniższa ilustracja przedstawia malowane prostokąta.  
   
- ![Prostokąt malowane przy użyciu RadialGradientBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")  
+ ![Prostokąt malowane przy użyciu RadialGradientBrush](./media/graphicsmm-brush-ovw-radialgradientbrush.jpg "graphicsmm_brush_ovw_radialgradientbrush")  
 Prostokąt malowane przy użyciu RadialGradientBrush  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmradialgradientbrushexampleinline)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmradialgradientbrushexampleinline)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.RadialGradientBrush> klasy, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.RadialGradientBrush> klasy, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](painting-with-solid-colors-and-gradients-overview.md).  
   
 <a name="paintwithimage"></a>   
 ## <a name="paint-with-an-image"></a>Malowanie przy użyciu obrazu  
@@ -88,14 +88,14 @@ Prostokąt malowane przy użyciu RadialGradientBrush
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.ImageBrush> namalować <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Rectangle>. Poniższa ilustracja przedstawia malowane prostokąta.  
   
- ![Prostokąt malowane przez ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")  
+ ![Prostokąt malowane przez ImageBrush](./media/graphicsmm-brush-ovw-imagebrush.jpg "graphicsmm_brush_ovw_imagebrush")  
 Prostokąt malowane przy użyciu obrazu  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmimagebrushexampleinline)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmimagebrushexampleinline)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmimagebrushexampleinline)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmimagebrushexampleinline)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmimagebrushexampleinline)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMImageBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmimagebrushexampleinline)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.ImageBrush> klasy, zobacz [malowanie obrazami, rysowaniem i Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.ImageBrush> klasy, zobacz [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md).  
   
 <a name="paintwithdrawing"></a>   
 ## <a name="paint-with-a-drawing"></a>Malowanie za pomocą rysowania  
@@ -103,14 +103,14 @@ Prostokąt malowane przy użyciu obrazu
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.DrawingBrush> namalować <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Rectangle>. Poniższa ilustracja przedstawia malowane prostokąta.  
   
- ![Prostokąt malowane przy użyciu obiektu DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-drawingbrush.jpg "graphicsmm_brush_ovw_drawingbrush")  
+ ![Prostokąt malowane przy użyciu obiektu DrawingBrush](./media/graphicsmm-brush-ovw-drawingbrush.jpg "graphicsmm_brush_ovw_drawingbrush")  
 Prostokąt malowane przy użyciu obiektu DrawingBrush  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmdrawingbrushexampleinline)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmdrawingbrushexampleinline)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmdrawingbrushexampleinline)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmdrawingbrushexampleinline)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmdrawingbrushexampleinline)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmdrawingbrushexampleinline)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.DrawingBrush> klasy, zobacz [malowanie obrazami, rysowaniem i Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.DrawingBrush> klasy, zobacz [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md).  
   
 <a name="paintwithvisual"></a>   
 ## <a name="paint-with-a-visual"></a>Malowanie przy użyciu wizualizacji  
@@ -118,56 +118,56 @@ Prostokąt malowane przy użyciu obiektu DrawingBrush
   
  W poniższym przykładzie użyto <xref:System.Windows.Media.VisualBrush> namalować <xref:System.Windows.Shapes.Shape.Fill%2A> z <xref:System.Windows.Shapes.Rectangle>. Poniższa ilustracja przedstawia malowane prostokąta.  
   
- ![Prostokąt malowane przy użyciu VisualBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")  
+ ![Prostokąt malowane przy użyciu VisualBrush](./media/graphicsmm-brush-ovw-visualbrush.jpg "graphicsmm_brush_ovw_visualbrush")  
 Prostokąt malowane przy użyciu VisualBrush  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmvisualbrushexampleinline)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmvisualbrushexampleinline)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmvisualbrushexampleinline)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTypesExample.cs#graphicsmmvisualbrushexampleinline)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmvisualbrushexampleinline)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMVisualBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmvisualbrushexampleinline)]  
   
- Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.VisualBrush> klasy, zobacz [malowanie obrazami, rysowaniem i Visual](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.VisualBrush> klasy, zobacz [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md).  
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>Malowanie przy użyciu wstępnie zdefiniowane i pędzli systemowych  
  Dla wygody Windows Presentation Foundation (WPF) zapewnia zestaw wstępnie zdefiniowanych i system pędzle, której można malować obiektów.  
   
--   Aby uzyskać listę dostępnych pędzle wstępnie zdefiniowanych, zobacz <xref:System.Windows.Media.Brushes> klasy. Przykład przedstawiający sposób użycia wstępnie zdefiniowanych pędzla, zobacz [Maluj obszar jednolitym kolorem](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md).  
+-   Aby uzyskać listę dostępnych pędzle wstępnie zdefiniowanych, zobacz <xref:System.Windows.Media.Brushes> klasy. Przykład przedstawiający sposób użycia wstępnie zdefiniowanych pędzla, zobacz [Maluj obszar jednolitym kolorem](how-to-paint-an-area-with-a-solid-color.md).  
   
--   Aby uzyskać listę pędzle dostępnej w systemie, zobacz <xref:System.Windows.SystemColors> klasy. Aby uzyskać przykład, zobacz [Maluj obszar pędzlem systemowym](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md).  
+-   Aby uzyskać listę pędzle dostępnej w systemie, zobacz <xref:System.Windows.SystemColors> klasy. Aby uzyskać przykład, zobacz [Maluj obszar pędzlem systemowym](how-to-paint-an-area-with-a-system-brush.md).  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>Typowe funkcje pędzla  
  <xref:System.Windows.Media.Brush> obiekty oferują <xref:System.Windows.Media.Brush.Opacity%2A> właściwość, która może służyć do wprowadzenia pędzla, przezroczyste lub częściowo przezroczyste. <xref:System.Windows.Media.Brush.Opacity%2A> Wartość 0 powoduje, że pędzel jest całkowicie przezroczysty podczas <xref:System.Windows.Media.Brush.Opacity%2A> wartość 1 powoduje, że pędzel jest całkowicie nieprzezroczysty. W poniższym przykładzie użyto <xref:System.Windows.Media.Brush.Opacity%2A> właściwość się <xref:System.Windows.Media.SolidColorBrush> 25 procent nieprzezroczystości.  
   
- [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
+ [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   
- [!code-csharp[BrushOverviewExamples_snip#OpacityExample1CSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/OpacityExample.cs#opacityexample1csharp)]  
+ [!code-csharp[BrushOverviewExamples_snip#OpacityExample1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/OpacityExample.cs#opacityexample1csharp)]  
   
  Jeśli pędzel zawiera kolorów, które są częściowo przezroczyste, wartość nieprzezroczystości koloru jest połączone za pośrednictwem mnożenia wartością przezroczystość pędzla. Na przykład jeśli pędzel ma wartość 0,5 kolor pędzla, a ponadto wartość 0,5 kolor danych wyjściowych ma wartość 0,25.  
   
 > [!NOTE]
 >  Jest bardziej wydajne, aby zmienić wartość nieprzezroczystości pędzla, niż można zmienić nieprzezroczystość całego elementu za pomocą jego <xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType> właściwości.  
   
- Może obrócić, skalowanie, pochylanie i tłumaczenie pędzla zawartości przy użyciu jego <xref:System.Windows.Media.Brush.Transform%2A> lub <xref:System.Windows.Media.Brush.RelativeTransform%2A> właściwości. Aby uzyskać więcej informacji, zobacz [Przekształcanie pędzla — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).  
+ Może obrócić, skalowanie, pochylanie i tłumaczenie pędzla zawartości przy użyciu jego <xref:System.Windows.Media.Brush.Transform%2A> lub <xref:System.Windows.Media.Brush.RelativeTransform%2A> właściwości. Aby uzyskać więcej informacji, zobacz [Przekształcanie pędzla — Przegląd](brush-transformation-overview.md).  
   
- Ponieważ są one <xref:System.Windows.Media.Animation.Animatable> obiektów <xref:System.Windows.Media.Brush> obiekty mogą być animowane. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
+ Ponieważ są one <xref:System.Windows.Media.Animation.Animatable> obiektów <xref:System.Windows.Media.Brush> obiekty mogą być animowane. Aby uzyskać więcej informacji, zobacz [Przegląd animacja](animation-overview.md).  
   
 <a name="freezable_features"></a>   
 ### <a name="freezable-features"></a>Funkcje freezable  
- Ponieważ dziedziczy on z <xref:System.Windows.Freezable> klasy <xref:System.Windows.Media.Brush> klasa udostępnia kilka funkcji specjalnych: <xref:System.Windows.Media.Brush> obiekty mogą być deklarowane jako [zasobów](../../../../docs/framework/wpf/advanced/xaml-resources.md)współużytkowane przez wiele obiektów i sklonować. Ponadto wszystkie <xref:System.Windows.Media.Brush> typów z wyjątkiem <xref:System.Windows.Media.VisualBrush> może być tylko do odczytu do zwiększenia wydajności i wprowadzone metodą o bezpiecznych wątkach.  
+ Ponieważ dziedziczy on z <xref:System.Windows.Freezable> klasy <xref:System.Windows.Media.Brush> klasa udostępnia kilka funkcji specjalnych: <xref:System.Windows.Media.Brush> obiekty mogą być deklarowane jako [zasobów](../advanced/xaml-resources.md)współużytkowane przez wiele obiektów i sklonować. Ponadto wszystkie <xref:System.Windows.Media.Brush> typów z wyjątkiem <xref:System.Windows.Media.VisualBrush> może być tylko do odczytu do zwiększenia wydajności i wprowadzone metodą o bezpiecznych wątkach.  
   
- Aby uzyskać więcej informacji na temat różnych funkcji oferowanych przez <xref:System.Windows.Freezable> obiekty, zobacz [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Aby uzyskać więcej informacji na temat różnych funkcji oferowanych przez <xref:System.Windows.Freezable> obiekty, zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md).  
   
  Aby uzyskać więcej informacji o tym, dlaczego <xref:System.Windows.Media.VisualBrush> obiekty nie mogą być zablokowane, zobacz <xref:System.Windows.Media.VisualBrush> typ strony.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)
 - [Przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
-- [Inne zalecenia dotyczące wydajności](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Tematy z instrukcjami](brushes-how-to-topics.md)
+- [Inne zalecenia dotyczące wydajności](../advanced/optimizing-performance-other-recommendations.md)

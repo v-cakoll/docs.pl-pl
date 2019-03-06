@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746664"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374872"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>Metoda IXCLRDataModule::Request
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>Parametry
 
-`reqCode` [in] Typ do wysłania żądania.
+`reqCode`\
+[in] Typ do wysłania żądania.
 
-`inBufferSize` [in] rozmiar buforu wejściowego, który ma być przekazany w.
+`inBufferSize`\
+[in] rozmiar buforu wejściowego, który ma być przekazany w.
 
-`inBuffer` [in, size_is(inBufferSize)] Bufor wskaźnik do danych pierwotnych, które mają być wysyłane w żądaniu.
+`inBuffer`\
+[in, size_is(inBufferSize)] Bufor wskaźnik do danych pierwotnych, które mają być wysyłane w żądaniu.
 
-`outBufferSize` [in] Rozmiar buforu wyjściowego.
+`outBufferSize`\
+[in] Rozmiar buforu wyjściowego.
 
-`outBuffer` [out, size_is(outBufferSize)] Wskaźnik buforu używany do przechowywania odpowiedzi na żądanie.
+`outBuffer`\
+[out, size_is(outBufferSize)] Wskaźnik buforu używany do przechowywania odpowiedzi na żądanie.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -61,5 +66,5 @@ Podana metoda jest częścią `IXCLRDataModule` interfejs i odnosi się do 36 gn
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interfejs IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [Debugowanie](index.md)
+- [Interfejs IXCLRDataModule](ixclrdatamodule-interface.md)

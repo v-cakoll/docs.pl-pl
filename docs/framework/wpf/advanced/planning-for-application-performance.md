@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: 3fadba2fe8036fc558e18f80bd7cb1ffc977b762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632117"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374430"
 ---
 # <a name="planning-for-application-performance"></a>Planowanie wydajności aplikacji
 Powodzenie osiągnąć cele dotyczące wydajności zależy od tego, jak dobrze opracowywania strategii wydajności. Planowanie jest pierwszy etap w opracowywaniu każdego produktu. W tym temacie opisano kilka bardzo proste zasady opracowanie strategii dobrą wydajność.  
@@ -33,12 +33,12 @@ Powodzenie osiągnąć cele dotyczące wydajności zależy od tego, jak dobrze o
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Formanty są założenia rozszerzalny poprzez umożliwienie rozprzestrzeniania się całej dostosowywanie ich wyglądu, podczas zmieniania nie ich zachowanie kontroli. Dzięki wykorzystaniu style, szablony danych i szablony kontrolek, możesz utworzyć i stopniowo rozwijać dostosowywany [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] który dostosowuje się do wymagań dotyczących wydajności.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Zachowanie obiektu](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Inne zalecenia dotyczące wydajności](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
+- [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)
+- [Układ i projekt](optimizing-performance-layout-and-design.md)
+- [Grafika 2D i obrazowanie](optimizing-performance-2d-graphics-and-imaging.md)
+- [Zachowanie obiektu](optimizing-performance-object-behavior.md)
+- [Zasoby aplikacji](optimizing-performance-application-resources.md)
+- [Tekst](optimizing-performance-text.md)
+- [Powiązanie danych](optimizing-performance-data-binding.md)
+- [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)

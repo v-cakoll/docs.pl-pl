@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545033"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352987"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Wytyczne do projektowania kontrolek w określonych stylach
 W tym dokumencie przedstawiono podsumowanie zestaw najlepszych rozwiązań, aby wziąć pod uwagę podczas projektowania formantu, który ma być łatwe w określonych stylach i templatable. Zdecydowaliśmy się ten zestaw najlepszych rozwiązań za pośrednictwem wiele prób i błędów podczas pracy nad style kontrolki motyw wbudowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestaw formantów. Dowiedzieliśmy się, że pomyślnie stylów jest tak dużej ilości funkcją modelu obiektu dobrze zaprojektowanego się stylu samego. Odbiorców dla tego dokumentu jest autorem formantu, nie Autor stylu.  
@@ -27,7 +27,7 @@ W tym dokumencie przedstawiono podsumowanie zestaw najlepszych rozwiązań, aby 
   
 -   Szablony danych.  
   
- Wprowadzenie do tworzenia szablonów i stylów, zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Wprowadzenie do tworzenia szablonów i stylów, zobacz [Tworzenie szablonów i stylów](styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>Przed rozpoczęciem: Omówienie formantu  
@@ -119,5 +119,5 @@ W tym dokumencie przedstawiono podsumowanie zestaw najlepszych rozwiązań, aby 
 -   **Style motyw musi mieć semantyki spójnego "układu" między wszystkie motywy**. Na przykład domyślny styl nie musi zagwarantować, że kontrolka będzie zajmować tego samego rozmiaru w wszystkie motywy lub gwarantuje, że kontrolka będzie miała ten sam marginesy zawartości / dopełnienie we wszystkich tematów.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie kontrolek — omówienie](control-authoring-overview.md)

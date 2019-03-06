@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-ms.openlocfilehash: d30e414dd83e596da6415cc455c599820a22f3e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b131ce444a91e518f6372b7aeac603687141b262
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689958"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360955"
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Instrukcje: Animuj grubość obramowania z wykorzystaniem klatek kluczowych
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Controls.Control.BorderThickness%2A> właściwość <xref:System.Windows.Controls.Border>.  
@@ -25,7 +25,7 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Controls.Control
   
 3.  Podczas końcowego dwie sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> klasy, aby zmniejszyć grubość obramowania. Ramek kluczowych krzywej składanej, takich jak te pochodzące z <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> Tworzenie zmiennej przejścia między wartościami zgodnie z wartościami <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> właściwości. W tym klatek kluczowych animacji wolno rozpoczyna się i przyspiesza wykładniczo w kierunku końca odcinka czasu.  
   
- [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   
  Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
@@ -33,6 +33,6 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Controls.Control
 - <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>
-- [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Klatki kluczowe — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
-- [Animowanie wartości BorderThickness](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)
+- [Animowanie wartości BorderThickness](../controls/how-to-animate-a-borderthickness-value.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703682"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358941"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optymalizacja wydajności: Inne zalecenia
-<a name="introduction"></a> Ten temat zawiera zalecenia dotyczące wydajności, oprócz tych objętych tematy w [optymalizowania wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) sekcji.  
+<a name="introduction"></a> Ten temat zawiera zalecenia dotyczące wydajności, oprócz tych objętych tematy w [optymalizowania wydajności aplikacji WPF](optimizing-wpf-application-performance.md) sekcji.  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54703682"
 ## <a name="navigation-to-object"></a>Nawigacja do obiektu  
  <xref:System.Windows.Navigation.NavigationWindow> Pochodzi od klasy obiektu <xref:System.Windows.Window> i rozszerza je z obsługą nawigowania po zawartości, przede wszystkim przez agregowanie <xref:System.Windows.Navigation.NavigationService> i dziennika. Możesz zaktualizować obszaru klienckiego <xref:System.Windows.Navigation.NavigationWindow> , określając opcję [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] lub obiektu. Poniższy przykład pokazuje obie metody:  
   
- [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
- [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
+ [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
+ [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
  Każdy <xref:System.Windows.Navigation.NavigationWindow> obiekt ma dziennika, która zawiera rekordy historii nawigacji dla danego użytkownika w tym oknie. Jednym z celów dziennika jest Zezwalaj użytkownikom na odtwarzanie ich kroki.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54703682"
   
  Po przejściu przy użyciu obiektu, arkusz przechowuje całe drzewo wizualne obiektu. Oznacza to, każdym razem odwiedzisz stronie renderowania bezpośrednio bez konieczności odtworzony. W tym przypadku koszt przechowywania dziennika jest wysoka, ale mało czasu do odtworzenia na stronie.  
   
- Kiedy używasz <xref:System.Windows.Navigation.NavigationWindow> obiektu, należy pamiętać, jak obsługa rejestrowanie ma wpływ na wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+ Kiedy używasz <xref:System.Windows.Navigation.NavigationWindow> obiektu, należy pamiętać, jak obsługa rejestrowanie ma wpływ na wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [Nawigacja — omówienie](../app-development/navigation-overview.md).  
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>Test na dużych powierzchni 3D trafienia  
@@ -73,12 +73,12 @@ ms.locfileid: "54703682"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Czcionki Cache service udostępnia dane czcionki między [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji. Pierwszy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, możesz uruchomić rozpoczyna się tej usługi, jeśli usługa nie jest już uruchomiona. Jeśli używasz [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], można ustawić usługę "Windows Presentation Foundation (WPF) czcionki pamięć podręczną 3.0.0.0" od "Ręczny" (wartość domyślna) "Automatycznie (opóźnione uruchomienie)" w celu skrócenia czasu początkowego rozruchu z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Planowanie wydajności aplikacji](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Zachowanie obiektu](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Animacja — porady i wskazówki](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Planowanie wydajności aplikacji](planning-for-application-performance.md)
+- [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)
+- [Układ i projekt](optimizing-performance-layout-and-design.md)
+- [Grafika 2D i obrazowanie](optimizing-performance-2d-graphics-and-imaging.md)
+- [Zachowanie obiektu](optimizing-performance-object-behavior.md)
+- [Zasoby aplikacji](optimizing-performance-application-resources.md)
+- [Tekst](optimizing-performance-text.md)
+- [Powiązanie danych](optimizing-performance-data-binding.md)
+- [Animacja — porady i wskazówki](../graphics-multimedia/animation-tips-and-tricks.md)

@@ -17,40 +17,44 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a6596807b98e6c8b8624b5df18f78dbf8d0711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd899422287d34407778f67e5b4dfd2f33ffd00c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359695"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly — Metoda
-Usuwa zestaw odwołuje się token określonych metadanych.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-HRESULT ResolveAssembly (  
-    [in]  mdToken             tkAssemblyRef,  
-    [out] ICorDebugAssembly   **ppAssembly  
-);  
-```  
-  
-#### <a name="parameters"></a>Parametry  
- `tkAsemblyRef`  
- [in] `mdToken` Wartość, która odwołuje się do zestawu.  
-  
- `ppAssembly`  
- [out] Wskaźnik do adresu ICorDebugAssembly obiekt, który reprezentuje zestaw.  
-  
-## <a name="remarks"></a>Uwagi  
- Jeśli zestaw nie jest już załadowany podczas `ResolveAssembly` jest nazywany HRESULT zostanie zwrócona wartość CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.  
-  
-## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Nagłówek:** CorDebug.idl, CorDebug.h  
-  
- **Biblioteka:** CorGuids.lib  
-  
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
+Usuwa zestaw odwołuje się token określonych metadanych.
+
+## <a name="syntax"></a>Składnia
+
+```cpp
+HRESULT ResolveAssembly (
+    [in]  mdToken             tkAssemblyRef,
+    [out] ICorDebugAssembly   **ppAssembly
+);
+```
+
+## <a name="parameters"></a>Parametry
+
+`tkAssemblyRef`\
+[in] `mdToken` Wartość, która odwołuje się do zestawu.
+
+`ppAssembly`\
+[out] Wskaźnik na adres obiektu ICorDebugAssembly, który reprezentuje zestaw.
+
+## <a name="remarks"></a>Uwagi
+
+Jeśli zestaw nie jest już załadowany gdy `ResolveAssembly` nosi nazwę, wartość HRESULT zostanie zwrócona wartość CORDBG_E_CANNOT_RESOLVE_ASSEMBLY.
+
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+
+**Nagłówek:** CorDebug.idl, CorDebug.h
+
+**Biblioteka:** CorGuids.lib
+
+**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

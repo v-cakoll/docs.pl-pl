@@ -5,23 +5,23 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: e50714e8cf50f42aad41ffa77fda34c55f9adb4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502991"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360514"
 ---
 # <a name="animation-and-timing-system-overview"></a>Przegląd Animacja i system chronometrażu
 W tym temacie opisano, jak korzysta z system chronometrażu animacji, <xref:System.Windows.Media.Animation.Timeline>, i <xref:System.Windows.Media.Animation.Clock> klasy, aby animować właściwości.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Aby zrozumieć, w tym temacie, powinno być możliwe do użycia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji, aby animować właściwości zgodnie z opisem w [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Pozwala ona również należy zapoznać się z właściwości zależności; Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ Aby zrozumieć, w tym temacie, powinno być możliwe do użycia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji, aby animować właściwości zgodnie z opisem w [Przegląd animacja](animation-overview.md). Pozwala ona również należy zapoznać się z właściwości zależności; Aby uzyskać więcej informacji, zobacz [Przegląd właściwości zależności](../advanced/dependency-properties-overview.md).  
   
 <a name="timelinesandclocks"></a>   
 ## <a name="timelines-and-clocks"></a>Osie czasu i zegary  
- [Przegląd animacja](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md) opisany sposób <xref:System.Windows.Media.Animation.Timeline> reprezentuje odcinek czasu, a także animację jest typem <xref:System.Windows.Media.Animation.Timeline> która wytwarza wartości danych wyjściowych. Przez siebie <xref:System.Windows.Media.Animation.Timeline>, nic nie robi inny niż segmentu czasu jego opis. Jest to oś czasu <xref:System.Windows.Media.Animation.Clock> obiekt, który wykonuje rzeczywistą pracę. Podobnie, animacja nie faktycznie animować właściwości: klasa animacji w tym artykule opisano sposób obliczania wartości danych wyjściowych, ale jest <xref:System.Windows.Media.Animation.Clock> utworzony podczas tworzenia animacji, który dyski danych wyjściowych animacji i stosuje je do właściwości.  
+ [Przegląd animacja](animation-overview.md) opisany sposób <xref:System.Windows.Media.Animation.Timeline> reprezentuje odcinek czasu, a także animację jest typem <xref:System.Windows.Media.Animation.Timeline> która wytwarza wartości danych wyjściowych. Przez siebie <xref:System.Windows.Media.Animation.Timeline>, nic nie robi inny niż segmentu czasu jego opis. Jest to oś czasu <xref:System.Windows.Media.Animation.Clock> obiekt, który wykonuje rzeczywistą pracę. Podobnie, animacja nie faktycznie animować właściwości: klasa animacji w tym artykule opisano sposób obliczania wartości danych wyjściowych, ale jest <xref:System.Windows.Media.Animation.Clock> utworzony podczas tworzenia animacji, który dyski danych wyjściowych animacji i stosuje je do właściwości.  
   
  A <xref:System.Windows.Media.Animation.Clock> to specjalny typ obiektu, który przechowuje związany stan czasu wykonywania dla <xref:System.Windows.Media.Animation.Timeline>. Zapewnia trzy bity informacji, które są niezbędne do Animacja i system chronometrażu: <xref:System.Windows.Media.Animation.Clock.CurrentTime%2A>, <xref:System.Windows.Media.Animation.Clock.CurrentProgress%2A>, i <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>. A <xref:System.Windows.Media.Animation.Clock> określa jego bieżący czas, postępu i stanu przy użyciu zachowania chronometrażu opisanego przez jego <xref:System.Windows.Media.Animation.Timeline>: <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>i tak dalej.  
   
@@ -46,7 +46,7 @@ W tym temacie opisano, jak korzysta z system chronometrażu animacji, <xref:Syst
   
  Na poniższej ilustracji przedstawiono relacje między Menedżer czas i <xref:System.Windows.Media.Animation.AnimationClock>i właściwość zależności animowany.  
   
- ![Czasy składników systemu](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
+ ![Czasy składników systemu](./media/graphicsmm-clocks-1clock1prop.png "graphicsmm_clocks_1clock1prop")  
 Animowanie właściwości  
   
  Menedżer czas znaczniki, aktualizuje czasie co <xref:System.Windows.Media.Animation.ClockState.Active> <xref:System.Windows.Media.Animation.Clock> w aplikacji. Jeśli <xref:System.Windows.Media.Animation.Clock> jest <xref:System.Windows.Media.Animation.AnimationClock>, używa ona <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> metody <xref:System.Windows.Media.Animation.AnimationTimeline> z której została utworzona w celu obliczania bieżącym danych wyjściowych wartość. <xref:System.Windows.Media.Animation.AnimationClock> Dostarcza <xref:System.Windows.Media.Animation.AnimationTimeline> z bieżącym czasem lokalnym, wartości wejściowej, która jest zwykle podstawowej wartości właściwości i wartość domyślną docelowego. Podczas pobierania wartości animowany przy użyciu właściwości <xref:System.Windows.DependencyObject.GetValue%2A> metody lub jego metoda dostępu do środowiska CLR, otrzymasz dane wyjściowe jego <xref:System.Windows.Media.Animation.AnimationClock>.  
@@ -54,13 +54,13 @@ Animowanie właściwości
 #### <a name="clock-groups"></a>Grupy zegara  
  Poprzedniej sekcji opisano, jak istnieją różne rodzaje <xref:System.Windows.Media.Animation.Clock> obiektów dla różnych typów osi czasu. Na poniższej ilustracji przedstawiono relacje między Menedżer czas <xref:System.Windows.Media.Animation.ClockGroup>, <xref:System.Windows.Media.Animation.AnimationClock>i właściwość zależności animowany. A <xref:System.Windows.Media.Animation.ClockGroup> jest tworzona dla osi czasu, które grupy innych osi czasu, takich jak <xref:System.Windows.Media.Animation.Storyboard> klasy, która grupuje animacji i innych osi czasu.  
   
- ![Czasy składników systemu](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
+ ![Czasy składników systemu](./media/graphicsmm-clocks-2clock1clockgroup2prop.png "graphicsmm_clocks_2clock1clockgroup2prop")  
 A ClockGroup  
   
 #### <a name="composition"></a>Kompozycja  
  Może się zdarzyć, aby skojarzyć wiele zegary przy użyciu pojedynczej właściwości, w którym to przypadku każdy używa zegara wartość danych wyjściowych poprzedniego zegara jako jego podstawowej wartości. Na poniższej ilustracji przedstawiono trzy <xref:System.Windows.Media.Animation.AnimationClock> obiektów zastosowanych do tej samej właściwości. Clock1 używa wartości bazowej animowany właściwości jako dane wejściowe i używa go w celu wygenerowania danych wyjściowych. Clock2 pobiera dane wyjściowe z Clock1 jako dane wejściowe i używa ich do generowania danych wyjściowych. Clock3 pobiera dane wyjściowe z Clock2 jako dane wejściowe i używa ich do generowania danych wyjściowych. Zegary wielu wpływać na tę samą właściwość jednocześnie, są określane w łańcuchu kompozycji.  
   
- ![Czasy składników systemu](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
+ ![Czasy składników systemu](./media/graphicsmm-clocks-2clock1prop.png "graphicsmm_clocks_2clock1prop")  
 Łańcuch kompozycji  
   
  Należy zauważyć, że tworzona jest relacja między dane wejściowe i wyjściowe <xref:System.Windows.Media.Animation.AnimationClock> obiekty w łańcuchu kompozycji nie wpływają na ich zachowania chronometrażu; <xref:System.Windows.Media.Animation.Clock> obiektów (w tym <xref:System.Windows.Media.Animation.AnimationClock> obiektów) są hierarchiczne zależne od ich nadrzędnej <xref:System.Windows.Media.Animation.Clock> obiektów.  
@@ -74,7 +74,7 @@ A ClockGroup
   
  Gdy <xref:System.Windows.Media.Animation.Clock> zmienia Stany i zwraca z powrotem do pierwotnego stanu między taktami (takie jak zmienianie docelowej z <xref:System.Windows.Media.Animation.ClockState.Active> do <xref:System.Windows.Media.Animation.ClockState.Stopped> i z powrotem do <xref:System.Windows.Media.Animation.ClockState.Active>), nadal występuje w skojarzonym zdarzeniu.  
   
- Aby uzyskać więcej informacji na temat zdarzenia chronometrażu zobacz [zdarzenia chronometrażu — Przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md).  
+ Aby uzyskać więcej informacji na temat zdarzenia chronometrażu zobacz [zdarzenia chronometrażu — Przegląd](timing-events-overview.md).  
   
 <a name="currentvaluesbasevaluesofproperties"></a>   
 ## <a name="current-values-and-base-values-of-properties"></a>Bieżące wartości i wartości podstawowe właściwości  
@@ -83,6 +83,6 @@ A ClockGroup
  Kiedy animujemy właściwość <xref:System.Windows.Media.Animation.AnimationClock> ustawia właściwość *bieżącego* wartość. Podczas pobierania wartości właściwości, za pośrednictwem jego metoda dostępu CLR lub <xref:System.Windows.DependencyObject.GetValue%2A> metoda zwraca dane wyjściowe <xref:System.Windows.Media.Animation.AnimationClock> podczas <xref:System.Windows.Media.Animation.AnimationClock> jest <xref:System.Windows.Media.Animation.ClockState.Active> lub <xref:System.Windows.Media.Animation.ClockState.Filling>. Podstawowa wartość właściwości można pobrać za pomocą <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> metody.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Zdarzenia chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)
-- [Zachowania chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Zdarzenia chronometrażu — przegląd](timing-events-overview.md)
+- [Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)

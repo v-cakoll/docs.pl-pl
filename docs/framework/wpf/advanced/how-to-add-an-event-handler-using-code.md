@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 4e8344ebcb0406a7da29787c5a4377760f55597e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499135"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352194"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Instrukcje: Dodaj obsługę zdarzeń z użyciem kodu
 W tym przykładzie przedstawiono sposób dodawania programu obsługi zdarzeń do elementu przy użyciu kodu.  
@@ -27,16 +27,16 @@ W tym przykładzie przedstawiono sposób dodawania programu obsługi zdarzeń do
   
 -   Użyj <xref:System.Windows.UIElement.AddHandler%2A> metoda wraz z `AddressOf` operatora, aby odwoływać się do wdrożenia programu obsługi zdarzeń.  
   
--   Użyj `Handles` — słowo kluczowe w definicji procedury obsługi zdarzeń. Ta technika nie jest wyświetlany w tym miejscu; zobacz [Visual Basic i obsługa zdarzeń WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+-   Użyj `Handles` — słowo kluczowe w definicji procedury obsługi zdarzeń. Ta technika nie jest wyświetlany w tym miejscu; zobacz [Visual Basic i obsługa zdarzeń WPF](visual-basic-and-wpf-event-handling.md).  
   
- [!code-xaml[RoutedEventAddRemoveHandler#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
- [!code-csharp[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventAddRemoveHandler#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  Dodawanie obsługi zdarzeń w początkowo przeanalizowany [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony jest znacznie prostsza. W elemencie obiektu, którym chcesz dodać program obsługi zdarzeń należy dodać atrybut, który jest zgodna z nazwą zdarzenia, które mają być obsługiwane. Następnie określ wartość tego atrybutu jako nazwę metody obsługi zdarzeń, które zdefiniowane w pliku związanym z kodem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony. Aby uzyskać więcej informacji, zobacz [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) lub [Przegląd zdarzeń kierowane](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+>  Dodawanie obsługi zdarzeń w początkowo przeanalizowany [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony jest znacznie prostsza. W elemencie obiektu, którym chcesz dodać program obsługi zdarzeń należy dodać atrybut, który jest zgodna z nazwą zdarzenia, które mają być obsługiwane. Następnie określ wartość tego atrybutu jako nazwę metody obsługi zdarzeń, które zdefiniowane w pliku związanym z kodem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony. Aby uzyskać więcej informacji, zobacz [Przegląd XAML (WPF)](xaml-overview-wpf.md) lub [Przegląd zdarzeń kierowane](routed-events-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+- [Tematy z instrukcjami](events-how-to-topics.md)

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605802"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363665"
 ---
 # <a name="geometries"></a>Geometria
 <xref:System.Windows.Media.Geometry> jest klasą wszechstronna używany do renderowania [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] grafiki, obiekty testowania trafienia i zdefiniuj regionów wycinka  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Składnia znacznikowania ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Składnia znacznikowania ścieżki](path-markup-syntax.md)  
+ [Geometria — przegląd](geometry-overview.md)  
+ [Tematy z instrukcjami](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafika i multimedia](index.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: 8b42104522be854fe4e49d08e110497469d64980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555365"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371492"
 ---
 # <a name="object-lifetime-events"></a>Obiekt okresu istnienia zdarzeń
 W tym temacie opisano konkretne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia, które oznaczają etapów w okresie istnienia obiektu, tworzenia, użytkowania i niszczenia.  
@@ -38,7 +38,7 @@ W tym temacie opisano konkretne [!INCLUDE[TLA2#tla_winclient](../../../../includ
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) tematu. Aby można było wykonać instrukcje opisane w przykładach w tym temacie, należy również mieć świadomość [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (zobacz [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)) i wiedzieć, jak napisać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
+ W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](dependency-properties-overview.md) tematu. Aby można było wykonać instrukcje opisane w przykładach w tym temacie, należy również mieć świadomość [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (zobacz [Przegląd XAML (WPF)](xaml-overview-wpf.md)) i wiedzieć, jak napisać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>Obiekt okresu istnienia zdarzeń  
@@ -68,12 +68,12 @@ W tym temacie opisano konkretne [!INCLUDE[TLA2#tla_winclient](../../../../includ
 ## <a name="lifetime-events-application-model-elements"></a>Elementy modelu aplikacji zdarzenia okresu istnienia  
  Opieranie się na typowych zdarzenia okresu istnienia dla elementów są następujące elementy modelu aplikacji: <xref:System.Windows.Application>, <xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, i <xref:System.Windows.Controls.Frame>. Te rozszerzenia typowych zdarzenia okresu istnienia przy użyciu dodatkowych zdarzeń, które mają zastosowanie do ich z określonym przeznaczeniem. Te są szczegółowo omówione w następujących lokalizacjach:  
   
--   <xref:System.Windows.Application>: [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md).  
+-   <xref:System.Windows.Application>: [Zarządzanie aplikacjami — omówienie](../app-development/application-management-overview.md).  
   
--   <xref:System.Windows.Window>: [Przegląd Windows WPF](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
+-   <xref:System.Windows.Window>: [Przegląd Windows WPF](../app-development/wpf-windows-overview.md).  
   
--   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, i <xref:System.Windows.Controls.Frame>: [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   <xref:System.Windows.Controls.Page>, <xref:System.Windows.Navigation.NavigationWindow>, i <xref:System.Windows.Controls.Frame>: [Nawigacja — omówienie](../app-development/navigation-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Następstwo wartości właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Następstwo wartości właściwości zależności](dependency-property-value-precedence.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)

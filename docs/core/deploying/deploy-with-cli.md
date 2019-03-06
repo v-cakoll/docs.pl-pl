@@ -8,18 +8,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826463"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359734"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie .NET Core z aplikacji przy użyciu interfejsu wiersza polecenia
 
 W tym artykule przedstawiono, jak opublikować aplikację .NET Core z poziomu wiersza polecenia. .NET core udostępnia trzy sposoby na publikowanie własnych aplikacji. Wdrożenie zależny od struktury tworzy plik .dll dla wielu platform, który używa zainstalowane lokalnie środowisko uruchomieniowe platformy .NET Core. Plik wykonywalny zależny od struktury tworzy specyficzne dla platformy plik wykonywalny, który używa zainstalowane lokalnie środowisko uruchomieniowe platformy .NET Core. Plik wykonywalny niezależna tworzy wykonywalnej specyficzne dla platformy i obejmuje lokalną kopię środowisko uruchomieniowe platformy .NET Core.
 
-Omówienie tych trybów publikowania, zobacz [wdrożenie aplikacji programu .NET Core](index.md). 
+Omówienie tych trybów publikowania, zobacz [wdrożenie aplikacji programu .NET Core](index.md).
 
 Szukasz szybkiego pomocy przy użyciu interfejsu wiersza polecenia? W poniższej tabeli przedstawiono kilka przykładów sposobu publikowania aplikacji. Można określić platformę docelową z `-f <TFM>` parametru lub przez edycję pliku projektu. Aby uzyskać więcej informacji, zobacz [publikowania podstawy](#publishing-basics).
 
@@ -33,8 +33,8 @@ Szukasz szybkiego pomocy przy użyciu interfejsu wiersza polecenia? W poniższej
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
->[!IMPORTANT]
->\*Korzystając z zestawu SDK w wersji 3.0 lub nowszej, plik wykonywalny zależny od struktury jest to domyślny tryb publikowania podczas uruchamiania podstawowego `dotnet publish` polecenia. Dotyczy tylko projektów przeznaczonych **platformy .NET Core 2.1** lub **.NET Core 3.0 to**.
+> [!IMPORTANT]
+> \*Korzystając z zestawu SDK w wersji 3.0 lub nowszej, plik wykonywalny zależny od struktury jest to domyślny tryb publikowania podczas uruchamiania podstawowego `dotnet publish` polecenia. Dotyczy tylko projektów przeznaczonych **platformy .NET Core 2.1** lub **.NET Core 3.0 to**.
 
 ## <a name="publishing-basics"></a>Podstawy publikowania
 
@@ -42,7 +42,7 @@ Szukasz szybkiego pomocy przy użyciu interfejsu wiersza polecenia? W poniższej
 
 Jeśli chcesz przeanalizować więcej niż jednej struktury, możesz ustawić `<TargetFrameworks>` ustawienie do więcej niż jednego elementu TFM wartości, rozdzielając je średnikiem. Możesz opublikować jedną z platform z `dotnet publish -f <TFM>` polecenia. Na przykład, jeśli masz `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` i uruchom `dotnet publish -f netcoreapp2.1`, zostanie utworzony plik binarny, który jest przeznaczony dla platformy .NET Core 2.1.
 
-Chyba że inaczej ustawiony, katalog wyjściowy [ `dotnet publish` ](../tools/dotnet-publish.md) polecenie jest `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Wartość domyślna **konfigurację kompilacji** tryb jest **debugowania** , chyba że zmieniono za pomocą `-c` parametru. Na przykład `dotnet publish -c Release -f netcoreapp2.1` publikuje `myfolder/bin/Release/netcoreapp2.1/publish/`. 
+Chyba że inaczej ustawiony, katalog wyjściowy [ `dotnet publish` ](../tools/dotnet-publish.md) polecenie jest `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`. Wartość domyślna **konfigurację kompilacji** tryb jest **debugowania** , chyba że zmieniono za pomocą `-c` parametru. Na przykład `dotnet publish -c Release -f netcoreapp2.1` publikuje `myfolder/bin/Release/netcoreapp2.1/publish/`.
 
 Jeśli używasz platformy .NET Core SDK 3.0, domyślnie opublikować tryb dla aplikacji, czy docelowej platformy .NET Core w wersji 2.1, 2.2 lub 3.0 jest zależny od struktury pliku wykonywalnego.
 
@@ -50,7 +50,7 @@ Jeśli używasz platformy .NET Core SDK 2.1, domyślnie opublikować tryb dla we
 
 ### <a name="native-dependencies"></a>Natywne zależności
 
-Jeśli aplikacja ma zależności natywnych, może nie działać w innym systemie operacyjnym. Na przykład jeśli aplikacja używa natywnego interfejsu API Win32, nie będzie uruchomić w systemie macOS lub Linux. Będzie konieczne podanie kodu specyficznego dla platformy i skompiluj plik wykonywalny dla każdej platformy. 
+Jeśli aplikacja ma zależności natywnych, może nie działać w innym systemie operacyjnym. Na przykład jeśli aplikacja używa natywnego interfejsu API Win32, nie będzie uruchomić w systemie macOS lub Linux. Będzie konieczne podanie kodu specyficznego dla platformy i skompiluj plik wykonywalny dla każdej platformy.
 
 Rozważ również, jeśli biblioteka odwołaniu ma zależności natywnych, aplikacja może nie działać na każdej platformie. Jednak jest możliwe, pakietu NuGet, który jest odwołanie do pakietu wersji specyficzne dla platformy do obsługi wymaganych zależności natywnych dla Ciebie.
 
@@ -85,6 +85,7 @@ namespace apptest1
     }
 }
 ```
+
 ```vb
 Imports System
 
@@ -128,34 +129,30 @@ Publikowanie FDE tworzy aplikację, automatycznie ustala przekazywania dalej na 
 
 Należy najpierw (z wyjątkiem platformy .NET Core 3.x, gdy miejscem docelowym bieżącej platformie) Użyj następujących przełączników z `dotnet publish` polecenie w celu opublikowania FDE:
 
-- `-r <RID>`  
-  Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
+- `-r <RID>` Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
-- `--self-contained false`  
-  Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako FDE.
+- `--self-contained false` Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako FDE.
 
 Zawsze, gdy używasz `-r` przełącznika, ścieżka folderu danych wyjściowych zmieni się na: `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`
 
 Jeśli używasz [Przykładowa aplikacja](#sample-app)Uruchom `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. To polecenie tworzy następujące pliku wykonywalnego: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
-> [!Note]
+> [!NOTE]
 > Można zmniejszyć całkowity rozmiar wdrożenia, włączając **globalizacji niezmiennej tryb**. Ten tryb jest przydatne w przypadku aplikacji, które nie są wspierane i mogą używać konwencji formatowania Konwencji obudowy i ciąg porównywania i sortowania kolejności [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji na temat **globalizacji niezmiennej tryb** i jak go włączyć, zobacz [trybie niezmiennej globalizacji platformy .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
 ## <a name="self-contained-deployment"></a>Niezależne wdrożenia
 
-Podczas publikowania niezależna wdrożenia (— SCD), .NET Core SDK tworzy wykonywalnej specyficzne dla platformy. Publikowanie — SCD zawiera wszystkie wymagane pliki platformy .NET Core, aby uruchomić aplikację, ale nie zawiera [natywnych zależności platformy .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Te zależności musi znajdować się w systemie przed uruchomieniem aplikacji. 
+Podczas publikowania niezależna wdrożenia (— SCD), .NET Core SDK tworzy wykonywalnej specyficzne dla platformy. Publikowanie — SCD zawiera wszystkie wymagane pliki platformy .NET Core, aby uruchomić aplikację, ale nie zawiera [natywnych zależności platformy .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Te zależności musi znajdować się w systemie przed uruchomieniem aplikacji.
 
 Publikowanie — SCD tworzy aplikację, która nie przodu do najnowszych dostępnych platformy .NET Core poprawki zabezpieczeń. Aby uzyskać więcej informacji na temat wersji powiązania w czasie kompilacji, zobacz [wybierz wersję platformy .NET Core do użycia](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
 Należy użyć następujących przełączników z `dotnet publish` polecenie w celu opublikowania — SCD:
 
-- `-r <RID>`  
-  Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
+- `-r <RID>` Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
-- `--self-contained true`  
-  Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako — SCD.
+- `--self-contained true` Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako — SCD.
 
-> [!Note]
+> [!NOTE]
 > Można zmniejszyć całkowity rozmiar wdrożenia, włączając **globalizacji niezmiennej tryb**. Ten tryb jest przydatne w przypadku aplikacji, które nie są wspierane i mogą używać konwencji formatowania Konwencji obudowy i ciąg porównywania i sortowania kolejności [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji na temat **globalizacji niezmiennej tryb** i jak go włączyć, zobacz [trybie niezmiennej globalizacji platformy .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
 
 

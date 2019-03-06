@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555011"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367157"
 ---
 # <a name="repeatbutton"></a>RepeatButton
-<xref:System.Windows.Controls.Primitives.RepeatButton> Jest podobny do <xref:System.Windows.Controls.Button>. Jednak <xref:System.Windows.Controls.Primitives.RepeatButton> podać elementy kontroli nad tym, kiedy i jak <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenie.  
+<xref:System.Windows.Controls.Primitives.RepeatButton> Przypomina <xref:System.Windows.Controls.Button>. Jednak <xref:System.Windows.Controls.Primitives.RepeatButton> zapewniają elementy kontrolę nad tym, kiedy i jak <xref:System.Windows.Controls.Primitives.ButtonBase.Click> wystąpi zdarzenie.  
   
- Na rysunku poniżej przedstawiono przykład trzy stany formantu przycisku powtarzania, Default, PointerFocused i naciśnięto symbol. Pierwszy przycisk pokazuje stan domyślny <xref:System.Windows.Controls.Primitives.RepeatButton>. Drugi przedstawia, jak zmienia wygląd przycisku, gdy wskaźnik myszy jest przesuwany nad po kliknięciu przycisku nadanie mu fokus. Przycisku ostatniej przedstawiono wygląd <xref:System.Windows.Controls.Primitives.RepeatButton> gdy użytkownik naciśnie przycisk myszy nad formantem.  
+ Poniższa ilustracja przedstawia przykład trzy stany kontrolki przycisku Powtórz tę procedurę, domyślny, PointerFocused i naciśnięto symbol. Pierwszy pokazuje stan domyślny <xref:System.Windows.Controls.Primitives.RepeatButton>. Drugi pokazuje, jak zmienia się wygląd przycisku po umieszczeniu wskaźnika myszy nad przyciskiem, nadając mu fokus. Ostatni przycisk przedstawiono wygląd <xref:System.Windows.Controls.Primitives.RepeatButton> gdy użytkownik naciśnie przycisk myszy nad formantem.  
   
- ![Powtórz Stany przycisku](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
-Typowy RepeatButton  
+ ![Powtórz Stany przycisku](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
+Typowe RepeatButton  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   

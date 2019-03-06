@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748080"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352714"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters i XAML
 W tym temacie przedstawiono celem typ Konwersja ciągu jako ogólna funkcja języka XAML. W .NET Framework <xref:System.ComponentModel.TypeConverter> klasy służy określonego celu, jako część wdrożenia na klasę niestandardową zarządzanego, który może służyć jako wartość właściwości użycie atrybutu XAML. Jeśli piszesz klasę niestandardową i chcesz, aby wystąpienia klasy może być używany jako wartości można ustawić atrybutu XAML, może być konieczne zastosowanie <xref:System.ComponentModel.TypeConverterAttribute> do klasy, należy napisać niestandardowy <xref:System.ComponentModel.TypeConverter> lub klasę.  
@@ -24,27 +24,22 @@ W tym temacie przedstawiono celem typ Konwersja ciągu jako ogólna funkcja jęz
  Procesor XAML potrzebuje dwóch informacji w celu przetworzenia wartość atrybutu. Pierwsza część informacji jest typ wartości właściwości, która jest ustawiona. Dowolny ciąg, który definiuje wartość atrybutu i przetworzony w XAML ostatecznie musi być konwertowany lub rozwiązać wartość tego typu. Jeśli wartość jest elementu podstawowego, który zrozumieniu przez parser XAML (na przykład wartość liczbowa), to bezpośrednia konwersji ciągu zostanie podjęta. Jeśli wartość jest wyliczeniem, ten ciąg jest używany do sprawdzenia pod kątem dopasowania nazwy do nazwanej stałej w tym wyliczeniu. Jeśli wartość jest ani podstawowy rozumieć analizatora ani wyliczeniem, a następnie danego typu musi mieć możliwość zapewnienia wystąpienia typu lub wartości, na podstawie ciągu przekonwertowanego. To zrobić, wskazując klasy konwertera typu. Konwerter typu jest faktycznie Klasa pomocy umożliwiająca dostarczanie wartości z innej klasy, zarówno dla scenariusza XAML, a także potencjalnie dla kodu wywołania w kodzie .NET.  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>Przy użyciu istniejącego zachowania konwersji typu w XAML  
- W zależności od Twojego znajomość XAML pojęć już używasz zachowanie konwersji typu w podstawowej aplikacji XAML bez wiedzy. Na przykład WPF definiuje dosłownie setki właściwości, które przyjmują wartości typu <xref:System.Windows.Point>. A <xref:System.Windows.Point> jest wartością, która opisuje współrzędnych w dwuwymiarowej przestrzeni współrzędnych i rzeczywistości po prostu ma dwie ważne właściwości: <xref:System.Windows.Point.X%2A> i <xref:System.Windows.Point.Y%2A>. Po określeniu punktu w XAML można określić go jako ciąg znaków z ogranicznika (zazwyczaj przecinkami) między <xref:System.Windows.Point.X%2A> i <xref:System.Windows.Point.Y%2A> należy podać wartości. Na przykład: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`.  
+ W zależności od Twojego znajomość XAML pojęć już używasz zachowanie konwersji typu w podstawowej aplikacji XAML bez wiedzy. Na przykład WPF definiuje dosłownie setki właściwości, które przyjmują wartości typu <xref:System.Windows.Point>. A <xref:System.Windows.Point> jest wartością, która opisuje współrzędnych w dwuwymiarowej przestrzeni współrzędnych i rzeczywistości po prostu ma dwie ważne właściwości: <xref:System.Windows.Point.X%2A> i <xref:System.Windows.Point.Y%2A>. Po określeniu punktu w XAML można określić go jako ciąg znaków z ogranicznika (zazwyczaj przecinkami) między <xref:System.Windows.Point.X%2A> i <xref:System.Windows.Point.Y%2A> należy podać wartości. Na przykład: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>`.  
   
  Nawet tego prostego typu <xref:System.Windows.Point> i prosty sposób jej użycia w XAML może dotyczyć konwertera typów. W tym przypadku jest to klasa <xref:System.Windows.PointConverter>.  
   
  Konwerter typu dla <xref:System.Windows.Point> zdefiniowany z numerem upraszczają poziomu klasa użycia znaczników wszystkich właściwości, które przyjmują <xref:System.Windows.Point>. Bez konwertera typów w tym miejscu, będziesz potrzebować następujących znacznie bardziej szczegółowy kod znaczników dla tego samego przykładu przedstawionego wcześniej:  
-  
- `<LinearGradientBrush>`  
-  
- `<LinearGradientBrush.StartPoint>`  
-  
- `<Point X="0" Y="0"/>`  
-  
- `</LinearGradientBrush.StartPoint>`  
-  
- `<LinearGradientBrush.EndPoint>`  
-  
- `<Point X="1" Y="1"/>`  
-  
- `</LinearGradientBrush.EndPoint>`  
-  
- `<LinearGradientBrush>`  
+
+```xaml
+<LinearGradientBrush>
+  <LinearGradientBrush.StartPoint>
+    <Point X="0" Y="0"/>
+  </LinearGradientBrush.StartPoint>
+  <LinearGradientBrush.EndPoint>
+    <Point X="1" Y="1"/>
+  </LinearGradientBrush.EndPoint>
+</LinearGradientBrush>
+ ```
   
  Czy używać typu string konwersji lub bardziej szczegółowy równoważny składni ogólnie jest wybranie stylu kodowania. Narzędzia przepływu pracy XAML mogą również mieć wpływ na sposób wartości są ustawione. Niektóre narzędzia XAML są zwykle do emitowania najpełniejszych formularza znaczniki, ponieważ jest łatwiejsza do przesłania danych do projektanta widoków lub własny mechanizm serializacji.  
   
@@ -53,7 +48,7 @@ W tym temacie przedstawiono celem typ Konwersja ciągu jako ogólna funkcja jęz
 ### <a name="type-converters-and-markup-extensions"></a>Typy konwerterów i rozszerzeń znaczników  
  Konwertery rozszerzenia i typu znaczników wypełnienia prostopadły ról pod kątem zachowania procesora XAML i scenariusze, które są stosowane względem. Mimo że kontekstu jest dostępna do użycia rozszerzenia znaczników, zachowanie konwersji typu właściwości, których rozszerzenie znaczników zawiera wartość jest zazwyczaj nie zostanie zaznaczona w implementacji rozszerzenia znaczników. Innymi słowy nawet jeśli rozszerzenie znaczników zwraca ciąg tekstowy jako jego `ProvideValue` dane wyjściowe, zachowanie konwersji typu dla tego ciągu jako dotyczą określoną właściwość lub typ wartości właściwości nie zostanie wywołany, ogólnie, rozszerzenie znaczników ma na celu procesu ciąg i zwraca obiekt bez żadnych konwertera typów zaangażowanych.  
   
- Typowe sytuacji kiedy rozszerzenie znaczników jest konieczne zamiast konwertera typów jest odwołaniem do obiektu, który już istnieje. W najlepszym konwertera typów o bezstanowa tylko może wygenerować nowe wystąpienie nie może być pożądane. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Typowe sytuacji kiedy rozszerzenie znaczników jest konieczne zamiast konwertera typów jest odwołaniem do obiektu, który już istnieje. W najlepszym konwertera typów o bezstanowa tylko może wygenerować nowe wystąpienie nie może być pożądane. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Konwertery typu natywnego  
  W implementacji WPF i .NET Framework analizatora XAML istnieją pewne typy, które mają obsługi konwersji typu natywnego, jeszcze nie są typami, które może być powszechnie traktować jako podstawowych. Na przykład taki typ <xref:System.DateTime>. Przyczyną jest oparty na działania architektury .NET Framework: typ <xref:System.DateTime> jest zdefiniowany w mscorlib, podstawowe biblioteki na platformie .NET. <xref:System.DateTime> nie ma zezwolenia na można przypisać za pomocą atrybutu, który pochodzi z innego zestawu, który wprowadza zależność (<xref:System.ComponentModel.TypeConverterAttribute> pochodzi z systemu), mechanizm odnajdywania konwertera typu zwykle poprzez przypisywanie nie są obsługiwane. Zamiast tego analizatora XAML zawiera listę typów, które są potrzebne takie natywne przetwarzanie i przetwarza je podobnie jak są przetwarzane prymitywów wartość true. (W przypadku właściwości <xref:System.DateTime> wiąże się to wywołanie <xref:System.DateTime.Parse%2A>.)  
@@ -116,6 +111,6 @@ W tym temacie przedstawiono celem typ Konwersja ciągu jako ogólna funkcja jęz
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.ComponentModel.TypeConverter>
-- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Szczegóły składni XAML](xaml-syntax-in-detail.md)

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: c521c5c5d4ecb2b20954b5b6e303bbbda0a26418
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3f2bf274db3a7b14f817dd2dbfffc39d2957ec4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508646"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374547"
 ---
 # <a name="richtextbox"></a>RichTextBox
 <xref:System.Windows.Controls.RichTextBox> Element definiuje edycji kontrolki z wbudowaną obsługę funkcji, takich jak Wytnij i Wklej, prezentacji sformatowanego dokumentu i Wybieranie zawartości.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [RichTextBox — omówienie](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [RichTextBox — omówienie](richtextbox-overview.md)  
+ [Tematy z instrukcjami](richtextbox-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Controls.TextBox>
-- [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Dokumenty w WPF](../advanced/documents-in-wpf.md)
+- [Przegląd dokumentu przepływu](../advanced/flow-document-overview.md)

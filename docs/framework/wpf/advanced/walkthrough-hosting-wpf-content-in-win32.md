@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: c56ef33d1a44b263466a293b06aa988885b2008d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f1ac68e49b5f84a41e3091b1a81010e7aa7cc0b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725600"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363166"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Przewodnik: Hosting zawartości WPF w Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej efektywne dodać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje do aplikacji, zamiast ponownego zapisywania adresów oryginalnego kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia prosty mechanizm do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  
@@ -22,7 +22,7 @@ ms.locfileid: "54725600"
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Wymagania  
- W tym samouczku założono podstawowe znajomość zarówno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania. Aby uzyskać wstęp do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania, zobacz [wprowadzenie](../../../../docs/framework/wpf/getting-started/index.md). Wprowadzenie do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania, możesz powinny odwoływać się dowolny wiele książek, w tym temacie, w szczególności *programowania Windows* przez Charles Petzold.  
+ W tym samouczku założono podstawowe znajomość zarówno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania. Aby uzyskać wstęp do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania, zobacz [wprowadzenie](../getting-started/index.md). Wprowadzenie do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania, możesz powinny odwoływać się dowolny wiele książek, w tym temacie, w szczególności *programowania Windows* przez Charles Petzold.  
   
  Ponieważ znajdująca się w tym samouczku przykład jest zaimplementowana w [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], w tym samouczku założono znajomość użytkowania [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] programu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] plus znajomości programowania kodu zarządzanego. Znajomość [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] jest przydatna, ale nie są niezbędne.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54725600"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa jednowątkowego apartamentu (STA) model wątkowości. Aby zapewnić prawidłowe działanie z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości kodu, należy ustawić aplikacji modelu wątkowości STA, stosując atrybut do punktu wejścia.
 
- [!code-cpp[Win32HostingWPFPage#WinMain](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
+ [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>Hosting zawartości WPF
@@ -120,14 +120,14 @@ ms.locfileid: "54725600"
 
  Kod, aby host [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości jest zaimplementowana w obsłudze dla [WM_CREATE](/windows/desktop/winmsg/wm-create) powiadomienia na oknie hosta.
 
- [!code-cpp[Win32HostingWPFPage#WMCreate](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
+ [!code-cpp[Win32HostingWPFPage#WMCreate](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
 
  `GetHwnd` Metoda przyjmuje, rozmiar i położenie informacje oraz element nadrzędny, uchwyt okna i zwraca uchwyt okna hostowanej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości.
 
 > [!NOTE]
 >  Nie można użyć `#using` dyrektywy dla `System::Windows::Interop` przestrzeni nazw. Spowoduje to utworzenie kolizja nazw między <xref:System.Windows.Interop.MSG> struktury w tej przestrzeni nazw i struktura MSG zadeklarowanych w winuser.h. Należy używać w pełni kwalifikowanej nazwy dostępu do zawartości tej przestrzeni nazw.
 
- [!code-cpp[Win32HostingWPFPage#GetHwnd](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
+ [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
  Nie można hostować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości bezpośrednio w oknie aplikacji. Zamiast tego należy najpierw utworzyć <xref:System.Windows.Interop.HwndSource> obiekt do opakowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości. Ten obiekt jest zasadniczo okna, który jest przeznaczony do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości. Hostowanie <xref:System.Windows.Interop.HwndSource> obiektu w oknie nadrzędnym, tworząc go jako element podrzędny elementu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna, które jest częścią Twojej aplikacji. <xref:System.Windows.Interop.HwndSource> Parametry konstruktora zawiera wiele tych samych informacji przejdzie CreateWindow podczas tworzenia [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna podrzędnego.
 
@@ -145,7 +145,7 @@ ms.locfileid: "54725600"
 
  Najprostszym rozwiązaniem tego problemu jest do zaimplementowania klasy zarządzanej, który zawiera zestaw pól statycznych do przechowywania odwołań do obiektów zarządzanych, którzy potrzebują dostępu do. W przykładzie użyto `WPFPageHost` utrzymywanie odwołania do klasy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości oraz wartość początkową liczbę jego właściwości, które mogą później zmienione przez użytkownika. To jest zdefiniowany w nagłówku.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageHost](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.h#wpfpagehost)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageHost](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.h#wpfpagehost)]
 
  W dalszej części `GetHwnd` funkcja przypisuje wartości do tych pól do późniejszego użytku podczas `myPage` jest nadal w zakresie.
 
@@ -155,7 +155,7 @@ ms.locfileid: "54725600"
 
  Jak wspomniano powyżej, gdy użytkownik kliknie przycisk albo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości zgłasza `OnButtonClicked` zdarzeń. Aplikacja dołącza obsługę do tego zdarzenia, aby otrzymywać te powiadomienia. Jeśli **OK** przycisk został kliknięty, klauzula obsługi przejmie informacji o użytkowniku z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości i wyświetla go w zestawie formantów statycznych.
 
- [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
+ [!code-cpp[Win32HostingWPFPage#WPFButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wpfbuttonclicked)]
 
  Program obsługi, otrzymuje obiekt argument zdarzenia niestandardowego z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości, `MyPageEventArgs`. Obiekt `IsOK` właściwość jest ustawiona na `true` Jeśli **OK** kliknięcia przycisku i `false` Jeśli **anulować** kliknięcia przycisku.
 
@@ -163,7 +163,7 @@ ms.locfileid: "54725600"
 
  Aplikacja [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] udostępnia zestaw przycisków radiowych, która pozwala użytkownikowi na modyfikację kolor tła [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości i kilka właściwości czcionki, powiązane. Poniższy fragment procedurę okna aplikacji (WndProc), a komunikat obsługi, który ustawia różne właściwości na różne komunikaty, w tym kolor tła. Inne są podobne i nie są wyświetlane. Zobacz pełny przykład, aby uzyskać szczegółowe informacje i kontekstu.
 
- [!code-cpp[Win32HostingWPFPage#WMCommandToBG](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcommandtobg)]
+ [!code-cpp[Win32HostingWPFPage#WMCommandToBG](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcommandtobg)]
 
  Aby ustawić kolor tła, Pobierz odwołanie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości (`hostedPage`) z `WPFPageHost` i ustaw właściwość koloru tła na odpowiedni kolor. W przykładzie użyto trzy opcje kolorów: oryginalny kolor, jasnołososiowy zielony lub światła. Kolor tła, oryginalnym jest przechowywany jako pole statyczne w `WPFPageHost` klasy. Ustawić inne dwa, utworzysz nową <xref:System.Windows.Media.SolidColorBrush> i przekazać konstruktora statycznego kolory wartość z zakresu od <xref:System.Windows.Media.Colors> obiektu.
 
@@ -186,23 +186,23 @@ ms.locfileid: "54725600"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zawartości Konstruktor przyjmuje wymagany szerokość i wysokość oraz rozmiary <xref:System.Windows.Controls.Grid> odpowiednio. Następnie definiuje układ podstawowy, tworząc zestaw <xref:System.Windows.Controls.ColumnDefinition> i <xref:System.Windows.Controls.RowDefinition> obiektów oraz dodać je do <xref:System.Windows.Controls.Grid> obiektu podstawowego <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> i <xref:System.Windows.Controls.Grid.RowDefinitions%2A> kolekcji, odpowiednio. Definiuje siatki pięciu wierszy i siedmiu kolumn z wymiarami ustalany na podstawie zawartości komórek.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorToGridDef](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortogriddef)]
 
  Następnie dodaje konstruktora [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów <xref:System.Windows.Controls.Grid>. Pierwszy element jest tekst tytułu, który jest <xref:System.Windows.Controls.Label> formant, który skupia się w pierwszym wierszu siatki.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
 
  Następny wiersz zawiera nazwę <xref:System.Windows.Controls.Label> kontroli i związanych z nią <xref:System.Windows.Controls.TextBox> kontroli. Ponieważ ten sam kod jest używany dla każdej pary etykiety/pola tekstowego, jest umieszczony w parze metody prywatne i używane dla wszystkich pięciu par etykiety/pole tekstowe. Metody tworzenia odpowiedniego sterowania, a następnie wywołaj <xref:System.Windows.Controls.Grid> klasy statycznej <xref:System.Windows.Controls.Grid.SetColumn%2A> i <xref:System.Windows.Controls.Grid.SetRow%2A> Umieść formanty w komórce odpowiedniej metody. Po utworzeniu kontrolki przykład wywołuje <xref:System.Windows.Controls.UIElementCollection.Add%2A> metody <xref:System.Windows.Controls.Panel.Children%2A> właściwość <xref:System.Windows.Controls.Grid> Aby dodać kontrolkę na siatce. Kod, aby dodać pozostałe pary etykiety/pole tekstowe jest podobny. Zobacz przykładowy kod, aby uzyskać szczegółowe informacje.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
 
  Implementacja dwie metody jest następujący:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCreateHelpers](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagecreatehelpers)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCreateHelpers](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagecreatehelpers)]
 
  Na koniec Przykładowa aplikacja dodaje **OK** i **anulować** przyciski i dołącza program obsługi zdarzeń, aby ich <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzenia.
 
- [!code-cpp[Win32HostingWPFPage#WPFPageCtorButtonsEvents](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorbuttonsevents)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageCtorButtonsEvents](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorbuttonsevents)]
 
 <a name="returning_data_to_window"></a>
 ### <a name="returning-the-data-to-the-host-window"></a>Zwracanie danych do okna hosta
@@ -210,11 +210,11 @@ ms.locfileid: "54725600"
 
  Deklaracja zdarzenia w WPFPage.h:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageEventDecl](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpageeventdecl)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageEventDecl](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpageeventdecl)]
 
  <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Program obsługi zdarzeń w WPFPage.cpp:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageButtonClicked](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagebuttonclicked)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageButtonClicked](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagebuttonclicked)]
 
 <a name="set_page_properties"></a>
 ### <a name="setting-the-wpf-properties"></a>Ustawianie właściwości WPF
@@ -222,13 +222,13 @@ ms.locfileid: "54725600"
 
  From WPFPage.h:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageFontFamilyProperty](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpagefontfamilyproperty)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageFontFamilyProperty](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.h#wpfpagefontfamilyproperty)]
 
  From WPFPage.cpp:
 
- [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](../../../../samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
+ [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Interop.HwndSource>
-- [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378849"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy
 Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w ramach danych zdarzenia. Obsługa zdarzenia skróci efektywne trasy. Obsługa klasy jest koncepcji programowania, który jest obsługiwany przez zdarzenia trasowane. Klasa program obsługi ma możliwość obsługi określonego zdarzenia trasowanego na poziomie klasy, za pomocą programu obsługi, które jest wywoływane przed jakakolwiek Obsługa wystąpienia na dowolne wystąpienie klasy.  
@@ -31,7 +31,7 @@ Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w 
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- W tym temacie rosnącego założenia [Przegląd zdarzeń kierowane](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ W tym temacie rosnącego założenia [Przegląd zdarzeń kierowane](routed-events-overview.md).  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>Gdy do oznaczenia zdarzeń jako obsługiwane  
@@ -47,7 +47,7 @@ Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w 
   
  Połączenie między zdarzenia trasowane tunelowania i propagacji odbywa się przez wewnętrzną implementację, w jaki sposób dowolnej podanej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasa wywołuje swoje własne zdarzenia trasowane zadeklarowane, a ta zasada obowiązuje sparowane zdarzeń trasowanych wejściowych. Ale chyba że istnieje tej implementacji na poziomie klasy, nie ma połączenia między tunelowania zdarzenia trasowanego i propagacji zdarzenia trasowane, które mają schemat nazewnictwa: bez takie wdrożenie będzie dwa rozłączne zdarzenia trasowane i nie będzie wywoływane w kolejności lub udziału danych zdarzeń.  
   
- Aby uzyskać więcej informacji o sposobie implementacji pary dane wejściowe zdarzenia trasowane tunelu/bąbelków w niestandardowej klasy, zobacz [Utwórz niestandardowe zdarzenie kierowane](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Aby uzyskać więcej informacji o sposobie implementacji pary dane wejściowe zdarzenia trasowane tunelu/bąbelków w niestandardowej klasy, zobacz [Utwórz niestandardowe zdarzenie kierowane](how-to-create-a-custom-routed-event.md).  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Funkcje obsługi klas i wystąpień obsługi  
@@ -100,6 +100,6 @@ Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w 
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.EventManager>
-- [Podgląd zdarzeń](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [Tworzenie niestandardowego zdarzenia trasowanego](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Podgląd zdarzeń](preview-events.md)
+- [Tworzenie niestandardowego zdarzenia trasowanego](how-to-create-a-custom-routed-event.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)

@@ -2,26 +2,27 @@
 title: <message> z <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 060c7dc07e53d0114241ac7528a24363e78715c6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 306bc56820cdbcba17cce9fc50d426260eb0e0d4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257186"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360670"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<komunikat > z \<netMsmqBinding >
-Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP w tym `netMsmqBinding` powiązania.  
-  
- \<system.ServiceModel>  
-\<powiązania >  
-\<netMsmqBinding>  
-\<Powiązanie >  
-\<security>  
-\<message>  
-  
-## <a name="syntax"></a>Składnia  
-  
-```xml  
+
+Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP w tym `netMsmqBinding` powiązania.
+
+\<system.ServiceModel>\
+\<powiązania > \
+\<netMsmqBinding>\
+\<Powiązanie > \
+\<Zabezpieczenia > \
+\<message>
+
+## <a name="syntax"></a>Składnia
+
+```xml
 <netMsmqBinding>
   <binding>
     <security>
@@ -30,28 +31,31 @@ Definiuje ustawienia zabezpieczeń wiadomości protokołu SOAP w tym `netMsmqBin
     </security>
   </binding>
 </netMsmqBinding>
-```  
-  
-## <a name="attributes-and-elements"></a>Atrybuty i elementy  
- W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
-  
-### <a name="attributes"></a>Atrybuty  
-  
-|Atrybut|Opis|  
-|---------------|-----------------|  
-|algorithmSuite|Ustawia komunikat algorytmów szyfrowania i klucz wrap, które są używane do uzyskania zabezpieczenia oparte na komunikatu dla komunikatów wysyłanych za pośrednictwem transportu MSMQ.<br /><br /> Wartość domyślna to `Aes256`. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
-|clientCredentialType|Określa typ poświadczenia do użycia podczas przeprowadzania uwierzytelniania klienta dla wiadomości wysłanych przez usługę transportową MSMQ. Prawidłowe wartości są następujące:<br /><br /> -Brak: Dzięki usłudze na współdziałanie z anonimowych klientów. Usługa ani klient wymaga poświadczeń.<br />-Windows: Dzięki temu wymiany protokołu SOAP i znajdować się w kontekście uwierzytelnionych poświadczeń Windows. To jest zawsze przeprowadza uwierzytelnianie za pomocą protokołu Kerberos.<br />— Nazwa użytkownika: Dzięki temu usługi wymagać który uwierzytelnienia klienta przy użyciu poświadczeń UserName. Poświadczenia w takim przypadku należy także określić przy użyciu `clientCredentials` zachowanie **Uwaga:**  Windows Communication Foundation (WCF) nie obsługuje wysyłanie skrótu hasła lub wyprowadzanie kluczy przy użyciu hasła i rozpoczęcie używania te klucze dla zabezpieczenia wiadomości. Usługi WCF wymusza w związku z tym, że programu exchange jest zabezpieczone, korzystając z poświadczeń UserName. Ten tryb wymaga określenia certyfikatu usługi na po stronie klienta za pomocą `clientCredential` zachowanie i `serviceCertificate`. <br /><br /> -Certyfikat: Dzięki temu usługi wymagać który uwierzytelnienia klienta za pomocą certyfikatu. Poświadczeń klienta w tym przypadku musi być określona za pomocą `clientCredentials` zachowanie. Poświadczenia usługi w tym przypadku należy także określić przy użyciu `clientCredentials` zachowanie, określając `serviceCertificate`.<br />-CardSpace: Dzięki temu usługi wymagać, za pomocą CardSpace uwierzytelnienia klienta. `serviceCertiifcate` Musi być obsługiwana w `clientCredential` zachowanie.<br /><br /> Wartość domyślna to `Windows`. Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|  
-  
-### <a name="child-elements"></a>Elementy podrzędne  
- Brak  
-  
-### <a name="parent-elements"></a>Elementy nadrzędne  
-  
-|Element|Opis|  
-|-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|  
-  
+```
+
+## <a name="attributes-and-elements"></a>Atrybuty i elementy
+
+W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.
+
+### <a name="attributes"></a>Atrybuty
+
+|Atrybut|Opis|
+|---------------|-----------------|
+|algorithmSuite|Ustawia komunikat algorytmów szyfrowania i klucz wrap, które są używane do uzyskania zabezpieczenia oparte na komunikatu dla komunikatów wysyłanych za pośrednictwem transportu MSMQ.<br /><br /> Wartość domyślna to `Aes256`. Ten atrybut jest typu <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|
+|clientCredentialType|Określa typ poświadczenia do użycia podczas przeprowadzania uwierzytelniania klienta dla wiadomości wysłanych przez usługę transportową MSMQ. Prawidłowe wartości są następujące:<br /><br /> -Brak: Dzięki usłudze na współdziałanie z anonimowych klientów. Usługa ani klient wymaga poświadczeń.<br />-Windows: Dzięki temu wymiany protokołu SOAP i znajdować się w kontekście uwierzytelnionych poświadczeń Windows. To jest zawsze przeprowadza uwierzytelnianie za pomocą protokołu Kerberos.<br />— Nazwa użytkownika: Dzięki temu usługi wymagać który uwierzytelnienia klienta przy użyciu poświadczeń UserName. Poświadczenia w takim przypadku należy także określić przy użyciu `clientCredentials` zachowanie **Uwaga:**  Windows Communication Foundation (WCF) nie obsługuje wysyłanie skrótu hasła lub wyprowadzanie kluczy przy użyciu hasła i rozpoczęcie używania te klucze dla zabezpieczenia wiadomości. Usługi WCF wymusza w związku z tym, że programu exchange jest zabezpieczone, korzystając z poświadczeń UserName. Ten tryb wymaga określenia certyfikatu usługi na po stronie klienta za pomocą `clientCredential` zachowanie i `serviceCertificate`. <br /><br /> -Certyfikat: Dzięki temu usługi wymagać który uwierzytelnienia klienta za pomocą certyfikatu. Poświadczeń klienta w tym przypadku musi być określona za pomocą `clientCredentials` zachowanie. Poświadczenia usługi w tym przypadku należy także określić przy użyciu `clientCredentials` zachowanie, określając `serviceCertificate`.<br />-CardSpace: Dzięki temu usługi wymagać, za pomocą CardSpace uwierzytelnienia klienta. `serviceCertificate` Musi być obsługiwana w `clientCredential` zachowanie.<br /><br /> Wartość domyślna to `Windows`. Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|
+
+### <a name="child-elements"></a>Elementy podrzędne
+
+Brak
+
+### <a name="parent-elements"></a>Elementy nadrzędne
+
+|Element|Opis|
+|-------------|-----------------|
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązania.|
+
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>
 - <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>

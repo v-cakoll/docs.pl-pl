@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552899"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371336"
 ---
-# <a name="progressbar"></a><span data-ttu-id="8d00d-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="8d00d-102">ProgressBar</span></span>
-<span data-ttu-id="8d00d-103">A <xref:System.Windows.Controls.ProgressBar> wskazuje postęp operacji.</span><span class="sxs-lookup"><span data-stu-id="8d00d-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="8d00d-104"><xref:System.Windows.Controls.ProgressBar> Kontrola składa się z oknem jest wypełniony kolorem wyróżnienie systemu w trakcie operacji.</span><span class="sxs-lookup"><span data-stu-id="8d00d-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
+# <a name="progressbar"></a><span data-ttu-id="8eab1-102">ProgressBar</span><span class="sxs-lookup"><span data-stu-id="8eab1-102">ProgressBar</span></span>
+<span data-ttu-id="8eab1-103">A <xref:System.Windows.Controls.ProgressBar> wskazuje postęp operacji.</span><span class="sxs-lookup"><span data-stu-id="8eab1-103">A <xref:System.Windows.Controls.ProgressBar> indicates the progress of an operation.</span></span> <span data-ttu-id="8eab1-104"><xref:System.Windows.Controls.ProgressBar> Kontrola składa się z oknem, które jest wypełniany kolor wyróżnienia system w miarę postępów operacji.</span><span class="sxs-lookup"><span data-stu-id="8eab1-104">The <xref:System.Windows.Controls.ProgressBar> control consists of a window that is filled with the system highlight color as an operation progresses.</span></span>  
   
- <span data-ttu-id="8d00d-105">Na poniższej ilustracji przedstawiono typowe <xref:System.Windows.Controls.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="8d00d-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
+ <span data-ttu-id="8eab1-105">Na poniższej ilustracji pokazano typową <xref:System.Windows.Controls.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="8eab1-105">The following illustration shows a typical <xref:System.Windows.Controls.ProgressBar>.</span></span>  
   
- <span data-ttu-id="8d00d-106">![Pasek postępu](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="8d00d-106">![Progress bar](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
+ <span data-ttu-id="8eab1-106">![Pasek postępu](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span><span class="sxs-lookup"><span data-stu-id="8eab1-106">![Progress bar](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8d00d-107">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="8d00d-107">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8eab1-107">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="8eab1-107">In This Section</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="8d00d-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="8d00d-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8eab1-108">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="8eab1-108">Reference</span></span>  
  <xref:System.Windows.Controls.ProgressBar>  
   <xref:System.Windows.Controls.Primitives.StatusBar>  
   
-## <a name="related-sections"></a><span data-ttu-id="8d00d-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="8d00d-109">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="8eab1-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="8eab1-109">Related Sections</span></span>

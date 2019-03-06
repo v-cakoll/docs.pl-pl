@@ -7,22 +7,22 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553926"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365272"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="997a9-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="997a9-102">RadioButton</span></span>
-<span data-ttu-id="997a9-103"><xref:System.Windows.Controls.RadioButton> Formanty zwykle są zgrupowane umożliwiającą użytkownikom pojedynczego wyboru między kilka opcji; można wybrać tylko jeden przycisk naraz.</span><span class="sxs-lookup"><span data-stu-id="997a9-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="908d6-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="908d6-102">RadioButton</span></span>
+<span data-ttu-id="908d6-103"><xref:System.Windows.Controls.RadioButton> Formanty zwykle są zgrupowane razem do zaoferowania użytkownikom pojedynczego wyboru spośród kilku opcji; można wybrać tylko jeden przycisk w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="908d6-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="997a9-104">Na poniższej ilustracji przedstawiono przykład <xref:System.Windows.Controls.RadioButton> formantu.</span><span class="sxs-lookup"><span data-stu-id="997a9-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="908d6-104">Na poniższej ilustracji przedstawiono przykład <xref:System.Windows.Controls.RadioButton> kontroli.</span><span class="sxs-lookup"><span data-stu-id="908d6-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="997a9-105">![Stany przycisku radiowego](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="997a9-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="997a9-106">Typowy RadioButton</span><span class="sxs-lookup"><span data-stu-id="997a9-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="908d6-105">![Stany przycisku radiowego](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="908d6-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="908d6-106">RadioButton — typowe</span><span class="sxs-lookup"><span data-stu-id="908d6-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="997a9-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="997a9-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="908d6-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="908d6-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="997a9-108">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="997a9-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="908d6-108">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="908d6-108">Related Sections</span></span>

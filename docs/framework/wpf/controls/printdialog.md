@@ -8,23 +8,23 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8638b56e8a6430b1a7cec371f133063a0c57692
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689314"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368981"
 ---
-# <a name="printdialog"></a><span data-ttu-id="65686-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="65686-102">PrintDialog</span></span>
-<span data-ttu-id="65686-103"><xref:System.Windows.Controls.PrintDialog> Formant jest używany do utworzenia wystąpienia standardowe okno dialogowe, automatycznie konfiguruje <xref:System.Printing.PrintTicket> i <xref:System.Printing.PrintQueue> zgodnie z danych wejściowych użytkownika.</span><span class="sxs-lookup"><span data-stu-id="65686-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
+# <a name="printdialog"></a><span data-ttu-id="f0892-102">PrintDialog</span><span class="sxs-lookup"><span data-stu-id="f0892-102">PrintDialog</span></span>
+<span data-ttu-id="f0892-103"><xref:System.Windows.Controls.PrintDialog> Formant jest używany do utworzenia wystąpienia standardowe okno dialogowe, automatycznie konfiguruje <xref:System.Printing.PrintTicket> i <xref:System.Printing.PrintQueue> zgodnie z danych wejściowych użytkownika.</span><span class="sxs-lookup"><span data-stu-id="f0892-103">The <xref:System.Windows.Controls.PrintDialog> control is used to instantiate a standard print dialog box that automatically configures a <xref:System.Printing.PrintTicket> and <xref:System.Printing.PrintQueue> according to user input.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="65686-104">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="65686-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="f0892-104">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="f0892-104">Reference</span></span>  
  <xref:System.Windows.Controls.PrintDialog>  
   
  <xref:System.Printing.PrintTicket>  
   
  <xref:System.Printing.PrintQueue>  
   
-## <a name="see-also"></a><span data-ttu-id="65686-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="65686-105">See also</span></span>
-- [<span data-ttu-id="65686-106">Przegląd drukowania</span><span class="sxs-lookup"><span data-stu-id="65686-106">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [<span data-ttu-id="65686-107">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="65686-107">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="f0892-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f0892-105">See also</span></span>
+- [<span data-ttu-id="f0892-106">Przegląd drukowania</span><span class="sxs-lookup"><span data-stu-id="f0892-106">Printing Overview</span></span>](../advanced/printing-overview.md)
+- [<span data-ttu-id="f0892-107">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="f0892-107">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)

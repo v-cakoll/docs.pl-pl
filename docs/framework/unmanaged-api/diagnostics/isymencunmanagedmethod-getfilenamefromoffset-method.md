@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0582714c157de69293eb1e8dfa40e0cd2f44cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df1e9d317294127a931bebf100295290a0dd6b23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621201"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471840"
 ---
-# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="81409-102">ISymENCUnmanagedMethod::GetFileNameFromOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="81409-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
-<span data-ttu-id="81409-103">Pobiera nazwę pliku dla linii skojarzonych z przesunięcia.</span><span class="sxs-lookup"><span data-stu-id="81409-103">Gets the file name for the line associated with an offset.</span></span>  
+# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="939f3-102">ISymENCUnmanagedMethod::GetFileNameFromOffset — Metoda</span><span class="sxs-lookup"><span data-stu-id="939f3-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
+<span data-ttu-id="939f3-103">Pobiera nazwę pliku dla linii skojarzonych z przesunięcia.</span><span class="sxs-lookup"><span data-stu-id="939f3-103">Gets the file name for the line associated with an offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="81409-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="81409-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="939f3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="939f3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFileNameFromOffset(  
@@ -38,24 +38,24 @@ HRESULT GetFileNameFromOffset(
        length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="81409-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="81409-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="939f3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="939f3-105">Parameters</span></span>  
  `dwOffset`  
- <span data-ttu-id="81409-106">[in] Element `ULONG32` zawiera przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="81409-106">[in] A `ULONG32` that contains the offset.</span></span>  
+ <span data-ttu-id="939f3-106">[in] Element `ULONG32` zawiera przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="939f3-106">[in] A `ULONG32` that contains the offset.</span></span>  
   
  `cchName`  
- <span data-ttu-id="81409-107">[in] A `ULONG32` oznacza rozmiar `szName` buforu.</span><span class="sxs-lookup"><span data-stu-id="81409-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="939f3-107">[in] A `ULONG32` oznacza rozmiar `szName` buforu.</span><span class="sxs-lookup"><span data-stu-id="939f3-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="81409-108">[out] Wskaźnik do `ULONG32` rozmiar, który odbiera w postaci, buforu, muszą zawierać nazwy pliku.</span><span class="sxs-lookup"><span data-stu-id="81409-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span></span>  
+ <span data-ttu-id="939f3-108">[out] Wskaźnik do `ULONG32` rozmiar, który odbiera w postaci, buforu, muszą zawierać nazwy pliku.</span><span class="sxs-lookup"><span data-stu-id="939f3-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span></span>  
   
  `szName`  
- <span data-ttu-id="81409-109">[out] Bufor, który zawiera nazwy pliku.</span><span class="sxs-lookup"><span data-stu-id="81409-109">[out] The buffer that contains the file names.</span></span>  
+ <span data-ttu-id="939f3-109">[out] Bufor, który zawiera nazwy pliku.</span><span class="sxs-lookup"><span data-stu-id="939f3-109">[out] The buffer that contains the file names.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="81409-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="81409-110">Return Value</span></span>  
- <span data-ttu-id="81409-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="81409-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="939f3-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="939f3-110">Return Value</span></span>  
+ <span data-ttu-id="939f3-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="939f3-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="81409-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="81409-112">Requirements</span></span>  
- <span data-ttu-id="81409-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="81409-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="939f3-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="939f3-112">Requirements</span></span>  
+ <span data-ttu-id="939f3-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="939f3-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81409-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="81409-114">See also</span></span>
-- [<span data-ttu-id="81409-115">ISymENCUnmanagedMethod, interfejs</span><span class="sxs-lookup"><span data-stu-id="81409-115">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="939f3-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="939f3-114">See also</span></span>
+- [<span data-ttu-id="939f3-115">ISymENCUnmanagedMethod, interfejs</span><span class="sxs-lookup"><span data-stu-id="939f3-115">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

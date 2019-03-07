@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7e07450b108eb3c5ea083a2ec2f51981941153f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a190041cacb635f1ad6703a634923e0bb9ddb3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484267"
 ---
-# <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a><span data-ttu-id="215ff-102">IHostIoCompletionManager::SetCLRIoCompletionManager — Metoda</span><span class="sxs-lookup"><span data-stu-id="215ff-102">IHostIoCompletionManager::SetCLRIoCompletionManager Method</span></span>
-<span data-ttu-id="215ff-103">Udostępnia wskaźnik interfejsu do hosta [iclriocompletionmanager —](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) wystąpienia implementowany przez środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="215ff-103">Provides the host with an interface pointer to the [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) instance implemented by the common language runtime (CLR).</span></span>  
+# <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a><span data-ttu-id="0c2ef-102">IHostIoCompletionManager::SetCLRIoCompletionManager — Metoda</span><span class="sxs-lookup"><span data-stu-id="0c2ef-102">IHostIoCompletionManager::SetCLRIoCompletionManager Method</span></span>
+<span data-ttu-id="0c2ef-103">Udostępnia wskaźnik interfejsu do hosta [iclriocompletionmanager —](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) wystąpienia implementowany przez środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="0c2ef-103">Provides the host with an interface pointer to the [ICLRIoCompletionManager](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md) instance implemented by the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="215ff-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="215ff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0c2ef-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0c2ef-104">Syntax</span></span>  
   
 ```  
 HRESULT SetCLRIoCompletionManager (  
@@ -35,33 +35,33 @@ HRESULT SetCLRIoCompletionManager (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="215ff-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="215ff-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0c2ef-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0c2ef-105">Parameters</span></span>  
  `pManager`  
- <span data-ttu-id="215ff-106">[in] Wskaźnik interfejsu do `ICLRIoCompletionManager` wystąpienia dostarczane przez środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="215ff-106">[in] An interface pointer to an `ICLRIoCompletionManager` instance provided by the CLR.</span></span>  
+ <span data-ttu-id="0c2ef-106">[in] Wskaźnik interfejsu do `ICLRIoCompletionManager` wystąpienia dostarczane przez środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-106">[in] An interface pointer to an `ICLRIoCompletionManager` instance provided by the CLR.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="215ff-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="215ff-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0c2ef-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="0c2ef-107">Return Value</span></span>  
   
-|<span data-ttu-id="215ff-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="215ff-108">HRESULT</span></span>|<span data-ttu-id="215ff-109">Opis</span><span class="sxs-lookup"><span data-stu-id="215ff-109">Description</span></span>|  
+|<span data-ttu-id="0c2ef-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0c2ef-108">HRESULT</span></span>|<span data-ttu-id="0c2ef-109">Opis</span><span class="sxs-lookup"><span data-stu-id="0c2ef-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="215ff-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="215ff-110">S_OK</span></span>|<span data-ttu-id="215ff-111">`SetCLRIoCompletionManager` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="215ff-111">`SetCLRIoCompletionManager` returned successfully.</span></span>|  
-|<span data-ttu-id="215ff-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="215ff-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="215ff-113">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="215ff-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="215ff-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="215ff-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="215ff-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="215ff-115">The call timed out.</span></span>|  
-|<span data-ttu-id="215ff-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="215ff-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="215ff-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="215ff-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="215ff-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="215ff-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="215ff-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="215ff-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="215ff-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="215ff-120">E_FAIL</span></span>|<span data-ttu-id="215ff-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="215ff-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="215ff-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="215ff-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="215ff-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="215ff-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="0c2ef-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="0c2ef-110">S_OK</span></span>|<span data-ttu-id="0c2ef-111">`SetCLRIoCompletionManager` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-111">`SetCLRIoCompletionManager` returned successfully.</span></span>|  
+|<span data-ttu-id="0c2ef-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0c2ef-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0c2ef-113">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="0c2ef-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0c2ef-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0c2ef-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-115">The call timed out.</span></span>|  
+|<span data-ttu-id="0c2ef-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0c2ef-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0c2ef-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="0c2ef-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0c2ef-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0c2ef-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="0c2ef-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0c2ef-120">E_FAIL</span></span>|<span data-ttu-id="0c2ef-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0c2ef-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0c2ef-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="215ff-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="215ff-124">Remarks</span></span>  
- <span data-ttu-id="215ff-125">Po środowisko CLR jest określana mianem `SetCLRIoCompletionManager`, host musi wywołać [iclriocompletionmanager::onComplete —](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) powiadomić środowiska CLR, po zakończeniu żądania We/Wy.</span><span class="sxs-lookup"><span data-stu-id="215ff-125">After the CLR has called `SetCLRIoCompletionManager`, the host must call [ICLRIoCompletionManager::OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) to notify the CLR when an I/O request has been completed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0c2ef-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0c2ef-124">Remarks</span></span>  
+ <span data-ttu-id="0c2ef-125">Po środowisko CLR jest określana mianem `SetCLRIoCompletionManager`, host musi wywołać [iclriocompletionmanager::onComplete —](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) powiadomić środowiska CLR, po zakończeniu żądania We/Wy.</span><span class="sxs-lookup"><span data-stu-id="0c2ef-125">After the CLR has called `SetCLRIoCompletionManager`, the host must call [ICLRIoCompletionManager::OnComplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) to notify the CLR when an I/O request has been completed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="215ff-126">Wymagania</span><span class="sxs-lookup"><span data-stu-id="215ff-126">Requirements</span></span>  
- <span data-ttu-id="215ff-127">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="215ff-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c2ef-126">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0c2ef-126">Requirements</span></span>  
+ <span data-ttu-id="0c2ef-127">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c2ef-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="215ff-128">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="215ff-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0c2ef-128">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0c2ef-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="215ff-129">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="215ff-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0c2ef-129">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0c2ef-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="215ff-130">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="215ff-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0c2ef-130">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c2ef-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="215ff-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="215ff-131">See also</span></span>
-- [<span data-ttu-id="215ff-132">ICLRIoCompletionManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="215ff-132">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [<span data-ttu-id="215ff-133">IHostIoCompletionManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="215ff-133">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0c2ef-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0c2ef-131">See also</span></span>
+- [<span data-ttu-id="0c2ef-132">ICLRIoCompletionManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="0c2ef-132">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="0c2ef-133">IHostIoCompletionManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="0c2ef-133">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

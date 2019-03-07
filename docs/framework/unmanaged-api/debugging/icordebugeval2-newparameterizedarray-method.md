@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413283"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487702"
 ---
-# <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="84f4c-102">ICorDebugEval2::NewParameterizedArray — Metoda</span><span class="sxs-lookup"><span data-stu-id="84f4c-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
-<span data-ttu-id="84f4c-103">Przydziela nowej tablicy o typie określonym elemencie i wymiary.</span><span class="sxs-lookup"><span data-stu-id="84f4c-103">Allocates a new array of the specified element type and dimensions.</span></span>  
+# <a name="icordebugeval2newparameterizedarray-method"></a><span data-ttu-id="85742-102">ICorDebugEval2::NewParameterizedArray — Metoda</span><span class="sxs-lookup"><span data-stu-id="85742-102">ICorDebugEval2::NewParameterizedArray Method</span></span>
+<span data-ttu-id="85742-103">Przydziela nową tablicę typu określonego elementu i wymiary.</span><span class="sxs-lookup"><span data-stu-id="85742-103">Allocates a new array of the specified element type and dimensions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84f4c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="84f4c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="85742-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="85742-104">Syntax</span></span>  
   
 ```  
 HRESULT NewParameterizedArray(  
@@ -38,27 +38,27 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="84f4c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="84f4c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="85742-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="85742-105">Parameters</span></span>  
  `pElementType`  
- <span data-ttu-id="84f4c-106">[in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ elementu przechowywane w tablicy.</span><span class="sxs-lookup"><span data-stu-id="84f4c-106">[in] A pointer to an ICorDebugType object that represents the type of element stored in the array.</span></span>  
+ <span data-ttu-id="85742-106">[in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ elementu przechowywanego w tablicy.</span><span class="sxs-lookup"><span data-stu-id="85742-106">[in] A pointer to an ICorDebugType object that represents the type of element stored in the array.</span></span>  
   
  `rank`  
- <span data-ttu-id="84f4c-107">[in] Liczba wymiarów tablicy.</span><span class="sxs-lookup"><span data-stu-id="84f4c-107">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="84f4c-108">W programie .NET Framework w wersji 2.0 ta wartość musi wynosić 1.</span><span class="sxs-lookup"><span data-stu-id="84f4c-108">In the .NET Framework version 2.0, this value must be 1.</span></span>  
+ <span data-ttu-id="85742-107">[in] Liczba wymiarów tablicy.</span><span class="sxs-lookup"><span data-stu-id="85742-107">[in] The number of dimensions of the array.</span></span> <span data-ttu-id="85742-108">W programie .NET Framework 2.0 ta wartość musi wynosić 1.</span><span class="sxs-lookup"><span data-stu-id="85742-108">In the .NET Framework version 2.0, this value must be 1.</span></span>  
   
  `dims`  
- <span data-ttu-id="84f4c-109">[in] Rozmiar w bajtach każdego wymiaru tablicy.</span><span class="sxs-lookup"><span data-stu-id="84f4c-109">[in] The size, in bytes, of each dimension of the array.</span></span>  
+ <span data-ttu-id="85742-109">[in] Rozmiar w bajtach każdego wymiaru tablicy.</span><span class="sxs-lookup"><span data-stu-id="85742-109">[in] The size, in bytes, of each dimension of the array.</span></span>  
   
  `lowBounds`  
- <span data-ttu-id="84f4c-110">[in] Opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="84f4c-110">[in] Optional.</span></span> <span data-ttu-id="84f4c-111">Dolną granicę każdego wymiaru tablicy.</span><span class="sxs-lookup"><span data-stu-id="84f4c-111">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="84f4c-112">W przypadku pominięcia tej wartości dolna granica zero zakłada, że dla każdego wymiaru.</span><span class="sxs-lookup"><span data-stu-id="84f4c-112">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
+ <span data-ttu-id="85742-110">[in] Opcjonalnie.</span><span class="sxs-lookup"><span data-stu-id="85742-110">[in] Optional.</span></span> <span data-ttu-id="85742-111">Dolna granica każdego wymiaru tablicy.</span><span class="sxs-lookup"><span data-stu-id="85742-111">The lower bound of each dimension of the array.</span></span> <span data-ttu-id="85742-112">Jeśli ta wartość zostanie pominięty, dolną granicę równą zero zakłada, że dla każdego wymiaru.</span><span class="sxs-lookup"><span data-stu-id="85742-112">If this value is omitted, a lower bound of zero is assumed for each dimension.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="84f4c-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="84f4c-113">Remarks</span></span>  
- <span data-ttu-id="84f4c-114">Elementy tablicy można instancji typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="84f4c-114">The elements of the array may be instances of a generic type.</span></span> <span data-ttu-id="84f4c-115">Tablicy zawsze jest tworzony w domenie aplikacji, w którym wątek jest uruchomiony.</span><span class="sxs-lookup"><span data-stu-id="84f4c-115">The array is always created in the application domain in which the thread is currently running.</span></span> <span data-ttu-id="84f4c-116">W .NET Framework 2.0, wartość `rank` musi być równa 1.</span><span class="sxs-lookup"><span data-stu-id="84f4c-116">In the .NET Framework 2.0, the value of `rank` must be 1.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="85742-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="85742-113">Remarks</span></span>  
+ <span data-ttu-id="85742-114">Elementy tablicy mogą być wystąpień typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="85742-114">The elements of the array may be instances of a generic type.</span></span> <span data-ttu-id="85742-115">Tablica zawsze jest tworzony w domenie aplikacji, w którym wątek jest obecnie uruchomiony.</span><span class="sxs-lookup"><span data-stu-id="85742-115">The array is always created in the application domain in which the thread is currently running.</span></span> <span data-ttu-id="85742-116">W programie .NET Framework 2.0, wartość `rank` musi mieć wartość 1.</span><span class="sxs-lookup"><span data-stu-id="85742-116">In the .NET Framework 2.0, the value of `rank` must be 1.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84f4c-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="84f4c-117">Requirements</span></span>  
- <span data-ttu-id="84f4c-118">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84f4c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="85742-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="85742-117">Requirements</span></span>  
+ <span data-ttu-id="85742-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="85742-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="84f4c-119">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="84f4c-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="85742-119">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="85742-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="84f4c-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="84f4c-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="85742-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="85742-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="84f4c-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84f4c-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="85742-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85742-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

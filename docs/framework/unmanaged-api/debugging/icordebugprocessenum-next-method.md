@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493586"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień ICorDebugProcess z wyliczenia, zaczynając od bieżącego położenia.  
+Pobiera określoną liczbę wystąpień ICorDebugProcess z wyliczenia, zaczynając od bieżącej pozycji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `celt`  
  [in] Liczba `ICorDebugProcess` wystąpienia mają zostać pobrane.  
   
  `processess`  
- [out] Tablicy wskaźników, z których każdy wskazuje `ICorDebugProcess` obiekt, który reprezentuje procesu.  
+ [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugProcess` obiekt, który reprezentuje proces.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugProcess` wystąpienia faktycznie zwracane. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby `ICorDebugProcess` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

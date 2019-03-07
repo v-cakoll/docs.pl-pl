@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b622d1bd82e53d5fa232e07b1f49e6fbba3ccba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a48396f8ef668cfe7755b2718180317b465793b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475293"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction — Metoda
 Pobiera funkcję, która zawiera kod skojarzony z tą ramką stosu.  
@@ -35,15 +35,15 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppFunction`  
- [out] Wskaźnik do adresu ICorDebugFunction obiekt, który reprezentuje funkcję kodem skojarzone z tą ramką stosu.  
+ [out] Wskaźnik na adres obiektu ICorDebugFunction, który reprezentuje funkcję zawierające kod skojarzony z tą ramką stosu.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetFunction` Metody może zakończyć się niepowodzeniem, jeśli ramka nie jest skojarzony z dowolnej określonej funkcji.  
+ `GetFunction` Metoda może zakończyć się niepowodzeniem, jeśli ramka nie jest skojarzona z dowolną określoną funkcję.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

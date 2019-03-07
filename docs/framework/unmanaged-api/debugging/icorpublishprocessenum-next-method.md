@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e427c3919e8b714146fbe630a7e151dff10703de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39e0b85b80618afed80d65430ba18cb1128352d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582415"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466721"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next — Metoda
 Pobiera określoną liczbę procesów z kolekcji, począwszy od bieżącej pozycji kursora.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `celt`  
  [in] Liczba procesów, które mają zostać pobrane.  
   

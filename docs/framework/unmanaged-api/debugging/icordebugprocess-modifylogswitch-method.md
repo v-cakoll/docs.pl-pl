@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ceed164631169b3a47809381b2cc4e630ae718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b1c85499e5269027da2c2a01ab67aab2c5da626
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418620"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488178"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch — Metoda
-Ustawia poziom ważności określony dziennik przełącznika.  
+Ustawia poziom ważności przełącznika określonego dziennika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,18 +35,18 @@ HRESULT ModifyLogSwitch(
     [in] LONG  lLevel);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pLogSwitchName`  
- [in] Wskaźnik do ciąg określający nazwę przełącznika dziennika.  
+ [in] Wskaźnik do ciągu, który określa nazwę przełącznika dziennika.  
   
  `lLevel`  
- [in] Poziom ważności dla przełącznika określony dziennik.  
+ [in] Poziom ważności, należy ustawić dla przełącznika określonego dziennika.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest prawidłowa tylko po [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) podczas wywołania zwrotnego.  
+ Ta metoda jest prawidłowa tylko po [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) wystąpiło wywołanie zwrotne.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

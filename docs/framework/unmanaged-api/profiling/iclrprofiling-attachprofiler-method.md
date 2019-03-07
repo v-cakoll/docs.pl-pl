@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737260"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469004"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler — Metoda
 Dołącza określony profiler do określonego procesu.  
@@ -39,7 +39,7 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `dwProfileeProcessID`  
  [in] Identyfikator procesu proces, do którego program profilujący powinien być dołączony. Na komputerze 64-bitowym, bitowości PROFILOWANEGO procesu musi odpowiadać wartości bitowości proces wyzwalacza, która wywołuje `AttachProfiler`. Jeśli konto użytkownika, pod którym `AttachProfiler` jest nazywany ma uprawnienia administracyjne, proces docelowy może być dowolnym procesu w systemie. W przeciwnym razie proces docelowy musi należeć do tego samego konta użytkownika.  
   

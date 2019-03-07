@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd65de77209f5a981c0a4c291f8573a61cf6335b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405146"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489556"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller — Metoda
-Pobiera łańcuch, który wywołuje ten łańcuch.  
+Pobiera łańcucha, który wywołuje ten łańcuch.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,17 +35,17 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik do adresu ICorDebugChain obiekt, który reprezentuje łańcucha wywołania.  
+ [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje łańcucha wywołania.  
   
- Jeśli ten łańcuch samorzutnie została wywołana (jak byłoby, jeśli ten łańcuch lub debuger zainicjowany stosu wywołań), `ppChain` będzie mieć wartość null.  
+ Jeśli ten łańcuch spontanicznie została wywołana (tak jak w przypadku gdy ten łańcuch lub debuger zainicjowano stosu wywołań), `ppChain` będzie miał wartość null.  
   
 ## <a name="remarks"></a>Uwagi  
- Łańcucha wywołania może być w innym wątku, jeśli wywołanie zostało organizowanego między wątkami.  
+ Łańcucha wywołania może być w innym wątku, jeśli połączenie zostało organizowane przez wątków.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

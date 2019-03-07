@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e832bbb58a08c50d8c2bb37fa0c310ef3133d02c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c177a315a76009b7ac82055cba2d0b23821333b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583642"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494886"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage — Metoda
 Pobiera rozmiar i zawartość z określonej sekcji metadanych.  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataStorage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppvMd`  
  [out w] Wskaźnik do sekcji metadanych.  
   

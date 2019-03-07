@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 12e6a262-d9ac-49b8-9b80-1e653a2a3819
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38d0ad7d84484c3b061429ee6cc1c38bc59586a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0069f301df9908a584608c7d20e5348de47361c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517269"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501607"
 ---
 # <a name="icordebugexceptiondebugeventgetnativeip-method"></a>Metoda ICorDebugExceptionDebugEvent::GetNativeIP
 Pobiera wskaźnik natywny instrukcji dla tego zdarzenia debugowania wyjątku.  
@@ -22,7 +22,7 @@ HRESULT GetNativeIP(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pIP`  
  [out] Zdarzenie debugowania wskaźnik do wskaźnika instrukcji dla tego wyjątku. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e62539304817432fcab8f3e0958e5a70b371b83d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b168673e76beddd8ae0479b8daae009c5f057b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416950"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494665"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a>ICorDebugStringValue::GetLength — Metoda
-Pobiera liczbę znaków w ciągu odwołuje się ten ICorDebugStringValue.  
+Pobiera liczbę znaków w ciągu odwołuje się ten icordebugstringvalue —.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,12 @@ HRESULT GetLength (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pcchString`  
- [out] Wskaźnik do wartości, który określa długość ciągu to odwołuje `ICorDebugStringValue` obiektu.  
+ [out] Wskaźnik do wartości, określająca długość ciągu przywoływane przez to `ICorDebugStringValue` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b53347e9f446d6340bfc5dab2d8f898ebbbf93f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7197f905c974bafc5b3892e498083f6abc18c12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527110"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498318"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes — Metoda
 Wylicza tokeny niestandardowe definicja atrybutu skojarzone z określonego typu lub składowej.  
@@ -40,7 +40,7 @@ HRESULT EnumCustomAttributes (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `phEnum`  
  [out w] Wskaźnik do zwróconego modułu wyliczającego.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c2695fb6fcd0f4bba3576f2331c80961e9a444d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0838ac08ff69e33a0badef7c0f52cb6189be2b7f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649183"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469043"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 — Metoda
 Pobiera trzecim polu adresów dla tej zmiennej. Znaczenia, zależy od rodzaju adresu.  
@@ -34,7 +34,7 @@ HRESULT GetAddressField3(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pRetVal`  
  [out] Wskaźnik do `ULONG32` odbierająca trzecim polu adresu.  
   

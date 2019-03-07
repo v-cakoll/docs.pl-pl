@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d497fd8e659a24add25df63c4ce48e710dcb0c6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1a9968dbec10783c6f1383fb523e95ff79561e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403796"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489751"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType — Metoda
-Pobiera wskaźnik do funkcji, która ma danym podpisem.  
+Pobiera wskaźnik do funkcji, która ma podpis danego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +37,18 @@ HRESULT GetFunctionPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `nTypeArgs`  
  [in] Liczba argumentów typu dla funkcji.  
   
  `ppTypeArgs`  
- [in] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugType, który reprezentuje typ argumentu funkcji. Pierwszy element jest typu zwracanego; Każdy z innymi elementami jest typ parametru.  
+ [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugType, który reprezentuje argument typu funkcji. Pierwszy element jest typu zwracanego; Każdy z innymi elementami jest typ parametru.  
   
  `ppType`  
- [out] Wskaźnik do adresu `ICorDebugType` obiekt, który reprezentuje wskaźnik do funkcji.  
+ [out] Wskaźnik na adres `ICorDebugType` obiekt, który reprezentuje wskaźnik do funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

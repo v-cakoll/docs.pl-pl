@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d38879fbb296fa2ce0058e137499e25cd78cdb87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89aaf70b6809ca00b1c8df8b99a4e08e7d86a3a1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702343"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492353"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey — Funkcja
 Pobiera klucz publiczny z pary kluczy publiczny/prywatny. Pary kluczy można podać jako nazwę kontenera kluczy w dostawcy usług kryptograficznych (CSP) lub jako kolekcję pierwotnych bajtów.  
@@ -41,7 +41,7 @@ BOOLEAN StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `szKeyContainer`  
  [in] Nazwa kontenera kluczy, który zawiera pary kluczy publiczny/prywatny. Jeśli `pbKeyBlob` ma wartość null, `szKeyContainer` należy określić prawidłowy kontener w ramach dostawcy usług Kryptograficznych. W tym przypadku `StrongNameGetPublicKey` wyodrębnia klucz publiczny z pary kluczy, przechowywane w kontenerze.  
   

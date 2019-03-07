@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 050bfb08dfd95e29b6534f69dbd35400d59e6099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b80e0cc026ce80950c14436abb2e84548f9adb64
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419607"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499579"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next — Metoda
-Pobiera liczbę wystąpień określonego ICorDebugThread z wyliczenia, zaczynając od bieżącego położenia.  
+Pobiera liczbę określonego wystąpienia ICorDebugThread z wyliczenia, zaczynając od bieżącej pozycji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `celt`  
  [in] Liczba `ICorDebugThread` wystąpienia mają zostać pobrane.  
   
  `threads`  
- [out] Tablicy wskaźników, z których każdy wskazuje `ICorDebugThread` obiekt, który reprezentuje wątku.  
+ [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugThread` obiekt, który reprezentuje wątku.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugThread` wystąpienia faktycznie zwracane. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby `ICorDebugThread` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d408f317b546fb7e8314e904e6f5ad9e6296ae6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7568f8ca3b92ef465ab595348f68895f389d61e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403269"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489712"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames — Metoda
-Pobiera moduł wyliczający, który zawiera wszystkie ramki stosu zarządzanych w łańcuchu, zaczynając od ostatniego ramki.  
+Pobiera moduł wyliczający, który zawiera wszystkie ramki stosu zarządzanych w łańcuchu, począwszy od najbardziej aktualną ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,17 +35,17 @@ HRESULT EnumerateFrames (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppFrames`  
- [out] Wskaźnik do adresu ICorDebugFrameEnum obiektu, który moduł wyliczający dla ramki stosu.  
+ [out] Wskaźnik na adres icordebugframeenum — obiekt, który jest moduł wyliczający ramek stosu.  
   
 ## <a name="remarks"></a>Uwagi  
- Łańcuch reprezentuje stosu wywołań fizycznych wątku.  
+ Łańcuch reprezentuje stosu wywołań fizycznych dla wątku.  
   
- `EnumerateFrames` Metoda powinna być wywoływana tylko do łańcuchów zarządzanych. Interfejsu API debugowania nie udostępnia metody uzyskania ramki zawarte w łańcuchy niezarządzane. Aby uzyskać te informacje debugera należy użyć inny sposób.  
+ `EnumerateFrames` Metodę należy wywoływać tylko w przypadku zarządzanych łańcuchów. Interfejsu API debugowania nie udostępnia metody uzyskania ramek, znajdujących się w łańcuchy niezarządzanych. Debuger, należy użyć inny sposób, aby uzyskać te informacje.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

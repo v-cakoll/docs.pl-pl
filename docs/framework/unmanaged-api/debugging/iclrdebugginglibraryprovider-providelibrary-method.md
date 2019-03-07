@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f66d91434fd92ff80bb17e04bf38bb0b631e819
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3dd1038fdc8b22b99e1c8c7b753b46b9ce877355
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825502"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496446"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary — Metoda
 Pobiera dostawcę biblioteki interfejs wywołania zwrotnego, która umożliwia bibliotekom debudowania określonych wersji środowiska uruchomieniowego (języka wspólnego CLR) lokalizowanie i ładowanie na żądanie języka wspólnego.  
@@ -37,7 +37,7 @@ HRESULT ProvideLibrary(
      [out] HMODULE* hModule);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pwszFilename`  
  [in] Nazwa modułu żądanej.  
   

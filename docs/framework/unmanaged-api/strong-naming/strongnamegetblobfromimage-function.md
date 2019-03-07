@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d058c1ad070e2ffacdf2129c6d9657d0fc1d01e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9f53c1d0c06498c6c9cede938d115f38a47569
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737286"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478794"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage — Funkcja
 Pobiera reprezentacja binarna obrazu zestawu pod adresem określonym pamięci.  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameGetBlobFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pbBase`  
  [in] Adres pamięci manifestu zestawu zamapowany.  
   

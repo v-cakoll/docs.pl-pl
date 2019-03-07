@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f7f36baa71a3e58dfa3314ebe06a018cfd3468
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7532218728aead72186b5156da87db6d3bc0a8c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408232"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469339"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs — Funkcja
-Udostępnia mechanizm dla wyliczania CLRs w procesie.  
+Udostępnia mechanizm wyliczania CLRs w procesie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,46 +39,46 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `debuggeePID`  
- [in] Proces identyfikator procesu, z którego będzie można wyliczyć CLRs załadowany.  
+ [in] Proces identyfikator procesu, z którego będzie można wyliczyć CLRs załadowane.  
   
  `ppHandleArrayOut`  
- [out] Wskaźnik do tablicę zawierającą uchwyty zdarzenie, które są używane do kontynuować uruchamianie środowiska CLR. Każdy dojście do tablicy nie jest gwarantowana jest nieprawidłowy. Jeśli prawidłowe, dojście ma być używany jako zdarzenie uruchomienia Kontynuuj odpowiedniego środowiska uruchomieniowego znajduje się w tym samym indeksie `ppStringArrayOut`.  
+ [out] Wskaźnik na tablicę zawierającą dojścia zdarzenia, które są używane w dalszym uruchamiania aparatu CLR. Dojście do każdego w tablicy nie jest gwarantowana był prawidłowy. Jeśli prawidłowy, uchwyt ma być używany jako zdarzenie Kontynuuj uruchamiania dla odpowiedniego środowiska uruchomieniowego, znajduje się w tym samym indeksie `ppStringArrayOut`.  
   
  `ppStringArrayOut`  
- [out] Wskaźnik do tablicy ciągów, które określają pełnej ścieżki do CLRs załadowany w procesie.  
+ [out] Wskaźnik na tablicę ciągów, które określają pełnej ścieżki do CLRs załadowany w procesie.  
   
  `pdwArrayLengthOut`  
  [out] Wskaźnik do typu DWORD, który zawiera długości równej wielkości `ppHandleArrayOut` i `pdwArrayLengthOut`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- CLRs procesu został pomyślnie określana i odpowiednie dojścia tablice ścieżki zostały prawidłowo wypełnione.  
+ CLRs procesu został pomyślnie określana i odpowiednie dojścia i tablice ścieżki zostały prawidłowo wypełnione.  
   
  E_INVALIDARG  
  Albo `ppHandleArrayOut` lub `ppStringArrayOut` ma wartość null, lub `pdwArrayLengthOut` ma wartość null.  
   
  E_OUTOFMEMORY  
- Funkcji nie może przydzielić wystarczającej ilości pamięci dla tablic dojścia i ścieżka.  
+ Funkcja nie może przydzielić wystarczającej ilości pamięci dla tablic dojścia i ścieżkę.  
   
- E_FAIL (lub inne kody powrotu E_)  
- Nie można wyliczyć CLRs załadowany.  
+ E_FAIL (lub inne kody powrotne e_)  
+ Nie można wyliczyć CLRs załadowane.  
   
 ## <a name="remarks"></a>Uwagi  
- Dla procesu docelowego, który jest identyfikowany przez `debuggeePID`, funkcja zwraca tablicę ścieżek, `ppStringArrayOut`, do CLRs załadowany w procesie; tablicę uchwytów zdarzeń `ppHandleArrayOut`, które mogą zawierać zdarzeń Kontynuuj uruchamiania dla CLR w tym samym indeksie; i rozmiar tablic, `pdwArrayLengthOut`, która określa liczbę CLRs, które zostały załadowane.  
+ Dla procesu docelowego, który jest identyfikowany przez `debuggeePID`, funkcja zwraca tablicę ścieżek, `ppStringArrayOut`, CLRs załadowany w procesie; tablicę uchwytów zdarzeń `ppHandleArrayOut`, które mogą zawierać zdarzeń Kontynuuj uruchamiania dla środowiska CLR, w tym samym indeksie; oraz Rozmiar macierzy, `pdwArrayLengthOut`, która określa liczbę CLRs, które są ładowane.  
   
- W systemie operacyjnym Windows `debuggeePID` identyfikator przetworzyć map do systemu operacyjnego.  
+ W systemie operacyjnym Windows `debuggeePID` mapuje do systemu operacyjnego przetworzyć identyfikatora.  
   
- Pamięć `ppHandleArrayOut` i `ppStringArrayOut` są przydzielane przez tę funkcję. Aby zwolnić pamięć przydzielona, należy wywołać [closeclrenumeration — funkcja](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
+ Pamięć `ppHandleArrayOut` i `ppStringArrayOut` są przydzielane przez tę funkcję. Aby zwolnić pamięć przydzielona, należy wywołać [CloseCLREnumeration, funkcja](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
   
- Ta funkcja może zostać wywołana z obu parametrów tablicowych ustawiona na wartość null, aby uzyskać liczbę CLRs w procesie docelowym. Z licznik ten obiekt wywołujący może wnioskować rozmiar buforu, który zostanie utworzony: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
+ Ta funkcja może zostać wywołany z oba parametry tablicy ustawiona na wartość null, aby zwrócić liczbę CLRs w procesie docelowym. Z tej liczby obiekt wywołujący może wywnioskować rozmiar buforu, który zostanie utworzony: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** dbgshim.h  
   
- **Biblioteka:** biblioteki dbgshim.dll  
+ **Biblioteka:** dbgshim.dll  
   
  **Wersje programu .NET framework:** 3.5 z dodatkiem SP1

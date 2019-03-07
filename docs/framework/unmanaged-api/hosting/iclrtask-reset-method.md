@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f4e25cfabbf18a9f0733d245259d9bb8f9c7757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae0a2a3af532b81d7b346cdd17da1712dfa3cba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715557"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499930"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset — Metoda
 Informuje środowisko uruchomieniowe języka wspólnego (CLR), hosta zostało zakończone zadania i umożliwia CLR do ponownego użycia bieżącego [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpienia do reprezentowania inne zadanie.  
@@ -35,7 +35,7 @@ HRESULT Reset (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `fFull`  
  [in] `true`, jeśli środowisko wykonawcze zresetować wszystkie wątku statyczne wartościom oprócz zabezpieczeń i ustawień regionalnych informacji powiązanych z bieżącym `ICLRTask` wystąpienia; w przeciwnym razie `false`.  
   

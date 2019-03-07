@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5262ba6ef0d2d36372326df24b519072e2aa6fc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da116de6bde01ea7fd17f7ab27605501ae723f30
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587518"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473011"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation — Metoda
 Zawiera informacje o wersji dotyczące wspólne środowisko uruchomieniowe języka (wspólnego CLR), która jest profilowana.  
@@ -43,7 +43,7 @@ HRESULT GetRuntimeInformation(
                    WCHAR  szVersionString[]);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pClrInstanceId`  
  [out] Identyfikator przedstawiciel uruchomionego wystąpienia CLR w procesie. To jest taka sama jak `ClrInstanceID` czy raportów śledzenia zdarzeń dla zdarzenia uruchamiania Windows (ETW).  
   

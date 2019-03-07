@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c0545440ed63ba914229249080ec9f6be8eb2b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fdcdf23dfee01e8bad1c95adb4de66f270d5e00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402256"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474972"
 ---
 # <a name="icordebugchaingetprevious-method"></a>ICorDebugChain::GetPrevious — Metoda
 Pobiera łańcuch poprzedniej ramki dla wątku.  
@@ -35,12 +35,12 @@ HRESULT GetPrevious (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik do adresu ICorDebugChain obiekt, który reprezentuje łańcuch poprzedniej ramki dla tego wątku. Jeśli ten łańcuch jest pierwszym łańcucha `ppChain` ma wartość null.  
+ [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje łańcuch poprzedniej ramki dla tego wątku. Jeśli ten łańcuch jest pierwszym łańcucha `ppChain` ma wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

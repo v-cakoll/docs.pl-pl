@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b92885d2a6514839a864d6a345dd8af8b07b90c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414986"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489816"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction — Metoda
-Ponownie mapuje funkcję edytowany przez określenie nowego przesunięcie język pośredni (MSIL) firmy Microsoft  
+Ponownie mapuje przeprowadzono edycję funkcji, określając nowy przesunięcia języka pośredniego (MSIL) firmy Microsoft  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,26 +35,26 @@ HRESULT RemapFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `newILOffset`  
  [in] Ramka stosu wskaźnik instrukcji ma zostać umieszczony nowy przesunięcie MSIL. Ta wartość musi być punktu sekwencji.  
   
- Odpowiada wywołującego Sprawdź poprawność tej wartości. Na przykład przesunięcie MSIL nie jest prawidłowy, jeśli znajduje się poza zakresem funkcji.  
+ Odpowiada za wywołującego Sprawdź poprawność tej wartości. Na przykład przesunięcie MSIL nie jest prawidłowy, jeśli znajduje się poza zakresem funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas edycji funkcja ramki debuger może wywołać `RemapFunction` sposób wymiany w ostatniej wersji funkcja ramki, tak aby można było wykonać. Wykonywanie kodu zostanie rozpoczęte od danego przesunięcia MSIL.  
+ Podczas edycji funkcji ramki debuger może wywołać `RemapFunction` metodę, aby zamienić w najnowszej wersji funkcji ramki, dzięki czemu mogą być wykonywane. Wykonanie kodu spowoduje rozpoczęcie od danego przesunięcia MSIL.  
   
 > [!NOTE]
->  Wywoływanie `RemapFunction`, takiej jak wywołanie [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), natychmiast spowoduje unieważnienie wszystkich interfejsów debugowania, które nie są związane z generowaniem ślad stosu wątku. Te interfejsy zawierają [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame i ICorDebugNativeFrame.  
+>  Wywoływanie `RemapFunction`, tak jak podczas wywoływania [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), natychmiast spowoduje unieważnienie wszystkich interfejsów debugowania, które są związane z generowaniem ślad stosu dla wątku. Te interfejsy zawierają [icordebugchain —](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, icordebuginternalframe — i icordebugnativeframe —.  
   
- `RemapFunction` Metodę można wywołać tylko w kontekście bieżącej ramki i tylko w następujących przypadkach:  
+ `RemapFunction` Metoda może być wywoływana tylko w kontekście bieżącej ramki i tylko w następujących przypadkach:  
   
--   Po otrzymaniu [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) wywołania zwrotnego, która nie ma jeszcze kontynuowane.  
+-   Po otrzymaniu [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) wywołanie zwrotne, które jeszcze nie jest kontynuowane.  
   
--   Podczas wykonywania kodu została zatrzymana z powodu [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) zdarzeń dla tej ramki.  
+-   Podczas wykonywania kodu została zatrzymana z powodu [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) zdarzenia dla tej ramki.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

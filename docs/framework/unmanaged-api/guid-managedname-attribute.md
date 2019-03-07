@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430014"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496394"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName — Atrybut
-Definiuje atrybut niestandardowy interfejs, który określa nazwę zarządzanego przestrzeni nazw dla składnika modelu (COM) biblioteki.  
+Określa atrybut niestandardowy interfejs, który określa nazwę przestrzeni nazw zarządzanych bibliotekę składników object model (COM).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,9 +34,9 @@ Definiuje atrybut niestandardowy interfejs, który określa nazwę zarządzanego
 ]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `value`  
- Nazwa zarządzanego przestrzeń nazw dla biblioteki.  
+ Nazwa przestrzeni nazw zarządzanych dla biblioteki.  
   
 ## <a name="definition"></a>Definicja  
  `GUID_ManagedName` zdefiniowano w Cor.h w następujący sposób:  
@@ -47,14 +47,14 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Atrybut niestandardowy interfejs definiuje metadanych obiektu w bibliotece typów.  
+ Atrybut niestandardowy interfejs definiuje metadanych dla obiektu w bibliotece typów.  
   
- Użyj <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> lub <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> pobrać zarządzanych nazwa atrybutu.  
+ Użyj <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> lub <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> pobrać nazwy zarządzanych z atrybutu.  
   
- Aby uzyskać więcej informacji, zobacz [atrybuty interfejsu](/cpp/windows/interface-attributes) w programie Visual C++ odwoływać się z dokumentacją.  
+ Aby uzyskać więcej informacji, zobacz [atrybuty interfejsu](/cpp/windows/interface-attributes) dokumentację referencyjną w programie Visual C++.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono definicję biblioteki przy użyciu `GUID_ManagedName` atrybutu.  
+ W poniższym przykładzie przedstawiono definicję biblioteki za pomocą `GUID_ManagedName` atrybutu.  
   
 ```  
 [  
@@ -68,4 +68,4 @@ library Microsoft_VisualStudio_CommandBars
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** Cor.h
+ **Nagłówek:** COR.h

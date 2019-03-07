@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359552"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482694"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują poprawy jakości i wydajności renderowania tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii obsługi rozszerzonego tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Poprawy jakości i wydajności tekstu  
@@ -36,13 +34,11 @@ Diagram potoku renderowania tekstu
   
  Perykles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] czcionki zawiera dodatkowe symbole, zapewniających stylistyczne do standardowego zestawu symbole. Następujący tekst Wyświetla stylistyczne alternatywne symbole.  
   
- ![Tekst stylistyczne alternatywne symbole OpenType](./media/opentypefont02.gif "opentypefont02")  
-Tekst stylistyczne alternatywne symbole OpenType  
+ ![Tekst stylistyczne alternatywne symbole OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "tekst stylistyczne alternatywne symbole OpenType")  
   
  Kaligraficzne są symbole dekoracyjnych, korzystających z rozbudowanych ornamentacji często skojarzony kaligrafia. Następujący tekst, wyświetla standardowe i kaligraficzne symbole Pescadero czcionki.  
   
- ![Tekst z użyciem glifów standardowe i kaligraficzne OpenType](./media/opentypefont08.gif "opentypefont08")  
-Tekst z użyciem glifów standardowe i kaligraficzne OpenType  
+ ![Tekst z użyciem glifów standardowe i kaligraficzne OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "tekst z użyciem glifów standardowe i kaligraficzne OpenType")  
   
  Aby uzyskać szczegółowe informacje na temat [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] funkcje, zobacz [funkcje czcionki OpenType](opentype-font-features.md).  
   
@@ -175,4 +171,4 @@ Interakcja między aplikacją i obiekt TextFormatter
 - [Rysowanie formatowanego tekstu](drawing-formatted-text.md)
 - [Zaawansowane formatowanie tekstu](advanced-text-formatting.md)
 - [Text](optimizing-performance-text.md)
-- [Microsoft Typography](https://www.microsoft.com/typography/default.mspx)
+- [Microsoft Typography](https://docs.microsoft.com/typography/)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac34fbca56c8a0f00ee3a7e0f898b8ee03287b11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f34a2fe2bb1f92e75f77c086b03776ec59495600
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412288"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482109"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>ICorDebugFunction::GetILCode — Metoda
-Pobiera wystąpienie ICorDebugCode, który reprezentuje kod języka pośredniego (MSIL) firmy Microsoft, które są skojarzone z tym obiektem ICorDebugFunction.  
+Pobiera wystąpienie ICorDebugCode, który reprezentuje kod intermediate language (MSIL) firmy Microsoft, które są skojarzone z tym obiektem ICorDebugFunction.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetILCode (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppCode`  
- [out] Wskaźnik do `ICorDebugCode` wystąpienia, lub wartość null, jeśli funkcja nie został skompilowany do MSIL.  
+ [out] Wskaźnik do `ICorDebugCode` wystąpienia lub wartość null, jeśli funkcja nie został skompilowany w MSIL.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli zezwolono Edytuj i Kontynuuj dla tej funkcji `GetILCode` metoda pobierze kod MSIL odpowiadającego tej funkcji zmodyfikowaną wersję kodu w środowisku uruchomieniowym języka (wspólnego CLR).  
+ Jeśli zezwolono Edytuj i Kontynuuj dla tej funkcji `GetILCode` metody zostanie wyświetlony kod MSIL odpowiadający tej funkcji edytowaną wersją kodu w środowisku uruchomieniowym języka (wspólnego CLR).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

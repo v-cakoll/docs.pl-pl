@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 475e9ab5c59260544b0e413e165953c0b84449b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ea0b8c37f6ef803fd36592376a7a8c0c334f719c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973902"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489400"
 ---
 # <a name="permission-c-programming-guide"></a>\<uprawnienie > (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -23,7 +23,7 @@ ms.locfileid: "56973902"
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  cref = " `member`"  
  Odwołanie do elementu członkowskiego lub pola, które są dostępne do wywoływania z bieżącym środowisku kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i wykonuje translację `member` nazwę kanoniczną element w danych wyjściowych XML. *element członkowski* musi znajdować się w znaki podwójnego cudzysłowu ("").  
   

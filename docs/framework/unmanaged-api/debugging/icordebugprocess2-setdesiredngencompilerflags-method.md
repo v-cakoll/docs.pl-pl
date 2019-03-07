@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc0dde4f2455ed45ddf8ca1efefa7ab67ba04f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1cab24f949ddae55d5e699e6ad82851007504dd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660778"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475700"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags — Metoda
 Ustawia flagi, które muszą być osadzone w wstępnie skompilowanym obrazów w kolejności dla środowiska uruchomieniowego do załadowania tego obrazu do bieżącego procesu.  
@@ -35,7 +35,7 @@ HRESULT SetDesiredNGENCompilerFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pdwFlags`  
  [in] Wartość [cordebugjitcompilerflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wyliczenie, które określa flagi kompilatora używany do wybierania wstępnie skompilowanym prawidłowy obraz.  
   

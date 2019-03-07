@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 021c4819036b85e1085c639bc2d874d2843b0c64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ac44d29dd99e0205c515905f9846263033babf3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570034"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479301"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember — Metoda
 Tworzy odwołanie do określonego elementu członkowskiego typu lub moduł, który jest zdefiniowane poza bieżącym zakresie i definiuje token dla tego odwołania.  
@@ -42,7 +42,7 @@ HRESULT DefineImportMember (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pAssemImport`  
  [in] [Imetadataassemblyimport —](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfejs, który reprezentuje zestaw, z którego docelowy element członkowski jest importowany.  
   

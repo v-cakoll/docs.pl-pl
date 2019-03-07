@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03a8bf7e215794f4a2951fe4e2d54a791bda20e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c362b41d842fb9d35cc7ae9293e2e305b2af281
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594060"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500437"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate — Metoda
 Sprawdza poprawność określonego pliku wykonalnego (PE) lub pliku języka intermediate language (MSIL) firmy Microsoft.  
@@ -42,7 +42,7 @@ HRESULT Validate (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `veh`  
  [in] Wskaźnik do `IVEHandler` wystąpienia, która obsługuje błędy sprawdzania poprawności.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d15656079c087026a905d9268edf4966d8ef4034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb5b4ec4b3bb99de4755a5b64398e989df379b7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503563"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478833"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished — Metoda
 Powiadamia program profilujący, że moduł zakończeniu ładowania.  
@@ -35,7 +35,7 @@ HRESULT ModuleLoadFinished(
     [in] HRESULT  hrStatus);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `moduleId`  
  [in] Identyfikator modułu, który zakończy ładowanie.  
   

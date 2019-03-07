@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a2156b87fb4bf72e8de7c32c7e20d2a017c900
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519128"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479284"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification — Metoda
 Oferuje funkcję wywołania zwrotnego, która może być wywoływana, gdy typowe wersję środowiska uruchomieniowego (języka wspólnego CLR) języka jest ładowana jako pierwsza, ale jeszcze nie rozpoczęty. Ta metoda zastępuje [lockclrversion —](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) funkcji.  
@@ -34,7 +34,7 @@ HRESULT RequestRuntimeLoadedNotification (
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pCallbackFunction`  
  [in] Funkcja wywołania zwrotnego, która jest wywoływana po załadowaniu nowego środowiska uruchomieniowego.  
   

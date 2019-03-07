@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413283"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487702"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray — Metoda
-Przydziela nowej tablicy o typie określonym elemencie i wymiary.  
+Przydziela nową tablicę typu określonego elementu i wymiary.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,24 +38,24 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pElementType`  
- [in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ elementu przechowywane w tablicy.  
+ [in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ elementu przechowywanego w tablicy.  
   
  `rank`  
- [in] Liczba wymiarów tablicy. W programie .NET Framework w wersji 2.0 ta wartość musi wynosić 1.  
+ [in] Liczba wymiarów tablicy. W programie .NET Framework 2.0 ta wartość musi wynosić 1.  
   
  `dims`  
  [in] Rozmiar w bajtach każdego wymiaru tablicy.  
   
  `lowBounds`  
- [in] Opcjonalne. Dolną granicę każdego wymiaru tablicy. W przypadku pominięcia tej wartości dolna granica zero zakłada, że dla każdego wymiaru.  
+ [in] Opcjonalnie. Dolna granica każdego wymiaru tablicy. Jeśli ta wartość zostanie pominięty, dolną granicę równą zero zakłada, że dla każdego wymiaru.  
   
 ## <a name="remarks"></a>Uwagi  
- Elementy tablicy można instancji typu ogólnego. Tablicy zawsze jest tworzony w domenie aplikacji, w którym wątek jest uruchomiony. W .NET Framework 2.0, wartość `rank` musi być równa 1.  
+ Elementy tablicy mogą być wystąpień typu ogólnego. Tablica zawsze jest tworzony w domenie aplikacji, w którym wątek jest obecnie uruchomiony. W programie .NET Framework 2.0, wartość `rank` musi mieć wartość 1.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

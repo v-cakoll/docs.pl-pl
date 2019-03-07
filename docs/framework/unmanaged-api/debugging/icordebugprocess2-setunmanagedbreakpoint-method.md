@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b374720bd7bdad48222da006b809702de6462a62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420820"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472788"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint — Metoda
-Ustawia niezarządzanego punktu przerwania w przesunięciu określonego obrazu macierzystego.  
+Ustawia niezarządzany punkt przerwania w przesunięciu określonego obrazu natywnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,24 +39,24 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` obiekt, który określa przesunięcie obrazu macierzystego.  
+ [in] A `CORDB_ADDRESS` obiekt, który określa przesunięcie obrazu natywnego.  
   
  `bufsize`  
  [in] Rozmiar w bajtach z `buffer` tablicy.  
   
  `buffer`  
- [out] Tablica zawiera kod operacji, która zastępuje punktu przerwania.  
+ [out] Tablica, która zawiera kod operacji, który jest zastępowany przez punkt przerwania.  
   
  `bufLen`  
- [out] Wskaźnik do liczba bajtów zwrócona w `buffer` tablicy.  
+ [out] Wskaźnik do liczby bajtów zwróconych w `buffer` tablicy.  
   
 ## <a name="remarks"></a>Uwagi  
- W przypadku przesunięcie obrazu macierzystego w środowisko uruchomieniowe języka wspólnego (CLR), punkt przerwania zostanie zignorowany. Dzięki temu CLR w celu uniknięcia wysyłki przerwania poza pasmem, gdy punkt przerwania jest ustawiony przez debuger.  
+ Jeśli przesunięcie obrazów natywnych w środowisko uruchomieniowe języka wspólnego (CLR), punkt przerwania zostanie zignorowany. Dzięki temu środowisko CLR uniknąć przerwania out-of-band wysyłki, gdy punkt przerwania jest ustawiony przez debuger.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

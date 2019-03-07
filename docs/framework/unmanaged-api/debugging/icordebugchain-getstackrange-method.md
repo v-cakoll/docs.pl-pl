@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481563"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange — Metoda
-Pobiera zakres adresów segmentu stosu dla tego łańcucha.  
+Pobiera zakres adresów segment stosu dla tego łańcucha.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +36,7 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pStart`  
  [out] Wskaźnik do `CORDB_ADDRESS` wartość, która jest adres początkowy segment stosu.  
   
@@ -44,10 +44,10 @@ HRESULT GetStackRange (
  [out] Wskaźnik do `CORDB_ADDRESS` wartość, która jest adres końcowy segmentu stosu.  
   
 ## <a name="remarks"></a>Uwagi  
- Zakres liczb jest znaczący tylko w przypadku porównywania lokalizacje ramki stosu. Nie można wprowadzić żadnych założenia dotyczące co to są przechowywane na stosie.  
+ Zakresu liczbowego ma znaczenie tylko w przypadku porównywania lokalizacje ramki stosu. Nie można wprowadzać żadnych założeń dotyczących co rzeczywiście jest przechowywana na stosie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

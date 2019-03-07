@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcf1dca8799ac082c025e602e5d82c99d42650d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74295b14e9c774aa8a61d9c2726a39a4e3f5f8cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659608"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477715"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps — Metoda
 Pobiera zbiór właściwości dla zestawu podpisem określonych metadanych.  
@@ -43,7 +43,7 @@ HRESULT GetAssemblyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `mda`  
  [in]. `mdAssembly` Token metadanych, który reprezentuje zestaw, dla którego można pobrać właściwości.  
   

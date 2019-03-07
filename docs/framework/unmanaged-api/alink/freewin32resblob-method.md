@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f7ffef0af68bee3e7184fe8bde9264f570230be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e52984e12f22486212f0a2ec02d452a77242400e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573641"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491831"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob — Metoda
 Zwalnia blob zasobów Win32 i skojarzonych zasobów.  
@@ -34,7 +34,7 @@ HRESULT FreeWin32ResBlob(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppResBlob`  
  Obiekt blob zasobów mogą być wprowadzane. Ta metoda przypisuje wskaźnik obiektu blob na wartość NULL.  
   

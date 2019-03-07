@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 157287ce5c85ec51f1711934cf9a5e4f568957ef
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84cadad8f6e4dfcf276400cf8831520b89728cdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977191"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498716"
 ---
 # <a name="exception-visual-basic"></a>\<wyjątek > (Visual Basic)
 Określa, które wyjątki mogą zostać wygenerowane.  
@@ -21,7 +21,7 @@ Określa, które wyjątki mogą zostać wygenerowane.
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `member`  
  Odwołanie do wyjątek, który jest dostępny w bieżącym środowisku kompilacji. Kompilator sprawdza, czy dany wyjątek istnieje i czy tłumaczy `member` nazwę kanoniczną element w danych wyjściowych XML. `member` musi znajdować się w znaki podwójnego cudzysłowu ("").  
   

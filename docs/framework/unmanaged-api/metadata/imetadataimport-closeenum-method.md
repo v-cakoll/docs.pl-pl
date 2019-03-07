@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 724660cd5703ee9b893493df5d583d97b5bdfb3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda94acc2ec5da456cdc41ba0902cdc414b11524
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486384"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum — Metoda
 Zamyka moduł wyliczający, który jest identyfikowany przez określone dojście.  
@@ -35,7 +35,7 @@ void CloseEnum (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `hEnum`  
  [in] Dojście dla typu wyliczeniowego zamknąć.  
   

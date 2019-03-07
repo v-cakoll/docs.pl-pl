@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 86cb99023c0abfc70d292427b14986dbcea1d333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5219a414c5961128d4eaa27c1f18d635938dc5ba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586166"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497408"
 ---
 # <a name="imetadataemitsetmoduleprops-method"></a>IMetaDataEmit::SetModuleProps — Metoda
 Aktualizuje odwołania do modułu zdefiniowane przez wcześniejsze wywołanie [IMetaDataEmit::DefineModuleRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md).  
@@ -35,7 +35,7 @@ HRESULT SetModuleProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `szName`  
  [in] Nazwa modułu w formacie Unicode. Jest to tylko nazwę pliku i nie pełną nazwę ścieżki.  
   

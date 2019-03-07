@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fd7694901534ad6897bbf78239081af6314e4bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cc9601105d05740e6db0a41bae521bd9a276d74
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471319"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables — Metoda
 Pobiera moduł wyliczający dla zmiennych lokalnych w tej ramce.  
@@ -35,15 +35,15 @@ HRESULT EnumerateLocalVariables(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppValueEnum`  
- [out] Wskaźnik do adresu ICorDebugValueEnum obiektu, który moduł wyliczający dla zmiennych lokalnych w tej ramce.  
+ [out] Wskaźnik na adres icordebugvalueenum — obiekt, który jest moduł wyliczający dla zmiennych lokalnych w tej ramce.  
   
 ## <a name="remarks"></a>Uwagi  
- `EnumerateLocalVariables` Pobiera moduł wyliczający, który można wyświetlić listę zmiennych lokalnych dostępnych w ramce wywołania reprezentowanego przez ten obiekt ICorDebugILFrame. Lista nie może zawierać wszystkie zmienne lokalne w funkcji uruchomionej, ponieważ niektóre z nich nie może być aktywny.  
+ `EnumerateLocalVariables` Pobiera moduł wyliczający, który można wyświetlić listę zmiennych lokalnych dostępnych w ramce wywołań, który jest reprezentowany przez ten obiekt ICorDebugILFrame. Listy mogą nie uwzględniać całego zmiennych lokalnych w uruchomionej funkcji, ponieważ niektóre z nich nie może być aktywne.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

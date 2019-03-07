@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd84293b3414a8622c6b91717e9f1b2f2ce85286
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603901"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472476"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap — Metoda
 Powiadamia debugera, CTRL + C jest zablokował w procesie, który jest debugowany.  
@@ -35,7 +35,7 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pProcess`  
  [in] Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces, w którym jest zablokował klawisze CTRL + C.  
   

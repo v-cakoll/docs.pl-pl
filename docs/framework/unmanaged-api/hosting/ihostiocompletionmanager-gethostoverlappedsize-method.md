@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f21e25c077ae6ca837a41d3e2227d12dd517d95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1482baf1a5ac951ce94ce55e50de2562597bdb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555508"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490726"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize — Metoda
 Pobiera rozmiar danych niestandardowych, aby dołączyć do żądań We/Wy przez hosta.  
@@ -35,7 +35,7 @@ HRESULT GetHostOverlappedSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pcbSize`  
  [out] Wskaźnik do liczby bajtów, które środowisko uruchomieniowe języka wspólnego (CLR) należy przydzielić oprócz rozmiaru Win32 `OVERLAPPED` obiektu.  
   

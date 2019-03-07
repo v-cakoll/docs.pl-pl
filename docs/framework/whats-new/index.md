@@ -796,7 +796,7 @@ Aby rozwiązać ten w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], zo
 
 **Obsługa szyfrowania symetrycznego klucza trwały**
 
-Biblioteka kryptografii Windows (CNG) dodano obsługę do przechowywania kluczy symetrycznych utrwalonych i przy użyciu kluczy symetrycznych przechowywane sprzętu i [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] mades możliwe dla deweloperów skorzystać z tej funkcji.  Ponieważ pojęcie nazw kluczy i kluczy dostawcy jest specyficzne dla implementacji, za pomocą tej funkcji wymaga przy użyciu konstruktora typy konkretną implementację zamiast podejście preferowanych fabryki (np. wywołanie `Aes.Create`).
+Biblioteka kryptografii Windows (CNG) dodano obsługę do przechowywania kluczy symetrycznych utrwalonych i przy użyciu kluczy symetrycznych przechowywane sprzętu i [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] możliwe dla deweloperów skorzystać z tej funkcji.  Ponieważ pojęcie nazw kluczy i kluczy dostawcy jest specyficzne dla implementacji, za pomocą tej funkcji wymaga przy użyciu konstruktora typy konkretną implementację zamiast podejście preferowanych fabryki (np. wywołanie `Aes.Create`).
 
 Obsługa szyfrowania symetrycznego klucza utrwalone istnieje AES (<xref:System.Security.Cryptography.AesCng>) i algorytmu 3DES (<xref:System.Security.Cryptography.TripleDESCng>) algorytmów. Na przykład:
 

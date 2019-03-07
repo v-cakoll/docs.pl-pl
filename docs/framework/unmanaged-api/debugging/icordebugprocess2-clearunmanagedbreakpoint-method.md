@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc34ab9c8dbfe10282f36a241a4e433debef7dd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4dcfb977f5ca87f2219fd3ed8ef87d16c2defd2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420498"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472654"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint — Metoda
 Usuwa wcześniej ustawiony punkt przerwania pod podanym adresem.  
@@ -35,19 +35,19 @@ HRESULT ClearUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` wartości, który określa adres, pod którym został ustawiony punkt przerwania.  
+ [in] A `CORDB_ADDRESS` wartość, która określa adres, w którym ustawiono punkt przerwania.  
   
 ## <a name="remarks"></a>Uwagi  
- Określony punkt przerwania czy zostały ustawione wcześniej przez wywołanie wcześniejszych [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Określony punkt przerwania mogły zostać wcześniej ustawione przez wcześniejsze wywołanie [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- `ClearUnmanagedBreakpoint` Można wywołać metody uruchomionej debugowanego procesu.  
+ `ClearUnmanagedBreakpoint` Metoda może być wywoływana, gdy debugowany proces jest uruchomiona.  
   
- `ClearUnmanagedBreakpoint` Metoda zwraca kod błędu, jeśli debuger jest dołączony w trybie tylko do zarządzanych lub przerwania nie istnieje pod określonym adresem.  
+ `ClearUnmanagedBreakpoint` Metoda zwraca kod błędu, jeśli jest dołączony debuger w trybie tylko do zarządzanych lub przerwania nie istnieje pod podanym adresem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

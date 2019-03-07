@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35f7e168f143d9427bf6905e9b4c383d9a40cd1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49fc3cf6aff94b5914040fba77acd0769fc73a43
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514455"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490037"
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromstream-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromStream — Metoda
 Pobiera wskaźnik do [iclrreferenceassemblyenum —](../../../../docs/framework/unmanaged-api/hosting/iclrreferenceassemblyenum-interface.md) obiekt, który zawiera dane o tożsamości zestawu dla zestawów odwołuje się zestaw w określonego strumienia.  
@@ -38,7 +38,7 @@ HRESULT GetReferencedAssembliesFromStream (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pStream`  
  [in] Wskaźnik interfejsu do `IStream` zawierającego zestaw, który ma zostać obliczone.  
   

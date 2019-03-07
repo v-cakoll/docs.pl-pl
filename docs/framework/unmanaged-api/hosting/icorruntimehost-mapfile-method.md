@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 814073b766d5d562b414a566ae3f92abd664ce35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 956de98fca1caec0ac1b94afc7251f9741246f94
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494782"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile — Metoda
 Mapuje określony plik do pamięci. Ta metoda jest przestarzała.  
@@ -36,7 +36,7 @@ HRESULT MapFile(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `hFile`  
  [in] Uchwyt pliku, które mają być mapowane.  
   

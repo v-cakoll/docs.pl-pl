@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d752eb17b956e2367e8b191080a370506a61ff34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d9239ccfe8ce08e5b50b762a6fede11ab8a439b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416670"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495718"
 ---
 # <a name="icordebugprocessgetid-method"></a>ICorDebugProcess::GetID — Metoda
 Pobiera identyfikator systemu operacyjnego (OS) procesu.  
@@ -33,12 +33,12 @@ Pobiera identyfikator systemu operacyjnego (OS) procesu.
 HRESULT GetID([out] DWORD *pdwProcessId);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pdwProcessId`  
  [out] Unikatowy identyfikator procesu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2009104d31723b9fed383b7bbb41146127d89bd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a91c8de67a095a2f89a69f43375c9ebdd4fc767c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611959"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491298"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods — Metoda
 Wylicza tokenów MemberDef reprezentujący nierozwiązane metod w bieżącym zakresie metadanych.  
@@ -38,7 +38,7 @@ HRESULT EnumUnresolvedMethods (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `phEnum`  
  [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
   

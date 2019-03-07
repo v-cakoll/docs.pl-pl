@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84ca240f937e210846e6eb9a17abfe70a280b87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fefc933cc84fede1f3dea16d4b13e09801a96e0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403559"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497356"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next — Metoda
 Pobiera określoną liczbę domen aplikacji z kolekcji, począwszy od bieżącej pozycji kursora.  
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `celt`  
  [in] Liczba domen aplikacji, które mają zostać pobrane.  
   
  `values`  
- [out] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugAppDomain, który reprezentuje domeny aplikacji.  
+ [out] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugAppDomain, który reprezentuje domenę aplikacji.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby domen aplikacji faktycznie zwracane. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby domen aplikacji rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

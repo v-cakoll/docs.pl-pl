@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 291c8129a790c235ee6e7f163c49c4e1e726cce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ab2b584b4a3e9bef17110f3084dc93efb2e5167
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481654"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread — Metoda
-Pobiera część wątku fizycznym, którego ten łańcuch wywołań.  
+Pobiera wątku fizycznym, ten łańcuch wywołań jest częścią.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,12 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppThread`  
- [out] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku fizycznym ten łańcuch wywołań jest częścią.  
+ [out] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku fizycznym tego łańcucha wywołań jest częścią.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 931395a1bb5f516000097f964ce0372a69420d85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27747b02237672ec302a545e2e0c73ace0cae1fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679633"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487463"
 ---
 # <a name="iclrtasklocksheld-method"></a>ICLRTask::LocksHeld — Metoda
 Pobiera liczbę blokad znajdujących się obecnie w zadania.  
@@ -35,7 +35,7 @@ HRESULT LocksHeld (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pLockCount`  
  [out] Liczba blokady utrzymywane w zadaniu w momencie wywołania metody.  
   

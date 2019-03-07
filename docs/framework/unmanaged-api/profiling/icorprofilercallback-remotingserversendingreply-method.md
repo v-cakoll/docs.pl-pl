@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf9f8241459f566eb0724596640fd6036ae799a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 655b2af2efcaba82af46e92ae94abf3a4adc349c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659621"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500411"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply — Metoda
 Powiadamia program profilujący, że proces zakończył przetwarzanie żądania wywołania zdalnej metody i ma przesłanie odpowiedzi za pośrednictwem kanału.  
@@ -35,7 +35,7 @@ HRESULT RemotingServerSendingReply(
     [in] BOOL fIsAsync);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pCookie`  
  [in] Wskaźnik do identyfikatora GUID, które będą odpowiadać wartość podana w [icorprofilercallback::remotingclientreceivingreply —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) w tych warunkach:  
   

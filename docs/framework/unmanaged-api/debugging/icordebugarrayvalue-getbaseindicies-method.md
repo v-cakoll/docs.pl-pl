@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3fe9edf7a635e54aac881a242aca3bc32e21fe1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408128"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471657"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies — Metoda
 Pobiera podstawowy indeks każdego wymiaru tablicy.  
@@ -37,15 +37,15 @@ HRESULT GetBaseIndicies (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `cdim`  
- [in] Liczba wymiarów tego `ICorDebugArrayValue` obiektu. Ta wartość jest również rozmiar `indicies` tablicy, ponieważ jego rozmiar jest równa liczbie wymiarów `ICorDebugArrayValue` obiektu.  
+ [in] Liczba wymiarów to `ICorDebugArrayValue` obiektu. Ta wartość jest również rozmiar `indicies` tablicy, ponieważ jego rozmiar jest równa liczbie wymiarów `ICorDebugArrayValue` obiektu.  
   
  `indicies`  
- [out] Tablica liczb całkowitych, z których każdy jest indeksem podstawowej (to znaczy indeks początkowy) wymiaru tego `ICorDebugArrayValue` obiektu.  
+ [out] Tablica liczb całkowitych, z których każdy jest podstawowy indeks (tj. wartość początkowa indeksu) wymiaru `ICorDebugArrayValue` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

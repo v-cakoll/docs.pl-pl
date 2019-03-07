@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a94891b91f6ac14469e18ed6840a083ce5e9d64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7930e993640e1ae88ce65b6c2025a5b62a0d0999
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516921"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502465"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>IManagedObject::GetSerializedBuffer — Metoda
 Pobiera reprezentację ciągu tego zarządzanego obiektu.  
@@ -35,7 +35,7 @@ HRESULT GetSerializedBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pBSTR`  
  [out] Wskaźnik do ciągu, który jest Zserializowany obiekt.  
   

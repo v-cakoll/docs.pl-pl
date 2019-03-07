@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881b1f420d8e177e093969b2cdd9f2ff36883f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 695ce7f25813a191c74bec6563fc7f8ae8d1143d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412525"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496121"
 ---
 # <a name="icordebugfunctioncreatebreakpoint-method"></a>ICorDebugFunction::CreateBreakpoint — Metoda
 Tworzy punkt przerwania na początku tej funkcji.  
@@ -35,12 +35,12 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppBreakpoint`  
- [out] Wskaźnik do adresu ICorDebugFunctionBreakpoint obiekt, który reprezentuje nowego punktu przerwania funkcji.  
+ [out] Wskaźnik na adres icordebugfunctionbreakpoint — obiekt, który reprezentuje nowy punkt przerwania funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

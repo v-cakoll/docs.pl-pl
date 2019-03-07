@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e2d99d85a6e6b09558e5941d08a7f522aaf66cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2016795e7b2c0588e2bd69e764fb96f7f90b24d0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421820"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480666"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval — Metoda
-Tworzy obiekt ICorDebugEval, który zbiera i udostępnia funkcje tego ICorDebugThread.  
+Tworzy obiekt ICorDebugEval, który zbiera i udostępnia funkcje to ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT CreateEval (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppEval`  
- [out] Wskaźnik do adresu `ICorDebugEval` obiektu, który zbiera i udostępnia funkcje tego wątku.  
+ [out] Wskaźnik na adres `ICorDebugEval` obiektu, który zbiera i udostępnia funkcje tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt oceny przeprowadzi wypychanie nowy łańcuch w wątku, przed wykonaniem jego obliczeń. To przerwania obliczenia aktualnie wykonywane w wątku dopiero po zakończeniu oceny.  
+ Obiekt oceny będzie umożliwiać wypychanie powiadomień nowy łańcuch w wątku, przed wykonaniem jego obliczeń. Przerywa to działanie obliczeń obecnie wykonywane w wątku do chwili zakończenia oceny.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

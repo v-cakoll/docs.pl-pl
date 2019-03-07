@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf0ba3938568524479e12b93ae8cebbcf52f909
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d23a0a489cfe13201b7798920feb3528db3b0709
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411732"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494613"
 ---
 # <a name="icordebugfunction2getjmcstatus-method"></a>ICorDebugFunction2::GetJMCStatus — Metoda
-Pobiera wartość wskazującą, czy funkcja reprezentowanego przez ten obiekt ICorDebugFunction2 jest oznaczony jako kodu użytkownika.  
+Pobiera wartość wskazującą, czy funkcja, która jest reprezentowany przez ten obiekt icordebugfunction2 — jest oznaczony jako kod użytkownika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pbIsJustMyCode`  
- [out] Wskaźnik do wartość logiczna, która jest `true`, jeśli ta funkcja jest oznaczony jako kod użytkownika; w przeciwnym razie wartość jest `false`.  
+ [out] Wskaźnik na wartość logiczną, która jest `true`, jeśli ta funkcja jest oznaczona jako kod użytkownika; w przeciwnym razie wartość to `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli funkcja reprezentowany przez to `ICorDebugFunction2` nie można debugować `pbIsJustMyCode` zawsze będzie `false`.  
+ Jeśli funkcja reprezentowany przez ten `ICorDebugFunction2` nie można debugować, `pbIsJustMyCode` zawsze będzie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

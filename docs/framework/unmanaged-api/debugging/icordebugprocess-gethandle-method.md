@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423445"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498089"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle — Metoda
-Pobiera dojścia do procesu.  
+Pobiera uchwyt do procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,15 +33,15 @@ Pobiera dojścia do procesu.
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `phProcessHandle`  
- [out] Wskaźnik do `HPROCESS` oznacza to dojścia do procesu.  
+ [out] Wskaźnik do `HPROCESS` oznacza to dojście do procesu.  
   
 ## <a name="remarks"></a>Uwagi  
- Pobrane dojścia jest należących do interfejsu debugowania. Debuger powinien zduplikowane dojście przed jego użyciem.  
+ Pobrane uchwyt jest własnością interfejsu debugowania programu. Debuger powinien zduplikować dojście przed jego użyciem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

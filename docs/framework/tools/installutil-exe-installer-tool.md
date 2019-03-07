@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d578381718dc5cae8c021d2ba247073a93283bc4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 04074c8120ad2bc4e279ca0c60624bde9d5e42d9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359838"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496700"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Narzędzie instalatora)
 
@@ -36,7 +36,7 @@ W wierszu polecenia wpisz następujące polecenie:
 installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
 |Argument|Opis|
 |--------------|-----------------|

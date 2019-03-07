@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1268d9fd892a4400491aca7966d81a3e23f9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e264a63dcea9c351289d1f63e1907f7c68779011
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515355"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496758"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock — Metoda
 Pobiera blok części bazy kodu.  
@@ -40,7 +40,7 @@ HRESULT GetSectionBlock (
 );   
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `section`  
  [in] Sekcja, z których mają być pobierane blok bazy kodu.  
   

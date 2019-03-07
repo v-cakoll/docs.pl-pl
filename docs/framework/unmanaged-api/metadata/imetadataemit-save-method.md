@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a2be03e82d5be9bae64d7169709d16c40b66e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90ddc540115a60154953ac6e8cb931103a650752
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511883"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492418"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save — Metoda
 Zapisuje wszystkie metadane w bieżącym zakresie pliku pod podanym adresem.  
@@ -36,7 +36,7 @@ HRESULT Save (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `wzFile`  
  [in] Nazwa pliku, aby zapisać. Jeśli ta wartość jest równa null, kopię znajdującą się w pamięci zostaną zapisane do ostatnich lokalizacji, który został użyty.  
   

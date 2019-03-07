@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3424646337c3f90f15d991f3f669a296bf11d8ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebd36f01297f24c050f84fb67e7673f8641fe206
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413010"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475245"
 ---
 # <a name="icordebugilframegetlocalvariable-method"></a>ICorDebugILFrame::GetLocalVariable — Metoda
-Pobiera wartość zmiennej lokalnej określony w tej ramki stosu język pośredni (MSIL) firmy Microsoft.  
+Pobiera wartość określonej zmiennej lokalnej w tej ramki stosu intermediate language (MSIL) firmy Microsoft.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,18 +36,18 @@ HRESULT GetLocalVariable (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `dwIndex`  
- [in] Indeks zmiennej lokalnej do tej ramki stosu MSIL.  
+ [in] Indeks zmiennej lokalnej w tej ramce stosu MSIL.  
   
  `ppValue`  
- [out] Wskaźnik do adresu ICorDebugValue obiekt, który reprezentuje pobrana wartość.  
+ [out] Wskaźnik na adres obiektu ICorDebugValue, który reprezentuje pobraną wartość.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetLocalVariable` Metody można użyć w ramce stosu MSIL lub w ramce skompilowanych just-in-time (JIT).  
+ `GetLocalVariable` Metody można użyć w ramce stosu MSIL lub w ramce skompilowany just-in-time (JIT).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c16cb5d85ddffc1646bee893c5644682812025
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 082ed24eb65de12f337ab4a379b088da0f6eea5a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560584"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497382"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>Funkcja CertFreeAuthenticodeTimestamperInfo
 Zwalnia zasoby przydzielone [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) struktury.  
@@ -28,7 +28,7 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pTimestamperInfo`  
  [out w] Czas stamper informacje mogą być wprowadzane. Zobacz [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) struktury.  
   

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ec7414b18b60a20eefcbf4ec742ddcc7b7a8f97
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 0f5d50ce17b35eb8701fdf115bb5f3b47cba24e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066106"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471241"
 ---
 # <a name="iclrdatatarget3getexceptioncontextrecord-method"></a>Metoda ICLRDataTarget3::GetExceptionContextRecord
 Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych w celu pobrania rekordu kontekstu skojarzonego z procesem docelowym. Na przykład dla elementu docelowego zrzutu jest to równoważne z rekordu kontekstu przekazaną za pomocą `ExceptionParam` argument [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) funkcji w Windows debugowania pomóc w bibliotece (DbgHelp).  
@@ -34,7 +34,7 @@ HRESULT GetExceptionContextRecord(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `bufferSize`  
  [in] Rozmiar buforu wejściowego w bajtach. Musi to być wystarczająco duży, aby pomieścić rekordu kontekstu.  
   

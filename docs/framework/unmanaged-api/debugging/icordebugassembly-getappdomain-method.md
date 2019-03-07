@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401982"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485112"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a>ICorDebugAssembly::GetAppDomain — Metoda
-Pobiera wskaźnika interfejsu do domeny aplikacji, która zawiera to `ICorDebugAssembly` wystąpienia.  
+Pobiera wskaźnik interfejsu do domeny aplikacji, która zawiera to `ICorDebugAssembly` wystąpienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppAppDomain`  
- [out] Wskaźnik do adresu ICorDebugAppDomain — interfejs reprezentujący domeny aplikacji.  
+ [out] Wskaźnik na adres icordebugappdomain — interfejs, który reprezentuje domeny aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ten zestaw jest zestawu systemowego `GetAppDomain` zwraca wartość null.  
+ Jeśli ten zestaw jest zestaw systemowy `GetAppDomain` zwraca wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

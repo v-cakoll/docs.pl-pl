@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51711162613db6c8045d9192e2ca9f1380509be2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ffcd389f9b9e2e113fc45d2961a92790f4c57ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556171"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478053"
 ---
 # <a name="embedresource-method"></a>EmbedResource — Metoda
 Deklaruje zasobu osadzonego. Ta metoda faktycznie osadzaj zasobu.  
@@ -39,7 +39,7 @@ HRESULT EmbedResource(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `AssemblyID`  
  Identyfikator zestawu.  
   

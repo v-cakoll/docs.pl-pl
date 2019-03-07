@@ -2,17 +2,20 @@
 title: Usługi Machine learning — słownik w strukturze ML.NET
 description: Słownik ważne terminy dotyczące uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w strukturze ML.NET.
 ms.custom: seodec18
-ms.date: 12/20/2018
-ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.date: 03/05/2019
+ms.openlocfilehash: 52f4aa7300edbbdabcc37d7710654dab455d27b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092439"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498903"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine learning słownik terminów ważne
 
 Poniższa lista jest kompilacja terminy dotyczące uczenia maszynowego ważne, które są przydatne podczas tworzenia niestandardowych modeli w strukturze ML.NET.
+
+> [!NOTE]
+> Ta dokumentacja dotyczy struktury ML.NET, która jest obecnie dostępna w wersji zapoznawczej. Materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [Wprowadzenie do struktury ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="accuracy"></a>dokładność
 

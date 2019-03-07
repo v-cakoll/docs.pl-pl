@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3657ef40fce3d9d29e0cf6c27e8eb527be0f150e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618814"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489023"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange — Metoda
 Definiuje zakres przesunięcia dla określonego zakresu leksykalne. Zakres staje się nowy zakres bieżący i są wypychane na stosie zakresów. Zakresy należy tworzą hierarchię. Elementy równorzędne są niedozwolone nakładają się na siebie.  
@@ -36,7 +36,7 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `scopeId`  
  [in] Identyfikator zakresu dla zakresu.  
   

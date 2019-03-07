@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30b13c75907ad0bc4d6dbce6a3ecd07f1fbede11
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264437"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492442"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Narzędzie rejestracji zestawów)
 
@@ -30,21 +30,21 @@ W wierszu polecenia wpisz następujące polecenie:
 regasm assemblyFile [options]
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
 |Parametr|Opis|
 |---------------|-----------------|
-|*AssemblyFile*|Zestaw do rejestracji w modelu COM.|
+|*assemblyFile*|Zestaw do rejestracji w modelu COM.|
 
 |Opcja|Opis|
 |------------|-----------------|
 |**/ codebase**|Tworzy wpis Codebase w rejestrze. Wpis Codebase określa ścieżkę pliku dla zestawu, który nie jest zainstalowany w globalnej pamięci podręcznej zestawów. Nie należy określać tej opcji, jeśli później instalowany będzie zestaw, który jest rejestrowany w globalnej pamięci podręcznej zestawów. *AssemblyFile* argument, określ **/ codebase** opcja musi być [zestawu z silną nazwą](../../../docs/framework/app-domains/strong-named-assemblies.md).|
-|**/ zarejestrowane**|Określa, że narzędzie będzie odnosić się tylko do bibliotek typów, które zostały już zarejestrowane.|
-|**/asmpath:Directory**|Określa katalog zawierający odwołania do zestawów. Może być używany z **/regfile razem** opcji.|
+|**/registered**|Określa, że narzędzie będzie odnosić się tylko do bibliotek typów, które zostały już zarejestrowane.|
+|**/asmpath:directory**|Określa katalog zawierający odwołania do zestawów. Może być używany z **/regfile razem** opcji.|
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
-|**/ regfile razem** [**:** *regFile*]|Generuje określony plik reg dla zestawu zawierający potrzebne wpisy rejestru. Zaznaczenie tej opcji nie powoduje zmiany rejestru. Nie można użyć tej opcji z **/u** lub **/TLB** opcje.|
+|**/regfile** [**:** *regFile*]|Generuje określony plik reg dla zestawu zawierający potrzebne wpisy rejestru. Zaznaczenie tej opcji nie powoduje zmiany rejestru. Nie można użyć tej opcji z **/u** lub **/TLB** opcje.|
 |**/ silent** lub **/s**|Pomija wyświetlanie komunikatów o sukcesie.|
-|**/ TLB** [**:** *typeLibFile*]|Generuje bibliotekę typów z określonego zestawu zawierającego definicje dostępnych typów zdefiniowanych w zestawie.|
+|**/tlb** [**:** *typeLibFile*]|Generuje bibliotekę typów z określonego zestawu zawierającego definicje dostępnych typów zdefiniowanych w zestawie.|
 |**/ unregister** lub **/u**|Wyrejestrowuje utworzone klasy znalezione w *assemblyFile*. Pominięcie tej opcji powoduje, że Regasm.exe rejestruje utworzone klasy w zestawie.|
 |**/verbose**|Określa tryb pełnej informacji; Wyświetla listę wszelkich zestawów, dla których Biblioteka typów musi zostać wygenerowane, gdy określony za pomocą występujących w odwołaniu **/TLB** opcji.|
 |**/?** lub   **/help**|Wyświetla składnię polecenia i opcje narzędzia.|

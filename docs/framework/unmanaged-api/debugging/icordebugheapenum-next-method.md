@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16f1c7d4b56da93b2f2f0a91d889bde72ec94f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a9e423a35ba8c592bbfd806f9087a88ee251e76
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530132"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502292"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next — Metoda
 Pobiera określoną liczbę [cor_heapobject —](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) wystąpień, które zawierają informacje dotyczące obiektów na stosie zarządzanym.  
@@ -36,7 +36,7 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  celt  
  [in] Liczba obiektów, które mają zostać pobrane.  
   

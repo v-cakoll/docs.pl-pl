@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8674fc7f079bd67ea95ac9d2a9891267b315098e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6c2a9c806b70ab33f68e3213d82ed96aca47d62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694740"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484202"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Metoda ICorDebugProcess6::EnableVirtualModuleSplitting
 Włącza lub wyłącza wirtualnego modułu dzielenia.  
@@ -22,7 +22,7 @@ HRESULT EnableVirtualModuleSplitting(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `enableSplitting`  
  `true` Aby włączyć wirtualny moduł dzielenia; `false` go wyłączyć.  
   
@@ -83,7 +83,7 @@ HRESULT EnableVirtualModuleSplitting(
 -   Metoda ICorDebugAssembly3.GetContainerAssembly zwraca zawierającej moduł.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>Interfejsy pobrane z modułów  
- Różne interfejsy, można utworzyć lub pobrać z modułów. Oto niektóre z nich:  
+ Różne interfejsy, można utworzyć lub pobrać z modułów. Oto niektóre poprawki:  
   
 -   Obiekt ICorDebugClass, który jest zwracany przez [ICorDebugModule::GetClassFromToken](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) metody.  
   

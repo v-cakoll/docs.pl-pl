@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe8491852ea1fd9791de761d848b774480f4b461
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 778664dea16c5183945e25e0261f4a65bb646ac0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550295"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467977"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly — Metoda
 Pobiera odwołanie do zestawu, który nie odwołuje się [iclrassemblyreferencelist —](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) zwrócone z [ihostassemblymanager::getnonhoststoreassemblies —](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje `ProvideAssembly` dla każdego zestawu, który nie jest widoczna na liście.  
@@ -39,7 +39,7 @@ HRESULT ProvideAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pBindInfo`  
  [in] Wskaźnik do [assemblybindinfo —](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) wystąpieniu, używany przez hosta do ustalenia niektórych parametrów powiązania, w tym obecność lub brak żadnych zasad przechowywania wersji i zestawu, które można powiązać.  
   

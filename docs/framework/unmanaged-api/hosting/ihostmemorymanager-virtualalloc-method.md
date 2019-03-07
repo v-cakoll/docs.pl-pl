@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd9bdd7ce0a5d9cfde91143cc5dcfdfc834abb18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e5ce46e1cf034e6b86d738d8ec69332df1ff9fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588265"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486267"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc — Metoda
 Służy jako logiczne otoki dla odpowiedniej funkcji Win32. Implementacja Win32 `VirtualAlloc` rezerwuje lub zwalnia region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
@@ -40,7 +40,7 @@ HRESULT VirtualAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pAddress`  
  [in] Wskaźnik do adres początkowy regionów do przydzielenia.  
   

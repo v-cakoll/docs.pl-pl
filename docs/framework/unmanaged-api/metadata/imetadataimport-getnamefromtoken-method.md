@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 36218fa44f1cb49d8d0193d7c72e6feb2d121050
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f45c89572362f380997e7d8247b93c0f8629655
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478885"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken — Metoda
 Pobiera nazwę UTF-8 zawiera odwołanie do tokenu metadanych określonego obiektu. Ta metoda jest przestarzała.  
@@ -36,7 +36,7 @@ HRESULT GetNameFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `tk`  
  [in] Token reprezentujący obiekt, aby zwrócić nazwę.  
   

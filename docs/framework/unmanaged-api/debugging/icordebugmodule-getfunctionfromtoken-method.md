@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acffd24ae9d5aad5f48058eec036f912ee016289
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1af0f8f792c856c0b27b4d3d9ff557bcc5fce82
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415987"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500073"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>ICorDebugModule::GetFunctionFromToken — Metoda
 Pobiera funkcję, która jest określona przez token metadanych.  
@@ -36,18 +36,18 @@ HRESULT GetFunctionFromToken(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `methodDef`  
- [in] A `mdMethodDef` token metadanych, który odwołuje się do funkcji metadanych.  
+ [in] A `mdMethodDef` token metadanych, który odwołuje się do metadanych funkcji.  
   
  `ppFunction`  
- [out] Wskaźnik do adresu ICorDebugFunction obiektu interfejsu, który reprezentuje funkcję.  
+ [out] Wskaźnik na adres obiektu interfejsu ICorDebugFunction, który reprezentuje funkcję.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetFunctionFromToken` Metoda zwróci wartość CORDBG_E_FUNCTION_NOT_IL HRESULT przypadku przekazano wartość `methodDef` nie odwołuje się do metody język pośredni (MSIL) firmy Microsoft.  
+ `GetFunctionFromToken` Metoda zwraca wartość CORDBG_E_FUNCTION_NOT_IL HRESULT, jeśli wartość przekazywana w `methodDef` nie odwołuje się do firmy Microsoft intermediate language (MSIL) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

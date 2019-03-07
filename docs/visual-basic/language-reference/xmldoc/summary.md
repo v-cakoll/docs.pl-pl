@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 531cac9bfec24577c22cb52962b2ac1eb740c5c8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e629a738a706b09dec97dd6593ef493470ec9472
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975501"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473880"
 ---
 # <a name="summary-visual-basic"></a>\<Podsumowanie > (Visual Basic)
 Określa podsumowanie elementu członkowskiego.  
@@ -21,7 +21,7 @@ Określa podsumowanie elementu członkowskiego.
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `description`  
  Podsumowanie obiektu.  
   

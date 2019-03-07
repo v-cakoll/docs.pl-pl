@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500e01955666c7a8e2bd1dcf9d34afe3aeb6b421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403347"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485307"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement — Metoda
-Pobiera wartość elementu podanej tablicy.  
+Pobiera wartość elementu danej tablicy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +38,22 @@ HRESULT GetElement (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `cdim`  
- [in] Liczba wymiarów tego `ICorDebugArrayValue` obiektu.  
+ [in] Liczba wymiarów to `ICorDebugArrayValue` obiektu.  
   
  Ta wartość jest również rozmiar `indices` tablicy, ponieważ jego rozmiar jest równa liczbie wymiarów `ICorDebugArrayValue` obiektu.  
   
  `indices`  
- [in] Tablica wartości indeksów, z których każdy określa pozycja w wymiarze z `ICorDebugArrayValue` obiektu.  
+ [in] Tablica wartości indeksu, z których każdy określa położenie w obrębie wymiaru `ICorDebugArrayValue` obiektu.  
   
- Ta wartość nie może być pusta.  
+ Ta wartość nie może być zerowy.  
   
  `ppValue`  
- [out] Wskaźnik do adres obiektu ICorDebugValue reprezentujący wartość określonego elementu.  
+ [out] Wskaźnik do adresu obiektu ICorDebugValue, która reprezentuje wartość określonego elementu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

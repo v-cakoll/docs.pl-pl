@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ada120b9cb4100bfadff83d96e0226f911958bf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d29f5cefd22592fa8949ff5361109c09c0972b24
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420768"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499696"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState — Metoda
-Określa flagi opisujące stan debugowania tego ICorDebugThread.  
+Ustawia flagi opisujące stan debugowania tego ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT SetDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `state`  
- [in] Bitowe połączenie wartości wyliczenia CorDebugThreadState, określające stan debugowania tego wątku.  
+ [in] Bitowa kombinacja wartości wyliczenia cordebugthreadstate —, określające stan debugowania tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- `SetDebugState` Ustawia bieżący stan debugowania wątku. ("Bieżący stan debugowania" reprezentuje stan debugowania, jeśli proces będzie kontynuowane, zamiast rzeczywistej bieżącego stanu.) Normalne wartość ta jest THREAD_RUNNING. Tylko debuger może mieć wpływ na stan debugowania wątku. Debugowanie stany ostatniego w poprzek będzie nadal występować, jeśli chcesz zachować wątku THREAD_SUSPENDed przez wiele będzie nadal występować, można ustawić go raz, a następnie nie są martwić się o jego. Zawieszanie wątków i wznawianie proces może spowodować zakleszczenie, chociaż jest mało prawdopodobne, zwykle. Jest to wewnętrzne jakości wątków i procesów, w projekcie. Debuger może asynchronicznie przerywanie i wznawianie wątków podziału zakleszczenia. Jeśli stan użytkownika dla wątku zawiera USER_UNSAFE_POINT, wątek może zablokować wyrzucania elementów bezużytecznych (GC). Oznacza to, że wątku zawieszonym ma znacznie wyższa szansy powodować zakleszczenie. Nie może to mieć wpływ na debugowania, które zdarzenia już do kolejki. W związku z tym debuger powinien opróżniania kolejki całe zdarzenie (wywołując [ICorDebugController::HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) przed wstrzymywanie i wznawianie wątków. Else on może pobrać zdarzenia w wątku, który określa, że została już wstrzymana.  
+ `SetDebugState` Ustawia bieżący stan debugowania w wątku. ("Bieżący stan debugowania" reprezentuje stan debugowania, gdyby proces będzie kontynuowane nie rzeczywiste bieżącego stanu.) Normalna wartość to jest THREAD_RUNNING. Tylko debuger może wpłynąć na stan debugowania wątku. Debugowanie stany ostatniego na będzie nadal występował, więc jeśli chcesz zachować wątku THREAD_SUSPENDed za pośrednictwem wielu będzie się powtarzać, można ustawić go jeden raz i dzięki temu nie trzeba martwić. Zawieszanie wątków i wznawianie procesu może spowodować zakleszczenia, chociaż jest mało prawdopodobne, zwykle. To jest wewnętrzne jakość wątków i procesów i projektem. Debuger asynchronicznie można przerwać i wznawianie wątków można przerwać zakleszczenia. Jeśli stan użytkownika dla wątku zawiera USER_UNSAFE_POINT, wątek może blokować wyrzucania elementów bezużytecznych (GC). Oznacza to, że wątek wstrzymania ma znacznie wyższe prawdopodobieństwo powoduje zakleszczenia. Nie może to mieć wpływ na debugowania, który już do kolejki zdarzeń. Ten sposób debuger powinien opróżnienia kolejki całe zdarzenie (przez wywołanie metody [ICorDebugController::HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) przed zawieszanie lub wznawianie wątków. Inne może ją odbierać zdarzenia w wątku, który uważa, że została już wstrzymana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

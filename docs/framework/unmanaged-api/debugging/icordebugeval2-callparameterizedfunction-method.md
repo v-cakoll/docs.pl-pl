@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cba4eb2b76d7057a5ed66a35342a79615cb8539f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416169"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487732"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction — Metoda
-Konfiguruje wywołanie do określonego ICorDebugFunction, które mogą być zagnieżdżone wewnątrz klasy, w których Konstruktor pobiera <xref:System.Type> parametrów lub mogą się zająć <xref:System.Type> parametrów.  
+Konfiguruje wywołanie do określonego ICorDebugFunction, które mogą być zagnieżdżone wewnątrz klasy, której Konstruktor przyjmuje <xref:System.Type> parametrów lub mogą się zająć <xref:System.Type> parametrów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,31 +39,31 @@ HRESULT CallParameterizedFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pFunction`  
- [in] Wskaźnik do `ICorDebugFunction` obiekt, który reprezentuje funkcję, która ma zostać wywołana.  
+ [in] Wskaźnik do `ICorDebugFunction` obiekt, który reprezentuje funkcja do wywołania.  
   
  `nTypeArgs`  
  [in] Liczba argumentów, które funkcja przyjmuje.  
   
  `ppTypeArgs`  
- [in] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugType, który reprezentuje argumentu funkcji.  
+ [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugType, który reprezentuje argumentu funkcji.  
   
  `nArgs`  
- [in] Liczba wartości przekazanych w funkcji.  
+ [in] Liczba wartości przekazywane w funkcji.  
   
  `ppArgs`  
- [in] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugValue, który reprezentuje wartość przekazano argument funkcji.  
+ [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugValue, która reprezentuje wartość przekazanego argumentu funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `CallParameterizedFunction` przypomina [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) z tą różnicą, że funkcja może być wewnątrz klasy z parametrami typu, może się zająć parametry typu lub obie. Argumenty typu należy najpierw dla klasy, a następnie dla funkcji.  
+ `CallParameterizedFunction` przypomina [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) z tą różnicą, że funkcja może być wewnątrz klasy z parametrami typu, może się zająć parametrów typu i / lub. Argumenty typu powinien być podawany najpierw dla klasy, a następnie dla tej funkcji.  
   
- Jeśli funkcja znajduje się w domenie innej aplikacji, nastąpi przejście. Jednak wszystkie argumenty typu i wartości muszą być w docelowej domenie aplikacji.  
+ Jeśli funkcja znajduje się w domenie innej aplikacji, nastąpi przejście. Jednak wszystkie argumenty typu i wartości musi należeć do domeny aplikacji docelowej.  
   
- Obliczanie funkcji można wykonać tylko w scenariuszach ograniczone. Jeśli `CallParameterizedFunction` lub `ICorDebugEval::CallFunction` kończy się niepowodzeniem, HRESULT zwrócony wskaże najbardziej ogólnym możliwe przyczyny błędu.  
+ Obliczanie funkcji mogą być wykonywane tylko w ograniczonej liczbie scenariuszy. Jeśli `CallParameterizedFunction` lub `ICorDebugEval::CallFunction` zakończy się niepowodzeniem, zwrócona wartość HRESULT będą wskazywać najbardziej ogólną możliwe przyczyny błędu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

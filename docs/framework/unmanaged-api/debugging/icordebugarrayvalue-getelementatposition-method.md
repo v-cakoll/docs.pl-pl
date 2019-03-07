@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580c7b4dcd63f83e113a5317c242b7e66cfb3f5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76100116f2ca3a9b9a99477ca2352d5fa1335ab2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403419"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502257"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition — Metoda
-Pobiera element na pozycji, traktując jako tablica liczony od zera, jednowymiarowej tablicy.  
+Pobiera element wskazywany danej pozycji, traktując tablicy jako tablicę indeksowaną od zera, jednowymiarową.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,18 +36,18 @@ HRESULT GetElementAtPosition (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `nPosition`  
  [in] Położenie elementu do pobrania.  
   
  `ppValue`  
- [out] Wskaźnik do adresu ICorDebugValue obiekt, który reprezentuje wartość elementu.  
+ [out] Wskaźnik na adres obiektu ICorDebugValue, która reprezentuje wartość elementu.  
   
 ## <a name="remarks"></a>Uwagi  
- Układ wielu wymiarów tablicy następuje C++ styl układu tablicy.  
+ Układ tablicą wielowymiarową następuje styl C++ układ tablicy.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd04e6d8bed86039b6f43985a8fb712b4612f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa1f6852544dddcdf514b14710ade3949818c93e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418353"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487322"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID — Metoda
 Pobiera wątku, na którym jest wykonywane zadanie o podanym identyfikatorze.  
@@ -36,18 +36,18 @@ HRESULT GetThreadForTaskID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `taskid`  
  [in] Identyfikator zadania.  
   
  `ppThread`  
- [out] Wskaźnik do adresu ICorDebugThread2 obiekt, który reprezentuje wątku do pobrania.  
+ [out] Wskaźnik na adres icordebugthread2 — obiekt, który reprezentuje wątków, które mają zostać pobrane.  
   
 ## <a name="remarks"></a>Uwagi  
- Hosta można ustawić identyfikatora zadania przy użyciu [ICLRTask::SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) metody.  
+ Hosta można ustawić identyfikator zadania przy użyciu [iclrtask::settaskidentifier —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

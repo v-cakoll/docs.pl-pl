@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a9a43735ec80821c2380b824bfced99113cf08f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bd21e43973d116e4383d88bd5ce90f0fbfeb1a6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651100"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471494"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize — Metoda
 Pobiera rozmiar w bajtach, reprezentowane przez ten icordebugcode "—" kod binarny.  
@@ -35,7 +35,7 @@ HRESULT GetSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pcBytes`  
  [out] Wskaźnik do rozmiaru, w bajtach pliku binarnego kod, że `ICorDebugCode` obiekt reprezentuje.  
   

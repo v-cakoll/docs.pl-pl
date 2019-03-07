@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c69d1f83a4591df4d2dcb7fb9724fa582ea28387
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 078dfd7162c250f0279b8bc372aeb39662aa0119
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413582"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498539"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle — Metoda
-Tworzy dojście o określonym typie dla wartości sterty reprezentowany przez ten obiekt ICorDebugHeapValue2.  
+Tworzy dojście do określonego typu dla wartości sterty, reprezentowane przez ten obiekt icordebugheapvalue2 —.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,20 +36,20 @@ HRESULT CreateHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `type`  
- [in] Wartość wyliczenia CorDebugHandleType, która określa typ dojścia do utworzenia.  
+ [in] Wartość cordebughandletype — wyliczenie, który określa typ dojścia do utworzenia.  
   
  `ppHandle`  
- [out] Wskaźnik do adres obiektu ICorDebugHandleValue reprezentujący nowy uchwyt dla tej wartości stosu.  
+ [out] Wskaźnik na adres icordebughandlevalue — obiekt, który reprezentuje nowy uchwyt dla tej wartości na stosie.  
   
 ## <a name="remarks"></a>Uwagi  
- Dojście zostaną utworzone w domenie aplikacji, które jest skojarzone z wartością sterty i staną się nieprawidłowe, jeśli domena aplikacji zostanie usunięty z pamięci.  
+ Dojście zostaną utworzone w domenie aplikacji, która jest skojarzona z wartością sterty i staną się nieprawidłowe, jeśli domena aplikacji zostanie zwolniona.  
   
- Wiele wywołań tej funkcji dla tej samej wartości sterty spowoduje utworzenie wielu dojść. Ponieważ uchwytów wpływ na wydajność modułu zbierającego elementy bezużyteczne, debuger ograniczyć się do stosunkowo małej liczby dojść (około 256), które są aktywne w czasie.  
+ Spowoduje to utworzenie wielu wywołań tej funkcji dla tej samej wartości sterty obsługuje wiele. Ponieważ uchwyty wpływa na wydajność modułu odśmiecania pamięci, debuger należy ograniczyć do stosunkowo małej liczby dojść (około 256), które są aktywne w danym momencie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

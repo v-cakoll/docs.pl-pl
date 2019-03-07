@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17673fb3684747f42556caef4ea54db050eef56e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db84a45668fd4f4f1690290a96e26add05b1785e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496342"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree — Metoda
 Służy jako logiczne otoki dla odpowiedniej funkcji Win32. Implementacja Win32 `VirtualFree` zwalnia, anuluje, zwalnia lub anuluje region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
@@ -37,7 +37,7 @@ HRESULT VirtualFree (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `lpAddress`  
  [in] Wskaźnik na adres bazowy stron pamięci wirtualnej, który ma zostać zwolniony.  
   

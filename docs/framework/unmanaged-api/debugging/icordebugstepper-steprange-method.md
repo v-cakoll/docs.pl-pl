@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b18474aeaa79224de5371df3ff0cac5ed9bf4ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421367"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475739"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange — Metoda
-Powoduje to ICorDebugStepper — aby pojedynczy krok za pomocą jego zawierającego wątku i zwracane w przypadku osiągnie kodu poza ostatniego z określonymi zakresami.  
+Powoduje to ICorDebugStepper — do pojedynczego kroku za pośrednictwem jego zawierającego wątku i wrócić po osiągnięciu kodu poza ostatnią z określonymi zakresami.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,25 +37,25 @@ HRESULT StepRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `bStepIn`  
- [in] Ustaw `true` do kroku do funkcji, która jest wywoływana w wątku. Ustaw `false` do kroku przez funkcję.  
+ [in] Ustaw `true` aby wejść do funkcji, która jest wywołana w wątku. Ustaw `false` do kroku za pośrednictwem funkcji.  
   
  `ranges`  
- [in] Tablica struktur COR_DEBUG_STEP_RANGE, z których każdy określa zakres.  
+ [in] Tablica cor_debug_step_range — struktur, z których każdy określa zakres.  
   
  `cRangeCount`  
  [in] Rozmiar `ranges` tablicy.  
   
 ## <a name="remarks"></a>Uwagi  
- `StepRange` Metody działa jak [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) metody, z wyjątkiem tego, że nie zostanie ukończone do kodu zakres zostanie osiągnięty.  
+ `StepRange` Metoda działa jak [ICorDebugStepper::Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) metody, z tą różnicą, że nie zostanie zakończone aż do kodu, zakres zostanie osiągnięty.  
   
- Może to być skuteczniejsze niż krokowe wykonywanie jednej instrukcji w czasie. Zakresy są określone jako lista par przesunięcia od początku stepper ramki.  
+ Może to być bardziej efektywne niż przechodzenie krok po kroku jednej instrukcji w danym momencie. Zakresy są określane jako lista par przesunięcia od początku stepper ramki.  
   
- Zakresy są względem kodu języka pośredniego (MSIL) firmy Microsoft metody. Wywołanie [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) z `false` aby zakresy względem kodu natywnego metody.  
+ Zakresy są względne wobec kod Microsoft intermediate language (MSIL) metody. Wywołaj [ICorDebugStepper::SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) z `false` się zakresy względem kodu natywnego metody.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

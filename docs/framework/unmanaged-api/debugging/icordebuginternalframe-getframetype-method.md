@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7e5fceacc3fefa9267a9d7f989e745c392322e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0b6f0550bad534379b562c3df9da9ab917f5270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414128"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493040"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType — Metoda
 Pobiera typ tej ramki wewnętrznego.  
@@ -35,15 +35,15 @@ HRESULT GetFrameType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pType`  
- [out] Wskaźnik do wartości wyliczenia CorDebugInternalFrameType wskazująca typ wewnętrzny ramki reprezentowany przez to `ICorDebugInternalFrame` obiektu.  
+ [out] Wskaźnik do wartości cordebuginternalframetype — wyliczenie, który wskazuje na typ reprezentowany przez ten ramka wewnętrzna `ICorDebugInternalFrame` obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Typ ramki wewnętrzny nigdy nie będą STUBFRAME_NONE. Debugery bezpiecznie ignorować typów nierozpoznany wewnętrzny ramek.  
+ Typ ramki wewnętrzny nigdy nie będą STUBFRAME_NONE. Debugery bez problemu zmieniała należy zignorować nierozpoznane ramki wewnętrznych typów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12cce87f7c92224dd83e4a51faedda616f0bbc39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97af133aa573e3b9c74f6bdbb4410f4d12214d67
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676812"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491420"
 ---
-# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="d0c19-102">ICorConfiguration::SetGCThreadControl — Metoda</span><span class="sxs-lookup"><span data-stu-id="d0c19-102">ICorConfiguration::SetGCThreadControl Method</span></span>
-<span data-ttu-id="d0c19-103">Określa interfejs wywołania zwrotnego, planowanie wątków dla zadań innych niż środowiska uruchomieniowego, które w przeciwnym razie zostałby zablokowany dla wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="d0c19-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
+# <a name="icorconfigurationsetgcthreadcontrol-method"></a><span data-ttu-id="d4921-102">ICorConfiguration::SetGCThreadControl — Metoda</span><span class="sxs-lookup"><span data-stu-id="d4921-102">ICorConfiguration::SetGCThreadControl Method</span></span>
+<span data-ttu-id="d4921-103">Określa interfejs wywołania zwrotnego, planowanie wątków dla zadań innych niż środowiska uruchomieniowego, które w przeciwnym razie zostałby zablokowany dla wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="d4921-103">Sets the callback interface for scheduling threads for non-runtime tasks that would otherwise be blocked for a garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0c19-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d0c19-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4921-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d4921-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCThreadControl (  
@@ -35,21 +35,21 @@ HRESULT SetGCThreadControl (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d0c19-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d0c19-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d4921-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d4921-105">Parameters</span></span>  
  `pGCThreadControl`  
- <span data-ttu-id="d0c19-106">[in] Wskaźnik do [igcthreadcontrol —](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) obiektu, która powiadamia hosta, dotyczące zawieszenia wątki zadań innych niż środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="d0c19-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
+ <span data-ttu-id="d4921-106">[in] Wskaźnik do [igcthreadcontrol —](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) obiektu, która powiadamia hosta, dotyczące zawieszenia wątki zadań innych niż środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="d4921-106">[in] A pointer to an [IGCThreadControl](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md) object that notifies the host about the suspension of threads for non-runtime tasks.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d0c19-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d0c19-107">Remarks</span></span>  
- <span data-ttu-id="d0c19-108">Host może wybrać w ramach [igcthreadcontrol::threadisblockingforsuspension —](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) wywołania zwrotnego czy zmienić termin egzaminu wątku.</span><span class="sxs-lookup"><span data-stu-id="d0c19-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d4921-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d4921-107">Remarks</span></span>  
+ <span data-ttu-id="d4921-108">Host może wybrać w ramach [igcthreadcontrol::threadisblockingforsuspension —](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) wywołania zwrotnego czy zmienić termin egzaminu wątku.</span><span class="sxs-lookup"><span data-stu-id="d4921-108">The host may choose within the [IGCThreadControl::ThreadIsBlockingForSuspension](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-threadisblockingforsuspension-method.md) callback whether to reschedule a thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0c19-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d0c19-109">Requirements</span></span>  
- <span data-ttu-id="d0c19-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0c19-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4921-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d4921-109">Requirements</span></span>  
+ <span data-ttu-id="d4921-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4921-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0c19-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d0c19-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d4921-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d4921-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d0c19-112">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d0c19-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d4921-112">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d4921-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d0c19-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0c19-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d4921-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4921-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0c19-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d0c19-114">See also</span></span>
-- [<span data-ttu-id="d0c19-115">ICorConfiguration, interfejs</span><span class="sxs-lookup"><span data-stu-id="d0c19-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d4921-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d4921-114">See also</span></span>
+- [<span data-ttu-id="d4921-115">ICorConfiguration, interfejs</span><span class="sxs-lookup"><span data-stu-id="d4921-115">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

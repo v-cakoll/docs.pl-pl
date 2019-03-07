@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281284ca432efc86964a2e3e37fa89d1506aa350
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6c9a6bf69b8f1728f9dfa6c19bc04670d96a6d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698677"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494349"
 ---
-# <a name="ihostiocompletionmanagercloseiocompletionport-method"></a><span data-ttu-id="48d43-102">IHostIoCompletionManager::CloseIoCompletionPort — Metoda</span><span class="sxs-lookup"><span data-stu-id="48d43-102">IHostIoCompletionManager::CloseIoCompletionPort Method</span></span>
-<span data-ttu-id="48d43-103">Żądania, że host Zamknij port, która została otwarta przy użyciu wcześniejszego wywołania funkcji [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span><span class="sxs-lookup"><span data-stu-id="48d43-103">Requests that the host close a port that was opened through an earlier call to [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span></span>  
+# <a name="ihostiocompletionmanagercloseiocompletionport-method"></a><span data-ttu-id="bcbce-102">IHostIoCompletionManager::CloseIoCompletionPort — Metoda</span><span class="sxs-lookup"><span data-stu-id="bcbce-102">IHostIoCompletionManager::CloseIoCompletionPort Method</span></span>
+<span data-ttu-id="bcbce-103">Żądania, że host Zamknij port, która została otwarta przy użyciu wcześniejszego wywołania funkcji [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span><span class="sxs-lookup"><span data-stu-id="bcbce-103">Requests that the host close a port that was opened through an earlier call to [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48d43-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="48d43-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bcbce-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="bcbce-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseIoCompletionPort (  
@@ -35,34 +35,34 @@ HRESULT CloseIoCompletionPort (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="48d43-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="48d43-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bcbce-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="bcbce-105">Parameters</span></span>  
  `hPort`  
- <span data-ttu-id="48d43-106">[in] Uchwyt portu, aby zamknąć.</span><span class="sxs-lookup"><span data-stu-id="48d43-106">[in] The handle of the port to close.</span></span>  
+ <span data-ttu-id="bcbce-106">[in] Uchwyt portu, aby zamknąć.</span><span class="sxs-lookup"><span data-stu-id="bcbce-106">[in] The handle of the port to close.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="48d43-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="48d43-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bcbce-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="bcbce-107">Return Value</span></span>  
   
-|<span data-ttu-id="48d43-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="48d43-108">HRESULT</span></span>|<span data-ttu-id="48d43-109">Opis</span><span class="sxs-lookup"><span data-stu-id="48d43-109">Description</span></span>|  
+|<span data-ttu-id="bcbce-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bcbce-108">HRESULT</span></span>|<span data-ttu-id="bcbce-109">Opis</span><span class="sxs-lookup"><span data-stu-id="bcbce-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="48d43-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="48d43-110">S_OK</span></span>|<span data-ttu-id="48d43-111">`CloseIoCompletionPort` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="48d43-111">`CloseIoCompletionPort` returned successfully.</span></span>|  
-|<span data-ttu-id="48d43-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="48d43-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="48d43-113">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="48d43-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="48d43-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="48d43-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="48d43-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="48d43-115">The call timed out.</span></span>|  
-|<span data-ttu-id="48d43-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="48d43-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="48d43-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="48d43-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="48d43-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="48d43-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="48d43-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="48d43-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="48d43-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="48d43-120">E_FAIL</span></span>|<span data-ttu-id="48d43-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="48d43-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="48d43-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="48d43-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="48d43-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="48d43-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="48d43-124">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="48d43-124">E_INVALIDARG</span></span>|<span data-ttu-id="48d43-125">Przekazano nieprawidłowe dojście do portu.</span><span class="sxs-lookup"><span data-stu-id="48d43-125">An invalid port handle was passed.</span></span>|  
+|<span data-ttu-id="bcbce-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="bcbce-110">S_OK</span></span>|<span data-ttu-id="bcbce-111">`CloseIoCompletionPort` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="bcbce-111">`CloseIoCompletionPort` returned successfully.</span></span>|  
+|<span data-ttu-id="bcbce-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="bcbce-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="bcbce-113">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="bcbce-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="bcbce-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="bcbce-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="bcbce-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="bcbce-115">The call timed out.</span></span>|  
+|<span data-ttu-id="bcbce-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="bcbce-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="bcbce-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="bcbce-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="bcbce-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="bcbce-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="bcbce-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="bcbce-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="bcbce-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="bcbce-120">E_FAIL</span></span>|<span data-ttu-id="bcbce-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="bcbce-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="bcbce-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="bcbce-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="bcbce-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="bcbce-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="bcbce-124">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="bcbce-124">E_INVALIDARG</span></span>|<span data-ttu-id="bcbce-125">Przekazano nieprawidłowe dojście do portu.</span><span class="sxs-lookup"><span data-stu-id="bcbce-125">An invalid port handle was passed.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="48d43-126">Uwagi</span><span class="sxs-lookup"><span data-stu-id="48d43-126">Remarks</span></span>  
- <span data-ttu-id="48d43-127">`hPort` musi być dojściem do portu, który został utworzony przez wcześniejsze wywołanie `CreateIoCompletionPort`.</span><span class="sxs-lookup"><span data-stu-id="48d43-127">`hPort` must be a handle to a port that was created by an earlier call to `CreateIoCompletionPort`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bcbce-126">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bcbce-126">Remarks</span></span>  
+ <span data-ttu-id="bcbce-127">`hPort` musi być dojściem do portu, który został utworzony przez wcześniejsze wywołanie `CreateIoCompletionPort`.</span><span class="sxs-lookup"><span data-stu-id="bcbce-127">`hPort` must be a handle to a port that was created by an earlier call to `CreateIoCompletionPort`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="48d43-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="48d43-128">Requirements</span></span>  
- <span data-ttu-id="48d43-129">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="48d43-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bcbce-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bcbce-128">Requirements</span></span>  
+ <span data-ttu-id="bcbce-129">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bcbce-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="48d43-130">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="48d43-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bcbce-130">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bcbce-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="48d43-131">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="48d43-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bcbce-131">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bcbce-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="48d43-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48d43-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bcbce-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bcbce-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48d43-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="48d43-133">See also</span></span>
-- [<span data-ttu-id="48d43-134">ICLRIoCompletionManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="48d43-134">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
-- [<span data-ttu-id="48d43-135">IHostIoCompletionManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="48d43-135">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bcbce-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bcbce-133">See also</span></span>
+- [<span data-ttu-id="bcbce-134">ICLRIoCompletionManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="bcbce-134">ICLRIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+- [<span data-ttu-id="bcbce-135">IHostIoCompletionManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="bcbce-135">IHostIoCompletionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

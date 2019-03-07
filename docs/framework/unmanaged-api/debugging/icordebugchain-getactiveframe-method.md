@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c14b48a29993a65a0a0ab9fcb63bcb1e0d882042
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402802"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494077"
 ---
-# <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="0f752-102">ICorDebugChain::GetActiveFrame — Metoda</span><span class="sxs-lookup"><span data-stu-id="0f752-102">ICorDebugChain::GetActiveFrame Method</span></span>
-<span data-ttu-id="0f752-103">Pobiera aktywny (to znaczy najnowszych) ramki w łańcuchu.</span><span class="sxs-lookup"><span data-stu-id="0f752-103">Gets the active (that is, most recent) frame on the chain.</span></span>  
+# <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="0663c-102">ICorDebugChain::GetActiveFrame — Metoda</span><span class="sxs-lookup"><span data-stu-id="0663c-102">ICorDebugChain::GetActiveFrame Method</span></span>
+<span data-ttu-id="0663c-103">Pobiera aktywny (oznacza to, najbardziej aktualną) ramki w łańcuchu.</span><span class="sxs-lookup"><span data-stu-id="0663c-103">Gets the active (that is, most recent) frame on the chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f752-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0f752-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0663c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0663c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveFrame (  
@@ -35,20 +35,20 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0f752-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0f752-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0663c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0663c-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="0f752-106">[out] Wskaźnik do adresu ICorDebugFrame obiekt, który reprezentuje aktywne (oznacza to, że najnowsze) ramki w łańcuchu.</span><span class="sxs-lookup"><span data-stu-id="0f752-106">[out] A pointer to the address of an ICorDebugFrame object that represents the active (that is, most recent) frame on the chain.</span></span>  
+ <span data-ttu-id="0663c-106">[out] Wskaźnik na adres ICorDebugFrame obiekt, który reprezentuje aktywny (oznacza to, najbardziej aktualną) ramki w łańcuchu.</span><span class="sxs-lookup"><span data-stu-id="0663c-106">[out] A pointer to the address of an ICorDebugFrame object that represents the active (that is, most recent) frame on the chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0f752-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0f752-107">Remarks</span></span>  
- <span data-ttu-id="0f752-108">Jeśli nie jest dostępne nie ramki stosu zarządzanych `ppFrame` jest ustawiony na wartość null.</span><span class="sxs-lookup"><span data-stu-id="0f752-108">If no managed stack frame is available, `ppFrame` is set to null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0663c-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0663c-107">Remarks</span></span>  
+ <span data-ttu-id="0663c-108">Jeśli nie ramki zarządzanego stosu jest dostępna, `ppFrame` jest ustawiona na wartość null.</span><span class="sxs-lookup"><span data-stu-id="0663c-108">If no managed stack frame is available, `ppFrame` is set to null.</span></span>  
   
- <span data-ttu-id="0f752-109">Jeśli aktywną ramkę nie jest dostępny, połączenie powiedzie się i `ppFrame` będzie mieć wartość null.</span><span class="sxs-lookup"><span data-stu-id="0f752-109">If the active frame is not available, the call will succeed and `ppFrame` will be null.</span></span> <span data-ttu-id="0f752-110">Aktywne ramek nie będą dostępne, łańcuchy inicjowane z powodu CHAIN_ENTER_UNMANAGED i niektóre łańcuchów inicjowane z powodu CHAIN_CLASS_INIT.</span><span class="sxs-lookup"><span data-stu-id="0f752-110">Active frames will not be available for chains initiated due to CHAIN_ENTER_UNMANAGED, and for some chains initiated due to CHAIN_CLASS_INIT.</span></span> <span data-ttu-id="0f752-111">Zobacz cordebugchainreason — wyliczenie.</span><span class="sxs-lookup"><span data-stu-id="0f752-111">See the CorDebugChainReason enumeration.</span></span>  
+ <span data-ttu-id="0663c-109">Jeśli aktywnej ramki jest niedostępny, wywołanie zostanie wykonane pomyślnie i `ppFrame` będzie miał wartość null.</span><span class="sxs-lookup"><span data-stu-id="0663c-109">If the active frame is not available, the call will succeed and `ppFrame` will be null.</span></span> <span data-ttu-id="0663c-110">Aktywne ramek nie będą dostępne, łańcuchy inicjowane z powodu CHAIN_ENTER_UNMANAGED i niektóre łańcuchów inicjowane z powodu CHAIN_CLASS_INIT.</span><span class="sxs-lookup"><span data-stu-id="0663c-110">Active frames will not be available for chains initiated due to CHAIN_ENTER_UNMANAGED, and for some chains initiated due to CHAIN_CLASS_INIT.</span></span> <span data-ttu-id="0663c-111">Zobacz cordebugchainreason — wyliczenie.</span><span class="sxs-lookup"><span data-stu-id="0663c-111">See the CorDebugChainReason enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0f752-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0f752-112">Requirements</span></span>  
- <span data-ttu-id="0f752-113">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f752-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0663c-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0663c-112">Requirements</span></span>  
+ <span data-ttu-id="0663c-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0663c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0f752-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0f752-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0663c-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0663c-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0f752-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f752-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0663c-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0663c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0f752-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f752-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="0663c-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0663c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,47 +17,47 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f94ce2f5e19636f581918550ee1f651dc1d2d253
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d9935da313b85e336dc8cb2e461b2d88db8db8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526577"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482018"
 ---
-# <a name="icorprofilerthreadenumskip-method"></a><span data-ttu-id="0df52-102">ICorProfilerThreadEnum::Skip — Metoda</span><span class="sxs-lookup"><span data-stu-id="0df52-102">ICorProfilerThreadEnum::Skip Method</span></span>
-<span data-ttu-id="0df52-103">Przesuwa kursor modułu wyliczającego z jego bieżącej pozycji, aby pominąć określoną liczbę elementów.</span><span class="sxs-lookup"><span data-stu-id="0df52-103">Advances the enumerator's cursor from its current position to skip the specified number of elements.</span></span>  
+# <a name="icorprofilerthreadenumskip-method"></a><span data-ttu-id="79664-102">ICorProfilerThreadEnum::Skip — Metoda</span><span class="sxs-lookup"><span data-stu-id="79664-102">ICorProfilerThreadEnum::Skip Method</span></span>
+<span data-ttu-id="79664-103">Przesuwa kursor modułu wyliczającego z jego bieżącej pozycji, aby pominąć określoną liczbę elementów.</span><span class="sxs-lookup"><span data-stu-id="79664-103">Advances the enumerator's cursor from its current position to skip the specified number of elements.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0df52-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0df52-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79664-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="79664-104">Syntax</span></span>  
   
 ```  
 HRESULT Skip (    [in] ULONG celt  
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0df52-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0df52-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="79664-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="79664-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="0df52-106">[in] Liczba elementów, które mają zostać pominięte.</span><span class="sxs-lookup"><span data-stu-id="0df52-106">[in] The number of elements to be skipped.</span></span>  
+ <span data-ttu-id="79664-106">[in] Liczba elementów, które mają zostać pominięte.</span><span class="sxs-lookup"><span data-stu-id="79664-106">[in] The number of elements to be skipped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0df52-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="0df52-107">Return Value</span></span>  
- <span data-ttu-id="0df52-108">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="0df52-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="79664-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="79664-107">Return Value</span></span>  
+ <span data-ttu-id="79664-108">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="79664-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="0df52-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0df52-109">HRESULT</span></span>|<span data-ttu-id="0df52-110">Opis</span><span class="sxs-lookup"><span data-stu-id="0df52-110">Description</span></span>|  
+|<span data-ttu-id="79664-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="79664-109">HRESULT</span></span>|<span data-ttu-id="79664-110">Opis</span><span class="sxs-lookup"><span data-stu-id="79664-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="0df52-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="0df52-111">S_OK</span></span>|<span data-ttu-id="0df52-112">`celt` elementy zostały pominięte.</span><span class="sxs-lookup"><span data-stu-id="0df52-112">`celt` elements were skipped.</span></span>|  
-|<span data-ttu-id="0df52-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="0df52-113">S_FALSE</span></span>|<span data-ttu-id="0df52-114">Mniej niż `celt` elementy zostały pominięte, co oznacza, że nie istnieją żadne więcej elementów.</span><span class="sxs-lookup"><span data-stu-id="0df52-114">Fewer than `celt` elements were skipped, which indicates that there are no more elements.</span></span>|  
+|<span data-ttu-id="79664-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="79664-111">S_OK</span></span>|<span data-ttu-id="79664-112">`celt` elementy zostały pominięte.</span><span class="sxs-lookup"><span data-stu-id="79664-112">`celt` elements were skipped.</span></span>|  
+|<span data-ttu-id="79664-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="79664-113">S_FALSE</span></span>|<span data-ttu-id="79664-114">Mniej niż `celt` elementy zostały pominięte, co oznacza, że nie istnieją żadne więcej elementów.</span><span class="sxs-lookup"><span data-stu-id="79664-114">Fewer than `celt` elements were skipped, which indicates that there are no more elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0df52-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0df52-115">Remarks</span></span>  
- <span data-ttu-id="0df52-116">Nowe położenie kursora ten moduł wyliczający jest (bieżącej pozycji) + `celt`.</span><span class="sxs-lookup"><span data-stu-id="0df52-116">The new position of this enumerator's cursor is (current position) + `celt`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="79664-115">Uwagi</span><span class="sxs-lookup"><span data-stu-id="79664-115">Remarks</span></span>  
+ <span data-ttu-id="79664-116">Nowe położenie kursora ten moduł wyliczający jest (bieżącej pozycji) + `celt`.</span><span class="sxs-lookup"><span data-stu-id="79664-116">The new position of this enumerator's cursor is (current position) + `celt`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0df52-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0df52-117">Requirements</span></span>  
- <span data-ttu-id="0df52-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0df52-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79664-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="79664-117">Requirements</span></span>  
+ <span data-ttu-id="79664-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79664-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0df52-119">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0df52-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="79664-119">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="79664-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0df52-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0df52-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="79664-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79664-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0df52-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0df52-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="79664-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79664-121">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0df52-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0df52-122">See also</span></span>
-- [<span data-ttu-id="0df52-123">ICorProfilerThreadEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="0df52-123">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="0df52-124">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="0df52-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="79664-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="79664-122">See also</span></span>
+- [<span data-ttu-id="79664-123">ICorProfilerThreadEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="79664-123">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="79664-124">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="79664-124">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

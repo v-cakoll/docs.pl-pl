@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c3d20b1b9470c744f6dca9ef638555b9322c1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bdd1a22a771a8d0c3cbab511e14eb3456df5032
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658120"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497785"
 ---
-# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="022a4-102">IAssemblyCache::QueryAssemblyInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="022a4-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
-<span data-ttu-id="022a4-103">Pobiera żądane dane dotyczące określonego zestawu.</span><span class="sxs-lookup"><span data-stu-id="022a4-103">Gets the requested data about the specified assembly.</span></span>  
+# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="7c5dc-102">IAssemblyCache::QueryAssemblyInfo — Metoda</span><span class="sxs-lookup"><span data-stu-id="7c5dc-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
+<span data-ttu-id="7c5dc-103">Pobiera żądane dane dotyczące określonego zestawu.</span><span class="sxs-lookup"><span data-stu-id="7c5dc-103">Gets the requested data about the specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="022a4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="022a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c5dc-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7c5dc-104">Syntax</span></span>  
   
 ```  
 HRESULT QueryAssemblyInfo (  
@@ -37,26 +37,26 @@ HRESULT QueryAssemblyInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="022a4-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="022a4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7c5dc-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7c5dc-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="022a4-106">[in] Flagi zdefiniowane w Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="022a4-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="022a4-107">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="022a4-107">The following values are supported:</span></span>  
+ <span data-ttu-id="7c5dc-106">[in] Flagi zdefiniowane w Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="7c5dc-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="7c5dc-107">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="7c5dc-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="022a4-108">QUERYASMINFO_FLAG_VALIDATE (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="022a4-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
+-   <span data-ttu-id="7c5dc-108">QUERYASMINFO_FLAG_VALIDATE (0X00000001)</span><span class="sxs-lookup"><span data-stu-id="7c5dc-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
   
--   <span data-ttu-id="022a4-109">QUERYASMINFO_FLAG_GETSIZE (0X00000002)</span><span class="sxs-lookup"><span data-stu-id="022a4-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
+-   <span data-ttu-id="7c5dc-109">QUERYASMINFO_FLAG_GETSIZE (0X00000002)</span><span class="sxs-lookup"><span data-stu-id="7c5dc-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="022a4-110">[in] Nazwa zestawu, dla którego będą pobierane dane.</span><span class="sxs-lookup"><span data-stu-id="022a4-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
+ <span data-ttu-id="7c5dc-110">[in] Nazwa zestawu, dla którego będą pobierane dane.</span><span class="sxs-lookup"><span data-stu-id="7c5dc-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
   
  `pAsmInfo`  
- <span data-ttu-id="022a4-111">[out w] [Assembly_info —](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) strukturę, która zawiera dane o zestawie.</span><span class="sxs-lookup"><span data-stu-id="022a4-111">[in, out] An [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
+ <span data-ttu-id="7c5dc-111">[out w] [Assembly_info —](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) strukturę, która zawiera dane o zestawie.</span><span class="sxs-lookup"><span data-stu-id="7c5dc-111">[in, out] An [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="022a4-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="022a4-112">Requirements</span></span>  
- <span data-ttu-id="022a4-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="022a4-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c5dc-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7c5dc-112">Requirements</span></span>  
+ <span data-ttu-id="7c5dc-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c5dc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="022a4-114">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="022a4-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="7c5dc-114">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7c5dc-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="022a4-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="022a4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7c5dc-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c5dc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="022a4-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="022a4-116">See also</span></span>
-- [<span data-ttu-id="022a4-117">IAssemblyCache, interfejs</span><span class="sxs-lookup"><span data-stu-id="022a4-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7c5dc-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7c5dc-116">See also</span></span>
+- [<span data-ttu-id="7c5dc-117">IAssemblyCache, interfejs</span><span class="sxs-lookup"><span data-stu-id="7c5dc-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

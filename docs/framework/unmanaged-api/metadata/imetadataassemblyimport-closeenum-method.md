@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 156b2274aa442d9efb129d51ccf5939a09ac7408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 647ddb742c080b7205a6f27ba36d58c010e3d510
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710134"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490024"
 ---
-# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="127dd-102">IMetaDataAssemblyImport::CloseEnum — Metoda</span><span class="sxs-lookup"><span data-stu-id="127dd-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
-<span data-ttu-id="127dd-103">Zwalnia odwołanie do wystąpienia określonego wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="127dd-103">Releases a reference to the specified enumeration instance.</span></span>  
+# <a name="imetadataassemblyimportcloseenum-method"></a><span data-ttu-id="c24ef-102">IMetaDataAssemblyImport::CloseEnum — Metoda</span><span class="sxs-lookup"><span data-stu-id="c24ef-102">IMetaDataAssemblyImport::CloseEnum Method</span></span>
+<span data-ttu-id="c24ef-103">Zwalnia odwołanie do wystąpienia określonego wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="c24ef-103">Releases a reference to the specified enumeration instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="127dd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="127dd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c24ef-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c24ef-104">Syntax</span></span>  
   
 ```  
 void CloseEnum (  
@@ -35,18 +35,18 @@ void CloseEnum (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="127dd-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="127dd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c24ef-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c24ef-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="127dd-106">[in] Wystąpienie wyliczania zostanie zamknięty.</span><span class="sxs-lookup"><span data-stu-id="127dd-106">[in] The enumeration instance to be closed.</span></span>  
+ <span data-ttu-id="c24ef-106">[in] Wystąpienie wyliczania zostanie zamknięty.</span><span class="sxs-lookup"><span data-stu-id="c24ef-106">[in] The enumeration instance to be closed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="127dd-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="127dd-107">Requirements</span></span>  
- <span data-ttu-id="127dd-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="127dd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c24ef-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c24ef-107">Requirements</span></span>  
+ <span data-ttu-id="c24ef-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c24ef-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="127dd-109">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="127dd-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c24ef-109">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c24ef-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="127dd-110">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="127dd-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c24ef-110">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c24ef-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="127dd-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="127dd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c24ef-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c24ef-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="127dd-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="127dd-112">See also</span></span>
-- [<span data-ttu-id="127dd-113">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="127dd-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c24ef-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c24ef-112">See also</span></span>
+- [<span data-ttu-id="c24ef-113">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="c24ef-113">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

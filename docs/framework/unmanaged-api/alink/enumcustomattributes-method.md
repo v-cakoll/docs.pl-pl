@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bba34b7f0956e602de690b8aa30d955acc526e8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e351c61f7e8bfc254a6fc8ea12c8a94fc393e3fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529492"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478157"
 ---
-# <a name="enumcustomattributes-method"></a><span data-ttu-id="996af-102">EnumCustomAttributes — Metoda</span><span class="sxs-lookup"><span data-stu-id="996af-102">EnumCustomAttributes Method</span></span>
-<span data-ttu-id="996af-103">Pobiera atrybuty niestandardowe na poziomie zestawu.</span><span class="sxs-lookup"><span data-stu-id="996af-103">Retrieves assembly-level custom attributes.</span></span>  
+# <a name="enumcustomattributes-method"></a><span data-ttu-id="64e71-102">EnumCustomAttributes — Metoda</span><span class="sxs-lookup"><span data-stu-id="64e71-102">EnumCustomAttributes Method</span></span>
+<span data-ttu-id="64e71-103">Pobiera atrybuty niestandardowe na poziomie zestawu.</span><span class="sxs-lookup"><span data-stu-id="64e71-103">Retrieves assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="996af-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="996af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="64e71-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="64e71-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumCustomAttributes(  
@@ -39,29 +39,29 @@ HRESULT EnumCustomAttributes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="996af-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="996af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="64e71-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="64e71-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="996af-106">Uchwyt modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="996af-106">Handle of enumerator.</span></span>  
+ <span data-ttu-id="64e71-106">Uchwyt modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="64e71-106">Handle of enumerator.</span></span>  
   
  `tkType`  
- <span data-ttu-id="996af-107">Typ atrybutów, które mają zostać wyliczone.</span><span class="sxs-lookup"><span data-stu-id="996af-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="996af-108">Użyj `mdTokenNill` dla wszystkich atrybutów.</span><span class="sxs-lookup"><span data-stu-id="996af-108">Use `mdTokenNill` for all attributes.</span></span>  
+ <span data-ttu-id="64e71-107">Typ atrybutów, które mają zostać wyliczone.</span><span class="sxs-lookup"><span data-stu-id="64e71-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="64e71-108">Użyj `mdTokenNill` dla wszystkich atrybutów.</span><span class="sxs-lookup"><span data-stu-id="64e71-108">Use `mdTokenNill` for all attributes.</span></span>  
   
  `rCustomValues`  
- <span data-ttu-id="996af-109">Odbiera tokenów atrybutów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="996af-109">Receives custom attributes tokens.</span></span>  
+ <span data-ttu-id="64e71-109">Odbiera tokenów atrybutów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="64e71-109">Receives custom attributes tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="996af-110">Określa rozmiar `rCustomValues` tablicy.</span><span class="sxs-lookup"><span data-stu-id="996af-110">Specifies size of `rCustomValues` array.</span></span>  
+ <span data-ttu-id="64e71-110">Określa rozmiar `rCustomValues` tablicy.</span><span class="sxs-lookup"><span data-stu-id="64e71-110">Specifies size of `rCustomValues` array.</span></span>  
   
  `pcCustomValues`  
- <span data-ttu-id="996af-111">Opcjonalnie odbiera token wartości.</span><span class="sxs-lookup"><span data-stu-id="996af-111">Optionally receives count of token values.</span></span>  
+ <span data-ttu-id="64e71-111">Opcjonalnie odbiera token wartości.</span><span class="sxs-lookup"><span data-stu-id="64e71-111">Optionally receives count of token values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="996af-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="996af-112">Return Value</span></span>  
- <span data-ttu-id="996af-113">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="996af-113">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="64e71-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="64e71-112">Return Value</span></span>  
+ <span data-ttu-id="64e71-113">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="64e71-113">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="996af-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="996af-114">Requirements</span></span>  
- <span data-ttu-id="996af-115">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="996af-115">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="64e71-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="64e71-114">Requirements</span></span>  
+ <span data-ttu-id="64e71-115">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="64e71-115">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="996af-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="996af-116">See also</span></span>
-- [<span data-ttu-id="996af-117">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="996af-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="996af-118">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="996af-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="996af-119">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="996af-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="64e71-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="64e71-116">See also</span></span>
+- [<span data-ttu-id="64e71-117">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="64e71-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="64e71-118">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="64e71-118">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="64e71-119">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="64e71-119">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

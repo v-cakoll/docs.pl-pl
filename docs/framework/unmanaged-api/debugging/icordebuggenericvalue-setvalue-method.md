@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83aebad108a743d25b8ea93c99060d10bf5c3980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae64fcccb49123f34cca2622a972a89bf700904f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413211"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476688"
 ---
-# <a name="icordebuggenericvaluesetvalue-method"></a><span data-ttu-id="4f560-102">ICorDebugGenericValue::SetValue — Metoda</span><span class="sxs-lookup"><span data-stu-id="4f560-102">ICorDebugGenericValue::SetValue Method</span></span>
-<span data-ttu-id="4f560-103">Kopiuje nową wartość z określonego bufora.</span><span class="sxs-lookup"><span data-stu-id="4f560-103">Copies a new value from the specified buffer.</span></span>  
+# <a name="icordebuggenericvaluesetvalue-method"></a><span data-ttu-id="e0fc0-102">ICorDebugGenericValue::SetValue — Metoda</span><span class="sxs-lookup"><span data-stu-id="e0fc0-102">ICorDebugGenericValue::SetValue Method</span></span>
+<span data-ttu-id="e0fc0-103">Kopiuje nowej wartości z określonego bufora.</span><span class="sxs-lookup"><span data-stu-id="e0fc0-103">Copies a new value from the specified buffer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f560-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4f560-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0fc0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e0fc0-104">Syntax</span></span>  
   
 ```  
 HRESULT SetValue (  
@@ -35,18 +35,18 @@ HRESULT SetValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4f560-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="4f560-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e0fc0-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e0fc0-105">Parameters</span></span>  
  `pFrom`  
- <span data-ttu-id="4f560-106">[in] Wskaźnik do buforu z którego można skopiować wartości.</span><span class="sxs-lookup"><span data-stu-id="4f560-106">[in] A pointer to the buffer from which to copy the value.</span></span>  
+ <span data-ttu-id="e0fc0-106">[in] Wskaźnik do buforu z którego można skopiować wartości.</span><span class="sxs-lookup"><span data-stu-id="e0fc0-106">[in] A pointer to the buffer from which to copy the value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4f560-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4f560-107">Remarks</span></span>  
- <span data-ttu-id="4f560-108">Dla typów referencyjnych wartość jest odwołanie, nie zawartość.</span><span class="sxs-lookup"><span data-stu-id="4f560-108">For reference types, the value is the reference, not the content.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e0fc0-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e0fc0-107">Remarks</span></span>  
+ <span data-ttu-id="e0fc0-108">Dla typów odwołań wartość jest odwołanie, nie element.</span><span class="sxs-lookup"><span data-stu-id="e0fc0-108">For reference types, the value is the reference, not the content.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4f560-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4f560-109">Requirements</span></span>  
- <span data-ttu-id="4f560-110">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f560-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0fc0-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e0fc0-109">Requirements</span></span>  
+ <span data-ttu-id="e0fc0-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0fc0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f560-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4f560-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e0fc0-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e0fc0-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4f560-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4f560-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e0fc0-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0fc0-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4f560-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f560-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e0fc0-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0fc0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8519577bb2b9d3ff8fa2138ba007d04d9fde159
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea0cba1f1b9154ccb14d75f7c377a8153c24f2b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730155"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499494"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>ISymUnmanagedReader::GetUserEntryPoint — Metoda
 Zwraca metodę, która została określona jako punkt wejścia użytkownika dla modułu, jeśli istnieje. Na przykład ta metoda może być głównej metody użytkownika, a nie wycinków generowanych przez kompilator przed metodą głównego.  
@@ -34,7 +34,7 @@ HRESULT GetUserEntryPoint (
     [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pToken`  
  [out] Wskaźnik do zmiennej, która odbiera punktu wejścia.  
   

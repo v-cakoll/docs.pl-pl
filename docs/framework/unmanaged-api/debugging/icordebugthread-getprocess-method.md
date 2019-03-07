@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41c7eeccad8b3f685c81e6afc23eaf19d862182
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46aa2ec5a282ef56f28d5fa0499571028e6602e6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417615"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483631"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess — Metoda
-Pobiera wskaźnika interfejsu, do której część stanowi ICorDebugThread tego procesu.  
+Pobiera wskaźnik interfejsu do procesu, w której część stanowi to ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,12 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppProcess`  
- [out] Wskaźnik do adresu ICorDebugProcess obiektu interfejsu, który reprezentuje procesu.  
+ [out] Wskaźnik na adres obiektu interfejsu ICorDebugProcess, który reprezentuje proces.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

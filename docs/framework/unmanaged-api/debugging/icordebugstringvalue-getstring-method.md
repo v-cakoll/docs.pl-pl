@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63d3df561a3b48a4b26426235455ef1a074512f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf62d8855b3f9de5629b9cfc6e0bcd0878a0d17
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417969"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489920"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString — Metoda
-Pobiera ciąg odwołuje się ten ICorDebugStringValue.  
+Pobiera ciąg odwołuje się ten icordebugstringvalue —.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `cchString`  
  [in] Rozmiar `szString` tablicy.  
   
@@ -46,10 +46,10 @@ HRESULT GetString (
  [out] Wskaźnik do liczby znaków zwracane w `szString` tablicy.  
   
  `szString`  
- [out] Tablica, która przechowuje pobrane ciągu.  
+ [out] Tablica, która przechowuje pobraną ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

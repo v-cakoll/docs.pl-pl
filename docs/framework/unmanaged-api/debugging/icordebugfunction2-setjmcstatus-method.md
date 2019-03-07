@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501009"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus — Metoda
-Funkcja reprezentowany przez ten ICorDebugFunction2 dla tylko mój kod oznacza wykonywanie krok po kroku.  
+Funkcja reprezentowany przez ten icordebugfunction2 — tylko mój kod oznacza przechodzenie krok po kroku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,22 +35,22 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `bIsJustMyCode`  
- [in] Ustaw `true` do oznaczenia funkcji jako kodu użytkownika; w przeciwnym razie wartość `false`.  
+ [in] Ustaw `true` aby oznaczyć tę funkcję, co kod użytkownika; w przeciwnym wypadku ustaw `false`.  
   
 ## <a name="return-values"></a>Wartości zwrócone  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|Funkcja została pomyślnie oznaczona.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Funkcja nie można oznaczyć jako kodu użytkownika, ponieważ nie można debugować.|  
+|`S_OK`|Funkcja został pomyślnie oznaczony.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Funkcja nie można oznaczyć jako kod użytkownika, ponieważ nie można debugować.|  
   
 ## <a name="remarks"></a>Uwagi  
- Stepper tylko mój kod pozwoli na pominięcie kodu innych użytkowników. Kod użytkownika muszą być podzbiorem możliwością debugowania kodu.  
+ Stepper tylko mój kod pozwoli na pominięcie kodu innych użytkowników. Kod użytkownika musi być podzestawem kod do debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

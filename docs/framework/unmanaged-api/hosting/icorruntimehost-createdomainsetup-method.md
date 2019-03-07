@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab00a93b0bedb8f7ea1425c65c4940b57f11219
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591601"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469668"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup — Metoda
 Pobiera typ wskaźnika interfejsu iappdomainsetup — aby <xref:System.AppDomainSetup?displayProperty=nameWithType> wystąpienia. `IAppDomainSetup` udostępnia metody umożliwiające konfigurowanie aspektów domeny aplikacji, zanim zostanie on utworzony.  
@@ -35,7 +35,7 @@ HRESULT CreateDomainSetup (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pAppDomainSetup`  
  [out] Wskaźnik interfejsu do <xref:System.AppDomainSetup?displayProperty=nameWithType> wystąpienia. Ten parametr jest wpisana jako `IUnknown`, więc obiekty wywołujące zwykle powinny wywoływać `QueryInterface` tego wskaźnika można uzyskać wskaźnika interfejsu typu `IAppDomainSetup`.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 888f6c823313c137be4b89e82f0c4cd1c50cf771
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ac1d749d18a9d02ce28f8cf600495f345ec0e89
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977477"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489273"
 ---
 # <a name="list-c-programming-guide"></a>\<Lista > (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -36,7 +36,7 @@ ms.locfileid: "56977477"
 </list>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `term`  
  Termin, aby zdefiniować, które są definiowane w `description`.  
   

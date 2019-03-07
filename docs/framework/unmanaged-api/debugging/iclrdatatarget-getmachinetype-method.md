@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15890bb4052905ef448501ae759669f8a1dfd444
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5727142f55e143cf144dae842f95a36effb33c68
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735600"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482239"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType — Metoda
 Pobiera identyfikator dla rodzaju — zestaw instrukcji używanej przez proces docelowy.  
@@ -35,7 +35,7 @@ HRESULT GetMachineType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `machineType`  
  [out] Wskaźnik do wartości, który wskazuje, że instrukcji zestawu, który proces docelowy korzysta. Zwrócony `machineType` jest jednym ze stałych IMAGE_FILE_MACHINE, które są zdefiniowane w pliku nagłówkowym opis pliku WinNT.h.  
   

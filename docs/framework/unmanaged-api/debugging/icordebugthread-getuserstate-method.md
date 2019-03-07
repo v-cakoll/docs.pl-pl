@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06ff8f0f13d7710d2d3d59aac4b5fdcadfe707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4deaa3ab4b14fbd32d45841966cfac9e33b9f31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418395"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487853"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>ICorDebugThread::GetUserState — Metoda
 Pobiera bieżący stan to ICorDebugThread użytkownika.  
@@ -35,15 +35,15 @@ HRESULT GetUserState (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pState`  
- [out] Wskaźnik do bitowe połączenie wartości wyliczenia CorDebugUserState, które opisują bieżący stan użytkownika tego wątku.  
+ [out] Wskaźnik do bitowa kombinacja wartości wyliczenia cordebuguserstate —, które opisują bieżący stan użytkownika tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Stanu użytkownika w wątku jest stan wątku, gdy jest on analizowane przez program, który jest debugowany. Wątek może mieć wiele bitów stanu.  
+ Stan użytkownika wątku jest stan wątku, gdy jest badany przez program, który jest debugowany. Wątek może mieć wiele stanu bitów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

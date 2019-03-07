@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b31db6e6a8ecb3fa15f1a8690b007bdb536b97c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6826ee1b94f9a1c48c19150271ebc84ac54dda25
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506553"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471787"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress — Funkcja
 Pobiera adres określonej funkcji, która została wyeksportowana z najnowszej zainstalowanej wersji środowiska uruchomieniowego języka wspólnego (CLR).  
@@ -37,7 +37,7 @@ HRESULT GetRealProcAddress (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pwszProcName`  
  [in] Nazwa funkcji.  
   

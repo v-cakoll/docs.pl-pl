@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 455b8f5434974f2bb424faf23bb2a49e91214e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60d9ae1abc97d348dced9e4a21236c70658a9141
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731091"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488139"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>Metoda ICorDebugILCode::GetEHClauses
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
@@ -35,7 +35,7 @@ HRESULT GetEHClauses(
    [out, size_is(cClauses), length_is(*pcClauses)] CorDebugEHClause clauses[]);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `cClauses`  
  [in] Pojemność magazynu `clauses` tablicy. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf3d362902eb338e5d797b66c5fe2af4f3e1ae9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81c590dd1f3f6682179645fb384cdd82d1d7ed96
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508330"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503258"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>ICorDebugProcess5::GetGCHeapInformation — Metoda
 Zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych, w tym, czy jest ono aktualnie wyliczalny.  
@@ -35,7 +35,7 @@ HRESULT GetGCHeapInformation(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pHeapInfo`  
  [out] Wskaźnik do [cor_heapinfo —](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) wartość, która zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych.  
   

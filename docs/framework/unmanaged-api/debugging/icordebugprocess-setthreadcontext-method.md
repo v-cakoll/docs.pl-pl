@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ed79eb799971dfcbc9fd787cd0290795f79d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e281022cd7bc9b2095fdbd3964061b811ef60e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417976"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496966"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext — Metoda
-Ustawia kontekst dla danego wątku, w tym procesie.  
+Ustawia kontekst dla danego wątku w ramach tego procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,9 +37,9 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `threadID`  
- [in] Identyfikator wątku, który można ustawić kontekstu.  
+ [in] Identyfikator wątku, do których chcesz ustawić kontekst.  
   
  `contextSize`  
  [in] Rozmiar `context` tablicy.  
@@ -47,17 +47,17 @@ HRESULT SetThreadContext(
  `context`  
  [in] Tablica bajtów, które opisują kontekst wątku.  
   
- Kontekst określa architektury procesora, na którym jest wykonywany wątku.  
+ Kontekst określa z architekturą procesora, na którym wykonywany jest wątek.  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger powinien wywoływać tej metody zamiast Win32 `SetThreadContext` działać, ponieważ wątek faktycznie może być w stanie "hijacked", w którym zostało tymczasowo zmienione kontekst. Tej metody należy użyć tylko wtedy, gdy wątek jest w kodzie natywnym. Użyj [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) wątków w kodzie zarządzanym. Nigdy nie powinien konieczne zmodyfikowanie kontekst wątku podczas zdarzenia debugowania poza pasmem (OOB).  
+ Debuger powinien wywoływać tej metody, a nie Win32 `SetThreadContext` działać, ponieważ wątek rzeczywiście może być w stanie "przejętego", w którym zostało tymczasowo zmienione kontekst. Ta metoda powinna służyć tylko wtedy, gdy wątek jest w kodzie natywnym. Użyj [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) dla wątków w kodzie zarządzanym. Nigdy nie należy modyfikować kontekst wątku podczas zdarzenia debugowania poza pasmem (OOB).  
   
- Dane przekazane musi być strukturą kontekst dla bieżącej platformy.  
+ Dane przekazywane musi być strukturą kontekstu dla bieżącej platformy.  
   
- Ta metoda może uszkodzić środowiska uruchomieniowego, użycie nieprawidłowo.  
+ Ta metoda może uszkodzić środowisko wykonawcze, jeśli niepoprawnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 540f9d1a765ff46235f3c3d62f5da4a00b8ab85a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1d9fdef9d183a03fd7f335a13683e1d1a3f95c8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745483"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485723"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual — Metoda
 Zapisuje dane z określonego bufora do adresu określonego pamięci wirtualnej.  
@@ -39,7 +39,7 @@ HRESULT WriteVirtual (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `address`  
  [in] CLRDATA_ADDRESS, która przechowuje adres pamięci wirtualnej.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a958e38857d2407930cb8c03a08eabdf6574cda9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1c1b2d8274baf5fd43991979bc65cd2c2299b46
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563895"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484696"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed — Metoda
 Pobiera wartość wskazującą, czy określony zestaw ma silnej nazwy.  
@@ -36,7 +36,7 @@ RESULT IsStronglyNamed (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pwzAssemblyIdentity`  
  [in] Nieprzezroczysty canonical zestawu danych tożsamości zestawu, który ma zostać obliczone.  
   

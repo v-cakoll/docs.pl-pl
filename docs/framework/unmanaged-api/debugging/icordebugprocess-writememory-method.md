@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da4c282c7f969a406a657d1e30dd6120a32b4e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e9d640fb1c9dae5bb195baa504e560ba8e45821
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420911"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497096"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory — Metoda
-Zapisuje dane do to obszar pamięci w tym procesie.  
+Zapisuje dane do obszar pamięci w ramach tego procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,26 +37,26 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` wartość, która jest adresem podstawowym obszaru pamięci dane są zapisywane. Przed wystąpieniem transferu danych, system sprawdza, czy obszar pamięci o określonym rozmiarze, rozpoczynając od adres podstawowy jest dostępny do zapisu. Jeśli nie jest dostępny, metoda kończy się niepowodzeniem.  
+ [in] A `CORDB_ADDRESS` wartość, która nie jest adresem podstawowym obszaru pamięci, do której jest zapisywany. Zanim nastąpi transfer danych, system sprawdza, czy obszar pamięci o określonym rozmiarze, rozpoczynając od adres podstawowy jest dostępny do zapisu. Jeśli nie jest dostępny, metoda kończy się niepowodzeniem.  
   
  `size`  
- [in] Liczba bajtów do zapisania w obszarze pamięci.  
+ [in] Liczba bajtów do zapisania obszaru pamięci.  
   
  `buffer`  
- [in] Buforu, który zawiera dane do zapisania.  
+ [in] Bufor, który zawiera dane do zapisania.  
   
  `written`  
- [out] Wskaźnik do zmiennej, która odbiera liczba bajtów zapisanych do obszaru pamięci w tym procesie. Jeśli `written` ma wartość NULL, ten parametr jest ignorowany.  
+ [out] Wskaźnik do zmiennej, która odbiera liczba bajtów zapisanych na obszaru pamięci w ramach tego procesu. Jeśli `written` ma wartość NULL, ten parametr jest ignorowany.  
   
 ## <a name="remarks"></a>Uwagi  
- Dane są automatycznie zapisywane za wszystkie punkty przerwania. W programie .NET Framework w wersji 2.0 natywnego debugery nie należy używać tej metody można wstawić punktów przerwania do strumienia instrukcji. Użyj [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) zamiast tego.  
+ Dane są automatycznie zapisywane za żadnych punktów przerwania. W programie .NET Framework 2.0 debugery natywne nie należy używać tej metody do dodania punktów przerwania w strumieniu instrukcji. Użyj [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) zamiast tego.  
   
- `WriteMemory` Metoda powinna być używana tylko poza kodu zarządzanego. Ta metoda może uszkodzić środowiska uruchomieniowego, użycie nieprawidłowo.  
+ `WriteMemory` Metoda powinna służyć wyłącznie poza kodu zarządzanego. Ta metoda może uszkodzić środowisko wykonawcze, jeśli niepoprawnie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

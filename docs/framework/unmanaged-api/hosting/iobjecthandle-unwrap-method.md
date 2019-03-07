@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da25055917743481f5a8314023ed94d552fe49ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5539d77b93be1f56102970e9febe6f63599d78e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526421"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502972"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap — Metoda
 Dekoduje obiekt marshal przez wartość pośredni.  
@@ -35,7 +35,7 @@ HRESULT Unwrap (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppv`  
  [out] Wskaźnik do obiektu do odkodowania.  
   

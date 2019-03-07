@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc986dc27deb08f779a9654324e6832d8420554a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c11eeeb4eece495a7ccbe51c7e04d077e497ce
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587141"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494574"
 ---
 # <a name="getscope2-method"></a>GetScope2 — Metoda
 Pobiera zakres importu.  
@@ -37,7 +37,7 @@ HRESULT GetScope2(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `AssemblyID`  
  Identyfikator zestawu docelowego.  
   

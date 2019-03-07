@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a253503f3046c004cc7109a31b5aa8fd8e8dc195
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618054"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488999"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile — Metoda
 Pozwala na określenie lub zresetowania pliku manifestu, który konsolidator używa podczas tworzenia zestawu.  
@@ -34,7 +34,7 @@ HRESULT SetManifestFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pszFile`  
   
  Nazwa pliku manifestu, którego zawartość są umieszczane w obiekcie blob zasobów Win32.  

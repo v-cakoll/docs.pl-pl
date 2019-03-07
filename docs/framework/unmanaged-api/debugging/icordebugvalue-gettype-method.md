@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4d2ba850ffc6e49cf330174dda9524c7bac4549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f99495b04942b7902619e0383522caf9f78ae984
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492507"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType — Metoda
 Pobiera typ pierwotny obiekt "ICorDebugValue".  
@@ -35,7 +35,7 @@ HRESULT GetType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pType`  
  [out] Wskaźnik do wartości wyliczenia "Corelementtype —", który wskazuje typ tej wartości.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d741bda5426dee1292df0e6fd9107cc2f44c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 540288f83de9c3c6ff2111330c77ded48abd6d5f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413322"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479119"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize — Metoda
 Pobiera rozmiar w bajtach modułu.  
@@ -35,14 +35,14 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pcBytes`  
  [out] Rozmiar modułu w bajtach.  
   
- Jeśli moduł został utworzony z generator obrazu natywnego (NGen.exe), rozmiar modułu będą miały wartość zero.  
+ Moduł został utworzony z generatorem obrazu natywnego (NGen.exe), rozmiar modułu będzie mieć wartość zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

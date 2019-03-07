@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dfe2bb234631a733248066e8475c135de288e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f0ed1aa0d095b13a90ed5b036719e71ccc8e272
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737601"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468198"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName — Metoda
 Pobiera ciąg zawierający nazwę zarządzanego Asystenta debugowania (MDA), reprezentowana przez [icordebugmda —](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
@@ -38,7 +38,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `cchName`  
  [in] Rozmiar `szName` tablicy.  
   

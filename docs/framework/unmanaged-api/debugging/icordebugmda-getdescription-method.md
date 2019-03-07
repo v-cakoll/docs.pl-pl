@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74b9ef2cdd48c403eb5a50d357a673eee3102106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93721815d44d7c348860742ab2c8b237cb8f5f67
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548256"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469590"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription — Metoda
 Pobiera ciąg zawierający opis zarządzanego Asystenta debugowania (MDA), reprezentowana przez [icordebugmda —](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
@@ -38,7 +38,7 @@ HRESULT GetDescription (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `cchName`  
  [in] Rozmiar buforu ciągu, w którym będą przechowywane opis.  
   

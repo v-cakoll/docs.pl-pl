@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 164c5941587d91fa807827b8783260fa34a8ef66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2efc8e0b47e68e53858bc949e6f0d0ca1352c7e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492416"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501590"
 ---
 # <a name="iclrtaskmanagergetcurrenttask-method"></a>ICLRTaskManager::GetCurrentTask — Metoda
 Pobiera [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpienia, które jest aktualnie uruchomione w wątku systemu operacyjnego, z którego pochodzi wywołania metody.  
@@ -35,7 +35,7 @@ HRESULT GetCurrentTask (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppTask`  
  [out] Wskaźnik na adres `ICLRTask` wystąpienie, które jest obecnie wykonywany w wątku systemu operacyjnego, z którego pochodzi wywołania lub wartość null, jeśli zadanie nie jest obecnie wykonywany w tym wątku.  
   

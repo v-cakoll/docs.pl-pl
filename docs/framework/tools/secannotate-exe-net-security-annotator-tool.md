@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be9100f49fcf6ed2926489e8346123eb7c3cfc70
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: caedc586a9d33ecbdc4a8c7202abcfdaafabd98c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221352"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469277"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Narzędzie adnotacji dotyczące zabezpieczeń w programach .NET)
 Narzędzie .NET Security Annotator (SecAnnotate.exe) jest aplikacją wiersza polecenia, który identyfikuje `SecurityCritical` i `SecuritySafeCritical` części jeden lub więcej zestawów.  
@@ -29,15 +29,15 @@ Narzędzie .NET Security Annotator (SecAnnotate.exe) jest aplikacją wiersza pol
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |`/a`<br /><br /> lub<br /><br /> `/showstatistics`|Pokazuje statystykę użycia przezroczystości w analizowanych w ten sposób zestawach.|  
-|`/d:` *Katalog*<br /><br /> lub<br /><br /> `/referencedir:` *Katalog*|Określa katalog, w którym mają być wyszukiwanie zależne zestawy podczas oznaczania adnotacjami.|  
+|`/d:` *directory*<br /><br /> lub<br /><br /> `/referencedir:` *directory*|Określa katalog, w którym mają być wyszukiwanie zależne zestawy podczas oznaczania adnotacjami.|  
 |`/i`<br /><br /> lub<br /><br /> `/includesignatures`|Umieszcza rozszerzone informacje podpisu w pliku raportu oznaczania adnotacjami.|  
 |`/n`<br /><br /> lub<br /><br /> `/nogac`|Pomija wyszukiwanie zestawów, których dotyczą odwołania, w globalnej pamięci podręcznej zestawów.|  
-|`/o:` *OUTPUT.XML*<br /><br /> lub<br /><br /> `/out:` *OUTPUT.XML*|Określa wyjściowy plik adnotacji.|  
+|`/o:` *output.xml*<br /><br /> lub<br /><br /> `/out:` *output.xml*|Określa wyjściowy plik adnotacji.|  
 |`/p:` *maxpasses*<br /><br /> lub<br /><br /> `/maximumpasses:` *maxpasses*|Określa maksymalną liczbę adnotacji, które można przekazać do zestawów przed zatrzymaniem generowania nowych adnotacji.|  
 |`/q`<br /><br /> lub<br /><br /> `/quiet`|Określa tryb cichy, w którym moduł oznaczający adnotacjami nie wyświetla komunikatów o stanie, ale tylko informacje o błędach.|  
 |`/r:` *Zestaw*<br /><br /> lub<br /><br /> `/referenceassembly:` *Zestaw*|Dołącza określony zestaw podczas rozpoznawania zestawów zależnych w trakcie oznaczania adnotacjami. Zestawy, do których występują odwołania, otrzymują większy priorytet niż zestawy znajdujące się w ścieżce odwołania.|  
@@ -47,7 +47,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |||  
 |`/v`<br /><br /> lub<br /><br /> `/verify`|Sprawdza tylko, czy adnotacje zestawu są poprawne; nie podejmuje próby wykonania wielu przebiegów w celu znalezienia wszystkich wymaganych adnotacji, jeśli zestaw tego nie weryfikuje.|  
 |`/x`<br /><br /> lub<br /><br /> `/verbose`|Określa pełne dane wyjściowe podczas oznaczania adnotacjami.|  
-|`/y:` *Katalog*<br /><br /> lub<br /><br /> `/symbolpath:` *Katalog*|Uwzględnia określony katalog podczas wyszukiwania plików symboli w trakcie oznaczania adnotacjami.|  
+|`/y:` *directory*<br /><br /> lub<br /><br /> `/symbolpath:` *directory*|Uwzględnia określony katalog podczas wyszukiwania plików symboli w trakcie oznaczania adnotacjami.|  
   
 ## <a name="remarks"></a>Uwagi  
  Parametry i zestawy można także podać w pliku odpowiedzi, który jest określany w wierszu polecenia i poprzedzany znakiem (@). Każdy wiersz w pliku odpowiedzi musi zawierać pojedynczy parametr lub nazwę zestawu.  

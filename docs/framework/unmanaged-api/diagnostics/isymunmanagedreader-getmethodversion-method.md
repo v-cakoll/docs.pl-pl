@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45aaceb2c39703cb1369941ce801c9cff1935ad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 364742957d16f12508d2df6f4cd7f50d7956d4cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479457"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion — Metoda
 Pobiera wersję metody. Wersja metody rozpoczyna się od 1 i rośnie, każdym razem, gdy metoda jest ponownie kompilowana. Ponowna kompilacja może się zdarzyć bez konieczności wprowadzania zmian do metody.  
@@ -35,7 +35,7 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pMethod`  
  [in] Metoda, dla którego można pobrać wersji.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3f0ca6d930b22f30fe9bbc5b5a04bf1e034f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405828"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484241"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType — Metoda
-Pobiera tablicę określonego typu lub wskaźnik lub odwołanie do określonego typu.  
+Pobiera tablicę elementów określonego typu lub wskaźnik lub odwołanie do określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,32 +38,32 @@ HRESULT GetArrayOrPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `elementType`  
- [in] Wartość wyliczenia CorElementType określający typ podstawowy natywnego (tablicy, wskaźnika lub odwołania) ma zostać utworzony.  
+ [in] Wartość corelementtype — wyliczenie, określający typ podstawowy natywnego (tablicy, wskaźnika lub odwołania) ma zostać utworzony.  
   
  `nRank`  
- [in] Ranga (to znaczy, że liczba wymiarów) tablicy. Ta wartość musi wynosić 0, jeśli `elementType` Określa typ wskaźnika lub odwołania.  
+ [in] Ranga (oznacza to, że liczba wymiarów) tablicy. Ta wartość musi wynosić 0, jeśli `elementType` Określa typ wskaźnika lub odwołania.  
   
  `pTypeArg`  
  [in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ tablicy, wskaźnika lub odwołania do utworzenia.  
   
  `ppType`  
- [out] Wskaźnik do adresu `ICorDebugType` typu obiektu, który reprezentuje skonstruowane tablicy, typ wskaźnika lub odwołania.  
+ [out] Wskaźnik na adres `ICorDebugType` typ obiektu, który reprezentuje zbudowany tablicy, typ wskaźnika lub odwołania.  
   
 ## <a name="remarks"></a>Uwagi  
  Wartość *elementType* musi mieć jedną z następujących czynności:  
   
--   POPRAWNOŚCI ELEMENTU ELEMENT_TYPE_PTR  
+-   ELEMENT_TYPE_PTR  
   
--   ELEMENT_TYPE_BYREF  
+-   POLE  
   
 -   ELEMENT_TYPE_ARRAY lub ELEMENT_TYPE_SZARRAY  
   
- Jeśli wartość *elementType* poprawności elementu ELEMENT_TYPE_PTR lub ELEMENT_TYPE_BYREF, *nRank* musi mieć wartość zero.  
+ Jeśli wartość *elementType* ELEMENT_TYPE_PTR lub pole, *nRank* musi mieć wartość zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

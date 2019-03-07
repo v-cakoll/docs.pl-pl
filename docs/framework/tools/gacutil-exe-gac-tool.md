@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 779cf36fb10cc3acbefabd6ef90a885cc221f3f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3b1f1d153c0ba8c9ae44243adc4672eee872085
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541225"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492494"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Narzędzie Global Assembly Cache)
 Narzędzie globalnej pamięci podręcznej zestawów umożliwia wyświetlenie zawartości globalnej pamięci podręcznej zestawów i wykonywanie na niej operacji oraz pobieranie pamięci podręcznej.  
@@ -39,7 +39,7 @@ Narzędzie globalnej pamięci podręcznej zestawów umożliwia wyświetlenie zaw
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
   
 |Argument|Opis|  
 |--------------|-----------------|  

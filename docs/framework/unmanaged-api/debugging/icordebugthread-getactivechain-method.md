@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9030319ca12aafcf452e3ecd816fc269f0abfc0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417518"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483319"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain — Metoda
-Pobiera wskaźnika interfejsu active (najnowsze) łańcucha stosu dla tego obiektu ICorDebugThread.  
+Pobiera wskaźnik interfejsu do aktywnego łańcucha stosu (najnowsze) dla tego obiektu ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetActiveChain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik do adresu ICorDebugChain obiekt, który reprezentuje łańcucha stosu.  
+ [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje łańcucha stosu.  
   
 ## <a name="remarks"></a>Uwagi  
- `ppChain` Parametr ma wartość null, jeśli żaden łańcuch stosu jest obecnie aktywny.  
+ `ppChain` Parametr ma wartość null, jeśli żaden łańcuch stosu jest obecnie aktywna.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

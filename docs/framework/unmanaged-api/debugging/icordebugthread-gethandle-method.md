@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358597edc9fbc5203e5c00a5fb4d04019281060d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 900fece1dd29f73f77b85ff08e4deff1396f8aaf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418275"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484514"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle — Metoda
-Pobiera bieżący dojście active części tego ICorDebugThread.  
+Pobiera bieżący uchwyt active część tego ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,17 +35,17 @@ HRESULT GetHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `phThreadHandle`  
- [out] Wskaźnik do HTHREAD będący dojście active częścią tego wątku.  
+ [out] Wskaźnik do HTHREAD będącego uchwytu aktywnego część tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Dojście może zmienić proces wykonuje i mogą być różne dla różnych części wątku.  
+ Uchwyt może zmienić proces wykonywany i mogą być różne dla różnych części wątku.  
   
- Ta dojścia jest własnością interfejsu API debugowania. Debuger powinien zduplikowane go przed jego użyciem.  
+ Tego dojścia jest własnością interfejsu API debugowania. Debuger powinien zduplikować go przed jego użyciem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

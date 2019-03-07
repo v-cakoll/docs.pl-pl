@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b712b7e88e6cb5693c0823799e0980d90e34ff0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568065"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492611"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect — Metoda
 Służy jako logiczne otoki dla odpowiedniej funkcji Win32. Implementacja Win32 `VirtualProtect` zmienia ochronę na region stron zadeklarowanej w wirtualnej przestrzeni adresowej procesu wywołującego.  
@@ -38,7 +38,7 @@ HRESULT VirtualProtect (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `lpAddress`  
  [in] Wskaźnik na adres bazowy pamięci wirtualnej, w których atrybuty ochrony mają być zmienione.  
   

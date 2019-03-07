@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e64bc173717c3121d6c2b101f734ee325a0ced53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64cc5b6e7c6fe44080b35dc07f029ad311b88ca7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413764"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489387"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread — Metoda
-Pobiera wątku, w którym tej oceny jest wykonywany lub będą wykonywane.  
+Pobiera wątku, w którym ta ocena jest wykonywany lub zostanie wykonana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,12 @@ HRESULT GetThread (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppThread`  
- [out] Wskaźnik do adresu ICorDebugThread obiekt, który reprezentuje wątku.  
+ [out] Wskaźnik na adres ICorDebugThread obiekt, który reprezentuje wątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

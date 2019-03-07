@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad9e552d31944523222798fe7dba2201461b1243
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487268"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints — Metoda
 Pobiera wszystkie punkty sekwencji w ramach tej metody.  
@@ -41,7 +41,7 @@ HRESULT GetSequencePoints(
     [in, size_is(cPoints)] ULONG32  endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `cPoints`  
  [in] A `ULONG32` wielkości, która otrzymuje `offsets`, `documents`, `lines`, `columns`, `endLines`, i `endColumns` tablic.  
   

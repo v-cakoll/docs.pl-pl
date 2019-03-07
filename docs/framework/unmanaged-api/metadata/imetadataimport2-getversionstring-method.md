@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e041efed929255d4ce3af2d051a391bc4179cda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b4c7ef2beca06713c04c7e0f8e30a47b884bf5c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630921"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486293"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString — Metoda
 Pobiera numer wersji środowiska uruchomieniowego, który został użyty do tworzenia zestawu.  
@@ -37,7 +37,7 @@ HRESULT GetVersionString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pwzBuf`  
  [out] Tablica do przechowywania ciąg, który określa numer wersji.  
   

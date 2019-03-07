@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2452f4be0acde300676bf56011416e0a9ef16464
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82902e6a395fe62464065ccea4cca5b52c960f0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411719"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492221"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller — Metoda
-Pobiera wskaźnik do obiektu ICorDebugFrame w łańcuchu bieżącego, która wywołuje tej ramki.  
+Pobiera wskaźnik do obiektu ICorDebugFrame w łańcuchu bieżącym wywołaniu tej ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,12 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppFrame`  
- [out] Wskaźnik do adresu `ICorDebugFrame` obiekt, który reprezentuje wywołanie ramki. Ta wartość ma wartość null, jeśli wywołane ramki jest najbardziej zewnętrznego ramki w łańcuchu bieżącej.  
+ [out] Wskaźnik na adres `ICorDebugFrame` obiekt, który reprezentuje wywoływania ramki. Ta wartość jest wartość null, jeśli ramka o nazwie jest najbardziej zewnętrznej ramki w łańcuchu bieżącego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

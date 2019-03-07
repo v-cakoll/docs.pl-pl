@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53571268391011cc1dc0ff112d484e1fa140057f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77164f9d8a1641ba37fa504d09d77ec6aecc3db5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407717"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502385"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>CreateDebuggingInterfaceFromVersion — Funkcja programu Silverlight
-Akceptuje wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) ciąg wersji zwrócone przez [createversionstringfrommodule — funkcja](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)i zwraca odpowiedniego interfejsu debugera (zazwyczaj [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
+Akceptuje wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) wersja ciąg, który jest zwracany z [createversionstringfrommodule — funkcja](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)i zwraca odpowiedniego interfejsu debugera (zazwyczaj [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,37 +29,37 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `szDebuggeeVersion`  
- [in] Ciąg wersji aparatu CLR w debugowanym obiekcie docelowym, który jest zwracany przez [createversionstringfrommodule — funkcja](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).  
+ [in] Ciąg wersji środowiska CLR w debugowanym obiekcie docelowym, która jest zwracana przez [createversionstringfrommodule — funkcja](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).  
   
  `ppCordb`  
- [out] Wskaźnik na wskaźnik do obiektu modelu COM (`IUnknown`). Ten obiekt będzie rzutowany [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) obiekt przed zwróceniem jest.  
+ [out] Wskaźnik do wskaźnika do obiektu COM (`IUnknown`). Ten obiekt zostanie rzutowany [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) obiekt przed zwróceniem.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- `ppCordb` odwołuje się do prawidłowego obiektu, który implementuje [ICorDebug — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfejsu.  
+ `ppCordb` odwołuje się do prawidłowego obiektu, który implementuje [icordebug — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfejsu.  
   
  E_INVALIDARG  
  Albo `szDebuggeeVersion` lub `ppCordb` ma wartość null.  
   
  CORDBG_E_DEBUG_COMPONENT_MISSING  
- Nie można zlokalizować składnika, który jest konieczny, aby debugowanie CLR. Oznacza to, że plik mscordbi.dll lub mscordaccore.dll nie znaleziono w tym samym katalogu co element docelowy CoreCLR.dll.  
+ Składnik, który jest konieczny, aby debugowanie CLR nie można odnaleźć. Oznacza to, że plik mscordbi.dll lub mscordaccore.dll nie został znaleziony w tym samym katalogu jako element docelowy CoreCLR.dll.  
   
  CORDBG_E_INCOMPATIBLE_PROTOCOL  
- Plik mscordbi.dll lub mscordaccore.dll nie jest ta sama wersja jako cel CoreCLR.dll.  
+ Plik mscordbi.dll lub mscordaccore.dll nie jest tę samą wersję, jako cel CoreCLR.dll.  
   
- E_FAIL (lub inne kody powrotu E_)  
- Nie można zwrócić [ICorDebug — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).  
+ E_FAIL (lub inne kody powrotne e_)  
+ Nie można zwrócić [icordebug — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).  
   
 ## <a name="remarks"></a>Uwagi  
- Interfejs, który jest zwracany zapewnia funkcji dołączanie do środowiska CLR w procesie docelowym i debugowanie kodu zarządzanego, uruchomionym środowiska CLR.  
+ Interfejs, który jest zwracany udostępnia funkcje służące do dołączania do CLR w procesie docelowym i debugowania kodu zarządzanego, który działa środowisko CLR.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** dbgshim.h  
   
- **Biblioteka:** biblioteki dbgshim.dll  
+ **Biblioteka:** dbgshim.dll  
   
  **Wersje programu .NET framework:** 3.5 z dodatkiem SP1

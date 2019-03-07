@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d234e01e3d47a64b9a001591ee2b61074eea8afb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ed6570e11008e52d4b1f97c2dc90e2ccbef2e35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403397"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471388"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus — Metoda
-Ustawia wartość wskazującą, czy metoda jest zdefiniowane przez użytkownika kod dla każdej metody klasy.  
+Ustawia wartość wskazującą, czy metoda jest zdefiniowany przez użytkownika kod dla każdej metody klasy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,17 +35,17 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `bIsJustMyCode`  
- [in] Ustaw `true` aby wskazać, że metoda jest zdefiniowane przez użytkownika kod; w przeciwnym razie wartość `false`.  
+ [in] Ustaw `true` do wskazania, że metoda jest zdefiniowana przez użytkownika kod; w przeciwnym wypadku ustaw `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Stepper (JMC) just my kodu pominie zdefiniowane użytkownika kodu. Kod użytkownika muszą być podzbiorem możliwością debugowania kodu.  
+ Stepper (JMC) just my kodu pominie kod zdefiniowane użytkownika. Zdefiniowane przez użytkownika kod musi być podzestawem kod do debugowania.  
   
- `SetJMCStatus` Zwraca wartość HRESULT S_FALSE, jeśli nie można ustawić wartości dla dowolnej metody, nawet jeśli pomyślnie ustawia wartość dla wszystkich innych metod.  
+ `SetJMCStatus` Zwraca wartość HRESULT S_FALSE, jeśli nie można ustawić wartości dla dowolnej metody nawet, jeśli pomyślnie ustawia wartość dla wszystkich innych metod.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

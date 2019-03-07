@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ab9773a5056dbfba422a9a53c7cd877e4c29abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2eaa48dcc7dad2d66f1a60922c94193120b59b32
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404602"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481359"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>ICorDebugAppDomain::GetModuleFromMetaDataInterface — Metoda
-Pobiera moduł, który odpowiada interfejsu określonych metadanych.  
+Pobiera moduł, który odnosi się do interfejsu określonych metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,15 +36,15 @@ HRESULT GetModuleFromMetaDataInterface (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pIMetaData`  
  [in] Wskaźnik do obiektu, który jest jednym z [interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
   
  `ppModule`  
- [out] Wskaźnik do adresu ICorDebugModule obiekt, który reprezentuje Moduł odpowiadający interfejsowi określonych metadanych.  
+ [out] Wskaźnik na adres obiektu ICorDebugModule, który reprezentuje Moduł odpowiadający interfejsowi określonych metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

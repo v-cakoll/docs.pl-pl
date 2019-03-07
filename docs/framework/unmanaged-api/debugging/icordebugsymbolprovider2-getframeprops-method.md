@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd8cc461519b01a9bf62a28610386e51630060d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c02a2b31ecc588879b43668d56cd9978b62e49a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646204"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482486"
 ---
 # <a name="icordebugsymbolprovider2getframeprops-method"></a>Metoda ICorDebugSymbolProvider2::GetFrameProps
 Zwraca metodę uruchamiania względny adres wirtualny, metody i podany kod względny adres wirtualny nadrzędnej ramki.  
@@ -24,7 +24,7 @@ HRESULT GetFrameProps(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `codeRva`  
  [in] Względny adres wirtualny kodu.  
   

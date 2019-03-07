@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401632"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501457"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId — Metoda
 Pobiera unikatowy identyfikator domeny aplikacji.  
@@ -35,7 +35,7 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pId`  
  [out] Unikatowy identyfikator domeny aplikacji.  
   
@@ -43,7 +43,7 @@ HRESULT GetID (
  Identyfikator domeny aplikacji jest unikatowa w ramach procesu zawierającego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 982e80696e0a8831397197c0c12d748d1d85c349
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e77db451103919df5809b2558fcb53a3d7fba71c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978937"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479964"
 ---
 # <a name="include-c-programming-guide"></a>\<obejmują > (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -23,7 +23,7 @@ ms.locfileid: "56978937"
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `filename`  
  Nazwa pliku XML zawierającego dokumentację. Nazwa pliku może być kwalifikowana ze ścieżką względną do pliku kodu źródłowego. Ujmij `filename` w znaki pojedynczego cudzysłowu ("").  
   

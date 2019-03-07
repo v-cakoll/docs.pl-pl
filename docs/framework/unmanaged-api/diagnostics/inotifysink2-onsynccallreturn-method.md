@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc182687b12f5941996c17f4c09da44c49ef815c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae3067e6941451d4debd8d18ca58a91708a48e56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694909"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487260"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn — Metoda
 Pobiera wywoływane, gdy wywołanie zwraca.  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallReturn
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `in_CallID`  
  [in] Identyfikator wywołania zwracanego. Zobacz [call_id — struktura](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   

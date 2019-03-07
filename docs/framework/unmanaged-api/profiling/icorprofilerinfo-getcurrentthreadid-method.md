@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8be698d27ce69f955e5c1f17f5258602880c4021
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32b44cb3a96205e8a784c81a05324370fb5ac67e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618701"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478547"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID — Metoda
 Pobiera identyfikator bieżącego wątku, jeśli jest wątków zarządzanych.  
@@ -34,7 +34,7 @@ HRESULT GetCurrentThreadID(
     [out] ThreadID *pThreadId);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pThreadId`  
  [out] Wskaźnik do zwrócony identyfikator wątków zarządzanych.  
   

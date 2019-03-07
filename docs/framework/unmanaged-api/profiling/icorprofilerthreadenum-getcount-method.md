@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c96c0a9819012c680a67a22d10d173c83d2f6da3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aaec45018261cd9318f65c26eec6ab89b437c3fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536239"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499007"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount — Metoda
 Pobiera liczbę wątków, które są używane przez aplikację.  
@@ -34,7 +34,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `celt`  
  [out] Liczba wątków używanych przez aplikację.  
   

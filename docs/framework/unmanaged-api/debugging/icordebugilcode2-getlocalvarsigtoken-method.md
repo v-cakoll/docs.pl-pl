@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e5a706b3e60bb9460434425ab82125811862ba0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ee067faddf7300512387c26ae4ce4fda2b73353
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740583"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475804"
 ---
 # <a name="icordebugilcode2getlocalvarsigtoken-method"></a>Metoda ICorDebugILCode2::GetLocalVarSigToken
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
@@ -34,7 +34,7 @@ HRESULT GetLocalVarSigToken(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pmdSig`  
  [out] Wskaźnik do `mdSignature` tokenu dla lokalnej zmiennej podpisu dla tej funkcji lub `mdSignatureNil` czy brak podpisu (to znaczy, jeśli funkcja nie ma żadnych zmiennych lokalnych).  
   

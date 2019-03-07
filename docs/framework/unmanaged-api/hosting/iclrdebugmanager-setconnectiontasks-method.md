@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be3bfc69c551179c99b9fb2134c12f3ab1b2dd63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cb4210972ba15a7ba3c7df5981e668cb5542f5c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713226"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471410"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks — Metoda
 Kojarzy listę [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpień przy użyciu identyfikatora i przyjazną nazwę.  
@@ -37,7 +37,7 @@ HRESULT SetConnectionTasks (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `id`  
  [in] Identyfikator określonego hosta do nawiązania połączenia, z którą chcesz skojarzyć `ppCLRTask` tablicy.  
   

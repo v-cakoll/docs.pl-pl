@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9b2fc1028eea4965dd9ac603706279e96e3855c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a44e85d0f697b8388b45373340e1691892ea499
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552063"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503271"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>IHostSyncManager::CreateCrst — Metoda
 Tworzy obiekt sekcję krytyczną synchronizacji.  
@@ -35,7 +35,7 @@ HRESULT CreateCrst (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppCrst`  
  [out] Wskaźnik na adres [ihostcrst —](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) wystąpienia implementowane przez hosta lub wartość null, jeśli nie można utworzyć sekcję krytyczną.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2515e21ec00bd656eafd21a092a27304f7b1769
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f014f9213a4b9a2d5119af9a6dceebb9a9d54b52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473475"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException — Metoda
 Czyści niezarządzane bieżącego wyjątku dla danego wątku.  
@@ -33,17 +33,17 @@ Czyści niezarządzane bieżącego wyjątku dla danego wątku.
 HRESULT ClearCurrentException([in] DWORD threadID);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `threadID`  
- [in] Identyfikator wątku wyczyszczone bieżący wyjątek niezarządzane.  
+ [in] Identyfikator wątku, wyczyszczone bieżący wyjątek niezarządzanych.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołanie tej metody przed wywołaniem [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) po zgłosił niezarządzany wyjątek, który powinien być ignorowane przez obiekt debugowany wątek. Spowoduje to wyczyszczenie zarówno oczekujących wewnątrzpasmowe (IB), jak i poza pasmem (OOB) zdarzenia dla danego wątku. Wszystkie punkty przerwania OOB i pojedynczy krok wyjątki zostaną automatycznie wyczyszczone.  
+ Wywołanie tej metody, przed wywołaniem [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) kiedy wątek zgłosił wyjątek niezarządzanych, które mają być ignorowane przez debugowany program. Spowoduje to wyczyszczenie zarówno oczekujących wewnątrzpasmowe (IB), jak i poza pasmem (OOB) zdarzenia dla danego wątku. Wszystkie punkty przerwania OOB i wyjątki pojedynczy krok zostaną automatycznie wyczyszczone.  
   
- Użyj [ICorDebugThread2::InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) przechwycenia bieżącego zarządzany wyjątek w wątku.  
+ Użyj [ICorDebugThread2::InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) przechwycić bieżący wyjątek w wątku zarządzanych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

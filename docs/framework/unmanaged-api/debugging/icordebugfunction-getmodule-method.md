@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef12634da477e72757e98e520b600ec1ee0f1b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1cefe84c482df3b20b5939e031ad76647f295d3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412168"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484628"
 ---
 # <a name="icordebugfunctiongetmodule-method"></a>ICorDebugFunction::GetModule — Metoda
-Pobiera moduł, w którym ta funkcja jest zdefiniowany.  
+Pobiera moduł, w którym ta funkcja jest zdefiniowana.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,12 @@ HRESULT GetModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppModule`  
- [out] Wskaźnik do adresu ICorDebugModule obiekt, który reprezentuje modułu, w którym ta funkcja jest zdefiniowany.  
+ [out] Wskaźnik na adres ICorDebugModule obiekt, który reprezentuje moduł, w którym ta funkcja jest zdefiniowana.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

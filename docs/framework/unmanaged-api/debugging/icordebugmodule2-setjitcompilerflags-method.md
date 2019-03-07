@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e605859a3049abc0c17d9d6792ade78f4ad2bd78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c71ccbc62ea026a55a7e84f6925a78850594a813
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417365"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473790"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a>ICorDebugModule2::SetJITCompilerFlags — Metoda
-Ustawia flagi sterujące kompilacji to ICorDebugModule2 just-in-time (JIT).  
+Ustawia flagi, które kontrolują kompilację just-in-time (JIT) to icordebugmodule2 —.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,19 +35,19 @@ HRESULT SetJITCompilerFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `dwFlags`  
- [in] Bitowe połączenie [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wartości wyliczenia.  
+ [in] Bitowa kombinacja [cordebugjitcompilerflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wartości wyliczenia.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli `dwFlags` wartość jest nieprawidłowa, `SetJITCompilerFlags` metoda zakończy się niepowodzeniem.  
   
- `SetJITCompilerFlags` Metodę można wywołać tylko z poziomu [ICorDebugManagedCallback::LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) wywołania zwrotnego dla tego modułu. Próby wywołania je po `ICorDebugManagedCallback::LoadModule` wywołania zwrotnego został dostarczony spowoduje niepowodzenie.  
+ `SetJITCompilerFlags` Metoda może być wywołana tylko z poziomu [ICorDebugManagedCallback::LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) wywołania zwrotnego dla tego modułu. Próbuje wywołać go po `ICorDebugManagedCallback::LoadModule` wywołania zwrotnego dostarczonej będą się nie powieść.  
   
- Edytuj i Kontynuuj nie jest obsługiwana na 64-bitowym lub platformach Win9x. W związku z tym jeśli wywołujesz `SetJITCompilerFlags` metodę na jedną z tych dwóch platform z flagą CORDEBUG_JIT_ENABLE_ENC w `dwFlags`, `SetJITCompilerFlags` — metoda i wszystkie metody określonej Edytuj i Kontynuuj, takich jak [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), zakończy się niepowodzeniem.  
+ Edytuj i Kontynuuj nie jest obsługiwany w 64-bitowych lub Win9x platformach. W związku z tym jeśli wywołasz `SetJITCompilerFlags` metodę na jedną z tych dwóch platform przy użyciu flagi CORDEBUG_JIT_ENABLE_ENC w `dwFlags`, `SetJITCompilerFlags` metody i wszystkie metody określonej funkcji Edytuj i Kontynuuj, takich jak [icordebugmodule2 —:: Applychanges —](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), zakończy się niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

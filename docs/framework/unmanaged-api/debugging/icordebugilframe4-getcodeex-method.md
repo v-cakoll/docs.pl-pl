@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5574b457925506f3178af7c636a834fad4fdd15e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc7bee8c56d7b904bf881efb652a2517d151c31a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475774"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>Metoda ICorDebugILFrame4::GetCodeEx
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
@@ -35,7 +35,7 @@ HRESULT GetCodeEx(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `flags`  
  [in] [ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md) składowej wyliczenia, która określa, czy języka pośredniego (IL), zdefiniowane przez żądanie ReJIT programu profilującego znajduje się w ramce.  
   

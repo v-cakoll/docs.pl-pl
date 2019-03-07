@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de267042eab8d0f3d8dc2562c13bcdd068837220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cd118c302723a7079adbc0dd446d17c8afe9cb6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559479"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496771"
 ---
 # <a name="strongnamesignatureverification-function"></a>StrongNameSignatureVerification — Funkcja
 Pobiera wartość wskazującą, czy manifest zestawu w podanej ścieżce zawiera podpisu silnej nazwy, który jest weryfikowany zgodnie z określone flagi.  
@@ -38,7 +38,7 @@ BOOLEAN StrongNameSignatureVerification (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `wszFilePath`  
  [in] Ścieżka do przenośnych (.dll lub .exe) pliku wykonywalnego dla zestawu sprawdzić.  
   

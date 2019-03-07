@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfd7ee890a7f2c3ea8cd3de9fbe830575c0ca10c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b00afc900a27aea94389ee81065ea22ae359440d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498344"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>ICorDebugAppDomain::EnumerateBreakpoints — Metoda
 Pobiera moduł wyliczający dla wszystkich aktywnych punktów przerwania w domenie aplikacji.  
@@ -35,15 +35,15 @@ HRESULT EnumerateBreakpoints (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppBreakpoints`  
- [out] Wskaźnik do adresu ICorDebugBreakpointEnum obiektu, który moduł wyliczający dla wszystkich aktywnych punktów przerwania w domenie aplikacji.  
+ [out] Wskaźnik na adres icordebugbreakpointenum — obiekt, który jest moduł wyliczający aktywnymi punktami przerwania w domenie aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
  Moduł wyliczający obejmuje wszystkie typy punktów przerwania, w tym punkty przerwania funkcji i punkty przerwania danych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

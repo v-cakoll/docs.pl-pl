@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ba1f357c0d68b5a8b5104569a95433504cc84ee6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c88e52840c579173fd6202f1609dd0508d850cde
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675354"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470149"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip — Metoda
 Przesuwa kursor modułu wyliczającego z jego bieżącej pozycji, tak, aby określoną liczbę elementów są pomijane.  
@@ -33,7 +33,7 @@ Przesuwa kursor modułu wyliczającego z jego bieżącej pozycji, tak, aby okre�
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `celt`  
  [in] Liczba elementów, które mają zostać pominięte.  
   

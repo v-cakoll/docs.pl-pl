@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7bf3aa6d883dffece6ba89d41005499cc6206906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d326c801ed17fa6fe79f9e464e64844d0016e572
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401294"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489366"
 ---
 # <a name="icordebugappdomainenumeratesteppers-method"></a>ICorDebugAppDomain::EnumerateSteppers — Metoda
 Pobiera moduł wyliczający dla wszystkich aktywnych steppery w domenie aplikacji.  
@@ -35,12 +35,12 @@ HRESULT EnumerateSteppers (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppSteppers`  
- [out] Wskaźnik do adresu ICorDebugStepperEnum obiektu, który moduł wyliczający dla wszystkich aktywnych steppery w domenie aplikacji.  
+ [out] Wskaźnik na adres icordebugstepperenum — obiekt, który jest moduł wyliczający dla wszystkich aktywnych steppery w domenie aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

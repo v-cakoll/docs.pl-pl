@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1816aeb0ddf783c8ad0baa7f5d460f0fc60747e1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 90fd73346d255d195fa7384ebc2f60ebc4f32fba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974825"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480679"
 ---
 # <a name="see-c-programming-guide"></a>\<zobacz > (C# Programming Guide)
 ## <a name="syntax"></a>Składnia  
@@ -25,7 +25,7 @@ ms.locfileid: "56974825"
 <see cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  cref = " `member`"  
  Odwołanie do elementu członkowskiego lub pola, które są dostępne do wywoływania z bieżącym środowisku kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i przekazuje `member` do nazwy elementu w danych wyjściowych XML. Miejsce *elementu członkowskiego* w znaki podwójnego cudzysłowu ("").  
   

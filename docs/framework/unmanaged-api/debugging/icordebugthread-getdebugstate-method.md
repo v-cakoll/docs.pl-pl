@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d9696e29bc1b460c94d7f4d8afd3de82653333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419633"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489894"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState — Metoda
-Pobiera bieżący stan tego obiektu ICorDebugThread debugowania.  
+Pobiera bieżący stan debugowania tego obiektu ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pState`  
- [out] Wskaźnik do bitowe połączenie wartości wyliczenia CorDebugThreadState, które opisują bieżący stan debugowania tego wątku.  
+ [out] Wskaźnik do bitowa kombinacja wartości wyliczenia cordebugthreadstate —, który opisuje bieżący stan debugowania tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli proces jest obecnie zatrzymana, `pState` reprezentuje stan debugowania, czy istnieje dla tego wątku, jeśli proces będzie kontynuowane, nie rzeczywiste bieżący stan tego wątku.  
+ Jeśli proces jest obecnie zatrzymana, `pState` reprezentuje stan debugowania, który istniałby dla tego wątku, gdyby proces będzie kontynuowane nie rzeczywiste bieżący stan tego wątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

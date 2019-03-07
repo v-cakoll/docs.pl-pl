@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3af824a23d683f4d450ef6f60fd407928c41d51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77bae0de732fc8847650b9ce03f8228111a76334
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536961"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466521"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses — Metoda
 Pobiera moduł wyliczający dla zarządzanego procesów uruchomionych na tym komputerze.  
@@ -36,7 +36,7 @@ HRESULT EnumProcesses (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `Type`  
  Wartość [cor_pub_enumprocess —](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) wyliczenie, który określa typ procesu, które mają zostać pobrane. W bieżącej wersji COR_PUB_MANAGEDONLY tylko jest prawidłowa.  
   

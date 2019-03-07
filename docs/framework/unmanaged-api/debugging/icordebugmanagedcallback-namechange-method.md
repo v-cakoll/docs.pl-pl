@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c33f287cf7ccadeb75ba0bbccf9118aeedc1f942
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8bc4eb1895fe67c25354b42fe3ae1ffe80bca58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607439"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491324"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>ICorDebugManagedCallback::NameChange — Metoda
 Powiadamia debugera, że zmieniono nazwę domeny aplikacji lub wątku.  
@@ -36,7 +36,7 @@ HRESULT NameChange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pAppDomain`  
  [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenie aplikacji, która albo była zmiana nazwy lub który zawiera wątku, który zmienił nazwę.  
   

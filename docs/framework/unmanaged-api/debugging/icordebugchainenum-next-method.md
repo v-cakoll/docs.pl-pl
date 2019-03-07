@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489829"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień ICorDebugChain z wyliczenia, zaczynając od bieżącego położenia.  
+Pobiera określoną liczbę wystąpień icordebugchain — z wyliczenia, zaczynając od bieżącej pozycji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `celt`  
  [in] Liczba `ICorDebugChain` wystąpienia mają zostać pobrane.  
   
  `chains`  
- [out] Tablicy wskaźników, z których każdy wskazuje `ICorDebugChain` obiekt, który reprezentuje łańcucha.  
+ [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugChain` obiekt, który reprezentuje łańcuch.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugChain` wystąpienia faktycznie zwracane. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby `ICorDebugChain` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

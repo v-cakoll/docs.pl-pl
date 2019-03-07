@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51fd8e9728955e8f426a38b8bf6cdc78dfa9bbde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecc0b46618cd00ba4442e30c23a7b7e950382fee
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412350"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475596"
 ---
 # <a name="icordebughandlevaluegethandletype-method"></a>ICorDebugHandleValue::GetHandleType — Metoda
-Pobiera wartość, która wskazuje typ dojścia odwołuje się ten obiekt ICorDebugHandleValue.  
+Pobiera wartość wskazującą rodzaj uchwyt odwołuje się ten obiekt icordebughandlevalue —.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,12 @@ HRESULT GetHandleType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pType`  
- [out] Wskaźnik do wartości wyliczenia CorDebugHandleType, który wskazuje typ ta dojścia.  
+ [out] Wskaźnik do wartości cordebughandletype — wyliczenie, który wskazuje na typ dojścia tego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

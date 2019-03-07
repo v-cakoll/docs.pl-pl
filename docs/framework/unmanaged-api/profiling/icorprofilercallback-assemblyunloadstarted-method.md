@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88ac588cd7eb98b4949aa993c66452de77dd100e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a45c757a9176c77c7dbf58333b66d9b26514265
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471216"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted — Metoda
 Powiadamia program profilujący, że zestaw jest zwalniany.  
@@ -34,7 +34,7 @@ HRESULT AssemblyUnloadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `assemblyId`  
  [in] Identyfikuje zestaw, który jest zwalniany.  
   

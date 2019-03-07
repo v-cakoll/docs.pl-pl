@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff4fe6f73370a28bf4f874b697616c08e7b40a3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d09877d9ca8dde601d2b515bce63bfdca53b6ab0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736669"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498136"
 ---
-# <a name="importfileex2-method"></a><span data-ttu-id="c10a0-102">ImportFileEx2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="c10a0-102">ImportFileEx2 Method</span></span>
-<span data-ttu-id="c10a0-103">Importuje zestawów i modułów niepowiązanej.</span><span class="sxs-lookup"><span data-stu-id="c10a0-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="c10a0-104">Ta metoda przypomina [importfile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ale wtedy, gdy importowanego pliku nie istnieje na dysku.</span><span class="sxs-lookup"><span data-stu-id="c10a0-104">This method is like [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
+# <a name="importfileex2-method"></a><span data-ttu-id="9cbab-102">ImportFileEx2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="9cbab-102">ImportFileEx2 Method</span></span>
+<span data-ttu-id="9cbab-103">Importuje zestawów i modułów niepowiązanej.</span><span class="sxs-lookup"><span data-stu-id="9cbab-103">Imports assemblies and unbound modules.</span></span> <span data-ttu-id="9cbab-104">Ta metoda przypomina [importfile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ale wtedy, gdy importowanego pliku nie istnieje na dysku.</span><span class="sxs-lookup"><span data-stu-id="9cbab-104">This method is like [ImportFile Method](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), but works even if the file being imported does not exist on disk.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c10a0-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="c10a0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9cbab-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="9cbab-105">Syntax</span></span>  
   
 ```  
 HRESULT ImportFileEx2(  
@@ -41,38 +41,38 @@ HRESULT ImportFileEx2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c10a0-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="c10a0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9cbab-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="9cbab-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="c10a0-107">Nazwa pliku do zaimportowania.</span><span class="sxs-lookup"><span data-stu-id="c10a0-107">Name of file to be imported.</span></span>  
+ <span data-ttu-id="9cbab-107">Nazwa pliku do zaimportowania.</span><span class="sxs-lookup"><span data-stu-id="9cbab-107">Name of file to be imported.</span></span>  
   
  `pszTargetName`  
- <span data-ttu-id="c10a0-108">Opcjonalna nazwa pliku docelowego.</span><span class="sxs-lookup"><span data-stu-id="c10a0-108">Optional name of target file.</span></span>  
+ <span data-ttu-id="9cbab-108">Opcjonalna nazwa pliku docelowego.</span><span class="sxs-lookup"><span data-stu-id="9cbab-108">Optional name of target file.</span></span>  
   
  `pAssemblyScopeIn`  
- <span data-ttu-id="c10a0-109">Zakres opcjonalny import [imetadataassemblyimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="c10a0-109">Optional import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
+ <span data-ttu-id="9cbab-109">Zakres opcjonalny import [imetadataassemblyimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="9cbab-109">Optional import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span>  
   
  `fSmartImport`  
- <span data-ttu-id="c10a0-110">W przypadku opcji TRUE importtypes — jest używana, w przeciwnym razie importowanie muszą być wykonywane ręcznie.</span><span class="sxs-lookup"><span data-stu-id="c10a0-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
+ <span data-ttu-id="9cbab-110">W przypadku opcji TRUE importtypes — jest używana, w przeciwnym razie importowanie muszą być wykonywane ręcznie.</span><span class="sxs-lookup"><span data-stu-id="9cbab-110">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
   
  `dwOpenFlags`  
- <span data-ttu-id="c10a0-111">Flagi, aby być przekazywane do [openscope — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span><span class="sxs-lookup"><span data-stu-id="c10a0-111">Flags to be passed along to [OpenScope Method](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span></span>  
+ <span data-ttu-id="9cbab-111">Flagi, aby być przekazywane do [openscope — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span><span class="sxs-lookup"><span data-stu-id="9cbab-111">Flags to be passed along to [OpenScope Method](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).</span></span>  
   
  `pImportToken`  
- <span data-ttu-id="c10a0-112">Otrzymuje unikatowy identyfikator zestawu lub pliku.</span><span class="sxs-lookup"><span data-stu-id="c10a0-112">Receives unique ID for the assembly or file.</span></span>  
+ <span data-ttu-id="9cbab-112">Otrzymuje unikatowy identyfikator zestawu lub pliku.</span><span class="sxs-lookup"><span data-stu-id="9cbab-112">Receives unique ID for the assembly or file.</span></span>  
   
  `ppAssemblyScope`  
- <span data-ttu-id="c10a0-113">Odbiera zakresu importu zestawu [imetadataassemblyimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="c10a0-113">Receives assembly import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="c10a0-114">Może mieć wartości NULL, jeśli plik nie jest zestawem.</span><span class="sxs-lookup"><span data-stu-id="c10a0-114">Can be NULL if the file is not an assembly.</span></span>  
+ <span data-ttu-id="9cbab-113">Odbiera zakresu importu zestawu [imetadataassemblyimport — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="9cbab-113">Receives assembly import scope [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interface.</span></span> <span data-ttu-id="9cbab-114">Może mieć wartości NULL, jeśli plik nie jest zestawem.</span><span class="sxs-lookup"><span data-stu-id="9cbab-114">Can be NULL if the file is not an assembly.</span></span>  
   
  `pdwCountOfScopes`  
- <span data-ttu-id="c10a0-115">Odbiera liczbę plików i/lub zakresów zaimportowane.</span><span class="sxs-lookup"><span data-stu-id="c10a0-115">Receives the number of files and/or scopes imported.</span></span>  
+ <span data-ttu-id="9cbab-115">Odbiera liczbę plików i/lub zakresów zaimportowane.</span><span class="sxs-lookup"><span data-stu-id="9cbab-115">Receives the number of files and/or scopes imported.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c10a0-116">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c10a0-116">Return Value</span></span>  
- <span data-ttu-id="c10a0-117">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="c10a0-117">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9cbab-116">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="9cbab-116">Return Value</span></span>  
+ <span data-ttu-id="9cbab-117">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="9cbab-117">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c10a0-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c10a0-118">Requirements</span></span>  
- <span data-ttu-id="c10a0-119">Wymaga alink.h.</span><span class="sxs-lookup"><span data-stu-id="c10a0-119">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9cbab-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9cbab-118">Requirements</span></span>  
+ <span data-ttu-id="9cbab-119">Wymaga alink.h.</span><span class="sxs-lookup"><span data-stu-id="9cbab-119">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c10a0-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c10a0-120">See also</span></span>
-- [<span data-ttu-id="c10a0-121">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="c10a0-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="c10a0-122">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="c10a0-122">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="c10a0-123">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="c10a0-123">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="9cbab-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9cbab-120">See also</span></span>
+- [<span data-ttu-id="9cbab-121">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="9cbab-121">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="9cbab-122">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="9cbab-122">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="9cbab-123">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="9cbab-123">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

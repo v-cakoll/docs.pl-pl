@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b94ae83f2fb5f71abb8cb3a5c96aac9e268fc5db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25861b2635605042acc1bf81f3f7a4739e678522
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405291"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493118"
 ---
-# <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="1717c-102">ICorDebugAssemblyEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="1717c-102">ICorDebugAssemblyEnum::Next Method</span></span>
-<span data-ttu-id="1717c-103">Pobiera określoną liczbę zestawów z kolekcji, począwszy od bieżącej pozycji kursora.</span><span class="sxs-lookup"><span data-stu-id="1717c-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  
+# <a name="icordebugassemblyenumnext-method"></a><span data-ttu-id="57307-102">ICorDebugAssemblyEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="57307-102">ICorDebugAssemblyEnum::Next Method</span></span>
+<span data-ttu-id="57307-103">Pobiera określoną liczbę zestawów z kolekcji, począwszy od bieżącej pozycji kursora.</span><span class="sxs-lookup"><span data-stu-id="57307-103">Gets the specified number of assemblies from the collection, starting at the current cursor position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1717c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1717c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="57307-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="57307-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1717c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="1717c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="57307-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="57307-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="1717c-106">[in] Liczba zestawów, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="1717c-106">[in] The number of assemblies to be retrieved.</span></span>  
+ <span data-ttu-id="57307-106">[in] Liczba zestawów, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="57307-106">[in] The number of assemblies to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="1717c-107">[out] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugAssembly, który reprezentuje zestawu.</span><span class="sxs-lookup"><span data-stu-id="1717c-107">[out] An array of pointers, each of which points to an ICorDebugAssembly object that represents an assembly.</span></span>  
+ <span data-ttu-id="57307-107">[out] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugAssembly, który reprezentuje zestaw.</span><span class="sxs-lookup"><span data-stu-id="57307-107">[out] An array of pointers, each of which points to an ICorDebugAssembly object that represents an assembly.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="1717c-108">[out] Wskaźnik do liczby zestawów faktycznie zwracane.</span><span class="sxs-lookup"><span data-stu-id="1717c-108">[out] A pointer to the number of assemblies actually returned.</span></span> <span data-ttu-id="1717c-109">Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.</span><span class="sxs-lookup"><span data-stu-id="1717c-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="57307-108">[out] Wskaźnik do liczby zestawów rzeczywistego zwrotu.</span><span class="sxs-lookup"><span data-stu-id="57307-108">[out] A pointer to the number of assemblies actually returned.</span></span> <span data-ttu-id="57307-109">Ta wartość może mieć wartości null Jeśli `celt` jeden.</span><span class="sxs-lookup"><span data-stu-id="57307-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1717c-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1717c-110">Requirements</span></span>  
- <span data-ttu-id="1717c-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1717c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57307-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="57307-110">Requirements</span></span>  
+ <span data-ttu-id="57307-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="57307-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1717c-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1717c-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="57307-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="57307-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1717c-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1717c-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="57307-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57307-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1717c-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1717c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="57307-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57307-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

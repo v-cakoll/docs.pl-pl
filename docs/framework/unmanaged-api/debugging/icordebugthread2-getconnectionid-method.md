@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c0e76b179854a380e66ac9daedffa8ccf4aa4ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d51e21eab4ac1edc81b58171e5382ada170a57f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422717"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468952"
 ---
-# <a name="icordebugthread2getconnectionid-method"></a><span data-ttu-id="2bf07-102">ICorDebugThread2::GetConnectionID — Metoda</span><span class="sxs-lookup"><span data-stu-id="2bf07-102">ICorDebugThread2::GetConnectionID Method</span></span>
-<span data-ttu-id="2bf07-103">Pobiera identyfikator połączenia dla tego obiektu ICorDebugThread2.</span><span class="sxs-lookup"><span data-stu-id="2bf07-103">Gets the connection identifier for this ICorDebugThread2 object.</span></span>  
+# <a name="icordebugthread2getconnectionid-method"></a><span data-ttu-id="f91f5-102">ICorDebugThread2::GetConnectionID — Metoda</span><span class="sxs-lookup"><span data-stu-id="f91f5-102">ICorDebugThread2::GetConnectionID Method</span></span>
+<span data-ttu-id="f91f5-103">Pobiera identyfikator połączenia dla tego obiektu icordebugthread2 —.</span><span class="sxs-lookup"><span data-stu-id="f91f5-103">Gets the connection identifier for this ICorDebugThread2 object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bf07-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2bf07-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f91f5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f91f5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetConnectionID (  
@@ -35,20 +35,20 @@ HRESULT GetConnectionID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2bf07-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2bf07-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f91f5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f91f5-105">Parameters</span></span>  
  `pdwConnectionId`  
- <span data-ttu-id="2bf07-106">[out] A `CONNID` reprezentujący identyfikator połączenia.</span><span class="sxs-lookup"><span data-stu-id="2bf07-106">[out] A `CONNID` that represents the connection identifier.</span></span>  
+ <span data-ttu-id="f91f5-106">[out] A `CONNID` reprezentujący identyfikator połączenia.</span><span class="sxs-lookup"><span data-stu-id="f91f5-106">[out] A `CONNID` that represents the connection identifier.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2bf07-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2bf07-107">Remarks</span></span>  
- <span data-ttu-id="2bf07-108">`GetConnectionID` Metoda zwraca zero w `pdwConnectionId` parametru, jeśli ten wątek nie jest częścią połączenia.</span><span class="sxs-lookup"><span data-stu-id="2bf07-108">The `GetConnectionID` method returns zero in the `pdwConnectionId` parameter, if this thread is not part of a connection.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f91f5-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f91f5-107">Remarks</span></span>  
+ <span data-ttu-id="f91f5-108">`GetConnectionID` Metoda zwraca zero w `pdwConnectionId` parametru, jeśli ten wątek nie jest częścią połączenia.</span><span class="sxs-lookup"><span data-stu-id="f91f5-108">The `GetConnectionID` method returns zero in the `pdwConnectionId` parameter, if this thread is not part of a connection.</span></span>  
   
- <span data-ttu-id="2bf07-109">Jeśli ten wątek jest podłączony do wystąpienia programu Microsoft SQL Server 2005 Analysis Services (SSAS), `CONNID` mapowany do identyfikatora procesu serwera (SPID).</span><span class="sxs-lookup"><span data-stu-id="2bf07-109">If this thread is connected to an instance of Microsoft SQL Server 2005 Analysis Services (SSAS), the `CONNID` maps to a server process identifier (SPID).</span></span>  
+ <span data-ttu-id="f91f5-109">Jeśli ten wątek jest podłączony do wystąpienia programu Microsoft SQL Server 2005 Analysis Services (SSAS), `CONNID` mapuje do identyfikatora procesu serwera (SPID).</span><span class="sxs-lookup"><span data-stu-id="f91f5-109">If this thread is connected to an instance of Microsoft SQL Server 2005 Analysis Services (SSAS), the `CONNID` maps to a server process identifier (SPID).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2bf07-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2bf07-110">Requirements</span></span>  
- <span data-ttu-id="2bf07-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2bf07-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f91f5-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f91f5-110">Requirements</span></span>  
+ <span data-ttu-id="f91f5-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f91f5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2bf07-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2bf07-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f91f5-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f91f5-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2bf07-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2bf07-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f91f5-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f91f5-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2bf07-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bf07-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="f91f5-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f91f5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

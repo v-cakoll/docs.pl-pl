@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c768091f84157ea651c018fa89cdeafcce6c02df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85c3fb601cd013eff889e794e71512533f1b12ec
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537676"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484683"
 ---
-# <a name="iinstallreferenceitemgetreference-method"></a><span data-ttu-id="cda71-102">IInstallReferenceItem::GetReference — Metoda</span><span class="sxs-lookup"><span data-stu-id="cda71-102">IInstallReferenceItem::GetReference Method</span></span>
-<span data-ttu-id="cda71-103">Pobiera wskaźnik do [fusion_install_reference —](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) struktury reprezentowany przez ten [iinstallreferenceitem —](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="cda71-103">Gets a pointer to the [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure represented by this [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object.</span></span>  
+# <a name="iinstallreferenceitemgetreference-method"></a><span data-ttu-id="7cc78-102">IInstallReferenceItem::GetReference — Metoda</span><span class="sxs-lookup"><span data-stu-id="7cc78-102">IInstallReferenceItem::GetReference Method</span></span>
+<span data-ttu-id="7cc78-103">Pobiera wskaźnik do [fusion_install_reference —](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) struktury reprezentowany przez ten [iinstallreferenceitem —](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="7cc78-103">Gets a pointer to the [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure represented by this [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cda71-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cda71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7cc78-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7cc78-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReference (  
@@ -37,23 +37,23 @@ HRESULT GetReference (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cda71-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="cda71-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7cc78-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7cc78-105">Parameters</span></span>  
  `ppRefData`  
- <span data-ttu-id="cda71-106">[out] Zwrócony `FUSION_INSTALL_REFERENCE` wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="cda71-106">[out] The returned `FUSION_INSTALL_REFERENCE` pointer.</span></span>  
+ <span data-ttu-id="7cc78-106">[out] Zwrócony `FUSION_INSTALL_REFERENCE` wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="7cc78-106">[out] The returned `FUSION_INSTALL_REFERENCE` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="cda71-107">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="cda71-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="cda71-108">`dwFlags` musi być równa 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="cda71-108">`dwFlags` must be 0 (zero).</span></span>  
+ <span data-ttu-id="7cc78-107">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="7cc78-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="7cc78-108">`dwFlags` musi być równa 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="7cc78-108">`dwFlags` must be 0 (zero).</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="cda71-109">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="cda71-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="cda71-110">`pvReserved` musi być odwołanie o wartości null.</span><span class="sxs-lookup"><span data-stu-id="cda71-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="7cc78-109">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="7cc78-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="7cc78-110">`pvReserved` musi być odwołanie o wartości null.</span><span class="sxs-lookup"><span data-stu-id="7cc78-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cda71-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cda71-111">Requirements</span></span>  
- <span data-ttu-id="cda71-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cda71-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cc78-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7cc78-111">Requirements</span></span>  
+ <span data-ttu-id="7cc78-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7cc78-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cda71-113">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="cda71-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="7cc78-113">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7cc78-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="cda71-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cda71-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7cc78-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cc78-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cda71-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cda71-115">See also</span></span>
-- [<span data-ttu-id="cda71-116">IInstallReferenceItem, interfejs</span><span class="sxs-lookup"><span data-stu-id="cda71-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [<span data-ttu-id="cda71-117">FUSION_INSTALL_REFERENCE, struktura</span><span class="sxs-lookup"><span data-stu-id="cda71-117">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a><span data-ttu-id="7cc78-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7cc78-115">See also</span></span>
+- [<span data-ttu-id="7cc78-116">IInstallReferenceItem, interfejs</span><span class="sxs-lookup"><span data-stu-id="7cc78-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="7cc78-117">FUSION_INSTALL_REFERENCE, struktura</span><span class="sxs-lookup"><span data-stu-id="7cc78-117">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

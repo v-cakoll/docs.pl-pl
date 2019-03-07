@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddae8f64eca348afa337b986ac81d59c37e51701
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf83c7755bc099275c02ff0049f663573c582faf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504304"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469564"
 ---
-# <a name="ihostcrstsetspincount-method"></a><span data-ttu-id="3ce6c-102">IHostCrst::SetSpinCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="3ce6c-102">IHostCrst::SetSpinCount Method</span></span>
-<span data-ttu-id="3ce6c-103">Ustawia liczbę pokrętła dla bieżącego [ihostcrst —](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-103">Sets the spin count for the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  
+# <a name="ihostcrstsetspincount-method"></a><span data-ttu-id="4a9b6-102">IHostCrst::SetSpinCount — Metoda</span><span class="sxs-lookup"><span data-stu-id="4a9b6-102">IHostCrst::SetSpinCount Method</span></span>
+<span data-ttu-id="4a9b6-103">Ustawia liczbę pokrętła dla bieżącego [ihostcrst —](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-103">Sets the spin count for the current [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ce6c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3ce6c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a9b6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4a9b6-104">Syntax</span></span>  
   
 ```  
 HRESULT SetSpinCount (  
@@ -35,36 +35,36 @@ HRESULT SetSpinCount (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3ce6c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3ce6c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4a9b6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="4a9b6-105">Parameters</span></span>  
  `dwSpinCount`  
- <span data-ttu-id="3ce6c-106">[in] Liczba nowych pokrętła, dla bieżącego `IHostCrst` wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-106">[in] The new spin count for the current `IHostCrst` instance.</span></span>  
+ <span data-ttu-id="4a9b6-106">[in] Liczba nowych pokrętła, dla bieżącego `IHostCrst` wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-106">[in] The new spin count for the current `IHostCrst` instance.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3ce6c-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="3ce6c-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4a9b6-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="4a9b6-107">Return Value</span></span>  
   
-|<span data-ttu-id="3ce6c-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3ce6c-108">HRESULT</span></span>|<span data-ttu-id="3ce6c-109">Opis</span><span class="sxs-lookup"><span data-stu-id="3ce6c-109">Description</span></span>|  
+|<span data-ttu-id="4a9b6-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4a9b6-108">HRESULT</span></span>|<span data-ttu-id="4a9b6-109">Opis</span><span class="sxs-lookup"><span data-stu-id="4a9b6-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3ce6c-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="3ce6c-110">S_OK</span></span>|<span data-ttu-id="3ce6c-111">`SetSpinCount` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-111">`SetSpinCount` returned successfully.</span></span>|  
-|<span data-ttu-id="3ce6c-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3ce6c-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3ce6c-113">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="3ce6c-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3ce6c-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3ce6c-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-115">The call timed out.</span></span>|  
-|<span data-ttu-id="3ce6c-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3ce6c-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3ce6c-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="3ce6c-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3ce6c-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3ce6c-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="3ce6c-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3ce6c-120">E_FAIL</span></span>|<span data-ttu-id="3ce6c-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3ce6c-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3ce6c-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="4a9b6-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="4a9b6-110">S_OK</span></span>|<span data-ttu-id="4a9b6-111">`SetSpinCount` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-111">`SetSpinCount` returned successfully.</span></span>|  
+|<span data-ttu-id="4a9b6-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4a9b6-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4a9b6-113">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="4a9b6-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4a9b6-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4a9b6-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-115">The call timed out.</span></span>|  
+|<span data-ttu-id="4a9b6-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4a9b6-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4a9b6-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="4a9b6-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4a9b6-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4a9b6-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="4a9b6-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4a9b6-120">E_FAIL</span></span>|<span data-ttu-id="4a9b6-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4a9b6-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="4a9b6-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3ce6c-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3ce6c-124">Remarks</span></span>  
- <span data-ttu-id="3ce6c-125">W systemach wieloprocesorowych, jeśli sekcję krytyczną, reprezentowane przez bieżącą `IHostCrst` wystąpienia jest niedostępna, wątek uruchamia `dwSpinCount` czasy przed wywołaniem [ihostsemaphore::wait —](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) na semafor skojarzone sekcja krytycznego.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-125">On multi-processor systems, if the critical section represented by the current `IHostCrst` instance is unavailable, a calling thread spins `dwSpinCount` times before calling [IHostSemaphore::Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) on a semaphore associated with the critical section.</span></span> <span data-ttu-id="3ce6c-126">Jeśli podczas operacji pokrętła zwolniony sekcję krytyczną, wątek wywołujący unika operacji oczekiwania.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-126">If the critical section becomes free during the spin operation, the calling thread avoids the wait operation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4a9b6-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4a9b6-124">Remarks</span></span>  
+ <span data-ttu-id="4a9b6-125">W systemach wieloprocesorowych, jeśli sekcję krytyczną, reprezentowane przez bieżącą `IHostCrst` wystąpienia jest niedostępna, wątek uruchamia `dwSpinCount` czasy przed wywołaniem [ihostsemaphore::wait —](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) na semafor skojarzone sekcja krytycznego.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-125">On multi-processor systems, if the critical section represented by the current `IHostCrst` instance is unavailable, a calling thread spins `dwSpinCount` times before calling [IHostSemaphore::Wait](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) on a semaphore associated with the critical section.</span></span> <span data-ttu-id="4a9b6-126">Jeśli podczas operacji pokrętła zwolniony sekcję krytyczną, wątek wywołujący unika operacji oczekiwania.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-126">If the critical section becomes free during the spin operation, the calling thread avoids the wait operation.</span></span>  
   
- <span data-ttu-id="3ce6c-127">Użycie `dwSpinCount` jest taka sama jak użycie parametru o takiej samej nazwie w Win32 `InitializeCriticalSectionAndSpinCount` funkcji.</span><span class="sxs-lookup"><span data-stu-id="3ce6c-127">The usage of `dwSpinCount` is identical to the usage of the parameter of the same name in the Win32 `InitializeCriticalSectionAndSpinCount` function.</span></span>  
+ <span data-ttu-id="4a9b6-127">Użycie `dwSpinCount` jest taka sama jak użycie parametru o takiej samej nazwie w Win32 `InitializeCriticalSectionAndSpinCount` funkcji.</span><span class="sxs-lookup"><span data-stu-id="4a9b6-127">The usage of `dwSpinCount` is identical to the usage of the parameter of the same name in the Win32 `InitializeCriticalSectionAndSpinCount` function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ce6c-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3ce6c-128">Requirements</span></span>  
- <span data-ttu-id="3ce6c-129">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ce6c-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a9b6-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4a9b6-128">Requirements</span></span>  
+ <span data-ttu-id="4a9b6-129">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a9b6-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ce6c-130">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3ce6c-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4a9b6-130">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4a9b6-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="3ce6c-131">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3ce6c-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4a9b6-131">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4a9b6-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3ce6c-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ce6c-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="4a9b6-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a9b6-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ce6c-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3ce6c-133">See also</span></span>
-- [<span data-ttu-id="3ce6c-134">ICLRSyncManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="3ce6c-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="3ce6c-135">IHostCrst, interfejs</span><span class="sxs-lookup"><span data-stu-id="3ce6c-135">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [<span data-ttu-id="3ce6c-136">IHostSyncManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="3ce6c-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4a9b6-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4a9b6-133">See also</span></span>
+- [<span data-ttu-id="4a9b6-134">ICLRSyncManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="4a9b6-134">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="4a9b6-135">IHostCrst, interfejs</span><span class="sxs-lookup"><span data-stu-id="4a9b6-135">IHostCrst Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
+- [<span data-ttu-id="4a9b6-136">IHostSyncManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="4a9b6-136">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

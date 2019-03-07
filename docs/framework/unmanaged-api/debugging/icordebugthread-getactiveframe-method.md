@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1bbe5674ba11b5ee6033c65f229d698eff15ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 051491173bbcef3d87d9a3dbe854eece46c49e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420644"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468783"
 ---
-# <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="1f80e-102">ICorDebugThread::GetActiveFrame — Metoda</span><span class="sxs-lookup"><span data-stu-id="1f80e-102">ICorDebugThread::GetActiveFrame Method</span></span>
-<span data-ttu-id="1f80e-103">Pobiera wskaźnika interfejsu do aktywnej ramki (najnowsze) dla tego obiektu ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="1f80e-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="a8a1e-102">ICorDebugThread::GetActiveFrame — Metoda</span><span class="sxs-lookup"><span data-stu-id="a8a1e-102">ICorDebugThread::GetActiveFrame Method</span></span>
+<span data-ttu-id="a8a1e-103">Pobiera wskaźnik interfejsu do aktywnej ramki (najnowsze) dla tego obiektu ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="a8a1e-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f80e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1f80e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a8a1e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a8a1e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveFrame (  
@@ -35,18 +35,18 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1f80e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="1f80e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a8a1e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a8a1e-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="1f80e-106">[out] Wskaźnik do adresu ICorDebugFrame obiektu interfejsu, który reprezentuje ramkę.</span><span class="sxs-lookup"><span data-stu-id="1f80e-106">[out] A pointer to the address of an ICorDebugFrame interface object that represents a frame.</span></span>  
+ <span data-ttu-id="a8a1e-106">[out] Wskaźnik na adres obiektu interfejsu ICorDebugFrame, który reprezentuje ramkę.</span><span class="sxs-lookup"><span data-stu-id="a8a1e-106">[out] A pointer to the address of an ICorDebugFrame interface object that represents a frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1f80e-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1f80e-107">Remarks</span></span>  
- <span data-ttu-id="1f80e-108">`ppFrame` Parametr ma wartość null, jeśli ramka nie jest obecnie aktywne.</span><span class="sxs-lookup"><span data-stu-id="1f80e-108">The `ppFrame` parameter is null if no frame is currently active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a8a1e-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a8a1e-107">Remarks</span></span>  
+ <span data-ttu-id="a8a1e-108">`ppFrame` Parametr ma wartość null, jeśli ramka nie jest obecnie aktywna.</span><span class="sxs-lookup"><span data-stu-id="a8a1e-108">The `ppFrame` parameter is null if no frame is currently active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1f80e-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1f80e-109">Requirements</span></span>  
- <span data-ttu-id="1f80e-110">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1f80e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a8a1e-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a8a1e-109">Requirements</span></span>  
+ <span data-ttu-id="a8a1e-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8a1e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1f80e-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1f80e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a8a1e-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a8a1e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1f80e-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1f80e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a8a1e-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a8a1e-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1f80e-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1f80e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a8a1e-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8a1e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

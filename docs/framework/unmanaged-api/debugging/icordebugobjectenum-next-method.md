@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4db5b6c6d54729363cd734840926f97d89aa4bfa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745167"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489296"
 ---
-# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="ecdc3-102">ICorDebugObjectEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="ecdc3-102">ICorDebugObjectEnum::Next Method</span></span>
-<span data-ttu-id="ecdc3-103">Pobiera względnych adresów wirtualnych (RVA) określoną liczbę obiektów z wyliczenia, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="ecdc3-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugobjectenumnext-method"></a><span data-ttu-id="d0921-102">ICorDebugObjectEnum::Next — Metoda</span><span class="sxs-lookup"><span data-stu-id="d0921-102">ICorDebugObjectEnum::Next Method</span></span>
+<span data-ttu-id="d0921-103">Pobiera względnych adresów wirtualnych (RVA) określoną liczbę obiektów z wyliczenia, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="d0921-103">Gets the relative virtual addresses (RVAs) of the specified number of objects from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ecdc3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ecdc3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0921-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d0921-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,24 +38,24 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ecdc3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ecdc3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0921-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d0921-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="ecdc3-106">[in] Liczba obiektów, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="ecdc3-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="d0921-106">[in] Liczba obiektów, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="d0921-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="ecdc3-107">[out] Tablica wskaźników, z których każdy wskazuje obiekt CORDB_ADDRESS.</span><span class="sxs-lookup"><span data-stu-id="ecdc3-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
+ <span data-ttu-id="d0921-107">[out] Tablica wskaźników, z których każdy wskazuje obiekt CORDB_ADDRESS.</span><span class="sxs-lookup"><span data-stu-id="d0921-107">[out] An array of pointers, each of which points to a CORDB_ADDRESS object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="ecdc3-108">[out] Wskaźnik do liczby obiektów rzeczywistego zwrotu.</span><span class="sxs-lookup"><span data-stu-id="ecdc3-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="ecdc3-109">Ta wartość może mieć wartości null Jeśli `celt` jeden.</span><span class="sxs-lookup"><span data-stu-id="ecdc3-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="d0921-108">[out] Wskaźnik do liczby obiektów rzeczywistego zwrotu.</span><span class="sxs-lookup"><span data-stu-id="d0921-108">[out] Pointer to the number of objects actually returned.</span></span> <span data-ttu-id="d0921-109">Ta wartość może mieć wartości null Jeśli `celt` jeden.</span><span class="sxs-lookup"><span data-stu-id="d0921-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ecdc3-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ecdc3-110">Requirements</span></span>  
- <span data-ttu-id="ecdc3-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ecdc3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0921-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d0921-110">Requirements</span></span>  
+ <span data-ttu-id="d0921-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0921-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ecdc3-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ecdc3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d0921-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d0921-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ecdc3-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ecdc3-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d0921-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0921-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ecdc3-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ecdc3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d0921-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0921-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ecdc3-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ecdc3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0921-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d0921-115">See also</span></span>
 

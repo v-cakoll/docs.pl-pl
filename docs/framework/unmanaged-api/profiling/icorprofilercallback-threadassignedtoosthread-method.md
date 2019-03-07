@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c55c6ffea0f3688fc7c3c3283701b4e35f1fcbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e955d2fdca67448897ed49b3200542075b4d534
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651984"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466781"
 ---
-# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="bce1c-102">ICorProfilerCallback::ThreadAssignedToOSThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="bce1c-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
-<span data-ttu-id="bce1c-103">Powiadamia program profilujący, że wątków zarządzanych wdrażane za pomocą wątku określonego systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="bce1c-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
+# <a name="icorprofilercallbackthreadassignedtoosthread-method"></a><span data-ttu-id="abbda-102">ICorProfilerCallback::ThreadAssignedToOSThread — Metoda</span><span class="sxs-lookup"><span data-stu-id="abbda-102">ICorProfilerCallback::ThreadAssignedToOSThread Method</span></span>
+<span data-ttu-id="abbda-103">Powiadamia program profilujący, że wątków zarządzanych wdrażane za pomocą wątku określonego systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="abbda-103">Notifies the profiler that a managed thread is being implemented using a particular operating system thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bce1c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="bce1c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="abbda-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="abbda-104">Syntax</span></span>  
   
 ```  
 HRESULT ThreadAssignedToOSThread(  
@@ -35,24 +35,24 @@ HRESULT ThreadAssignedToOSThread(
     [in] DWORD    osThreadId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bce1c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="bce1c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="abbda-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="abbda-105">Parameters</span></span>  
  `managedThreadId`  
- <span data-ttu-id="bce1c-106">[in] Identyfikator wątków zarządzanych.</span><span class="sxs-lookup"><span data-stu-id="bce1c-106">[in] The identifier of the managed thread.</span></span>  
+ <span data-ttu-id="abbda-106">[in] Identyfikator wątków zarządzanych.</span><span class="sxs-lookup"><span data-stu-id="abbda-106">[in] The identifier of the managed thread.</span></span>  
   
  `osThreadId`  
- <span data-ttu-id="bce1c-107">[in] Identyfikator wątku systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="bce1c-107">[in] The identifier of the operating system thread.</span></span>  
+ <span data-ttu-id="abbda-107">[in] Identyfikator wątku systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="abbda-107">[in] The identifier of the operating system thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bce1c-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bce1c-108">Remarks</span></span>  
- <span data-ttu-id="bce1c-109">`ThreadAssignedToOSThread` Wywołania zwrotnego istnieje tak, aby program profilujący może zachować dokładne mapowania między włókien wątków zarządzanych wątków systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="bce1c-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="abbda-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="abbda-108">Remarks</span></span>  
+ <span data-ttu-id="abbda-109">`ThreadAssignedToOSThread` Wywołania zwrotnego istnieje tak, aby program profilujący może zachować dokładne mapowania między włókien wątków zarządzanych wątków systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="abbda-109">The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bce1c-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bce1c-110">Requirements</span></span>  
- <span data-ttu-id="bce1c-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bce1c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="abbda-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="abbda-110">Requirements</span></span>  
+ <span data-ttu-id="abbda-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abbda-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bce1c-112">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bce1c-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="abbda-112">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="abbda-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bce1c-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bce1c-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="abbda-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="abbda-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bce1c-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bce1c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="abbda-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abbda-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bce1c-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bce1c-115">See also</span></span>
-- [<span data-ttu-id="bce1c-116">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="bce1c-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="abbda-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="abbda-115">See also</span></span>
+- [<span data-ttu-id="abbda-116">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="abbda-116">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

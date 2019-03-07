@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6962824551c108907929e19d75fc4a31f7001f03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d58174aa8b8d0e0544566faa6b1d79c2c3d6197
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727160"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472619"
 ---
-# <a name="icorprofilerinfo2getclassidinfo2-method"></a><span data-ttu-id="b41f6-102">ICorProfilerInfo2::GetClassIDInfo2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="b41f6-102">ICorProfilerInfo2::GetClassIDInfo2 Method</span></span>
-<span data-ttu-id="b41f6-103">Pobiera moduł nadrzędny i metadane token otwarte ogólne definicji określonej klasy `ClassID` klasy nadrzędnej, a `ClassID` dla każdego typu argumentu, jeśli jest obecny, klasy.</span><span class="sxs-lookup"><span data-stu-id="b41f6-103">Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.</span></span>  
+# <a name="icorprofilerinfo2getclassidinfo2-method"></a><span data-ttu-id="9b882-102">ICorProfilerInfo2::GetClassIDInfo2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="9b882-102">ICorProfilerInfo2::GetClassIDInfo2 Method</span></span>
+<span data-ttu-id="9b882-103">Pobiera moduł nadrzędny i metadane token otwarte ogólne definicji określonej klasy `ClassID` klasy nadrzędnej, a `ClassID` dla każdego typu argumentu, jeśli jest obecny, klasy.</span><span class="sxs-lookup"><span data-stu-id="9b882-103">Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b41f6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b41f6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9b882-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9b882-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassIDInfo2(  
@@ -40,48 +40,48 @@ HRESULT GetClassIDInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b41f6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b41f6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9b882-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9b882-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="b41f6-106">[in] Identyfikator klasy, dla którego będą pobierane informacje.</span><span class="sxs-lookup"><span data-stu-id="b41f6-106">[in] The ID of the class for which information will be retrieved.</span></span>  
+ <span data-ttu-id="9b882-106">[in] Identyfikator klasy, dla którego będą pobierane informacje.</span><span class="sxs-lookup"><span data-stu-id="9b882-106">[in] The ID of the class for which information will be retrieved.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="b41f6-107">[out] Wskaźnik do Identyfikatora modułu nadrzędnego otwarte ogólne definicji określonej klasy.</span><span class="sxs-lookup"><span data-stu-id="b41f6-107">[out] Pointer to the ID of the parent module for the open generic definition of the specified class.</span></span>  
+ <span data-ttu-id="9b882-107">[out] Wskaźnik do Identyfikatora modułu nadrzędnego otwarte ogólne definicji określonej klasy.</span><span class="sxs-lookup"><span data-stu-id="9b882-107">[out] Pointer to the ID of the parent module for the open generic definition of the specified class.</span></span>  
   
  `pTypeDefToken`  
- <span data-ttu-id="b41f6-108">[out] Wskaźnik do tokenu metadanych otwarte ogólne definicji określonej klasy.</span><span class="sxs-lookup"><span data-stu-id="b41f6-108">[out] Pointer to the metadata token for the open generic definition of the specified class.</span></span>  
+ <span data-ttu-id="9b882-108">[out] Wskaźnik do tokenu metadanych otwarte ogólne definicji określonej klasy.</span><span class="sxs-lookup"><span data-stu-id="9b882-108">[out] Pointer to the metadata token for the open generic definition of the specified class.</span></span>  
   
  `pParentClassId`  
- <span data-ttu-id="b41f6-109">[out] Wskaźnik do Identyfikatora klasy nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="b41f6-109">[out] Pointer to the ID of the parent class.</span></span>  
+ <span data-ttu-id="9b882-109">[out] Wskaźnik do Identyfikatora klasy nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="9b882-109">[out] Pointer to the ID of the parent class.</span></span>  
   
  `cNumTypeArgs`  
- <span data-ttu-id="b41f6-110">[in] Rozmiar `typeArgs` tablicy.</span><span class="sxs-lookup"><span data-stu-id="b41f6-110">[in] The size of the `typeArgs` array.</span></span>  
+ <span data-ttu-id="9b882-110">[in] Rozmiar `typeArgs` tablicy.</span><span class="sxs-lookup"><span data-stu-id="9b882-110">[in] The size of the `typeArgs` array.</span></span>  
   
  `pcNumTypeArgs`  
- <span data-ttu-id="b41f6-111">[out] Wskaźnik na całkowitą liczbę dostępnych elementów.</span><span class="sxs-lookup"><span data-stu-id="b41f6-111">[out] Pointer to the total number of available elements.</span></span>  
+ <span data-ttu-id="9b882-111">[out] Wskaźnik na całkowitą liczbę dostępnych elementów.</span><span class="sxs-lookup"><span data-stu-id="9b882-111">[out] Pointer to the total number of available elements.</span></span>  
   
  `typeArgs`  
- <span data-ttu-id="b41f6-112">[out] Tablica `ClassID` wartości, z których każdy reprezentuje identyfikator argument typu klasy.</span><span class="sxs-lookup"><span data-stu-id="b41f6-112">[out] An array of `ClassID` values, each of which represents the ID of a type argument of the class.</span></span> <span data-ttu-id="b41f6-113">Po powrocie z metody `typeArgs` będzie zawierać niektórych lub wszystkich dostępnych `ClassID` wartości.</span><span class="sxs-lookup"><span data-stu-id="b41f6-113">When the method returns, `typeArgs` will contain some or all the available `ClassID` values.</span></span>  
+ <span data-ttu-id="9b882-112">[out] Tablica `ClassID` wartości, z których każdy reprezentuje identyfikator argument typu klasy.</span><span class="sxs-lookup"><span data-stu-id="9b882-112">[out] An array of `ClassID` values, each of which represents the ID of a type argument of the class.</span></span> <span data-ttu-id="9b882-113">Po powrocie z metody `typeArgs` będzie zawierać niektórych lub wszystkich dostępnych `ClassID` wartości.</span><span class="sxs-lookup"><span data-stu-id="9b882-113">When the method returns, `typeArgs` will contain some or all the available `ClassID` values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b41f6-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b41f6-114">Remarks</span></span>  
- <span data-ttu-id="b41f6-115">`GetClassIDInfo2` Metoda jest podobna do [icorprofilerinfo::getclassidinfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) metody, ale `GetClassIDInfo2` uzyskuje dodatkowe informacje na temat typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="b41f6-115">The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9b882-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9b882-114">Remarks</span></span>  
+ <span data-ttu-id="9b882-115">`GetClassIDInfo2` Metoda jest podobna do [icorprofilerinfo::getclassidinfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) metody, ale `GetClassIDInfo2` uzyskuje dodatkowe informacje na temat typu ogólnego.</span><span class="sxs-lookup"><span data-stu-id="9b882-115">The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.</span></span>  
   
- <span data-ttu-id="b41f6-116">Program profilujący kodu może wywołać [icorprofilerinfo::getmodulemetadata —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) uzyskać [metadanych](../../../../docs/framework/unmanaged-api/metadata/index.md) interfejs dla danego modułu.</span><span class="sxs-lookup"><span data-stu-id="b41f6-116">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module.</span></span> <span data-ttu-id="b41f6-117">Token metadanych, które są zwracane do lokalizacji, odwołuje się `pTypeDefToken` następnie może służyć do uzyskania dostępu do klasy metadanych.</span><span class="sxs-lookup"><span data-stu-id="b41f6-117">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
+ <span data-ttu-id="9b882-116">Program profilujący kodu może wywołać [icorprofilerinfo::getmodulemetadata —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) uzyskać [metadanych](../../../../docs/framework/unmanaged-api/metadata/index.md) interfejs dla danego modułu.</span><span class="sxs-lookup"><span data-stu-id="9b882-116">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module.</span></span> <span data-ttu-id="9b882-117">Token metadanych, które są zwracane do lokalizacji, odwołuje się `pTypeDefToken` następnie może służyć do uzyskania dostępu do klasy metadanych.</span><span class="sxs-lookup"><span data-stu-id="9b882-117">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
   
- <span data-ttu-id="b41f6-118">Po `GetClassIDInfo2` zwróci wartość, należy sprawdzić, czy `typeArgs` bufor jest wystarczająco duży, aby zawierała wszystkich `ClassID` wartości.</span><span class="sxs-lookup"><span data-stu-id="b41f6-118">After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values.</span></span> <span data-ttu-id="b41f6-119">Aby to zrobić, porównaj wartość która `pcNumTypeArgs` wskazuje z wartością `cNumTypeArgs` parametru.</span><span class="sxs-lookup"><span data-stu-id="b41f6-119">To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter.</span></span> <span data-ttu-id="b41f6-120">Jeśli `pcNumTypeArgs` wskazuje wartość, która jest większa niż `cNumTypeArgs`, Przydziel większego `typeArgs` buforu, zaktualizuj `cNumTypeArgs` przy użyciu nowych, większy rozmiar i Wywołaj `GetClassIDInfo2` ponownie.</span><span class="sxs-lookup"><span data-stu-id="b41f6-120">If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.</span></span>  
+ <span data-ttu-id="9b882-118">Po `GetClassIDInfo2` zwróci wartość, należy sprawdzić, czy `typeArgs` bufor jest wystarczająco duży, aby zawierała wszystkich `ClassID` wartości.</span><span class="sxs-lookup"><span data-stu-id="9b882-118">After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values.</span></span> <span data-ttu-id="9b882-119">Aby to zrobić, porównaj wartość która `pcNumTypeArgs` wskazuje z wartością `cNumTypeArgs` parametru.</span><span class="sxs-lookup"><span data-stu-id="9b882-119">To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter.</span></span> <span data-ttu-id="9b882-120">Jeśli `pcNumTypeArgs` wskazuje wartość, która jest większa niż `cNumTypeArgs`, Przydziel większego `typeArgs` buforu, zaktualizuj `cNumTypeArgs` przy użyciu nowych, większy rozmiar i Wywołaj `GetClassIDInfo2` ponownie.</span><span class="sxs-lookup"><span data-stu-id="9b882-120">If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.</span></span>  
   
- <span data-ttu-id="b41f6-121">Alternatywnie, można wywołać `GetClassIDInfo2` o zerowej długości `typeArgs` buforu w celu uzyskania rozmiar buforu poprawne.</span><span class="sxs-lookup"><span data-stu-id="b41f6-121">Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="b41f6-122">Następnie można ustawić `typeArgs` rozmiar do wartości zwracanej w buforu `pcNumTypeArgs` i wywołać `GetClassIDInfo2` ponownie.</span><span class="sxs-lookup"><span data-stu-id="b41f6-122">You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.</span></span>  
+ <span data-ttu-id="9b882-121">Alternatywnie, można wywołać `GetClassIDInfo2` o zerowej długości `typeArgs` buforu w celu uzyskania rozmiar buforu poprawne.</span><span class="sxs-lookup"><span data-stu-id="9b882-121">Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="9b882-122">Następnie można ustawić `typeArgs` rozmiar do wartości zwracanej w buforu `pcNumTypeArgs` i wywołać `GetClassIDInfo2` ponownie.</span><span class="sxs-lookup"><span data-stu-id="9b882-122">You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b41f6-123">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b41f6-123">Requirements</span></span>  
- <span data-ttu-id="b41f6-124">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b41f6-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9b882-123">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9b882-123">Requirements</span></span>  
+ <span data-ttu-id="9b882-124">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9b882-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b41f6-125">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b41f6-125">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="9b882-125">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9b882-125">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b41f6-126">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b41f6-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9b882-126">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9b882-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b41f6-127">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b41f6-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9b882-127">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b882-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b41f6-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b41f6-128">See also</span></span>
-- [<span data-ttu-id="b41f6-129">ICorProfilerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="b41f6-129">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="b41f6-130">ICorProfilerInfo2, interfejs</span><span class="sxs-lookup"><span data-stu-id="b41f6-130">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [<span data-ttu-id="b41f6-131">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="b41f6-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="b41f6-132">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="b41f6-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="9b882-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9b882-128">See also</span></span>
+- [<span data-ttu-id="9b882-129">ICorProfilerInfo, interfejs</span><span class="sxs-lookup"><span data-stu-id="9b882-129">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="9b882-130">ICorProfilerInfo2, interfejs</span><span class="sxs-lookup"><span data-stu-id="9b882-130">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="9b882-131">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="9b882-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="9b882-132">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="9b882-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

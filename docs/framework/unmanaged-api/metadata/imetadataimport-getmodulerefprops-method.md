@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 501c554f6e2e4ddd8abd21fe81b81d1898ea070b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b00fdaa6dacaf9a7eefa1a1ac1192f7c18fde95
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465910"
 ---
-# <a name="imetadataimportgetmodulerefprops-method"></a><span data-ttu-id="2a3da-102">IMetaDataImport::GetModuleRefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="2a3da-102">IMetaDataImport::GetModuleRefProps Method</span></span>
-<span data-ttu-id="2a3da-103">Pobiera nazwę modułu odwołuje się token określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="2a3da-103">Gets the name of the module referenced by the specified metadata token.</span></span>  
+# <a name="imetadataimportgetmodulerefprops-method"></a><span data-ttu-id="53866-102">IMetaDataImport::GetModuleRefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="53866-102">IMetaDataImport::GetModuleRefProps Method</span></span>
+<span data-ttu-id="53866-103">Pobiera nazwę modułu odwołuje się token określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="53866-103">Gets the name of the module referenced by the specified metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2a3da-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2a3da-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="53866-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="53866-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleRefProps (  
@@ -38,28 +38,28 @@ HRESULT GetModuleRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2a3da-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2a3da-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="53866-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="53866-105">Parameters</span></span>  
  `mur`  
- <span data-ttu-id="2a3da-106">[in] Element ModuleRef metadanych tokenu który odwołuje się moduł, aby uzyskać informacje o metadanych.</span><span class="sxs-lookup"><span data-stu-id="2a3da-106">[in] The ModuleRef metadata token that references the module to get metadata information for.</span></span>  
+ <span data-ttu-id="53866-106">[in] Element ModuleRef metadanych tokenu który odwołuje się moduł, aby uzyskać informacje o metadanych.</span><span class="sxs-lookup"><span data-stu-id="53866-106">[in] The ModuleRef metadata token that references the module to get metadata information for.</span></span>  
   
  `szName`  
- <span data-ttu-id="2a3da-107">[out] Bufor do przechowywania nazwy modułu.</span><span class="sxs-lookup"><span data-stu-id="2a3da-107">[out] A buffer to hold the module name.</span></span>  
+ <span data-ttu-id="53866-107">[out] Bufor do przechowywania nazwy modułu.</span><span class="sxs-lookup"><span data-stu-id="53866-107">[out] A buffer to hold the module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="2a3da-108">[in] Żądany rozmiar `szName` w znaki dwubajtowe.</span><span class="sxs-lookup"><span data-stu-id="2a3da-108">[in] The requested size of `szName` in wide characters.</span></span>  
+ <span data-ttu-id="53866-108">[in] Żądany rozmiar `szName` w znaki dwubajtowe.</span><span class="sxs-lookup"><span data-stu-id="53866-108">[in] The requested size of `szName` in wide characters.</span></span>  
   
  `pchName`  
- <span data-ttu-id="2a3da-109">[out] Rozmiar zwróconego `szName` w znaki dwubajtowe.</span><span class="sxs-lookup"><span data-stu-id="2a3da-109">[out] The returned size of `szName` in wide characters.</span></span>  
+ <span data-ttu-id="53866-109">[out] Rozmiar zwróconego `szName` w znaki dwubajtowe.</span><span class="sxs-lookup"><span data-stu-id="53866-109">[out] The returned size of `szName` in wide characters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2a3da-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2a3da-110">Requirements</span></span>  
- <span data-ttu-id="2a3da-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2a3da-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="53866-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="53866-110">Requirements</span></span>  
+ <span data-ttu-id="53866-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="53866-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2a3da-112">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="2a3da-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="53866-112">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="53866-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2a3da-113">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2a3da-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="53866-113">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="53866-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2a3da-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2a3da-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="53866-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53866-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2a3da-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2a3da-115">See also</span></span>
-- [<span data-ttu-id="2a3da-116">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="2a3da-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="2a3da-117">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="2a3da-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="53866-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="53866-115">See also</span></span>
+- [<span data-ttu-id="53866-116">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="53866-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="53866-117">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="53866-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

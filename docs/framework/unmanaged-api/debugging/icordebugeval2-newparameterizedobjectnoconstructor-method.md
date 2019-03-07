@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad5a285fc2280dc062b0f4cbb69977a7e605e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6feef7b1e1f09107cd2a57555df07bebec86effa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466989"
 ---
-# <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a><span data-ttu-id="343c9-102">ICorDebugEval2::NewParameterizedObjectNoConstructor — Metoda</span><span class="sxs-lookup"><span data-stu-id="343c9-102">ICorDebugEval2::NewParameterizedObjectNoConstructor Method</span></span>
-<span data-ttu-id="343c9-103">Tworzy nowy obiekt sparametryzowany typ określonej klasy bez próba wywołania metody konstruktora.</span><span class="sxs-lookup"><span data-stu-id="343c9-103">Instantiates a new parameterized type object of the specified class without attempting to call a constructor method.</span></span>  
+# <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a><span data-ttu-id="f5dec-102">ICorDebugEval2::NewParameterizedObjectNoConstructor — Metoda</span><span class="sxs-lookup"><span data-stu-id="f5dec-102">ICorDebugEval2::NewParameterizedObjectNoConstructor Method</span></span>
+<span data-ttu-id="f5dec-103">Tworzy nowy typ sparametryzowany obiekt określonej klasy bez próby wywołania metody konstruktora.</span><span class="sxs-lookup"><span data-stu-id="f5dec-103">Instantiates a new parameterized type object of the specified class without attempting to call a constructor method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="343c9-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="343c9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5dec-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f5dec-104">Syntax</span></span>  
   
 ```  
 HRESULT NewParameterizedObjectNoConstructor (  
@@ -37,24 +37,24 @@ HRESULT NewParameterizedObjectNoConstructor (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="343c9-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="343c9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f5dec-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f5dec-105">Parameters</span></span>  
  `pClass`  
- <span data-ttu-id="343c9-106">[in] Wskaźnik do obiektu ICorDebugClass, który reprezentuje klasę, można utworzyć wystąpienia obiektu.</span><span class="sxs-lookup"><span data-stu-id="343c9-106">[in] A pointer to an ICorDebugClass object that represents the class of the object to be instantiated.</span></span>  
+ <span data-ttu-id="f5dec-106">[in] Wskaźnik do obiektu ICorDebugClass, który reprezentuje klasę obiektu, który ma zostać utworzona.</span><span class="sxs-lookup"><span data-stu-id="f5dec-106">[in] A pointer to an ICorDebugClass object that represents the class of the object to be instantiated.</span></span>  
   
  `nTypeArgs`  
- <span data-ttu-id="343c9-107">[in] Przekazany liczby argumentów typu.</span><span class="sxs-lookup"><span data-stu-id="343c9-107">[in] The number of type arguments passed.</span></span>  
+ <span data-ttu-id="f5dec-107">[in] Przekazany liczby argumentów typu.</span><span class="sxs-lookup"><span data-stu-id="f5dec-107">[in] The number of type arguments passed.</span></span>  
   
  `ppTypeArgs`  
- <span data-ttu-id="343c9-108">[in] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugType, który reprezentuje typ argumentu dla obiekt, który jest uruchamianiu.</span><span class="sxs-lookup"><span data-stu-id="343c9-108">[in] An array of pointers, each of which points to an ICorDebugType object that represents a type argument for the object that is being instantiated.</span></span>  
+ <span data-ttu-id="f5dec-108">[in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugType, który reprezentuje argument typu obiektu, który zostanie on uruchomiony.</span><span class="sxs-lookup"><span data-stu-id="f5dec-108">[in] An array of pointers, each of which points to an ICorDebugType object that represents a type argument for the object that is being instantiated.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="343c9-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="343c9-109">Remarks</span></span>  
- <span data-ttu-id="343c9-110">`NewParameterizedObjectNoConstructor` Metoda zakończy się niepowodzeniem, jeśli niepoprawną liczbę argumentów typu lub są przekazano nieprawidłowe typy argumentów typu.</span><span class="sxs-lookup"><span data-stu-id="343c9-110">The `NewParameterizedObjectNoConstructor` method will fail if an incorrect number of type arguments or the wrong types of type arguments are passed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f5dec-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f5dec-109">Remarks</span></span>  
+ <span data-ttu-id="f5dec-110">`NewParameterizedObjectNoConstructor` Metoda zakończy się niepowodzeniem, jeśli niepoprawną liczbę argumentów typu lub zostaną przekazane nieprawidłowe typy argumentów typu.</span><span class="sxs-lookup"><span data-stu-id="f5dec-110">The `NewParameterizedObjectNoConstructor` method will fail if an incorrect number of type arguments or the wrong types of type arguments are passed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="343c9-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="343c9-111">Requirements</span></span>  
- <span data-ttu-id="343c9-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="343c9-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f5dec-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f5dec-111">Requirements</span></span>  
+ <span data-ttu-id="f5dec-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f5dec-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="343c9-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="343c9-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f5dec-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f5dec-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="343c9-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="343c9-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f5dec-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f5dec-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="343c9-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="343c9-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="f5dec-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5dec-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a09741ed778436f1cb35d094885bd3effa813a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a682999c888a93cef94162a8179673c862dc43ce
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411597"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476649"
 ---
-# <a name="icordebugfunctiongetlocalvarsigtoken-method"></a><span data-ttu-id="2e937-102">ICorDebugFunction::GetLocalVarSigToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="2e937-102">ICorDebugFunction::GetLocalVarSigToken Method</span></span>
-<span data-ttu-id="2e937-103">Pobiera metadane token podpisu lokalnego zmiennej funkcji, która jest reprezentowana przez to wystąpienie ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="2e937-103">Gets the metadata token for the local variable signature of the function that is represented by this ICorDebugFunction instance.</span></span>  
+# <a name="icordebugfunctiongetlocalvarsigtoken-method"></a><span data-ttu-id="6f7bf-102">ICorDebugFunction::GetLocalVarSigToken — Metoda</span><span class="sxs-lookup"><span data-stu-id="6f7bf-102">ICorDebugFunction::GetLocalVarSigToken Method</span></span>
+<span data-ttu-id="6f7bf-103">Pobiera token metadanych dla lokalnej zmiennej podpis funkcji, która jest reprezentowana przez to wystąpienie ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="6f7bf-103">Gets the metadata token for the local variable signature of the function that is represented by this ICorDebugFunction instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2e937-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2e937-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f7bf-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6f7bf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalVarSigToken (  
@@ -35,15 +35,15 @@ HRESULT GetLocalVarSigToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2e937-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2e937-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6f7bf-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6f7bf-105">Parameters</span></span>  
  `pmdSig`  
- <span data-ttu-id="2e937-106">[out] Wskaźnik do `mdSignature` tokenu dla zmiennej podpisu lokalnego z tej funkcji, lub `mdSignatureNil`, jeśli ta funkcja nie ma lokalnych zmiennych.</span><span class="sxs-lookup"><span data-stu-id="2e937-106">[out] A pointer to the `mdSignature` token for the local variable signature of this function, or `mdSignatureNil`, if this function has no local variables.</span></span>  
+ <span data-ttu-id="6f7bf-106">[out] Wskaźnik do `mdSignature` tokenu do lokalnej zmiennej podpisu tej funkcji lub `mdSignatureNil`, jeśli funkcja ta nie ma żadnych zmiennych lokalnych.</span><span class="sxs-lookup"><span data-stu-id="6f7bf-106">[out] A pointer to the `mdSignature` token for the local variable signature of this function, or `mdSignatureNil`, if this function has no local variables.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2e937-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2e937-107">Requirements</span></span>  
- <span data-ttu-id="2e937-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2e937-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f7bf-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6f7bf-107">Requirements</span></span>  
+ <span data-ttu-id="6f7bf-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6f7bf-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2e937-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2e937-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6f7bf-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6f7bf-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2e937-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2e937-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6f7bf-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6f7bf-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2e937-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2e937-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="6f7bf-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f7bf-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

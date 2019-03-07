@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84f895e749fc8f2520dbce3caf9e6c11fda78a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7939f7b1c0c725bb4e8c642bc38121dd755da5e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471059"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName — Metoda
 Pobiera nazwę domeny aplikacji.  
@@ -38,21 +38,21 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `cchName`  
- [in] Rozmiar `szName` tablicy. Ta wartość zero, aby umieścić tę metodę w trybie zapytania.  
+ [in] Rozmiar `szName` tablicy. Ustaw tę wartość na wartość zero, aby przełączyć tę metodę w trybie zapytania.  
   
  `pcchName`  
- [out] Wskaźnik do rozmiaru nazwę lub liczbę znaków, które faktycznie zwracane w `szName`. W trybie zapytania, ta wartość umożliwia wywołującego wiedzieć, jak duży buforu do przydzielenia dla nazwy.  
+ [out] Wskaźnik do rozmiaru nazwę lub liczbę znaków, które faktycznie są zwracane w `szName`. W trybie zapytania ta wartość umożliwia element wywołujący wiedzieć, jak duże bufor do przydzielenia dla nazwy.  
   
  `szName`  
  [out] Tablica, która przechowuje nazwę domeny aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołuje debugera `GetName` metodę raz, aby pobrać rozmiaru buforu potrzebne dla nazwy. Debuger przydziela buforu, a następnie wywołuje metodę po raz drugi do wypełnienia buforu. Pierwsze wywołanie, aby uzyskać nazwę, rozmiar jest określany jako *tryb zapytania*.  
+ Wywołuje debugera `GetName` metody raz, można pobrać rozmiar buforu, wymagane dla nazwy. Debuger przydziela bufor, a następnie po raz drugi wywołuje metodę, aby wypełnić buforu. Pierwsze wywołanie, aby uzyskać nazwę, rozmiar jest określany jako *tryb zapytania*.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

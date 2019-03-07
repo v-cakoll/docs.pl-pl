@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a5b3a28c7250a16e78e199bceff7c9e64517319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e1734ca91fd48cc15b8dbf25f11518ed0455b6f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408216"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475644"
 ---
 # <a name="icordebugclass2getparameterizedtype-method"></a>ICorDebugClass2::GetParameterizedType — Metoda
 Pobiera deklaracji typu dla tej klasy.  
@@ -38,33 +38,33 @@ HRESULT GetParameterizedType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `elementType`  
- [in] Wartość wyliczenia CorElementType, która określa typ elementu dla tej klasy: Ustaw tę wartość na ELEMENT_TYPE_VALUETYPE, jeśli ta ICorDebugClass2 reprezentuje typ wartości. Ustaw tę wartość po elemencie ELEMENT_TYPE_CLASS, jeśli `ICorDebugClass2` reprezentuje typ złożony.  
+ [in] Wartość corelementtype — wyliczenie, który określa typ elementu dla tej klasy: Ta wartość ELEMENT_TYPE_VALUETYPE Jeśli ta icordebugclass2 — reprezentuje typ wartości. Ustaw tę wartość na ELEMENT_TYPE_CLASS, jeśli `ICorDebugClass2` reprezentuje typ złożony.  
   
  `nTypeArgs`  
- [in] Liczba parametrów typu, jeśli typ jest rodzajowy. Liczba parametrów typu (jeśli istnieją) muszą być zgodne numer wymagane przez klasę.  
+ [in] Liczba parametrów typu, w przypadku typu ogólnego. Liczba parametrów typu (jeśli istnieje) musi być zgodna liczbę wymaganych przez klasę.  
   
  `ppTypeArgs`  
- [in] Tablicy wskaźników, z których każdy wskazuje obiekt ICorDebugType, który reprezentuje parametr typu. Jeśli klasa jest inny niż ogólny, ta wartość jest pusta.  
+ [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugType, który reprezentuje parametr typu. Jeśli klasa jest nieogólnego, ta wartość ma wartość null.  
   
  `ppType`  
- [out] Wskaźnik do adresu `ICorDebugType` obiekt, który reprezentuje deklaracji typu. Ten obiekt jest odpowiednikiem <xref:System.Type> obiektu w kodzie zarządzanym.  
+ [out] Wskaźnik na adres `ICorDebugType` obiekt, który reprezentuje deklaracji typu. Ten obiekt jest odpowiednikiem <xref:System.Type> obiektu w kodzie zarządzanym.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli klasa nie jest ogólna, oznacza to, jeśli go nie ma typu parametrów, `GetParameterizedType` po prostu pobiera obiekt typu środowiska uruchomieniowego odpowiadającą klasę. `elementType` Parametr należy ustawić na typ elementu poprawne dla klasy: ELEMENT_TYPE_VALUETYPE, jeśli klasa jest typ wartości; w przeciwnym razie po elemencie ELEMENT_TYPE_CLASS.  
+ Jeśli klasa nieogólnego, oznacza to, jeśli go nie ma parametrów typu, `GetParameterizedType` po prostu pobiera obiekt typu środowiska uruchomieniowego, odpowiadający tej klasy. `elementType` Parametr powinien być ustawiony na typ elementu poprawne dla klasy: ELEMENT_TYPE_VALUETYPE, jeśli klasa jest typem wartości w przeciwnym razie ELEMENT_TYPE_CLASS.  
   
- Jeśli klasa akceptuje parametrów typu (na przykład `ArrayList<T>`), można użyć `GetParameterizedType` do utworzenia obiektu typu dla typu, takich jak `ArrayList<int>`.  
+ Jeśli klasa akceptuje parametry typu (na przykład `ArrayList<T>`), możesz użyć `GetParameterizedType` do konstruowania na obiekt typu dla typu wystąpień, takie jak `ArrayList<int>`.  
   
 ## <a name="background-information"></a>Informacje uzupełniające  
- W wersji systemu .NET Framework 1.0 i 1.1 co typ w metadanych można bezpośrednio zmapowana do typu w uruchomionym procesem. W związku z tym typem metadanych i typu środowiska uruchomieniowego miała pojedynczego reprezentacja w uruchomionego procesu. Jednak jeden typ rodzajowy w metadanych mogą być mapowane na wiele różnych wystąpień typu uruchomionego procesu. Na przykład typ metadanych `SortedList<K,V>` można mapować na `SortedList<String, EmployeeRecord>`, `SortedList<Int32, String>`, `SortedList<String,Array<Int32>>`i tak dalej. W związku z tym należy sposób obsługi podczas tworzenia wystąpienia typu.  
+ W wersjach programu .NET Framework 1.0 i 1.1 Każdy typ w metadanych może być bezpośrednio zmapowana do typu w uruchomionego procesu. W związku z tym typ metadanych i typ środowiska uruchomieniowego w kończyły się jednym reprezentacji uruchomionego procesu. Jednak pierwszego typu ogólnego w metadanych można mapować do wielu inne realizacje typu w uruchomionego procesu. Na przykład typ metadanych `SortedList<K,V>` można mapować na `SortedList<String, EmployeeRecord>`, `SortedList<Int32, String>`, `SortedList<String,Array<Int32>>`i tak dalej. Dlatego należy sposób obsługi podczas tworzenia wystąpienia typu.  
   
- .NET Framework w wersji 2.0 wprowadzono `ICorDebugType` interfejsu. Dla typu ogólnego `ICorDebugClass` lub `ICorDebugClass2` obiekt reprezentuje typ bez wystąpień (`SortedList<K,V>`), a `ICorDebugType` obiektu przedstawia różne typy skonkretyzowanym. Podane `ICorDebugClass` lub `ICorDebugClass2` obiektu, można utworzyć `ICorDebugType` obiekt do dowolnego wystąpienia przez wywołanie metody `ICorDebugClass2::GetParameterizedType` metody. Można również utworzyć `ICorDebugType` obiektu typu prostego, takie jak Int32, lub dla typu nieogólnego.  
+ .NET Framework w wersji 2.0 wprowadzono `ICorDebugType` interfejsu. Dla typu ogólnego `ICorDebugClass` lub `ICorDebugClass2` obiekt reprezentuje typ bez wystąpień (`SortedList<K,V>`), a `ICorDebugType` obiekt reprezentuje różne typy wystąpień. Biorąc pod uwagę `ICorDebugClass` lub `ICorDebugClass2` obiektu, można utworzyć `ICorDebugType` obiektów dla dowolnego wystąpienia przez wywołanie metody `ICorDebugClass2::GetParameterizedType` metody. Można również utworzyć `ICorDebugType` obiektu dla typu prostego, takie jak Int32, lub dla typu nieogólnego.  
   
- Wprowadzenie `ICorDebugType` obiekt do reprezentowania wykonawcze pojęcie typu ma wpływ w interfejsie API. Funkcje, które wcześniej miały `ICorDebugClass` lub `ICorDebugClass2` obiektu, a nawet `CorElementType` wartości zostały uogólnione podjęcie `ICorDebugType` obiektu.  
+ Wprowadzenie `ICorDebugType` obiekt do reprezentowania pojęcie środowiska wykonawczego typu ma falę w interfejsie API. Funkcje, które poprzednio miały `ICorDebugClass` lub `ICorDebugClass2` obiektu, a nawet `CorElementType` wartości zostały uogólnione podjęcie `ICorDebugType` obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

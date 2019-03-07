@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d6a316fb7b17a4859fd4e69acf4422c3e4baffc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121934"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478014"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Potencjalne pułapki związane z PLINQ
 W wielu przypadkach PLINQ może zapewnić znaczne ulepszenia wydajności za pośrednictwem sekwencyjnego LINQ do kwerendy obiekty. Jednak pracy przekształcają wykonywania zapytania wprowadza złożoności, który może prowadzić do problemów, które sekwencyjnego kodu nie są jako wspólne lub nie zostaną napotkane w ogóle. W tym temacie wymieniono niektóre rozwiązania, aby uniknąć podczas pisania zapytań PLINQ.  
@@ -42,19 +42,19 @@ W wielu przypadkach PLINQ może zapewnić znaczne ulepszenia wydajności za poś
   
 -   System docelowy jest znana wystarczającej liczby procesorów, którą należy obsługiwać liczbę wątków, które zostaną wygenerowane przez zrównoleglić zapytanie na `cust.Orders`.  
   
- We wszystkich przypadkach najlepszym sposobem określenia kształtu optymalne zapytania jest do testowania i miar. Aby uzyskać więcej informacji, zobacz [jak: wydajności zapytań PLINQ miary](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
+ We wszystkich przypadkach najlepszym sposobem określenia kształtu optymalne zapytania jest do testowania i miar. Aby uzyskać więcej informacji, zobacz [jak: Mierzenie wydajności zapytań PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
 ## <a name="avoid-calls-to-non-thread-safe-methods"></a>Należy unikać wywołania metod innych niż wątkowo  
  Zapisywanie metod wystąpienia innych wątkowo z PLINQ zapytania może prowadzić do uszkodzenia danych, które mogą lub nie może być wykryte w programach. Może to również prowadzić do wyjątków. W poniższym przykładzie wielu wątków będzie próba wywołania `Filestream.Write` metoda równocześnie, które nie jest obsługiwane przez klasę.  
   
 ```vb  
 Dim fs As FileStream = File.OpenWrite(…)  
-a.Where(...).OrderBy(...).Select(...).ForAll(Sub(x) fs.Write(x))  
+a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(Sub(x) fs.Write(x))  
 ```  
   
 ```csharp  
 FileStream fs = File.OpenWrite(...);  
-a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));  
+a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));  
 ```  
   
 ## <a name="limit-calls-to-thread-safe-methods"></a>Ogranicz wywołania metod metodą o bezpiecznych wątkach  

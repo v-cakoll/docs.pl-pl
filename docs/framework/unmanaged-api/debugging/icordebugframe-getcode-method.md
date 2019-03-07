@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7a4e8c6fa91ee43c33fe0f99d50bd4b1af4a0fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411921"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481199"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode — Metoda
 Pobiera wskaźnik do kodu skojarzonego z tą ramką stosu.  
@@ -35,12 +35,12 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppCode`  
- [out] Wskaźnik do adresu ICorDebugCode obiektu, który reprezentuje kod skojarzone z tej ramki.  
+ [out] Wskaźnik na adres obiektu ICorDebugCode, która przedstawia kod skojarzony z tej ramki.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

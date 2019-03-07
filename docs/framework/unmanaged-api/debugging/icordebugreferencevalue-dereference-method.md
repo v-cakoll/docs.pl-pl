@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a0fd1981e7da5af19cf3a422c6008d373e9ac92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b436fa14322d444a6c8b515ba8e50698eecb95ba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416596"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487021"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>ICorDebugReferenceValue::Dereference — Metoda
 Pobiera obiekt, do którego istnieje odwołanie.  
@@ -35,15 +35,15 @@ HRESULT Dereference (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppValue`  
- [out] Wskaźnik do adresu ICorDebugValue, który reprezentuje obiekt, do którego ten obiekt ICorDebugReferenceValue punktów.  
+ [out] Wskaźnik na adres ICorDebugValue, który reprezentuje obiekt, na który wskazuje ten obiekt ICorDebugReferenceValue.  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebugValue` Obiekt jest prawidłowy tylko wtedy, gdy odwołanie, nie ma jeszcze wyłączone.  
+ `ICorDebugValue` Obiekt jest prawidłowy tylko w przypadku, gdy odwołanie, nie ma jeszcze wyłączone.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

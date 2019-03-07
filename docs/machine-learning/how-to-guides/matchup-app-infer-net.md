@@ -1,14 +1,14 @@
 ---
 title: Tworzenie gier dopasowania listy aplikacji za pomocą programowania probalistic i Infer.NET
 description: Dowiedz się, jak za pomocą programowania probalistic Infer.NET utworzyć aplikację listy gier matchup oparty na uproszczonej wersji TrueSkill.
-ms.date: 10/04/2018
+ms.date: 03/01/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d760c364d874ec9670823be0664005d62526ee93
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152474"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473139"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Tworzenie gier dopasowania listy aplikacji przy użyciu Infer.NET i Probabilistyczne programowania
 
@@ -16,7 +16,7 @@ Ten przewodnik zawiera informacje na temat prawdopodobieństwa programowania prz
 
 ## <a name="what-is-probabilistic-programming"></a>Co to jest programowanie Probabilistyczne?
 
-Programowanie Probabilistyczne umożliwia nam tworzenie statystyczne modeli procesów w rzeczywistych warunkach. 
+Probabilistyczne programowania służy do tworzenia modeli statystyczne rzeczywistych procesów. 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -45,9 +45,9 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Projektowanie modelu
 
-W przykładzie przykładzie użyto tenisa tabeli lub dopasowania foosball odtwarzany w biurze. Mamy z uczestnikami i wynik każdego dopasowania.  Chcemy wywnioskować gracza umiejętności z tych danych. Będziesz przyjęto założenie, że każdy z graczy ma zwykle rozproszonych umiejętności ukrytego, a ich wydajności w danym dopasowanie jest hałas wersją tej umiejętności. Dane ogranicza wydajność zwycięzca powinien być większy niż pominiętych wskutek wydajności. Jest to Uproszczona wersja popularnej [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) modelu, który również obsługuje zespołów, rysuje oraz inne rozszerzenia. [Zaawansowanych wersji](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) ten model jest używana do matchmaking w najlepiej sprzedające tytuły gry Halo i Gears War.
+W przykładzie przykładzie użyto tenisa tabeli lub dopasowania foosball odtwarzany w biurze. Masz uczestników i wynik każdego dopasowania.  Chcesz wywnioskować gracza umiejętności z tych danych. Załóżmy, że każdy z graczy ma zwykle rozproszonych umiejętności ukryte, a ich wydajności danego dopasowanie jest hałas wersją tej umiejętności. Dane ogranicza wydajność zwycięzca powinien być większy niż pominiętych wskutek wydajności. Jest to Uproszczona wersja popularnej [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) modelu, który również obsługuje zespołów, rysuje oraz inne rozszerzenia. [Zaawansowanych wersji](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) ten model jest używana do matchmaking w najlepiej sprzedające tytuły gry Halo i Gears War.
 
-Potrzebujemy listy zadań do umiejętności wywnioskowane player wraz z ich wariancji — miary niepewności wokół umiejętności.
+Należy listy zadań do umiejętności wywnioskowane player wraz z ich wariancji — miary niepewności wokół umiejętności.
 
 *Wynik gier przykładowych danych*
 

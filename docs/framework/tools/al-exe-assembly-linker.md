@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492260"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Konsolidator zestawów)
 
@@ -33,7 +33,7 @@ W wierszu polecenia wpisz następujące polecenie:
 al sources options
 ```
 
-#### <a name="parameters"></a>Parametry
+## <a name="parameters"></a>Parametry
 
 Można określić co najmniej jeden z następujących `sources`.
 
@@ -69,7 +69,7 @@ Można określić następujące `options`; musisz określić **/out**.
 |**/ platform:** `text`|Ogranicza platformy, na których można uruchomić kod; dopuszczalne wartości to: x86, Itanium, x64, anycpu (domyślnie) lub anycpu32bitpreferred.|
 |**/ produktu [UTC]:** `text`|Określa ciąg dla **produktu** pole w zestawie. Umieścić ciąg w podwójnym cudzysłowie ("") jeżeli `text` zawiera spację. Ten ciąg jest dla zestawu atrybutem niestandardowym i może być wyświetlany z refleksją.<br /><br /> Jeśli nie określisz **/win32res**, **/product** pojawia się w Eksploratorze plików jako Win32 **nazwa produktu** zasobów.<br /><br /> Jeśli tekst jest pustym ciągiem, a Win32 **nazwa produktu** zasób pojawi się jako pojedyncza spacja.<br /><br /> Jeśli określisz **/win32res**, **/product** nie ma wpływu na informacje o zasobach Win32.<br /><br /> Można również określić tę opcję jako atrybut niestandardowy (<xref:System.Reflection.AssemblyProductAttribute>) w kodzie źródłowym dla każdego modułu MSIL.|
 |**/ productv [ersja]:** `text`|Określa ciąg dla **wersji produktu** pole w zestawie. Umieścić ciąg w podwójnym cudzysłowie ("") jeżeli `text` zawiera spację. Ten ciąg jest dla zestawu atrybutem niestandardowym i może być wyświetlany z refleksją.<br /><br /> Jeśli nie określisz **/win32res**, **/productversion** będzie służyć jako Win32 **wersji produktu** zasobów. Jeśli nie określisz **/productversion**, Win32 **wersji produktu** zasobów zostanie wypełniony przez Win32 **wersja pliku** zasobów.<br /><br /> Jeśli określisz **/win32res**, **/productversion** nie ma wpływu na informacje o zasobach Win32.<br /><br /> Można również określić tę opcję jako atrybut niestandardowy (<xref:System.Reflection.AssemblyInformationalVersionAttribute>) w kodzie źródłowym dla każdego modułu MSIL.|
-|**/t [arget]:** `lib[rary]` &#124; `exe`&#124; `win[exe]`|Określa format pliku wyjściowego: `lib[rary]` (biblioteka kodu) `exe` (Aplikacja konsoli) lub `win[exe]` (aplikacji systemu Windows). Wartość domyślna to `lib[rary]`.|
+|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|Określa format pliku wyjściowego: `lib[rary]` (biblioteka kodu) `exe` (Aplikacja konsoli) lub `win[exe]` (aplikacji systemu Windows). Wartość domyślna to `lib[rary]`.|
 |**Template:** `filename`|Określa zestaw, `filename`, z którego można odziedziczyć wszystkie metadane zestawu, z wyjątkiem pola kultury.<br /><br /> Zestaw utworzony przy użyciu **Template** będzie zestawem satelickim.|
 |**/ title:** `text`|Określa ciąg dla **tytuł** pole w zestawie. Umieścić ciąg w podwójnym cudzysłowie ("") jeżeli `text` zawiera spację. Ten ciąg jest dla zestawu atrybutem niestandardowym i może być wyświetlany z refleksją.<br /><br /> Jeśli nie określisz **/win32res**, **/title** pojawia się w Eksploratorze plików jako Win32 **opis** zasób, który jest używany przez powłokę jako przyjazna nazwa aplikacji. Jest również wyświetlany na **Otwórz za pomocą** podmenu menu skrótów dla typu pliku, dla którego istnieją obsługuje wiele aplikacji.<br /><br /> Jeśli tekst jest pustym ciągiem, a Win32 **opis** zasób pojawi się jako pojedyncza spacja.<br /><br /> Jeśli określisz **/win32res**, **/title** nie ma wpływu na informacje o zasobach Win32.<br /><br /> Można również określić tę opcję jako atrybut niestandardowy (<xref:System.Reflection.AssemblyTitleAttribute>) w kodzie źródłowym dla każdego modułu MSIL.|
 |**/Trade [mark]:** `text`|Określa ciąg dla **znaków towarowych** pole w zestawie. Umieścić ciąg w podwójnym cudzysłowie ("") jeżeli `text` zawiera spację. Ten ciąg jest dla zestawu atrybutem niestandardowym i może być wyświetlany z refleksją.<br /><br /> Jeśli nie określisz **/win32res**, **/trademark** pojawia się w Eksploratorze plików jako Win32 **znaków towarowych** zasobów.<br /><br /> Jeśli tekst jest pustym ciągiem, a Win32 **znaków towarowych** zasób pojawi się jako pojedyncza spacja.<br /><br /> Jeśli określisz **/win32res**, **/trademark** nie ma wpływu na informacje o zasobach Win32.<br /><br /> Można również określić tę opcję jako atrybut niestandardowy (<xref:System.Reflection.AssemblyTrademarkAttribute>) w kodzie źródłowym dla każdego modułu MSIL.|
@@ -129,7 +129,7 @@ W poniższej tabeli wymieniono błędy generowane przez *Al.exe*.
 |al1039|Nie można zainicjować Menedżera pamięci podręcznej zestawów globalnych — Przyczyna<br /><br /> Zainstaluj ponownie program Visual Studio lub [!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)].|
 |al1040|Nie można zainstalować zestawu w pamięci podręcznej — Przyczyna<br /><br /> Można zainstalować tylko zestawy podpisane w pamięci podręcznej. Zobacz [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) Aby uzyskać więcej informacji.|
 |al1041|"method": nie może być punktem wejścia, ponieważ podpis lub widoczność jest nieprawidłowa lub jest ona typu ogólnego<br /><br /> Metoda została określona za pomocą **/main** opcja, ale ta metoda nie jest statyczna, nie może zwracać `int` lub `void`, został ogólny lub ma nieprawidłowe argumenty.|
-|al1042|"exe": Nie można dodać pliku exe modułów<br /><br /> *.Exe* pliku, który nie ma zestawu został określony jako plik wejściowy, tak aby *Al.exe*. *Al.exe* przyjmuje tylko *dll* plików bez zestawów jako plików wejściowych.|
+|al1042|'exe': Nie można dodać pliku exe modułów<br /><br /> *.Exe* pliku, który nie ma zestawu został określony jako plik wejściowy, tak aby *Al.exe*. *Al.exe* przyjmuje tylko *dll* plików bez zestawów jako plików wejściowych.|
 |al1043|Nazwa pliku manifestu "name" nie może być taka sama jak wszystkie moduły<br /><br /> Nazwa określona za pomocą **/out** nie może być taka sama jak nazwy plików, które są określone jako dane wejściowe *Al.exe*.|
 |al1044|Błąd podczas odczytywania pliku klucza "file" — Przyczyna<br /><br /> Wystąpił błąd podczas otwierania lub odczytu z pliku, określonego przez **/KeyFile** lub <xref:System.Reflection.AssemblyKeyFileAttribute>.|
 |al1045|Nazwa pliku 'Plik' jest za długa lub nieprawidłowa<br /><br /> Nazwa pliku jest dłuższa niż 260 znaków został przekazany do *Al.exe*. Wybierz nazwę pliku przy użyciu mniejszej liczby znaków lub o krótszej ścieżce lub zmień nazwę pliku.|

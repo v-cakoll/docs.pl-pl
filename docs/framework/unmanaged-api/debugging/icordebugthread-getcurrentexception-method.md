@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82686fdd14783257987ec5bf9a24db7d87049d42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4baa4eb4da48b923ab0137ca25d9d819c94e33d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421749"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487346"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException — Metoda
-Pobiera wskaźnika interfejsu do obiektu ICorDebugValue, który reprezentuje wyjątek, który obecnie został zgłoszony przez kod zarządzany.  
+Pobiera wskaźnik interfejsu do obiektu ICorDebugValue, który przedstawia wyjątek, który obecnie został zgłoszony przez kod zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,19 +35,19 @@ HRESULT GetCurrentException (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppExceptionObject`  
- [out] Wskaźnik do adresu `ICorDebugValue` obiekt, który reprezentuje wyjątek, który obecnie został zgłoszony przez kod zarządzany.  
+ [out] Wskaźnik na adres `ICorDebugValue` obiekt, który reprezentuje wyjątek, który obecnie został zgłoszony przez kod zarządzany.  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt wyjątku będzie istnieć od czasu wyjątku do końca `catch` bloku. Obliczanie funkcji, które jest wykonywane za pomocą metod ICorDebugEval, należy usunąć obiekt wyjątku w instalacji, a następnie przywróć ją po zakończeniu.  
+ Obiekt wyjątku będzie istnieć od momentu wyjątek aż do końca `catch` bloku. Obliczanie funkcji, które jest wykonywane za pomocą metod ICorDebugEval, należy usunąć obiekt wyjątku na temat instalacji, a następnie przywróć ją po zakończeniu.  
   
- Wyjątki mogą być zagnieżdżane (na przykład, jeśli w filtrze lub obliczanie funkcji jest zgłaszany wyjątek), dlatego może być wiele oczekujących wyjątków w jednym wątku. `GetCurrentException` Zwraca najbardziej bieżącego wyjątku.  
+ Wyjątki mogą być zagnieżdżane (na przykład, jeśli wyjątek jest zgłaszany w filtrze lub obliczanie funkcji), dlatego może być wiele wyjątków oczekujących w jednym wątku. `GetCurrentException` Zwraca najbardziej bieżącego wyjątku.  
   
- Obiekt wyjątku i typ mogą ulec zmianie przez cały czas życia wyjątku. Na przykład po wyjątek typu x, środowisko uruchomieniowe języka wspólnego (CLR) może przekroczyć dostępną ilość pamięci i Podwyższ go do wyjątku braku pamięci.  
+ Obiekt wyjątku i typu mogą ulec zmianie w całym cyklu życia wyjątku. Na przykład po typu x jest zwracany wyjątek, środowisko uruchomieniowe języka wspólnego (CLR) może przekroczyć dostępną ilość pamięci i podwyższyć jego poziom do wyjątku braku pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

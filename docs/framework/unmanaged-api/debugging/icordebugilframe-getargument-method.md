@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414056"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475791"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument — Metoda
-Pobiera wartość określonego argumentu w tej ramce stosu język pośredni (MSIL) firmy Microsoft.  
+Pobiera wartość określonego argumentu w tej ramce stosu intermediate language (MSIL) firmy Microsoft.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,18 +36,18 @@ HRESULT GetArgument (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `dwIndex`  
  [in] Indeks argumentu w tej ramki stosu MSIL.  
   
  `ppValue`  
- [out] Wskaźnik do adresu ICorDebugValue obiekt, który reprezentuje pobrana wartość.  
+ [out] Wskaźnik na adres obiektu ICorDebugValue, który reprezentuje pobraną wartość.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetArgument` Metody można użyć w ramce stosu MSIL lub w ramce skompilowanych just-in-time (JIT).  
+ `GetArgument` Metody można użyć w ramce stosu MSIL lub w ramce skompilowany just-in-time (JIT).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

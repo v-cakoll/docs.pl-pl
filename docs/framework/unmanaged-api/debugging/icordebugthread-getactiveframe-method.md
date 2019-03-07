@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1bbe5674ba11b5ee6033c65f229d698eff15ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 051491173bbcef3d87d9a3dbe854eece46c49e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420644"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468783"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>ICorDebugThread::GetActiveFrame — Metoda
-Pobiera wskaźnika interfejsu do aktywnej ramki (najnowsze) dla tego obiektu ICorDebugThread.  
+Pobiera wskaźnik interfejsu do aktywnej ramki (najnowsze) dla tego obiektu ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppFrame`  
- [out] Wskaźnik do adresu ICorDebugFrame obiektu interfejsu, który reprezentuje ramkę.  
+ [out] Wskaźnik na adres obiektu interfejsu ICorDebugFrame, który reprezentuje ramkę.  
   
 ## <a name="remarks"></a>Uwagi  
- `ppFrame` Parametr ma wartość null, jeśli ramka nie jest obecnie aktywne.  
+ `ppFrame` Parametr ma wartość null, jeśli ramka nie jest obecnie aktywna.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

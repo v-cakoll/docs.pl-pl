@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413943"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471514"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray — Metoda
-Przydziela nowej tablicy o typie określonym elemencie i wymiary.  
+Przydziela nową tablicę typu określonego elementu i wymiary.  
   
- Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0. Użyj [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) zamiast tego.  
+ Ta metoda jest przestarzała w programie .NET Framework 2.0. Użyj [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) zamiast tego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,27 +41,27 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `elementType`  
- [in] Wartość wyliczenia CorElementType, która określa typ elementu tablicy.  
+ [in] Wartość corelementtype — wyliczenie, który określa typ elementu tablicy.  
   
  `pElementClass`  
- [in] Wskaźnik do obiektu ICorDebugClass, który określa klasę elementu. Ta wartość może mieć wartości zerowej, jeśli typ elementu jest typem pierwotnym.  
+ [in] Wskaźnik do obiektu ICorDebugClass, który określa klasę elementu. Ta wartość może być zerowy, jeśli typ elementu to typ pierwotny.  
   
  `rank`  
- [in] Liczba wymiarów tablicy. W .NET Framework 2.0 ta wartość musi wynosić 1.  
+ [in] Liczba wymiarów tablicy. W programie .NET Framework 2.0 ta wartość musi wynosić 1.  
   
  `dims`  
  [in] Rozmiar w bajtach każdego wymiaru tablicy.  
   
  `lowBounds`  
- [in] Opcjonalne. Dolną granicę każdego wymiaru tablicy. W przypadku pominięcia tej wartości dolna granica zero zakłada, że dla każdego wymiaru.  
+ [in] Opcjonalnie. Dolna granica każdego wymiaru tablicy. Jeśli ta wartość zostanie pominięty, dolną granicę równą zero zakłada, że dla każdego wymiaru.  
   
 ## <a name="remarks"></a>Uwagi  
- Tablicy zawsze jest tworzony w domenie aplikacji, w którym wątek jest aktualnie wykonywany.  
+ Tablica zawsze jest tworzony w domenie aplikacji, w którym wątek jest w trakcie wykonywania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

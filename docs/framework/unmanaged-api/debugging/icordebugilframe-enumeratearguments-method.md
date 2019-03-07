@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49d7fb1de0b2ea63c1a766023b23acc42e027af8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415025"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475661"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments — Metoda
-Pobiera moduł wyliczający dla argumentów do tej ramki.  
+Pobiera moduł wyliczający dla argumentów w tej ramce.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT EnumerateArguments (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppValueEnum`  
- [out] Wskaźnik do adresu ICorDebugValueEnum obiektu, który moduł wyliczający dla argumentów do tej ramki.  
+ [out] Wskaźnik na adres icordebugvalueenum — obiekt, który jest moduł wyliczający dla argumentów w tej ramce.  
   
 ## <a name="remarks"></a>Uwagi  
- `EnumerateArguments` Pobiera moduł wyliczający, który można wyświetlić listę dostępnych w ramce wywołania reprezentowanego przez ten obiekt ICorDebugILFrame argumentów. Lista zawiera argumenty, które są [vararg](/cpp/windows/vararg) (to znaczy zmienną liczbę argumentów) oraz argumentów, które nie są `vararg`.  
+ `EnumerateArguments` Pobiera moduł wyliczający, który można wyświetlić listę dostępnych w ramce wywołań, który jest reprezentowany przez ten obiekt ICorDebugILFrame argumentów. Lista zawiera argumenty, które są [vararg](/cpp/windows/vararg) (czyli zmienną liczbę argumentów) oraz argumenty, które nie są `vararg`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

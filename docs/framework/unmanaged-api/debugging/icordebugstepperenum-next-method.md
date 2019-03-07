@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bd62e4c5476aacf736f2ddfea008790861d931c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419620"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494600"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień ICorDebugStepper — z wyliczenia, zaczynając od bieżącego położenia.  
+Pobiera określoną liczbę wystąpień ICorDebugStepper — z wyliczenia, zaczynając od bieżącej pozycji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +38,18 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `celt`  
  [in] Liczba `ICorDebugStepper` wystąpienia mają zostać pobrane.  
   
  `steppers`  
- [out] Tablicy wskaźników, z których każdy wskazuje `ICorDebugStepper` obiektu.  
+ [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugStepper` obiektu.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugStepper` wystąpienia faktycznie zwracane. Ta wartość może mieć wartości zerowej Jeśli `celt` jeden.  
+ [out] Wskaźnik do liczby `ICorDebugStepper` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

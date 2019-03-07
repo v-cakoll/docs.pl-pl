@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3b77a0ffc7af3b3640d1b255bd3be522f45a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b84a2fad53feda2996515781035c0eaad5828d54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413553"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473438"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength — Metoda
 Tworzy ciąg o określonej długości, przy użyciu określonej zawartości.  
@@ -36,7 +36,7 @@ HRESULT NewStringWithLength (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `string`  
  [in] Wskaźnik do wartości ciągu.  
   
@@ -44,12 +44,12 @@ HRESULT NewStringWithLength (
  [in] Długość ciągu.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ciąg na końcu znak null powinien być w ciągu zarządzany element wywołujący `NewStringWithLength` metody musi zapewnić, że długość ciągu zawiera znak końcowy null.  
+ Jeśli ciąg na końcu znak null powinien być w ciągu zarządzany obiekt wywołujący `NewStringWithLength` metody należy upewnić się, że długość ciągu zawiera końcowego znaku null.  
   
- Ciąg zawsze jest tworzony w domenie aplikacji, w którym wątek jest aktualnie wykonywany.  
+ Ciąg zawsze jest tworzony w domenie aplikacji, w którym wątek jest w trakcie wykonywania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

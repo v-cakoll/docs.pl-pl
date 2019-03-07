@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008f945b5301894261ce1529cbd915dd614b919d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418958"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470084"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread — Metoda
-Pobiera wątku tego procesu, który ma identyfikator wątku. określony system operacyjny (OS)  
+Pobiera wątku tego procesu, który ma identyfikator wątku określonego systemu operacyjnego (OS).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetThread(
     [out] ICorDebugThread **ppThread);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `dwThreadId`  
- [in] System operacyjny wątku, identyfikator wątku, które mają zostać pobrane.  
+ [in] System operacyjny, wątek identyfikator wątku do pobrania.  
   
  `ppThread`  
- [out] Wskaźnik do adresu ICorDebugThread obiekt, który reprezentuje wątku.  
+ [out] Wskaźnik na adres ICorDebugThread obiekt, który reprezentuje wątku.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

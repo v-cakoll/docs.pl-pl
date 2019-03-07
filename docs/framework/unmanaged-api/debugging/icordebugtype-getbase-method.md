@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b96c6ab8fb9065e1a08ad45a7f4482ef0b32788b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d04bc67013a2227f295ac3a41be027b9f9b04e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418888"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478729"
 ---
 # <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase — Metoda
-Pobiera wskaźnika interfejsu do ICorDebugType, który reprezentuje typ podstawowy, jeśli istnieje, typu reprezentowanego przez ten `ICorDebugType`.  
+Pobiera wskaźnik interfejsu do ICorDebugType, który reprezentuje typ podstawowy, jeśli taki istnieje, typu reprezentowanego przez ten `ICorDebugType`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetBase (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pBase`  
- [out] Wskaźnik do adresu `ICorDebugType` obiekt, który reprezentuje typ podstawowy.  
+ [out] Wskaźnik na adres `ICorDebugType` obiekt, który reprezentuje typ podstawowy.  
   
 ## <a name="remarks"></a>Uwagi  
- Wyszukiwanie typu podstawowego dla typu jest przydatne do zaimplementowania typowych funkcji debugera, takie jak drukowanie wszystkie pola obiektu lub jej klas nadrzędnych.  
+ Wyszukiwanie z typem podstawowym typem jest przydatne do zaimplementowania typowych funkcji debugowania, takich jak drukowanie wszystkich pól obiektu lub jej klas nadrzędnych.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

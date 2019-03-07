@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60624a5f6323399d06bda4e0280de8fbe861bd9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 08bf4022f7cd7f85ffe7939c16fd47950e131a77
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419588"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471527"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle — Metoda
-Pobiera wskaźnik odwołanie do określonego zarządzanego obiektu, który ma obsługiwać wyrzucania elementów bezużytecznych.  
+Pobiera wskaźnik odwołania do określonego obiektu zarządzanego, który ma obsługiwać wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,23 +36,23 @@ HRESULT GetReferenceValueFromGCHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `handle`  
- [in] Wskaźnik do zarządzanego obiektu, który ma uchwyt kolekcji pamięci. Ta wartość jest <xref:System.IntPtr> obiektu i mogą być pobierane z <xref:System.Runtime.InteropServices.GCHandle> dla obiekt zarządzany.  
+ [in] Wskaźnik do obiektu zarządzanego, który ma dojścia kolekcji wyrzucania elementów. Ta wartość jest <xref:System.IntPtr> obiektu i może zostać pobrana z <xref:System.Runtime.InteropServices.GCHandle> obiektu zarządzanego.  
   
  `pOutValue`  
- [out] Wskaźnik do adresu ICorDebugReferenceValue obiekt, który reprezentuje odwołanie do określonego obiektu zarządzanego.  
+ [out] Wskaźnik na adres obiektu ICorDebugReferenceValue, który reprezentuje odwołanie do określonego obiektu zarządzanego.  
   
 ## <a name="remarks"></a>Uwagi  
- Nie należy mylić wartości zwracane odwołanie o wartości odwołania kolekcji pamięci.  
+ Nie należy mylić wartości zwracane odwołanie o wartości odniesienia kolekcji wyrzucania elementów.  
   
- Zwracane odwołanie zachowuje się jak normalne odwołania. Gdy kontynuuje wykonywanie kodu po punkt przerwania jest wyłączona. Okres istnienia obiektu docelowego nie ma wpływu na okres istnienia wartości odwołania.  
+ Zwracane odwołanie zachowuje się jak normalne odwołania. Jest ona wyłączona, gdy punkt przerwania jest kontynuowane wykonywanie kodu. Okres istnienia wartość odwołania nie dotyczy okresu istnienia obiektu docelowego.  
   
 > [!NOTE]
->  `GetReferenceValueFromGCHandle` Metody nie można zweryfikować dojście. W związku z tym `GetReferenceValueFromGCHandle` metody może potencjalnie uszkodzić zarówno debugera i kod debugowany, jeżeli nie przekazano nieprawidłowe dojście.  
+>  `GetReferenceValueFromGCHandle` Metoda nie sprawdza poprawności dojścia. W związku z tym `GetReferenceValueFromGCHandle` metoda może potencjalnie uszkodzić debugera i kod debugowany, jeśli zostanie przekazana nieprawidłowego dojścia.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 129bf04a097b2019b080f813bf049d41b501f8fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418200"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474218"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC — Metoda
-Ustawia wartość określającą, czy ten ICorDebugStepper — przeprowadza tylko przez kod, który został utworzony przez dewelopera aplikacji. Ten proces jest również znane jako tylko mój kod (JMC) debugowania.  
+Ustawia wartość określającą, czy ten ICorDebugStepper — przeprowadzi tylko kod, który został utworzony przez dewelopera aplikacji. Ten proces jest również znane jako tylko mój kod (JMC) debugowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,12 +35,12 @@ HRESULT SetJMC (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `fIsJMCStepper`  
- [in] Ustaw `true` do kroku tylko za pośrednictwem kodu, który jest utworzony przez dewelopera aplikacji; w przeciwnym razie wartość `false`.  
+ [in] Ustaw `true` przechodzić jedynie przez kod, który jest utworzony przez dewelopera aplikacji; w przeciwnym wypadku ustaw `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

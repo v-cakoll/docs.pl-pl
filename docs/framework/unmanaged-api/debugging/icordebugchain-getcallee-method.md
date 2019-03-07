@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f050a3d9d37e43713c40896fb162bcf9932c6512
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed5a7657affde335acf79952d77bbdb7ac42c7a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403373"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490466"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee — Metoda
-Pobiera łańcucha, która została wywołana przez ten łańcuch.  
+Pobiera łańcucha, który został wywołany przez tego łańcucha.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,15 +35,15 @@ HRESULT GetCallee (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik do adresu ICorDebugChain obiektu, który odpowiada nazwie łańcucha. Jeśli ten łańcuch jest aktualnie wykonywany (oznacza to, czy ten łańcuch nie oczekuje na nazwie łańcucha do zwrócenia), `ppChain` będzie mieć wartość null.  
+ [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje o nazwie łańcucha. Jeśli ta sieć jest w trakcie wykonywania (to znaczy, jeśli ten łańcuch nie oczekuje na o nazwie łańcuch do zwrócenia), `ppChain` będzie miał wartość null.  
   
 ## <a name="remarks"></a>Uwagi  
- Ten łańcuch będzie oczekiwał na nazwie łańcucha do zwrócenia przed kontynuuje wykonywanie. Łańcuch o nazwie może być inny wątek w przypadku międzyprocesowe między wątkami.  
+ Ten łańcuch będzie czekać na o nazwie łańcuch do zwrócenia przed jego wznawia działanie. Łańcuch o nazwie może znajdować się na inny wątek w przypadku międzyprocesowe między wątkami.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

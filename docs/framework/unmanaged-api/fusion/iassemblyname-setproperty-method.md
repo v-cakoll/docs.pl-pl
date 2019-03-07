@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca2d7fe73fc749296f76e18ecce75b7fdd0795d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb04a97597982fdae7a68ba4f3ed4d7420b4189
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585594"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488152"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty — Metoda
 Ustawia wartość właściwości odwołuje się określony identyfikator właściwości.  
@@ -37,7 +37,7 @@ HRESULT SetProperty (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `PropertyId`  
  [in] Unikatowy identyfikator właściwości, którego wartość zostanie ustawiona.  
   

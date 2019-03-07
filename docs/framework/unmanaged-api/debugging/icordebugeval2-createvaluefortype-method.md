@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683457c249915708becadaeda9dec265666e2023
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27e40618d6128c21e99745ca45e139a9c21c843
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412110"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475037"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType — Metoda
 Pobiera wskaźnik do nowego ICorDebugValue określonego typu o wartości początkowej zero lub wartość null.  
@@ -36,20 +36,20 @@ HRESULT CreateValueForType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `pType`  
  [in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ.  
   
  `ppValue`  
- [out] Wskaźnik do adresu `ICorDebugValue` obiekt, który reprezentuje wartość.  
+ [out] Wskaźnik na adres `ICorDebugValue` obiekt, który reprezentuje wartość.  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateValueForType` stanowi uogólnienie [ICorDebugEval::CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , umożliwiając określenie typu dowolnego obiektu, w tym konstruować typów takich jak `List<int>`. Jedynym celem tej metody polega na generowaniu wartości, które mogą zostać przekazane do obliczania funkcji.  
+ `CreateValueForType` stanowi uogólnienie [ICorDebugEval::CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , umożliwiając określenie typu dowolnego obiektu, w tym skonstruowany typy takie jak `List<int>`. Jedynym celem tej metody jest do generowania wartości, które mogą być przekazywane do obliczania funkcji.  
   
- Typ musi być klasą lub typem wartości. Tej metody nie można użyć do utworzenia tablicy wartości lub wartości ciągu.  
+ Typ musi być klasą lub typu wartości. Ta metoda nie można użyć do utworzenia tablicy wartości lub wartości ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

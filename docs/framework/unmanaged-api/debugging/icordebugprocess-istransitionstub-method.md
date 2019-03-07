@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420098"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488191"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub — Metoda
-Pobiera wartość wskazującą, czy adres znajduje się wewnątrz skrótowa, która spowoduje przejście do kodu zarządzanego.  
+Pobiera wartość wskazującą, czy adres znajduje się wewnątrz odcinek, który spowoduje przejście do kodu zarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,20 +35,20 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` wartość, która określa adres jest zagrożona.  
+ [in] A `CORDB_ADDRESS` wartość, która określa danego adresu.  
   
  `pbTransitionStub`  
- [out] Wskaźnik do wartość logiczna, która jest `true` , jeśli określony adres znajduje się wewnątrz skrótowa, która spowoduje przejście do zarządzanego kodu; w przeciwnym razie *`pbTransitionStub` jest `false`.  
+ [out] Wskaźnik na wartość logiczną, która jest `true` Jeśli określony adres znajduje się wewnątrz odcinek, który spowoduje przejście do zarządzanego kodu; w przeciwnym razie *`pbTransitionStub` jest `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- `IsTransitionStub` Metoda pozwala przez kod niezarządzany wykonywania krokowego podjęcie decyzji dotyczącej powrócić wykonywania krokowego kontroli do zarządzanych stepper.  
+ `IsTransitionStub` Metoda może służyć przez kod niezarządzany przechodzenia krok po kroku w podjęciu decyzji, przywrócenie kontroli przechodzenia krok po kroku do stepper zarządzanych.  
   
- Można również klas zastępczych przejścia tożsamości, analizując informacje w przenośny plik wykonywalny (PE).  
+ Można również wycinków przejścia tożsamości, analizując informacje zawarte w przenośny plik wykonywalny (PE).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 084b80e90ea3950245606c56de7ed3e18fd27662
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653865"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486436"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo — Metoda
 Pobiera komunikat o błędzie odpowiadający błąd sprawdzania poprawności określonej.  
@@ -39,7 +39,7 @@ HRESULT FormatEventInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `hVECode`  
  [in] Wartość HRESULT, który został przekazany do procedury obsługi błędów sprawdzania poprawności.  
   

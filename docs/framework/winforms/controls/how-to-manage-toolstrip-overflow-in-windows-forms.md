@@ -10,39 +10,41 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-ms.openlocfilehash: 5f26217c92aef1d568349aefb87dd5a882a0cf28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24304b64b4214f9c15006e4f6cf35fac0bd0ced1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541160"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480081"
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Instrukcje: Zarządzanie przepełnieniem elementu ToolStrip w formularzach Windows Forms
-Gdy wszystkie elementy na <xref:System.Windows.Forms.ToolStrip> formantu nie mieszczą się w wyznaczonym miejscu, można włączyć funkcji przepełnienie w <xref:System.Windows.Forms.ToolStrip> i określić zachowanie przepełnienie konkretnych <xref:System.Windows.Forms.ToolStripItem>s.  
-  
- Po dodaniu <xref:System.Windows.Forms.ToolStripItem>s, które wymagają więcej miejsca niż jest przydzielone <xref:System.Windows.Forms.ToolStrip> danego formularza bieżący rozmiar <xref:System.Windows.Forms.ToolStripOverflowButton> automatycznie pojawia się na <xref:System.Windows.Forms.ToolStrip>. <xref:System.Windows.Forms.ToolStripOverflowButton> Pojawi się, i włączone przepełnienie elementy zostaną przeniesione do menu rozwijanego, przepełnieniu. Dzięki temu można dostosować i ustalić ich priorytety jak Twoje <xref:System.Windows.Forms.ToolStrip> elementy odpowiednio dostosowują się do różnych rozmiarów. Możesz również zmienić wygląd swoich elementów, gdy znajdą się one do przeciążenia przy użyciu <xref:System.Windows.Forms.ToolStripItem.Placement%2A> i <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> właściwości i <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> zdarzeń. Jeśli w czasie projektowania lub wykonywania, Powiększ bardziej formularza <xref:System.Windows.Forms.ToolStripItem>s mogą być wyświetlane w głównym <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.ToolStripOverflowButton> nawet może zniknąć, dopóki nie można zmniejszyć rozmiar formularza.  
-  
-### <a name="to-enable-overflow-on-a-toolstrip-control"></a>Aby włączyć przepełnienie w formancie ToolStrip  
-  
--   Upewnij się, że <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> nie ustawiono właściwości `false` dla <xref:System.Windows.Forms.ToolStrip>. Wartość domyślna to `True`.  
-  
-     Gdy <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> jest `True` (ustawienie domyślne), <xref:System.Windows.Forms.ToolStripItem> są wysyłane do menu rozwijanego, przepełnieniu podczas zawartość <xref:System.Windows.Forms.ToolStripItem> przekracza szerokość poziomego <xref:System.Windows.Forms.ToolStrip> lub wysokości kontrolki w pionie <xref:System.Windows.Forms.ToolStrip>.  
-  
-### <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>Aby określić zachowanie przepełnienie określonych ToolStripItem  
-  
--   Ustaw <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> właściwość <xref:System.Windows.Forms.ToolStripItem> na żądaną wartość. Możliwości są `Always`, `Never`, i `AsNeeded`. Defaultis `AsNeeded`.  
-  
-    ```vb  
-    toolStripTextBox1.Overflow = _  
-    System.Windows.Forms.ToolStripItemOverflow.Never  
-    ```  
-  
-    ```csharp  
-    toolStripTextBox1.Overflow = _  
-    System.Windows.Forms.ToolStripItemOverflow.Never;  
-    ```  
-  
+
+Gdy wszystkie elementy na <xref:System.Windows.Forms.ToolStrip> formantu nie mieszczą się w wyznaczonym miejscu, można włączyć funkcji przepełnienie w <xref:System.Windows.Forms.ToolStrip> i określić zachowanie przepełnienie konkretnych <xref:System.Windows.Forms.ToolStripItem>s.
+
+Po dodaniu <xref:System.Windows.Forms.ToolStripItem>s, które wymagają więcej miejsca niż jest przydzielone <xref:System.Windows.Forms.ToolStrip> danego formularza bieżący rozmiar <xref:System.Windows.Forms.ToolStripOverflowButton> automatycznie pojawia się na <xref:System.Windows.Forms.ToolStrip>. <xref:System.Windows.Forms.ToolStripOverflowButton> Pojawi się, i włączone przepełnienie elementy zostaną przeniesione do menu rozwijanego, przepełnieniu. Dzięki temu można dostosować i ustalić ich priorytety jak Twoje <xref:System.Windows.Forms.ToolStrip> elementy odpowiednio dostosowują się do różnych rozmiarów. Możesz również zmienić wygląd swoich elementów, gdy znajdą się one do przeciążenia przy użyciu <xref:System.Windows.Forms.ToolStripItem.Placement%2A> i <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> właściwości i <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> zdarzeń. Jeśli w czasie projektowania lub wykonywania, Powiększ bardziej formularza <xref:System.Windows.Forms.ToolStripItem>s mogą być wyświetlane w głównym <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.ToolStripOverflowButton> nawet może zniknąć, dopóki nie można zmniejszyć rozmiar formularza.
+
+## <a name="to-enable-overflow-on-a-toolstrip-control"></a>Aby włączyć przepełnienie w formancie ToolStrip
+
+- Upewnij się, że <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> nie ustawiono właściwości `false` dla <xref:System.Windows.Forms.ToolStrip>. Wartość domyślna to `True`.
+
+     Gdy <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> jest `True` (ustawienie domyślne), <xref:System.Windows.Forms.ToolStripItem> są wysyłane do menu rozwijanego, przepełnieniu podczas zawartość <xref:System.Windows.Forms.ToolStripItem> przekracza szerokość poziomego <xref:System.Windows.Forms.ToolStrip> lub wysokości kontrolki w pionie <xref:System.Windows.Forms.ToolStrip>.
+
+## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>Aby określić zachowanie przepełnienie określonych ToolStripItem
+
+- Ustaw <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> właściwość <xref:System.Windows.Forms.ToolStripItem> na żądaną wartość. Możliwości są `Always`, `Never`, i `AsNeeded`. Wartość domyślna to `AsNeeded`.
+
+    ```vb
+    toolStripTextBox1.Overflow = _
+    System.Windows.Forms.ToolStripItemOverflow.Never
+    ```
+
+    ```csharp
+    toolStripTextBox1.Overflow = _
+    System.Windows.Forms.ToolStripItemOverflow.Never;
+    ```
+
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>
 - <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>

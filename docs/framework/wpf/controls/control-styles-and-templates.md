@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373207"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488841"
 ---
 # <a name="control-styles-and-templates"></a>Style i szablony formantu
 Formanty w Windows Presentation Foundation (WPF) mają <xref:System.Windows.Controls.ControlTemplate> zawiera drzewo wizualne tej kontrolki. Struktury i wyglądu kontrolki można zmienić, modyfikując <xref:System.Windows.Controls.ControlTemplate> tej kontrolki. Nie ma możliwości zastąpienia tylko drzewie wizualnym kontrolki; Aby zmienić drzewie wizualnym kontrolki, należy ustawić <xref:System.Windows.Controls.Control.Template%2A> właściwości formantu do nowych i kompletne <xref:System.Windows.Controls.ControlTemplate>.  
@@ -50,18 +50,18 @@ Formanty w Windows Presentation Foundation (WPF) mają <xref:System.Windows.Cont
  [ListView — style i szablony](listview-styles-and-templates.md)  
  [Style i szablony menu](menu-styles-and-templates.md)  
  [NavigationWindow — style i szablony](navigationwindow-styles-and-templates.md)  
- [PasswordBox — style i szablony](passwordbox-syles-and-templates.md)  
+ [PasswordBox — style i szablony](passwordbox-styles-and-templates.md)  
  [ProgressBar — style i szablony](progressbar-styles-and-templates.md)  
  [RadioButton — style i szablony](radiobutton-styles-and-templates.md)  
- [RepeatButton — style i szablony](repeatbutton-syles-and-templates.md)  
+ [RepeatButton — style i szablony](repeatbutton-styles-and-templates.md)  
  [ScrollBar — style i szablony](scrollbar-styles-and-templates.md)  
  [ScrollViewer — style i szablony](scrollviewer-styles-and-templates.md)  
  [Style i szablony suwaka](slider-styles-and-templates.md)  
  [StatusBar — style i szablony](statusbar-styles-and-templates.md)  
  [TabControl — style i szablony](tabcontrol-styles-and-templates.md)  
  [TextBox — style i szablony](textbox-styles-and-templates.md)  
- [Thumb — style i szablony](thumb-syles-and-templates.md)  
- [ToggleButton — style i szablony](togglebutton-syles-and-templates.md)  
+ [Thumb — style i szablony](thumb-styles-and-templates.md)  
+ [ToggleButton — style i szablony](togglebutton-styles-and-templates.md)  
  [ToolBar — style i szablony](toolbar-styles-and-templates.md)  
  [ToolTip — style i szablony](tooltip-styles-and-templates.md)  
  [TreeView — style i szablony](treeview-styles-and-templates.md)  

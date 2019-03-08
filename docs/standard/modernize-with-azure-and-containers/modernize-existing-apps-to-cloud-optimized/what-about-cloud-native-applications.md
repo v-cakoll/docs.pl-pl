@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746419"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679284"
 ---
 # <a name="what-about-cloud-native-applications"></a>Jak wygląda aplikacjom natywnym dla chmury?
 
@@ -21,13 +21,13 @@ Rysunek 4-3 umieszcza natywnych aplikacji w chmurze w poziomie dojrzałości mod
 
 > **Rysunek 4-3.** Pozycjonowanie aplikacjom natywnym dla chmury
 
-Poziom dojrzałości modernizacji natywnych dla chmury zwykle wymagają nowych inwestycji rozwoju. Przejście do poziomu natywnych dla chmury zwykle wynikają potrzeba biznesowa w celu zmodernizowania możliwie najlepiej znacząco zwiększyć skalę w dużych aplikacji, tworząc podsystemy autonomicznego (mikrousług), które mogą być wdrażane i skalowania aplikacji niezależnie z innych obszarów aplikacji, obniżając jednocześnie koszty w długi czas trwania umowy i zwiększenia ewolucji elastyczności części tych aplikacji autonomicznych, które zapewniają znaczących konkurować korzyści. 
+Poziom dojrzałości modernizacji natywnych dla chmury zwykle wymagają nowych inwestycji rozwoju. Przejście do poziomu natywnych dla chmury zwykle wynikają potrzeba biznesowa w celu zmodernizowania możliwie najlepiej znacząco zwiększyć skalę w dużych aplikacji, tworząc podsystemy autonomicznego (mikrousług), które mogą być wdrażane i skalowania aplikacji niezależnie z innych obszarów aplikacji, obniżając jednocześnie koszty w długi czas trwania umowy i zwiększenia ewolucji elastyczności części tych aplikacji autonomicznych, które zapewniają znaczących konkurować korzyści.
 
 Głównych filarów aplikacji natywnych dla chmury są oparte na metody dotyczące architektury mikrousług, które ewoluują wraz z elastyczności i skalowanie do ograniczenia, które mogą być trudny do osiągnięcia w monolityczne architektury wdrożone w środowisku lokalnym lub w chmurze środowisko.
 
-Rysunek 4-4 przedstawiono charakterystykę modelu natywnych dla chmury.  
+Rysunek 4-4 przedstawiono charakterystykę modelu natywnych dla chmury.
 
-> ![Cechy natywnych dla chmury są Mikrousług, kontenerów, odporne na błędy dla chmury i koordynatorów serverles](./media/image4.png)
+> ![Cechy natywnych dla chmury są Mikrousługi i chmura — odporne na błędy, koordynatorów kontenerów i bez użycia serwera](./media/image4.png)
 >
 > **Rysunek 4-4.** Właściwości natywnych dla chmury
 
@@ -47,7 +47,7 @@ Przykładowa definicja i więcej informacji na temat właściwości aplikacji na
 
 Najistotniejszym czynnikiem wziąć pod uwagę, czy migrować pełnej aplikacji natywnych dla chmury modelu jest, użytkownik musi Przekształcanie do opartych na mikrousługach architektury. Wymaga to wyraźnie znaczących inwestycji związanych z programowania ze względu na duże proces refaktoryzacji. Zazwyczaj zostanie wybrana ta opcja dla aplikacji o kluczowym znaczeniu, które wymagają nowych poziomów skalowalność i elastyczność długoterminowe. Jednak można rozpocząć przenoszenie kierunku natywnych dla chmury, dodając mikrousług dla kilku nowych scenariuszy i ostatecznie refaktoryzacji aplikacji pełni jako mikrousług. To podejście przyrostowe jest najlepszym rozwiązaniem w przypadku niektórych scenariuszy.
 
-## <a name="what-about-microservices"></a>Jak wygląda mikrousług? 
+## <a name="what-about-microservices"></a>Jak wygląda mikrousług?
 
 Ważne jest zrozumienie mikrousług i sposobie ich działania, gdy rozważasz aplikacjom natywnym dla chmury w organizacji.
 
@@ -67,6 +67,6 @@ Jako ostatecznego notatki, nawet ryzyko zwrócenia powtarzających się o to poj
 
 W każdym przypadku pozostałej części tej wskazówki obecne koncentruje się większość wszystkich na "Brak opartych na mikrousługach aplikacji", ponieważ te wskazówki głównie przeznaczone dla modernizacji istniejących aplikacji, mających monolityczne lub N-warstwowej architektury.
 
->[!div class="step-by-step"]
->[Poprzednie](microsoft-technologies-in-cloud-optimized-applications.md)
->[dalej](deploy-existing-net-apps-as-windows-containers.md)
+> [!div class="step-by-step"]
+> [Poprzednie](microsoft-technologies-in-cloud-optimized-applications.md)
+> [dalej](deploy-existing-net-apps-as-windows-containers.md)

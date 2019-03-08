@@ -1,16 +1,21 @@
 ---
 title: Szkolenie modelu uczenia maszynowego, za pomocą krzyżowego sprawdzania poprawności - strukturze ML.NET
 description: Dowiedz się, jak do nauczenia modelu, używając krzyżowa Weryfikacja za pomocą platformy ML.NET mają większy poziom dokładności przewidywania modelu uczenia maszynowego
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092283"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676541"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Szkolenie modelu uczenia maszynowego, za pomocą krzyżowego sprawdzania poprawności - strukturze ML.NET
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 [Krzyżowa Weryfikacja](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) jest przydatną techniką, w przypadku aplikacji uczenia Maszynowego. On pomaga oszacować wariancję jakość modelu z jeden przebieg do innego i również eliminuje potrzebę wyodrębnić oddzielne testów, zestawu do oceny.
 

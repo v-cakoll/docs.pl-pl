@@ -6,16 +6,14 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 5070403cea88fb9c4a5b5d6140fe4d5a5218c636
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b26662b710b089349b921c7d6517cd86fe6d933
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512170"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673109"
 ---
-# <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementacja wzorca kontrolki przekształcania automatyzacji interfejsu użytkownika
+# <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementacja wzorca formantu przekształcania automatyzacji interfejsu użytkownika
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

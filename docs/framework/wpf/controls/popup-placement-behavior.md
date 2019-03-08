@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 0f02fcef5c905e81808d76b71b45e0d010084268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 449ec3ff30bb4650c32d3f6b9743b5d1a31ad0de
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360562"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679518"
 ---
 # <a name="popup-placement-behavior"></a>Zachowanie położenia okna podręcznego
 A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartość w osobnym oknie, które pojawia się za pośrednictwem aplikacji. Można określić położenie <xref:System.Windows.Controls.Primitives.Popup> względem formantu, myszy lub ekranu przy użyciu <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> właściwości.  Właściwości te działają razem, zapewniają elastyczność podczas określania położenia <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -30,8 +30,7 @@ A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartoś
   
  Na poniższej ilustracji przedstawiono obrazu i <xref:System.Windows.Controls.Primitives.Popup> formantów  
   
- ![Obraz z czterech kontrolek popup](./media/popupplacementintro.png "PopupPlacementIntro")  
-Obraz z czterech wyskakujące okienka  
+ ![Obraz z czterech kontrolek popup](./media/popup-placement-behavior/popup-placement-intro.png "obrazu za pomocą czterech wyskakujące okienka")    
   
  Ten prosty przykład pokazuje, jak ustawić <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> i <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwości, ale przy użyciu <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> właściwości, masz większą kontrolę nad <xref:System.Windows.Controls.Primitives.Popup> znajduje się.  
   
@@ -58,8 +57,8 @@ Obraz z czterech wyskakujące okienka
   
  Poniższa ilustracja pokazuje, że <xref:System.Windows.Controls.Primitives.Popup> jest umieszczony względem <xref:System.Windows.Controls.Canvas>.  
   
- ![Formant okna podręcznego PlacementTarget](./media/popupplacementnoplacementtarget.PNG "PopupPlacementNoPlacementTarget")  
-Okno podręczne PlacementTarget  
+ ![Formant okna podręcznego PlacementTarget](./media/popup-placement-behavior/popup-placement-no-placement-target.png "okno podręczne PlacementTarget.")  
+  
   
  Poniższy przykład tworzy <xref:System.Windows.Controls.Primitives.Popup> czyli elementem podrzędnym elementu <xref:System.Windows.Controls.Canvas>, ale tym razem <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> jest ustawiona na `ellipse1`, dlatego pojawi się okno podręczne poniżej <xref:System.Windows.Shapes.Ellipse>.  
   
@@ -67,8 +66,7 @@ Okno podręczne PlacementTarget
   
  Poniższa ilustracja pokazuje, że <xref:System.Windows.Controls.Primitives.Popup> jest umieszczony względem <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Okno podręczne umieszczony względem elipsę](./media/popupplacementwithplacementtarget.PNG "PopupPlacementWithPlacementTarget")  
-Okno podręczne z PlacementTarget  
+ ![Okno podręczne umieszczony względem elipsę](./media/popup-placement-behavior/popup-placement-with-placement-target.png "okno podręczne z PlacementTarget")    
   
 > [!NOTE]
 >  Aby uzyskać <xref:System.Windows.Controls.ToolTip>, wartością domyślną <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>.  Aby uzyskać <xref:System.Windows.Controls.ContextMenu>, wartością domyślną <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>. Te wartości są szczegółowo opisane w dalszej części, "Jak właściwości współpracują ze sobą."  
@@ -82,8 +80,8 @@ Okno podręczne z PlacementTarget
   
  Poniższa ilustracja przedstawia wynik poprzedniego przykładu.  
   
- ![Okno podręczne z lub bez PlacementRectangle](./media/popupplacementplacementrectangle.PNG "PopupPlacementPlacementRectangle")  
-Okno podręczne z lub bez PlacementRectangle  
+ ![Okno podręczne z lub bez PlacementRectangle](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "okno podręczne z lub bez PlacementRectangle.")  
+  
   
 ### <a name="target-origin-and-popup-alignment-point"></a>Docelowy punkt początkowy i punkt wyrównania okna podręcznego  
  *Docelowe źródło* i *punkt wyrównania okno podręczne* punktów odniesienia w docelowy obszar obsługujący kliknięcia i okno podręczne, odpowiednio, które są używane do pozycjonowania. Możesz użyć <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> właściwości w celu przesunięcia okno podręczne z obszaru docelowego.  <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> są względne wobec target punkt początkowy i punkt wyrównania okna podręcznego. Wartość <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość określa, gdzie znajdują się docelowy punkt wyrównania pochodzenia i menu podręczne.  
@@ -94,8 +92,7 @@ Okno podręczne z lub bez PlacementRectangle
   
  Poniższa ilustracja przedstawia wynik poprzedniego przykładu.  
   
- ![Położenie okna podręcznego z punktem wyrównania pochodzenia docelowej](./media/popupplacementtargetoriginalignmentpoint.PNG "PopupPlacementTargetOriginAlignmentPoint")  
-Okno podręczne z HorizontalOffset i verticaloffset w razie  
+ ![Położenie okna podręcznego z punktem wyrównania pochodzenia docelowej](./media/popup-placement-behavior/popup-placement-target-origin-alignment-point.png "okno podręczne z HorizontalOffset i verticaloffset w razie.")    
   
 <a name="How"></a>   
 ## <a name="how-the-properties-work-together"></a>Jak właściwości współpracują ze sobą  
@@ -120,32 +117,23 @@ Okno podręczne z HorizontalOffset i verticaloffset w razie
   
  Pokazują następujące ilustracje <xref:System.Windows.Controls.Primitives.Popup>, docelowy obszar obsługujący kliknięcia, target punkt początkowy i wyrównanie okno podręczne punktu dla każdego <xref:System.Windows.Controls.Primitives.PlacementMode> wartość. W każdym rysunek obszar docelowy jest żółty i <xref:System.Windows.Controls.Primitives.Popup> ma kolor niebieski.  
   
- ![Okno podręczne z położenia bezwzględne lub AbsolutePoint](./media/popupplacementabsolute.png "PopupPlacementAbsolute")  
-Umieszczanie jest bezwzględna lub AbsolutePoint  
+ ![Okno podręczne z położenia bezwzględne lub AbsolutePoint](./media/popup-placement-behavior/popup-placement-absolute.png "umieszczania jest bezwzględna lub AbsolutePoint.")    
   
- ![Okno podręczne z dołu umieszczania](./media/popupplacementbottom.png "PopupPlacementBottom")  
-Umieszczanie jest dołu  
+ ![Okno podręczne z dołu umieszczania](./media/popup-placement-behavior/popup-placement-bottom.png "umieszczania jest dolnej.")   
   
- ![Okno podręczne z Centrum umieszczania](./media/popupplacementcenter.png "PopupPlacementCenter")  
-Umieszczanie jest Centrum  
+ ![Okno podręczne z Centrum umieszczania](./media/popup-placement-behavior/popup-placement-center.png "umieszczania jest Centrum.")    
   
- ![Okno podręczne z lewym umieszczania](./media/popupplacementleft.png "PopupPlacementLeft")  
-Umieszczanie jest po lewej stronie  
+ ![Okno podręczne z lewym umieszczania](./media/popup-placement-behavior/popup-placement-left.png "umieszczania jest po lewej stronie.")   
   
- ![Okno podręczne z położenie myszy](./media/popupplacementmouse.png "PopupPlacementMouse")  
-Umieszczanie czy przycisk myszy  
+ ![Okno podręczne z położenie myszy](./media/popup-placement-behavior/popup-placement-mouse.png "umieszczania czy przycisk myszy.")  
   
- ![Okno podręczne z ustawienie MousePoint](./media/popupplacementmousepoint.png "PopupPlacementMousePoint")  
-Umieszczanie jest MousePoint  
+ ![Okno podręczne z ustawienie MousePoint](./media/popup-placement-behavior/popup-placement-mousepoint.png "umieszczania jest MousePoint.")  
   
- ![Okno podręczne z ustawienie Relative lub RelativePoint](./media/popupplacementrelative.png "PopupPlacementRelative")  
-Umieszczanie jest względna lub RelativePoint  
+ ![Okno podręczne z ustawienie Relative lub RelativePoint](./media/popup-placement-behavior/popup-placement-relative.png "umieszczania jest względna lub RelativePoint.")    
   
- ![Okno podręczne z prawej umieszczania](./media/popupplacementright.png "PopupPlacementRight")  
-Umieszczanie jest po prawej stronie  
+ ![Okno podręczne z prawej umieszczania](./media/popup-placement-behavior/popup-placement-right.png "umieszczania jest po prawej stronie.")    
   
- ![Okno podręczne z najważniejszych umieszczania](./media/popupplacementtop.png "PopupPlacementTop")  
-Umieszczanie jest wyrównanie do góry  
+ ![Okno podręczne z najważniejszych umieszczania](./media/popup-placement-behavior/popup-placement-top.png "umieszczania jest wyrównanie do góry.")    
   
 <a name="When"></a>   
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Gdy okno podręczne napotka krawędzi ekranu  
@@ -178,21 +166,19 @@ Umieszczanie jest wyrównanie do góry
 ### <a name="aligning-to-the-screen-edge"></a>Wyrównanie z krawędzią ekranu  
  A <xref:System.Windows.Controls.Primitives.Popup> można wyrównać krawędzią ekranu, zmiana położenia tego samego całą <xref:System.Windows.Controls.Primitives.Popup> jest widoczne na ekranie.  W takiej sytuacji odległość między docelowy punkt wyrównania pochodzenia i menu podręczne mogą różnić się od wartości <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>. Gdy <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>, <xref:System.Windows.Controls.Primitives.PlacementMode.Center>, lub <xref:System.Windows.Controls.Primitives.PlacementMode.Relative>, <xref:System.Windows.Controls.Primitives.Popup> sam wyrównuje każdej krawędzi ekranu.  Na przykład, załóżmy, że <xref:System.Windows.Controls.Primitives.Popup> ma <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> równa <xref:System.Windows.Controls.Primitives.PlacementMode.Relative> i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> równa 100.  Jeśli dolną krawędzią ekranu ukrywa wszystkie lub część <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.Primitives.Popup> powoduje przeniesienie się wzdłuż dolnej krawędzi ekranu i pionową odległość między okna podręczne oraz źródła do docelowego punktu wyrównania jest mniejsza niż 100. Poniższa ilustracja przedstawia to.  
   
- ![Okno podręczne pasującą do krawędzi ekranu](./media/popupplacementrelativescreenedge.png "PopupPlacementRelativeScreenEdge")  
-Okno podręczne powoduje wyrównanie z krawędzią ekranu  
+ ![Okno podręczne pasującą do krawędzi ekranu](./media/popup-placement-behavior/popup-placement-relative-screen-edge.png "okno podręczne powoduje wyrównanie z krawędzią ekranu.")    
   
 ### <a name="changing-the-popup-alignment-point"></a>Zmiana punktu wyrównania okna podręcznego  
  Jeśli <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>, <xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>, lub <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>, punkt wyrównania okno podręczne zmienia się, gdy okno podręczne napotka u dołu lub prawej krawędzi ekranu.  
   
  Poniższa ilustracja pokazuje, że podczas dolnej krawędzi ekranu ukrywa wszystkie lub część <xref:System.Windows.Controls.Primitives.Popup>, okno podręczne wyrównanie punkt znajduje się w lewym dolnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nowy punkt wyrównania ze względu na dolnej krawędzi ekranu](./media/popupplacementrelativepointscreenedge.png "PopupPlacementRelativePointScreenEdge")  
-Okno podręczne napotka dolną krawędzią ekranu i zmiany punktu wyrównania okna podręcznego  
+ ![Nowy punkt wyrównania ze względu na dolnej krawędzi ekranu](./media/popup-placement-behavior/popup-placement-relative-point-screen-edge.png "Popup napotka dolną krawędzią ekranu i zmiany punktu wyrównania okna podręcznego.")  
+ 
   
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup> jest ukryty przy prawej krawędzi ekranu, okno podręczne wyrównanie punkt znajduje się w prawym górnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nowy punkt wyrównania okno podręczne z powodu krawędzi ekranu](./media/popupplacementrelativepointrightscreenedge.png "PopupPlacementRelativePointRightScreenEdge")  
-Okno podręczne napotka prawej krawędzi ekranu i zmienia punkt wyrównania okna podręcznego  
+ ![Nowy punkt wyrównania okno podręczne z powodu krawędzi ekranu](./media/popup-placement-behavior/popup-placement-relative-point-right-screen-edge.png "Popup napotka prawej krawędzi ekranu i zmiany punktu wyrównania okna podręcznego.")    
   
  Jeśli <xref:System.Windows.Controls.Primitives.Popup> napotka dolnej i krawędzi okna, okno podręczne wyrównanie punkt znajduje się w prawym dolnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
@@ -201,28 +187,24 @@ Okno podręczne napotka prawej krawędzi ekranu i zmienia punkt wyrównania okna
   
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> i <xref:System.Windows.Controls.Primitives.Popup> napotka dolnej krawędzi ekranu, target punkt początkowy jest lewego górnego rogu obszaru docelowego i menu podręczne wyrównanie punkt znajduje się w lewym dolnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nowy punkt wyrównania ze względu na dolnej krawędzi ekranu](./media/popupplacementbottomscreenedge.png "PopupPlacementBottomScreenEdge")  
-Umieszczanie jest dolnej i okno podręczne napotka dolną krawędzią ekranu  
+ ![Nowy punkt wyrównania ze względu na dolnej krawędzi ekranu](./media/popup-placement-behavior/popup-placement-bottom-screen-edge.png "umieszczania jest dolnej i okno podręczne napotka dolną krawędzią ekranu.")    
   
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Left> i <xref:System.Windows.Controls.Primitives.Popup> napotka lewej krawędzi ekranu, target punkt początkowy jest prawym górnym rogu obszaru docelowego i menu podręczne wyrównanie punkt znajduje się w lewym górnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nowy punkt wyrównania ze względu na lewej krawędzi ekranu](./media/popupplacementleftscreenedge.png "PopupPlacementLeftScreenEdge")  
-Umieszczanie jest po lewej stronie, a okno podręczne napotka lewą krawędzią ekranu  
+ ![Nowy punkt wyrównania ze względu na lewej krawędzi ekranu](./media/popup-placement-behavior/popup-placement-left-screen-edge.png "umieszczania jest po lewej stronie, a okno podręczne napotka lewą krawędzią ekranu.")  
   
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Right> i <xref:System.Windows.Controls.Primitives.Popup> napotka prawej krawędzi ekranu, target punkt początkowy jest lewego górnego rogu obszaru docelowego i menu podręczne wyrównanie punkt znajduje się w prawym górnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nowy punkt wyrównania ze względu na prawej krawędzi ekranu](./media/popupplacementrightscreenedge.png "PopupPlacementRightScreenEdge")  
-Umieszczanie jest po prawej stronie, a okno podręczne napotka prawą krawędzią ekranu  
+ ![Nowy punkt wyrównania ze względu na prawej krawędzi ekranu](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "umieszczania jest po prawej stronie, a okno podręczne napotka prawą krawędzią ekranu.")  
+  
   
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Top> i <xref:System.Windows.Controls.Primitives.Popup> napotka górnej krawędzi ekranu, początek docelowy znajduje się w lewym dolnym rogu obszaru docelowego i menu podręczne wyrównanie punkt znajduje się w lewym górnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Nowy punkt wyrównania z powodu górnej krawędzi ekranu](./media/popupplacementtopscreenedge.png "PopupPlacementTopScreenEdge")  
-Umieszczanie jest wyrównanie do góry i okno podręczne napotka górną krawędzią ekranu  
+ ![Nowy punkt wyrównania z powodu górnej krawędzi ekranu](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "umieszczania jest wyrównanie do góry i okno podręczne napotka górną krawędzią ekranu.")  
   
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> i <xref:System.Windows.Controls.Primitives.Popup> napotka dolnej krawędzi ekranu docelowego pochodzi lewego górnego rogu obszaru docelowego (granice wskaźnik myszy) i wyrównanie okna podręcznego punkt znajduje się w lewym dolnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![nowy punkt wyrównania ze względu na myszy krawędzi ekranu](./media/popupplacementmousescreenedge.png "PopupPlacementMouseScreenEdge")  
-Umieszczanie jest myszy, a okno podręczne napotka dolną krawędzią ekranu  
+ ![nowy punkt wyrównania ze względu na myszy krawędzi ekranu](./media/popup-placement-behavior/popup-placement-mouse-screen-edge.png "umieszczania jest myszy, a okno podręczne napotka dolną krawędzią ekranu.")    
   
 ### <a name="customizing-popup-placement"></a>Dostosowywanie położenia okna podręcznego  
  Docelowy punkt wyrównania okna podręczne oraz źródła można dostosować przez ustawienie <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Następnie zdefiniuj <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegata, która zwraca zestaw punktów możliwe umieszczanie i osi podstawowej (w kolejności preferencji) dla <xref:System.Windows.Controls.Primitives.Popup>. Punkt, który pokazuje największą część <xref:System.Windows.Controls.Primitives.Popup> jest zaznaczone.  Pozycja <xref:System.Windows.Controls.Primitives.Popup> jest automatycznie dostosowywany Jeśli <xref:System.Windows.Controls.Primitives.Popup> jest ukryta przez krawędzi ekranu. Aby uzyskać przykład, zobacz [Określ niestandardowe położenie okna podręcznego](how-to-specify-a-custom-popup-position.md).  

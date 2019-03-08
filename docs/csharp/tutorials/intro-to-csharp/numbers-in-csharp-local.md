@@ -3,12 +3,12 @@ title: Liczby w elemencie C# — wprowadzenie do C# samouczek
 description: Dowiedz się, C# eksplorując typy liczbowe, ich właściwości i metody.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978621"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673863"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipulowanie liczb całkowitych i zmiennoprzecinkowych w języku C\#
 
@@ -20,7 +20,7 @@ W tym samouczku oczekuje, że będziesz mieć maszyny, których można użyć do
 
 Utwórz katalog o nazwie **numery — Szybki Start**. Upewnij, że bieżącego katalogu i uruchom `dotnet new console -n NumbersInCSharp -o .`.
 
-Otwórz **Program.cs** w ulubionym edytorze i Zastąp wiersz `Console.Writeline("Hello World!");` następującym kodem:
+Otwórz **Program.cs** w ulubionym edytorze i Zastąp wiersz `Console.WriteLine("Hello World!");` następującym kodem:
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Uruchom ten kod, wpisując `dotnet run` w oknie polecenia. 
+Uruchom ten kod, wpisując `dotnet run` w oknie polecenia.
 
 Po prostu przedstawiono jedną z podstawowych operacji matematycznych na liczbach całkowitych. `int` Wpisz reprezentuje **całkowitą**, dodatnią lub ujemną liczbę całkowitą. Możesz użyć `+` symbol do dodania. Inne typowe operacje matematyczne dla liczb całkowitych obejmują:
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Uruchom ten kod, wpisując `dotnet run` w oknie polecenia. 
-    
+Uruchom ten kod, wpisując `dotnet run` w oknie polecenia.
+
 Możesz także eksperymentować, wykonując wiele operacji matematycznych w jednym wierszu, jeśli chcesz. Spróbuj `c = a + b - 12 * 17;` na przykład. Mieszanie zmiennych i stałych liczb jest dozwolone.
 
 > [!TIP]
 > Gdy eksplorujesz C# (lub dowolnego języka programowania), będziesz robić błędy podczas pisania kodu. **Kompilatora** znajdzie te błędy i zgłosi je. Gdy dane wyjściowe zawierają komunikaty o błędach, Przyjrzyj się blisko przykładowy kod i kod w oknie w taki sposób, aby zobaczyć, co należy naprawić.
-> To ćwiczenie pomoże Ci poznać strukturę kodu C#.     
+> To ćwiczenie pomoże Ci poznać strukturę kodu C#.
 
 Pierwszym krokiem zostały ukończone. Przed rozpoczęciem następnej sekcji, Przejdźmy bieżącego kodu w oddzielnych metodach. Który sprawia, że łatwiej rozpocząć pracę z nową przykładową. Zmiana nazwy Twojego `Main` metodę, aby `WorkingWithIntegers` i zapisywać nowy `Main` metodę, która wywołuje `WorkingWithIntegers`. Po zakończeniu, kod powinien wyglądać następująco:
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>Zapoznaj się z liczbą całkowitą precyzji i limitów
+
 Ostatni przykład pokazuje, że dzielenie całkowitoliczbowe obcina wynik.
 Możesz uzyskać **resztę** przy użyciu **modulo** operatora `%` znaków. Wypróbuj poniższy kod w swojej `Main` metody:
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 Typ liczby całkowitej C# różni się od matematycznych liczb całkowitych w inny sposób: `int` typ ma limit maksimum i minimum. Dodaj następujący kod do Twojego `Main` metodę, aby zobaczyć te limity:
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Jeśli obliczenia generują wartość, która przekracza te limity, masz **niedo
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-Należy zauważyć, że odpowiedź jest bardzo zbliżona minimalnej (ujemnej) liczby całkowitej. Jest taka sama jak `min + 2`. Operacja dodawania **przepełnienie** dozwolone wartości liczb całkowitych.
+
+Należy zauważyć, że odpowiedź jest bardzo zbliżona minimalnej (ujemnej) liczby całkowitej. Jest taka sama jak `min + 2`.
+Operacja dodawania **przepełnienie** dozwolone wartości liczb całkowitych.
 Odpowiedzią jest bardzo duża liczba ujemna, ponieważ przepełnienie "zawinięcie" z największej możliwej liczby całkowitej do najmniejszej.
 
 Istnieją inne typy liczbowe z innymi limitami i precyzją, których możesz użyć, gdy `int` typu nie odpowiada Twoim potrzebom. Przyjrzyjmy się nimi w następnej kolejności.
 
-Jeszcze raz Przejdźmy kod, który napisał w tej sekcji w oddzielnych metodach. Nadaj mu nazwę `TestLimits`. 
+Jeszcze raz Przejdźmy kod, który napisał w tej sekcji w oddzielnych metodach. Nadaj mu nazwę `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Praca z typem double
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Te wartości są drukowane w notacji naukowej. Liczba po lewej stronie `E` to mantysa. Liczba po prawej stronie to wykładnik jako potęga 10. 
+Te wartości są drukowane w notacji naukowej. Liczba po lewej stronie `E` to mantysa. Liczba po prawej stronie to wykładnik jako potęga 10.
 
 Podobnie jak liczb dziesiętnych w matematyce wartości podwójnej precyzji w języku C# mogą wystąpić błędy zaokrąglania. Wypróbuj ten kod:
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 `M` Sufiks liczby jest wskazuje, że stałe powinny używać `decimal` typu.
 
-Należy zauważyć, że matematyczne liczbach typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego. 
+Należy zauważyć, że matematyczne liczbach typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego.
 
 ***Challenge***
 
-Teraz, gdy różne typy liczbowe, należy napisać kod obliczający pole koła o promieniu jest kosztuje 2,50 cm. Należy pamiętać, że pole koła to promień pomnożony pomnożonej przez PI. Wskazówka: platforma .NET zawiera stałą dla liczby PI — <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości. 
+Teraz, gdy różne typy liczbowe, należy napisać kod obliczający pole koła o promieniu jest kosztuje 2,50 cm. Należy pamiętać, że pole koła to promień pomnożony pomnożonej przez PI. Wskazówka: platforma .NET zawiera stałą dla liczby PI — <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości.
 
 Powinna pojawić się odpowiedź zakresu 19-20.
 Możesz sprawdzić odpowiedzi przez [spojrzenie na Zakończono przykładowego kodu w serwisie GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)
 
-Wypróbuj także inne wzory, jeśli chcesz. 
+Wypróbuj także inne wzory, jeśli chcesz.
 
 Ukończono "liczby w elemencie C#" Szybki Start. Możesz kontynuować [gałęzie i pętle](branches-and-loops-local.md) Szybki Start w środowisku projektowym.
 
 Możesz dowiedzieć się więcej na temat liczb w języku C# w następujących tematach:
 
-[Tabela typów całkowitych](../../language-reference/keywords/integral-types-table.md)   
-[Tabela typów zmiennoprzecinkowych](../../language-reference/keywords/floating-point-types-table.md)   
-[Tabela typów wbudowanych](../../language-reference/keywords/built-in-types-table.md)   
-[Tabela niejawnych konwersji liczbowych](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[Tabela jawnych konwersji liczbowych](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tabela typów całkowitych](../../language-reference/keywords/integral-types-table.md)
+- [Tabela typów zmiennoprzecinkowych](../../language-reference/keywords/floating-point-types-table.md)
+- [Tabela typów wbudowanych](../../language-reference/keywords/built-in-types-table.md)
+- [Tabela niejawnych konwersji liczbowych](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabela jawnych konwersji liczbowych](../../language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -1,20 +1,18 @@
 ---
-title: Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek
+title: Obsługa automatyzacji interfejsu użytkownika dla standardowych formantów
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 9c5e4133a3bc1f019ada00299df929c2e3915880
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5dbd547378faf885f5d0349ff77d124b0b860591
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726588"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677633"
 ---
-# <a name="ui-automation-support-for-standard-controls"></a>Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek
+# <a name="ui-automation-support-for-standard-controls"></a>Obsługa automatyzacji interfejsu użytkownika dla standardowych formantów
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

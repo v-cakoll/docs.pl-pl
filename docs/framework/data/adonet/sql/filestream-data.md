@@ -2,183 +2,189 @@
 title: Dane FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 4002f95e47b3c1ac7d8415d590b8c4c8a5d95a91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd496909a387f5726b2d22adae14085a60eae881
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701095"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674743"
 ---
 # <a name="filestream-data"></a>Dane FILESTREAM
-Atrybutu magazynowania FILESTREAM jest dla danych binarnych (BLOB) przechowywanego w kolumny typu varbinary(max). Przed FILESTREAM przechowywanie danych binarnych wymaga specjalnej obsługi. Danych niestrukturalnych, takich jak dokumenty tekstowe, obrazy i wideo, często są przechowywane poza bazą danych, co utrudnia do zarządzania.  
-  
+
+Atrybutu magazynowania FILESTREAM jest dla danych binarnych (BLOB) przechowywanego w kolumny typu varbinary(max). Przed FILESTREAM przechowywanie danych binarnych wymaga specjalnej obsługi. Danych niestrukturalnych, takich jak dokumenty tekstowe, obrazy i wideo, często są przechowywane poza bazą danych, co utrudnia do zarządzania.
+
 > [!NOTE]
->  Należy zainstalować .NET Framework 3.5 z dodatkiem SP1 (lub nowszym) do pracy z danymi FILESTREAM przy użyciu SqlClient.  
-  
- Określając atrybut FILESTREAM kolumny typu varbinary(max) powoduje, że program SQL Server do przechowywania danych na lokalny system plików NTFS zamiast w pliku bazy danych. Chociaż były przechowywane osobno, możesz użyć takie same [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji, które są obsługiwane w przypadku pracy z danymi varbinary(max), która jest przechowywana w bazie danych.  
-  
-## <a name="sqlclient-support-for-filestream"></a>Obsługa SqlClient dla FILESTREAM  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Dostawcy danych programu SQL Server <xref:System.Data.SqlClient>, obsługuje Odczyt i zapis danych FILESTREAM przy użyciu <xref:System.Data.SqlTypes.SqlFileStream> klasy zdefiniowanej w <xref:System.Data.SqlTypes> przestrzeni nazw. `SqlFileStream` dziedziczy <xref:System.IO.Stream> klasy, która zawiera metody służące do odczytu i zapisu do strumieni danych. Odczyt ze strumienia przesyła dane ze strumienia do struktury danych, takich jak tablica bajtów. Zapisywanie przesyła dane z struktury danych w strumieniu.  
-  
-### <a name="creating-the-sql-server-table"></a>Tworzenie tabeli programu SQL Server  
- Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji tworzy tabelę o nazwie Pracownicy i wstawia wiersz danych. Po włączeniu magazynowania FILESTREAM można użyć tej tabeli, w połączeniu z przykładami kodu, które należy wykonać. Na końcu tego tematu znajdują się linki do zasobów programu SQL Server — książki Online.  
-  
-```  
-CREATE TABLE employees  
-(  
-  EmployeeId INT  NOT NULL  PRIMARY KEY,  
-  Photo VARBINARY(MAX) FILESTREAM  NULL,  
-  RowGuid UNIQUEIDENTIFIER  NOT NULL  ROWGUIDCOL  
-  UNIQUE DEFAULT NEWID()  
-)  
-GO  
-Insert into employees  
-Values(1, 0x00, default)  
-GO  
-```  
-  
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Przykład: Odczytanie, zastępowanie i wstawianie danych FILESTREAM  
- Poniższy przykład pokazuje, jak można odczytać danych z FILESTREAM. Kod pobiera logiczne ścieżkę do pliku, ustawianie `FileAccess` do `Read` i `FileOptions` do `SequentialScan`. Kod następnie odczytuje bajtów z SqlFileStream w buforze. Bajty są następnie zapisywane do okna konsoli.  
-  
- W przykładzie pokazano również sposób zapisywania danych FILESTREAM, w którym wszystkie istniejące dane zostaną zastąpione. Ten kod pobiera logiczne ścieżkę do pliku i tworzy `SqlFileStream`, ustawiając `FileAccess` do `Write` i `FileOptions` do `SequentialScan`. Jednobajtowych są zapisywane do `SqlFileStream`, zastępując wszystkie dane w pliku.  
-  
- W przykładzie pokazano również sposób zapisywania danych FILESTREAM przy użyciu metody wyszukiwania, aby dołączyć dane do końca pliku. Ten kod pobiera logiczne ścieżkę do pliku i tworzy `SqlFileStream`, ustawiając `FileAccess` do `ReadWrite` i `FileOptions` do `SequentialScan`. Kod używa metody wyszukiwania do wyszukania na końcu pliku, dodając jednobajtowych do istniejącego pliku.  
-  
-```csharp  
-using System;  
-using System.Data.SqlClient;  
-using System.Data.SqlTypes;  
-using System.Data;  
-using System.IO;  
-  
-namespace FileStreamTest  
-{  
-    class Program  
-    {  
-        static void Main(string[] args)  
-        {  
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;database=myDB");  
-            ReadFilestream(builder);  
-            OverwriteFilestream(builder);  
-            InsertFilestream(builder);  
-  
-            Console.WriteLine("Done");  
-        }  
-  
-        private static void ReadFilestream(SqlConnectionStringBuilder connStringBuilder)  
-        {  
-            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))  
-            {  
-                connection.Open();  
-                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);  
-  
-                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);  
-                command.Transaction = tran;  
-  
-                using (SqlDataReader reader = command.ExecuteReader())  
-                {  
-                    while (reader.Read())  
-                    {  
-                        // Get the pointer for the file  
-                        string path = reader.GetString(0);  
-                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-                        // Create the SqlFileStream  
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Read, FileOptions.SequentialScan, allocationSize: 0))  
-                        {  
-                            // Read the contents as bytes and write them to the console  
-                            for (long index = 0; index < fileStream.Length; index++)  
-                            {  
-                                Console.WriteLine(fileStream.ReadByte());  
-                            }  
-                        }  
-                    }  
-                }  
-                tran.Commit();  
-            }  
-        }  
-  
-        private static void OverwriteFilestream(SqlConnectionStringBuilder connStringBuilder)  
-        {  
-            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))  
-            {  
-                connection.Open();  
-  
-                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);  
-  
-                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);  
-                command.Transaction = tran;  
-  
-                using (SqlDataReader reader = command.ExecuteReader())  
-                {  
-                    while (reader.Read())  
-                    {  
-                        // Get the pointer for file   
-                        string path = reader.GetString(0);  
-                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-                        // Create the SqlFileStream  
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Write, FileOptions.SequentialScan, allocationSize: 0))  
-                        {  
-                            // Write a single byte to the file. This will  
-                            // replace any data in the file.  
-                            fileStream.WriteByte(0x01);  
-                        }  
-                    }  
-                }  
-                tran.Commit();  
-            }  
-        }  
-  
-        private static void InsertFilestream(SqlConnectionStringBuilder connStringBuilder)  
-        {  
-            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))  
-            {  
-                connection.Open();  
-  
-                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);  
-  
-                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);  
-                command.Transaction = tran;  
-  
-                using (SqlDataReader reader = command.ExecuteReader())  
-                {  
-                    while (reader.Read())  
-                    {  
-                        // Get the pointer for file  
-                        string path = reader.GetString(0);  
-                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;  
-  
-                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.ReadWrite, FileOptions.SequentialScan, allocationSize: 0))  
-                        {  
-                            // Seek to the end of the file  
-                            fileStream.Seek(0, SeekOrigin.End);  
-  
-                            // Append a single byte   
-                            fileStream.WriteByte(0x01);  
-                        }  
-                    }  
-                }  
-                tran.Commit();  
-            }  
-  
-        }  
-    }  
+> Należy zainstalować .NET Framework 3.5 z dodatkiem SP1 (lub nowszym) do pracy z danymi FILESTREAM przy użyciu SqlClient.
+
+Określając atrybut FILESTREAM kolumny typu varbinary(max) powoduje, że program SQL Server do przechowywania danych na lokalny system plików NTFS zamiast w pliku bazy danych. Chociaż były przechowywane osobno, możesz użyć takie same [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji, które są obsługiwane w przypadku pracy z danymi varbinary(max), która jest przechowywana w bazie danych.
+
+## <a name="sqlclient-support-for-filestream"></a>Obsługa SqlClient dla FILESTREAM
+
+[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Dostawcy danych programu SQL Server <xref:System.Data.SqlClient>, obsługuje Odczyt i zapis danych FILESTREAM przy użyciu <xref:System.Data.SqlTypes.SqlFileStream> klasy zdefiniowanej w <xref:System.Data.SqlTypes> przestrzeni nazw. `SqlFileStream` dziedziczy <xref:System.IO.Stream> klasy, która zawiera metody służące do odczytu i zapisu do strumieni danych. Odczyt ze strumienia przesyła dane ze strumienia do struktury danych, takich jak tablica bajtów. Zapisywanie przesyła dane z struktury danych w strumieniu.
+
+### <a name="creating-the-sql-server-table"></a>Tworzenie tabeli programu SQL Server
+
+Następujące [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji tworzy tabelę o nazwie Pracownicy i wstawia wiersz danych. Po włączeniu magazynowania FILESTREAM można użyć tej tabeli, w połączeniu z przykładami kodu, które należy wykonać. Na końcu tego tematu znajdują się linki do zasobów programu SQL Server — książki Online.
+
+```sql
+CREATE TABLE employees
+(
+  EmployeeId INT  NOT NULL  PRIMARY KEY,
+  Photo VARBINARY(MAX) FILESTREAM  NULL,
+  RowGuid UNIQUEIDENTIFIER  NOT NULL  ROWGUIDCOL
+  UNIQUE DEFAULT NEWID()
+)
+GO
+Insert into employees
+Values(1, 0x00, default)
+GO
+```
+
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Przykład: Odczytanie, zastępowanie i wstawianie danych FILESTREAM
+
+Poniższy przykład pokazuje, jak można odczytać danych z FILESTREAM. Kod pobiera logiczne ścieżkę do pliku, ustawianie `FileAccess` do `Read` i `FileOptions` do `SequentialScan`. Kod następnie odczytuje bajtów z SqlFileStream w buforze. Bajty są następnie zapisywane do okna konsoli.
+
+W przykładzie pokazano również sposób zapisywania danych FILESTREAM, w którym wszystkie istniejące dane zostaną zastąpione. Ten kod pobiera logiczne ścieżkę do pliku i tworzy `SqlFileStream`, ustawiając `FileAccess` do `Write` i `FileOptions` do `SequentialScan`. Jednobajtowych są zapisywane do `SqlFileStream`, zastępując wszystkie dane w pliku.
+
+W przykładzie pokazano również sposób zapisywania danych FILESTREAM przy użyciu metody wyszukiwania, aby dołączyć dane do końca pliku. Ten kod pobiera logiczne ścieżkę do pliku i tworzy `SqlFileStream`, ustawiając `FileAccess` do `ReadWrite` i `FileOptions` do `SequentialScan`. Kod używa metody wyszukiwania do wyszukania na końcu pliku, dodając jednobajtowych do istniejącego pliku.
+
+```csharp
+using System;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+using System.Data;
+using System.IO;
+
+namespace FileStreamTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder("server=(local);integrated security=true;database=myDB");
+            ReadFileStream(builder);
+            OverwriteFileStream(builder);
+            InsertFileStream(builder);
+
+            Console.WriteLine("Done");
+        }
+
+        private static void ReadFileStream(SqlConnectionStringBuilder connStringBuilder)
+        {
+            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);
+
+                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+                command.Transaction = tran;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        // Get the pointer for the file
+                        string path = reader.GetString(0);
+                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;
+
+                        // Create the SqlFileStream
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Read, FileOptions.SequentialScan, allocationSize: 0))
+                        {
+                            // Read the contents as bytes and write them to the console
+                            for (long index = 0; index < fileStream.Length; index++)
+                            {
+                                Console.WriteLine(fileStream.ReadByte());
+                            }
+                        }
+                    }
+                }
+                tran.Commit();
+            }
+        }
+
+        private static void OverwriteFileStream(SqlConnectionStringBuilder connStringBuilder)
+        {
+            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);
+
+                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+                command.Transaction = tran;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        // Get the pointer for file
+                        string path = reader.GetString(0);
+                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;
+
+                        // Create the SqlFileStream
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.Write, FileOptions.SequentialScan, allocationSize: 0))
+                        {
+                            // Write a single byte to the file. This will
+                            // replace any data in the file.
+                            fileStream.WriteByte(0x01);
+                        }
+                    }
+                }
+                tran.Commit();
+            }
+        }
+
+        private static void InsertFileStream(SqlConnectionStringBuilder connStringBuilder)
+        {
+            using (SqlConnection connection = new SqlConnection(connStringBuilder.ToString()))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("SELECT TOP(1) Photo.PathName(), GET_FILESTREAM_TRANSACTION_CONTEXT() FROM employees", connection);
+
+                SqlTransaction tran = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+                command.Transaction = tran;
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        // Get the pointer for file
+                        string path = reader.GetString(0);
+                        byte[] transactionContext = reader.GetSqlBytes(1).Buffer;
+
+                        using (Stream fileStream = new SqlFileStream(path, transactionContext, FileAccess.ReadWrite, FileOptions.SequentialScan, allocationSize: 0))
+                        {
+                            // Seek to the end of the file
+                            fileStream.Seek(0, SeekOrigin.End);
+
+                            // Append a single byte
+                            fileStream.WriteByte(0x01);
+                        }
+                    }
+                }
+                tran.Commit();
+            }
+
+        }
+    }
 }
-```  
-  
- Aby uzyskać inny przykład, zobacz [jak przechowywać i pobierać dane binarne do kolumny strumienia pliku](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
-  
-## <a name="resources-in-sql-server-books-online"></a>Zasoby programu SQL Server — książki Online  
- Pełną dokumentację dla FILESTREAM znajduje się w następujących sekcjach w dokumentacji SQL Server — książki Online.  
-  
-|Temat|Opis|  
-|-----------|-----------------|  
-|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Opisuje, kiedy należy używać magazynowania FILESTREAM i sposobu integracji aparatu bazy danych programu SQL Server w systemie plików NTFS.|  
-|[Tworzenie aplikacji klienckich dla danych FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Zawiera opis funkcji Win32 API do pracy z danymi FILESTREAM.|  
-|[FILESTREAM i inne funkcje serwera SQL](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Zawiera zagadnienia, wytyczne i ograniczenia dotyczące używania danych FILESTREAM z innymi funkcjami programu SQL Server.|  
-  
+```
+
+Aby uzyskać inny przykład, zobacz [jak przechowywać i pobierać dane binarne do kolumny strumienia pliku](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).
+
+## <a name="resources-in-sql-server-books-online"></a>Zasoby programu SQL Server — książki Online
+
+Pełną dokumentację dla FILESTREAM znajduje się w następujących sekcjach w dokumentacji SQL Server — książki Online.
+
+|Temat|Opis|
+|-----------|-----------------|
+|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Opisuje, kiedy należy używać magazynowania FILESTREAM i sposobu integracji aparatu bazy danych programu SQL Server w systemie plików NTFS.|
+|[Tworzenie aplikacji klienckich dla danych FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Zawiera opis funkcji Win32 API do pracy z danymi FILESTREAM.|
+|[FILESTREAM i inne funkcje serwera SQL](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Zawiera zagadnienia, wytyczne i ograniczenia dotyczące używania danych FILESTREAM z innymi funkcjami programu SQL Server.|
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych programu SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [Zabezpieczenia dostępu kodu i ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)

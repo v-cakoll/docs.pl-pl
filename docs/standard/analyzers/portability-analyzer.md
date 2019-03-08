@@ -1,17 +1,15 @@
 ---
 title: Narzędzia .NET Portability Analyzer — .NET
 description: Dowiedz się, jak ocenić, jak przenośny kod jest między różne implementacje platformy .NET, takich jak .NET Core, .NET Standard, platformy uniwersalnej systemu Windows i Xamarin za pomocą narzędzia .NET Portability Analyzer.
-author: blackdwarf
-ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17b05b9434d406acec03d84d17901f8339bcb6bc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205760"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677646"
 ---
 # <a name="the-net-portability-analyzer"></a>Narzędzia .NET Portability Analyzer
 
@@ -19,11 +17,11 @@ Czy chcesz wprowadzić bibliotek dla wielu platform? Chcesz zobaczyć, ile pracy
 
 ## <a name="new-targets"></a>Nowe obiekty docelowe
 
-* [.NET core](../../core/index.md): ma modułowej, stosuje side-by-side i jest przeznaczony dla scenariuszy dla wielu platform. Side-by-side umożliwia wdrażanie nowych wersji platformy .NET Core bez przerywania innych aplikacji.
+* [.NET Core](../../core/index.md): Modularny projekt ma używającego side-by-side i jest przeznaczony dla scenariuszy dla wielu platform. Side-by-side umożliwia wdrażanie nowych wersji platformy .NET Core bez przerywania innych aplikacji.
 * [Platforma ASP.NET Core](/aspnet/core): to nowoczesnej sieci web — struktura oparta na module .NET Core, co daje deweloperom te same korzyści.
-* [Universal Windows Platform](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): poprawianie wydajności aplikacji Windows Store przeznaczonych dla x64 i maszyn ARM przy użyciu platformy .NET Native kompilacji statyczne. 
-* + Rozszerzenia platformy .NET core: Zawiera podstawowe interfejsy API .NET oprócz innych interfejsów API, należący do ekosystemu .NET, takich jak usługi WCF, ASP.NET Core, języka FSharp i platformy Azure.
-* .NET standard + rozszerzenia platformy: Obejmuje standardowych interfejsów API .NET oprócz innych ekosystemu .NET, takich jak usługi WCF, ASP.NET Core, języka FSharp i platformy Azure.
+* [Platforma Universal Windows](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): Zwiększyć wydajność aplikacji Windows Store przeznaczonych dla x64 i maszyn ARM przy użyciu platformy .NET Native statyczne kompilacji. 
+* + Rozszerzenia platformy .NET core: Obejmuje podstawowe interfejsy API .NET oprócz innych interfejsów API, należący do ekosystemu .NET, takich jak usługi WCF, ASP.NET Core, języka FSharp i platformy Azure.
+* + Rozszerzenia platformy .NET standard: Obejmuje standardowych interfejsów API .NET oprócz innych ekosystemu .NET, takich jak usługi WCF, ASP.NET Core, języka FSharp i platformy Azure.
 
 ## <a name="how-to-use-portability-analyzer"></a>Jak używać analizator przenośności
 

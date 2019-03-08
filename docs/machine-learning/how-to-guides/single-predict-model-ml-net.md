@@ -1,16 +1,21 @@
 ---
 title: Użyj PredictionEngine przewiduje jednego naraz — strukturze ML.NET
 description: Dowiedz się, jak używać PredictionEngine strukturze ML.NET przewiduje jednego naraz
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 328067816be37c9490ae71974e3f6da4ae079f25
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 68837888c53409b4249bbece481888fb4167a5ca
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092036"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673811"
 ---
 # <a name="use-the-predictionengine-to-make-one-prediction-at-a-time---mlnet"></a>Użyj PredictionEngine przewiduje jednego naraz — strukturze ML.NET 
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Ponieważ każdy model w strukturze ML.NET transformatora, użyj `model.Transform` do zastosowania modelu, który ma `DataView` do przewidywania przyszłych zdarzeń. 
 

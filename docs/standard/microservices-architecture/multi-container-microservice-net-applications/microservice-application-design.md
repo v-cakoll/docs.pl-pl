@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Do
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981884"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674396"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji opartej na mikrousługach
 
@@ -63,11 +63,11 @@ Każda mikrousługa ma własną bazę danych, dzięki któremu można w pełni c
 
 ### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: Odwołanie do stosowania platformy .NET Core i mikrousług, wdrażać za pomocą kontenerów
 
-Dzięki czemu można skupić się na temat architektury i technologii, zamiast myśleć o domeny hypothetic biznesowych, która może być, wybraliśmy domeny dobrze znanych firm — to znaczy, uproszczone handlu elektronicznego (e Sklep) aplikację która przedstawia informacje o katalogu produkty, przyjmuje zamówień klientów, sprawdza spisu i wykonuje funkcje innych firm. Ten kod źródłowy aplikacji opartych na kontenerach jest dostępna w [ramach aplikacji eShopOnContainers](https://aka.ms/MicroservicesArchitecture) repozytorium GitHub.
+Dzięki czemu można skupić się na temat architektury i technologii, zamiast myśleć o domeny hipotetyczny biznesowych, która może być, wybraliśmy domeny dobrze znanych firm — to znaczy, uproszczone handlu elektronicznego (e Sklep) aplikację która przedstawia informacje o katalogu produktów, przyjmuje zamówień klientów, sprawdza spisu i wykonuje funkcje innych firm. Ten kod źródłowy aplikacji opartych na kontenerach jest dostępna w [ramach aplikacji eShopOnContainers](https://aka.ms/MicroservicesArchitecture) repozytorium GitHub.
 
 Aplikacja składa się z wiele podsystemów, w tym kilka magazynu interfejsu użytkownika Frontony aplikacji sieci Web i natywnych aplikacji mobilnych, wraz z zaplecza mikrousług i kontenerów dla wszystkich wymaganych operacji po stronie serwera za pomocą kilku bramy interfejsu API jako skonsolidowane punkty wejścia do wewnętrznego mikrousług. Rysunek 6-1 przedstawiono architekturę aplikacji referencyjnej.
 
-![Klienci urządzeń przenośnych i SPA komunikują się do jednej bramy punkty końcowe interfejsu API, następnie komunikujących się mikrousług. Klienci sieci web Tradditional nawiązanie mikrousług MVC, który komunikuje się do mikrousług](./media/image1.png)
+![Klienci urządzeń przenośnych i SPA komunikują się do jednej bramy punkty końcowe interfejsu API, następnie komunikujących się mikrousług. Tradycyjny web klienci komunikują się do mikrousług MVC, która komunikuje się mikrousług](./media/image1.png)
 
 **Rysunek 6-1**. Architektury aplikacji w środowisku deweloperskim referencyjnej ramach aplikacji eShopOnContainers
 
@@ -91,7 +91,7 @@ Dlatego jednostki wdrożenia mikrousługi (a nawet w przypadku baz danych w tej 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **eShopOnContainers GitHub repo. Kod źródłowy aplikacji odwołanie**  
+- **eShopOnContainers GitHub repo. Kod źródłowy aplikacji odwołanie**\
     [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Zalety rozwiązania oparte na mikrousługach
@@ -142,7 +142,7 @@ Jak wspomniano w sekcji architektury podczas projektowania i tworzenia złożony
 
 Architektura zewnętrznych jest architekturze mikrousług, składający się przez wiele usług, zgodnie z zasadami opisanymi w architekturze części tego przewodnika. Jednak w zależności od charakteru poszczególne mikrousługi i niezależnie od architektury mikrousługi wysokiego poziomu, możesz wybrać to typowe i czasami wskazane zapewnienie różnych architektur wewnętrznego, każdy na podstawie różnych wzorców dla różnych mikrousługi. Mikrousługi może za pomocą różnych technologii i języków programowania. Na rysunku 6-2 przedstawiono tę różnorodność.
 
-![Różnica między architektury zewnętrznych: mikrousług wzorców bramy interfejsu API, odporne na błędy komunikacji, publikowania/subskrybowania, itp. i architekturę wewnętrzną: opartych na danych/CRUD DDD pattrens, wstrzykiwanie zależności, wiele bibliotek, itp.](./media/image2.png)
+![Różnica między architektury zewnętrznych: mikrousług wzorców bramy interfejsu API, odporne na błędy komunikacji, publikowania/subskrybowania, itp. i architekturę wewnętrzną: opartych na danych/CRUD wzorców DDD, wstrzykiwanie zależności, wiele bibliotek, itp.](./media/image2.png)
 
 **Rysunek 6-2**. Zewnętrzne i wewnętrzne architektury i projektowania
 
@@ -150,7 +150,7 @@ Na przykład w naszym *ramach aplikacji eShopOnContainers* przykładowe wykazu, 
 
 Kolejnym powodem, dla różnych technologii na mikrousługach, może być charakter poszczególne mikrousługi. Na przykład może być lepiej używać funkcjonalny język programowania, takich jak F\#, a nawet języków R, jeśli są przeznaczone dla sztucznej Inteligencji i usługi machine learning domen, zamiast bardziej obiektowy język programowania takich jak C\#.
 
-Mierzenie jest poszczególne mikrousługi można innej architektury wewnętrznego na podstawie wzorców projektowania. Nie wszystkie mikrousługi powinny zostać wdrożone za pomocą zaawansowanych wzorców DDD, ponieważ, może być nadmiernie inżynierii je. Podobnie złożonych mikrousług z logiką biznesową ciągle zmieniające nie powinny być implementowane jako części operacji CRUD lub można znajdą się z kodem niskiej jakości. 
+Mierzenie jest poszczególne mikrousługi można innej architektury wewnętrznego na podstawie wzorców projektowania. Nie wszystkie mikrousługi powinny zostać wdrożone za pomocą zaawansowanych wzorców DDD, ponieważ, może być nadmiernie inżynierii je. Podobnie złożonych mikrousług z logiką biznesową ciągle zmieniające nie powinny być implementowane jako części operacji CRUD lub można znajdą się z kodem niskiej jakości.
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Nowy świat: wiele wzorce architektury i mikrousług polyglot
 
@@ -172,7 +172,7 @@ Możesz również tworzyć mikrousługi przy użyciu wielu technologii i język�
 
 Istotne jest to wzorzec nie określonej architektury lub stylu ani żadnych określonej technologii jest odpowiednia dla wszystkich sytuacjach. Rysunek 6-3 przedstawiono niektóre podejścia i technologii (ale nie w określonej kolejności), można używać w różnych mikrousług.
 
-![Wzorzec wielu architektury i mikrousług polyglot oznacza, że możesz mieszać i dopasować języki i tecnologies na potrzeby poszczególne mikrousługi i występuje nadal komunikować się ze sobą.](./media/image3.png)
+![Wzorzec wielu architektury i mikrousług polyglot oznacza, że można mieszać i zgodne, języków i technologii na potrzeby poszczególne mikrousługi i występuje nadal komunikować się ze sobą.](./media/image3.png)
 
 **Rysunek 6-3**. Wielu wzorce architektury i świata polyglot mikrousług
 

@@ -4,12 +4,12 @@ description: Poznaj kluczowe rolę kontenerów, aby usprawnić metodyki DevOps.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 752a678be7735f7ae962005e1d373993d1496753
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583735"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679102"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Kontenery jako podstawa współpracy w metodyce DevOps
 
@@ -33,7 +33,7 @@ Dwa zespoły współpracują za pośrednictwem platformy podstawowe (kontenery p
 
 Istnieje wiele przyczyn, które spowoduje zwiększenie liczby konteneryzowanych aplikacji w ciągu przyszłych lat, a jeden z następujących powodów jest tworzenie aplikacji opartych na mikrousługach.
 
-W ciągu ostatnich 15 lat korzystanie z usług sieci web jest podstawą tysiące aplikacji, i prawdopodobnie po kilku latach firma Microsoft znajdzie tej samej sytuacji przy użyciu opartych na mikrousługach działających w kontenerach platformy Docker.
+W ciągu ostatnich 15 lat korzystanie z usług sieci web jest podstawą tysiące aplikacji, i prawdopodobnie po kilku latach będzie znaleźliśmy tej samej sytuacji przy użyciu opartych na mikrousługach działających w kontenerach platformy Docker.
 
 Warto również wspomnieć o czy umożliwia również kontenery platformy Docker dla aplikacji monolitycznych i będzie nadal się pojawiać większości korzyści z platformy Docker. Kontenery nie są przeznaczone dla tylko mikrousług.
 
@@ -63,11 +63,11 @@ Rysunek 2-2 przedstawia informacje o bardziej szczegółowy przepływ pracy dla 
 
 **Rysunek 2-2.** Ogólny przepływ pracy dla cyklu życia konteneryzowanych aplikacji platformy Docker
 
-Wszystko zaczyna się od deweloperów, który rozpoczyna pisanie kodu w przepływie pracy wewnętrznej pętli. Etapu wewnętrzną pętli jest, gdzie deweloperów zdefiniować wszystko, co ma miejsce przed wypychanie kodu do repozytorium kodu (na przykład systemu kontroli źródła takich jak Git). Po zostanie zatwierdzony, repozytorium wyzwalacze ciągłej integracji (CI) i pozostałej części przepływu pracy.
+Wszystko zaczyna się od deweloperów, który rozpoczyna pisanie kodu w przepływie pracy wewnętrznej pętli. Etapu wewnętrzną pętli jest, gdzie deweloperów zdefiniować wszystko, co ma miejsce przed wypychanie kodu do repozytorium kodu (na przykład systemu kontroli źródła takich jak Git). Po nim zobowiązał, repozytorium wyzwalacze ciągłej integracji (CI) i pozostałej części przepływu pracy.
 
 Wewnętrzną pętlę zasadniczo obejmuje typowe etapy, takich jak "code", "run", "test" i "debugowanie" oraz dodatkowych czynnościach, bezpośrednio przed uruchamianie aplikacji lokalnie. Jest to proces dewelopera, aby uruchomić i przetestować aplikację w kontenerze aparatu Docker. Przepływ pracy wewnętrznej pętli zostaną wyjaśnione w kolejnych sekcjach.
 
-Przyjęcie krok z powrotem do wzięcia pod — do zakończenia przepływu pracy, przepływ pracy DevOps jest większa niż technologii lub zestawu narzędzi: jest to sposób myślenia wymagającego ewolucji kultury. Jest to osoby, procesy i odpowiednie narzędzia, aby cyklu życia aplikacji szybsze i bardziej przewidywalne. Przedsiębiorstwa, które przyjęły konteneryzowanych przepływu pracy zwykle restrukturyzacja organizacji do reprezentowania ludzi i procesy, które odpowiadają konteneryzowanych przepływu pracy.
+Przyjęcie krok z powrotem do wzięcia pod — do zakończenia przepływu pracy, przepływ pracy DevOps jest większa niż technologii lub zestawu narzędzi: jest to sposób myślenia wymagającego ewolucji kultury. Jego ludzi, procesów i odpowiednie narzędzia aby cyklu życia aplikacji szybsze i bardziej przewidywalne. Przedsiębiorstwa, które przyjęły konteneryzowanych przepływu pracy zwykle restrukturyzacja organizacji do reprezentowania ludzi i procesy, które odpowiadają konteneryzowanych przepływu pracy.
 
 Ćwiczenia, metodyki DevOps może pomóc zespołom szybszego reagowania na razem nacisk konkurencji, zastępując procesów ręcznych podatne automatyzację, co skutkuje ulepszone możliwości śledzenia i powtarzalne przepływy pracy. Organizacje można również efektywniej zarządzać środowiskami i osiągnięcia oszczędności dzięki kombinacji lokalnych i zasobów w chmurze, a także ściśle zintegrowanych narzędzi.
 

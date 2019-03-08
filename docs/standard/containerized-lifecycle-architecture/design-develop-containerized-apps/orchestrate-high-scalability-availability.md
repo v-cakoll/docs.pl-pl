@@ -4,16 +4,16 @@ description: Aplikacje rzeczywistej produkcji mają być wdrażane i zarządzane
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836165"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679050"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
 
-Przy użyciu koordynatorów aplikacji gotowych do produkcji jest istotne, jeśli aplikacja jest oparta na mikrousługach lub podzielone między wiele kontenerów. Jak wprowadzona wcześniej w podejściu opartych na mikrousługach, każda mikrousługa jest właścicielem jej modelu i danych tak, aby go autonomicznego od środowisk programowania i wdrażania punktu widzenia. Ale nawet w przypadku bardziej tradycyjny aplikację która składa się z wielu usług (np. SOA), ponadto będziesz mieć wiele kontenerów i usług wchodzących w skład aplikacji biznesowej, które muszą zostać wdrożone jako rozproszony system. Tego rodzaju systemy są złożone i skalowanie w poziomie i zarządzać; w związku z tym bezwzględnie konieczne koordynatora, jeśli chcesz mieć aplikację obsługującą wiele kontenerów gotowe do produkcji i skalowalny.
+Przy użyciu koordynatorów aplikacji gotowych do produkcji jest istotne, jeśli aplikacja jest oparta na mikrousługach lub podzielone między wiele kontenerów. Jak wprowadzona wcześniej w podejściu opartych na mikrousługach, każda mikrousługa jest właścicielem jej modelu i danych tak, aby go autonomicznego od środowisk programowania i wdrażania punktu widzenia. Ale nawet w przypadku bardziej tradycyjny aplikację która składa się z wielu usług (np. SOA), będziesz również mieć wiele kontenerów i usług wchodzących w skład aplikacji biznesowej, które muszą zostać wdrożone jako rozproszony system. Tego rodzaju systemy są złożone i skalowanie w poziomie i zarządzać; w związku z tym bezwzględnie konieczne koordynatora, jeśli chcesz mieć aplikację obsługującą wiele kontenerów gotowe do produkcji i skalowalny.
 
 Rysunek 4 – 6 przedstawia wdrożenie w klastrze aplikacji składających się z wielu mikrousług (kontenery).
 
@@ -27,7 +27,7 @@ Interfejsu wiersza polecenia (CLI) Docker spełnia potrzeby zarządzania jeden k
 
 Czegoś Zarządzanie poszczególne kontenery lub proste aplikacje złożone i Przenieś kierunku większych aplikacje dla przedsiębiorstw przy użyciu mikrousług, należy go włączyć do aranżacji i klastrowanie platform.
 
-Z architektury i projektowania punktu widzenia Jeśli tworzenie dużych przedsiębiorstw, opartych na mikrousługach, aplikacji, warto zapoznać się z następujących platform i produktów, które obsługuje zaawansowane scenariusze:
+Z architektury i projektowania punktu widzenia w przypadku tworzenia dużych przedsiębiorstw, opartych na mikrousługach, aplikacji, warto zapoznać się z następujących platform i produktów, które obsługuje zaawansowane scenariusze:
 
 - **Klastry i koordynatorów.** Jeśli musisz skalować aplikacje na wielu hostach Docker, takich jak przy użyciu dużych aplikacji opartych na mikrousługach, bardzo ważne jest można zarządzać wszystkich tych hostów jako pojedynczy klaster, zapewniając abstrakcyjność złożoność podstawowej platformy. To, co zapewnia klastry kontenerów i koordynatorów. Przykładami koordynatorów są usługi Azure Service Fabric i Kubernetes. Rozwiązanie Kubernetes jest dostępna na platformie Azure za pomocą usługi Azure Kubernetes Service.
 
@@ -80,7 +80,7 @@ W przypadku dalszych wdrożenia na podstawie informacji na temat wdrażanie w us
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Wdrażanie przy użyciu narzędzia Helm do klastrów Kubernetes
 
-W przypadku wdrażania aplikacji w klastrze Kubernetes, można użyć oryginalnego `kubectl.exe` narzędzie interfejsu wiersza polecenia przy użyciu plików wdrożenia na podstawie natywnego formatu (`.yaml` plików), jak już wspomniano w poprzedniej sekcji. Jednak w przypadku bardziej złożonych aplikacji platformy Kubernetes, takie jak w przypadku wdrażania złożonych aplikacji opartych na mikrousługach, zaleca się używanie [Helm](https://helm.sh/).
+W przypadku wdrażania aplikacji w klastrze Kubernetes, można użyć oryginalnego `kubectl.exe` narzędzie interfejsu wiersza polecenia przy użyciu plików wdrożenia na podstawie natywnego formatu (`.yaml` plików), jak już wspomniano w poprzedniej sekcji. Jednak w przypadku bardziej złożonych aplikacji platformy Kubernetes, takie jak w przypadku wdrażania złożonych aplikacji opartych na mikrousługach, zaleca się używać [Helm](https://helm.sh/).
 
 Narzędzia Helm pomaga określić, wersji, install, udział, uaktualnienia lub wycofywania nawet najbardziej złożoną aplikację platformy Kubernetes.
 
@@ -149,7 +149,7 @@ Aby uzyskać aktualne informacje na temat obsługi kontenerów w usłudze Azure 
 
 Usługa Service Fabric jest dobrym przykładem platformy, w którym można zdefiniować różne architekturę logiczną (mikrousług biznesowych lub ograniczone konteksty) niż fizyczna implementacja. Na przykład w przypadku zaimplementowania [stanowych usług Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) w [usługi Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), które zostały wprowadzone w następnej sekcji "[Stateless w porównaniu z mikrousług stanowych](#stateless-versus-stateful-microservices), "masz koncepcja mikrousług firmy z wieloma usługami fizycznych.
 
-Jak pokazano na rysunku 4 – 10 i myśleć z punktu widzenia mikrousług/biznesowych podczas implementowania usługi Service Fabric Reliable usługa stanowa zazwyczaj należy zaimplementować dwie warstwy usług. Pierwszy jest zaplecza niezawodnej usługi stanowej, która obsługuje wiele partycji (każda partycja jest stanowej usługi). Drugim jest usługa frontonu, czyli usługę bramy, odpowiedzialnym za routingu i agreguje dane należące do wielu partycji lub wystąpień usługi stanowej. Usługi bramy również obsługuje komunikacji po stronie klienta za pomocą pętli ponawiania, uzyskiwanie dostępu do usługi zaplecza. Jest wywoływana usługi bramy, jeśli implementować niestandardowe usługi lub alternatywnie można również użyć usługi Service Fabric out-of--box [zwrotny serwer proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Jak pokazano na rysunku 4 – 10 i myśleć z punktu widzenia mikrousług/biznesowych podczas implementowania usługi Service Fabric Reliable usługa stanowa zazwyczaj należy zaimplementować dwie warstwy usług. Pierwszy jest zaplecza niezawodnej usługi stanowej, która obsługuje wiele partycji (każda partycja jest stanowej usługi). Drugim jest usługa frontonu, czyli usługę bramy, odpowiedzialnym za routingu i agreguje dane należące do wielu partycji lub wystąpień usługi stanowej. Usługi bramy również obsługuje komunikacji po stronie klienta za pomocą pętli ponawiania, uzyskiwanie dostępu do usługi zaplecza. Usługa bramy jest nazywane implementować niestandardowe usługi, czy też można również użyć usługi Service Fabric out-of--box [zwrotny serwer proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
 
 ![Usługa Service Fabric ma zgodnie z gotowymi receptami do obsługi kilku stanowych usług reliable services w kontenerach.](./media/service-fabric-stateful-business-microservice.png)
 
@@ -187,7 +187,7 @@ Ale samych usług może być również stanowych w usłudze Service Fabric, co o
 
 **Rysunek 4 – 14**. Bezstanowe i stanowe mikrousługi
 
-Bezstanowe podejście nadaje się doskonale i jest prostsza do zaimplementowania niż mikrousług stanowych, ponieważ to podejście jest podobne do tradycyjnych i dobrze znanych wzorców. Jednak mikrousługi bezstanowe powodować opóźnienia między źródłami danych i procesów. Wymagają one również więcej ruchomych części próbując zwiększyć wydajność dzięki dodatkowej pamięci podręcznej i kolejek. Powoduje to, że użytkownik może wystąpić złożone architektury, które mają zbyt wiele warstw.
+Bezstanowe podejście nadaje się doskonale i jest prostsza do zaimplementowania niż mikrousług stanowych, ponieważ to podejście jest podobne do tradycyjnych i dobrze znanych wzorców. Jednak mikrousługi bezstanowe powodować opóźnienia między źródłami danych i procesów. Wymagają one również więcej ruchomych części gdy próbujesz poprawianie wydajności za pomocą dodatkowych pamięci podręcznej i kolejki. Powoduje to, że użytkownik może wystąpić złożone architektury, które mają zbyt wiele warstw.
 
 Z kolei [mikrousług stanowych](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) można programu excel w zaawansowanych scenariuszach, ponieważ nie istnieje żadne opóźnienie między domeny logikę i dane. Duże przetwarzania danych, gry ponownie kończy, baz danych jako usługa i innych scenariuszy o małych opóźnieniach, wszystkie korzystają z usług stanowych umożliwiających lokalne stan szybszy dostęp.
 

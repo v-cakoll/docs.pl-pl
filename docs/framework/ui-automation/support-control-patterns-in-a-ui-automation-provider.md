@@ -1,5 +1,5 @@
 ---
-title: Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika
+title: Obsługa wzorców formantów dostawcy automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 76340438de505cb8297c6a303defe7c33bbb5726
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3fda706f4f2a4aa44b3627a6e6339ef0e3acb03
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691713"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673161"
 ---
-# <a name="support-control-patterns-in-a-ui-automation-provider"></a>Obsługa wzorców kontrolek dostawcy automatyzacji interfejsu użytkownika
+# <a name="support-control-patterns-in-a-ui-automation-provider"></a>Obsługa wzorców formantów dostawcy automatyzacji interfejsu użytkownika
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

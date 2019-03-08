@@ -1,16 +1,21 @@
 ---
 title: Sprawdź wartości danych pośrednich podczas przetwarzania potokowego w strukturze ML.NET
 description: Dowiedz się, jak przeprowadzać inspekcję wartości rzeczywiste dane pośrednie podczas strukturze ML.NET usługi machine learning przetwarzania potokowego w programie
-ms.date: 01/30/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b3a554bf7cd88219a66f91a18b9d983bb91c0f0e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675013"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678647"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>Sprawdź wartości danych pośrednich podczas przetwarzania potokowego w strukturze ML.NET
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Podczas eksperymentu można obserwować i Zweryfikuj wyniki przetwarzania danych w danym momencie. To nie jest proste, ponieważ operacje strukturze ML.NET są powolne, konstruowanie obiektów, które są zapowiedzi i danych.
 

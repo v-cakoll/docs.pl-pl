@@ -1,21 +1,20 @@
 ---
 title: Architektura narzędzi wiersza polecenia programu .NET core
 description: Więcej informacji na temat platformy .NET Core, narzędzia warstwy i co zmieniło się w nowszych wersjach.
-author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696338"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675696"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Ogólne omówienie zmian w narzędziach platformy .NET Core
 
-W tym dokumencie opisano zmiany związane z przenoszeniem z *project.json* do programu MSBuild i *csproj* projektu systemu z informacjami na temat zmian warstw zestaw narzędzi .NET Core i Implementacja poleceń interfejsu wiersza polecenia. Te zmiany podczas wersji platformy .NET Core SDK 1.0 i Visual Studio 2017 z 7 marca 2017 r. (zobacz [ogłoszenie](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)), ale początkowo zostały wdrożone za pomocą wersji programu .NET Core SDK w wersji zapoznawczej 3.
+W tym dokumencie opisano zmiany związane z przenoszeniem z *project.json* do programu MSBuild i *csproj* projektu systemu z informacjami na temat zmian warstw zestaw narzędzi .NET Core i Implementacja poleceń interfejsu wiersza polecenia. Te zmiany podczas wersji platformy .NET Core SDK 1.0 i Visual Studio 2017 z 7 marca 2017 r. (zobacz [ogłoszenie](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/)), ale początkowo zostały wdrożone za pomocą wersji programu .NET Core SDK w wersji zapoznawczej 3.
 
 ## <a name="moving-away-from-projectjson"></a>Przejście od pliku project.json
-Największe zmiana narzędzi dla platformy .NET Core jest bez obaw [przesuwania kursora od pliku project.json do csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/) jako system projektu. Najnowsze wersje narzędzi wiersza polecenia nie obsługują *project.json* plików. Oznacza to, że nie może służyć do tworzenia, uruchamiania lub publikowania aplikacji opartych na pliku project.json i bibliotek. Aby można było używać tej wersji narzędzi, konieczne będzie migracji istniejących projektów lub Rozpocznij nowe. 
+Największe zmiana narzędzi dla platformy .NET Core jest bez obaw [przesuwania kursora od pliku project.json do csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) jako system projektu. Najnowsze wersje narzędzi wiersza polecenia nie obsługują *project.json* plików. Oznacza to, że nie może służyć do tworzenia, uruchamiania lub publikowania aplikacji opartych na pliku project.json i bibliotek. Aby można było używać tej wersji narzędzi, konieczne będzie migracji istniejących projektów lub Rozpocznij nowe. 
 
 W ramach tego przeniesienia, aparat niestandardowej kompilacji, który został opracowany, aby kompilować projekty project.json został zastąpiony z aparatem dojrzałe i pełną obsługę kompilacji o nazwie [MSBuild](https://github.com/Microsoft/msbuild). Program MSBuild jest aparatem dobrze znane w społeczności platformy .NET, ponieważ ma ono kluczowych technologii od pierwszej wersji tej platformy. Oczywiście ponieważ wymagane do kompilowania aplikacji platformy .NET Core, MSBuild wydajnej i .NET Core i może być używany na dowolnej platformie, która platformy .NET Core jest uruchamiany na. Jedną z głównych obietnic programu .NET Core jest to, że stosu wieloplatformowego opracowywania aplikacji, a firma Microsoft ma upewnienie się, że to przeniesienie nie mogą przerwać działania te zobowiązania.
 

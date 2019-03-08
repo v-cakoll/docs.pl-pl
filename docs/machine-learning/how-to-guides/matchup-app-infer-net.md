@@ -1,22 +1,27 @@
 ---
-title: Tworzenie gier dopasowania listy aplikacji za pomocą programowania probalistic i Infer.NET
-description: Dowiedz się, jak za pomocą programowania probalistic Infer.NET utworzyć aplikację listy gier matchup oparty na uproszczonej wersji TrueSkill.
-ms.date: 03/01/2019
+title: Tworzenie gier dopasowania listy aplikacji przy użyciu Infer.NET i Probabilistyczne programowania
+description: Dowiedz się, jak za pomocą programowania Probabilistyczne Infer.NET utworzyć aplikację listy gier matchup oparty na uproszczonej wersji TrueSkill.
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: d760c364d874ec9670823be0664005d62526ee93
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473139"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679141"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Tworzenie gier dopasowania listy aplikacji przy użyciu Infer.NET i Probabilistyczne programowania
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Ten przewodnik zawiera informacje na temat prawdopodobieństwa programowania przy użyciu Infer.NET. Probabilistyczne programowania jest podejście machine learning, gdzie niestandardowe modele są wyrażane jako programów komputerowych. Umożliwia zdobędziesz znajomość domeny w ramach modeli oraz sprawia, że system jest bardziej interpretowanej uczenia maszynowego. Obsługuje ona również wnioskowania online — proces uczenia nadejściu nowych danych. Infer.NET jest używana w różnych produktów w firmie Microsoft na platformie Azure, usługi Xbox i Bing.
 
 ## <a name="what-is-probabilistic-programming"></a>Co to jest programowanie Probabilistyczne?
 
-Probabilistyczne programowania służy do tworzenia modeli statystyczne rzeczywistych procesów. 
+Probabilistyczne programowania służy do tworzenia modeli statystyczne rzeczywistych procesów.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -85,7 +90,7 @@ namespace myApp
             var winnerData = new[] { 0, 0, 0, 1, 3, 4 };
             var loserData = new[] { 1, 3, 4, 2, 1, 2 };
 
-            // Define the statistical model as a probabilistic program 
+            // Define the statistical model as a probabilistic program
             var game = new Range(winnerData.Length);
             var player = new Range(winnerData.Concat(loserData).Max() + 1);
             var playerSkills = Variable.Array<double>(player);
@@ -149,7 +154,7 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-W wynikach Zwróć uwagę, że tego odtwarzacza 3 szereguje nieznacznie wyższe niż 4 graczy, zgodnie z naszym modelu. To dlatego zwycięstwa odtwarzacza 3 za pośrednictwem gracz 1 jest większe znaczenie niż zwycięstwa odtwarzacza 4 za pośrednictwem player 2 — Uwaga tego odtwarzacza 1 uderzeń player 2. Odtwarzacz 0 jest ogólny wyszukiwarek.  
+W wynikach Zwróć uwagę, że tego odtwarzacza 3 szereguje nieznacznie wyższe niż 4 graczy, zgodnie z naszym modelu. To dlatego zwycięstwa odtwarzacza 3 za pośrednictwem gracz 1 jest większe znaczenie niż zwycięstwa odtwarzacza 4 za pośrednictwem player 2 — Uwaga tego odtwarzacza 1 uderzeń player 2. Odtwarzacz 0 jest ogólny wyszukiwarek.
 
 ## <a name="keep-learning"></a>Zachowaj nauki
 

@@ -5,18 +5,16 @@ helpviewer_keywords:
 - UI Automation, threading issues
 - threading issues with UI Automation
 ms.assetid: 0ab8d42c-5b8b-481b-b788-2caecc2f0191
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 7d8df325d18c3657d4955fa534d29bb7fdbc595c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 83b8ec67cff7006e736e0f65a7339b340b20d458
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846503"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678595"
 ---
 # <a name="ui-automation-threading-issues"></a>Problemy wielowątkowości dotyczące automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Ze względu na sposób [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] używa Windows wiadomości, konflikty mogą wystąpić, gdy aplikacja kliencka próbuje korzystać z własnej [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] na [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] wątku. Te konflikty mogą prowadzić do bardzo niska wydajność lub nawet spowodować, że aplikacja przestanie odpowiadać.  
   

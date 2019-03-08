@@ -6,19 +6,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 0acd235fe015b3f93364482b83008b388c1b86d9
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: b365ada2d38f8fca97b66bb3d46b2c8e93d7cb1d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303975"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676242"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Instrukcje: Włączanie widoku Tile w formancie ListView formularzy Windows przy użyciu narzędzia Projektant
 Funkcja widoku kafelków z <xref:System.Windows.Forms.ListView> kontroli umożliwia wizualne równowagi między informacje graficzne i tekstowe. Tekstowe informacje wyświetlane dla elementu w widoku kafelków jest taka sama jak informacji o kolumnie zdefiniowane dla widoku szczegółów. Funkcje widoku kafelków w połączeniu z grupowania lub wstawiania oznaczyć funkcji <xref:System.Windows.Forms.ListView> kontroli.  
   
  Wyświetlanie kafelka używa ikonę 32 x 32 i kilka wierszy tekstu, jak pokazano na poniższej ilustracji.  
   
- ![Widok w kontrolce ListView kafelków](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
+ ![Widok w kontrolce ListView kafelków](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "Kafelek widoku ikon i tekstu")  
   
  Kafelek służy do wyświetlania właściwości i metody umożliwiają określenie, które pola kolumny do wyświetlenia dla każdego elementu i zbiorczo kontrolowanie rozmiaru i wyglądu wszystkich elementów w obrębie okna widoku kafelków. W celu uściślenia pierwszy wiersz tekstu we fragmencie jest zawsze nazwę elementu; Nie można zmienić.  
   

@@ -2,12 +2,12 @@
 title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442896"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680389"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez architekturę WCF. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, przeglądać i filtrować komunikaty śledzenia w dzienniku, aby zdiagnozować, naprawy i sprawdź problemów z usługą WCF.  
@@ -50,7 +50,13 @@ Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga an
 |ActivityTracing|Zdarzenia przepływ między działaniami przetwarzania i składników.<br /><br /> Ten poziom umożliwia administratorów i deweloperów skorelować aplikacji w tej samej domenie aplikacji.<br /><br /> -Ślady działania granice: uruchamianie/zatrzymywanie.<br />-Ślady transferów.|  
   
  Można użyć `add` określić nazwę i typ odbiornik śledzenia ma być używany. W przykładzie konfiguracji, odbiornik o nazwie `sdt` i standardowy odbiornik śledzenia .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) jest dodawany jako typu. Użyj `initializeData` można ustawić nazwę pliku dziennika dla tego odbiornika. Ponadto można zastąpić w pełni kwalifikowaną ścieżkę do nazwy pliku prostego.  
-  
+
+Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycje o wysokim kontraście są wyświetlane w prawidłowy kolor. Możesz wyłączyć tę zmianę, usuwając następujące ustawienie na podstawie *svcTraceViewer.exe.config* pliku:
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Za pomocą narzędzia podglądu śledzenia usług  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Otwieranie i wyświetlanie plików śledzenia WCF  

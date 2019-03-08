@@ -4,18 +4,18 @@ description: Mieć na uwadze kontenerów można też opcji wdrożenia przydatne 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 353ba738143b7dcd92c7c75ac27ea6a7370f9da6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ee71873ac15246f979fd2b08d92280ba797ff6ee
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745836"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675800"
 ---
 # <a name="service-oriented-applications"></a>Aplikacje zorientowane na usługę
 
 Architektury zorientowanej na usługi (SOA) była termin nadmiernego obciążenia, który przeznaczone wiele różnych rzeczy do różnych osób. Jednak jako uniwersalność, SOA oznacza, że struktury architekturę aplikacji przez podzielenie go na kilka usług (najczęściej jako usługi HTTP), które mogą być klasyfikowane w różnych typów, takich jak podsystemów lub w innych przypadkach, w jak warstwy.
 
-Obecnie te usługi można wdrożyć jako kontenery platformy Docker, które rozwiązywania problemów związanych z wdrażaniem, ponieważ wszystkie zależności są uwzględnione w obrazie kontenera. Jednak gdy zachodzi potrzeba skalowanie w poziomie SOAs, może wystąpić wyzwaniom wdrażania na podstawie jednego wystąpienia. Ten problem można obsługiwać przy użyciu klastra oprogramowania lub koordynatora Docker. Przyjrzymy koordynatorów bardziej szczegółowo w następnej sekcji, gdy będziemy eksplorować metody mikrousług.
+Obecnie te usługi można wdrożyć jako kontenery platformy Docker, które rozwiązywania problemów związanych z wdrażaniem, ponieważ wszystkie zależności są uwzględnione w obrazie kontenera. Jednak jeśli potrzebne jest skalowanie w poziomie SOAs, może wystąpić wyzwania Jeśli wdrażasz na podstawie jednego wystąpienia. Ten problem można obsługiwać przy użyciu klastra oprogramowania lub koordynatora Docker. Przyjrzymy koordynatorów bardziej szczegółowo w następnej sekcji, gdy będziemy eksplorować metody mikrousług.
 
 Kontenery platformy docker są przydatne (ale nie jest wymagane) dla bardziej zaawansowanych architektur mikrousług i tradycyjnych architekturach zorientowane na usługę.
 

@@ -1,19 +1,21 @@
 ---
 title: Podstawowe pojęcia do trenowania modelu w strukturze ML.NET
 description: W tym artykule opisano podstawowe pojęcia dotyczące *modelu szkolenia* scenariuszy w strukturze ML.NET. Nie wszystkie pojęcia są istotne dla bardziej prostego scenariusza *prognozowania z istniejącego modelu*.
-ms.date: 02/13/2019
+ms.date: 03/05/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 78554cfd1dfdb3dba82a325d47245aeb313bb6fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303663"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675566"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>Podstawowe pojęcia do trenowania modelu w strukturze ML.NET
 
 W tym artykule opisano podstawowe pojęcia dotyczące *modelu szkolenia* scenariuszy w strukturze ML.NET. Nie wszystkie pojęcia są istotne dla bardziej prostego scenariusza *prognozowania z istniejącego modelu*.
+
+Obecnie używasz niniejszego artykułu i powiązane próbki **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 ## <a name="model-training-concepts"></a>Pojęcia dotyczące szkolenia modelu
 

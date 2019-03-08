@@ -2,12 +2,12 @@
 title: 'Samouczek: Tworzenie dostawcy typów'
 description: Dowiedz się, jak tworzyć własne F# dostawców w typów F# 3.0, sprawdzając kilku dostawców typu prostego, w celu zilustrowania podstawowych koncepcji.
 ms.date: 02/02/2019
-ms.openlocfilehash: ec26f25ad39ca432d6ef11238268e1704bd9638b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371570"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678426"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
@@ -469,7 +469,7 @@ Pamiętaj o następujących kwestiach:
 
 - Każda grupa o nazwie wyników w podanej właściwości i uzyskiwania dostępu do właściwości powoduje użycie indeksatora w przypadku dopasowania `Groups` kolekcji.
 
-Poniższy kod stanowi podstawę logiki do zaimplementowania takich dostawcy, a w tym przykładzie pomija dodanie wszystkich elementów członkowskich do podanego typu. Informacje dla każdego członka dodano zobacz odpowiednią sekcję w dalszej części tego tematu. Aby uzyskać pełny kod pobrać przykład z [ F# 3.0 przykładowy pakiet](https://fsharp3sample.codeplex.com) w witrynie Codeplex.
+Poniższy kod stanowi podstawę logiki do zaimplementowania takich dostawcy, a w tym przykładzie pomija dodanie wszystkich elementów członkowskich do podanego typu. Informacje dla każdego członka dodano zobacz odpowiednią sekcję w dalszej części tego tematu. Aby uzyskać pełny kod pobrać przykład z [ F# 3.0 przykładowy pakiet](https://archive.codeplex.com/?p=fsharp3sample) w witrynie CodePlex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

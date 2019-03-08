@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679780"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677269"
 ---
 # <a name="whats-new-in-net-core-22"></a>What's new in .NET Core 2.2
 
@@ -28,9 +28,9 @@ Ten nowy tryb wdrożenia ma różne zalet kompilowania pliku wykonywalnego, zami
 
 **Obsługa zdarzeń w usługach środowiska uruchomieniowego**
 
-Często może chcieć monitorować użycie aplikacji usług środowiska uruchomieniowego, takich jak GC, JIT i puli wątków, aby zrozumieć ich wpływ na aplikację. W systemach Windows zwykle odbywa się przez monitorowanie zdarzeń ETW bieżącego procesu. Gdy ta w dalszym ciągu działać prawidłowo, nie zawsze jest możliwe użycie funkcji ETW, jeśli pracujesz w środowisku o niskim poziomie uprawnień lub w systemie Linux lub macOS.  
+Często może chcieć monitorować użycie aplikacji usług środowiska uruchomieniowego, takich jak GC, JIT i puli wątków, aby zrozumieć ich wpływ na aplikację. W systemach Windows zwykle odbywa się przez monitorowanie zdarzeń ETW bieżącego procesu. Gdy ta w dalszym ciągu działać prawidłowo, nie zawsze jest możliwe użycie funkcji ETW, jeśli pracujesz w środowisku o niskim poziomie uprawnień lub w systemie Linux lub macOS. 
 
-Począwszy od platformy .NET Core 2.2 zdarzenia CoreCLR teraz mogą być używane przy użyciu <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype> klasy. Zdarzenia te opisują zachowanie środowiska uruchomieniowego usług GC, JIT, puli wątków i współdziałania. Są to te same zdarzenia, które części dostawcy funkcji ETW w środowisku CoreCLR.  Dzięki temu aplikacje mogą pobierać te zdarzenia lub wysyłać je do usługi telemetrii na agregacji za pomocą mechanizmu transportu. Można wyświetlić sposób subskrybowania zdarzeń w następującym przykładzie kodu:
+Począwszy od platformy .NET Core 2.2 zdarzenia CoreCLR teraz mogą być używane przy użyciu <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> klasy. Zdarzenia te opisują zachowanie środowiska uruchomieniowego usług GC, JIT, puli wątków i współdziałania. Są to te same zdarzenia, które są dostępne w ramach dostawcy funkcji ETW w środowisku CoreCLR.  Dzięki temu aplikacje mogą pobierać te zdarzenia lub wysyłać je do usługi telemetrii na agregacji za pomocą mechanizmu transportu. Można wyświetlić sposób subskrybowania zdarzeń w następującym przykładzie kodu:
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -82,7 +82,7 @@ W programie .NET Core 2.1 kompilator JIT zaimplementowane nową technologię kom
 
 - A **Druga warstwa**, która generuje zoptymalizowanego kodu dla tych metod, które są często wykonywane. Druga warstwa kompilacji odbywa się w sposób równoległy, aby uzyskać lepszą wydajność.
 
-Aby uzyskać informacje na zwiększenie wydajności, który może wynikać z warstwową kompilacji, zobacz [Announcing .NET Core 2.2 w wersji zapoznawczej 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/). 
+Aby uzyskać informacje na zwiększenie wydajności, który może wynikać z warstwową kompilacji, zobacz [Announcing .NET Core 2.2 w wersji zapoznawczej 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).
 
 W .NET Core 2.2 w wersji zapoznawczej 2 warstwowego kompilacji została włączona domyślnie. Jednak firma Microsoft decydujesz, czy możemy przystąpić nadal nie umożliwia warstwowego kompilacji domyślnie. Dlatego w .NET Core 2.2, warstwowy kompilacji jest nadal funkcji opcjonalnych. Aby uzyskać informacji na temat zgody na korzystanie z warstwową kompilacji, zobacz [ulepszenia kompilatora Jit](dotnet-core-2-1.md#jit-compiler-improvements) w [What's new in .NET Core 2.1](dotnet-core-2-1.md).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066431"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677183"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Stos dużych obiektów w systemach Windows
 
@@ -47,12 +47,12 @@ Po wyzwoleniu wyrzucania elementów bezużytecznych, GC ślady za pośrednictwem
 
 Rysunek 1 przedstawia scenariusz, w którym GC formularzy generacji 1 po pierwszej generacji 0 GC gdzie `Obj1` i `Obj3` są martwe i formularzy generacji 2 po pierwszej generacji 1 GC gdzie `Obj2` i `Obj5` jest nieużywany. Należy zauważyć, że to i poniższych ilustracjach tylko w celach ilustracyjnych; zawierają one bardzo mało obiekty, aby lepiej zrozumieć, co się dzieje na stosie. W rzeczywistości wiele innych obiektów zazwyczaj wiążą się z wykazem Globalnym.
 
-![Rysunek 1: Gen 0 GC i gen 1 GC](media/loh/loh-figure-1.jpg)  
+![Rysunek 1: Gen 0 GC i gen 1 GC](media/loh/loh-figure-1.jpg)\
 Rysunek 1: Generacji 0 i odzyskiwania pamięci generacji 1.
 
 Rysunek 2 pokazuje, że po GC generacji 2 której pokazano, że `Obj1` i `Obj2` są serialem telewizyjnym GC formularzy ciągłych ilość wolnego miejsca na Brak pamięci używanej zajmowany przez `Obj1` i `Obj2`, który następnie został użyty do spełnienia żądania alokacji Aby uzyskać `Obj4`. Odstęp po ostatni obiekt `Obj3`do końca segmentu można również spełnić żądania alokacji.
 
-![Rysunek 2: Po gen 2 GC](media/loh/loh-figure-2.jpg)  
+![Rysunek 2: Po gen 2 GC](media/loh/loh-figure-2.jpg)\
 Rysunek 2: Po GC generacji 2
 
 Jeśli nie ma wystarczającej ilości wolnego miejsca, aby obsłużyć żądania alokacji dużego obiektu, GC najpierw próbuje pobrać więcej segmentów z systemu operacyjnego. W przypadku niepowodzenia wyzwala wykaz Globalny generacji 2 w nadzieję, że jest zwolnić miejsce.
@@ -61,7 +61,7 @@ Podczas generacji 1 lub generacja 2 GC, moduł zbierający elementy bezużyteczn
 
 Ponieważ LOH są zbierane podczas operacje odzyskiwania pamięci generacji 2, LOH segment może być zwolniony tylko podczas odzyskiwania pamięci. Rysunek 3 przedstawia scenariusz, w której moduł zbierający elementy bezużyteczne zwalnia jednego segmentu (segment 2) do systemu operacyjnego i anuluje więcej miejsca na pozostałe segmenty. Jeśli musi używać miejsca anulowane na końcu segmentu do spełnienia żądania alokacji dużego obiektu, jej zatwierdzenia pamięć ponownie. (Objaśnienia dotyczące zatwierdzania/anulowania, zobacz dokumentację dla [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).
 
-![Rysunek 3: LOH po gen 2 GC](media/loh/loh-figure-3.jpg)  
+![Rysunek 3: LOH po gen 2 GC](media/loh/loh-figure-3.jpg)\
 Rysunek 3: LOH po GC generacji 2
 
 ## <a name="when-is-a-large-object-collected"></a>Gdy dużego obiektu są zbierane?
@@ -156,7 +156,7 @@ Te liczniki wydajności są zwykle dobry, pierwszym krokiem w badanie problemów
 
 Typowym sposobem Obejrzyj liczników wydajności to za pomocą Monitora wydajności (perfmon.exe). Użyj "Dodawanie liczników", aby dodać licznik interesujące dla procesów, które Cię interesują. Dane licznika wydajności można zapisać do pliku dziennika, jak pokazano na rysunku 4.
 
-![Rysunek 4: Dodawanie liczników wydajności.](media/loh/perfcounter.png)  
+![Rysunek 4: Dodawanie liczników wydajności.](media/loh/perfcounter.png)\
 Rysunek 4: LOH po GC generacji 2
 
 Liczniki wydajności można również można wykonywać zapytania programowo. Wiele osób ich zbierania dzięki temu w ramach rutynowego procesu testowania. Gdy są dodatkowe liczniki wartościami, które są niezwykłe, używają innych oznacza, że aby uzyskać bardziej szczegółowe dane ułatwiające wykonywanie analiz.
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Wynik jest podobny do poniższego:
 
-![Rysunek 5: Badanie zdarzeń ETW za pomocą narzędzia PerfView](media/loh/perfview.png)  
-Rysunek 5: Zdarzenia ETW są wyświetlane, za pomocą narzędzia PerfView
+![Rysunek 5: Badanie zdarzeń ETW za pomocą narzędzia PerfView](media/loh/perfview.png) rysunek 5: Zdarzenia ETW są wyświetlane, za pomocą narzędzia PerfView
 
 Jak widać, wszystkie wykazów globalnych są operacje odzyskiwania pamięci generacji 2, a ich wszystkich wygenerowaniu przez AllocLarge, oznacza to, czy alokowanie dużego obiektu wyzwolenie tej GC. Wiemy, że te przydziały są tymczasowe ponieważ **% LOH przeżywalność** kolumny mówi 1%.
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 zbiera zdarzenia AllocationTick uruchamiane mniej więcej co 100 tysięcy warte alokacji. Innymi słowy zdarzenie jest generowane każdorazowo, gdy jest przydzielany dużego obiektu. Można następnie przyjrzymy się jeden z widoków alokacji sterty GC, pokazujące stosy wywołań, który przydzielony dużych obiektów:
 
-![Rysunek 6: Widok alokacji sterty GC](media/loh/perfview2.png)  
+![Rysunek 6: Widok alokacji sterty GC](media/loh/perfview2.png)\
 Rysunek 6: Widok alokacji sterty GC
 
 Jak widać, jest to bardzo prosty test, który po prostu przydziela dużych obiektów z jego `Main` metody.
@@ -244,7 +243,7 @@ Rozmiar sterty LOH jest (16,754,224 + 16,699,288 + 16,284,504) = 49,738,016 bajt
 
 Czasami debuger pokazuje, że całkowity rozmiar LOH jest mniejsza niż rozmiarze 85 000 bajtów. Dzieje się tak, ponieważ środowisko wykonawcze używa LOH przydzielić niektóre obiekty, które są mniejsze niż dużego obiektu.
 
-Ponieważ LOH nie skompaktowany, czasami LOH jest thoought źródło fragmentacji. Oznacza, że fragmentacji:
+Ponieważ LOH nie skompaktowany, czasami LOH jest uznawane za źródło fragmentacji. Oznacza, że fragmentacji:
 
 - Fragmentacja zarządzanej sterty, która jest wskazywany przez ilość wolnego miejsca między obiektami zarządzanej. W SoS `!dumpheap –type Free` polecenia wyświetlana jest ilość wolnego miejsca między obiektami zarządzanej.
 
@@ -310,7 +309,7 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 To polecenie przechodzi do debugera i przedstawia stos wywołań tylko wtedy, gdy [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) jest wywoływana z rozmiarem alokacji większe niż 8 MB (0x800000).
 
-Środowisko CLR 2.0 dodano funkcję o nazwie *Hoarding maszyny Wirtualnej* , może być przydatne w przypadku scenarious gdzie segmenty (łącznie z dużymi i małymi obiekt sterty) są często nabyte i wydania. Aby określić Hoarding maszyny Wirtualnej, należy określić flagę uruchamiania o nazwie `STARTUP_HOARD_GC_VM` za pośrednictwem interfejsu API. Zamiast zwalnianie pustych segmentów do systemu operacyjnego, środowisko CLR anuluje pamięci w tych segmentach i umieszcza je na liście wstrzymania. (Zwróć uwagę, że CLR nie robi to segmentów, które są zbyt duże). Środowisko CLR używa później te segmenty do obsługi nowych żądań segmentu. Następnym razem, że Twoja aplikacja wymaga nowego segmentu, środowisko CLR używa z tej listy gotowości Jeśli znajdziesz taki, który jest wystarczająco duży.
+Środowisko CLR 2.0 dodano funkcję o nazwie *Hoarding maszyny Wirtualnej* , może być przydatne w scenariuszach gdzie segmenty (łącznie z dużymi i małymi obiekt sterty) są często nabyte i wydania. Aby określić Hoarding maszyny Wirtualnej, należy określić flagę uruchamiania o nazwie `STARTUP_HOARD_GC_VM` za pośrednictwem interfejsu API. Zamiast zwalnianie pustych segmentów do systemu operacyjnego, środowisko CLR anuluje pamięci w tych segmentach i umieszcza je na liście wstrzymania. (Zwróć uwagę, że CLR nie robi to segmentów, które są zbyt duże). Środowisko CLR używa później te segmenty do obsługi nowych żądań segmentu. Następnym razem, że Twoja aplikacja wymaga nowego segmentu, środowisko CLR używa z tej listy gotowości Jeśli znajdziesz taki, który jest wystarczająco duży.
 
 Hoarding maszyny Wirtualnej jest również przydatne w przypadku aplikacji, które mają być przechowywane segmentów, którzy już uzyskali, takich jak niektórych aplikacji serwera, które są dominujący aplikacje uruchomione w systemie, aby uniknąć poza wyjątki pamięci.
 

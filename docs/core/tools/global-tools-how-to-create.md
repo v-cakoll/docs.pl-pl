@@ -4,12 +4,12 @@ description: Opisuje sposób tworzenia narzędzie globalne. Narzędzie globalnej
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826424"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677867"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Utworzyć narzędzie globalnej platformy .NET Core przy użyciu interfejsu wiersza polecenia platformy .NET Core
 
@@ -50,7 +50,7 @@ static void Main(string[] args)
                                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                 .InformationalVersion
                                 .ToString();
-                                
+
         Console.WriteLine($"botsay v{versionString}");
         Console.WriteLine("-------------");
         Console.WriteLine("\nUsage:");
@@ -129,13 +129,13 @@ Wszystkie argumenty po `--` ogranicznik są przekazywane do aplikacji.
 
 Przed dodatkiem Service pack i dystrybucji aplikacji jako globalne narzędzie, należy zmodyfikować plik projektu. Otwórz `botsay.csproj` pliku i Dodaj trzy nowe węzły XML do `<Project><PropertyGroup>` węzła:
 
-- `<PackAsTool>`  
+- `<PackAsTool>`\
 [WYMAGANE] Wskazuje, że aplikacja zostanie umieszczony w pakiecie do zainstalowania narzędzia globalnej.
 
-- `<ToolCommandName>`  
+- `<ToolCommandName>`\
 [OPCJONALNIE] Alternatywna nazwa narzędzia, w przeciwnym razie nazwa polecenia dla narzędzia będzie identyczna z nazwą pliku projektu. W pakiecie, wybierając unikatową przyjazną nazwą pomaga odróżnić od innych narzędzi, w tym samym pakiecie, może mieć wielu narzędzi.
 
-- `<PackageOutputPath>`  
+- `<PackageOutputPath>`\
 [OPCJONALNIE] Gdzie będą opracowywane pakietu NuGet. Pakiet NuGet jest narzędzia globalnej interfejsu wiersza polecenia platformy .NET Core używa Aby zainstalować narzędzie.
 
 ```xml
@@ -164,7 +164,7 @@ dotnet pack
 
 `botsay.1.0.0.nupkg` Plik jest tworzony w folderze identyfikowane przez `<PackageOutputPath>` wartość XML z `botsay.csproj` pliku, który w tym przykładzie jest `./nupkg` folderu. Dzięki temu można łatwo zainstalować i przetestować. W przypadku wersji narzędzia publicznie, przekaż go do [ https://www.nuget.org ](https://www.nuget.org). Gdy narzędzie jest dostępne dla narzędzia NuGet, deweloperzy można przeprowadzić instalację na poziomie użytkownika za pomocą narzędzia `--global` opcji [instalacji narzędzi dotnet](dotnet-tool-install.md) polecenia.
 
-Teraz, gdy pakiet, należy zainstalować narzędzia z tego pakietu: 
+Teraz, gdy pakiet, należy zainstalować narzędzia z tego pakietu:
 
 ```console
 dotnet tool install --global --add-source ./nupkg botsay
@@ -186,7 +186,7 @@ Teraz powinno być możliwe do wpisania `botsay` i uzyskać odpowiedzi z narzęd
 
 ## <a name="remove-the-tool"></a>Usuń narzędzie
 
-Po zakończeniu eksperymentowanie, za pomocą narzędzia, możesz je usunąć za pomocą następujących commnand:
+Po zakończeniu eksperymentowanie, za pomocą narzędzia, możesz je usunąć za pomocą następującego polecenia:
 
 ```console
 dotnet tool uninstall -g botsay

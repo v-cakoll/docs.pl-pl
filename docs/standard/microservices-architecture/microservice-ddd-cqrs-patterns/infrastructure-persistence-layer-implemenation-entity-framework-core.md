@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 01e326b049ab8bb8d9c7f8c78acfc272d1d57ae9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 637e51c45217c9ff214395235348b09119200fe7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146137"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676346"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementowanie warstwy trwałości infrastruktury za pomocą platformy Entity Framework Core
 
@@ -56,7 +56,7 @@ public class Order : Entity
     private DateTime _orderDate;
     // Other fields ...
 
-    private readonly List<OrderItem> _orderItems; 
+    private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
@@ -72,7 +72,7 @@ public class Order : Entity
     {
         // Validation logic...
 
-        var orderItem = new OrderItem(productId, productName, 
+        var orderItem = new OrderItem(productId, productName,
                                       unitPrice, discount,
                                       pictureUrl, units);
         _orderItems.Add(orderItem);
@@ -80,7 +80,7 @@ public class Order : Entity
 }
 ```
 
-Należy pamiętać, że `OrderItems` właściwość może zostać oceniony jedynie jako tylko do odczytu przy użyciu `IReadOnlyCollection<OrderItem>`. Ten typ jest tylko do odczytu, więc jest chroniony przed regularne aktualizacje zewnętrznych. 
+Należy pamiętać, że `OrderItems` właściwość może zostać oceniony jedynie jako tylko do odczytu przy użyciu `IReadOnlyCollection<OrderItem>`. Ten typ jest tylko do odczytu, więc jest chroniony przed regularne aktualizacje zewnętrznych.
 
 EF Core umożliwia mapowanie modelu domeny do fizycznej bazy danych bez "zanieczyszczenia" model domeny. Jest czysty .NET obiektów POCO kodu, ponieważ akcji mapowanie jest zaimplementowana w warstwy trwałości. W tym działaniu mapowania należy skonfigurować mapowanie pól w bazie danych. W poniższym przykładzie `OnModelCreating` metody z `OrderingContext` i `OrderEntityTypeConfiguration` klasy wywołanie `SetPropertyAccessMode` informuje programu EF Core w celu uzyskania dostępu do `OrderItems` właściwości za pomocą jej pola.
 
@@ -101,7 +101,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
         orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
         // Other configuration
 
-        var navigation = 
+        var navigation =
               orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
 
         //EF access the OrderItem collection property through its backing field
@@ -140,7 +140,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
         public Buyer Add(Buyer buyer)
         {
-            return _context.Buyers.Add(buyer).Entity; 
+            return _context.Buyers.Add(buyer).Entity;
         }
 
         public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
@@ -353,11 +353,11 @@ Jak wprowadzona wcześniej w sekcji dotyczącej projektu, wzorzec specyfikacji z
 
 Wzorzec specyfikacji zapytania definiuje zapytanie w obiekcie. Na przykład w celu hermetyzacji stronicowane zapytanie, które wyszukuje niektórych produktów, można utworzyć specyfikację PagedProduct, która przyjmuje niezbędne parametry wejściowe (pageNumber pageSize, filtr, itp.). Następnie w ramach dowolnej metody repozytorium (zazwyczaj przeciążenie List()) będzie akceptować IQuerySpecification i uruchom zapytanie oczekiwany, na podstawie tej specyfikacji.
 
-Przykładem ogólny interfejs specyfikacji jest następujący kod z [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb).
+Przykładem ogólny interfejs specyfikacji jest następujący kod z [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb).
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
-// https://github.com/dotnet-architecture/eShopOnWeb 
+// https://github.com/dotnet-architecture/eShopOnWeb
 
 public interface ISpecification<T>
 {
@@ -372,7 +372,7 @@ Następnie w implementacji klasy podstawowej specyfikacji ogólnego jest następ
 ```csharp
 // GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
 // https://github.com/dotnet-architecture/eShopOnWeb
- 
+
 public abstract class BaseSpecification<T> : ISpecification<T>
 {
     public BaseSpecification(Expression<Func<T, bool>> criteria)
@@ -381,16 +381,16 @@ public abstract class BaseSpecification<T> : ISpecification<T>
     }
     public Expression<Func<T, bool>> Criteria { get; }
 
-    public List<Expression<Func<T, object>>> Includes { get; } = 
+    public List<Expression<Func<T, object>>> Includes { get; } =
                                            new List<Expression<Func<T, object>>>();
 
     public List<string> IncludeStrings { get; } = new List<string>();
- 
+
     protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
     {
         Includes.Add(includeExpression);
     }
-    
+
     // string-based includes allow for including children of children
     // e.g. Basket.Items.Product
     protected virtual void AddInclude(string includeString)
@@ -432,18 +432,19 @@ public IEnumerable<T> List(ISpecification<T> spec)
     var queryableResultWithIncludes = spec.Includes
         .Aggregate(_dbContext.Set<T>().AsQueryable(),
             (current, include) => current.Include(include));
- 
+
     // modify the IQueryable to include any string-based include statements
     var secondaryResult = spec.IncludeStrings
         .Aggregate(queryableResultWithIncludes,
             (current, include) => current.Include(include));
- 
+
     // return the result of the query using the specification's criteria expression
     return secondaryResult
                     .Where(spec.Criteria)
                     .AsEnumerable();
 }
 ```
+
 Oprócz enkapsulacji logikę filtrowania, Specyfikacja można określić kształt danych ma zostać zwrócone, w tym właściwości, które można wypełnić.
 
 Chociaż nie jest zalecane do zwrócenia IQueryable z repozytorium, jest idealnie możesz ich używać w ramach repozytorium do utworzenia zestawu wyników. Widać to podejście używany na liście powyżej, metodę, która używa wyrażeń pośrednich IQueryable, do utworzenia listy zapytania zawiera przed wykonaniem kwerendy z kryteriami specyfikacji w ostatnim wierszu.
@@ -468,6 +469,6 @@ Chociaż nie jest zalecane do zwrócenia IQueryable z repozytorium, jest idealni
 - **Wzorzec specyfikacji** \
   [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
->[!div class="step-by-step"]
->[Poprzednie](infrastructure-persistence-layer-design.md)
->[dalej](nosql-database-persistence-infrastructure.md)
+> [!div class="step-by-step"]
+> [Poprzednie](infrastructure-persistence-layer-design.md)
+> [dalej](nosql-database-persistence-infrastructure.md)

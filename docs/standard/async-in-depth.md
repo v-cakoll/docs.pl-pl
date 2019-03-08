@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361329"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677529"
 ---
 # <a name="async-in-depth"></a>Asynchroniczne szczegółowo
 
@@ -142,7 +142,7 @@ Raz `await` napotkaniu wykonywania `CalculateResult()` jest uzyskane do obiektu 
 
 ### <a name="why-does-async-help-here"></a>Dlaczego czy asynchroniczne pomaga w tym miejscu?
 
-`async` i `await` są najlepszym rozwiązaniem Zarządzanie zadań intensywnie angażujących Procesor, gdy będziesz potrzebować czasu odpowiedzi. Istnieje wiele wzorce przy użyciu async za pomocą zadań intensywnie angażujących Procesor. Należy pamiętać, że istnieje niewielkim kosztem za pomocą async i nie jest zalecane w ścisłej pętli for.  To pozwala określić, jak pisać kod wokół tej nowej możliwości.
+`async` i `await` są najlepszym rozwiązaniem do zarządzania zadań intensywnie angażujących Procesor, gdy będziesz potrzebować czasu odpowiedzi. Istnieje wiele wzorce przy użyciu async za pomocą zadań intensywnie angażujących Procesor. Należy pamiętać, że istnieje niewielkim kosztem za pomocą async i nie jest zalecane w ścisłej pętli for.  To pozwala określić, jak pisać kod wokół tej nowej możliwości.
 
 ## <a name="see-also"></a>Zobacz także
 

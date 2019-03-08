@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
-ms.openlocfilehash: c04ea514c1730de8e4ceabbd6fc0e9a12fdbfb3c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3a19cc7ffae706769cf1b1a19fdaff7c7cdc07fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376510"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674448"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -335,7 +335,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 Poniższy kod tworzy Podzakres przy użyciu słowa "szybkie", "brown" i "fox". Zawiera on `words[1]` za pośrednictwem `words[3]`. Element `words[4]` nie znajduje się w zakresie.
 
 ```csharp
-var brownFox = words[1..4];
+var quickBrownFox = words[1..4];
 ```
 
 Poniższy kod tworzy Podzakres "z opóźnieniem" i "dog". Zawiera on `words[^2]` i `words[^1]`. Indeks końcowy `words[^0]` nie jest dołączony:

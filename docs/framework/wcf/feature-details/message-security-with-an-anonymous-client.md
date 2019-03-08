@@ -5,133 +5,141 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: b0dbd38e02c2e200796fa4508efc203685026155
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596673"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680312"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Zabezpieczenia komunikatów z anonimowym klientem
-Następujący scenariusz pokazuje, klient i usługa zabezpieczane na komunikat usług Windows Communication Foundation (WCF). Celem projektu jest użycie zabezpieczeń wiadomości, a nie z zabezpieczeń transportu, aby w przyszłości może obsługiwać rozbudowane modelu opartego na oświadczeniach. Aby uzyskać więcej informacji o korzystaniu z zaawansowanych oświadczenia dotyczące autoryzacji, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
-  
- Dla przykładowej aplikacji, zobacz [komunikat zabezpieczeń anonimowe](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
-  
- ![Zabezpieczenia za pomocą klienta anynymous wiadomości](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")  
-  
-|Cechy|Opis|  
-|--------------------|-----------------|  
-|Tryb zabezpieczeń|Komunikat|  
-|Współdziałanie|Tylko usługi WCF|  
-|Uwierzytelnianie (serwer)|Początkowego negocjowania wymaga uwierzytelniania serwera, ale nie uwierzytelnianie klienta|  
-|Uwierzytelnianie (klient)|Brak|  
-|Integralność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
-|Poufność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
-|Transport|HTTP|  
-  
-## <a name="service"></a>Usługa  
- Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
-  
--   Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.  
-  
--   Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.  
-  
-### <a name="code"></a>Kod  
- Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, która używa zabezpieczenia wiadomości.  
-  
- [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
- [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]  
-  
-### <a name="configuration"></a>Konfiguracja  
- Następująca konfiguracja można używać zamiast kodu. Element zachowanie usługi jest używany do określenia certyfikatu, który jest używany do uwierzytelniania usługi dla klienta. Element usługi należy określić przy użyciu zachowanie `behaviorConfiguration` atrybutu. Element powiązania Określa, że typ poświadczeń klienta jest `None`, umożliwiając klientom anonimowych do korzystania z usługi.  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-  <system.serviceModel>  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="ServiceCredentialsBehavior">  
-          <serviceCredentials>  
-            <serviceCertificate findValue="contoso.com"   
-                                storeLocation="LocalMachine"  
-                                storeName="My" />  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-    <services>  
-      <service behaviorConfiguration="ServiceCredentialsBehavior"   
-               name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
-                  binding="wsHttpBinding"  
-                  bindingConfiguration="WSHttpBinding_ICalculator"   
-                  name="CalculatorService"  
-                  contract="ServiceModel.ICalculator" />  
-      </service>  
-    </services>  
-    <bindings>  
-      <wsHttpBinding>  
-        <binding name="WSHttpBinding_ICalculator" >  
-          <security mode="Message">  
-            <message clientCredentialType="None" />  
-          </security>  
-        </binding>  
-      </wsHttpBinding>  
-    </bindings>  
-    <client />  
-  </system.serviceModel>  
-</configuration>  
-```  
-  
-## <a name="client"></a>Klient  
- Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
-  
--   Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).  
-  
--   Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:  
-  
-     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
-     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
-  
-### <a name="code"></a>Kod  
- Poniższy kod tworzy wystąpienie klienta. Powiązanie używa komunikatów tryb zabezpieczeń, a typu poświadczeń klienta jest ustawiona na wartość none.  
-  
- [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
- [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]  
-  
-### <a name="configuration"></a>Konfiguracja  
- Poniższy kod konfiguruje klienta.  
-  
-```xml  
-<?xml version="1.0" encoding="utf-8"?>  
-<configuration>  
-  <system.serviceModel>  
-    <bindings>  
-      <wsHttpBinding>  
-        <binding name="WSHttpBinding_ICalculator" >  
-          <security mode="Message">  
-            <message clientCredentialType="None" />  
-          </security>  
-        </binding>  
-      </wsHttpBinding>  
-    </bindings>  
-    <client>  
-      <endpoint address="http://machineName/Calculator"  
-        binding="wsHttpBinding"  
-        bindingConfiguration="WSHttpBinding_ICalculator"   
-        contract="ICalculator"  
-        name="WSHttpBinding_ICalculator">  
-        <identity>  
-          <dns value="contoso.com" />  
-        </identity>  
-      </endpoint>  
-    </client>  
-  </system.serviceModel>  
-</configuration>  
-```  
-  
+
+Następujący scenariusz pokazuje, klient i usługa zabezpieczane na komunikat usług Windows Communication Foundation (WCF). Celem projektu jest użycie zabezpieczeń wiadomości, a nie z zabezpieczeń transportu, aby w przyszłości może obsługiwać rozbudowane modelu opartego na oświadczeniach. Aby uzyskać więcej informacji o korzystaniu z zaawansowanych oświadczenia dotyczące autoryzacji, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+
+Dla przykładowej aplikacji, zobacz [komunikat zabezpieczeń anonimowe](../../../../docs/framework/wcf/samples/message-security-anonymous.md).
+
+![Zabezpieczenia z anonimowym klientem wiadomości](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
+
+|Cechy|Opis|
+|--------------------|-----------------|
+|Tryb zabezpieczeń|Komunikat|
+|Współdziałanie|Tylko usługi WCF|
+|Uwierzytelnianie (serwer)|Początkowego negocjowania wymaga uwierzytelniania serwera, ale nie uwierzytelnianie klienta|
+|Uwierzytelnianie (klient)|Brak|
+|Integralność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|
+|Poufność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|
+|Transport|HTTP|
+
+## <a name="service"></a>Usługa
+
+Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:
+
+- Tworzenie autonomicznego usługi przy użyciu kodu bez konfiguracji.
+
+- Tworzenie usługi przy użyciu wprowadzonej konfiguracji, ale nie definiują żadnych punktów końcowych.
+
+### <a name="code"></a>Kod
+
+Poniższy kod przedstawia sposób tworzenia punktu końcowego usługi, która używa zabezpieczenia wiadomości.
+
+[!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
+[!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]
+
+### <a name="configuration"></a>Konfiguracja
+
+Następująca konfiguracja można używać zamiast kodu. Element zachowanie usługi jest używany do określenia certyfikatu, który jest używany do uwierzytelniania usługi dla klienta. Element usługi należy określić przy użyciu zachowanie `behaviorConfiguration` atrybutu. Element powiązania Określa, że typ poświadczeń klienta jest `None`, umożliwiając klientom anonimowych do korzystania z usługi.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="ServiceCredentialsBehavior">
+          <serviceCredentials>
+            <serviceCertificate findValue="contoso.com"
+                                storeLocation="LocalMachine"
+                                storeName="My" />
+          </serviceCredentials>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <services>
+      <service behaviorConfiguration="ServiceCredentialsBehavior"
+               name="ServiceModel.Calculator">
+        <endpoint address="http://localhost/Calculator"
+                  binding="wsHttpBinding"
+                  bindingConfiguration="WSHttpBinding_ICalculator"
+                  name="CalculatorService"
+                  contract="ServiceModel.ICalculator" />
+      </service>
+    </services>
+    <bindings>
+      <wsHttpBinding>
+        <binding name="WSHttpBinding_ICalculator" >
+          <security mode="Message">
+            <message clientCredentialType="None" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client />
+  </system.serviceModel>
+</configuration>
+```
+
+## <a name="client"></a>Klient
+
+Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:
+
+- Tworzenie klienta autonomicznego przy użyciu kodu (i kodu klienta).
+
+- Tworzenie klienta, który nie definiuje żadnych adresy punktów końcowych. Zamiast tego należy użyć konstruktora klienta, który przyjmuje nazwę konfiguracji jako argument. Na przykład:
+
+    [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
+    [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
+
+### <a name="code"></a>Kod
+
+Poniższy kod tworzy wystąpienie klienta. Powiązanie używa komunikatów tryb zabezpieczeń, a typu poświadczeń klienta jest ustawiona na wartość none.
+
+[!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
+[!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]
+
+### <a name="configuration"></a>Konfiguracja
+
+Poniższy kod konfiguruje klienta.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <bindings>
+      <wsHttpBinding>
+        <binding name="WSHttpBinding_ICalculator" >
+          <security mode="Message">
+            <message clientCredentialType="None" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://machineName/Calculator"
+        binding="wsHttpBinding"
+        bindingConfiguration="WSHttpBinding_ICalculator"
+        contract="ICalculator"
+        name="WSHttpBinding_ICalculator">
+        <identity>
+          <dns value="contoso.com" />
+        </identity>
+      </endpoint>
+    </client>
+  </system.serviceModel>
+</configuration>
+```
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Rozproszone zabezpieczenia aplikacji](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [Zabezpieczenia komunikatów z anonimowością](../../../../docs/framework/wcf/samples/message-security-anonymous.md)

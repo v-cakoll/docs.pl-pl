@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Na
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d48c78e6ea63ea1a2f3dbfea6b9fec646493c751
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4ec170c5951147e4979152a0208b00a1369b16d7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148074"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679544"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Projektowanie reguł weryfikacji w warstwie modelu domeny
 
@@ -42,7 +42,7 @@ Przykład lepsze wskazywałoby potrzebę zapewnienia wewnętrzny stan nie zosta�
 public void SetAddress(string line1, string line2,
     string city, string state, int zip)
 {
-    _shipingAddress.line1 = line1 ?? throw new ...
+    _shippingAddress.line1 = line1 ?? throw new ...
     _shippingAddress.line2 = line2;
     _shippingAddress.city = city ?? throw new ...
     _shippingAddress.state = (IsValid(state) ? state : throw new …);
@@ -93,13 +93,13 @@ Za pomocą weryfikacji pola przy użyciu adnotacji danych, na przykład nie dupl
 - **Rick Anderson. Dodawanie walidacji** \
   [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
-- **Martina Fowlera. Zastępowanie zgłaszanie wyjątków z powiadomieniem w walidacji** \
+- **Martin Fowler. Zastępowanie zgłaszanie wyjątków z powiadomieniem w walidacji** \
   [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
 - **Specyfikacja i wzorce powiadomień** \
   [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
-- **Lew Gorodinski. Sprawdzanie poprawności w projektowania opartego na domenach (DDD)** \
+- **Lev Gorodinski. Sprawdzanie poprawności w projektowania opartego na domenach (DDD)** \
   [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
 - **Gniazdo Colin. Sprawdzanie poprawności modelu domeny** \
@@ -108,6 +108,6 @@ Za pomocą weryfikacji pola przy użyciu adnotacji danych, na przykład nie dupl
 - **Jimmy Bogard. Sprawdzanie poprawności w świecie DDD** \
   [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
->[!div class="step-by-step"]
->[Poprzednie](enumeration-classes-over-enum-types.md)
->[dalej](client-side-validation.md)
+> [!div class="step-by-step"]
+> [Poprzednie](enumeration-classes-over-enum-types.md)
+> [dalej](client-side-validation.md)

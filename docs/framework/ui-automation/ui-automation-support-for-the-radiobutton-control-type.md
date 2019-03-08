@@ -6,16 +6,14 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 6f9df16a26de37df1f61d8de115a2e9da04a9b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a70e1f3a7a738358af938f64116a4bc0d4600711
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512830"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675215"
 ---
-# <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu RadioButton
+# <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu RadioButton
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

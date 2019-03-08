@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55fd6e6eec0c5107398bd0a7dda0281f69eb471b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a9889ddf1c03f14835101f31d0a3b264f0016267
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492520"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676554"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime — Metoda
 Pobiera [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejs, który odnosi się do określonej wersji środowiska uruchomieniowego języka wspólnego (CLR). Ta metoda zastępuje [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funkcja używana z [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) flagi.  
@@ -61,7 +61,7 @@ HRESULT GetRuntime (
 |E_POINTER|`pwzVersion` lub `ppRuntime` ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda użyje spójne interfejsy starszej wersji takich jak [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) funkcji interfejsu i starszej wersji, takich jak przestarzałego `CorBindTo*` funkcji (zobacz [przestarzałe CLR funkcje hostingu](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) w programie .NET Framework 2.0, hostowanie interfejsu API). Oznacza to środowisk wykonawczych, które są ładowane przy użyciu starszej wersji interfejsu API są widoczne dla nowego interfejsu API i środowisk wykonawczych, które są ładowane przy użyciu nowego interfejsu API są widoczne dla starszej wersji interfejsu API. .  
+ Ta metoda użyje spójne interfejsy starszej wersji takich jak [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) funkcji interfejsu i starszej wersji, takich jak przestarzałego `CorBindTo*` funkcji (zobacz [przestarzałe CLR funkcje hostingu](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) w programie .NET Framework 2.0, hostowanie interfejsu API). Oznacza to środowisk wykonawczych, które są ładowane przy użyciu starszej wersji interfejsu API są widoczne dla nowego interfejsu API i środowisk wykonawczych, które są ładowane przy użyciu nowego interfejsu API są widoczne dla starszej wersji interfejsu API.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

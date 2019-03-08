@@ -4,12 +4,12 @@ description: Dowiedz się, dostępną opcją do zapisywania stanu w konteneryzow
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746001"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678088"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
@@ -53,7 +53,7 @@ Jak pokazano na rysunku 4-5, regularne woluminów Docker mogą być przechowywan
 
 **Rysunek 4-5**. Woluminy i zewnętrznych źródeł danych dla aplikacji opartych na kontenerach
 
-Ponadto gdy kontenerów platformy Docker są zarządzane przez program orchestrator, kontenerów może "Przenieś" między hostami w zależności od optymalizacje wykonywane przez klaster. W związku z tym nie jest zalecane użycie woluminów danych dla danych biznesowych. Ale są one dobrym mechanizm do pracy z plikami śledzenia, pliki danych czasowych lub podobne, który nie ma wpływu na spójność danych biznesowych.
+Ponadto gdy kontenerów platformy Docker są zarządzane przez program orchestrator, kontenerów może "Przenieś" między hostami w zależności od optymalizacje wykonywane przez klaster. W związku z tym nie jest zalecane, użyć woluminów danych dla danych biznesowych. Ale są one dobrym mechanizm do pracy z plikami śledzenia, pliki danych czasowych lub podobne, który nie ma wpływu na spójność danych biznesowych.
 
 **Zdalnych źródeł danych i pamięć podręczna** aplikacji kontenerowych nimi narzędzi, takich jak Azure SQL Database, Azure Cosmos DB lub zdalnego pamięci podręcznej, takich jak Redis można używać w taki sam sposób, są one używane podczas tworzenia bez kontenerów. To jest sprawdzonym sposobem przechowywania danych aplikacji biznesowych.
 

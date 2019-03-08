@@ -6,15 +6,15 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: a65d09c6449a14dbb74d80247afa18a6f3a601d5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 34e3370b0f6d28160be3ad9d918c110fc93f51fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969950"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674084"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Przekazywanie parametrów typu odwołanie (Przewodnik programowania w języku C#)
-Zmienna [odwołania do typu](../../../csharp/language-reference/keywords/reference-types.md) nie zawierają swoje dane bezpośrednio; zawiera on odwołanie do swoich danych. Należy podać parametr typu odwołania przez wartość, jest możliwość zmiany danych należących do przywoływanego obiektu, na przykład wartość składowej klasy. Jednak nie możesz zmienić wartości odwołania. na przykład nie można użyć tego samego odwołania można przydzielić pamięci dla nowej klasy i jego utrwalenia poza metodą. Aby to zrobić, należy przekazać przy użyciu parametru [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Dla uproszczenia w poniższych przykładach używane `ref`.  
+Zmienna [odwołania do typu](../../../csharp/language-reference/keywords/reference-types.md) nie zawierają swoje dane bezpośrednio; zawiera on odwołanie do swoich danych. Należy podać parametr typu odwołania przez wartość, jest możliwość zmiany danych należących do przywoływanego obiektu, na przykład wartość składowej klasy. Jednak nie możesz zmienić wartości odwołania. na przykład nie można użyć tego samego odwołania można przydzielić pamięci dla nowego obiektu i jego utrwalenia poza metodą. Aby to zrobić, należy przekazać przy użyciu parametru [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Dla uproszczenia w poniższych przykładach używane `ref`.  
   
 ## <a name="passing-reference-types-by-value"></a>Przekazywanie typów referencyjnych przez wartość  
  W poniższym przykładzie pokazano przekazywanie parametrów typu odwołanie `arr`, przez wartość do metody, `Change`. Ponieważ parametr jest odwołaniem do `arr`, można zmienić wartości elementów tablicy. Jednak próba ponownego przypisania parametru do innej lokalizacji w pamięci tylko działa wewnątrz metody i nie ma wpływu na oryginalny zmiennej `arr`.  

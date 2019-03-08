@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4422f325566724e3ea65d47d97c42e57e3fe621
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835606"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680363"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Korzystanie z narzędzi platformy Docker w programie Visual Studio 2017 na Windows
 
@@ -75,7 +75,7 @@ Poniższa tabela może pomóc zdecydować, jak ustawić te opcje.
 
 | Nazwa | Ustawienie domyślne | Dotyczy: | Opis |
 | -----|:---------------:|:----------:| ----------- |
-| Automatycznie Ściągnij wymagane obrazy platformy Docker po załadowaniu projektu | On | Docker Compose | Aby zwiększyć wydajność podczas ładowania projektów programu Visual Studio rozpocznie operacji ściągania aparatu Docker w tle, tak, aby gdy jesteś gotowy do uruchomienia kodu, obraz, który został już pobrany, lub w trakcie pobierania. Jeśli właśnie trwa ładowanie projektów i przeglądania kodu, możesz Wyłącz tę opcję, aby uniknąć pobierania obrazów kontenerów, które nie są potrzebne. |
+| Automatycznie Ściągnij wymagane obrazy platformy Docker po załadowaniu projektu | On | Docker Compose | Aby zwiększyć wydajność podczas ładowania projektów programu Visual Studio rozpocznie operacji ściągania aparatu Docker w tle, tak, aby gdy wszystko będzie gotowe uruchomić kod, obraz, który został już pobrany, lub w trakcie pobierania. Jeśli właśnie trwa ładowanie projektów i przeglądania kodu, możesz Wyłącz tę opcję, aby uniknąć pobierania obrazów kontenerów, które nie są potrzebne. |
 | Automatycznie uruchom kontenery w tle | On | Docker Compose | Ponownie do zwiększenia wydajności programu Visual Studio tworzy kontener z instaluje wolumin gotowy do podczas kompilowania i uruchamiania kontenera. Jeśli chcesz kontrolować, po utworzeniu kontenera, wyłącz tę opcję. |
 | Automatycznie zabij kontenery rozwiązanie, zamknij | On | Docker Compose | Wyłącz tę opcję, jeśli chcesz kontenerów do rozwiązania w celu będą nadal działać po zamknięcie rozwiązania lub zamknięcia programu Visual Studio. |
 | Nie monituj o zaufanie certyfikatowi protokołu SSL | Off | Projekty ASP.NET Core 2.1 | Jeśli certyfikatowi protokołu SSL nie jest zaufany, Visual Studio wyświetli monit o za każdym razem, gdy uruchamiasz projekt, chyba że to pole wyboru jest zaznaczone. |
@@ -85,9 +85,9 @@ Poniższa tabela może pomóc zdecydować, jak ustawić te opcje.
 
 > [! Informacje o] Aby uzyskać więcej informacji o implementacji usług i korzystanie z programu Visual Studio Tools for Docker, przeczytaj następujące artykuły:
 >
->Debugowanie aplikacji w lokalnym kontenerze Docker: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+>Debugowanie aplikacji w lokalnym kontenerze Docker: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >
->Wdrażanie kontenera platformy ASP.NET do rejestru kontenerów przy użyciu programu Visual Studio: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+>Wdrażanie kontenera platformy ASP.NET do rejestru kontenerów przy użyciu programu Visual Studio: <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 >[!div class="step-by-step"]
 >[Poprzednie](docker-apps-inner-loop-workflow.md)

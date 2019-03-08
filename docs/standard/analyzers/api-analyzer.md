@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759135"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680272"
 ---
 # <a name="net-api-analyzer"></a>Analizator interfejsu API platformy .NET
 
@@ -44,7 +44,7 @@ Gdy przestarzałe API, takich jak <xref:System.Net.WebClient>, jest używana w k
 
 **Lista błędów** okno zawiera ostrzeżenia o unikatowym identyfikatorze za przestarzałe API, jak pokazano w poniższym przykładzie (`DE004`): 
 
-!["Zrzut ekranu przedstawiający ostrzeżenie jego identyfikator i opis okno Lista błędów"](media/api-analyzer/warnings.jpg)
+!["Zrzut ekranu przedstawiający ostrzeżenie jego identyfikator i opis okno Lista błędów"](media/api-analyzer/warnings-id-and-descriptions.jpg "okno Lista błędów, które zawiera ostrzeżenia.")
 
 Klikając identyfikator, możesz przejść do strony sieci Web za pomocą szczegółowe informacje na temat przyczyny interfejsu API została zakończona i sugestie dotyczące alternatywne interfejsy API, które mogą być używane.
 
@@ -112,5 +112,5 @@ Użytkownik decyduje, jak powinny być traktowane diagnostyki: jako ostrzeżenia
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do interfejsu API analizatora](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) wpis w blogu.
+- [Wprowadzenie do interfejsu API analizatora](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) wpis w blogu.
 - [Interfejs API analizatora](https://youtu.be/eeBEahYXGd0) pokaz wideo w serwisie YouTube.

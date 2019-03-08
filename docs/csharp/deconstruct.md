@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 90c693790398509a810d93d8504e1eb748637bb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c24c1ec04bdd7ce7ee2061c2551652e26a28cf9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710260"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679336"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Dekonstrukcja krotek i innych typów
 
@@ -100,7 +100,7 @@ Poniższy przykład deconstructs `Person` obiektu do czterech ciągów (imiona i
 
 Jeśli nie możesz tworzyć klasy, struktury lub interfejsu, nadal można dekonstruować obiektów tego typu przez zaimplementowanie co najmniej jeden `Deconstruct` [metody rozszerzenia](programming-guide/classes-and-structs/extension-methods.md) zwracać wartości, w których interesują.
 
-W poniższym przykładzie zdefiniowano dwa `Deconstruct` metody rozszerzenia dla <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> klasy. Pierwsza zwraca zestaw wartości, które wskazują cechy właściwości, w tym jego typ jest statyczna lub wystąpienia, czy jest tylko do odczytu i czy są indeksowane. Drugi wskazuje właściwości ułatwień dostępu. Ponieważ dostępność metody get i metody dostępu set mogą się różnić, wartościami logicznymi wskazywania, czy właściwość ma oddzielne pobieranie i ustawianie metody dostępu i, jeśli istnieje, czy mają identyczną dostępność. Czy istnieje tylko jedna metoda dostępu zarówno get, jak i metody dostępu set mieć identyczną dostępność `access` zmienna wskazuje dostępność właściwości jako całości. W przeciwnym razie dostępność metody get i set metody dostępu są wskazywane przez accessaccessibility jest wskazywany przez `getAccess` i `setAccess` zmiennych.
+W poniższym przykładzie zdefiniowano dwa `Deconstruct` metody rozszerzenia dla <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> klasy. Pierwsza zwraca zestaw wartości, które wskazują cechy właściwości, w tym jego typ jest statyczna lub wystąpienia, czy jest tylko do odczytu i czy są indeksowane. Drugi wskazuje właściwości ułatwień dostępu. Ponieważ dostępność metody get i metody dostępu set mogą się różnić, wartościami logicznymi wskazywania, czy właściwość ma oddzielne pobieranie i ustawianie metody dostępu i, jeśli istnieje, czy mają identyczną dostępność. Czy istnieje tylko jedna metoda dostępu zarówno get, jak i metody dostępu set mieć identyczną dostępność `access` zmienna wskazuje dostępność właściwości jako całości. W przeciwnym razie dostępność metody get i set metody dostępu są wskazywane przez `getAccess` i `setAccess` zmiennych.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
 

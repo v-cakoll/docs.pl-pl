@@ -4,16 +4,16 @@ description: Dowiedz się więcej "wewnętrzną pętlę" przepływu pracy dla op
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835684"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676671"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy wewnętrznej pętli tworzenia aplikacji platformy Docker
 
-Przed wyzwoleniem zewnętrzna Pętla przepływu pracy, obejmujące cały DevOps cyklu, rozpoczyna na każdy Deweloper maszynie kodowania samej aplikacji, za pomocą swojego preferowanego języków lub platform i testowanie jej lokalnie (rysunek 4-21). Ale w każdym przypadku konieczne będzie to ważny punkt, niezależnie od tego, jaki język, struktury lub platform wybierz. W tym określonego przepływu pracy są zawsze tworzenia i testowania kontenerów platformy Docker, ale lokalnie.
+Przed wyzwoleniem zewnętrzna Pętla przepływu pracy, obejmujące cały DevOps cyklu, rozpoczyna na każdy Deweloper maszynie kodowania samej aplikacji, za pomocą swojego preferowanego języków lub platform i testowanie jej lokalnie (rysunek 4-21). Jednak w każdym przypadku, będziesz mieć to ważny punkt, niezależnie od tego, jaki język, struktury lub platform wybierz. W tym określonego przepływu pracy zawsze tworzenia i testowania kontenerów platformy Docker, ale lokalnie.
 
 ![Krok 1 — Kod/uruchomienia/debugowania](./media/image18.png)
 
@@ -43,7 +43,7 @@ Rysunek 4-22 przedstawiono podstawowe kroki, które zazwyczaj trzeba przeprowadz
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Krok 1. Rozpocznij kodowanie w programie Visual Studio Code i utworzyć linię bazową początkową aplikacji/usługi
 
-Sposób tworzenia aplikacji jest podobny sposób, co można zrobić bez platformy Docker. Różnica jest, że podczas tworzenia, są wdrażanie i testowanie aplikacji lub usług działających w kontenerach platformy Docker, umieszczone w środowisku lokalnym (np. maszyny Wirtualnej systemu Linux lub Windows).
+Sposób tworzenia aplikacji jest podobny sposób, co można zrobić bez platformy Docker. Różnica jest, że podczas tworzenia, jesteś wdrażania i testowania aplikacji lub usług działających w kontenerach platformy Docker, umieszczone w środowisku lokalnym (np. maszyny Wirtualnej systemu Linux lub Windows).
 
 **Konfigurowanie środowiska lokalnego**
 
@@ -91,13 +91,13 @@ Aby zainstalować rozszerzenia platformy Docker, naciśnij klawisze Ctrl + Shift
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Krok 2. Tworzenie pliku DockerFile związane z istniejącego obrazu (zwykły system operacyjny lub środowiskach deweloperskich, takich jak .NET Core, Node.js i Ruby)
 
-Konieczne będzie `DockerFile` według obrazu niestandardowego do zbudowania i kontenera do wdrożenia. Jeśli aplikacja składa się z jednej usługi niestandardowe, należy jeden `DockerFile`. Ale jeśli aplikacja składa się z wielu usług (tak jak w architekturze mikrousług), trzeba będzie je utworzyć `Dockerfile` na usługę.
+Będziesz potrzebować `DockerFile` według obrazu niestandardowego do zbudowania i kontenera do wdrożenia. Jeśli aplikacja składa się z jednej usługi niestandardowe, należy jeden `DockerFile`. Ale jeśli aplikacja składa się z wielu usług (tak jak w architekturze mikrousług), trzeba będzie je utworzyć `Dockerfile` na usługę.
 
 `DockerFile` Często znajduje się w folderze głównym aplikacji lub usługi i zawiera wymagane polecenia, tak że platforma Docker wie, jak skonfigurować i uruchomić tej aplikacji lub usługi. Można utworzyć usługi `DockerFile` i dodaj go do swojego projektu, wraz z kodu (node.js, .NET Core, itp.), lub, jeśli jesteś nowym użytkownikiem środowiska, spójrz na poniższe porady.
 
 > [!TIP]
 >
-> Można użyć rozszerzenia platformy Docker, przeprowadzenie Cię w przypadku korzystania z `Dockerfile` i `docker-compose.yml` pliki związane z programem kontenerów Docker. Po pewnym czasie prawdopodobnie będzie zapisywać te rodzaje plików bez tego narzędzia, ale przy użyciu rozszerzenia platformy Docker jest dobry punkt wyjścia przyspieszy swoje nauki.
+> Można użyć rozszerzenia platformy Docker, przeprowadzenie Cię w przypadku korzystania z `Dockerfile` i `docker-compose.yml` pliki związane z programem kontenerów Docker. Po pewnym czasie prawdopodobnie napiszesz te rodzaje plików bez tego narzędzia, ale przy użyciu rozszerzenia platformy Docker jest dobry punkt wyjścia przyspieszy swoje nauki.
 
 W rysunek 4 – 24, możesz zobaczyć jak docker-compose plik zostanie dodany przy użyciu rozszerzenia platformy Docker dla programu VS Code.
 
@@ -105,7 +105,7 @@ W rysunek 4 – 24, możesz zobaczyć jak docker-compose plik zostanie dodany pr
 
 **Rysunek 4-24**. Pliki docker dodać za pomocą **plików Dodaj Docker do polecenia obszaru roboczego**
 
-Po dodaniu pliku DockerFile, określ jaki podstawowego obrazu platformy Docker, należy używać (takimi jak wymaganie użycia `FROM microsoft/aspnetcore`). Zazwyczaj utworzy obraz niestandardowy na podstawie obrazu podstawowego, który można pobrać z dowolnego oficjalne repozytorium na [rejestru usługi Docker Hub](https://hub.docker.com/) (takich jak [obrazu dla platformy .NET Core](https://hub.docker.com/r/microsoft/dotnet/) lub [dla środowiska Node.js](https://hub.docker.com/_/node/)).
+Po dodaniu pliku DockerFile, określ jaki podstawowego obrazu platformy Docker, należy używać (takimi jak wymaganie użycia `FROM microsoft/aspnetcore`). Zazwyczaj utworzysz obraz niestandardowy na podstawie obrazu podstawowego, który można pobrać z dowolnego oficjalne repozytorium na [rejestru usługi Docker Hub](https://hub.docker.com/) (takich jak [obrazu dla platformy .NET Core](https://hub.docker.com/r/microsoft/dotnet/) lub [dla środowiska Node.js](https://hub.docker.com/_/node/)).
 
 ***Użyj istniejącego oficjalny obraz platformy Docker***
 
@@ -149,7 +149,7 @@ Nazwa pojedynczego obrazu w repozytorium może zawierać warianty platformy, tak
 
 ***Tworzenie obrazu podstawowego od podstaw***
 
-Można utworzyć własny obraz podstawowy platformy Docker od podstaw, zgodnie z opisem w tym [artykułu](https://docs.docker.com/engine/userguide/eng-image/baseimages/) docker. Ten scenariusz jest prawdopodobnie nie najlepiej dla Ciebie, jeśli po prostu rozpoczynasz korzystanie z platformy Docker, ale jeśli chcesz ustawić bity określonego obrazu podstawowego, możesz to zrobić.
+Można utworzyć własny obraz podstawowy platformy Docker od podstaw, zgodnie z opisem w tym [artykułu](https://docs.docker.com/engine/userguide/eng-image/baseimages/) docker. Ten scenariusz jest prawdopodobnie nie najlepiej dla Ciebie, jeśli dopiero zaczynasz przy użyciu rozwiązania Docker, ale jeśli chcesz ustawić bity określonego obrazu podstawowego, możesz to zrobić.
 
 ### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Krok 3. Tworzenie niestandardowych obrazów platformy Docker osadzania usługi w nim
 

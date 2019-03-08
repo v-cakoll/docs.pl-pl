@@ -2,17 +2,17 @@
 title: Co nowego w języku C# 7.2
 description: Omówienie nowych funkcji w języku C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148178"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673226"
 ---
 # <a name="whats-new-in-c-72"></a>Co nowego w języku C# 7.2
 
 C# 7.2 jest innej wersji punkt, który dodaje wiele użytecznych funkcji.
-Jeden motywu w tej wersji pracuje wydajniej typów wartości, unikając niepotrzebnego kopiowania lub alokacji. 
+Jeden motywu w tej wersji pracuje wydajniej typów wartości, unikając niepotrzebnego kopiowania lub alokacji.
 
 Pozostałe funkcje są przydatne do być funkcji.
 
@@ -36,7 +36,7 @@ Dostępne są następujące nowe funkcje języka w tej wersji:
 Funkcje językowe, które wprowadzono w 7.2 pozwalają pracować z typami wartości podczas korzystania z semantyką odwołań. Są one przeznaczone do zwiększenia wydajności, minimalizując kopiowania typów wartości bez powodowania alokacji pamięci, związanych z użyciem typów odwołań. Funkcje obejmują:
 
  - `in` Modyfikator parametrów, aby określić, że argument jest przekazywany przez odwołanie, ale nie jest modyfikowany przez metodę o nazwie. Dodawanie `in` modyfikator do argumentu jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes).
- - `ref readonly` Modyfikator na zwraca metodę, aby wskazać, że metoda zwraca wartość przez odwołanie, ale nie zezwala na operacje zapisu do tego obiektu. Dodawanie `ref readonly` modyfikator jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes), jeśli zwracana jest przypisany do wartości. Dodawanie `readonly` modifer do istniejącego `ref` zwracany jest instrukcja [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Wymaga ona wywołań zaktualizować deklaracji `ref` zmienne lokalne, aby uwzględnić `readonly` modyfikator.
+ - `ref readonly` Modyfikator na zwraca metodę, aby wskazać, że metoda zwraca wartość przez odwołanie, ale nie zezwala na operacje zapisu do tego obiektu. Dodawanie `ref readonly` modyfikator jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes), jeśli zwracana jest przypisany do wartości. Dodawanie `readonly` modyfikator do istniejącego `ref` zwracany jest instrukcja [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Wymaga ona wywołań zaktualizować deklaracji `ref` zmienne lokalne, aby uwzględnić `readonly` modyfikator.
  - `readonly struct` Deklaracji, aby wskazać, że struktury jest niemodyfikowalna i mają być przekazywane jako `in` parametru do metody jego elementu członkowskiego. Dodawanie `readonly` modyfikator do istniejącej deklaracji struktury jest [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
  - `ref struct` Deklaracji, aby wskazać, że typ struktury uzyskuje dostęp do pamięci zarządzanej bezpośrednio i muszą zawsze być stosu przydzielone. Dodawanie `ref` modyfikator do istniejącego `struct` deklaracja jest [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Element `ref struct` nie może być składową klasy ani używane w innych lokalizacjach, w którym może zostać przydzielone na stercie.
 
@@ -48,7 +48,7 @@ Wywołania metody mogą teraz używać argumentów nazwanych, które poprzedzaj�
 
 ## <a name="leading-underscores-in-numeric-literals"></a>Wiodące znaki podkreślenia w literałach numerycznych
 
-Nie zezwalaj na implementację obsługę separatory cyfr w języku C# 7.0 `_` jako pierwszy znak w wartości literału. Hex i literały liczbowe binarne mogą teraz zaczynają się od `_`. 
+Nie zezwalaj na implementację obsługę separatory cyfr w języku C# 7.0 `_` jako pierwszy znak w wartości literału. Hex i literały liczbowe binarne mogą teraz zaczynają się od `_`.
 
 Na przykład:
 

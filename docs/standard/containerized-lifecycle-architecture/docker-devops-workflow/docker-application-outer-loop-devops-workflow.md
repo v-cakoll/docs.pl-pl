@@ -4,12 +4,12 @@ description: Poznaj procedurę "zewnętrzna pętla" przepływ pracy DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836412"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676203"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki w przepływie pracy DevOps zewnętrznej pętli dla aplikacji platformy Docker
 
@@ -114,7 +114,7 @@ Poniżej przedstawiono kilka rodzajów testów, które mogą być uruchamiane wz
 
 - Testowanie w produkcji i "kanarkiem" wersji
 
-Istotną kwestią jest to, że podczas uruchamiania, integracji i testów funkcjonalnych, należy uruchomić te testy z poza kontenerów. Testy są nie zawarte lub w kontenerach, które są wdrażane, ponieważ kontenery są oparte na obrazy statyczne, które powinny być dokładnie tak, jak te, które będziesz wdrażać do środowiska produkcyjnego.
+Istotną kwestią jest to, że podczas uruchamiania, integracji i testów funkcjonalnych, należy uruchomić te testy z poza kontenerów. Testy są nie zawarte lub w kontenerach, który jest wdrażany, ponieważ kontenery są oparte na obrazy statyczne, które powinny być dokładnie tak, jak te, które będziesz wdrażać do środowiska produkcyjnego.
 
 Jest to praktyczne opcja podczas testowania bardziej zaawansowane scenariusze, takie jak z klastrami kilka (testowanie, klastra, klaster przemieszczania i w warunkach produkcyjnych klastra) opublikować obrazów do rejestru, dzięki czemu mogą być testowane w różnych klastrach.
 
@@ -144,7 +144,7 @@ Przy użyciu zadań platformy Docker, możesz wypchnąć zestaw obrazów usługi
 
 Niezmienność obrazów platformy Docker zapewnia powtarzalne wdrożenia za pomocą co został opracowany, przetestowane za pośrednictwem ciągłej integracji i uruchomić w środowisku produkcyjnym. Po utworzeniu aplikacji obrazów platformy Docker, opublikowane w rejestrze Docker (prywatnej lub publicznej), można wdrożyć je do kilku środowiskach, które mogą wystąpić (produkcyjne, QA, przemieszczania, itp.) z potok ciągłego wdrażania za pomocą usługi DevOps platformy Azure zadania potoku lub usługi Azure DevOps usługi Release Management.
 
-Jednak na tym etapie zależy ona wdrażanie jakiego rodzaju aplikację platformy Docker. Wdrażając prostą aplikację (z tworzenia i wdrażania punktu widzenia) takich jak monolitycznych aplikacji wchodzących w skład kilku kontenerów lub usług i wdrożone na kilku serwerach lub maszynach wirtualnych jest inna niż wdrażanie bardziej złożonych aplikacji, takich jak zorientowanych na mikrousługi aplikacji z możliwościami w hiperskali. W poniższych sekcjach opisano te dwa scenariusze.
+Jednak w tym momencie to zależy od rodzaju aplikację platformy Docker jest wdrażany. Wdrażając prostą aplikację (z tworzenia i wdrażania punktu widzenia) takich jak monolitycznych aplikacji wchodzących w skład kilku kontenerów lub usług i wdrożone na kilku serwerach lub maszynach wirtualnych jest inna niż wdrażanie bardziej złożonych aplikacji, takich jak zorientowanych na mikrousługi aplikacji z możliwościami w hiperskali. W poniższych sekcjach opisano te dwa scenariusze.
 
 ### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>Wdrażanie składa się z aplikacji platformy Docker w wielu środowiskach platformy Docker
 
@@ -202,7 +202,7 @@ Rysunek 5 – 11 pokazano, jak można edytować zadania wdrażania platformy Doc
 
 ## <a name="step-5-run-and-manage"></a>Krok 5. Uruchamianie i zarządzanie
 
-Ponieważ uruchamianie aplikacji i zarządzanie nimi w środowisku produkcyjnym przedsiębiorstwa poziom jest główne tematu w i samego siebie oraz ze względu na rodzaj operacji, i ludzie przy pracy na tym samym poziomie (operacje IT) oraz duży zakres tego obszaru, firma Microsoft ma poświęcona całą obok rozdziału w celu objaśniające go.
+Ponieważ uruchamianie aplikacji i zarządzanie nimi w środowisku produkcyjnym przedsiębiorstwa poziom jest główne tematu w i samego siebie oraz ze względu na rodzaj operacji, i ludzie przy pracy na tym samym poziomie (operacje IT) oraz duży zakres tego obszaru, cały następny rozdział jest poświęcona to wyjaśniać.
 
 ## <a name="step-6-monitor-and-diagnose"></a>Krok 6. Monitorowanie i diagnozowanie
 

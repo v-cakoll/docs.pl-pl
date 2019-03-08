@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28f5a5148b39b60d69fecc8bf1273445ebad4953
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145270"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675020"
 ---
 # <a name="implement-value-objects"></a>Implementowanie obiektów wartości
 
@@ -92,8 +92,8 @@ public abstract class ValueObject
         return GetAtomicValues()
          .Select(x => x != null ? x.GetHashCode() : 0)
          .Aggregate((x, y) => x ^ y);
-    }        
-    // Other utilility methods
+    }
+    // Other utility methods
 }
 ```
 
@@ -133,9 +133,9 @@ public class Address : ValueObject
 
 Możesz zobaczyć, jak ta implementacja obiektu wartość adresu ma, Brak tożsamości, a w związku z tym, żadne pole ID, ani w klasie adres, nawet w klasie ValueObject.
 
-Posiadanie żadne pole Identyfikatora w klasie, który będzie używany przez Entity Framework nie było możliwe aż do programu EF Core 2.0, co znacznie ułatwia Implementowanie lepsze obiekty wartości nie identyfikatorem To dokładnie wyjaśnienie w następnej sekcji. 
+Nie było możliwe o żadne pole Identyfikatora w klasie, który będzie używany przez Entity Framework, dopóki programu EF Core 2.0, co pozwala znacznie lepiej zaimplementować wartość obiekty nie identyfikatorem To dokładnie wyjaśnienie w następnej sekcji.
 
-Może być podniesiono, że obiekty wartości, są niezmienne, powinny być odczytywane tylko (czyli get tylko właściwości) i że jest rzeczywiście. Jednak wartość jest zazwyczaj serializacji i deserializacji za pośrednictwem kolejki komunikatów i jest tylko do odczytu, zatrzymuje Deserializator przypisywaniu wartości, dzięki czemu możemy po prostu pozostaw je prywatnej Ustaw których jest tylko do odczytu wystarczająco to praktyczne.
+Można utrzymywał, że obiekty wartości, są niezmienne, powinny być tylko do odczytu (czyli get tylko właściwości), i który jest rzeczywiście. Jednak wartość jest zazwyczaj serializacji i deserializacji za pośrednictwem kolejki komunikatów i jest tylko do odczytu zatrzymuje Deserializator przypisywaniu wartości, więc po prostu pozostawimy je jako zestaw prywatny, który jest tylko do odczytu, wystarczająco przydatne.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Jak zachować wartość obiektów w bazie danych przy użyciu programu EF Core 2.0
 
@@ -150,9 +150,9 @@ W wersji początkowej w ramach aplikacji eShopOnContainers (.NET Core 1.1) ident
 ```csharp
 // Old approach with EF Core 1.1
 // Fluent API within the OrderingContext:DbContext in the Infrastructure project
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
 
     addressConfiguration.Property<int>("Id")  // Id is a shadow property
         .IsRequired();
@@ -192,7 +192,7 @@ W ramach aplikacji eShopOnContainers u OrderingContext.cs, w metodzie OnModelCre
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
-// 
+//
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
@@ -206,8 +206,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 W poniższym kodzie infrastruktury trwałości jest zdefiniowany dla jednostki zamówienia:
 
 ```csharp
-// Part of the OrderEntityTypeConfiguration.cs class 
-// 
+// Part of the OrderEntityTypeConfiguration.cs class
+//
 public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 {
     orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
@@ -220,7 +220,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     orderConfiguration.OwnsOne(o => o.Address);
 
     orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    
+
     //...Additional validations, constraints and code...
     //...
 }
@@ -309,7 +309,7 @@ public class Address
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Martina Fowlera. Wzorzec ValueObject** \
+- **Martin Fowler. Wzorzec ValueObject** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
 - **Eric Evans. Projektowania opartego na domenie: Co dzień do czynienia złożoności serce oprogramowania.** (Zarezerwuj; zawiera omówienie obiekty wartości) \
@@ -330,6 +330,6 @@ public class Address
 - **Klasy adresów.** Klasa obiektu wartość próbki w ramach aplikacji eShopOnContainers. \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
->[!div class="step-by-step"]
->[Poprzednie](seedwork-domain-model-base-classes-interfaces.md)
->[dalej](enumeration-classes-over-enum-types.md)
+> [!div class="step-by-step"]
+> [Poprzednie](seedwork-domain-model-base-classes-interfaces.md)
+> [dalej](enumeration-classes-over-enum-types.md)

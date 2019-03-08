@@ -6,16 +6,14 @@ helpviewer_keywords:
 - Calendar control type
 - control types, Calendar
 ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 6235d4eb0d5996666097b486efe0ff0b75b68af4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9359fb8c154b39c6396cc9f012173a952a4d385e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498323"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674500"
 ---
-# <a name="ui-automation-support-for-the-calendar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu kalendarz
+# <a name="ui-automation-support-for-the-calendar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla formantów typu kalendarz
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

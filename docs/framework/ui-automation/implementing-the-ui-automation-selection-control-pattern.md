@@ -6,16 +6,14 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: d0ae98797516a2c70f96a693ddcbcade2b70165e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5ca41c5dafe42a9afbd8390713f099c167d2020
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522664"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673317"
 ---
-# <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementacja wzorca kontrolki wyboru automatyzacji interfejsu użytkownika
+# <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementacja wzorca formantu wyboru automatyzacji interfejsu użytkownika
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

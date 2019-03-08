@@ -4,6 +4,7 @@ description: 'Dowiedz się, jak wykonywać określone zadania na potrzeby niesta
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET machine learning przewodniki z instrukcjami — strukturze ML.NET
 
 W sekcji Przewodnik po strukturze ML.NET jak możesz znaleźć szybkich odpowiedzi na często zadawane pytania. W niektórych przypadkach artykuły mogą być wymienione w wielu sekcjach, aby były łatwe do znalezienia.
@@ -44,7 +45,7 @@ W sekcji Przewodnik po strukturze ML.NET jak możesz znaleźć szybkich odpowied
 
 * [Zastosuj technicznego opracowywania funkcji do trenowania modelu danych tekstowych za pomocą platformy ML.NET.](train-model-textual-ml-net.md)
 
-## <a name="run"></a>Uruchom 
+## <a name="run"></a>Uruchom
 
 * [Sprawdź wartości danych pośrednich podczas przetwarzania potokowego w strukturze ML.NET.](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ W sekcji Przewodnik po strukturze ML.NET jak możesz znaleźć szybkich odpowied
 
 * [Użyj PredictionFunction przewiduje jednego naraz.](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>Probabalistic (Infer.NET)
+## <a name="probabilistic-infernet"></a>Probabilistyczny (Infer.NET)
 
 * [Twórz gry dopasowania listy aplikacji Infer.NET z Probabilistyczne programowania.](matchup-app-infer-net.md)
-

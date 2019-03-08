@@ -4,12 +4,12 @@ description: Cykl życia aplikacji konteneryzowanych platformy Docker przy użyc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967168"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676658"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Tworzenie aplikacji platformy ASP.NET Core 2.1 wdrażane jako kontenery systemu Linux do programu orchestrator AKS/Kubernetes
 
@@ -39,7 +39,7 @@ Aby utworzyć przykładowy projekt w programie Visual Studio, wybierz **pliku** 
 
 Program Visual Studio Wyświetla listę szablonów dla projektów sieci web. W tym przykładzie wybierz **API** do tworzenia aplikacji interfejsu API sieci Web programu ASP.NET.
 
-Sprawdź, czy jako platformę wybrano platformy ASP.NET Core 2.1. .NET core 2.1 znajduje się w najnowszej wersji programu Visual Studio 2017 i jest automatycznie zainstalowane i skonfigurowane podczas instalacji programu Visual Studio 2017.
+Sprawdź, czy zostało wybrane platformy ASP.NET Core 2.1 jako platformę. .NET core 2.1 znajduje się w najnowszej wersji programu Visual Studio 2017 i jest automatycznie zainstalowane i skonfigurowane podczas instalacji programu Visual Studio 2017.
 
 ![Visual Studio okno dialogowe Wybieranie typu aplikacji sieci Web programu ASP.NET Core z wybraną opcją interfejsu API.](media/create-web-api-application.png)
 

@@ -9,18 +9,16 @@ helpviewer_keywords:
 - check boxes, getting toggle states of
 - getting, toggle states of check boxes
 ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: ebe51247a93384ab2d269220b08a1b3f3cb22e03
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 42dc9c679f877b0136cac12eae232e4365f79bdf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200623"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676619"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a>Pobierz stan przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  W tym temacie pokazano, jak używać [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] można pobrać stanu Przełącz kontrolki.  
   

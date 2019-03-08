@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Of
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479610"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674656"
 ---
 # <a name="official-net-docker-images"></a>Oficjalne obrazy Docker w programie .NET
 
@@ -23,15 +23,15 @@ Większość repozytoriów obraz zapewniają szeroką tagowania ułatwiające wy
 
 Podczas tworzenia obrazów platformy Docker dla deweloperów, Microsoft skupia się na następujących głównych scenariuszy:
 
--   Obrazy używane do *opracowywanie* i tworzenie aplikacji .NET Core.
+- Obrazy używane do *opracowywanie* i tworzenie aplikacji .NET Core.
 
--   Obrazy używane do *Uruchom* aplikacje platformy .NET Core.
+- Obrazy używane do *Uruchom* aplikacje platformy .NET Core.
 
 Dlaczego wiele obrazów? Podczas tworzenia, kompilowania i uruchamiania konteneryzowanych aplikacji, zwykle mają różne priorytety. Dostarczając różne obrazy do oddzielnych wykonywania tych zadań, Microsoft pomaga w optymalizacji oddzielne procesy tworzenia, kompilowania i wdrażania aplikacji.
 
 ### <a name="during-development-and-build"></a>Podczas projektowania i kompilowania
 
-Podczas tworzenia aplikacji ważne jest jak szybko można wykonać iterację zmiany i możliwość debugowania zmiany. Rozmiar obrazu nie jest tak ważna jak możliwość zmiany w kodzie i szybko zobaczyć zmiany. Niektóre narzędzia i "kontenery agenta kompilacji", należy użyć obrazu platformy .NET Core development (*microsoft / dotnet:2.2 — zestaw sdk*) podczas projektowania i kompilowania proces. Podczas kompilowania w kontenerze platformy Docker, ważne kwestie są elementy, które są wymagane w celu kompilowania aplikacji. Obejmuje to kompilator i inne zależności platformy .NET.
+Podczas tworzenia aplikacji ważne jest jak szybko można wykonać iterację zmiany i możliwość debugowania zmiany. Rozmiar obrazu nie jest tak ważna jak możliwość zmiany w kodzie i szybko zobaczyć zmiany. Niektóre narzędzia i "kontenery agenta kompilacji", należy użyć obrazu platformy .NET Core development (*microsoft / dotnet:2.2 — zestaw sdk*) podczas procesu projektowania i kompilowania. Podczas kompilowania w kontenerze platformy Docker, ważne kwestie są elementy, które są wymagane w celu kompilowania aplikacji. Obejmuje to kompilator i inne zależności platformy .NET.
 
 Ten typ obrazu kompilacji jest ważna Ten obraz nie są wdrażane do środowiska produkcyjnego. Zamiast tego jest obrazu używanego do tworzenia zawartości, które można umieścić w środowisku produkcyjnym obraz. Ten obraz będzie używany w danym środowisku ciągłej integracji (CI) lub środowiska kompilacji, w przypadku korzystania z platformy Docker wieloetapowych kompilacji.
 
@@ -50,6 +50,6 @@ Podczas eksplorowania repozytoriów obrazu platformy .NET w usłudze Docker Hub 
 | Microsoft/dotnet:**2.2-aspnetcore-środowiska uruchomieniowego** | ASP.NET Core przy użyciu tylko środowiska uruchomieniowego i optymalizacje platformy ASP.NET Core, w systemie Linux i Windows (wielu arch) |
 | Microsoft/dotnet:**zestawu sdk 2.2**                | .NET core przy użyciu zestawów SDK uwzględnione, w systemie Linux i Windows (wielu arch)                                  |
 
->[!div class="step-by-step"]
->[Poprzednie](net-container-os-targets.md)
->[dalej](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [Poprzednie](net-container-os-targets.md)
+> [dalej](../architect-microservice-container-applications/index.md)

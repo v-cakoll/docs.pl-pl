@@ -2,12 +2,12 @@
 title: Dostrajanie aplikacji Async (C#)
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: f33a06a181b44fc15ed2de81c4ceb385023a6fe5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31d9fcf04780d421faa609e06e18e66e0e8b9ce7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601951"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679168"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Dostrajanie aplikacji Async (C#)
 Aby asynchroniczna aplikacja można dodać precyzyjna i elastyczna za pomocą metod i właściwości, <xref:System.Threading.Tasks.Task> udostępnia typu. W tematach w tej sekcji opisano przykłady z zastosowaniem <xref:System.Threading.CancellationToken> i ważnych `Task` metody takie jak <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>.  
@@ -37,7 +37,7 @@ Aby asynchroniczna aplikacja można dodać precyzyjna i elastyczna za pomocą me
   
  Projekty tworzą interfejs użytkownika zawierający przycisk, który uruchamia proces i przycisk, który go anuluje, co pokazuje poniższa ilustracja. Przyciski nazywają się `startButton` i `cancelButton`.  
   
- ![Okno WPF za pomocą przycisku Anuluj](../../../../csharp/programming-guide/concepts/async/media/cancellation.png "anulowania")  
+ ![Okno WPF za pomocą przycisku Anuluj](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "okno dialogowe z przyciskiem rozpoczęcie i zakończenie")  
   
  Możesz pobrać pełne projekty Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Dostrajania aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   

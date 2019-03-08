@@ -1,15 +1,15 @@
 ---
 title: Projektowanie warstwy aplikacji mikrousług i internetowego interfejsu API
-description: 'Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | BRIEF: wzmianka SOLID priciples projektowania warstwy aplikacji.'
+description: 'Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | BRIEF: wzmianka stałych zasad projektowania warstwy aplikacji.'
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f31c712143a448e12350db1ed242da7561a7a286
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa292cb97db612506eb7a6f83bb24f37425d690a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147499"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678660"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Projektowanie warstwy aplikacji mikrousług i internetowego interfejsu API
 
@@ -37,7 +37,7 @@ Zajęłoby innego przewodnika, aby omówić stałe. W związku z tym ten przewod
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **STAŁE: Obiektowo podstawowych zasad** \
+- **SOLID: Obiektowo podstawowych zasad** \
   [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
 - **Inwersja kontroli kontenerów i wzorzec wstrzykiwanie zależności** \
@@ -46,6 +46,6 @@ Zajęłoby innego przewodnika, aby omówić stałe. W związku z tym ten przewod
 - **Steve Smith. Nowością jest pośredniczącego** \
   [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
->[!div class="step-by-step"]
->[Poprzednie](nosql-database-persistence-infrastructure.md)
->[dalej](microservice-application-layer-implementation-web-api.md)
+> [!div class="step-by-step"]
+> [Poprzednie](nosql-database-persistence-infrastructure.md)
+> [dalej](microservice-application-layer-implementation-web-api.md)

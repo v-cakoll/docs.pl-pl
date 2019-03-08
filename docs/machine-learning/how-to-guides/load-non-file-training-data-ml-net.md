@@ -1,16 +1,21 @@
 ---
 title: Szkolenie modelu uczenia maszynowego z danymi, które nie znajduje się w pliku tekstowym - strukturze ML.NET
 description: Dowiedz się, jak używać strukturze ML.NET do ładowania danych innego niż plik szkolenia szkoleń modelowych jako część potoku prognoz uczenia maszynowego.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4ffbc69629aa9dc6cea5d33c704bc9c57a4a612c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 27b327a63cb55b7fce0f4ff7facd3ee7c4a1c85c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092023"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678629"
 ---
 # <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a>Szkolenie modelu uczenia maszynowego z danymi, które nie znajduje się w pliku tekstowym - strukturze ML.NET
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 W przypadku użycia często wykazały strukturze ML.NET jest używany `TextLoader` można odczytać danych szkoleniowych z pliku.
 Jednak w przypadku scenariuszy szkoleniowych w czasie rzeczywistym dane mogą być w innych miejscach, takich jak:

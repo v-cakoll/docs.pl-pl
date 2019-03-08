@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 2f83b8ac71bfc53791f7de42d127badbda0d3881
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610317"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678686"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego
 
@@ -53,7 +53,7 @@ Aby uzyskać samouczek dotyczący tworzenia podstawowe usługi i klienta WCF, zo
           Console.WriteLine("Result ({0})", result)
        End Sub
         Public Sub Equation(ByVal equation As String)
-            Console.Writeline("Equation({0})", equation)
+            Console.WriteLine("Equation({0})", equation)
         End Sub
     End Class
     ```

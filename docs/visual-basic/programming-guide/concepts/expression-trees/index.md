@@ -2,12 +2,6 @@
 title: Drzewa wyrażeń (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: 08a22cc0528385f5e8008b80b62f2e81d89adae4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735587"
 ---
 # <a name="expression-trees-visual-basic"></a>Drzewa wyrażeń (Visual Basic)
 Drzew wyrażeń reprezentują kodu struktury drzewa danych, gdzie każdy węzeł jest wyrażeniem, na przykład, wywołanie metody lub operacja binarna, takich jak `x < y`.  
@@ -85,7 +79,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Aby uzyskać więcej informacji, zobacz [metody dynamiczne generowanie za pomocą drzew w programie Visual Studio 2010](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010), która ma zastosowanie również do nowszej wersji programu Visual Studio.
+Aby uzyskać więcej informacji, zobacz [metody dynamiczne generowanie za pomocą drzew w programie Visual Studio 2010](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/), która ma zastosowanie również do nowszej wersji programu Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Podczas analizowania drzew wyrażeń  
  Poniższy przykład kodu demonstruje, jak wyrażenie drzewa, która reprezentuje wyrażenia lambda `Function(num) num < 5` może być rozłożone na jego części.  

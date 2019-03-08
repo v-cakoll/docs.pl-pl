@@ -4,16 +4,16 @@ description: Zrozumienie podstawowych pojęć do umieszczania aplikacji monolity
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747265"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676840"
 ---
 # <a name="monolithic-applications"></a>Aplikacje monolityczne
 
-W tym scenariuszu są tworzenia pojedynczej i monolitycznych aplikacji sieci web lub usługi i wdrożyć go jako kontener. W aplikacji struktura może nie być monolityczne; może on zawierać kilka bibliotek, składników lub nawet warstwy (warstwa aplikacji, warstwa domeny, warstwy dostępu do danych itp.). Zewnętrznie jest jeden kontener, takich jak pojedynczego procesu, aplikacji sieci web jednej lub jednej usługi.
+W tym scenariuszu w przypadku tworzenia pojedynczej i monolitycznych aplikacji sieci web lub usługi i wdrożyć go jako kontener. W aplikacji struktura może nie być monolityczne; może on zawierać kilka bibliotek, składników lub nawet warstwy (warstwa aplikacji, warstwa domeny, warstwy dostępu do danych itp.). Zewnętrznie jest jeden kontener, takich jak pojedynczego procesu, aplikacji sieci web jednej lub jednej usługi.
 
 Aby zarządzać tym modelu, możesz wdrożyć jeden kontener, do reprezentowania aplikacji. W celu skalowania, wystarczy dodać kilka większej liczby kopii z modułem równoważenia obciążenia z przodu. Prostotę pochodzi z zarządzania pojedyncze wdrożenie w ramach jednego kontenera lub maszyny wirtualnej (VM).
 
@@ -71,7 +71,7 @@ Albo ponieważ w celu uzyskania szybkiego sprawdzania poprawności kontenera wdr
 
 Za pomocą usługi Azure App Service jest intuicyjna i można rozpocząć pracę i szybkie uruchomione, ponieważ udostępnia doskonałe narzędzia Git integracji do wykonania kodu, skompiluj go w programie Microsoft Visual Studio i bezpośrednie wdrażanie na platformie Azure. Ale, tradycyjnie (przy użyciu nie platformy Docker), jeśli to konieczne, inne możliwości, struktury lub zależności, które nie są obsługiwane w usługach App potrzebnych do poczekaj na jego zespół Azure aktualizuje te zależności w usłudze App Service lub przełączone do innych usług, takich jak Usługa Service Fabric, Cloud Services lub nawet zwykły maszyn wirtualnych, dla których masz dodatkowe kontroli i może zainstalować wymaganego składnika lub framework dla aplikacji.
 
-Teraz, jak pokazano na rysunku 4-4 korzystając z programu Visual Studio 2017, obsługa kontenerów w usłudze Azure App Service umożliwia zdolności do uwzględnienia w dowolnie w danym środowisku aplikacji. Jeśli dodano zależności aplikacji, ponieważ jest on używany w kontenerze, zostanie wyświetlony możliwości tych zależności, w tym obrazie pliku Dockerfile lub rozwiązania Docker.
+Teraz, jak pokazano na rysunku 4-4 korzystając z programu Visual Studio 2017, obsługa kontenerów w usłudze Azure App Service umożliwia zdolności do uwzględnienia w dowolnie w danym środowisku aplikacji. Jeśli zależność została dodana do swojej aplikacji, ponieważ pracujesz w kontenerze, otrzymasz możliwość tych zależności, w tym obrazie pliku Dockerfile lub rozwiązania Docker.
 
 ![Widok Kreator programu Visual Studio, aby opublikować w usłudze Azure app service, wyróżnianie selektora dla rejestru kontenerów.](./media/image4.png)
 

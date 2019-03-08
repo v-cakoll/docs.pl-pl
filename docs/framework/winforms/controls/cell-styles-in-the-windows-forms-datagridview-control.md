@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 7ff8f8b0c047601e092b8ccb347095d9d1d0a1d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575164"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674682"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Style komórki w formancie DataGridView formularzy systemu Windows
 Każda komórka w ramach <xref:System.Windows.Forms.DataGridView> formant może mieć własny styl, na przykład format tekstu, koloru tła, kolor pierwszego planu i czcionki. Zwykle jednak wiele komórek współużytkują właściwości danego stylu.  
@@ -87,7 +87,7 @@ Każda komórka w ramach <xref:System.Windows.Forms.DataGridView> formant może 
   
  Na poniższym diagramie przedstawiono ten proces.  
   
- ![Właściwości typu DataGridViewCellStyle](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
+ ![Właściwości typu DataGridViewCellStyle](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells diagram dziedziczenia")  
   
  Można także przejść style dziedziczone przez określonych wierszy i kolumn. Kolumna <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> właściwość dziedziczy jej wartości następujących właściwości.  
   
@@ -122,7 +122,7 @@ Każda komórka w ramach <xref:System.Windows.Forms.DataGridView> formant może 
   
  Na poniższym diagramie przedstawiono sposób różnych <xref:System.Windows.Forms.DataGridViewCellStyle> właściwości może dziedziczyć ich wartości z różnych miejsc.  
   
- ![Właściwość formantu DataGridView&#45;wartość dziedziczenia](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![Właściwość formantu DataGridView&#45;wartość dziedziczenia](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-value-inheritance-diagram.gif "DataGridViewCells wartość dziedziczenia diagramu")  
   
  Dzięki wykorzystaniu dziedziczenie stylów, możesz podać odpowiednie style kontrolki całego bez konieczności określania tych samych informacji w kilku miejscach.  
   

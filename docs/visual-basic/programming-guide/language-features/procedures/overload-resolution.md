@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966232"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678827"
 ---
 # <a name="overload-resolution-visual-basic"></a>Rozpoznanie przeciążenia (Visual Basic)
 Gdy kompilator języka Visual Basic napotyka wywołanie procedury, która jest zdefiniowana w kilku przeciążone wersje, kompilator należy zdecydować, której przeciążenia do wywołania. Dzieje się tak, wykonując następujące czynności:  
@@ -36,8 +36,7 @@ Gdy kompilator języka Visual Basic napotyka wywołanie procedury, która jest z
   
  Na poniższej ilustracji przedstawiono proces, który określa, który zestaw przeciążone wersje do wywołania.  
   
- ![Diagram przepływu procesu rozpoznawania przeciążenia](./media/overloadres.gif "OverloadRes")  
-Rozpoznawanie między przeciążone wersje  
+ ![Diagram przepływu procesu rozpoznawania przeciążenia](./media/overload-resolution/determine-overloaded-version.gif "rozpoznawanie między przeciążone wersje")    
   
  Poniższy przykład ilustruje ten proces rozpoznawania przeciążenia.  
   

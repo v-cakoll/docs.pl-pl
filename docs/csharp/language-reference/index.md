@@ -1,52 +1,49 @@
 ---
-title: Odwołanie w C#
+title: 'Odwołanie w C#'
 ms.date: 02/14/2017
 helpviewer_keywords:
-- Visual C#, language reference
-- language reference [C#]
-- Programmer's Reference for C#
-- C# language, reference
-- reference, C# language
+  - 'Visual C#, language reference'
+  - 'language reference [C#]'
+  - 'Programmer''s Reference for C#'
+  - 'C# language, reference'
+  - 'reference, C# language'
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472506"
 ---
 # <a name="c-reference"></a>Odwołanie w C#
-Ta sekcja zawiera materiały informacyjne o C# słów kluczowych, operatory, znaki specjalne, dyrektywy preprocesora, opcje kompilatora i kompilatora błędy i ostrzeżenia.  
+Ta sekcja zawiera materiały źródłowe dotyczące C# słów kluczowych, operatorów, znaki specjalne, dyrektyw preprocesora, opcji kompilatora i kompilatora błędy i ostrzeżenia.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Słowa kluczowe języka C#](../../csharp/language-reference/keywords/index.md)  
- Zawiera linki do informacji o słowa kluczowe języka C# i składni.  
+ Zawiera łącza do informacji na temat C# słów kluczowych i składni.  
   
  [Operatory języka C#](../../csharp/language-reference/operators/index.md)  
- Zawiera linki do informacji o operatory C# i składni.  
+ Zawiera łącza do informacji na temat C# operatorów i składni.  
 
  [Znaki specjalne języka C#](../../csharp/language-reference/tokens/index.md)  
- Zawiera linki do informacji na temat kontekstowe znaki specjalne w języku C# i ich użycia.  
+ Zawiera łącza do informacji na temat kontekstowe znaki specjalne w C# i ich użycia.  
 
  [Dyrektywy preprocesora C#](../../csharp/language-reference/preprocessor-directives/index.md)  
- Linki do informacji o poleceniach kompilatora osadzanie kodu źródłowego C#.  
+ Zawiera łącza do informacji dotyczących kompilatora poleceń do osadzania w C# kodu źródłowego.  
   
  [Opcje kompilatora C#](../../csharp/language-reference/compiler-options/index.md)  
  Zawiera informacje na temat opcji kompilatora i sposobu ich używania.  
   
  [Błędy kompilatora C#](../../csharp/language-reference/compiler-messages/index.md)  
- Obejmuje wstawki kodu, które wskazują przyczynę i korekcji błędów kompilatora C# i ostrzeżenia.  
+ Obejmuje wstawki kodu demonstrujące przyczynę i dodaje się korekcji C# kompilatora, błędy i ostrzeżenia.  
   
- [Specyfikacja języka C#](../../csharp/language-reference/language-specification/index.md)  
- Zawiera łącza do najnowszej wersji specyfikacji języka C#.  
+ [Specyfikacja języka C#](../../../_csharplang/spec/introduction.md)  
+ C# Specyfikacji języka w wersji 6.0. Jest to szkice C# języka w wersji 6.0. W wersji 5.0 wydano w grudniu 2017 r jako [Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) dokumentu.
+  
+ [C#7.0 propozycje języka](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ Istnieje wiele nowych funkcji w C# 7.0. One obejmują wzorzec dopasowania, lokalnych funkcji, deklaracji zmiennych, throw wyrażeń, literały binarne oraz separatory cyfr. Ten folder zawiera specyfikacje dla każdej z tych funkcji.
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
  [Przewodnik dla języka C#](../../csharp/index.md)  
- Zawiera portal dokumentacji Visual C#.  
+ Udostępnia portal wizualizacji C# dokumentacji.  
   
  [Używanie środowiska programistycznego Visual Studio dla C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Zawiera łącza do pojęć i zadań tematach opisano IDE i edytora.  
+ Zawiera łącza do pojęć i tematów zadań, które opisują IDE i edytorem.  
   
  [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)  
- Zawiera informacje o używaniu języka programowania w języku C#.
+ Zawiera informacje o sposobie używania C# języka programowania.

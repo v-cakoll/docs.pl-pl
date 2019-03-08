@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221254"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677217"
 ---
 # <a name="interop-marshaling"></a>Organizowanie międzyoperacyjne
 <a name="top"></a> Marshaling międzyoperacyjny decyduje o tym, jak dane są przekazywane w metodzie argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania. Marshaling międzyoperacyjny jest czynnością środowiska wykonawczego, wykonywane przez usługę organizowania wykonywalnych języka wspólnego.  
@@ -44,8 +44,7 @@ ms.locfileid: "56221254"
   
  Wywołanie obie platformy i COM międzyoperacyjny Użyj marshaling międzyoperacyjny dokładnie przenoszenie argumenty metody między obiekt wywołujący i obiekt wywoływany i z powrotem, jeśli wymagane. Jak pokazano na poniższej ilustracji, wywołania platformy przepływy wywołanie metody z kodu zarządzanego do kodu niezarządzanego i nigdy nie inny sposób, chyba że [funkcji wywołania zwrotnego](callback-functions.md) są zaangażowani. Mimo że wywołanie platformy wywołania mogą przepływać tylko z kodu zarządzanego do kodu niezarządzanego, dane mogą przepływać w obu kierunkach, jako parametry wejściowe i wyjściowe. Wywołań metod międzyoperacyjnego modelu COM może przepływać w obu kierunkach.  
   
- ![Wywołanie platformy](./media/interopmarshaling.png "interopmarshaling")  
-Wywołanie platformy i przepływ wywołań międzyoperacyjnych COM  
+ ![Wywołanie platformy](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "wywołania platformy i wywołania międzyoperacyjnego modelu COM przepływu")  
   
  Na najniższym poziomie zarówno mechanizmów używać tego samego międzyoperacyjnego organizowanie usług. Jednak niektóre typy danych są obsługiwane wyłącznie przez COM interop lub wywołania platformy. Aby uzyskać więcej informacji, zobacz [domyślne zachowanie Marshalingu](default-marshaling-behavior.md).  
   
@@ -67,8 +66,7 @@ Wywołanie platformy i przepływ wywołań międzyoperacyjnych COM
   
  Ponieważ klient i serwer znajdują się w tej samej typu apartment, interop marshaling usługi automatycznie obsługuje marshaling wszystkich danych. Poniższa ilustracja przedstawia międzyoperacyjny usługi organizowania działające między zarządzanymi i niezarządzanymi stosów w ramach tego samego typu apartment styl modelu COM.  
   
- ![Marshaling międzyoperacyjny](./media/interopheap.gif "interopheap")  
-Tego samego typu apartment organizowania procesu  
+ ![Marshaling międzyoperacyjny między zarządzane i niezarządzane stosów](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "tego samego apartamentu marshaling procesu")  
   
  Jeśli planujesz eksportu serwera zarządzanego, należy pamiętać, określa, czy klient modelu COM apartamentu serwera. Serwerów zarządzanych, wywoływany przez klient modelu COM, zainicjować w MTA musi zapewnić bezpieczeństwo wątkowe.  
   
@@ -84,8 +82,7 @@ Tego samego typu apartment organizowania procesu
   
  Gdy klienta zarządzanego i niezarządzanego serwera są tego samego typu apartment, współdziałanie marshaling usługi obsługuje kierowanie wszystkich danych. Jednak jeśli klienta i serwera są inicjowane w apartamentach różnych, kierowanie modelu COM jest również wymagane. Na poniższej ilustracji pokazano elementy wywołania typu apartment krzyżowe.  
   
- ![COM marshaling](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-Wywołania między apartamentu między klient modelu .NET i obiektu COM  
+ ![COM marshaling](./media/interop-marshaling/single-process-across-multi-apartment.gif "apartamentu dla wielu wywołań między klient modelu .NET i obiektu COM")  
   
  Dla typu apartment między organizowanie, należy wykonać następujące:  
   
@@ -110,14 +107,12 @@ Wywołania między apartamentu między klient modelu .NET i obiektu COM
   
  Na poniższej ilustracji przedstawiono marshaling międzyoperacyjny jak i kierowanie modelu COM zapewniają kanałów komunikacyjnych granice procesu i hosta.  
   
- ![COM marshaling](./media/interophost.gif "interophost")  
-Szeregowanie między procesami  
+ ![COM marshaling](./media/interop-marshaling/interop-and-com-marshaling.gif "szeregowanie między procesami")  
   
 ### <a name="preserving-identity"></a>Zachowywanie tożsamości  
  Środowisko uruchomieniowe języka wspólnego zachowuje tożsamość odwołania zarządzane i niezarządzane. Poniższa ilustracja przedstawia przepływ bezpośrednimi odwołaniami niezarządzane (górny wiersz) i bezpośredniego zarządzanych odwołania (dolny wiersz) granice procesu i hosta.  
   
- ![Wywoływana otoka COM i wywoływana otoka środowiska uruchomieniowego](./media/interopdirectref.gif "interopdirectref")  
-Dokumentacja przechodzi przez granice procesu i hosta  
+ ![Wywoływana otoka COM i wywoływana otoka środowiska uruchomieniowego](./media/interop-marshaling/interop-direct-ref-across-process.gif "odwołania przechodzi przez granice procesu i hosta")  
   
  Na tej ilustracji:  
   
@@ -133,7 +128,7 @@ Dokumentacja przechodzi przez granice procesu i hosta
 ### <a name="managed-remoting"></a>Zarządzanych usług zdalnych  
  Środowisko wykonawcze zapewnia również zarządzanych usług zdalnych, używane do ustanawiania kanału komunikacyjnego między obiektami zarządzanej granice procesu i hosta. Zarządzane komunikacji zdalnej może obsłużyć zapory między składnikami komunikujące się, jak pokazano na następującym rysunku.  
   
- ![Protokół SOAP lub TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![Protokół SOAP lub TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "zdalnego wywołania przez zapory za pomocą protokołu SOAP lub klasy TcpChannel")  
 Zdalne wywołania przez zapory za pomocą protokołu SOAP lub klasy TcpChannel  
   
  Niektóre wywołania niezarządzanych może channeled za pośrednictwem protokołu SOAP, takie jak wywołania między obsługiwanych składników i modelu COM.  

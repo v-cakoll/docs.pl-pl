@@ -1,16 +1,21 @@
 ---
 title: Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
 description: Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c6f30a8cc5c07d97c62ded065f1e18a4f0523617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f7b8b9a3daabb16f59c901911a1f6950ce864fff
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093115"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675592"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Uogólnione modele dodatku i kształtu funkcji na użytek explainability model w strukturze ML.NET
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Podczas tworzenia modeli uczenia maszynowego, często nie jest wystarczająco, aby po prostu prognozowania. Często deweloperom, osobom podejmującym decyzje i te wpływ modele uczenia maszynowego trzeba wiedzieć, jak modele uczenia maszynowego podejmowanie decyzji i funkcji, które przyczyniają się do ich wydajność. **Uogólnione modele dodatku (GAMs)** są używane wewnętrznie w firmie Microsoft explainability modelu pomagające deweloperom learning maszyny, tworzyć modele o dużej pojemności, które mogą być łatwo interpretowane przez innych użytkowników.
 

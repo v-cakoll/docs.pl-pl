@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 25d18b4e362481dfde8fb440911bac67f27eab40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636238"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675605"
 ---
 # <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -26,7 +26,7 @@ Następujące witryny sieci web, wytyczne i mogą pomóc w znalezieniu odpowiedz
 |Termin|Definicja|
 |----------|----------------|
 |[Projektowanie języków platformy .NET w Visual Basic](https://github.com/dotnet/vblang)|Oficjalne repozytorium w usłudze GitHub, przeznaczone dla projektów w języku Visual Basic .NET.|
-|[Blog zespołu programu Microsoft Visual Basic](https://blogs.msdn.microsoft.com/vbteam/)|Zapewnia dostęp do blogu zespołu języka Visual Basic.|
+|[Blog zespołu programu Microsoft Visual Basic](https://devblogs.microsoft.com/vbteam/)|Zapewnia dostęp do blogu zespołu języka Visual Basic.|
 
 ### <a name="code-samples"></a>Przykłady kodu
 

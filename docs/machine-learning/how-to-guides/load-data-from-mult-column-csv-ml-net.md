@@ -1,16 +1,21 @@
 ---
 title: Ładowanie danych z wieloma kolumnami z pliku CSV, machine learning przetwarzania - strukturze ML.NET
 description: Dowiedz się, jak można załadować danych z wieloma kolumnami z pliku CSV do użycia w modelu uczenia maszynowego, kompilowania, szkolenia i oceniania za pomocą platformy ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e33fdf1d71b02545e3ea284cc317f5d244c3fc13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091971"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675956"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>Ładowanie danych z wieloma kolumnami z pliku CSV, machine learning przetwarzania - strukturze ML.NET
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 `TextLoader` Służy do ładowania danych z plików tekstowych. Należy określić kolumny danych, ich typy i ich lokalizacji w pliku tekstowym.
 

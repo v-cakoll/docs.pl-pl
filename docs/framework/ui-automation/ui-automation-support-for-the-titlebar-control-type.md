@@ -1,21 +1,19 @@
 ---
-title: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TitleBar
+title: Obsługa automatyzacji interfejsu użytkownika dla typu formantu TitleBar
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control types, Title Bar
 - Title Bar control type
 - UI Automation, Title Bar control type
 ms.assetid: 3b7a4e13-0305-45d5-bc33-1f4133c50782
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 29cb2df149c484caca45bb63e173e375b5d97515
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e3b980aaa64dcfd53f533808be3ae5887cbfb61
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607150"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676853"
 ---
-# <a name="ui-automation-support-for-the-titlebar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TitleBar
+# <a name="ui-automation-support-for-the-titlebar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu TitleBar
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

@@ -3,12 +3,12 @@ title: Szablony niestandardowe dla nowej platformy dotnet
 description: Dowiedz się więcej na temat szablonów niestandardowych dla dowolnego typu projektu .NET lub plików.
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503929"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679063"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Szablony niestandardowe dla nowej platformy dotnet
 
@@ -16,7 +16,7 @@ ms.locfileid: "54503929"
 
 Można zainstalować niestandardowe szablony z pakietu NuGet dla dowolnego narzędzia NuGet kanału informacyjnego, odwołując się do NuGet *nupkg* plików bezpośrednio lub przez określenie katalogu systemu plików, który zawiera szablon. Aparat szablonów oferuje funkcje, które pozwala zastąpić wartości, dołączać i wykluczać, pliki i regiony plików, a wykonywanie niestandardowych operacji, gdy szablon jest używany.
 
-Aparat szablonów "open source", a repozytorium kodu w trybie online jest w [dotnet/szablonów](https://github.com/dotnet/templating/) w witrynie GitHub. Odwiedź stronę [dotnet/dotnet szablonu samples](https://github.com/dotnet/dotnet-template-samples) repozytorium przykładów szablonów. Więcej szablonów, w tym szablony innych firm, znajdują się w [dostępnych szablonów dla platformy dotnet nowe](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) w witrynie GitHub. Aby uzyskać więcej informacji na temat tworzenia i używania niestandardowych szablonów, zobacz [sposobu tworzenia nowych szablonów dla platformy dotnet](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) i [repozytorium GitHub dotnet/szablonów Wiki](https://github.com/dotnet/templating/wiki).
+Aparat szablonów "open source", a repozytorium kodu w trybie online jest w [dotnet/szablonów](https://github.com/dotnet/templating/) w witrynie GitHub. Odwiedź stronę [dotnet/dotnet szablonu samples](https://github.com/dotnet/dotnet-template-samples) repozytorium przykładów szablonów. Więcej szablonów, w tym szablony innych firm, znajdują się w [dostępnych szablonów dla platformy dotnet nowe](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) w witrynie GitHub. Aby uzyskać więcej informacji na temat tworzenia i używania niestandardowych szablonów, zobacz [sposobu tworzenia nowych szablonów dla platformy dotnet](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) i [repozytorium GitHub dotnet/szablonów Wiki](https://github.com/dotnet/templating/wiki).
 
 Aby wykonać przewodnik i utworzyć szablon, zobacz [Utwórz nowy szablon niestandardowy dla platformy dotnet](~/docs/core/tutorials/create-custom-template.md) samouczka.
 
@@ -155,5 +155,5 @@ dotnet new <TEMPLATE>
 - [Tworzenie szablonu niestandardowego dla platformy dotnet w nowych (samouczek)](../tutorials/create-custom-template.md)
 - [repozytorium GitHub DotNet/szablonów witryny typu Wiki](https://github.com/dotnet/templating/wiki)
 - [repozytorium GitHub DotNet/dotnet-— przykłady szablonów](https://github.com/dotnet/dotnet-template-samples)
-- [Jak utworzyć nowe szablony dla platformy dotnet](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [Jak utworzyć nowe szablony dla platformy dotnet](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
 - [*Template.JSON* schemat w Store schematu JSON](http://json.schemastore.org/template)

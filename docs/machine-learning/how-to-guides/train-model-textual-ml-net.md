@@ -1,16 +1,21 @@
 ---
 title: Zastosuj technicznego opracowywania funkcji do trenowania modelu danych tekstowych — strukturze ML.NET
 description: Dowiedz się, jak można zastosować technicznego opracowywania funkcji do trenowania modelu danych tekstowych za pomocą platformy ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4206bfe1e840c420c90e62957036a629ecf34445
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8733db281dbc60ae3f4ac0c139c482b39089f2b8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092218"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680077"
 ---
 # <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a>Zastosuj technicznego opracowywania funkcji Machine learning model szkoleń dotyczących danych tekstowych za pomocą platformy ML.NET
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Należy przekonwertować żadnych danych innych niż float do `float` typy danych, ponieważ wszystkie strukturze ML.NET `learners` oczekiwane funkcje jak `float vector`.
 

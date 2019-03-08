@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220814"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675163"
 ---
 # <a name="deploying-an-interop-application"></a>Wdrażanie aplikacji międzyoperacyjnych
 Aplikacji międzyoperacyjnych zwykle zawiera zestaw klienta platformy .NET, jeden lub więcej zestawów międzyoperacyjnych reprezentująca różne COM wpisz biblioteki i co najmniej jeden zarejestrowany składników COM. Program Visual Studio i [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] oferuje narzędzia do importowania i Konwertowanie biblioteki typów na zestaw międzyoperacyjny, zgodnie z opisem w [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md). Istnieją dwa sposoby wdrażania aplikacji międzyoperacyjnych:  
@@ -38,8 +38,7 @@ Aplikacji międzyoperacyjnych zwykle zawiera zestaw klienta platformy .NET, jede
 ### <a name="private-assemblies"></a>Zestawy prywatne  
  Aby zainstalować zestaw ma być używany przez użytkowników, zarówno plik wykonywalny aplikacji, jak i zestawu międzyoperacyjnego, który zawiera zaimportowane typy modelu COM muszą być zainstalowane w tej samej struktury katalogów. Poniższa ilustracja przedstawia zestaw międzyoperacyjny bez znaku do użycia przez użytkowników Client1.exe i Client2.exe, które znajdują się w katalogach oddzielną aplikację. Zestaw międzyoperacyjny, które jest wywoływane LOANLib.dll w tym przykładzie, jest zainstalowana dwa razy.  
   
- ![Strukturę katalogów oraz ich rejestru Windows](media/comdeployprivate.gif "comdeployprivate")  
-Katalog struktury i wpisy rejestru prywatnego wdrożenia  
+ ![Strukturę katalogów oraz ich rejestru Windows](./media/deploying-an-interop-application/com-private-deployment.gif "katalogu struktury i wpisy rejestru prywatnego wdrożenia")  
   
  Wszystkie składniki COM skojarzone z aplikacją, musi być zainstalowany w rejestrze systemu Windows. Jeśli Client1.exe i Client2.exe na ilustracji są zainstalowane na różnych komputerach, należy zarejestrować składników COM na obu komputerach.  
   

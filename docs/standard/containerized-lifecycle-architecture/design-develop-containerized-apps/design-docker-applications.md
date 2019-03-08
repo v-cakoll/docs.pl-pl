@@ -4,12 +4,12 @@ description: Tu znaleźć odwołania do szczegółowy przewodnik dotyczący arch
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 5238ef8d9025f1518d513bfa7ff83eb51c2b88df
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 858147883b3b4a5a5f487856028fdbfa84f6cca9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748625"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675189"
 ---
 # <a name="design-docker-applications"></a>Projektowanie aplikacji platformy Docker
 
@@ -17,7 +17,7 @@ Rozdział 1 wprowadzono podstawowe pojęcia dotyczące kontenerów i platformy D
 
 **Więcej informacji o** Aby dowiedzieć się więcej na temat aplikacji dla przedsiębiorstw i architektury mikrousług szczegółowo, zapoznaj się z przewodnikiem [Mikrousług .NET: Architektura aplikacji kontenerowych nimi .NET](https://docs.microsoft.com/dotnet/standard/microservices-architecture) , którą można również pobrać z <https://aka.ms/MicroservicesEbook>.
 
-Jednak przed przejściem do cyklu życia aplikacji i metodyki DevOps, jest ważne, aby dowiedzieć się, jak zamierzasz projektowania i tworzenia aplikacji i jakie uzasadnienie wyboru tych elementów.
+Jednak przed przejściem do cyklu życia aplikacji i metodyki DevOps, jest ważne, aby dowiedzieć się, jak możesz zacząć projektowanie i tworzenie aplikacji i jakie są uzasadnienie wyboru tych elementów.
 
 >[!div class="step-by-step"]
 >[Poprzednie](index.md)

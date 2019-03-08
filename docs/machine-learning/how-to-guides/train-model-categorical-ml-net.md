@@ -1,16 +1,21 @@
 ---
 title: Zastosuj technicznego opracowywania funkcji do trenowania modelu dla danych podzielonych na kategorie — strukturze ML.NET
 description: Dowiedz się, jak zastosować technicznego opracowywania funkcji Machine learning szkolenie modelu dla danych podzielonych na kategorie za pomocą platformy ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8e7a6f2429dd5ceda065332770e0ba3af374143
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968416"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677282"
 ---
 # <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a>Zastosuj technicznego opracowywania funkcji do trenowania modelu dla danych podzielonych na kategorie — strukturze ML.NET
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Należy przekonwertować żadnych danych innych niż float do `float` typy danych, ponieważ wszystkie strukturze ML.NET `learners` oczekiwane funkcje jak `float vector`.
 

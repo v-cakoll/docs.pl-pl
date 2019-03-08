@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 47a5ae3e81b0320a094ecc79e6b08035de66e785
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443078"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679739"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 2)
 
@@ -24,16 +24,16 @@ W tym artykule opisano nowości w programie .NET Core 3.0 (wersja zapoznawcza 2)
 
 Aby uzyskać więcej informacji na temat co wydanej z każdą wersją zobacz następujące komunikaty:
 
-- [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 1](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 2](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
+- [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [Ogłoszenie .NET core 3.0 w wersji zapoznawczej 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
 Obsługuje platformy .NET core 3.0 C# 8, a począwszy od platformy .NET Core 3.0 w wersji zapoznawczej 2 obsługuje te nowe funkcje. Aby uzyskać więcej informacji na temat C# funkcje 8.0, zobacz następujące wpisy na blogu:
 
-- [Osiągnij więcej ze wzorców w C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)
-- [Wykonaj C# 8.0 dla pokrętła](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/)
-- [Building C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/)
+- [Osiągnij więcej ze wzorców w C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [Wykonaj C# 8.0 dla pokrętła](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
 
 
 ### <a name="ranges-and-indices"></a>Zakresy i indeksy
@@ -108,7 +108,7 @@ Wzorce umożliwiają pisanie kod deklaratywny, która przechwytuje zgodne z zami
 
 Nadal będą przypadki gdzie *instrukcje switch* będzie lepszym rozwiązaniem niż *Przełącz wyrażenia* i wzorce mogą być używane z obu stylów składni.
 
-Aby uzyskać więcej informacji, zobacz [więcej możliwości dzięki wzorce w C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/).
+Aby uzyskać więcej informacji, zobacz [więcej możliwości dzięki wzorce w C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/).
 
 ## <a name="ieee-floating-point-improvements"></a>Ulepszenia zmiennoprzecinkowej IEEE
 
@@ -271,7 +271,7 @@ dotnet new winforms
 
 Visual Studio 2019 Preview 2 dodaje **nowy projekt** szablonów dla platformy .NET Core 3.0 Windows Forms i WPF. Projektanci nadal jeszcze nie są obsługiwane. I można otwierać, uruchamianie i debugowanie tych projektów w programie Visual Studio 2019 r.
 
-Visual Studio 2017 15.9 dodaje możliwość [Włącz podglądy platformy .NET Core](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/), ale konieczne jest włączenie tej funkcji i nie jest obsługiwanym scenariuszem.
+Visual Studio 2017 15.9 dodaje możliwość [Włącz podglądy platformy .NET Core](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), ale konieczne jest włączenie tej funkcji i nie jest obsługiwanym scenariuszem.
 
 Nowe projekty są takie same jak istniejących projektów .NET Core z dodatkami kilka. Oto porównanie podstawowy projekt konsoli .NET Core i podstawowy projekt Windows Forms i WPF.
 
@@ -730,9 +730,9 @@ Następujące ulepszenia również są nowe w .NET Core 3 (wersja zapoznawcza) 1
 
 ## <a name="tiered-compilation"></a>Warstwowe kompilacji
 
-[Warstwowe kompilacji](https://blogs.msdn.microsoft.com/dotnet/2018/08/02/tiered-compilation-preview-in-net-core-2-1/) jest domyślnie przy użyciu platformy .NET Core 3.0. Jest funkcją, która umożliwia bardziej adaptacyjnie Użyj kompilator just in Time (JIT), aby uzyskać lepszą wydajność, zarówno podczas uruchamiania i w celu zmaksymalizowania wydajności.
+[Warstwowe kompilacji](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) jest domyślnie przy użyciu platformy .NET Core 3.0. Jest funkcją, która umożliwia bardziej adaptacyjnie Użyj kompilator just in Time (JIT), aby uzyskać lepszą wydajność, zarówno podczas uruchamiania i w celu zmaksymalizowania wydajności.
 
-Ta funkcja została dodana jako funkcja opcjonalna w [platformy .NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) i następnie została włączona domyślnie w [.NET Core 2.2 w wersji zapoznawczej 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/). Następnie został on przywrócony do zoptymalizowany pod kątem się przy użyciu wersji platformy .NET Core 2.2.
+Ta funkcja została dodana jako funkcja opcjonalna w [platformy .NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) i następnie została włączona domyślnie w [.NET Core 2.2 w wersji zapoznawczej 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/). Następnie został on przywrócony do zoptymalizowany pod kątem się przy użyciu wersji platformy .NET Core 2.2.
 
 ## <a name="arm64-linux-support"></a>Obsługa systemu Linux ARM64
 

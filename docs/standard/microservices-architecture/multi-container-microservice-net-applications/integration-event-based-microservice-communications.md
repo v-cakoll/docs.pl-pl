@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Do
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967974"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676021"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
 
@@ -66,7 +66,7 @@ Istnieje tylko kilka rodzajów bibliotek, które powinny współużytkować mię
 
 Magistrali zdarzeń umożliwia publikowania/subskrybowania — styl komunikację między mikrousługami bez składniki, które jawnie wiedzieć, jak pokazano w rysunek 6-19.
 
-![Wzorzec publikowania/subskrybowania podstawowe Mikrousług A publikuje w magistrali zdarzeń, który rozprowadza do mikrousług susbcribing B i C, bez znajomości susbcribers wydawcy.](./media/image20.png)
+![Wzorzec publikowania/subskrybowania podstawowe Mikrousług A publikuje w magistrali zdarzeń, który rozprowadza subskrypcję mikrousług B i C, bez wydawcy znajomości subskrybentów.](./media/image20.png)
 
 **Rysunek 6-19**. Podstawowe informacje o magistrali zdarzeń publikowania/subskrybowania
 
@@ -76,25 +76,25 @@ Magistrali zdarzeń dotyczące wzorzec obserwatora i Publikuj — Subskrybuj wzo
 
 W [wzorzec obserwatora](https://en.wikipedia.org/wiki/Observer_pattern), obiekt podstawowy (znanych jako możliwość obserwowania) powiadamia innych zainteresowanych obiektów (znanych jako obserwatorzy) z istotnymi informacjami (zdarzenia).
 
-### <a name="publishsubscribe-pubsub-pattern"></a>Wzorzec publikowania/subskrybowania (Pub/Sub) 
+### <a name="publishsubscribe-pubsub-pattern"></a>Wzorzec publikowania/subskrybowania (Pub/Sub)
 
 Celem [wzorca publikowania/subskrypcji](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) jest taka sama jak wzorzec obserwatora: chcesz powiadomić inne usługi, w przypadku wystąpienia określonych zdarzeń została wykonana. Ale ma jedną istotną różnicą między wzorców obserwatora i Pub/Sub. We wzorcu obserwatora emisji odbywa się bezpośrednio z obserwowalnymi na obserwatorów, dzięki czemu "znane" siebie nawzajem. Ale gdy przy użyciu wzorca publikowania/subskrybowania, jest trzecim składnikiem o nazwie brokera lub broker lub zdarzeń magistrali komunikatów, który jest znany wydawcy i subskrybenta. W związku z tym gdy przy użyciu wzorca publikowania/subskrybowania wydawcy i subskrybenci są dokładnie odłączone dzięki brokera magistrali lub wiadomości wymienionych zdarzeń.
 
-### <a name="the-middleman-or-event-bus"></a>Service bus pośredników lub zdarzenie 
+### <a name="the-middleman-or-event-bus"></a>Service bus pośredników lub zdarzenie
 
 Jak osiągnąć anonimowości między wydawcą a transakcyjnym subskrybentem? Łatwo jest umożliwiają pośredników zajmie się całą komunikację. Magistrali zdarzeń jest jeden taki pośredników.
 
 Magistrali zdarzeń zwykle składa się z dwóch części:
 
--   Abstrakcja lub interfejs.
+- Abstrakcja lub interfejs.
 
--   Co najmniej jeden implementacji.
+- Co najmniej jeden implementacji.
 
 W rysunek 6-19 możesz zobaczyć jak to zrobić, z punktu widzenia aplikacji, magistrali zdarzeń to nic innego niż kanału Pub/Sub. Sposób zaimplementowania tej komunikacji asynchronicznej może się różnić. Tak, aby można przełączać się między nimi, w zależności od wymagań środowiska (na przykład, środowisko produkcyjne i środowiska deweloperskie) może mieć wiele implementacji.
 
 W rysunek 6 – 20 znajduje abstrakcję magistrali zdarzeń z wielu implementacjach oparte na infrastruktury obsługi komunikatów technologii, takich jak RabbitMQ, usługi Azure Service Bus lub innym brokerem/komunikatu o zdarzeniu.
 
-![Warto mieć magistrali zdarzeń zdefiniowanych za pomocą interfejsu, więc można ją wdrożyć za pomocą kilku tecnologies, takich jak usługi RabbitMQ usługi Azure Service bus lub inne osoby.](./media/image21.png)
+![Warto mieć magistrali zdarzeń zdefiniowanych za pomocą interfejsu, więc można ją wdrożyć za pomocą kilku technologii, takich jak usługi RabbitMQ usługi Azure Service bus lub inne osoby.](./media/image21.png)
 
 **Rysunek 6 - 20.** Wiele implementacji magistrali zdarzeń
 
@@ -129,6 +129,6 @@ public interface IEventBus
 
 `Subscribe` Metody (może mieć kilka implementacji w zależności od argumentów) są używane przez mikrousług, które chcesz odbierać zdarzenia. Ta metoda ma dwa argumenty. Pierwsza to zdarzenie integracji, aby subskrybować (`IntegrationEvent`). Drugi argument funkcji jest integracja zdarzenie obsługi (lub metody wywołania zwrotnego), o nazwie `IIntegrationEventHandler<T>`, które zostaną wykonane podczas mikrousług odbiornik pobiera ten komunikat zdarzenia integracji.
 
->[!div class="step-by-step"]
->[Poprzednie](database-server-container.md)
->[dalej](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [Poprzednie](database-server-container.md)
+> [dalej](rabbitmq-event-bus-development-test-environment.md)

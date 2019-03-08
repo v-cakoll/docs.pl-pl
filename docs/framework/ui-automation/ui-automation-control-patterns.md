@@ -7,18 +7,16 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: defcd0a4ecc52f40e526aaf65ee91f22e3c49002
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a4e3492b4ff4a0eb670d2f1e0c0f8daab269cb7b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231102"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673105"
 ---
 # <a name="ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Ta sekcja zawiera szczegółowe informacje o sposobie używania [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kontrolować wzorców.  
   

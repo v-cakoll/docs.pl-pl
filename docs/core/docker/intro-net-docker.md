@@ -3,12 +3,12 @@ title: Wprowadzenie do platformy Docker
 description: Ten artykuł zawiera omówienie i wprowadzenie do platformy Docker w kontekście aplikacji .NET Core.
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656170"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676281"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
 
@@ -93,15 +93,15 @@ Przykłady użycia platformy .NET Core 2.0. Korzystać z aparatu Docker [kompila
 
 To repozytorium zawiera przykłady, które pokazują różne konfiguracje Docker w programie .NET Framework. Obrazy te można użyć jako punktu wyjścia dla własnych obrazów platformy Docker.
 
-**.NET framework 4.7**
+**.NET Framework 4.7**
 
 [Dotnet-przykładowe framework: 4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) pokazuje podstawowe "hello world" użycie [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Przedstawia on sposób tworzenie i wdrażanie aplikacji, opierając się na [obrazu platformy docker programu .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile).
 
-**.NET framework 4.6.2**
+**.NET Framework 4.6.2**
 
 [Dotnet-przykładowe framework: 4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) pokazuje podstawowe "hello world" użycie [platformy .NET Framework 4.6.2](../../framework/whats-new/index.md#v462). Przedstawia on sposób tworzenie i wdrażanie aplikacji, opierając się na [obrazu platformy docker platformy .NET Framework 4.6.2](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile).
 
-**.NET framework 3.5**
+**.NET Framework 3.5**
 
  [Dotnet-przykładowe framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) pokazuje podstawowe "hello world" użycie [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile). Przedstawia on sposób tworzenia i wdrażania projektu polegania na programie .NET Framework 3.5 na platformie Docker.
 
@@ -113,7 +113,7 @@ To repozytorium zawiera przykłady, które pokazują różne konfiguracje Docker
 
 * [Obrazy platformy ASP.NET Core w usłudze GitHub](https://github.com/aspnet/aspnet-docker)
 
-#### <a name="aspnet-framework"></a>Środowiska ASP.NET Framework
+#### <a name="aspnet-framework"></a>ASP.NET Framework
 
 * [Środowiska ASP.NET Framework obrazów w witrynie DockerHub](https://hub.docker.com/r/microsoft/aspnet/)
 
@@ -178,7 +178,7 @@ To repozytorium zawiera przykłady, które pokazują różne konfiguracje Docker
 
 Skoro wiesz już o różnych obrazów platformy Docker i platformy Docker, następnym krokiem jest zapoznaj się z bogatego ekosystemu platformy Docker. Poniższe linki dowiesz się, jak narzędzia Microsoft uzupełniają programowania kontenerów.
 
-* [Ze sobą przy użyciu platformy .NET i Docker](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/)
+* [Ze sobą przy użyciu platformy .NET i Docker](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/)
 * [Projektowanie i opracowywanie aplikacji obsługującej wiele kontenerów i opartych na Mikrousługach .NET](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Rozszerzenie programu Visual Studio Code Docker](https://code.visualstudio.com/docs/languages/dockerfile)
 * [Dowiedz się, jak używać usługi Azure Service Fabric](/azure/service-fabric/index)

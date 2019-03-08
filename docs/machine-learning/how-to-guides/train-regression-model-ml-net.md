@@ -1,16 +1,21 @@
 ---
 title: Uczenie modelu regresji do przewidywania wartości przy użyciu strukturze ML.NET
 description: Dowiedz się, jak to w opracowywaniu regresji model do przewidywania wartości przy użyciu strukturze ML.NET uczenia maszynowego
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092907"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673148"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>Uczenie modelu regresji do przewidywania wartości przy użyciu strukturze ML.NET
+
+> [!NOTE]
+> W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Ogólnie rzecz biorąc istnieją trzy kroki do trenowania modelu w strukturze ML.NET:
 

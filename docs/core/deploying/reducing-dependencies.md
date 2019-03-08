@@ -4,16 +4,16 @@ description: Ogranicz zależności pakietów, podczas tworzenia bibliotek oparty
 author: cartermp
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168285"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674968"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Zmniejszenie zależności pakietów przy użyciu pliku project.json
 
-W tym artykule opisano, co musisz wiedzieć o zmniejszenie zależności pakietu, podczas tworzenia `project.json` bibliotek. Przy końcu tego artykułu dowiesz się, jak tworzyć biblioteki w taki sposób, że używa tylko zależności, których potrzebuje. 
+W tym artykule opisano, co musisz wiedzieć o zmniejszenie zależności pakietu, podczas tworzenia `project.json` bibliotek. Przy końcu tego artykułu dowiesz się, jak tworzyć biblioteki w taki sposób, że używa tylko zależności, których potrzebuje.
 
 ## <a name="why-its-important"></a>Dlaczego jest ważne
 
@@ -27,18 +27,17 @@ Obecnie nie ma żadnych official będzie przydatna `dotnet` polecenie, które us
 
 1. Odwołanie `NETStandard.Library` wersji `1.6.0` w `dependencies` części Twojej `project.json`.
 2. Przywróć pakiety za pomocą `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) z wiersza polecenia.
-3. Sprawdzanie `project.lock.json` plików i Znajdź `NETSTandard.Library` sekcji.  Jest na początku pliku.
+3. Sprawdzanie `project.lock.json` plików i Znajdź `NETStandard.Library` sekcji.  Jest na początku pliku.
 4. Skopiuj wszystkie pakiety wymienione w obszarze `dependencies`.
 5. Usuń `.NETStandard.Library` odwołania i zastąp go skopiowane pakiety.
 6. Usuń odwołania do pakietów, które nie są potrzebne.
-
 
 Możesz dowiedzieć się które pakiety, nie musisz za pomocą jednej z następujących sposobów:
 
 1. Prób i błędów.  Obejmuje to usunięcie pakietu, przywracanie, wyświetlanie, jeśli Twoja Biblioteka nadal będzie się kompilować i powtórzyć ten proces.
 2. Za pomocą narzędzia, takie jak [użyciu narzędzia do dekompilacji](https://github.com/icsharpcode/ILSpy#ilspy-------) lub [odblaskowego .NET](https://www.red-gate.com/products/dotnet-development/reflector) wglądu odwołania, aby zobaczyć, co Twój kod faktycznie używa.  Następnie można usunąć pakiety, które nie odnoszą się do typów, których używasz.
 
-## <a name="example"></a>Przykład 
+## <a name="example"></a>Przykład
 
 Wyobraź sobie, autorem biblioteki, które podano dodatkowe funkcje do typów ogólnych kolekcji.  Takie biblioteki konieczne są zależne od pakietów, takich jak `System.Collections`, ale może być w ogóle nie zależy od pakietów takich jak `System.Net.Http`.  W efekcie byłoby dobrze trim zależności pakietów w dół, co ta biblioteka wymagane tylko!
 
@@ -56,7 +55,7 @@ Można przycięcia tej biblioteki, możesz zaczynać `project.json` pliku i Doda
 }
 ```
 
-Następnie przywróć pakiety za pomocą `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)), sprawdź `project.lock.json` plików i Znajdź wszystkie pakiety, które są przywracane dla `NETSTandard.Library`.
+Następnie przywróć pakiety za pomocą `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)), sprawdź `project.lock.json` plików i Znajdź wszystkie pakiety, które są przywracane dla `NETStandard.Library`.
 
 Oto jakie odpowiedniej sekcji w `project.lock.json` pliku wygląda podobnie, gdy `netstandard1.0`:
 

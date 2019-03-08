@@ -3,22 +3,24 @@ title: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
 description: Przewidywanie ceny za pomocą platformy ML.NET przy użyciu uczeń regresji.
 author: aditidugar
 ms.author: johalex
-ms.date: 02/08/2019
+ms.date: 03/05/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 543411f58f2d7c5c4e8658bd90cf52c7a3291ec3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251095"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678409"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Samouczek: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
+
+W tym samouczku pokazano, jak za pomocą strukturze ML.NET tworzyć [modelu regresji](../resources/glossary.md#regression) do prognozowania cen, w szczególności, taksówek w Nowym Jorku cen w klasie ekonomicznej.
 
 > [!NOTE]
 > W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [Wprowadzenie do struktury ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-W tym samouczku pokazano, jak za pomocą strukturze ML.NET tworzyć [modelu regresji](../resources/glossary.md#regression) do prognozowania cen, w szczególności, taksówek w Nowym Jorku cen w klasie ekonomicznej.
+Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
 > [!div class="checklist"]

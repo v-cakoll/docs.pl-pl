@@ -3,12 +3,12 @@ title: Temat platformy .NET Core
 description: Dowiedz się więcej na temat platformy .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058558"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675969"
 ---
 # <a name="about-net-core"></a>Temat platformy .NET Core
 
@@ -34,7 +34,7 @@ C#, Visual Basic i F# języków może służyć do pisania aplikacji i bibliotek
 - Kolekcje, takie jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Typy narzędzia, takie jak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>, i <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Typy danych, takich jak <xref:System.Data.DataSet?displayProperty=nameWithType>, i [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Typy o wysokiej wydajności, takich jak <xref:System.Numerics.Vector?displayProperty=nameWithType> i [potoki](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/).
+- Typy o wysokiej wydajności, takich jak <xref:System.Numerics.Vector?displayProperty=nameWithType> i [potoki](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
 
 .NET core zapewnia zgodność z .NET Framework oraz interfejsów API platformy Mono przez zaimplementowanie [.NET Standard](../standard/net-standard.md) specyfikacji.
 
@@ -95,7 +95,7 @@ Być może najłatwiej jest poznać wielkość i kształt platformy .NET Core, p
 
 Najważniejsze różnice między .NET Core i .NET Framework:
 
-- **Modele aplikacji** — .NET Core nie obsługuje wszystkich .NET Framework — modele aplikacji. W szczególności program nie obsługuje platformy ASP.NET MVC i formularzy sieci Web platformy ASP.NET, ale obsługuje ona ASP.NET Core MVC. Ogłoszono go, [.NET Core 3 będzie obsługiwać WPF i formularze Windows](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **Modele aplikacji** — .NET Core nie obsługuje wszystkich .NET Framework — modele aplikacji. W szczególności program nie obsługuje platformy ASP.NET MVC i formularzy sieci Web platformy ASP.NET, ale obsługuje ona ASP.NET Core MVC. Ogłoszono go, [.NET Core 3 będzie obsługiwać WPF i formularze Windows](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/).
 - **Interfejsy API** — .NET Core zawiera dużego podzbioru .NET Framework Biblioteka klasy podstawowej, przy użyciu różnych wyprowadzenie (nazwy zestawu różnią się; elementy eksponowane na typach różnią się w przypadku klucza). Te różnice wymagają zmiany portu źródłowego platformę .NET Core, w niektórych przypadkach (zobacz [dotnet/microsoft-apiport](https://github.com/microsoft/dotnet-apiport)). Implementuje platformy .NET core [.NET Standard](../standard/net-standard.md) specyfikacji interfejsu API.
 - **Podsystemy** — .NET Core implementuje podzbiór podsystemów w programie .NET Framework w celu wykonania prostsze i modelu programowania. Na przykład zabezpieczenia dostępu kodu (CAS) jest nieobsługiwana, gdy odbicie jest obsługiwana.
 - **Platform** — .NET Framework obsługuje Windows i Windows Server, a .NET Core obsługuje również w systemach macOS i Linux.

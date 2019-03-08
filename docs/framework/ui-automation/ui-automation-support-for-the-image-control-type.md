@@ -6,16 +6,14 @@ helpviewer_keywords:
 - control types, Image
 - Image control type
 ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: cfd5057ee95c5a569d85a29a25afe9a32240e801
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf4c67382eac718ed1acf81ce88eeb9ea2c4993e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707794"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676879"
 ---
-# <a name="ui-automation-support-for-the-image-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu obraz
+# <a name="ui-automation-support-for-the-image-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla formantów typu obraz
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

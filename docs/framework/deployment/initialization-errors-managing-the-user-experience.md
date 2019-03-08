@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02fa197b12e6a5bfb37cd0f275bc615dc179291b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8e5a3cb79187d6434585560e9c128e03fe8003b7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222522"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679375"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Błędy inicjowania programu .NET framework: Zarządzanie wrażeniami użytkownika
 
@@ -41,7 +41,7 @@ Aktywacja CLR interfejsów API zwraca wartość HRESULT kody do zgłaszania wyni
 
 Jeśli system aktywacji środowiska CLR nie można załadować poprawną wersję środowiska uruchomieniowego, które jest wymagane przez aplikację, wyświetla komunikat o błędzie do użytkowników i poinformuj ich o tym komputerze nie jest prawidłowo skonfigurowany do uruchamiania aplikacji i udostępnia je za pomocą możliwości, aby rozwiązać ten problem. Następujący komunikat o błędzie, zazwyczaj są przedstawione w tej sytuacji. Użytkownik może wybrać **tak** można przejść do witryny firmy Microsoft, w którym będą oni mogli pobrać poprawną wersję .NET Framework dla aplikacji.
 
-![Okno dialogowe Błąd inicjalizacji programu .NET framework](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog") komunikat o błędzie typowe błędy inicjowania
+![Okno dialogowe Błąd inicjalizacji programu .NET framework](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "komunikat o błędzie typowe błędy inicjowania")
 
 ## <a name="resolving-the-initialization-error"></a>Błąd podczas inicjowania rozpoznawania
 
@@ -82,7 +82,7 @@ Jednak w niektórych przypadkach warto zastąpić ustawienie SEM_FAILCRITICALERR
 
 System aktywacji środowiska CLR zawiera te same zachowanie i interfejsu użytkownika po [!INCLUDE[win8](../../../includes/win8-md.md)] tak samo jak na inne wersje systemu operacyjnego Windows, z wyjątkiem po napotkaniu problemy z ładowaniem środowisko CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] obejmuje [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], który używa funkcji CLR 4.5. Jednak [!INCLUDE[win8](../../../includes/win8-md.md)] nie zawiera programu .NET Framework 2.0, 3.0 lub 3.5, która za pomocą wersji CLR 2.0. W rezultacie aplikacje, które są zależne od wersji CLR 2.0 nie należy uruchamiać na [!INCLUDE[win8](../../../includes/win8-md.md)] domyślnie. Zamiast tego są wyświetlane następujące okno dialogowe, aby umożliwić użytkownikom instalowanie programu .NET Framework 3.5. Użytkowników można również włączyć program .NET Framework 3.5 w Panelu sterowania. Obie opcje zostały omówione w artykule [Instalowanie programu .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md).
 
-![Okno dialogowe instalacji wersji 3.5 w systemie Windows 8](../../../docs/framework/deployment/media/installdialog.png "installdialog") wybór opcji Monituj o zainstalowanie programu .NET Framework 3.5 na żądanie
+![Okno dialogowe instalacji wersji 3.5 w systemie Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "wybór opcji Monituj o zainstalowanie programu .NET Framework 3.5 na żądanie")
 
 > [!NOTE]
 > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Zastępuje programu .NET Framework 4 (Środowisko CLR 4) na komputerze użytkownika. W związku z tym, .NET Framework 4, aplikacje są uruchamiane bezproblemowo, bez wyświetlania tego okna dialogowego w [!INCLUDE[win8](../../../includes/win8-md.md)].

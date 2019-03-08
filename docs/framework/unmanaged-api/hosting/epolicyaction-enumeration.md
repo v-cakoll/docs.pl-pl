@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa8589b3f27ba97d32e77dbfecb190edc69dbc18
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655715"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677334"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction — Wyliczenie
 W tym artykule opisano akcje zasad hosta można ustawić dla operacji opisanych przez [eclroperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) i awarie opisanego przez [eclrfailure —](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md).  
@@ -50,7 +50,7 @@ typedef enum {
 |`eAbortThread`|Określa, że środowisko uruchomieniowe języka wspólnego (CLR) należy przerwać bez problemu zmieniała wątku. Łagodne przerwania obejmuje próbuje uruchomić wszystkie `finally` blokach dowolny `catch` bloków związanych z wątku przerwań i finalizatorów.|  
 |`eDisableRuntime`|Określa, że środowisko CLR należy wprowadzić w stanie wyłączenia. Żadne dodatkowe zarządzanego kodu mogą być wykonywane w procesie zainfekowanego i możliwość wprowadzania środowiska CLR są blokowane wątki.|  
 |`eExitProcess`|Określa, że środowisko CLR powinien podejmować próbę Łagodne wyjście procesu, łącznie z systemem finalizatory i oczyszczania i operacji rejestrowania.|  
-|`eFastExitProcess`|Określa środowisko CLR powinien natychmiast zakończyć proces bez uruchamiania finalizatory i oczyszczania i operacji rejestrowania. Nowever, powiadomienie jest wysyłane do debugera.|  
+|`eFastExitProcess`|Określa środowisko CLR powinien natychmiast zakończyć proces bez uruchamiania finalizatory i oczyszczania i operacji rejestrowania. Jednak powiadomienie jest wysyłane do debugera.|  
 |`eNoAction`|Określa, czy podjęta żadna akcja.|  
 |`eRudeAbortThread`|Określa, że przerwanie wątku prosta powinno być wykonywane przez środowisko CLR. Tylko te `catch` i `finally` bloki oznaczone <xref:System.EnterpriseServices.MustRunInClientContextAttribute> są wykonywane.|  
 |`eRudeExitProcess`|Określa środowisko CLR powinna zakończyć proces bez uruchamiania finalizatory i rejestrowanie operacji.|  

@@ -7,18 +7,16 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: 665b01b5-25f5-47a1-ab11-cffe8ebbf2a7
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: ebd8feb00f397faab4a231005ef90a55895c6f67
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 158c116aa54602a4311dfa8165dba7546369c53c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424379"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674045"
 ---
 # <a name="ui-automation-clients-for-managed-code-how-to-topics"></a>Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego — Tematy porad
 > [!NOTE]
->  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Ta sekcja zawiera szczegółowe informacje na temat implementowania funkcji [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] w aplikacji klienckiej.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Porady: nasłuchiwanie wielu żądań anulowania'
+title: 'Instrukcje: Nasłuchiwanie wielu żądań anulowania'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17874b8b9733ea18d4877e2c79810fcd6247db0b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178572"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680242"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Porady: nasłuchiwanie wielu żądań anulowania
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Instrukcje: Nasłuchiwanie wielu żądań anulowania
 W tym przykładzie pokazano, jak do nasłuchiwania dwa tokeny anulowania jednocześnie tak, aby anulować operację, jeśli żądanie albo tokenu.  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ W tym przykładzie pokazano, jak do nasłuchiwania dwa tokeny anulowania jednocz
   
  Kiedy wyrzuca token połączony <xref:System.OperationCanceledException>, token, który jest przekazywany do wyjątku jest token połączony, nie albo tokenów poprzednika. Aby określić, które tokeny zostało anulowane, sprawdź stan tokenów poprzednika bezpośrednio.  
   
- W tym przykładzie <xref:System.AggregateException> powinna być nigdy nie były zgłaszane, ale jej padł w tym miejscu ponieważ w rzeczywistych scenariuszach innych wyjątków, oprócz <xref:System.OperationCanceledException> , są generowane przez delegata zadania są opakowane w <xref:System.OperationCanceledException>.  
+ W tym przykładzie <xref:System.AggregateException> powinna być nigdy nie były zgłaszane, ale jej padł w tym miejscu ponieważ w rzeczywistych scenariuszach innych wyjątków, oprócz <xref:System.OperationCanceledException> , są generowane przez delegata zadania są opakowane w <xref:System.AggregateException>.  
   
 ## <a name="see-also"></a>Zobacz także
 

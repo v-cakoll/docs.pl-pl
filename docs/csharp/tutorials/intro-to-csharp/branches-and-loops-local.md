@@ -3,12 +3,12 @@ title: Gałęzie i pętle — wprowadzenie do C# samouczek
 description: W tym samouczku omawiającym gałęzie i pętle zapisu C# kodu, aby poznać składnię języka, obsługującego warunkowych gałęzi i pętli, aby wykonać instrukcje wielokrotnie.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153777"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677789"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dowiedz się, logikę warunkową instrukcji gałęzi i pętli
 
@@ -20,7 +20,7 @@ W tym samouczku oczekuje, że będziesz mieć maszyny, których można użyć do
 
 Utwórz katalog o nazwie **samouczek dotyczący gałęzi**. Upewnij, że bieżącego katalogu i uruchom `dotnet new console -n BranchesAndLoops -o .`. To polecenie tworzy nową aplikację konsoli .NET Core w bieżącym katalogu.
 
-Otwórz **Program.cs** w ulubionym edytorze i Zastąp wiersz `Console.Writeline("Hello World!");` następującym kodem:
+Otwórz **Program.cs** w ulubionym edytorze i Zastąp wiersz `Console.WriteLine("Hello World!");` następującym kodem:
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 Wypróbuj ten kod, wpisując `dotnet run` w oknie konsoli. Powinien zostać wyświetlony komunikat "odpowiedź jest większa niż 10". drukowane do konsoli.
 
-Zmodyfikuj deklarację zmiennej `b` , tak aby suma była mniejsza niż 10: 
+Zmodyfikuj deklarację zmiennej `b` , tak aby suma była mniejsza niż 10:
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ Instrukcja po słowie `else` — słowo kluczowe jest wykonywany tylko wtedy, gd
 
 > [!IMPORTANT]
 > Wcięcia pod `if` i `else` instrukcji jest czytelności.
-> W języku C# nie mają wcięcia ani białe miejsca znaczenia. Instrukcja po słowie `if` lub `else` — słowo kluczowe zostanie wykonana w zależności od warunku. Wszystkie przykłady w tym samouczku wykonaj jest stosowana powszechna praktyka wcięć odpowiadających przepływowi sterowania instrukcji.
+> W języku C# nie mają wcięcia ani białe miejsca znaczenia.
+> Instrukcja po słowie `if` lub `else` — słowo kluczowe zostanie wykonana w zależności od warunku. Wszystkie przykłady w tym samouczku wykonaj jest stosowana powszechna praktyka wcięć odpowiadających przepływowi sterowania instrukcji.
 
 Ponieważ wcięcia nie ma znaczenia, należy użyć `{` i `}` wskazać, kiedy ma więcej niż jedna instrukcja jako część bloku wykonywanego warunkowo. Programiści języka C# zazwyczaj używają nawiasów klamrowych we wszystkich `if` i `else` klauzul. Poniższy przykład jest taka sama jak właśnie utworzony. Zmodyfikuj kod powyżej, aby dopasować następujący kod:
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ To `do` pętli i wcześniej `while` pętli generuje ten sam wynik.
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 To działa ten sam jako `while` pętli i `do` pętli został już użyty. `for` Instrukcja składa się z trzech części, które sterują jej pracą.
@@ -252,7 +253,7 @@ Możesz kontynuować [Interpolacja ciągów](interpolated-strings-local.md) samo
 
 Możesz dowiedzieć się więcej na temat tych pojęć w następujących tematach:
 
-[Jeśli i else, instrukcja](../../language-reference/keywords/if-else.md)  
-[while — instrukcja](../../language-reference/keywords/while.md)  
-[— Instrukcja](../../language-reference/keywords/do.md)  
-[For — instrukcja](../../language-reference/keywords/for.md)  
+- [Jeśli i else, instrukcja](../../language-reference/keywords/if-else.md)
+- [while — instrukcja](../../language-reference/keywords/while.md)
+- [— Instrukcja](../../language-reference/keywords/do.md)
+- [For — instrukcja](../../language-reference/keywords/for.md)

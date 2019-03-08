@@ -1,21 +1,19 @@
 ---
-title: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu separator
+title: Obsługa automatyzacji interfejsu użytkownika dla formantów typu separator
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Separator control type
 - Separator control type
 - control types, Separator
 ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: a51ed653146421b22d6db4f7b9b2fd2faca1b0b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415acb678dd8eb15d6001c5cefa75335cb8d2c16
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597986"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680376"
 ---
-# <a name="ui-automation-support-for-the-separator-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu separator
+# <a name="ui-automation-support-for-the-separator-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla formantów typu separator
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   

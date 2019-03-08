@@ -4,12 +4,12 @@ description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: c34d49307408520afc6223a43d1c347dd6cffb97
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 92dd63fa155ea6e49ddb1eee9c201d5d9dc0418e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584307"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679531"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -125,10 +125,10 @@ Można określić dodatkowe ustawienia konfiguracji w pliku Dockerfile, w zależ
   [*https://docs.docker.com/engine/tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
 
 - **Uzyskuje obrazów kontenerów platformy .NET** \
-  [*https://blogs.msdn.microsoft.com/dotnet/2018/06/18/staying-up-to-date-with-net-container-images/*](https://blogs.msdn.microsoft.com/dotnet/2018/06/18/staying-up-to-date-with-net-container-images/)
+  *<https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>*
 
 - **Przy użyciu platformy .NET i Docker wspólnie - DockerCon 2018 Update** \
-  [*https://blogs.msdn.microsoft.com/dotnet/2018/06/13/using-net-and-docker-together-dockercon-2018-update/*](https://blogs.msdn.microsoft.com/dotnet/2018/06/13/using-net-and-docker-together-dockercon-2018-update/)
+  *<https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>*
 
 ### <a name="using-multi-arch-image-repositories"></a>Przy użyciu repozytoriów wielu architektury obrazu
 

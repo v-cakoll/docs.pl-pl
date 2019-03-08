@@ -7,24 +7,22 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 44f4befc03c886e51a19a44f45f7cbdc20f60fe3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dc77d3798c9a79b5becf28e55c9f7e3be23eb352
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209921"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677828"
 ---
-# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="9df28-102">Wzorce kontrolek automatyzacji interfejsu użytkownika — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="9df28-102">UI Automation Control Patterns How-to Topics</span></span>
+# <a name="ui-automation-control-patterns-how-to-topics"></a><span data-ttu-id="a6bf4-102">Wzorce kontrolek automatyzacji interfejsu użytkownika — Tematy porad</span><span class="sxs-lookup"><span data-stu-id="a6bf4-102">UI Automation Control Patterns How-to Topics</span></span>
 > [!NOTE]
->  <span data-ttu-id="9df28-103">Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="9df28-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="9df28-104">Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="9df28-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="a6bf4-103">Ta dokumentacja jest przeznaczona dla deweloperów .NET Framework, którzy chcą używać zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="a6bf4-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a6bf4-104">Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [Windows Automation API: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="a6bf4-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="9df28-105">Ta sekcja zawiera szczegółowe informacje na temat implementowania wzorców kontrolek.</span><span class="sxs-lookup"><span data-stu-id="9df28-105">This section contains detailed information about implementing control patterns.</span></span>  
+ <span data-ttu-id="a6bf4-105">Ta sekcja zawiera szczegółowe informacje na temat implementowania wzorców kontrolek.</span><span class="sxs-lookup"><span data-stu-id="a6bf4-105">This section contains detailed information about implementing control patterns.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9df28-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="9df28-106">In This Section</span></span>  
- [<span data-ttu-id="9df28-107">Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="9df28-107">Expose the Content of a Table Using UI Automation</span></span>](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [<span data-ttu-id="9df28-108">Pobieranie obsługiwanych wzorców kontrolek automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="9df28-108">Get Supported UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
- [<span data-ttu-id="9df28-109">Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="9df28-109">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
- [<span data-ttu-id="9df28-110">Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="9df28-110">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
- [<span data-ttu-id="9df28-111">Przenoszenie elementu automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="9df28-111">Move a UI Automation Element</span></span>](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)
+## <a name="in-this-section"></a><span data-ttu-id="a6bf4-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="a6bf4-106">In This Section</span></span>  
+ [<span data-ttu-id="a6bf4-107">Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="a6bf4-107">Expose the Content of a Table Using UI Automation</span></span>](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
+ [<span data-ttu-id="a6bf4-108">Pobieranie obsługiwanych wzorców kontrolek automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="a6bf4-108">Get Supported UI Automation Control Patterns</span></span>](../../../docs/framework/ui-automation/get-supported-ui-automation-control-patterns.md)  
+ [<span data-ttu-id="a6bf4-109">Pobieranie stanu przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="a6bf4-109">Get the Toggle State of a Check Box Using UI Automation</span></span>](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)  
+ [<span data-ttu-id="a6bf4-110">Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="a6bf4-110">Invoke a Control Using UI Automation</span></span>](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)  
+ [<span data-ttu-id="a6bf4-111">Przenoszenie elementu automatyzacji interfejsu użytkownika</span><span class="sxs-lookup"><span data-stu-id="a6bf4-111">Move a UI Automation Element</span></span>](../../../docs/framework/ui-automation/move-a-ui-automation-element.md)

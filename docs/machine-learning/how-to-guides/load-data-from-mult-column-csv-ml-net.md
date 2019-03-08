@@ -1,22 +1,27 @@
 ---
 title: Ładowanie danych z wieloma kolumnami z pliku CSV, machine learning przetwarzania - strukturze ML.NET
 description: Dowiedz się, jak można załadować danych z wieloma kolumnami z pliku CSV do użycia w modelu uczenia maszynowego, kompilowania, szkolenia i oceniania za pomocą platformy ML.NET
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e33fdf1d71b02545e3ea284cc317f5d244c3fc13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091971"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675956"
 ---
-# <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a><span data-ttu-id="0555b-103">Ładowanie danych z wieloma kolumnami z pliku CSV, machine learning przetwarzania - strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="0555b-103">Load data with many columns from a CSV file for machine learning processing - ML.NET</span></span>
+# <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a><span data-ttu-id="7a3e1-103">Ładowanie danych z wieloma kolumnami z pliku CSV, machine learning przetwarzania - strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="7a3e1-103">Load data with many columns from a CSV file for machine learning processing - ML.NET</span></span>
 
-<span data-ttu-id="0555b-104">`TextLoader` Służy do ładowania danych z plików tekstowych.</span><span class="sxs-lookup"><span data-stu-id="0555b-104">`TextLoader` is used to load data from text files.</span></span> <span data-ttu-id="0555b-105">Należy określić kolumny danych, ich typy i ich lokalizacji w pliku tekstowym.</span><span class="sxs-lookup"><span data-stu-id="0555b-105">You need to specify the data columns, their types, and their location in the text file.</span></span>
+> [!NOTE]
+> <span data-ttu-id="7a3e1-104">W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie.</span><span class="sxs-lookup"><span data-stu-id="7a3e1-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="7a3e1-105">Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="7a3e1-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="0555b-106">Jeśli plik wejściowy zawiera wiele kolumn, tego samego typu i zawsze używane razem, przeczytaj je jako *kolumny wektor*.</span><span class="sxs-lookup"><span data-stu-id="0555b-106">When the input file contains many columns of the same type and always used together, read them as a *vector column*.</span></span> <span data-ttu-id="0555b-107">Ta strategia wyniki w schemacie Wyczyść dane i eliminuje koszty wydajności niepotrzebne, jak pokazano w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="0555b-107">This strategy results in a clean data schema and avoids unnecessary performance costs, as shown in the following example:</span></span>
+<span data-ttu-id="7a3e1-106">Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersji 0.10**.</span><span class="sxs-lookup"><span data-stu-id="7a3e1-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="7a3e1-107">Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="7a3e1-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="0555b-108">[Przykładowy plik](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv):</span><span class="sxs-lookup"><span data-stu-id="0555b-108">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv):</span></span>
+<span data-ttu-id="7a3e1-108">`TextLoader` Służy do ładowania danych z plików tekstowych.</span><span class="sxs-lookup"><span data-stu-id="7a3e1-108">`TextLoader` is used to load data from text files.</span></span> <span data-ttu-id="7a3e1-109">Należy określić kolumny danych, ich typy i ich lokalizacji w pliku tekstowym.</span><span class="sxs-lookup"><span data-stu-id="7a3e1-109">You need to specify the data columns, their types, and their location in the text file.</span></span>
+
+<span data-ttu-id="7a3e1-110">Jeśli plik wejściowy zawiera wiele kolumn, tego samego typu i zawsze używane razem, przeczytaj je jako *kolumny wektor*.</span><span class="sxs-lookup"><span data-stu-id="7a3e1-110">When the input file contains many columns of the same type and always used together, read them as a *vector column*.</span></span> <span data-ttu-id="7a3e1-111">Ta strategia wyniki w schemacie Wyczyść dane i eliminuje koszty wydajności niepotrzebne, jak pokazano w poniższym przykładzie:</span><span class="sxs-lookup"><span data-stu-id="7a3e1-111">This strategy results in a clean data schema and avoids unnecessary performance costs, as shown in the following example:</span></span>
+
+<span data-ttu-id="7a3e1-112">[Przykładowy plik](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv):</span><span class="sxs-lookup"><span data-stu-id="7a3e1-112">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/generated_regression_dataset.csv):</span></span>
 
 ```console
 -2.75;0.77;-0.61;0.14;1.39;0.38;-0.53;-0.50;-2.13;-0.39;0.46;140.66
@@ -25,7 +30,7 @@ ms.locfileid: "56091971"
 0.28;1.05;-0.24;0.30;-0.99;0.19;0.32;-0.95;-1.19;-0.63;0.75;443.51
 ```
 
-<span data-ttu-id="0555b-109">Odczytywanie tego pliku przy użyciu `TextLoader`:</span><span class="sxs-lookup"><span data-stu-id="0555b-109">Reading this file using `TextLoader`:</span></span>
+<span data-ttu-id="7a3e1-113">Odczytywanie tego pliku przy użyciu `TextLoader`:</span><span class="sxs-lookup"><span data-stu-id="7a3e1-113">Reading this file using `TextLoader`:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 

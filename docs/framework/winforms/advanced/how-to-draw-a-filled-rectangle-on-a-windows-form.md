@@ -12,20 +12,20 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-ms.openlocfilehash: a9722b2939e77282453743a4dea165a340412a21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53fab93f47c16257b5ab2e336b43c6133a31d509
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587037"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716897"
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Instrukcje: Rysuj wypełniony prostokąt w formularzu Windows
 W tym przykładzie Rysuje wypełniony prostokąt w formularzu.  
   
 ## <a name="example"></a>Przykład  
- [!code-cpp[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#2)]
- [!code-csharp[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#2)]
- [!code-vb[System.Drawing.ConceptualHowTos#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#2)]  
+ [!code-cpp[System.Drawing.ConceptualHowTos#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#2)]
+ [!code-csharp[System.Drawing.ConceptualHowTos#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#2)]
+ [!code-vb[System.Drawing.ConceptualHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Nie można wywołać tej metody w <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń. Rysowane zawartość nie zostanie narysowany ponownie, gdy formularz jest zmiany rozmiaru lub zostanie przesłonięty przez inny formularz. Aby automatycznie odświeżenia zawartości, należy zastąpić <xref:System.Windows.Forms.Control.OnPaint%2A> metody.  
@@ -36,7 +36,7 @@ W tym przykładzie Rysuje wypełniony prostokąt w formularzu.
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Drawing.Graphics.FillRectangle%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Wprowadzenie do programowania grafiki](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [Pędzle i wypełnione kształty w GDI+](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)
+- [Wprowadzenie do programowania grafiki](getting-started-with-graphics-programming.md)
+- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)
+- [Pędzle i wypełnione kształty w GDI+](brushes-and-filled-shapes-in-gdi.md)

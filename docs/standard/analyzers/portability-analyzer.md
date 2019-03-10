@@ -4,12 +4,12 @@ description: Dowiedz się, jak ocenić, jak przenośny kod jest między różne 
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 17b05b9434d406acec03d84d17901f8339bcb6bc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677646"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717651"
 ---
 # <a name="the-net-portability-analyzer"></a>Narzędzia .NET Portability Analyzer
 
@@ -19,7 +19,7 @@ Czy chcesz wprowadzić bibliotek dla wielu platform? Chcesz zobaczyć, ile pracy
 
 * [.NET Core](../../core/index.md): Modularny projekt ma używającego side-by-side i jest przeznaczony dla scenariuszy dla wielu platform. Side-by-side umożliwia wdrażanie nowych wersji platformy .NET Core bez przerywania innych aplikacji.
 * [Platforma ASP.NET Core](/aspnet/core): to nowoczesnej sieci web — struktura oparta na module .NET Core, co daje deweloperom te same korzyści.
-* [Platforma Universal Windows](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): Zwiększyć wydajność aplikacji Windows Store przeznaczonych dla x64 i maszyn ARM przy użyciu platformy .NET Native statyczne kompilacji. 
+* [Platforma Universal Windows](https://devblogs.microsoft.com/dotnet/net-native-performance/): Zwiększyć wydajność aplikacji Windows Store przeznaczonych dla x64 i maszyn ARM przy użyciu platformy .NET Native statyczne kompilacji. 
 * + Rozszerzenia platformy .NET core: Obejmuje podstawowe interfejsy API .NET oprócz innych interfejsów API, należący do ekosystemu .NET, takich jak usługi WCF, ASP.NET Core, języka FSharp i platformy Azure.
 * + Rozszerzenia platformy .NET standard: Obejmuje standardowych interfejsów API .NET oprócz innych ekosystemu .NET, takich jak usługi WCF, ASP.NET Core, języka FSharp i platformy Azure.
 

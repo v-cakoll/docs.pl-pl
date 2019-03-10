@@ -11,24 +11,24 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: e017e25f140d3dfd260545f28fab73905fe149fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 875ed49e3a7dbe7205abb47ee1f2012d82826416
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601847"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711476"
 ---
 # <a name="how-to-display-pop-up-help"></a>Instrukcje: Wyświetlanie pomocy podręcznej
 Jest jednym ze sposobów, aby wyświetlić Pomoc na formularzach Windows Forms **pomocy** przycisk znajdujący się po prawej stronie paska tytułu, dostępne za pośrednictwem <xref:System.Windows.Forms.Form.HelpButton%2A> właściwości. Ten typ ekranu Pomocy jest dobrze nadaje się do użytku z okien dialogowych. Okna dialogowe wyświetlane w trybie modalnym (przy użyciu <xref:System.Windows.Forms.Form.ShowDialog%2A> metoda) mają problemy z wyświetlania zewnętrzna Pomoc systemów, ponieważ modalnych okien dialogowych, które muszą zostać zamknięte przed fokus można przejść do innego okna. Ponadto za pomocą **pomocy** przycisk wymaga, że istnieje nie **Minimalizuj** przycisk lub **Maksymalizuj** przycisk na pasku tytułu. To Konwencji standardowe okno dialogowe, formularze, zwykle mają **Minimalizuj** i **Maksymalizuj** przycisków.  
   
- Należy pamiętać, że można również użyć <xref:System.Windows.Forms.HelpProvider> składnika formanty łączy do plików w systemie pomocy, nawet jeśli udało Ci się wdrożyć Pomoc podręczną. Aby uzyskać więcej informacji, zobacz [zapewnianie pomocy w aplikacji Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
+ Należy pamiętać, że można również użyć <xref:System.Windows.Forms.HelpProvider> składnika formanty łączy do plików w systemie pomocy, nawet jeśli udało Ci się wdrożyć Pomoc podręczną. Aby uzyskać więcej informacji, zobacz [zapewnianie pomocy w aplikacji Windows](how-to-provide-help-in-a-windows-application.md).  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-display-pop-up-help"></a>Aby Wyświetlanie pomocy podręcznej  
   
-1.  Przeciągnij [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) składnika z przybornika do formularza.  
+1.  Przeciągnij [HelpProvider](../controls/helpprovider-component-windows-forms.md) składnika z przybornika do formularza.  
   
      Będzie ona znajdują się w pasku w dolnej części projektanta Windows Forms.  
   
@@ -36,13 +36,13 @@ Jest jednym ze sposobów, aby wyświetlić Pomoc na formularzach Windows Forms *
   
 3.  Aby <xref:System.Windows.Forms.Form.HelpButton%2A> do wyświetlania formularza <xref:System.Windows.Forms.Form.MinimizeBox%2A> i <xref:System.Windows.Forms.Form.MaximizeBox%2A> właściwości musi być równa `false`, <xref:System.Windows.Forms.Form.ControlBox%2A> właściwością `true`i <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwość na jedną z następujących wartości: <xref:System.Windows.Forms.FormBorderStyle.FixedSingle> , <xref:System.Windows.Forms.FormBorderStyle.Fixed3D>, <xref:System.Windows.Forms.FormBorderStyle.FixedDialog> lub <xref:System.Windows.Forms.FormBorderStyle.Sizable>.  
   
-4.  Wybierz kontrolkę, dla którego chcesz wyświetlić pomocy w formularzu i ustaw ciąg pomocy w oknie dialogowym właściwości. Jest to ciąg tekstowy, który będzie wyświetlany w oknie podobne do [etykietki narzędzia](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md).  
+4.  Wybierz kontrolkę, dla którego chcesz wyświetlić pomocy w formularzu i ustaw ciąg pomocy w oknie dialogowym właściwości. Jest to ciąg tekstowy, który będzie wyświetlany w oknie podobne do [etykietki narzędzia](../controls/tooltip-component-windows-forms.md).  
   
 5.  Naciśnij klawisz **F5**.  
   
 6.  Naciśnij klawisz **pomocy** znajdujący się na pasku tytułu, a następnie kliknij przycisk kontrolki, na którym można ustawić parametrów pomocy.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Pomoc do kontrolek przy użyciu etykietek narzędzi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [Integrowanie pomocy użytkownika z formularzami Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Pomoc do kontrolek przy użyciu etykietek narzędzi](control-help-using-tooltips.md)
+- [Integrowanie pomocy użytkownika z formularzami Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../index.md)

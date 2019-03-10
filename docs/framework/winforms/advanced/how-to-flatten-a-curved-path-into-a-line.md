@@ -8,17 +8,17 @@ helpviewer_keywords:
 - paths [Windows Forms], flattening
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-ms.openlocfilehash: aa47a655417cdf82d79fb222dc6ff6f6d8c3a947
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4847124c7af2e0b35d6874f53b85be4891b22df
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601821"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711047"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>Instrukcje: Spłaszczanie ścieżki krzywej do linii
 A <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt przechowuje sekwencji linii i krzywych Beziera. Można dodać kilka typów krzywych (wielokropek, łuki kardynalne) do ścieżki, ale każda krzywa jest konwertowany na krzywej Beziera, zanim znajduje się w ścieżce. Spłaszczanie ścieżki składa się z konwersji każdego krzywej Beziera w ścieżce z linii prostych sekwencji. Na poniższej ilustracji przedstawiono ścieżkę przed i po nim spłaszczanie.  
   
- ![Proste linii i krzywych](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")  
+ ![Proste linii i krzywych](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")  
   
 ### <a name="to-flatten-a-path"></a>Spłaszczanie ścieżki  
   
@@ -26,5 +26,5 @@ A <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt przechowuje sekwencji lini
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
-- [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Konstruowanie i rysowanie ścieżek](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+- [Linie, krzywe i kształty](lines-curves-and-shapes.md)
+- [Konstruowanie i rysowanie ścieżek](constructing-and-drawing-paths.md)

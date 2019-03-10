@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664747"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711307"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzystać z danych przechowywanych w bazach danych. Powiązanie danych formularzy Windows, umożliwia dostęp do danych z bazy danych, a także dane w innych strukturach, takich jak tablice i kolekcje, tak długo, jak niektóre minimalne wymagania zostały spełnione.  
   
 ## <a name="structures-to-bind-to"></a>Struktury, do powiązania  
- W formularzach Windows Forms, można powiązać cały szereg struktur, od prostego obiektów (proste powiązanie) do złożonych list, takich jak tabel danych ADO.NET (złożone powiązanie). Proste powiązanie formularzy Windows obsługuje powiązania właściwości publiczne dla prostego obiektu. Formularze Windows oparte na liście powiązań ogólnie wymaga obiekt obsługuje <xref:System.Collections.IList> interfejsu lub <xref:System.ComponentModel.IListSource> interfejsu. Ponadto są wiązane z za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnik, można powiązać obiektu, który obsługuje <xref:System.Collections.IEnumerable> interfejsu. Aby uzyskać więcej informacji na temat interfejsy dotyczące wiązania danych, zobacz [interfejsy powiązane powiązanie danych](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
+ W formularzach Windows Forms, można powiązać cały szereg struktur, od prostego obiektów (proste powiązanie) do złożonych list, takich jak tabel danych ADO.NET (złożone powiązanie). Proste powiązanie formularzy Windows obsługuje powiązania właściwości publiczne dla prostego obiektu. Formularze Windows oparte na liście powiązań ogólnie wymaga obiekt obsługuje <xref:System.Collections.IList> interfejsu lub <xref:System.ComponentModel.IListSource> interfejsu. Ponadto są wiązane z za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnik, można powiązać obiektu, który obsługuje <xref:System.Collections.IEnumerable> interfejsu. Aby uzyskać więcej informacji na temat interfejsy dotyczące wiązania danych, zobacz [interfejsy powiązane powiązanie danych](interfaces-related-to-data-binding.md).  
   
  Na poniższej liście przedstawiono struktur, że można powiązać w formularzach Windows Forms.  
   
@@ -58,6 +58,6 @@ Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzysta�
 -   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> jest dostosowany widok przedstawiający całą <xref:System.Data.DataSet>, jest odpowiednikiem <xref:System.Data.DataView>, z relacjami uwzględniony, ale. Za pomocą <xref:System.Data.DataViewManager.DataViewSettings%2A> kolekcji, można ustawić domyślne filtry i opcje sortowania dla dowolnego widoków, <xref:System.Data.DataViewManager> ma dla danej tabeli.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
+- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)

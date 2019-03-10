@@ -9,37 +9,37 @@ helpviewer_keywords:
 - forms. Help (using designer)
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
-ms.openlocfilehash: b16ba14eea68083cd7bdfc91c88375406137f450
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527226"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715311"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrowanie pomocy użytkownika z formularzami systemu Windows
-Aspekt istotnych, ale często ich tworzenia aplikacji systemu Windows jest system pomocy, jak jest to, gdzie użytkownicy Włącz Pomoc w razy pomyłek. Formularze systemu Windows obsługuje dwa rodzaje pomocy, każda z podanych przez [helpprovider — składnik](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Pierwszy obejmuje wskazanie użytkownika do pliku Pomocy HTML lub 1 pomocy HTML. *x* lub większą. Drugi można wyświetlić krótki "Co to jest"-wpisz pomocy na pojedynczych formantów; jest to szczególnie przydatne w oknach dialogowych. Na tym samym formularzu można używać obu typów pomocy.  
+Istotne, ale często zapomina aspektów tworzenia aplikacji systemu Windows to system pomocy, jak jest to, gdzie użytkownicy mogą włączyć uzyskać pomoc w razie pomyłek. Formularze Windows obsługuje dwa różne typy pomocy, każdy podał [HelpProvider, składnik](../controls/helpprovider-component-windows-forms.md). Pierwsza polega na wskazuje użytkownika do pliku Pomocy HTML lub 1 pomocy HTML. *x* lub większą. Drugi może wyświetlać krótkie "Co to jest"-wpisz Help poszczególnych formantów; jest to szczególnie przydatne w oknach dialogowych. Oba rodzaje pomocy może służyć w tym samym formularzu.  
   
- Ponadto [ToolTip — składnik](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md) może służyć do zapewnienia pomocy pojedynczych formantów na formularzach systemu Windows.  
+ Ponadto [ToolTip, składnik](../controls/tooltip-component-windows-forms.md) może służyć do zapewnienia pomocy poszczególnych kontrolek na formularzach Windows Forms.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: zapewnianie pomocy w aplikacji Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
- Wyjaśniono, jak używać `HelpProvider` składnik, aby połączyć formanty do plików w systemie pomocy.  
+ [Instrukcje: Zapewnianie pomocy w aplikacji Windows](how-to-provide-help-in-a-windows-application.md)  
+ Opis sposobu użycia `HelpProvider` składnika formanty łączy do plików w systemie pomocy.  
   
- [Instrukcje: wyświetlanie pomocy podręcznej](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- Wyjaśniono, jak używać `HelpProvider` składnik, aby wyświetlić Pomoc wyskakująca w formularzach systemu Windows.  
+ [Instrukcje: Wyświetlanie pomocy podręcznej](how-to-display-pop-up-help.md)  
+ Opis sposobu użycia `HelpProvider` składnika, aby wyświetlić Pomoc podręczną na formularzach Windows Forms.  
   
- [Pomoc do kontrolek przy użyciu etykietek narzędzi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- Zawiera opis używania `ToolTip` składnik, aby wyświetlić Pomoc dotyczącą formantu.  
+ [Pomoc do kontrolek przy użyciu etykietek narzędzi](control-help-using-tooltips.md)  
+ Opisano sposób używania `ToolTip` składnika, aby wyświetlić Pomoc dotyczącą kontroli.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [HelpProvider, składnik](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- Przedstawiono podstawowe `HelpProvider` składnika.  
+ [HelpProvider, składnik](../controls/helpprovider-component-windows-forms.md)  
+ Objaśnia podstawy `HelpProvider` składnika.  
   
- [ToolTip, składnik](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- Przedstawiono podstawowe `ToolTip` składnika.  
+ [ToolTip, składnik](../controls/tooltip-component-windows-forms.md)  
+ Objaśnia podstawy `ToolTip` składnika.  
   
- [Windows Forms — omówienie](../../../../docs/framework/winforms/windows-forms-overview.md)  
- Przedstawiono podstawowe formularzy systemu Windows.  
+ [Windows Forms — omówienie](../windows-forms-overview.md)  
+ Objaśnia podstawy formularzy Windows Forms.  
   
- [Windows Forms](../../../../docs/framework/winforms/index.md)  
- Zawiera omówienie formularzy systemu Windows.
+ [Windows Forms](../index.md)  
+ Omówienie formularzy Windows Forms.

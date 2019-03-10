@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 042861b2d79d0b638600a5463673fb922f3b4881
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: cb19dfb59ba36eea94f65005c2711ad58d098144
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664396"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717001"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Przewodnik: Implementowanie formularza korzystającego z operacji w tle
 Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytkownika (UI) przestanie odpowiadać lub "zawiesza się," można użyć <xref:System.ComponentModel.BackgroundWorker> klasy do wykonywania operacji na inny wątek.  
@@ -37,7 +37,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 -   Dodawanie raportowania postępu i obsługę anulowania  
   
- Aby uzyskać pełną listę kod używany w tym przykładzie, zobacz [jak: Implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+ Aby uzyskać pełną listę kod używany w tym przykładzie, zobacz [jak: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md).  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -79,30 +79,30 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 2.  Utwórz nową metodę o nazwie `ComputeFibonacci`, w formularzu. Ta metoda wykonuje faktyczną pracę, a zostanie ona uruchomiona w tle. Ten kod przedstawia implementację cyklicznego algorytmu Fibonacci, który jest szczególnie nieefektywne, biorąc wykładniczo dłużej, aby uzyskać większą liczbą. Służy w tym miejscu w celach ilustracyjnych, aby pokazać operacji, która może prowadzić do opóźnień w aplikacji.  
   
-     [!code-cpp[System.ComponentModel.BackgroundWorker#10](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#10)]
-     [!code-csharp[System.ComponentModel.BackgroundWorker#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#10)]
-     [!code-vb[System.ComponentModel.BackgroundWorker#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#10)]  
+     [!code-cpp[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#10)]
+     [!code-csharp[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#10)]
+     [!code-vb[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#10)]  
   
 3.  W <xref:System.ComponentModel.BackgroundWorker.DoWork> procedura obsługi zdarzeń, dodaj wywołanie do `ComputeFibonacci` metody. Wykonaj pierwszy parametr `ComputeFibonacci` z <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> właściwość <xref:System.ComponentModel.DoWorkEventArgs>. <xref:System.ComponentModel.BackgroundWorker> i <xref:System.ComponentModel.DoWorkEventArgs> parametry będzie później używane dla raportowania postępu i anulowania obsługi. Przypisz wartość zwrotną z elementu `ComputeFibonacci` do <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> właściwość <xref:System.ComponentModel.DoWorkEventArgs>. Ten wynik będzie dostępny dla <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> programu obsługi zdarzeń.  
   
     > [!NOTE]
     >  <xref:System.ComponentModel.BackgroundWorker.DoWork> Program obsługi zdarzeń nie odwołuje się `backgroundWorker1` wystąpienie zmiennej bezpośrednio, jak to będzie sprzęgnięcie ta procedura obsługi zdarzeń do określonego wystąpienia <xref:System.ComponentModel.BackgroundWorker>. Zamiast tego odwołania do <xref:System.ComponentModel.BackgroundWorker> , to zgłoszone zdarzenie jest przywracany z `sender` parametru. Jest to ważne, gdy formularz udostępnia więcej niż jedną <xref:System.ComponentModel.BackgroundWorker>. Jest również pamiętać, aby nie modyfikować żadnych obiektów interfejsu użytkownika w Twojej <xref:System.ComponentModel.BackgroundWorker.DoWork> programu obsługi zdarzeń. Zamiast tego komunikują się interfejs użytkownika za pośrednictwem <xref:System.ComponentModel.BackgroundWorker> zdarzenia.  
   
-     [!code-cpp[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#5)]
-     [!code-csharp[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
-     [!code-vb[System.ComponentModel.BackgroundWorker#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
+     [!code-cpp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#5)]
+     [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
+     [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
 4.  W `startAsyncButton` kontrolki <xref:System.Windows.Forms.Control.Click> procedura obsługi zdarzeń, Dodaj kod, który rozpoczyna operację asynchroniczną.  
   
-     [!code-cpp[System.ComponentModel.BackgroundWorker#13](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#13)]
-     [!code-csharp[System.ComponentModel.BackgroundWorker#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#13)]
-     [!code-vb[System.ComponentModel.BackgroundWorker#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#13)]  
+     [!code-cpp[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#13)]
+     [!code-csharp[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#13)]
+     [!code-vb[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#13)]  
   
 5.  W <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> procedura obsługi zdarzeń, przypisz wynik obliczenia `resultLabel` kontroli.  
   
-     [!code-cpp[System.ComponentModel.BackgroundWorker#6](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#6)]
-     [!code-csharp[System.ComponentModel.BackgroundWorker#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#6)]
-     [!code-vb[System.ComponentModel.BackgroundWorker#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#6)]  
+     [!code-cpp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#6)]
+     [!code-csharp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#6)]
+     [!code-vb[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#6)]  
   
 ## <a name="adding-progress-reporting-and-support-for-cancellation"></a>Dodawanie raportowania postępu i obsługę anulowania  
  Operacje asynchroniczne, które będzie trwać często jest pożądane, aby raport postęp dla użytkownika, aby umożliwić użytkownikowi anulować operację. <xref:System.ComponentModel.BackgroundWorker> Klasa udostępnia zdarzenia, które pozwala na publikowanie postępu jako swoje przychody operacji tła. Zapewnia także flagę, która umożliwia wywołanie w celu wykrywania kodu procesu roboczego <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> i przerwać samej sobie.  
@@ -113,32 +113,32 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 2.  Zadeklaruj dwie zmienne w `FibonacciCalculator` formularza. Będą one używane, w celu śledzenia postępu.  
   
-     [!code-cpp[System.ComponentModel.BackgroundWorker#14](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#14)]
-     [!code-csharp[System.ComponentModel.BackgroundWorker#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#14)]
-     [!code-vb[System.ComponentModel.BackgroundWorker#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#14)]  
+     [!code-cpp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#14)]
+     [!code-csharp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#14)]
+     [!code-vb[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#14)]  
   
 3.  Dodawanie obsługi zdarzeń dla <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> zdarzeń. W <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> programu obsługi zdarzeń, aktualizacja <xref:System.Windows.Forms.ProgressBar> z <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> właściwość <xref:System.ComponentModel.ProgressChangedEventArgs> parametru.  
   
-     [!code-cpp[System.ComponentModel.BackgroundWorker#7](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#7)]
-     [!code-csharp[System.ComponentModel.BackgroundWorker#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#7)]
-     [!code-vb[System.ComponentModel.BackgroundWorker#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#7)]  
+     [!code-cpp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#7)]
+     [!code-csharp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#7)]
+     [!code-vb[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#7)]  
   
 #### <a name="to-implement-support-for-cancellation"></a>Aby zaimplementować obsługę anulowania  
   
 1.  W `cancelAsyncButton` kontrolki <xref:System.Windows.Forms.Control.Click> procedura obsługi zdarzeń, Dodaj kod, który anuluje operację asynchroniczną.  
   
-     [!code-cpp[System.ComponentModel.BackgroundWorker#4](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#4)]
-     [!code-csharp[System.ComponentModel.BackgroundWorker#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#4)]
-     [!code-vb[System.ComponentModel.BackgroundWorker#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#4)]  
+     [!code-cpp[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#4)]
+     [!code-csharp[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#4)]
+     [!code-vb[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#4)]  
   
 2.  Poniższy kod fragmentów w `ComputeFibonacci` metoda raport postępu i pomoc techniczna anulowania.  
   
-     [!code-cpp[System.ComponentModel.BackgroundWorker#11](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#11)]
-     [!code-csharp[System.ComponentModel.BackgroundWorker#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#11)]
-     [!code-vb[System.ComponentModel.BackgroundWorker#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#11)]  
-    [!code-cpp[System.ComponentModel.BackgroundWorker#12](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#12)]
-    [!code-csharp[System.ComponentModel.BackgroundWorker#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#12)]
-    [!code-vb[System.ComponentModel.BackgroundWorker#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#12)]  
+     [!code-cpp[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#11)]
+     [!code-csharp[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#11)]
+     [!code-vb[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#11)]  
+    [!code-cpp[System.ComponentModel.BackgroundWorker#12](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#12)]
+    [!code-csharp[System.ComponentModel.BackgroundWorker#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#12)]
+    [!code-vb[System.ComponentModel.BackgroundWorker#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#12)]  
   
 ## <a name="checkpoint"></a>Punkt kontrolny  
  W tym momencie można skompilować i uruchomić aplikacja Kalkulator Fibonacci.  
@@ -158,17 +158,17 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
   
 -   Do debugowania aplikacji wielowątkowych, zobacz [jak: Korzystanie z okna wątków](/visualstudio/debugger/how-to-use-the-threads-window).  
   
--   Implementowanie własnego składnika, który obsługuje model programowania asynchronicznego. Aby uzyskać więcej informacji, zobacz [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+-   Implementowanie własnego składnika, który obsługuje model programowania asynchronicznego. Aby uzyskać więcej informacji, zobacz [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
     > [!CAUTION]
-    >  Korzystając z wielowątkowością jakiegokolwiek rodzaju, możesz potencjalnie się narazić na bardzo poważne i złożone usterek. Zapoznaj się z [zarządzana wątkowość najlepsze](../../../../docs/standard/threading/managed-threading-best-practices.md) przed zaimplementowaniem dowolne rozwiązanie, który używa wielowątkowości.  
+    >  Korzystając z wielowątkowością jakiegokolwiek rodzaju, możesz potencjalnie się narazić na bardzo poważne i złożone usterek. Zapoznaj się z [zarządzana wątkowość najlepsze](../../../standard/threading/managed-threading-best-practices.md) przed zaimplementowaniem dowolne rozwiązanie, który używa wielowątkowości.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
-- [Zarządzana wątkowość](../../../../docs/standard/threading/index.md)
-- [Zarządzana wątkowość — najlepsze rozwiązania](../../../../docs/standard/threading/managed-threading-best-practices.md)
-- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Zarządzana wątkowość](../../../standard/threading/index.md)
+- [Zarządzana wątkowość — najlepsze rozwiązania](../../../standard/threading/managed-threading-best-practices.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Przewodnik: Przeprowadzanie operacji w tle](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker, składnik](backgroundworker-component.md)

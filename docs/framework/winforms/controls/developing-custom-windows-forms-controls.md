@@ -5,42 +5,42 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 427a865bc9550fe489d1a1f22ea4a07b421de1fe
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3d628d75b75c311c266648886b3b971c4833d172
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442714"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716442"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework
 Kontrolek formularzy Windows Forms są składniki wielokrotnego użytku, hermetyzacji funkcjonalność interfejsu użytkownika, które są używane w aplikacjach opartych na Windows po stronie klienta. Nie tylko formularze Windows zapewnia wiele kontrolek gotowych do użycia, również udostępnia infrastrukturę do tworzenia własnych kontrolek. Można połączyć istniejące kontrolki, rozszerzanie istniejących kontrolek lub tworzyć własne niestandardowe formanty. Ta sekcja zawiera ogólne informacje i przykłady ułatwiające opracowywanie kontrolek formularzy Windows Forms.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie używania kontrolek w formularzach Windows Forms](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
+ [Omówienie używania kontrolek w formularzach Windows Forms](overview-of-using-controls-in-windows-forms.md)  
  Podświetla podstawowe elementy za pomocą formantów w aplikacjach Windows Forms.  
   
- [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)  
  W tym artykule opisano różne rodzaje Kontrolki niestandardowe można tworzyć za pomocą <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw.  
   
- [Podstawowe informacje o opracowywaniu kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
+ [Podstawowe informacje o opracowywaniu kontrolek formularzy Windows Forms](windows-forms-control-development-basics.md)  
  W tym artykule omówiono pierwszych kroków w tworzeniu formantu Windows Forms.  
   
- [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Właściwości kontrolek formularzy Windows Forms](properties-in-windows-forms-controls.md)  
  Pokazuje, jak dodać do właściwości kontrolek formularzy Windows Forms.  
   
- [Zdarzenia w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Zdarzenia w kontrolkach formularzy Windows Forms](events-in-windows-forms-controls.md)  
  Pokazuje, jak obsługiwać i definiowania zdarzenia w kontrolkach formularzy Windows Forms.  
   
- [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Atrybuty w kontrolkach formularzy Windows Forms](attributes-in-windows-forms-controls.md)  
  W tym artykule opisano atrybuty, które można zastosować do właściwości lub innym członkom swojej niestandardowych kontrolek i składników.  
   
- [Malowanie i renderowanie kontrolki niestandardowej](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
+ [Malowanie i renderowanie kontrolki niestandardowej](custom-control-painting-and-rendering.md)  
  Pokazuje, jak dostosować wygląd kontrolek.  
   
- [Układ w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
+ [Układ w kontrolkach formularzy Windows Forms](layout-in-windows-forms-controls.md)  
  Pokazuje, jak tworzyć zaawansowane układy formantów i formularze.  
   
- [Wielowątkowość w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
+ [Wielowątkowość w kontrolkach formularzy Windows Forms](multithreading-in-windows-forms-controls.md)  
  Pokazuje, jak zaimplementować formantów wielowątkowych.  
   
 ## <a name="reference"></a>Tematy pomocy  

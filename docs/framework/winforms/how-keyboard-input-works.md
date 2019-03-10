@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645486"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718028"
 ---
 # <a name="how-keyboard-input-works"></a>Działanie wprowadzania z klawiatury
-Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarzeń klawiatury w odpowiedzi na wiadomości Windows. Większość aplikacji Windows Forms przetwarzać dane wejściowe z klawiatury wyłącznie przez obsługi zdarzenia klawiatury. Jednak musisz zrozumieć, jak komunikaty klawiatury współdziałać, dzięki czemu można zaimplementować bardziej zaawansowane scenariusze wejście klawiatury, przechwytuje kluczy, zanim dotrą formantu. W tym temacie opisano typy danych klucza, formularze Windows rozpoznaje i omówiono sposób kierowania komunikaty klawiatury. Aby uzyskać informacji na temat zdarzeń klawiatury, zobacz [zdarzenia klawiatury przy użyciu](../../../docs/framework/winforms/using-keyboard-events.md).  
+Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarzeń klawiatury w odpowiedzi na wiadomości Windows. Większość aplikacji Windows Forms przetwarzać dane wejściowe z klawiatury wyłącznie przez obsługi zdarzenia klawiatury. Jednak musisz zrozumieć, jak komunikaty klawiatury współdziałać, dzięki czemu można zaimplementować bardziej zaawansowane scenariusze wejście klawiatury, przechwytuje kluczy, zanim dotrą formantu. W tym temacie opisano typy danych klucza, formularze Windows rozpoznaje i omówiono sposób kierowania komunikaty klawiatury. Aby uzyskać informacji na temat zdarzeń klawiatury, zobacz [zdarzenia klawiatury przy użyciu](using-keyboard-events.md).  
   
 ## <a name="types-of-keys"></a>Typy kluczy  
  Windows Forms identyfikuje dane wejściowe z klawiatury jako klawisza wirtualnego kody, które są reprezentowane przez operatora testu koniunkcji <xref:System.Windows.Forms.Keys> wyliczenia. Za pomocą <xref:System.Windows.Forms.Keys> wyliczania, można połączyć szereg po naciśnięciu klawiszy do wyniku w postaci pojedynczej wartości. Te wartości odpowiadają wartościom, dołączone do wiadomości przetłumaczyła i WM_SYSKEYDOWN Windows. Większości fizycznych naciśnięcia klawiszy może wykryć, obsługując <xref:System.Windows.Forms.Control.KeyDown> lub <xref:System.Windows.Forms.Control.KeyUp> zdarzenia. Klawisze stanowią podzestaw <xref:System.Windows.Forms.Keys> wyliczenie i odpowiadają wartościom, dołączone do wiadomości WM_CHAR i WM_SYSCHAR Windows. Jeśli kombinację po naciśnięciu klawiszy w wyniku znak, można wykryć znak obsługi <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Alternatywnie, można użyć <xref:Microsoft.VisualBasic.Devices.Keyboard>, uwidocznione przez interfejs programowania Visual Basic, odnajdywanie, których klucze zostały naciśnięte i Wyślij klucze. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do klawiatury](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
@@ -74,4 +74,4 @@ Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarze�
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [My.Computer.Keyboard, obiekt](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Uzyskiwanie dostępu do klawiatury](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [Używanie zdarzeń klawiatury](../../../docs/framework/winforms/using-keyboard-events.md)
+- [Używanie zdarzeń klawiatury](using-keyboard-events.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 4d000adfa02555a766410833fabe4039dd06c268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33be9d4d4e5a1aca933bb84e948b2200cd96b152
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592049"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708120"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Struktura interfejsu grafiki
 Interfejs klasy zarządzanej do [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zawiera klasy około 60, 50 wyliczeń i struktur 8. <xref:System.Drawing.Graphics> Klasa jest sercem [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funkcjonalności; jest to klasa, która faktycznie rysuje linie, krzywe, rysunki, obrazów i tekstu.  
@@ -23,6 +23,6 @@ Interfejs klasy zarządzanej do [!INCLUDE[ndptecgdiplus](../../../../includes/nd
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] definiuje kilka wyliczenia, które są kolekcjami pokrewnych stałych. Na przykład <xref:System.Drawing.Drawing2D.LineJoin> wyliczenia zawiera elementy <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, i <xref:System.Drawing.Drawing2D.LineJoin.Round>, które określą style, które mogą służyć do dołączenia do dwóch wierszy.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Grafika — omówienie](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
-- [Informacje o kodzie zarządzanym GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
-- [Używanie zarządzanych klas grafiki](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+- [Grafika — omówienie](graphics-overview-windows-forms.md)
+- [Informacje o kodzie zarządzanym GDI+](about-gdi-managed-code.md)
+- [Używanie zarządzanych klas grafiki](using-managed-graphics-classes.md)

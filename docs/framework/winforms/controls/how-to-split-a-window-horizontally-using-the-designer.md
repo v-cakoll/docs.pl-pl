@@ -6,12 +6,12 @@ helpviewer_keywords:
 - split windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: 3872a176-891f-4c70-9779-b2ce85b0b102
-ms.openlocfilehash: 3fab2eab07d9c632d10ceb06fbffcfeacfc10df1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06d20a34b01cac71e234e98cea1ede7361cac6a3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535557"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721921"
 ---
 # <a name="how-to-split-a-window-horizontally-using-the-designer"></a>Instrukcje: Dzielenie okna w poziomie przy użyciu narzędzia Projektant
 W tym przykładzie sprawia, że podziału, która dzieli <xref:System.Windows.Forms.SplitContainer> kontrolki w poziomie.  
@@ -25,4 +25,4 @@ W tym przykładzie sprawia, że podziału, która dzieli <xref:System.Windows.Fo
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer, kontrolka](splitcontainer-control-windows-forms.md)

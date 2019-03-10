@@ -2,48 +2,48 @@
 title: Kontrakt pierwszy programowanie usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373065"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721791"
 ---
 # <a name="contract-first-workflow-service-development"></a>Kontrakt pierwszy programowanie usługi przepływu pracy
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Windows Workflow Foundation (WF) lepszą integrację między usługami sieci web i przepływów pracy w formie Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu. Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia projektowanie najpierw kontrakt w kodzie. Narzędzie następnie automatycznie generuje szablon działania w przyborniku dla operacji w kontrakcie. Ten temat zawiera omówienie sposobu działania i właściwości w usłudze przepływu pracy mapowania na atrybuty kontraktu usługi. Aby uzyskać przykład krok po kroku tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu usługi, zobacz [jak: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Windows Workflow Foundation (WF) lepszą integrację między usługami sieci web i przepływów pracy w formie Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu. Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia projektowanie najpierw kontrakt w kodzie. Narzędzie następnie automatycznie generuje szablon działania w przyborniku dla operacji w kontrakcie. Ten temat zawiera omówienie sposobu działania i właściwości w usłudze przepływu pracy mapowania na atrybuty kontraktu usługi. Aby uzyskać przykład krok po kroku tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu usługi, zobacz [jak: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>W tym temacie:  
   
--   [Mapowanie atrybutów kontraktu usługi do atrybutów przepływu pracy](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [Mapowanie atrybutów kontraktu usługi do atrybutów przepływu pracy](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Atrybuty kontraktu usługi](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [Atrybuty kontraktu usługi](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [Atrybuty kontrakt operacji](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [Atrybuty kontrakt operacji](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [Atrybuty kontraktu komunikatu](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [Atrybuty kontraktu komunikatu](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Atrybuty kontraktu danych](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [Atrybuty kontraktu danych](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Atrybuty kontraktu błędów](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [Atrybuty kontraktu błędów](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Dodatkowa pomoc techniczna i informacje o implementacji](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [Dodatkowa pomoc techniczna i informacje o implementacji](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Nieobsługiwane funkcje kontraktu](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [Nieobsługiwane funkcje kontraktu](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Generowanie skonfigurowanych działań dotyczących komunikatów](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [Generowanie skonfigurowanych działań dotyczących komunikatów](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Mapowanie atrybutów kontraktu usługi do atrybutów przepływu pracy  
  Tabele w poniższych sekcjach określ różne WCF atrybutów, właściwości i jak są mapowane do obsługi komunikatów działań i właściwości w przepływie pracy z wymogiem wcześniejszego zawarcia kontraktu.  
   
--   [Atrybuty kontraktu usługi](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [Atrybuty kontraktu usługi](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [Atrybuty kontrakt operacji](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [Atrybuty kontrakt operacji](contract-first-workflow-service-development.md#OperationContract)  
   
--   [Atrybuty kontraktu komunikatu](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [Atrybuty kontraktu komunikatu](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Atrybuty kontraktu danych](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [Atrybuty kontraktu danych](contract-first-workflow-service-development.md#DataContract)  
   
--   [Atrybuty kontraktu błędów](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [Atrybuty kontraktu błędów](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Atrybuty kontraktu usługi  
   
@@ -109,9 +109,9 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Wind
   
 ## <a name="AdditionalSupport"></a> Dodatkowa pomoc techniczna i informacje o implementacji  
   
--   [Nieobsługiwane funkcje kontraktu](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [Nieobsługiwane funkcje kontraktu](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Generowanie skonfigurowanych działań dotyczących komunikatów](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [Generowanie skonfigurowanych działań dotyczących komunikatów](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Nieobsługiwane funkcje kontraktu  
   

@@ -7,59 +7,59 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: 61080643d5cacde60f5fbff35d815977a977cb65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522828"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720361"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Wprowadzenie do programowania grafiki
-W tej sekcji pokazano, jak rozpocząć korzystanie z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] w aplikacji formularzy systemu Windows. W następujących tematach opisano sposób wykonania kilku [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zadań, takich jak rysowania i wypełnianie kształty i tekst.  
+W tej sekcji pokazano, jak rozpocząć pracę z usługą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] w aplikacji Windows Forms. Poniższe tematy przedstawiają sposób wykonania kilku [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zadań, takich jak rysowanie i wypełnianie kształty i tekst.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- Przedstawia sposób tworzenia <xref:System.Drawing.Graphics> obiektu do rysowania.  
+ [Instrukcje: Tworzenie obiektów graficznych do rysowania](how-to-create-graphics-objects-for-drawing.md)  
+ Pokazuje, jak utworzyć <xref:System.Drawing.Graphics> obiektu do rysowania.  
   
- [Instrukcje: tworzenie pióra](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- Przedstawia sposób tworzenia pióra.  
+ [Instrukcje: Tworzenie pióra](how-to-create-a-pen.md)  
+ Pokazuje, jak utworzyć pióra.  
   
- [Instrukcje: ustawianie koloru pióra](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
- Pokazuje, jak można ustawić na kolor pióra.  
+ [Instrukcje: Ustawianie koloru pióra](how-to-set-the-color-of-a-pen.md)  
+ Pokazuje, jak ustawić kolor pióra.  
   
- [Instrukcje: tworzenie pędzla pełnego koloru](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
- Opisuje sposób tworzenia pędzla pełnego koloru.  
+ [Instrukcje: Utwórz pełny obiekt Brush](how-to-create-a-solid-brush.md)  
+ Opisuje sposób Tworzenie pędzla.  
   
- [Instrukcje: rysowanie linii w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- Demonstracja Rysowanie linii.  
+ [Instrukcje: Rysuj linię w formularzu Windows](how-to-draw-a-line-on-a-windows-form.md)  
+ Pokazuje, jak narysować linię.  
   
- [Instrukcje: rysowanie konturu kształtu](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
- Opisuje sposób narysować kształt.  
+ [Instrukcje: Rysowanie konturu kształtu](how-to-draw-an-outlined-shape.md)  
+ W tym artykule opisano, jak narysować kształt.  
   
- [Instrukcje: rysowanie wypełnionego prostokąta w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- Wyjaśniono, jak narysować prostokąt.  
+ [Instrukcje: Rysuj wypełniony prostokąt w formularzu Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ Wyjaśnia, jak narysować prostokąt.  
   
- [Instrukcje: rysowanie wypełnionej elipsy w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- Przedstawia sposób Rysowanie wypełnionej elipsy.  
+ [Instrukcje: Rysuj wypełnioną elipsę w formularzu Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ Pokazuje, jak rysowanie wypełnionej elipsy.  
   
- [Instrukcje: rysowanie tekstu w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- Opisuje sposób rysowania tekstu.  
+ [Instrukcje: Rysowanie tekstu w formularzu Windows](how-to-draw-text-on-a-windows-form.md)  
+ W tym artykule opisano sposób rysowania tekstu.  
   
- [Instrukcje: rysowanie pionowego tekstu w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
- Przedstawia sposób Rysowanie pionowego tekstu.  
+ [Instrukcje: Rysowanie pionowego tekstu w formularzu Windows](how-to-draw-vertical-text-on-a-windows-form.md)  
+ Pokazuje, jak rysowanie pionowego tekstu.  
   
- [Instrukcje: renderowanie obrazów za pomocą GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- Demonstracja rysowanie obrazów.  
+ [Instrukcje: Renderowanie obrazów za pomocą GDI +](how-to-render-images-with-gdi.md)  
+ Pokazuje, jak narysować obrazów.  
   
- [Instrukcje: tworzenie formularzy systemu Windows o określonych kształtach](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
- Wyjaśniono, jak zmienić kształt formularza.  
+ [Instrukcje: Tworzenie formularza Windows o określonych kształtach](how-to-create-a-shaped-windows-form.md)  
+ Wyjaśnia, jak zmienić kształt formularza.  
   
- [Instrukcje: kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- Wyjaśniono, jak kopiowanie pikseli z jednego obszaru do innego.  
+ [Instrukcje: Kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms](how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ Wyjaśnia, jak kopiowanie pikseli z jednego do drugiego.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Drawing>  
- Zawiera opis tej przestrzeni nazw i zawiera łącza do wszystkich jej członków.  
+ W tym artykule opisano w tej przestrzeni nazw i zawiera linki do wszystkich jej członków.  
   
  <xref:System.Windows.Forms>  
- Zawiera opis tej przestrzeni nazw i zawiera linki do wszystkich jej członków.
+ W tym artykule opisano w tej przestrzeni nazw i zawiera linki do wszystkich jej członków.

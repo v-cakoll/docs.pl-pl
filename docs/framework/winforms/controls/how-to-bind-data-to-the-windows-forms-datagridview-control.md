@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cbcc04625a14ebc23cacfb567951bf8f76f14985
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584060"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725106"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Instrukcje: Powiąż dane z formantu DataGridView formularzy Windows
 
-<xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje standardowy model powiązanie danych formularzy Windows, dzięki czemu można powiązać różnorodne źródła danych. Zazwyczaj można powiązać <xref:System.Windows.Forms.BindingSource> który zarządza interakcji ze źródłem danych. <xref:System.Windows.Forms.BindingSource> Mogą być dowolnego źródła danych Windows Forms, co zapewnia dużą elastyczność podczas wybierania lub modyfikowania lokalizacji usługi danych. Aby uzyskać więcej informacji o źródłach danych <xref:System.Windows.Forms.DataGridView> kontrolować obsługuje, zobacz [— informacje o formancie DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+<xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje standardowy model powiązanie danych formularzy Windows, dzięki czemu można powiązać różnorodne źródła danych. Zazwyczaj można powiązać <xref:System.Windows.Forms.BindingSource> który zarządza interakcji ze źródłem danych. <xref:System.Windows.Forms.BindingSource> Mogą być dowolnego źródła danych Windows Forms, co zapewnia dużą elastyczność podczas wybierania lub modyfikowania lokalizacji usługi danych. Aby uzyskać więcej informacji o źródłach danych <xref:System.Windows.Forms.DataGridView> kontrolować obsługuje, zobacz [— informacje o formancie DataGridView](datagridview-control-overview-windows-forms.md).  
 
 Program Visual Studio została rozbudowana Obsługa powiązanie danych z kontrolką DataGridView. Aby uzyskać więcej informacji, zobacz [jak: Powiąż dane z formantu DataGridView formularzy Windows za pomocą projektanta](bind-data-to-the-datagrid-using-the-designer.md).  
 
@@ -44,8 +44,8 @@ Aby skompilować i uruchomić ten przykład, Wklej kod do *Form1* pliku z kodem 
   
 Wypełnij `connectionString` zmiennej w przykładzie z wartościami połączenia programu SQL Server Northwind przykładowej bazy danych. Uwierzytelnianie Windows, nazywany również zabezpieczenia zintegrowane jest bardziej bezpieczny sposób łączenia z bazą danych niż przechowywanie hasła w parametrach połączenia. Aby uzyskać więcej informacji na temat zabezpieczeń połączeń, zobacz [chronić informacje o połączeniu](../../data/adonet/protecting-connection-information.md).  
 
-[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
-[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.DataGridView>

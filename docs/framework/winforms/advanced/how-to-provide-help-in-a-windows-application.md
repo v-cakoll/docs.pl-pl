@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738605"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724937"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Instrukcje: Zapewnianie pomocy w aplikacji Windows
 Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby dołączyć tematów pomocy w pliku pomocy do określonych formantów na formularzach Windows Forms. Może to być plik Pomocy HTML lub HTMLHelp 1.x lub większa formatu.  
@@ -53,10 +53,10 @@ Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby
 > [!IMPORTANT]
 >  Uważaj sprawdzić wszelkie informacje wysłane przez klienta, zanim użyjesz go w aplikacji. Złośliwi użytkownicy mogą próbować wysyłać ani wstawić skrypt pliku wykonywalnego, instrukcji SQL lub inny kod. Zanim wyświetlić dane wejściowe użytkownika, zapisz go w bazie danych lub pracować z nim Sprawdź, czy nie zawiera informacji o potencjalnie niebezpieczną. Typowym sposobem na sprawdzenie ma użyć wyrażeń regularnych do wyszukiwania słów kluczowych, takich jak "Skrypt" po otrzymaniu danych wejściowych od użytkownika.  
   
- Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby wyświetlić Pomoc podręczną, nawet jeśli jest skonfigurowany do wyświetlania plików pomocy dla formantów na formularzach Windows. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie pomocy podręcznej](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
+ Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby wyświetlić Pomoc podręczną, nawet jeśli jest skonfigurowany do wyświetlania plików pomocy dla formantów na formularzach Windows. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie pomocy podręcznej](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Wyświetlanie pomocy podręcznej](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [Pomoc do kontrolek przy użyciu etykietek narzędzi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [Integrowanie pomocy użytkownika z formularzami Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Instrukcje: Wyświetlanie pomocy podręcznej](how-to-display-pop-up-help.md)
+- [Pomoc do kontrolek przy użyciu etykietek narzędzi](control-help-using-tooltips.md)
+- [Integrowanie pomocy użytkownika z formularzami Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../index.md)

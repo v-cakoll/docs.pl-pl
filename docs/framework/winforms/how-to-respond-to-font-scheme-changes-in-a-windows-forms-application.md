@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 73a6c20f1790ca4ad1dbe331d693af2331da1ea1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682271"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715974"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Instrukcje: Reagowanie na zmiany schematu czcionek w aplikacji Windows Forms
 W systemach operacyjnych Windows użytkownik może zmienić ustawień czcionki systemowe, aby były domyślną czcionkę, są wyświetlane, większy lub mniejszy. Zmiana tych ustawień Czcionka jest krytyczny dla użytkowników, którzy niedowidzących i wymagają większej typu do odczytywania tekstu na swoich ekranach. Można dostosować aplikację Windows Forms, aby reagować na te zmiany przez zwiększenie lub zmniejszenie rozmiaru formularza i wszystkie zawarte tekstu, zawsze wtedy, gdy zmiany schematu czcionek. Jeśli chcesz, aby formularza w taki sposób, aby uwzględnić zmiany w rozmiary czcionek dynamicznie, można dodać kod do formularza.  
@@ -21,30 +21,30 @@ W systemach operacyjnych Windows użytkownik może zmienić ustawień czcionki s
   
 ### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>Użyj czcionki pulpitu i reagować na zmiany schematu czcionek  
   
-1.  Tworzenie formularza i dodać kontrolki, które mają do niego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie aplikacji programu Windows Forms z wiersza polecenia](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md) i [kontrolki do użycia w formularzach Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md).  
+1.  Tworzenie formularza i dodać kontrolki, które mają do niego. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie aplikacji programu Windows Forms z wiersza polecenia](how-to-create-a-windows-forms-application-from-the-command-line.md) i [kontrolki do użycia w formularzach Windows Forms](./controls/controls-to-use-on-windows-forms.md).  
   
 2.  Dodaj odwołanie do <xref:Microsoft.Win32> przestrzeni nazw w kodzie.  
   
-     [!code-csharp[WinFormsAutoScaling#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
-     [!code-vb[WinFormsAutoScaling#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
+     [!code-csharp[WinFormsAutoScaling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
+     [!code-vb[WinFormsAutoScaling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
 3.  Dodaj następujący kod do konstruktora formularza można dołączyć procedury obsługi zdarzeń wymagane i zmieniać domyślną czcionkę używaną do formularza.  
   
-     [!code-csharp[WinFormsAutoScaling#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
-     [!code-vb[WinFormsAutoScaling#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
+     [!code-csharp[WinFormsAutoScaling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
+     [!code-vb[WinFormsAutoScaling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
 4.  Implementowanie obsługi dla <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzeń, który powoduje, że formularza w celu automatycznego skalowania podczas <xref:Microsoft.Win32.UserPreferenceCategory.Window> zmian kategorii.  
   
-     [!code-csharp[WinFormsAutoScaling#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
-     [!code-vb[WinFormsAutoScaling#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
+     [!code-csharp[WinFormsAutoScaling#4](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
+     [!code-vb[WinFormsAutoScaling#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
 5.  Na koniec zaimplementować funkcję obsługi <xref:System.Windows.Forms.Form.FormClosing> zdarzenia, które powoduje odłączenie <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> programu obsługi zdarzeń.  
   
      > [!IMPORTANT]
      > Niepodanie tego kodu spowoduje, że aplikacja do wycieku pamięci.  
   
-     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
-     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
 6.  Skompiluj i uruchom kod.  
   
@@ -59,11 +59,11 @@ W systemach operacyjnych Windows użytkownik może zmienić ustawień czcionki s
      Można zauważyć, że formularz teraz w przypadku środowiska wykonawczego zmiany schematu czcionek pulpitu. Gdy użytkownik zmieni się między **normalny**, **duży rozmiar czcionki**, i **dodatkowe duży rozmiar czcionki**, formularz zmieni się czcionka i skaluje się poprawnie.  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
- [!code-vb[WinFormsAutoScaling#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
+ [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
+ [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
  Constructer w tym przykładzie kod zawiera wywołanie `InitializeComponent`, który jest zdefiniowany, tworząc nowy projekt Windows Forms w programie Visual Studio. Usuń ten wiersz kodu, jeśli tworzysz aplikację w wierszu polecenia.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
-- [Automatyczne skalowanie w formularzach Windows Forms](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)
+- [Automatyczne skalowanie w formularzach Windows Forms](automatic-scaling-in-windows-forms.md)

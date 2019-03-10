@@ -5,12 +5,12 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 0afc1aba32852406b975cc65ab4d4bff334d3ff7
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 504a2396902fecf2ac17c2db434fef68ff2ece45
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745466"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723663"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer — Formant (Formularze systemu Windows)
 Formularze Windows `SplitContainer` kontrolki mogą być uważane za złożonego, a dwa panele rozdzielone ruchome paska. Gdy wskaźnik myszy znajduje się nad paskiem, kursor zmienia kształt, aby pokazać, że pasek jest ruchomy.  
@@ -21,16 +21,16 @@ Formularze Windows `SplitContainer` kontrolki mogą być uważane za złożonego
  `SplitContainer` Kontroli pozwala na tworzenie interfejsów użytkownika złożonych; często wybór w jeden panel Określa, jakie obiekty są wyświetlane w innych panelu. Taki układ jest bardzo skuteczny sposób na wyświetlanie i informacji o przeglądaniu. Istnienie dwa panele umożliwiają agregują informacje w obszarach i słupka lub "podziału," ułatwia użytkownikom zmieniać rozmiar paneli.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [SplitContainer, kontrolka — omówienie](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
+ [SplitContainer, kontrolka — omówienie](splitcontainer-control-overview-windows-forms.md)  
  Wprowadza `SplitContainer` kontroli i zawiera opis często używanych właściwości, metody i zdarzenia.  
   
- [Instrukcje: Definiowanie zmieniania rozmiaru i pozycjonowania zachowania w podzielonym oknie](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [Instrukcje: Definiowanie zmieniania rozmiaru i pozycjonowania zachowania w podzielonym oknie](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
  W tym artykule opisano sposób kontrolowania podziału w ramach `SplitContainer` kontroli.  
   
- [Instrukcje: Dzielenie okna w poziomie](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
+ [Instrukcje: Dzielenie okna w poziomie](how-to-split-a-window-horizontally.md)  
  W tym artykule opisano sposób kontrolowania orientacji rozdzielacza w ramach `SplitContainer` kontroli.  
   
- [Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Tworzy interfejs użytkownika wielu okienko, który jest podobny do tego użyć programu Microsoft Outlook.  
   
  Zobacz też [jak: Dzielenie okna w poziomie za pomocą projektanta](how-to-split-a-window-horizontally-using-the-designer.md), [jak: Tworzenie interfejsu w stylu Eksploratora Windows na formularzu Windows](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), [jak: Tworzenie złożonego interfejsu użytkownika za pomocą interfejsu Windows Forms przy użyciu narzędzia Projektant](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
@@ -40,8 +40,8 @@ Formularze Windows `SplitContainer` kontrolki mogą być uważane za złożonego
  Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Kontrolki formularzy Windows Forms](index.md)  
  Zawiera łącza do tematów dotyczących kontrolek, zaprojektowany specjalnie w celu pracy z formularzami Windows Forms.  
   
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.

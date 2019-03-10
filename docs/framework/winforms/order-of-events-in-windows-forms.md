@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a88fd7b912063af5961a2bb366b42b0f67411f5f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643965"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720297"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Kolejność zdarzeń w formularzach systemu Windows
-Kolejność, w której zdarzenia są wywoływane w aplikacjach Windows Forms ma szczególne znaczenie dla deweloperów zaniepokojona obsługi, każde z tych wydarzeń z kolei. Rozwiązania wymaga dokładnych obsługi zdarzeń, takich jak kiedy są odświeżanie części formularza, niezbędne jest rozpoznawanie dokładne kolejność, w której zdarzenia są wywoływane w czasie wykonywania. Ten temat zawiera kilka szczegółów rzędu kilku zdarzeń kilku etapach ważne w okresie istnienia aplikacji i formantów. Aby uzyskać szczegółowe informacje na temat kolejności zdarzeń wejściowych myszy zobacz [zdarzeń myszy w formularzach Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Aby uzyskać przegląd zdarzeń w formularzach Windows Forms, zobacz [Przegląd zdarzeń](../../../docs/framework/winforms/events-overview-windows-forms.md). Aby uzyskać szczegółowe informacje o korzeń procedury obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+Kolejność, w której zdarzenia są wywoływane w aplikacjach Windows Forms ma szczególne znaczenie dla deweloperów zaniepokojona obsługi, każde z tych wydarzeń z kolei. Rozwiązania wymaga dokładnych obsługi zdarzeń, takich jak kiedy są odświeżanie części formularza, niezbędne jest rozpoznawanie dokładne kolejność, w której zdarzenia są wywoływane w czasie wykonywania. Ten temat zawiera kilka szczegółów rzędu kilku zdarzeń kilku etapach ważne w okresie istnienia aplikacji i formantów. Aby uzyskać szczegółowe informacje na temat kolejności zdarzeń wejściowych myszy zobacz [zdarzeń myszy w formularzach Windows Forms](mouse-events-in-windows-forms.md). Aby uzyskać przegląd zdarzeń w formularzach Windows Forms, zobacz [Przegląd zdarzeń](events-overview-windows-forms.md). Aby uzyskać szczegółowe informacje o korzeń procedury obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](event-handlers-overview-windows-forms.md).  
   
 ## <a name="application-startup-and-shutdown-events"></a>Uruchamianie aplikacji i zamykania  
  <xref:System.Windows.Forms.Form> i <xref:System.Windows.Forms.Control> klasy udostępnić zestaw zdarzeń związanych z aplikacji, uruchamiania i zamykania. Po uruchomieniu aplikacji Windows Forms zdarzenia uruchamiania formularza głównego są wywoływane w następującej kolejności:  
@@ -81,4 +81,4 @@ Kolejność, w której zdarzenia są wywoływane w aplikacjach Windows Forms ma 
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](creating-event-handlers-in-windows-forms.md)

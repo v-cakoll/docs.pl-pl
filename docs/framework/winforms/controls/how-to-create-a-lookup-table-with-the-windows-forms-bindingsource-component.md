@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539899"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723923"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Instrukcje: Tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy Windows Forms
 Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która wyświetla dane z rekordów w powiązanej tabeli. W poniższych procedurach <xref:System.Windows.Forms.ComboBox> formantu służy do wyświetlania pól z relacji klucza obcego z obiektu nadrzędnego do tabeli podrzędnej.  
@@ -35,7 +35,7 @@ Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która
   
  W tym scenariuszu jednej tabeli, CustomersTable, przechowuje aktualne informacje, które chcesz wyświetlić, a następnie zapisz. Ale aby zaoszczędzić przestrzeń, tabeli powoduje, że dane, które dodaje przejrzystości. Drugiej tabeli OrdersTable, zawiera tylko informacje związane z wygląd, o których odbiorcy numer identyfikacyjny jest odpowiednikiem których data zamówienia i kolejność identyfikatora. Nie wymieniono nazwy klientów nie istnieje.  
   
- Cztery ważne właściwości są ustawione na [ComboBox, kontrolka](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) kontroli można utworzyć tabeli odnośników.  
+ Cztery ważne właściwości są ustawione na [ComboBox, kontrolka](combobox-control-windows-forms.md) kontroli można utworzyć tabeli odnośników.  
   
 -   <xref:System.Windows.Forms.ComboBox.DataSource%2A> Właściwość zawiera nazwę tabeli.  
   
@@ -53,7 +53,7 @@ Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która
   
      Ta kontrolka będzie wyświetlać kolumny z tabeli nadrzędnej.  
   
-2.  Przeciągnij inne kontrolki, aby wyświetlić szczegółowe informacje z tabeli podrzędnej. Format danych w tabeli należy określić, które kontrolki, możesz wybrać. Aby uzyskać więcej informacji, zobacz [formantów formularzy Windows za pomocą funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  Przeciągnij inne kontrolki, aby wyświetlić szczegółowe informacje z tabeli podrzędnej. Format danych w tabeli należy określić, które kontrolki, możesz wybrać. Aby uzyskać więcej informacji, zobacz [formantów formularzy Windows za pomocą funkcji](windows-forms-controls-by-function.md).  
   
 3.  Przeciągnij <xref:System.Windows.Forms.BindingNavigator> formant na formularzu; to umożliwia nawigowanie po danych w tabeli podrzędnej.  
   
@@ -93,6 +93,6 @@ Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [ComboBox, kontrolka](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [BindingSource, składnik](bindingsource-component.md)
+- [ComboBox, kontrolka](combobox-control-windows-forms.md)
 - [Wiązanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

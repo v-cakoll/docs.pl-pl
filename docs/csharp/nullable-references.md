@@ -2,12 +2,12 @@
 title: Typy dopuszczające wartości null odwołań
 description: Ten artykuł zawiera omówienie typów referencyjnych dopuszczającego wartość null, dodane w C# 8. Dowiesz się, jak ta funkcja zapewnia zabezpieczenie przed wyjątków odwołanie o wartości null dla nowych i istniejących projektów.
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203278"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725028"
 ---
 # <a name="nullable-reference-types"></a>Typy dopuszczające wartości null odwołań
 
@@ -41,7 +41,7 @@ Kompilator używa analizy statycznej, aby określić, czy odwołanie dopuszczaj�
 name!.Length;
 ```
 
-Można znaleźć szczegółowe informacje dotyczące tego operatora w [wersję roboczą typy dopuszczające wartości null odwołań](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) propozycji specyfikację w witrynie GitHub.
+Można znaleźć szczegółowe informacje dotyczące tego operatora w [wersję roboczą typy dopuszczające wartości null odwołań](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) propozycji specyfikację w witrynie GitHub.
 
 ## <a name="nullability-of-types"></a>Dopuszczanie wartości null dla typów
 

@@ -1,19 +1,19 @@
 ---
-title: Argumenty i zmienne
+title: Zmienne i argumenty
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520110"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717820"
 ---
-# <a name="variables-and-arguments"></a>Argumenty i zmienne
-W systemie Windows Workflow Foundation (WF), zmienne reprezentują magazynu danych i argumenty reprezentują przepływ danych do i z działania. Działanie ma zestaw argumentów i tworzą one podpisu działania. Ponadto działania można zachować listę zmiennych, których projektant można dodawać i usuwać zmienne podczas projektowania przepływu pracy. Argument jest powiązany za pomocą wyrażenia, która nie zwraca wartości.  
+# <a name="variables-and-arguments"></a>Zmienne i argumenty
+W Windows Workflow Foundation (WF), zmienne reprezentują przechowywania danych i argumenty reprezentują przepływ danych do i z działania. Działanie ma zestawu argumentów i stanowią one podpis działania. Ponadto działanie może zachować listę zmiennych, do których Deweloper można dodawać i usuwać zmiennych podczas projektowania przepływu pracy. Argument jest powiązany za pomocą wyrażenia, która nie zwraca wartości.  
   
 ## <a name="variables"></a>Zmienne  
- Zmienne są lokalizacje magazynu dla danych. Zmienne są deklarowane jako część definicji przepływu pracy. Zmienne Przełącz wartości w czasie wykonywania, a te wartości są przechowywane w ramach stanu wystąpienia przepływu pracy. Definicja zmiennej określa typu zmienną, i opcjonalnie nazwy. Poniższy kod przedstawia sposób zadeklarować zmiennej, przypisywanie wartości do niej przy użyciu <xref:System.Activities.Statements.Assign%601> działania, a następnie wyświetl jego wartość przy użyciu konsoli <xref:System.Activities.Statements.WriteLine> działania.  
+ Zmienne są lokalizacje magazynu dla danych. Zmienne są deklarowane jako część definicji przepływu pracy. Zmienne przyjmą wartości w czasie wykonywania, a te wartości są przechowywane jako część stanu wystąpienia przepływu pracy. Definicja zmiennej określa typ zmiennej, i opcjonalnie nazwy. Poniższy kod pokazuje sposób deklarowania zmiennych, przypisz wartości do niego przy użyciu <xref:System.Activities.Statements.Assign%601> działania, a następnie wyświetl jego wartość za pomocą konsoli <xref:System.Activities.Statements.WriteLine> działania.  
   
 ```csharp  
 // Define a variable named "str" of type string.  
@@ -44,7 +44,7 @@ Activity wf = new Sequence()
 WorkflowInvoker.Invoke(wf);  
 ```  
   
- Opcjonalnie można określić wyrażenie wartości domyślnej w ramach deklaracji zmiennej. Zmienne można również mieć modyfikatorów. Na przykład jeśli zmienna jest tylko do odczytu, a następnie tylko do odczytu <xref:System.Activities.VariableModifiers> modyfikator mogą być stosowane. W poniższym przykładzie utworzono zmiennej tylko do odczytu, która ma przypisaną wartość domyślną.  
+ Opcjonalnie można określić wyrażenie wartości domyślnej jako część deklaracji zmiennej. Zmienne również może mieć modyfikatorów. Aby uzyskać przykład, jeśli zmienna jest tylko do odczytu, a następnie tylko do odczytu <xref:System.Activities.VariableModifiers> modyfikator mogą być stosowane. W poniższym przykładzie utworzono zmiennej tylko do odczytu, która ma przypisaną wartość domyślną.  
   
 ```csharp  
 // Define a read-only variable with a default value.  
@@ -55,24 +55,24 @@ Variable<string> var = new Variable<string>
 };  
 ```  
   
-## <a name="variable-scoping"></a>Zakres zmiennej  
- Okres istnienia zmienną w czasie wykonywania jest równa okres istnienia działania, który deklaruje go. Po zakończeniu działania, zmienne są wyczyszczone, a nie może być przywoływany.  
+## <a name="variable-scoping"></a>Zmienna zakresu  
+ Okres istnienia zmiennej w czasie wykonywania jest równy okres istnienia działania, który deklaruje ją. Po ukończeniu działania swoje zmienne są wyczyszczone, a nie będzie można się odwoływać.  
   
 ## <a name="arguments"></a>Argumenty  
- Autorzy działania używać argumentów do definiowania danych sposób przepływy do i z działania. Każdy argument ma kierunek określony: <xref:System.Activities.ArgumentDirection.In>, <xref:System.Activities.ArgumentDirection.Out>, lub <xref:System.Activities.ArgumentDirection.InOut>.  
+ Autorzy działania używać argumentów do definiowania danych sposób przepływy do i z działania. Każdy argument ma określony kierunek: <xref:System.Activities.ArgumentDirection.In>, <xref:System.Activities.ArgumentDirection.Out>, lub <xref:System.Activities.ArgumentDirection.InOut>.  
   
- Środowiska uruchomieniowego przepływu pracy wykonuje następujące gwarancje o czas przenoszenia danych do i z działania:  
+ Środowisko wykonawcze przepływów pracy zapewnia następujące gwarancje, dotyczące czas przenoszenia danych do i z działań:  
   
-1.  Po uruchomieniu działania wykonywane są obliczane wartości wszystkich argumentów wejściowych i operacjami wejścia/wyjścia. Na przykład, niezależnie od tego, kiedy <xref:System.Activities.Argument.Get%2A> jest wywoływana, zwracana wartość jest obliczana co w czasie wykonywania przed jej wywołanie `Execute`.  
+1.  Po uruchomieniu działania wykonywania jest obliczany wartości wszystkich argumentów wejściowych i wejścia/wyjścia. Na przykład, niezależnie od tego, kiedy <xref:System.Activities.Argument.Get%2A> jest wywoływana, wartość zwracana jest ten, który jest obliczana przez środowisko wykonawcze przed jej wywołanie `Execute`.  
   
 2.  Gdy <xref:System.Activities.InOutArgument%601.Set%2A> jest wywoływana, środowisko uruchomieniowe ustawia wartość natychmiast.  
   
-3.  Opcjonalnie może mieć argumentów ich <xref:System.Activities.Argument.EvaluationOrder%2A> określony. <xref:System.Activities.Argument.EvaluationOrder%2A> jest liczony od zera wartość, która określa kolejność, w jakiej są oceniane argument. Domyślnie kolejność obliczania argumentu nie jest określona i jest równa <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> wartość. Ustaw <xref:System.Activities.Argument.EvaluationOrder%2A> na wartość większą lub równą zero, aby określić kolejność obliczania dla tego argumentu. Windows Workflow Foundation oblicza argumentów, których kolejność obliczania określony w kolejności rosnącej. Należy pamiętać, że argumenty z kolejnością obliczania nieokreślony są oceniane przed elementami z kolejnością obliczania określony.  
+3.  Argumenty mogą opcjonalnie mieć ich <xref:System.Activities.Argument.EvaluationOrder%2A> określony. <xref:System.Activities.Argument.EvaluationOrder%2A> jest liczony od zera wartość, która określa kolejność szacowania argumentu. Domyślnie kolejność oceny argument jest nieokreślony i jest równa <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> wartość. Ustaw <xref:System.Activities.Argument.EvaluationOrder%2A> na wartość większą lub równą zero, aby określić kolejność obliczania dla tego argumentu. Windows Workflow Foundation ocenia argumenty w kolejności określonej wersji ewaluacyjnej, w kolejności rosnącej. Należy pamiętać, że argumenty z kolejnością nieokreślony oceny są obliczane przed elementami o kolejność oceny określonej.  
   
- Przez autora działania można używać mechanizmu jednoznacznie udostępnianie argumenty. Jest to osiągane przez deklarowanie właściwości typu <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, i <xref:System.Activities.InOutArgument%601>. Dzięki temu przez autora działania nawiązać z określonym kontraktem o danych, przechodząc do i z działania.  
+ Autor aktywności można użyć silnie typizowane mechanizm do udostępniania jej argumentów. Jest to realizowane przez zadeklarowanie właściwości typu <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, i <xref:System.Activities.InOutArgument%601>. Dzięki temu Autor działania ustalenie określonej umowy o dane przesyłane do i z działania.  
   
 ### <a name="defining-the-arguments-on-an-activity"></a>Definiowanie argumenty w działaniu  
- Argumenty można zdefiniować w działaniu, określając właściwości typu <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, i <xref:System.Activities.InOutArgument%601>. Poniższy kod przedstawia sposób definiowania argumenty `Prompt` działania, która przyjmuje w ciągu do wyświetlenia dla użytkownika i zwraca ciąg zawierający odpowiedzi użytkownika.  
+ Argumenty można zdefiniować w działaniu, określając właściwości typu <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, i <xref:System.Activities.InOutArgument%601>. Poniższy kod przedstawia sposób definiowania argumenty `Prompt` działanie, które przyjmuje w ciągu do wyświetlania użytkownikowi i zwraca ciąg, który zawiera odpowiedź użytkownika.  
   
 ```csharp  
 public class Prompt : Activity  
@@ -84,10 +84,10 @@ public class Prompt : Activity
 ```  
   
 > [!NOTE]
->  Działania, które zwraca pojedynczą wartość może pochodzić od <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601>, lub <xref:System.Activities.CodeActivity%601>. Te działania mają dobrze zdefiniowanego <xref:System.Activities.OutArgument%601> o nazwie <xref:System.Activities.Activity%601.Result%2A> zawiera wartość zwracaną przez działanie.  
+>  Działania, które zwraca pojedynczą wartość może pochodzić z <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601>, lub <xref:System.Activities.CodeActivity%601>. Te działania muszą być dobrze zdefiniowane <xref:System.Activities.OutArgument%601> o nazwie <xref:System.Activities.Activity%601.Result%2A> zawierający wartość zwracaną przez działanie.  
   
-### <a name="using-variables-and-arguments-in-workflows"></a>Używanie zmiennych i argumenty w przepływach pracy  
- W poniższym przykładzie pokazano, jak argumenty i zmienne są używane w przepływie pracy. Przepływ pracy jest sekwencji, który deklaruje trzy zmienne: `var1`, `var2`, i `var3`. Pierwsze działanie w przepływie pracy jest `Assign` działania, która przypisuje wartość zmiennej `var1` do zmiennej `var2`. Następuje to `WriteLine` działanie, które wartości `var2` zmiennej. Następnie jest inny `Assign` działania, która przypisuje wartość zmiennej `var2` do zmiennej `var3`. Na koniec istnieje inny `WriteLine` działanie, które wartości `var3` zmiennej. Pierwszy `Assign` używa działania `InArgument<string>` i `OutArgument<string>` obiekty reprezentujące jawnie powiązań dla argumentów działania. `InArgument<string>` Służy do <xref:System.Activities.Statements.Assign.Value%2A> , ponieważ wartość wejściowa jest do <xref:System.Activities.Statements.Assign%601> działania za pomocą jego <xref:System.Activities.Statements.Assign.Value%2A> argumentu, i `OutArgument<string>` służy do <xref:System.Activities.Statements.Assign.To%2A> , ponieważ wartość jest wynikających z <xref:System.Activities.Statements.Assign.To%2A> argument do zmiennej. Drugi `Assign` działania wykonuje ten sam efekt z więcej compact ale równoważne składnię, która używa niejawnego rzutowania. `WriteLine` Działań również użyć zwięzłą składnią.  
+### <a name="using-variables-and-arguments-in-workflows"></a>Używanie zmienne i argumenty w przepływach pracy  
+ Poniższy przykład pokazuje, jak zmienne i argumenty są używane w przepływie pracy. Przepływ pracy jest sekwencji, która deklaruje trzy zmienne: `var1`, `var2`, i `var3`. Pierwsze działanie w przepływie pracy jest `Assign` działanie, które przypisuje wartość zmiennej `var1` do zmiennej `var2`. Następuje to `WriteLine` działań, która drukuje wartość `var2` zmiennej. Następnie jest kolejnym `Assign` działanie, które przypisuje wartość zmiennej `var2` do zmiennej `var3`. Na koniec istnieje inny `WriteLine` działań, która drukuje wartość `var3` zmiennej. Pierwszy `Assign` używa działania `InArgument<string>` i `OutArgument<string>` obiekty reprezentujące jawnie powiązania dla argumentów tego działania. `InArgument<string>` Służy do <xref:System.Activities.Statements.Assign.Value%2A> ponieważ wartość będą przepływać do <xref:System.Activities.Statements.Assign%601> działania za pośrednictwem jego <xref:System.Activities.Statements.Assign.Value%2A> argument i `OutArgument<string>` służy do <xref:System.Activities.Statements.Assign.To%2A> ponieważ wartość będą przepływać z <xref:System.Activities.Statements.Assign.To%2A> argument do zmiennej. Drugi `Assign` działanie wykonuje ten sam efekt więcej compact ale równoważne składnia, która używa niejawnego rzutowania. `WriteLine` Działania również użyć zwięzłą składnią.  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  
@@ -122,8 +122,8 @@ Activity wf = new Sequence
 WorkflowInvoker.Invoke(wf);  
 ```  
   
-### <a name="using-variables-and-arguments-in-code-based-activities"></a>Użycie zmiennych i argumentów działania oparte na kodzie  
- W powyższym przykładzie pokazano sposób użycia argumentów i zmiennych w przepływach pracy i deklaratywne działań. Argumenty i zmienne są również używane w działaniach opartej na kodzie. Koncepcyjnie jest bardzo podobne. Zmienne reprezentują magazynu danych w ramach działania i argumenty reprezentują przepływ danych do lub z działania i są powiązane przez autora przepływu pracy do innych zmiennych lub argumentów w przepływie pracy reprezentujące, w którym dane przepływają do lub z. Get lub zestaw, który należy użyć wartości zmiennej lub argumentu w działaniu, kontekst działania reprezentujący aktualnego środowiska wykonawczego działania. To jest przekazywany do <xref:System.Activities.CodeActivity%601.Execute%2A> metody działania przez środowisko wykonawcze przepływu pracy. W tym przykładzie niestandardowego `Add` zdefiniowano zawiera dwa działania <xref:System.Activities.ArgumentDirection.In> argumentów. Aby uzyskać dostęp do wartości argumentów <xref:System.Activities.Argument.Get%2A> metoda jest używana i jest używany w kontekście, który został przekazany w czasie wykonywania przepływu pracy.  
+### <a name="using-variables-and-arguments-in-code-based-activities"></a>Za pomocą zmienne i argumenty w działaniach oparte na kodzie  
+ Sposób używania argumentów i zmiennych w przepływach pracy i deklaratywne działania można znaleźć w poprzednich przykładach. Zmienne i argumenty są również używane w działaniach oparte na kodzie. Koncepcyjnie użycie jest bardzo podobne. Zmienne reprezentowania magazynu danych w ramach działania, a argumenty reprezentują przepływ danych do lub z działalności i są powiązane reprezentujące, gdzie dane są wczytywane do lub z innych zmienne i argumenty w przepływie pracy Autor przepływu pracy. Do pobierania lub zestaw, który należy użyć wartości zmiennej lub argumentu w działaniu, kontekst działania reprezentujący bieżące środowisko wykonywania działania. Te informacje są przekazywane do <xref:System.Activities.CodeActivity%601.Execute%2A> sposób działania w czasie wykonywania przepływu pracy. W tym przykładzie niestandardową `Add` działania jest zdefiniowany, który ma dwa <xref:System.Activities.ArgumentDirection.In> argumentów. Aby uzyskać dostęp do wartości argumentów, <xref:System.Activities.Argument.Get%2A> metoda jest używana i jest używany w kontekście, która została przekazana przez środowisko wykonawcze przepływów pracy.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Aby uzyskać więcej informacji na temat pracy z argumentami, zmienne i wyrażenia w kodzie, zobacz [tworzenia przepływów pracy, działań i kod Imperatywne przy użyciu wyrażenia](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) i [wymaganych argumentów i przeciążenia grup](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Aby uzyskać więcej informacji na temat pracy z argumentami, zmienne i wyrażenia w kodzie, zobacz [tworzenia przepływów pracy, działań i wyrażeń przy użyciu technologii kodu](authoring-workflows-activities-and-expressions-using-imperative-code.md) i [wymagane argumenty i grupy przeciążenia](required-arguments-and-overload-groups.md).

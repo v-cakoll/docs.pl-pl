@@ -13,30 +13,30 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: 2a525f72-0245-41d7-94e9-b9c971dc4484
-ms.openlocfilehash: f87d76d4215d7d944b465b47113cf7cb24473df3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d24a25a0b033caeb165566eb0dc5a2e189a8d4a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525591"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724430"
 ---
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox — Formant (Formularze systemu Windows)
-Formularze systemu Windows `CheckedListBox` kontroli Wyświetla listę elementów, jak <xref:System.Windows.Forms.ListBox> kontroli, a także wyświetlić znacznik wyboru obok elementów na liście.  
+Formularze Windows `CheckedListBox` kontrolka Wyświetla listę elementów, takie jak <xref:System.Windows.Forms.ListBox> sterowania, a także można wyświetlić znacznik wyboru obok elementów na liście.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [CheckedListBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
+ [CheckedListBox, kontrolka — omówienie](checkedlistbox-control-overview-windows-forms.md)  
+ Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
- [Instrukcje: określanie zaznaczonych elementów w kontrolce CheckedListBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
- Opisuje sposób krok za pomocą listy, aby określić elementy, które są sprawdzane.  
+ [Instrukcje: Określić elementów jako zaznaczone w formancie CheckedListBox formularzy Windows](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
+ Opisuje sposób przejrzeć listę, aby określić, które elementy są zaznaczone.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.CheckedListBox> Klasy  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ <xref:System.Windows.Forms.CheckedListBox> Klasa  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Zawiera listę czynności, które można wykonywać z pola listy, pola kombi i pól listy zaznaczenia.  
+ [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)  
+ Lista rzeczy, które można zrobić za pomocą pola listy, pola kombi i pól listy zaznaczone.  
   
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.

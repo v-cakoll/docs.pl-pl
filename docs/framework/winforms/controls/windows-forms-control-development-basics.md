@@ -6,19 +6,19 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: b40c45905c65cdc40d77553a93e83aa417199826
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643560"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723074"
 ---
 # <a name="windows-forms-control-development-basics"></a>Podstawowe informacje o opracowywaniu formantów formularzy systemu Windows
 Formant programu Windows Forms jest klasa, która pochodzi bezpośrednio lub pośrednio z <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Na poniższej liście opisano typowe scenariusze dotyczące tworzenia kontrolek formularzy Windows Forms:  
   
 -   Łączenie istniejących kontroluje tworzenie formantu złożonego.  
   
-     Formanty złożone hermetyzują interfejs użytkownika, które mogą być ponownie używane jako formant programu. Przykład formantu złożonego jest formant, który składa się z pola tekstowego i przycisku resetowania. Projektanci wizualni oferują szeroką obsługę tworzenia złożonych kontrolek. Tworzenie kontrolki złożonej, pochodzi od <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. Klasa bazowa <xref:System.Windows.Forms.UserControl> zapewnia routing klawiatury dla podrzędnych kontrolki i umożliwia formanty podrzędne do działania w formie grupy. Aby uzyskać więcej informacji, zobacz [opracowywanie złożonej kontrolki formularzy Windows](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
+     Formanty złożone hermetyzują interfejs użytkownika, które mogą być ponownie używane jako formant programu. Przykład formantu złożonego jest formant, który składa się z pola tekstowego i przycisku resetowania. Projektanci wizualni oferują szeroką obsługę tworzenia złożonych kontrolek. Tworzenie kontrolki złożonej, pochodzi od <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. Klasa bazowa <xref:System.Windows.Forms.UserControl> zapewnia routing klawiatury dla podrzędnych kontrolki i umożliwia formanty podrzędne do działania w formie grupy. Aby uzyskać więcej informacji, zobacz [opracowywanie złożonej kontrolki formularzy Windows](developing-a-composite-windows-forms-control.md).  
   
 -   Rozszerzanie istniejącej kontrolki, zgodnie z własnymi lub dodać do jego funkcji.  
   
@@ -26,12 +26,12 @@ Formant programu Windows Forms jest klasa, która pochodzi bezpośrednio lub po�
   
 -   Tworzenie formantu, która nie ma połączyć lub rozszerzanie istniejących kontrolek.  
   
-     W tym scenariuszu dziedziczyć kontroli nad klasy bazowej <xref:System.Windows.Forms.Control>. Można dodać również jak zastąpić właściwości, metod i zdarzeń klasy podstawowej. Aby rozpocząć pracę, zobacz [jak: Tworzenie kontrolki formularzy Windows proste](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+     W tym scenariuszu dziedziczyć kontroli nad klasy bazowej <xref:System.Windows.Forms.Control>. Można dodać również jak zastąpić właściwości, metod i zdarzeń klasy podstawowej. Aby rozpocząć pracę, zobacz [jak: Tworzenie kontrolki formularzy Windows proste](how-to-develop-a-simple-windows-forms-control.md).  
   
  Klasa bazowa dla kontrolek Windows Forms, <xref:System.Windows.Forms.Control>, zapewnia podstawami wymagane dla wizualizacji do wyświetlenia w aplikacji klienta Windows. <xref:System.Windows.Forms.Control> zapewnia uchwyt okna, obsługuje routing komunikatów i udostępnia zdarzenia interfejsu zdarzeń klawiatury oraz myszy, a także wiele innych użytkowników. Zapewnia zaawansowane układ i zawiera właściwości specyficzne dla wizualizacji do wyświetlenia, takie jak <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>i wiele innych. Ponadto udostępnia zabezpieczenia, wątki, pomocy technicznej i współdziałania z kontrolki ActiveX. Ponieważ tak wiele infrastruktury jest dostarczany przez klasę bazową, jest stosunkowo łatwa do opracowywania własnych kontrolek Windows Forms.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [Opracowywanie złożonej kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
-- [Instrukcje: Utwórz formant programu Windows Forms pokazującej postęp](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)
-- [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](how-to-develop-a-simple-windows-forms-control.md)
+- [Opracowywanie złożonej kontrolki formularzy Windows Forms](developing-a-composite-windows-forms-control.md)
+- [Instrukcje: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)

@@ -2,12 +2,12 @@
 title: Uczestnicy stanów trwałych
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569508"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723767"
 ---
 # <a name="persistence-participants"></a>Uczestnicy stanów trwałych
 Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwolone przez aplikację hosta. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, którego można użyć do utworzenia uczestnika stanów trwałych. Uczestnika stanów trwałych pochodzi z jednej z tych klas, implementuje metody zainteresowań, a następnie dodaje wystąpienie klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może poszukaj takie rozszerzenia przepływu pracy po przechowywanie wystąpienia przepływu pracy i wywoływać właściwe metody na uczestnicy stanów trwałych we właściwym czasie.  
@@ -58,7 +58,7 @@ Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz 
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Rozszerzalność magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [Rozszerzalność magazynu](store-extensibility.md)

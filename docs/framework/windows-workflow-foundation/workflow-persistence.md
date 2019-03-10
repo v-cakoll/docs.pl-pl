@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: 0a938f2f4d4cc790fe03db1e2b57862e54af48a7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748570"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715545"
 ---
 # <a name="workflow-persistence"></a>Trwałość przepływu pracy
 Trwałość przepływu pracy jest trwały przechwytywania stanu wystąpienia przepływu pracy, niezależnie od informacji proces lub komputer. Ma to na zapewnienie znanego punktu odzyskiwania dla wystąpienia przepływu pracy w przypadku awarii systemu lub zachować pamięci przez zwalnianie wystąpienia przepływu pracy, które nie wykonują aktywnie pracy lub przenieść stanu wystąpienia przepływu pracy z jednego węzła do innego węzeł w farmie serwerów.  
   
  Stan trwały umożliwia procesu elastyczność, skalowalności, odzyskiwania w przypadku awarii i możliwość bardziej wydajne zarządzanie pamięcią. Proces trwałości obejmuje określenie punktu trwałości, zbieranie danych, które mają być zapisywane i na koniec delegowanie rzeczywisty magazyn danych do dostawcy stanów trwałych.  
   
- Aby włączyć opcję trwałości dla przepływu pracy, należy skojarzyć magazyn wystąpienia z **WorkflowApplication** lub **WorkflowServiceHost** zgodnie z opisem w [porady: Włączanie stanów trwałych dla Przepływy pracy i usług przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** i **WorkflowServiceHost** umożliwiają magazyn wystąpienia skojarzonych z nimi utrwalanie wystąpienia przepływu pracy w magazynie w trwałości i ładowanie wystąpienia przepływu pracy do pamięć, w oparciu o dane wystąpienia przepływu pracy, które są przechowywane w magazynie w trwałości.  
+ Aby włączyć opcję trwałości dla przepływu pracy, należy skojarzyć magazyn wystąpienia z **WorkflowApplication** lub **WorkflowServiceHost** zgodnie z opisem w [jak: Włączanie stanów trwałych dla przepływów pracy i usług przepływu pracy](how-to-enable-persistence-for-workflows-and-workflow-services.md). **WorkflowApplication** i **WorkflowServiceHost** umożliwiają magazyn wystąpienia skojarzonych z nimi utrwalanie wystąpienia przepływu pracy w magazynie w trwałości i ładowanie wystąpienia przepływu pracy do pamięć, w oparciu o dane wystąpienia przepływu pracy, które są przechowywane w magazynie w trwałości.  
   
- [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z **SqlWorkflowInstanceStore** klasy, która zezwala na trwałości danych oraz metadane dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Zobacz [Store wystąpienia przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) Aby uzyskać więcej informacji.  
+ [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z **SqlWorkflowInstanceStore** klasy, która zezwala na trwałości danych oraz metadane dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Zobacz [Store wystąpienia przepływu pracy SQL](sql-workflow-instance-store.md) Aby uzyskać więcej informacji.  
   
- Aby przechowywać i załadować dane specyficzne dla aplikacji wraz z informacjami dotyczącego wystąpienia przepływu pracy, należy utworzyć uczestnicy stanów trwałych, które rozszerzają <xref:System.Activities.Persistence.PersistenceParticipant> klasy. Uczestnika stanów trwałych bierze udział w procesie trwałości zapisanie danych niestandardowych do serializacji w magazynie w trwałości, aby załadować dane z magazynu wystąpień w pamięci i przeprowadzenie dodatkowej logiki w ramach transakcji trwałości. Aby uzyskać więcej informacji, zobacz [uczestnicy stanów trwałych](../../../docs/framework/windows-workflow-foundation/persistence-participants.md).  
+ Aby przechowywać i załadować dane specyficzne dla aplikacji wraz z informacjami dotyczącego wystąpienia przepływu pracy, należy utworzyć uczestnicy stanów trwałych, które rozszerzają <xref:System.Activities.Persistence.PersistenceParticipant> klasy. Uczestnika stanów trwałych bierze udział w procesie trwałości zapisanie danych niestandardowych do serializacji w magazynie w trwałości, aby załadować dane z magazynu wystąpień w pamięci i przeprowadzenie dodatkowej logiki w ramach transakcji trwałości. Aby uzyskać więcej informacji, zobacz [uczestnicy stanów trwałych](persistence-participants.md).  
   
  Windows Server AppFabric upraszcza proces konfigurowania trwałości. Aby uzyskać więcej informacji, zobacz [trwałości koncepcji z systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201200)  
   
@@ -43,14 +43,14 @@ Trwałość przepływu pracy jest trwały przechwytywania stanu wystąpienia prz
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Magazyn wystąpień przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)  
+-   [Magazyn wystąpień przepływu pracy SQL](sql-workflow-instance-store.md)  
   
--   [Magazyny wystąpień](../../../docs/framework/windows-workflow-foundation/instance-stores.md)  
+-   [Magazyny wystąpień](instance-stores.md)  
   
--   [Uczestnicy stanów trwałych](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)  
+-   [Uczestnicy stanów trwałych](persistence-participants.md)  
   
--   [Najlepsze rozwiązania w zakresie stanów trwałych](../../../docs/framework/windows-workflow-foundation/persistence-best-practices.md)  
+-   [Najlepsze rozwiązania w zakresie stanów trwałych](persistence-best-practices.md)  
   
--   [Nietrwałe wystąpienia przepływu pracy](../../../docs/framework/windows-workflow-foundation/non-persisted-workflow-instances.md)  
+-   [Nietrwałe wystąpienia przepływu pracy](non-persisted-workflow-instances.md)  
   
--   [Wstrzymywanie i wznawianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/pausing-and-resuming-a-workflow.md)
+-   [Wstrzymywanie i wznawianie przepływu pracy](pausing-and-resuming-a-workflow.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442558"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714661"
 ---
 # <a name="application-settings-attributes"></a>Atrybuty ustawień aplikacji
 Architektura ustawień aplikacji zawiera wiele atrybutów, które mogą być stosowane do klasy otoki ustawień aplikacji lub jego poszczególnych właściwości. Te atrybuty są sprawdzane w czasie wykonywania przez infrastrukturę ustawienia aplikacji, często specjalnie Dostawca ustawień, aby dostosować jego funkcjonowania określone potrzeby niestandardowej otoki.  
@@ -40,5 +40,5 @@ Architektura ustawień aplikacji zawiera wiele atrybutów, które mogą być sto
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
-- [Architektura ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Architektura ustawień aplikacji](application-settings-architecture.md)
 - [Instrukcje: Tworzenie ustawień aplikacji](how-to-create-application-settings.md)

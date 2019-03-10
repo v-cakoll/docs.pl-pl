@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689734"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710501"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Instrukcje: Tworzenie formantu powiązanego oraz formatowanie wyświetlanych danych
 Za pomocą powiązanie danych formularzy Windows, możesz sformatować dane wyświetlane w kontrolce powiązanych z danymi za pomocą **formatowanie i zaawansowane powiązanie** okno dialogowe.  
@@ -23,11 +23,11 @@ Za pomocą powiązanie danych formularzy Windows, możesz sformatować dane wyś
   
 1.  Łączenie ze źródłem danych.  
   
-     Aby uzyskać więcej informacji, zobacz [nawiązania połączenia ze źródłem danych](../../../docs/framework/data/adonet/connecting-to-a-data-source.md).  
+     Aby uzyskać więcej informacji, zobacz [nawiązania połączenia ze źródłem danych](../data/adonet/connecting-to-a-data-source.md).  
   
 2.  W formularzu wybierz kontrolkę, a następnie otwórz okno właściwości.  
   
-3.  Rozwiń **(powiązania danych)** właściwości, a następnie w polu **(zaawansowane)** polu i kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) do wyświetlenia **formatowanie i powiązywanie zaawansowane** okno dialogowe, które zawiera pełną listę właściwości dla tej kontrolki.  
+3.  Rozwiń **(powiązania danych)** właściwości, a następnie w polu **(zaawansowane)** polu i kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](./media/vbellipsesbutton.png " vbEllipsesButton")) do wyświetlenia **formatowanie i powiązywanie zaawansowane** okno dialogowe, które zawiera pełną listę właściwości dla tej kontrolki.  
   
 4.  Wybierz właściwość, aby powiązać, a następnie kliknij przycisk **powiązanie** strzałki.  
   
@@ -50,11 +50,11 @@ Za pomocą powiązanie danych formularzy Windows, możesz sformatować dane wyś
     |Waluta|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|  
     |Data i godzina|Wybierz sposób wyświetlania daty i godziny, wybierając jeden z elementów w **typu** pola wyboru.|  
     |naukowe|Określ liczbę miejsc dziesiętnych, za pomocą **miejsc dziesiętnych** formantu góra dół.|  
-    |Niestandardowe|Określ ciąg formatu niestandardowego za pomocą.<br /><br /> Aby uzyskać więcej informacji, zobacz [typy formatowania](../../../docs/standard/base-types/formatting-types.md). **Uwaga:**  Tworzenie niestandardowych formatów ciągów nie ma gwarancji pomyślnie komunikacji dwustronnej między źródłem danych i powiązanej kontrolki. Zamiast tego obsługiwać <xref:System.Windows.Forms.Binding.Parse> lub <xref:System.Windows.Forms.Binding.Format> zdarzeń dla wiązania i zastosować niestandardowe formatowanie w kodzie obsługi zdarzeń.|  
+    |Niestandardowe|Określ ciąg formatu niestandardowego za pomocą.<br /><br /> Aby uzyskać więcej informacji, zobacz [typy formatowania](../../standard/base-types/formatting-types.md). **Uwaga:**  Tworzenie niestandardowych formatów ciągów nie ma gwarancji pomyślnie komunikacji dwustronnej między źródłem danych i powiązanej kontrolki. Zamiast tego obsługiwać <xref:System.Windows.Forms.Binding.Parse> lub <xref:System.Windows.Forms.Binding.Format> zdarzeń dla wiązania i zastosować niestandardowe formatowanie w kodzie obsługi zdarzeń.|  
   
 8.  Kliknij przycisk **OK** zamknąć **formatowanie i powiązywanie zaawansowane** okno dialogowe i wrócić do okna właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Weryfikacja danych użytkownika w formularzach Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
-- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Weryfikacja danych użytkownika w formularzach Windows Forms](user-input-validation-in-windows-forms.md)
+- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)

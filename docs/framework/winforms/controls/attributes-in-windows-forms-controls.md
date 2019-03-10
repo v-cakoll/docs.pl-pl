@@ -7,18 +7,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: a8bbc59087b5d1d296c25b6aaf0836b31611a54a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441245"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724404"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atrybuty w formantach formularzy systemu Windows
 .NET Framework oferuje różne atrybuty, które można zastosować do elementów członkowskich niestandardowych kontrolek i składników. Niektóre z tych atrybutów wpływać na zachowania w czasie wykonywania klasy i inne osoby mają wpływ na zachowanie czasu projektowania.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Atrybuty kontrolki i właściwości składnika  
- W poniższej tabeli przedstawiono atrybuty, które można zastosować do właściwości lub innych elementów członkowskich niestandardowych kontrolek i składników. Na przykład, który używa wiele z tych atrybutów, zobacz [jak: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ W poniższej tabeli przedstawiono atrybuty, które można zastosować do właściwości lub innych elementów członkowskich niestandardowych kontrolek i składników. Na przykład, który używa wiele z tych atrybutów, zobacz [jak: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
@@ -62,6 +62,6 @@ ms.locfileid: "56441245"
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Attribute>
-- [Instrukcje: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
+- [Instrukcje: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)

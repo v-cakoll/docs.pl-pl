@@ -8,12 +8,12 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: a22085e0bbaeda1a166c6d46b2604858fb403d8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741447"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720800"
 ---
 # <a name="how-to-read-image-metadata"></a>Instrukcje: Odczytaj metadane obrazu
 Niektóre pliki obrazu zawierają metadane, które mogą odczytać w celu określenia funkcji obrazu. Na przykład cyfrowych fotografii może zawierać metadane, które mogą odczytać w celu określenia producenta i modelu aparatu używane do przechwytywania obrazu. Za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], mogą odczytywać metadane istniejącego i można także zapisać nowe metadane do plików obrazu.  
@@ -117,12 +117,12 @@ Niektóre pliki obrazu zawierają metadane, które mogą odczytać w celu okreś
  `The equipment make is Northwind Camera.`  
   
 ### <a name="code"></a>Kod  
- [!code-csharp[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Obsługa formularzy <xref:System.Windows.Forms.Control.Paint> zdarzeń i wklej ten kod do obsługi zdarzeń malowania. Należy zastąpić `FakePhoto.jpg` przy użyciu nazwy obrazu i ścieżki prawidłowe dla używanego systemu i importowania `System.Drawing.Imaging` przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)
+- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)

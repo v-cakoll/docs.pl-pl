@@ -8,12 +8,12 @@ helpviewer_keywords:
 - system tray icons [Windows Forms], about system tray icons
 - system tray icons [Windows Forms], using in Windows Forms
 ms.assetid: 5b9189fa-d4ae-41a6-9b97-eb1f44bb1a69
-ms.openlocfilehash: 4b612e0a798a53c3034cc78bfed5bde43f591286
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430d869265b9add34c6de617a178aa27af6218f3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551868"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707628"
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a>NotifyIcon — Informacje o składniku (Formularze systemu Windows)
 
@@ -27,9 +27,9 @@ Każdy <xref:System.Windows.Forms.NotifyIcon> składnik Wyświetla pojedynczą i
 
 Możesz skojarzyć dymek porad, menu skrótów i etykietki narzędzi z <xref:System.Windows.Forms.NotifyIcon> ułatwiają użytkownika.
 
-Możesz wyświetlić dymek porady dotyczące <xref:System.Windows.Forms.NotifyIcon> przez wywołanie metody <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> metody, określając zakres czasu ma dymku do wyświetlenia. Można również określić tekst, ikona i tytuł dymku z <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> i <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, odpowiednio. <xref:System.Windows.Forms.NotifyIcon> składniki mogą także mieć skojarzone etykietki narzędzi i menu skrótów. Aby uzyskać więcej informacji, zobacz [— informacje o składniku ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md) i [— informacje o składniku ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).
+Możesz wyświetlić dymek porady dotyczące <xref:System.Windows.Forms.NotifyIcon> przez wywołanie metody <xref:System.Windows.Forms.NotifyIcon.ShowBalloonTip%2A> metody, określając zakres czasu ma dymku do wyświetlenia. Można również określić tekst, ikona i tytuł dymku z <xref:System.Windows.Forms.NotifyIcon.BalloonTipText%2A>, <xref:System.Windows.Forms.NotifyIcon.BalloonTipIcon%2A> i <xref:System.Windows.Forms.NotifyIcon.BalloonTipTitle%2A>, odpowiednio. <xref:System.Windows.Forms.NotifyIcon> składniki mogą także mieć skojarzone etykietki narzędzi i menu skrótów. Aby uzyskać więcej informacji, zobacz [— informacje o składniku ToolTip](tooltip-component-overview-windows-forms.md) i [— informacje o składniku ContextMenu](contextmenu-component-overview-windows-forms.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.NotifyIcon>
-- [NotifyIcon, składnik](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
+- [NotifyIcon, składnik](notifyicon-component-windows-forms.md)

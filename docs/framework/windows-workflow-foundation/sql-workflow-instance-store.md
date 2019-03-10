@@ -2,12 +2,12 @@
 title: Store wystąpienia przepływu pracy SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 6af42fa8ae119ba8fbc08e00cd5b3800521943a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 926b50ee00743f6a84f48c6ccae976daf49b3d9a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538300"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715675"
 ---
 # <a name="sql-workflow-instance-store"></a>Store wystąpienia przepływu pracy SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Jest dostarczany z programem SQL Store wystąpienia przepływu pracy, który umożliwia przepływy pracy, aby utrwalić informacje o stanie dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Ta funkcja jest zaimplementowany głównie w formie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> klasy, która jest pochodną abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy framework trwałości. Funkcja Store wystąpienia przepływu pracy SQL stanowi dostawcy stanów trwałych programu SQL, który jest konkretną implementację trwałości interfejsu API, który korzysta z hosta do wysyłania poleceń trwałości do magazynu.  
@@ -22,19 +22,19 @@ ms.locfileid: "54538300"
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Właściwości magazynu wystąpień przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
+-   [Właściwości magazynu wystąpień przepływu pracy SQL](properties-of-sql-workflow-instance-store.md)  
   
--   [Instrukcje: Włączanie stanów trwałych programu SQL dla przepływów pracy i usług przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Instrukcje: Włączanie stanów trwałych programu SQL dla przepływów pracy i usług przepływu pracy](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Aktywacja wystąpienia](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
+-   [Aktywacja wystąpienia](instance-activation.md)  
   
--   [Obsługa zapytań](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
+-   [Obsługa zapytań](support-for-queries.md)  
   
--   [Rozszerzalność magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
+-   [Rozszerzalność magazynu](store-extensibility.md)  
   
--   [Zabezpieczenia](../../../docs/framework/windows-workflow-foundation/security.md)  
+-   [Zabezpieczenia](security.md)  
   
--   [Baza danych stanów trwałych programu SQL Server](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
+-   [Baza danych stanów trwałych programu SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Zobacz także
 - [Przykłady trwałości](https://go.microsoft.com/fwlink/?LinkID=177735)

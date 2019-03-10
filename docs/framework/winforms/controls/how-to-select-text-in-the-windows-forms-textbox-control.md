@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: df2aec3ff108c0106f29e453a93b06c60e67c6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: acb5434911b569b0a663f47ec5de04db13b436d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649417"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722294"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Instrukcje: Zaznaczanie tekstu w formancie TextBox formularzy Windows
 Zaznacz tekst programowo w formularzach Windows Forms <xref:System.Windows.Forms.TextBox> kontroli. Na przykład jeśli utworzysz funkcję, która umożliwia wyszukiwanie tekstu dla określonego ciągu, można wybrać tekst, który wizualnie alert czytnik pozycji znaleziony ciąg.  
@@ -32,7 +32,7 @@ Zaznacz tekst programowo w formularzach Windows Forms <xref:System.Windows.Forms
   
 3.  (Opcjonalnie) Dostęp do zaznaczonego tekstu za pomocą <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> właściwości.  
   
-     Kod poniżej wybiera zawartość tekstu pola, gdy kontrolka <xref:System.Windows.Forms.Control.Enter> wystąpi zdarzenie. W tym przykładzie sprawdza, czy pole tekstowe ma wartość <xref:System.Windows.Forms.TextBox.Text%2A> właściwość, która jest `null` ani być pustym ciągiem. Gdy pole tekstowe uzyskuje fokus, jest zaznaczony tekst w polu tekstowym. `TextBox1_Enter` Programu obsługi zdarzeń musi być powiązana z formantem; Aby uzyskać więcej informacji, zobacz [jak: Tworzenie procedur obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     Kod poniżej wybiera zawartość tekstu pola, gdy kontrolka <xref:System.Windows.Forms.Control.Enter> wystąpi zdarzenie. W tym przykładzie sprawdza, czy pole tekstowe ma wartość <xref:System.Windows.Forms.TextBox.Text%2A> właściwość, która jest `null` ani być pustym ciągiem. Gdy pole tekstowe uzyskuje fokus, jest zaznaczony tekst w polu tekstowym. `TextBox1_Enter` Programu obsługi zdarzeń musi być powiązana z formantem; Aby uzyskać więcej informacji, zobacz [jak: Tworzenie procedur obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
      Aby przetestować w tym przykładzie, naciśnij klawisz Tab, aż pole ma fokus. Tekst nie jest zaznaczona, po kliknięciu w polu tekstowym.  
   
@@ -69,10 +69,10 @@ Zaznacz tekst programowo w formularzach Windows Forms <xref:System.Windows.Forms
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Instrukcje: Tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Instrukcje: Umieszczanie cudzysłowu w ciągu](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Instrukcje: Wyświetlanie wielu wierszy w formancie TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox, kontrolka](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)
+- [Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Instrukcje: Tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Instrukcje: Umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Instrukcje: Wyświetlanie wielu wierszy w formancie TextBox formularzy Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox, kontrolka](textbox-control-windows-forms.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: b2193c862b0bfe0ffbdc55f5d7073409b03a040d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442948"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717712"
 ---
 # <a name="control-type-recommendations"></a>Zalecenia dotyczące typu formantu
 Zapewnia .NET Framework power opracowanie i wdrożenie nowych kontrolek. Oprócz kontrolki użytkownika znanych teraz znajdziesz się możliwość zapisywania niestandardowych formantów, które narysowania własne, a nawet mogą rozszerzać funkcjonalność istniejących kontrolek poprzez dziedziczenie. Przy wyborze rozwiązania, jakiego typu formantu, aby utworzyć może być mylące. W tej sekcji przedstawiono różnice między różnymi typami kontrolek, z którego może dziedziczyć i zapewnia uwagi dotyczące wpisz, aby wybrać projekt.  
@@ -80,5 +80,5 @@ Zapewnia .NET Framework power opracowanie i wdrożenie nowych kontrolek. Oprócz
 -   [Instrukcje: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](how-to-develop-a-simple-windows-forms-control.md)
+- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)

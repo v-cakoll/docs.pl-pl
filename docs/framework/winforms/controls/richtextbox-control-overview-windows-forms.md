@@ -7,24 +7,24 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: 88a94a5256ba016fbdcc7ceab3802e0c3777f7b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642220"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720250"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant jest używany do wyświetlania, wprowadzania i manipulowanie formatowanie tekstu. <xref:System.Windows.Forms.RichTextBox> Kontroli działanie jest <xref:System.Windows.Forms.TextBox> kontroli jest, ale można również wyświetlać czcionki, kolory i łącza; ładowanie z pliku; tekstu i obrazów osadzonych i znaleźć określonych znaków. <xref:System.Windows.Forms.RichTextBox> Kontroli zazwyczaj służy do zapewnienia manipulacja tekstem i wyświetlić funkcje podobne do aplikacji edytora tekstów, takiego jak Microsoft Word. Podobnie jak <xref:System.Windows.Forms.TextBox> kontroli <xref:System.Windows.Forms.RichTextBox> formant może wyświetlić paski przewijania; ale w przeciwieństwie do <xref:System.Windows.Forms.TextBox> formant, ustawienie domyślne jest do wyświetlenia zarówno poziome i pionowe paski przewijania, zgodnie z potrzebami i ma ustawienia dodatkowe paska przewijania.  
   
 ## <a name="working-with-the-richtextbox-control"></a>Praca z kontrolki RichTextBox  
- Podobnie jak w przypadku <xref:System.Windows.Forms.TextBox> tekst wyświetlany formantu, jest ustawiana przez <xref:System.Windows.Forms.RichTextBox.Text%2A> właściwości. <xref:System.Windows.Forms.RichTextBox> Formant ma wiele właściwości do formatowania tekstu. Aby uzyskać więcej informacji na temat tych właściwości, zobacz [jak: Ustawianie atrybutów czcionki dla kontrolki RichTextBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) i [jak: Ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą formantu RichTextBox formularzy Windows](../../../../docs/framework/winforms/controls/set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md). Do manipulowania plikami, <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> i <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> metod można wyświetlać i zapisać wiele formatów plików, w tym zwykłego tekstu, Unicode zwykły tekst i Format tekstu sformatowanego (RTF). Formaty plików możliwe są wymienione w <xref:System.Windows.Forms.RichTextBoxStreamType>. Możesz użyć <xref:System.Windows.Forms.RichTextBox.Find%2A> metody do znalezienia ciągów tekstu lub określonych znaków.  
+ Podobnie jak w przypadku <xref:System.Windows.Forms.TextBox> tekst wyświetlany formantu, jest ustawiana przez <xref:System.Windows.Forms.RichTextBox.Text%2A> właściwości. <xref:System.Windows.Forms.RichTextBox> Formant ma wiele właściwości do formatowania tekstu. Aby uzyskać więcej informacji na temat tych właściwości, zobacz [jak: Ustawianie atrybutów czcionki dla kontrolki RichTextBox formularzy Windows Forms](how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md) i [jak: Ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą formantu RichTextBox formularzy Windows](set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md). Do manipulowania plikami, <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> i <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> metod można wyświetlać i zapisać wiele formatów plików, w tym zwykłego tekstu, Unicode zwykły tekst i Format tekstu sformatowanego (RTF). Formaty plików możliwe są wymienione w <xref:System.Windows.Forms.RichTextBoxStreamType>. Możesz użyć <xref:System.Windows.Forms.RichTextBox.Find%2A> metody do znalezienia ciągów tekstu lub określonych znaków.  
   
- Można również użyć <xref:System.Windows.Forms.RichTextBox> Kontrola łączy stylu sieci Web, ustawiając <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> właściwości `true` i pisanie kodu do obsługi <xref:System.Windows.Forms.RichTextBox.LinkClicked> zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie łączy stylu sieci Web za pomocą Windows formantu RichTextBox formularzy](../../../../docs/framework/winforms/controls/how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md). Uniemożliwia użytkownikowi manipulowanie niektóre lub wszystkie z tekstem w kontrolce, ustawiając <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> właściwość `true`.  
+ Można również użyć <xref:System.Windows.Forms.RichTextBox> Kontrola łączy stylu sieci Web, ustawiając <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> właściwości `true` i pisanie kodu do obsługi <xref:System.Windows.Forms.RichTextBox.LinkClicked> zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie łączy stylu sieci Web za pomocą Windows formantu RichTextBox formularzy](how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md). Uniemożliwia użytkownikowi manipulowanie niektóre lub wszystkie z tekstem w kontrolce, ustawiając <xref:System.Windows.Forms.RichTextBox.SelectionProtected%2A> właściwość `true`.  
   
  Można cofnąć i wykonaj ponownie większość operacji edycji w <xref:System.Windows.Forms.RichTextBox> kontroli przez wywołanie metody <xref:System.Windows.Forms.TextBoxBase.Undo%2A> i <xref:System.Windows.Forms.RichTextBox.Redo%2A> metody. <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> Metody umożliwia określenie, czy kontrolka zostanie zastosowana Ostatnia operacja wycofywania użytkownika.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [TextBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [RichTextBox, kontrolka](richtextbox-control-windows-forms.md)
+- [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)

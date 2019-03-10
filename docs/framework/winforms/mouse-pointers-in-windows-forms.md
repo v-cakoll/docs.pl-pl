@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491782"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712737"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Wskaźniki myszy w formularzach systemu Windows
 Wskaźnik myszy *wskaźnika*, który jest czasami nazywany kursora, jest mapę bitową, która określa punkt koncentracji uwagi na ekranie dla danych wejściowych użytkownika za pomocą myszy. Ten temat zawiera omówienie wskaźnik myszy w formularzach Windows Forms i opisuje kilka sposobów modyfikowania i sterowanie wskaźnikiem myszy.  
@@ -32,5 +32,5 @@ Wskaźnik myszy *wskaźnika*, który jest czasami nazywany kursora, jest mapę b
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.Cursor>
-- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Funkcjonalność przeciągania i upuszczania w formularzach Windows Forms](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Funkcjonalność przeciągania i upuszczania w formularzach Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150638"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720959"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Instrukcje: Tworzenie niestandardowego uczestnika śledzenia
 Śledzenie przepływu pracy zapewnia wgląd w stan wykonywania przepływu pracy. Środowisko wykonawcze przepływów pracy emituje rekordów śledzenia, które opisują przepływ pracy zdarzenia cyklu życia, zdarzenia cyklu życia działań, resumptions zakładki i błędów. Te rekordy śledzenia są używane przez śledzenia uczestników. Windows Workflow Foundation (WF) zawiera standardowe śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia. W tym kroku samouczka opisano tworzenie niestandardowego uczestnika śledzenia i profilu śledzenia, który przechwycenie danych wyjściowych `WriteLine` działania, aby mogą być wyświetlane użytkownikowi.  
@@ -328,7 +328,7 @@ ms.locfileid: "54150638"
     ```
     
     > [!NOTE]
-    > Te informacje są przydatne do określania zakresu liczb losowych, ale nie zawiera żadnych informacji o jakie prób zostały wprowadzone wcześniej. Te informacje są w następnym kroku [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+    > Te informacje są przydatne do określania zakresu liczb losowych, ale nie zawiera żadnych informacji o jakie prób zostały wprowadzone wcześniej. Te informacje są w następnym kroku [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
     Zanotuj identyfikator wystąpienia przepływu pracy i Zagraj w grę za pośrednictwem do jego zakończenia.
   
@@ -342,4 +342,4 @@ ms.locfileid: "54150638"
     Please enter a number between 1 and 10
     ```
 
-    Oprócz braku prób przez użytkownika to dane śledzenia nie zawiera informacji na temat ostateczny wynik przepływu pracy. To dlatego informacje o śledzeniu składa się tylko z `WriteLine` danych wyjściowych z przepływu pracy, końcowe komunikat, który jest wyświetlany jest wykonywane to `Completed` obsługi po ukończeniu przepływu pracy. W następnym kroku samouczka [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), istniejące `WriteLine` działań są modyfikowane w celu wyświetlania prób przez użytkownika oraz dodatkowy `WriteLine` dodaniu działania, który wyświetla wyniki końcowe. Po zintegrowaniu są te zmiany, [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) pokazuje, jak hostowanie wielu wersji przepływu pracy w tym samym czasie.
+    Oprócz braku prób przez użytkownika to dane śledzenia nie zawiera informacji na temat ostateczny wynik przepływu pracy. To dlatego informacje o śledzeniu składa się tylko z `WriteLine` danych wyjściowych z przepływu pracy, końcowe komunikat, który jest wyświetlany jest wykonywane to `Completed` obsługi po ukończeniu przepływu pracy. W następnym kroku samouczka [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md), istniejące `WriteLine` działań są modyfikowane w celu wyświetlania prób przez użytkownika oraz dodatkowy `WriteLine` dodaniu działania, który wyświetla wyniki końcowe. Po zintegrowaniu są te zmiany, [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md) pokazuje, jak hostowanie wielu wersji przepływu pracy w tym samym czasie.

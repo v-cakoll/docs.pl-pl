@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636972"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719315"
 ---
 # <a name="application-settings-for-windows-forms"></a>Ustawienia aplikacji dla formularzy systemu Windows
 Funkcja ustawienia aplikacji Windows Forms ułatwia tworzenie i przechowywanie i Obsługa niestandardowych aplikacji i preferencji użytkowników na komputerze klienckim. Za pomocą ustawień aplikacji można przechowywać nie tylko dane aplikacji, takie jak parametry połączenia bazy danych, ale również dane specyficzne dla użytkownika, takie jak położenie paska narzędzi i ostatnio używane listy.  
@@ -38,7 +38,7 @@ Funkcja ustawienia aplikacji Windows Forms ułatwia tworzenie i przechowywanie i
   
 ## <a name="related-topics"></a>Tematy pokrewne
 
-[Sekcja konfiguracji programu Windows Forms](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
+[Sekcja konfiguracji programu Windows Forms](../../configure-apps/file-schema/winforms/index.md)    
 Dokumenty ustawienia, aby umożliwić o wysokiej rozdzielczości pomocy technicznej w aplikacji Windows Forms, począwszy od programu .NET Framework 4.7.
 
 ## <a name="see-also"></a>Zobacz także

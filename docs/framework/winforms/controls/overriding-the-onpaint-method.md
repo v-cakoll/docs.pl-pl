@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: d688818e24084dbb3db81f418e37d724e9f48512
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666257"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713244"
 ---
 # <a name="overriding-the-onpaint-method"></a>Zastępowanie metody OnPaint
 Podstawowe kroki zastąpienie dowolnego zdarzenia, zdefiniowany w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] są identyczne i są podsumowane w poniższej liście.  
@@ -26,7 +26,7 @@ Podstawowe kroki zastąpienie dowolnego zdarzenia, zdefiniowany w [!INCLUDE[dnpr
   
  <xref:System.Windows.Forms.Control.Paint> Zdarzeń została szczegółowo opisana w tym miejscu ponieważ przesłonięcie każdego formantu Windows Forms <xref:System.Windows.Forms.Control.Paint> zdarzeń, która jest dziedziczona z <xref:System.Windows.Forms.Control>. Podstawa <xref:System.Windows.Forms.Control> klasy nie wie, jak pochodnej kontrolki musi zostać narysowany i nie zapewnia dowolnej logiki malowania w <xref:System.Windows.Forms.Control.OnPaint%2A> metody. <xref:System.Windows.Forms.Control.OnPaint%2A> Metody <xref:System.Windows.Forms.Control> po prostu wywołuje <xref:System.Windows.Forms.Control.Paint> zdarzenie, aby odbiorcy zarejestrowanych zdarzeń.  
   
- W przypadku pracy przy użyciu przykładu w [jak: Tworzenie prostego formantu formularzy Windows](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md), jak już wspomniano przykładem zastępowanie <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Poniższy fragment kodu jest pobierana z tej próbki.  
+ W przypadku pracy przy użyciu przykładu w [jak: Tworzenie prostego formantu formularzy Windows](how-to-develop-a-simple-windows-forms-control.md), jak już wspomniano przykładem zastępowanie <xref:System.Windows.Forms.Control.OnPaint%2A> metody. Poniższy fragment kodu jest pobierana z tej próbki.  
   
 ```vb  
 Public Class FirstControl  
@@ -87,6 +87,6 @@ public class PaintEventArgs : EventArgs {
  Kontrolki wywołuje jego <xref:System.Windows.Forms.Control.OnPaint%2A> metody zawsze wtedy, gdy trzeba zmienić jego wizualizacji do wyświetlenia. Z kolei wywołuje tę metodę <xref:System.Windows.Forms.Control.Paint> zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zdarzenia](../../../../docs/standard/events/index.md)
-- [Renderowanie kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/rendering-a-windows-forms-control.md)
-- [Definiowanie zdarzenia](../../../../docs/framework/winforms/controls/defining-an-event-in-windows-forms-controls.md)
+- [Zdarzenia](../../../standard/events/index.md)
+- [Renderowanie kontrolki formularzy Windows Forms](rendering-a-windows-forms-control.md)
+- [Definiowanie zdarzenia](defining-an-event-in-windows-forms-controls.md)

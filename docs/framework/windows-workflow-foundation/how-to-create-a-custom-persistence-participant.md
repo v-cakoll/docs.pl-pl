@@ -1,16 +1,16 @@
 ---
-title: 'Porady: Tworzenie niestandardowego uczestnika stanów trwałych'
+title: 'Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fca8db41a415965f10990069682c561f680bf386
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855845"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725080"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>Porady: Tworzenie niestandardowego uczestnika stanów trwałych
-Poniższa procedura zawiera kroki, aby utworzyć uczestnika stanów trwałych. Zobacz [uczestniczących w trwałości](https://go.microsoft.com/fwlink/?LinkID=177735) próbki i [rozszerzalności Store](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) tematu w przykładowej implementacji uczestnicy stanów trwałych.  
+# <a name="how-to-create-a-custom-persistence-participant"></a>Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych
+Poniższa procedura zawiera kroki, aby utworzyć uczestnika stanów trwałych. Zobacz [uczestniczących w trwałości](https://go.microsoft.com/fwlink/?LinkID=177735) próbki i [rozszerzalności Store](store-extensibility.md) tematu w przykładowej implementacji uczestnicy stanów trwałych.  
   
 1.  Utwórz klasę pochodząca od <xref:System.Activities.Persistence.PersistenceParticipant> lub <xref:System.Activities.Persistence.PersistenceIOParticipant> klasy. Klasa PersistenceIOParticipant zapewnia ten sam punkty rozszerzeń jako klasa PersistenceParticipant, oprócz możliwości udziału w operacji We/Wy. Postępuj zgodnie z co najmniej jeden z następujących czynności.  
   

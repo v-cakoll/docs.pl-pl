@@ -5,28 +5,28 @@ helpviewer_keywords:
 - examples [Windows Forms], regions
 - regions [Windows Forms], using
 ms.assetid: 7809295b-870f-4107-a8b5-8386c298acd5
-ms.openlocfilehash: bb116cd22c87aab1402bd2989f4039acc4ba137c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec11b8c7d2eeb153eb4a8c8772fef24977310e13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522612"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713751"
 ---
 # <a name="using-regions"></a>Używanie regionów
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> Klasa umożliwia zdefiniowanie niestandardowego kształtu. Kształt może składać się z linii, wielokątów i krzywych.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> Klasy pozwala na zdefiniowanie niestandardowego kształtu. Kształt może składać się z linii, wielokąty i krzywych.  
   
- Dwie typowe zastosowania regiony są osiągane testowania i wycinka. Testowanie trafień jest określenie, czy w danym regionie ekranu kliknięto przycisk myszy. Wycinek jest ograniczenie rysunku w danym regionie.  
+ Dwa z typowych zastosowań regiony są osiągane, testowania i przycinania. Testowanie trafień jest określenie, czy w danym regionie ekranu kliknięcia myszą. Wycinek jest ograniczenie rysunku do określonych regionów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: stosowanie testowania trafień za pomocą obszaru](../../../../docs/framework/winforms/advanced/how-to-use-hit-testing-with-a-region.md)  
- Przedstawia sposób użycia <xref:System.Drawing.Region> do wykonania testu trafienia.  
+ [Instrukcje: Użyj testowania trafień za pomocą obszaru](how-to-use-hit-testing-with-a-region.md)  
+ Ilustruje sposób używania <xref:System.Drawing.Region> przeprowadzić test trafień.  
   
- [Instrukcje: stosowanie przycinania za pomocą obszaru](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)  
- Wyjaśniono, jak ustawić obszar przycinania <xref:System.Drawing.Graphics> obiektu.  
+ [Instrukcje: Stosowanie przycinania za pomocą obszaru](how-to-use-clipping-with-a-region.md)  
+ Wyjaśnia, jak i ustaw obszar przycinania <xref:System.Drawing.Graphics> obiektu.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Drawing.Region>  
- Ta klasa opisuje i zawiera linki do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera łącza do wszystkich jej członków.  
   
  <xref:System.Drawing.Graphics>  
- Ta klasa opisuje i zawiera linki do wszystkich jej członków.
+ Zawiera opis tej klasy i zawiera łącza do wszystkich jej członków.

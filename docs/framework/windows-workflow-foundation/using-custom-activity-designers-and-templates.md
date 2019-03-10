@@ -1,29 +1,29 @@
 ---
-title: Przy użyciu projektantów działań niestandardowych i szablonów
+title: Przy użyciu szablonów i projektantów działań niestandardowych
 ms.date: 03/30/2017
 ms.assetid: 1aab82e7-7f89-4255-be46-526b09ceeb8b
-ms.openlocfilehash: 674af9fa6f03e78045d7c195f94e7fa23b4d30d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb00a2927c8521e68bc2c5fc73bc2aab55d7d868
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518323"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714635"
 ---
-# <a name="using-custom-activity-designers-and-templates"></a>Przy użyciu projektantów działań niestandardowych i szablonów
-Ta sekcja zawiera tematy dotyczące tworzenia działań niestandardowych projektantów i Szablony działań niestandardowych.  
+# <a name="using-custom-activity-designers-and-templates"></a>Przy użyciu szablonów i projektantów działań niestandardowych
+Ta sekcja zawiera tematy dotyczące tworzenia działań niestandardowych szablonów i projektantów działań niestandardowych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Tworzenie niestandardowego projektanta działań](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)  
- Opisuje jak utworzyć designer niestandardowe działania podczas projektantów udostępniane przez przepływ pracy nie są odpowiednie do zadania projektowania.  
+ [Instrukcje: Tworzenie niestandardowego projektanta działań](how-to-create-a-custom-activity-designer.md)  
+ W tym artykule opisano jak utworzyć projektanta działań niestandardowych w przypadku projektantów, dostarczone przez przepływ pracy nie są odpowiednie do zadania projektowania.  
   
- [Instrukcje: Tworzenie niestandardowego szablonu działań](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-template.md)  
- Informacje dotyczące używania działań niestandardowych szablonów do działań należy wstępnie skonfigurować tak, aby użytkownicy muszą utworzyć każde działanie oddzielnie i skonfigurować ich właściwości i inne ustawienia ręcznie.  
+ [Instrukcje: Tworzenie niestandardowego szablonu działań](how-to-create-a-custom-activity-template.md)  
+ W tym artykule opisano sposób użycia szablonów niestandardowych działań do działań należy wstępnie skonfigurować tak, aby użytkownicy muszą utworzyć każde działanie indywidualnie i skonfigurować ich właściwości i inne ustawienia ręcznie.  
   
- [Używanie kontekstu edycyjnego ModelItem](../../../docs/framework/windows-workflow-foundation/using-the-modelitem-editing-context.md)  
- Informacje dotyczące używania funkcji Kontekst edycyjny ModelItem umożliwia projektanta do interakcji z hostem.  
+ [Używanie kontekstu edycyjnego ModelItem](using-the-modelitem-editing-context.md)  
+ Opisuje sposób użycia funkcji Kontekst edycyjny elementu modelu, aby umożliwić projektanta do interakcji z hostem.  
   
- [Powiązanie niestandardowych właściwości działań z kontrolką projektanta](../../../docs/framework/windows-workflow-foundation/binding-a-custom-activity-property-to-a-designer-control.md)  
- Opisuje sposób powiązania formantu listview do właściwości działania w projektancie.  
+ [Powiązanie niestandardowych właściwości działań z kontrolką projektanta](binding-a-custom-activity-property-to-a-designer-control.md)  
+ W tym artykule opisano, jak powiązać kontrolce listview z właściwością działania w projektancie.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Activities.Presentation.ActivityDesigner>  
@@ -37,7 +37,7 @@ Ta sekcja zawiera tematy dotyczące tworzenia działań niestandardowych projekt
  <xref:System.Activities.Presentation.Model.ModelTreeManager>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Rehostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Rehostowanie projektanta przepływu pracy](rehosting-the-workflow-designer.md)  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
- [Działania niestandardowe](../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)
+ [Działania niestandardowe](./samples/custom-activities.md)

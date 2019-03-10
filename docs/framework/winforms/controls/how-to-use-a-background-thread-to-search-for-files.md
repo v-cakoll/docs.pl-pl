@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536335"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723169"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Instrukcje: Użycie wątku w tle do wyszukiwania plików
-<xref:System.ComponentModel.BackgroundWorker> Składnika zastępuje i dodaje funkcjonalność do <xref:System.Threading> przestrzeni nazw; jednakże <xref:System.Threading> przestrzeń nazw została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [BackgroundWorker, składnik — omówienie](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+<xref:System.ComponentModel.BackgroundWorker> Składnika zastępuje i dodaje funkcjonalność do <xref:System.Threading> przestrzeni nazw; jednakże <xref:System.Threading> przestrzeń nazw została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [BackgroundWorker, składnik — omówienie](backgroundworker-component-overview.md).  
   
- Windows Forms używa modelu apartamentem jednowątkowym (przedziale STA), ponieważ Windows Forms jest oparta na natywny Win32 dla systemu windows, które są z natury typu apartment. Modelu STA. oznacza okna można tworzyć na żadnym z wątków, ale go nie ma możliwości przełączenia wątków po utworzeniu i wszystkie wywołania funkcji do niego musi wystąpić w jego tworzenia wątku. Poza formularzy Windows klas w programie .NET Framework przy użyciu wolnego modelu wątkowości. Aby dowiedzieć się, jak wątkowości w programie .NET Framework, zobacz [wątki](../../../../docs/standard/threading/index.md).  
+ Windows Forms używa modelu apartamentem jednowątkowym (przedziale STA), ponieważ Windows Forms jest oparta na natywny Win32 dla systemu windows, które są z natury typu apartment. Modelu STA. oznacza okna można tworzyć na żadnym z wątków, ale go nie ma możliwości przełączenia wątków po utworzeniu i wszystkie wywołania funkcji do niego musi wystąpić w jego tworzenia wątku. Poza formularzy Windows klas w programie .NET Framework przy użyciu wolnego modelu wątkowości. Aby dowiedzieć się, jak wątkowości w programie .NET Framework, zobacz [wątki](../../../standard/threading/index.md).  
   
  STA model wymaga, że wszystkie metody dla formantu, który muszą zostać wywołane z poza wątku tworzenia kontrolki musi być organizowany do (wykonywane na) wątku tworzenia kontrolki. Klasa bazowa <xref:System.Windows.Forms.Control> udostępnia kilka metod (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, i <xref:System.Windows.Forms.Control.EndInvoke%2A>) do tego celu. <xref:System.Windows.Forms.Control.Invoke%2A> Metoda synchroniczna wywołań; <xref:System.Windows.Forms.Control.BeginInvoke%2A> sprawia, że wywołania metody asynchronicznej.  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

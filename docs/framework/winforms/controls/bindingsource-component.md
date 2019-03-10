@@ -6,66 +6,66 @@ helpviewer_keywords:
 - Windows Forms, data binding control
 - BindingSource component [Windows Forms]
 ms.assetid: 3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9
-ms.openlocfilehash: 0d07dc0ddf5e80d51d1494ff3398eeab150c3f26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54639edb512a8bc6c5909282d5e4c210439e2a6e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528161"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717599"
 ---
 # <a name="bindingsource-component"></a>BindingSource — Składnik
-Hermetyzuje źródło danych dla powiązania kontrolki.  
+Hermetyzuje źródła danych dla powiązania kontrolki.  
   
- <xref:System.Windows.Forms.BindingSource> Składnika służy dwóch celów. Po pierwsze zapewnia warstwę pośredników podczas wiązania z danymi formantów w formularzu. Jest to osiągane przez powiązanie <xref:System.Windows.Forms.BindingSource> składnika do źródła danych, a następnie powiązanie formantów w formularzu do <xref:System.Windows.Forms.BindingSource> składnika. Wszystkie dalsze interakcji z danymi, w tym przeglądanie, sortowanie, filtrowanie i aktualizowanie, jest realizowane za pomocą wywołania <xref:System.Windows.Forms.BindingSource> składnika.  
+ <xref:System.Windows.Forms.BindingSource> Składnika służy do dwóch celów. Po pierwsze zapewnia warstwę operatorów pośrednich podczas tworzenia wiązania kontrolek w formularzu do danych. Jest to realizowane przez powiązanie <xref:System.Windows.Forms.BindingSource> do źródła danych, a następnie powiązanie kontrolek w formularzu do <xref:System.Windows.Forms.BindingSource> składnika. Wszystkie dalszej interakcji z dane, w tym przeglądanie, sortowanie, filtrowanie i aktualizowaniem odbywa się przy użyciu wywołań <xref:System.Windows.Forms.BindingSource> składnika.  
   
- Drugi, <xref:System.Windows.Forms.BindingSource> składnika może działać jako źródło danych jednoznacznie. Dodawanie typów do <xref:System.Windows.Forms.BindingSource> składnik o <xref:System.Windows.Forms.BindingSource.Add%2A> metoda tworzy listę tego typu.  
+ Drugi <xref:System.Windows.Forms.BindingSource> składnika może działać jako źródło silnie typizowanych danych. Dodawanie typu <xref:System.Windows.Forms.BindingSource> składnika za pomocą <xref:System.Windows.Forms.BindingSource.Add%2A> metoda tworzy listę tego typu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [BindingSource, składnik — omówienie](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
- Ogólne pojęcia związane z <xref:System.Windows.Forms.BindingSource> składnika, dzięki czemu można powiązać źródła danych z formantu.  
+ [BindingSource, składnik — omówienie](bindingsource-component-overview.md)  
+ Ogólne pojęcia związane z <xref:System.Windows.Forms.BindingSource> składnik, który pozwala powiązać źródła danych z kontrolką.  
   
- [Instrukcje: powiązanie kontrolek formularzy Windows Forms z wartościami bazy danych DBNull](../../../../docs/framework/winforms/controls/how-to-bind-windows-forms-controls-to-dbnull-database-values.md)  
- Pokazuje sposób obsługi <xref:System.DBNull> wartości z źródła danych przy użyciu <xref:System.Windows.Forms.BindingSource> składnika.  
+ [Instrukcje: Powiązywanie kontrolek formularzy Windows Forms bazy danych DBNull](how-to-bind-windows-forms-controls-to-dbnull-database-values.md)  
+ Pokazuje, jak obsługiwać <xref:System.DBNull> wartości ze źródła danych przy użyciu <xref:System.Windows.Forms.BindingSource> składnika.  
   
- [Instrukcje: filtrowanie i sortowanie danych ADO.NET za pomocą składnika BindingSource formularzy Windows Forms](../../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)  
- Pokazuje przy użyciu <xref:System.Windows.Forms.BindingSource> składnika do zastosowania sortowania i filtrów do wyświetlanych danych.  
+ [Instrukcje: Sortowanie i filtrowanie danych ADO.NET za pomocą Windows składnika BindingSource formularzy](sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)  
+ Demonstruje użycie <xref:System.Windows.Forms.BindingSource> składnika, aby zastosować sortuje i filtruje do wyświetlanych danych.  
   
- [Instrukcje: powiązanie z usługą internetową za pomocą kontrolki BindingSource formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md)  
- Przedstawia sposób użycia <xref:System.Windows.Forms.BindingSource> składnik do powiązania z usługą sieci Web.  
+ [Instrukcje: Powiązanie z usługą sieci Web przy użyciu kontrolki BindingSource formularzy Windows Forms](how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md)  
+ Ilustruje sposób używania <xref:System.Windows.Forms.BindingSource> składnika do utworzenia powiązania z usługą sieci Web.  
   
- [Instrukcje: obsługa błędów i wyjątków występujących za powodu powiązania danych](../../../../docs/framework/winforms/controls/how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)  
- Pokazuje przy użyciu <xref:System.Windows.Forms.BindingSource> składnik, aby obsługiwać błędów występujących w operacji wiązania danych.  
+ [Instrukcje: Obsługa błędów i wyjątków występujących za powodu powiązania danych](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)  
+ Demonstruje użycie <xref:System.Windows.Forms.BindingSource> składnik do poprawnego działania obsługi błędów występujących w operacji wiązania danych.  
   
- [Instrukcje: powiązanie kontrolki Windows Forms z typem](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
- Pokazuje przy użyciu <xref:System.Windows.Forms.BindingSource> składników, które można powiązać z typem.  
+ [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)  
+ Demonstruje użycie <xref:System.Windows.Forms.BindingSource> składnika powiązanie z typem.  
   
- [Instrukcje: powiązanie kontrolki Windows Forms z obiektem fabryki](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-factory-object.md)  
- Pokazuje przy użyciu <xref:System.Windows.Forms.BindingSource> składników, aby powiązać obiekt fabryki lub metody.  
+ [Instrukcje: Powiąż formant programu Windows Forms z obiektem fabryki](how-to-bind-a-windows-forms-control-to-a-factory-object.md)  
+ Demonstruje użycie <xref:System.Windows.Forms.BindingSource> składnika, aby powiązać obiekt fabryki lub metody.  
   
- [Instrukcje: dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)  
- Pokazuje przy użyciu <xref:System.Windows.Forms.BindingSource> składników do tworzenia nowych elementów i dodaj je do źródła danych.  
+ [Instrukcje: Dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy Windows Forms](how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)  
+ Demonstruje użycie <xref:System.Windows.Forms.BindingSource> składników do tworzenia nowych elementów i dodać je do źródła danych.  
   
- [Instrukcje: wywoływanie powiadomień o zmianie za pomocą metody BindingSource ResetItem](../../../../docs/framework/winforms/controls/how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)  
- Pokazuje przy użyciu <xref:System.Windows.Forms.BindingSource> składników, aby wywołać zdarzenia zmiany powiadomienia dla źródeł danych, które nie obsługują powiadomienie o zmianie.  
+ [Instrukcje: Wywoływanie powiadomień o zmianie za BindingSource Resetitem](how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)  
+ Demonstruje użycie <xref:System.Windows.Forms.BindingSource> składnik, aby wywoływać zdarzenia, powiadomienia o zmianie dla źródeł danych, które nie obsługują powiadomienie o zmianie.  
   
- [Instrukcje: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged](../../../../docs/framework/winforms/controls/raise-change-notifications--bindingsource.md)  
- Przedstawiono sposób użycia typu, która dziedziczy <xref:System.ComponentModel.INotifyPropertyChanged> z <xref:System.Windows.Forms.BindingSource> formantu.  
+ [Instrukcje: Wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged](raise-change-notifications--bindingsource.md)  
+ Pokazuje, jak używać typu, który dziedziczy z <xref:System.ComponentModel.INotifyPropertyChanged> z <xref:System.Windows.Forms.BindingSource> kontroli.  
   
- [Instrukcje: odzwierciedlanie aktualizacji źródła danych w kontrolce Windows Forms za pomocą elementu BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)  
- Pokazuje, jak reagować na zmiany w źródła danych przy użyciu <xref:System.Windows.Forms.BindingSource> składnika.  
+ [Instrukcje: Odzwierciedlanie aktualizacji źródła danych w kontrolce Windows Forms przy użyciu kontrolki BindingSource](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)  
+ Pokazuje, jak reagować na zmiany źródła danych przy użyciu <xref:System.Windows.Forms.BindingSource> składnika.  
   
- [Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource](../../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
- Przedstawia sposób użycia <xref:System.Windows.Forms.BindingSource> powiązanie wielu formularzy do tego samego źródła danych.  
+ [Instrukcje: Udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource](how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
+ Ilustruje sposób używania <xref:System.Windows.Forms.BindingSource> powiązanie wielu formularzy do tego samego źródła danych.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.BindingSource>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.BindingSource> składnika.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.BindingSource> składnika.  
   
  <xref:System.Windows.Forms.BindingNavigator>  
- Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.BindingNavigator> formantu.  
+ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.BindingNavigator> kontroli.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wiązanie danych formularzy Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- Zawiera łącza do tematów opisujących architektura powiązanie danych formularzy systemu Windows.  
+ [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)  
+ Zawiera łącza do tematów opisujących architektura powiązanie danych formularzy Windows.  
   
- Zobacz też [powiązywanie formantów z danymi w Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).
+ Zobacz też [powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio).

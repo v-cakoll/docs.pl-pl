@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: d3082da455df7497a4c54f963017910e54ac677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536311"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717911"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> wiersze, kolumny i nagłówki można zmienić rozmiar wyniku wiele różnych wystąpień. W poniższej tabeli przedstawiono te wystąpienia.  
@@ -61,7 +61,7 @@ ms.locfileid: "54536311"
 ## <a name="automatic-sizing"></a>Automatycznej zmiany rozmiaru  
  Istnieją dwa rodzaje automatycznej zmiany rozmiaru w <xref:System.Windows.Forms.DataGridView> kontroli: tryb wypełniania kolumny i na podstawie zawartości automatycznej zmiany rozmiaru.  
   
- Tryb wypełniania kolumny powoduje, że widocznych kolumn w formancie do wypełnienia szerokości obszaru wyświetlania kontrolki. Aby uzyskać więcej informacji na temat tego trybu, zobacz [trybu wypełnienia kolumn w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+ Tryb wypełniania kolumny powoduje, że widocznych kolumn w formancie do wypełnienia szerokości obszaru wyświetlania kontrolki. Aby uzyskać więcej informacji na temat tego trybu, zobacz [trybu wypełnienia kolumn w formancie DataGridView formularzy Windows](column-fill-mode-in-the-windows-forms-datagridview-control.md).  
   
  Można również skonfigurować wiersze, kolumny i nagłówki, aby automatycznie dopasowywać ich rozmiary, do ich zawartości komórki. W tym przypadku sposób korekty rozmiaru występuje po każdym wprowadzeniu zmiany zawartości komórki.  
   
@@ -154,6 +154,6 @@ ms.locfileid: "54536311"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Zmiana rozmiaru wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Tryb wypełniania kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Zmiana rozmiaru wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Tryb wypełniania kolumn w kontrolce DataGridView formularzy Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

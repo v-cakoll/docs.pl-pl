@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 1c4eadaadf561e127ac2eaa87f62aea4e1dc7ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0cf7666e6d969b3d02d13e86eb45904307d3ce3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636082"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722688"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a><span data-ttu-id="45117-102">Instrukcje: Ustawianie tła panelu formularzy Windows</span><span class="sxs-lookup"><span data-stu-id="45117-102">How to: Set the Background of a Windows Forms Panel</span></span>
-<span data-ttu-id="45117-103">Formularze Windows <xref:System.Windows.Forms.Panel> formant może wyświetlić kolor tła i obraz tła.</span><span class="sxs-lookup"><span data-stu-id="45117-103">A Windows Forms <xref:System.Windows.Forms.Panel> control can display both a background color and a background image.</span></span> <span data-ttu-id="45117-104"><xref:System.Windows.Forms.Control.BackColor%2A> Właściwość ustawia kolor tła dla zawartych w nim formantów, takich jak etykiety i przycisków radiowych.</span><span class="sxs-lookup"><span data-stu-id="45117-104">The <xref:System.Windows.Forms.Control.BackColor%2A> property sets the background color for the contained controls, such as labels and radio buttons.</span></span> <span data-ttu-id="45117-105">Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie ustawiono właściwości <xref:System.Windows.Forms.Control.BackColor%2A> wybór wypełni całą panelu.</span><span class="sxs-lookup"><span data-stu-id="45117-105">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is not set, the <xref:System.Windows.Forms.Control.BackColor%2A> selection will fill the entire panel.</span></span> <span data-ttu-id="45117-106">Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość jest ustawiona, obraz, który pojawi się za zaporą zawartych w nim formantów.</span><span class="sxs-lookup"><span data-stu-id="45117-106">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is set, the image will be displayed behind the contained controls.</span></span>  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a><span data-ttu-id="b5137-102">Instrukcje: Ustawianie tła panelu formularzy Windows</span><span class="sxs-lookup"><span data-stu-id="b5137-102">How to: Set the Background of a Windows Forms Panel</span></span>
+<span data-ttu-id="b5137-103">Formularze Windows <xref:System.Windows.Forms.Panel> formant może wyświetlić kolor tła i obraz tła.</span><span class="sxs-lookup"><span data-stu-id="b5137-103">A Windows Forms <xref:System.Windows.Forms.Panel> control can display both a background color and a background image.</span></span> <span data-ttu-id="b5137-104"><xref:System.Windows.Forms.Control.BackColor%2A> Właściwość ustawia kolor tła dla zawartych w nim formantów, takich jak etykiety i przycisków radiowych.</span><span class="sxs-lookup"><span data-stu-id="b5137-104">The <xref:System.Windows.Forms.Control.BackColor%2A> property sets the background color for the contained controls, such as labels and radio buttons.</span></span> <span data-ttu-id="b5137-105">Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie ustawiono właściwości <xref:System.Windows.Forms.Control.BackColor%2A> wybór wypełni całą panelu.</span><span class="sxs-lookup"><span data-stu-id="b5137-105">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is not set, the <xref:System.Windows.Forms.Control.BackColor%2A> selection will fill the entire panel.</span></span> <span data-ttu-id="b5137-106">Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość jest ustawiona, obraz, który pojawi się za zaporą zawartych w nim formantów.</span><span class="sxs-lookup"><span data-stu-id="b5137-106">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is set, the image will be displayed behind the contained controls.</span></span>  
   
-### <a name="to-set-the-background-programmatically"></a><span data-ttu-id="45117-107">Aby programowo ustawić tło</span><span class="sxs-lookup"><span data-stu-id="45117-107">To set the background programmatically</span></span>  
+### <a name="to-set-the-background-programmatically"></a><span data-ttu-id="b5137-107">Aby programowo ustawić tło</span><span class="sxs-lookup"><span data-stu-id="b5137-107">To set the background programmatically</span></span>  
   
-1.  <span data-ttu-id="45117-108">Ustaw panelu <xref:System.Windows.Forms.Control.BackColor%2A> właściwości na wartość typu <xref:System.Drawing.Color?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="45117-108">Set the panel's <xref:System.Windows.Forms.Control.BackColor%2A> property to a value of type <xref:System.Drawing.Color?displayProperty=nameWithType>.</span></span>  
+1.  <span data-ttu-id="b5137-108">Ustaw panelu <xref:System.Windows.Forms.Control.BackColor%2A> właściwości na wartość typu <xref:System.Drawing.Color?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b5137-108">Set the panel's <xref:System.Windows.Forms.Control.BackColor%2A> property to a value of type <xref:System.Drawing.Color?displayProperty=nameWithType>.</span></span>  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ ms.locfileid: "54636082"
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2.  <span data-ttu-id="45117-109">Ustaw panelu <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość za pomocą <xref:System.Drawing.Image.FromFile%2A> metody <xref:System.Drawing.Image?displayProperty=nameWithType> klasy.</span><span class="sxs-lookup"><span data-stu-id="45117-109">Set the panel's <xref:System.Windows.Forms.Control.BackgroundImage%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image?displayProperty=nameWithType> class.</span></span>  
+2.  <span data-ttu-id="b5137-109">Ustaw panelu <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość za pomocą <xref:System.Drawing.Image.FromFile%2A> metody <xref:System.Drawing.Image?displayProperty=nameWithType> klasy.</span><span class="sxs-lookup"><span data-stu-id="b5137-109">Set the panel's <xref:System.Windows.Forms.Control.BackgroundImage%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image?displayProperty=nameWithType> class.</span></span>  
   
     ```vb  
     ' You should replace the bolded image   
@@ -67,8 +67,8 @@ ms.locfileid: "54636082"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="45117-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="45117-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5137-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b5137-110">See also</span></span>
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [<span data-ttu-id="45117-111">Panel, kontrolka</span><span class="sxs-lookup"><span data-stu-id="45117-111">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [<span data-ttu-id="45117-112">Panel, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="45117-112">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+- [<span data-ttu-id="b5137-111">Panel, kontrolka</span><span class="sxs-lookup"><span data-stu-id="b5137-111">Panel Control</span></span>](panel-control-windows-forms.md)
+- [<span data-ttu-id="b5137-112">Panel, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="b5137-112">Panel Control Overview</span></span>](panel-control-overview-windows-forms.md)

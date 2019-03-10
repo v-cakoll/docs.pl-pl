@@ -9,24 +9,24 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 363fb4d79cf3fab1cdd814e6cf22d399a27864da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534199"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708226"
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox — Formant (Formularze systemu Windows)
-Formularze systemu Windows `ListBox` formantu zostanie wyświetlona lista elementów, z których użytkownik może wybrać co najmniej jeden.  
+Formularze Windows `ListBox` kontrolka Wyświetla listę elementów, z których użytkownik może wybrać co najmniej jeden.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ListBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
+ [ListBox, kontrolka — omówienie](listbox-control-overview-windows-forms.md)  
+ Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.ListBox> Klasy  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ <xref:System.Windows.Forms.ListBox> Klasa  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- Zawiera listę czynności, które można wykonywać z pola listy, pola kombi i pól listy zaznaczenia.
+ [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)  
+ Lista rzeczy, które można zrobić za pomocą pola listy, pola kombi i pól listy zaznaczone.

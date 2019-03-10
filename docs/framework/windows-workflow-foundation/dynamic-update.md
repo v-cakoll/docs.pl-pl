@@ -2,12 +2,12 @@
 title: Aktualizacja dynamiczna
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9dc733e0fa9cc6fead51eb8105b7b1e37de8cd91
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496745"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724482"
 ---
 # <a name="dynamic-update"></a>Aktualizacja dynamiczna
 
@@ -17,13 +17,13 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów 
 
 Aby zastosować aktualizacje dynamiczne do utrwalonego wystąpienia przepływu pracy, <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> utworzono, która zawiera instrukcje dla środowiska uruchomieniowego, które opisują sposób modyfikowania utrwalonego wystąpienia przepływu pracy zgodnie ze zmianami żądaną. Po utworzeniu update map zostanie zastosowany do wystąpienia żądaną utrwalonych przepływu pracy. Po zastosowaniu aktualizacji dynamicznej wystąpienia przepływu pracy może wznowić, przy użyciu nowej definicji zaktualizowany przepływ pracy. Istnieją cztery kroki wymagane do tworzenia i stosowania aktualizacji mapy.
 
-1. [Przygotowanie definicji przepływu pracy dla aktualizacji dynamicznych](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)
+1. [Przygotowanie definicji przepływu pracy dla aktualizacji dynamicznych](dynamic-update.md#Prepare)
 
-2. [Aktualizowanie definicji przepływu pracy, aby odzwierciedlić żądane zmiany](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)
+2. [Aktualizowanie definicji przepływu pracy, aby odzwierciedlić żądane zmiany](dynamic-update.md#Update)
 
-3. [Tworzenie update map](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)
+3. [Tworzenie update map](dynamic-update.md#Create)
 
-4. [Zastosuj mapy aktualizacji do wystąpień żądaną utrwalonych przepływów pracy](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)
+4. [Zastosuj mapy aktualizacji do wystąpień żądaną utrwalonych przepływów pracy](dynamic-update.md#Apply)
 
 > [!NOTE]
 > Należy pamiętać, że kroki od 1 do 3, które obejmują tworzenie mapy aktualizacji, może być odbywa się niezależnie od zastosowania aktualizacji. Typowy scenariusz, że przepływ pracy dla deweloperów utworzy aktualizacji mapy w trybie offline, a następnie administrator zastosuje aktualizację w późniejszym czasie.
@@ -37,7 +37,7 @@ Pierwszym krokiem w procesie aktualizacja dynamiczna jest przygotowanie definicj
 Aby przygotować Xaml przepływu pracy dla aktualizacji dynamicznych, które mogą zostać załadowane do <xref:System.Activities.ActivityBuilder>, a następnie <xref:System.Activities.ActivityBuilder> jest przekazywana do <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat pracy z usługą serializacji przepływów pracy i <xref:System.Activities.ActivityBuilder>, zobacz [serializowanie przepływów pracy i działań do i z XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).
+> Aby uzyskać więcej informacji na temat pracy z usługą serializacji przepływów pracy i <xref:System.Activities.ActivityBuilder>, zobacz [serializowanie przepływów pracy i działań do i z XAML](serializing-workflows-and-activities-to-and-from-xaml.md).
 
 W poniższym przykładzie `MortgageWorkflow` definicji (składający się z <xref:System.Activities.Statements.Sequence> z kilku działań podrzędnych) jest ładowany do <xref:System.Activities.ActivityBuilder>, a następnie przygotowane na potrzeby aktualizacji dynamicznej. Po powrocie z metody, <xref:System.Activities.ActivityBuilder> zawiera oryginalnej definicji przepływu pracy, a także kopię.
 
@@ -171,7 +171,7 @@ foreach (Guid id in ids)
 Po zastosowaniu aktualizacji dynamicznych, może zostać wznowione wystąpienia przepływu pracy. Uwaga nowej aktualizacji definicji i <xref:System.Activities.WorkflowIdentity> musi być używana.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat pracy z usługą <xref:System.Activities.WorkflowApplication> i <xref:System.Activities.WorkflowIdentity>, zobacz [przy użyciu obiektu WorkflowIdentity i wersjonowanie](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).
+> Aby uzyskać więcej informacji na temat pracy z usługą <xref:System.Activities.WorkflowApplication> i <xref:System.Activities.WorkflowIdentity>, zobacz [przy użyciu obiektu WorkflowIdentity i wersjonowanie](using-workflowidentity-and-versioning.md).
 
 W poniższym przykładzie `MortgageWorkflow_v1.1.xaml` przepływu pracy z poprzedniego przykładu został wcześniej skompilowany, a zostanie załadowany i wznowić, przy użyciu definicji przepływu pracy zaktualizowane.
 

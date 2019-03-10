@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: abd25c21cf98bb0ec426ef772f8cd26baa4e8e47
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467145"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722909"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>Instrukcje: Aktualizowanie definicji działającego wystąpienia przepływu pracy
 
-Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów aplikacji, aby zaktualizować definicję przepływu pracy z istniejącym wystąpieniem przepływu pracy. Wymagana zmiana można zaimplementować poprawki, nowe wymagania lub uwzględnić nieoczekiwanych zmian. Ten krok, w tym samouczku przedstawiono sposób użycia aktualizacji dynamicznej do modyfikowania utrwalonego wystąpienia `v1` numer zgadywania przepływu pracy w celu dopasowania nowych funkcji wprowadzonych w [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów aplikacji, aby zaktualizować definicję przepływu pracy z istniejącym wystąpieniem przepływu pracy. Wymagana zmiana można zaimplementować poprawki, nowe wymagania lub uwzględnić nieoczekiwanych zmian. Ten krok, w tym samouczku przedstawiono sposób użycia aktualizacji dynamicznej do modyfikowania utrwalonego wystąpienia `v1` numer zgadywania przepływu pracy w celu dopasowania nowych funkcji wprowadzonych w [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
 > [!NOTE]
 > Aby pobrać wersję inną ukończone lub wyświetlić Przewodnik wideo tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 ## <a name="in-this-topic"></a>W tym temacie:
 
-- [Aby utworzyć projekt CreateUpdateMaps](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
+- [Aby utworzyć projekt CreateUpdateMaps](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
 
-- [Aby zaktualizować StateMachineNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
+- [Aby zaktualizować StateMachineNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
 
-- [Aby zaktualizować FlowchartNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
+- [Aby zaktualizować FlowchartNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
 
-- [Aby zaktualizować SequentialNumberGuessWorkflow](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
+- [Aby zaktualizować SequentialNumberGuessWorkflow](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
 
-- [Aby skompilować i uruchomić aplikację CreateUpdateMaps](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
+- [Aby skompilować i uruchomić aplikację CreateUpdateMaps](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
 
-- [Tworzenie zestawu zaktualizowanego przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
+- [Tworzenie zestawu zaktualizowanego przepływu pracy](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
 
-- [Aby zaktualizować WorkflowVersionMap do nowych wersji](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
+- [Aby zaktualizować WorkflowVersionMap do nowych wersji](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
 
-- [Aby zastosować aktualizacje dynamiczne](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
+- [Aby zastosować aktualizacje dynamiczne](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
 
-- [Aby uruchomić aplikację przy użyciu zaktualizowanych przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
+- [Aby uruchomić aplikację przy użyciu zaktualizowanych przepływów pracy](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
 
-- [Aby włączyć uruchamianie wcześniejszych wersji przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
+- [Aby włączyć uruchamianie wcześniejszych wersji przepływów pracy](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
 
 ### <a name="BKMK_CreateProject"></a> Aby utworzyć projekt CreateUpdateMaps
 
@@ -257,7 +257,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów 
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3. Następnie zaktualizuj wyrażeń dwa `WriteLine` działań, które wyświetlają czy odgadnięcia użytkownika jest zbyt duże lub zbyt nisko, tak aby były zgodne aktualizacje wprowadzone w [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+3. Następnie zaktualizuj wyrażeń dwa `WriteLine` działań, które wyświetlają czy odgadnięcia użytkownika jest zbyt duże lub zbyt nisko, tak aby były zgodne aktualizacje wprowadzone w [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -652,13 +652,13 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów 
 
 2. Wybierz **Otwórz**, **projekt/rozwiązanie** z **pliku** menu.
 
-3. Przejdź do **NumberGuessWorkflowActivities_du** folderu utworzonego w [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), wybierz opcję **NumberGuessWorkflowActivities.csproj** (lub **vbproj**) i kliknij przycisk **Otwórz**.
+3. Przejdź do **NumberGuessWorkflowActivities_du** folderu utworzonego w [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md), wybierz opcję **NumberGuessWorkflowActivities.csproj** (lub **vbproj**) i kliknij przycisk **Otwórz**.
 
 4. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **SequentialNumberGuessWorkflow.xaml** i wybierz polecenie **Wyklucz z projektu**. Tak samo jak w przypadku **FlowchartNumberGuessWorkflow.xaml** i **StateMachineNumberGuessWorkflow.xaml**. Ten krok usuwa poprzednich wersji definicji przepływu pracy z projektu.
 
 5. Wybierz **Dodaj istniejący element** z **projektu** menu.
 
-6. Przejdź do **NumberGuessWorkflowActivities_du** folderu utworzonego w [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+6. Przejdź do **NumberGuessWorkflowActivities_du** folderu utworzonego w [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
 7. Wybierz **pliki XAML (\*.xaml;\*. xoml)** z **pliki typu** listy rozwijanej.
 
@@ -675,7 +675,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów 
 
 11. Otwórz Eksploratora Windows i przejdź do **NumberGuessWorkflowActivities_du\bin\Debug** folder (lub **bin\Release** w zależności od ustawień projektu).
 
-12. Zmień nazwę **NumberGuessWorkflowActivities.dll** do **NumberGuessWorkflowActivities_v15.dll**, a następnie skopiuj go do **PreviousVersions** folderu utworzonego w [Jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+12. Zmień nazwę **NumberGuessWorkflowActivities.dll** do **NumberGuessWorkflowActivities_v15.dll**, a następnie skopiuj go do **PreviousVersions** folderu utworzonego w [Jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
 ### <a name="BKMK_UpdateWorkflowVersionMap"></a> Aby zaktualizować WorkflowVersionMap do nowych wersji
 
@@ -1447,7 +1447,7 @@ Aktualizacja dynamiczna udostępnia mechanizm dla przepływu pracy deweloperów 
 
 3. Kliknij przycisk **nową grę** Aby uruchomić nowy przepływ pracy i zwrócić uwagę na wersję informacje poniżej okno stanu, który wskazuje przepływu pracy jest `v2` przepływu pracy.
 
-4. Wybierz jedną z `v1` przepływów pracy na początku [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) tematu. Należy pamiętać, że informacje o wersji w obszarze okno stanu wskazuje, że przepływ pracy jest wersji **1.5.0.0** przepływu pracy. Należy zauważyć, że nie ma żadnych informacji wykazały o poprzednich prób innych niż czy były zbyt duże lub zbyt nisko.
+4. Wybierz jedną z `v1` przepływów pracy na początku [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md) tematu. Należy pamiętać, że informacje o wersji w obszarze okno stanu wskazuje, że przepływ pracy jest wersji **1.5.0.0** przepływu pracy. Należy zauważyć, że nie ma żadnych informacji wykazały o poprzednich prób innych niż czy były zbyt duże lub zbyt nisko.
 
     **Wprowadź liczbę między 1 a 10**\
     **Przypuszczenie jest zbyt mała.**

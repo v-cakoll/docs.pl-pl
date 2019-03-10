@@ -7,31 +7,31 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521007"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710605"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich
 Dodano do formularzy Windows Forms kontrolki mają właściwości i metod, które są używane do dalszego specialize użytkownika środowiska. Dostosowywanie interfejsu użytkownika do potrzeb użytkownika jest niezwykle ważna we dobrze zaprojektowanego aplikacji Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
  W tym artykule opisano, jak przypisać etykietę tekstową do formantu.  
   
- [Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
+ [Instrukcje: Ustawianie obrazu wyświetlanego przez kontrolki formularzy Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
  Wyjaśnia, jak skonfigurować kontrolkę do wyświetlania obrazów.  
   
- [Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)  
  Zawiera informacje na temat tworzenia wstępnie zdefiniowane skróty klawiaturowe.  
   
- [Podawanie informacji o ułatwieniach dostępu dotyczących kontrolek w formularzu systemu Windows](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ [Podawanie informacji o ułatwieniach dostępu dotyczących kontrolek w formularzu systemu Windows](providing-accessibility-information-for-controls-on-a-windows-form.md)  
  Zawiera informacje na temat włączania kontrolek do pracy z ułatwieniami.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Kontrolki formularzy Windows Forms](index.md)  
  Zawiera łącza do innych podstawowych rzeczy, które można zrobić za pomocą kontrolek.  
   
- Zobacz też [jak: tworzenie dostępu do kluczy dla Windows formularzy kontrolki za pomocą projektanta](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [jak: Ustaw tekst wyświetlany za pomocą kontrolki formularzy Windows projektanta](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [porady: Ustawianie obrazu Wyświetlane przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).
+ Zobacz też [jak: Tworzenie klawiszy dostępu dla Windows Forms przy użyciu narzędzia Projektant formantów](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [jak: Ustawianie tekstu wyświetlanego przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [jak: Ustawianie obrazu wyświetlanego przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).

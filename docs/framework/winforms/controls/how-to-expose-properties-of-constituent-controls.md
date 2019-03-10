@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75ee93b7a601b4fc1480dca708d78740664c9a85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532165"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704539"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Instrukcje: Udostępnianie właściwości formantów składowych
 Noszą nazwę kontrolek, które tworzą kontrolki złożonej *formanty składników*. Te kontrolki są zwykle zgłaszane w prywatnej, a zatem nie są dostępne przez dewelopera. Jeśli chcesz udostępnić użytkownikom przyszłych właściwości tych kontrolek, należy je udostępnić użytkownikowi. Właściwość składowej formantu jest uwidaczniany przez tworzenie właściwości w kontrolce użytkownika i używanie `get` i `set` metod dostępu właściwości do efektu zmianę właściwości prywatnej składowej formantu.  
@@ -59,5 +59,5 @@ public Color ButtonColor
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.UserControl>
-- [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Właściwości kontrolek formularzy Windows Forms](properties-in-windows-forms-controls.md)
+- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)

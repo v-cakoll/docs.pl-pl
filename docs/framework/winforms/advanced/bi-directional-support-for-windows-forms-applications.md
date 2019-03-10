@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442974"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712292"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
 Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługują dwukierunkowej języków (od prawej do lewej), takich jak arabski i hebrajski. W tym standardowych formularzy, okna dialogowe, formularze MDI i wszystkich kontrolek, można pracować w nich — oznacza to, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
@@ -79,7 +79,7 @@ Visual Studio umożliwia tworzenie aplikacji z systemem Windows, które obsługu
 |<xref:System.Windows.Forms.VScrollBar>|Wyświetlane po lewej stronie zamiast po prawej stronie kontrolki przewijany|Nie wpływu|Nie|  
   
 ## <a name="encoding"></a>Kodowanie  
- Formularze Windows obsługują standardu Unicode, dzięki czemu może zawierać dowolny znak, po utworzeniu aplikacji dwukierunkowej. Jednak nie wszystkie formanty Windows Forms obsługują znaki Unicode na wszystkich platformach. Aby uzyskać więcej informacji, zobacz [kodowanie i globalizacja formularzy Windows](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
+ Formularze Windows obsługują standardu Unicode, dzięki czemu może zawierać dowolny znak, po utworzeniu aplikacji dwukierunkowej. Jednak nie wszystkie formanty Windows Forms obsługują znaki Unicode na wszystkich platformach. Aby uzyskać więcej informacji, zobacz [kodowanie i globalizacja formularzy Windows](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
  Możesz użyć [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysowanie tekstu za pomocą kolejność czytania od prawej do lewej. <xref:System.Drawing.Graphics.DrawString%2A> Obsługuje metodę, która służy do rysowania tekstu, `StringFormat` parametr, który można ustawić <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> członkiem <xref:System.Drawing.StringFormatFlags> wyliczenie, aby można było odwrócić punkt początkowy dla tekstu.  

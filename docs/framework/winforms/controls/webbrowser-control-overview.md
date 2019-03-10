@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: 919098fd5eb6578b91a7b44cf99ba3aef9076081
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc998fd88f3487aa20f6cef73aacb6c07f92c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610984"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710098"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser — Informacje o formancie
 <xref:System.Windows.Forms.WebBrowser> Control oferuje zarządzany otok dla formantu WebBrowser ActiveX. Zarządzana otoka służy do wyświetlania stron sieci Web w aplikacjach Windows Forms klienta. Możesz użyć <xref:System.Windows.Forms.WebBrowser> kontrolki duplikowały funkcji przeglądania programu Internet Explorer lub aplikacji można wyłączyć domyślna funkcjonalność programu Internet Explorer i formant jest używany jako prosty przeglądarki dokumentów HTML. Umożliwia także formantu do dodawania elementów interfejsu użytkownika opartego na DHTML do formularza i ukryć fakt, że są hostowane na platformie <xref:System.Windows.Forms.WebBrowser> kontroli. Takie podejście umożliwia bezproblemowe łączenie formantów sieci Web za pomocą kontrolek Windows Forms w jednej aplikacji.  
@@ -52,9 +52,9 @@ ms.locfileid: "54610984"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [Instrukcje: Przejdź do adresu URL za pomocą formantu WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Instrukcje: Drukowanie za pomocą formantu WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
-- [Instrukcje: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Instrukcje: Tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [Instrukcje: Implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)
-- [Zabezpieczenia WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+- [Instrukcje: Przejdź do adresu URL za pomocą formantu WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Instrukcje: Drukowanie za pomocą formantu WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Instrukcje: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Instrukcje: Tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Instrukcje: Implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta](implement-two-way-com-between-dhtml-and-client.md)
+- [Zabezpieczenia WebBrowser](webbrowser-security.md)

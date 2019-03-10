@@ -6,51 +6,51 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-ms.openlocfilehash: dad26479a3790f40e50760ac9e9282aa692a4ea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523734"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708902"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Używanie pędzla do wypełniania kształtów
-A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> obiekt jest używany do wypełniania wnętrza zamknięty kształt. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Definiuje styl wypełnienia kilka: pełnego koloru, wzorzec kreskowania tekstury obrazu i kolor gradientu.  
+A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> obiekt jest używany do wypełniania wewnątrz kształtu zamkniętego. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] definiuje kilka style wypełnienia: jednolitego koloru, wzorem kreskowanym, obraz tekstury i kolor gradientu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: wypełnianie kształtów jednolitym kolorem](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
- Informacje dotyczące używania pełny kolor pędzla do wypełniania kształtów.  
+ [Instrukcje: Wypełnianie kształtów jednolitym kolorem](how-to-fill-a-shape-with-a-solid-color.md)  
+ Opisuje sposób używania pełny kolor pędzla do wypełniania kształtów.  
   
- [Instrukcje: wypełnianie kształtów wzorem kreskowanym](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-hatch-pattern.md)  
- Przedstawia sposób użycia kreskowania pędzla do wypełniania kształtów.  
+ [Instrukcje: Wypełnianie kształtów wzorem kreskowanym](how-to-fill-a-shape-with-a-hatch-pattern.md)  
+ Pokazuje, jak używać kreskowania pędzla do wypełniania kształtów.  
   
- [Instrukcje: wypełnianie kształtów teksturą obrazu](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-an-image-texture.md)  
- Wyjaśniono, jak używać tekstury pędzla do wypełniania kształtów.  
+ [Instrukcje: Wypełnianie kształtów teksturą obrazu](how-to-fill-a-shape-with-an-image-texture.md)  
+ Opis sposobu użycia tekstury pędzla do wypełniania kształtów.  
   
- [Instrukcje: wypełnianie kafelków w obrębie kształtu obrazem](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)  
- Opis kafelka obrazu w kształcie.  
+ [Instrukcje: Kafelek kształtu obrazem](how-to-tile-a-shape-with-an-image.md)  
+ Opisuje sposób kafelka obrazu w kształcie.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Drawing.Brush?displayProperty=nameWithType>  
- Ta klasa opisuje i zawiera linki do wszystkich jego elementów członkowskich  
+ Ta klasa opisuje i zawiera linki do wszystkich członków  
   
  <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>  
- Ta klasa opisuje i zawiera linki do wszystkich jego elementów członkowskich  
+ Ta klasa opisuje i zawiera linki do wszystkich członków  
   
  <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  
- Ta klasa opisuje i zawiera linki do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera łącza do wszystkich jej członków.  
   
  <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
- Ta klasa opisuje i zawiera linki do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera łącza do wszystkich jej członków.  
   
  <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=nameWithType>  
- Ta klasa opisuje i zawiera linki do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Używanie pędzla gradientów do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
+ [Używanie pędzla gradientów do wypełniania kształtów](using-a-gradient-brush-to-fill-shapes.md)  
  Zawiera listę tematów, które pokazują, jak używać pędzla gradientu.  
   
- [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Zawiera listę tematów, które przedstawiają sposób rysowania kształty obramowane.  
+ [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)  
+ Zawiera listę tematów, które pokazują, jak można rysować kształty obramowane.  
   
- [Używanie zarządzanych klas grafiki](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
+ [Używanie zarządzanych klas grafiki](using-managed-graphics-classes.md)  
  Zawiera listę tematów opisujących sposób używania zarządzanych klas grafiki.

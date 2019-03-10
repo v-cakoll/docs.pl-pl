@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362568"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714011"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Instrukcje: Bezpieczne wątkowo wywołania kontrolek formularzy Windows Forms
 
-Wielowątkowość może poprawić wydajność aplikacji Windows Forms, ale dostęp do kontrolek formularzy Windows Forms jest natury metodą o bezpiecznych wątkach. Wielowątkowość udostępnić swój kod, aby bardzo poważne i złożone usterek. Dwa lub więcej wątków operowanie formantem można wymusić kontrolki w niespójnym stanie i prowadzić do Sytuacje wyścigu, zakleszczenia i zawiesza się lub zawiesza się. W przypadku zaimplementowania wielowątkowości w swojej aplikacji, należy koniecznie wywołania międzywątkowe formanty w sposób wątkowo. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość — najlepsze rozwiązania](../../../../docs/standard/threading/managed-threading-best-practices.md). 
+Wielowątkowość może poprawić wydajność aplikacji Windows Forms, ale dostęp do kontrolek formularzy Windows Forms jest natury metodą o bezpiecznych wątkach. Wielowątkowość udostępnić swój kod, aby bardzo poważne i złożone usterek. Dwa lub więcej wątków operowanie formantem można wymusić kontrolki w niespójnym stanie i prowadzić do Sytuacje wyścigu, zakleszczenia i zawiesza się lub zawiesza się. W przypadku zaimplementowania wielowątkowości w swojej aplikacji, należy koniecznie wywołania międzywątkowe formanty w sposób wątkowo. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość — najlepsze rozwiązania](../../../standard/threading/managed-threading-best-practices.md). 
 
 Istnieją dwa sposoby, aby bezpiecznie wywołać formantu Windows Forms z wątku, który nie został utworzony tej kontrolki. Możesz użyć <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> metodę do wywołania delegata utworzone w wątku głównym, który z kolei wywołuje formantu. Lub możesz zaimplementować <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>, który używa modelu oparte na zdarzeniach do rozdzielania pracy wykonanej w wątku w tle z raportowania na wyniki. 
 
@@ -75,8 +75,8 @@ W poniższym przykładzie pokazano wzorzec zapewniających wątkowo wywołania d
 
 `SafeCallDelegate` Umożliwia ustawienie <xref:System.Windows.Forms.TextBox> kontrolki <xref:System.Windows.Forms.TextBox.Text%2A> właściwości. `WriteTextSafe` Zapytania metody <xref:System.Windows.Forms.Control.InvokeRequired%2A>. Jeśli <xref:System.Windows.Forms.Control.InvokeRequired%2A> zwraca `true`, `WriteTextSafe` przekazuje `SafeCallDelegate` do <xref:System.Windows.Forms.Control.Invoke%2A> metody to rzeczywiste wywołanie do formantu. Jeśli <xref:System.Windows.Forms.Control.InvokeRequired%2A> zwraca `false`, `WriteTextSafe` ustawia <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> bezpośrednio. `Button1_Click` Programu obsługi zdarzeń tworzy nowy wątek i uruchamia `WriteTextSafe` metody. 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>Przykład: Użyj obsługi zdarzeń BackgroundWorker
 
@@ -86,12 +86,12 @@ Aby wywołać wątków przy użyciu <xref:System.ComponentModel.BackgroundWorker
 
 W przykładzie użyto <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> programu obsługi zdarzeń, aby ustawić <xref:System.Windows.Forms.TextBox> kontrolki <xref:System.Windows.Forms.TextBox.Text%2A> właściwości. Aby uzyskać przykłady dotyczące używania <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> zdarzeń, zobacz <xref:System.ComponentModel.BackgroundWorker>. 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Instrukcje: Uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Tworzenie niestandardowych formantów Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Instrukcje: Uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md)
+- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Tworzenie niestandardowych formantów Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)

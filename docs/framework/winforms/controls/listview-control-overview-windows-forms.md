@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: 8ceed741e72dae46f7f791b7564b7f5c38f82bc2
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d62c0081c128693861a9fd21360f09f65d485a79
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664630"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709809"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.ListView> kontrolka Wyświetla listę elementów z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takich jak okienku po prawej stronie Eksploratora Windows. Kontrolka ma cztery trybów wyświetlania: LargeIcon, SmallIcon, listy i szczegółów.  
@@ -21,9 +21,9 @@ Formularze Windows <xref:System.Windows.Forms.ListView> kontrolka Wyświetla lis
 ## <a name="what-you-can-do-with-the-listview-control"></a>Co można zrobić za pomocą formantu ListView  
   
 > [!NOTE]
->  Tryb wyświetlania dodatkowych, Kafelek, jest dostępna tylko w systemach Windows i systemu operacyjnego Windows Server 2003. Aby uzyskać więcej informacji, zobacz [jak: Włączanie widoku Tile w Windows formantu ListView formularzy](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
+>  Tryb wyświetlania dodatkowych, Kafelek, jest dostępna tylko w systemach Windows i systemu operacyjnego Windows Server 2003. Aby uzyskać więcej informacji, zobacz [jak: Włączanie widoku Tile w Windows formantu ListView formularzy](how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
   
- Wyświetlanie dużych ikon obok tekstu elementu; w trybie LargeIcon elementy są wyświetlane w wielu kolumnach, gdy kontrolka jest wystarczająco duży. Tryb SmallIcon jest taki sam, z tą różnicą, że wyświetla małych ikon. Tryb listy wyświetla małe ikony, ale jest zawsze w jednej kolumnie. Tryb szczegółów wyświetla elementy w wielu kolumnach. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie kolumn do Windows formantu ListView formularzy](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). Tryb widoku jest określany przez <xref:System.Windows.Forms.ListView.View%2A> właściwości. Wszystkie tryby widoku można wyświetlić obrazy z listy obrazów. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie ikon dla kontrolki ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
+ Wyświetlanie dużych ikon obok tekstu elementu; w trybie LargeIcon elementy są wyświetlane w wielu kolumnach, gdy kontrolka jest wystarczająco duży. Tryb SmallIcon jest taki sam, z tą różnicą, że wyświetla małych ikon. Tryb listy wyświetla małe ikony, ale jest zawsze w jednej kolumnie. Tryb szczegółów wyświetla elementy w wielu kolumnach. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie kolumn do Windows formantu ListView formularzy](how-to-add-columns-to-the-windows-forms-listview-control.md). Tryb widoku jest określany przez <xref:System.Windows.Forms.ListView.View%2A> właściwości. Wszystkie tryby widoku można wyświetlić obrazy z listy obrazów. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie ikon dla kontrolki ListView formularzy Windows](how-to-display-icons-for-the-windows-forms-listview-control.md).  
   
  W poniższej tabeli wymieniono niektóre <xref:System.Windows.Forms.ListView> elementów członkowskich i widoki są prawidłowe w.  
   
@@ -49,14 +49,14 @@ Formularze Windows <xref:System.Windows.Forms.ListView> kontrolka Wyświetla lis
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.ListView>
-- [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [Instrukcje: Dodawanie i usuwanie elementów za pomocą formantu ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Instrukcje: Dodawanie kolumn do formantu ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Instrukcje: Wyświetlanie ikon dla kontrolki ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Instrukcje: Wyświetlanie podelementów w kolumnach za pomocą formantu ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Instrukcje: Wybierz element w kontrolce ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [Instrukcje: Grupowanie elementów w formancie ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)
-- [Instrukcje: Wyświetlanie znacznika wstawiania w formancie ListView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
-- [Instrukcje: Dodawanie możliwości wyszukiwania do formantu ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)
-- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Kontrolka ListView](listview-control-windows-forms.md)
+- [Instrukcje: Dodawanie i usuwanie elementów za pomocą formantu ListView formularzy Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Instrukcje: Dodawanie kolumn do formantu ListView formularzy Windows](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Instrukcje: Wyświetlanie ikon dla kontrolki ListView formularzy Windows](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Instrukcje: Wyświetlanie podelementów w kolumnach za pomocą formantu ListView formularzy Windows](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Instrukcje: Wybierz element w kontrolce ListView formularzy Windows](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [Instrukcje: Grupowanie elementów w formancie ListView formularzy Windows](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Instrukcje: Wyświetlanie znacznika wstawiania w formancie ListView formularzy Windows](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [Instrukcje: Dodawanie możliwości wyszukiwania do formantu ListView](how-to-add-search-capabilities-to-a-listview-control.md)
+- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows](how-to-create-a-multipane-user-interface-with-windows-forms.md)

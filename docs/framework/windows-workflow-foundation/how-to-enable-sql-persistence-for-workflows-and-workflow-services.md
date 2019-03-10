@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4f4bcd06067775c6f43063ebe5682730deba1d4f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498890"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710286"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Instrukcje: Włączanie stanów trwałych programu SQL dla przepływów pracy i usług przepływu pracy
 
@@ -31,7 +31,7 @@ Przed użyciem funkcji Store wystąpienia przepływu pracy SQL, należy utworzy�
 >
 > System.Data.SqlClient.SqlException: Nie można odnaleźć procedury składowanej "System.Activities.DurableInstancing.CreateLockOwner"
 
-Poniżej opisano sposób włączania stanów trwałych dla przepływów pracy i usług przepływu pracy przy użyciu Store wystąpienia przepływu pracy SQL. Aby uzyskać więcej informacji na temat właściwości Store wystąpienia przepływu pracy SQL, zobacz [właściwości programu SQL przepływu pracy wystąpienie Store](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md).
+Poniżej opisano sposób włączania stanów trwałych dla przepływów pracy i usług przepływu pracy przy użyciu Store wystąpienia przepływu pracy SQL. Aby uzyskać więcej informacji na temat właściwości Store wystąpienia przepływu pracy SQL, zobacz [właściwości programu SQL przepływu pracy wystąpienie Store](properties-of-sql-workflow-instance-store.md).
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Włączanie stanów trwałych dla przepływów pracy z produktem, używanego przez WorkflowApplication
 
@@ -72,7 +72,7 @@ Możesz włączyć trwałość Self-Hosted przepływach pracy korzystających <x
    ```
 
 > [!NOTE]
-> Zobacz [jak: Tworzenie i uruchamianie długiego uruchamiania przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) kroku [Samouczek wprowadzający](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) instrukcje krok po kroku.
+> Zobacz [jak: Tworzenie i uruchamianie długiego uruchamiania przepływu pracy](how-to-create-and-run-a-long-running-workflow.md) kroku [Samouczek wprowadzający](getting-started-tutorial.md) instrukcje krok po kroku.
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Włączanie stanów trwałych dla produktu usług przepływu pracy, które korzystają WorkflowServiceHost
 
@@ -129,7 +129,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 Możesz włączyć trwałość usługi samodzielnie hostowanej lub hostowany Windows Process Activation Service WAS przepływu pracy przy użyciu pliku konfiguracji. Usługa hostowana WAS przepływ pracy używa WorkflowServiceHost w usługach samodzielnie hostowanej przepływu pracy.
 
-`SqlWorkflowInstanceStoreBehavior`, Zachowanie usługi, które umożliwia zmianę wygodnie [Store wystąpienia przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) właściwości za pomocą konfiguracji XML. Hostowana WAS usług przepływu pracy można użyć w pliku Web.config. W poniższym przykładzie konfiguracji przedstawia sposób konfigurowania Store wystąpienia przepływu pracy SQL przy użyciu `sqlWorkflowInstanceStore` zachowania elementu w pliku konfiguracji.
+`SqlWorkflowInstanceStoreBehavior`, Zachowanie usługi, które umożliwia zmianę wygodnie [Store wystąpienia przepływu pracy SQL](sql-workflow-instance-store.md) właściwości za pomocą konfiguracji XML. Hostowana WAS usług przepływu pracy można użyć w pliku Web.config. W poniższym przykładzie konfiguracji przedstawia sposób konfigurowania Store wystąpienia przepływu pracy SQL przy użyciu `sqlWorkflowInstanceStore` zachowania elementu w pliku konfiguracji.
 
 ```xml
 <serviceBehaviors>

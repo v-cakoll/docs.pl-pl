@@ -2,12 +2,12 @@
 title: Profile śledzenia
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482304"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721375"
 ---
 # <a name="tracking-profiles"></a>Profile śledzenia
 
@@ -345,7 +345,7 @@ Elementy zapytania śledzenia są używane do tworzenia profilu śledzenia przy 
 > [!WARNING]
 > Dla programu WF przy użyciu hosta usługi przepływu pracy profilu śledzenia jest zwykle tworzony, przy użyciu pliku konfiguracji. Istnieje również możliwość tworzenia profilu śledzenia przy użyciu kodu przy użyciu profilu śledzenia i śledzenia interfejsu API zapytań.
 
-Profil, który został skonfigurowany jako plik konfiguracyjny XML jest stosowany do śledzenia uczestnika, za pomocą rozszerzenia zachowania. To jest dodawany do klasy WorkflowServiceHost zgodnie z opisem w dalszej części [Konfigurowanie śledzenia przepływu pracy](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).
+Profil, który został skonfigurowany jako plik konfiguracyjny XML jest stosowany do śledzenia uczestnika, za pomocą rozszerzenia zachowania. To jest dodawany do klasy WorkflowServiceHost zgodnie z opisem w dalszej części [Konfigurowanie śledzenia przepływu pracy](configuring-tracking-for-a-workflow.md).
 
 Poziom szczegółowości rekordów śledzenia emitowane przez hosta jest określana przez ustawienia konfiguracji w profilu śledzenia. Subskrybuje uczestnikiem śledzenia do śledzenia rekordów przez dodanie zapytania do profilu śledzenia. Aby subskrybować wszystkie rekordy śledzenia, należy określić wszystkie zapytania śledzenia przy użyciu profilu śledzenia "\*" w polach Nazwa we wszystkich zapytań.
 
@@ -388,6 +388,6 @@ Poniżej przedstawiono niektóre typowe przykłady śledzenie profile.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Śledzenie SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [Śledzenie SQL](./samples/sql-tracking.md)
 - [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

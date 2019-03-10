@@ -2,12 +2,12 @@
 title: Wywoływanie walidacji działania
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035139"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711151"
 ---
 # <a name="invoking-activity-validation"></a>Wywoływanie walidacji działania
 Działanie sprawdzania poprawności zapewnia metodę, aby zidentyfikować i raportowania błędów w konfiguracji dowolne działanie przed jej wykonanie. Sprawdzanie poprawności występuje, gdy przepływ pracy zostanie zmodyfikowany w Projektancie przepływów pracy i żadnych ostrzeżeń ani błędów sprawdzania poprawności, które są wyświetlane w Projektancie przepływu pracy. Sprawdzanie poprawności występuje także w czasie wykonywania po wywołaniu przepływu pracy i, jeśli wystąpią błędy sprawdzania poprawności, <xref:System.Activities.InvalidWorkflowException> jest generowany przez domyślną logikę weryfikacji. Windows Workflow Foundation (WF) zapewnia <xref:System.Activities.Validation.ActivityValidationServices> klasę, która może służyć przez aplikacji przepływu pracy i deweloperom narzędzia do jawnie sprawdzania poprawności działania. W tym temacie opisano sposób użycia <xref:System.Activities.Validation.ActivityValidationServices> do wykonywania sprawdzania poprawności działania.  
@@ -76,8 +76,8 @@ else
   
  Gdy <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> jest wywoływana w tym przykładowym przepływie pracy dwóch sprawdzania poprawności są zwracane błędy.  
   
- **Błąd: Nie podano wartości argumentu wymagane działania 'Operand2'.**  
-**Błąd: Nie podano wartości argumentu wymagane działania "Operand1".**  Jeśli ten przepływ pracy został wywołany, <xref:System.Activities.InvalidWorkflowException> może zostać zgłoszone, jak pokazano w poniższym przykładzie.  
+ **Błąd: Nieprawidłowa wartość argumentu wymagane działania 'Operand2'.**  
+**Błąd: Nieprawidłowa wartość argumentu wymagane działania "Operand1".**  Jeśli ten przepływ pracy został wywołany, <xref:System.Activities.InvalidWorkflowException> może zostać zgłoszone, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 try  
@@ -92,8 +92,8 @@ catch (Exception ex)
   
  **System.Activities.InvalidWorkflowException:**  
 **Napotkano następujące błędy podczas przetwarzania drzewa przepływu pracy:**   
-**"Dodaj": wartość argumentu w postaci wymagane działania 'Operand2' nie został dostarczony.**   
-**"Dodaj": wartość argumentu w postaci wymagane działania "Operand1" nie został podany.**  Dla tego przykładowego przepływu pracy był prawidłowy, dwa wymagane argumenty `Add` działanie musi być powiązana. W poniższym przykładzie dwa wymagane argumenty są powiązane z zmienne przepływu pracy oraz wartość wyniku. W tym przykładzie <xref:System.Activities.Activity%601.Result%2A> argument jest powiązana wraz z dwóch wymaganych argumentów. <xref:System.Activities.Activity%601.Result%2A> Argument nie jest wymagana z oświadczeniem i nie powoduje błąd sprawdzania poprawności, jeśli nie jest. Jest odpowiedzialny za tworzenie przepływu pracy można powiązać <xref:System.Activities.Activity%601.Result%2A> jeśli jego wartość jest używana w innym miejscu w przepływie pracy.  
+**Dodaj: Nieprawidłowa wartość argumentu wymagane działania 'Operand2'.**   
+**Dodaj: Nieprawidłowa wartość argumentu wymagane działania "Operand1".**  Dla tego przykładowego przepływu pracy był prawidłowy, dwa wymagane argumenty `Add` działanie musi być powiązana. W poniższym przykładzie dwa wymagane argumenty są powiązane z zmienne przepływu pracy oraz wartość wyniku. W tym przykładzie <xref:System.Activities.Activity%601.Result%2A> argument jest powiązana wraz z dwóch wymaganych argumentów. <xref:System.Activities.Activity%601.Result%2A> Argument nie jest wymagana z oświadczeniem i nie powoduje błąd sprawdzania poprawności, jeśli nie jest. Jest odpowiedzialny za tworzenie przepływu pracy można powiązać <xref:System.Activities.Activity%601.Result%2A> jeśli jego wartość jest używana w innym miejscu w przepływie pracy.  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException: Działania głównego ustawienia argumentów są nieprawidłowe.**  
+ **System.ArgumentException: Działania głównego argument ustawienia są nieprawidłowe.**  
 **Napraw definicji przepływu pracy lub podać wartości wejściowe, aby naprawić te błędy:**   
-**"Dodaj": wartość argumentu w postaci wymagane działania 'Operand2' nie został dostarczony.**   
-**"Dodaj": wartość argumentu w postaci wymagane działania "Operand1" nie został podany.**  Po poprawne argumenty są przekazywane, przepływ pracy zakończy się pomyślnie, jak pokazano w poniższym przykładzie.  
+**Dodaj: Nieprawidłowa wartość argumentu wymagane działania 'Operand2'.**   
+**Dodaj: Nieprawidłowa wartość argumentu wymagane działania "Operand1".**  Po poprawne argumenty są przekazywane, przepływ pracy zakończy się pomyślnie, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 Add wf = new Add();  
@@ -229,12 +229,12 @@ else
 ```  
   
  **Błąd: Koszt musi być większa niż cena.**  
-**Błąd: Nie podano wartości argumentu wymagane działania "Opis".**    
+**Błąd: Nieprawidłowa wartość argumentu wymagane działania "Opis".**    
 > [!NOTE]
 >  Niestandardowe działanie autorzy mogą udostępniać logikę weryfikacji w działaniu <xref:System.Activities.CodeActivity.CacheMetadata%2A> zastąpienia. Wszelkie wyjątki, które są generowane przez <xref:System.Activities.CodeActivity.CacheMetadata%2A> nie są traktowane jako błędy sprawdzania poprawności. Wyjątki te będą uciekały z wywołania <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> i muszą być obsługiwane przez obiekt wywołujący.  
   
 ## <a name="using-validationsettings"></a>Za pomocą ValidationSettings  
- Domyślnie wszystkie działania w drzewie działania są oceniane podczas sprawdzania poprawności jest wywoływana przez <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> Umożliwia sprawdzanie poprawności można dostosować na kilka różnych sposobów, konfigurując jego trzy właściwości. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> Określa, czy moduł weryfikacji powinny przejść przez drzewo działanie całej dotyczą tylko logikę weryfikacji podanej działania. Wartością domyślną dla tej wartości jest `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> Określa dodatkowe ograniczenia mapowanie z typu do listy ograniczeń. Typ podstawowy elementu każde działanie w drzewie działanie sprawdzania poprawności jest wyszukiwanie w <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Jeśli zostanie znalezione pasujące lista ograniczeń, wszystkie ograniczenia na liście są oceniane pod kątem działania. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> Określa, czy moduł weryfikacji należy ocenić wszystkie ograniczenia lub tylko te określone w <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Wartość domyślna to `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> i <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> są przydatne dla autorów hosta przepływu pracy dodać dodatkowe sprawdzanie poprawności dla przepływów pracy, takich jak zasady ograniczeń dla narzędzi, takich jak programu FxCop. Aby uzyskać więcej informacji na temat ograniczeń, zobacz [ograniczenia deklaratywne](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
+ Domyślnie wszystkie działania w drzewie działania są oceniane podczas sprawdzania poprawności jest wywoływana przez <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> Umożliwia sprawdzanie poprawności można dostosować na kilka różnych sposobów, konfigurując jego trzy właściwości. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> Określa, czy moduł weryfikacji powinny przejść przez drzewo działanie całej dotyczą tylko logikę weryfikacji podanej działania. Wartością domyślną dla tej wartości jest `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> Określa dodatkowe ograniczenia mapowanie z typu do listy ograniczeń. Typ podstawowy elementu każde działanie w drzewie działanie sprawdzania poprawności jest wyszukiwanie w <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Jeśli zostanie znalezione pasujące lista ograniczeń, wszystkie ograniczenia na liście są oceniane pod kątem działania. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> Określa, czy moduł weryfikacji należy ocenić wszystkie ograniczenia lub tylko te określone w <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Wartość domyślna to `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> i <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> są przydatne dla autorów hosta przepływu pracy dodać dodatkowe sprawdzanie poprawności dla przepływów pracy, takich jak zasady ograniczeń dla narzędzi, takich jak programu FxCop. Aby uzyskać więcej informacji na temat ograniczeń, zobacz [ograniczenia deklaratywne](declarative-constraints.md).  
   
  Aby użyć <xref:System.Activities.Validation.ValidationSettings>skonfiguruj żądane właściwości, a następnie przekazać go w wywołaniu <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. W tym przykładzie przepływ pracy składający się z <xref:System.Activities.Statements.Sequence> za pomocą niestandardowego `Add` działania jest weryfikowane. `Add` Działanie ma dwa wymagane argumenty.  
   

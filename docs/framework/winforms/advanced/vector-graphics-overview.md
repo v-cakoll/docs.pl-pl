@@ -9,26 +9,26 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 2fe3beaa13def25f8b7311e38a654d2e82922407
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663982"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720413"
 ---
 # <a name="vector-graphics-overview"></a>Przegląd grafiki wektorowej
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysuje linie, prostokąty i inne kształty w układzie współrzędnych. Można wybrać spośród różnych systemów współrzędnych, ale w układzie współrzędnych domyślna ma pochodzenia w lewym górnym rogu z osi x, wskazując i prawej osi y skierowany w dół. Jednostka miary w układzie współrzędnych domyślny jest piksela.  
   
 ## <a name="the-building-blocks-of-gdi"></a>Bloki konstrukcyjne GDI +  
- ![Grafika wektorowa](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
+ ![Grafika wektorowa](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
   
  Monitor komputera tworzy jej wyświetlanie na prostokątne tablicę kropki, nazywane elementami obrazu lub pikselach. Liczbę pikseli, które są wyświetlane na ekranie różni się od jednego monitora do następnego i zazwyczaj można skonfigurować liczbę pikseli, wyświetlanymi na monitorze poszczególnych do pewnego stopnia przez użytkownika.  
   
- ![Grafika wektorowa](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
+ ![Grafika wektorowa](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
  Kiedy używasz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Aby narysować linię, prostokąta lub krzywą, podaj niektórych kluczowych informacji na temat elementu do narysowania. Na przykład można określić wiersz, zapewniając dwa punkty i prostokąt można określić, podając punkt, wysokość i szerokość. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] działa w połączeniu z oprogramowanie sterownik ekranu w celu ustalenia, które piksele muszą być włączone do wyświetlenia w wierszu, prostokąta lub krzywej. Poniższa ilustracja przedstawia piksele, które są włączone, aby wyświetlić wiersz z punktu (4, 2) w punkcie (12, 8).  
   
- ![Grafika wektorowa](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
+ ![Grafika wektorowa](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
  Wraz z upływem czasu niektórych podstawowych bloków konstrukcyjnych okazały się być najbardziej przydatne do tworzenia obrazów dwuwymiarową. Te bloki konstrukcyjne, w których są obsługiwane przez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], są podane w poniższej liście:  
   
@@ -53,11 +53,11 @@ ms.locfileid: "54663982"
   
  Wszystkie metody rysowania <xref:System.Drawing.Graphics> klasy działa w połączeniu z <xref:System.Drawing.Pen> obiektu. Aby narysować niczego, należy utworzyć co najmniej dwa obiekty: <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu. <xref:System.Drawing.Pen> Obiekt przechowuje atrybuty, takie jak szerokość i kolor elementu do narysowania. <xref:System.Drawing.Pen> Obiekt jest przekazywany jako jeden z argumentów metody rysowania. Na przykład jeden odmianą <xref:System.Drawing.Graphics.DrawLine%2A> metoda otrzymuje <xref:System.Drawing.Pen> obiektu i czterech liczb całkowitych, jak pokazano w poniższym przykładzie, który rysuje prostokąt o szerokości 100, o wysokości od 50 do lewego górnego rogu (20, 10):  
   
- [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
- [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
+ [!code-csharp[LinesCurvesAndShapes#11](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
+ [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Instrukcje: Tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Linie, krzywe i kształty](lines-curves-and-shapes.md)
+- [Instrukcje: Tworzenie obiektów graficznych do rysowania](how-to-create-graphics-objects-for-drawing.md)

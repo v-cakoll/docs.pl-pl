@@ -2,12 +2,12 @@
 title: Omówienie programu Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: af5ccd47dd7b3ff35dd283f8fe659ebef912d441
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 385be91538bb6ee9ee570107c22d4b0ffc6afcba
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665165"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718756"
 ---
 # <a name="windows-workflow-overview"></a>Omówienie programu Windows Workflow
 Przepływ pracy jest zbiorem elemental jednostek nazywanych *działania* , są przechowywane jako obiekty modelu, który zawiera opis procesu rzeczywistych. Przepływy pracy, zapewniają sposób opisania kolejności wykonania i zależności między elementami krótkotrwałej pracy krótkim lub długim. Ta Praca przechodzi przez model od początku do końca, a działania może być wykonywane przez osoby lub funkcji systemu.  
@@ -25,21 +25,21 @@ Przepływ pracy jest zbiorem elemental jednostek nazywanych *działania* , są p
   
  Każdy z poprzednich obiektów interakcji trzy hosta jest tworzony z drzewa działań określone jako program przepływu pracy. Za pomocą tych typów lub niestandardowego hosta, który otacza <xref:System.Activities.ActivityInstance>, przepływy pracy mogą być wykonywane w żaden proces Windows, w tym aplikacje konsoli opartego na formularzach aplikacje, usługi Windows [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] sieci Web, witryn i (Windows Communication Foundation Usługi WCF).  
   
- ![Składniki przepływu pracy w procesie hosta](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
+ ![Składniki przepływu pracy w procesie hosta](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 Składniki przepływu pracy w procesie hosta  
   
 ## <a name="interaction-between-workflow-components"></a>Interakcje między składnikami przepływu pracy  
  Poniższy diagram przedstawia, jak składniki przepływu pracy współdziałają ze sobą.  
   
- ![Przepływ pracy interakcji](../../../docs/framework/windows-workflow-foundation/media/workflowinteraction.gif "WorkflowInteraction")  
+ ![Przepływ pracy interakcji](./media/workflowinteraction.gif "WorkflowInteraction")  
   
  Na powyższym diagramie <xref:System.Activities.WorkflowInvoker.Invoke%2A> metody <xref:System.Activities.WorkflowInvoker> klasa jest używana do wywołania kilka wystąpień przepływu pracy. <xref:System.Activities.WorkflowInvoker> Służy do uproszczonego przepływów pracy, które nie ma potrzeby zarządzania z hosta przepływy pracy, wymagających zarządzania z hosta (takie jak <xref:System.Activities.Bookmark> wznowienie) musi zostać wykonana przy użyciu <xref:System.Activities.WorkflowApplication.Run%2A> zamiast tego. Nie jest wymagane oczekiwania dla jednego wystąpienia przepływu pracy do wykonania przed wywołaniem Aparat środowiska wykonawczego obsługuje jednoczesne uruchamianie wielu wystąpień przepływu pracy.  Przepływy pracy wywoływane są następujące:  
   
--   A <xref:System.Activities.Statements.Sequence> działania, który zawiera <xref:System.Activities.Statements.WriteLine> działania podrzędnego. A <xref:System.Activities.Variable> elementu nadrzędnego działania jest powiązany z <xref:System.Activities.InArgument> działania podrzędnego. Aby uzyskać więcej informacji na temat zmiennych, argumentów i powiązania zobacz [zmienne i argumenty](../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
+-   A <xref:System.Activities.Statements.Sequence> działania, który zawiera <xref:System.Activities.Statements.WriteLine> działania podrzędnego. A <xref:System.Activities.Variable> elementu nadrzędnego działania jest powiązany z <xref:System.Activities.InArgument> działania podrzędnego. Aby uzyskać więcej informacji na temat zmiennych, argumentów i powiązania zobacz [zmienne i argumenty](variables-and-arguments.md).  
   
 -   Niestandardowe działanie o nazwie `ReadLine`. <xref:System.Activities.OutArgument> z `ReadLine` działania są zwracane do wywołania <xref:System.Activities.WorkflowInvoker.Invoke%2A> metody.  
   
--   Niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.CodeActivity> klasy abstrakcyjnej. <xref:System.Activities.CodeActivity> Mogą uzyskiwać dostęp do funkcji wykonawczej (takich jak śledzenie i właściwości) przy użyciu <xref:System.Activities.CodeActivityContext> który jest dostępny jako parametr <xref:System.Activities.CodeActivity.Execute%2A> metody. Aby uzyskać więcej informacji o tych funkcjach czasu wykonywania, zobacz [przepływu pracy i śledzenie](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) i [właściwości wykonania przepływu pracy](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
+-   Niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.CodeActivity> klasy abstrakcyjnej. <xref:System.Activities.CodeActivity> Mogą uzyskiwać dostęp do funkcji wykonawczej (takich jak śledzenie i właściwości) przy użyciu <xref:System.Activities.CodeActivityContext> który jest dostępny jako parametr <xref:System.Activities.CodeActivity.Execute%2A> metody. Aby uzyskać więcej informacji o tych funkcjach czasu wykonywania, zobacz [przepływu pracy i śledzenie](workflow-tracking-and-tracing.md) i [właściwości wykonania przepływu pracy](workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - [BizTalk Server 2006 lub WF? Wybór narzędzia prawo przepływu pracy dla projektu](https://go.microsoft.com/fwlink/?LinkId=154901)

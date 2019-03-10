@@ -2,12 +2,12 @@
 title: Ograniczenia deklaratywne
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842375"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708157"
 ---
 # <a name="declarative-constraints"></a>Ograniczenia deklaratywne
 Ograniczenia deklaratywne udostępnia zaawansowane metody sprawdzania poprawności działania i jej relacji z innymi działaniami. Ograniczenia są skonfigurowane do działania podczas procesu tworzenia, ale można również określić dodatkowe ograniczenia przez hosta przepływu pracy. Ten temat zawiera omówienie sposobu użycia ograniczenia deklaratywne, aby zapewnić działanie sprawdzania poprawności.  
@@ -176,4 +176,4 @@ else
 }  
 ```  
   
- Jeśli <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> właściwość <xref:System.Activities.Validation.ValidationSettings> jest `true`, a następnie określone dodatkowe ograniczenia są oceniane podczas sprawdzania poprawności, wywołując <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Może to być przydatne w przypadku sprawdzanie przepływów pracy na potrzeby sprawdzania poprawności określonej konfiguracji. Należy jednak pamiętać, że podczas wywoływania przepływu pracy logikę weryfikacji skonfigurowany w przepływie pracy jest obliczane i musi pomyślnie przejść dla przepływu pracy rozpocząć pomyślnie. Aby uzyskać więcej informacji na temat wywoływania sprawdzania poprawności, zobacz [wywoływanie walidacji działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Jeśli <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> właściwość <xref:System.Activities.Validation.ValidationSettings> jest `true`, a następnie określone dodatkowe ograniczenia są oceniane podczas sprawdzania poprawności, wywołując <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Może to być przydatne w przypadku sprawdzanie przepływów pracy na potrzeby sprawdzania poprawności określonej konfiguracji. Należy jednak pamiętać, że podczas wywoływania przepływu pracy logikę weryfikacji skonfigurowany w przepływie pracy jest obliczane i musi pomyślnie przejść dla przepływu pracy rozpocząć pomyślnie. Aby uzyskać więcej informacji na temat wywoływania sprawdzania poprawności, zobacz [wywoływanie walidacji działania](invoking-activity-validation.md).

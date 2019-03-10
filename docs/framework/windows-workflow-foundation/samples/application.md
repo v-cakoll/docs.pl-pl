@@ -2,28 +2,28 @@
 title: Aplikacja
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-ms.openlocfilehash: c37eaeca486d01a352df9cb53dc34650393a0b81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ee4f6513b8a400dcaef6e7e8caf168876db4dbc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513854"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718331"
 ---
 # <a name="application"></a>Aplikacja
-Ta sekcja zawiera przykłady związane z aplikacjami przepływów pracy w systemie Windows Workflow Foundation (WF).  
+Ta sekcja zawiera przykłady dotyczące przepływu pracy aplikacji w Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Proces zatwierdzania dokumentu](../../../../docs/framework/windows-workflow-foundation/samples/document-approval-process.md)  
- Pokazuje, za pomocą przepływu pracy w aplikacji — biznesowych.  
+ [Proces zatwierdzania dokumentu](document-approval-process.md)  
+ Demonstruje użycie przepływu pracy w aplikacji — biznesowych.  
   
- [Proces zakupów firmowych](../../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
- Pokazuje, za pomocą przepływu pracy w aplikacji hostowanej okna i sieci Web.  
+ [Proces zakupów firmowych](corporate-purchase-process.md)  
+ Demonstruje użycie przepływu pracy w aplikacji hostowanych okna i sieci Web.  
   
- [Proces zatrudniania](../../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
- Pokazuje, jak przeprowadzić proces biznesowy przy użyciu działań obsługi wiadomości i dwóch przepływów pracy hostowany jako usługi przepływu pracy.  
+ [Proces zatrudniania](hiring-process.md)  
+ Demonstruje sposób implementacji procesu biznesowego, przy użyciu działań dotyczących komunikatów i dwa przepływy pracy hostowany jako usług przepływu pracy.  
   
- [Wizualne śledzenie przepływu pracy](../../../../docs/framework/windows-workflow-foundation/samples/visual-workflow-tracking.md)  
- Pokazuje, jak przeprowadzić proces biznesowy przy użyciu działań obsługi wiadomości i dwóch przepływów pracy hostowany jako usługi przepływu pracy.  
+ [Wizualne śledzenie przepływu pracy](visual-workflow-tracking.md)  
+ Demonstruje sposób implementacji procesu biznesowego, przy użyciu działań dotyczących komunikatów i dwa przepływy pracy hostowany jako usług przepływu pracy.  
   
- [Zarządzanie wstrzymanymi wystąpieniami](../../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
+ [Zarządzanie wstrzymanymi wystąpieniami](suspended-instance-management.md)  
  Pokazuje, jak zarządzać wystąpienia przepływu pracy, które zostało zawieszone.

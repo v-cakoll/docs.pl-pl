@@ -12,12 +12,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: a8159e9e9a2484b95399aba67b1a10b1252a4357
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb68d76d936f13e78d13629455c6ac7fb537b40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525563"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714791"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Instrukcje: Ustawianie opcji za pomocą formantów CheckBox formularzy Windows
 Formularze Windows <xref:System.Windows.Forms.CheckBox> formantu umożliwia użytkownikom True/False lub opcji Yes/No. Kontrolka wyświetla znacznik wyboru, gdy jest wybrana.  
@@ -67,6 +67,6 @@ Formularze Windows <xref:System.Windows.Forms.CheckBox> formantu umożliwia uży
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.CheckBox>
-- [CheckBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
-- [Instrukcje: Odpowiadanie do formularzy Windows Forms kliknięcia kontrolki CheckBox](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [CheckBox, kontrolka](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [CheckBox, kontrolka — omówienie](checkbox-control-overview-windows-forms.md)
+- [Instrukcje: Odpowiadanie do formularzy Windows Forms kliknięcia kontrolki CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox, kontrolka](checkbox-control-windows-forms.md)

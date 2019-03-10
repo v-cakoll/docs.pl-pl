@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: cc3ec2dd0bdd7f83b2cd6b8cfaf0cad37238707b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e44b2944a24ea4201fda2f0891d74c672a64a4a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514819"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718947"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>Instrukcje: Włączanie funkcji AutoComplete w formantach ToolStrip w formularzach Windows Forms
 Poniższa procedura łączy <xref:System.Windows.Forms.ToolStripLabel> z <xref:System.Windows.Forms.ToolStripComboBox> który można upuszczać w dół do wyświetlenia listy elementów, takich jak ostatnio odwiedzane witryny sieci Web. Jeśli użytkownik wpisze znak, który pasuje do pierwszego znaku, jednego z elementów na liście, element natychmiast jest wyświetlany.  
@@ -95,6 +95,6 @@ Poniższa procedura łączy <xref:System.Windows.Forms.ToolStripLabel> z <xref:S
 - <xref:System.Windows.Forms.ToolStripComboBox>
 - <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>
 - <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>
-- [ToolStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip, kontrolka — architektura](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip — podsumowanie informacji o technologii](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip, kontrolka — architektura](toolstrip-control-architecture.md)
+- [ToolStrip — podsumowanie informacji o technologii](toolstrip-technology-summary.md)

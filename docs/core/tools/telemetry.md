@@ -4,16 +4,16 @@ description: Poznaj funkcje telemetryczne zestawu .NET Core SDK, które zbieraj�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168848"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718041"
 ---
 # <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestawu SDK programu .NET core
 
-[Zestawu .NET Core SDK](index.md) obejmuje [funkcji telemetrii](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) które zbiera informacje o użyciu. Należy pamiętać, że zespół .NET wiedział, jak te narzędzia są używane, dzięki czemu można poprawić. Aby uzyskać więcej informacji, zobacz [poznane z platformy .NET Core SDK Telemetrii](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
+[Zestawu .NET Core SDK](index.md) obejmuje [funkcji telemetrii](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) które zbiera informacje o użyciu. Należy pamiętać, że zespół .NET wiedział, jak te narzędzia są używane, dzięki czemu można poprawić. Aby uzyskać więcej informacji, zobacz [poznane z platformy .NET Core SDK Telemetrii](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/).
 
 Zebrane dane są anonimowe i opublikowane w zagregowanej formie do użycia przez firmę Microsoft i społeczności w ramach [licencji Creative Commons: uznanie autorstwa License](https://creativecommons.org/licenses/by/4.0/).
 
@@ -85,7 +85,7 @@ Dane publikowane jest dostępny co kwartał i znajduje się w [danych użycia pr
 
 | Znacznik czasu      | Wystąpienia | Polecenie | Lokalizacja geograficzna | Rodzina systemów operacyjnych | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| 4/16/2017 0:00 | 8           | Uruchom     | Ugandyjski    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
+| 4/16/2017 0:00 | 8           | Uruchom     | Uganda    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
 
 ### <a name="datasets"></a>Zestawy danych
 
@@ -130,6 +130,6 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Czego się nauczyliśmy z platformy .NET Core SDK Telemetrii](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)
+- [Czego się nauczyliśmy z platformy .NET Core SDK Telemetrii](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)
 - [Źródło odwołania danych telemetrycznych (repozytorium dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
 - [Dane użycia zestawu SDK programu .NET core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)

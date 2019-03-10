@@ -2,16 +2,16 @@
 title: What's New in Windows Workflow Foundation na platformie .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b907a592bd644bc7a9c4aa19cef78a49bf729561
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212407"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718925"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>What's New in Windows Workflow Foundation na platformie .NET 4.5
 
-Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, takich jak nowe działania, funkcje projektanta i modele programowania przepływu pracy. Wiele, ale nie dla wszystkich nowych funkcji przepływu pracy, wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. Aby uzyskać więcej informacji na temat nowych funkcji, które są obsługiwane, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Rehostowanym projektancie przepływu pracy](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Aby uzyskać więcej informacji na temat migrowania aplikacji .NET 3.0 i .NET 3.5 przepływu pracy można korzystać z najnowszej wersji, zobacz [wskazówek dotyczących migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Ten temat zawiera omówienie nowych funkcji przepływu pracy, wprowadzonych w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, takich jak nowe działania, funkcje projektanta i modele programowania przepływu pracy. Wiele, ale nie dla wszystkich nowych funkcji przepływu pracy, wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. Aby uzyskać więcej informacji na temat nowych funkcji, które są obsługiwane, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Rehostowanym projektancie przepływu pracy](wf-features-in-the-rehosted-workflow-designer.md). Aby uzyskać więcej informacji na temat migrowania aplikacji .NET 3.0 i .NET 3.5 przepływu pracy można korzystać z najnowszej wersji, zobacz [wskazówek dotyczących migracji](migration-guidance.md). Ten temat zawiera omówienie nowych funkcji przepływu pracy, wprowadzonych w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 
 > [!WARNING]
 > Nowe funkcje programu Windows Workflow Foundation, wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] nie są dostępne w projektach przeznaczonych dla poprzednich wersji Framework. Jeśli projekt, który jest przeznaczony dla [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ponownie jest przeznaczona do poprzedniej wersji framework, może wystąpić kilka problemów.
@@ -25,13 +25,13 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono kilka nowych funkcji przechowywania wersji, na podstawie nowej <xref:System.Activities.WorkflowIdentity> klasy. <xref:System.Activities.WorkflowIdentity> udostępnia autorzy aplikacji przepływu pracy mechanizmu mapowania utrwalonego wystąpienia przepływu pracy przy użyciu jego definicji.
 
-- Deweloperzy korzystający z <xref:System.Activities.WorkflowApplication> hostingu może użyć <xref:System.Activities.WorkflowIdentity> hostowania wielu wersji przepływu pracy side-by-side. Wystąpienia przepływu pracy utrwalonych może zostać załadowany za pomocą nowego <xref:System.Activities.WorkflowApplicationInstance> klasy, a następnie <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> może służyć przez hosta w celu zapewnienia odpowiedniej wersji definicji przepływu pracy podczas tworzenia wystąpienia <xref:System.Activities.WorkflowApplication>. Aby uzyskać więcej informacji, zobacz [przy użyciu obiektu WorkflowIdentity i wersjonowanie](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md) i [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+- Deweloperzy korzystający z <xref:System.Activities.WorkflowApplication> hostingu może użyć <xref:System.Activities.WorkflowIdentity> hostowania wielu wersji przepływu pracy side-by-side. Wystąpienia przepływu pracy utrwalonych może zostać załadowany za pomocą nowego <xref:System.Activities.WorkflowApplicationInstance> klasy, a następnie <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> może służyć przez hosta w celu zapewnienia odpowiedniej wersji definicji przepływu pracy podczas tworzenia wystąpienia <xref:System.Activities.WorkflowApplication>. Aby uzyskać więcej informacji, zobacz [przy użyciu obiektu WorkflowIdentity i wersjonowanie](using-workflowidentity-and-versioning.md) i [jak: Hostowanie wielu wersji przepływu pracy Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
-- <xref:System.ServiceModel.WorkflowServiceHost> jest teraz hostem wielu wersji. Po wdrożeniu nowej wersji usługi przepływu pracy nowe wystąpienia są tworzone przy użyciu nowej usługi, ale istniejące wystąpienia wykonać przy użyciu poprzedniej wersji. Aby uzyskać więcej informacji, zobacz [równoległe przechowywanie wersji w klasie WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
+- <xref:System.ServiceModel.WorkflowServiceHost> jest teraz hostem wielu wersji. Po wdrożeniu nowej wersji usługi przepływu pracy nowe wystąpienia są tworzone przy użyciu nowej usługi, ale istniejące wystąpienia wykonać przy użyciu poprzedniej wersji. Aby uzyskać więcej informacji, zobacz [równoległe przechowywanie wersji w klasie WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
 
-- Aktualizacja dynamiczna jest wprowadzenie udostępnia mechanizm do aktualizowania definicji utrwalonego wystąpienia przepływu pracy. Aby uzyskać więcej informacji, zobacz [aktualizacja dynamiczna](../../../docs/framework/windows-workflow-foundation/dynamic-update.md) i [jak: Aktualizowanie definicji działającego wystąpienia przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+- Aktualizacja dynamiczna jest wprowadzenie udostępnia mechanizm do aktualizowania definicji utrwalonego wystąpienia przepływu pracy. Aby uzyskać więcej informacji, zobacz [aktualizacja dynamiczna](dynamic-update.md) i [jak: Aktualizowanie definicji działającego wystąpienia przepływu pracy](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
-- Skrypt bazy danych SqlWorkflowInstanceStoreSchemaUpgrade.sql znajduje się do uaktualnienia bazy danych trwałości utworzone za pomocą [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bazy danych skryptów. Ten skrypt aktualizacji [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] trwałości baz danych w celu obsługują nowe możliwości przechowywania wersji, wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Wystąpienia utrwalonych przepływów pracy w bazie danych są podane wartości wersji domyślnych i mogą uczestniczyć w aktualizacji dynamicznych i wykonywanie side-by-side. Aby uzyskać więcej informacji, zobacz [uaktualnianie .NET Framework 4 trwałości baz danych do przechowywania wersji przepływu pracy obsługi](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+- Skrypt bazy danych SqlWorkflowInstanceStoreSchemaUpgrade.sql znajduje się do uaktualnienia bazy danych trwałości utworzone za pomocą [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] bazy danych skryptów. Ten skrypt aktualizacji [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] trwałości baz danych w celu obsługują nowe możliwości przechowywania wersji, wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Wystąpienia utrwalonych przepływów pracy w bazie danych są podane wartości wersji domyślnych i mogą uczestniczyć w aktualizacji dynamicznych i wykonywanie side-by-side. Aby uzyskać więcej informacji, zobacz [uaktualnianie .NET Framework 4 trwałości baz danych do przechowywania wersji przepływu pracy obsługi](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
 ## <a name="BKMK_NewActivities"></a> Działania
 
@@ -72,7 +72,7 @@ Przepływy pracy w [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)
 
      Jeśli wyjątki nie powinny być serializowane, upewnij się, że wyjątki są używane w ramach <xref:System.Activities.Statements.NoPersistScope>.
 
-4. Autorzy działania powinny przesłaniać <xref:System.Activities.Activity.CacheMetadata%2A> pozwala uniknąć środowiska uruchomieniowego przepływu pracy, automatyczne wykonywanie odbicie wobec typu. Argumenty i działania podrzędne muszą być różna od null, i <xref:System.Activities.ActivityMetadata.Bind%2A> musi być wywoływana jawnie. Aby uzyskać więcej informacji na temat zastępowania <xref:System.Activities.Activity.CacheMetadata%2A>, zobacz [Uwidacznianie danych przy użyciu metody CacheMetadata](../../../docs/framework/windows-workflow-foundation/exposing-data-with-cachemetadata.md). Ponadto wystąpienia argumenty, które są typu, który jest `internal` lub **prywatnej** muszą być jawnie tworzone w <xref:System.Activities.Activity.CacheMetadata%2A> w celu uniknięcia tworzonego przez odbicie.
+4. Autorzy działania powinny przesłaniać <xref:System.Activities.Activity.CacheMetadata%2A> pozwala uniknąć środowiska uruchomieniowego przepływu pracy, automatyczne wykonywanie odbicie wobec typu. Argumenty i działania podrzędne muszą być różna od null, i <xref:System.Activities.ActivityMetadata.Bind%2A> musi być wywoływana jawnie. Aby uzyskać więcej informacji na temat zastępowania <xref:System.Activities.Activity.CacheMetadata%2A>, zobacz [Uwidacznianie danych przy użyciu metody CacheMetadata](exposing-data-with-cachemetadata.md). Ponadto wystąpienia argumenty, które są typu, który jest `internal` lub **prywatnej** muszą być jawnie tworzone w <xref:System.Activities.Activity.CacheMetadata%2A> w celu uniknięcia tworzonego przez odbicie.
 
 5. Typy nie będzie używać <xref:System.Runtime.Serialization.ISerializable> lub <xref:System.SerializableAttribute> do serializacji; typy, które mają być serializowane musi obsługiwać <xref:System.Runtime.Serialization.DataContractSerializer>.
 
@@ -118,7 +118,7 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], zmienne i ar
 
 Poniższy zrzut ekranu przedstawia zmienną i argument menu kontekstowe projektanta.
 
-![Zmienna i Menu kontekstowego projektanta argumentów](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")
+![Zmienna i Menu kontekstowego projektanta argumentów](./media/designercontextmenu.png "DesignerContextMenu")
 
 ### <a name="BKMK_AutoSurround"></a> Auto umieszczanie w sekwencji
 
@@ -126,11 +126,11 @@ Od przepływu pracy lub niektóre działania kontenera (takie jak <xref:System.A
 
 Poniższy zrzut ekranu przedstawia `WriteLine` działania w `Body` z `NoPersistScope`.
 
-![Automatyczne&#45;otaczające lokalizację wrzucania](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")
+![Automatyczne&#45;otaczające lokalizację wrzucania](./media/autosurround1.png "AutoSurround1")
 
 Poniższy zrzut ekranu przedstawia utworzone automatycznie `Sequence` działania w `Body` po drugiej `WriteLine` jest spadła poniżej pierwszej.
 
-![Automatycznie utworzone działaniu sequence](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+![Automatycznie utworzone działaniu sequence](./media/autosurround2.png "AutoSurround2")
 
 ### <a name="BKMK_PanMode"></a> Tryb Pan
 
@@ -138,7 +138,7 @@ Aby łatwiej przejść z dużych przepływów pracy w projektancie, można włą
 
 Poniższy zrzut ekranu przedstawia przycisk przesunięcie, który znajduje się w prawym dolnym rogu projektanta przepływów pracy.
 
-![Przycisk przesunięcie w Projektancie przepływu pracy](../../../docs/framework/windows-workflow-foundation/media/panbutton.png "PanButton")
+![Przycisk przesunięcie w Projektancie przepływu pracy](./media/panbutton.png "PanButton")
 
 Środkowy przycisk myszy lub spacji może również służyć do Przesuń w Projektancie przepływu pracy.
 
@@ -152,9 +152,9 @@ Wielokrotny działania można też przeciąganie i upuszczanie w Projektancie i 
 
 Aby ułatwić hierarchiczne przepływów pracy można przejść, składniki przepływu pracy są wyświetlane w widoku konspektu stylu drzewa. Wyświetlanie konspektu jest wyświetlany w **konspekt dokumentu** widoku. Aby otworzyć ten widok z górnego menu, wybierz **widoku**, **Windows inne**, **konspekt dokumentu**, lub naciśnij klawisze Ctrl W U. Klikając węzeł w widoku konspektu spowoduje przejście do odpowiadającego im działania w Projektancie przepływów pracy i widoku konspektu zostaną zaktualizowane w celu wyświetlenia działań, które są wybrane w projektancie.
 
-Poniższy zrzut ekranu przedstawiający ukończony przepływ pracy z [Samouczek wprowadzający](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) Pokazuje widok konspektu sekwencyjnego przepływu pracy.
+Poniższy zrzut ekranu przedstawiający ukończony przepływ pracy z [Samouczek wprowadzający](getting-started-tutorial.md) Pokazuje widok konspektu sekwencyjnego przepływu pracy.
 
-![Widoku w Projektancie przepływu pracy konspektu](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Widoku w Projektancie przepływu pracy konspektu](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
 
 ### <a name="BKMK_CSharpExpressions"></a> Wyrażeń języka C#
 
@@ -162,7 +162,7 @@ Przed [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wszystkie wyrażenia
 
 Wyrażeń języka C# są weryfikowane w czasie projektowania. Błędy w wyrażeniach języka C# będzie oznaczone czerwoną, falistą linią.
 
-Aby uzyskać więcej informacji na temat wyrażeń języka C#, zobacz [wyrażeń języka C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).
+Aby uzyskać więcej informacji na temat wyrażeń języka C#, zobacz [wyrażeń języka C#](csharp-expressions.md).
 
 ### <a name="BKMK_Visibility"></a> Większa kontrola nad widoczność pasek powłoki i nagłówek elementów
 
@@ -174,17 +174,17 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], musiały rę
 
 Poniższy zrzut ekranu przedstawia punkty załącznika, które stają się widoczne, gdy działanie zostanie przeciągnięty z przybornika.
 
-![Węzeł początkowy schemat blokowy przedstawiający punktów połączenie automatyczne](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")
+![Węzeł początkowy schemat blokowy przedstawiający punktów połączenie automatyczne](./media/autoconnect1.png "Autoconnect1")
 
 Działania również można przeciągać połączeń między węzłami schemat blokowy i Stanami automatyczne wstawianie węzła między dwóch pozostałych węzłach. Poniższy zrzut ekranu przedstawia wyróżnione linii łączącej, gdzie można przeciągnąć z przybornika i porzucić działania.
 
-![Automatyczne&#45;Wstaw uchwytu upuszczanie działania](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "automatycznego wstawiania")
+![Automatyczne&#45;Wstaw uchwytu upuszczanie działania](./media/autoinsert.png "automatycznego wstawiania")
 
 ### <a name="BKMK_Annotations"></a> Adnotacje projektanta
 
 W celu ułatwienia tworzenia większych przepływów pracy, Projektant obsługuje dodawanie adnotacji, aby ułatwić śledzenie procesu projektowania. Adnotację można dodać do działań, Stany, węzłów schematu blokowego, zmienne i argumenty. Poniższy zrzut ekranu przedstawia menu kontekstowe służy do dodawania adnotacji do projektanta.
 
-![Menu kontekstowe adnotacji](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")
+![Menu kontekstowe adnotacji](./media/annotationdialog.png "annotationdialog")
 
 ### <a name="debugging-states"></a>Stany debugowania
 
@@ -230,12 +230,12 @@ Przepływy pracy automatu stanów zostały wprowadzone w ramach programu .NET Fr
 
 4. Działania używany do tworzenia przepływów pracy automatu stanów, w tym: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, i <xref:System.Activities.Statements.Transition>
 
-Poniższy zrzut ekranu przedstawia przepływ pracy automatu stanu ukończenia od [Samouczek wprowadzający](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) kroku [jak: Tworzenie przepływu pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).
+Poniższy zrzut ekranu przedstawia przepływ pracy automatu stanu ukończenia od [Samouczek wprowadzający](getting-started-tutorial.md) kroku [jak: Tworzenie przepływu pracy automatu stanów](how-to-create-a-state-machine-workflow.md).
 
-![Ukończono przepływ pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Ukończono przepływ pracy automatu stanów](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
 
-Aby uzyskać więcej informacji na temat tworzenia przepływów pracy automatu stanów, zobacz [przepływów pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).
+Aby uzyskać więcej informacji na temat tworzenia przepływów pracy automatu stanów, zobacz [przepływów pracy automatu stanów](state-machine-workflows.md).
 
 ### <a name="BKMK_ContractFirst"></a> Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu
 
-Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia deweloperom projektowanie najpierw kontrakt w kodzie, a następnie za pomocą kilku kliknięć w programie Visual Studio automatycznie wygenerować szablon działania w przyborniku, reprezentujący każdej operacji. Działania te są następnie używane do tworzenia przepływu pracy, który implementuje operacje zdefiniowane przez umowę. Projektant przepływu pracy zostanie przeprowadzona Weryfikacja usługi przepływu pracy, aby upewnić się, czy te operacje są wykonywane, i podpis przepływu pracy odpowiada sygnatury Umowa. Deweloper można również skojarzyć usługi przepływu pracy z kolekcją zaimplementowane kontrakty. Aby uzyskać więcej informacji na temat opracowywania rozwiązań usługi przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu, zobacz [jak: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).
+Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia deweloperom projektowanie najpierw kontrakt w kodzie, a następnie za pomocą kilku kliknięć w programie Visual Studio automatycznie wygenerować szablon działania w przyborniku, reprezentujący każdej operacji. Działania te są następnie używane do tworzenia przepływu pracy, który implementuje operacje zdefiniowane przez umowę. Projektant przepływu pracy zostanie przeprowadzona Weryfikacja usługi przepływu pracy, aby upewnić się, czy te operacje są wykonywane, i podpis przepływu pracy odpowiada sygnatury Umowa. Deweloper można również skojarzyć usługi przepływu pracy z kolekcją zaimplementowane kontrakty. Aby uzyskać więcej informacji na temat opracowywania rozwiązań usługi przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu, zobacz [jak: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).

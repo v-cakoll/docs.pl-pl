@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 2150e7797095b88227b499ec5481a3ce521270e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667914"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711502"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Instrukcje: Obracanie, odzwierciedlanie i pochylanie obrazów
 Można obracanie, odzwierciedlanie i pochylanie obrazów, określając docelowe punkty narożników lewym, prawym górnym rogu i lewym dolnym oryginalnego obrazu. Docelowe trzy punkty określają affine — przekształcenia, które mapuje równoległobok oryginalny obraz prostokątny.  
@@ -30,23 +30,23 @@ Można obracanie, odzwierciedlanie i pochylanie obrazów, określając docelowe 
   
  Na poniższej ilustracji pokazuje oryginalny obraz i obraz, który mapowany do równoległobok. Oryginalny obraz ma zostały nierówne, zostaną uwzględnione, obracać i translacji. Oś x wzdłuż górnej krawędzi oryginalny obraz jest mapowany na wierszu, który jest uruchamiany za pośrednictwem (200, 20) i (110, 100). Oś y wzdłuż lewej krawędzi oryginalny obraz jest mapowany na wierszu, który jest uruchamiany za pośrednictwem (200, 20) i (250, 30).  
   
- ![Rozkłada](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
+ ![Rozkłada](./media/stripes1.gif "Stripes1")  
   
  Poniższa ilustracja przedstawia podobne przekształcenie zastosowane do obrazu fotograficznych.  
   
- ![Transformed Climber](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
+ ![Transformed Climber](./media/transformedclimber.png "TransformedClimber")  
   
  Poniższa ilustracja przedstawia podobne przekształcenie zastosowane do metaplik.  
   
- ![Przekształcono metaplik](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")  
+ ![Przekształcono metaplik](./media/transformedmetafile.png "TransformedMetafile")  
   
  Poniższy przykład tworzy obrazy z pierwszą ilustracją.  
   
- [!code-csharp[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
- [!code-vb[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
+ [!code-vb[System.Drawing.WorkingWithImages#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Upewnij się zastąpić `Stripes.bmp` ze ścieżką do obrazu, który jest prawidłowy w tym systemie.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)

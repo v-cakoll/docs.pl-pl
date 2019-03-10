@@ -15,12 +15,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-ms.openlocfilehash: 6c3ad0892ea0892b7c4c0e21e14bdb75fe22b447
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 311673c30283cdf3e0206d143daab8c01adc2bce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554221"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718795"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Przycinanie i skalowanie obrazów w GDI+
 Możesz użyć <xref:System.Drawing.Graphics.DrawImage%2A> metody <xref:System.Drawing.Graphics> klasy do rysowania i umieść wektor obrazów i obrazów rastrowych. <xref:System.Drawing.Graphics.DrawImage%2A> jest przeciążona metoda, dzięki czemu może dostarczyć argumentów na kilka sposobów.  
@@ -28,24 +28,24 @@ Możesz użyć <xref:System.Drawing.Graphics.DrawImage%2A> metody <xref:System.D
 ## <a name="drawimage-variations"></a>DrawImage — zmiany  
  Zmiana jednego <xref:System.Drawing.Graphics.DrawImage%2A> metoda otrzymuje <xref:System.Drawing.Bitmap> i <xref:System.Drawing.Rectangle>. Prostokąt Określa lokalizację docelową dla operacji rysowania; oznacza to, że Określa ona prostokąta do rysowania obrazu. Jeśli rozmiar prostokąta docelowego jest inna niż rozmiar oryginalnego obrazu, obraz, który jest skalowany w celu dopasowania prostokąta docelowego. Poniższy przykład kodu pokazuje sposób rysowania trzy razy ten sam obraz: drugi raz z bez skalowania, drugi raz z rozszerzenia a drugi raz z kompresji:  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#31)]  
   
  Poniższa ilustracja przedstawia trzy obrazy.  
   
- ![Skalowanie](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
+ ![Skalowanie](./media/aboutgdip03-art06.gif "AboutGdip03_Art06")  
   
  Kilka odmian <xref:System.Drawing.Graphics.DrawImage%2A> metoda ma parametr prostokąta źródłowego, a także parametr prostokąta docelowego. Parametr prostokąta źródłowego określa część oryginalnego obrazu, aby narysować. Prostokąta docelowego określa prostokąta do rysowania część obrazu. Jeśli rozmiar prostokąta docelowego jest inna niż rozmiar prostokąta źródłowego, obraz jest skalowane w celu dopasowania prostokąta docelowego.  
   
  Poniższy przykład kodu pokazuje sposób tworzenia <xref:System.Drawing.Bitmap> z pliku Runner.jpg. Całego obrazu narysowany bez skalowania w (0, 0). Następnie niewielką część obrazu jest rysowana dwa razy: rozszerzenie raz przy użyciu kompresji i drugi raz.  
   
- [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
- [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
+ [!code-csharp[System.Drawing.ImagesBitmapsMetafiles#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/CS/Class1.cs#32)]
+ [!code-vb[System.Drawing.ImagesBitmapsMetafiles#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#32)]  
   
  Na poniższej ilustracji pokazuje nieskalowanego obrazu i fragmenty skompresowane i rozwiniętej obrazu.  
   
- ![Przycinanie i skalowanie](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
+ ![Przycinanie i skalowanie](./media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
 ## <a name="see-also"></a>Zobacz także
-- [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)
+- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)

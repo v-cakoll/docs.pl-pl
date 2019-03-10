@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9c8580f61bcb311ca6b2e1cc2a11b4d4a4dbe79c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664771"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719419"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funkcjonalność przeciągania i upuszczania w formularzach systemu Windows
 Windows Forms zawiera zestaw metod, zdarzeń i klasy, które implementują zachowanie przeciągnij i upuść. Ten temat zawiera omówienie obsługi przeciągania i upuszczania w formularzach Windows Forms.  Zobacz też [operacji przeciągania i upuszczania oraz Obsługa schowka](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
@@ -44,4 +44,4 @@ Windows Forms zawiera zestaw metod, zdarzeń i klasy, które implementują zacho
  <xref:System.Windows.Forms.QueryContinueDragEventArgs> Klasy zawiera bieżący stan myszą przycisków i klawisze modyfikujące klawiatury wartość określającą, czy został naciśnięty klawisz ESC, a <xref:System.Windows.Forms.DragAction> wartości, które można ustawić, aby określić, czy należy kontynuować operacji przeciągania i upuszczania.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)

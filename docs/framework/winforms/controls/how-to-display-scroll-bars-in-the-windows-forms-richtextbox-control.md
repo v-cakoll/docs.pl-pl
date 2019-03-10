@@ -6,12 +6,12 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 6b6cfb8c21c8f3a48bb85a0591f3390d5b5575b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610399"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716494"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Instrukcje: Wyświetlanie pasków przewijania w Windows formantu RichTextBox formularzy
 Domyślnie w formularzach Windows <xref:System.Windows.Forms.RichTextBox> kontrolka Wyświetla poziome i pionowe paski przewijania, zgodnie z potrzebami. Istnieje siedem możliwych wartości dla <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolki, które są opisane w poniższej tabeli.  
@@ -42,5 +42,5 @@ Domyślnie w formularzach Windows <xref:System.Windows.Forms.RichTextBox> kontro
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox, kontrolka](richtextbox-control-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

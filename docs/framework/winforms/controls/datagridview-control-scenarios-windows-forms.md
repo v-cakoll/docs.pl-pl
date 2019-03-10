@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: c8d6f3d9b1d0380ccf78badd44484c96e0593bd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621438"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721319"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scenariusze formantu DataGridView (Formularze systemu Windows)
 Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można wyświetlić dane tabelaryczne z różnych źródeł danych. Do prostych zastosowań, możesz ręcznie wypełnić <xref:System.Windows.Forms.DataGridView> i manipulowanie danymi bezpośrednio za pomocą formantu. Zwykle jednak będzie przechowywać dane w zewnętrznym źródle danych i powiązywanie formantu do niego za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnika.  
@@ -19,7 +19,7 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można wyświetli
  W tym temacie opisano niektóre typowe scenariusze, które obejmują <xref:System.Windows.Forms.DataGridView> kontroli.  
   
 ## <a name="scenario-1-displaying-small-amounts-of-data"></a>Scenariusz 1: Wyświetlanie małe ilości danych  
- Nie masz do przechowywania danych w zewnętrznym źródle danych do wyświetlenia go w <xref:System.Windows.Forms.DataGridView> kontroli. Jeśli pracujesz z małą ilością danych, możesz samodzielnie wypełnienia kontrolki i manipulowanie danymi za pomocą formantu. Jest to nazywane *Tryb niepowiązany*. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie formantu DataGridView formularzy Windows niepowiązanych](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).  
+ Nie masz do przechowywania danych w zewnętrznym źródle danych do wyświetlenia go w <xref:System.Windows.Forms.DataGridView> kontroli. Jeśli pracujesz z małą ilością danych, możesz samodzielnie wypełnienia kontrolki i manipulowanie danymi za pomocą formantu. Jest to nazywane *Tryb niepowiązany*. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie formantu DataGridView formularzy Windows niepowiązanych](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Scenariusz kluczowe punkty  
   
@@ -30,7 +30,7 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można wyświetli
 -   Tryb niepowiązany jest również odpowiedni dla przypominającego arkusz kalkulacyjny lub słabo wypełnionych tabel.  
   
 ## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a>Scenariusz 2: Wyświetlanie i aktualizowanie danych przechowywanych w zewnętrznym źródle danych  
- Możesz użyć <xref:System.Windows.Forms.DataGridView> powinna być kontrolka interfejsu użytkownika (UI) za pośrednictwem użytkowników, którzy mają dostęp do danych przechowywane w źródle danych, takich jak tabela bazy danych lub kolekcji obiektów biznesowych. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie danych Windows formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
+ Możesz użyć <xref:System.Windows.Forms.DataGridView> powinna być kontrolka interfejsu użytkownika (UI) za pośrednictwem użytkowników, którzy mają dostęp do danych przechowywane w źródle danych, takich jak tabela bazy danych lub kolekcji obiektów biznesowych. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie danych Windows formantu DataGridView formularzy](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Scenariusz kluczowe punkty  
   
@@ -47,14 +47,14 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można wyświetli
   
  Na przykład jeśli pracujesz z dużymi ilościami danych, warto Implementowanie trybu wirtualnego w celu zapewnienia optymalnej wydajności. Tryb wirtualny jest również przydatne do przechowywania wartości niepowiązanych kolumn, które wyświetlają wraz z kolumnami pobrane z innego źródła danych.  
   
- Aby uzyskać więcej informacji na temat trybu wirtualnego zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Aby uzyskać więcej informacji na temat trybu wirtualnego zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Scenariusz kluczowe punkty  
   
 -   Tryb wirtualny nadaje się do wyświetlania dużych ilości danych, gdy trzeba dostrajania wydajności.  
   
 ## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>Scenariusz 4: Automatyczna zmiana rozmiaru wierszy i kolumn  
- Podczas wyświetlania danych, która jest regularnie aktualizowana, możesz automatycznie zmienić rozmiar wierszy i kolumn, aby upewnić się, że cała zawartość jest widoczna. <xref:System.Windows.Forms.DataGridView> Control oferuje kilka opcji umożliwiających Włącz lub wyłącz ręczne zmiany rozmiaru, zmienić rozmiar programowo w określonym czasie lub zmiany rozmiaru automatycznie zawsze, gdy zmian zawartości. Aby uzyskać więcej informacji, zobacz [opcje ustalania rozmiaru w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+ Podczas wyświetlania danych, która jest regularnie aktualizowana, możesz automatycznie zmienić rozmiar wierszy i kolumn, aby upewnić się, że cała zawartość jest widoczna. <xref:System.Windows.Forms.DataGridView> Control oferuje kilka opcji umożliwiających Włącz lub wyłącz ręczne zmiany rozmiaru, zmienić rozmiar programowo w określonym czasie lub zmiany rozmiaru automatycznie zawsze, gdy zmian zawartości. Aby uzyskać więcej informacji, zobacz [opcje ustalania rozmiaru w formancie DataGridView formularzy Windows](sizing-options-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Scenariusz kluczowe punkty  
   
@@ -65,7 +65,7 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można wyświetli
 -   Programowe zmienianie rozmiaru pozwala na zmianę rozmiaru komórek w określonym czasie, aby uniknąć ciągłego automatyczną zmianę rozmiaru spadek wydajności.  
   
 ## <a name="scenario-5-simple-customization"></a>Scenariusz 5: Proste dostosowania  
- <xref:System.Windows.Forms.DataGridView> Control oferuje wiele sposobów na zmianę jego podstawowy wygląd i zachowanie. Aby uzyskać więcej informacji, zobacz [style komórki w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+ <xref:System.Windows.Forms.DataGridView> Control oferuje wiele sposobów na zmianę jego podstawowy wygląd i zachowanie. Aby uzyskać więcej informacji, zobacz [style komórki w formancie DataGridView formularzy Windows](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="scenario-key-points"></a>Scenariusz kluczowe punkty  
   
@@ -78,14 +78,14 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można wyświetli
   
 ### <a name="scenario-key-points"></a>Scenariusz kluczowe punkty  
   
--   Możesz podać swój kod rysowania komórki. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md).  
+-   Możesz podać swój kod rysowania komórki. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy Windows](customize-the-appearance-of-cells-in-the-datagrid.md).  
   
--   Możesz podać własne malowania wiersza. Jest to przydatne, na przykład, aby utworzyć wiersze z zawartością, która obejmuje wiele kolumn. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu wierszy w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md).  
+-   Możesz podać własne malowania wiersza. Jest to przydatne, na przykład, aby utworzyć wiersze z zawartością, która obejmuje wiele kolumn. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu wierszy w formancie DataGridView formularzy Windows](customize-the-appearance-of-rows-in-the-datagrid.md).  
   
--   Można implementować własne klasy komórek i kolumn, aby dostosować wygląd komórki. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie komórek i kolumn w Windows formantu DataGridView formularzy przez rozszerzanie ich zachowania i wyglądu](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
+-   Można implementować własne klasy komórek i kolumn, aby dostosować wygląd komórki. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie komórek i kolumn w Windows formantu DataGridView formularzy przez rozszerzanie ich zachowania i wyglądu](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md).  
   
--   Można implementować własne klasy komórek i kolumn do kontrolki hosta innych niż udostępniane przez typy wbudowane kolumn. Aby uzyskać więcej informacji, zobacz [jak: Kontrolki hosta w formularzach Windows Forms komórkach DataGridView](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md).  
+-   Można implementować własne klasy komórek i kolumn do kontrolki hosta innych niż udostępniane przez typy wbudowane kolumn. Aby uzyskać więcej informacji, zobacz [jak: Kontrolki hosta w formularzach Windows Forms komórkach DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+- [DataGridView, kontrolka — omówienie](datagridview-control-overview-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Konfigurowanie śledzenia przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491259"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719406"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurowanie śledzenia przepływu pracy
 
@@ -67,7 +67,7 @@ Dla usługi przepływu pracy hostowanych w <xref:System.ServiceModel.WorkflowSer
 Alternatywnie przepływu pracy usługi hostowanej w <xref:System.ServiceModel.WorkflowServiceHost>, możesz dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> rozszerzenia zachowania za pomocą kodu. Aby dodać uczestnikiem niestandardowe śledzenia, Utwórz nowe rozszerzenie zachowanie i dodaj go do <xref:System.ServiceModel.ServiceHost> jak pokazano w poniższym przykładowym kodzie.
 
 > [!NOTE]
-> Aby wyświetlić przykładowy kod, który pokazuje, jak można utworzyć elementu niestandardowe zachowanie, który dodaje niestandardowego uczestnika śledzenia, zapoznaj się [śledzenia](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) przykładów.
+> Aby wyświetlić przykładowy kod, który pokazuje, jak można utworzyć elementu niestandardowe zachowanie, który dodaje niestandardowego uczestnika śledzenia, zapoznaj się [śledzenia](./samples/tracking.md) przykładów.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -141,7 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Konfigurowanie śledzenia za pomocą obiektu WorkflowInvoker
 
-Do konfigurowania śledzenia dla przepływu pracy, posługując się <xref:System.Activities.WorkflowInvoker>, Dodaj dostawcę śledzenia jako rozszerzenie <xref:System.Activities.WorkflowInvoker> wystąpienia. Poniższy przykładowy kod pochodzi z [niestandardowe śledzenia](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) próbki.
+Do konfigurowania śledzenia dla przepływu pracy, posługując się <xref:System.Activities.WorkflowInvoker>, Dodaj dostawcę śledzenia jako rozszerzenie <xref:System.Activities.WorkflowInvoker> wystąpienia. Poniższy przykładowy kod pochodzi z [niestandardowe śledzenia](./samples/custom-tracking.md) próbki.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -185,7 +185,7 @@ Aby wyświetlić rekordy śledzenia, wykonaj następujące kroki.
 
 Na poniższej ilustracji przedstawiono zdarzeń śledzenia w Podglądzie zdarzeń.
 
-![Wyświetlanie podglądu zdarzeń śledzenia rekordów](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![Wyświetlanie podglądu zdarzeń śledzenia rekordów](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>Rejestrowanie identyfikator dostawcy specyficzne dla aplikacji
 

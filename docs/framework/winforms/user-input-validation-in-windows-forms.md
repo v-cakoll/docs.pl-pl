@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711320"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są prawidłowe, zanim aplikacja używa go. Może wymagać, że niektóre pola tekstowego jest o zerowej długości, że pole formatowane jako numer telefonu lub innego typu danych sformułowany lub czy ciąg zawiera niebezpiecznych znaków, które mogłyby zostać użyte w celu złamania zabezpieczeń bazy danych. Formularze Windows oferuje kilka sposobów umożliwiające sprawdzanie poprawności danych wejściowych w aplikacji.  
@@ -22,14 +22,14 @@ Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są
   
  Język maskowanie, który jest używany przez <xref:System.Windows.Forms.MaskedTextBox> jest bardzo elastyczny. Umożliwia określenie wymaganych znaków, znaki opcjonalne, literałów znaków, takich jak łączniki i nawiasy, waluty znaków i separatory daty. Kontrolki działa dobrze powiązany ze źródłem danych. <xref:System.Windows.Forms.Binding.Format> Zdarzeń w powiązaniu danych może służyć do formatowania danych przychodzących do wykonania z maską i <xref:System.Windows.Forms.Binding.Parse> zdarzeń może służyć do formatowania danych wychodzących, aby spełnić wymogi pola danych.  
   
- Aby uzyskać więcej informacji, zobacz [maskedtextbox — formant](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).  
+ Aby uzyskać więcej informacji, zobacz [maskedtextbox — formant](./controls/maskedtextbox-control-windows-forms.md).  
   
 ## <a name="event-driven-validation"></a>Weryfikacja oparte na zdarzeniach  
  Ma programowe pełnej kontroli nad weryfikacji, czy trzeba będzie wykonać sprawdzanie poprawności złożonych, należy użyć zdarzenia sprawdzania poprawności, wbudowane w większości kontrolek Windows Forms. Każdy formant, który akceptuje dane wejściowe użytkownika w dowolnej postaci ma <xref:System.Windows.Forms.Control.Validating> zdarzenia, które będzie wysyłane zawsze, gdy kontrolka wymaga sprawdzania poprawności danych. W <xref:System.Windows.Forms.Control.Validating> metody obsługi zdarzeń, można sprawdzić poprawność danych wejściowych na kilka sposobów użytkownika. Na przykład jeśli masz pole tekstowe, które mogą zawierać kod pocztowy, należy wykonać sprawdzanie poprawności w następujący sposób:  
   
 -   Jeśli kod pocztowy musi należeć do konkretnej grupy kodów pocztowych, można wykonać porównania ciągów w danych wejściowych do sprawdzania poprawności danych wprowadzonych przez użytkownika. Na przykład jeśli kod pocztowy musi być w zestawie {10001 10002, 10003}, następnie umożliwia porównanie ciągów sprawdzania poprawności danych.  
   
--   Jeśli kod pocztowy musi znajdować się w określonej formy można użyć wyrażeń regularnych do sprawdzania poprawności danych wprowadzonych przez użytkownika. Na przykład, aby zweryfikować formularza `#####` lub `#####-####`, można użyć wyrażenia regularnego `^(\d{5})(-\d{4})?$`. Aby zweryfikować formularza `A#A #A#`, można użyć wyrażenia regularnego `[A-Z]\d[A-Z] \d[A-Z]\d`. Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz [wyrażeń regularnych programu .NET Framework](../../../docs/standard/base-types/regular-expressions.md) i [przykłady wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-examples.md).  
+-   Jeśli kod pocztowy musi znajdować się w określonej formy można użyć wyrażeń regularnych do sprawdzania poprawności danych wprowadzonych przez użytkownika. Na przykład, aby zweryfikować formularza `#####` lub `#####-####`, można użyć wyrażenia regularnego `^(\d{5})(-\d{4})?$`. Aby zweryfikować formularza `A#A #A#`, można użyć wyrażenia regularnego `[A-Z]\d[A-Z] \d[A-Z]\d`. Aby uzyskać więcej informacji na temat wyrażeń regularnych, zobacz [wyrażeń regularnych programu .NET Framework](../../standard/base-types/regular-expressions.md) i [przykłady wyrażeń regularnych](../../standard/base-types/regular-expression-examples.md).  
   
 -   Jeśli kod pocztowy musi być prawidłowy kod pocztowy w Stanach Zjednoczonych, można wywołać usługę sieci Web kod pocztowy i sprawdzanie poprawności danych wprowadzonych przez użytkownika.  
   
@@ -67,7 +67,7 @@ Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Formanty formularzy domyślne zachowanie weryfikacji niejawna systemu Windows  
  Różne formanty Windows Forms mają różne wartości domyślne dla ich <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> właściwości. W poniższej tabeli przedstawiono najbardziej typowe kontrolki i ich wartości domyślne.  
   
-|Formant|Domyślne zachowanie walidacji|  
+|formant|Domyślne zachowanie walidacji|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
@@ -94,5 +94,5 @@ Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox, kontrolka](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [Przykłady wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox, kontrolka](./controls/maskedtextbox-control-windows-forms.md)
+- [Przykłady wyrażeń regularnych](../../standard/base-types/regular-expression-examples.md)

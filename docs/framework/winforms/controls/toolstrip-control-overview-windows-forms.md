@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 49f544727ee82b1e36357fc4312bcd449ffc3c0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558751"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719388"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.ToolStrip> kontrolki i ich skojarzonych klas zapewniają wspólną platformę łączenie elementów interfejsu użytkownika w paski narzędzi, paski stanu i menu. <xref:System.Windows.Forms.ToolStrip> kontrolki oferują bogate środowisko czasu projektowania, która obejmuje aktywacji w miejscu i edytowanie, układu niestandardowego i rafting, który jest możliwość udostępniania poziomej lub pionowej przestrzeni pasków narzędzi.  
@@ -77,7 +77,7 @@ Formularze Windows <xref:System.Windows.Forms.ToolStrip> kontrolki i ich skojarz
 |<xref:System.Windows.Forms.ToolStripControlHost>|Obsługuje inne formanty, które nie są specjalnie <xref:System.Windows.Forms.ToolStrip> kontrolek, ale dla którego ma <xref:System.Windows.Forms.ToolStrip> funkcji.|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|Określa, czy <xref:System.Windows.Forms.ToolStripItem> ma być rozmieszczony w głównym <xref:System.Windows.Forms.ToolStrip>, przy przepełnieniu <xref:System.Windows.Forms.ToolStrip>, żaden z tych.|  
   
- Aby uzyskać więcej informacji, zobacz [ToolStrip — podsumowanie informacji o technologii](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md) i [ToolStrip — architektura formantu](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md).  
+ Aby uzyskać więcej informacji, zobacz [ToolStrip — podsumowanie informacji o technologii](toolstrip-technology-summary.md) i [ToolStrip — architektura formantu](toolstrip-control-architecture.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.ToolStrip>

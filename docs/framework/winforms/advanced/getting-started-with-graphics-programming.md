@@ -7,59 +7,59 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: 61080643d5cacde60f5fbff35d815977a977cb65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f19a0e87c140a3fde8c43acc546ae11ea3b62d33
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522828"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720361"
 ---
-# <a name="getting-started-with-graphics-programming"></a><span data-ttu-id="4e6de-102">Wprowadzenie do programowania grafiki</span><span class="sxs-lookup"><span data-stu-id="4e6de-102">Getting Started with Graphics Programming</span></span>
-<span data-ttu-id="4e6de-103">W tej sekcji pokazano, jak rozpocząć korzystanie z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] w aplikacji formularzy systemu Windows.</span><span class="sxs-lookup"><span data-stu-id="4e6de-103">This section shows how to get started using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application.</span></span> <span data-ttu-id="4e6de-104">W następujących tematach opisano sposób wykonania kilku [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zadań, takich jak rysowania i wypełnianie kształty i tekst.</span><span class="sxs-lookup"><span data-stu-id="4e6de-104">The following topics show how to complete several [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.</span></span>  
+# <a name="getting-started-with-graphics-programming"></a><span data-ttu-id="a79d2-102">Wprowadzenie do programowania grafiki</span><span class="sxs-lookup"><span data-stu-id="a79d2-102">Getting Started with Graphics Programming</span></span>
+<span data-ttu-id="a79d2-103">W tej sekcji pokazano, jak rozpocząć pracę z usługą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] w aplikacji Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a79d2-103">This section shows how to get started using [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] in a Windows Forms application.</span></span> <span data-ttu-id="a79d2-104">Poniższe tematy przedstawiają sposób wykonania kilku [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zadań, takich jak rysowanie i wypełnianie kształty i tekst.</span><span class="sxs-lookup"><span data-stu-id="a79d2-104">The following topics show how to complete several [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tasks such as drawing and filling shapes and text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4e6de-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="4e6de-105">In This Section</span></span>  
- [<span data-ttu-id="4e6de-106">Instrukcje: tworzenie obiektów graficznych do rysowania</span><span class="sxs-lookup"><span data-stu-id="4e6de-106">How to: Create Graphics Objects for Drawing</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- <span data-ttu-id="4e6de-107">Przedstawia sposób tworzenia <xref:System.Drawing.Graphics> obiektu do rysowania.</span><span class="sxs-lookup"><span data-stu-id="4e6de-107">Shows how to create a <xref:System.Drawing.Graphics> object for drawing.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a79d2-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="a79d2-105">In This Section</span></span>  
+ [<span data-ttu-id="a79d2-106">Instrukcje: Tworzenie obiektów graficznych do rysowania</span><span class="sxs-lookup"><span data-stu-id="a79d2-106">How to: Create Graphics Objects for Drawing</span></span>](how-to-create-graphics-objects-for-drawing.md)  
+ <span data-ttu-id="a79d2-107">Pokazuje, jak utworzyć <xref:System.Drawing.Graphics> obiektu do rysowania.</span><span class="sxs-lookup"><span data-stu-id="a79d2-107">Shows how to create a <xref:System.Drawing.Graphics> object for drawing.</span></span>  
   
- [<span data-ttu-id="4e6de-108">Instrukcje: tworzenie pióra</span><span class="sxs-lookup"><span data-stu-id="4e6de-108">How to: Create a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
- <span data-ttu-id="4e6de-109">Przedstawia sposób tworzenia pióra.</span><span class="sxs-lookup"><span data-stu-id="4e6de-109">Shows how to create a pen.</span></span>  
+ [<span data-ttu-id="a79d2-108">Instrukcje: Tworzenie pióra</span><span class="sxs-lookup"><span data-stu-id="a79d2-108">How to: Create a Pen</span></span>](how-to-create-a-pen.md)  
+ <span data-ttu-id="a79d2-109">Pokazuje, jak utworzyć pióra.</span><span class="sxs-lookup"><span data-stu-id="a79d2-109">Shows how to create a pen.</span></span>  
   
- [<span data-ttu-id="4e6de-110">Instrukcje: ustawianie koloru pióra</span><span class="sxs-lookup"><span data-stu-id="4e6de-110">How to: Set the Color of a Pen</span></span>](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
- <span data-ttu-id="4e6de-111">Pokazuje, jak można ustawić na kolor pióra.</span><span class="sxs-lookup"><span data-stu-id="4e6de-111">Demonstrates how to set the color of a pen.</span></span>  
+ [<span data-ttu-id="a79d2-110">Instrukcje: Ustawianie koloru pióra</span><span class="sxs-lookup"><span data-stu-id="a79d2-110">How to: Set the Color of a Pen</span></span>](how-to-set-the-color-of-a-pen.md)  
+ <span data-ttu-id="a79d2-111">Pokazuje, jak ustawić kolor pióra.</span><span class="sxs-lookup"><span data-stu-id="a79d2-111">Demonstrates how to set the color of a pen.</span></span>  
   
- [<span data-ttu-id="4e6de-112">Instrukcje: tworzenie pędzla pełnego koloru</span><span class="sxs-lookup"><span data-stu-id="4e6de-112">How to: Create a Solid Brush</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
- <span data-ttu-id="4e6de-113">Opisuje sposób tworzenia pędzla pełnego koloru.</span><span class="sxs-lookup"><span data-stu-id="4e6de-113">Describes how to create a solid brush.</span></span>  
+ [<span data-ttu-id="a79d2-112">Instrukcje: Utwórz pełny obiekt Brush</span><span class="sxs-lookup"><span data-stu-id="a79d2-112">How to: Create a Solid Brush</span></span>](how-to-create-a-solid-brush.md)  
+ <span data-ttu-id="a79d2-113">Opisuje sposób Tworzenie pędzla.</span><span class="sxs-lookup"><span data-stu-id="a79d2-113">Describes how to create a solid brush.</span></span>  
   
- [<span data-ttu-id="4e6de-114">Instrukcje: rysowanie linii w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4e6de-114">How to: Draw a Line on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
- <span data-ttu-id="4e6de-115">Demonstracja Rysowanie linii.</span><span class="sxs-lookup"><span data-stu-id="4e6de-115">Demonstrates how to draw a line.</span></span>  
+ [<span data-ttu-id="a79d2-114">Instrukcje: Rysuj linię w formularzu Windows</span><span class="sxs-lookup"><span data-stu-id="a79d2-114">How to: Draw a Line on a Windows Form</span></span>](how-to-draw-a-line-on-a-windows-form.md)  
+ <span data-ttu-id="a79d2-115">Pokazuje, jak narysować linię.</span><span class="sxs-lookup"><span data-stu-id="a79d2-115">Demonstrates how to draw a line.</span></span>  
   
- [<span data-ttu-id="4e6de-116">Instrukcje: rysowanie konturu kształtu</span><span class="sxs-lookup"><span data-stu-id="4e6de-116">How to: Draw an Outlined Shape</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
- <span data-ttu-id="4e6de-117">Opisuje sposób narysować kształt.</span><span class="sxs-lookup"><span data-stu-id="4e6de-117">Describes how to draw a shape.</span></span>  
+ [<span data-ttu-id="a79d2-116">Instrukcje: Rysowanie konturu kształtu</span><span class="sxs-lookup"><span data-stu-id="a79d2-116">How to: Draw an Outlined Shape</span></span>](how-to-draw-an-outlined-shape.md)  
+ <span data-ttu-id="a79d2-117">W tym artykule opisano, jak narysować kształt.</span><span class="sxs-lookup"><span data-stu-id="a79d2-117">Describes how to draw a shape.</span></span>  
   
- [<span data-ttu-id="4e6de-118">Instrukcje: rysowanie wypełnionego prostokąta w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4e6de-118">How to: Draw a Filled Rectangle on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- <span data-ttu-id="4e6de-119">Wyjaśniono, jak narysować prostokąt.</span><span class="sxs-lookup"><span data-stu-id="4e6de-119">Explains how to draw a rectangle.</span></span>  
+ [<span data-ttu-id="a79d2-118">Instrukcje: Rysuj wypełniony prostokąt w formularzu Windows</span><span class="sxs-lookup"><span data-stu-id="a79d2-118">How to: Draw a Filled Rectangle on a Windows Form</span></span>](how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ <span data-ttu-id="a79d2-119">Wyjaśnia, jak narysować prostokąt.</span><span class="sxs-lookup"><span data-stu-id="a79d2-119">Explains how to draw a rectangle.</span></span>  
   
- [<span data-ttu-id="4e6de-120">Instrukcje: rysowanie wypełnionej elipsy w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4e6de-120">How to: Draw a Filled Ellipse on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- <span data-ttu-id="4e6de-121">Przedstawia sposób Rysowanie wypełnionej elipsy.</span><span class="sxs-lookup"><span data-stu-id="4e6de-121">Shows how to draw a filled ellipse.</span></span>  
+ [<span data-ttu-id="a79d2-120">Instrukcje: Rysuj wypełnioną elipsę w formularzu Windows</span><span class="sxs-lookup"><span data-stu-id="a79d2-120">How to: Draw a Filled Ellipse on a Windows Form</span></span>](how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ <span data-ttu-id="a79d2-121">Pokazuje, jak rysowanie wypełnionej elipsy.</span><span class="sxs-lookup"><span data-stu-id="a79d2-121">Shows how to draw a filled ellipse.</span></span>  
   
- [<span data-ttu-id="4e6de-122">Instrukcje: rysowanie tekstu w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4e6de-122">How to: Draw Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
- <span data-ttu-id="4e6de-123">Opisuje sposób rysowania tekstu.</span><span class="sxs-lookup"><span data-stu-id="4e6de-123">Describes how to draw text.</span></span>  
+ [<span data-ttu-id="a79d2-122">Instrukcje: Rysowanie tekstu w formularzu Windows</span><span class="sxs-lookup"><span data-stu-id="a79d2-122">How to: Draw Text on a Windows Form</span></span>](how-to-draw-text-on-a-windows-form.md)  
+ <span data-ttu-id="a79d2-123">W tym artykule opisano sposób rysowania tekstu.</span><span class="sxs-lookup"><span data-stu-id="a79d2-123">Describes how to draw text.</span></span>  
   
- [<span data-ttu-id="4e6de-124">Instrukcje: rysowanie pionowego tekstu w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="4e6de-124">How to: Draw Vertical Text on a Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
- <span data-ttu-id="4e6de-125">Przedstawia sposób Rysowanie pionowego tekstu.</span><span class="sxs-lookup"><span data-stu-id="4e6de-125">Shows how to draw vertical text.</span></span>  
+ [<span data-ttu-id="a79d2-124">Instrukcje: Rysowanie pionowego tekstu w formularzu Windows</span><span class="sxs-lookup"><span data-stu-id="a79d2-124">How to: Draw Vertical Text on a Windows Form</span></span>](how-to-draw-vertical-text-on-a-windows-form.md)  
+ <span data-ttu-id="a79d2-125">Pokazuje, jak rysowanie pionowego tekstu.</span><span class="sxs-lookup"><span data-stu-id="a79d2-125">Shows how to draw vertical text.</span></span>  
   
- [<span data-ttu-id="4e6de-126">Instrukcje: renderowanie obrazów za pomocą GDI+</span><span class="sxs-lookup"><span data-stu-id="4e6de-126">How to: Render Images with GDI+</span></span>](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- <span data-ttu-id="4e6de-127">Demonstracja rysowanie obrazów.</span><span class="sxs-lookup"><span data-stu-id="4e6de-127">Demonstrates how to draw images.</span></span>  
+ [<span data-ttu-id="a79d2-126">Instrukcje: Renderowanie obrazów za pomocą GDI +</span><span class="sxs-lookup"><span data-stu-id="a79d2-126">How to: Render Images with GDI+</span></span>](how-to-render-images-with-gdi.md)  
+ <span data-ttu-id="a79d2-127">Pokazuje, jak narysować obrazów.</span><span class="sxs-lookup"><span data-stu-id="a79d2-127">Demonstrates how to draw images.</span></span>  
   
- [<span data-ttu-id="4e6de-128">Instrukcje: tworzenie formularzy systemu Windows o określonych kształtach</span><span class="sxs-lookup"><span data-stu-id="4e6de-128">How to: Create a Shaped Windows Form</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
- <span data-ttu-id="4e6de-129">Wyjaśniono, jak zmienić kształt formularza.</span><span class="sxs-lookup"><span data-stu-id="4e6de-129">Explains how to change the shape of a form.</span></span>  
+ [<span data-ttu-id="a79d2-128">Instrukcje: Tworzenie formularza Windows o określonych kształtach</span><span class="sxs-lookup"><span data-stu-id="a79d2-128">How to: Create a Shaped Windows Form</span></span>](how-to-create-a-shaped-windows-form.md)  
+ <span data-ttu-id="a79d2-129">Wyjaśnia, jak zmienić kształt formularza.</span><span class="sxs-lookup"><span data-stu-id="a79d2-129">Explains how to change the shape of a form.</span></span>  
   
- [<span data-ttu-id="4e6de-130">Instrukcje: kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4e6de-130">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- <span data-ttu-id="4e6de-131">Wyjaśniono, jak kopiowanie pikseli z jednego obszaru do innego.</span><span class="sxs-lookup"><span data-stu-id="4e6de-131">Explains how to copy pixels from one area to another.</span></span>  
+ [<span data-ttu-id="a79d2-130">Instrukcje: Kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a79d2-130">How to: Copy Pixels for Reducing Flicker in Windows Forms</span></span>](how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ <span data-ttu-id="a79d2-131">Wyjaśnia, jak kopiowanie pikseli z jednego do drugiego.</span><span class="sxs-lookup"><span data-stu-id="a79d2-131">Explains how to copy pixels from one area to another.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="4e6de-132">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="4e6de-132">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a79d2-132">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="a79d2-132">Reference</span></span>  
  <xref:System.Drawing>  
- <span data-ttu-id="4e6de-133">Zawiera opis tej przestrzeni nazw i zawiera łącza do wszystkich jej członków.</span><span class="sxs-lookup"><span data-stu-id="4e6de-133">Describes this namespace and has links to all its members.</span></span>  
+ <span data-ttu-id="a79d2-133">W tym artykule opisano w tej przestrzeni nazw i zawiera linki do wszystkich jej członków.</span><span class="sxs-lookup"><span data-stu-id="a79d2-133">Describes this namespace and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms>  
- <span data-ttu-id="4e6de-134">Zawiera opis tej przestrzeni nazw i zawiera linki do wszystkich jej członków.</span><span class="sxs-lookup"><span data-stu-id="4e6de-134">Describes this namespace and has links to all of its members.</span></span>
+ <span data-ttu-id="a79d2-134">W tym artykule opisano w tej przestrzeni nazw i zawiera linki do wszystkich jej członków.</span><span class="sxs-lookup"><span data-stu-id="a79d2-134">Describes this namespace and has links to all of its members.</span></span>

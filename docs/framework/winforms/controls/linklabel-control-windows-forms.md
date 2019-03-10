@@ -8,33 +8,33 @@ helpviewer_keywords:
 - Web page link control
 - LinkLabel control [Windows Forms]
 ms.assetid: af1fd04e-e126-4fd7-9a4e-13b49010c5ca
-ms.openlocfilehash: ea472636402b650b6e8d0352bd151d3bcf9e3bfd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a67f127adf94829202f02056c64e2951891998e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535454"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714674"
 ---
 # <a name="linklabel-control-windows-forms"></a>LinkLabel — Formant (Formularze systemu Windows)
-Formularze systemu Windows `LinkLabel` formant umożliwia dodawanie łączy stylu sieci Web do aplikacji formularzy systemu Windows. Można użyć `LinkLabel` kontroli dla wszystko, co umożliwia <xref:System.Windows.Forms.Label> sterować dla; można też określić część tekstu jako łącze do obiektu lub strony sieci Web.  
+Formularze Windows `LinkLabel` control umożliwia dodawanie łączy stylu sieci Web do aplikacji Windows Forms. Możesz użyć `LinkLabel` kontrola wszystko, co umożliwia <xref:System.Windows.Forms.Label> kontrolki; można też określić część tekstu jako link do obiektu lub strony sieci Web.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [LinkLabel, kontrolka — omówienie](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)  
- Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
+ [LinkLabel, kontrolka — omówienie](linklabel-control-overview-windows-forms.md)  
+ Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
- [Instrukcje: zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
- Wyświetla listę sposobów, aby określić kolor i podkreślenie łączy stylu sieci Web w etykiety łączy.  
+ [Instrukcje: Zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
+ Wyświetla listę sposoby, aby określić kolor i podkreślenie łączy stylu sieci Web w etykiecie linku.  
   
- [Instrukcje: łączenie z obiektem lub stroną internetową za pomocą kontrolki LinkLabel formularzy Windows Forms](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
- Instrukcje dla otwieranego formularza lub strony sieci Web, gdy łącze zostanie kliknięte.  
+ [Instrukcje: Łączenie do obiektu lub strony za pomocą formantu LinkLabel formularzy Windows w sieci Web](link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
+ Instrukcje do otwierania formularza lub strony sieci Web, po kliknięciu łącza.  
   
- [Instrukcje: wyświetlanie strony internetowej za pomocą kontrolki LinkLabel formularzy Windows Forms (Visual Basic)](../../../../docs/framework/winforms/controls/display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
- Przedstawia sposób wyświetlania strony sieci Web w domyślnej przeglądarce po kliknięciu przez użytkownika formularzy systemu Windows `LinkLabel` formantu.  
+ [Instrukcje: Wyświetlanie strony sieci Web formantu LinkLabel formularzy Windows (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
+ Pokazuje, jak można wyświetlić strony sieci Web w domyślnej przeglądarce, gdy użytkownik kliknie formularzy Windows `LinkLabel` kontroli.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.LinkLabel> Klasy  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ <xref:System.Windows.Forms.LinkLabel> Klasa  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera pełną listę formanty formularzy systemu Windows, linki do informacji na temat ich użycia.
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.

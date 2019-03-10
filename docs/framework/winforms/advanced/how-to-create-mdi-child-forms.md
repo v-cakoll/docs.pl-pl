@@ -9,15 +9,15 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 6ff5873fc2e0a321ad682805457be87c609972fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708470"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720202"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Instrukcje: Tworzenie formularzy podrzędnych MDI
-Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), jak te formularze są środek interakcji z użytkownikiem.  
+Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md), jak te formularze są środek interakcji z użytkownikiem.  
   
  W poniższej procedurze utworzysz formularz podrzędny MDI, która wyświetla <xref:System.Windows.Forms.RichTextBox> kontrolki, podobne do innych aplikacji. Podstawianie <xref:System.Windows.Forms> kontrolką inne formanty, takie jak <xref:System.Windows.Forms.DataGridView> formantu lub kombinację kontrolki pozwala na tworzenie elementu podrzędnego MDI systemu windows (a w konsekwencji, aplikacje MDI) z różnych możliwości.  
   
@@ -107,8 +107,8 @@ Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu
     >  Jeśli formularz podrzędny MDI ma <xref:System.Windows.Forms.MainMenu> składnika (z, zwykle struktury menu elementów menu) i jest otwarty w ramach formularza nadrzędnego MDI, która ma <xref:System.Windows.Forms.MainMenu> składnik (z, zwykle struktury menu elementów menu), menu, automatycznie scali elementów Jeśli ustawiono <xref:System.Windows.Forms.MenuItem.MergeType%2A> właściwości (i ewentualnie <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> właściwości). Ustaw <xref:System.Windows.Forms.MenuItem.MergeType%2A> właściwość obu <xref:System.Windows.Forms.MainMenu> składników i wszystkie elementy menu formularza podrzędnego <xref:System.Windows.Forms.MenuMerge.MergeItems>. Ponadto, ustawić <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> właściwość tak, aby elementy menu, zarówno menu są wyświetlane w odpowiedni sposób. Ponadto należy pamiętać o tym, że po zamknięciu formularza nadrzędnego MDI każdego elementu podrzędnego MDI formularzy zgłasza <xref:System.Windows.Forms.Form.Closing> zdarzenie przed <xref:System.Windows.Forms.Form.Closing> jest wywoływane zdarzenie nadrzędnego MDI. Anulowanie podrzędnym MDI <xref:System.Windows.Forms.Form.Closing> zdarzeń nie zapobiega nadrzędny MDI <xref:System.Windows.Forms.Form.Closing> zdarzenia wywoływane; jednak <xref:System.ComponentModel.CancelEventArgs> argumentu dla elementu nadrzędnego MDI <xref:System.Windows.Forms.Form.Closing> zdarzenie zostanie teraz ustawiony na `true`. Można wymusić nadrzędnych MDI i wszystkie formularze podrzędne MDI, aby zamknąć, ustawiając <xref:System.ComponentModel.CancelEventArgs> argument `false`.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [Instrukcje: Tworzenie formularzy nadrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Instrukcje: Określanie elementu podrzędnego Active MDI](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [Instrukcje: Wysyłanie danych do Active MDI Child](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [Instrukcje: Aranżowanie formularzy podrzędnych MDI](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [Aplikacje interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md)
+- [Instrukcje: Tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md)
+- [Instrukcje: Określanie elementu podrzędnego Active MDI](how-to-determine-the-active-mdi-child.md)
+- [Instrukcje: Wysyłanie danych do Active MDI Child](how-to-send-data-to-the-active-mdi-child.md)
+- [Instrukcje: Aranżowanie formularzy podrzędnych MDI](how-to-arrange-mdi-child-forms.md)

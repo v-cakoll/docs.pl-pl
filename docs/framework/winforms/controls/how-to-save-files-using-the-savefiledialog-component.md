@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615965"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719432"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Instrukcje: Zapisywanie plików za pomocą składnika SaveFileDialog
 <xref:System.Windows.Forms.SaveFileDialog> Składnik umożliwia użytkownikom Przeglądaj system plików i wybierz pliki do zapisania. Okno dialogowe zwraca ścieżkę i nazwę pliku, który został wybrany przez użytkownika w oknie dialogowym. Jednak należy napisać kod, aby faktycznie zapisywać pliki na dysku.  
@@ -32,7 +32,7 @@ ms.locfileid: "54615965"
      W poniższym przykładzie występuje <xref:System.Windows.Forms.Button> formant z obrazem, który został do niej przypisany. Po kliknięciu przycisku, <xref:System.Windows.Forms.SaveFileDialog> składnik jest utworzone za pomocą filtru, który umożliwia plików obraz typu GIF, JPEG i BMP. Wybranie pliku tego typu w oknie dialogowym Zapisz plik jest zapisywany obraz przycisku.  
   
     > [!IMPORTANT]
-    >  Do pobierania lub ustawiania <xref:System.Windows.Forms.FileDialog.FileName%2A> właściwości zestawu wymaga poziom uprawnień przyznanych <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> klasy. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek ze względu na niewystarczające uprawnienia. Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Do pobierania lub ustawiania <xref:System.Windows.Forms.FileDialog.FileName%2A> właściwości zestawu wymaga poziom uprawnień przyznanych <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> klasy. Jeśli używasz w kontekście częściowego zaufania, proces może zgłosić wyjątek ze względu na niewystarczające uprawnienia. Aby uzyskać więcej informacji, zobacz [podstawy zabezpieczeń dostępu kodu](../../misc/code-access-security-basics.md).  
   
      W przykładzie założono, formularz ma <xref:System.Windows.Forms.Button> sterować za pomocą jego <xref:System.Windows.Forms.ButtonBase.Image%2A> właściwość do pliku obraz typu GIF, JPEG lub bmp.  
   
@@ -179,4 +179,4 @@ ms.locfileid: "54615965"
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [SaveFileDialog, składnik](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [SaveFileDialog, składnik](savefiledialog-component-windows-forms.md)

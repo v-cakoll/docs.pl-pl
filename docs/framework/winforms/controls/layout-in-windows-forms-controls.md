@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 - Padding property [Windows Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-ms.openlocfilehash: a184eea8fd6804848cf7dfa324ef1430746ff7e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d1a3954c8eda87bdda9fa17df1bd2b3858c43619
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503297"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711333"
 ---
 # <a name="layout-in-windows-forms-controls"></a>Układ w formantach formularzy systemu Windows
 
@@ -20,19 +20,19 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[AutoSize — Przegląd właściwości](../../../../docs/framework/winforms/controls/autosize-property-overview.md)\
+[AutoSize — Przegląd właściwości](autosize-property-overview.md)\
 W tym artykule opisano <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość i swojej roli w układzie.
 
-[Margines i wypełnienie w formularzach Windows Forms, formanty](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)\
+[Margines i wypełnienie w formularzach Windows Forms, formanty](margin-and-padding-in-windows-forms-controls.md)\
 W tym artykule opisano <xref:System.Windows.Forms.Control.Margin%2A> i <xref:System.Windows.Forms.Control.Padding%2A> właściwości i ich ról w układzie.
 
-[Instrukcje: Wyrównywanie formantu z krawędziami formularzy](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md)\
+[Instrukcje: Wyrównywanie formantu z krawędziami formularzy](how-to-align-a-control-to-the-edges-of-forms.md)\
 Pokazuje sposób użycia <xref:System.Windows.Forms.Control.Dock%2A> właściwość wyrównywanie formantu do krawędzi formularza zajmuje.
 
-[Instrukcje: Tworzenie obramowania Wokoło formularze Windows kontrolować za pomocą wypełnienia](../../../../docs/framework/winforms/controls/how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
+[Instrukcje: Tworzenie obramowania Wokoło formularze Windows kontrolować za pomocą wypełnienia](how-to-create-a-border-around-a-windows-forms-control-using-padding.md)\
 Pokazuje sposób użycia <xref:System.Windows.Forms.Control.Padding%2A> właściwości opisują formantu.
 
-[Instrukcje: Implementowanie aparatu niestandardowego układu](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-layout-engine.md)\
+[Instrukcje: Implementowanie aparatu niestandardowego układu](how-to-implement-a-custom-layout-engine.md)\
 Demonstruje sposób implementacji <xref:System.Windows.Forms.Layout.LayoutEngine> rozmieszczania kontrolek formularzy Windows Forms.
 
 ## <a name="reference"></a>Tematy pomocy
@@ -45,7 +45,7 @@ Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.FlowLayoutPan
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Instrukcje: Projektowanie układu formularzy Windows dobrze reagującego na lokalizację](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
-- [Zachowanie AutoSize w kontrolce TableLayoutPanel](../../../../docs/framework/winforms/controls/autosize-behavior-in-the-tablelayoutpanel-control.md)
+- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Instrukcje: Projektowanie układu formularzy Windows dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Zachowanie AutoSize w kontrolce TableLayoutPanel](autosize-behavior-in-the-tablelayoutpanel-control.md)

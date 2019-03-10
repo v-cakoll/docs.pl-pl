@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: d5ee6d9cbb8beb819d023c92af1123ebc37b53c8
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 648dd8017f5c1f043a450ef207912cca51f2d3a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834919"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720273"
 ---
 # <a name="welcome-to-net"></a>Zapraszamy do platformy .NET
 
@@ -22,10 +22,10 @@ Twórz wiele rodzajów aplikacji przy użyciu platformy .NET, takich jak chmury,
 
 Najnowsze wiadomości dotyczące platformy .NET Sprawdź następujących blogach:
 
-- [.NET Blog](https://blogs.msdn.microsoft.com/dotnet/)
-- [ASP.NET Blog](https://blogs.msdn.microsoft.com/webdev/)
-- [Blog Visual Studio](https://blogs.msdn.microsoft.com/visualstudio/)
-- [Zespół programu Visual Basic](https://blogs.msdn.microsoft.com/vbteam/)
+- [.NET Blog](https://devblogs.microsoft.com/dotnet/)
+- [ASP.NET Blog](https://devblogs.microsoft.com/aspnet/)
+- [Blog Visual Studio](https://devblogs.microsoft.com/visualstudio/)
+- [Zespół programu Visual Basic](https://devblogs.microsoft.com/vbteam/)
 
 To samo wykonać również najnowszych zdarzeń platformy .NET:
 

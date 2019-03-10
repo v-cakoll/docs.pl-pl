@@ -5,12 +5,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], using managed interface
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
-ms.openlocfilehash: c569eb249a583ca9f71381210eeb11a8d10b04e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d8e1ab286d4e5723f5ca6bca0b6eeff53ac1d43
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590204"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711347"
 ---
 # <a name="overview-of-graphics"></a>Omówienie grafik
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] to interfejs programowania aplikacji (API), który wchodzi w skład podsystemu systemu operacyjnego Microsoft Windows. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] odpowiada za wyświetlanie informacji na ekranach i drukarki. Jak sugeruje nazwa, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jest następcą programu [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], graficzny interfejs urządzenia dołączone do wcześniejszych wersji systemu Windows.  
@@ -31,4 +31,4 @@ ms.locfileid: "54590204"
  Za pomocą graficzny interfejs urządzenia takie jak [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], informacje możesz wyświetlać na ekranie lub drukarki, bez konieczności liczyć się szczegółowe informacje o urządzeniu określony ekran. Programistę wykonywania wywołań do metod dostarczonych przez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] klasy. Tych metod należy z kolei odpowiednie wywołania określone sterowniki urządzeń. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] powoduje, że aplikacja od sprzętu graficznego. Jest to izolacji, umożliwiająca z programistą podczas tworzenia aplikacji niezależnych od urządzenia.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Grafika — omówienie](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
+- [Grafika — omówienie](graphics-overview-windows-forms.md)

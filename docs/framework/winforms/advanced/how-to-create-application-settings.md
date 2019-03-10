@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441362"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721245"
 ---
 # <a name="how-to-create-application-settings"></a>Instrukcje: Tworzenie ustawień aplikacji
 Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wiązania ich z właściwościami w formularzu lub kontrolki formularza tak, aby te ustawienia są ładowane i zapisywane automatycznie w czasie wykonywania.  
@@ -26,20 +26,20 @@ Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wi
   
 1.  Dodaj nową klasę do projektu i zmień jego nazwę. Do wykonania tej procedury, firma Microsoft będzie wywoływać tej klasy `MyUserSettings`. Zmiana definicji klasy, aby klasa pochodzi od klasy <xref:System.Configuration.ApplicationSettingsBase>.  
   
-2.  Zdefiniuj właściwość od tej klasy otoki dla każdego ustawienia aplikacji, potrzebujesz, a następnie Zastosuj tę właściwość z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, w zależności od zakresu ustawienia. Aby uzyskać więcej informacji na temat zakresu ustawień, zobacz [Przegląd ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-overview.md). W razie kod powinien wyglądać następująco:  
+2.  Zdefiniuj właściwość od tej klasy otoki dla każdego ustawienia aplikacji, potrzebujesz, a następnie Zastosuj tę właściwość z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, w zależności od zakresu ustawienia. Aby uzyskać więcej informacji na temat zakresu ustawień, zobacz [Przegląd ustawień aplikacji](application-settings-overview.md). W razie kod powinien wyglądać następująco:  
   
-     [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
-     [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+     [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+     [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 3.  W aplikacji, należy utworzyć wystąpienie tej klasy otoki. Będzie najczęściej od prywatnej składowej formularza głównego. Po zdefiniowaniu klasy należy powiązać go z właściwością; w tym przypadku <xref:System.Windows.Forms.Form.BackColor%2A> właściwości formularza. Można to zrobić do formularza `Load` programu obsługi zdarzeń.  
   
-     [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
-     [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
+     [!code-csharp[ApplicationSettings.Create#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
+     [!code-vb[ApplicationSettings.Create#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
   
 4.  Jeśli podasz sposób, aby zmienić ustawienia w czasie wykonywania, należy zapisać bieżące ustawienia użytkownika na dysku w przypadku, gdy formularz zostanie zamknięty, w przeciwnym razie te zmiany zostaną utracone.  
   
-     [!code-csharp[ApplicationSettings.Create#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
-     [!code-vb[ApplicationSettings.Create#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  
+     [!code-csharp[ApplicationSettings.Create#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
+     [!code-vb[ApplicationSettings.Create#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  
   
      Możesz pomyślnie utworzono nowe ustawienie aplikacji i powiązany określonej właściwości.  
   
@@ -49,5 +49,5 @@ Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wi
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Przegląd ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Instrukcje: Sprawdzanie poprawności ustawień aplikacji](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+- [Przegląd ustawień aplikacji](application-settings-overview.md)
+- [Instrukcje: Sprawdzanie poprawności ustawień aplikacji](how-to-validate-application-settings.md)

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie niestandardowego projektanta działań'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466885"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716832"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Instrukcje: Tworzenie niestandardowego projektanta działań
 
@@ -21,9 +21,9 @@ Kluczowym elementem z historią, która wymaga wyróżniania w implementacji nie
 
 W tym temacie opisano dwie procedury.
 
-1. Pierwsza procedura w tym artykule opisano sposób tworzenia niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter> zapewniający strefy listy, który odbiera innych działań. Ta procedura jest oparty na [niestandardowe projektantów złożonych — Prezenter elementu przepływu pracy](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) próbki.
+1. Pierwsza procedura w tym artykule opisano sposób tworzenia niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemPresenter> zapewniający strefy listy, który odbiera innych działań. Ta procedura jest oparty na [niestandardowe projektantów złożonych — Prezenter elementu przepływu pracy](./samples/custom-composite-designers-workflow-item-presenter.md) próbki.
 
-2. W drugiej procedurze opisano sposób tworzenia niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter> zapewniająca funkcje potrzebne do edycji zbioru zawarte elementy. Ta procedura jest oparty na [niestandardowe projektantów złożonych — Prezenter elementy przepływu pracy](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) próbki.
+2. W drugiej procedurze opisano sposób tworzenia niestandardowego projektanta działań z <xref:System.Activities.Presentation.WorkflowItemsPresenter> zapewniająca funkcje potrzebne do edycji zbioru zawarte elementy. Ta procedura jest oparty na [niestandardowe projektantów złożonych — Prezenter elementy przepływu pracy](./samples/custom-composite-designers-workflow-items-presenter.md) próbki.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Aby utworzyć niestandardowego projektanta działań ze strefą listy przy użyciu WorkflowItemPresenter
 
@@ -350,4 +350,4 @@ W tym temacie opisano dwie procedury.
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [Dostosowywanie środowiska projektowania przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [Dostosowywanie środowiska projektowania przepływu pracy](customizing-the-workflow-design-experience.md)

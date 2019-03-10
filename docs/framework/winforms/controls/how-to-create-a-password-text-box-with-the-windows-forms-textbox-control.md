@@ -12,12 +12,12 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: b6fe0e615cc5bbd0f549505ed9e6add8d7a51433
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93be2378e812ce909adaf9b640b37f8056fc09c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523993"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710813"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Instrukcje: Tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows
 Pole hasła jest polem tekstowym formularzy Windows, który wyświetla symboli zastępczych, gdy użytkownik wpisze ciąg.  
@@ -73,10 +73,10 @@ Pole hasła jest polem tekstowym formularzy Windows, który wyświetla symboli z
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Instrukcje: Umieszczanie cudzysłowu w ciągu](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Instrukcje: Zaznaczanie tekstu w formancie TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Instrukcje: Wyświetlanie wielu wierszy w formancie TextBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox, kontrolka](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)
+- [Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Instrukcje: Umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Instrukcje: Zaznaczanie tekstu w formancie TextBox formularzy Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Instrukcje: Wyświetlanie wielu wierszy w formancie TextBox formularzy Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox, kontrolka](textbox-control-windows-forms.md)

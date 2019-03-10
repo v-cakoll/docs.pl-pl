@@ -1,18 +1,18 @@
 ---
-title: 'Porady: tworzenie działania'
+title: 'Instrukcje: Utwórz działanie'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872960"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709020"
 ---
-# <a name="how-to-create-an-activity"></a>Porady: tworzenie działania
+# <a name="how-to-create-an-activity"></a>Instrukcje: Utwórz działanie
 
 Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Logika wykonania działania, które można zaimplementować w kodzie zarządzanym lub można ją wdrożyć za pomocą innych działań. W tym temacie pokazano, jak utworzyć dwóch działań. Pierwsze działanie jest proste działania, które używa kodu, aby zaimplementować logikę jego wykonywania. Implementacja drugiego działania jest zdefiniowana za pomocą innych działań. Te działania są używane w kolejnych krokach samouczka.
 
@@ -42,8 +42,8 @@ Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../include
 
 4.  Zastąp istniejące `ReadInt` definicji przy użyciu następującej definicji.
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > `ReadInt` Pochodzi od klasy działania <xref:System.Activities.NativeActivity%601> zamiast <xref:System.Activities.CodeActivity>, co jest ustawieniem domyślnym dla szablonu działania kodu. <xref:System.Activities.CodeActivity%601> można użyć, jeśli działanie zapewnia pojedynczy wynik, która jest dostępna za pośrednictwem <xref:System.Activities.Activity%601.Result%2A> argument, ale <xref:System.Activities.CodeActivity%601> nie obsługuje korzystanie z zakładek, więc <xref:System.Activities.NativeActivity%601> jest używany.
@@ -100,13 +100,13 @@ Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../include
 
 ## <a name="next-steps"></a>Następne kroki
 
-Instrukcje dotyczące sposobu tworzenia przepływu pracy przy użyciu tych działań można znaleźć następnego kroku w tym samouczku [porady: Tworzenie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
+Instrukcje dotyczące sposobu tworzenia przepływu pracy przy użyciu tych działań można znaleźć następnego kroku w tym samouczku [jak: Tworzenie przepływu pracy](how-to-create-a-workflow.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [Projektowanie i implementowanie niestandardowych działań](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Instrukcje: Tworzenie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [Używanie elementu ExpressionTextBox w projektancie działań niestandardowych](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Projektowanie i implementowanie niestandardowych działań](designing-and-implementing-custom-activities.md)
+- [Wprowadzenie — samouczek](getting-started-tutorial.md)
+- [Instrukcje: Tworzenie przepływu pracy](how-to-create-a-workflow.md)
+- [Używanie elementu ExpressionTextBox w projektancie działań niestandardowych](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

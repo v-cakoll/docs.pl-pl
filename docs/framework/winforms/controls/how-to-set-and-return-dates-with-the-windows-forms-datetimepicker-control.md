@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 678fc5883096d82937c4a1677d2f7f345e955ae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73c40a48a75955d1ba44decae6b50ca641a63f7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562209"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703221"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Instrukcje: Ustaw i zwracają dat za pomocą formantu DateTimePicker formularzy Windows
 Aktualnie wybranej daty lub godziny w formularzach Windows Forms <xref:System.Windows.Forms.DateTimePicker> kontrolki jest określany przez <xref:System.Windows.Forms.DateTimePicker.Value%2A> właściwości. Możesz ustawić <xref:System.Windows.Forms.DateTimePicker.Value%2A> właściwości przed wyświetleniem formantu (na przykład w czasie projektowania lub w postaci <xref:System.Windows.Forms.Form.Load> zdarzeń) do określenia daty, dla której będzie początkowo zaznaczone w formancie. Domyślnie formant firmy <xref:System.Windows.Forms.DateTimePicker.Value%2A> jest ustawiona na bieżącą datę. Jeśli zmienisz formantu <xref:System.Windows.Forms.DateTimePicker.Value%2A> w kodzie, formant jest automatycznie aktualizowany na formularz, aby odzwierciedlić nowe ustawienie.  
@@ -24,7 +24,7 @@ Aktualnie wybranej daty lub godziny w formularzach Windows Forms <xref:System.Wi
   
 -   W przypadku wartości daty <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A>, i <xref:System.DateTime.Year%2A> właściwości zwracają wartości całkowite dla tych jednostek czasu od wybranej daty. <xref:System.DateTime.DayOfWeek%2A> Właściwość zwraca wartość wskazującą wybranego dnia tygodnia (możliwe wartości są wymienione w <xref:System.DayOfWeek> wyliczenia).  
   
--   W przypadku wartości czasu <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A>, i <xref:System.DateTime.Millisecond%2A> właściwości zwracają wartości całkowite dla tych jednostek czasu. Aby skonfigurować formantu, aby wyświetlić czas, zobacz [jak: Wyświetlanie godziny za pomocą formantu DateTimePicker](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).  
+-   W przypadku wartości czasu <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A>, i <xref:System.DateTime.Millisecond%2A> właściwości zwracają wartości całkowite dla tych jednostek czasu. Aby skonfigurować formantu, aby wyświetlić czas, zobacz [jak: Wyświetlanie godziny za pomocą formantu DateTimePicker](how-to-display-time-with-the-datetimepicker-control.md).  
   
 ### <a name="to-set-the-date-and-time-value-of-the-control"></a>Aby ustawić wartości daty i godziny formantu  
   
@@ -73,5 +73,5 @@ Aktualnie wybranej daty lub godziny w formularzach Windows Forms <xref:System.Wi
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [DateTimePicker, kontrolka](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
-- [Instrukcje: Wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy Windows](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [DateTimePicker, kontrolka](datetimepicker-control-windows-forms.md)
+- [Instrukcje: Wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy Windows](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

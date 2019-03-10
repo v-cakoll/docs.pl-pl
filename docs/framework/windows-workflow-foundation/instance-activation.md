@@ -2,12 +2,12 @@
 title: Aktywacja wystąpienia
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 78f134ca2d78261a5f6ff9376bd9a98116315f0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366052"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703403"
 ---
 # <a name="instance-activation"></a>Aktywacja wystąpienia
 Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, okresowo budzi się i wykrywa wystąpienia przepływu pracy możliwy do uruchomienia lub aktywowalnej w bazie danych trwałości. Jeśli zostaną znalezione wystąpienia możliwy do uruchomienia przepływu pracy, powiadamia hosta przepływu pracy, który jest w stanie aktywacji wystąpienia. Jeśli Magazyn wystąpienia wykryje wystąpienia przepływu pracy aktywowalnej, powiadamia ogólnego hosta, który aktywuje hosta przepływu pracy, który z kolei uruchamia wystąpienie przepływu pracy. W poniższych sekcjach w tym temacie opisano proces aktywacji wystąpienia szczegółowo.  
@@ -40,4 +40,4 @@ Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, okresowo 
  W celu aktywacji WAS ogólnego hosta wymaga zestawu parametrów aktywacji w celu uzyskania adresu punktu końcowego, w którym można aktywować nowe hosty. Parametry aktywacji WAS aktywacji są nazwę lokacji, ścieżka do aplikacji względem lokacji oraz ścieżkę usługi względem aplikacji. Store wystąpienia przepływu pracy SQL przechowuje te parametry aktywacji podczas wykonywania <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.  
   
 ## <a name="runnable-instances-detection-period"></a>Okres wykrywania wystąpień możliwych do uruchomienia  
- **Możliwy do uruchomienia okres wykrywania wystąpień** właściwość Store wystąpienia przepływu pracy SQL określa okres czasu, po upływie którego Store wystąpienia przepływu pracy SQL uruchamia zadanie wykrywania, aby wykrywać wszelkie możliwe do uruchomienia lub aktywowalnej przepływu pracy wystąpień w bazie danych trwałości od poprzedniego cyklu wykrywania. Zobacz [możliwy do uruchomienia okres wykrywania wystąpień](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md) Aby uzyskać więcej informacji na temat tej właściwości.
+ **Możliwy do uruchomienia okres wykrywania wystąpień** właściwość Store wystąpienia przepływu pracy SQL określa okres czasu, po upływie którego Store wystąpienia przepływu pracy SQL uruchamia zadanie wykrywania, aby wykrywać wszelkie możliwe do uruchomienia lub aktywowalnej przepływu pracy wystąpień w bazie danych trwałości od poprzedniego cyklu wykrywania. Zobacz [możliwy do uruchomienia okres wykrywania wystąpień](runnable-instances-detection-period.md) Aby uzyskać więcej informacji na temat tej właściwości.

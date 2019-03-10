@@ -1,29 +1,29 @@
 ---
-title: Hosting opcje przepływu pracy
+title: Opcje hostowania przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 7713044e40532c431d090b1cb1795876ead2a899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516555"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713322"
 ---
-# <a name="workflow-hosting-options"></a>Hosting opcje przepływu pracy
-Większość przykładów programu Windows Workflow Foundation (WF) używane przepływy pracy, które znajdują się w aplikacji konsoli, ale nie jest to realistyczne scenariusz dla przepływów pracy w rzeczywistych. Przepływy pracy w aplikacjach biznesowych rzeczywiste będzie obsługiwana w trwałych procesów — usługi systemu Windows utworzone przez dewelopera lub aplikacji serwera, takich jak [!INCLUDE[iisver](../../../includes/iisver-md.md)] lub AppFabric. Dostępne są następujące różnice między tych metod.  
+# <a name="workflow-hosting-options"></a>Opcje hostowania przepływu pracy
+Większość przykładów programu Windows Workflow Foundation (WF) korzystanie z przepływów pracy, które znajdują się w aplikacji konsoli, ale nie jest to realistyczny scenariusz dla przepływów pracy w rzeczywistych warunkach. Przepływy pracy w aplikacjach biznesowych rzeczywiste będzie obsługiwana w trwałych procesów — usługa Windows opracowane przez dewelopera lub aplikację serwera, takich jak [!INCLUDE[iisver](../../../includes/iisver-md.md)] lub rozwiązania AppFabric. Dostępne są następujące różnice w tych metod.  
   
-## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hosting przepływów pracy w programie IIS z AppFabric systemu Windows  
- Za pomocą usług IIS z AppFabric jest preferowanym hosta dla przepływów pracy. Aplikacja hosta dla przepływów pracy za pomocą AppFabric to usługa aktywacji systemu Windows, która usuwa zależność od protokołu HTTP za pośrednictwem usług IIS tylko.  
+## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hostowanie przepływów pracy w usługach IIS przy użyciu rozwiązania AppFabric Windows  
+ Za pomocą usług IIS przy użyciu rozwiązania AppFabric jest preferowany hosta dla przepływów pracy. Aplikacja hosta dla przepływów pracy przy użyciu rozwiązania AppFabric to usługa aktywacji Windows, która usuwa zależność od protokołu HTTP za pośrednictwem usług IIS samodzielnie.  
   
-## <a name="hosting-workflows-in-iis-alone"></a>Hosting przepływów pracy w programie IIS samodzielnie  
- Przy użyciu [!INCLUDE[iisver](../../../includes/iisver-md.md)] samodzielnie nie jest zalecane, ponieważ istnieją do zarządzania i monitorowania z AppFabric dostępne narzędzia, które ułatwiają utrzymanie uruchomionych aplikacji. Przepływy pracy powinien być obsługiwany tylko na [!INCLUDE[iisver](../../../includes/iisver-md.md)] tylko w przypadku infrastruktury problemy z przenoszeniem do AppFabric.  
+## <a name="hosting-workflows-in-iis-alone"></a>Hostowanie przepływów pracy w usługach IIS samodzielnie  
+ Za pomocą [!INCLUDE[iisver](../../../includes/iisver-md.md)] samodzielnie nie jest zalecane, ponieważ istnieją narzędzia dostępne przy użyciu rozwiązania AppFabric, które ułatwiają utrzymanie działających aplikacji, zarządzania i monitorowania. Przepływy pracy powinien być obsługiwany tylko na [!INCLUDE[iisver](../../../includes/iisver-md.md)] tylko, jeśli występują problemy infrastruktury z przeniesieniem do rozwiązania AppFabric.  
   
 > [!WARNING]
->  [!INCLUDE[iisver](../../../includes/iisver-md.md)] przeprowadza recykling pul aplikacji i okresowo z różnych przyczyn. Podczas odtwarzania puli aplikacji, usługi IIS zatrzymuje akceptowanie komunikatów do starego pulę i tworzy nową pulę aplikacji do akceptowania nowych żądań. Jeśli przepływ pracy będzie nadal występować po wysłaniu odpowiedzi, [!INCLUDE[iisver](../../../includes/iisver-md.md)] nie będą świadomi pracy i może odtworzyć obsługi puli aplikacji. Jeśli tak się stanie, spowoduje przerwanie przepływu pracy i zarejestruje usługi śledzenia [1004 - WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md) wiadomości z puste pole przyczyny.  
+>  [!INCLUDE[iisver](../../../includes/iisver-md.md)] przeprowadza recykling pul aplikacji i okresowo z różnych powodów. Pula aplikacji zostanie odtworzona, usługi IIS zatrzymuje akceptowanie komunikatów do starego puli i tworzy nową pulę aplikacji, aby zaakceptować nowe żądania. Jeśli przepływ pracy kontynuuje pracę po wysłaniu odpowiedzi, [!INCLUDE[iisver](../../../includes/iisver-md.md)] nie będzie pamiętać o wykonywanej pracy i może odtworzyć hostingu pulę aplikacji. Jeśli tak się stanie, przepływ pracy zostanie przerwany i zarejestruje usługi śledzenia [1004 — WorkflowInstanceAborted](1004-workflowinstanceaborted.md) wiadomości z pustym polem przyczyna.  
 >   
->  Jeśli jest używana opcja trwałości, host jawnie należy ponownie uruchomić wystąpień zostało przerwane z ostatniego punktu trwałości.  
+>  Jeśli trwałości jest używany, host jawnie ponownie uruchomić wystąpienia przerwane z ostatniego punktu stanu trwałego.  
 >   
->  Użycie AppFabric usługi przepływu pracy zarządzania po pewnym czasie wznowić przepływ pracy z ostatniego punktu pomyślne trwałości, jeśli używane jest trwałości. Jeśli jest używana żadna trwałość i przepływu pracy wykonuje operacje poza wzorcem żądanie/odpowiedź, dane zostaną utracone, jeśli przerwanie przepływu pracy.  
+>  Użycie rozwiązania AppFabric usługi zarządzania przepływu pracy po pewnym czasie zostanie wznowiona przepływu pracy od ostatniego punktu pomyślne trwałości, jeśli trwałości jest używany. Jeśli jest używana żadna trwałość i przepływ pracy wykonuje operacje poza wzorzec żądań/odpowiedzi, dane zostaną utracone podczas przerywa przepływ pracy.  
   
-## <a name="hosting-a-workflow-in-a-custom-windows-service"></a>Hosting przepływ pracy w niestandardowych usługi systemu Windows  
- Tworzenie usługi niestandardowego przepływu pracy do przepływu pracy obsługi będzie wymagać deweloperowi zduplikowane dużo funkcjonalność out-of-box AppFabric, ale pozwoli większą elastyczność z funkcji niestandardowych. Tylko należy traktować tę opcję, jeśli AppFabric nie okaże się, że opcja.
+## <a name="hosting-a-workflow-in-a-custom-windows-service"></a>Hostowanie przepływu pracy w usłudze Windows niestandardowe  
+ Tworzenie usługi przepływu pracy niestandardowych do przepływu pracy obsługi będzie wymagać deweloperowi zduplikowane mnóstwo funkcjonalność out-of-box AppFabric, ale pozwoli uzyskać większą elastyczność przy użyciu funkcji niestandardowych. Tę opcję, należy rozważyć, tylko jeśli AppFabric nie okaże się, że opcja.

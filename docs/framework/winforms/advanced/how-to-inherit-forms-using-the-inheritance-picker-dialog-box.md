@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601834"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719363"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Instrukcje: Dziedziczenie formularzy przy użyciu okna dialogowego selektora dziedziczenia
 Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **selektor dziedziczenia** okno dialogowe. Dzięki niemu można korzystać z zalet interfejsów kodu lub użytkownika (UI), utworzono już w innych rozwiązaniach.  
@@ -41,7 +41,7 @@ Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **sele
   
 6.  Wybierz składnik.  
   
-     W **Eksploratora rozwiązań**, składnik zostanie dodany do projektu. Ma interfejs użytkownika, kontrolek, które są częścią odziedziczony formularz będą oznaczone znakiem glif (![VisualBasicInheritanceSymbol — zrzut ekranu](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")), i po wybraniu wskazujący obramowania poziom zabezpieczeń, które kontrolkę w formularzu podklasy. W poniższej tabeli wymieniono zachowań, które odnoszą się do różnych poziomów ochrony.  
+     W **Eksploratora rozwiązań**, składnik zostanie dodany do projektu. Ma interfejs użytkownika, kontrolek, które są częścią odziedziczony formularz będą oznaczone znakiem glif (![VisualBasicInheritanceSymbol — zrzut ekranu](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")), i po wybraniu wskazujący obramowania poziom zabezpieczeń, które kontrolkę w formularzu podklasy. W poniższej tabeli wymieniono zachowań, które odnoszą się do różnych poziomów ochrony.  
   
     |Poziom kontroli zabezpieczeń|Dostępne interakcji za pomocą projektanta i edytora kodu za pomocą formularza dziedziczone|  
     |-------------------------------|--------------------------------------------------------------------------------|  
@@ -51,13 +51,13 @@ Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **sele
     |Wewnętrzny (Friend w języku Visual Basic)|Standardowa obramowanie z nie uchwyty zmiany rozmiaru, wyświetlane w formularzu właściwości widocznych w **właściwości** okna. Jednak wszystkie aspekty kontrolki będą uznawane za tylko do odczytu. Nie można przenieść lub rozmiar kontrolki lub zmienić jego właściwości. Jeśli kontrolka jest kontenerem inne formanty, takie jak pola grupy nie można dodać nowych kontrolek i nie można usunąć istniejące kontrolki, nawet jeśli te kontrolki były publiczne. Formant może zostać oceniony jedynie przez innych członków zestawu, który go zawiera.|  
     |Private|Standardowa obramowanie z nie uchwyty zmiany rozmiaru, wyświetlane w formularzu właściwości widocznych w **właściwości** okna. Jednak wszystkie aspekty kontrolki będą uznawane za tylko do odczytu. Nie można przenieść lub rozmiar kontrolki lub zmienić jego właściwości. Jeśli kontrolka jest kontenerem inne formanty, takie jak pola grupy nie można dodać nowych kontrolek i nie można usunąć istniejące kontrolki, nawet jeśli te kontrolki były publiczne. Formant może zostać oceniony jedynie przez klasę, która deklaruje ją.|  
   
-     Aby uzyskać informacje o tym, jak zmienić wygląd formularza podstawowego, zobacz [efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md).  
+     Aby uzyskać informacje o tym, jak zmienić wygląd formularza podstawowego, zobacz [efekty modyfikowania wyglądu formularza podstawowego](effects-of-modifying-base-form-appearance.md).  
   
     > [!NOTE]
-    >  Łącząc dziedziczone kontrolek i składników za pomocą standardowych kontrolek i składników na formularzach Windows Forms, może wystąpić powoduje konflikt z kolejności z. Problem można rozwiązać, zmieniając porządku osi z, które jest realizowane przez kliknięcie w **Format** menu, wskazać polecenie **kolejności**, a następnie klikając polecenie **Przesuń na wierzch** lub  **Przesuń na spód**. Aby uzyskać więcej informacji na temat kolejności z formantów zobacz [jak: Warstw obiektów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Łącząc dziedziczone kontrolek i składników za pomocą standardowych kontrolek i składników na formularzach Windows Forms, może wystąpić powoduje konflikt z kolejności z. Problem można rozwiązać, zmieniając porządku osi z, które jest realizowane przez kliknięcie w **Format** menu, wskazać polecenie **kolejności**, a następnie klikając polecenie **Przesuń na wierzch** lub  **Przesuń na spód**. Aby uzyskać więcej informacji na temat kolejności z formantów zobacz [jak: Warstw obiektów na formularzach Windows Forms](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Efekty modyfikowania wyglądu formularza podstawowego](effects-of-modifying-base-form-appearance.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)

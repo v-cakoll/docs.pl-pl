@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-ms.openlocfilehash: ee84576c99b7088be72c2bdaf72d25f954d23ee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbbbba1bd620858eaa57559b1a9787956bfef1f5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499729"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702454"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Instrukcje: Drukowanie za pomocą formantu WebBrowser
 Poniższy przykład kodu pokazuje jak używać <xref:System.Windows.Forms.WebBrowser> formantu, aby wydrukować stronę sieci Web bez wyświetlania go.  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[WebBrowserMisc#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#10)]
- [!code-vb[WebBrowserMisc#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#10)]  
+ [!code-csharp[WebBrowserMisc#10](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#10)]
+ [!code-vb[WebBrowserMisc#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#10)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
@@ -36,8 +36,8 @@ Poniższy przykład kodu pokazuje jak używać <xref:System.Windows.Forms.WebBro
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Print%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [Instrukcje: Przejdź do adresu URL za pomocą formantu WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Instrukcje: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Instrukcje: Tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [WebBrowser, kontrolka — omówienie](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)
-- [Zabezpieczenia WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+- [Instrukcje: Przejdź do adresu URL za pomocą formantu WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Instrukcje: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Instrukcje: Tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [WebBrowser, kontrolka — omówienie](webbrowser-control-overview.md)
+- [Zabezpieczenia WebBrowser](webbrowser-security.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835489"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708408"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Obsługuje wiele scenariuszy programowania oprogramowania za pomocą [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Te scenariusze można podzielić na trzy kategorie:
@@ -40,7 +40,7 @@ ms.locfileid: "56835489"
 
     -   Funkcje, które po prostu umieszczają w otoce interfejsu API w systemu operacyjnego są również usuwane, ponieważ [!INCLUDE[wrt](../../../includes/wrt-md.md)] jest łatwa do wywoływania z kodu zarządzanego.
 
-     Aby dowiedzieć się więcej o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], zobacz [Omówienie aplikacji .NET dla Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Aby dowiedzieć się o procesie wybór interfejsu API, zobacz [platformy .NET dla aplikacji w stylu Metro](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) wpis w blogu .NET.
+     Aby dowiedzieć się więcej o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], zobacz [Omówienie aplikacji .NET dla Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Aby dowiedzieć się o procesie wybór interfejsu API, zobacz [platformy .NET dla aplikacji w stylu Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) wpis w blogu .NET.
 
 -   [Windows Runtime](/uwp/api/) zawiera elementy interfejsu użytkownika do kompilowania [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji i zapewnia dostęp do funkcji systemu operacyjnego. .NET Framework, takich jak [!INCLUDE[wrt](../../../includes/wrt-md.md)] ma metadane, umożliwiająca Kompilatory języka C# i Visual Basic można użyć [!INCLUDE[wrt](../../../includes/wrt-md.md)] sposób korzystają z programu .NET Framework klasy biblioteki. .NET Framework ułatwia użyj [!INCLUDE[wrt](../../../includes/wrt-md.md)] poprzez ukrywanie pewne różnice:
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: b30bb28e816f27cc8661d478758a05e52fb45037
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442129"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702571"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Wdrożenie ClickOnce w przypadku formularzy systemu Windows
 W poniższych tematach opisano [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], technologia używana w łatwy sposób wdrażania aplikacji Windows Forms na komputerach klienckich.  
@@ -63,7 +63,7 @@ W poniższych tematach opisano [!INCLUDE[ndptecclick](../../../includes/ndpteccl
  Pokazuje, jak oznaczyć plik, aby była dostępna w [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] katalog danych.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Przegląd ustawień aplikacji](./advanced/application-settings-overview.md)
 - [Publikowanie aplikacji ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
 - [Tworzenie aplikacji ClickOnce z wiersza poleceń](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
 - [Debugowanie aplikacji ClickOnce używających System.Deployment.Application](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)

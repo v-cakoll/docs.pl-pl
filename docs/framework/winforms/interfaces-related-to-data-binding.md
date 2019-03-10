@@ -1,5 +1,5 @@
 ---
-title: Interfejsy dotyczące powiązania danych
+title: Interfejsy dotyczące wiązania danych
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], data-binding interfaces
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547134"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703539"
 ---
-# <a name="interfaces-related-to-data-binding"></a>Interfejsy dotyczące powiązania danych
+# <a name="interfaces-related-to-data-binding"></a>Interfejsy dotyczące wiązania danych
 Za pomocą [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], możesz utworzyć wiele różnymi strukturami danych zgodnie z potrzebami powiązania aplikacji i danych, w którym pracujesz. Można tworzyć własnych klas, które zapewniają lub zużywają danych w formularzach Windows Forms. Te obiekty można udostępniają różne poziomy funkcjonalności i poziomie złożoności, z powiązania danych podstawowych do zapewniania obsługi w czasie projektowania, sprawdzanie błędów, powiadomienia o zmianie lub nawet pomocy technicznej ze strukturą wycofywania zmian wprowadzonych w samych danych.  
   
 ## <a name="consumers-of-data-binding-interfaces"></a>Konsumenci interfejsy powiązania danych  
@@ -150,6 +150,6 @@ Za pomocą [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], możesz utwor
     >  Klasa, która dziedziczy <xref:System.Windows.Forms.Control> zarządza automatycznie za pomocą powiązania jej <xref:System.Windows.Forms.Control.BindingContext%2A> właściwości, więc przypadki, w których należy zaimplementować <xref:System.Windows.Forms.ICurrencyManagerProvider> są stosunkowo rzadkie.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
+- [Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)

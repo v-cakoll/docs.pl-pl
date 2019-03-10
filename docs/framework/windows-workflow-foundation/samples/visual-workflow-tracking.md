@@ -2,18 +2,18 @@
 title: Wizualne śledzenie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: 4b6dac8020ba8df0fad57b8cbd0853b4aeb4e75d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261384"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703585"
 ---
 # <a name="visual-workflow-tracking"></a>Wizualne śledzenie przepływu pracy
 W tym przykładzie przedstawiono sposób pisania przepływu pracy visual śledzenia aplikacji przy użyciu funkcji debugowania dostępnych za pośrednictwem [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].
 
 ## <a name="sample-details"></a>Przykład szczegółów
- Aplikacja wykonuje przepływ pracy prosty schemat blokowy (zdefiniowanymi w Workflow.xaml) i ponownie obsługuje projektanta przepływów pracy, aby wyświetlić aktualnie wykonywanej przepływu pracy. Przepływ pracy jest wykonywane, aktualnie wykonywanego działania jest wyświetlana żółta strzałka konspekt i debugowania. Ponadto rekordów śledzenia generowane przez przepływ pracy również są wyświetlane w oknie aplikacji. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Aby dowiedzieć się więcej o ponowne hostowanie projektanta przepływu pracy, zobacz [Rehostowanie projektanta przepływu pracy](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md).
+ Aplikacja wykonuje przepływ pracy prosty schemat blokowy (zdefiniowanymi w Workflow.xaml) i ponownie obsługuje projektanta przepływów pracy, aby wyświetlić aktualnie wykonywanej przepływu pracy. Przepływ pracy jest wykonywane, aktualnie wykonywanego działania jest wyświetlana żółta strzałka konspekt i debugowania. Ponadto rekordów śledzenia generowane przez przepływ pracy również są wyświetlane w oknie aplikacji. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../workflow-tracking-and-tracing.md). Aby dowiedzieć się więcej o ponowne hostowanie projektanta przepływu pracy, zobacz [Rehostowanie projektanta przepływu pracy](../rehosting-the-workflow-designer.md).
 
  Symulator przepływu pracy polega na przechowywanie dwóch słowników. Jedna z nich zawiera mapowanie między aktualnie wykonywany obiekt działania i XAML numer wiersza, w którym zostanie utworzone wystąpienie działania. Drugi zawiera mapowanie między identyfikator wystąpienia działania i obiekt działania. Gdy są emitowane rekordów śledzenia przy użyciu niestandardowego śledzenia profilu aplikacji z Identyfikatorem wystąpienia aktualnie wykonywanego działania, a mapuje go pliku XAML, który on uruchomiony. Rehostowanym projektancie przepływu pracy jest następnie zgodnie z instrukcjami otrzymywanymi zaznacz działań na powierzchni projektanta i używać tej samej metody co debuger przepływu pracy, w szczególności rysowania żółte obramowanie wokół działania i wyświetlanie żółtą strzałką z lewej strony Projektant.
 

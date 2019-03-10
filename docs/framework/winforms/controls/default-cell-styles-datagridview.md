@@ -7,21 +7,21 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 4a4cd1e7582e6e7443ceb1f4188eb3359638d8df
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 44180c1d8e7f6fd29778ef6b9f5bd5e333c3ece2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332211"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702350"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: Ustawianie domyślnych stylów komórek i formatów danych dla formantu DataGridView formularzy Windows przy użyciu narzędzia Projektant
 <xref:System.Windows.Forms.DataGridView> Dzięki kontroli Określ domyślnych stylów komórek i formatów danych dla całego kontrolki, w określonych kolumnach, dla nagłówków wierszy i kolumn i przemienne wiersze, aby utworzyć efekt księgi komórki. Domyślne style całego formantu są zastępowane przez domyślne style ustawiony dla kolumn i przemienne wiersze. Ponadto style, które można ustawić w kodzie, dla poszczególnych wierszy i komórek zastępują domyślne style.  
   
- Aby uzyskać więcej informacji na temat style komórki zobacz [style komórki w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md). Aby ustawić style wierszy zmiennych, zobacz [jak: Ustawianie przemiennych wierszy dla formantu DataGridView, które przy użyciu narzędzia Projektant formularzy Windows](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
+ Aby uzyskać więcej informacji na temat style komórki zobacz [style komórki w formancie DataGridView formularzy Windows](cell-styles-in-the-windows-forms-datagridview-control.md). Aby ustawić style wierszy zmiennych, zobacz [jak: Ustawianie przemiennych wierszy dla formantu DataGridView, które przy użyciu narzędzia Projektant formularzy Windows](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
   
- Można również ustawić za pomocą stylów <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> właściwości wpływają na wszystkie wiersze, które zostaną dodane do formantu. Aby uzyskać więcej informacji na temat szablonu wiersza zobacz [jak: Użycie szablonu wiersza do dostosowania wierszy w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md).  
+ Można również ustawić za pomocą stylów <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> właściwości wpływają na wszystkie wiersze, które zostaną dodane do formantu. Aby uzyskać więcej informacji na temat szablonu wiersza zobacz [jak: Użycie szablonu wiersza do dostosowania wierszy w formancie DataGridView formularzy Windows](use-the-row-template-to-customize-rows-in-the-datagrid.md).  
   
- Poniższe procedury wymagają **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.DataGridView> kontroli. Aby uzyskać informacje o konfigurowaniu taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Poniższe procedury wymagają **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.DataGridView> kontroli. Aby uzyskać informacje o konfigurowaniu taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -30,7 +30,7 @@ ms.locfileid: "56332211"
   
 1.  Wybierz <xref:System.Windows.Forms.DataGridView> formantu w projektancie.  
   
-2.  W **właściwości** okna, kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, lub <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> właściwości. **CellStyle Konstruktor —** pojawi się okno dialogowe.  
+2.  W **właściwości** okna, kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, lub <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> właściwości. **CellStyle Konstruktor —** pojawi się okno dialogowe.  
   
 3.  Zdefiniuj styl przez ustawienie właściwości, za pomocą **(wersja zapoznawcza)** okienko, aby potwierdzić wybór.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "56332211"
   
 2.  Wybierz kolumnę z **wybrane kolumny** listy.  
   
-3.  W **właściwości kolumny** siatki, kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> właściwości. **CellStyle Konstruktor —** pojawi się okno dialogowe.  
+3.  W **właściwości kolumny** siatki, kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> właściwości. **CellStyle Konstruktor —** pojawi się okno dialogowe.  
   
 4.  Zdefiniuj styl przez ustawienie właściwości, za pomocą **(wersja zapoznawcza)** okienko, aby potwierdzić wybór.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "56332211"
   
 1.  Użyj jednej z powyższych procedur, aby wyświetlić **CellStyle Konstruktor —** okno dialogowe związane z domyślna właściwość style komórki.  
   
-2.  W **CellStyle Konstruktor —** okna dialogowego pole i kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Właściwość. **Ciąg formatu** pojawi się okno dialogowe.  
+2.  W **CellStyle Konstruktor —** okna dialogowego pole i kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Właściwość. **Ciąg formatu** pojawi się okno dialogowe.  
   
 3.  Wybierz typ formatu, a następnie zmodyfikować szczegóły tego typu (takie jak liczba miejsc dziesiętnych do wyświetlenia), za pomocą **przykładowe** pole, aby potwierdzić wybór.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "56332211"
 - <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
-- [Style komórki w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Ustawianie przemiennych wierszy dla formantu DataGridView formularzy Windows przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Ustawianie przemiennych wierszy dla formantu DataGridView formularzy Windows przy użyciu narzędzia Projektant](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
 - [Instrukcje: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)

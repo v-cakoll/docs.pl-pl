@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: 65533bc8f9125666e39c53635f5798573f66ef14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db0a43534080d630323d8c1c95759fd2dcc04a85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523184"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707949"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>ProgressBar — Informacje o formancie [Formularze systemu Windows]
 > [!IMPORTANT]
@@ -37,4 +37,4 @@ ms.locfileid: "54523184"
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.ProgressBar>
-- [ProgressBar, kontrolka](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+- [ProgressBar, kontrolka](progressbar-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: Macierzowe przedstawienie przekształcenia
+title: Macierzowe przedstawienie transformacji
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: ec1feda5547a96a0deac6f9d2e6ba1139e3fa73f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f98dac8b9d14cac01e109627d40fe01c37c6954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732092"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720829"
 ---
-# <a name="matrix-representation-of-transformations"></a>Macierzowe przedstawienie przekształcenia
+# <a name="matrix-representation-of-transformations"></a>Macierzowe przedstawienie transformacji
 M x n macierzy jest zbioru liczb rozmieszczone w mln wierszy i kolumn n. Poniższa ilustracja przedstawia kilka macierzy.  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art04.gif "AboutGdip05_art04")  
+ ![Przekształcenia](./media/aboutgdip05-art04.gif "AboutGdip05_art04")  
   
  Możesz dodać dwa macierzy o tym samym rozmiarze, dodając poszczególne elementy. Na poniższej ilustracji przedstawiono dwa przykłady dodanie macierzy.  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art05.gif "AboutGdip05_art05")  
+ ![Przekształcenia](./media/aboutgdip05-art05.gif "AboutGdip05_art05")  
   
  M x n macierzy można pomnożona przez macierz p n x, a wynik jest macierzy p "x" m. Liczba kolumn w pierwszym macierzy musi być taka sama jak liczba wierszy w drugiej macierzy. Na przykład macierzy 4 x 2 można pomnożona przez 2 macierzy x 3, aby wygenerować macierzy 4 x 3.  
   
@@ -48,23 +48,23 @@ M x n macierzy jest zbioru liczb rozmieszczone w mln wierszy i kolumn n. Poniżs
   
  Na poniższej ilustracji przedstawiono kilka przykładów mnożenie macierzy.  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art06.gif "AboutGdip05_art06")  
+ ![Przekształcenia](./media/aboutgdip05-art06.gif "AboutGdip05_art06")  
   
  Jeśli Twoim zdaniem punktu płaszczyźnie jako 1 macierzy x 2, mnożąc przez macierz 2 x 2 można przekształcać tego punktu. Poniższa ilustracja przedstawia kilka przekształcenia w punkcie, (2, 1).  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art07.gif "AboutGdip05_art07")  
+ ![Przekształcenia](./media/aboutgdip05-art07.gif "AboutGdip05_art07")  
   
  Wszystkie przekształcenia zostało pokazane na poprzedniej ilustracji są linear — przekształcenia. Niektóre inne transformacji, takich jak tłumaczenia, nie są liniowe, a nie może być wyrażona jako mnożenia przez macierz 2 x 2. Załóżmy, że chcesz rozpocząć od punktu, (2, 1), Obróć go o 90 stopni, przekształca ją 3 jednostki w kierunku x i przekształca ją 4 jednostek w kierunku y. Można to zrobić za pomocą mnożenie macierzy, a następnie dodanie macierzy.  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art08.gif "AboutGdip05_art08")  
+ ![Przekształcenia](./media/aboutgdip05-art08.gif "AboutGdip05_art08")  
   
  Liniowy transformacji (mnożenie przez macierz 2 x 2), następuje tłumaczenia (Dodawanie 1 macierzy x 2) jest nazywany affine — przekształcenia. Alternatywa dla przechowywania affine — przekształcenia w parze macierzy (jeden dla części liniowych) i jeden dla tłumaczenie jest do przechowywania cały przekształcenia w macierzy 3 x 3. Aby działało, punkt na płaszczyźnie muszą być przechowywane w macierzy x 1, 3, za pomocą fikcyjnego współrzędnych 3. Zwykle techniką jest zapewnienie wszystkie współrzędne 3rd równa 1. Na przykład punkt, (2, 1) jest reprezentowany przez macierz [2 1 1]. Na poniższej ilustracji przedstawiono affine — przekształcenia (obrót o 90 stopni; tłumaczenie 3 jednostki w kierunku x, 4 jednostek w kierunku y) wyrażonej w postaci mnożenia przez macierz pojedynczego 3 x 3.  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art09.gif "AboutGdip05_art09")  
+ ![Przekształcenia](./media/aboutgdip05-art09.gif "AboutGdip05_art09")  
   
  W powyższym przykładzie punktu, (2, 1) jest mapowany do punktu, (2, 6). Należy pamiętać, że trzecia kolumna macierzy 3 x 3 zawiera cyfry od 0, 0, 1. Zawsze będzie w przypadku macierzy 3 x 3 affine — przekształcenia. Numery ważne są sześć cyfr w kolumnach 1 i 2. Lewa górna 2 x 2 część macierzy odpowiada liniowej część przekształcenie, a pierwsze dwie pozycje w wierszu 3 tłumaczenia.  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art10.gif "AboutGdip05_art10")  
+ ![Przekształcenia](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
  W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można przechowywać affine — przekształcenia w <xref:System.Drawing.Drawing2D.Matrix> obiektu. Ponieważ trzecia kolumna macierzy, który reprezentuje affine — przekształcenia jest zawsze (0, 0, 1), określ tylko sześć cyfr w pierwszych dwóch kolumn będących jej podczas konstruowania <xref:System.Drawing.Drawing2D.Matrix> obiektu. Wykonywanie instrukcji `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` tworzy macierzy pokazano na poprzednim rysunku.  
   
@@ -87,7 +87,7 @@ M x n macierzy jest zbioru liczb rozmieszczone w mln wierszy i kolumn n. Poniżs
   
  Na poniższej ilustracji przedstawiono macierzy, A, B, C i D.  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art12.gif "AboutGdip05_art12")  
+ ![Przekształcenia](./media/aboutgdip05-art12.gif "AboutGdip05_art12")  
   
  Fakt, że macierzy transformacji złożonych mogą powstawać przez mnożenie macierzy transformacji poszczególnych oznacza, że dowolnej sekwencji affine — przekształcenia mogą być przechowywane w jednej <xref:System.Drawing.Drawing2D.Matrix> obiektu.  
   
@@ -96,13 +96,13 @@ M x n macierzy jest zbioru liczb rozmieszczone w mln wierszy i kolumn n. Poniżs
   
  <xref:System.Drawing.Drawing2D.Matrix> Klasa udostępnia kilka metod do tworzenia złożonych transformacji: <xref:System.Drawing.Drawing2D.Matrix.Multiply%2A>, <xref:System.Drawing.Drawing2D.Matrix.Rotate%2A>, <xref:System.Drawing.Drawing2D.Matrix.RotateAt%2A>, <xref:System.Drawing.Drawing2D.Matrix.Scale%2A>, <xref:System.Drawing.Drawing2D.Matrix.Shear%2A>, i <xref:System.Drawing.Drawing2D.Matrix.Translate%2A>. Poniższy przykład tworzy macierzy transformacji złożonego, najpierw obraca się 30 stopni, a następnie skaluje się o 2 w kierunku y, która przetwarza 5 jednostek w kierunku x:  
   
- [!code-csharp[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.CoordinateSystems#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.CoordinateSystems#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.CoordinateSystems#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#11)]  
   
  Poniższa ilustracja przedstawia macierzy.  
   
- ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art13.gif "AboutGdip05_art13")  
+ ![Przekształcenia](./media/aboutgdip05-art13.gif "AboutGdip05_art13")  
   
 ## <a name="see-also"></a>Zobacz także
-- [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
-- [Używanie przekształceń w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+- [Systemy i przekształcenia współrzędnych](coordinate-systems-and-transformations.md)
+- [Używanie przekształceń w zarządzanym GDI+](using-transformations-in-managed-gdi.md)

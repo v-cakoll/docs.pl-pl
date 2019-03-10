@@ -6,58 +6,58 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 1a2407065930da6fff74e50d1a6946dad94560da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524889"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720452"
 ---
 # <a name="using-managed-graphics-classes"></a>Używanie zarządzanych klas grafiki
-W poniższych tematach opisano sposób użycia [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] interfejsu API w ramach zarządzanej klasy.  
+W poniższych tematach opisano sposób użycia [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] interfejsu API w ramach klasy zarządzanej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadzenie do programowania grafiki](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- Opisuje sposób wykonywania podstawowych zadań z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [Wprowadzenie do programowania grafiki](getting-started-with-graphics-programming.md)  
+ W tym artykule opisano sposób wykonywania podstawowych zadań z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- Pokazuje, jak utworzyć pióra i użyć go do rysowania różnych linii i kształtów.  
+ [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)  
+ Pokazuje, jak skonstruować pióra i użyć go do rysowania różnych linii i kształtów.  
   
- [Używanie pędzla do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)  
- Pokazuje, jak utworzyć pędzla i wypełnienia kształty z różnymi efekty.  
+ [Używanie pędzla do wypełniania kształtów](using-a-brush-to-fill-shapes.md)  
+ Pokazuje, jak skonstruować pędzla i wypełnienia kształtów różne efekty.  
   
- [Używanie pędzla gradientów do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- Przedstawia sposób tworzenia i używania różnych typów pędzle gradientów.  
+ [Używanie pędzla gradientów do wypełniania kształtów](using-a-gradient-brush-to-fill-shapes.md)  
+ Pokazuje, jak utworzyć i używać różnych rodzajów pędzle gradientów.  
   
- [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
- Demonstracja tworzenia obrazów i manipulowania nimi.  
+ [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)  
+ Przedstawia sposób tworzenia i manipulowania obrazami.  
   
- [Przenikanie alfa linii i wypełnień](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
- Pokazuje, jak do osiągnięcia Przezroczystość kształtów i linii.  
+ [Przenikanie alfa linii i wypełnień](alpha-blending-lines-and-fills.md)  
+ Pokazuje, jak uzyskać przezroczystość kształty i linie.  
   
- [Używanie czcionek i tekstu](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)  
- Przedstawia sposób Rysowanie tekstu i używanie czcionek i rodziny czcionek.  
+ [Używanie czcionek i tekstu](using-fonts-and-text.md)  
+ Pokazuje, jak rysować tekst i używanie czcionek i rodziny czcionek.  
   
- [Konstruowanie i rysowanie krzywych](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
- Przedstawiono sposób rysowania krzywe kardynalnych i Beziera.  
+ [Konstruowanie i rysowanie krzywych](constructing-and-drawing-curves.md)  
+ Pokazuje, jak narysować krzywe Kardynalną i Beziera.  
   
- [Konstruowanie i rysowanie ścieżek](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
- Przedstawia sposób tworzenia dane przy użyciu ścieżki.  
+ [Konstruowanie i rysowanie ścieżek](constructing-and-drawing-paths.md)  
+ Pokazuje, jak utworzyć dane przy użyciu ścieżki.  
   
- [Używanie przekształceń w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Pokazuje przekształcenia macierzowe.  
+ [Używanie przekształceń w zarządzanym GDI+](using-transformations-in-managed-gdi.md)  
+ Pokazuje przekształcenia macierzy.  
   
- [Używanie kontenerów grafiki](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
+ [Używanie kontenerów grafiki](using-graphics-containers.md)  
  Pokazuje, jak zarządzać kontenery grafiki stanu i zagnieżdżonych obiektów grafiki.  
   
- [Używanie regionów](../../../../docs/framework/winforms/advanced/using-regions.md)  
- Pokazuje, testowania i wycinka z regionami trafień.  
+ [Używanie regionów](using-regions.md)  
+ Pokazuje testowania trafień i obcinanie przy użyciu regionów.  
   
- [Ponowne kolorowanie obrazów](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
+ [Ponowne kolorowanie obrazów](recoloring-images.md)  
  Przedstawia różne aspekty manipulowanie kolorów.  
   
- [Używanie kodeków obrazu w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
- Pokazują, jak używać kodeków obrazu do manipulowania obrazów.  
+ [Używanie kodeków obrazu w zarządzanym GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)  
+ Pokazano, jak używać kodeków obrazu do manipulowania obrazami.  
   
- [Podwójnie buforowana grafika](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- Demonstracja zmniejszenia migotania przy użyciu podwójnego buforowania.
+ [Podwójnie buforowana grafika](double-buffered-graphics.md)  
+ Pokazuje, jak Zmniejszanie migotania za pomocą podwójnego buforowania.

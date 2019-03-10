@@ -9,57 +9,57 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-ms.openlocfilehash: 6d2f0a2f4acebaac59f2d8180f2de4ccb88b2965
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526839"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710462"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Praca z obrazami, mapami bitowymi, ikonami i metaplikami
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia `Bitmap` klasy do pracy z obrazów rastrowych i `Metafile` klasy do pracy z obrazami wektora. `Bitmap` i `Metafile` klasy zarówno dziedziczą `Image` klasy.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia `Bitmap` klasy do pracy z obrazów rastrowych i `Metafile` klasy do pracy z obrazami wektora. `Bitmap` i `Metafile` dziedziczyć obu klas `Image` klasy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: rysowanie istniejącej mapy bitowej na ekranie](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
- Opisuje sposób załadować i rysowanie map bitowych.  
+ [Instrukcje: Rysowanie istniejącej mapy bitowej na ekranie](how-to-draw-an-existing-bitmap-to-the-screen.md)  
+ Opisuje sposób ładowania i narysuj map bitowych.  
   
- [Instrukcje: ładowanie i wyświetlanie metaplików](../../../../docs/framework/winforms/advanced/how-to-load-and-display-metafiles.md)  
- Przedstawia sposób ładowania i rysowanie metapliki.  
+ [Instrukcje: Ładowanie i wyświetlanie metaplików](how-to-load-and-display-metafiles.md)  
+ Pokazuje, jak ładować i narysuj metapliki.  
   
- [Przycinanie i skalowanie obrazów w GDI+](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
- Wyjaśniono, jak przycinanie i skalowanie obrazów wektorowe i rastrowe.  
+ [Przycinanie i skalowanie obrazów w GDI+](cropping-and-scaling-images-in-gdi.md)  
+ Wyjaśnia, jak przycinanie i skalowanie wektora i rastrowych obrazów.  
   
- [Instrukcje: obracanie, odzwierciedlanie i pochylanie obrazów](../../../../docs/framework/winforms/advanced/how-to-rotate-reflect-and-skew-images.md)  
- Opisuje sposób rysowania obracany, odbitych i spowodowałoby zafałszowanie obrazów.  
+ [Instrukcje: Obracanie, odzwierciedlanie i pochylanie obrazów](how-to-rotate-reflect-and-skew-images.md)  
+ W tym artykule opisano jak narysować obrócony, odbitych i niesymetryczne.  
   
- [Instrukcje: używanie trybu interpolacji do sterowania jakością obrazu w czasie skalowania](../../../../docs/framework/winforms/advanced/how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
- Przedstawia sposób użycia <xref:System.Drawing.Drawing2D.InterpolationMode> wyliczeniu, aby zmienić jakości obrazu.  
+ [Instrukcje: Używanie trybu interpolacji do sterowania jakością obrazu w czasie skalowania](how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
+ Ilustruje sposób używania <xref:System.Drawing.Drawing2D.InterpolationMode> wyliczeniu, aby zmienić jakości obrazu.  
   
- [Instrukcje: tworzenie obrazów miniatur](../../../../docs/framework/winforms/advanced/how-to-create-thumbnail-images.md)  
- Zawiera opis sposobu tworzenia obrazów miniatur.  
+ [Instrukcje: Tworzenie obrazów miniatur](how-to-create-thumbnail-images.md)  
+ Opisuje sposób tworzenie obrazów miniatur.  
   
- [Instrukcje: poprawianie wydajności dzięki unikaniu automatycznego skalowania](../../../../docs/framework/winforms/advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)  
- Wyjaśniono, jak narysować obraz bez skalowania automatycznego.  
+ [Instrukcje: Poprawianie wydajności dzięki unikaniu automatycznego skalowania](how-to-improve-performance-by-avoiding-automatic-scaling.md)  
+ Wyjaśnia, jak rysować obraz z bez skalowania automatycznego.  
   
- [Instrukcje: odczytywanie metadanych obrazu](../../../../docs/framework/winforms/advanced/how-to-read-image-metadata.md)  
- Opisuje sposób odczytać metadanych z obrazu.  
+ [Instrukcje: Odczytaj metadane obrazu](how-to-read-image-metadata.md)  
+ W tym artykule opisano, jak odczytać metadane z obrazu.  
   
- [Instrukcje: tworzenie mapy bitowej w czasie wykonywania](../../../../docs/framework/winforms/advanced/how-to-create-a-bitmap-at-run-time.md)  
- Przedstawiono sposób rysowania mapy bitowej w czasie wykonywania.  
+ [Instrukcje: Tworzenie mapy bitowej w czasie wykonywania](how-to-create-a-bitmap-at-run-time.md)  
+ Pokazuje, jak narysować mapy bitowej w czasie wykonywania.  
   
- [Instrukcje: wyodrębnianie ikon skojarzonych z plikiem w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
- Opisuje sposób wyodrębnić ikonę, która jest osadzony zasób pliku.  
+ [Instrukcje: Wyodrębnianie ikon skojarzonych z plikiem w formularzach Windows Forms](how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
+ W tym artykule opisano sposób wyodrębniania ikonę która jest osadzony zasób pliku.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Drawing.Image>  
- Ta klasa opisuje i zawiera linki do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
  <xref:System.Drawing.Imaging.Metafile>  
- Ta klasa opisuje i zawiera linki do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
  <xref:System.Drawing.Bitmap>  
- Ta klasa opisuje i zawiera linki do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- Zawiera linki do tematów, w których omówiono różne typy map bitowych i manipulowania nimi w aplikacji.
+ [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)  
+ Zawiera łącza do tematów opisujących różne rodzaje mapy bitowe i manipulowania nimi w swoich aplikacjach.

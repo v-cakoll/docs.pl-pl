@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496289"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705834"
 ---
 # <a name="how-to-validate-application-settings"></a>Instrukcje: Sprawdzanie poprawności ustawień aplikacji
 W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim zostaną utrwalone.  
@@ -40,9 +40,9 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
   
 -   Zdarzenia wywoływane przed wykonaniem skojarzonych z nimi działań, takich jak <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> i <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, używa <xref:System.ComponentModel.CancelEventArgs> argumentu, aby anulować operację.  
   
- Aby uzyskać więcej informacji na temat obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Aby uzyskać więcej informacji na temat obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../event-handlers-overview-windows-forms.md).  
   
- Poniższe procedury pokazują, jak testować prawidłową datę urodzenia za pomocą <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> lub <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> zdarzeń. Procedury przedstawione zostały napisane przy założeniu, że utworzono już ustawienia aplikacji; w tym przykładzie zostaną wykonane sprawdzanie ustawienie o nazwie granic `DateOfBirth`. Aby uzyskać więcej informacji na temat tworzenia ustawień, zobacz [jak: Tworzenie ustawień aplikacji](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Poniższe procedury pokazują, jak testować prawidłową datę urodzenia za pomocą <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> lub <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> zdarzeń. Procedury przedstawione zostały napisane przy założeniu, że utworzono już ustawienia aplikacji; w tym przykładzie zostaną wykonane sprawdzanie ustawienie o nazwie granic `DateOfBirth`. Aby uzyskać więcej informacji na temat tworzenia ustawień, zobacz [jak: Tworzenie ustawień aplikacji](how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>Aby uzyskać obiekt ustawień aplikacji  
   
@@ -161,5 +161,5 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Instrukcje: Tworzenie ustawień aplikacji](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../creating-event-handlers-in-windows-forms.md)
+- [Instrukcje: Tworzenie ustawień aplikacji](how-to-create-application-settings.md)

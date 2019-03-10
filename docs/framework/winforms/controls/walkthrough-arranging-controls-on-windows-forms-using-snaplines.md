@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748037"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703598"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. Windows Forms Designer udostępnia wiele narzędzi układu, w tym celu. Jednym z najważniejszych jest <xref:System.Windows.Forms.Design.Behavior.SnapLine> funkcji.  
@@ -92,7 +92,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 > [!NOTE]
 >  Jeśli formularz <xref:System.Windows.Forms.Control.Padding%2A> właściwość jest ustawiona na 0,0,0,0, Windows Forms Designer zapewnia formularza zasłonięte <xref:System.Windows.Forms.Control.Padding%2A> wartość 9,9,9,9. Aby zastąpić to zachowanie, należy przypisać wartość inna niż 0,0,0,0.  
   
-1.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Margin%2A> właściwości, rozwijając <xref:System.Windows.Forms.Control.Margin%2A> wpis **właściwości** okna i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości na wartość 0. Aby uzyskać więcej informacji, zobacz [instruktażu: Układania Windows Forms kontrolek z dopełnienie, marginesy oraz właściwościami AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).  
+1.  Zmień wartość właściwości <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Margin%2A> właściwości, rozwijając <xref:System.Windows.Forms.Control.Margin%2A> wpis **właściwości** okna i ustawienie <xref:System.Windows.Forms.Padding.All%2A> właściwości na wartość 0. Aby uzyskać więcej informacji, zobacz [instruktażu: Układania Windows Forms kontrolek z dopełnienie, marginesy oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md).  
   
 2.  Przenieś <xref:System.Windows.Forms.Button> kontroli blisko prawej krawędzi formularza, aż pojawi się snapline —. Odległość tę teraz jest określony przez wartość w postaci <xref:System.Windows.Forms.Control.Padding%2A> właściwości.  
   
@@ -154,7 +154,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
   
 1.  Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do formularza.  
   
-2.  Zmień rozmiar <xref:System.Windows.Forms.Button> kontroli przez Przechwytywanie jeden rogu uchwytów zmiany rozmiaru, a następnie przeciągając. Aby uzyskać więcej informacji, zobacz [jak: Zmiana rozmiaru formantów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+2.  Zmień rozmiar <xref:System.Windows.Forms.Button> kontroli przez Przechwytywanie jeden rogu uchwytów zmiany rozmiaru, a następnie przeciągając. Aby uzyskać więcej informacji, zobacz [jak: Zmiana rozmiaru formantów na formularzach Windows Forms](how-to-resize-controls-on-windows-forms.md).  
   
 3.  Przeciągnij uchwyt zmiany rozmiaru, dopóki jeden z <xref:System.Windows.Forms.Button> obramowania kontrolki jest wyrównany z inną kontrolką. Pamiętaj, że snapline — zostanie wyświetlona. Należy również zauważyć, że uchwyt zmiany rozmiaru przyciąganie do pozycji snapline —.  
   
@@ -165,7 +165,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>Aby wyrównać etykietę do kontrolki tekstu  
   
-1.  Przeciągnij <xref:System.Windows.Forms.TextBox> z kontrolować **przybornika** do formularza. Gdy usuniesz <xref:System.Windows.Forms.TextBox> sterowania do formularza, kliknij symbol tagu inteligentne i wybierz **Ustaw tekst na textBox1** opcji. Aby uzyskać więcej informacji, zobacz [instruktażu: Wykonywanie typowych zadań z tagami inteligentnymi na Windows Forms kontrolki](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).  
+1.  Przeciągnij <xref:System.Windows.Forms.TextBox> z kontrolować **przybornika** do formularza. Gdy usuniesz <xref:System.Windows.Forms.TextBox> sterowania do formularza, kliknij symbol tagu inteligentne i wybierz **Ustaw tekst na textBox1** opcji. Aby uzyskać więcej informacji, zobacz [instruktażu: Wykonywanie typowych zadań z tagami inteligentnymi na Windows Forms kontrolki](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
 2.  Przeciągnij <xref:System.Windows.Forms.Label> z kontrolować **przybornika** do formularza.  
   
@@ -241,7 +241,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Przewodnik: Układania Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: Układania Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)
+- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)

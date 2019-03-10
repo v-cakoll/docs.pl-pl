@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543071"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717924"
 ---
 # <a name="windows-forms-controls-by-function"></a>Formanty formularzy systemu Windows według funkcji
 Formularze Windows oferuje formanty i składniki, które wykonują wiele funkcji. W poniższej tabeli wymieniono kontrolek formularzy Windows Forms i składników, zgodnie z ogólnych funkcji. Ponadto w przypadku wielu formantów, które obsługują tę samą funkcję, zalecane kontroli znajduje się notatki dotyczące formant, który on zastąpiony. W osobnej tabeli kolejnych zastąpione formanty są wyświetlane z ich zalecane zamienniki.  
   
 > [!NOTE]
->  W poniższej tabeli nie wymieniono każdy formant lub składnika, których można używać w formularzach Windows Forms; Aby bardziej pełną listę, zobacz [kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  W poniższej tabeli nie wymieniono każdy formant lub składnika, których można używać w formularzach Windows Forms; Aby bardziej pełną listę, zobacz [kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
   
 ## <a name="recommended-controls-and-components-by-function"></a>Zalecane kontrolek i składników, funkcja  
   
-|Funkcja|Formant|Opis|  
+|Funkcja|formant|Opis|  
 |--------------|-------------|-----------------|  
-|Wyświetlanie danych|<xref:System.Windows.Forms.DataGridView> Kontrolki|<xref:System.Windows.Forms.DataGridView> Kontroli zawiera tabelę można dostosować do wyświetlania danych. <xref:System.Windows.Forms.DataGridView> Klasa umożliwia dostosowanie komórek, wierszy, kolumny i obramowania. **Uwaga:**  <xref:System.Windows.Forms.DataGridView> Control oferuje wiele podstawowych i zaawansowanych funkcji, których brakuje w <xref:System.Windows.Forms.DataGrid> kontroli. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Wyświetlanie danych|<xref:System.Windows.Forms.DataGridView> Kontrolki|<xref:System.Windows.Forms.DataGridView> Kontroli zawiera tabelę można dostosować do wyświetlania danych. <xref:System.Windows.Forms.DataGridView> Klasa umożliwia dostosowanie komórek, wierszy, kolumny i obramowania. **Uwaga:**  <xref:System.Windows.Forms.DataGridView> Control oferuje wiele podstawowych i zaawansowanych funkcji, których brakuje w <xref:System.Windows.Forms.DataGrid> kontroli. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |Powiązanie danych oraz nawigacji|<xref:System.Windows.Forms.BindingSource> cm6long|Ułatwia powiązanie kontrolek w formularzu z danymi, zapewniając zarządzania waluty, powiadomienia o zmianie i innych usług.|  
 ||<xref:System.Windows.Forms.BindingNavigator> Kontrolki|Udostępnia interfejs typu toolbar do nawigowania i manipulowanie danymi w formularzu.|  
 |Edytowanie tekstu|<xref:System.Windows.Forms.TextBox> Kontrolki|Wyświetla tekst wprowadzony w czasie projektowania, które mogą być edytowane przez użytkowników w czasie wykonywania lub programowo zmienić.|  
@@ -85,5 +85,5 @@ Formularze Windows oferuje formanty i składniki, które wykonują wiele funkcji
 |Układ formularza|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)

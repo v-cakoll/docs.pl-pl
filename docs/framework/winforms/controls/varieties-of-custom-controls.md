@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 140b9284d9361aa149b4f739908376d1cbe6902c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746607"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713029"
 ---
 # <a name="varieties-of-custom-controls"></a>Różne typy formantów niestandardowych
 Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontrolek. Możesz rozszerzyć funkcjonalność formantu użytkownika z dobrze znanych również jako istniejących kontrolek poprzez dziedziczenie. Można także napisać niestandardowe formanty, które narysowania swoje własne.  
@@ -53,9 +53,9 @@ Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontro
   
  Kontrolki złożonej zawiera wszystkie funkcje nieprzerwaną pracę związany z każdą z zawartych w nim formantów Windows Forms i umożliwia selektywne udostępnianie i wiązania ich właściwości. Kontrolki złożonej także dużym stopniem domyślnie za pomocą klawiatury funkcji z nie dodatkowe postanowiło ze strony użytkownika.  
   
- Na przykład kontrolek złożonych można przystosować do wyświetlania danych adres klienta z bazy danych. Ten formant może obejmować <xref:System.Windows.Forms.DataGridView> sterowania do wyświetlania pól bazy danych <xref:System.Windows.Forms.BindingSource> do obsługi powiązania ze źródłem danych i <xref:System.Windows.Forms.BindingNavigator> kontrolki przechodzenia między rekordami. Można selektywnie ujawnić właściwości powiązań danych i może spakować i ponownie użyć kontrolki całego od aplikacji. Na przykład tego typu złożonego formantu zobacz [jak: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
+ Na przykład kontrolek złożonych można przystosować do wyświetlania danych adres klienta z bazy danych. Ten formant może obejmować <xref:System.Windows.Forms.DataGridView> sterowania do wyświetlania pól bazy danych <xref:System.Windows.Forms.BindingSource> do obsługi powiązania ze źródłem danych i <xref:System.Windows.Forms.BindingNavigator> kontrolki przechodzenia między rekordami. Można selektywnie ujawnić właściwości powiązań danych i może spakować i ponownie użyć kontrolki całego od aplikacji. Na przykład tego typu złożonego formantu zobacz [jak: Stosowanie atrybutów w kontrolkach formularzy Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
   
- Tworzenie kontrolki złożonej, pochodzi od <xref:System.Windows.Forms.UserControl> klasy. <xref:System.Windows.Forms.UserControl> Klasy bazowej zapewnia routing klawiatury dla podrzędnych kontrolki i umożliwia formanty podrzędne do działania w formie grupy. Aby uzyskać więcej informacji, zobacz [opracowywanie złożonej kontrolki formularzy Windows](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md).  
+ Tworzenie kontrolki złożonej, pochodzi od <xref:System.Windows.Forms.UserControl> klasy. <xref:System.Windows.Forms.UserControl> Klasy bazowej zapewnia routing klawiatury dla podrzędnych kontrolki i umożliwia formanty podrzędne do działania w formie grupy. Aby uzyskać więcej informacji, zobacz [opracowywanie złożonej kontrolki formularzy Windows](developing-a-composite-windows-forms-control.md).  
   
  **Zalecenie**  
   
@@ -85,7 +85,7 @@ Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontro
   
  Aby zaimplementować formant niestandardowy, należy napisać kod dla <xref:System.Windows.Forms.Control.OnPaint%2A> zdarzenia kontroli, jak również żadnego kodu właściwe dla funkcji, potrzebujesz. Możesz również zastąpić <xref:System.Windows.Forms.Control.WndProc%2A> metody i obsługują komunikaty systemu windows bezpośrednio. Jest to najbardziej wydajnymi procesorami sposób, aby utworzyć kontrolkę, ale aby efektywnie korzystać z tej techniki, należy zapoznać się z Microsoft Win32 API®.  
   
- Przykład formantu niestandardowego jest formantem zegara powielającą wygląd i zachowanie zegar analogowy. Malowanie niestandardowych jest wywoływane w celu spowodować ręce zegar przenoszone w odpowiedzi na <xref:System.Windows.Forms.Timer.Tick> zdarzenia z wewnętrznego <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie kontrolki formularzy Windows proste](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md).  
+ Przykład formantu niestandardowego jest formantem zegara powielającą wygląd i zachowanie zegar analogowy. Malowanie niestandardowych jest wywoływane w celu spowodować ręce zegar przenoszone w odpowiedzi na <xref:System.Windows.Forms.Timer.Tick> zdarzenia z wewnętrznego <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie kontrolki formularzy Windows proste](how-to-develop-a-simple-windows-forms-control.md).  
   
  **Zalecenie**  
   
@@ -96,7 +96,7 @@ Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontro
 -   Musisz zaimplementować niestandardowy funkcji, która nie jest dostępna za pośrednictwem standardowych kontrolek.  
   
 ### <a name="activex-controls"></a>Kontrolki ActiveX  
- Mimo że infrastruktura formularzy Windows została zoptymalizowana do kontrolek Windows Forms hosta, ale nadal używać kontrolki ActiveX. Są obsługiwane dla tego zadania w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md).  
+ Mimo że infrastruktura formularzy Windows została zoptymalizowana do kontrolek Windows Forms hosta, ale nadal używać kontrolki ActiveX. Są obsługiwane dla tego zadania w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md).  
   
 ### <a name="windowless-controls"></a>Od kontrolek bez okien  
  Obsługa technologii ActiveX the Microsoft Visual Basic® 6.0and *niepowiązanej z oknami* kontrolki. Od kontrolek bez okien nie są obsługiwane w formularzach Windows Forms.  
@@ -107,8 +107,8 @@ Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontro
  Użyj <xref:System.ComponentModel.DesignerAttribute> do powiązania kontrolki z projektanta. Aby uzyskać więcej informacji, zobacz [rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) i [jak: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [Opracowywanie złożonej kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
+- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](how-to-develop-a-simple-windows-forms-control.md)
+- [Opracowywanie złożonej kontrolki formularzy Windows Forms](developing-a-composite-windows-forms-control.md)
 - [Rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Instrukcje: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

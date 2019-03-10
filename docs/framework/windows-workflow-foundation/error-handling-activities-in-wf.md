@@ -2,20 +2,20 @@
 title: Obsługa błędów działań w WF
 ms.date: 03/30/2017
 ms.assetid: 24b68bd3-cef5-4413-ab82-2e2625f209aa
-ms.openlocfilehash: 51431e367f0ec8874588a52cb4dbd76d714768fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 410c481745cc62a55a2b6e840d82b01fcc7f5766
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512388"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707680"
 ---
 # <a name="error-handling-activities-in-wf"></a>Obsługa błędów działań w WF
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Implementowanie obsługi błędów i odzyskiwania zawiera kilka działań dostarczane przez system. Aby uzyskać więcej informacji, zobacz [wyjątki](../../../docs/framework/windows-workflow-foundation/exceptions.md).  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Implementowanie obsługi błędów i odzyskiwania zawiera kilka działań dostarczane przez system. Aby uzyskać więcej informacji, zobacz [wyjątki](exceptions.md).  
   
-## <a name="error-handling-activities"></a>Błąd obsługi działań  
+## <a name="error-handling-activities"></a>Działania obsługi błędu  
   
 |||  
 |-|-|  
-|<xref:System.Activities.Statements.Rethrow>|Ponownie zgłasza wyjątek ostatniego z poziomu `TryCatch` działania.|  
+|<xref:System.Activities.Statements.Rethrow>|Ponownie zgłasza ostatni wyjątek zgłoszony z poziomu `TryCatch` działania.|  
 |<xref:System.Activities.Statements.Throw>|Zgłasza wyjątek.|  
-|<xref:System.Activities.Statements.TryCatch>|Implementuje obsługi wyjątków.|
+|<xref:System.Activities.Statements.TryCatch>|Implementuje obsługę wyjątków.|

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366711"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705990"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Instrukcje: Hostowanie wielu wersji przepływu pracy Side-by-Side
 `WorkflowIdentity` Umożliwia deweloperom aplikacji przepływu pracy skojarzyć nazwę i wersję z definicji przepływu pracy i te informacje, które ma zostać skojarzony z istniejącym wystąpieniem przepływu pracy. Informacje o tożsamości może służyć przez deweloperów aplikacji przepływu pracy można obsługiwać scenariusze takie jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i zapewnia podstawę dla innych funkcji, takich jak aktualizacja dynamiczna. Ten krok, w tym samouczku przedstawiono sposób użycia `WorkflowIdentity` do hostowania wielu wersji przepływu pracy w tym samym czasie.
@@ -21,22 +21,22 @@ ms.locfileid: "57366711"
 ## <a name="in-this-topic"></a>W tym temacie:  
  W tym kroku samouczka `WriteLine` działań w przepływie pracy są modyfikowane w celu dodatkowe informacje i nową `WriteLine` dodanym działaniem. Kopia oryginalnego zestawu przepływu pracy jest przechowywana, a aplikacja hosta zostanie zaktualizowana, dzięki czemu można uruchamiać zarówno oryginał, jak i zaktualizowano przepływów pracy w tym samym czasie.  
   
--   [Aby utworzyć kopię projektu NumberGuessWorkflowActivities](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [Aby utworzyć kopię projektu NumberGuessWorkflowActivities](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [Aby zaktualizować przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [Aby zaktualizować przepływów pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [Aktualizacja Automat stanów przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [Aktualizacja Automat stanów przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [Aktualizacja przepływu pracy schematu blokowego](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [Aktualizacja przepływu pracy schematu blokowego](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [Aby zaktualizować sekwencyjnego przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [Aby zaktualizować sekwencyjnego przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [Aby zaktualizować WorkflowVersionMap obejmujący poprzednich wersji przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [Aby zaktualizować WorkflowVersionMap obejmujący poprzednich wersji przepływu pracy](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [Aby skompilować i uruchomić aplikację](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [Aby skompilować i uruchomić aplikację](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  Przed wykonaniem kroków w tym temacie, uruchom aplikację, uruchom wiele przepływów pracy dla każdego typu, a dzięki jednej lub dwóch prób dla każdego z nich. Tych utrwalonych przepływów pracy są używane w tym kroku i następny krok [jak: Aktualizowanie definicji działającego wystąpienia przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+>  Przed wykonaniem kroków w tym temacie, uruchom aplikację, uruchom wiele przepływów pracy dla każdego typu, a dzięki jednej lub dwóch prób dla każdego z nich. Tych utrwalonych przepływów pracy są używane w tym kroku i następny krok [jak: Aktualizowanie definicji działającego wystąpienia przepływu pracy](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 > [!NOTE]
 >  Poszczególne kroki samouczka Wprowadzenie zależy od poprzednich kroków. Jeśli nie została ukończona poprzednich kroków możesz pobrać pełną wersję z samouczka w [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -60,7 +60,7 @@ ms.locfileid: "57366711"
     > [!NOTE]
     >  Kroki opisane w tym temacie pokazują jeden sposób zarządzania zestawów zawiera wiele wersji przepływów pracy. Można również zmienić innych metod, takich jak silnych nazw zestawów i rejestrowania ich w globalnej pamięci podręcznej.
 
-8.  Utwórz nowy folder o nazwie **NumberGuessWorkflowActivities_du** w tym samym folderze co **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, a nowo dodano **PreviousVersions** folder, a następnie skopiuj wszystkie pliki i podfoldery z **NumberGuessWorkflowActivities** do nowego folderu  **NumberGuessWorkflowActivities_du** folderu. Ta kopia zapasowa projektu dla początkowej wersji działania jest używana w [jak: Aktualizowanie definicji działającego wystąpienia przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+8.  Utwórz nowy folder o nazwie **NumberGuessWorkflowActivities_du** w tym samym folderze co **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, a nowo dodano **PreviousVersions** folder, a następnie skopiuj wszystkie pliki i podfoldery z **NumberGuessWorkflowActivities** do nowego folderu  **NumberGuessWorkflowActivities_du** folderu. Ta kopia zapasowa projektu dla początkowej wersji działania jest używana w [jak: Aktualizowanie definicji działającego wystąpienia przepływu pracy](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Otwórz ponownie **WF45GettingStartedTutorial** rozwiązania w programie Visual Studio 2012.
 
@@ -580,4 +580,4 @@ ms.locfileid: "57366711"
 
 4.  Przejdź z powrotem do odgadnięcia liczba aplikacji, a następnie wybierz jedno z przepływów pracy, które zostało uruchomione, zanim aktualizacje zostały wprowadzone. Wersję aktualnie wybranego przepływu pracy można zidentyfikować, sprawdzając informacje o wersji, która jest wyświetlana poniżej oknie stanu. Wprowadź kilka prób i należy pamiętać, że stan aktualizacji dopasowanie `WriteLine` działania dane wyjściowe z poprzedniej wersji i nie obejmują odgadnięcia użytkownika. To dlatego te przepływy pracy korzystają z poprzednią definicję przepływu pracy, który nie ma `WriteLine` aktualizacji.
 
-     W następnym kroku [jak: Aktualizowanie definicji uruchomione wystąpienie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), uruchomienie `v1` wystąpienia przepływu pracy są aktualizowane i zawierają nową funkcjonalność w postaci `v2` wystąpień.
+     W następnym kroku [jak: Aktualizowanie definicji uruchomione wystąpienie przepływu pracy](how-to-update-the-definition-of-a-running-workflow-instance.md), uruchomienie `v1` wystąpienia przepływu pracy są aktualizowane i zawierają nową funkcjonalność w postaci `v2` wystąpień.

@@ -2,24 +2,24 @@
 title: Działanie zasad zewnętrznych w programie .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850240"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706377"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Działanie zasad zewnętrznych w programie .NET Framework 4.5
 
-Niniejszy przykład pokazuje, jak działanie ExternalizedPolicy4 zezwala na wykonywanie istniejącej [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiekty w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) bezpośrednio przy użyciu aparatu reguł który jest dostarczany w WF 3.5. Korzystając z tego działania, można otwierać i wykonać wszelkie istniejące 3.5 WF <xref:System.Workflow.Activities.Rules.RuleSet>. Aby uzyskać więcej informacji na temat aparatu reguł 3.5 WF wchodzącego w skład Windows Workflow Foundation, przeczytaj [wprowadzenie do aparatu reguł programu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Aby uzyskać więcej informacji o migrowaniu reguły do [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], należy przeczytać wskazówki dotyczące migracji w [wskazówek dotyczących migracji](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+Niniejszy przykład pokazuje, jak działanie ExternalizedPolicy4 zezwala na wykonywanie istniejącej [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiekty w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) bezpośrednio przy użyciu aparatu reguł który jest dostarczany w WF 3.5. Korzystając z tego działania, można otwierać i wykonać wszelkie istniejące 3.5 WF <xref:System.Workflow.Activities.Rules.RuleSet>. Aby uzyskać więcej informacji na temat aparatu reguł 3.5 WF wchodzącego w skład Windows Workflow Foundation, przeczytaj [wprowadzenie do aparatu reguł programu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Aby uzyskać więcej informacji o migrowaniu reguły do [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], należy przeczytać wskazówki dotyczące migracji w [wskazówek dotyczących migracji](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Projekty w tym przykładzie
 
 |Nazwa projektu|Opis|Pliki główne|
 |-|-|-|
-|ExternalizedPolicy4|Zawiera działanie ExternalizedPolicy4 i swojego projektanta 4.5 programu WF.|**ExternalizedPolicy4.cs**: definicji działania.<br /><br /> **ExternalizedPolicy4Designer.xaml**: niestandardowego projektanta ExternalizedPolicy4 działania. Użyto Edytora reguł (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) od aparatu reguł programu WF 3.5.|
-|ImperativeCodeClientSample|Przykładowa aplikacja kliencka, konfiguruje, która uruchamia przepływ pracy przy użyciu aplikacji ExternalizedPolicy4 przy użyciu języka C# kodu imperatywnego (Projektant nie jest używany).|**ApplyDiscount.rules**: plik z [!INCLUDE[wf1](../../../../includes/wf1-md.md)] reguły definicji.<br /><br /> **ORDER.cs**: typ, który reprezentuje zamówienia klienta. Reguły są stosowane do obiektów tego typu.<br /><br /> **Plik program.cs**: konfiguruje i uruchamia przepływ pracy, który ma działanie Policy4 można zastosować reguł zdefiniowanych w ApplyDiscount.rules do wystąpień obiektów zamówienia.<br /><br /> Pliku App.config: Plik konfiguracji ze ścieżką do pliku reguł.|
-|DesignerClientSample|Przykładowa aplikacja kliencka, która umożliwia skonfigurowanie i uruchamia przepływ pracy przy użyciu aplikacji ExternalPolicy4 w [!INCLUDE[wf1](../../../../includes/wf1-md.md)] projektanta.|**Sequence1.XAML**: sekwencyjny przepływ pracy, który używa działania Policy4 podczas przeprowadzania oceny reguł.<br /><br /> **Plik program.cs**: uruchamia wystąpienie przepływu pracy zdefiniowane w Sequence1.xaml.|
+|ExternalizedPolicy4|Zawiera działanie ExternalizedPolicy4 i swojego projektanta 4.5 programu WF.|**ExternalizedPolicy4.cs**: definicji działania.<br /><br /> **ExternalizedPolicy4Designer.xaml**: Niestandardowe Projektant ExternalizedPolicy4 działania. Użyto Edytora reguł (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) od aparatu reguł programu WF 3.5.|
+|ImperativeCodeClientSample|Przykładowa aplikacja kliencka, konfiguruje, która uruchamia przepływ pracy przy użyciu aplikacji ExternalizedPolicy4 przy użyciu języka C# kodu imperatywnego (Projektant nie jest używany).|**ApplyDiscount.rules**: Plik z [!INCLUDE[wf1](../../../../includes/wf1-md.md)] reguły definicji.<br /><br /> **ORDER.cs**: Typ reprezentujący zamówienia klienta. Reguły są stosowane do obiektów tego typu.<br /><br /> **Program.cs**: Konfiguruje i uruchamia przepływ pracy, który ma działanie Policy4 można zastosować reguł zdefiniowanych w ApplyDiscount.rules do wystąpień obiektów zamówienia.<br /><br /> App.config: Plik konfiguracji ze ścieżką do pliku reguł.|
+|DesignerClientSample|Przykładowa aplikacja kliencka, która umożliwia skonfigurowanie i uruchamia przepływ pracy przy użyciu aplikacji ExternalPolicy4 w [!INCLUDE[wf1](../../../../includes/wf1-md.md)] projektanta.|**Sequence1.XAML**: Sekwencyjny przepływ pracy, który używa działania Policy4 podczas przeprowadzania oceny reguł.<br /><br /> **Program.cs**: Uruchamia wystąpienie przepływu pracy zdefiniowane w Sequence1.xaml.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>Działanie ExternalizedPolicy4
 
@@ -47,7 +47,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 |RuleSetFilePath|Ścieżka do programu .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> plik ma zostać obliczone, gdy jest wykonywane działanie.|
 |RuleSetName|Nazwa <xref:System.Workflow.Activities.Rules.RuleSet> do użycia w pliku rules.|
 |TargetObject|Obiekt, dla którego <xref:System.Workflow.Activities.Rules.Rule> obiekty w <xref:System.Workflow.Activities.Rules.RuleSet> zostaną ocenione względem.|
-|Obiektu wyników wystąpiły pełne|Wynikowy obiekt po zastosowaniu zasad (na przykład reguły są stosowane względem argumentu dane wejściowe i wynik jest przechowywany w argumencie wynik.|
+|ResultObject|Wynikowy obiekt po zastosowaniu zasad (na przykład reguły są stosowane względem argumentu dane wejściowe i wynik jest przechowywany w argumencie wynik.|
 |ValidationError|Lista błędów sprawdzania poprawności zwrócony przez aparat reguł WF 3.5, podczas sprawdzania poprawności <xref:System.Workflow.Activities.Rules.RuleSet> względem obiektu docelowego, przed wykonaniem.|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4, Projektant działań

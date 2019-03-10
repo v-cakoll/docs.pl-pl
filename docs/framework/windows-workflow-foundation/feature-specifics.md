@@ -2,12 +2,12 @@
 title: Charakterystyka funkcji programu Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492598"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721856"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Charakterystyka funkcji programu Windows Workflow Foundation
 
@@ -43,9 +43,9 @@ A `BestPriceFinder` usługi wywołuje wiele usług linii lotniczych, można znal
 
 - Przykłady dla <xref:System.ServiceModel.WorkflowServiceHost> można znaleźć w następujących sekcjach:
 
-    - [Wykonanie](samples/execution.md)
+    - [Wykonanie](./samples/execution.md)
 
-    - Aplikacja: [Zarządzanie wstrzymanymi wystąpieniami](samples/suspended-instance-management.md)
+    - Aplikacja: [Zarządzanie wstrzymanymi wystąpieniami](./samples/suspended-instance-management.md)
 
 - [Przegląd hostowania usług przepływu pracy](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -121,7 +121,7 @@ W .NET 3.5 wystąpiły pewne ograniczenia w projekcie znanych typów:
 
 - Nie było możliwe dla użytkowników określić, jaki typ xsi: type chciałby pojawiał się na przewodowej, na przykład zmniejszyć rozmiar wystąpienia serializacji w sieci.
 
-[Obiektu DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md) rozwiązuje te problemy w programie .NET 4.5.
+[Obiektu DataContractResolver](../wcf/samples/datacontractresolver.md) rozwiązuje te problemy w programie .NET 4.5.
 
 ### <a name="getting-started"></a>Wprowadzenie
 
@@ -131,9 +131,9 @@ W .NET 3.5 wystąpiły pewne ograniczenia w projekcie znanych typów:
 
 - Przykłady:
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Scenariusze programu rozpoznawania nazw kontraktu danych
 
@@ -163,9 +163,9 @@ Schemat blokowy jest dobrze znanego modelu do reprezentowania wizualnie problem�
 
 - Przykłady:
 
-    - [Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Proces zatrudniania](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [Proces zatrudniania](./samples/hiring-process.md)
 
 - Dokumentacja projektanta:
 
@@ -197,9 +197,9 @@ Działań proceduralnych udostępniają mechanizm przepływu sterowania sekwency
 
 - Przykłady:
 
-    - [Proces zatrudniania](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [Proces zatrudniania](./samples/hiring-process.md)
 
-    - [Proces zakupów firmowych](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [Proces zakupów firmowych](./samples/corporate-purchase-process.md)
 
 - Dokumentacja projektanta:
 
@@ -237,7 +237,7 @@ Działań proceduralnych udostępniają mechanizm przepływu sterowania sekwency
 
 - W programie Visual Studio 2012 należy utworzyć aplikację konsoli przepływu pracy. Dodaj <xref:System.Activities.Statements.TryCatch> działania w Projektancie przepływu pracy.
 
-- Przykład: [Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- Przykład: [Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - Dokumentacja projektanta: [Projektanci działań Error Handling](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -253,7 +253,7 @@ Zbiór działań musi być wykonywane, i logikę specyficzną dla musi być wyko
 
 - W programie Visual Studio 2012 należy utworzyć aplikację konsoli przepływu pracy. Dodaj <xref:System.Activities.Statements.Pick> działania w Projektancie przepływu pracy.
 
-- Przykład: [Używanie działania Pick](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- Przykład: [Używanie działania Pick](./samples/using-the-pick-activity.md)
 
 - Dokumentacja projektanta: [Pick, projektant działań](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -283,9 +283,9 @@ Usługa routingu na platformie .net 4 zaprojektowano w celu ułatwienia rozwiąz
 
 ### <a name="getting-started"></a>Wprowadzenie
 
-1. Dokumentacja: [Routing](../../../docs/framework/wcf/feature-details/routing.md)
+1. Dokumentacja: [Routing](../wcf/feature-details/routing.md)
 
-2. Przykłady: [Usługi routingu &#91;przykłady WCF&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. Przykłady: [Usługi routingu &#91;przykłady WCF&#93;](../wcf/samples/routing-services.md)
 
 3. Blog: [Reguły routingu!](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -317,9 +317,9 @@ Ponadto komunikaty odnajdywania są niezależne od protokołu sieciowego; używa
 
 ### <a name="getting-started"></a>Wprowadzenie
 
-- Dokumentacja: [Odnajdywanie w programie WCF](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- Dokumentacja: [Odnajdywanie w programie WCF](../wcf/feature-details/wcf-discovery.md)
 
-- Przykłady: [Odnajdywanie (przykłady)](../../../docs/framework/wcf/samples/discovery-samples.md)
+- Przykłady: [Odnajdywanie (przykłady)](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>Scenariusze odnajdywania
 
@@ -343,9 +343,9 @@ Projektant nie chce punktów końcowych twardych kodu, ponieważ jest nieznany, 
 
     4. Obserwuj przepływ pracy zdarzenia śledzenia w Podglądzie zdarzeń.
 
-3. Przykłady: [Śledzenie](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. Przykłady: [Śledzenie](./samples/tracking.md)
 
-4. Dokumentacja koncepcyjna: [Kontrola i śledzenie przepływu pracy](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. Dokumentacja koncepcyjna: [Kontrola i śledzenie przepływu pracy](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>Store wystąpienia przepływu pracy SQL
 
@@ -355,6 +355,6 @@ Projektant nie chce punktów końcowych twardych kodu, ponieważ jest nieznany, 
 
 1. W programie Visual Studio 2012, należy utworzyć przepływ pracy, który zawiera niejawny lub jawny <xref:System.Activities.Statements.Persist> działania. Dodaj <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> zachowanie do hosta usługi przepływu pracy. Można to zrobić w kodzie lub w pliku konfiguracyjnym aplikacji.
 
-2. Przykłady: [Trwałość](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. Przykłady: [Trwałość](./samples/persistence.md)
 
-3. Dokumentacja koncepcyjna: [Store wystąpienia przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
+3. Dokumentacja koncepcyjna: [Store wystąpienia przepływu pracy SQL](sql-workflow-instance-store.md).

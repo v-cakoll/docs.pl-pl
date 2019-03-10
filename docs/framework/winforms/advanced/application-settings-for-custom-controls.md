@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526746"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714349"
 ---
 # <a name="application-settings-for-custom-controls"></a>Ustawienia aplikacji dotyczące kontrolek niestandardowych
 Należy wykonać niektóre zadania, aby zapewnić możliwość utrzymania ustawienia aplikacji, gdy kontrolki znajdują się w aplikacji innych firm Kontrolki niestandardowe.  
@@ -26,7 +26,7 @@ Należy wykonać niektóre zadania, aby zapewnić możliwość utrzymania ustawi
   
 2.  Tworzenie tej klasy ustawienia niestandardowe, po utworzeniu kontrolki i umieszczane na formularzu, takie jak w postaci <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
   
- Aby uzyskać instrukcje na temat tworzenia klasy ustawień niestandardowych, zobacz [jak: Tworzenie ustawień aplikacji](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Aby uzyskać instrukcje na temat tworzenia klasy ustawień niestandardowych, zobacz [jak: Tworzenie ustawień aplikacji](how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Ustawienia kluczy i wspólnych ustawień  
  Niektóre formanty mogą być używane wielokrotnie w ramach tego samego formularza. W większości przypadków, należy te kontrolki do utrwalania indywidualne ustawienia. Za pomocą <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> właściwość <xref:System.Configuration.IPersistComponentSettings>, możesz podać unikatowy ciąg, który działa do odróżniania wielu wersji kontrolkę w formularzu.  
@@ -48,4 +48,4 @@ Należy wykonać niektóre zadania, aby zapewnić możliwość utrzymania ustawi
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Architektura ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Architektura ustawień aplikacji](application-settings-architecture.md)

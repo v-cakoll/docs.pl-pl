@@ -8,24 +8,24 @@ helpviewer_keywords:
 - data binding [Windows Forms], checkbox controls
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-ms.openlocfilehash: 5e81ac9e8830333e5aadb195563b25fdd93895c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 003e57db16c35b519d3948fc24e82a94a5c3744d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733288"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713452"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.CheckBox> formant wskazuje, czy określony warunek jest włączone czy wyłączone. Często są one wykorzystywane do przedstawienia tak/nie lub zaznaczenie PRAWDA/FAŁSZ dla użytkownika. Formanty pól wyboru w grupach umożliwia wyświetlanie wielu opcji, z których użytkownik może wybrać co najmniej jeden.  
   
  Kontrolka pola wyboru jest podobny do kontrolki przycisku radiowego, w tym, że każdy obiekt jest używany do wskazania wybranej przez użytkownika. Różnią się one w tym można wybrać przycisk radiowy tylko jednej grupy naraz. Za pomocą kontrolki pola wyboru jednak dowolną liczbę pól wyboru można wybrać.  
   
- Pole wyboru mogą być połączone z elementami w bazie danych za pomocą proste powiązanie danych. Wiele pól wyboru może być zgrupowane za pomocą <xref:System.Windows.Forms.GroupBox> kontroli. Jest to przydatne dla wygląd, a także projektu interfejsu użytkownika, ponieważ kontrolki zgrupowane mogą być przenoszone między ze sobą w Projektancie formularza. Aby uzyskać więcej informacji, zobacz [powiązanie danych formularzy Windows](../../../../docs/framework/winforms/windows-forms-data-binding.md) i [GroupBox, kontrolka](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md).  
+ Pole wyboru mogą być połączone z elementami w bazie danych za pomocą proste powiązanie danych. Wiele pól wyboru może być zgrupowane za pomocą <xref:System.Windows.Forms.GroupBox> kontroli. Jest to przydatne dla wygląd, a także projektu interfejsu użytkownika, ponieważ kontrolki zgrupowane mogą być przenoszone między ze sobą w Projektancie formularza. Aby uzyskać więcej informacji, zobacz [powiązanie danych formularzy Windows](../windows-forms-data-binding.md) i [GroupBox, kontrolka](groupbox-control-windows-forms.md).  
   
  <xref:System.Windows.Forms.CheckBox> Kontroli ma dwie właściwości ważne <xref:System.Windows.Forms.CheckBox.Checked%2A> i <xref:System.Windows.Forms.CheckBox.CheckState%2A>. <xref:System.Windows.Forms.CheckBox.Checked%2A> Właściwość zwraca albo `true` lub `false`. <xref:System.Windows.Forms.CheckBox.CheckState%2A> Właściwość zwraca albo <xref:System.Windows.Forms.CheckState.Checked> lub <xref:System.Windows.Forms.CheckState.Unchecked>; lub, jeśli <xref:System.Windows.Forms.CheckBox.ThreeState%2A> właściwość jest ustawiona na `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> może również zwracać <xref:System.Windows.Forms.CheckState.Indeterminate>. Stan nieokreślony pojawia się okno dialogowe z wygaszone wygląd, aby wskazać, że ta opcja jest niedostępna.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.CheckBox>
-- [Instrukcje: Ustawianie opcji za pomocą formantów CheckBox formularzy Windows](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [Instrukcje: Odpowiadanie do formularzy Windows Forms kliknięcia kontrolki CheckBox](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [CheckBox, kontrolka](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [Instrukcje: Ustawianie opcji za pomocą formantów CheckBox formularzy Windows](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Instrukcje: Odpowiadanie do formularzy Windows Forms kliknięcia kontrolki CheckBox](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox, kontrolka](checkbox-control-windows-forms.md)

@@ -6,35 +6,35 @@ helpviewer_keywords:
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: b4692b668ed19e6d720e873f374fe6729939dae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d04794df6bce82573ff8f53b282a4d945933b1bb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526164"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707303"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog — Składnik (Formularze systemu Windows)
-Formularze systemu Windows <xref:System.Windows.Forms.ColorDialog> składnik jest wstępnie skonfigurowana okno dialogowe, które umożliwia użytkownikowi wybieranie koloru z palety i dodać do tej palety kolorów niestandardowych. To okno dialogowe tego samego widoczne w innych aplikacji systemu Windows, aby wybrać kolorów. Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem zamiast własne okno dialogowe Konfigurowanie.  
+Formularze Windows <xref:System.Windows.Forms.ColorDialog> składnik to wstępnie skonfigurowane okno dialogowe, które pozwala użytkownikowi wybrać kolor z palety i dodać kolorów niestandardowych do tej palety. Jest to ten sam okno dialogowe, które pojawi się w innych aplikacji opartych na Windows do wybierania kolorów. Użyj go w ramach aplikacji opartych na Windows jako proste rozwiązanie audytów Konfigurowanie własnego okno dialogowe.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ColorDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
- Ogólne pojęcia związane z <xref:System.Windows.Forms.ColorDialog> składnika, dzięki czemu można wyświetlać okno dialogowe wstępnie skonfigurowane przez użytkowników można użyć do wybrania kolory z palety.  
+ [ColorDialog, składnik — omówienie](colordialog-component-overview-windows-forms.md)  
+ Ogólne pojęcia związane z <xref:System.Windows.Forms.ColorDialog> składnik, który umożliwia wyświetlenie okna dialogowego wstępnie skonfigurowanych przez użytkowników można użyć, aby wybrać kolory z palety.  
   
- [Instrukcje: zmienianie wyglądu składnika ColorDialog formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
- Zawiera opis sposobu zmiany kolorów dostępnych dla użytkowników i innych właściwości.  
+ [Instrukcje: Zmienianie wyglądu składnika ColorDialog formularzy Windows](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
+ W tym artykule opisano, jak zmienić kolory, które są dostępne dla użytkowników i innych właściwości.  
   
- [Instrukcje: pokazywanie palety kolorów przy użyciu składnika ColorDialog](../../../../docs/framework/winforms/controls/how-to-show-a-color-palette-with-the-colordialog-component.md)  
- Wyjaśniono, jak wybierz kolor, który w czasie wykonywania za pomocą wystąpienia <xref:System.Windows.Forms.ColorDialog> składnika.  
+ [Instrukcje: Pokazywanie palety kolorów przy użyciu składnika ColorDialog](how-to-show-a-color-palette-with-the-colordialog-component.md)  
+ Wyjaśnia, jak wybrać kolor w czasie wykonywania za pomocą wystąpienia <xref:System.Windows.Forms.ColorDialog> składnika.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty, które można używać w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
+ [Formanty, używane w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
  <xref:System.Windows.Forms.ColorDialog>  
- Zawiera informacje dotyczące <xref:System.Windows.Forms.ColorDialog> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące <xref:System.Windows.Forms.ColorDialog> klasy i jej elementów członkowskich.  
   
- [Okna dialogowe stanowi podstawowy kod dla systemu Windows](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
- Omówiono formantów okna dialogowego formularzy systemu Windows i składników oraz kod niezbędnych do wykonywania swoich podstawowych funkcji.  
+ [Podstawowy kod służący do Windows Forms okien dialogowych](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
+ W tym artykule omówiono formantów okna dialogowego Windows Forms i składniki i kod wymagany do wykonywania swoich podstawowych funkcji.  
   
- [Kontrolki i składniki okien dialogowych](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- Zawiera zestaw kontrolek, które pozwalają użytkownikom do wykonywania standardowych interakcji z aplikacji lub systemu.
+ [Kontrolki i składniki okien dialogowych](dialog-box-controls-and-components-windows-forms.md)  
+ Zawiera zestaw kontrolek, które umożliwiają użytkownikom do wykonywania standardowych interakcji z aplikacji lub systemu.

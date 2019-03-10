@@ -2,44 +2,44 @@
 title: Obsługa zapytań
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 5c46ed5ae2fc2cc2275bfa7251fe5f8fa346c1f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517994"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712025"
 ---
 # <a name="support-for-queries"></a>Obsługa zapytań
-W magazynie wystąpień przepływu pracy SQL rejestruje zestaw dobrze znanych właściwości w magazynie. Użytkownicy mogą wykonywać kwerendę o wystąpień na podstawie tych właściwości. Poniższa lista zawiera niektóre z tych znanych właściwości:  
+Store wystąpienia przepływu pracy SQL rejestruje zestaw właściwości dobrze znane w magazynie. Użytkownicy mogą wyszukiwać wystąpień na podstawie tych właściwości. Poniższa lista zawiera niektóre z tych znanych właściwości:  
   
--   **Nazwa witryny.** Nazwa witryny sieci Web, który zawiera tę usługę.  
+-   **Nazwa witryny.** Nazwa witryny sieci Web, które zawiera tę usługę.  
   
 -   **Ścieżka względna aplikacji.** Ścieżka aplikacji względem witryny sieci Web.  
   
--   **Ścieżka względna usługi.** Ścieżka usługi względem aplikacji.  
+-   **Relative Service Path.** Ścieżka usługi względem aplikacji.  
   
 -   **Nazwa usługi.** Nazwa usługi.  
   
--   **Usługa Namespace.** Nazwa przestrzeni nazw, która korzysta z usługi.  
+-   **Usługa Namespace.** Nazwa przestrzeni nazw, używanymi przez usługę.  
   
--   **Bieżącego komputera.**  
+-   **Bieżąca maszyna.**  
   
--   **Ostatni maszyny**. Komputer, na którym został uruchomiony podczas ostatniego wystąpienia usługi przepływu pracy.  
+-   **Ostatnie maszyny**. Komputer, na którym został uruchomiony ostatniego wystąpienia usługi przepływu pracy.  
   
 > [!NOTE]
->  W przypadku scenariuszy hostowania samoobsługowego przy użyciu hosta usługi przepływu pracy są wypełniane tylko cztery ostatnie właściwości. W przypadku scenariuszy aplikacji przepływu pracy jest wypełniana tylko ostatnich właściwości.  
+>  W przypadku scenariuszy samodzielnie hostowany przy użyciu hosta usługi przepływu pracy są wypełniane tylko cztery ostatnie właściwości. W przypadku scenariuszy aplikacji przepływu pracy jest wypełniana tylko ostatnie właściwości.  
   
- Środowiska uruchomieniowego przepływu pracy, dostarcza wartości dla właściwości pierwsze trzy. Hosta usługi przepływu pracy, dostarcza wartość **zawiesić Przyczyna** właściwości. Samego magazynu wystąpienia przepływu pracy SQL dostarcza wartości dla **ostatnia maszyna zaktualizowane** właściwości.  
+ Środowisko wykonawcze przepływów pracy dostarcza wartości dla pierwszych trzech właściwości. Hosta usługi przepływu pracy dostarcza wartość **zawiesić Przyczyna** właściwości. Store wystąpienia przepływu pracy SQL, sama dostarcza wartości dla **ostatnia maszyna zaktualizowane** właściwości.  
   
- Funkcja magazynu wystąpienia przepływu pracy SQL umożliwia także określić, czy właściwości niestandardowe, dla których mają być przechowywane w bazie danych trwałości i wartości mają być używane w zapytaniach. Aby uzyskać więcej informacji o promocjach niestandardowych, zobacz [rozszerzalności magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).  
+ Funkcja Store wystąpienia przepływu pracy SQL umożliwia także określić właściwości niestandardowe, dla których mają być przechowywane wartości w bazie danych trwałości i chcesz używać w zapytaniach. Aby uzyskać więcej informacji na temat niestandardowych promocji zobacz [rozszerzalności Store](store-extensibility.md).  
   
 ## <a name="views"></a>Widoki  
- W magazynie wystąpień zawiera następujące widoki. Zobacz [schematu bazy danych trwałości](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) uzyskać więcej szczegółowych informacji.  
+ Magazyn wystąpienie zawiera następujące widoki. Zobacz [schemat bazy danych trwałości](persistence-database-schema.md) więcej szczegółowych informacji.  
   
-### <a name="the-instances-view"></a>Widok wystąpień  
+### <a name="the-instances-view"></a>Wyświetl wystąpienia  
  Widok wystąpień zawiera następujące pola:  
   
-1.  **Id**  
+1.  **Identyfikator**  
   
 2.  **PendingTimer**  
   
@@ -80,7 +80,7 @@ W magazynie wystąpień przepływu pracy SQL rejestruje zestaw dobrze znanych w�
 ### <a name="the-servicedeployments-view"></a>Widok ServiceDeployments  
  Widok ServiceDeployments zawiera następujące pola:  
   
-1.  **Nazwa witryny**  
+1.  **SiteName**  
   
 2.  **RelativeServicePath**  
   
@@ -91,12 +91,12 @@ W magazynie wystąpień przepływu pracy SQL rejestruje zestaw dobrze znanych w�
 5.  **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Widok InstancePromotedProperties  
- Widok InstancePromotedProperties zawiera następujące pola. Aby uzyskać więcej informacji na temat awansowanej właściwości, zobacz [rozszerzalności magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) tematu.  
+ Widok InstancePromotedProperties zawiera następujące pola. Aby uzyskać więcej informacji na temat właściwości o podwyższonym poziomie, zobacz [rozszerzalności Store](store-extensibility.md) tematu.  
   
-1.  **Identyfikator wystąpienia**  
+1.  **InstanceId**  
   
 2.  **EncodingOption**  
   
 3.  **PromotionName**  
   
-4.  **Wartość #** (zakresu pola z **wartość1** do **Value64**).
+4.  **Wartość #** (zakres pola z **wartość1** do **Value64**).

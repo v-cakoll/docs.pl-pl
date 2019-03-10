@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637154"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715948"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Instrukcje: Dostęp do modelu obiektów zarządzanych dokumentów HTML
 Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodzajów aplikacji:  
@@ -24,18 +24,18 @@ Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodza
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Aby uzyskać dostęp do modelu DOM z aplikacji Windows Forms  
   
-1.  Host <xref:System.Windows.Forms.WebBrowser> kontrolki w aplikacji Windows Forms i Monitoruj <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. Szczegółowe informacje na temat kontrolki hostingu i monitorowania zdarzeń, [zdarzenia](../../../../docs/standard/events/index.md).  
+1.  Host <xref:System.Windows.Forms.WebBrowser> kontrolki w aplikacji Windows Forms i Monitoruj <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. Szczegółowe informacje na temat kontrolki hostingu i monitorowania zdarzeń, [zdarzenia](../../../standard/events/index.md).  
   
 2.  Pobieranie <xref:System.Windows.Forms.HtmlDocument> dla bieżącej strony, uzyskując dostęp do <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwość <xref:System.Windows.Forms.WebBrowser> kontroli.  
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Dostęp do modelu DOM z elementu UserControl hostowanych w programie Internet Explorer  
   
-1.  Utwórz własne niestandardowe klasy pochodnej <xref:System.Windows.Forms.UserControl> klasy. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie kontrolek złożonych](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
+1.  Utwórz własne niestandardowe klasy pochodnej <xref:System.Windows.Forms.UserControl> klasy. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie kontrolek złożonych](how-to-author-composite-controls.md).  
   
 2.  Umieść następujący kod wewnątrz procedury obsługi zdarzenia obciążenia dla swojej <xref:System.Windows.Forms.UserControl>:  
   
- [!code-csharp[AccessHTMLDOMControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
- [!code-vb[AccessHTMLDOMControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
+ [!code-csharp[AccessHTMLDOMControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
+ [!code-vb[AccessHTMLDOMControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
   
@@ -46,4 +46,4 @@ Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodza
 1.  Aplikacja lub <xref:System.Windows.Forms.UserControl> będzie wymagać pełnego zaufania w celu uzyskania dostępu do zarządzanego kodu HTML DOM. Jeżeli wdrażasz aplikacji Windows Forms przy użyciu [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], możesz poprosić o pełnym zaufaniu przy użyciu zaufanego wdrożenia aplikacji lub podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications) Aby uzyskać szczegółowe informacje.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](using-the-managed-html-document-object-model.md)

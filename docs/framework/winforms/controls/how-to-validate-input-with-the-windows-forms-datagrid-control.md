@@ -11,17 +11,17 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: 84057a2d9709963c7a7302110ab11931b86fcad9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497629"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720335"
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Instrukcje: Sprawdzanie poprawności danych wejściowych za pomocą kontrolki DataGrid formularzy Windows Forms
 
 > [!NOTE]
-> <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
 Istnieją dwa typy walidacji danych wejściowych w dostępnych dla formularzy Windows Forms <xref:System.Windows.Forms.DataGrid> kontroli. Jeśli użytkownik próbuje wprowadzić wartość jest typu danych nieodpowiednia dla komórki, na przykład ciąg na liczbę całkowitą, nowa wartość nieprawidłowa jest zastępowany starej wartości. Tego rodzaju Walidacja danych wejściowych odbywa się automatycznie i nie można dostosować.
 
@@ -89,4 +89,4 @@ Typ sprawdzania poprawności danych wejściowych może służyć do odrzucenia n
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [DataGrid, kontrolka](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid, kontrolka](datagrid-control-windows-forms.md)

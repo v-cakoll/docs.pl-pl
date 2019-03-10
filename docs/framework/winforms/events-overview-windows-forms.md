@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543720"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710735"
 ---
 # <a name="events-overview-windows-forms"></a>Formularze systemu Windows — przegląd zdarzeń
 Zdarzenie jest działaniem, które można odpowiedzieć lub "handle" w kodzie. Zdarzenia mogą być generowane przez działanie użytkownika, takie jak kliknięcie myszą lub naciśnięciu klawisza; w kodzie programu lub przez system.  
@@ -26,12 +26,12 @@ Zdarzenie jest działaniem, które można odpowiedzieć lub "handle" w kodzie. Z
 > [!NOTE]
 >  Wiele zdarzenia występują w połączeniu z innymi zdarzeniami. Na przykład w trakcie właściwości <xref:System.Windows.Forms.Control.DoubleClick> zdarzeń mających miejsce, <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp>, i <xref:System.Windows.Forms.Control.Click> wystąpieniu zdarzenia.  
   
- Aby uzyskać informacje o tym, jak podnieść i zużyć zdarzenie, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
+ Aby uzyskać informacje o tym, jak podnieść i zużyć zdarzenie, zobacz [zdarzenia](../../standard/events/index.md).  
   
 ## <a name="delegates-and-their-role"></a>Delegaci i ich roli  
  Obiekty delegowane są często używane w ramach klasy [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tworzyć mechanizmy obsługi zdarzeń. Delegaty około równoważne do wskaźników funkcji, często używane w [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] i inne języki zorientowane obiektowo. W przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo, bezpieczny i bezpieczne. Dodatkowo, gdy wskaźnik funkcji zawiera tylko odwołanie do określonej funkcji, delegata składa się z odwołaniem do obiektu, a odwołuje się do co najmniej jednej metody w obrębie obiektu.  
   
- Ten model zdarzeń wykorzystuje *delegatów* powiązać metod, które są używane do obsługi tych zdarzeń. Delegat umożliwia innych klas zarejestrować dla powiadomień o zdarzeniach, określając metody obsługi. Po wystąpieniu zdarzenia, delegat wywołuje powiązanej metody. Aby uzyskać więcej informacji na temat definiowania obiektów delegowanych, zobacz [zdarzenia](../../../docs/standard/events/index.md).  
+ Ten model zdarzeń wykorzystuje *delegatów* powiązać metod, które są używane do obsługi tych zdarzeń. Delegat umożliwia innych klas zarejestrować dla powiadomień o zdarzeniach, określając metody obsługi. Po wystąpieniu zdarzenia, delegat wywołuje powiązanej metody. Aby uzyskać więcej informacji na temat definiowania obiektów delegowanych, zobacz [zdarzenia](../../standard/events/index.md).  
   
  Może być powiązana delegatów, jedną metodę lub wiele metod, określane jako multiemisji. Podczas tworzenia obiektu delegowany dla zdarzenia, użytkownik (lub programu Windows Forms Designer) Utwórz zazwyczaj multiemisji zdarzeń. Rzadkie wyjątków może być zdarzenie, które powoduje określonej procedury (na przykład wyświetlanie okna dialogowego), która nie powtórzysz logicznie wiele razy na zdarzenie. Aby uzyskać informacje o sposobie tworzenia delegata multiemisji, zobacz [jak: Łączenie obiektów delegowanych (obiekty delegowane multiemisji)](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
   
@@ -44,5 +44,5 @@ Zdarzenie jest działaniem, które można odpowiedzieć lub "handle" w kodzie. Z
  Mechanizm powiązania, używany przy użyciu delegatów jest elementem dynamicznym: Delegat może być powiązana, w czasie wykonywania do dowolnej metody, którego podpis jest zgodny z typem obsługi zdarzeń. Za pomocą tej funkcji można zdefiniować lub zmienić metodę powiązanej zależności od warunku i dynamicznie dołączyć program obsługi zdarzeń do formantu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Przegląd procedur obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Przegląd procedur obsługi zdarzeń](event-handlers-overview-windows-forms.md)

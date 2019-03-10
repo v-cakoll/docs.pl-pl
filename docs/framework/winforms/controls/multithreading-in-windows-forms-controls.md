@@ -5,39 +5,39 @@ helpviewer_keywords:
 - BackgroundWorker component
 - threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
-ms.openlocfilehash: 68822c62a1a195ce3128d51c765cfeba2056955d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc7f358a62c8057abb77e1f5a28544bb6c858d98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536360"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703325"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Wielowątkowość w formantach formularzy systemu Windows
-W wielu aplikacjach możesz wprowadzić interfejsu użytkownika (UI) poprawę reakcji, wykonując czas operacji w innym wątku. Wiele narzędzi dostępnych dla wielowątkowości formantów formularzy systemu Windows, w tym <xref:System.Threading> przestrzeni nazw, <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> metody i `BackgroundWorker` składnika.  
+W wielu aplikacjach możesz wprowadzić interfejsu użytkownika (UI) zwiększyć szybkość reakcji, wykonywanie operacji czasochłonne na inny wątek. Wiele narzędzi dostępnych dla wielowątkowości formantów Windows Forms, w tym <xref:System.Threading> przestrzeni nazw, <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> metody i `BackgroundWorker` składnika.  
   
 > [!NOTE]
->  `BackgroundWorker` Składnika zastępuje i dodaje funkcje do <xref:System.Threading> przestrzeni nazw i <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> metody, jednak te pozostają dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli zostanie wybrana. Aby uzyskać więcej informacji, zobacz [BackgroundWorker — informacje o składniku](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+>  `BackgroundWorker` Składnika zastępuje i dodaje funkcjonalność do <xref:System.Threading> przestrzeni nazw i <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> metody; jednak te są przechowywane zarówno w przypadku zgodności z poprzednimi wersjami, jak i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [BackgroundWorker, składnik — omówienie](backgroundworker-component-overview.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: bezpieczne wątkowo wywołania kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
- Pokazuje, jak nawiązać bezpieczne wątkowo wywołania formantów formularzy systemu Windows.  
+ [Instrukcje: Bezpieczne wątkowo wywołania kontrolek formularzy Windows Forms](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
+ Pokazuje, jak bezpieczne wątkowo wywołania kontrolek formularzy Windows Forms.  
   
- [Instrukcje: użycie wątku w tle do wyszukiwania plików](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
- Przedstawia sposób użycia <xref:System.Threading> przestrzeni nazw i <xref:System.Windows.Forms.Control.BeginInvoke%2A> metody do wyszukiwania plików asynchronicznie.  
+ [Instrukcje: Użycie wątku w tle do wyszukiwania plików](how-to-use-a-background-thread-to-search-for-files.md)  
+ Ilustruje sposób używania <xref:System.Threading> przestrzeni nazw i <xref:System.Windows.Forms.Control.BeginInvoke%2A> metody należy szukać plików asynchronicznie.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ComponentModel.BackgroundWorker>  
- Dokumenty składnik, który hermetyzuje wątku roboczego dla operacji asynchronicznych.  
+ Dokumenty składnika, który hermetyzuje wątku roboczego dla operacji asynchronicznych.  
   
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
- Dokumenty jak ładowanie dźwięku asynchronicznie.  
+ Dokumentują sposób ładowanie dźwięku asynchronicznie.  
   
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
- Omówiono sposób asynchronicznie ładowania obrazu.  
+ Dokumenty, jak załadować obraz asynchronicznie.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Instrukcje: uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- Pokazuje, jak wykonać czasochłonna operacja z <xref:System.ComponentModel.BackgroundWorker> składnika.  
+ [Instrukcje: Uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md)  
+ Pokazuje, jak wykonywać czasochłonne operację, podając <xref:System.ComponentModel.BackgroundWorker> składnika.  
   
- [BackgroundWorker, składnik — omówienie](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
- Udostępnia tematy, które opisują sposób użycia <xref:System.ComponentModel.BackgroundWorker> składnika dla operacji asynchronicznych.
+ [BackgroundWorker, składnik — omówienie](backgroundworker-component-overview.md)  
+ Zawiera tematy, które opisują sposób używania <xref:System.ComponentModel.BackgroundWorker> składnika dla operacji asynchronicznych.

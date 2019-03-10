@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 8162dfc898f7965d65de918d2a5b1f7afbfdf9b2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863286"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723048"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar — Formant (Formularze systemu Windows)
 > [!NOTE]
@@ -22,27 +22,27 @@ ms.locfileid: "43863286"
 >  `ToolBar` Kontrolki <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> właściwość przyjmuje wystąpienie klasy <xref:System.Windows.Forms.ContextMenu> klasy jako odwołanie. Zastanów się uważnie odwołania, Przekaż podczas implementowania tego rodzaju przycisku na paski narzędzi w aplikacji, jako właściwość będzie akceptować dowolny obiekt, który dziedziczy z <xref:System.Windows.Forms.Menu> klasy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ToolBar, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [ToolBar, kontrolka — omówienie](toolbar-control-overview-windows-forms.md)  
  Ogólne pojęcia związane z `ToolBar` formant, który pozwala Ci projektować niestandardowe paski narzędzi, które użytkownicy mogą pracować.  
   
- [Instrukcje: dodawanie przycisków do kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [Instrukcje: Dodawanie przycisków do formantu ToolBar](how-to-add-buttons-to-a-toolbar-control.md)  
  W tym artykule opisano sposób dodawania przycisków `ToolBar` kontroli.  
   
- [Instrukcje: określanie ikony dla przycisku kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)  
  W tym artykule opisano sposób wyświetlania ikon w ramach `ToolBar` przycisków kontrolki.  
   
- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków kontrolki Toolbar](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Kierunkach zapewnia na temat pisania kodu do interpretacji, które przycisku użytkownik kliknie `ToolBar` kontroli.  
   
- Zobacz też [jak: Określanie ikony dla narzędzi przycisk za pomocą projektanta](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [porady: dodawanie przycisków do paska narzędzi kontroli za pomocą projektanta](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
+ Zobacz też [jak: Określanie ikony dla przycisku kontrolki ToolBar przy użyciu narzędzia Projektant](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md), [jak: Dodawanie przycisków do formantu ToolBar przy użyciu narzędzia Projektant](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md).  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.ToolBar> Klasa  
  Zawiera dodatkowe informacje na temat klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
- [ToolStrip, kontrolka](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)  
  W tym artykule opisano paski narzędzi, które mogą hostować, menu, formantów i kontrolki użytkownika w aplikacjach Windows Forms.

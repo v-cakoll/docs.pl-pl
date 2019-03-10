@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 050bb147358636ff9ce250bd5026facd53e9bf51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f19039c69f27f78e838ea1a891690451af3f0cdc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498950"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705600"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Instrukcje: Stosowanie macierzy kolorów do przekształcenia pojedynczego koloru
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowania obrazami. <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów przechowywać kolor każdego piksela jako wartość liczby 32-bitowej: 8 bitów na każdy czerwony, zielony, niebieski i alfa. Każdy z czterech składników jest liczba z przedziału od 0 do 255, od 0, reprezentujących natężenie i 255 reprezentujący pełnej intensywności. Składnik alfa określa Przezroczystość koloru: 0 jest w pełni przezroczyste, a 255 jest całkowicie nieprzezroczyste.  
@@ -32,22 +32,22 @@ ms.locfileid: "54498950"
   
  Następujące mnożenie macierzy wykona pary przekształcenia w podanej kolejności.  
   
- ![Ponowne kolorowanie](../../../../docs/framework/winforms/advanced/media/recoloring01.gif "recoloring01")  
+ ![Ponowne kolorowanie](./media/recoloring01.gif "recoloring01")  
   
  Elementów macierzy kolorów są indeksowane (liczony od zera), wiersz, a następnie kolumny. Na przykład wpis w piątym wierszu, a trzecia kolumna macierzy M jest oznaczona M [4] [2].  
   
  5 x 5 macierzą (pokazane na poniższej ilustracji) ma 1s na przekątnej i 0s wszędzie, gdzie else. Jeśli wektor kolor mnożenia macierz tożsamości, vector kolorów nie zmienia się. Wygodny sposób do utworzenia macierzy transformacji kolorów jest rozpoczynać macierz tożsamości i wprowadź niewielką zmianę, który produkuje żądane transformacje.  
   
- ![Ponowne kolorowanie](../../../../docs/framework/winforms/advanced/media/recoloring02.gif "recoloring02")  
+ ![Ponowne kolorowanie](./media/recoloring02.gif "recoloring02")  
   
- Bardziej szczegółowe omówienie macierzy, a przekształcenia zobacz [systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Bardziej szczegółowe omówienie macierzy, a przekształcenia zobacz [systemy i przekształcenia współrzędnych](coordinate-systems-and-transformations.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pobiera obraz, który jest w jednym kolorze (0.2 0.0, 0,4, 1.0) i stosuje przekształcenia opisanych w poprzednich akapitach.  
   
  Poniższa ilustracja pokazuje oryginalny obraz po lewej stronie i przekształcone obraz po prawej stronie.  
   
- ![Colors](../../../../docs/framework/winforms/advanced/media/colortrans1.png "colortrans1")  
+ ![Colors](./media/colortrans1.png "colortrans1")  
   
  Kod w poniższym przykładzie używa następujące kroki, aby wykonać ponowne kolorowanie:  
   
@@ -57,12 +57,12 @@ ms.locfileid: "54498950"
   
 3.  Przekaż <xref:System.Drawing.Imaging.ImageAttributes> obiekt <xref:System.Drawing.Graphics.DrawImage%2A> metody <xref:System.Drawing.Graphics> obiektu.  
   
- [!code-csharp[System.Drawing.RecoloringImages#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.RecoloringImages#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Ponowne kolorowanie obrazów](../../../../docs/framework/winforms/advanced/recoloring-images.md)
-- [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+- [Ponowne kolorowanie obrazów](recoloring-images.md)
+- [Systemy i przekształcenia współrzędnych](coordinate-systems-and-transformations.md)

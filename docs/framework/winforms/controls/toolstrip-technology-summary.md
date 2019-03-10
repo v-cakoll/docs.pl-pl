@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: 94b061b6c403c22fc7eed4ca3632f3165693e868
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c32b14e1394004b68247d4d7bf2d0fcc8870b730
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747142"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703294"
 ---
 # <a name="toolstrip-technology-summary"></a>Podsumowanie informacji o technologii formantów ToolStrip
 Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które obsługują jego użycia.  
@@ -87,7 +87,7 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które 
 ## <a name="hosting-controls"></a>Hosting kontrolek  
  <xref:System.Windows.Forms.ToolStripControlHost> Klasa udostępnia wbudowane otoki <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, i <xref:System.Windows.Forms.ToolStripProgressBar> kontrolki. Możesz również hostować innych istniejących lub kontrolki COM w <xref:System.Windows.Forms.ToolStripControlHost>.  
   
- Aby uzyskać przykład hosting kontrolki, zobacz [jak: OPAKOWYWANIE formant programu Windows Forms za pomocą elementu ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
+ Aby uzyskać przykład hosting kontrolki, zobacz [jak: OPAKOWYWANIE formant programu Windows Forms za pomocą elementu ToolStripControlHost](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
 ## <a name="rendering"></a>Renderowanie  
  <xref:System.Windows.Forms.ToolStrip> klasy implementować schemat renderowania, który znacznie różni się od innych kontrolek Windows Forms. Ten schemat można łatwo zastosować stylów i motywów.  
@@ -96,7 +96,7 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które 
   
  Ten styl można zastosować do wielu <xref:System.Windows.Forms.ToolStrip> obiektów w tej samej aplikacji, ustawiając <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> do <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> i ustawienie <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> lub <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> właściwości <xref:System.Windows.Forms.ToolStripManagerRenderMode> przewidzianą lub <xref:System.Windows.Forms.ToolStripRenderer> wartości odpowiednio.  
   
- Aby uzyskać przykłady renderowania, zobacz [jak: Tworzenie i ustawienie niestandardowego modułu renderowania dla formantu ToolStrip w Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
+ Aby uzyskać przykłady renderowania, zobacz [jak: Tworzenie i ustawienie niestandardowego modułu renderowania dla formantu ToolStrip w Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
   
 ## <a name="styles-and-themes"></a>Style i motywów  
  <xref:System.Windows.Forms.ToolStrip> i skojarzonych klas umożliwiają łatwe do obsługi funkcji stylów wizualnych i wygląd niestandardowych, które nie wymagają zastępowanie <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> metody dla każdego elementu. Użyj <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> i <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> i <xref:System.Windows.Forms.ToolStrip.Renderer%2A> właściwości.  
@@ -112,12 +112,12 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klas, które 
   
  Zaletą rafting za pośrednictwem dokowanie jest to, że <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.StatusStrip> kontrolki mogą udostępniać miejsce na poziomą lub pionową innych kontrolek.  
   
- Większość <xref:System.Windows.Forms.ToolStrip> może być zadokowane formantów do formularza, podobnie jak inne kontrolki, zamiast rafting. Można również określić, że <xref:System.Windows.Forms.ToolStrip> kontroli swobodnie rozmieszczone na formularzu, usuwając go z jego <xref:System.Windows.Forms.ToolStripContainer> i ustawienie jej `Dock` właściwości `None`, lub można określić położenia bezwzględne, ustawiając do odpowiednich <xref:System.Windows.Forms.Control.Location%2A> Właściwość. Zobacz [jak: Przenoszenie elementu ToolStrip z ToolStripContainer na formularz](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
+ Większość <xref:System.Windows.Forms.ToolStrip> może być zadokowane formantów do formularza, podobnie jak inne kontrolki, zamiast rafting. Można również określić, że <xref:System.Windows.Forms.ToolStrip> kontroli swobodnie rozmieszczone na formularzu, usuwając go z jego <xref:System.Windows.Forms.ToolStripContainer> i ustawienie jej `Dock` właściwości `None`, lub można określić położenia bezwzględne, ustawiając do odpowiednich <xref:System.Windows.Forms.Control.Location%2A> Właściwość. Zobacz [jak: Przenoszenie elementu ToolStrip z ToolStripContainer na formularz](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
   
  Użyj co najmniej jeden <xref:System.Windows.Forms.ToolStripPanel> formantów większej elastyczności, szczególnie w przypadku aplikacji wielu interfejsu dokumentów (MDI), lub jeśli nie potrzebujesz <xref:System.Windows.Forms.ToolStripContainer>. A <xref:System.Windows.Forms.ToolStripPanel> dokowalne miejsce do lokalizowania i rafting <xref:System.Windows.Forms.ToolStrip> formanty, ale nie tradycyjne formanty. Domyślnie <xref:System.Windows.Forms.ToolStripPanel> nie jest wyświetlana w Projektancie **przybornika**, ale można umieścić ją w tym miejscu, klikając prawym przyciskiem myszy **przybornika**, a następnie kliknij przycisk **wybierz elementy**. Możesz też programowo uzyskać dostęp <xref:System.Windows.Forms.ToolStripPanel> , takich jak inne klasy.  
   
  <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, I <xref:System.Windows.Forms.StatusStrip> umożliwiają przepełnienie elementów. Jest to podobne do sposób, w jaki te elementy działają na paskach narzędzi Microsoft Office.  
   
 ## <a name="see-also"></a>Zobacz także
-- [ToolStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip, kontrolka — architektura](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip, kontrolka — architektura](toolstrip-control-architecture.md)

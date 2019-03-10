@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 10981f6e49b1d109dce0f3b2b4dc0ab9043ceb0f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746380"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712698"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Rozwiązywanie problemów związanych z formantami oraz autoryzacją elementów
 Ten temat zawiera następujące typowe problemy, które występują podczas tworzenia składników i formantów. Aby uzyskać więcej informacji, zobacz [Programowanie przy użyciu składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -34,7 +34,7 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
 -   Ikona składnika nie jest wyświetlana w przyborniku  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Nie można dodać kontrolki do przybornika  
- Jeśli chcesz dodać formant niestandardowy, który został utworzony w innym projekcie lub kontrolki z innych firm **przybornika**, należy to zrobić ręcznie. Jeśli bieżący projekt zawiera kontrolki lub składnika, powinien pojawić się w **przybornika** automatycznie. Aby uzyskać więcej informacji, zobacz [instruktażu: Automatyczne zapełnianie przybornika składnikami niestandardowymi](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
+ Jeśli chcesz dodać formant niestandardowy, który został utworzony w innym projekcie lub kontrolki z innych firm **przybornika**, należy to zrobić ręcznie. Jeśli bieżący projekt zawiera kontrolki lub składnika, powinien pojawić się w **przybornika** automatycznie. Aby uzyskać więcej informacji, zobacz [instruktażu: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Aby dodać formant do przybornika  
   
@@ -67,7 +67,7 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
          Formant jest dodawany do **przybornika**.  
   
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Nie można debugować kontrolki użytkownika interfejsu Windows Forms lub składnika  
- Jeśli pochodzi od klasy formantu <xref:System.Windows.Forms.UserControl> klasy, można debugować jego zachowanie w czasie wykonywania za pomocą kontenera testu. Aby uzyskać więcej informacji, zobacz [jak: Testowanie zachowania UserControl w czasie wykonywania](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Jeśli pochodzi od klasy formantu <xref:System.Windows.Forms.UserControl> klasy, można debugować jego zachowanie w czasie wykonywania za pomocą kontenera testu. Aby uzyskać więcej informacji, zobacz [jak: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Inne niestandardowe formanty i składniki nie są autonomiczne projektów. One muszą być obsługiwane przez aplikację, taki jak projekt Windows Forms. Aby debugować formant lub składnika, należy dodać go do projektu Windows Forms.  
   
@@ -93,7 +93,7 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
   
      Można teraz debugować swoje kontroli lub składnika w zwykły sposób w całym dokumencie.  
   
- Aby uzyskać więcej informacji na temat debugowania, zobacz [debugowania w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) i [instruktażu: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ Aby uzyskać więcej informacji na temat debugowania, zobacz [debugowania w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) i [instruktażu: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Zdarzenie jest zgłaszane w dwukrotnie odziedziczoną kontrolkę lub składnika  
  Jest to prawdopodobnie spowodowane zduplikowane `Handles` klauzuli. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z dziedziczone procedury obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
@@ -105,12 +105,12 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
  <xref:System.STAThreadAttribute> Informuje środowisko uruchomieniowe języka wspólnego (CLR), Windows Forms korzysta z modelu apartamentem jednowątkowym. Możesz zauważyć niezamierzone zachowanie, jeśli ten atrybut nie są stosowane do aplikacji Windows Forms `Main` metody. Na przykład obrazy tła mogą być niewidoczne dla kontrolki, takie jak <xref:System.Windows.Forms.ListView>. Niektóre kontrolki mogą także wymagać tego atrybutu poprawne Autouzupełnianie i zachowanie przeciągnij i upuść.  
   
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>Ikona składnika nie jest wyświetlana w przyborniku  
- Kiedy używasz <xref:System.Drawing.ToolboxBitmapAttribute> zostać skojarzona ikona za pomocą składnika niestandardowego, mapa bitowa nie ma w przyborniku dla składników wygenerowany automatycznie. Aby wyświetlić mapę bitową, należy ponownie załadować formantu za pomocą **wybierz elementy przybornika** okno dialogowe. Aby uzyskać więcej informacji, zobacz [jak: Dostarczanie mapy bitowej przybornika dla formantu](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
+ Kiedy używasz <xref:System.Drawing.ToolboxBitmapAttribute> zostać skojarzona ikona za pomocą składnika niestandardowego, mapa bitowa nie ma w przyborniku dla składników wygenerowany automatycznie. Aby wyświetlić mapę bitową, należy ponownie załadować formantu za pomocą **wybierz elementy przybornika** okno dialogowe. Aby uzyskać więcej informacji, zobacz [jak: Dostarczanie mapy bitowej przybornika dla formantu](how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
-- [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md)
+- [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 - [Tworzenie składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [Rozwiązywanie problemów podczas projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

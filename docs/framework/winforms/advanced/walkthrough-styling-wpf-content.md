@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ef81d9272acdddfc7d547de6f44725481e55dc3e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303728"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712399"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Przewodnik: Nadawanie stylu zawartości WPF
 W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presentation Foundation (WPF) hostowanych w formularzu Windows.
@@ -47,7 +47,7 @@ W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presenta
   
 #### <a name="to-create-wpf-control-types"></a>Aby utworzyć typy kontrolek WPF  
   
-1.  Dodaj nowe WPF <xref:System.Windows.Controls.UserControl> projektu do rozwiązania. Użyj domyślnej nazwy dla kontrolek typu `UserControl1.xaml`. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Dodaj nowe WPF <xref:System.Windows.Controls.UserControl> projektu do rozwiązania. Użyj domyślnej nazwy dla kontrolek typu `UserControl1.xaml`. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
 2.  W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i Przesuń elementy na powierzchni projektowej](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
   
@@ -76,7 +76,7 @@ W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presenta
   
 4.  W widoku XAML, Wstaw następujące XAML po `<UserControl>` tagu początkowego.  
   
-     Ta XAML tworzy gradient kontrastujące obramowaniem gradientu. Po kliknięciu formantu gradientów zostały zmienione, aby wygenerować się po naciśnięciu przycisku. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+     Ta XAML tworzy gradient kontrastujące obramowaniem gradientu. Po kliknięciu formantu gradientów zostały zmienione, aby wygenerować się po naciśnięciu przycisku. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../../wpf/controls/styling-and-templating.md).  
   
 ```xaml  
 <UserControl.Resources>  
@@ -152,8 +152,8 @@ W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presenta
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [Korzystanie z kontrolek WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Migracja i współdziałanie](../../wpf/advanced/migration-and-interoperability.md)
+- [Korzystanie z kontrolek WPF](using-wpf-controls.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Przegląd XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [Tworzenie szablonów i stylów](../../wpf/controls/styling-and-templating.md)

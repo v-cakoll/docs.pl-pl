@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 9ee357e343c5e060393359f0666886bef6b87b50
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664357"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708057"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderowanie formantów przy użyciu stylów wizualnych
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zapewnia obsługę renderowania kontrolek i innych użytkowników Windows elementów interfejsu (UI), przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują. W tym temacie omówiono kilka poziomów pomocy technicznej w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla formantów renderowania i inne elementy interfejsu użytkownika przy użyciu bieżącego stylu wizualnego systemu operacyjnego.  
@@ -49,7 +49,7 @@ ms.locfileid: "56664357"
   
 -   <xref:System.Windows.Forms.TrackBarRenderer>  
   
- Aby uzyskać więcej informacji na temat korzystania z tych klas do rysowania kontrolki, zobacz [jak: Używanie klasy renderowania formantu](../../../../docs/framework/winforms/controls/how-to-use-a-control-rendering-class.md).  
+ Aby uzyskać więcej informacji na temat korzystania z tych klas do rysowania kontrolki, zobacz [jak: Używanie klasy renderowania formantu](how-to-use-a-control-rendering-class.md).  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>Elementu stylu wizualnego i renderowanie klas  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Przestrzeń nazw zawiera klasy, które mogą służyć do tworzenia oraz uzyskać informacje na temat dowolnego formantu lub elementu interfejsu użytkownika, który jest obsługiwany przez stylów wizualnych. Obsługiwane zawierają między innymi wspólnych formantów, które mają klasy renderowania w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw (zobacz poprzednią sekcję), a także inne formanty, takie jak formanty karty i kontrolki paska pomocniczego. Inne obsługiwane elementy interfejsu użytkownika obejmują części **Start** menu, pasek zadań, a także nieklienckim obszarze okna.  
@@ -58,7 +58,7 @@ ms.locfileid: "56664357"
   
  <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> udostępnia metody, rysowania, które zawiera informacje o każdej <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> zdefiniowane przez bieżącego stylu wizualnego systemu operacyjnego. Informacje, które mogą być pobierane dotyczące elementu obejmuje jego domyślny rozmiar, typ tła i koloru definicji. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> otacza funkcjonalność klasy stylów wizualnych (UxTheme) interfejsu API z powłoki Windows części zestawu SDK platformy Windows. Aby uzyskać więcej informacji, zobacz [Włączanie stylów wizualnych](/windows/desktop/controls/cookbook-overview).  
   
- Aby uzyskać więcej informacji o korzystaniu z <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> i <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, zobacz [jak: Renderowanie elementu stylu wizualnego](../../../../docs/framework/winforms/controls/how-to-render-a-visual-style-element.md).  
+ Aby uzyskać więcej informacji o korzystaniu z <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> i <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, zobacz [jak: Renderowanie elementu stylu wizualnego](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Włączanie stylów wizualnych  
  Aby włączyć style wizualne dla aplikacji napisanych dla [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.0, programiści mogą zawierać manifest aplikacji, która określa, że ComCtl32.dll w wersji 6 lub nowszym będzie służyć do rysowania formantów. Aplikacje utworzone przy użyciu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wersji 1.1 lub nowszej można użyć <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> metody <xref:System.Windows.Forms.Application> klasy.  
@@ -79,4 +79,4 @@ ms.locfileid: "56664357"
 >  Jeśli chcesz używać <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> do renderowania formantu lub elementu interfejsu użytkownika, gdy użytkownik włączy lub zmienia stylów wizualnych, upewnij się, to zrobić podczas obsługi <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzeń zamiast <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> zdarzeń. Wyjątek zostanie zgłoszony, jeśli używasz <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> klasy podczas obsługi <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Malowanie i renderowanie kontrolki niestandardowej](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+- [Malowanie i renderowanie kontrolki niestandardowej](custom-control-painting-and-rendering.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 9fb343cd7ca3f17509353ddd088ab6d945118903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9348d44697b2c617481b55242faa83ab517e6226
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514182"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707823"
 ---
 # <a name="bindingsource-component-architecture"></a>Architektura składnika BindingSource
 Za pomocą <xref:System.Windows.Forms.BindingSource> składnika wszystkie kontrolki Windows Forms można powiązać powszechnie dla źródła danych.  
@@ -69,9 +69,9 @@ Za pomocą <xref:System.Windows.Forms.BindingSource> składnika wszystkie kontro
   
 -   Możesz dołączyć <xref:System.Windows.Forms.BindingSource> do różnych źródeł danych przy zachowaniu bieżącego powiązania kontroli.  
   
--   Można zmienić elementów w źródle danych i powiadom formanty powiązane. Aby uzyskać więcej informacji, zobacz [jak: Odzwierciedlanie aktualizacji źródła danych w kontrolce Windows Forms przy użyciu kontrolki BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md).  
+-   Można zmienić elementów w źródle danych i powiadom formanty powiązane. Aby uzyskać więcej informacji, zobacz [jak: Odzwierciedlanie aktualizacji źródła danych w kontrolce Windows Forms przy użyciu kontrolki BindingSource](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md).  
   
--   Możesz powiązać <xref:System.Type> zamiast obiektu w pamięci. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie formantu Windows Forms z typem](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md). Następnie możesz powiązać z obiektem w czasie wykonywania.  
+-   Możesz powiązać <xref:System.Type> zamiast obiektu w pamięci. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie formantu Windows Forms z typem](how-to-bind-a-windows-forms-control-to-a-type.md). Następnie możesz powiązać z obiektem w czasie wykonywania.  
   
 ### <a name="currency-management"></a>Zarządzanie waluty  
  <xref:System.Windows.Forms.BindingSource> Wdrażane <xref:System.Windows.Forms.ICurrencyManagerProvider> interfejsu do obsługi zarządzania waluty dla Ciebie. Za pomocą <xref:System.Windows.Forms.ICurrencyManagerProvider> interfejsu, można również przejść do menedżera waluty <xref:System.Windows.Forms.BindingSource>, oprócz menedżera waluty dla innego <xref:System.Windows.Forms.BindingSource> powiązany do tej samej <xref:System.Windows.Forms.BindingSource.DataMember%2A>.  
@@ -123,7 +123,7 @@ Za pomocą <xref:System.Windows.Forms.BindingSource> składnika wszystkie kontro
 |<xref:System.Windows.Forms.BindingSource.AddNew%2A> — Metoda|Dodaje nowy element do listy źródłowej. Stosuje się do źródeł danych, które implementują <xref:System.ComponentModel.IBindingList> interfejs i Zezwalaj na dodawanie elementów (czyli <xref:System.Windows.Forms.BindingSource.AllowNew%2A> właściwość jest ustawiona na `true`).|  
   
 ### <a name="custom-item-creation"></a>Tworzenie niestandardowego elementu  
- Może obsługiwać <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie, aby zapewnić logikę Tworzenie elementu. <xref:System.Windows.Forms.BindingSource.AddingNew> Wystąpi zdarzenie, przed dodaniem nowego obiektu do <xref:System.Windows.Forms.BindingSource>. To zdarzenie jest wywoływane po wykonaniu <xref:System.Windows.Forms.BindingSource.AddNew%2A> wywoływana jest metoda, ale zanim nowy element zostanie dodany do listy źródłowej. Dzięki obsłudze to zdarzenie, może zapewnić zachowanie tworzenia niestandardowego elementu bez pochodząca od <xref:System.Windows.Forms.BindingSource> klasy. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy Windows](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md).  
+ Może obsługiwać <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie, aby zapewnić logikę Tworzenie elementu. <xref:System.Windows.Forms.BindingSource.AddingNew> Wystąpi zdarzenie, przed dodaniem nowego obiektu do <xref:System.Windows.Forms.BindingSource>. To zdarzenie jest wywoływane po wykonaniu <xref:System.Windows.Forms.BindingSource.AddNew%2A> wywoływana jest metoda, ale zanim nowy element zostanie dodany do listy źródłowej. Dzięki obsłudze to zdarzenie, może zapewnić zachowanie tworzenia niestandardowego elementu bez pochodząca od <xref:System.Windows.Forms.BindingSource> klasy. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy Windows](how-to-customize-item-addition-with-the-windows-forms-bindingsource.md).  
   
 ### <a name="transactional-item-creation"></a>Tworzenie elementu transakcyjne  
  <xref:System.Windows.Forms.BindingSource> Wdrażane <xref:System.ComponentModel.ICancelAddNew> interfejs, który umożliwia utworzenie elementu transakcyjnych. Tymczasowo utworzony nowy element za pomocą wywołania <xref:System.Windows.Forms.BindingSource.AddNew%2A>, dodanie może zostać przekazana lub wycofana w następujący sposób:  
@@ -142,7 +142,7 @@ Za pomocą <xref:System.Windows.Forms.BindingSource> składnika wszystkie kontro
 ### <a name="design-time-support"></a>Pomoc techniczna czasu projektowania  
  Nie można utworzyć niektórych typów obiektów w czasie projektowania, takich jak obiekty utworzone na podstawie klasę fabryki lub obiektów zwróconych przez usługę sieci Web. Czasami może być konieczne powiązanie formantów do tych typów w czasie projektowania, nawet jeśli nie ma obiektu w pamięci, do którego można powiązać kontrolki. Na przykład, konieczne może być domyślnie nagłówkami kolumn o <xref:System.Windows.Forms.DataGridView> kontrolki z nazwami właściwości publiczne typu niestandardowego.  
   
- Aby obsługiwać ten scenariusz <xref:System.Windows.Forms.BindingSource> składnik obsługuje wiązania <xref:System.Type>. Po przypisaniu <xref:System.Type> do <xref:System.Windows.Forms.BindingSource.DataSource%2A> właściwości <xref:System.Windows.Forms.BindingSource> składnik tworzy pustą <xref:System.ComponentModel.BindingList%601> z <xref:System.Type> elementów. Następnie powiązać formanty <xref:System.Windows.Forms.BindingSource> składnika będą przedstawiane alerty na obecność właściwości lub schemat tego typu w czasie projektowania lub w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie formantu Windows Forms z typem](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md).  
+ Aby obsługiwać ten scenariusz <xref:System.Windows.Forms.BindingSource> składnik obsługuje wiązania <xref:System.Type>. Po przypisaniu <xref:System.Type> do <xref:System.Windows.Forms.BindingSource.DataSource%2A> właściwości <xref:System.Windows.Forms.BindingSource> składnik tworzy pustą <xref:System.ComponentModel.BindingList%601> z <xref:System.Type> elementów. Następnie powiązać formanty <xref:System.Windows.Forms.BindingSource> składnika będą przedstawiane alerty na obecność właściwości lub schemat tego typu w czasie projektowania lub w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie formantu Windows Forms z typem](how-to-bind-a-windows-forms-control-to-a-type.md).  
   
 ### <a name="static-listbindinghelper-methods"></a>Metody statyczne ListBindingHelper  
  <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>, <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>, I <xref:System.Windows.Forms.BindingSource> typy całą logikę wspólnej udziału do generowania listy z `DataSource` / `DataMember` pary. Ponadto typowe logika jest publicznie udostępniane do użycia przez autorów kontroli i osoby trzecie w następującym `static` metody:  
@@ -166,14 +166,14 @@ Za pomocą <xref:System.Windows.Forms.BindingSource> składnika wszystkie kontro
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> Właściwość|Jeśli źródło danych jest <xref:System.ComponentModel.IBindingList>, pobiera lub ustawia nazwę kolumny, używane do sortowania i informacje o kolejności sortowania.<br /><br /> —lub—<br /><br /> Jeśli źródło danych jest <xref:System.ComponentModel.IBindingListView> i obsługuje zaawansowane, sortowanie, pobiera wiele nazw kolumn, używane do sortowania i porządek sortowania|  
   
 ### <a name="integration-with-bindingnavigator"></a>Integracja z usługą BindingNavigator  
- Możesz użyć <xref:System.Windows.Forms.BindingSource> składnika, aby powiązać dowolnej kontrolki Windows Forms ze źródłem danych, ale <xref:System.Windows.Forms.BindingNavigator> kontroli jest zaprojektowany specjalnie w celu pracy z <xref:System.Windows.Forms.BindingSource> składnika. <xref:System.Windows.Forms.BindingNavigator> Kontroli udostępnia interfejs użytkownika do kontrolowania <xref:System.Windows.Forms.BindingSource> składnika bieżącego elementu. Domyślnie <xref:System.Windows.Forms.BindingNavigator> control oferuje przycisków, które odnoszą się do metod nawigacji <xref:System.Windows.Forms.BindingSource> składnika. Aby uzyskać więcej informacji, zobacz [jak: Nawigowanie po danych za pomocą kontrolki BindingNavigator formularzy Windows](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  
+ Możesz użyć <xref:System.Windows.Forms.BindingSource> składnika, aby powiązać dowolnej kontrolki Windows Forms ze źródłem danych, ale <xref:System.Windows.Forms.BindingNavigator> kontroli jest zaprojektowany specjalnie w celu pracy z <xref:System.Windows.Forms.BindingSource> składnika. <xref:System.Windows.Forms.BindingNavigator> Kontroli udostępnia interfejs użytkownika do kontrolowania <xref:System.Windows.Forms.BindingSource> składnika bieżącego elementu. Domyślnie <xref:System.Windows.Forms.BindingNavigator> control oferuje przycisków, które odnoszą się do metod nawigacji <xref:System.Windows.Forms.BindingSource> składnika. Aby uzyskać więcej informacji, zobacz [jak: Nawigowanie po danych za pomocą kontrolki BindingNavigator formularzy Windows](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [BindingSource, składnik — omówienie](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [BindingNavigator, kontrolka](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Wiązanie danych formularzy Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Instrukcje: Powiązanie z typem formantu Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
-- [Instrukcje: Odzwierciedlanie aktualizacji źródła danych w kontrolce Windows Forms przy użyciu kontrolki BindingSource](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [BindingSource, składnik — omówienie](bindingsource-component-overview.md)
+- [BindingNavigator, kontrolka](bindingnavigator-control-windows-forms.md)
+- [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Instrukcje: Odzwierciedlanie aktualizacji źródła danych w kontrolce Windows Forms przy użyciu kontrolki BindingSource](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

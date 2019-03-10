@@ -6,17 +6,17 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 923f913d8dd44aeef5d0b661e9408c6c50acd98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664229"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713777"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Instrukcje: Tworzenie złożonego interfejsu użytkownika za pomocą interfejsu Windows Forms przy użyciu narzędzia Projektant
 W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do komentarzowi użytemu w programie Microsoft Outlook przy użyciu **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. Taki układ odbywa się głównie za pośrednictwem dokowanie kontrolek za pomocą formularza.  
   
- Po zadokowaniu kontrolkę, należy określić, które krawędzią kontenera nadrzędnego formantu jest podłączony. W związku z tym Jeśli ustawisz <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Right>, prawą krawędzią kontrolki będzie zadokowany na prawej krawędzi kontrolki nadrzędnej. Ponadto aby pasował do jego kontrolki kontenera zmieniany jest zadokowany krawędzią formantu. Aby uzyskać więcej informacji o tym, jak <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość znaleźć [jak: Dokowanie formantów na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
+ Po zadokowaniu kontrolkę, należy określić, które krawędzią kontenera nadrzędnego formantu jest podłączony. W związku z tym Jeśli ustawisz <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Right>, prawą krawędzią kontrolki będzie zadokowany na prawej krawędzi kontrolki nadrzędnej. Ponadto aby pasował do jego kontrolki kontenera zmieniany jest zadokowany krawędzią formantu. Aby uzyskać więcej informacji o tym, jak <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość znaleźć [jak: Dokowanie formantów na formularzach Windows Forms](how-to-dock-controls-on-windows-forms.md).  
   
  Ta procedura polega na rozmieszczanie <xref:System.Windows.Forms.SplitContainer> i inne kontrolki na formularzu, a nie na dodawanie funkcji do aplikacji Microsoft Outlook naśladować.  
   
@@ -44,8 +44,8 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
     > [!NOTE]
     >  Po umieszczeniu wskaźnika myszy nad albo rozdzielaczy w ramach <xref:System.Windows.Forms.SplitContainer> kontrolek, możesz zmienić rozmiar wewnętrznych wymiarów.  
   
-     W tym momencie podczas tworzenia aplikacji ma specjalnie interfejsu użytkownika zaawansowane. Następnym krokiem jest przejściem z programowaniem aplikacji, być może, łącząc <xref:System.Windows.Forms.TreeView> kontroli i <xref:System.Windows.Forms.ListView> kontrolki do pewnego rodzaju źródła danych. Aby uzyskać więcej informacji na temat kontrolek o łączeniu z danymi, zobacz [powiązanie danych i formularze Windows](../../../../docs/framework/winforms/data-binding-and-windows-forms.md).  
+     W tym momencie podczas tworzenia aplikacji ma specjalnie interfejsu użytkownika zaawansowane. Następnym krokiem jest przejściem z programowaniem aplikacji, być może, łącząc <xref:System.Windows.Forms.TreeView> kontroli i <xref:System.Windows.Forms.ListView> kontrolki do pewnego rodzaju źródła danych. Aby uzyskać więcej informacji na temat kontrolek o łączeniu z danymi, zobacz [powiązanie danych i formularze Windows](../data-binding-and-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer, kontrolka](splitcontainer-control-windows-forms.md)

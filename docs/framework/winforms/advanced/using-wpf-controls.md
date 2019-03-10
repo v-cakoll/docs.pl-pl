@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: be925bdceea3dd01c568d85fe025d6e037066454
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 24b88e456628c5a0bdc3cded60b0e52a92057851
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841621"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713803"
 ---
 # <a name="using-wpf-controls"></a>Korzystanie z formantów WPF
 W aplikacjach opartych na formularzach Windows, można użyć kontrolek Windows Presentation Foundation (WPF). Mimo że są to dwie technologie inny widok, mogą współdziałać sprawnie.  
@@ -20,19 +20,19 @@ W aplikacjach opartych na formularzach Windows, można użyć kontrolek Windows 
  Umożliwia także kontrolek formularzy Windows Forms w swoich aplikacjach opartego na podsystemie WPF. Aby uzyskać więcej informacji, zobacz [projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: kopiowanie i wklejanie kontrolki ElementHost w czasie projektowania](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
+ [Instrukcje: Kopiowanie i wklejanie formantu ElementHost w czasie projektowania](how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  Pokazuje, jak kopiowanie kontrolki Windows Presentation Foundation w formularzu Windows.  
   
- [Przewodnik: rozmieszczanie zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
+ [Przewodnik: Rozmieszczanie zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
  Pokazuje, jak korzystać z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation.
   
- [Przewodnik: tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
+ [Przewodnik: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
  Pokazuje, jak utworzyć formant programu Windows Presentation Foundation, do użytku w aplikacjach opartych na formularzach Windows.
   
- [Przewodnik: przypisywanie zawartości WPF na formularzach Windows Forms w czasie projektowania](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
+ [Przewodnik: Przypisywanie zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  Pokazuje sposób wybierania typów formantów Windows Presentation Foundation, które mają być wyświetlane w formularzu.  
   
- [Przewodnik: nadawanie stylu zawartości WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
+ [Przewodnik: Nadawanie stylu zawartości WPF](walkthrough-styling-wpf-content.md)  
  Przedstawia przepływ pracy między Windows Forms Designer i [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] dla stosowanie stylów do kontrolek Windows Presentation Foundation.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -43,7 +43,7 @@ W aplikacjach opartych na formularzach Windows, można użyć kontrolek Windows 
  W tym artykule opisano klasy, które służy do kontrolek Windows Forms hosta w aplikacji opartej na systemie Windows Presentation Foundation.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
+ [Migracja i współdziałanie](../../wpf/advanced/migration-and-interoperability.md)  
  W tym artykule opisano współdziałanie technologii Windows Presentation Foundation i Windows Forms.  
   
  [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  

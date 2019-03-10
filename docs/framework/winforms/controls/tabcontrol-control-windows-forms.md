@@ -10,41 +10,41 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d00dbe1e450a2d4316709e92eff7dab488b36045
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867621"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707732"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl — Formant (Formularze systemu Windows)
 Formularze Windows `TabControl` wyświetla wiele kart, takich jak separatorów w notesie lub etykiet w zestawie folderów w pliku cabinet zgłoszenia. Karty mogą zawierać obrazów i innych kontrolek. Użyj `TabControl` do tworzenia stron właściwości.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [TabControl, kontrolka — omówienie](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [TabControl, kontrolka — omówienie](tabcontrol-control-overview-windows-forms.md)  
  Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
- [Instrukcje: dodawanie kontrolki do karty](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Instrukcje: Dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)  
  Zawiera wskazówki dotyczące wyświetlania formantów na kartach.  
   
- [Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [Instrukcje: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
  Zapewnia wskazówek umożliwiających dodawanie i usuwanie kart za pomocą projektanta lub w kodzie.  
   
- [Instrukcje: zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ [Instrukcje: Zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
  Zawiera wskazówki dotyczące dostosowywania właściwości, które wpływają na wygląd poszczególnych kart.  
   
- [Instrukcje: wyłączanie kart](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [Instrukcje: Wyłączanie kart](how-to-disable-tab-pages.md)  
  Wyjaśnia, jak ograniczyć dostęp do strony karty, prawdopodobnie na podstawie poświadczeń użytkownika.  
   
- Zobacz też [instrukcje: Dodawanie i usuwanie karty przy użyciu kontrolki TabControl formularzy Windows projektanta](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [instrukcje: Dodawanie kontrolki do karty strony za pomocą narzędzia Projektant](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
+ Zobacz też [jak: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows, za pomocą projektanta](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [jak: Dodawanie kontrolki do karty przy użyciu narzędzia Projektant](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.TabControl> Klasa  
  Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Okna dialogowe w formularzach Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Okna dialogowe w formularzach Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Zawiera listę zadań dla okien dialogowych, które są często wyświetlane karty.  
   
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.

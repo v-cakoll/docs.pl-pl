@@ -8,12 +8,12 @@ helpviewer_keywords:
 - labels [Windows Forms], sizing to fit contents
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-ms.openlocfilehash: 74947e529a472c9e9a681fcb436ce8aff990c0af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5771b232d77e3e5a792b179ebffd3fa0edda7c9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640410"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702197"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Instrukcje: Rozmiaru kontrolki Label formularzy Windows pasujący do jego zawartości
 Formularze Windows <xref:System.Windows.Forms.Label> formant może być w jednym lub wielu linii, które mogą być stałe w rozmiarze lub może automatycznie zmieniał swój rozmiar do uwzględnienia swój podpis. <xref:System.Windows.Forms.Label.AutoSize%2A> Właściwość pomaga rozmiaru formantów, aby dopasować większy lub mniejszy podpisów, która jest szczególnie przydatne, jeśli podpis zmieni się w czasie wykonywania.  
@@ -25,6 +25,6 @@ Formularze Windows <xref:System.Windows.Forms.Label> formant może być w jednym
  Jeśli <xref:System.Windows.Forms.Label.AutoSize%2A> ustawiono `false`, wyrazy w <xref:System.Windows.Forms.Label.Text%2A> właściwość będzie zawijany do następnego wiersza, jeśli jest to możliwe, ale formant nie będzie rosnąć.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy Windows](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)
-- [Label, kontrolka — omówienie](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [Label, kontrolka](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+- [Instrukcje: Tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy Windows](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Label, kontrolka — omówienie](label-control-overview-windows-forms.md)
+- [Label, kontrolka](label-control-windows-forms.md)

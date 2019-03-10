@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6605809f984a4a1323f555cd73ecb04a67830f46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f29d6d5e3942296905088eb250d09f3a5ace1fa4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582061"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708356"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Program .NET Framework i wydania poza harmonogramem (OOB)
 
@@ -49,7 +49,7 @@ Wydania OOB dla podstawowych składników środowiska uruchomieniowego (języka 
  Jak wspomniano wcześniej, podczas wdrażania aplikacji używającej pakietu OOB zestawy OOB będą dostarczane wraz z pakietem aplikacji.
 
 ## <a name="types-of-oob-releases"></a>Typy wersji OOB
- Zazwyczaj pakiet OOB ma jedną lub kilka wersji wstępnych i wersję stabilną. Licencja, który towarzyszy wersji wstępnej, zazwyczaj nie zezwala na redystrybucję, ale umożliwia wypróbowanie pakietu i wyrazić swoją opinię. Opinie są włączane do wszelkich aktualizacji wprowadzanych w pakiecie. Ostateczna wersja jest rozpowszechniana jako stabilny pakiet NuGet i zawiera licencję zezwalającą na dystrybucję pakietu NuGet wraz z aplikacją. Stabilne pakiety są obsługiwane przez firmę Microsoft. Firma Microsoft zapewnia obsługę technologii IntelliSense, jak również inne typy dokumentacji, takie jak wpisy w blogu i odpowiedzi na forum dla wszystkich pakietów. Ponadto kod źródłowy może być dostępny w niektórych, ale nie wszystkie pakiety. Zapowiedzi dotyczących nowych i zaktualizowanych pakietów, możesz zasubskrybować [Blog programu .NET Framework](https://blogs.msdn.com/b/dotnet/).
+ Zazwyczaj pakiet OOB ma jedną lub kilka wersji wstępnych i wersję stabilną. Licencja, który towarzyszy wersji wstępnej, zazwyczaj nie zezwala na redystrybucję, ale umożliwia wypróbowanie pakietu i wyrazić swoją opinię. Opinie są włączane do wszelkich aktualizacji wprowadzanych w pakiecie. Ostateczna wersja jest rozpowszechniana jako stabilny pakiet NuGet i zawiera licencję zezwalającą na dystrybucję pakietu NuGet wraz z aplikacją. Stabilne pakiety są obsługiwane przez firmę Microsoft. Firma Microsoft zapewnia obsługę technologii IntelliSense, jak również inne typy dokumentacji, takie jak wpisy w blogu i odpowiedzi na forum dla wszystkich pakietów. Ponadto kod źródłowy może być dostępny w niektórych, ale nie wszystkie pakiety. Zapowiedzi dotyczących nowych i zaktualizowanych pakietów, możesz zasubskrybować [Blog programu .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
  Aby znaleźć stabilne i wstępne pakiety, wybierz **Uwzględnij wydania wstępne** w Menedżerze pakietów NuGet.
 

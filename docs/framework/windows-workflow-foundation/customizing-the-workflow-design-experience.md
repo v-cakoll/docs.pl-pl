@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 87b49b025cfb27812933511b76c5a024cde4995a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6ef24d00baa4df6dfc8e0af69c1d489b79a41f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680310"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724669"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Dostosowywanie środowiska projektowania przepływu pracy
 
@@ -17,15 +17,15 @@ Scenariusze dotyczące projektowania niestandardowych działań i rehosting [!IN
 
 ## <a name="in-this-section"></a>W tej sekcji
 
- [Używanie niestandardowych szablonów i projektantów działań](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)
+ [Używanie niestandardowych szablonów i projektantów działań](using-custom-activity-designers-and-templates.md)
 
  W tym artykule opisano sposób tworzenia nowego niestandardowi Projektanci działań i szablony.
 
- [Rehostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
+ [Rehostowanie projektanta przepływu pracy](rehosting-the-workflow-designer.md)
 
  Opisuje sposób ponownego hostowania [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] poza programem Visual Studio i sposób wyświetlania błędów sprawdzania poprawności.
 
- [Używanie edytora wyrażeń niestandardowych](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)
+ [Używanie edytora wyrażeń niestandardowych](using-a-custom-expression-editor.md)
 
  Opisuje sposób implementacji edytora wyrażeń niestandardowych do korzystania z przepływu pracy projektanci rehostowanym poza programem Visual Studio 2010.
 
@@ -35,7 +35,7 @@ Scenariusze dotyczące projektowania niestandardowych działań i rehosting [!IN
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Rozszerzanie programu Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)
-- [Projektant](../../../docs/framework/windows-workflow-foundation/samples/designer.md)
-- [Projektanci działań niestandardowych](../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)
-- [Rehostowanie projektanta](../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)
+- [Rozszerzanie programu Windows Workflow Foundation](extend.md)
+- [Projektant](./samples/designer.md)
+- [Projektanci działań niestandardowych](./samples/custom-activity-designers.md)
+- [Rehostowanie projektanta](./samples/designer-rehosting.md)

@@ -2,12 +2,12 @@
 title: Wskazówki dotyczące migracji
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441219"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719679"
 ---
 # <a name="migration-guidance"></a>Wskazówki dotyczące migracji
 W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Microsoft udostępnia drugą wersją główną systemu Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] został wydany w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (to uwzględnione typy w przestrzeniach nazw System.Workflow.*; teraz nazywana WF3) i ulepszone w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 jest również częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ale istnieje się wraz z technologią przepływu pracy (typy System.Activities.\* obszarów nazw; nazywane WF4). Podczas wybierania, kiedy należy przyjąć WF4, należy najpierw rozpoznaje, że możesz kontrolować termin.  
@@ -35,7 +35,7 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Micros
  [Wskazówki dotyczące WF: Automat stanów](https://go.microsoft.com/fwlink/?LinkId=153855)  
  W tym artykule omówiono przepływ sterowania WF4 modelowania w przypadku braku działań automatu stanów.  
   
- Należy pamiętać, że te wskazówki dotyczą tylko projekty przepływu pracy, których platformą docelową jest program .NET Framework 4. Przepływy pracy automatu stanów zostały dodane w programie .NET 4.0.1 wraz z wydaniem platformy Update 1, a następnie zostały zawarte w ramach programu .NET Framework 4.5. Aby uzyskać więcej informacji na temat przepływów pracy automatu stanów na platformie .NET 4.0.1 — 4.0.3 i .NET Framework 4.5, zobacz [aktualizacji 4.0.1 funkcje platformy Microsoft .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) i [przepływów pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Należy pamiętać, że te wskazówki dotyczą tylko projekty przepływu pracy, których platformą docelową jest program .NET Framework 4. Przepływy pracy automatu stanów zostały dodane w programie .NET 4.0.1 wraz z wydaniem platformy Update 1, a następnie zostały zawarte w ramach programu .NET Framework 4.5. Aby uzyskać więcej informacji na temat przepływów pracy automatu stanów na platformie .NET 4.0.1 — 4.0.3 i .NET Framework 4.5, zobacz [aktualizacji 4.0.1 funkcje platformy Microsoft .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) i [przepływów pracy automatu stanów](state-machine-workflows.md).  
   
  [Podręcznik migracji WF: Działania niestandardowe](https://go.microsoft.com/fwlink/?LinkId=153856)  
  Zawiera instrukcje dotyczące zmieniania projektu WF3 niestandardowe działania w WF4 i przykłady.  

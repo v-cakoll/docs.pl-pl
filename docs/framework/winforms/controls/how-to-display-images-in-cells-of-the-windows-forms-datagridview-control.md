@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying images
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-ms.openlocfilehash: 637cb2f51e8ad1161b0208a3ebd8337859261a11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 280f274a0957f098add7fbf2e3b919c33c4c5233
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523600"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704413"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>Instrukcje: Wyświetlanie obrazów w komórkach kontrolki DataGridView formularzy Windows Forms
 Obraz lub element graficzny jest jedną z wartości, które można wyświetlić w wierszu danych. Często te grafiki formę fotografii pracownika lub logo firmy.  
@@ -24,11 +24,11 @@ Obraz lub element graficzny jest jedną z wartości, które można wyświetlić 
   
  Jeśli <xref:System.Windows.Forms.DataGridView> swojego źródła danych zawiera kolumnę obrazów, zostaną one wyświetlone automatycznie przez <xref:System.Windows.Forms.DataGridView> kontroli.  
   
- Poniższy przykład kodu demonstruje sposób wyodrębniania ikony z zasobu osadzonego i przekonwertować go do mapy bitowej do wyświetlenia w każdej komórce kolumny obrazu. Inny przykład zastępuje wartości tekstowej komórek przy użyciu odpowiedniego obrazów, zobacz [jak: Dostosowywanie formatowania danych w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+ Poniższy przykład kodu demonstruje sposób wyodrębniania ikony z zasobu osadzonego i przekonwertować go do mapy bitowej do wyświetlenia w każdej komórce kolumny obrazu. Inny przykład zastępuje wartości tekstowej komórek przy użyciu odpowiedniego obrazów, zobacz [jak: Dostosowywanie formatowania danych w formancie DataGridView formularzy Windows](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="example"></a>Przykład  
- [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
- [!code-vb[System.Windows.Forms.DataGridViewMisc#050](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
+ [!code-vb[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
@@ -41,5 +41,5 @@ Obraz lub element graficzny jest jedną z wartości, które można wyświetlić 
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.DataGridView>
-- [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Instrukcje: Dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Instrukcje: Dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: f2ab0cc789b026a139e1421b72e9215bf52c6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672022"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709487"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Tryb wirtualny w formancie DataGridView formularzy systemu Windows
 Tryb wirtualny, można zarządzać interakcji między <xref:System.Windows.Forms.DataGridView> kontroli i pamięć podręczna danych niestandardowych. Aby zaimplementować trybu wirtualnego, należy ustawić <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwość `true` i obsługi co najmniej jeden zdarzenia opisane w tym temacie. Zazwyczaj będziesz obsługiwać co najmniej `CellValueNeeded` zdarzenie, które umożliwia kontrolki odnośnika wartości w pamięci podręcznej danych.  
@@ -27,14 +27,14 @@ Tryb wirtualny, można zarządzać interakcji między <xref:System.Windows.Forms
 ## <a name="replacing-bound-mode"></a>Zastępowanie tryb powiązane  
  Jeśli tryb powiązanej nie spełnia potrzeby związane z wydajnością, możesz zarządzać wszystkie dane w pamięci podręcznej niestandardowych za pomocą programów obsługi zdarzeń trybu wirtualnego. Na przykład umożliwia trybu wirtualnego zaimplementować mechanizm, który pobiera tylko ładowania danych just-in-time tak dużej ilości danych, z sieciowych bazy danych, jak to konieczne, aby uzyskać optymalną wydajność. Ten scenariusz jest szczególnie przydatne podczas pracy z dużymi ilościami danych ciągu z wolnym połączeniem sieciowym lub z komputerów klienckich, które mają ograniczoną ilość pamięci RAM lub miejsce do magazynowania.  
   
- Aby uzyskać więcej informacji na temat korzystania z trybu wirtualnego w scenariuszu just-in-time, zobacz [Implementowanie trybu wirtualnego przy użyciu ładowanie danych just in time w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
+ Aby uzyskać więcej informacji na temat korzystania z trybu wirtualnego w scenariuszu just-in-time, zobacz [Implementowanie trybu wirtualnego przy użyciu ładowanie danych just in time w formancie DataGridView formularzy Windows](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
 ## <a name="virtual-mode-events"></a>Tryb wirtualny zdarzenia  
  Jeśli dane są tylko do odczytu, `CellValueNeeded` zdarzenia mogą być tylko zdarzenia, konieczne będzie obsługiwać. Dodatkowe zdarzenia trybu wirtualnego pozwalają włączyć określonych funkcji, takich jak użytkownik dokona edycji, wierszy i usuwanie i transakcji na poziomie wiersza.  
   
  Niektóre standardowe <xref:System.Windows.Forms.DataGridView> zdarzenia (takie jak zdarzenia, które występują, gdy użytkownicy Dodawanie lub usuwanie wierszy lub gdy komórka wartości są edytowane, przeanalizować, sprawdzania poprawności lub sformatowany) są przydatne w trybie wirtualnym, jak również. Może również obsługiwać zdarzenia, które umożliwiają Obsługa wartości, które zazwyczaj nie są przechowywane w źródle powiązanych danych, takie jak tekst etykietki narzędzia komórki, komórki i tekst błędu wiersza, komórki i danych menu skrótów dla wiersza i danych wysokość wiersza.  
   
- Aby uzyskać więcej informacji na temat Implementowanie trybu wirtualnego do zarządzania danymi odczytu/zapisu o zakresie zatwierdzenia na poziomie wiersza, zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Aby uzyskać więcej informacji na temat Implementowanie trybu wirtualnego do zarządzania danymi odczytu/zapisu o zakresie zatwierdzenia na poziomie wiersza, zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](implementing-virtual-mode-wf-datagridview-control.md).  
   
  Na przykład, który implementuje trybu wirtualnego przy użyciu zakresu zatwierdzenia na poziomie komórki, zobacz <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> temat referencyjny właściwości.  
   
@@ -60,12 +60,12 @@ Tryb wirtualny, można zarządzać interakcji między <xref:System.Windows.Forms
 |<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|Używane przez formant do pobierania i przechowywania informacji wysokość wiersza w pamięci podręcznej danych. Wywołaj <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A> metody, gdy zmiana informacji wysokość wiersza pamięci podręcznej poza <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed> program obsługi zdarzeń, aby upewnić się, że aktualna wartość jest używane na wyświetlaczu formantu.|  
   
 ## <a name="best-practices-in-virtual-mode"></a>Najlepsze rozwiązania w trybie wirtualnym  
- Przed zaimplementowaniem trybu wirtualnego w celu efektywnej pracy z dużymi ilościami danych, również należy upewnić się, że pracujesz wydajnie <xref:System.Windows.Forms.DataGridView> samej kontrolki. Aby uzyskać więcej informacji o efektywne wykorzystanie style komórki, automatycznej zmiany rozmiaru, opcji i udostępnianie wierszy, zobacz [najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Przed zaimplementowaniem trybu wirtualnego w celu efektywnej pracy z dużymi ilościami danych, również należy upewnić się, że pracujesz wydajnie <xref:System.Windows.Forms.DataGridView> samej kontrolki. Aby uzyskać więcej informacji o efektywne wykorzystanie style komórki, automatycznej zmiany rozmiaru, opcji i udostępnianie wierszy, zobacz [najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

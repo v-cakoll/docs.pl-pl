@@ -2,12 +2,12 @@
 title: Obsługa błędów w schematu blokowego przy użyciu działania TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 56215ecf1b5f2b54333271f2086b831f564ff7c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507502"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708837"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Obsługa błędów w schematu blokowego przy użyciu działania TryCatch
 W tym przykładzie pokazano sposób, w jaki <xref:System.Activities.Statements.TryCatch> działanie może być używane w ramach działania przepływu sterowania złożonego.
@@ -47,5 +47,5 @@ W tym przykładzie pokazano sposób, w jaki <xref:System.Activities.Statements.T
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przepływy pracy schematów blokowych](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
-- [Wyjątki](../../../../docs/framework/windows-workflow-foundation/exceptions.md)
+- [Przepływy pracy schematów blokowych](../flowchart-workflows.md)
+- [Wyjątki](../exceptions.md)

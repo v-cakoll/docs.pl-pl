@@ -1,37 +1,37 @@
 ---
-title: 'Porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi'
+title: 'Instrukcje: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 146b3bba3a880c780644eecd277827823793b5e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57babf216821665613da053f972ff25488418b7d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515308"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705067"
 ---
-# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Funkcje lepszą integrację usług sieci web i przepływów pracy w formularzu tworzenia pierwszej kontraktu przepływu pracy. Narzędzie do projektowania przepływu pracy pierwszy kontraktu pozwala na projektowanie najpierw kontraktu w kodzie. Narzędzie następnie automatycznie generuje szablon czynności w przyborniku operacji w umowie.  
+# <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Instrukcje: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Funkcje lepszą integrację między usługami sieci web i przepływów pracy w formie Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu. Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia projektowanie najpierw kontrakt w kodzie. Narzędzie następnie automatycznie generuje szablon działania w przyborniku dla operacji w kontrakcie.  
   
 > [!NOTE]
->  Ten temat zawiera wskazówki krok po kroku dotyczące tworzenia usługi przepływu pracy pierwszy kontraktu. Aby uzyskać więcej informacji na temat przepływu pracy pierwszy kontraktu usługi programowanie zobacz [kontraktu pierwszego tworzenia usługi przepływu pracy](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md).  
+>  Ten temat zawiera wskazówki krok po kroku dotyczące tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu usługi. Aby uzyskać więcej informacji na temat programowanie usługi przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu, zobacz [kontraktu pierwszy programowanie usługi przepływu pracy](contract-first-workflow-service-development.md).  
   
 ### <a name="creating-the-workflow-project"></a>Tworzenie projektu przepływu pracy  
   
-1.  W programie Visual Studio, wybierz **pliku**, **nowy projekt**. Wybierz **WCF** węźle **C#** w węźle **szablony** drzewa, a następnie wybierz **aplikacji usługi przepływu pracy WCF** szablonu.  
+1.  W programie Visual Studio, wybierz **pliku**, **nowy projekt**. Wybierz **WCF** węźle **C#** w węźle **szablony** drzewa, a następnie wybierz **aplikacja usługi przepływu pracy WCF** szablon.  
   
 2.  Nazwa nowego projektu `ContractFirst` i kliknij przycisk **Ok**.  
   
 ### <a name="creating-the-service-contract"></a>Tworzenie kontraktu usługi  
   
-1.  Kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy element...** . Wybierz **kod** węźle po lewej stronie oraz **klasy** szablonu po prawej stronie. Nazwa nowej klasy `IBookService` i kliknij przycisk **Ok**.  
+1.  Kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy element...** . Wybierz **kodu** węzła po lewej stronie, a **klasy** szablonu po prawej stronie. Nadaj nowej klasie `IBookService` i kliknij przycisk **Ok**.  
   
-2.  W górnej części okna kodu, który pojawia się, Dodaj instrukcję Using `System.Servicemodel`.  
+2.  W górnej części okna kodu, który pojawia się, Dodaj instrukcję Using do `System.Servicemodel`.  
   
     ```  
     using System.ServiceModel;  
     ```  
   
-3.  Zmień definicję klasy próbki do następujących definicji interfejsu.  
+3.  Zmień definicję klasy przykładowe następująca definicja interfejsu.  
   
     ```  
     [ServiceContract]  
@@ -45,20 +45,20 @@ ms.locfileid: "33515308"
         }  
     ```  
   
-4.  Tworzenie projektu przez naciśnięcie przycisku **Ctrl + Shift + B**.  
+4.  Skompiluj projekt, naciskając klawisz **Ctrl + Shift + B**.  
   
-### <a name="importing-the-service-contract"></a>Importowanie kontraktu usługi  
+### <a name="importing-the-service-contract"></a>Trwa importowanie kontraktu usługi  
   
-1.  Kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz **kontraktu usługi Import**. W obszarze  **\<bieżącego projektu >**, otwórz wszystkie węzły podrzędne i wybierz **IBookService**. Kliknij przycisk **OK**.  
+1.  Kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** i wybierz **Importuj kontrakt usługi**. W obszarze  **\<bieżący projekt >**, otwórz wszystkie węzły podrzędne i wybierz **IBookService**. Kliknij przycisk **OK**.  
   
-2.  Zostanie otwarte okno dialogowe informujący, że operacja zakończyła się pomyślnie, a wygenerowanego działania będzie wyświetlana w przyborniku po utworzeniu projektu. Kliknij przycisk **OK**.  
+2.  Zostanie otwarte okno dialogowe alerty, operacja ukończona pomyślnie, a które wygenerowane działania zostaną wyświetlone w przyborniku, po skompilowaniu projektu. Kliknij przycisk **OK**.  
   
-3.  Tworzenie projektu przez naciśnięcie przycisku **Ctrl + Shift + B**, dzięki czemu importowanych działania zostanie wyświetlony w przyborniku.  
+3.  Skompiluj projekt, naciskając klawisz **Ctrl + Shift + B**, dzięki czemu importowanych działania będą wyświetlane w przyborniku.  
   
-4.  W **Eksploratora rozwiązań**, otwórz Service1.xamlx. Usługi przepływu pracy będą wyświetlane w projektancie.  
+4.  W **Eksploratora rozwiązań**, otwórz Service1.xamlx. W Projektancie pojawi się usługi przepływu pracy.  
   
-5.  Wybierz **sekwencji** działania. Kliknij w oknie właściwości **...** przycisk **ImplementedContract** właściwości. W **edytora kolekcji typu** okno zostanie wyświetlone, kliknij przycisk **typu** listy rozwijanej i wybierz **Przeglądaj w poszukiwaniu typów...** wpis. W **Przeglądaj i wybierz .net typ** okna dialogowego, w obszarze  **\<bieżącego projektu >**, otwórz wszystkie węzły podrzędne i wybierz **IBookService**. Kliknij przycisk **OK**. W **edytora kolekcji typu** okna dialogowego, kliknij przycisk **OK**.  
+5.  Wybierz **sekwencji** działania. W oknie dialogowym właściwości kliknij **...** znajdujący się w **ImplementedContract** właściwości. W **Editor typu Kolekce** okna, które zostanie wyświetlone, kliknij przycisk **typu** listy rozwijanej i wybierz **vyhledat typy...** wpis. W **przeglądania i wybierz pozycję .net typu** okna dialogowego, w obszarze  **\<bieżący projekt >**, otwórz wszystkie węzły podrzędne i wybierz **IBookService**. Kliknij przycisk **OK**. W **Editor typu Kolekce** okno dialogowe, kliknij przycisk **OK**.  
   
 6.  Wybierz i Usuń **ReceiveRequest** i **SendResponse** działań.  
   
-7.  Przeciągnij z przybornika, **Buy_ReceiveAndSendReply** i **Checkout_Receive** działania na **usługa Sekwencyjna** działania.
+7.  Z przybornika przeciągnij **Buy_ReceiveAndSendReply** i **Checkout_Receive** działania na **usługa Sekwencyjna** działania.

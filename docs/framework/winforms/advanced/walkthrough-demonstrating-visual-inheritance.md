@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 3e1aced8ecb4f85dd81c8a928422cbb7d0b10dcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564334"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721453"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia wizualizacji
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym instruktażu utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Będzie zaimportować tej biblioteki klas do innego projektu i utworzyć nowy formularz, który dziedziczy z formularza podstawowego. Z tego instruktażu dowiesz się jak:  
@@ -140,7 +140,7 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
 5.  Otwórz odziedziczony formularz (**formularz2**) w projektancie, klikając dwukrotnie plik, go, jeśli nie jest już otwarty.  
   
-     W Projektancie dziedziczone przyciski powinny mieć symbol (![VisualBasicInheritanceSymbol — zrzut ekranu](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) w górnym rogu, wskazując, są one dziedziczone.  
+     W Projektancie dziedziczone przyciski powinny mieć symbol (![VisualBasicInheritanceSymbol — zrzut ekranu](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) w górnym rogu, wskazując, są one dziedziczone.  
   
 6.  Wybierz **Say Hello** przycisk i obserwuj uchwytami zmiany rozmiaru. Ponieważ ten przycisk jest chroniony, obiektów dziedziczących można go przenieść, zmienić jego rozmiar, zmień swój podpis i wprowadzać inne modyfikacje.  
   
@@ -161,9 +161,9 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
 12. Naciśnij klawisz F5, aby uruchomić aplikację i przyjrzeć się zachowaniu odziedziczony formularz.  
   
 ## <a name="next-steps"></a>Następne kroki  
- Dziedziczenie w przypadku kontrolek użytkownika działa w taki sam sposób. Otwórz nowy projekt biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompiluj projekt. Otwórz inny nowy projekt biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać odziedziczoną kontrolkę (za pośrednictwem **Dodaj nowe elementy** okno dialogowe) do projektu i przy użyciu **selektor dziedziczenia**. Dodaj formant użytkownika, a następnie zmień `Inherits` (`:` w języku Visual C#) instrukcja. Aby uzyskać więcej informacji, zobacz [jak: Dziedziczenie formularzy Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ Dziedziczenie w przypadku kontrolek użytkownika działa w taki sam sposób. Otwórz nowy projekt biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompiluj projekt. Otwórz inny nowy projekt biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać odziedziczoną kontrolkę (za pośrednictwem **Dodaj nowe elementy** okno dialogowe) do projektu i przy użyciu **selektor dziedziczenia**. Dodaj formant użytkownika, a następnie zmień `Inherits` (`:` w języku Visual C#) instrukcja. Aby uzyskać więcej informacji, zobacz [jak: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Dziedziczenie formularzy Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
-- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)
+- [Windows Forms](../index.md)

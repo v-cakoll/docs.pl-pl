@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 86e61afd0882fea9015cdfe3b40e6d3cd329391b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734964"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703923"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows
 Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplikacji, często można zapewnić użytkownikom możliwość dodawania nowych wierszy danych w magazynie danych. <xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje tę funkcję, zapewniając wiersza dla nowych rekordów, który jest zawsze wyświetlany jako ostatni wiersz. Jest ona oznaczona symbolem gwiazdki (*) w jej nagłówku wiersza. W poniższych sekcjach omówiono niektóre czynności, należy rozważyć, gdy program za pomocą wiersza dla nowych rekordów jest włączona.  
@@ -24,7 +24,7 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplik
 ## <a name="populating-the-row-for-new-records-with-default-data"></a>Wypełnianie wiersza dla nowych rekordów z danymi domyślnymi  
  Gdy użytkownik wybierze wiersza dla nowych rekordów jako bieżący wiersz <xref:System.Windows.Forms.DataGridView> kontrolować zgłasza <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> zdarzeń.  
   
- To zdarzenie umożliwia dostęp do nowego <xref:System.Windows.Forms.DataGridViewRow> i umożliwia wypełnianie nowy wiersz z danymi domyślnymi. Aby uzyskać więcej informacji, zobacz [jak: Określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ To zdarzenie umożliwia dostęp do nowego <xref:System.Windows.Forms.DataGridViewRow> i umożliwia wypełnianie nowy wiersz z danymi domyślnymi. Aby uzyskać więcej informacji, zobacz [jak: Określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>Kolekcja wierszy  
  Wiersz dla nowych rekordów jest zawarty w <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji ale zachowuje się inaczej w dwóch aspektach:  
@@ -34,7 +34,7 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplik
 -   Można dodać nie wiersz po wierszu dla nowych rekordów. <xref:System.InvalidOperationException> Jest wywoływane, jeśli ta próba zostanie podjęta. W rezultacie wiersza dla nowych rekordów jest zawsze ostatni wiersz w <xref:System.Windows.Forms.DataGridView> kontroli. Metody na <xref:System.Windows.Forms.DataGridViewRowCollection> , dodawanie wierszy —<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>, i <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— wszystkie wywołania metod wstawiania wewnętrznie po wiersza dla nowych rekordów jest obecny.  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>Dostosowywanie Visual wiersza dla nowych rekordów  
- Po utworzeniu wiersza dla nowych rekordów opiera się na wiersza określonego przez <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> właściwości. Wszystkie style komórki, które nie zostały określone dla tego wiersza są dziedziczone z innych właściwości. Aby uzyskać więcej informacji na temat dziedziczenie stylów komórki, zobacz [style komórki w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+ Po utworzeniu wiersza dla nowych rekordów opiera się na wiersza określonego przez <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> właściwości. Wszystkie style komórki, które nie zostały określone dla tego wiersza są dziedziczone z innych właściwości. Aby uzyskać więcej informacji na temat dziedziczenie stylów komórki, zobacz [style komórki w formancie DataGridView formularzy Windows](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
  Wartości początkowe, są wyświetlane przez komórki w wierszu nowe rekordy są pobierane z każdej komórki <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> właściwości. Dla komórki typu <xref:System.Windows.Forms.DataGridViewImageCell>, właściwość ta zwraca obraz zastępczy. W przeciwnym razie ta właściwość zwraca `null`. Można zastąpić tę właściwość, aby zwrócić wartość niestandardową. Jednak te wartości początkowej może być zastąpiony <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> program obsługi zdarzeń, gdy zespół wprowadza wiersza dla nowych rekordów.  
   
@@ -55,10 +55,10 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplik
  Wiersz dla nowych rekordów zawsze jest tworzony w stanie niezaznaczone.  
   
 ## <a name="virtual-mode"></a>Tryb wirtualny  
- Jeśli są Implementowanie trybu wirtualnego, należy śledzić razie wiersza dla nowych rekordów w modelu danych i kiedy należy wycofać dodanie wiersza. Dokładna implementację tej funkcji zależy od implementacji modelu danych i jego semantyki transakcji na przykład, czy zakres zatwierdzenia znajduje się na poziomie wiersza lub komórki. Aby uzyskać więcej informacji, zobacz [trybu wirtualnego w formancie DataGridView formularzy Windows](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md).  
+ Jeśli są Implementowanie trybu wirtualnego, należy śledzić razie wiersza dla nowych rekordów w modelu danych i kiedy należy wycofać dodanie wiersza. Dokładna implementację tej funkcji zależy od implementacji modelu danych i jego semantyki transakcji na przykład, czy zakres zatwierdzenia znajduje się na poziomie wiersza lub komórki. Aby uzyskać więcej informacji, zobacz [trybu wirtualnego w formancie DataGridView formularzy Windows](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

@@ -2,16 +2,16 @@
 title: 'Instrukcje: Utwórz Store wystąpienia niestandardowego'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503193"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707772"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Instrukcje: Utwórz Store wystąpienia niestandardowego
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, Magazyn wystąpienia, który używa programu SQL Server do utrwalenia danych przepływu pracy. Jeśli aplikacja jest wymagany do utrwalenia danych przepływu pracy na innym urządzeniu, takie jak system plików, lub innej bazy danych można zaimplementować magazyn wystąpienia niestandardowego. Magazyn niestandardowy wystąpienie tworzy się przez rozszerzenie abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy i implementowanie metod, które są wymagane do wykonania. Aby uzyskać pełną implementację magazynu niestandardowego wystąpienia, zobacz [firmowych proces zakupu](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) próbki.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, Magazyn wystąpienia, który używa programu SQL Server do utrwalenia danych przepływu pracy. Jeśli aplikacja jest wymagany do utrwalenia danych przepływu pracy na innym urządzeniu, takie jak system plików, lub innej bazy danych można zaimplementować magazyn wystąpienia niestandardowego. Magazyn niestandardowy wystąpienie tworzy się przez rozszerzenie abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy i implementowanie metod, które są wymagane do wykonania. Aby uzyskać pełną implementację magazynu niestandardowego wystąpienia, zobacz [firmowych proces zakupu](./samples/corporate-purchase-process.md) próbki.
 
 ## <a name="implementing-the-begintrycommand-method"></a>Implementacja metody BeginTryCommand
 
@@ -226,11 +226,11 @@ ms.locfileid: "57503193"
 
 ## <a name="using-a-custom-instance-store"></a>Za pomocą magazynu niestandardowego wystąpienia
 
-Aby zaimplementować magazynu niestandardowego wystąpienia, przypisz wystąpienie magazynu wystąpienia do <xref:System.Activities.WorkflowApplication.InstanceStore%2A>i zaimplementować <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> metody. Zobacz [jak: Tworzenie i uruchamianie długiego uruchamiania przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) samouczek dotyczący szczegółowych informacji.
+Aby zaimplementować magazynu niestandardowego wystąpienia, przypisz wystąpienie magazynu wystąpienia do <xref:System.Activities.WorkflowApplication.InstanceStore%2A>i zaimplementować <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> metody. Zobacz [jak: Tworzenie i uruchamianie długiego uruchamiania przepływu pracy](how-to-create-and-run-a-long-running-workflow.md) samouczek dotyczący szczegółowych informacji.
 
 ## <a name="a-sample-instance-store"></a>Magazyn wystąpień próbki
 
-Poniższy przykładowy kod jest pełne wystąpienie Implementacja magazynu, z [firmowych proces zakupu](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) próbki. Ten magazyn wystąpienia są utrwalane danych przepływu pracy do pliku za pomocą języka XML.
+Poniższy przykładowy kod jest pełne wystąpienie Implementacja magazynu, z [firmowych proces zakupu](./samples/corporate-purchase-process.md) próbki. Ten magazyn wystąpienia są utrwalane danych przepływu pracy do pliku za pomocą języka XML.
 
 ```csharp
 using System;

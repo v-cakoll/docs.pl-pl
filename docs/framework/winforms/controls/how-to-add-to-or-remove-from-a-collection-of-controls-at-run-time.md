@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 88a743cc6d0a1e90d2912c9ec610fae326ff5770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720894"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Instrukcje: Dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania
 Typowe zadania podczas tworzenia aplikacji są dodawanie formantów do i usuwanie kontrolek z dowolną kontrolkę kontenera na formularzach (takie jak <xref:System.Windows.Forms.Panel> lub <xref:System.Windows.Forms.GroupBox> formantu lub nawet formularza). W czasie projektowania formanty można przeciągać bezpośrednio okno panel lub grupę. W czasie wykonywania, obsługa tych formantów `Controls` kolekcji, która przechowuje informacje o kontrolki są umieszczane na nich.  
@@ -102,4 +102,4 @@ Typowe zadania podczas tworzenia aplikacji są dodawanie formantów do i usuwani
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.Panel>
-- [Panel, kontrolka](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+- [Panel, kontrolka](panel-control-windows-forms.md)

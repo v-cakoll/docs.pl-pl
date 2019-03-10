@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687248"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710683"
 ---
 # <a name="application-settings-architecture"></a>Architektura ustawień aplikacji
 W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje zaawansowanych funkcji architektury, takich jak ustawienia pogrupowanych i klucze ustawienia.  
@@ -34,12 +34,12 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
   
 -   Weryfikowanie ustawień, zanim zostaną one zmienione lub przed ich zapisaniem  
   
- Ustawienia można opisać za pomocą numeru atrybuty zdefiniowane w ramach <xref:System.Configuration> przestrzeni nazw; te ustawienia zostały opisane w [atrybuty ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-attributes.md). Podczas definiowania ustawienie, należy zastosować go z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, która opisuje, czy ustawienie dotyczy całej aplikacji, lub po prostu bieżącego użytkownika.  
+ Ustawienia można opisać za pomocą numeru atrybuty zdefiniowane w ramach <xref:System.Configuration> przestrzeni nazw; te ustawienia zostały opisane w [atrybuty ustawień aplikacji](application-settings-attributes.md). Podczas definiowania ustawienie, należy zastosować go z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, która opisuje, czy ustawienie dotyczy całej aplikacji, lub po prostu bieżącego użytkownika.  
   
  Poniższy kod definiuje klasę ustawienia niestandardowe, za pomocą pojedynczego ustawienia `BackgroundColor`.  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>Ustawienia trwałości  
  <xref:System.Configuration.ApplicationSettingsBase> Klasy nie sam utrwalić lub załadować ustawień; tego zadania znajduje się z dostawcą ustawienia klasy, która pochodzi od klasy <xref:System.Configuration.SettingsProvider>. Jeśli klasa pochodna <xref:System.Configuration.ApplicationSettingsBase> nie określono ustawień dostawcy za pośrednictwem <xref:System.Configuration.SettingsProviderAttribute>, domyślny dostawca, a następnie <xref:System.Configuration.LocalFileSettingsProvider>, jest używany.  
@@ -88,7 +88,7 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
 </configuration>  
 ```  
   
- Dla definicji elementów w obrębie sekcji Ustawienia aplikacji w pliku konfiguracji, zobacz [schemat ustawień aplikacji](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md).  
+ Dla definicji elementów w obrębie sekcji Ustawienia aplikacji w pliku konfiguracji, zobacz [schemat ustawień aplikacji](../../configure-apps/file-schema/application-settings-schema.md).  
   
 ### <a name="settings-bindings"></a>Ustawienia powiązań  
  Ustawienia aplikacji używa architektury powiązanie danych formularzy Windows w celu zapewnienia dwukierunkowej komunikacji aktualizacji ustawień między obiektu ustawień i składników. Jeśli używasz programu Visual Studio do tworzenie ustawień aplikacji i przypisać je do właściwości składnika te powiązania są generowane automatycznie.  
@@ -106,7 +106,7 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
   
 3.  Określa ustawienia, które go, w której pliki na podstawie atrybutu tego ustawienia.  
   
- W przypadku zastosowania klasy ustawienia, można użyć <xref:System.Configuration.SettingsSerializeAsAttribute> do oznaczania ustawienie binarne lub niestandardowej serializacji przy użyciu <xref:System.Configuration.SettingsSerializeAs> wyliczenia. Aby uzyskać więcej informacji na temat tworzenia własnych klas ustawień w kodzie, zobacz [jak: Tworzenie ustawień aplikacji](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ W przypadku zastosowania klasy ustawienia, można użyć <xref:System.Configuration.SettingsSerializeAsAttribute> do oznaczania ustawienie binarne lub niestandardowej serializacji przy użyciu <xref:System.Configuration.SettingsSerializeAs> wyliczenia. Aby uzyskać więcej informacji na temat tworzenia własnych klas ustawień w kodzie, zobacz [jak: Tworzenie ustawień aplikacji](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Ustawienia lokalizacji plików  
  Lokalizacja `app`. exe.config i *użytkownika*.config pliki będą się różnić w zależności od sposobu instalowania aplikacji. W przypadku aplikacji opartych na formularzach Windows skopiować na komputer lokalny `app`. exe.config będą znajdować się w tym samym katalogu, jako katalog podstawowy aplikacji głównego pliku wykonywalnego, i *użytkownika*.config będą znajdować się w lokalizacji określonej przez <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> właściwości. Dla aplikacji, który został zainstalowany przez [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], oba te pliki będą znajdować się w [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] katalog danych poniżej ustawienia i %InstallRoot%\Documents\\*username*\Local ustawienia.  
@@ -127,8 +127,8 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
   
  Twój dostawca musi implementować jedną właściwość i jedną metodę, której implementacji może nie być oczywista. <xref:System.Configuration.SettingsProvider.ApplicationName%2A> Właściwość jest abstrakcyjny właściwość <xref:System.Configuration.SettingsProvider>; programujesz powinno zwrócić następujące czynności:  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  Klasy pochodnej musi implementować też `Initialize` metodę, która nie przyjmuje żadnych argumentów i nie zwraca żadnej wartości. Ta metoda nie jest zdefiniowany przez <xref:System.Configuration.SettingsProvider>.  
   
@@ -136,8 +136,8 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
   
  Po zaimplementowane i kompilowane dostawcy należy wydać polecenie klasy ustawienia do używania tego dostawcy zamiast domyślnego. Osiągniesz to za pośrednictwem <xref:System.Configuration.SettingsProviderAttribute>. Zastosowanie do całej klasy ustawień dostawcy jest używany dla każdego ustawienia, który definiuje klasę; Jeśli stosowane do poszczególnych ustawień, architektura ustawień aplikacji używa tego dostawcy tylko do tych ustawień i używa <xref:System.Configuration.LocalFileSettingsProvider> przez resztę. W poniższym przykładzie kodu pokazano, jak nakazać Klasa ustawień, aby użyć niestandardowego dostawcy.  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  Dostawca może być wywoływana z wielu wątków jednocześnie, ale zawsze będzie zapisywać w tej samej lokalizacji magazynu; w związku z tym Architektura ustawień aplikacji będzie tylko tworzy pojedyncze wystąpienie klasy dostawcy.  
   
@@ -150,7 +150,7 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [Przegląd ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Ustawienia aplikacji dotyczące kontrolek niestandardowych](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [Przegląd ustawień aplikacji](application-settings-overview.md)
+- [Ustawienia aplikacji dotyczące kontrolek niestandardowych](application-settings-for-custom-controls.md)
 - [ClickOnce i ustawienia aplikacji](/visualstudio/deployment/clickonce-and-application-settings)
-- [Schemat ustawień aplikacji](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [Schemat ustawień aplikacji](../../configure-apps/file-schema/application-settings-schema.md)

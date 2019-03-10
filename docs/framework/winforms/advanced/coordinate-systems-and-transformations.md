@@ -6,33 +6,33 @@ helpviewer_keywords:
 - graphics [Windows Forms], transformations
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
-ms.openlocfilehash: 1b91cbc21abe8cc92a9718a71712c52219ad0174
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521781"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709942"
 ---
 # <a name="coordinate-systems-and-transformations"></a>Systemy i przekształcenia współrzędnych
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zapewnia transformacja świata i transformacja strony, dzięki czemu można przekształcać (Obróć, skalowania, tłumaczenia i tak dalej) elementów rysowania. Dwa przekształcenia pozwalają również działać w różnych systemów współrzędnych.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zapewnia transformacji świata i przekształcenie strony, dzięki czemu można przekształcać (Obróć, skalowanie, tłumaczenie i tak dalej) elementy rysowania. Dwa przekształcenia pozwalają również na pracy w różnych systemów współrzędnych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Typy systemów współrzędnych](../../../../docs/framework/winforms/advanced/types-of-coordinate-systems.md)  
+ [Typy systemów współrzędnych](types-of-coordinate-systems.md)  
  Wprowadza współrzędne systemy i przekształcenia.  
   
- [Macierzowe przedstawienie przekształcenia](../../../../docs/framework/winforms/advanced/matrix-representation-of-transformations.md)  
- W tym artykule omówiono używanie macierzy do przekształcenia współrzędnych.  
+ [Macierzowe przedstawienie przekształcenia](matrix-representation-of-transformations.md)  
+ W tym artykule omówiono, za pomocą macierzy dla przekształcenia współrzędnych.  
   
- [Globalne i lokalne przekształcenia](../../../../docs/framework/winforms/advanced/global-and-local-transformations.md)  
+ [Globalne i lokalne przekształcenia](global-and-local-transformations.md)  
  W tym artykule omówiono globalne i lokalne przekształcenia.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Drawing.Drawing2D.Matrix>  
- Hermetyzuje reprezentujący geometrycznych przekształcenia macierzy podobne 3 x 3.  
+ Hermetyzuje macierzy affine — 3, 3, reprezentujący geometrycznych transformacji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Używanie przekształceń w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
- Zawiera listę tematów, które dostarczają więcej informacji o sposobie używania przekształcenia macierzowe.  
+ [Używanie przekształceń w zarządzanym GDI+](using-transformations-in-managed-gdi.md)  
+ Zawiera listę tematów, które zawierają więcej informacji o używaniu przekształcenia macierzy.  
   
- [Informacje o kodzie zarządzanym GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- Zawiera listę tematów opisujących konstrukcje grafiki, używanego w programie .NET Framework.
+ [Informacje o kodzie zarządzanym GDI+](about-gdi-managed-code.md)  
+ Zawiera listę tematów opisujących konstrukcje grafiki, używane w programie .NET Framework.

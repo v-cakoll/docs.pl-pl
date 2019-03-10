@@ -6,30 +6,30 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms]
 - grouping controls [Windows Forms]
 ms.assetid: ee7fb3ed-2fae-4df3-bdeb-15d42e5d7d75
-ms.openlocfilehash: ca302dc78b177241065cde60d1b887ad0d9813a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b808a76f4aa9d2c28c838d0c6cfd7bc28d589061
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525145"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704573"
 ---
 # <a name="groupbox-control-windows-forms"></a>GroupBox — Formant (Formularze systemu Windows)
-Formularze systemu Windows <xref:System.Windows.Forms.GroupBox> formantów służą do zapewniania do zidentyfikowania grupowania dla innych formantów. Zwykle Użyj pola grupy do podziału formularza przez funkcję. Na przykład może być formularzu zamówienia określający wysyłkowy opcje, takie jak które liczbę operator do użycia. Grupowanie wszystkie opcje w polu grupy daje użytkownikowi logicznej wizualnie. <xref:System.Windows.Forms.GroupBox> Formant jest podobny do <xref:System.Windows.Forms.Panel> kontrolować; jednak tylko <xref:System.Windows.Forms.GroupBox> formant zawiera nagłówek i tylko <xref:System.Windows.Forms.Panel> formant może mieć paski przewijania.  
+Windows Forms <xref:System.Windows.Forms.GroupBox> formantów służą do zapewniania do zidentyfikowania grupowanie dla innych kontrolek. Zwykle Użyj pola grupy pozwalające na dalszy podział formularza za pomocą funkcji. Na przykład masz formularza zamówienia, określający korespondencyjny opcje, takie jak które przelewy operatora do użycia. Grupowanie wszystkie opcje w polu grupy zapewnia logiczną oznak wizualnych aktywacji. <xref:System.Windows.Forms.GroupBox> Kontroli jest podobny do <xref:System.Windows.Forms.Panel> kontrolować; jednak tylko <xref:System.Windows.Forms.GroupBox> kontrolka Wyświetla podpis i tylko <xref:System.Windows.Forms.Panel> formant może mieć paski przewijania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [GroupBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
- Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
+ [GroupBox, kontrolka — omówienie](groupbox-control-overview-windows-forms.md)  
+ Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
- [Instrukcje: grupowanie kontrolek za pomocą kontrolki GroupBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
- Opis sposobu użycia tego formantu do formantów grupy.  
+ [Instrukcje: Grupowanie formantów za pomocą formantu GroupBox formularzy Windows](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
+ Opisuje sposób używania tej kontrolki na grupowanie formantów.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.GroupBox>  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
  <xref:System.Windows.Forms.Panel>  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.

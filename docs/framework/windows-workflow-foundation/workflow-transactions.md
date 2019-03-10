@@ -2,12 +2,12 @@
 title: Transakcje przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 6081fb02-c0f2-483d-97b8-f3b7dc03011d
-ms.openlocfilehash: 061cebb6791ada9e3e64097a6490b1e2b4736839
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb2a72bb24640d214170c52b8b3bf0a328d3f775
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624222"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714622"
 ---
 # <a name="workflow-transactions"></a>Transakcje przepływu pracy
 
@@ -47,7 +47,7 @@ static Activity ScenarioOne()
 }  
 ```  
   
-Aby uzyskać więcej informacji, zobacz temat przy użyciu <xref:System.ServiceModel.Activities.TransactedReceiveScope>, zobacz [przepływu transakcji do i z usług przepływu pracy](../../../docs/framework/wcf/feature-details/flowing-transactions-into-and-out-of-workflow-services.md).  
+Aby uzyskać więcej informacji, zobacz temat przy użyciu <xref:System.ServiceModel.Activities.TransactedReceiveScope>, zobacz [przepływu transakcji do i z usług przepływu pracy](../wcf/feature-details/flowing-transactions-into-and-out-of-workflow-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Activities.Statements.TransactionScope>

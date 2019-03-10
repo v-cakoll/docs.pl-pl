@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: cfa0d374bf08ab1ea1753ed46e3e87ca177343b6
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a4fcb4e527825a9946861a46dc336db227e52296
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219857"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709630"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel
 <xref:System.Windows.Forms.TableLayoutPanel> Kontrolować obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jego formantów podrzędnych.  
@@ -62,20 +62,20 @@ ms.locfileid: "56219857"
 ## <a name="example"></a>Przykład  
  Na poniższej ilustracji przedstawiono pięciu przycisków zakotwiczone w pięć oddzielnych <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
   
- ![Zakotwiczanie formantu TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor.gif "VS_TLPanchor")  
+ ![Zakotwiczanie formantu TableLayoutPanel](./media/vs-tlpanchor.gif "VS_TLPanchor")  
   
  Na poniższej ilustracji przedstawiono cztery przyciski zakotwiczone w rogach cztery oddzielne <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
   
- ![Zakotwiczanie formantu TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor2.gif "VS_TLPanchor2")  
+ ![Zakotwiczanie formantu TableLayoutPanel](./media/vs-tlpanchor2.gif "VS_TLPanchor2")  
   
  Na poniższej ilustracji przedstawiono trzy przyciski rozciągnięte przez Zakotwiczanie w trzech oddzielnych <xref:System.Windows.Forms.TableLayoutPanel> komórek.  
   
- ![Zakotwiczanie formantu TableLayoutPanel](../../../../docs/framework/winforms/controls/media/vs-tlpanchor3.gif "VS_TLPAnchor3")  
+ ![Zakotwiczanie formantu TableLayoutPanel](./media/vs-tlpanchor3.gif "VS_TLPAnchor3")  
   
  Poniższy przykład kodu pokazuje wszystkie kombinacje <xref:System.Windows.Forms.Control.Anchor%2A> wartości właściwości <xref:System.Windows.Forms.Button> w kontrolce <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
   
- [!code-csharp[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/CS/TlpAnchorExampleForm.cs#1)]
- [!code-vb[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/VB/TlpAnchorExampleForm.vb#1)]  
+ [!code-csharp[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/CS/TlpAnchorExampleForm.cs#1)]
+ [!code-vb[System.Windows.Forms.TableLayoutPanel.AnchorExampleForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.AnchorExampleForm/VB/TlpAnchorExampleForm.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
@@ -86,4 +86,4 @@ ms.locfileid: "56219857"
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [TableLayoutPanel, kontrolka](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+- [TableLayoutPanel, kontrolka](tablelayoutpanel-control-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: fc0edaa8ca115a09eb6d8382a12d9a7c0c0db7f6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260167"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715558"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Efekty modyfikowania wyglądu formularza podstawowego
 Podczas opracowywania aplikacji często konieczne może być zmiana wyglądu formularza podstawowego, z której dziedziczą inne formy w projekcie (lub w innych projektach).  
@@ -27,5 +27,5 @@ Podczas opracowywania aplikacji często konieczne może być zmiana wyglądu for
   
 ## <a name="see-also"></a>Zobacz także
 - [base](~/docs/csharp/language-reference/keywords/base.md)
-- [Instrukcje: Dziedziczenie formularzy Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
-- [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)

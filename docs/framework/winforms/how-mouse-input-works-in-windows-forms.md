@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496010"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725331"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Działanie myszy w formularzach systemu Windows
-Otrzymywanie i obsługę wejście myszy jest ważnym elementem każdej aplikacji Windows. Obsługa zdarzeń myszy do wykonania akcji w aplikacji lub za pomocą informacji o lokalizacji myszy do testowania trafień lub innych działań. Ponadto można zmienić sposób kontrolki w aplikacji obsługi myszy w danych wejściowych. W tym temacie opisano te zdarzenia myszy w szczegółów i jak uzyskać i zmieniać ustawień systemowych myszy. Aby uzyskać więcej informacji na temat danych dostarczanych za pomocą myszy wywoływania zdarzeń i kolejności, w którym zdarzenia kliknięcia myszą, zobacz [zdarzeń myszy w formularzach Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
+Otrzymywanie i obsługę wejście myszy jest ważnym elementem każdej aplikacji Windows. Obsługa zdarzeń myszy do wykonania akcji w aplikacji lub za pomocą informacji o lokalizacji myszy do testowania trafień lub innych działań. Ponadto można zmienić sposób kontrolki w aplikacji obsługi myszy w danych wejściowych. W tym temacie opisano te zdarzenia myszy w szczegółów i jak uzyskać i zmieniać ustawień systemowych myszy. Aby uzyskać więcej informacji na temat danych dostarczanych za pomocą myszy wywoływania zdarzeń i kolejności, w którym zdarzenia kliknięcia myszą, zobacz [zdarzeń myszy w formularzach Windows Forms](mouse-events-in-windows-forms.md).  
   
 ## <a name="mouse-location-and-hit-testing"></a>Położenie myszy i testowania trafień  
  Gdy użytkownik przesuwa mysz, system operacyjny wskaźnika myszy. Wskaźnik myszy zawiera piksela o nazwie aktywny, którego system operacyjny śledzi i jest rozpoznawany jako położenia wskaźnika. Gdy użytkownik przesuwa wskaźnik myszy lub naciśnie przycisk myszy <xref:System.Windows.Forms.Control> zawierający <xref:System.Windows.Forms.Cursor.HotSpot%2A> wywołuje zdarzenie myszy odpowiednie. Można uzyskać bieżącego położenia kursora myszy przy użyciu <xref:System.Windows.Forms.MouseEventArgs.Location%2A> właściwość <xref:System.Windows.Forms.MouseEventArgs> podczas obsługi zdarzenia myszy lub za pomocą <xref:System.Windows.Forms.Cursor.Position%2A> właściwość <xref:System.Windows.Forms.Cursor> klasy. Można później użyć informacji o lokalizacji myszy do testowania trafień, a następnie wykonać akcję na podstawie lokalizacji kursora myszy. Możliwość testowania trafień jest wbudowana w kilku formantów w formularzach Windows Forms takich jak <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.MonthCalendar> i <xref:System.Windows.Forms.DataGridView> kontrolki. Używane ze zdarzeniem myszy odpowiednie <xref:System.Windows.Forms.Control.MouseHover> na przykład testowania trafień jest bardzo przydatne do określenia, kiedy aplikacja powinna przeprowadzić określonej akcji.  
@@ -53,6 +53,6 @@ Otrzymywanie i obsługę wejście myszy jest ważnym elementem każdej aplikacji
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Pobiera liczbę wierszy do przewijania podczas obracania kółka myszy.|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Przechwytywanie myszy w formularzach Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Wskaźniki myszy w formularzach Windows Forms](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Przechwytywanie myszy w formularzach Windows Forms](mouse-capture-in-windows-forms.md)
+- [Wskaźniki myszy w formularzach Windows Forms](mouse-pointers-in-windows-forms.md)

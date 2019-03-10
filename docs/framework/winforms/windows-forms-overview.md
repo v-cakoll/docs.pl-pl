@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375327"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705847"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms — omówienie
 
@@ -26,9 +26,9 @@ Poniższy przegląd omawia zalety inteligentnych aplikacji klienckich, najważni
 
  W formularzach Windows *formularza* jest powierzchnią wizualną, na którym możesz wyświetlić informacje do użytkownika. Zazwyczaj tworzenie aplikacji Windows Forms przez dodawanie kontrolek do formularzy i tworzenie odpowiedzi na działania użytkownika, takich jak kliknięcia lub naciśnięcia klawiszy. A *kontroli* jest element interfejsu użytkownika dyskretnych, który wyświetla dane lub akceptuje dane wejściowe.
 
- Gdy użytkownik wykona coś do formularza lub jego formantów, akcja generuje zdarzenie. Aplikacja reaguje na zdarzenia przy użyciu kodu i przetwarza zdarzenia w momencie ich wystąpienia. Aby uzyskać więcej informacji, zobacz [tworzenie obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md).
+ Gdy użytkownik wykona coś do formularza lub jego formantów, akcja generuje zdarzenie. Aplikacja reaguje na zdarzenia przy użyciu kodu i przetwarza zdarzenia w momencie ich wystąpienia. Aby uzyskać więcej informacji, zobacz [tworzenie obsługi zdarzeń w formularzach Windows Forms](creating-event-handlers-in-windows-forms.md).
 
- Windows Forms zawiera szereg formantów, które można dodać do formularzy: formantów, które wyświetlają pola tekstowe, przyciski, pola listy rozwijanej, przyciski radiowe i nawet stron sieci Web. Aby uzyskać listę wszystkich kontrolek, można użyć w formularzu, zobacz [kontrolki do użycia w formularzach Windows Forms](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md). Jeśli formant nie spełnia Twoich potrzeb, formularze Windows obsługuje również tworzenie własnych niestandardowych kontrolek przy użyciu <xref:System.Windows.Forms.UserControl> klasy.
+ Windows Forms zawiera szereg formantów, które można dodać do formularzy: formantów, które wyświetlają pola tekstowe, przyciski, pola listy rozwijanej, przyciski radiowe i nawet stron sieci Web. Aby uzyskać listę wszystkich kontrolek, można użyć w formularzu, zobacz [kontrolki do użycia w formularzach Windows Forms](./controls/controls-to-use-on-windows-forms.md). Jeśli formant nie spełnia Twoich potrzeb, formularze Windows obsługuje również tworzenie własnych niestandardowych kontrolek przy użyciu <xref:System.Windows.Forms.UserControl> klasy.
 
  Formularze Windows ma zaawansowanych kontrolek interfejsu użytkownika, które emulują funkcji wysokiej jakości aplikacji, takie jak Microsoft Office. Kiedy używasz <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.MenuStrip> kontrolki, możesz utworzyć pasków narzędzi i menu, które zawierają tekst i obrazy, wyświetlić podmenu i hostują inne kontrolki, takie jak pola tekstowe i pola kombi.
 
@@ -45,10 +45,10 @@ Aby uzyskać szczegółowe informacje o sposobie używania tych funkcji zobacz n
 
 |Opis|Temat pomocy|
 |-----------------|----------------|
-|Za pomocą kontrolek na formularzach|[Instrukcje: Dodawanie formantów do formularzy Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Za pomocą <xref:System.Windows.Forms.ToolStrip> kontroli|[Instrukcje: Tworzenie podstawowych ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
-|Tworzenia grafiki przy użyciu <xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Tworzenie niestandardowych formantów|[Instrukcje: Dziedziczenie z klasy UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Za pomocą kontrolek na formularzach|[Instrukcje: Dodawanie formantów do formularzy Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
+|Za pomocą <xref:System.Windows.Forms.ToolStrip> kontroli|[Instrukcje: Tworzenie podstawowych ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Tworzenia grafiki przy użyciu <xref:System.Drawing>|[Wprowadzenie do programowania grafiki](./advanced/getting-started-with-graphics-programming.md)|
+|Tworzenie niestandardowych formantów|[Instrukcje: Dziedziczenie z klasy UserControl](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>Wyświetlanie i manipulowanie danymi
  Wiele aplikacji, musisz wyświetlić dane z bazy danych, plik XML, usługi XML sieci Web lub innego źródła danych. Formularze Windows udostępnia elastyczną kontrolę, który nosi nazwę <xref:System.Windows.Forms.DataGridView> kontrolkę do wyświetlania takich danych tabelarycznych w tradycyjnych formacie wierszy i kolumn, tak aby każdy element danych zajmował komórki. Kiedy używasz <xref:System.Windows.Forms.DataGridView>, można dostosować wygląd pojedyncze komórki, blokuje dowolnego wierszy i kolumn w miejscu i wyświetlić złożonych kontrolek w komórkach, m.in.
@@ -65,10 +65,10 @@ Aby uzyskać szczegółowe informacje o sposobie używania tych funkcji zobacz n
 
 |Opis|Temat pomocy|
 |-----------------|----------------|
-|Za pomocą <xref:System.Windows.Forms.BindingSource> składnika|[Instrukcje: Powiązywanie kontrolek formularzy Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Praca z [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] źródeł danych|[Instrukcje: Sortowanie i filtrowanie danych ADO.NET za pomocą Windows składnika BindingSource formularzy](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Za pomocą <xref:System.Windows.Forms.BindingSource> składnika|[Instrukcje: Powiązywanie kontrolek formularzy Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|Praca z [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] źródeł danych|[Instrukcje: Sortowanie i filtrowanie danych ADO.NET za pomocą Windows składnika BindingSource formularzy](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Korzystanie z okna źródeł danych|[Wiązanie kontrolek Windows Forms z danymi w programie Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|Przy użyciu ustawień aplikacji|[Instrukcje: Tworzenie ustawień aplikacji](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|Przy użyciu ustawień aplikacji|[Instrukcje: Tworzenie ustawień aplikacji](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Wdrażanie aplikacji na komputerach klienckich
 
@@ -98,15 +98,15 @@ Aby uzyskać szczegółowe informacje o sposobie używania tych funkcji zobacz n
 
 |Opis|Temat pomocy|
 |-----------------|----------------|
-|Drukowanie zawartości formularza|[Instrukcje: Drukowanie grafiki w formularzach Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Instrukcje: Podglądu wydruku w formularzach Windows Forms](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|Więcej informacji na temat zabezpieczeń Windows Forms|[Przegląd zabezpieczeń w formularzach Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
+|Drukowanie zawartości formularza|[Instrukcje: Drukowanie grafiki w formularzach Windows Forms](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Instrukcje: Podglądu wydruku w formularzach Windows Forms](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Więcej informacji na temat zabezpieczeń Windows Forms|[Przegląd zabezpieczeń w formularzach Windows Forms](security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do formularzy Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [Tworzenie nowego formularza systemu Windows](../../../docs/framework/winforms/creating-a-new-windows-form.md)
-- [ToolStrip, kontrolka — omówienie](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [DataGridView, kontrolka — omówienie](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [BindingSource, składnik — omówienie](../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [Przegląd ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Wprowadzenie do formularzy Windows Forms](getting-started-with-windows-forms.md)
+- [Tworzenie nowego formularza systemu Windows](creating-a-new-windows-form.md)
+- [ToolStrip, kontrolka — omówienie](./controls/toolstrip-control-overview-windows-forms.md)
+- [DataGridView, kontrolka — omówienie](./controls/datagridview-control-overview-windows-forms.md)
+- [BindingSource, składnik — omówienie](./controls/bindingsource-component-overview.md)
+- [Przegląd ustawień aplikacji](./advanced/application-settings-overview.md)
 - [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)

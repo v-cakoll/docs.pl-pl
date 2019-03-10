@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: d1b015fbd35c07611816195c4498a74fb232383f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 354c524924794cd240a230e325a4f0eee58cdc50
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441986"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705210"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows
 Mimo że formularze Windows zostały zoptymalizowane do kontrolek Windows Forms hosta, ale nadal używać kontrolki ActiveX. Podczas planowania aplikacji korzystającej z formantów ActiveX, należy pamiętać o następujących kwestiach:  
@@ -29,8 +29,8 @@ Mimo że formularze Windows zostały zoptymalizowane do kontrolek Windows Forms 
     >  Jeśli nazwa składowej formantu ActiveX pasuje do nazwy zdefiniowanej w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], a następnie Importer formantów ActiveX będzie prefiks nazwy elementu członkowskiego z **Ctl** gdy tworzy <xref:System.Windows.Forms.AxHost> klasy pochodnej. Na przykład, jeśli formant ActiveX ma składową o nazwie **układ**, jej nazwa zostanie zmieniona **CtlLayout** w klasie pochodnej AxHost ponieważ **układ** zdarzeń jest zdefiniowana w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [Zabezpieczenia dostępu kodu](../../../../docs/framework/misc/code-access-security.md)
+- [Instrukcje: Dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [Zabezpieczenia dostępu kodu](../../misc/code-access-security.md)
 - [Formantów i programowanych obiektów w różnych językach i bibliotekach](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Umieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
-- [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)
+- [Umieszczanie kontrolek na formularzach Windows Forms](putting-controls-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms](index.md)

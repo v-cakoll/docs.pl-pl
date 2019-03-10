@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: b39c682ccb73a71da1752e6e9f3f79e5916d106c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81edab0d44ae0bb9dcabe77ad568f281e6f5fffb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503992"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722373"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.LinkLabel> kontrolka zezwala na dodawanie łączy stylu sieci Web do aplikacji Windows Forms. Możesz użyć <xref:System.Windows.Forms.LinkLabel> kontrola wszystko, co umożliwia <xref:System.Windows.Forms.Label> kontrolki; można też określić część tekstu jako link do pliku, folderu lub strony sieci Web.  
@@ -25,6 +25,6 @@ Formularze Windows <xref:System.Windows.Forms.LinkLabel> kontrolka zezwala na do
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.LinkLabel>
-- [Label, kontrolka — omówienie](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [Instrukcje: Łączenie do obiektu lub strony za pomocą formantu LinkLabel formularzy Windows w sieci Web](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [Instrukcje: Zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Label, kontrolka — omówienie](label-control-overview-windows-forms.md)
+- [Instrukcje: Łączenie do obiektu lub strony za pomocą formantu LinkLabel formularzy Windows w sieci Web](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Instrukcje: Zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

@@ -9,33 +9,33 @@ helpviewer_keywords:
 - spin button control
 - NumericUpDown control [Windows Forms]
 ms.assetid: 32b0c20d-4f37-4aea-873d-faded741d2db
-ms.openlocfilehash: 24e2464eaa94f104d167add1f5fe696b7622ee09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47aff0ae4d75ef83fd72bc0dc381963a7b496ec6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535860"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704301"
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown — Formant (Formularze systemu Windows)
-Formularze systemu Windows `NumericUpDown` formant wygląda kombinację pole tekstowe i parę strzałki, które użytkownik może kliknąć, aby dostosować wartość. Kontrolka Wyświetla i ustawia pojedynczą wartość liczbową z listy dostępnych opcji. Użytkownik może zwiększyć i zmniejszyć liczbę kilikając przyciski, naciskając klawisze strzałek w górę i w dół lub wpisując liczbę. Klikając przycisk strzałki w górę przenosi wartość w kierunku maksymalną; klikając przycisk Strzałka w dół przenosi pozycji do minimum. Gdzie mogą być przydatne tego rodzaju kontroli to regulacji głośności na odtwarzacz muzyczny. Up-down — formanty liczbowych są używane w niektórych aplikacjach Panelu sterowania systemu Windows.  
+Formularze Windows `NumericUpDown` kontrolka wygląda kombinacją pole tekstowe oraz pary strzałki, które użytkownik może kliknąć, aby dopasować wartość. Kontrolka Wyświetla i ustawia wartość liczbową jednej z listy dostępnych opcji. Użytkownik może zwiększyć i zmniejszyć liczbę, przez kliknięcie przycisków w górę i w dół, naciskając klawisze strzałek w górę i w dół lub wpisując liczbę. Klikając przycisk Strzałka w górę przenosi wartość kierunku maksymalną; klikając przycisk strzałki w dół przenosi pozycji do minimum. To na przykład gdy ten rodzaj kontroli mogą być przydatne dla formantu woluminu na odtwarzacz muzyczny. Liczbowe up-down — formanty są używane w niektórych aplikacjach Panelu sterowania Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [NumericUpDown, kontrolka — omówienie](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)  
- Ogólne pojęcia związane z `NumericUpDown` kontroli, co umożliwi użytkownikom do przeglądania i wybrać z listy wartości liczbowych.  
+ [NumericUpDown, kontrolka — omówienie](numericupdown-control-overview-windows-forms.md)  
+ Ogólne pojęcia związane z `NumericUpDown` formant, który pozwala użytkownikom na przeglądanie i wybierz z listy wartości liczbowych.  
   
- [Instrukcje: ustawianie i zwracanie wartości liczbowych za pomocą kontrolki NumericUpDown formularzy Windows Forms](../../../../docs/framework/winforms/controls/set-and-return-numeric-values-with-wf-numericupdown-control.md)  
- Opisuje sposób sprawdzić, czy wartość formantu.  
+ [Instrukcje: Ustawianie i zwracanie wartości liczbowych za pomocą formantu NumericUpDown formularzy Windows](set-and-return-numeric-values-with-wf-numericupdown-control.md)  
+ Opisuje sposób sprawdzić wartość formantu.  
   
- [Instrukcje: ustawienie formatu dla kontrolki NumericUpDown formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
- W tym artykule opisano, jak skonfigurować sposób wyświetlania wartości w formancie.  
+ [Instrukcje: Ustawienie formatu dla formantu NumericUpDown formularzy Windows](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)  
+ W tym artykule opisano, jak skonfigurować sposób wyświetlania wartości w kontrolce.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.NumericUpDown>  
- Zawiera informacje dotyczące <xref:System.Windows.Forms.NumericUpDown> klasy i jej elementów członkowskich.  
+ Zawiera informacje referencyjne dotyczące <xref:System.Windows.Forms.NumericUpDown> klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
- [DomainUpDown, kontrolka](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- Wprowadza podobne do formantu <xref:System.Windows.Forms.NumericUpDown>, ale <xref:System.Windows.Forms.DomainUpDown> kontrolka ma wyświetlać ciągu zamiast wartości liczbowych.
+ [DomainUpDown, kontrolka](domainupdown-control-windows-forms.md)  
+ Wprowadza podobny do kontrolki <xref:System.Windows.Forms.NumericUpDown>, chyba że <xref:System.Windows.Forms.DomainUpDown> kontrolka wyświetla ciąg, a nie wartości liczbowych.

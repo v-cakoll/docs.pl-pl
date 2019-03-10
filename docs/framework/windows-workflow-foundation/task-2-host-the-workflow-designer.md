@@ -2,12 +2,12 @@
 title: Zadanie 2. Hostowanie projektanta przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572776"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708642"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Zadanie 2. Hostowanie projektanta przepływu pracy
 W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] w aplikacji Windows Presentation Foundation (WPF).  
@@ -16,7 +16,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
   
 ### <a name="to-host-the-workflow-designer"></a>Do obsługi projektanta przepływów pracy  
   
-1.  Otwórz HostingApplication projektu utworzonego w sekcji [zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Otwórz HostingApplication projektu utworzonego w sekcji [zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
 2.  Dopasuj rozmiar okna, aby ułatwić użyj [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Aby to zrobić, wybierz **MainWindow** w projektancie, naciśnij klawisz F4, aby wyświetlić **właściwości** okna i w **układ** sekcji istnieje, należy ustawić **szerokość** wartość 600 i **wysokość** wartości 350.  
   
@@ -97,7 +97,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
         }  
         ```  
   
-         Aby uzyskać więcej informacji na temat rejestrowania Projektanci działań, zobacz [jak: Tworzenie niestandardowego projektanta działań](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Aby uzyskać więcej informacji na temat rejestrowania Projektanci działań, zobacz [jak: Tworzenie niestandardowego projektanta działań](how-to-create-a-custom-activity-designer.md).  
   
     5.  W `MainWindow` konstruktora klasy, Dodaj wywołania metod uprzednio zadeklarowany, zarejestruj metadane projektanta pomocy technicznej i utworzyć <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
@@ -119,9 +119,9 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
   
 9. Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązanie.  
   
-10. Zobacz [zadanie 3: Tworzenie okienka PropertyGrid i przybornika](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) dowiesz się, jak dodać **przybornika** i **PropertyGrid** pomocy technicznej do Twojej rehostowanym projektancie przepływu pracy.  
+10. Zobacz [zadanie 3: Tworzenie okienka PropertyGrid i przybornika](task-3-create-the-toolbox-and-propertygrid-panes.md) dowiesz się, jak dodać **przybornika** i **PropertyGrid** pomocy technicznej do Twojej rehostowanym projektancie przepływu pracy.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Rehostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Zadanie 3. Tworzenie okienka PropertyGrid i przybornika](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Rehostowanie projektanta przepływu pracy](rehosting-the-workflow-designer.md)
+- [Zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Zadanie 3. Tworzenie okienka PropertyGrid i przybornika](task-3-create-the-toolbox-and-propertygrid-panes.md)

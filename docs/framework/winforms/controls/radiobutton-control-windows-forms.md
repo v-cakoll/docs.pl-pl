@@ -8,27 +8,27 @@ helpviewer_keywords:
 - radio buttons
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
-ms.openlocfilehash: e62f3dddb75a5652f1edb3ef5c6bfb7d8029210d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf2da32dd286e03b89cfa59e09d38eceb030f5ea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534970"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725310"
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton — Formant (Formularze systemu Windows)
-Formularze systemu Windows `RadioButton` formanty wyświetlania zestawu co najmniej dwa wzajemnie wykluczających się opcji do użytkownika. Podczas gdy przycisków radiowych i pól wyboru mogą pojawiać się działają podobnie, jest istotną różnicą:, gdy użytkownik wybierze przycisk radiowy, innych przycisków radiowych w tej samej grupy nie można również wybrać.  
+Windows Forms `RadioButton` formanty wyświetlania zestawu co najmniej dwóch wzajemnie wykluczających się opcji do użytkownika. Chociaż pola wyboru i przyciski opcji może wydawać się działają podobnie, ma jedną istotną różnicą: gdy użytkownik wybierze przycisk radiowy, inne przyciski radiowe w tej samej grupy nie można również wybrać.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [RadioButton, kontrolka — omówienie](../../../../docs/framework/winforms/controls/radiobutton-control-overview-windows-forms.md)  
- Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
+ [RadioButton, kontrolka — omówienie](radiobutton-control-overview-windows-forms.md)  
+ Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
- [Instrukcje: grupowanie kontrolek RadioButton formularzy Windows Forms, aby działały jak zestaw](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- Wyjaśniono, jak grupa przycisków radiowych jako zestaw, z których można wybrać tylko jeden z nich.  
+ [Instrukcje: Grupa formantów RadioButton formularzy Windows aby działały jak zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ Wyjaśnia, jak grupowanie przycisków radiowych w zestawie, które można wybrać tylko jeden.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.RadioButton> Klasy  
- Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
+ <xref:System.Windows.Forms.RadioButton> Klasa  
+ Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.

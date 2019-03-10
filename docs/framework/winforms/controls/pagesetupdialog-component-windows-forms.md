@@ -19,21 +19,21 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 8caa984799d7f8f5a8f4b017e8c40eeb44d8b6c4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964569"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723945"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog — Składnik (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.PageSetupDialog> składnik to wstępnie skonfigurowane okno dialogowe umożliwia określanie szczegółów strony do drukowania w aplikacji systemu Windows. Użycie go w aplikacji opartych na Windows jako proste rozwiązanie dla użytkowników, aby ustawić preferencje strony audytów Konfigurowanie własnego okno dialogowe. Możesz umożliwić użytkownikom ustawić obramowanie i korekty margines, nagłówki i stopki i pionowym, a orientacji poziomej. Opierając się na standardowych okien dialogowych Windows, możesz tworzyć aplikacje, w których podstawowych funkcji jest natychmiast dobrze znanym użytkownikom.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [PageSetupDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ [PageSetupDialog, składnik — omówienie](pagesetupdialog-component-overview-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.PageSetupDialog> składnik, który można użyć, aby wyświetlić okno dialogowe wstępnie skonfigurowane, którego użytkownicy mogą modyfikować ustawień strony.  
   
- [Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog](../../../../docs/framework/winforms/controls/how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ [Instrukcje: Określanie właściwości strony za pomocą składnika PageSetupDialog](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
  Wyjaśnia, jak ustawić właściwości strony za pomocą wystąpienia <xref:System.Windows.Forms.PageSetupDialog> składnika w czasie wykonywania.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -41,10 +41,10 @@ Formularze Windows <xref:System.Windows.Forms.PageSetupDialog> składnik to wst�
  Zawiera dodatkowe informacje na temat klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.  
   
- [Kontrolki i składniki okien dialogowych](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ [Kontrolki i składniki okien dialogowych](dialog-box-controls-and-components-windows-forms.md)  
  W tym artykule opisano zestaw kontrolek i składników, które umożliwiają użytkownikom do wykonywania standardowych interakcji z aplikacji lub systemu.  
   
  [Podstawowy kod służący do Windows Forms okien dialogowych](https://go.microsoft.com/fwlink/?LinkID=102575)  

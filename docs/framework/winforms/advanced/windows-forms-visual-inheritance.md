@@ -10,40 +10,40 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-ms.openlocfilehash: 6cf2a7d95f7f6b015c785859b646a5d42f907127
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524416"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705301"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Formularze systemu Windows — dziedziczenie Visual
-Czasami może zdecydować, że projekt odwołuje się do formularza podobny do utworzonego w poprzednim projekcie. Możesz też utworzyć podstawowy formularz z ustawienia, takie jak znak wodny lub niektórych układ formantu, który zostanie następnie ponownie użyć w projekcie, a każda iteracja zawierającą zmiany w oryginalnym szablonie formularza. Dziedziczenie formularzy umożliwia tworzenie formularza podstawowego, a następnie dziedziczyć po nim i wprowadź zmiany, zachowując niezależnie od oryginalnego ustawienia potrzebne.  
+Od czasu do czasu może zdecydować, że projekt wymaga formularz podobny do jednego, utworzony w poprzednim projektu. Możesz też utworzyć podstawowy formularz przy użyciu ustawień, takich jak znak wodny lub niektórych układu kontrolki, która będzie następnie używana ponownie w ramach projektu, z każdą iteracją, zawierający modyfikacji oryginalnego szablonu formularza. Dziedziczenie formularzy pozwala na tworzenie formularza podstawowego, a następnie dziedziczyć po nim i wprowadź zmiany przy jednoczesnym zachowaniu niezależnie od oryginalnego ustawienia, należy.  
   
- Można utworzyć formularze klas pochodnych programowo lub przy użyciu selektora dziedziczenia Visual.  
+ Klasa pochodna formularzy można utworzyć programowo lub za pomocą selektora dziedziczenia Visual.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: dziedziczenie formularzy Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)  
  Zawiera wskazówki dotyczące tworzenia odziedziczone formularze w kodzie.  
   
- [Instrukcje: dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
- Zawiera wskazówki dotyczące tworzenia formularzy dziedziczone z selektora dziedziczenia.  
+ [Instrukcje: Dziedziczenie formularzy przy użyciu okna dialogowego selektora dziedziczenia](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  
+ Zawiera wskazówki dotyczące tworzenia odziedziczone formularze za pomocą selektora dziedziczenia.  
   
- [Efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- Zawiera wskazówki dotyczące zmieniania kontrolek formularza podstawowego i ich właściwości.  
+ [Efekty modyfikowania wyglądu formularza podstawowego](effects-of-modifying-base-form-appearance.md)  
+ Zawiera wskazówki dotyczące zmieniania kontrolki formularza podstawowego i ich właściwości.  
   
- [Przewodnik: demonstrowanie dziedziczenia wizualizacji](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  
- Opisuje sposób tworzenia podstawowej formularza systemu Windows i skompiluj go do biblioteki klas. Zostanie zaimportować tę bibliotekę klas do innego projektu, a następnie utwórz nowy formularz, który dziedziczy z formularza podstawowego.  
+ [Przewodnik: Demonstrowanie dziedziczenia wizualizacji](walkthrough-demonstrating-visual-inheritance.md)  
+ W tym artykule opisano sposób tworzenia formularza Windows podstawowego i skompiluj go do biblioteki klas. Będzie zaimportować tej biblioteki klas do innego projektu, a następnie utworzyć nowy formularz, który dziedziczy z formularza podstawowego.  
   
- [Instrukcje: stosowanie modyfikatorów i właściwości GenerateMember](../../../../docs/framework/winforms/advanced/how-to-use-the-modifiers-and-generatemember-properties.md)  
- Zawiera wskazówki dotyczące korzystania z `GenerateMember` i `Modifiers` właściwości, które mają zastosowanie, gdy projektant formularzy systemu Windows generuje zmienną członkowską dla składnika.  
+ [Instrukcje: Stosowanie modyfikatorów i właściwości "generatemember"](how-to-use-the-modifiers-and-generatemember-properties.md)  
+ Zawiera wskazówki dotyczące używania `GenerateMember` i `Modifiers` właściwości, które są istotne, generując zmienną składową dla składnika Windows Forms Designer.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Podstawowe informacje o dziedziczeniu (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- Opisuje sposób definiowania klas języka Visual Basic, które stanowią podstawę dla innych klas.  
+ W tym artykule opisano sposób definiowania klas języka Visual Basic, które stanowią podstawę dla innych klas.  
   
  [class](~/docs/csharp/language-reference/keywords/class.md)  
- Opisuje metody C# klas, w których jest dozwolona pojedyncze dziedziczenie.  
+ W tym artykule opisano C# podejście klas, w których pojedyncze dziedziczenie jest dozwolone.  
   
  [Rozwiązywanie problemów z odziedziczonymi programami obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  
- Wyświetla listę typowych problemów, które wynikają z obsługi zdarzeń w składników odziedziczonych
+ Zawiera listę typowych problemów, które wynikają z programami obsługi zdarzeń w składnikach dziedziczone

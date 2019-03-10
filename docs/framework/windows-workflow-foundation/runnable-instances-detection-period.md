@@ -2,16 +2,16 @@
 title: Okres wykrywania wystąpień możliwych do uruchomienia
 ms.date: 03/30/2017
 ms.assetid: 4ea5c787-b638-47fd-bfc8-ede8c2898ce6
-ms.openlocfilehash: 7b12353c3bd18367618825d22d020391b14ec3f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9652dd811f64e5324219b8aa0700ab8219edeeb0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513240"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709710"
 ---
 # <a name="runnable-instances-detection-period"></a>Okres wykrywania wystąpień możliwych do uruchomienia
-W magazynie wystąpień przepływu pracy SQL działa wewnętrzny zadanie, które okresowo budzi i wykrywa do uruchomienia lub aktywowalnej wystąpienia w bazie danych trwałości. **Okres wykrywania wystąpień możliwych do uruchomienia** właściwość w magazynie wystąpień przepływu pracy SQL określa okres czasu, po którym w magazynie wystąpień przepływu pracy SQL uruchamia zadanie wykrywania do wykrywania wszelkich do uruchomienia lub aktywowalnej przepływu pracy wystąpienia w bazie danych trwałości od poprzedniego cyklu wykrywania.  
+Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, okresowo budzi się i wykrywa możliwy do uruchomienia lub aktywowalnej wystąpień w bazie danych trwałości. **Możliwy do uruchomienia okres wykrywania wystąpień** właściwość Store wystąpienia przepływu pracy SQL określa okres czasu, po upływie którego Store wystąpienia przepływu pracy SQL uruchamia zadanie wykrywania, aby wykrywać wszelkie możliwe do uruchomienia lub aktywowalnej przepływu pracy wystąpień w bazie danych trwałości od poprzedniego cyklu wykrywania.  
   
- Ustawienie krótszy interwał dla tej właściwości skraca czas między wygaśnięcia czasomierz skojarzony z wystąpieniem przepływu pracy i sygnalizowania zdarzenia oraz kolejnych ładowanie wystąpienia. Jednak również zwiększa obciążenie przetwarzania na hoście i nie może być wskazane w scenariuszach, w których występują rzadko trwałe czasomierze i/lub awarii hosta. Typ właściwości jest TimeSpan i wartość właściwości zgodne z formatem: hh: mm:. Minimalna wartość dla tej właściwości to 00:00:01. Wartość domyślna właściwości to 00:00:05.  
+ Ustawienie krótszy okres dla tej właściwości skraca czas między wygaśnięcia czasomierz skojarzonych z wystąpieniem przepływu pracy i sygnalizowanie zdarzenia oraz ładowanie kolejne wystąpienia. Jednak również zwiększa obciążenie przetwarzania na hoście i nie może być pożądane w scenariuszach, w którym występują rzadko trwałe czasomierze i/lub błędy hosta. Typ właściwości jest przedział czasu, a wartość właściwości w formacie:: mm: ss. Minimalna wartość tej właściwości to 00:00:01. Wartość domyślna właściwości to 00:00:05.  
   
- Aby uzyskać więcej informacji zobacz wykrywanie i aktywowanie wystąpienia przepływu pracy do uruchomienia i aktywowalnej [aktywacji wystąpienia](../../../docs/framework/windows-workflow-foundation/instance-activation.md).
+ Aby uzyskać więcej informacji zobacz wykrywanie i aktywowanie wystąpienia przepływu pracy możliwy do uruchomienia i aktywowalnej [Aktywacja wystąpienia](instance-activation.md).

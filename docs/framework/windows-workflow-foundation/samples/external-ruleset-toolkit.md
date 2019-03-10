@@ -2,12 +2,12 @@
 title: Zewnętrzne Przybornik zestawu reguł
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 7a331f139fd7d3127892e6a103b370ec50dc9c99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482369"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710046"
 ---
 # <a name="external-ruleset-toolkit"></a>Zewnętrzne Przybornik zestawu reguł
 
@@ -30,7 +30,7 @@ Składnik to między innymi próbki:
 
 Interakcja składników przedstawiono na rysunku 1. W kolejnych sekcjach opisano każdego składnika.
 
-![Omówienie pojęć dotyczących zewnętrznych Przykładowy zestaw reguł](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
+![Omówienie pojęć dotyczących zewnętrznych Przykładowy zestaw reguł](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
 
 Rysunek 1: Omówienie przykładowych
 
@@ -47,7 +47,7 @@ Rysunek 1: Omówienie przykładowych
 
 Zrzut ekranu narzędzia do zestaw reguł jest pokazany na rysunku 2. Z **Store reguły** menu, można załadować dostępne zestawy reguł z bazy danych i zapisać zmodyfikowane zestawów reguł do sklepu. Plik konfiguracji aplikacji zawiera parametry połączenia bazy danych dla bazy danych zestaw reguł. Możesz uruchomić to narzędzie, automatycznie ładuje zestawy reguł z bazy danych skonfigurowane.
 
-![Dnia zewnętrzny zestaw reguł Toolkit przykładowe dane wyjściowe](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")
+![Dnia zewnętrzny zestaw reguł Toolkit przykładowe dane wyjściowe](./media/rulesetbrowser.gif "RuleSetBrowser")
 
 Rysunek 2: Zestaw reguł przeglądarki
 
@@ -55,13 +55,13 @@ Narzędzie RuleSet dotyczy numery wersji głównych i pomocniczych zestawów reg
 
 Po kliknięciu **Edycja reguł**, uruchomiony Edytor zestawu reguł, jak pokazano na rysunku 3.
 
-![Zewnętrzne Przybornik zestawu przykładowych danych wyjściowych](../../../../docs/framework/windows-workflow-foundation/samples/media/ruleseteditor.gif "RuleSetEditor")
+![Zewnętrzne Przybornik zestawu przykładowych danych wyjściowych](./media/ruleseteditor.gif "RuleSetEditor")
 
 Rysunek 3: Edytor zestawu reguł
 
 Jest to, ponownie hostingu okno dialogowe Edytor, który jest częścią dodatku Windows Workflow Foundation programu Visual Studio. Zapewnia te same funkcje, w tym obsługę funkcji Intellisense. Zasady są tworzone na typ docelowy (np. przepływ pracy), który jest skojarzony z zestawu reguł w narzędziu; Po kliknięciu **Przeglądaj** w oknie dialogowym Narzędzia główne **selektor przepływu pracy i typu** zostanie wyświetlone okno dialogowe, jak pokazano na rysunku 4.
 
-![Przepływ pracy &#47;wpisz wybór](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
+![Przepływ pracy &#47;wpisz wybór](./media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
 
 Rysunek 4: Selektor typu/przepływu pracy
 
@@ -71,7 +71,7 @@ Możesz użyć **selektor przepływu pracy i typu** okna dialogowego, aby okreś
 
 Po kliknięciu **OK** w **selektor przepływu pracy i typu** okno dialogowe, sprawdza poprawność wybranego typu względem zestaw reguł, aby upewnić się, że typ docelowy wszystkie elementy członkowskie przywoływany przez zasady. Błędy są wyświetlane w **błędy sprawdzania poprawności** okna dialogowego (zobacz rysunek 5). Można kontynuować zmiany, pomimo błędów, lub kliknij przycisk **anulować**. Z **narzędzia** menu w oknie dialogowym Narzędzia główne, możesz kliknąć pozycję **weryfikacji** do ponownego sprawdzania poprawności wersji zestaw reguł względem działanie docelowe.
 
-![Błędy sprawdzania poprawności z zewnętrznego zestawu reguł próbki](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")
+![Błędy sprawdzania poprawności z zewnętrznego zestawu reguł próbki](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
 
 Rysunek 5: Błędy sprawdzania poprawności
 
@@ -81,7 +81,7 @@ Po wybraniu pliku Rules **selektor RuleSet** zostanie wyświetlone okno dialogow
 
 Dla każdego zestawu reguł, który importuje narzędzie spróbuje znaleźć skojarzony typ z folderu bin\Debug znajdujące się w lokalizacji pliku Rules (jeśli istnieje), na podstawie elementów członkowskich, używany w zestawie reguł. Jeśli narzędzie wykryje wiele typów zgodnych, próbuje wybierz typ na podstawie dopasowania między nazwę typu i nazwę pliku Rules (na przykład `Workflow1` typ odpowiada Workflow1.rules). Jeśli istnieje wiele dopasowań, pojawia się monit o wybranie typu. Jeśli ten mechanizm automatycznej identyfikacji nie znajdzie zgodnego zestawu lub typu, a następnie po zaimportowaniu można kliknąć **Przeglądaj** w oknie dialogowym Narzędzia główne, aby przejść do skojarzonego typu.
 
-![Selektor zestawu reguł](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")
+![Selektor zestawu reguł](./media/rulesetselector.gif "RuleSetSelector")
 
 Rysunek 6: Selektor zestawu reguł
 

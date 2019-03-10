@@ -1,6 +1,7 @@
 ---
 title: Podstawy dotyczące odzyskiwania pamięci
-ms.date: 03/30/2017
+description: Dowiedz się, jak działa moduł odśmiecania pamięci i jak ona skonfigurowana w celu uzyskania optymalnej wydajności.
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066335"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712477"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a> W środowisko uruchomieniowe języka wspólnego (CLR) wyrzucanie elementów bezużytecznych działa jako automatycznych Menadżer pamięci. Zapewnia następujące korzyści:  
@@ -30,28 +31,8 @@ ms.locfileid: "55066335"
   
 -   Zapewnia bezpieczeństwo pamięci, upewniając się, że obiekt nie może korzystać zawartość innego obiektu.  
   
- W tym temacie opisano podstawowe pojęcia dotyczące wyrzucania elementów bezużytecznych. Ten temat zawiera następujące sekcje:  
-  
--   [Podstawy pamięci](#fundamentals_of_memory)  
-  
--   [Warunki dla wyrzucania elementów bezużytecznych](#conditions_for_a_garbage_collection)  
-  
--   [Sterty zarządzanej](#the_managed_heap)  
-  
--   [Generacje](#generations)  
-  
--   [Co się dzieje podczas wyrzucania elementów bezużytecznych](#what_happens_during_a_garbage_collection)  
-  
--   [Manipulowanie niezarządzanymi zasobami](#manipulating_unmanaged_resources)  
-  
--   [Wyrzucanie elementów bezużytecznych stacji roboczych i serwera](#workstation_and_server_garbage_collection)  
-  
--   [Współbieżne wyrzucanie elementów bezużytecznych](#concurrent_garbage_collection)  
-  
--   [Tło wyrzucanie elementów bezużytecznych](#background_garbage_collection)  
-  
--   [Tło serwer wyrzucania elementów bezużytecznych](#background_server_garbage_collection)  
-  
+ W tym temacie opisano podstawowe pojęcia dotyczące wyrzucania elementów bezużytecznych. 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>Podstawy pamięci  
  Na poniższej liście podsumowano ważne pojęcia dotyczące pamięci CLR.  
@@ -109,9 +90,9 @@ ms.locfileid: "55066335"
   
  Wszechobecność (częstotliwość i czas trwania) wyrzucania elementów bezużytecznych jest wynikiem ilości alokacji i ilość pamięci przetrwałych na stosie zarządzanym.  
   
- Stos może być traktowany jako akumulacja dwóch stosów: stosu dużych obiektów i stosu małych obiektów.  
+ Stos może być traktowany jako akumulacja dwóch stosów: [stertę dużego obiektu](large-object-heap.md) i stosu małych obiektów.  
   
- Stos dużych obiektów zawiera bardzo duże obiekty o rozmiarze 85 000 bajtów i większe. Obiekty na stosie dużego obiektu są zazwyczaj tablicami. To jest rzadkie dla obiektu wystąpienia, żeby był bardzo duży.  
+ [Stertę dużego obiektu](large-object-heap.md) zawiera bardzo duże obiekty o rozmiarze 85 000 bajtów i większe. Obiekty na stosie dużego obiektu są zazwyczaj tablicami. To jest rzadkie dla obiektu wystąpienia, żeby był bardzo duży.  
   
  [Powrót do początku](#top)  
   

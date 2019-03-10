@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: b1f7e0f5c1c9a01e47d0d972c56db8da922d2d0b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664578"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708915"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Właściwości formantów formularzy systemu Windows
 Formant programu Windows Forms dziedziczy wiele formularza właściwości klasy bazowej <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Obejmują one właściwości takich jak <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>i wiele innych. Aby uzyskać szczegółowe informacje o właściwości dziedziczonych, zobacz <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
@@ -19,19 +19,19 @@ Formant programu Windows Forms dziedziczy wiele formularza właściwości klasy 
  Można zastąpić właściwości dziedziczonych w kontrolce i jak definiowania nowych właściwości.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Definiowanie właściwości](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
+ [Definiowanie właściwości](defining-a-property-in-windows-forms-controls.md)  
  Pokazuje, jak implementować właściwość kontrolkę niestandardową lub składnika i pokazuje, jak zintegrować właściwość środowisko projektowania.  
   
- [Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
  Pokazuje jak zdefiniować domyślne wartości właściwości dla składnika lub kontrolki niestandardowej.  
   
- [Zdarzenia zmiany właściwości](../../../../docs/framework/winforms/controls/property-changed-events.md)  
+ [Zdarzenia zmiany właściwości](property-changed-events.md)  
  W tym artykule opisano, jak włączyć powiadomienia o zmianie właściwości po zmianie wartości właściwości.  
   
- [Instrukcje: Udostępnianie właściwości formantów składowych](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
+ [Instrukcje: Udostępnianie właściwości formantów składowych](how-to-expose-properties-of-constituent-controls.md)  
  Pokazuje, jak udostępnianie właściwości formantów składowych w złożonego formantu niestandardowego.  
   
- [Implementacja metody w kontrolkach niestandardowych](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
+ [Implementacja metody w kontrolkach niestandardowych](method-implementation-in-custom-controls.md)  
  Opisuje sposób implementacji metody w kontrolkach niestandardowych i składników.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -45,7 +45,7 @@ Formant programu Windows Forms dziedziczy wiele formularza właściwości klasy 
  Dokumenty atrybut, który określa <xref:System.Drawing.Design.UITypeEditor> do użycia dla właściwości niestandardowej.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Atrybuty w kontrolkach formularzy Windows Forms](attributes-in-windows-forms-controls.md)  
  W tym artykule opisano atrybuty, które można zastosować do właściwości lub innym członkom swojej niestandardowych kontrolek i składników.  
   
  [Atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  

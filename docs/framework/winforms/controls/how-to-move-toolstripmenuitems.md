@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 12554ee2225dbb186392b910ddfd7c2f69695e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50b5fd16780147ad7592035a901d993495dcb878
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660219"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708954"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Instrukcje: Przenoszenie kontrolki ToolStripMenuItems
 W czasie projektowania, można przenieść cały menu najwyższego poziomu i ich elementów menu w inne miejsce na <xref:System.Windows.Forms.MenuStrip>. Możesz również przenieść elementy menu poszczególnych między menu najwyższego poziomu lub zmiana położenia elementów menu w menu.  
@@ -73,4 +73,4 @@ W czasie projektowania, można przenieść cały menu najwyższego poziomu i ich
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [MenuStrip, kontrolka — omówienie](menustrip-control-overview-windows-forms.md)

@@ -9,27 +9,27 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 - text boxes [Windows Forms], validating user input
 ms.assetid: 235d6121-027d-481d-8d59-4f6794d15d0c
-ms.openlocfilehash: 84e01e3c8b2275f910c7daf3de31d1ffbe891171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af699875f6f3dea2f384574c85d85bd77a4507af
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539841"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713722"
 ---
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox — Formant (Formularze systemu Windows)
-Ten temat zawiera łącza do innych użytkowników o `MaskedTextBox` formantu.  
+Ten temat zawiera łącza do innych osób o `MaskedTextBox` kontroli.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przewodnik: praca z kontrolką MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)  
- Przedstawiono najważniejsze cechy `MaskedTextBox` formantu.  
+ [Przewodnik: Praca z formantem MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
+ Pokazuje kluczowe funkcje `MaskedTextBox` kontroli.  
   
- [Instrukcje: powiązanie danych z kontrolką MaskedTextBox](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-maskedtextbox-control.md)  
- Pokazuje, jak do ponownego formatowania danych, gdy w bazie danych jest niezgodny z formatu oczekiwanego przez definicję maski.  
+ [Instrukcje: Powiąż dane z formantem MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
+ Pokazuje, jak sformatować dane, gdy dane z bazy danych jest niezgodny z formatu oczekiwanego przez definicję maska sieci.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.MaskedTextBox>  
- Klasy podstawowej dla implementacji maskowanego polu tekstowym.  
+ Klasa podstawowe do wykonania kontrolkę pola tekstowego maskowanego.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.
+ [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)  
+ Zawiera listę wszystkich kontrolek Windows Forms, wraz z łączami do informacji na temat ich używania.

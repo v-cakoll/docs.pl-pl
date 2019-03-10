@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: dfb7ee9a97c5b88d4b2404d4d895ca91150b903b
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 41071efad50d42c873410420c850a7800b41008d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333342"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705444"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Instrukcje: Modyfikowanie danych wprowadzonych z klawiatury do kontrolki standardowej
 Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzonych z klawiatury. Korzystanie z klucza odwołuje się do obsługi klucza w ramach metody lub procedury obsługi zdarzeń, tak, aby inne metody i zdarzenia dalszych szczegółów kolejka komunikatów nie mają wartości klucza. Zmodyfikowanie klucza odwołuje się do modyfikowania wartości klucza, tak aby metody i procedury obsługi zdarzeń dalszych szczegółów kolejki komunikatów odbierać różne wartości klucza. W tym temacie przedstawiono sposób wykonywania tych zadań.  
@@ -33,8 +33,8 @@ Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzo
   
      Poniższy przykład to fragment `switch` instrukcję, która sprawdza, czy <xref:System.Windows.Forms.KeyPressEventArgs.KeyChar%2A> właściwość <xref:System.Windows.Forms.KeyPressEventArgs> odebranych przez <xref:System.Windows.Forms.Control.KeyPress> programu obsługi zdarzeń. Ten kod wykorzystuje "A" i "" klawiszy znaków.  
   
-     [!code-csharp[System.Windows.Forms.KeyBoardInput#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#6)]
-     [!code-vb[System.Windows.Forms.KeyBoardInput#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#6)]  
+     [!code-csharp[System.Windows.Forms.KeyBoardInput#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#6)]
+     [!code-vb[System.Windows.Forms.KeyBoardInput#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#6)]  
   
 ### <a name="to-modify-a-standard-character-key"></a>Aby zmodyfikować klucz znaków standardowych  
   
@@ -42,23 +42,23 @@ Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzo
   
      Poniższy przykład to fragment `switch` instrukcji, która modyfikuje "B", "A" i "b", "a". Należy pamiętać, że <xref:System.Windows.Forms.KeyPressEventArgs.Handled%2A> właściwość <xref:System.Windows.Forms.KeyPressEventArgs> parametr ma wartość `false`, dzięki czemu nowe wartości klucza są propagowane do innych metod i zdarzeń w kolejce komunikatów.  
   
-     [!code-csharp[System.Windows.Forms.KeyBoardInput#7](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#7)]
-     [!code-vb[System.Windows.Forms.KeyBoardInput#7](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#7)]  
+     [!code-csharp[System.Windows.Forms.KeyBoardInput#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#7)]
+     [!code-vb[System.Windows.Forms.KeyBoardInput#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#7)]  
   
 ### <a name="to-modify-a-noncharacter-key"></a>Aby zmodyfikować nieznakowe klucz  
   
 -   Zastąpienie <xref:System.Windows.Forms.Control> metody, która przetwarza wiadomości Windows wykrywanie przetłumaczyła lub WM_SYSKEYDOWN wiadomości i ustawić <xref:System.Windows.Forms.Message.WParam%2A> właściwość <xref:System.Windows.Forms.Message> parametr <xref:System.Windows.Forms.Keys> wartość, która reprezentuje nowy klucz nieznakowe.  
   
-     Poniższy przykład kodu demonstruje sposób zastąpienia <xref:System.Windows.Forms.Control.PreProcessMessage%2A> metodę formantu do wykrywania klucze F1, za pomocą F9 i zmodyfikować wszelkie F3 naciśnięcie klawisza F1 — do. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.Control> metod, które można przesłonić, aby przechwycić komunikaty klawiatury, zobacz [dane wejściowe użytkownika w aplikacji Windows Forms](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md) i [sposób działania wejście klawiatury](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+     Poniższy przykład kodu demonstruje sposób zastąpienia <xref:System.Windows.Forms.Control.PreProcessMessage%2A> metodę formantu do wykrywania klucze F1, za pomocą F9 i zmodyfikować wszelkie F3 naciśnięcie klawisza F1 — do. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.Control> metod, które można przesłonić, aby przechwycić komunikaty klawiatury, zobacz [dane wejściowe użytkownika w aplikacji Windows Forms](user-input-in-a-windows-forms-application.md) i [sposób działania wejście klawiatury](how-keyboard-input-works.md).  
   
-     [!code-csharp[System.Windows.Forms.KeyBoardInput#12](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#12)]
-     [!code-vb[System.Windows.Forms.KeyBoardInput#12](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#12)]  
+     [!code-csharp[System.Windows.Forms.KeyBoardInput#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#12)]
+     [!code-vb[System.Windows.Forms.KeyBoardInput#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#12)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu jest kompletnej aplikacji, aby uzyskać przykłady kodu w poprzedniej sekcji. Aplikacja korzysta z kontrolki niestandardowej, która jest pochodną <xref:System.Windows.Forms.TextBox> klasy w celu umożliwienia użycia i modyfikowanie danych wprowadzonych z klawiatury.  
   
- [!code-csharp[System.Windows.Forms.KeyBoardInput#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.KeyBoardInput#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#0)]  
+ [!code-csharp[System.Windows.Forms.KeyBoardInput#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.KeyBoardInput#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyboardInput/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
@@ -68,6 +68,6 @@ Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzo
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wprowadzanie z klawiatury w aplikacjach Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
-- [Wprowadzanie przez użytkownika w aplikacjach Windows Forms](../../../docs/framework/winforms/user-input-in-a-windows-forms-application.md)
-- [Działanie wprowadzania z klawiatury](../../../docs/framework/winforms/how-keyboard-input-works.md)
+- [Wprowadzanie z klawiatury w aplikacjach Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+- [Wprowadzanie przez użytkownika w aplikacjach Windows Forms](user-input-in-a-windows-forms-application.md)
+- [Działanie wprowadzania z klawiatury](how-keyboard-input-works.md)

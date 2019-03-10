@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093947"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715688"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalowanie programu .NET Framework dla deweloperów
 
@@ -228,7 +228,7 @@ Poniższa tabela zawiera listę obsługiwanych języków.
 
 - Aby uzyskać informacje dotyczące migracji aplikacji z programu .NET Framework 4, aby [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub jeden z jego wydania punktowe, zobacz [Przewodnik po migracji](~/docs/framework/migration-guide/index.md).
 
-- Zobacz [źródła programu .NET Framework odwołanie](https://referencesource.microsoft.com/) przeglądanie kodu źródłowego .NET Framework w trybie online. Źródło odwołania jest dostępna również na [GitHub](https://github.com/Microsoft/referencesource). Możesz [Pobierz źródło odwołania](https://referencesource.microsoft.com/download.html) przeglądania w trybie offline i krok po kroku źródła (w tym poprawki i aktualizacje) podczas debugowania. Aby uzyskać więcej informacji, zobacz wpis na blogu [nowy wygląd na potrzeby źródło odwołania .NET](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx).
+- Zobacz [źródła programu .NET Framework odwołanie](https://referencesource.microsoft.com/) przeglądanie kodu źródłowego .NET Framework w trybie online. Źródło odwołania jest dostępna również na [GitHub](https://github.com/Microsoft/referencesource). Możesz [Pobierz źródło odwołania](https://referencesource.microsoft.com/download.html) przeglądania w trybie offline i krok po kroku źródła (w tym poprawki i aktualizacje) podczas debugowania. Aby uzyskać więcej informacji, zobacz wpis na blogu [nowy wygląd na potrzeby źródło odwołania .NET](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/).
 
 ## <a name="see-also"></a>Zobacz także
 

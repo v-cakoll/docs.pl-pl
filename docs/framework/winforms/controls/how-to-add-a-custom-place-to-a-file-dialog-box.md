@@ -9,24 +9,24 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 797b98cb408c7f9fc1d55b774f7ceccef009bb22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674651"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721882"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a><span data-ttu-id="4bd98-102">Instrukcje: Dodawanie niestandardowego miejsca do okna dialogowego plików</span><span class="sxs-lookup"><span data-stu-id="4bd98-102">How To: Add a Custom Place to a File Dialog Box</span></span>
-<span data-ttu-id="4bd98-103">Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] ma obszar po lewej stronie okna dialogowego pod tytułem **Ulubione łącza**.</span><span class="sxs-lookup"><span data-stu-id="4bd98-103">The default open and save dialog boxes on [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] have an area on the left side of the dialog box titled **Favorite Links**.</span></span> <span data-ttu-id="4bd98-104">Ten obszar nosi nazwę niestandardowych miejsc.</span><span class="sxs-lookup"><span data-stu-id="4bd98-104">This area is called custom places.</span></span> <span data-ttu-id="4bd98-105"><xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> klasy umożliwiają dodanie folderów do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji.</span><span class="sxs-lookup"><span data-stu-id="4bd98-105">The <xref:System.Windows.Forms.OpenFileDialog> and <xref:System.Windows.Forms.SaveFileDialog> classes allow you to add folders to the <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection.</span></span>  
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a><span data-ttu-id="c3b56-102">Instrukcje: Dodawanie niestandardowego miejsca do okna dialogowego plików</span><span class="sxs-lookup"><span data-stu-id="c3b56-102">How To: Add a Custom Place to a File Dialog Box</span></span>
+<span data-ttu-id="c3b56-103">Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] ma obszar po lewej stronie okna dialogowego pod tytułem **Ulubione łącza**.</span><span class="sxs-lookup"><span data-stu-id="c3b56-103">The default open and save dialog boxes on [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] have an area on the left side of the dialog box titled **Favorite Links**.</span></span> <span data-ttu-id="c3b56-104">Ten obszar nosi nazwę niestandardowych miejsc.</span><span class="sxs-lookup"><span data-stu-id="c3b56-104">This area is called custom places.</span></span> <span data-ttu-id="c3b56-105"><xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> klasy umożliwiają dodanie folderów do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji.</span><span class="sxs-lookup"><span data-stu-id="c3b56-105">The <xref:System.Windows.Forms.OpenFileDialog> and <xref:System.Windows.Forms.SaveFileDialog> classes allow you to add folders to the <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4bd98-106">Aby custom place do okna pojawiają się w <xref:System.Windows.Forms.OpenFileDialog> lub <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> właściwość musi być równa `true` (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="4bd98-106">In order for a custom place to appear in the <xref:System.Windows.Forms.OpenFileDialog> or <xref:System.Windows.Forms.SaveFileDialog>, the <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> property must be set to `true` (the default).</span></span>  
+>  <span data-ttu-id="c3b56-106">Aby custom place do okna pojawiają się w <xref:System.Windows.Forms.OpenFileDialog> lub <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> właściwość musi być równa `true` (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="c3b56-106">In order for a custom place to appear in the <xref:System.Windows.Forms.OpenFileDialog> or <xref:System.Windows.Forms.SaveFileDialog>, the <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> property must be set to `true` (the default).</span></span>  
   
-### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a><span data-ttu-id="4bd98-107">Aby Dodawanie niestandardowego miejsca do okna dialogowego obsługi plików</span><span class="sxs-lookup"><span data-stu-id="4bd98-107">To add a custom place to a file dialog box</span></span>  
+### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a><span data-ttu-id="c3b56-107">Aby Dodawanie niestandardowego miejsca do okna dialogowego obsługi plików</span><span class="sxs-lookup"><span data-stu-id="c3b56-107">To add a custom place to a file dialog box</span></span>  
   
--   <span data-ttu-id="4bd98-108">Dodaj ścieżkę identyfikatora GUID znanych folderów lub <xref:System.Windows.Forms.FileDialogCustomPlace> obiekt <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji okna dialogowego.</span><span class="sxs-lookup"><span data-stu-id="4bd98-108">Add a path, a Known Folder GUID, or a <xref:System.Windows.Forms.FileDialogCustomPlace> object to the <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection of the dialog box.</span></span>  
+-   <span data-ttu-id="c3b56-108">Dodaj ścieżkę identyfikatora GUID znanych folderów lub <xref:System.Windows.Forms.FileDialogCustomPlace> obiekt <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji okna dialogowego.</span><span class="sxs-lookup"><span data-stu-id="c3b56-108">Add a path, a Known Folder GUID, or a <xref:System.Windows.Forms.FileDialogCustomPlace> object to the <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection of the dialog box.</span></span>  
   
-     <span data-ttu-id="4bd98-109">Poniższy przykład kodu pokazuje, jak dodać ścieżkę:</span><span class="sxs-lookup"><span data-stu-id="4bd98-109">The following code example shows how to add a path:</span></span>  
+     <span data-ttu-id="c3b56-109">Poniższy przykład kodu pokazuje, jak dodać ścieżkę:</span><span class="sxs-lookup"><span data-stu-id="c3b56-109">The following code example shows how to add a path:</span></span>  
   
     ```vb  
     OpenFileDialog1.CustomPlaces.Add("C:\MyCustomPlace")  
@@ -36,7 +36,7 @@ ms.locfileid: "54674651"
     openFileDialog1.CustomPlaces.Add("C:\\MyCustomPlace");  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4bd98-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4bd98-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3b56-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c3b56-110">See also</span></span>
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="4bd98-111">Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików</span><span class="sxs-lookup"><span data-stu-id="4bd98-111">Known Folder GUIDs for File Dialog Custom Places</span></span>](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+- [<span data-ttu-id="c3b56-111">Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików</span><span class="sxs-lookup"><span data-stu-id="c3b56-111">Known Folder GUIDs for File Dialog Custom Places</span></span>](known-folder-guids-for-file-dialog-custom-places.md)

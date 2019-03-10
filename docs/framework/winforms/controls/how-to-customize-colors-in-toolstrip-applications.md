@@ -9,30 +9,30 @@ helpviewer_keywords:
 - colors [Windows Forms], customizing in ToolStrip controls [Windows Forms]
 - ToolStrip control [Windows Forms], custom colors
 ms.assetid: e2752fe2-1afb-489e-ab96-b7805acd96bc
-ms.openlocfilehash: 347d29db33e9a695cd83f2d48e53a730bc7bbbd6
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: db64ee353cc71cf39516e5ee0a08cf4b9627548c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260637"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709644"
 ---
-# <a name="how-to-customize-colors-in-toolstrip-applications"></a><span data-ttu-id="99b18-102">Instrukcje: Dostosowywanie kolorów w aplikacjach ToolStrip</span><span class="sxs-lookup"><span data-stu-id="99b18-102">How to: Customize Colors in ToolStrip Applications</span></span>
-<span data-ttu-id="99b18-103">Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> przy użyciu <xref:System.Windows.Forms.ToolStripProfessionalRenderer> klasy, aby używać kolorów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="99b18-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> by using the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> class to use customized colors.</span></span>  
+# <a name="how-to-customize-colors-in-toolstrip-applications"></a><span data-ttu-id="814e7-102">Instrukcje: Dostosowywanie kolorów w aplikacjach ToolStrip</span><span class="sxs-lookup"><span data-stu-id="814e7-102">How to: Customize Colors in ToolStrip Applications</span></span>
+<span data-ttu-id="814e7-103">Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> przy użyciu <xref:System.Windows.Forms.ToolStripProfessionalRenderer> klasy, aby używać kolorów niestandardowych.</span><span class="sxs-lookup"><span data-stu-id="814e7-103">You can customize the appearance of your <xref:System.Windows.Forms.ToolStrip> by using the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> class to use customized colors.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="99b18-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="99b18-104">Example</span></span>  
- <span data-ttu-id="99b18-105">Poniższy przykład kodu demonstruje sposób używania <xref:System.Windows.Forms.ToolStripProfessionalRenderer> definiowanie kolorów niestandardowych w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="99b18-105">The following code example demonstrates how to use a <xref:System.Windows.Forms.ToolStripProfessionalRenderer> to define custom colors at run time.</span></span>  
+## <a name="example"></a><span data-ttu-id="814e7-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="814e7-104">Example</span></span>  
+ <span data-ttu-id="814e7-105">Poniższy przykład kodu demonstruje sposób używania <xref:System.Windows.Forms.ToolStripProfessionalRenderer> definiowanie kolorów niestandardowych w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="814e7-105">The following code example demonstrates how to use a <xref:System.Windows.Forms.ToolStripProfessionalRenderer> to define custom colors at run time.</span></span>  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#20)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#20)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#20)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#20)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="99b18-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="99b18-106">Compiling the Code</span></span>  
- <span data-ttu-id="99b18-107">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="99b18-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="814e7-106">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="814e7-106">Compiling the Code</span></span>  
+ <span data-ttu-id="814e7-107">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="814e7-107">This example requires:</span></span>  
   
--   <span data-ttu-id="99b18-108">Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="99b18-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="814e7-108">Odwołania do zestawów System.Design System.Drawing i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="814e7-108">References to the System.Design, System.Drawing, and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="99b18-109">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="99b18-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="99b18-110">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="99b18-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="814e7-109">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="814e7-109">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="814e7-110">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="814e7-110">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99b18-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="99b18-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="814e7-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="814e7-111">See also</span></span>
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.ProfessionalColorTable>
 - <xref:System.Windows.Forms.MenuStrip>

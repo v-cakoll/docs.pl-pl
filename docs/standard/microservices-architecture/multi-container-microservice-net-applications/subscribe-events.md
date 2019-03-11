@@ -4,28 +4,28 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971783"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675033"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
 Pierwszym krokiem przy użyciu magistrali zdarzeń jest subskrybowanie mikrousług dla zdarzeń, które chcą otrzymywać. Który ma się odbywać w mikrousługach odbiorcy.
 
-Poniższy kod proste pokazuje, jakie poszczególne mikrousługi odbiornika należy zaimplementować podczas uruchamiania usługi (to znaczy w `Startup` klasy) tak subskrybuje zdarzenia go wymaga. W tym przypadku `basket.api` mikrousług trzeba subskrybować `ProductPriceChangedIntegrationEvent` i `OrderStartedIntegrationEvent` wiadomości. 
+Poniższy kod proste pokazuje, jakie poszczególne mikrousługi odbiornika należy zaimplementować podczas uruchamiania usługi (to znaczy w `Startup` klasy) tak subskrybuje zdarzenia go wymaga. W tym przypadku `basket.api` mikrousług trzeba subskrybować `ProductPriceChangedIntegrationEvent` i `OrderStartedIntegrationEvent` wiadomości.
 
 Na przykład podczas subskrybowania `ProductPriceChangedIntegrationEvent` zdarzeń, który sprawia, że mikrousług koszyka pamiętać o dowolnej zmiany cena produktu i umożliwia mu ostrzec użytkownika o zmianie, jeśli produktu znajduje się w koszyku użytkownika.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-W tym przypadku mikrousług pochodzenia jest proste mikrousługi CRUD, ten kod jest umieszczana po prawej stronie do kontrolera internetowego interfejsu API. 
- 
-W bardziej zaawansowanych mikrousług, takich jak przy użyciu podejścia CQRS może być implementowany w `CommandHandler` klasy poziomu `Handle()` metody. 
+W tym przypadku mikrousług pochodzenia jest proste mikrousługi CRUD, ten kod jest umieszczana po prawej stronie do kontrolera internetowego interfejsu API.
+
+W bardziej zaawansowanych mikrousług, takich jak przy użyciu podejścia CQRS może być implementowany w `CommandHandler` klasy poziomu `Handle()` metody.
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Projektowanie niepodzielność i zwiększa odporność podczas publikowania w magistrali zdarzeń
 
@@ -103,11 +103,11 @@ Wróćmy do początkowego problemu i jego przykład. Jeśli usługa ulegnie awar
 
 Jak wspomniano wcześniej, w sekcji architektury, może mieć różne podejścia do radzenia sobie z tym problemem:
 
--   Przy użyciu pełnego [wzorzec określania źródła zdarzeń](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+- Przy użyciu pełnego [wzorzec określania źródła zdarzeń](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
--   Za pomocą [wyszukiwania dziennik transakcji](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Za pomocą [wyszukiwania dziennik transakcji](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Za pomocą [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/). To jest tabela transakcji do przechowywania zdarzeń integracji (Rozszerzanie lokalnej transakcji).
+- Za pomocą [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/). To jest tabela transakcji do przechowywania zdarzeń integracji (Rozszerzanie lokalnej transakcji).
 
 W tym scenariuszu przy użyciu pełnej wzorca określania źródła zdarzeń (ES) jest jednym z najlepszych metod, jeśli *nie* najlepsze. Jednak w wielu scenariuszach aplikacji, nie można zaimplementować pełnego ES. ES oznacza przechowywanie tylko domeny zdarzenia w transakcji bazy danych, zamiast przechowywania danych bieżącego stanu. Przechowywanie tylko domeny zdarzenia może mieć wiele korzyści, takich jak o historii dostępności systemu i możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełnego ES wymaga Przekształcanie większość systemu i wprowadza wiele złożoności i wymagania. Na przykład chcesz korzystać z bazy danych, które celowo do określania źródła zdarzeń, takich jak [Store zdarzeń](https://eventstore.org/), lub korzystający z dokumentów bazy danych, takich jak usługi Azure Cosmos DB, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest to doskonałe podejście do problemu, ale nie najprostszym rozwiązaniu, chyba że znasz już określania źródła zdarzeń.
 
@@ -125,19 +125,19 @@ Jeśli już używasz relacyjnej bazy danych, można użyć transakcji tabeli do 
 
 Krok po kroku proces wykracza następująco:
 
-1.  Aplikacja rozpocznie transakcji lokalnej bazy danych.
+1. Aplikacja rozpocznie transakcji lokalnej bazy danych.
 
-2.  Następnie aktualizuje stan jednostki domeny i wstawia zdarzenia do tabeli zdarzeń integracji.
+2. Następnie aktualizuje stan jednostki domeny i wstawia zdarzenia do tabeli zdarzeń integracji.
 
-3.  Na koniec jej zatwierdzenia transakcji, dzięki czemu uzyskujesz żądaną niepodzielność i następnie
+3. Na koniec jej zatwierdzenia transakcji, dzięki czemu uzyskujesz żądaną niepodzielność i następnie
 
-4.  Jakiś sposób opublikować wydarzenie (dalej).
+4. Jakiś sposób opublikować wydarzenie (dalej).
 
 Implementując kroki publikowania zdarzenia, masz następujące opcje:
 
--   Publikowanie zdarzeń integracji od razu po zatwierdzanie transakcji i użyj innego transakcji lokalnej, aby oznaczyć zdarzenia w opublikowanej tabeli. Następnie skorzystaj z tabeli po prostu jako artefaktu do śledzenia zdarzeń integracji, w razie problemów z mikrousług zdalnego i wykonywać akcje kompensacyjne, na podstawie zdarzeń przechowywanych integracji.
+- Publikowanie zdarzeń integracji od razu po zatwierdzanie transakcji i użyj innego transakcji lokalnej, aby oznaczyć zdarzenia w opublikowanej tabeli. Następnie skorzystaj z tabeli po prostu jako artefaktu do śledzenia zdarzeń integracji, w razie problemów z mikrousług zdalnego i wykonywać akcje kompensacyjne, na podstawie zdarzeń przechowywanych integracji.
 
--   Skorzystaj z tabeli jako rodzaj kolejki. Wątek oddzielną aplikację lub procesu zapytania w tabeli zdarzeń integracji, publikuje w magistrali zdarzeń zdarzenia i następnie używa lokalnej transakcji do oznaczenia zdarzeń jako opublikowane.
+- Skorzystaj z tabeli jako rodzaj kolejki. Wątek oddzielną aplikację lub procesu zapytania w tabeli zdarzeń integracji, publikuje w magistrali zdarzeń zdarzenia i następnie używa lokalnej transakcji do oznaczenia zdarzeń jako opublikowane.
 
 Rysunek 6-22 przedstawiono architekturę jako pierwsza z tych metod.
 
@@ -166,55 +166,55 @@ W celu uściślenia poniższy przykład pokazuje całego procesu w pojedynczy fr
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -281,7 +281,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 Program obsługi zdarzeń musi sprawdzić, czy produkt istnieje we wszystkich wystąpieniach koszyka. Aktualizuje cenę dla każdego elementu wiersza powiązane koszyka. Na koniec tworzy alert ma być wyświetlany dla użytkownika o zmianę ceny, jak pokazano w rysunek 6 do 24.
 
-![Wyświetlany w przeglądarce widok procesu zmiany powiadomienia na koszyka użytkownika.](./media/image25.png)
+![Widok przeglądarki procesu zmiany powiadomienia na koszyka użytkownika.](./media/image25.png)
 
 **Rysunek 6 – 24**. Wyświetlanie zmian cen elementów w koszyku jako przekazywane przez zdarzenia integracji
 
@@ -303,7 +303,7 @@ Przetwarza komunikat jest idempotentna. Na przykład jeśli system generuje obra
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Zapewniane idempotentności wiadomości** <br/>
+- **Zapewniane idempotentności wiadomości** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplikacja integracji komunikaty o zdarzeniach
@@ -324,69 +324,69 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Rozwidlone w ramach aplikacji eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)** <br/>
+- **Rozwidlone w ramach aplikacji eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Aktivita typu EventDriven komunikatów** <br/>
+- **Aktivita typu EventDriven komunikatów** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refaktoryzacja kierunku odporności na błędy: Ocena sprzężenia** <br/>
+- **Jimmy Bogard. Refaktoryzacja kierunku odporności na błędy: Ocena sprzężenia** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publikowanie/subskrybowanie kanałów** <br/>
+- **Publikowanie/subskrybowanie kanałów** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Komunikacja między ograniczone konteksty** <br/>
+- **Komunikacja między ograniczone konteksty** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **Spójność ostateczna** <br/>
+- **Spójność ostateczna** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Integrowanie strategii ograniczone konteksty** <br/>
+- **Philip Brown. Integrowanie strategii ograniczone konteksty** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowane, określania źródła zdarzeń i podejście CQRS — część 2** <br/>
+- **Chris Richardson. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowane, określania źródła zdarzeń i podejście CQRS — część 2** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Wzorzec określania źródła zdarzeń** <br/>
+- **Chris Richardson. Wzorzec określania źródła zdarzeń** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Wprowadzenie do określania źródła zdarzeń** <br/>
+- **Wprowadzenie do określania źródła zdarzeń** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **Bazy danych zdarzeń Store**. Oficjalna witryna. <br/>
+- **Bazy danych zdarzeń Store**. Oficjalna witryna. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Zarządzanie oparte na zdarzeniach danych dla Mikrousług** <br/>
+- **Patrick Nommensen. Zarządzanie oparte na zdarzeniach danych dla Mikrousług** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **Kolejnego elementu teorii CAP** <br/>
+- **Kolejnego elementu teorii CAP** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Co to jest kolejnego elementu teorii CAP?** <br/>
+- **Co to jest kolejnego elementu teorii CAP?** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Podstawy spójności danych** <br/>
+- **Podstawy spójności danych** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling. Kolejnego elementu teorii CAP: Dlaczego "wszystko, co jest różne" chmura i Internet** <br/>
+- **Rick Saling. Kolejnego elementu teorii CAP: Dlaczego "wszystko, co jest różne" chmura i Internet** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewera. LIMIT dwunastu latach później: Jak "Zasady" zostały zmienione** <br/>
+- **Eric Brewera. LIMIT dwunastu latach później: Jak "Zasady" zostały zmienione** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**  <br/>
+- **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Przewodnik niezawodność** (dokumentacja RabbitMQ) * <br/>
+- **Przewodnik niezawodność** (dokumentacja RabbitMQ) * <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów** <br/>
+- **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Przewodnik niezawodność** (dokumentacja RabbitMQ) <br/>
+- **Przewodnik niezawodność** (dokumentacja RabbitMQ) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[Poprzednie](rabbitmq-event-bus-development-test-environment.md)
->[dalej](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [Poprzednie](rabbitmq-event-bus-development-test-environment.md)
+> [dalej](test-aspnet-core-services-web-apps.md)

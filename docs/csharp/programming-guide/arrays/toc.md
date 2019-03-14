@@ -5,5 +5,4 @@
 ## [Tablice nieregularne](jagged-arrays.md)
 ## [Używanie instrukcji foreach z tablicami](using-foreach-with-arrays.md)
 ## [Przekazywanie tablic jako argumentów](passing-arrays-as-arguments.md)
-## [Przekazywanie tablic za pomocą ref i out](passing-arrays-using-ref-and-out.md)
 ## [Niejawnie wpisane tablice](implicitly-typed-arrays.md)

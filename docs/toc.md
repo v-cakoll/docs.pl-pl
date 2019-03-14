@@ -94,7 +94,7 @@
 ### [Co nowego w programie .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
 ### [Co nowego w programie .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Samouczki](core/tutorials/index.md)
-### [Wprowadzenie do zestawu .NET SDK w systemie macOS](core/tutorials/using-on-macos.md)
+### [Wprowadzenie do platformy .NET Core w systemie macOS](core/tutorials/using-on-macos.md)
 ### [Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](core/tutorials/using-on-mac-vs.md)
 ### [Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Rozpoczynanie pracy z platformą .NET Core przy użyciu narzędzi interfejsu wiersza polecenia](core/tutorials/using-with-xplat-cli.md)
@@ -1209,6 +1209,7 @@
 ### Używanie wytrenowanego modelu
 #### [Jedna prognoza w danym momencie przy użyciu aparatu PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Operacjonalizowanie uczonego modelu](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Obsługa modelu za pomocą usługi Azure Functions](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Probabilistyczne programowanie za pomocą Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Tematy pomocy

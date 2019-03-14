@@ -1,1 +1,9 @@
-<span data-ttu-id="723d8-101">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="723d8-101">Entity Data Model</span></span>
+---
+ms.openlocfilehash: d9b3b24ad8a61e956d8ca973e93f841a758fa721
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/13/2019
+ms.locfileid: "25837486"
+---
+<span data-ttu-id="01b6f-101">Entity Data Model</span><span class="sxs-lookup"><span data-stu-id="01b6f-101">Entity Data Model</span></span>

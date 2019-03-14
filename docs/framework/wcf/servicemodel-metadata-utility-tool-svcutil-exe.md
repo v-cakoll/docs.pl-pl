@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533211"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788430"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)
 
@@ -43,7 +43,7 @@ Poniższa tabela zawiera podsumowanie różnych funkcji udostępnianych przez to
 
 Narzędzie ma limit pięciu minut, podczas pobierania metadanych. Tego limitu czasu ma zastosowanie tylko do pobierania metadanych za pośrednictwem sieci. Nie ma zastosowania do jakiegokolwiek przetwarzania tych metadanych.
 
-### <a name="multi-targetting"></a>Obsługa wielu odwołujących
+### <a name="multi-targeting"></a>Wielowersyjność kodu
 
 Narzędzie nie obsługuje wielowersyjności kodu. Jeśli chcesz wygenerować artefaktu .NET 4 *svcutil.exe*, użyj *svcutil.exe* z zestawu SDK .NET 4. Aby wygenerować artefaktu .NET 3.5, należy użyć pliku wykonywalnego z zestawu SDK programu .NET 3.5.
 
@@ -71,7 +71,7 @@ Svcutil.exe może wygenerować kod dla usługi kontrakty, klientów i typy danyc
 
 Możesz użyć *SvcUtil.exe* narzędzie do generowania kontraktów usług i danych na podstawie wstępnie zdefiniowanych dokumentu WSDL. Użyj przełącznika /serviceContract i określ adres URL lub lokalizacji pliku, gdzie dokument WSDL, można pobrać lub znaleźć. Spowoduje to wygenerowanie kontraktów usług i danych, zdefiniowane w dokumencie WSDL, który następnie może służyć do implementacji usługi skargi. Aby uzyskać więcej informacji, zobacz [jak: Pobieranie metadanych i implementowanie zgodnej usługi](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
 
-Usługi za pomocą punktu końcowego obiekt BasicHttpContextbinding *Svcutil.exe* generuje BasicHttpBinding z `allowCookies` ustawioną wartość atrybutu `true` zamiast tego. Pliki cookie są używane w kontekście na serwerze. Jeśli chcesz zarządzać kontekstu na komputerze klienckim, gdy usługa używa plików cookie, można ręcznie zmodyfikować tę konfigurację na używanie kontekstu powiązania.
+Usługi za pomocą punktu końcowego Obiekt BasicHttpContextBinding *Svcutil.exe* generuje BasicHttpBinding z `allowCookies` ustawioną wartość atrybutu `true` zamiast tego. Pliki cookie są używane w kontekście na serwerze. Jeśli chcesz zarządzać kontekstu na komputerze klienckim, gdy usługa używa plików cookie, można ręcznie zmodyfikować tę konfigurację na używanie kontekstu powiązania.
 
 > [!CAUTION]
 > Svcutil.exe generuje klienta na podstawie pliku WSDL lub zasad, otrzymanych z usługi. Główna nazwa użytkownika (UPN) jest generowana przez połączenie nazwy użytkownika, "\@" i w pełni kwalifikowaną nazwą domeny (FQDN). Jednak dla użytkowników, którzy zarejestrowali się w usłudze Active Directory, ten format jest nieprawidłowy i głównej nazwy użytkownika generowany przez narzędzie powoduje awarię w uwierzytelnianiu Kerberos z komunikatem o błędzie "Nie powiodła się próba logowania". Aby rozwiązać ten problem, należy ręcznie rozwiązać pliku klienta generowane przez to narzędzie.

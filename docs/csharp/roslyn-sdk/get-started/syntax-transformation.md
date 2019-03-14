@@ -3,12 +3,12 @@ title: Wprowadzenie do składni przekształcania (interfejsy API Roslyn)
 description: Wprowadzenie do przechodzenie przez wykonywanie zapytań i zalet drzewa składni.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122587"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788443"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Wprowadzenie do składni przekształcania
 
@@ -152,7 +152,7 @@ Teraz Dodaj tej instrukcji, aby powiązać wyrażenia inicjatora:
 
 Na koniec należy dodać następujące `if` instrukcję, aby zastąpić istniejącą nazwę typu z `var` — słowo kluczowe, jeśli określony typ pasuje do typu wyrażenia inicjatora:
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 Warunkowe jest wymagana, ponieważ deklaracja może oddać wyrażenia inicjatora do klasy bazowej lub interfejsu. W razie potrzeby, typy po lewej i prawej stronie przypisania nie są zgodne. Usuwanie typu jawnego w tych przypadkach zmieniłby semantykę programu. `var` Określony identyfikator zamiast słowa kluczowego, ponieważ `var` jest kontekstowym słowem kluczowym. Początkowe i końcowe elementy towarzyszące składni (biały) są przekazywane z starej nazwy typu `var` — słowo kluczowe do zachowania biały znak pionowej i wcięcia. Jest łatwiejszy w obsłudze `ReplaceNode` zamiast `With*` do przekształcania <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> ponieważ nazwa typu jest faktycznie podwójnym instrukcji deklaracji.
 

@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ---
 
-# What's new in .NET Framework <a name="introduction"></a>
+# <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 
 Ten artykuł zawiera podsumowanie kluczowych nowych funkcji i ulepszeń w następujących wersjach systemu .NET Framework:
 
@@ -1570,8 +1570,6 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
      Pakietów .NET core, takich jak kolekcje niezmienialne [interfejsów API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639), a sieć interfejsów API, takich jak te znajdujące się w <xref:System.Net.Http> przestrzeni nazw są teraz dostępne jako pakiety "open source" na [GitHub](https://github.com/). Aby uzyskać dostęp do kodu, zobacz [CoreFx w serwisie GitHub](https://github.com/dotnet/corefx). Aby uzyskać więcej informacji i sposobu współtworzenia te pakiety, zobacz [platformy .NET Core i Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md), [strony głównej platformy .NET w witrynie GitHub](https://github.com/dotnet/home).
 
-[Powrót do początku](#introduction)
-
 <a name="v452" />
 
 ## <a name="whats-new-in-the-net-framework-452"></a>What's new in .NET Framework 4.5.2
@@ -1643,8 +1641,6 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
      Metoda może być używany przez rejestracji, który został wcześniej utworzony przez <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> w odpowiedzi na <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> metody. Sprawdza, czy `System.Transactions` mógł wypromować transakcji do transakcji MSDTC i na "konwersję" awansowanie rejestracji trwałej rejestracji. Po pomyślnym ukończeniu działania tej metody <xref:System.Transactions.IPromotableSinglePhaseNotification> interfejsu nie jest już się odwołuje `System.Transactions`, oraz wszelkich kolejnych powiadomień zostanie wyświetlony na podany <xref:System.Transactions.ISinglePhaseNotification> interfejsu. Funkcja rejestracji danego musi działać jako trwałej rejestracji, obsługując rejestrowanie transakcji i odzyskiwania. Zapoznaj się <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> Aby uzyskać szczegółowe informacje. Ponadto rejestracji musi obsługiwać <xref:System.Transactions.ISinglePhaseNotification>.  Ta metoda może *tylko* można wywołać podczas przetwarzania <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> wywołania. Jeśli tak nie jest <xref:System.Transactions.TransactionException> wyjątku.
 
-[Powrót do początku](#introduction)
-
 <a name="v451" />
 
 ## <a name="whats-new-in-the-net-framework-451"></a>What's new in .NET Framework 4.5.1
@@ -1706,8 +1702,6 @@ Ulepszenia podczas debugowania aplikacji .NET Framework w programie Visual Studi
 Począwszy od programu Visual Studio 2013, można użyć [z przewodnikiem narzędzia optymalizacji zarządzanym profilem (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) zoptymalizować [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, jak również aplikacje klasycznych.
 
 Aby uzyskać nowe funkcje w programie ASP.NET 4.5.1, zobacz [ASP.NET and Web Tools dla programu Visual Studio 2013 Release Notes](/aspnet/visual-studio/overview/2013/release-notes).
-
-[Powrót do początku](#introduction)
 
 <a name="v45" />
 

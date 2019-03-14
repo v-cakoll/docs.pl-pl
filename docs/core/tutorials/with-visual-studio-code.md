@@ -4,12 +4,12 @@ description: Informacje o sposobie tworzenia i debugowania pierwszej aplikacji p
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: ea8b93128e4acd435ad95fc42257df6ab22812fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620555"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788339"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i Visual Studio Code
 

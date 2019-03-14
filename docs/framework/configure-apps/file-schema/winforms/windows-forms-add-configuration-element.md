@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371375"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788482"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms, Dodaj Element konfiguracji
 
@@ -41,14 +41,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 | `key` Nazwa | Wartości | Opis |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Wskazuje, czy formanty zakotwiczonej są skalowane w jednym przebiegu. "true", aby wyłączyć pojedynczego przekazywania skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Pojedynczego Powodzenie, skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Wskazuje, czy formanty zakotwiczonej są skalowane w jednym przebiegu. "true", aby wyłączyć pojedynczego przekazywania skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Pojedynczego Powodzenie, skalowanie" w [uwagi](#remarks) Aby uzyskać więcej informacji. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Wskazuje, czy aplikacja ma obsługującą ustawienia DPI. Ustaw klucz do "PerMonitorV2", aby obsługiwać rozpoznawanie Dpi; w przeciwnym wypadku ustaw ją na "false". Rozpoznawanie DPI to funkcja opcjonalna; Aby móc korzystać z pomocy technicznej Windows Forms o wysokiej rozdzielczości DPI, należy ustawić jej wartość na "PerMonitorV2". Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. |
 | "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.CheckedListBox> kontroli korzysta z zalet skalowania i układ ulepszeń wprowadzonych w programie .NET Framework 4.7. "true", aby zrezygnować z usprawnień caling i układ. w przeciwnym razie wartość "false". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.DataGridView> kontrolować ulepszenia w zakresie skalowania i układu wprowadzone w programie .NET Framework 4.7. "true", aby zrezygnować z DPI awareness; "false" w przeciwnym razie. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true", aby zrezygnować z odbieraniem wiadomości związanych z skalowania zmiany; rozdzielczości "false" w przeciwnym razie. Zobacz [uwagi](#remarks) sekcji, aby uzyskać więcej informacji. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Wskazuje, czy aplikacji Windows Forms automatycznie zmiany rozmiaru z powodu zmian skalowania DPI. "true", aby włączyć automatyczną zmianę rozmiaru; w przeciwnym razie wartość false. |
-| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.Form> jest skalowany w jednym przebiegu. "true", aby wyłączyć jednego przebiegu skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Pojedynczego Powodzenie, skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.MonthCalendar> kontroli jest skalowany w jednym przebiegu. "true", aby wyłączyć jednego przebiegu skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Pojedynczego Powodzenie, skalowanie" w [uwagi](#Remarks) Aby uzyskać więcej informacji. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.Form> jest skalowany w jednym przebiegu. "true", aby wyłączyć jednego przebiegu skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Pojedynczego Powodzenie, skalowanie" w [uwagi](#remarks) Aby uzyskać więcej informacji. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.MonthCalendar> kontroli jest skalowany w jednym przebiegu. "true", aby wyłączyć jednego przebiegu skalowanie; w przeciwnym razie wartość false. Zobacz sekcję "Pojedynczego Powodzenie, skalowanie" w [uwagi](#remarks) Aby uzyskać więcej informacji. |
 | "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | Wskazuje, czy <xref:System.Windows.Forms.ToolStrip> kontroli korzysta z zalet skalowania i układ ulepszeń wprowadzonych w programie .NET Framework 4.7. "true", aby zrezygnować z DPI awareness; "false" w przeciwnym razie. |
 
 ### <a name="child-elements"></a>Elementy podrzędne
@@ -61,7 +61,7 @@ Brak.
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Konfiguruje obsługę nowych funkcji w aplikacji Windows Forms. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" /> Uwagi
+## <a name="remarks"></a>Uwagi
 
 Począwszy od .NET Framework 4.7 `<System.Windows.Forms.ApplicationConfigurationSection>` elementu umożliwia skonfigurowanie aplikacji Windows Forms, aby wykorzystać funkcje dodane w najnowszych wersjach programu .NET Framework.
 
@@ -96,6 +96,7 @@ Pojedynczy uczestnictwo ustawieniem domyślnym podać, ustawiając `DpiAwareness
    <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
+
 Zwykle możesz zrezygnować z określonej funkcji, ponieważ wybrano będzie przetwarzał programowo.
 
 Aby uzyskać więcej informacji na zalety biorąc obsługa wysokiej rozdzielczości w aplikacjach Windows Forms, zobacz [wysokiej rozdzielczości DPI pomocy technicznej w formularzach Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).

@@ -19,12 +19,12 @@ Następujące samouczki są dostępne dla zapoznać się z platformą .NET Core.
 - [Tworzenie biblioteki klas w języku Visual Basic](vb-library-with-visual-studio.md)
 - [Testowanie biblioteki klas](testing-library-with-visual-studio.md)
 - [Korzystanie z biblioteki klas](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB: Wprowadzenie do interfejsu API SQL i .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB: Rozpoczynanie pracy z interfejsem API SQL i .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Tworzenie aplikacji za pomocą programu Visual Studio Code
 
-- [Wprowadzenie do C# i programu Visual Studio Code](with-visual-studio-code.md)
-- [Wprowadzenie do zestawu .NET SDK w systemie macOS](using-on-macos.md)
+- [Wprowadzenie do języka C# i programu Visual Studio Code](with-visual-studio-code.md)
+- [Rozpoczynanie pracy z platformą .NET Core w systemie macOS](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Tworzenie aplikacji za pomocą programu Visual Studio dla komputerów Mac
 
@@ -33,7 +33,7 @@ Następujące samouczki są dostępne dla zapoznać się z platformą .NET Core.
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>Tworzenie aplikacji za pomocą narzędzi interfejsu wiersza polecenia platformy .NET Core
 
-- [Rozpoczęcie pracy z platformą .NET Core w Windows/Linux/macOS przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core](using-with-xplat-cli.md)
+- [Rozpoczynanie pracy z platformą .NET Core w Windows/Linux/macOS przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core](using-with-xplat-cli.md)
 - [Organizowanie i testowanie projektów przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core](testing-with-cli.md)
 - [Rozpoczynanie pracy z usługąF#](../../fsharp/get-started/get-started-command-line.md)
 

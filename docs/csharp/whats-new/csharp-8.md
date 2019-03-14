@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
-ms.openlocfilehash: 3a19cc7ffae706769cf1b1a19fdaff7c7cdc07fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d723bdf55104fa0a8d4a8e20c60a9debb26c7886
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674448"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788599"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -83,7 +83,7 @@ Istnieje kilka ulepszeń składni tutaj:
 Natomiast, za pomocą klasycznego kodu równoważne `switch` instrukcji:
 
 ```csharp
-public static RGBColor fromRainbowClassic(Rainbow colorBand)
+public static RGBColor FromRainbowClassic(Rainbow colorBand)
 {
     switch (colorBand)
     {

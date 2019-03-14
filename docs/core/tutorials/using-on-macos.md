@@ -1,17 +1,17 @@
 ---
-title: Wprowadzenie do platformy .NET Core w systemie macOS
+title: Rozpoczynanie pracy z platformą .NET Core w systemie macOS
 description: Ten dokument zawiera kroki i przepływ pracy, aby utworzyć rozwiązanie podstawowych platformy .NET przy użyciu programu Visual Studio Code.
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170290"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788456"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a>Wprowadzenie do platformy .NET Core w systemie macOS
+# <a name="get-started-with-net-core-on-macos"></a>Rozpoczynanie pracy z platformą .NET Core w systemie macOS
 
 Ten dokument zawiera kroki i przepływ pracy, aby utworzyć rozwiązanie platformy .NET Core dla systemu macOS. Dowiedz się, jak tworzyć projekty, testy jednostkowe, użyj narzędzi debugowania i zestawowi bibliotek innych firm za pomocą [NuGet](https://www.nuget.org/).
 
@@ -26,11 +26,11 @@ Zainstaluj [programu Visual Studio Code](https://code.visualstudio.com). W trakc
 
 Zainstaluj rozszerzenie programu Visual Studio kodu C#, otwierając program Visual Studio Code i naciskając klawisz <kbd>F1</kbd> aby otworzyć paletę programu Visual Studio Code. Typ **zainstalować ext** Aby wyświetlić listę rozszerzeń. Wybierz rozszerzenie języka C#. Uruchom ponownie Visual Studio Code, aby aktywować rozszerzenia. Aby uzyskać więcej informacji, zobacz [dokumentację kodu C# rozszerzenie programu Visual Studio](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="getting-started"></a>Wprowadzenie
+## <a name="get-started"></a>Wprowadzenie
 
 W tym samouczku utworzysz trzy projekty: projektu biblioteki testów dla tego projektu biblioteki i aplikacji konsoli korzystającej z biblioteki. Możesz [wyświetlić lub pobrać źródło](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) dla tego tematu w repozytorium dotnet/samples w witrynie GitHub. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Uruchom program Visual Studio Code. Naciśnij klawisz <kbd>Ctrl</kbd> + <kbd> \` </kbd> (znak znakami odwróconego lub początkowych) lub wybierz **Widok > zintegrowany Terminal** z menu aby otworzyć osadzonych w terminalu w programie Visual Studio Code. Możesz nadal otworzyć powłokę zewnętrznych za pomocą Eksploratora usługi **Otwórz w wierszu polecenia** polecenia (**Otwórz w terminalu** na komputerze Mac lub Linux), jeśli wolisz pracować poza programem Visual Studio Code.
+Start Visual Studio Code. Naciśnij klawisz <kbd>Ctrl</kbd> + <kbd> \` </kbd> (znak znakami odwróconego lub początkowych) lub wybierz **Widok > zintegrowany Terminal** z menu aby otworzyć osadzonych w terminalu w programie Visual Studio Code. Możesz nadal otworzyć powłokę zewnętrznych za pomocą Eksploratora usługi **Otwórz w wierszu polecenia** polecenia (**Otwórz w terminalu** na komputerze Mac lub Linux), jeśli wolisz pracować poza programem Visual Studio Code.
 
 Rozpocznij od utworzenia pliku rozwiązania, który służy jako kontener dla jednego lub więcej projektów .NET Core. W terminalu Utwórz *złoty* folder i otwórz folder. Ten folder jest katalogiem głównym rozwiązania. Uruchom [ `dotnet new` ](../tools/dotnet-new.md) polecenie, aby utworzyć nowe rozwiązanie *golden.sln*:
 

@@ -2,12 +2,12 @@
 title: Rozpoczynanie pracy z usługą F# w programie Visual Studio Code
 description: Dowiedz się, jak używać F# za pomocą programu Visual Studio Code i Ionide zestawu wtyczki.
 ms.date: 12/23/2018
-ms.openlocfilehash: 79863d57abbc71d59ce01fe30abf1db0a569f1e1
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 3e526d33a8b52e3c1241ed861d5ceb37eac10451
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788495"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846574"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Rozpoczynanie pracy z usługą F# w programie Visual Studio Code
 
@@ -16,7 +16,7 @@ Można napisać F# w [programu Visual Studio Code](https://code.visualstudio.com
 Aby rozpocząć, upewnij się, że [ F# i poprawnie zainstalowaną wtyczką Ionide](install-fsharp.md#install-f-with-visual-studio-code).
 
 > [!NOTE]
-> Ionide wygeneruje .NET Framework F# projektów, nie dotnet rdzeń procesora, który może mieć problemy ze zgodnością między platformami. Jeśli są uruchomione na **Linux** lub **OSX**, prostszy sposób na rozpoczęcie pracy jest użycie (narzędzia wiersza polecenia) [https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line].
+> Ionide wygeneruje .NET Framework F# projektów, nie dotnet rdzeń procesora, który może mieć problemy ze zgodnością między platformami. Jeśli są uruchomione na **Linux** lub **OSX**, prostszy sposób na rozpoczęcie pracy jest użycie [narzędzi wiersza polecenia](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line).
 
 ## <a name="creating-your-first-project-with-ionide"></a>Tworzenie pierwszego projektu za pomocą Ionide
 

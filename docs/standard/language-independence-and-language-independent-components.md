@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836555"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846470"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
 Program .NET Framework jest niezależny od języka. Oznacza to, że jako deweloper możesz tworzyć w jednym z wielu języków, których platformą docelową .NET Framework, takich jak C#, C + +/ CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i Windows PowerShell. Dostępne typy i członków bibliotek klas opracowanych dla programu .NET Framework bez znajomości języka, w którym zostały one pierwotnie napisane i bez konieczności którąkolwiek z Konwencji języka oryginału. Jeśli jesteś deweloperem składnika, dostęp do danego składnika jest możliwy przez dowolną aplikację .NET Framework, niezależnie od języka.  
@@ -343,7 +343,7 @@ Program .NET Framework jest niezależny od języka. Oznacza to, że jako dewelop
 ### <a name="member-accessibility"></a>Ułatwienia dostępu członków  
  Zastępowanie dziedziczonego członka nie można zmienić dostępności tego członka. Na przykład publiczną metodę w klasie bazowej nie może być zastąpiona przez prywatną metodę w klasie pochodnej. Istnieje jeden wyjątek: `protected internal` (w języku C#) lub `Protected Friend` (w języku Visual Basic) elementu członkowskiego w jednym zestawie, który jest zastępowany przez typ w innym zestawie. W tym przypadku dostępnośc zastąpienia jest `Protected`.  
   
- Poniższy przykład ilustruje błąd, który jest generowany, jeśli <xref:System.CLSCompliantAttribute> ma ustawioną wartość atrybutu `true`, i `Person`, która jest klasą pochodną `Animal`, próbuje zmienić dostępność `Species` właściwość publicznej na prywatną. Przykład pomyślnie wykonuje kompilację po zmianie jego dostępności na publiczną.  
+ Poniższy przykład ilustruje błąd, który jest generowany, jeśli <xref:System.CLSCompliantAttribute> ma ustawioną wartość atrybutu `true`, i `Human`, która jest klasą pochodną `Animal`, próbuje zmienić dostępność `Species` właściwość publicznej na prywatną. Przykład pomyślnie wykonuje kompilację po zmianie jego dostępności na publiczną.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

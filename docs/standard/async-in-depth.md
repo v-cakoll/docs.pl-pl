@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7b9017c30deebf6762b60d70e2be0b68ab5e27fc
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677529"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844739"
 ---
 # <a name="async-in-depth"></a>Asynchroniczne szczegółowo
 
@@ -21,12 +21,12 @@ Zapisywanie operacji We/Wy i Procesora CPU kodu asynchronicznego jest proste prz
 
 Zadania są konstrukcji używanych do wdrożenia, co jest nazywane [Promise modelu współbieżności](https://en.wikipedia.org/wiki/Futures_and_promises).  Krótko mówiąc oferują one, że możesz element "promise", które działają zakończy się w późniejszym czasie, dzięki czemu możesz skontaktować się z zobowiązania przy użyciu czystego interfejsu API.
 
-*   `Task` reprezentuje pojedynczej operacji, która nie zwraca wartości.
-*   `Task<T>` reprezentuje jednej operacji, która zwraca wartość typu `T`.
+* `Task` reprezentuje pojedynczej operacji, która nie zwraca wartości.
+* `Task<T>` reprezentuje jednej operacji, która zwraca wartość typu `T`.
 
 Ważne jest, aby Przyczyna o zadaniach jako abstrakcje wykonywane asynchronicznie, pracy i *nie* abstrakcji wątków. Domyślnie wykonywane podzadania wchodzące w bieżącym wątku i delegata pracy do systemu operacyjnego, zgodnie z potrzebami. Opcjonalnie, zadania można jawnie wymagane do uruchamiania w oddzielnym wątku za pomocą `Task.Run` interfejsu API.
 
-Zadania ujawnić protokół interfejsu API oraz funkcje monitorowania i oczekiwania na dostęp do wartości wyniku (w przypadku właściwości `Task<T>`) zadania. Integracja języka, za pomocą `await` — słowo kluczowe, zapewnia wyższego poziomu abstrakcji dotyczące korzystania z zadań. 
+Zadania ujawnić protokół interfejsu API oraz funkcje monitorowania i oczekiwania na dostęp do wartości wyniku (w przypadku właściwości `Task<T>`) zadania. Integracja języka, za pomocą `await` — słowo kluczowe, zapewnia wyższego poziomu abstrakcji dotyczące korzystania z zadań.
 
 Za pomocą `await` umożliwia aplikacji lub usługi wykonać przydatnych działań po uruchomieniu zadania przez reaguje formantu do obiektu wywołującego, dopóki zadanie jest wykonywane. Twój kod nie trzeba polegać na wywołania zwrotne lub zdarzeń w celu kontynuowania wykonywania po ukończeniu zadania. Języku i za pomocą integracji interfejsu API zadań robi to za Ciebie. Jeśli używasz `Task<T>`, `await` — słowo kluczowe zostanie dodatkowo "Odkodowywanie" wartość zwracana, gdy zadanie zostało ukończone.  Szczegóły dotyczące sposobu działania zostały wyjaśnione poniżej.
 
@@ -43,7 +43,7 @@ public Task<string> GetHtmlAsync()
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
@@ -55,14 +55,14 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
     var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
-    
+
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
-    
+
     if (count > page.Length)
     {
         return page;
@@ -74,7 +74,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-Wywołanie `GetStringAsync()` wywołań za pośrednictwem niższego poziomu bibliotek programu .NET (być może wywołaniem innych metod asynchronicznych) dopóki osiągnie P/Invoke międzyoperacyjny wywołania natywne biblioteki sieciowej. Bibliotekę natywną później może wywołać do wywołania interfejsu API systemu (takich jak `write()` do gniazda w systemie Linux). Obiekt zadania, które zostaną utworzone na granicy natywnego/zarządzanego, prawdopodobnie za pomocą [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). Obiekt zadania będą przekazywane warstw, prawdopodobnie działa jako lub bezpośrednio zwracana, ostatecznie zwracana do początkowego obiektu wywołującego. 
+Wywołanie `GetStringAsync()` wywołań za pośrednictwem niższego poziomu bibliotek programu .NET (być może wywołaniem innych metod asynchronicznych) dopóki osiągnie P/Invoke międzyoperacyjny wywołania natywne biblioteki sieciowej. Bibliotekę natywną później może wywołać do wywołania interfejsu API systemu (takich jak `write()` do gniazda w systemie Linux). Obiekt zadania, które zostaną utworzone na granicy natywnego/zarządzanego, prawdopodobnie za pomocą [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). Obiekt zadania będą przekazywane warstw, prawdopodobnie działa jako lub bezpośrednio zwracana, ostatecznie zwracana do początkowego obiektu wywołującego.
 
 W drugim przykładzie powyżej `Task<T>` obiektu zostanie zwrócony z `GetStringAsync`. Korzystanie z `await` — słowo kluczowe spowoduje, że metoda zwraca obiekt nowo utworzonym zadaniem. Formant powraca do obiektu wywołującego z tej lokalizacji w `GetFirstCharactersCountAsync` metody. Metody i właściwości [zadań&lt;T&gt; ](xref:System.Threading.Tasks.Task%601) obiektów wywołujących Włącz, aby monitorować postęp zadania, które zostanie ukończone, gdy pozostały kod GetFirstCharactersCountAsync zostało wykonane.
 
@@ -90,9 +90,9 @@ Mimo że powyżej może wydawać się wiele zadań do wykonania, gdy mierzy czas
 
 0-1————————————————————————————————————————————————–2-3
 
-*   Czas poświęcony na z punktów `0` do `1` to wszystko, aż do metody asynchronicznej przekazuje sterowanie do obiektu wywołującego.
-*   Czas poświęcony na z punktów `1` do `2` jest czas spędzony na We/Wy przy użyciu procesora CPU, nie kosztów.
-*   Ponadto czas działania z punktów `2` do `3` to przekazanie kontroli Wstecz (i potencjalnie wartości) do metody asynchronicznej, w tym momencie jest wykonywane ponownie.
+* Czas poświęcony na z punktów `0` do `1` to wszystko, aż do metody asynchronicznej przekazuje sterowanie do obiektu wywołującego.
+* Czas poświęcony na z punktów `1` do `2` jest czas spędzony na We/Wy przy użyciu procesora CPU, nie kosztów.
+* Ponadto czas działania z punktów `2` do `3` to przekazanie kontroli Wstecz (i potencjalnie wartości) do metody asynchronicznej, w tym momencie jest wykonywane ponownie.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>Co to oznacza dla scenariusza serwera
 
@@ -125,13 +125,13 @@ public async Task<int> CalculateResult(InputData data)
 {
     // This queues up the work on the threadpool.
     var expensiveResultTask = Task.Run(() => DoExpensiveCalculation(data));
-    
+
     // Note that at this point, you can do some other work concurrently,
     // as CalculateResult() is still executing!
-    
+
     // Execution of CalculateResult is yielded here!
     var result = await expensiveResultTask;
-    
+
     return result;
 }
 ```

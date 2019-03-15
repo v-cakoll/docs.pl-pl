@@ -2,12 +2,12 @@
 title: Parametry połączenia w ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627567"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844875"
 ---
 # <a name="connection-strings-in-adonet"></a>Parametry połączenia w ADO.NET
 
@@ -16,9 +16,9 @@ Parametry połączenia zawierają informacje inicjowania, który jest przekazywa
 ## <a name="connection-string-syntax"></a>Składnia ciągu połączenia
 
 Ciąg połączenia jest rozdzielaną średnikami listę par klucz/wartość do parametru:
-  
+
     keyword1=value; keyword2=value;
-  
+
 Słowa kluczowe nie jest rozróżniana wielkość liter. Jednakże, wartości, może być uwzględniana jest wielkość liter, w zależności od źródła danych. Słowa kluczowe i wartości mogą zawierać [białych znaków](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Początkowe i końcowe biały jest ignorowany słów kluczowych i nienotowane wartości.
 
 Jeśli wartość zawiera średnika, [znaków kontrolnych Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), lub wiodące lub końcowe biały znak, muszą być ujęte w pojedyncze lub podwójne znaki cudzysłowu. Na przykład:
@@ -44,19 +44,21 @@ Błędów może spowodować błędy. Na przykład `Integrated Security=true` jes
 
 Parametry połączenia, tworzony ręcznie, w czasie wykonywania z danych wejściowych użytkownika niezweryfikowanych są narażone na ataki polegające na iniekcji ciągu i zagrozić zabezpieczeń w źródle danych. Aby rozwiązać te problemy *ADO.NET* 2.0 wprowadzono [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md) dla każdego *.NET Framework* dostawcy danych. Te Konstruktorzy parametrów połączeń ujawnić parametry jako silnie typizowane właściwości, dzięki czemu będzie można sprawdzić poprawność parametrów połączenia przed wysłaniem ich do źródła danych.
 
-## <a name="in-this-section"></a>W tej sekcji  
- [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- Pokazuje sposób użycia `ConnectionStringBuilder` klas do utworzenia prawidłowego połączenia ciągów w czasie wykonywania.
-  
- [Parametry połączenia i pliki konfiguracji](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- Pokazuje, jak przechowywać i pobierać parametry połączenia w plikach konfiguracji.
-  
- [Składnia parametrów połączenia](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- W tym artykule opisano jak skonfigurować parametry połączenia specyficzne dla dostawcy na potrzeby `SqlClient`, `OracleClient`, `OleDb`, i `Odbc`.
-  
- [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- Pokazuje technik ochrony informacje używane do połączenia ze źródłem danych.
-  
+## <a name="in-this-section"></a>W tej sekcji
+
+[Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+Pokazuje sposób użycia `ConnectionStringBuilder` klas do utworzenia prawidłowego połączenia ciągów w czasie wykonywania.
+
+[Parametry połączenia i pliki konfiguracji](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+Pokazuje, jak przechowywać i pobierać parametry połączenia w plikach konfiguracji.
+
+[Składnia ciągu połączenia](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+W tym artykule opisano jak skonfigurować parametry połączenia specyficzne dla dostawcy na potrzeby `SqlClient`, `OracleClient`, `OleDb`, i `Odbc`.
+
+[Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+Pokazuje technik ochrony informacje używane do połączenia ze źródłem danych.
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Nawiązywanie połączenia ze źródłem danych](/cpp/data/odbc/connecting-to-a-data-source)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

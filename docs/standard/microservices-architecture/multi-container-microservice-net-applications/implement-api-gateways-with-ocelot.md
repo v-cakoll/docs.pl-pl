@@ -4,12 +4,12 @@ description: Dowiedz się, jak zaimplementować bramy interfejsu API za pomocą 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679492"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846106"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementowanie bramy interfejsu API za pomocą Ocelot
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ Ruch przychodzący, jednak jest po prostu Przekierowywanie żądań HTTP, ale ni
 
 Posiadanie warstwą Nginx ruch przychodzący w usłudze Kubernetes przed aplikacji sieci web, a także kilka bramy interfejsu API Ocelot / BFF jest idealnym rozwiązaniem architektury, jak pokazano na poniższym diagramie.
 
- ![Przychodzący Kubernetes działa jako zwrotny serwer proxy dla całego ruchu do aplikacji, w tym aplikacje sieci web, które zazwyczaj są poza zakresem bramy interfejsu Api.](./media/image41.png)
+![Przychodzący Kubernetes działa jako zwrotny serwer proxy dla całego ruchu do aplikacji, w tym aplikacje sieci web, które zazwyczaj są poza zakresem bramy interfejsu Api.](./media/image41.png)
 
 **Rysunek 6-41**. Warstwa danych przychodzących w ramach aplikacji eShopOnContainers podczas wdrażania do rozwiązania Kubernetes
 
 Gdy wdrażasz ramach aplikacji eShopOnContainers do rozwiązania Kubernetes, udostępnia kilka usług lub punktów końcowych za pośrednictwem _ruch przychodzący_, po prostu poniżej postfixes na adresy URL:
 
--   `/` SPA klienta aplikacji sieci web
--   `/webmvc` dla klienta aplikacji sieci web MVC
--   `/webstatus` Wyświetlanie stanu/healthchecks aplikacji sieci web klienta
--   `/webshoppingapigw` dla sieci web BFF i zakupów procesów biznesowych
--   `/webmarketingapigw` dla sieci web BFF i marketingu procesów biznesowych
--   `/mobileshoppingapigw` dla mobilnych BFF i zakupów procesów biznesowych
--   `/mobilemarketingapigw` przenośne BFF i marketingowych procesów biznesowych
+- `/` SPA klienta aplikacji sieci web
+- `/webmvc` dla klienta aplikacji sieci web MVC
+- `/webstatus` Wyświetlanie stanu/healthchecks aplikacji sieci web klienta
+- `/webshoppingapigw` dla sieci web BFF i zakupów procesów biznesowych
+- `/webmarketingapigw` dla sieci web BFF i marketingu procesów biznesowych
+- `/mobileshoppingapigw` dla mobilnych BFF i zakupów procesów biznesowych
+- `/mobilemarketingapigw` przenośne BFF i marketingowych procesów biznesowych
 
 Podczas wdrażania usługi Kubernetes, każdej bramy interfejsu API Ocelot jest używany plik różnych "configuration.json" dla każdego _zasobnika_ uruchamianie bramy interfejsu API. Te pliki "configuration.json" są dostarczane przez zainstalowanie (pierwotnie ze skryptem deploy.ps1) wolumin utworzony w oparciu o usługi Kubernetes _mapy config_ o nazwie "ocelot". Każdy kontener instaluje jego pliku konfiguracji powiązane w folderze kontenera o nazwie `/app/configuration`.
 

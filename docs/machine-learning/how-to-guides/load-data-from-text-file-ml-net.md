@@ -3,12 +3,12 @@ title: Ładowanie danych z pliku tekstowego, machine learning przetwarzania - st
 description: Dowiedz się, jak załadować dane z pliku tekstowego do użycia w modelu uczenia maszynowego, kompilowania, szkolenia i oceniania za pomocą platformy ML.NET
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 62f68bd950d6a2c116baaba86ba7e27a10cec69d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 14b1f8c99da6f1b8da436d9afef5b2ac8d36ecae
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676294"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843372"
 ---
 # <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a>Ładowanie danych z pliku tekstowego, machine learning przetwarzania - strukturze ML.NET
 
@@ -23,6 +23,7 @@ Należy pamiętać, że doskonale dopuszczalne do odczytu niektórych kolumn w p
 
 [Przykładowy plik](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):
 
+<!-- markdownlint-disable MD010 -->
 ```console
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -30,11 +31,12 @@ Label   Workclass   education   marital-status
 1   Local-gov   Assoc-acdm  Married-civ-spouse
 1   Private Some-college    Married-civ-spouse
 ```
+<!-- markdownlint-enable MD010 -->
 
 Aby załadować dane z pliku tekstowego:
 
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
+// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
 // as a catalog of available operations and as the source of randomness.
 var mlContext = new MLContext();
 

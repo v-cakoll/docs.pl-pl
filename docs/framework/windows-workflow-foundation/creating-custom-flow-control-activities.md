@@ -2,15 +2,15 @@
 title: Tworzenie przepływu niestandardowych działań sterowania
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: de1378cc0dd304db37aefd437d1ce6feac9f2ed2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724677"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57847014"
 ---
 # <a name="creating-custom-flow-control-activities"></a>Tworzenie przepływu niestandardowych działań sterowania
-.Net Framework zawiera szereg działań przepływu sterowania, które działają podobnie do abstrakcyjnej struktur programowania (takich jak <xref:System.Activities.Statements.Flowchart>) lub standardowy instrukcji programowania (takich jak <xref:System.Activities.Statements.If>). W tym temacie omówiono architekturę jednego z przykładowych projektów, [ForEach Nieuniwersalne](./samples/non-generic-foreach.md).  
+.NET Framework zawiera szereg działań przepływu sterowania, które działają podobnie do abstrakcyjnej struktur programowania (takich jak <xref:System.Activities.Statements.Flowchart>) lub standardowy instrukcji programowania (takich jak <xref:System.Activities.Statements.If>). W tym temacie omówiono architekturę jednego z przykładowych projektów, [ForEach Nieuniwersalne](./samples/non-generic-foreach.md).  
   
 ## <a name="creating-the-custom-class"></a>Tworzenie niestandardowej klasy  
  Ponieważ klasa ForEach Nieuniwersalne należy zaplanować działania podrzędne, trzeba będzie ją dziedziczyć <xref:System.Activities.NativeActivity>, od działań, które wynikają z <xref:System.Workflow.Activities.CodeActivity> nie korzystać z tej funkcji.  

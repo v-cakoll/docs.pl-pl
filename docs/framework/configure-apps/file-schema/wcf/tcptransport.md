@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 20591186448fa1c3b4a91ed303bd2a5c6e452491
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272022"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845963"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Definiuje warstwę transportu TCP, który może służyć przez kanał do transferu wiadomości dla niestandardowego powiązania.  
@@ -49,7 +49,7 @@ Definiuje warstwę transportu TCP, który może służyć przez kanał do transf
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|channelInitializationTimeout|Pobiera lub ustawia limit czasu na inicjowanie kanału do zaakceptowania.  Maksymalny czas kanału może być w stanie inicjowania przed rozłączeniem w ciągu kilku sekund. Ten limit przydziału obejmuje czas połączenia TCP można wykonać, aby uwierzytelniać przy użyciu programu .Net Framing komunikatu protokołu. Klient musi wysyłać niektórych danych początkowych, zanim serwer ma za mało informacji w celu przeprowadzenia uwierzytelniania. Wartość domyślna to 30 sekund.|  
+|channelInitializationTimeout|Pobiera lub ustawia limit czasu na inicjowanie kanału do zaakceptowania.  Maksymalny czas kanału może być w stanie inicjowania przed rozłączeniem w ciągu kilku sekund. Ten limit przydziału obejmuje czas połączenia TCP można wykonać, aby uwierzytelniać przy użyciu protokołu ramek komunikatu .NET. Klient musi wysyłać niektórych danych początkowych, zanim serwer ma za mało informacji w celu przeprowadzenia uwierzytelniania. Wartość domyślna to 30 sekund.|  
 |connectionBufferSize|Pobiera lub ustawia rozmiar buforu używany do przesyłania fragmentów serializacji wiadomości na łączu z klienta lub usługi.|  
 |hostNameComparisonMode|Pobiera lub ustawia wartość wskazującą, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI.|  
 |listenBacklog|Maksymalna liczba żądań połączenia w kolejce, oczekujących usługi sieci Web. `connectionLeaseTimeout` Atrybut ogranicza czas, klient będzie czekać połączenia zanim zostanie zgłoszony wyjątek połączenia. Jest to właściwość poziomu gniazda, która określa maksymalną liczbę żądań połączenia w kolejce, oczekujących usługi sieci Web. Gdy ListenBacklog jest zbyt niska, WCF zatrzymać, akceptując żądania i w związku z tym porzucić nowe połączenia, dopóki serwer uznaje, niektóre z istniejących połączeń umieszczonych w kolejce. Wartość domyślna to 16 * liczba procesorów.|  

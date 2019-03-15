@@ -2,12 +2,12 @@
 title: Odwołanie do słowa kluczowego
 description: Znajdź łącza do informacji na temat wszystkich F# słowa kluczowe języka.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857908"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845297"
 ---
 # <a name="keyword-reference"></a>Odwołanie do słowa kluczowego
 
@@ -50,7 +50,7 @@ W poniższej tabeli przedstawiono wszystkie F# słów kluczowych w kolejności a
 |`inline`|[Funkcje](functions/index.md)<br /><br />[Funkcje śródwierszowe](functions/inline-functions.md)|Służy do wskazania funkcja, która powinna zostać włączona bezpośrednio do kodu wywołującego.|
 |`interface`|[Interfejsy](interfaces.md)|Używane do deklarowania i implementować interfejsy.|
 |`internal`|[Kontrola dostępu](access-control.md)|Można określić, że element członkowski jest widoczny w zestawie, ale nie poza nim.|
-|`lazy`|[Obliczenia powolne](lazy-computations.md)|Służy do określania obliczeń, który ma być wykonywane tylko wtedy, gdy wynik jest wymagana.|
+|`lazy`|[Wyrażenia z opóźnionym obliczaniem](lazy-expressions.md)|Można określić wyrażenie, które ma być wykonywane tylko wtedy, gdy wynik jest wymagana.|
 |`let`|[`let` Powiązania](functions/let-bindings.md)|Służy do skojarzenia lub powiązać nazwę wartości lub funkcji.|
 |`let!`|[Asynchroniczne przepływy pracy](asynchronous-workflows.md)<br /><br />[Wyrażenia obliczeń](computation-expressions.md)|Używane w Asynchroniczne przepływy pracy, aby powiązać nazwę wynik asynchroniczne obliczenie, lub inne wyrażenia obliczeń użyte do utworzenia powiązania nazwy wyniku jest typem wyliczenia.|
 |`match`|[Wyrażenia dopasowania](match-expressions.md)|Używany do gałęzi przez porównanie wartości do wzorca.|

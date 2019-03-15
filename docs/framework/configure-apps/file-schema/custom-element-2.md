@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693801"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845712"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Element niestandardowy dla NameValueSectionHandler i DictionarySectionHandler
 
 Definiuje ustawienia powiązane z sekcji konfiguracji niestandardowej, korzystających z <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> klasy.
 
-[**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[**\<Konfiguracja >**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
 &nbsp;&nbsp;**\<sectionName>**
 
 ## <a name="attributes"></a>Atrybuty
@@ -37,7 +37,7 @@ Brak
 |     | Opis |
 | --- | ----------- |
 | [**\<Dodaj >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler>  | Dodaje ustawienia bezpieczeństwa aplikacji niestandardowych. |
-| [**\<Usuń >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> |    Usuwa ustawienie uprzednio zdefiniowany. |
+| [**\<Usuń >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> | Usuwa ustawienie uprzednio zdefiniowany. |
 | [**\<Wyczyść >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) dla <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler> | Czyści wszystkie wcześniej zdefiniowane ustawienia w sekcji. |
 
 ## <a name="remarks"></a>Uwagi
@@ -53,7 +53,7 @@ W poniższej tabeli przedstawiono typ obiektu, metoda ConfigurationSettings.GetC
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje sposób deklarowania sekcje, które używają <xref:System.Configuration.DictionarySectionHandler> i <xref:System.Configuration.NameValueSectionHandler> klasy. 
+Poniższy przykład pokazuje sposób deklarowania sekcje, które używają <xref:System.Configuration.DictionarySectionHandler> i <xref:System.Configuration.NameValueSectionHandler> klasy.
 
 Pierwszy element niestandardowego jest  **\<dictionarySample >**, który zawiera ustawienia odczytywane przez <xref:System.Configuration.DictionarySectionHandler> klasy w `System.dll` zestawu. Drugi element niestandardowego jest  **\<mySection >**, który zawiera ustawienia odczytywane przez <xref:System.Configuration.NameValueSectionHandler> klasy w `System.dll` zestawu.
 

@@ -1,15 +1,15 @@
 ---
 title: Użyj strukturze ML.NET w scenariuszu wieloklasowej klasyfikacji problemu usługi GitHub
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu wieloklasowej klasyfikacji można klasyfikować problemy usługi GitHub, aby przypisać je do danego obszaru.
-ms.date: 02/20/2019
+ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4f6a95fbd470c688c977b406d1813d6a453e8a79
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1031ac8a592c968e22745de4be966392733597dd
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471491"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846314"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Samouczek: Umożliwia strukturze ML.NET w scenariuszu klasyfikacji wieloklasowej klasyfikacji problemów w usłudze GitHub
 
@@ -29,7 +29,7 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > [!NOTE]
 > W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium dotnet/machinelearning github](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET wersji 0,11**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium dotnet/machinelearning github](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 ## <a name="github-issue-sample-overview"></a>Omówienie przykładowych problem usługi GitHub
 
@@ -197,7 +197,7 @@ W strukturze ML.NET, dane są podobne do `SQL view`. Jest opóźnieniem ocenian�
 
 Ponieważ utworzone wcześniej `GitHubIssue` typ modelu danych jest zgodny schemat zestawu danych, można połączyć inicjowania, mapowanie i zestaw danych ładowania do jednego wiersza kodu.
 
-Pierwsza część wiersza (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) tworzy <xref:Microsoft.ML.Data.TextLoader> przez wnioskowanie schematu zestawu danych z `GitHubIssue` modelu danych, typ i przy użyciu nagłówka zestawu danych.
+Ładowanie danych za pomocą `MLContext.Data.LoadFromTextFile` otoki dla [metoda LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Zwraca <xref:Microsoft.Data.DataView.IDataView> którego wnioskuje schemat zestawu danych z `GitHubIssue` typ modelu danych i używa nagłówka zestawu danych. 
 
 Wcześniej zdefiniowany schemat danych podczas tworzenia `GitHubIssue` klasy. Dla schematu:
 
@@ -206,12 +206,9 @@ Wcześniej zdefiniowany schemat danych podczas tworzenia `GitHubIssue` klasy. Dl
 * trzecia kolumna `Title` (tytuł problemu usługi GitHub) jest to pierwszy [funkcji](../resources/glossary.md##feature) używane do prognozowania `Area`
 * Czwarta kolumna `Description` jest druga funkcja używana do prognozowania `Area`
 
-Druga część wiersza (`.Read(_trainDataPath)`) używa <xref:Microsoft.ML.Data.TextLoader.Read%2A> metodę, aby załadować tekstu szkolenia plików przy użyciu `_trainDataPath` do `IDataView` (`_trainingDataView`) zmiennej globalnej.  
-
 Aby zainicjować i załadować `_trainingDataView` zmienna globalna, aby mógł zostać użyty dla potoku, Dodaj następujący kod po `mlContext` inicjowania:
 
 [!code-csharp[LoadTrainData](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTrainData)]
-
 
 Dodaj następujący kod jako następnego wiersza kodu w `Main` metody:
 
@@ -225,7 +222,7 @@ Dodaj następujący kod jako następnego wiersza kodu w `Main` metody:
 Tworzenie `ProcessData` metody tuż za `Main` metody, używając następującego kodu:
 
 ```csharp
-public static EstimatorChain<ITransformer> ProcessData()
+public static IEstimator<ITransformer> ProcessData()
 {
 
 }
@@ -254,7 +251,7 @@ Ostatnim krokiem w przygotowaniu danych łączy wszystkie kolumny funkcji do **f
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
 
- Następnie dołącz <xref:Microsoft.ML.Data.EstimatorChain`1.AppendCacheCheckpoint%2A> w pamięci podręcznej widoku danych, dzięki czemu podczas iteracji przez dane wielokrotnie przy użyciu pamięci podręcznej mogą uzyskać lepszą wydajność, zgodnie z poniższym kodem:
+ Następnie dołącz <xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A> w pamięci podręcznej widoku danych, dzięki czemu podczas iteracji przez dane wielokrotnie przy użyciu pamięci podręcznej mogą uzyskać lepszą wydajność, zgodnie z poniższym kodem:
 
 [!code-csharp[AppendCache](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AppendCache)]
 
@@ -284,7 +281,7 @@ Dodaj następujące wywołanie do `BuildAndTrainModel`metodę jako następnego w
 Tworzenie `BuildAndTrainModel` metody tuż za `Main` metody, używając następującego kodu:
 
 ```csharp
-public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(IDataView trainingDataView, EstimatorChain<ITransformer> pipeline)
+public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingDataView, IEstimator<ITransformer> pipeline)
 {
 
 }

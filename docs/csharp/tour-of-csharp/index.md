@@ -1,16 +1,11 @@
 ---
-title: Przewodnik po przykładzie C# - C# przewodnik
-description: Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.
+title: 'Przewodnik po przykładzie C# - C# przewodnik'
+description: 'Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.'
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150397"
 ---
-# <a name="a-tour-of-the-c-language"></a>Przewodnik po przykładzie C# języka  
+
+# <a name="a-tour-of-the-c-language"></a>Przewodnik po przykładzie C# języka
 
 C# (Wymowa: "Zobacz Sharp") to proste, nowoczesnych, zorientowane obiektowo i bezpieczny typowo język programowania. C#korzenie jego rodziny C języków, będzie znane w programowaniu w języku C, C++, Java i JavaScript.
 
@@ -57,7 +52,7 @@ Istnieje o wiele więcej, aby dowiedzieć się więcej na temat C#.  Poniższe t
 * [Typy i zmienne](types-and-variables.md)
     - Dowiedz się więcej o ***typy wartości***, ***typy odwołań***, i ***zmienne*** w C# języka.
 * [Wyrażenia](expressions.md)
-    - ***Wyrażenia*** są konstruowane na podstawie ***operandy*** i ***operatory***. Wyrażenia dają wartość.
+    - ***Wyrażenia*** są konstruowane na podstawie ***operandów*** i ***operatorów***. Wyrażenia dają wartość.
 * [Instrukcje](statements.md)
     - Możesz użyć ***instrukcji*** do działania programu express.
 * [Klasy i obiekty](classes-and-objects.md)
@@ -73,7 +68,7 @@ Istnieje o wiele więcej, aby dowiedzieć się więcej na temat C#.  Poniższe t
 * [Delegaty](delegates.md)
     - A ***typ delegowany*** reprezentuje odwołania do metod z określonego parametru listy i typ zwracany. Delegatów można umożliwić traktować metod jako jednostki, które mogą być przypisane do zmiennych i przekazywane jako parametry. Delegaty są podobne do koncepcji wskaźników funkcji, w przeciwieństwie do innych języków, ale w przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo i bezpieczny typowo.
 * [Atrybuty](attributes.md)
-    * ***Atrybuty*** Włącz programy określić dodatkowe deklaratywne informacje na temat typów, składniki i innych jednostek.
+     * ***Atrybuty*** Włącz programy określić dodatkowe deklaratywne informacje na temat typów, składniki i innych jednostek.
 
->[!div class="step-by-step"]
->[Next](program-structure.md)
+> [!div class="step-by-step"]
+> [Next](program-structure.md)

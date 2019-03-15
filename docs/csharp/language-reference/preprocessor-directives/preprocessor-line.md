@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 81c719698e1dc3462e13c149c0f6a26657052f5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51cffe40321aad2c91fb9a09821531545a415aec
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740557"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845924"
 ---
 # <a name="line-c-reference"></a>#line (odwołanie w C#)
 `#line` Umożliwia modyfikowanie kompilatora numerowanie wierszy i (opcjonalnie) danymi wyjścia nazwy pliku, błędów i ostrzeżeń.
 
-Poniższy przykład pokazuje, jak zgłosić dwa ostrzeżenia skojarzony z numerami wierszy. `#line 200` Dyrektywy wymusza numer następny wiersz jako 200 (mimo że wartość domyślna to #6) i aż do następnego dyrektywy #line, nazwa pliku będą raportowane jako "Specjalne". Dyrektywa #line domyślnie zwraca numerowanie wierszy w wersji domyślnej, czyli zlicza wiersze, które zostały ponumerowane przez poprzednią dyrektywę.  
+Poniższy przykład pokazuje, jak zgłosić dwa ostrzeżenia skojarzony z numerami wierszy. `#line 200` Dyrektywy wymusza numer następny wiersz jako 200 (mimo że wartość domyślna to #6), a aż do następnej `#line` dyrektywy, nazwa_pliku będą raportowane jako "Specjalne". `#line default` Dyrektywy zwraca numerację do jego numerowanie domyślne, które zlicza wiersze, które zostały oznaczenie w poprzedniej dyrektywie.  
   
 ```csharp
 class MainClass  

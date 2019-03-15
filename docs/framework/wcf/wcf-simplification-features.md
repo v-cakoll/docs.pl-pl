@@ -2,12 +2,12 @@
 title: Funkcje upraszczania programu WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467184"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845281"
 ---
 # <a name="wcf-simplification-features"></a>Funkcje upraszczania programu WCF
 
@@ -96,7 +96,7 @@ W poniższej tabeli opisano ustawienia, które zostały zmienione i gdzie można
 
 |Właściwość|On|Nowe rozwiązanie domyślne|Więcej informacji|
 |--------------|--------|-----------------|----------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 sekund|Ta właściwość określa, jak długo połączenia protokołu TCP można wykonać w celu uwierzytelniać za pomocą programu .Net Framing protokołu. Klient musi wysyłać niektórych danych początkowych, zanim serwer ma za mało informacji w celu przeprowadzenia uwierzytelniania. Limit czasu jest celowo zapewnić mniejszy niż ReceiveTimeout (10 min) złośliwego nieuwierzytelnionych klientów nie przechowuj połączeń blokowana serwerowi długo. Wartość domyślna to 30 sekund. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 sekund|Ta właściwość określa, jak długo połączenia protokołu TCP można wykonać w celu uwierzytelniać przy użyciu protokołu .NET Framing. Klient musi wysyłać niektórych danych początkowych, zanim serwer ma za mało informacji w celu przeprowadzenia uwierzytelniania. Limit czasu jest celowo zapewnić mniejszy niż ReceiveTimeout (10 min) złośliwego nieuwierzytelnionych klientów nie przechowuj połączeń blokowana serwerowi długo. Wartość domyślna to 30 sekund. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * liczba procesorów|Ta właściwość poziomie gniazd opisuje liczbę "oczekujące Akceptuj" żądań w kolejce. Jeśli kolejka zaległości nasłuchiwania się zapełni, nowe żądania gniazda zostanie odrzucone. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * liczba procesorów dla transportu<br /><br /> 4 \* liczby procesorów dla SMSvcHost.exe|Ta właściwość ogranicza liczbę kanałów, które serwer może mieć oczekiwanie na odbiornik. Gdy MaxPendingAccepts jest zbyt niska, nastąpi małych przedział czasu, w którym wszystkie kanały oczekiwania rozpoczęły obsługi połączeń, ale nie nowe kanały rozpoczęto nasłuchiwania. Połączenie, mogą pojawić się w danym przedziale czasu i zakończy się niepowodzeniem, ponieważ nic nie czeka on na serwerze. Tej właściwości można skonfigurować, ustawiając <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> właściwości na większą liczbę. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> i [konfigurowania usługi udostępniania portów Net.TCP](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * liczba procesorów|Ta właściwość określa, ile połączenia transportu zaakceptował, ale nie zostały jeszcze odebrane przez dyspozytora elementu ServiceModel. Aby ustawić tę wartość, użyj `MaxConnections` w powiązaniu lub `maxOutboundConnectionsPerEndpoint` w elemencie powiązania. Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|

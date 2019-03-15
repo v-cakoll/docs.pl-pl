@@ -3,12 +3,12 @@ title: C#Wyrażenia — Przewodnik po przykładzie C# języka
 description: bloki konstrukcyjne są wyrażenia, argumenty operacji i operatory C# języka
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 7a7f65eb7ba3da3f9630bbcb92d8578d60d2095d
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212095"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846600"
 ---
 # <a name="expressions"></a>Wyrażenia
 
@@ -18,8 +18,8 @@ Gdy wyrażenie zawiera wiele operatorów *pierwszeństwo* operatorów określa k
 
 Gdy operand występuje między dwoma operatorami o tym samym priorytecie *asocjacyjność* operatorów określa kolejność, w której są wykonywane operacje:
 
-*   Z wyjątkiem operatorów przypisania wszystkie operatory dwuargumentowe są *lewostronne*, co oznacza, że operacje są wykonywane od lewej do prawej. Na przykład `x + y + z` jest oceniane jako `(x + y) + z`.
-*   Operatory przypisania i operator warunkowy (`?:`) są *prawostronne*, co oznacza, że operacje są wykonywane od prawej do lewej. Na przykład `x = y = z` jest oceniane jako `x = (y = z)`.
+* Z wyjątkiem operatorów przypisania wszystkie operatory dwuargumentowe są *lewostronne*, co oznacza, że operacje są wykonywane od lewej do prawej. Na przykład `x + y + z` jest oceniane jako `(x + y) + z`.
+* Operatory przypisania i operator warunkowy (`?:`) są *prawostronne*, co oznacza, że operacje są wykonywane od prawej do lewej. Na przykład `x = y = z` jest oceniane jako `x = (y = z)`.
 
 Pierwszeństwo i asocjacyjność mogą być kontrolowane za pomocą nawiasów. Na przykład `x + y * z` najpierw mnoży `y` przez `z` , a następnie dodaje wynik do `x`, ale `(x + y) * z` najpierw dodaje `x` i `y` i następnie wynik mnoży przez `z`.
 

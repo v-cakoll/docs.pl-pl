@@ -2,12 +2,12 @@
 title: Narzędzie Contract-First
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 86ef109425a75e46e056447f4f40df36aa332293
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261618"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846184"
 ---
 # <a name="contract-first-tool"></a>Narzędzie Contract-First
 Kontrakty usług często muszą zostać utworzone z istniejącymi usługami. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], klasy kontraktu danych mogą być tworzone automatycznie z istniejącymi usługami za pomocą narzędzie contract-first. Aby użyć narzędzie contract-first, plik definicji schematu XML (XSD), należy pobrać lokalnie; Narzędzie nie może zaimportować kontraktów danych zdalnych za pośrednictwem protokołu HTTP.
@@ -69,31 +69,31 @@ Kontrakty usług często muszą zostać utworzone z istniejącymi usługami. W [
 
  Można skonfigurować następujące ustawienia zaawansowane dla generowania kodu z umów. Ustawienia można skonfigurować tylko dla wszystkich plików w projekcie; ustawienia nie można skonfigurować dla poszczególnych plików w tej chwili.
 
--   **Tryb serializator**: to ustawienie określa, które serializator służy do odczytywania plików kontraktu usługi. Gdy **serializatora XML** jest zaznaczone, **typy kolekcji** i **Użyj ponownie typów** opcje zostaną wyłączone. Te opcje mają zastosowanie tylko do **serializator kontraktu danych**.
+-   **Tryb serializator**: To ustawienie określa, które serializator służy do odczytywania plików kontraktu usługi. Gdy **serializatora XML** jest zaznaczone, **typy kolekcji** i **Użyj ponownie typów** opcje zostaną wyłączone. Te opcje mają zastosowanie tylko do **serializator kontraktu danych**.
 
--   **Ponownie użyj typów**: to ustawienie określa, które biblioteki są używane do ponownego użycia typu. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
+-   **Ponownie użyj typów**: To ustawienie określa, które biblioteki są używane do ponownego użycia typu. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
 
--   **Typ kolekcji**: to ustawienie określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu typu ma być używany dla typu danych kolekcji. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
+-   **Typ kolekcji**: To ustawienie określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu typu ma być używany dla typu danych kolekcji. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
 
--   **Typ słownika**: to ustawienie określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu typu ma być używany dla typu danych słownika.
+-   **Typ słownika**: To ustawienie określa w pełni kwalifikowaną lub kwalifikowaną dla zestawu typu ma być używany dla typu danych słownika.
 
--   **EnableDataBinding**: to ustawienie określa, czy wdrożyć <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu dla wszystkich typów danych do zaimplementowania powiązanie danych.
+-   **EnableDataBinding**: To ustawienie określa, czy wdrożyć <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu dla wszystkich typów danych do zaimplementowania powiązanie danych.
 
 -   **Elementu ExcludedTypes**: to ustawienie określa listę w pełni kwalifikowaną lub kwalifikowaną dla zestawu typów, które mają być wykluczone z przywoływanych zestawów. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
 
--   **GenerateInternalTypes**: to ustawienie określa, czy mają zostać wygenerowane klasy, które są oznaczone jako wewnętrzne. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
+-   **GenerateInternalTypes**: To ustawienie określa, czy mają zostać wygenerowane klasy, które są oznaczone jako wewnętrzne. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
 
--   **GenerateSerializableTypes**: to ustawienie określa, czy mają zostać wygenerowane klasy z <xref:System.SerializableAttribute> atrybutu. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
+-   **GenerateSerializableTypes**: To ustawienie określa, czy mają zostać wygenerowane klasy z <xref:System.SerializableAttribute> atrybutu. To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
 
--   **ImportXMLTypes**: to ustawienie określa, czy ma być konfigurowane serializator kontraktu danych, aby zastosować <xref:System.SerializableAttribute> atrybutów do klasy bez <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu.  To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
+-   **ImportXMLTypes**: To ustawienie określa, czy ma być konfigurowane serializator kontraktu danych, aby zastosować <xref:System.SerializableAttribute> atrybutów do klasy bez <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu.  To ustawienie dotyczy tylko, jeśli **tryb serializator** ustawiono **serializator kontraktu danych**.
 
--   **SupportFx35TypedDataSets**: to ustawienie określa, czy oferowanie dodatkowych funkcji typizowane zestawy danych utworzone dla programu .net Framework 3.5. Gdy **tryb serializator** jest ustawiona na **serializatora XML**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> rozszerzenia zostaną dodane do importera schematów XML, gdy ta wartość jest ustawiona na wartość True. Gdy **tryb serializator** jest ustawiona na **serializator kontraktu danych**, typ <xref:System.DateTimeOffset> zostaną wykluczone z odwołań, gdy ta wartość jest ustawiona na wartość False, tak, aby <xref:System.DateTimeOffset> był zawsze generowany w przypadku starszych wersji framework.
+-   **SupportFx35TypedDataSets**: To ustawienie określa, czy oferowanie dodatkowych funkcji dla typizowanych zestawów danych utworzonych dla .NET Framework 3.5. Gdy **tryb serializator** jest ustawiona na **serializatora XML**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> rozszerzenia zostaną dodane do importera schematów XML, gdy ta wartość jest ustawiona na wartość True. Gdy **tryb serializator** jest ustawiona na **serializator kontraktu danych**, typ <xref:System.DateTimeOffset> zostaną wykluczone z odwołań, gdy ta wartość jest ustawiona na wartość False, tak, aby <xref:System.DateTimeOffset> był zawsze generowany w przypadku starszych wersji framework.
 
--   **InputXsdFiles**: to ustawienie określa listę plików wejściowych. Każdy plik musi zawierać prawidłowy schemat XML.
+-   **InputXsdFiles**: To ustawienie określa listę plików wejściowych. Każdy plik musi zawierać prawidłowy schemat XML.
 
--   **Język**: to ustawienie określa język generowanego kodu kontraktu. Ustawienie musi być rozpoznawalna przy <xref:System.CodeDom.Compiler.CodeDomProvider>.
+-   **Język**: To ustawienie określa język generowanego kodu kontraktu. Ustawienie musi być rozpoznawalna przy <xref:System.CodeDom.Compiler.CodeDomProvider>.
 
--   **NamespaceMappings**: to ustawienie określa odwzorowania z docelowych przestrzeni nazw XSD do przestrzeni nazw CLR. Każdego mapowania należy użyć następującego formatu:
+-   **NamespaceMappings**: To ustawienie określa mapowania z docelowych przestrzeni nazw XSD do przestrzeni nazw CLR. Każdego mapowania należy użyć następującego formatu:
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +105,7 @@ Kontrakty usług często muszą zostać utworzone z istniejącymi usługami. W [
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**: to ustawienie określa katalog, w którym będą generowane w plikach kodu.
+-   **OutputDirectory**: To ustawienie określa katalog, w którym zostaną wygenerowane pliki kodu.
 
  Ustawienia będzie służyć do generowania typów kontraktu usługi z plików kontraktu usługi, gdy projekt jest kompilowany.
 

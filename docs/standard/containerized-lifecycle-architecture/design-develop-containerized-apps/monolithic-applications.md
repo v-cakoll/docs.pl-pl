@@ -4,12 +4,12 @@ description: Zrozumienie podstawowych pojęć do umieszczania aplikacji monolity
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676840"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843548"
 ---
 # <a name="monolithic-applications"></a>Aplikacje monolityczne
 
@@ -63,7 +63,7 @@ Ponieważ kontenery są założenia niezmienne, zgodnie z projektem, nigdy nie t
 
 Mimo że monolitycznych aplikacji mogą korzystać z platformy Docker, firma Microsoft jest dotknięcie na tylko porady dotyczące korzyści. Większe korzyści wynikające z zarządzania kontenerów pochodzi z wdrażania przy użyciu koordynatorów kontenerów, które zarządzają różnych wystąpień i cyklu życia każdego wystąpienia kontenera. Podzielenie aplikacji monolitycznej na podsystemy, które można skalować, opracowane i wdrażane indywidualnie jest punktem wejścia do obszaru mikrousług.
 
-Aby dowiedzieć się więcej na temat "metodą lift and shift" monolitycznych aplikacji za pomocą kontenerów i jak można modernizowanie aplikacji, użytkownik może w tym przewodniku dodatkowe firmy Microsoft, [modernizacji istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows ](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/), który można pobrać jako plik PDF z <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Aby dowiedzieć się więcej na temat "metodą lift and shift" monolitycznych aplikacji za pomocą kontenerów i jak można modernizowanie aplikacji, użytkownik może w tym przewodniku dodatkowe firmy Microsoft, [modernizacji istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows ](../../modernize-with-azure-and-containers/index.md), który można pobrać jako plik PDF z <https://aka.ms/LiftAndShiftWithContainersEbook>.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Opublikować pojedynczą aplikację kontenera platformy Docker w usłudze Azure App Service
 

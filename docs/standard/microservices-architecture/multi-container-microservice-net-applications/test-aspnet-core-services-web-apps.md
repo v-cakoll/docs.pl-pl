@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Ek
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 5af1fa6163858ed80fe92118e85d149081aa6f53
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 99f17f713a1193e82ad64036a4b3f5e0caa20fd7
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677750"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845976"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług platformy ASP.NET Core
 
@@ -110,7 +110,7 @@ public class PrimeWebDefaultRequestShould
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
 - **Testowanie jednostek w .NET Core za pomocą polecenia dotnet test** <br/>
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Oficjalna witryna. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -128,7 +128,7 @@ public class PrimeWebDefaultRequestShould
 
 Jak wspomniano wcześniej, podczas testowania aplikacji obsługującej wiele kontenerów, wszystkie mikrousługi muszą działać w ramach klastra hostów lub kontenera Docker. Testy usług end-to-end, obejmujących wiele operacji obejmujących wiele mikrousług wymagają jej wdrażanie i uruchamianie całej aplikacji na hoście platformy Docker za pomocą platformy docker-compose up (lub porównywalny mechanizmu, jeśli używasz programu orchestrator). Gdy całej aplikacji i wszystkich jego usług jest uruchomiona, można wykonać end-to-end integracji i testów funkcjonalnych.
 
-Istnieje kilka metod, których można użyć. W pliku docker-compose.yml, która umożliwia wdrażanie aplikacji na poziomie rozwiązania można rozwinąć punktu wejścia, aby użyć [polecenia dotnet test](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test). Można również użyć innego pliku compose, która może uruchomić testy na ilustracji, które są przeznaczone dla. Przy użyciu innego pliku compose dla testów integracyjnych, które obejmuje z mikrousług i bazami danych w kontenerach, należy upewnić się, że powiązanych danych zawsze jest resetowany do stanu pierwotnego przed uruchomieniem testów.
+Istnieje kilka metod, których można użyć. W pliku docker-compose.yml, która umożliwia wdrażanie aplikacji na poziomie rozwiązania można rozwinąć punktu wejścia, aby użyć [polecenia dotnet test](../../../core/tools/dotnet-test.md). Można również użyć innego pliku compose, która może uruchomić testy na ilustracji, które są przeznaczone dla. Przy użyciu innego pliku compose dla testów integracyjnych, które obejmuje z mikrousług i bazami danych w kontenerach, należy upewnić się, że powiązanych danych zawsze jest resetowany do stanu pierwotnego przed uruchomieniem testów.
 
 Po skonfigurowaniu i uruchomieniu aplikacji compose możesz korzystać z zalet punktów przerwania i wyjątków w przypadku korzystania z programu Visual Studio. Lub uruchomić testy integracji automatycznie w potoku ciągłej integracji w usługach infrastruktury DevOps platformy Azure lub inny system ciągłej integracji/ciągłego wdrażania, który obsługuje kontenery platformy Docker.
 

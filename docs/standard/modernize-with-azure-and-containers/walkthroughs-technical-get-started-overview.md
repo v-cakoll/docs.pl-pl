@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą chmury platfor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674942"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846262"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Przewodniki i technicznych wprowadzająca
 
@@ -83,7 +83,7 @@ Korzyści wynikające z tego przewodnika są proste: Po prostu zapoznać się z 
 Poznaj tę zawartość, więcej informacji na temat w witrynie typu wiki usługi GitHub:
 
 - [Samouczek linii bazowej platformy ASP.NET MVC i formularzy sieci Web "starszych" aplikacji](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
--   [Samouczek na temat usługi WCF linii bazowej i aplikacja "starszych" (3-warstwowej) WinForms](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [Samouczek na temat usługi WCF linii bazowej i aplikacja "starszych" (3-warstwowej) WinForms](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Przewodnik 2: Konteneryzowanie istniejącej aplikacji .NET za pomocą kontenerów Windows
 

@@ -2,12 +2,12 @@
 title: Charakterystyka funkcji programu Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721856"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846548"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Charakterystyka funkcji programu Windows Workflow Foundation
 
@@ -101,7 +101,7 @@ Schemat konfiguracji programu WCF jest złożona i zapewnia użytkownikom z wiel
 
 - [Standardowy punkt końcowy elementu](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [Usługa ulepszenia konfiguracji w programie .net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Ulepszenia konfiguracji usługi w programie .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [Powszechnym użytkownika na platformie .NET 4: Błędne Nazwa konfiguracji usługi WF/WCF](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -263,7 +263,7 @@ Użytkownik musi się monit o podanie danych wejściowych. W normalnych warunkac
 
 ## <a name="wcf-routing-service"></a>Usługa routingu WCF
 
-Usługa routingu jest zaprojektowane jako ogólnego oprogramowania routera, który pozwala na kontrolowanie przepływ komunikatów WCF Between klientów i usług. Usługa routingu umożliwia rozdzielenie klientów z usług, co daje znacznie większą swobodę w zakresie konfiguracji, może obsługiwać i elastyczność masz podczas wybierania sposobu hostowania usług. W .NET 3.5 klientów i usługi zostały ściśle; Klient ma wiedzieć o wszystkich usług potrzebny na komunikowanie się, gdzie znajduje się. Ponadto usługi WCF w programie .net Framework 3.5 ma następujące ograniczenia:
+Usługa routingu jest zaprojektowane jako ogólnego oprogramowania routera, który pozwala na kontrolowanie przepływ komunikatów WCF Between klientów i usług. Usługa routingu umożliwia rozdzielenie klientów z usług, co daje znacznie większą swobodę w zakresie konfiguracji, może obsługiwać i elastyczność masz podczas wybierania sposobu hostowania usług. W .NET 3.5 klientów i usługi zostały ściśle; Klient ma wiedzieć o wszystkich usług potrzebny na komunikowanie się, gdzie znajduje się. Ponadto usługi WCF w programie .NET Framework 3.5 powodowało następujące ograniczenia:
 
 - Obsługa błędów została skomplikowane, ponieważ musiały być ustalone do klienta tę logikę.
 
@@ -271,7 +271,7 @@ Usługa routingu jest zaprojektowane jako ogólnego oprogramowania routera, któ
 
 - Usługi rzadko dobrze była brana pod uwagę: jest łatwiejsze do klienta, zwróć się do jednej usługi, która implementuje wszystko, a nie wymagających, aby wybrać wiele usług.
 
-Usługa routingu na platformie .net 4 zaprojektowano w celu ułatwienia rozwiązywania tych problemów. Nowa usługa routingu ma następujące cechy:
+Usługa routingu w .NET 4 zaprojektowano w celu ułatwienia rozwiązywania tych problemów. Nowa usługa routingu ma następujące cechy:
 
 1. Routing na podstawie zawartości (<xref:System.ServiceModel.Dispatcher.MessageFilter> obiektów zbadać wiadomości, aby określić, gdzie mają być wysyłane.)
 
@@ -327,7 +327,7 @@ Projektant nie chce punktów końcowych twardych kodu, ponieważ jest nieznany, 
 
 ## <a name="tracking"></a>Śledzenie
 
-Śledzenie przepływu pracy zapewnia wgląd w wykonywania wystąpienia przepływu pracy. Zdarzenia śledzenia są emitowane z przepływu pracy na poziomie wystąpienia przepływu pracy i wykonywania działań w ramach przepływu pracy. Uczestnikiem śledzenia przepływu pracy musi zostać dodane do hosta przepływu pracy do subskrybowania śledzenie rekordów. Rekordy śledzenia są filtrowane przy użyciu profilu śledzenia. .Net Framework oferuje uczestnika śledzenia zdarzeń systemu Windows (Event Tracing for Windows), a podstawowy profil jest zainstalowany w pliku machine.config.
+Śledzenie przepływu pracy zapewnia wgląd w wykonywania wystąpienia przepływu pracy. Zdarzenia śledzenia są emitowane z przepływu pracy na poziomie wystąpienia przepływu pracy i wykonywania działań w ramach przepływu pracy. Uczestnikiem śledzenia przepływu pracy musi zostać dodane do hosta przepływu pracy do subskrybowania śledzenie rekordów. Rekordy śledzenia są filtrowane przy użyciu profilu śledzenia. Program .NET Framework oferuje uczestnika śledzenia zdarzeń systemu Windows (Event Tracing for Windows), a podstawowy profil jest zainstalowany w pliku machine.config.
 
 ### <a name="getting-started"></a>Wprowadzenie
 

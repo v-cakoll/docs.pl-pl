@@ -3,12 +3,12 @@ title: Projektowanie w przypadku typów referencyjnych dopuszczającego wartoś�
 description: W tym samouczku zaawansowane zawiera wprowadzenie do typów referencyjnych dopuszczającego wartość null. Dowiesz się, że express projektu chcący po wartości odniesienia może mieć wartości null i pozwolić kompilatorowi wymusić, gdy nie może mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442103"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846587"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Samouczek: Wyraźniej Express zgodną z planem projektu w przypadku typów referencyjnych dopuszcza wartości null i nie dopuszcza wartości null
 
@@ -24,7 +24,7 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 beta. C# 8 kompilatora w wersji beta jest dostępna z [2019 usługi Visual Studio w wersji zapoznawczej 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview), lub [.NET Core 3.0 w wersji zapoznawczej 2](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 beta. C# 8 kompilatora w wersji beta jest dostępna z [2019 usługi Visual Studio w wersji zapoznawczej 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview), lub [.NET Core 3.0 w wersji zapoznawczej 3](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 W tym samouczku założono, kiedy znasz już C# i .NET, w tym Visual Studio lub interfejsu wiersza polecenia platformy .NET Core.
 

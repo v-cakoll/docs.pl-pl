@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 57babf216821665613da053f972ff25488418b7d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06d4d4f6687979f4fd54e919ca6f236a5b5402e8
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705067"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843011"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Instrukcje: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Funkcje lepszą integrację między usługami sieci web i przepływów pracy w formie Projektowanie przepływów pracy z wymogiem wcześniejszego zawarcia kontraktu. Narzędzie tworzenia przepływu pracy z wymogiem wcześniejszego zawarcia kontraktu umożliwia projektowanie najpierw kontrakt w kodzie. Narzędzie następnie automatycznie generuje szablon działania w przyborniku dla operacji w kontrakcie.  
@@ -57,7 +57,7 @@ ms.locfileid: "57705067"
   
 4.  W **Eksploratora rozwiązań**, otwórz Service1.xamlx. W Projektancie pojawi się usługi przepływu pracy.  
   
-5.  Wybierz **sekwencji** działania. W oknie dialogowym właściwości kliknij **...** znajdujący się w **ImplementedContract** właściwości. W **Editor typu Kolekce** okna, które zostanie wyświetlone, kliknij przycisk **typu** listy rozwijanej i wybierz **vyhledat typy...** wpis. W **przeglądania i wybierz pozycję .net typu** okna dialogowego, w obszarze  **\<bieżący projekt >**, otwórz wszystkie węzły podrzędne i wybierz **IBookService**. Kliknij przycisk **OK**. W **Editor typu Kolekce** okno dialogowe, kliknij przycisk **OK**.  
+5.  Wybierz **sekwencji** działania. W oknie dialogowym właściwości kliknij **...** znajdujący się w **ImplementedContract** właściwości. W **Editor typu Kolekce** okna, które zostanie wyświetlone, kliknij przycisk **typu** listy rozwijanej i wybierz **vyhledat typy...** wpis. W **Wyszukaj i wybierz typ architektury .NET** okna dialogowego, w obszarze  **\<bieżący projekt >**, otwórz wszystkie węzły podrzędne i wybierz **IBookService**. Kliknij przycisk **OK**. W **Editor typu Kolekce** okno dialogowe, kliknij przycisk **OK**.  
   
 6.  Wybierz i Usuń **ReceiveRequest** i **SendResponse** działań.  
   

@@ -3,11 +3,11 @@ title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
 ms.openlocfilehash: d723bdf55104fa0a8d4a8e20c60a9debb26c7886
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788599"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843945"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 

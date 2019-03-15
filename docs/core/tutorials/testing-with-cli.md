@@ -4,12 +4,12 @@ description: W tym samouczku wyjaśniono, jak organizowanie i testowanie projekt
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: b8460cb04297a0a5c1785009cbf3d86f5e133b00
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788261"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845911"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
@@ -48,7 +48,7 @@ Projekty, które logicznie grupy plików do folderów, które są łatwe do nawi
 
 Dla następujących kroków możesz albo kontynuować pracę przy użyciu [przykładowe zwierzęta NewTypes](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) lub tworzyć własne pliki i foldery. Typy są logicznie pogrupowane w strukturę folderów, która zezwala na dodawanie większej liczby typów później, a testy również logicznie są umieszczane w folderach, umożliwiające dodanie więcej testów później.
 
-Przykład zawiera dwa typy `Dog` i `Cat`i ma mu w zaimplementowaniu wspólny interfejs `IPet`. Aby uzyskać `NewTypes` projektu, dowiesz się, jak organizowania typów powiązanych pet do *zwierzęta* folderu. Jeśli inny zestaw typów zostanie dodany później *WildAnimals* na przykład, są umieszczane w *NewTypes* folder wraz z *zwierzęta* folderu. *WildAnimals* folderu może zawierają typy służące do zwierząt, które nie są zwierząt domowych, takich jak `Squirrel` i `Rabbit` typów. W ten sposób podczas dodawania typów projektu pozostaje dobrze zorganizowane. 
+Przykład zawiera dwa typy `Dog` i `Cat`i ma mu w zaimplementowaniu wspólny interfejs `IPet`. Aby uzyskać `NewTypes` projektu, dowiesz się, jak organizowania typów powiązanych pet do *zwierzęta* folderu. Jeśli inny zestaw typów zostanie dodany później *WildAnimals* na przykład, są umieszczane w *NewTypes* folder wraz z *zwierzęta* folderu. *WildAnimals* folderu może zawierają typy służące do zwierząt, które nie są zwierząt domowych, takich jak `Squirrel` i `Rabbit` typów. W ten sposób podczas dodawania typów projektu pozostaje dobrze zorganizowane.
 
 Utwórz następującą strukturę folderów z zawartością pliku wskazanego:
 
@@ -144,16 +144,16 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
@@ -184,9 +184,8 @@ Poniżej przedstawiono strukturę kompletnego projektu:
 
 Rozpocznij w *testów/NewTypesTests* katalogu. Przywróć projekt testowy z [ `dotnet restore` ](../tools/dotnet-restore.md) polecenia. Uruchom testy przy użyciu [ `dotnet test` ](../tools/dotnet-test.md) polecenia. To polecenie uruchamia narzędzie test runner, określone w pliku projektu.
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 Zgodnie z oczekiwaniami, testowania kończy się niepowodzeniem i konsoli wyświetlane następujące wyniki:
 
 ```
@@ -238,4 +237,3 @@ Test execution time: 1.6029 Seconds
 Testowanie przebiegów. Typów pet zwracają poprawne wartości w przypadku do właściciela.
 
 Wyjaśniono techniki organizowanie i testowanie projektów przy użyciu xUnit. Przejdź do przodu, za pomocą tych metod, stosując je do własnych projektów. *Udanego kodowania!*
-

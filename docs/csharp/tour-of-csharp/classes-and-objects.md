@@ -3,12 +3,12 @@ title: Klasy i obiekty w C# — Przewodnik po przykładzie C# języka
 description: Jesteś nowym użytkownikiem C#? Przeczytaj omówienie klas, obiektów i dziedziczenie
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147557"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846145"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -123,7 +123,7 @@ Podobnie jak typy metody mogą również mieć zestaw parametrów typu, dla któ
 
 Parametry są używane do przekazywania wartości lub odwołania zmiennej do metody. Parametry metody uzyskać wartości rzeczywiste z *argumenty* które są określone, gdy metoda jest wywoływana. Istnieją cztery rodzaje parametrów: wartości parametrów, parametrów w formie odwołań, parametry wyjściowe i tablice parametrów.
 
-A *wartość parametru* służy do przekazywania argumentów wejściowych. Wartość parametru odnosi się do zmiennej lokalnej, która pobiera jej wartość początkową z argumentem, która została przekazana dla parametru. Modyfikacje parametr wartości nie wpływają na argumentu, która została przekazana dla parametru. 
+A *wartość parametru* służy do przekazywania argumentów wejściowych. Wartość parametru odnosi się do zmiennej lokalnej, która pobiera jej wartość początkową z argumentem, która została przekazana dla parametru. Modyfikacje parametr wartości nie wpływają na argumentu, która została przekazana dla parametru.
 
 Wartości parametrów można opcjonalnie, określając wartość domyślną, dzięki czemu można pominąć odpowiednie argumenty.
 
@@ -293,6 +293,6 @@ Moduł odśmiecania pamięci jest dozwolona szerokiego szerokości przy podejmow
 
 `using` Instrukcja oferuje lepszym rozwiązaniem do zniszczenia obiektu.
 
->[!div class="step-by-step"]
->[Poprzednie](statements.md)
->[dalej](structs.md)
+> [!div class="step-by-step"]
+> [Poprzednie](statements.md)
+> [dalej](structs.md)

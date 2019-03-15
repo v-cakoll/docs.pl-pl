@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfik
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d94e254f0cdf56c21c94012f824f05a550e4da2f
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788469"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845794"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -180,7 +180,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 ```
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Ponieważ utworzone wcześniej `SentimentData` typ modelu danych jest zgodny schemat zestawu danych, inicjowanie, mapowanie i ładowanie na jeden wiersz kodu za pomocą zestawu danych można łączyć `MLContext.Data.ReadFromTextFile` otoki dla <xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29>. Zwraca <xref:Microsoft.Data.DataView.IDataView>. 
+Ponieważ utworzone wcześniej `SentimentData` typ modelu danych jest zgodny schemat zestawu danych, inicjowanie, mapowanie i ładowanie na jeden wiersz kodu za pomocą zestawu danych można łączyć `MLContext.Data.LoadFromTextFile` otoki dla [metoda LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Zwraca <xref:Microsoft.Data.DataView.IDataView>. 
 
  Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
 

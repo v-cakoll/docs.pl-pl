@@ -2,12 +2,12 @@
 title: Przestrzeń nazw dla usług .NET Framework XAML
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736802"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030523"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Przestrzeń nazw dla usług .NET Framework XAML
 Przestrzeń nazw XAML jest koncepcji, który rozwija w definicji przestrzeni nazw XML. Podobnie jak w przestrzeni nazw XML, można zdefiniować za pomocą nazw XAML `xmlns` atrybutów w znaczniku. Przestrzenie nazw XAML również jest reprezentowanych w strumień węzłów XAML i innych interfejsów API usług XAML. W tym temacie wprowadzono pojęcie przestrzeń nazw XAML i opisuje, jak przestrzenie nazw XAML mogą być definiowane i są używane przez kontekst schematu XAML i innymi aspektami usług programu .NET Framework XAML.  
@@ -44,14 +44,14 @@ Przestrzeń nazw XAML jest koncepcji, który rozwija w definicji przestrzeni naz
   
  *assemblyName* reprezentuje dowolny ciąg, który jest dozwolony jako <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> danych wejściowych. Ten ciąg może zawierać informacje o wersji kultury lub klucza publicznego (definicje te pojęcia są zdefiniowane w temacie dotyczącym <xref:System.Reflection.Assembly>). COFF format i dowody (używane przez inne przeciążenia <xref:System.Reflection.Assembly.Load%2A>) nie są istotne dla celów; z ładowaniem zestawu, XAML wszystkie informacje o ładowaniu muszą być przedstawione jako ciąg.  
   
- Określenie klucza publicznego dla zestawu jest przydatną techniką, dotyczące zabezpieczeń XAML lub usuwania niejednoznaczności możliwe, że może istnieć, jeśli zestawy są ładowane przez prostej nazwie lub wstępnie istnieje w domenie z pamięci podręcznej lub aplikacji. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące zabezpieczeń XAML](../../../docs/framework/xaml-services/xaml-security-considerations.md).  
+ Określenie klucza publicznego dla zestawu jest przydatną techniką, dotyczące zabezpieczeń XAML lub usuwania niejednoznaczności możliwe, że może istnieć, jeśli zestawy są ładowane przez prostej nazwie lub wstępnie istnieje w domenie z pamięci podręcznej lub aplikacji. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące zabezpieczeń XAML](xaml-security-considerations.md).  
   
 ## <a name="xaml-namespace-declarations-in-the-xaml-services-api"></a>Deklaracji Namespace XAML w usługach XAML interfejsu API  
  W interfejsie API usług XAML deklarację przestrzeni nazw XAML jest reprezentowany przez <xref:System.Xaml.NamespaceDeclaration> obiektu. Jeśli użytkownik deklaruje przestrzeni nazw XAML w kodzie, należy wywołać <xref:System.Xaml.NamespaceDeclaration.%23ctor%28System.String%2CSystem.String%29> konstruktora. `ns` i `prefix` parametry są określane jako ciągi, a dane wejściowe do przekazania do tych parametrów odnosi się do definicji identyfikatora przestrzeni nazw XAML i prefiksu przestrzeni nazw XAML, zgodnie z wcześniej w tym temacie.  
   
  Jeśli badaną informacji dotyczących przestrzeni nazw XAML w ramach strumienia węzłów XAML lub za pośrednictwem innych dostępu w systemie typu XAML, <xref:System.Xaml.NamespaceDeclaration.Namespace%2A?displayProperty=nameWithType> zgłasza identyfikator przestrzeni nazw XAML i <xref:System.Xaml.NamespaceDeclaration.Prefix%2A?displayProperty=nameWithType> raportów prefiks przestrzeni nazw XAML.  
   
- W postaci strumienia węzłów XAML informacji dotyczących przestrzeni nazw XAML może pojawić się jako węzeł XAML, który poprzedza jednostki, której dotyczy. Obejmuje to przypadki, w którym poprzedza informacji dotyczących przestrzeni nazw XAML `StartObject` głównego elementu XAML. Aby uzyskać więcej informacji, zobacz [opis XAML węzła Stream strukturami i koncepcjami](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+ W postaci strumienia węzłów XAML informacji dotyczących przestrzeni nazw XAML może pojawić się jako węzeł XAML, który poprzedza jednostki, której dotyczy. Obejmuje to przypadki, w którym poprzedza informacji dotyczących przestrzeni nazw XAML `StartObject` głównego elementu XAML. Aby uzyskać więcej informacji, zobacz [opis XAML węzła Stream strukturami i koncepcjami](understanding-xaml-node-stream-structures-and-concepts.md).  
   
  Umożliwia obsługę wielu scenariuszy korzystających z interfejsu API programu .NET Framework XAML Services powinien istnieć co najmniej jedną deklarację przestrzeni nazw XAML i deklaracji musi zawierać lub odwoływać się do informacji, która jest wymagana przez kontekst schematu XAML. Przestrzenie nazw XAML musi określić zestawy do załadowania lub pomocne przy rozwiązywaniu określonych typów w przestrzeni nazw i zestawów, które są już załadowane lub znane przez kontekst schematu XAML.  
   
@@ -61,7 +61,7 @@ Przestrzeń nazw XAML jest koncepcji, który rozwija w definicji przestrzeni naz
   
  Jeśli potrzebujesz wstępnie wypełnić informacji przestrzeń nazw XAML, w przypadkach, gdzie nie zdefiniowano przestrzeni nazw XAML, mają kontekst schematu XAML do użycia w znaczniku, jedna z technik umożliwia jest do deklarowania deklaracje przestrzeni nazw XML w <xref:System.Xml.XmlParserContext> dla <xref:System.Xml.XmlReader>. Użyj tego <xref:System.Xml.XmlReader> jako dane wejściowe dla konstruktora czytnika XAML lub <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>.  
   
- Dwa API, które są istotne dla przestrzeni nazw XAML, obsługa w .NET Framework XAML Services są atrybuty <xref:System.Windows.Markup.XmlnsDefinitionAttribute> i <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Te atrybuty mają zastosowanie do zestawów. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> jest używany przez kontekst schematu XAML do interpretacji żadnych deklaracji przestrzeni nazw XAML, która zawiera identyfikator URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> jest używana przez narzędzia, które emitują XAML, dzięki czemu określonej przestrzeni nazw XAML może być serializowany z prefiksem przewidywalne. Aby uzyskać więcej informacji, zobacz [XAML-Related atrybuty CLR dla niestandardowych typów i bibliotek](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Dwa API, które są istotne dla przestrzeni nazw XAML, obsługa w .NET Framework XAML Services są atrybuty <xref:System.Windows.Markup.XmlnsDefinitionAttribute> i <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Te atrybuty mają zastosowanie do zestawów. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> jest używany przez kontekst schematu XAML do interpretacji żadnych deklaracji przestrzeni nazw XAML, która zawiera identyfikator URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> jest używana przez narzędzia, które emitują XAML, dzięki czemu określonej przestrzeni nazw XAML może być serializowany z prefiksem przewidywalne. Aby uzyskać więcej informacji, zobacz [XAML-Related atrybuty CLR dla niestandardowych typów i bibliotek](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Omówienie struktur i koncepcji strumienia węzłów XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [Omówienie struktur i koncepcji strumienia węzłów XAML](understanding-xaml-node-stream-structures-and-concepts.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839095"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048672"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Typy wbudowane dla wspólnych elementów podstawowych języka XAML
 XAML 2009 wprowadza wsparcie poziomu języka XAML dla kilku typów danych, które są często używanymi wartościami pierwotnymi w środowisku uruchomieniowym języka (wspólnego CLR) i w innych językach programowania. XAML 2009 dodaje obsługę tych wartości pierwotnych: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`, i `x:Array`  
@@ -40,7 +40,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ```  
   
 <a name="xaml_2009_language_primitives"></a>   
-## <a name="xaml-2009-language-primitives"></a>XAML 2009 — elementów podstawowych języka  
+## <a name="xaml-2009-language-primitives"></a>XAML 2009 Language Primitives  
  Umownie wyświetlane są pierwotne wartości języka XAML i wszystkie inne elementy języka XAML, w tym `x:` prefiks. Jest to, jak elementy języka XAML są zwykle używane w znacznikach rzeczywistych. Występuje Niniejsza Konwencja w dokumentacji koncepcyjnej XAML w WPF, a także w specyfikacji XAML.  
   
 ### <a name="xobject"></a>x: obiekt  
@@ -48,7 +48,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Ten typ pierwotny nie jest zazwyczaj używany w zaznaczaniu aplikacji, ale może być pomocny w niektórych scenariuszach, takich jak sprawdzanie zbywalności w systemie typu XAML.  
   
-### <a name="xboolean"></a>x: Boolean  
+### <a name="xboolean"></a>x:Boolean  
  Dla obsługi środowiska CLR `x:Boolean` podstawowego odnosi się do <xref:System.Boolean>.  
   
  XAML analizuje wartości dla `x:Boolean` bez uwzględniania wielkości liter. Należy pamiętać, że `x:Bool` nie jest alternatywą zaakceptowaną. Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.17 i 5.4.11](https://go.microsoft.com/fwlink/?LinkId=114525).  
@@ -58,12 +58,12 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Typy String lub char wchodzą mają interakcję z ogólnym kodowaniem pliku na poziomie XML. Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.7 i 5.4.1](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xstring"></a>x: String.  
+### <a name="xstring"></a>x:String  
  Dla obsługi środowiska CLR `x:String` podstawowego odnosi się do <xref:System.String>.  
   
  Typy String lub char wchodzą mają interakcję z ogólnym kodowaniem pliku na poziomie XML. Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcja 5.2.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xdecimal"></a>x: dziesiętne  
+### <a name="xdecimal"></a>x:Decimal  
  Dla obsługi środowiska CLR `x:Decimal` podstawowego odnosi się do <xref:System.Decimal>.  
   
  Należy pamiętać, że analiza kodu XAML standardowo odbywa się w obszarze `en-US` kultury. W obszarze `en-US` kultury, poprawnym separatorem dla elementów ułamków dziesiętny jest zawsze kropka (`.`) niezależnie od ustawień kultury środowiska programowania lub obiektu docelowego ewentualnego klienta gdzie XAML jest ładowany w czasie wykonywania.  
@@ -79,7 +79,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.8 i 5.4.2](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xdouble"></a>x: Double  
+### <a name="xdouble"></a>x:Double  
  Dla obsługi środowiska CLR `x:Double` podstawowego odnosi się do <xref:System.Double>.  
   
  Oprócz wartości liczbowych składnia tekstu `x:Double` pozwala na tokeny `Infinity`, `-Infinity`, i `NaN`. Te tokeny uwzględniają wielkość liter.  
@@ -93,31 +93,31 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
   
  Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.11 i 5.4.5](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xint32"></a>x: Int32  
+### <a name="xint32"></a>x:Int32  
  Dla obsługi środowiska CLR `x:Int32` podstawowego odnosi się do <xref:System.Int32>. `x:Int32` jest traktowany jako podpisany. W XAML, Brak znaku plusa (`+`) w składni tekstu jest przez domniemanie interpretowany jako wartość ze znakiem dodatnim.  
   
  Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.12 i 5.4.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xint64"></a>x: Int64.  
+### <a name="xint64"></a>x:Int64  
  Dla obsługi środowiska CLR `x:Int64` podstawowego odnosi się do <xref:System.Int64>. `x:Int64` jest traktowany jako podpisany. W XAML, Brak znaku plusa (`+`) w składni tekstu jest przez domniemanie interpretowany jako wartość ze znakiem dodatnim.  
   
  Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.13 i 5.4.7](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xtimespan"></a>x: TimeSpan  
+### <a name="xtimespan"></a>x:TimeSpan  
  Dla obsługi środowiska CLR `x:TimeSpan` podstawowego odnosi się do <xref:System.TimeSpan>.  
   
  Pamiętaj, że analiza kodu XAML formatu daty i godziny standardowo odbywa się w obszarze `en-US` kultury.  
   
  Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.16 i 5.4.10](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xuri"></a>x: Uri  
+### <a name="xuri"></a>x:Uri  
  Dla obsługi środowiska CLR `x:Uri` podstawowego odnosi się do <xref:System.Uri>.  
   
  Szukanie protokołów nie jest częścią definicji XAML dla `x:Uri`.  
   
  Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.15 i 5.4.9](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
-### <a name="xbyte"></a>x: Byte  
+### <a name="xbyte"></a>x:Byte  
  Dla obsługi środowiska CLR `x:Byte` podstawowego odnosi się do <xref:System.Byte>. A <xref:System.Byte>  /  `x:Byte` jest traktowany jako nieoznaczony.  
   
  Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcje 5.2.10 i 5.4.4](https://go.microsoft.com/fwlink/?LinkId=114525).  
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x: Array  
  Dla obsługi środowiska CLR `x:Array` podstawowego odnosi się do <xref:System.Array>.  
   
- Można zdefiniować tablicę w XAML 2006 za pomocą składni rozszerzenia znaczników; Składnia XAML 2009 jest jednak zdefiniowanym przez język podstawowy, który nie wymaga dostępu do rozszerzenia znacznika. Aby uzyskać więcej informacji na temat obsługi XAML 2006, zobacz [x: Array — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-array-markup-extension.md).  
+ Można zdefiniować tablicę w XAML 2006 za pomocą składni rozszerzenia znaczników; Składnia XAML 2009 jest jednak zdefiniowanym przez język podstawowy, który nie wymaga dostępu do rozszerzenia znacznika. Aby uzyskać więcej informacji na temat obsługi XAML 2006, zobacz [x: Array — rozszerzenie znaczników](x-array-markup-extension.md).  
   
  Aby uzyskać definicję specyfikacji języka XAML, zobacz [ \[MS-XAML\] sekcja 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525).  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 3bcf78ce6fe0e56e027b2d473a95d6663971744d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1704a7a86e89685763da7bf49a67c1fe8373124a
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588226"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050529"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Typy konwerterów i rozszerzenia znaczników dla XAML
 Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających z systemów typu XAML i moduły zapisujące XAML można wygenerować składniki wykresu obiektu. Mimo że korzystają z niektórych właściwości, typy konwerterów i rozszerzenia znaczników są reprezentowane inaczej w strumień węzłów XAML. W tej dokumentacji zestawu, konwerterów typów, rozszerzenia znaczników i podobne konstrukcje są czasami nazywane zbiorczo konwertery wartości.  
@@ -32,7 +32,7 @@ Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających 
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>Konwertery typu  
- W definicji usług programu .NET Framework XAML konwerterów typów są klas, które pochodzą ze środowiska CLR <xref:System.ComponentModel.TypeConverter> klasy. <xref:System.ComponentModel.TypeConverter> to klasa, która była w Microsoft .NET Framework, przed wprowadzeniem XAML. Jego oryginalnym celem było do obsługi systemu windows właściwość i podobne oparte na tekście owoce cytrusowe metafory edycji dla [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] właściwości. Wprowadzenie XAML .NET Framework używa <xref:System.ComponentModel.TypeConverter> do konwertowania składni tekstu (tak jak w wartości atrybutu lub węzła wartości XAML) do obiektu. <xref:System.ComponentModel.TypeConverter> Ponadto można serializować wartość obiektu do składni tekstu. <xref:System.ComponentModel.TypeConverter> była już używana w poprzednich implementacjach XAML określonej platformy Windows Presentation Foundation (WPF) i Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat <xref:System.ComponentModel.TypeConverter> w XAML, zobacz [typy konwerterów dla XAML — omówienie](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md).  
+ W definicji usług programu .NET Framework XAML konwerterów typów są klas, które pochodzą ze środowiska CLR <xref:System.ComponentModel.TypeConverter> klasy. <xref:System.ComponentModel.TypeConverter> to klasa, która była w Microsoft .NET Framework, przed wprowadzeniem XAML. Jego oryginalnym celem było do obsługi systemu windows właściwość i podobne oparte na tekście owoce cytrusowe metafory edycji dla [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] właściwości. Wprowadzenie XAML .NET Framework używa <xref:System.ComponentModel.TypeConverter> do konwertowania składni tekstu (tak jak w wartości atrybutu lub węzła wartości XAML) do obiektu. <xref:System.ComponentModel.TypeConverter> Ponadto można serializować wartość obiektu do składni tekstu. <xref:System.ComponentModel.TypeConverter> była już używana w poprzednich implementacjach XAML określonej platformy Windows Presentation Foundation (WPF) i Windows Communication Foundation (WCF). Aby uzyskać więcej informacji na temat <xref:System.ComponentModel.TypeConverter> w XAML, zobacz [typy konwerterów dla XAML — omówienie](type-converters-for-xaml-overview.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Rozszerzenia znaczników  
@@ -42,10 +42,10 @@ Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających 
   
  Rozszerzenia znaczników są skojarzone z jednej klasy pomocnicze usługi, ale może być stosowane do dowolnej wartości elementu członkowskiego. (Jednak można zaimplementować celowo ograniczyć jego użycia do niektórych elementów członkowskich i typy docelowej, używając kontekstu usługi rozszerzenia znaczników.) Rozszerzenia znaczników można zastąpić skojarzenie konwertera typu. Także można go użyć do określenia wartości atrybutu dla elementów członkowskich, które w przeciwnym razie będzie nie obsługuje składni tekstu.  
   
- Aby uzyskać więcej informacji o implementacji wzorca rozszerzenia znaczników dla XAML, zobacz [rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Aby uzyskać więcej informacji o implementacji wzorca rozszerzenia znaczników dla XAML, zobacz [rozszerzenia znaczników dla przeglądu XAML](markup-extensions-for-xaml-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> i <xref:System.Windows.Markup.ValueSerializer> typów znajdują się w <xref:System.Windows.Markup> przestrzeni nazw i nie <xref:System.Xaml> przestrzeni nazw. Oznacza to, że te typy są specyficzne dla technologii WPF lub formularzy Windows, które w przeciwnym razie wypełnić przestrzeni nazw CLR, który zawiera ciąg `Windows`. <xref:System.Windows.Markup.MarkupExtension> i <xref:System.Windows.Markup.ValueSerializer> znajdują się w zestawie System.Xaml i mają niezależne określonym środowiskiem. Te typy istniał w przestrzeni nazw CLR [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] i pozostają w przestrzeni nazw CLR w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pozwala uniknąć przerwy odwołania w istniejących projektach WPF. Aby uzyskać więcej informacji, zobacz [typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md).  
+>  <xref:System.Windows.Markup.MarkupExtension> i <xref:System.Windows.Markup.ValueSerializer> typów znajdują się w <xref:System.Windows.Markup> przestrzeni nazw i nie <xref:System.Xaml> przestrzeni nazw. Oznacza to, że te typy są specyficzne dla technologii WPF lub formularzy Windows, które w przeciwnym razie wypełnić przestrzeni nazw CLR, który zawiera ciąg `Windows`. <xref:System.Windows.Markup.MarkupExtension> i <xref:System.Windows.Markup.ValueSerializer> znajdują się w zestawie System.Xaml i mają niezależne określonym środowiskiem. Te typy istniał w przestrzeni nazw CLR [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] i pozostają w przestrzeni nazw CLR w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pozwala uniknąć przerwy odwołania w istniejących projektach WPF. Aby uzyskać więcej informacji, zobacz [typy migrowane z WPF do System.Xaml](types-migrated-from-wpf-to-system-xaml.md).  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>Wartość serializatorów  
@@ -63,11 +63,11 @@ Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających 
   
 <a name="service_context_for_a_value_converter"></a>   
 ## <a name="service-context-for-a-value-converter"></a>Kontekst usługi dla konwertera wartości  
- Podczas implementowania konwerter wartości, często wymagany jest dostęp do kontekstu, w której jest stosowany konwertera wartości. Ten kontekst jest określany jako kontekst usługi. Kontekst usługi może zawierać informacje, takie jak active kontekst schematu XAML, dostęp do system mapowania typu, który kontekst schematu XAML i modułu zapisywania obiektu XAML zapewniają i tak dalej. Aby uzyskać więcej informacji na temat konteksty usług dostępne dla konwertera wartości i sposobu uzyskiwania dostępu do usług, które mogą dostarczać kontekstu usługi zobacz [usługi kontekstów dostępne dla typów konwerterów i rozszerzeń znaczników](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md).  
+ Podczas implementowania konwerter wartości, często wymagany jest dostęp do kontekstu, w której jest stosowany konwertera wartości. Ten kontekst jest określany jako kontekst usługi. Kontekst usługi może zawierać informacje, takie jak active kontekst schematu XAML, dostęp do system mapowania typu, który kontekst schematu XAML i modułu zapisywania obiektu XAML zapewniają i tak dalej. Aby uzyskać więcej informacji na temat konteksty usług dostępne dla konwertera wartości i sposobu uzyskiwania dostępu do usług, które mogą dostarczać kontekstu usługi zobacz [usługi kontekstów dostępne dla typów konwerterów i rozszerzeń znaczników](service-contexts-available-to-type-converters-and-markup-extensions.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [Rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [Typy konwerterów dla XAML — omówienie](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
-- [Konteksty usług dostępne dla typów konwerterów i rozszerzeń znaczników](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)
+- [Rozszerzenia znaczników dla przeglądu XAML](markup-extensions-for-xaml-overview.md)
+- [Typy konwerterów dla XAML — omówienie](type-converters-for-xaml-overview.md)
+- [Konteksty usług dostępne dla typów konwerterów i rozszerzeń znaczników](service-contexts-available-to-type-converters-and-markup-extensions.md)

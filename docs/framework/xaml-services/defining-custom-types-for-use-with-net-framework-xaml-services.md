@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: 672660f73e9e6faf25985a651290e979f9deb9f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492510"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042630"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML
 Definiowanie typów niestandardowych, które są obiektami biznesowych lub typów, które nie są zależne od określonych platform, istnieją niektóre najlepsze rozwiązania dotyczące XAML, które możesz wykonać. Jeśli wykonujesz tych rozwiązań, usług programu .NET Framework XAML, a jego XAML czytników i składników zapisywania XAML może odnajdywać właściwości XAML danego typu i nadaj mu odpowiednią reprezentację w postaci strumienia węzłów XAML w systemie typu XAML. W tym temacie opisano najlepsze rozwiązania dotyczące definicji typu, definicje elementów członkowskich i przypisywanie CLR, typy lub członków.  
@@ -23,7 +23,7 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
   
  Jeśli obiekt może być utworzone jako elementu obiektu, utworzony obiekt wypełnić formularz elementu właściwości wszystkich właściwości, które przyjmują obiektu jako ich typu podstawowego.  
   
- Nadal można podać obiekt wartości dla typów, które nie spełniają tych kryteriów, po włączeniu konwertera wartości. Aby uzyskać więcej informacji, zobacz [typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Nadal można podać obiekt wartości dla typów, które nie spełniają tych kryteriów, po włączeniu konwertera wartości. Aby uzyskać więcej informacji, zobacz [typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 ### <a name="structures"></a>Struktury  
  Struktury mogą zawsze być zbudowane w XAML, zgodnie z definicją CLR. Jest to spowodowane kompilatora CLR niejawnie tworzy domyślny konstruktor dla struktury. Ten konstruktor inicjuje wszystkie wartości właściwości do wartości domyślnych.  
@@ -34,12 +34,12 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
  Interfejsy mogą służyć jako typów podstawowych elementów członkowskich. System typów XAML sprawdza listy można przypisać i oczekuje, że obiekt, który jest dostarczana jako wartości można przypisać do interfejsu. Nie ma koncepcji jak interfejsu muszą być przedstawione jako typ XAML tak długo, jak odpowiedni typ można przypisać obsługuje wymagania konstrukcji XAML.  
   
 ### <a name="factory-methods"></a>Metodami Factory  
- Metodami Factory są funkcją XAML 2009. Zasada XAML, że obiekty muszą mieć konstruktory domyślne mogą modyfikować. W tym temacie nie opisano metodach fabryki. Zobacz [x: FactoryMethod — dyrektywa](../../../docs/framework/xaml-services/x-factorymethod-directive.md).  
+ Metodami Factory są funkcją XAML 2009. Zasada XAML, że obiekty muszą mieć konstruktory domyślne mogą modyfikować. W tym temacie nie opisano metodach fabryki. Zobacz [x: FactoryMethod — dyrektywa](x-factorymethod-directive.md).  
   
 ## <a name="enumerations"></a>Wyliczenia  
  Wyliczenia mają zachowanie konwersji typu natywnego XAML. Nazwy stałe wyliczeń, określone w XAML zostaną rozwiązane przed podstawowym typem wyliczenia, a następnie wróć na wartość wyliczenia do zapisywania obiektu XAML.  
   
- XAML obsługuje użycie flagi stylu dla wyliczeń ze <xref:System.FlagsAttribute> stosowane. Aby uzyskać więcej informacji, zobacz [składnia XAML w szczegółów](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md). ([Szczegółów w składni XAML](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md) jest przeznaczony dla odbiorców WPF, ale większość informacji w tym temacie jest odpowiednie dla XAML, które nie są specyficzne dla określonej struktury implementującej.)  
+ XAML obsługuje użycie flagi stylu dla wyliczeń ze <xref:System.FlagsAttribute> stosowane. Aby uzyskać więcej informacji, zobacz [składnia XAML w szczegółów](../wpf/advanced/xaml-syntax-in-detail.md). ([Szczegółów w składni XAML](../wpf/advanced/xaml-syntax-in-detail.md) jest przeznaczony dla odbiorców WPF, ale większość informacji w tym temacie jest odpowiednie dla XAML, które nie są specyficzne dla określonej struktury implementującej.)  
   
 ## <a name="member-definitions"></a>Definicje elementów członkowskich  
  Typy można zdefiniować elementy członkowskie do użycia XAML. Istnieje możliwość dla typów, które definiują elementy członkowskie, które są użyteczne XAML, nawet jeśli nie jest XAML można używać tego konkretnego typu. Jest to możliwe z powodu dziedziczenia CLR. Tak długo, jak pewnego typu, który dziedziczy element członkowski obsługuje XAML użycia jako typ, a element członkowski obsługuje użycia XAML dla jego typu podstawowego lub ma dostępne natywnej składni XAML, ten element członkowski jest użyteczne XAML.  
@@ -47,23 +47,23 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
 ### <a name="properties"></a>Właściwości  
  Możesz zdefiniować właściwości jako właściwość publiczna CLR przy użyciu typowego CLR `get` i `set` wzorce dostępu i odpowiednim języku temat zgłosić właściwość jako element członkowski o odpowiednie informacje przewidziane systemie typu XAML <xref:System.Xaml.XamlMember> właściwości, takie jak <xref:System.Xaml.XamlMember.IsReadPublic%2A> i <xref:System.Xaml.XamlMember.IsWritePublic%2A>.  
   
- Określone właściwości, można włączyć składni tekstu, stosując <xref:System.ComponentModel.TypeConverterAttribute>. Aby uzyskać więcej informacji, zobacz [typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Określone właściwości, można włączyć składni tekstu, stosując <xref:System.ComponentModel.TypeConverterAttribute>. Aby uzyskać więcej informacji, zobacz [typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
  W przypadku braku składni tekstu lub natywnych konwersji XAML i w przypadku braku dalszych pośredniego, takich jak użycie rozszerzenia znaczników, typ właściwości (<xref:System.Xaml.XamlMember.TargetType%2A> system typów XAML) musi mieć możliwość zwrócenia wystąpienia do zapisywania obiektów XAML, traktując t Typ docelowy jako typ CLR.  
   
- Jeśli przy użyciu XAML 2009 r. [x: Reference — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-reference-markup-extension.md) może służyć do Podaj wartości, jeśli poprzednie zagadnienia nie są spełnione; dotyczy to jednak jeden problem użycia, niż problem definicji typu.  
+ Jeśli przy użyciu XAML 2009 r. [x: Reference — rozszerzenie znaczników](x-reference-markup-extension.md) może służyć do Podaj wartości, jeśli poprzednie zagadnienia nie są spełnione; dotyczy to jednak jeden problem użycia, niż problem definicji typu.  
   
 ### <a name="events"></a>Zdarzenia  
  Jeśli zdefiniujesz zdarzenia jako publiczne zdarzenie środowiska CLR, systemie typu XAML zgłosić zdarzenia jako element członkowski o <xref:System.Xaml.XamlMember.IsEvent%2A> jako `true`. Dołączenie procedury obsługi zdarzeń nie jest w zakresie możliwości usług programu .NET Framework XAML; To pole pozostanie do określonej struktury i implementacji.  
   
 ### <a name="methods"></a>Metody  
- Wbudowany kod dla metody nie jest to domyślna funkcja XAML. W większości przypadków użytkownik nie należy bezpośrednio odwoływać członkowie metody z XAML, a rola metod w XAML jest tylko do zapewnienia obsługi określonych wzorców XAML. [x: FactoryMethod — dyrektywa](../../../docs/framework/xaml-services/x-factorymethod-directive.md) jest wyjątek.  
+ Wbudowany kod dla metody nie jest to domyślna funkcja XAML. W większości przypadków użytkownik nie należy bezpośrednio odwoływać członkowie metody z XAML, a rola metod w XAML jest tylko do zapewnienia obsługi określonych wzorców XAML. [x: FactoryMethod — dyrektywa](x-factorymethod-directive.md) jest wyjątek.  
   
 ### <a name="fields"></a>Pola  
- Wytyczne dotyczące projektowania CLR zniechęcić niestatycznego pola. W przypadku pól statycznych, można uzyskać dostęp wartości pól statycznych tylko za pośrednictwem [x: Static — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-static-markup-extension.md); w takim przypadku nie wykonujesz jakieś szczególne w definicji CLR, aby ujawnić pola dla [x: Static](../../../docs/framework/xaml-services/x-static-markup-extension.md) użycia.  
+ Wytyczne dotyczące projektowania CLR zniechęcić niestatycznego pola. W przypadku pól statycznych, można uzyskać dostęp wartości pól statycznych tylko za pośrednictwem [x: Static — rozszerzenie znaczników](x-static-markup-extension.md); w takim przypadku nie wykonujesz jakieś szczególne w definicji CLR, aby ujawnić pola dla [x: Static](x-static-markup-extension.md) użycia.  
   
 ## <a name="attachable-members"></a>Można dołączyć elementy członkowskie  
- Można dołączyć elementy członkowskie są ujawniane XAML przy użyciu wzorca metody dostępu na typ definiujący. Typ definiujący sam nie trzeba XAML mogą być używane jako obiekt. W rzeczywistości jest wspólny wzorzec do deklarowania klasy usługi, którego rola jest właścicielem można dołączyć elementu członkowskiego i zaimplementować zachowania powiązane, ale obsługiwać żadnych innych funkcji, takich jak reprezentacja interfejsu użytkownika. Dla następujących sekcji, a symbol zastępczy *PropertyName* reprezentuje nazwę usługi można dołączyć elementu członkowskiego. Tej nazwy muszą być prawidłowe w [xamlname — gramatyka](../../../docs/framework/xaml-services/xamlname-grammar.md).  
+ Można dołączyć elementy członkowskie są ujawniane XAML przy użyciu wzorca metody dostępu na typ definiujący. Typ definiujący sam nie trzeba XAML mogą być używane jako obiekt. W rzeczywistości jest wspólny wzorzec do deklarowania klasy usługi, którego rola jest właścicielem można dołączyć elementu członkowskiego i zaimplementować zachowania powiązane, ale obsługiwać żadnych innych funkcji, takich jak reprezentacja interfejsu użytkownika. Dla następujących sekcji, a symbol zastępczy *PropertyName* reprezentuje nazwę usługi można dołączyć elementu członkowskiego. Tej nazwy muszą być prawidłowe w [xamlname — gramatyka](xamlname-grammar.md).  
   
  Należy zachować ostrożność kolizji nazw między te wzorce i innych metod typu. Jeśli istnieje element członkowski, który jest zgodny z jednym z wzorców, jego może być interpretowana jako ścieżki użycie można dołączyć elementu członkowskiego przez procesor XAML nawet wtedy, gdy nie było zamiaru.  
   
@@ -95,7 +95,7 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
 ## <a name="xaml-related-clr-attributes"></a>Atrybuty CLR związane z XAML  
  Poprawnie przypisywanie swoje typy, członków i zestawy ważne jest, aby raport informacje o systemie typu XAML do usług programu .NET Framework XAML. Może to być istotne, jeśli zamierzasz typów do użycia w systemach XAML, które opierają się bezpośrednio na .NET Framework XAML Services XAML czytników i składników zapisywania XAML lub zdefiniuj, lub użyj framework przy użyciu XAML, który jest oparty na tych XAML czytników i składników zapisywania XAML.  
   
- Lista każdego atrybutu związane z XAML, odpowiednią obsługę XAML typów niestandardowych, zobacz [XAML-Related atrybuty CLR dla niestandardowych typów i bibliotek](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
+ Lista każdego atrybutu związane z XAML, odpowiednią obsługę XAML typów niestandardowych, zobacz [XAML-Related atrybuty CLR dla niestandardowych typów i bibliotek](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="usage"></a>Użycie  
  Użycie niestandardowych typów wymaga, że autor znaczników musi być mapowane prefiks dla zestawu i przestrzeń nazw środowiska CLR, które zawierają typ niestandardowy. Ta procedura nie jest opisane w tym temacie.  
@@ -115,5 +115,5 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
  W terminologii WPF XAML *wewnętrzny typ* to typ, który jest definiowany przez tego samego zestawu, który również uwzględnia odwołujący się XAML. Za pomocą przestrzeni nazw XAML, które celowo pomija zestawu można zamapować taki typ = fragment mapowania, na przykład `xmlns:local="clr-namespace:WPFApplication1"`.  Jeśli BAML odwołuje się do typu wewnętrznego i typ ma `internal` uzyskać dostęp do poziomu, spowoduje to wygenerowanie `GeneratedInternalTypeHelper` klasy dla zestawu. Jeśli chcesz uniknąć `GeneratedInternalTypeHelper`, należy albo użyć `public` uzyskać dostęp do poziomu, lub należy wziąć pod uwagę odpowiednich klas w osobnym zestawie i udostępnić tego zestawu zależnego.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)
-- [Usługi XAML](../../../docs/framework/xaml-services/index.md)
+- [Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
+- [Usługi XAML](index.md)

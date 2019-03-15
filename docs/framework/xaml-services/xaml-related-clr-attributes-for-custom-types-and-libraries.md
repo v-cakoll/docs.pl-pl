@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: e194dbef0f18657646161a3f5cc4812b3ab78f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530112"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039463"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek
 W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka wspólnego CLR) języka, które są definiowane przez .NET Framework XAML Services. Omówiono także inne atrybuty CLR zdefiniowane w programie .NET Framework, które mają scenariusz związane z XAML dla aplikacji do zespołów lub typów. Przypisywanie zestawy, typy lub elementy członkowskie z tych atrybutów CLR udostępnia informacje o systemie typu XAML powiązane z typami. Dane mają charakter-klient XAML, który używa usług programu .NET Framework XAML dla przetwarzania strumienia węzłów XAML bezpośrednio lub za pośrednictwem dedykowanej czytniki XAML i moduły zapisujące XAML.  
@@ -81,7 +81,7 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  **Argumenty:** A <xref:System.Type> określa najbardziej dokładne typ oczekiwany jako `ProvideValue` wynik opartego na atrybutach <xref:System.Windows.Markup.MarkupExtension>.  
   
- Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników dla przeglądu XAML](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **Dokumentacja:**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -103,7 +103,7 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  **Argumenty:** Ciąg, który określa nazwę właściwości nazwy środowiska wykonawczego typu opartego na atrybutach.  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> Raporty właściwość typu opartego na atrybutach, który jest mapowany do XAML [x: Name — dyrektywa](../../../docs/framework/xaml-services/x-name-directive.md). Właściwość musi być typu <xref:System.String> i musi być odczytu/zapisu.  
+ <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> Raporty właściwość typu opartego na atrybutach, który jest mapowany do XAML [x: Name — dyrektywa](x-name-directive.md). Właściwość musi być typu <xref:System.String> i musi być odczytu/zapisu.  
   
  Definicja dziedziczy dla wszystkich typów pochodnych, które są możliwe do przypisania do definiowania typu. Możesz zastąpić definicję dla określonego typu pochodnego, stosując <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> określonego typu pochodnego.  
   
@@ -114,7 +114,7 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  **Argumenty:** Brak.  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> jest stosowany do określonych typów, które mogą być wyświetlane jako elementy podrzędne w zawartości znaczące odstępu (zawartość w posiadaniu kolekcja, która ma <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> dotyczy głównie Zapisz ścieżkę, ale jest dostępna w systemie typu XAML w ścieżce obciążenia, sprawdzając <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [spacji w XAML na przetworzenie](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> jest stosowany do określonych typów, które mogą być wyświetlane jako elementy podrzędne w zawartości znaczące odstępu (zawartość w posiadaniu kolekcja, która ma <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>). <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> dotyczy głównie Zapisz ścieżkę, ale jest dostępna w systemie typu XAML w ścieżce obciążenia, sprawdzając <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [spacji w XAML na przetworzenie](whitespace-processing-in-xaml.md).  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **Dokumentacja:**  <xref:System.ComponentModel.TypeConverterAttribute>  
@@ -127,7 +127,7 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  Należy zastosować <xref:System.ComponentModel.TypeConverterAttribute> atrybutu do danego typu odwołuje się do implementacji konwertera typu. Typy konwerterów dla XAML można zdefiniować klasy, struktury lub interfejsów. Nie trzeba podać konwersja typu dla wyliczenia, jest natywnie włączona konwersja.  
   
- Usługi konwertera typów powinno być możliwe do przekonwertowania w ciąg, który jest używany dla atrybutów lub inicjowania tekstu w znacznikach, do danego typu miejsca docelowego. Aby uzyskać więcej informacji, zobacz [TypeConverters i XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).  
+ Usługi konwertera typów powinno być możliwe do przekonwertowania w ciąg, który jest używany dla atrybutów lub inicjowania tekstu w znacznikach, do danego typu miejsca docelowego. Aby uzyskać więcej informacji, zobacz [TypeConverters i XAML](../wpf/advanced/typeconverters-and-xaml.md).  
   
  Zamiast stosowania się do wszystkich wartości na typ, zachowanie konwerter typu dla XAML może zostać nawiązana na określoną właściwość. W takim przypadku należy zastosować <xref:System.ComponentModel.TypeConverterAttribute> do definicji właściwości (definicja zewnętrzne, nie konkretne `get` i `set` definicji).  
   
@@ -142,7 +142,7 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  **Argumenty:** Ciąg, który odwołuje się do odpowiednich właściwości według nazwy.  
   
- Wskazuje właściwość CLR klasy tego aliasy [x: Uid — dyrektywa](../../../docs/framework/xaml-services/x-uid-directive.md).  
+ Wskazuje właściwość CLR klasy tego aliasy [x: Uid — dyrektywa](x-uid-directive.md).  
   
 ### <a name="usableduringinitializationattribute"></a>UsableDuringInitializationAttribute  
  **Dokumentacja:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
@@ -169,7 +169,7 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
  **Argumenty:** Brak.  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> Wskazuje typ kolekcji mają być przetwarzane jako znaczące biały procesora XAML, ma wpływ na konstrukcji węzłów wartość strumień węzłów XAML w kolekcji. Aby uzyskać więcej informacji, zobacz [spacji w XAML na przetworzenie](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> Wskazuje typ kolekcji mają być przetwarzane jako znaczące biały procesora XAML, ma wpływ na konstrukcji węzłów wartość strumień węzłów XAML w kolekcji. Aby uzyskać więcej informacji, zobacz [spacji w XAML na przetworzenie](whitespace-processing-in-xaml.md).  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **Dokumentacja:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
@@ -270,4 +270,4 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Attribute>
-- [Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML](defining-custom-types-for-use-with-net-framework-xaml-services.md)

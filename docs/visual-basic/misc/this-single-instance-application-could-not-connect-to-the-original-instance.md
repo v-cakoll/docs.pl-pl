@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 80c1ec0bf1aa4b6dbf885294c680b3bfe8897eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565712"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037504"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>Ta aplikacja o pojedynczym wystąpieniu nie można połączyć z oryginalnego wystąpienia
 Ta aplikacja o pojedynczym wystąpieniu nie może połączyć do oryginalnego wystąpienia. Niektóre z możliwych przyczyn tego problemu są następujące:  
@@ -33,5 +33,5 @@ Ta aplikacja o pojedynczym wystąpieniu nie może połączyć do oryginalnego wy
 5.  Należy pamiętać, okoliczności, w których wystąpił błąd i telefoniczna pomoc techniczna firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Podstawowe informacje o debugerze](/visualstudio/debugger/debugger-basics)
 
+- [Podstawowe informacje o debugerze](/visualstudio/debugger/debugger-basics)

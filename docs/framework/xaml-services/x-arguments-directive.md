@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: d4cff4c2f95d1418371921a3ac992a3b243d1c07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 351974786b9f4748499279d29202e2051d9268fd
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490820"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043330"
 ---
 # <a name="xarguments-directive"></a>x:Arguments — dyrektywa
 Pakiety argumentów deklaracji elementu innego niż domyślny konstruktor obiektu w XAML lub dla deklaracji obiektu metody fabryki.  
@@ -107,5 +107,5 @@ public Food TryLookupFood(string name)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
-- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML](defining-custom-types-for-use-with-net-framework-xaml-services.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

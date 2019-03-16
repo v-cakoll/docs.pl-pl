@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: e94928f17a31cdadae11f69c37a4f148452b5d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699743"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047884"
 ---
 # <a name="xarray-markup-extension"></a>x:Array — Rozszerzenie znaczników
 Oferuje ogólną pomoc techniczną dla tablic obiektów w XAML poprzez rozszerzenie znaczników. Odpowiada to `x:ArrayExtension` typu XAML w [MS-XAML].  
@@ -46,9 +46,9 @@ Oferuje ogólną pomoc techniczną dla tablic obiektów w XAML poprzez rozszerze
   
  `x:Array` jest rozszerzeniem znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. `x:Array` częściowo są wyjątkiem od tej reguły, ponieważ zamiast podawać inny atrybut obsługi wartości `x:Array` zapewnia alternatywną obsługę swoją zawartość tekst wewnętrzny. To zachowanie umożliwia typy, które nie mogą być obsługiwane przez istniejący model zawartości może być pogrupowane w tablicy i do których odwołuje się w dalszej części związanym z kodem, uzyskując dostęp do tablicy o nazwie; Możesz wywołać <xref:System.Array> metody w celu uzyskania tablicy poszczególne elementy.  
   
- Wszystkie rozszerzenia znaczników w XAML ujmować w nawiasy klamrowe ({,} `)` w składni swoich atrybutów, która jest Konwencja, za pomocą której procesor XAML rozpoznaje, że rozszerzenie znacznika musi przetworzyć wartość atrybutu. Aby uzyskać więcej informacji na temat rozszerzenia znaczników ogólnie rzecz biorąc, zobacz [typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Wszystkie rozszerzenia znaczników w XAML ujmować w nawiasy klamrowe ({,} `)` w składni swoich atrybutów, która jest Konwencja, za pomocą której procesor XAML rozpoznaje, że rozszerzenie znacznika musi przetworzyć wartość atrybutu. Aby uzyskać więcej informacji na temat rozszerzenia znaczników ogólnie rzecz biorąc, zobacz [typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
- XAML 2009 roku `x:Array` jest zdefiniowany jako język pierwotnych zamiast rozszerzenia znaczników. Aby uzyskać więcej informacji, zobacz [typy wbudowane dla wspólnych elementów podstawowych języka XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+ XAML 2009 roku `x:Array` jest zdefiniowany jako język pierwotnych zamiast rozszerzenia znaczników. Aby uzyskać więcej informacji, zobacz [typy wbudowane dla wspólnych elementów podstawowych języka XAML](built-in-types-for-common-xaml-language-primitives.md).  
   
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
  Zazwyczaj elementów obiektu, służące do wypełniania `x:Array` nie są elementami, które istnieją w [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] przestrzeni nazw XAML i muszą być mapowane prefiks przestrzeni nazw XAML innych niż domyślne.  
@@ -67,8 +67,8 @@ Oferuje ogólną pomoc techniczną dla tablic obiektów w XAML poprzez rozszerze
   
  `</x:Array>`  
   
- Niestandardowe typy, które są używane jako elementów tablicy klasa również musi obsługiwać wymagania dotyczące wystąpienia w XAML jako elementy obiektu. Aby uzyskać więcej informacji, zobacz [XAML oraz klas niestandardowe dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Niestandardowe typy, które są używane jako elementów tablicy klasa również musi obsługiwać wymagania dotyczące wystąpienia w XAML jako elementy obiektu. Aby uzyskać więcej informacji, zobacz [XAML oraz klas niestandardowe dla WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Rozszerzenia znaczników i WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Typy migrowane z WPF do System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

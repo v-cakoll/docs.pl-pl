@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659153"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049489"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Typy konwerterów dla XAML — Omówienie
 Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z ciągu w znaczniku XAML, w szczególności obiekty wykresu obiektu. W programie .NET Framework XAML Services konwertera typów musi być klasą pochodzącą z <xref:System.ComponentModel.TypeConverter>. Niektóre konwertery również obsługuje XAML ścieżka zapisu i może służyć do serializacji obiektu do postaci ciągu w znacznikach serializacji. W tym temacie opisano, jak i kiedy są wywoływane konwerterów typów w XAML i zawiera porady, implementacja dla przesłonięć metod elementu <xref:System.ComponentModel.TypeConverter>.  
@@ -29,7 +29,7 @@ Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z
 >  Dyrektywy języka XAML, nie należy używać konwerterów typów.  
   
 ### <a name="type-converters-and-markup-extensions"></a>Typy konwerterów i rozszerzeń znaczników  
- Użycia rozszerzenia znaczników muszą być obsługiwane przez procesor XAML, przed zarejestrowaniem typ właściwości i inne zagadnienia. Na przykład jeśli właściwość zostanie ustawiony, ponieważ atrybut ma zwykle konwersji typu, ale w przypadku określonego jest ustawiony przez użycie rozszerzenia znaczników, następnie zachowania rozszerzeń znaczników przetwarza najpierw. Jedna sytuacja typowe, gdy jest konieczne rozszerzenie znaczników jest odwołaniem do obiektu, który już istnieje. W tym scenariuszu konwertera typów o bezstanowa może generować jedynie nowe wystąpienie nie może być pożądane. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Użycia rozszerzenia znaczników muszą być obsługiwane przez procesor XAML, przed zarejestrowaniem typ właściwości i inne zagadnienia. Na przykład jeśli właściwość zostanie ustawiony, ponieważ atrybut ma zwykle konwersji typu, ale w przypadku określonego jest ustawiony przez użycie rozszerzenia znaczników, następnie zachowania rozszerzeń znaczników przetwarza najpierw. Jedna sytuacja typowe, gdy jest konieczne rozszerzenie znaczników jest odwołaniem do obiektu, który już istnieje. W tym scenariuszu konwertera typów o bezstanowa może generować jedynie nowe wystąpienie nie może być pożądane. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="native-type-converters"></a>Konwertery typu natywnego  
  W implementacji usług WPF i .NET, XAML istnieją pewne typy CLR, które mają obsługi konwersji typu natywnego, jednak te typy CLR są nie tradycyjnie traktować jako elementów podstawowych. Na przykład taki typ <xref:System.DateTime>. Co dzieje się jak architektura .NET Framework działa: typ <xref:System.DateTime> jest zdefiniowany w mscorlib, podstawowe biblioteki na platformie .NET. <xref:System.DateTime> nie ma zezwolenia na można przypisać za pomocą atrybutu, który pochodzi z innego zestawu, który wprowadza zależność (<xref:System.ComponentModel.TypeConverterAttribute> pochodzi z systemu); w związku z tym, mechanizm odnajdywania konwertera typu zwykle poprzez przypisywanie nie są obsługiwane. Zamiast tego analizatora XAML zawiera listę typów, które muszą natywne przetwarzanie i przetwarza te typy, które są podobne do przetwarzaniu prymitywów wartość true. W przypadku właściwości <xref:System.DateTime>, przetwarzania obejmuje wywołanie <xref:System.DateTime.Parse%2A>.  
@@ -60,7 +60,7 @@ Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> i <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> są metody pomocy technicznej, które są używane, gdy usługa zapytania z funkcjami <xref:System.ComponentModel.TypeConverter> implementacji. Musisz zaimplementować te metody, aby zwrócić `true` dla przypadków specyficznych dla typu, który obsługuje metody konwersji równoważne usługi konwertera. Do celów XAML, zwykle oznacza to <xref:System.String> typu.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informacje o ustawieniach kulturowych i typy konwerterów dla XAML  
- Każdy <xref:System.ComponentModel.TypeConverter> implementacji może jednoznacznie interpretować, co to jest prawidłowy ciąg dla konwersji i można także użyć lub zignorować opis typu, który jest przekazywany jako parametry. Ważną kwestią konwersja typu kultury i XAML jest następująca: przy użyciu możliwych do zlokalizowania ciągi jako wartości atrybutów są obsługiwane przez XAML, nie można użyć tych ciągów Lokalizowalny — wejście typ konwertera z wymaganiami określonej kultury. Jest to ograniczenie, ponieważ typy konwerterów dla XAML wartości atrybutów obejmują zachowanie przetwarzania XAML zawsze stałej języka, które używa `en-US` kultury. Aby uzyskać więcej informacji na temat projektowania powody to ograniczenie, zobacz temat specyfikacji języka XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) lub [WPF przeglądanie globalizacji i lokalizacji](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Każdy <xref:System.ComponentModel.TypeConverter> implementacji może jednoznacznie interpretować, co to jest prawidłowy ciąg dla konwersji i można także użyć lub zignorować opis typu, który jest przekazywany jako parametry. Ważną kwestią konwersja typu kultury i XAML jest następująca: przy użyciu możliwych do zlokalizowania ciągi jako wartości atrybutów są obsługiwane przez XAML, nie można użyć tych ciągów Lokalizowalny — wejście typ konwertera z wymaganiami określonej kultury. Jest to ograniczenie, ponieważ typy konwerterów dla XAML wartości atrybutów obejmują zachowanie przetwarzania XAML zawsze stałej języka, które używa `en-US` kultury. Aby uzyskać więcej informacji na temat projektowania powody to ograniczenie, zobacz temat specyfikacji języka XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) lub [WPF przeglądanie globalizacji i lokalizacji](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Na przykład gdy kultury może być problemem niektórych kultur należy użyć przecinka zamiast kropki jako separator dziesiętny liczb w postaci ciągu. To wykorzystania powoduje konflikt z zachowaniem, który ma wiele istniejących konwerterów typów, czyli jako ogranicznik, należy użyć przecinka. Przekazywanie kultury za pośrednictwem `xml:lang` w otaczających XAML nie rozwiązuje problemu.  
   
@@ -101,7 +101,7 @@ Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Uzyskiwanie dostępu do kontekstu dostawcy usług z implementacji rozszerzenie znaczników  
- Dostępne usługi są identyczne dla dowolnego konwertera wartości. Różnica polega na w sposób każdego konwertera wartości odbiera kontekst usługi. Dostęp do usług i usługi dostępne są udokumentowane w temacie [typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Dostępne usługi są identyczne dla dowolnego konwertera wartości. Różnica polega na w sposób każdego konwertera wartości odbiera kontekst usługi. Dostęp do usług i usługi dostępne są udokumentowane w temacie [typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>Typy konwerterów w Stream węzłów XAML  
@@ -109,5 +109,5 @@ Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.ComponentModel.TypeConverterAttribute>
-- [Typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

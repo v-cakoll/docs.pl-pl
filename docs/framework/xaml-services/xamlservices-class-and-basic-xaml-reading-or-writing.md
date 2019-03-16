@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: bbb5f31516be4e977471ee1250502e58e252f1c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503197"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58027131"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Klasa XAMLServices i podstawowy odczyt lub zapis XAML
 <xref:System.Xaml.XamlServices> jest klasą dostarczone przez .NET Framework XAML Services może służyć do scenariuszy XAML, które nie wymagają określonej dostęp do strumienia węzłów XAML lub informacje o systemie typu XAML uzyskany z tych węzłów. <xref:System.Xaml.XamlServices> Interfejs API można podsumować w następujący: `Load` lub `Parse` do obsługi ścieżką obciążenia XAML `Save` do obsługi XAML Zapisz ścieżkę, i `Transform` do udostępniania technika, która dołącza ścieżki obciążenia i Zapisz ścieżkę. `Transform` może służyć do zmiany z jednego schematu XAML do innego. Ten temat zawiera podsumowanie wszystkich te klasyfikacje interfejsu API i opisano różnice między przeciążeń określonej metody.  
@@ -21,7 +21,7 @@ ms.locfileid: "54503197"
   
  To najprostsza przeciążenie dla większości scenariuszy <xref:System.Xaml.XamlServices.Load%28System.String%29>. Ma to przeciążenie `fileName` parametr, który jest po prostu nazwą pliku tekstowego zawierającego XAML do załadowania. Ta opcja jest odpowiednia dla scenariuszy aplikacji, takich jak w pełni zaufane aplikacje, które zostały wcześniej serializowane, stanu lub danych na komputerze lokalnym. Jest to również przydatne w przypadku środowisk, w którym definiowania modelu aplikacji i chcesz załadować jednej standardowe pliki, które definiuje zachowanie aplikacji, od interfejsu użytkownika lub innych zdefiniowanych funkcji, korzystających z XAML.  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> zawiera podobne scenariusze. Tego przeciążenia mogą być przydatne, jeśli masz użytkownikowi na wybranie pliki należy załadować, ponieważ <xref:System.IO.Stream> częste dane wyjściowe innych <xref:System.IO> interfejsów API, które mogą uzyskać dostępu do systemu plików. Lub użytkownik może uzyskiwać dostęp do źródła XAML za pomocą asynchronicznego pliki do pobrania lub innych technik sieci, które oferują także strumień. (Ładowanie ze strumienia lub wybrane przez użytkownika źródłowego może mieć wpływ na zabezpieczenia. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące zabezpieczeń XAML](../../../docs/framework/xaml-services/xaml-security-considerations.md).)  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> zawiera podobne scenariusze. Tego przeciążenia mogą być przydatne, jeśli masz użytkownikowi na wybranie pliki należy załadować, ponieważ <xref:System.IO.Stream> częste dane wyjściowe innych <xref:System.IO> interfejsów API, które mogą uzyskać dostępu do systemu plików. Lub użytkownik może uzyskiwać dostęp do źródła XAML za pomocą asynchronicznego pliki do pobrania lub innych technik sieci, które oferują także strumień. (Ładowanie ze strumienia lub wybrane przez użytkownika źródłowego może mieć wpływ na zabezpieczenia. Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące zabezpieczeń XAML](xaml-security-considerations.md).)  
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> i <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> są przeciążenia, które korzystają z czytników formaty z poprzednich wersji programu .NET Framework. Aby korzystać z tych przeciążeń, powinien już utworzonego wystąpienia czytnika i używać jej `Create` interfejsu API, aby załadować XAML w odpowiednim formularzu (tekstowym lub XML). Jeśli masz już przeniesiony wskaźniki rekordu na inne czytniki lub wykonać inne operacje z nimi, to nie jest ważna. Logika ścieżki obciążenia z <xref:System.Xaml.XamlServices.Load%2A> zawsze przetwarza całego XAML, dane wejściowe z katalogu głównego w dół. Scenariusze te przeciążenia mogą obejmować następujące czynności:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "54503197"
 ## <a name="transform"></a>Transformacja  
  <xref:System.Xaml.XamlServices.Transform%2A> Konwertuje lub przekształca XAML, łącząc ścieżki obciążenia i Zapisz ścieżkę jako pojedyncza operacja. Kontekst innego schematu lub tworzenie innej kopii typu systemu może służyć do <xref:System.Xaml.XamlReader> i <xref:System.Xaml.XamlWriter>, czyli, co ma wpływ na sposób wynikowy XAML jest przekształcane. Działa to dobrze w przypadku operacji przekształcania szerokiego.  
   
- Dla operacji, które opierają się na sprawdzenie każdego węzła w strumień węzłów XAML, zwykle nie jest używana <xref:System.Xaml.XamlServices.Transform%2A>. Zamiast tego należy zdefiniować własne obciążenia Zapisz ścieżkę ścieżki operacji serii i interject własnej logiki. W jednej ze ścieżek za pomocą pary moduł zapisujący czytnika/XAML XAML wokół własne pętli węzła. Na przykład, ładowanie początkowe przy użyciu XAML <xref:System.Xaml.XamlXmlReader> i Wkrocz do węzłów z kolejnych <xref:System.Xaml.XamlXmlReader.Read%2A> wywołania. Działających na poziomie strumienia węzłów XAML można teraz dostosować poszczególne węzły (typy, elementy członkowskie, inne węzły), aby zastosować przekształcenie, lub pozostaw węzła jako-to. Następnie i nowszych wersjach wysłać węzeł odpowiednim `Write` interfejsu API <xref:System.Xaml.XamlObjectWriter> i zapisać obiekt. Aby uzyskać więcej informacji, zobacz [opis XAML węzła Stream strukturami i koncepcjami](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+ Dla operacji, które opierają się na sprawdzenie każdego węzła w strumień węzłów XAML, zwykle nie jest używana <xref:System.Xaml.XamlServices.Transform%2A>. Zamiast tego należy zdefiniować własne obciążenia Zapisz ścieżkę ścieżki operacji serii i interject własnej logiki. W jednej ze ścieżek za pomocą pary moduł zapisujący czytnika/XAML XAML wokół własne pętli węzła. Na przykład, ładowanie początkowe przy użyciu XAML <xref:System.Xaml.XamlXmlReader> i Wkrocz do węzłów z kolejnych <xref:System.Xaml.XamlXmlReader.Read%2A> wywołania. Działających na poziomie strumienia węzłów XAML można teraz dostosować poszczególne węzły (typy, elementy członkowskie, inne węzły), aby zastosować przekształcenie, lub pozostaw węzła jako-to. Następnie i nowszych wersjach wysłać węzeł odpowiednim `Write` interfejsu API <xref:System.Xaml.XamlObjectWriter> i zapisać obiekt. Aby uzyskać więcej informacji, zobacz [opis XAML węzła Stream strukturami i koncepcjami](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
-- [Usługi XAML](../../../docs/framework/xaml-services/index.md)
+- [Usługi XAML](index.md)

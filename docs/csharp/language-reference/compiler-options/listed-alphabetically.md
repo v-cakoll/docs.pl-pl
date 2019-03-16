@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d225a4bf9da35a59a409a783347ec407b49bf16a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677737"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037698"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opcje kompilatora C# w porządku alfabetycznym
 
@@ -29,7 +29,7 @@ Następujące opcje kompilatora są sortowane alfabetycznie. Aby uzyskać listę
 |[-baseaddress](baseaddress-compiler-option.md)|Określa adres podstawowy biblioteki, który ma zostać utworzony.|
 |[-bugreport](bugreport-compiler-option.md)|Tworzy plik "Raport o usterce". Ten plik będzie wysyłane wraz z informacjami o awariach, jeśli jest używane z parametrem-errorreport: wiersz lub - errorreport: wysyłanie.|
 |[-checked](checked-compiler-option.md)|Powoduje, że kompilatorowi Generowanie sprawdzenia przepełnienia.|
-|-checksumalgorithm:\<alg>|Określa algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: Algorytm SHA1 (domyślna) lub SHA256.|
+|-checksumalgorithm:\<alg>|Określa algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: Algorytm SHA1 (domyślna) lub SHA256.<br>Ze względu na problemy kolizji z SHA1 firma Microsoft zaleca SHA256. |
 |[-codepage](codepage-compiler-option.md)|Określa stronę kodową do użycia przy otwieraniu plików źródłowych.|
 |[-debug](debug-compiler-option.md)|Emituje informacje debugowania.|
 |[-define](define-compiler-option.md)|Definiuje symbole kompilacji warunkowej.|

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 0d1d3530bfd8bc85d6ae2d6741cbe6d48b381f69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570021"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58019158"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Rozszerzenia znaczników dla przeglądu XAML
 Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie jest podstawowy ani określonego typu XAML. Użycie atrybutu rozszerzenia znaczników użytku sekwencję znaków znanych otwierającym nawiasie klamrowym `{` zakres rozszerzenia znaczników i zamykający nawias klamrowy `}` aby wyjść. Korzystając z usług programu .NET Framework XAML, możesz korzystać z niektórych wstępnie zdefiniowanych rozszerzeń znaczników języka XAML z zestawu System.Xaml. Możesz również podklasy z <xref:System.Windows.Markup.MarkupExtension> klasy zdefiniowane w System.Xaml i zdefiniować własne rozszerzenia znaczników. Lub możesz użyć rozszerzenia znaczników zdefiniowana przez strukturę określonego, jeśli są już odwołanie do tej struktury.  
@@ -25,28 +25,28 @@ Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie
 >  `x:` Prefiks jest używany dla typowych mapowania przestrzeni nazw XAML przestrzeni nazw języka XAML, w elemencie głównym produkcji XAML. Na przykład szablonów projektów i stron programu Visual Studio dla różnych platform określonych zainicjować pliku XAML, za pomocą tego `x:` mapowania. Możesz wybrać inny token własne mapowania przestrzeni nazw XAML, ale ta dokumentacja przyjmie domyślną `x:` mapowanie jako sposób identyfikacji tych jednostek, które są zdefiniowane częścią przestrzeni nazw XAML języka XAML, w przeciwieństwie do przestrzeń nazw XAML domyślną określonym środowiskiem lub innych dowolnego przestrzeniach nazw środowiska CLR i XML.  
   
 ### <a name="xtype"></a>x: Type  
- `x:Type` dostarcza <xref:System.Type> obiektu dla typu nazwanego. Ta funkcja jest używana najczęściej w mechanizmów opóźnienia, które należy użyć podstawowy typ środowiska CLR i wpisać pochodnym jako moniker grupowania lub identyfikator. WPF style i szablony i ich użycie funkcji `TargetType` właściwości, znajdują się konkretnemu przykładowi. Aby uzyskać więcej informacji, zobacz [x: Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md).  
+ `x:Type` dostarcza <xref:System.Type> obiektu dla typu nazwanego. Ta funkcja jest używana najczęściej w mechanizmów opóźnienia, które należy użyć podstawowy typ środowiska CLR i wpisać pochodnym jako moniker grupowania lub identyfikator. WPF style i szablony i ich użycie funkcji `TargetType` właściwości, znajdują się konkretnemu przykładowi. Aby uzyskać więcej informacji, zobacz [x: Type Markup Extension](x-type-markup-extension.md).  
   
 ### <a name="xstatic"></a>x: Static  
- `x:Static` Tworzy statyczny wartości z jednostki kodu typ wartości, które nie są bezpośrednio typ wartości właściwości, ale mogą być obliczane do tego typu. Jest to przydatne do określenia wartości, które już istnieją jako stałe dobrze znane w definicji typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-static-markup-extension.md).  
+ `x:Static` Tworzy statyczny wartości z jednostki kodu typ wartości, które nie są bezpośrednio typ wartości właściwości, ale mogą być obliczane do tego typu. Jest to przydatne do określenia wartości, które już istnieją jako stałe dobrze znane w definicji typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` Określa `null` jako wartość dla elementu członkowskiego XAML. W zależności od projektu określonych typów lub większych pojęcia framework `null` nie zawsze jest wartość domyślną dla właściwości lub sugerowanej wartości atrybutu pusty ciąg. Aby uzyskać więcej informacji, zobacz [x: Null — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+ `x:Null` Określa `null` jako wartość dla elementu członkowskiego XAML. W zależności od projektu określonych typów lub większych pojęcia framework `null` nie zawsze jest wartość domyślną dla właściwości lub sugerowanej wartości atrybutu pusty ciąg. Aby uzyskać więcej informacji, zobacz [x: Null — rozszerzenie znaczników](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x: Array  
- `x:Array` obsługuje tworzenie ogólne tablic przy użyciu składni XAML w przypadkach, w których obsługę kolekcji, która jest świadczona przez elementy bazy i modeli kontroli celowo nie jest używany. Aby uzyskać więcej informacji, zobacz [x: Array — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-array-markup-extension.md). W XAML 2009 ściślej mówiąc, tablice są dostępne jako elementów podstawowych języka zamiast jako rozszerzenie. Aby uzyskać więcej informacji, zobacz [XAML 2009 — funkcje językowe](../../../docs/framework/xaml-services/xaml-2009-language-features.md).  
+ `x:Array` obsługuje tworzenie ogólne tablic przy użyciu składni XAML w przypadkach, w których obsługę kolekcji, która jest świadczona przez elementy bazy i modeli kontroli celowo nie jest używany. Aby uzyskać więcej informacji, zobacz [x: Array — rozszerzenie znaczników](x-array-markup-extension.md). W XAML 2009 ściślej mówiąc, tablice są dostępne jako elementów podstawowych języka zamiast jako rozszerzenie. Aby uzyskać więcej informacji, zobacz [XAML 2009 — funkcje językowe](xaml-2009-language-features.md).  
   
 ### <a name="xreference"></a>x: Reference  
- `x:Reference` jest częścią XAML 2009, rozszerzenie oryginalnego zestawu języka (2006). `x:Reference` reprezentuje odwołanie do innego istniejącego obiektu wykresu obiektu. Ten obiekt jest identyfikowany przez jego `x:Name`. Aby uzyskać więcej informacji, zobacz [x: Reference — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-reference-markup-extension.md).  
+ `x:Reference` jest częścią XAML 2009, rozszerzenie oryginalnego zestawu języka (2006). `x:Reference` reprezentuje odwołanie do innego istniejącego obiektu wykresu obiektu. Ten obiekt jest identyfikowany przez jego `x:Name`. Aby uzyskać więcej informacji, zobacz [x: Reference — rozszerzenie znaczników](x-reference-markup-extension.md).  
   
 ### <a name="other-x-constructs"></a>Inne x: Konstrukcje  
- Inne `x:` istnieją konstrukcji do obsługi funkcji języka XAML, ale nie są one implementowane jako rozszerzenia znaczników. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+ Inne `x:` istnieją konstrukcji do obsługi funkcji języka XAML, ale nie są one implementowane jako rozszerzenia znaczników. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka](xaml-namespace-x-language-features.md).  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>Klasa bazowa MarkupExtension  
  Aby zdefiniować rozszerzenie niestandardowych znaczników, które mogą prowadzić interakcję z domyślnej implementacji XAML czytników i składników zapisywania XAML System.Xaml, możesz dziedziczyć klasy abstrakcyjnej <xref:System.Windows.Markup.MarkupExtension> klasy. Czy klasa ma jednej metody do przesłonięcia, czyli <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Może trzeba będzie również zdefiniować dodatkowe konstruktorów do obsługi argumenty do użycia rozszerzenia znaczników i pasującą do ustawienia właściwości.  
   
- Za pomocą <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>, rozszerzenie znaczników niestandardowych ma dostęp do kontekstu usługi, który zgłasza, środowisko, w której rozszerzenie znaczników faktycznie jest wywoływany przez procesor XAML. W ścieżce obciążenia zazwyczaj jest to <xref:System.Xaml.XamlObjectWriter>. W polu Zapisz ścieżkę zazwyczaj jest to <xref:System.Xaml.XamlXmlWriter>. Każdy raport kontekst usługi jako wewnętrzny XAML usługi dostawcy kontekstu klasy, która implementuje wzorzec dostawcy usług. Aby uzyskać więcej informacji na temat dostępnych usług i ich znaczenie, zobacz [typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Za pomocą <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>, rozszerzenie znaczników niestandardowych ma dostęp do kontekstu usługi, który zgłasza, środowisko, w której rozszerzenie znaczników faktycznie jest wywoływany przez procesor XAML. W ścieżce obciążenia zazwyczaj jest to <xref:System.Xaml.XamlObjectWriter>. W polu Zapisz ścieżkę zazwyczaj jest to <xref:System.Xaml.XamlXmlWriter>. Każdy raport kontekst usługi jako wewnętrzny XAML usługi dostawcy kontekstu klasy, która implementuje wzorzec dostawcy usług. Aby uzyskać więcej informacji na temat dostępnych usług i ich znaczenie, zobacz [typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
  Klasy rozszerzenia znaczników, należy użyć poziom dostępu publicznego; Procesory XAML musi zawsze można utworzyć wystąpienia klasy pomocy technicznej rozszerzenie znaczników, aby można było używać swoich usług.  
   
@@ -110,13 +110,13 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Uzyskiwanie dostępu do kontekstu dostawcy usług z implementacji rozszerzenie znaczników  
- Dostępność usług są identyczne dla dowolnego konwertera wartości. Różnica polega na w sposób każdego konwertera wartości odbiera kontekst usługi. Dostęp do usług i usługi dostępne są udokumentowane w temacie [typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Dostępność usług są identyczne dla dowolnego konwertera wartości. Różnica polega na w sposób każdego konwertera wartości odbiera kontekst usługi. Dostęp do usług i usługi dostępne są udokumentowane w temacie [typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
 <a name="property_element_usage_of_a_markup_extension"></a>   
 ## <a name="property-element-usage-of-a-markup-extension"></a>Użycie elementu właściwości rozszerzenia znaczników  
  Scenariusze użycia rozszerzenia znaczników często są projektowane na podstawie przy użyciu rozszerzenia znaczników w użycie atrybutu. Jednak użytkownik może również potencjalnie w celu zdefiniowania zapasowy klasy do obsługi użycie elementu właściwości.  
   
- Aby umożliwić użycie elementu właściwości rozszerzenia znaczników, zdefiniuj publicznego konstruktora domyślnego. Powinna to być konstruktora wystąpień nie Konstruktor statyczny. Jest to wymagane, ponieważ procesor XAML ogólnie musi wywołać konstruktora domyślnego w dowolnym elemencie obiektu, który przetwarza z kodu znaczników, a w tym klasy rozszerzenia znaczników jako elementy obiektu. W przypadku zaawansowanych scenariuszy można zdefiniować konstrukcji innych niż domyślne ścieżki dla klasy. (Aby uzyskać więcej informacji, zobacz [x: FactoryMethod — dyrektywa](../../../docs/framework/xaml-services/x-factorymethod-directive.md).) Jednak nie należy używać tych wzorców w celach rozszerzenia znaczników, ponieważ dzięki temu odnajdywania z wzorcem użycia dużo bardziej skomplikowane, zarówno dla projektantów, jak i dla użytkowników pierwotne znaczników.  
+ Aby umożliwić użycie elementu właściwości rozszerzenia znaczników, zdefiniuj publicznego konstruktora domyślnego. Powinna to być konstruktora wystąpień nie Konstruktor statyczny. Jest to wymagane, ponieważ procesor XAML ogólnie musi wywołać konstruktora domyślnego w dowolnym elemencie obiektu, który przetwarza z kodu znaczników, a w tym klasy rozszerzenia znaczników jako elementy obiektu. W przypadku zaawansowanych scenariuszy można zdefiniować konstrukcji innych niż domyślne ścieżki dla klasy. (Aby uzyskać więcej informacji, zobacz [x: FactoryMethod — dyrektywa](x-factorymethod-directive.md).) Jednak nie należy używać tych wzorców w celach rozszerzenia znaczników, ponieważ dzięki temu odnajdywania z wzorcem użycia dużo bardziej skomplikowane, zarówno dla projektantów, jak i dla użytkowników pierwotne znaczników.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>Przypisywanie rozszerzenia znaczników niestandardowe  
@@ -156,5 +156,5 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Markup.MarkupExtension>
-- [Typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [Rozszerzenia znaczników i WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619330"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037681"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static — Rozszerzenie znaczników
 Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jest zdefiniowana w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— sposób zgodne. Właściwość statyczna, do którego istnieje odwołanie może służyć do zapewnienia wartości właściwości w XAML.  
@@ -69,7 +69,7 @@ Istnieją dwa inne zastosowania XAML, które są technicznie możliwa. Jednak te
 
 W implementacji .NET Framework XAML Services obsługi dla tego rozszerzenia znacznika jest definiowany przez <xref:System.Windows.Markup.StaticExtension> klasy.  
 
-`x:Static` jest rozszerzeniem znacznika. Wszystkie rozszerzenia znaczników w XAML użyj `{` i `}` znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą którego procesor XAML rozpoznaje, że rozszerzenie znaczników należy podać wartość. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+`x:Static` jest rozszerzeniem znacznika. Wszystkie rozszerzenia znaczników w XAML użyj `{` i `}` znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą którego procesor XAML rozpoznaje, że rozszerzenie znaczników należy podać wartość. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](markup-extensions-for-xaml-overview.md).  
   
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
  Domyślna przestrzeń nazw XAML, użyj dla programowania WPF nie zawiera wiele użytecznych właściwości statycznej, a większość użytecznych właściwości statycznej obsługuje takie jak konwerterów typów, które ułatwiają użycie bez konieczności `{x:Static}` . W przypadku statycznej właściwości możesz zamapować prefiksu dla przestrzeni nazw XAML, jeśli jest spełniony jeden z następujących czynności:  
@@ -78,10 +78,10 @@ W implementacji .NET Framework XAML Services obsługi dla tego rozszerzenia znac
   
 -   Z niestandardowego zestawu odwołuje się do typu.  
   
--   Utworzono odwołanie do typu, który istnieje w zestawie WPF, jednak, że typ znajduje się w przestrzeni nazw CLR, który nie został zmapowany jako część domyślnej WPF XAML przestrzeni nazw. Mapowanie przestrzeni nazw CLR do domyślnej przestrzeni nazw XAML dla WPF odbywa się przez definicje w różnych zestawach WPF (Aby uzyskać więcej informacji dotyczących tej reguły, zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Zamapowane bez przestrzeni nazw CLR może istnieć, jeśli przestrzeń nazw CLR składa się głównie z definicji klas, które nie są zwykle przeznaczone dla XAML, takich jak <xref:System.Windows.Threading>.  
+-   Utworzono odwołanie do typu, który istnieje w zestawie WPF, jednak, że typ znajduje się w przestrzeni nazw CLR, który nie został zmapowany jako część domyślnej WPF XAML przestrzeni nazw. Mapowanie przestrzeni nazw CLR do domyślnej przestrzeni nazw XAML dla WPF odbywa się przez definicje w różnych zestawach WPF (Aby uzyskać więcej informacji dotyczących tej reguły, zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)). Zamapowane bez przestrzeni nazw CLR może istnieć, jeśli przestrzeń nazw CLR składa się głównie z definicji klas, które nie są zwykle przeznaczone dla XAML, takich jak <xref:System.Windows.Threading>.  
   
- Aby uzyskać więcej informacji na temat korzystania z prefiksy i XAML w przestrzeni nazw dla WPF, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Aby uzyskać więcej informacji na temat korzystania z prefiksy i XAML w przestrzeni nazw dla WPF, zobacz [przestrzeni nazw XAML i Namespace mapowania dla WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [x:Type, rozszerzenie znaczników](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Type, rozszerzenie znaczników](x-type-markup-extension.md)
+- [Typy migrowane z WPF do System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

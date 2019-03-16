@@ -2,12 +2,12 @@
 title: ReDim Zachowaj argument nie może być nic
 ms.date: 07/20/2015
 ms.assetid: b857f313-3fc2-4262-a577-88df1718b811
-ms.openlocfilehash: a4153795bc72e831d9f4bb0814df0c410cf67ab8
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 0f2354cdf52c65eb3ce387933ebfc825c80e6bad
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738841"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047377"
 ---
 # <a name="redim-preserve-operand-cannot-be-nothing"></a>ReDim Zachowaj argument nie może być nic
 A `ReDim` instrukcji podejmują próbę użycia `Preserve` — słowo kluczowe, aby zmienić wymiaru tablicy, która nie jest ostatniego wymiaru, ale nie dostarcza prawidłową wartością dla swojego operandu.  
@@ -17,6 +17,7 @@ A `ReDim` instrukcji podejmują próbę użycia `Preserve` — słowo kluczowe, 
 -   Zmiana `Preserve` operand na prawidłową wartość.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tablice w Visual Basic](~/docs/visual-basic/programming-guide/language-features/arrays/index.md)
 - [Wymiary tablic w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)
 - [ReDim, instrukcja](../../visual-basic/language-reference/statements/redim-statement.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668993"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042092"
 ---
 # <a name="xtype-markup-extension"></a>x:Type — Rozszerzenie znaczników
 Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla określonego typu XAML.  
@@ -61,7 +61,7 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
   
 ### <a name="default-xaml-namespace-and-type-mapping"></a>Domyślne Namespace XAML i mapowanie typu  
- Domyślna przestrzeń nazw XAML dla programowania WPF zawiera większość typów XAML, czego potrzebujesz do typowych scenariuszy XAML; Dlatego możesz często uniknąć prefiksy podczas odwoływania się do wartości typu XAML. Może być konieczne zamapować prefiksu, jeśli odwołujesz się do typu z niestandardowego zestawu lub dla typów, które istnieją w zestawie WPF, ale od przestrzeń nazw środowiska CLR, który nie został zmapowany do domyślnej przestrzeni nazw XAML. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XAML i mapowanie środowiska CLR w przestrzeni nazw, zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Domyślna przestrzeń nazw XAML dla programowania WPF zawiera większość typów XAML, czego potrzebujesz do typowych scenariuszy XAML; Dlatego możesz często uniknąć prefiksy podczas odwoływania się do wartości typu XAML. Może być konieczne zamapować prefiksu, jeśli odwołujesz się do typu z niestandardowego zestawu lub dla typów, które istnieją w zestawie WPF, ale od przestrzeń nazw środowiska CLR, który nie został zmapowany do domyślnej przestrzeni nazw XAML. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XAML i mapowanie środowiska CLR w przestrzeni nazw, zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ### <a name="type-properties-that-support-typename-as-string"></a>Typ właściwości tej obsługi Typename co String  
  WPF obsługuje technik, które umożliwiają określenie wartości niektórych właściwości typu <xref:System.Type> bez konieczności `x:Type` użycie rozszerzenia znaczników. Zamiast tego można określić wartość jako ciąg znaków zapewniający nazwę typu. Przykładami są <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> i <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Obsługa tego zachowania nie jest dostępna za pośrednictwem typy konwerterów i rozszerzenia znaczników. Zamiast tego jest to zachowanie odroczenia implementowane za pomocą <xref:System.Windows.FrameworkElementFactory>.  
@@ -71,7 +71,7 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 zapewnia dodatkową obsługę dla ogólnych typów i modyfikuje zachowanie funkcji `x:TypeArguments` i `x:Type` zapewnienie tej obsługi.  
   
--   `x:TypeArguments` i elementu skojarzonego obiektu dla wystąpienia obiektu ogólny może być w przypadku elementów innych niż katalog główny. Aby uzyskać więcej informacji, zobacz sekcję "XAML 2009" [x: typearguments — dyrektywa](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` i elementu skojarzonego obiektu dla wystąpienia obiektu ogólny może być w przypadku elementów innych niż katalog główny. Aby uzyskać więcej informacji, zobacz sekcję "XAML 2009" [x: typearguments — dyrektywa](x-typearguments-directive.md).  
   
 -   XAML 2009 obsługuje składnię do określania ograniczenie typu ogólnego w znacznikach. To mogą być używane przez `x:TypeArguments`, `x:Type`, lub obu tych funkcji w połączeniu.  
   
@@ -81,6 +81,6 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Style>
-- [Tworzenie szablonów i stylów](../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Tworzenie szablonów i stylów](../wpf/controls/styling-and-templating.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

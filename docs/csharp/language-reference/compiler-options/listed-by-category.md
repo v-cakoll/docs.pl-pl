@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a2b0668b1d55afc331484339d579752646ffa88b
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: bceb6283e202dfa699115edd6e0a1a040095783d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442415"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58028706"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opcje kompilatora C# w rozbiciu na kategorie
 
@@ -76,7 +76,7 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |------------|-------------|
 |[-define](define-compiler-option.md)|Definiuje symbole preprocesora.|
 
-## <a name="resources"></a>Resources
+## <a name="resources"></a>Zasoby
 
 |Opcja|Cel|
 |------------|-------------|
@@ -105,7 +105,7 @@ Następujące opcje kompilatora są sortowane według kategorii. Aby uzyskać al
 |[-unsafe](unsafe-compiler-option.md)|Włącza kompilację kodu, który używa [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe.|
 |[-utf8output](utf8output-compiler-option.md)|Kompilator wyświetla dane wyjściowe przy użyciu kodowania UTF-8.|
 |-parallel[+&#124;-]|Określa, czy używać współbieżną kompilację (+).|
-|-checksumalgorithm:\<alg>|Określić algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: Algorytm SHA1 (domyślna) lub SHA256.|
+|-checksumalgorithm:\<alg>|Określić algorytm obliczania sumy kontrolnej pliku źródłowego, które zostały zapisane w pliku PDB.  Obsługiwane są następujące wartości: Algorytm SHA1 (domyślna) lub SHA256.<br>Ze względu na problemy kolizji z SHA1 firma Microsoft zaleca SHA256.|
 
 ## <a name="obsolete-options"></a>Opcje przestarzałe
 

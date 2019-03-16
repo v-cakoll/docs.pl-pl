@@ -43,7 +43,11 @@ Wprowadzających samouczków po lekcji Witaj, świecie są dostępne w środowis
 
 ## <a name="explore-new-features-in-c"></a>Eksploruj nowe funkcje w języku C\#
 
-Wypróbuj nowe funkcje w [ C# 6](../whats-new/csharp-6.md) w tym [możliwość interaktywnego eksplorowania](exploration/csharp-6.yml).
+* [Wypróbuj nowe funkcje w C# 6 interaktywnie](exploration/csharp-6.yml): Poznaj funkcje dodane w [ C# 6](../whats-new/csharp-6.md) interaktywnie w przeglądarce.
+* [Interpolacja ciągów](string-interpolation.md): Pokazuje, jak używać Interpolacja ciągów w celu utworzenia sformatowane ciągi w C#.
+* [Typy dopuszczające wartości null odwołań](nullable-reference-types.md): Pokazuje sposób użycia typy dopuszczające wartości null odwołanie do wyrażenia zgodne z zamiarami użytkownika dla odwołania o wartości null.
+* [Aktualizowanie projektu, aby użyć Nullable typy odwołań](upgrade-to-nullable-references.md): pokazano techniki, aby uaktualnić istniejący projekt, aby użyć typów referencyjnych dopuszczającego wartość null.
+* [Rozszerz możliwości danych za pomocą dopasowywania do wzorca](pattern-matching.md): Pokazuje, jak na potrzeby dopasowywania do wzorca rozszerzać typów poza ich podstawowych funkcji.
 
 ## <a name="general-tutorials"></a>Samouczki ogólne
 
@@ -53,6 +57,4 @@ Następujące samouczki umożliwiają tworzenie C# programy przy użyciu [platfo
 * [Klient REST](console-webapiclient.md): demonstruje komunikacji w sieci web, serializację JSON i funkcji zorientowanych obiektowo w C# języka.
 * [Dziedziczenie w C# i .NET](inheritance.md): Pokazuje dziedziczenie w C#, łącznie z użyciem dziedziczenia, aby zdefiniować klas bazowych, abstrakcyjne klasy podstawowe i klasach pochodnych.
 * [Praca z technologią LINQ](working-with-linq.md): Pokazuje wiele funkcji LINQ i elementów języka, które go obsługują.
-* [Interpolacja ciągów](string-interpolation.md): Pokazuje, jak używać Interpolacja ciągów w celu utworzenia sformatowane ciągi w C#.
 * [Przy użyciu atrybutów](attributes.md): Pokazuje, jak utworzyć i używać atrybutów w C#.
-* [Typy dopuszczające wartości null odwołań](nullable-reference-types.md): Pokazuje sposób użycia typy dopuszczające wartości null odwołanie do wyrażenia zgodne z zamiarami użytkownika dla odwołania o wartości null.

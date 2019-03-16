@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365727"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034743"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
 
@@ -232,7 +232,7 @@ Niektóre dyrektywy są przeznaczone specjalnie w celu zapewnienia dodatkowe inf
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>Zachowanie XamlObjectWriter i kolejność węzłów
 
-`StartObject` Aby <xref:System.Xaml.XamlObjectWriter> niekoniecznie jest sygnał do modułu zapisywania obiektu XAML bezpośrednio utworzyć wystąpienie obiektu. XAML udostępnia kilka funkcji języka, które umożliwiają programowi na można zainicjować obiektu przy użyciu dodatkowych danych wejściowych i nie zależą od całkowicie wywoływania konstruktora domyślnego, aby wygenerować początkowego obiektu, a dopiero potem Ustawianie właściwości. Te funkcje obejmują: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; inicjowania tekstu. [x: typearguments —](../../../docs/framework/xaml-services/x-typearguments-directive.md); pozycyjnych parametrów rozszerzenia znaczników; metodach fabryki i skojarzone [x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) węzłów (XAML 2009). Każda z tych przypadków opóźnienie konstruowania rzeczywistego obiektu, a ponieważ strumień węzłów kolejność została zmieniona, modułu zapisywania obiektu XAML może polegać na zachowanie faktycznie konstruowanie wystąpienie, zawsze wtedy, gdy członek start zostanie osiągnięty, który nie jest specjalnie konstrukcji dyrektywa dla tego typu obiektu.
+`StartObject` Aby <xref:System.Xaml.XamlObjectWriter> niekoniecznie jest sygnał do modułu zapisywania obiektu XAML bezpośrednio utworzyć wystąpienie obiektu. XAML udostępnia kilka funkcji języka, które umożliwiają programowi na można zainicjować obiektu przy użyciu dodatkowych danych wejściowych i nie zależą od całkowicie wywoływania konstruktora domyślnego, aby wygenerować początkowego obiektu, a dopiero potem Ustawianie właściwości. Te funkcje obejmują: <xref:System.Windows.Markup.XamlDeferLoadAttribute>; inicjowania tekstu. [x: typearguments —](x-typearguments-directive.md); pozycyjnych parametrów rozszerzenia znaczników; metodach fabryki i skojarzone [x: Arguments](x-arguments-directive.md) węzłów (XAML 2009). Każda z tych przypadków opóźnienie konstruowania rzeczywistego obiektu, a ponieważ strumień węzłów kolejność została zmieniona, modułu zapisywania obiektu XAML może polegać na zachowanie faktycznie konstruowanie wystąpienie, zawsze wtedy, gdy członek start zostanie osiągnięty, który nie jest specjalnie konstrukcji dyrektywa dla tego typu obiektu.
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ Niektóre dyrektywy są przeznaczone specjalnie w celu zapewnienia dodatkowe inf
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xaml.XamlObjectReader>
-- [Usługi XAML](../../../docs/framework/xaml-services/index.md)
-- [Przestrzeń nazw XAML](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [Usługi XAML](index.md)
+- [Przestrzeń nazw XAML](xaml-namespaces-for-net-framework-xaml-services.md)

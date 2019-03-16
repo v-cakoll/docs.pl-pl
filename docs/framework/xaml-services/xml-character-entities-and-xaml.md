@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661363"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048046"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Jednostki znaków XML i XAML
 XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W tym temacie opisano niektóre jednostki określonych znaków i ogólne uwagi dotyczące innych pojęć XML w XAML.  
@@ -34,7 +34,7 @@ XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W 
 ## <a name="character-entities-and-escaping-issues-that-are-unique-to-xaml"></a>Jednostki znaków i anulowania zapewnianego element problemy, które są unikatowe dla XAML  
  XAML znaczników są zazwyczaj używa tej samej jednostki znaków i sekwencje unikowe, które są zdefiniowane w pliku XML.  
   
- Najważniejszym wyjątkiem jest, że nawiasy klamrowe ({i}) ma znaczenie w XAML, ponieważ te znaki informuje procesora XAML, że sekwencji znaków w nawiasach klamrowych musi być interpretowany jako rozszerzenie znaczników. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Najważniejszym wyjątkiem jest, że nawiasy klamrowe ({i}) ma znaczenie w XAML, ponieważ te znaki informuje procesora XAML, że sekwencji znaków w nawiasach klamrowych musi być interpretowany jako rozszerzenie znaczników. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znaczników dla przeglądu XAML](markup-extensions-for-xaml-overview.md).  
   
  Jednak nadal można wyświetlić nawiasy klamrowe jako znaki literału przy użyciu sekwencji unikowej specyficznych dla XAML, a nie XML. Aby uzyskać więcej informacji, zobacz [ {} sekwencja ucieczki — rozszerzenie znaczników](escape-sequence-markup-extension.md).  
   
@@ -52,7 +52,7 @@ XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W 
 |"(prosty cudzysłów)|\&quot;|Musi być używany dla wartości atrybutu, ale prosty cudzysłów (") jest akceptowany w zawartości elementu. Należy pamiętać, że wartości atrybutu mogą być ujęte w prostej znak pojedynczego cudzysłowu (') lub bezpośrednio znak cudzysłowu ("); niezależnie od znaku występuje jako pierwszy definiuje obudowy wartość atrybutu i alternatywne oferty mogą posłużyć jako literał w wartości.|  
 |"(prosty cudzysłów pojedynczy)|\&APOS;|Musi być używany dla wartości atrybutu, ale proste znak pojedynczego cudzysłowu (') jest akceptowany w zawartości elementu. Należy pamiętać, że wartości atrybutu mogą być ujęte w prostej znak pojedynczego cudzysłowu (') lub bezpośrednio znak cudzysłowu ("); niezależnie od znaku występuje jako pierwszy definiuje obudowy wartość atrybutu i alternatywne oferty mogą posłużyć jako literał w wartości.|  
 |(znak numeryczny mapowania)|&#*[liczba całkowita]* ; lub & #x *[szesnastkowy]*;|XAML obsługuje mapowania cyfrę do kodowania, które jest aktywny.|  
-|(spacja nierozdzielająca)|&\#160; (przy założeniu, kodowanie UTF-8)|Dla elementów dokumentu przepływu lub elementy, które przyjmują tekstu, takich jak WPF <xref:System.Windows.Controls.TextBox>, spacji nierozdzielających nie są znormalizowane poza znaczników, nawet w przypadku `xml:space="default"`. (Aby uzyskać więcej informacji, zobacz [spacji w XAML na przetworzenie](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
+|(spacja nierozdzielająca)|&\#160; (przy założeniu, kodowanie UTF-8)|Dla elementów dokumentu przepływu lub elementy, które przyjmują tekstu, takich jak WPF <xref:System.Windows.Controls.TextBox>, spacji nierozdzielających nie są znormalizowane poza znaczników, nawet w przypadku `xml:space="default"`. (Aby uzyskać więcej informacji, zobacz [spacji w XAML na przetworzenie](whitespace-processing-in-xaml.md).)|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>Format komentarza XML  
@@ -63,7 +63,7 @@ XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W 
  XAML obsługuje instrukcji przetwarzania XML według specyfikacji XML, co oznacza, że instrukcje muszą być przekazywane za pośrednictwem. Przetwarzanie w .NET Framework XAML Services XAML nie korzysta z żadnych instrukcji przetwarzania. Inne istniejącymi strukturami, które używają XAML również należy używać instrukcji przetwarzania z XAML.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XamlName, gramatyka](../../../docs/framework/xaml-services/xamlname-grammar.md)
-- [Znak odstępu przetwarzanie w XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName, gramatyka](xamlname-grammar.md)
+- [Znak odstępu przetwarzanie w XAML](whitespace-processing-in-xaml.md)

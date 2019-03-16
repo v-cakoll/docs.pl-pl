@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 2913782d8179fb882f8e916ed25feafcb5740a3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8acc1ac099a71fbf624049b119ebe908f27cbb55
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690049"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031224"
 ---
 # <a name="xclass-directive"></a>x:Class — dyrektywa
 Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas częściowych między znaczników i związane z kodem. Klasy częściowe kod jest zdefiniowany w osobnym pliku kodu w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] języka, natomiast klasy częściowej znaczników jest zwykle tworzony przy generowanie kodu podczas kompilacji XAML.  
@@ -41,18 +41,18 @@ Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas cz
 ## <a name="remarks"></a>Uwagi  
  `namespace` Wartość może zawierać dodatkowe kropki w celu zorganizowania pokrewne obszary nazw Nazwa hierarchii, co jest typową techniką w programowaniu .NET Framework. Tylko ostatni kropki (.) w ciągu `x:Class` wartości jest interpretowany do oddzielania `namespace` i `classname.` klasy, która jest używana jako `x:Class` nie może być klasą zagnieżdżoną. Klasy zagnieżdżone nie są dozwolone, ponieważ określanie znaczenie kropki dla `x:Class` ciągów jest niejednoznaczny, jeżeli klasy zagnieżdżone są dozwolone.  
   
- W istniejących modeli, które używają programowania `x:Class`, `x:Class` jest opcjonalny w tym sensie, jest całkowicie umożliwiającego strona XAML ma nie związanym z kodem. Jednak taką możliwość interakcji z akcji kompilacji jako implementowany przez struktur, które używają XAML. `x:Class` możliwość ma również wpływ ról, że różne klasyfikacje zawartości XAML, określone w modelu aplikacji i w odpowiednich akcji kompilowania. Jeśli Twoje XAML deklaruje atrybutu obsługi zdarzeń wartości lub tworzy niestandardowe elementy, których definiowanie klas w klasie CodeBehind, musisz podać `x:Class` dyrektywy odwołania (lub [x: Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) do Klasa odpowiednie związanym z kodem.  
+ W istniejących modeli, które używają programowania `x:Class`, `x:Class` jest opcjonalny w tym sensie, jest całkowicie umożliwiającego strona XAML ma nie związanym z kodem. Jednak taką możliwość interakcji z akcji kompilacji jako implementowany przez struktur, które używają XAML. `x:Class` możliwość ma również wpływ ról, że różne klasyfikacje zawartości XAML, określone w modelu aplikacji i w odpowiednich akcji kompilowania. Jeśli Twoje XAML deklaruje atrybutu obsługi zdarzeń wartości lub tworzy niestandardowe elementy, których definiowanie klas w klasie CodeBehind, musisz podać `x:Class` dyrektywy odwołania (lub [x: Subclass](x-subclass-directive.md)) do Klasa odpowiednie związanym z kodem.  
   
  Wartość `x:Class` dyrektywa musi być ciąg, który określa w pełni kwalifikowana nazwa klasy, ale bez żadnych informacji zestawu (równoważne <xref:System.Type.FullName%2A?displayProperty=nameWithType>). Dla prostej aplikacji można pominąć informacje o przestrzeni nazw CLR, jeśli również mają strukturę kodu powiązanego w ten sposób (rozpoczęcie definicji kodu na poziomie klasy).  
   
- Plik związany z kodem dla definicji strona lub aplikacja musi być w pliku kodu, który wchodzi w skład projektu, który tworzy skompilowaną aplikację i obejmuje kompilacji znaczników. Nazwa reguły dla klas CLR muszą być zgodne. Aby uzyskać więcej informacji, zobacz [wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md). Domyślnie klasa związanym z kodem musi być `public`; Jednakże, można zdefiniować na poziomie różny dostęp za pomocą [x: classmodifier — dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
+ Plik związany z kodem dla definicji strona lub aplikacja musi być w pliku kodu, który wchodzi w skład projektu, który tworzy skompilowaną aplikację i obejmuje kompilacji znaczników. Nazwa reguły dla klas CLR muszą być zgodne. Aby uzyskać więcej informacji, zobacz [wytyczne dotyczące projektowania Framework](../../standard/design-guidelines/index.md). Domyślnie klasa związanym z kodem musi być `public`; Jednakże, można zdefiniować na poziomie różny dostęp za pomocą [x: classmodifier — dyrektywa](x-classmodifier-directive.md).  
   
  Interpretacja tego `x:Class` atrybut ma zastosowanie tylko do wykonania na podstawie CLR XAML, w szczególności do usług programu .NET Framework XAML. Inne implementacje XAML, które nie są oparte na CLR, które nie korzystają z usług programu .NET Framework XAML może użyć formuły innego rozwiązania do łączenia znaczników XAML i kodu w czasie wykonywania kopii. Aby uzyskać więcej informacji na temat interpretacji bardziej ogólnych `x:Class`, zobacz [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
  Na poziomie architekturę, znaczenie `x:Class` nie jest zdefiniowana w .NET Framework XAML Services. Jest to spowodowane usług programu .NET Framework XAML nie określono modelu programowania, XAML, które są połączone znaczników i kopii kodu. Zastosowań dodatkowe `x:Class` dyrektywa może być implementowana przez określonych platform, korzystające z modeli programowania lub modeli aplikacji do definiowania sposobu łączenia znaczników XAML i na podstawie CLR związane z kodem. Każdej struktury mogą mieć własne działania kompilacji, umożliwiające niektóre zachowania lub określonych składników, które muszą być zawarte w środowisku kompilacji. W ramach akcji kompilacji może być różny w zależności od określonego języka środowiska CLR, używany do związanym z kodem.  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>x: Class w modelu programowania WPF  
- W aplikacjach WPF i modelu aplikacji WPF `x:Class` mogą być deklarowane jako atrybutu dla każdego elementu głównego pliku XAML, który jest kompilowany (gdzie XAML znajduje się w projekcie aplikacji WPF przy użyciu `Page` Akcja kompilacji), lub < C4 > <xref:System.Windows.Application>  główny urząd certyfikacji w definicji aplikacji skompilowanej aplikacji WPF. Deklarowanie `x:Class` na element inny niż główny strony lub katalog główny aplikacji lub w pliku XAML w WPF, która nie jest kompilowana, powoduje błąd kompilacji w ramach [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] i [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] kompilatora WPF XAML. Aby uzyskać informacje o innych aspektów `x:Class` obsługi na platformie WPF, zobacz [związanym z kodem i XAML w WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ W aplikacjach WPF i modelu aplikacji WPF `x:Class` mogą być deklarowane jako atrybutu dla każdego elementu głównego pliku XAML, który jest kompilowany (gdzie XAML znajduje się w projekcie aplikacji WPF przy użyciu `Page` Akcja kompilacji), lub < C4 > <xref:System.Windows.Application>  główny urząd certyfikacji w definicji aplikacji skompilowanej aplikacji WPF. Deklarowanie `x:Class` na element inny niż główny strony lub katalog główny aplikacji lub w pliku XAML w WPF, która nie jest kompilowana, powoduje błąd kompilacji w ramach [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] i [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] kompilatora WPF XAML. Aby uzyskać informacje o innych aspektów `x:Class` obsługi na platformie WPF, zobacz [związanym z kodem i XAML w WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md).  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>x: Class dla programu Windows Workflow Foundation  
  Dla programu Windows Workflow Foundation `x:Class` nazwy klasy niestandardowe działanie składające się wyłącznie w XAML lub nazwy klasy częściowej strony XAML w Projektancie działanie z kodem.  
@@ -61,7 +61,7 @@ Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas cz
  `x:Class` dla programu Silverlight jest opisane osobno. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Zobacz także
-- [x:Subclass, dyrektywa](../../../docs/framework/xaml-services/x-subclass-directive.md)
-- [Klasy XAML i niestandardowe dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [x:ClassModifier, dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
-- [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Subclass, dyrektywa](x-subclass-directive.md)
+- [Klasy XAML i niestandardowe dla WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [x:ClassModifier, dyrektywa](x-classmodifier-directive.md)
+- [Typy migrowane z WPF do System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

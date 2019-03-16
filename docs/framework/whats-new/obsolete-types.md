@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6db80e4cb1f54ed58dabf84f4a88f1b3db616ea
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443117"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049729"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
-<a name="introduction"></a> W tabelach, w tym artykule przedstawiono typy, które są przestarzałe w programie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]zorganizowanym przez zestaw. Poniższe łącza umożliwiają wyświetlenie listy przestarzałych typów i zalecanych rozwiązań alternatywnych, w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementów członkowskich również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md).
+<a name="introduction"></a> W tabelach, w tym artykule przedstawiono typy, które są przestarzałe w programie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]zorganizowanym przez zestaw. Poniższe łącza umożliwiają wyświetlenie listy przestarzałych typów i zalecanych rozwiązań alternatywnych, w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementów członkowskich również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](obsolete-members.md).
 
 -   [Przestarzałe typy w zestawy systemowe](#obsolete_types_in_system_assemblies)
 
@@ -779,5 +779,5 @@ Aby uzyskać informacje na temat migracji z programu Visual Basic 6, zobacz [Cen
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll jest przestarzały zestawu i istnieje tylko w przypadku zapewnienia zgodności.|
 
 ## <a name="see-also"></a>Zobacz także
-- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Przestarzałe elementy członkowskie](../../../docs/framework/whats-new/obsolete-members.md)
+- [Przestarzałe elementy w ułatwieniach dostępu](whats-obsolete.md)
+- [Przestarzałe elementy członkowskie](obsolete-members.md)

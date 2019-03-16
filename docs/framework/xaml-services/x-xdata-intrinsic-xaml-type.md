@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 8b951b33242fa7e17a02133adb8fed4ce638e51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498050"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030263"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData — Typ funkcji XAML
 Umożliwia umieszczanie Wyspy danych XML w ramach produkcji XAML. Elementy XML wewnątrz `x:XData` nie powinny być traktowane przez procesory XAML, jak gdyby były częścią acting domyślna przestrzeń nazw XAML lub innych nazw XAML. `x:XData` może zawierać dowolną poprawnie sformułowany dokument XML.  
@@ -45,11 +45,11 @@ Umożliwia umieszczanie Wyspy danych XML w ramach produkcji XAML. Elementy XML w
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
  `x:XData` Obiekt jest używany głównie jako obiekt podrzędny panelu <xref:System.Windows.Data.XmlDataProvider>, albo, jako obiekt podrzędny obiektu <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> właściwości (w XAML, to jest zwykle wyrażona w składni elementu właściwości).  
   
- Dane zwykle powinny również ponownie definiować podstawowej przestrzeni nazw XML, w ramach Wyspy danych do nowego domyślnej przestrzeni nazw XML (ustawiony na pusty ciąg znaków). Jest to najprostszy Wyspy danych proste, ponieważ <xref:System.Windows.Data.Binding.XPath%2A> wyrażeń, które są używane do odwołania i powiąż z danymi można uniknąć włączenia prefiksów. Bardziej złożone Wyspy danych może zdefiniować wiele prefiksów dla danych i używaj określonego prefiksu dla przestrzeni nazw XML w folderze głównym. W takim przypadku wszystkie <xref:System.Windows.Data.Binding.XPath%2A> wyrażenie odwołuje się powinna zawierać odpowiedni prefiks mapowane w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Dane zwykle powinny również ponownie definiować podstawowej przestrzeni nazw XML, w ramach Wyspy danych do nowego domyślnej przestrzeni nazw XML (ustawiony na pusty ciąg znaków). Jest to najprostszy Wyspy danych proste, ponieważ <xref:System.Windows.Data.Binding.XPath%2A> wyrażeń, które są używane do odwołania i powiąż z danymi można uniknąć włączenia prefiksów. Bardziej złożone Wyspy danych może zdefiniować wiele prefiksów dla danych i używaj określonego prefiksu dla przestrzeni nazw XML w folderze głównym. W takim przypadku wszystkie <xref:System.Windows.Data.Binding.XPath%2A> wyrażenie odwołuje się powinna zawierać odpowiedni prefiks mapowane w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../wpf/data/data-binding-overview.md).  
   
  Z technicznego punktu widzenia `x:XData` może służyć jako zawartość żadnej właściwości typu <xref:System.Xml.Serialization.IXmlSerializable>. Jednak <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> tylko widocznym implementacji.  
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Data.XmlDataProvider>
-- [Powiązanie danych — omówienie](../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Rozszerzenie znaczników powiązania](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+- [Powiązanie danych — omówienie](../wpf/data/data-binding-overview.md)
+- [Rozszerzenie znaczników powiązania](../wpf/advanced/binding-markup-extension.md)

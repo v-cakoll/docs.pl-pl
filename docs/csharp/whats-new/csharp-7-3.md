@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 7.3
 description: Omówienie nowych funkcji w języku C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873803"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58028675"
 ---
 # <a name="whats-new-in-c-73"></a>Co nowego w języku C# 7.3
 
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-We wcześniejszych wersjach języka C#, potrzebna do przypięcia zmienną dostęp do jednej z wartości całkowitych, które są częścią `myFixedField`. Poniższy kod kompiluje się teraz w kontekście bezpiecznego:
+We wcześniejszych wersjach języka C#, potrzebna do przypięcia zmienną dostęp do jednej z wartości całkowitych, które są częścią `myFixedField`. Teraz, poniższy kod kompiluje się bez przypinanie zmiennej `p` w osobnym `fixed` instrukcji:
 
 ```csharp
 class C

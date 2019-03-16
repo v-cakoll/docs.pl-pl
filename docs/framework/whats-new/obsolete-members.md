@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635978"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58038175"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w .NET Framework
-W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są przestarzałe w programie .NET Framework 4.5 i nowsze wersje, uporządkowane według zestawu. Użyj poniższych linków, aby zobaczyć listę przestarzali członkowie i zalecanych rozwiązań alternatywnych, w każdym zestawie. W tym temacie nie ma elementów członkowskich przestarzałe typy. Aby uzyskać listę przestarzałych typów, zobacz [przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md).  
+W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są przestarzałe w programie .NET Framework 4.5 i nowsze wersje, uporządkowane według zestawu. Użyj poniższych linków, aby zobaczyć listę przestarzali członkowie i zalecanych rozwiązań alternatywnych, w każdym zestawie. W tym temacie nie ma elementów członkowskich przestarzałe typy. Aby uzyskać listę przestarzałych typów, zobacz [przestarzałe typy](obsolete-types.md).  
   
 -   [Przestarzali członkowie w zestawy systemowe](#SystemMembers)  
   
@@ -799,5 +799,5 @@ W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` Klucza rejestru działa tylko wobec Win9x, który nie jest obsługiwany przez tę wersję programu .NET Framework. Użyj `PerformanceData` klucz rejestru, który zamiast tego. Ta właściwość zostaną usunięte z przyszłych wersji Framework.|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md)
+- [Przestarzałe elementy w ułatwieniach dostępu](whats-obsolete.md)
+- [Przestarzałe typy](obsolete-types.md)

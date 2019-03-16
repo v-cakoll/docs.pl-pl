@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 1c718522a20fb2047ebf500adbf4044265e3af3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542263"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039407"
 ---
 # <a name="xshared-attribute"></a>x:Shared — Atrybut
 Po ustawieniu `false`, modyfikuje zachowanie pobierania zasobów WPF żądania zasobu atrybutami Utwórz nowe wystąpienie dla każdego żądania zamiast udostępnianie tego samego wystąpienia dla wszystkich żądań.  
@@ -33,7 +33,7 @@ Po ustawieniu `false`, modyfikuje zachowanie pobierania zasobów WPF żądania z
   
  Obiekt, który jest zwracany za pośrednictwem zasobów interfejsu API, takich jak modyfikowanie <xref:System.Windows.FrameworkElement.FindResource%2A>, lub zmodyfikowanie obiektu bezpośrednio w ramach <xref:System.Windows.ResourceDictionary>, zmienia oryginalny zasób. Odwołania do tego zasobu, gdyby odwołania do zasobów dynamicznych, użytkowników tego zasobu Pobieranie zmienionych zasobów.  
   
- Odwołania do zasobu, gdyby odwołania do zasobów statycznych, zmienia się do zasobu po [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] czas przetwarzania są nieistotne. Aby uzyskać więcej informacji o statycznej i odwołania do zasobów dynamicznej, zobacz [zasoby XAML](../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Odwołania do zasobu, gdyby odwołania do zasobów statycznych, zmienia się do zasobu po [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] czas przetwarzania są nieistotne. Aby uzyskać więcej informacji o statycznej i odwołania do zasobów dynamicznej, zobacz [zasoby XAML](../wpf/advanced/xaml-resources.md).  
   
  Jawne określenie `x:Shared="true"` rzadko odbywa się, ponieważ już jest ustawieniem domyślnym. Brak przeznaczony do bezpośredniego kodu `x:Shared` modelu obiektów WPF; można określić tylko w przypadku użycia XAML i muszą zostać przetworzone przez domyślne zachowanie WPF lub pośredniego strumień węzłów XAML w ścieżce obciążenia przetwarzanie za pomocą programu .NET Framework XAML Se rvices i jego czytelnicy XAML.  
   
@@ -51,5 +51,5 @@ Po ustawieniu `false`, modyfikuje zachowanie pobierania zasobów WPF żądania z
   
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.ResourceDictionary>
-- [Zasoby XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [Elementy podstawowe](../../../docs/framework/wpf/advanced/base-elements.md)
+- [Zasoby XAML](../wpf/advanced/xaml-resources.md)
+- [Elementy podstawowe](../wpf/advanced/base-elements.md)

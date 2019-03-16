@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 164b0283864cdeb60ef7b8e19c9d457f80ee4eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d188038526570761c2e50dc607fd4aac165fda5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696467"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034343"
 ---
 # <a name="xname-directive"></a>x:Name — dyrektywa
 Jednoznacznie identyfikuje elementy zdefiniowane XAML XAML namescope. Zakresy nazw XAML i ich modeli unikatowości mogą być stosowane do wystąpień obiektów platform zapewniają interfejsy API lub zaimplementować zachowania uzyskujących dostęp do wykresu obiektu utworzone XAML w czasie wykonywania.  
@@ -30,12 +30,12 @@ Jednoznacznie identyfikuje elementy zdefiniowane XAML XAML namescope. Zakresy na
   
 |||  
 |-|-|  
-|`XAMLNameValue`|Ciąg, który jest zgodny z ograniczeniami [xamlname — gramatyka](../../../docs/framework/xaml-services/xamlname-grammar.md).|  
+|`XAMLNameValue`|Ciąg, który jest zgodny z ograniczeniami [xamlname — gramatyka](xamlname-grammar.md).|  
   
 ## <a name="remarks"></a>Uwagi  
  Po `x:Name` jest stosowany do struktury firmy kopii modelu programowania, nazwa jest odpowiednikiem zmiennej, która zawiera odwołanie do obiektu lub wystąpienie zwrócone przez konstruktora.  
   
- Wartość `x:Name` użycie dyrektywy muszą być unikatowe w obrębie XAML namescope. Domyślnie gdy jest używana przez .NET Framework XAML usług API głównej namescope XAML jest zdefiniowana na element główny XAML pojedynczego procesu produkcji XAML i obejmuje elementy, które są zawarte w tym środowisku produkcyjnym XAML. Dodatkowe dyskretnych zakresy nazw XAML, które mogą wystąpić w ramach pojedynczego procesu produkcji XAML mogą być definiowane przez środowisk dla określonych scenariuszy. W środowisku WPF nowe zakresy nazw XAML są na przykład zdefiniowane i utworzony przez dowolny szablon, który jest też definiowany w produkcji XAML. Aby uzyskać więcej informacji na temat zakresy nazw XAML (ale odpowiednie dla wielu koncepcji namescope XAML napisane dla WPF), zobacz [zakresy WPF XAML nazw](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
+ Wartość `x:Name` użycie dyrektywy muszą być unikatowe w obrębie XAML namescope. Domyślnie gdy jest używana przez .NET Framework XAML usług API głównej namescope XAML jest zdefiniowana na element główny XAML pojedynczego procesu produkcji XAML i obejmuje elementy, które są zawarte w tym środowisku produkcyjnym XAML. Dodatkowe dyskretnych zakresy nazw XAML, które mogą wystąpić w ramach pojedynczego procesu produkcji XAML mogą być definiowane przez środowisk dla określonych scenariuszy. W środowisku WPF nowe zakresy nazw XAML są na przykład zdefiniowane i utworzony przez dowolny szablon, który jest też definiowany w produkcji XAML. Aby uzyskać więcej informacji na temat zakresy nazw XAML (ale odpowiednie dla wielu koncepcji namescope XAML napisane dla WPF), zobacz [zakresy WPF XAML nazw](../wpf/advanced/wpf-xaml-namescopes.md).  
   
  Ogólnie rzecz biorąc `x:Name` nie powinny być stosowane w sytuacjach, które także używają `x:Key`. Implementacje XAML przez określone z istniejącymi strukturami wprowadza pojęcia podstawienia między `x:Key` i `x:Name`, ale nie jest zalecanym rozwiązaniem. .NET framework XAML Services nie obsługuje takie pojęcia podstawienia podczas obsługi informacji klucza/nazwy, takie jak <xref:System.Windows.Markup.INameScope> lub <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>.  
   
@@ -46,11 +46,11 @@ Jednoznacznie identyfikuje elementy zdefiniowane XAML XAML namescope. Zakresy na
  Using.NET Framework XAML usług, logiki zapasowy obsługi namescope XAML można zdefiniować w sposób niezależny od framework implementując <xref:System.Windows.Markup.INameScope> interfejsu.  
   
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
- W obszarze Konfiguracja standardową kompilacją [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] aplikacji, która używa XAML, klasy częściowe i związane z kodem, określony `x:Name` staje się nazwę pola, który jest tworzony w źródłowym kodu, gdy [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] jest przetwarzany przez znacznik Zadanie kompilacji w kompilacji, a to pole zawiera odwołanie do obiektu. Domyślnie pole utworzony jest wewnętrzny. Dostęp do pola można zmienić, określając [x: fieldmodifier — atrybut](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md). W programie WPF i Silverlight sekwencji jest definiuje kompilacji znaczników i nazwy pola w częściowej klasy, ale wartość jest początkowo pusta. Następnie wygenerowanej metody o nazwie `InitializeComponent` jest wywoływana z w ramach konstruktora klasy. `InitializeComponent` składa się z `FindName` wywołań przy użyciu wszystkich `x:Name` wartości, które istnieją w zdefiniowanych XAML części klasy częściowej jako dane wejściowe ciągów. Wartości zwracane są przypisywany do odwołania podobnie nazwanego pola do wypełnienia wartości pól z obiektami, które zostały utworzone przy użyciu XAML podczas analizowania. Wykonanie `InitializeComponent` umożliwiać odwołania w czasie wykonywania obiektu programu graph przy użyciu `x:Name` / Nazwa pola bezpośrednio, zamiast wywoływać `FindName` jawnie w dowolnej chwili należy odwołanie do obiektu zdefiniowany XAML.  
+ W obszarze Konfiguracja standardową kompilacją [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] aplikacji, która używa XAML, klasy częściowe i związane z kodem, określony `x:Name` staje się nazwę pola, który jest tworzony w źródłowym kodu, gdy [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] jest przetwarzany przez znacznik Zadanie kompilacji w kompilacji, a to pole zawiera odwołanie do obiektu. Domyślnie pole utworzony jest wewnętrzny. Dostęp do pola można zmienić, określając [x: fieldmodifier — atrybut](x-fieldmodifier-directive.md). W programie WPF i Silverlight sekwencji jest definiuje kompilacji znaczników i nazwy pola w częściowej klasy, ale wartość jest początkowo pusta. Następnie wygenerowanej metody o nazwie `InitializeComponent` jest wywoływana z w ramach konstruktora klasy. `InitializeComponent` składa się z `FindName` wywołań przy użyciu wszystkich `x:Name` wartości, które istnieją w zdefiniowanych XAML części klasy częściowej jako dane wejściowe ciągów. Wartości zwracane są przypisywany do odwołania podobnie nazwanego pola do wypełnienia wartości pól z obiektami, które zostały utworzone przy użyciu XAML podczas analizowania. Wykonanie `InitializeComponent` umożliwiać odwołania w czasie wykonywania obiektu programu graph przy użyciu `x:Name` / Nazwa pola bezpośrednio, zamiast wywoływać `FindName` jawnie w dowolnej chwili należy odwołanie do obiektu zdefiniowany XAML.  
   
- Dla WPF jest przeznaczony dla aplikacji, która używa programu Microsoft Visual Basic i obejmuje pliki XAML z `Page` akcji kompilacji, właściwości oddzielne odwołania jest tworzony podczas kompilacji, który dodaje `WithEvents` — słowo kluczowe do wszystkich elementów, które mają `x:Name`, które obsługują `Handles` składnia delegatów obsługi zdarzeń. Ta właściwość zawsze jest publiczny. Aby uzyskać więcej informacji, zobacz [Visual Basic i obsługa zdarzeń WPF](../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Dla WPF jest przeznaczony dla aplikacji, która używa programu Microsoft Visual Basic i obejmuje pliki XAML z `Page` akcji kompilacji, właściwości oddzielne odwołania jest tworzony podczas kompilacji, który dodaje `WithEvents` — słowo kluczowe do wszystkich elementów, które mają `x:Name`, które obsługują `Handles` składnia delegatów obsługi zdarzeń. Ta właściwość zawsze jest publiczny. Aby uzyskać więcej informacji, zobacz [Visual Basic i obsługa zdarzeń WPF](../wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
- `x:Name` jest używany przez procesor WPF XAML można zarejestrować nazwę do XAML namescope w czasie ładowania, nawet w przypadku przypadków, gdy strona nie jest kompilowana do znaczników przez akcje kompilacji (na przykład luźne XAML słownika zasobów). Jest jednym z powodów to zachowanie, ponieważ `x:Name` potencjalnie jest wymagany w przypadku <xref:System.Windows.Data.Binding.ElementName%2A> powiązania. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../../../docs/framework/wpf/data/data-binding-overview.md).  
+ `x:Name` jest używany przez procesor WPF XAML można zarejestrować nazwę do XAML namescope w czasie ładowania, nawet w przypadku przypadków, gdy strona nie jest kompilowana do znaczników przez akcje kompilacji (na przykład luźne XAML słownika zasobów). Jest jednym z powodów to zachowanie, ponieważ `x:Name` potencjalnie jest wymagany w przypadku <xref:System.Windows.Data.Binding.ElementName%2A> powiązania. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie danych](../wpf/data/data-binding-overview.md).  
   
  Jak wspomniano wcześniej, `x:Name` (lub `Name`) nie należy stosować w sytuacjach, które także używają `x:Key`. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary> Ma specjalne zachowanie Definiowanie sama jako XAML namescope, ale zwracając nie zaimplementowano lub wartości null dla <xref:System.Windows.Markup.INameScope> interfejsów API jako sposób wymuszania to zachowanie. Jeśli WPF XAML analizator składni napotka `Name` lub `x:Name` w XAML zdefiniowane <xref:System.Windows.ResourceDictionary>, nazwa nie jest dodawana do wszelkich namescope XAML. Próby znalezienia tej nazwy z dowolnego namescope XAML i `FindName` metody nie będzie zwracał prawidłowe wyniki.  
   
@@ -69,4 +69,4 @@ Jednoznacznie identyfikuje elementy zdefiniowane XAML XAML namescope. Zakresy na
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
-- [Drzewa w WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+- [Drzewa w WPF](../wpf/advanced/trees-in-wpf.md)

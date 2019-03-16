@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_NotNumericType2
 ms.assetid: 6eca32a6-9a44-4f05-8791-abdb4cb316d2
-ms.openlocfilehash: bda1ce2d7662facdca334a0be7c312daccc10902
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2c7e4e50b85ff9e8e028e31dd9c4c401199a1a53
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254590"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031238"
 ---
 # <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>Typ argumentu "\<argumentname >" jest "\<typename >", który nie jest liczbą
 Argument nienumeryczny występuje w sytuacji, w którym oczekiwano liczbowego argumentu.  
@@ -19,5 +19,5 @@ Argument nienumeryczny występuje w sytuacji, w którym oczekiwano liczbowego ar
 -   Upewnij się, że argument jest wartością liczbową.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przekazywanie argumentów według wartości i według odwołania](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
 
+- [Przekazywanie argumentów według wartości i według odwołania](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

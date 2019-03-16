@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287823"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018744"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Przestarzałe elementy w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i składowe typu, które zapewniają nowe funkcje. Istniejące typy i składowe są również zmienić wraz z upływem czasu. Na przykład niektóre typy stać się mniej ważne technologii, które obsługują zostaje zastąpiona przez nową technologię, a niektóre metody są zastępowane przez nowszą metody, które są bardziej wygodne lub zaawansowanych funkcji.  
@@ -68,9 +68,9 @@ ms.locfileid: "55287823"
 |1.0|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Przestarzałe list dla .NET Framework 4.5 lub nowszy  
- [Przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md)  
+ [Przestarzałe typy](obsolete-types.md)  
   
- [Przestarzałe elementy członkowskie](../../../docs/framework/whats-new/obsolete-members.md)  
+ [Przestarzałe elementy członkowskie](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Przestarzałe list dla wcześniejszych wersji  
  [Przestarzałe typy w programie .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
@@ -82,4 +82,4 @@ ms.locfileid: "55287823"
  [.NET framework 2.0 przestarzałe listy](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Zobacz także
-- [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

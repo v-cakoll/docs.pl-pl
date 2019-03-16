@@ -4,23 +4,24 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: 06683cf73c2e01e353b20fe9fb585d2993f37337
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c140bb1d1e79b46324cf184bb94caa66f26834e6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276526"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58025114"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a><span data-ttu-id="b512c-102">Metoda "\<methodname >' nie może zostać wywołany z \<numer > argumentów</span><span class="sxs-lookup"><span data-stu-id="b512c-102">Method '\<methodname>' cannot be called with \<number> arguments</span></span>
-<span data-ttu-id="b512c-103">Wywołanie metody zawiera nieprawidłową liczbę argumentów.</span><span class="sxs-lookup"><span data-stu-id="b512c-103">A method call contains the wrong number of arguments.</span></span>  
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a><span data-ttu-id="01d3b-102">Metoda "\<methodname >' nie może zostać wywołany z \<numer > argumentów</span><span class="sxs-lookup"><span data-stu-id="01d3b-102">Method '\<methodname>' cannot be called with \<number> arguments</span></span>
+<span data-ttu-id="01d3b-103">Wywołanie metody zawiera nieprawidłową liczbę argumentów.</span><span class="sxs-lookup"><span data-stu-id="01d3b-103">A method call contains the wrong number of arguments.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b512c-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="b512c-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="01d3b-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="01d3b-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="b512c-105">Liczba argumentów, dostarczonego przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="b512c-105">Count the arguments that you have supplied.</span></span>  
+1.  <span data-ttu-id="01d3b-105">Liczba argumentów, dostarczonego przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="01d3b-105">Count the arguments that you have supplied.</span></span>  
   
-2.  <span data-ttu-id="b512c-106">Jest zgodna z liczbą na liczbie parametrów w metodę, którą chcesz się połączyć.</span><span class="sxs-lookup"><span data-stu-id="b512c-106">Match the number against the number of parameters in the method you want to call.</span></span>  
+2.  <span data-ttu-id="01d3b-106">Jest zgodna z liczbą na liczbie parametrów w metodę, którą chcesz się połączyć.</span><span class="sxs-lookup"><span data-stu-id="01d3b-106">Match the number against the number of parameters in the method you want to call.</span></span>  
   
-3.  <span data-ttu-id="b512c-107">Dopasuj liczbę argumentów, jeśli nie akceptuje dwóch liczb.</span><span class="sxs-lookup"><span data-stu-id="b512c-107">Adjust the number of arguments if the two numbers do not agree.</span></span>  
+3.  <span data-ttu-id="01d3b-107">Dopasuj liczbę argumentów, jeśli nie akceptuje dwóch liczb.</span><span class="sxs-lookup"><span data-stu-id="01d3b-107">Adjust the number of arguments if the two numbers do not agree.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b512c-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b512c-108">See also</span></span>
-- [<span data-ttu-id="b512c-109">Przekazywanie argumentów według wartości i według odwołania</span><span class="sxs-lookup"><span data-stu-id="b512c-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a><span data-ttu-id="01d3b-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="01d3b-108">See also</span></span>
+
+- [<span data-ttu-id="01d3b-109">Przekazywanie argumentów według wartości i według odwołania</span><span class="sxs-lookup"><span data-stu-id="01d3b-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

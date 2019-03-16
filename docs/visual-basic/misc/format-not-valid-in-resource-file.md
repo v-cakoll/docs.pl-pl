@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
-ms.openlocfilehash: e9095f0a69211e5832ee9a87a12a5944a500010a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02082b7eb205fe2e0d878d5772e144438802fc9c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701576"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58051258"
 ---
 # <a name="format-not-valid-in-resource-file"></a>Nieprawidłowy format w pliku zasobów
 Plik zasobów w projekcie nie jest zgodna z formatu standardowego dla pliku zasobu Windows lub występuje niezgodność między plikiem zasobów i projekt języka Visual Basic.  
@@ -21,4 +21,5 @@ Plik zasobów w projekcie nie jest zgodna z formatu standardowego dla pliku zaso
 2.  Usuń nieprawidłowy plik z projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)

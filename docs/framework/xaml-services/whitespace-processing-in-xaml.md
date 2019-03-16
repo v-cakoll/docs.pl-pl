@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728371"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048036"
 ---
 # <a name="white-space-processing-in-xaml"></a>Znak odstępu przetwarzanie w XAML
 Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie opisano te reguły języka XAML. Również dokumenty obsługi dodatkowe biały znak, który jest definiowany przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacji procesora XAML i zapisywania XAML do serializacji.  
@@ -35,7 +35,7 @@ Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone
   
 5.  Miejsce, od razu, przed usunięciem tagu końcowego.  
   
- "Domyślna" odnosi się do stanu wskazywane przez wartość domyślną [XML: Space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) atrybutu.  
+ "Domyślna" odnosi się do stanu wskazywane przez wartość domyślną [XML: Space](xml-space-handling-in-xaml.md) atrybutu.  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Biały znak w tekst wewnętrzny i ciągu w nim elementów podstawowych  
@@ -75,6 +75,6 @@ Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone
  Ponadto niektóre elementy wbudowane, które oznacza rzeczywistej linebreak w modelu dokument przepływu celowo nie powinna wprowadzać dodatkowe miejsce, nawet w przypadku kolekcji znaczące odstępu. Na przykład <xref:System.Windows.Documents.LineBreak> element ma tę samą funkcję co \<BR / > tag w [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]i aby zwiększyć czytelność w znaczniku, zwykle <xref:System.Windows.Documents.LineBreak> jest oddzielona od tekstu kolejnych utworzone wysuwu wiersza. Tego wysuwu wiersza nie powinny być znormalizowane do stają się spację, kolejny wiersz. Aby włączyć to zachowanie w definicji klasy dla <xref:System.Windows.Documents.LineBreak> dotyczy elementu <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, który następnie jest interpretowany przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesora oznacza ten biały znak otaczającego <xref:System.Windows.Documents.LineBreak> zawsze są spacje.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Jednostki znaków XML i XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
-- [XML: Space — Obsługa w XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Jednostki znaków XML i XAML](xml-character-entities-and-xaml.md)
+- [XML: Space — Obsługa w XAML](xml-space-handling-in-xaml.md)

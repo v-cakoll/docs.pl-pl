@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482694"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125632"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują poprawy jakości i wydajności renderowania tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii obsługi rozszerzonego tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
@@ -18,13 +18,12 @@ W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[T
 ## <a name="improved-quality-and-performance-of-text"></a>Poprawy jakości i wydajności tekstu  
  Tekst w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest renderowany przy użyciu [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], która rozszerza, przejrzystości i czytelności, tekstu. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowanie opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] który poprawia czytelność tekstu na istniejące LCD (należy zmienić.), takie jak ekranów komputerów przenośnych, ekrany Pocket PC i monitory płaskie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] korzysta z renderowania podrzędnych pikseli, umożliwiający tekst ma być wyświetlany z większą wierność na jego true kształt znakami wyrównywanie na część ułamkową piksela. Dodatkowe rozwiązanie zwiększa ostrość niewielki Szczegóły sposobu wyświetlania tekstu, znacznie ułatwiając przeczytaniu długim czasie trwania. Ulepszanie innego [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest kierunku y wygładzanie, który wygładza stacjonarne i dołu krzywych płytka w znakach tekstu. Aby uzyskać szczegółowe informacje na temat [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcje, zobacz [ClearType — Przegląd](cleartype-overview.md).  
   
- ![Tekst z ClearType y&#45;kierunek ochrony przed złośliwym&#45;aliasów](./media/typographyinwpf02.gif "TypographyInWPF02")  
+ ![Tekst wygładzanie ClearType kierunku y](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Tekst z antialiasingu kierunku y ClearType  
   
  Potok renderowania całego tekstu można przyspieszanych sprzętowo w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pod warunkiem Twoja maszyna spełnia minimalnego wymagania sprzętowe. Renderowanie, nie można wykonać przy użyciu sprzętu powróci do renderowania oprogramowania. Przyspieszanie sprzętowe wpływa na wszystkich etapach potoku renderowania tekstu — przechowywanie poszczególnych symbole, symbole składania do uruchomienia symbol stosowanie efektów, zastosowanie [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] mieszania algorytm końcowych danych wyjściowych wyświetlanych. Aby uzyskać więcej informacji na temat przyspieszania sprzętowego, zobacz [poziomy renderowania grafiki](graphics-rendering-tiers.md).  
   
- ![Diagram potoku renderowania tekstu](./media/typographyinwpf01.png "TypographyInWPF01")  
-Diagram potoku renderowania tekstu  
+ ![Diagram potoku renderowania tekstu](./media/typography-in-wpf/text-rendering-pipeline.png)  
   
  Ponadto animacji tekstu przez znaku lub symbolu, w pełni korzysta grafiki możliwości sprzętu przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Skutkuje to animacji smooth tekstu.  
   
@@ -86,70 +85,57 @@ Diagram potoku renderowania tekstu
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Przy użyciu efektów mapy bitowej, transformacji i efektów tekstowych  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia tworzenie wizualnie interesujące używa tekstu przez korzysta z funkcji takich jak efektów mapy bitowej, transformacji i efektów tekstowych. Poniższy kod przedstawia typowy typ efektem cienia tekstu.  
   
- ![Cień tekstu z miękkości &#61; 0,25](./media/shadowtext01.jpg "ShadowText01")  
-Tekst z cień  
+ ![Cień tekstu z miękkości &#61; 0,25](./media/typography-in-wpf/drop-shadow-text-effect.jpg) 
   
  Poniższy przykład pokazuje efektem cienia i szumu tekstu.  
   
- ![Cień tekstu z szumu](./media/shadowtext04.jpg "ShadowText04")  
-Tekst z Cień i hałasu  
+ ![Cień tekstu z szumów](./media/typography-in-wpf/drop-shadow-noise-text.jpg) 
   
  Poniższy przykład przedstawia efekt zewnętrzna poświata tekstu.  
   
- ![Cień tekstu z użyciem efektu OuterGlowBitmapEffect](./media/shadowtext05.jpg "ShadowText05")  
-Tekst z efektem zewnętrzna poświata  
+ ![Cień tekstu z użyciem efektu OuterGlowBitmapEffect](./media/typography-in-wpf/text-shadow-glow-effect.jpg)
   
  Poniższy przykład przedstawia efekt rozmycia tekstu.  
   
- ![Cień tekstu przy użyciu BlurBitmapEffect](./media/shadowtext06.jpg "ShadowText06")  
-Tekst z efektem Rozmycie  
-  
+ ![Cień tekstu przy użyciu BlurBitmapEffect](./media/typography-in-wpf/text-shadow-blur-effect.jpg)  
+
  Poniższy przykład pokazuje, drugi wiersz tekstu skalowania przez 150% wzdłuż osi x, a trzeci wiersz tekstu skalowania przez 150% wzdłuż osi y.  
   
- ![Tekst skalowane za pomocą ScaleTransform](./media/transformedtext02.jpg "TransformedText02")  
-Tekst przy użyciu ScaleTransform  
+ ![Skalowanie przy użyciu ScaleTransform tekstu](./media/typography-in-wpf/scaled-text-scaletransform.jpg) 
   
  Poniższy przykład pokazuje tekst skośny wzdłuż osi x.  
   
- ![Tekst skośny przy użyciu metody SkewTransform](./media/transformedtext03.jpg "TransformedText03")  
-Tekst przy użyciu SkewTransform  
+ ![Tekst skośny przy użyciu metody SkewTransform](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
  A <xref:System.Windows.Media.TextEffect> obiekt jest obiektem pomocnika umożliwiająca traktuje tekst jako co najmniej jedną grupę znaków w ciągu tekstowym. Poniższy przykład pokazuje za pojedynczy znak. Każdy znak jest obracana niezależnie w odstępach czasu 1 sekundę.  
   
- ![Zrzut ekranu przedstawiający efekt obrócenia tekstu](./media/texteffect01.jpg "TextEffect01")  
-Przykład rotacji animacji efekt tekstu  
+ ![Zrzut ekranu przedstawiający efekt obrócenia tekstu](./media/typography-in-wpf/rotating-text-effect.jpg) 
   
 #### <a name="using-flow-documents"></a>Używanie dokumentów przepływu  
  Oprócz typowe [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kontrolek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferuje kontrolkę układu, aby obejrzeć prezentację tekstu — <xref:System.Windows.Documents.FlowDocument> elementu. <xref:System.Windows.Documents.FlowDocument> Elementu w połączeniu z <xref:System.Windows.Controls.DocumentViewer> elementu udostępnia kontrolkę do dużych ilości tekstu ze zróżnicowanymi wymagania związane z układem. Układ kontrolki zapewniają dostęp do zaawansowanych typografii za pośrednictwem <xref:System.Windows.Documents.Typography> obiektu i właściwości związane z czcionki innych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kontrolki.  
   
  W poniższym przykładzie pokazano tekstu, zawartości hostowanej w <xref:System.Windows.Controls.FlowDocumentReader>, która umożliwia wyszukiwanie, nawigacji, dzielenia na strony i zawartości skalowanie pomocy technicznej.  
   
- ![Przykład użycia czcionek OpenType zrzut ekranu przedstawiający](./media/typographyinwpf-03.png "TypographyInWPF_03")  
-Tekst hostowanych w FlowDocumentReader  
+ ![Zrzut ekranu pokazujący czcionek OpenType.](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
  Aby uzyskać więcej informacji, zobacz [dokumenty w WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Rysowanie tekstu lekkie  
  Rysowanie tekstu w bezpośrednio do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektów przy użyciu <xref:System.Windows.Media.DrawingContext.DrawText%2A> metody <xref:System.Windows.Media.DrawingContext> obiektu. Aby użyć tej metody, należy utworzyć <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt umożliwia rysowanie tekstu wielowierszowego, w którym każdy znak w tekście mogą indywidualnie sformatowane. Funkcje <xref:System.Windows.Media.FormattedText> obiekt zawiera wiele funkcji flagi DrawText w interfejsie API Win32. Ponadto <xref:System.Windows.Media.FormattedText> obiekt zawiera funkcje, takie jak obsługa wielokropka, w którym wielokropka jest wyświetlane, gdy tekst przekracza jego granice. Poniższy przykład pokazuje tekst, który ma kilka formatów zastosowano, tym gradientu liniowego na drugi i trzeci słów.  
   
- ![Tekst wyświetlany za pomocą obiektu FormattedText](./media/formattedtext01.jpg "FormattedText01")  
-Przy użyciu obiektu FormattedText wyświetlanego tekstu.  
+ ![Tekst wyświetlany za pomocą obiektu FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   
  Możesz przekonwertować sformatowany tekst do <xref:System.Windows.Media.Geometry> obiektów, co pozwala na tworzenie innych rodzajów wizualnie tekstu. Na przykład można utworzyć <xref:System.Windows.Media.Geometry> obiektu oparte na konspekt ciąg tekstowy.  
   
- ![Kontur tekstu przy użyciu pędzel gradientów liniowych](./media/outlinedtext02.jpg "OutlinedText02")  
-Kontur tekstu przy użyciu pędzel gradientów liniowych  
+ ![Kontur tekstu przy użyciu pędzel gradientów liniowych](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
   
  Poniższe przykłady ilustrują kilka sposobów tworzenia efektów wizualnych interesujące, modyfikując obrysu, wypełnij i wyróżnienie tekst skonwertowany.  
   
- ![Tekst w różnych kolorach wypełnienia i pociągnięcia](./media/outlinedtext03.jpg "OutlinedText03")  
-Przykład ustawień obrysu i wypełnienia na różne kolory  
+ ![Tekst w różnych kolorach wypełnienia i pociągnięcia](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![Tekst z ImageBrush zastosowany do obrysu](./media/outlinedtext04.jpg "OutlinedText04")  
-Przykład ImageBrush dotyczą pociągnięcia  
+ ![Tekst z ImageBrush dotyczą pociągnięcia](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![Tekst z ImageBrush zastosowany do obrysu](./media/outlinedtext05.jpg "OutlinedText05")  
-Przykład ImageBrush stosowane do obrysu i wyróżnienia  
+ ![Tekst z ImageBrush stosowane do obrysu i wyróżnienia](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.FormattedText> obiektu, zobacz [Rysowanie tekstu w formacie](drawing-formatted-text.md).  
   
@@ -158,8 +144,7 @@ Przykład ImageBrush stosowane do obrysu i wyróżnienia
   
  W przeciwieństwie do tradycyjnych tekstu [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> wchodzi w interakcję z klientem układu tekstu za pomocą zestawu metod wywołania zwrotnego. Wymaga od klienta zapewnienia tych metod w celu wykonania <xref:System.Windows.Media.TextFormatting.TextSource> klasy. Na poniższym diagramie przedstawiono interakcje układu tekstu między aplikacji klienckiej i <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
- ![Diagram klienta układu tekstu i obiekt TextFormatter](./media/textformatter01.png "TextFormatter01")  
-Interakcja między aplikacją i obiekt TextFormatter  
+ ![Diagram klienta układu tekstu i obiekt TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
  Aby uzyskać więcej informacji na temat tworzenia układu niestandardowego tekstu, zobacz [zaawansowane formatowanie tekstu](advanced-text-formatting.md).  
   

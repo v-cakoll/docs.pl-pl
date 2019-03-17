@@ -4,12 +4,12 @@ description: Dowiedz się, jak wykonać istniejącą aplikację konsoli .NET Fra
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145283"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126087"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Uruchamianie aplikacji konsoli w kontenerach Windows
 
@@ -50,7 +50,7 @@ Kontenery Windows są obsługiwane na [Rocznicowej aktualizacji systemu Windows 
 
 Musisz mieć Docker for Windows, wersja 1.12 26 lub nowszej wersji Beta do obsługi Windows kontenery. Domyślnie program Docker umożliwia kontenerów opartych na systemie Linux; Przełącz się do kontenerów Windows, klikając prawym przyciskiem myszy ikonę platformy Docker, na pasku zadań, a następnie wybierz pozycję **przełączyć się do kontenerów Windows**. Docker uruchomi proces zmiany i może być wymagane ponowne uruchomienie.
 
-![Windows-Containers](./media/console/SwitchContainer.png)
+![Zrzut ekranu przedstawiający opcję menu kontenerów Windows.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Tworzenie aplikacji
 Zazwyczaj aplikacje konsoli są dystrybuowane za pośrednictwem Instalatora, FTP lub udziału plików wdrożenia. Podczas wdrażania do kontenera, zasoby muszą być kompilowane i umieszczane w lokalizacji, która może być używany podczas tworzenia obrazu platformy Docker.

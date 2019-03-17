@@ -2,12 +2,12 @@
 title: Konfigurowanie śledzenia przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719406"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126204"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurowanie śledzenia przepływu pracy
 
@@ -183,9 +183,9 @@ Aby wyświetlić rekordy śledzenia, wykonaj następujące kroki.
 
 6. Kliknij prawym przyciskiem myszy **analityczne** a następnie wybierz węzeł **odświeżania.** Rekordy śledzenia powinny być widoczne w środkowym okienku.
 
-Na poniższej ilustracji przedstawiono zdarzeń śledzenia w Podglądzie zdarzeń.
+Na poniższej ilustracji przedstawiono zdarzeń śledzenia w Podglądzie zdarzeń:
 
-![Wyświetlanie podglądu zdarzeń śledzenia rekordów](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![Zrzut ekranu przedstawiający Podgląd zdarzeń, śledzenia rekordów.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>Rejestrowanie identyfikator dostawcy specyficzne dla aplikacji
 

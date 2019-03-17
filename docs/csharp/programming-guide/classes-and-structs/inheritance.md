@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202356"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125918"
 ---
 # <a name="inheritance-c-programming-guide"></a>Dziedziczenie (Przewodnik programowania w języku C#)
 
@@ -30,8 +30,7 @@ Dziedziczenie, wraz z hermetyzacji i polimorfizmu, jest jednym z trzech właści
   
  Poniższa ilustracja przedstawia klasy `WorkItem` reprezentujący element pracy w niektórych procesów biznesowych. Podobnie jak wszystkie klasy pochodzi z <xref:System.Object?displayProperty=nameWithType> i dziedziczy jej metody. `WorkItem` dodaje pięciu członków własne. Obejmują one konstruktora, ponieważ konstruktory nie są dziedziczone. Klasa `ChangeRequest` dziedziczy `WorkItem` i reprezentuje określonego typu elementu roboczego. `ChangeRequest` dodaje dwa więcej elementów członkowskich do elementów członkowskich, które dziedziczy `WorkItem` i <xref:System.Object>. Jego należy dodać własną konstruktora, i dodaje także `originalItemID`. Właściwość `originalItemID` umożliwia `ChangeRequest` wystąpienia, które mają być skojarzone z oryginalnym `WorkItem` którego dotyczy żądanie zmiany.  
   
- ![Dziedziczenie klas](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-Dziedziczenie klas  
+ ![Diagram przedstawiający dziedziczenia klas](./media/inheritance/class-inheritance-diagram.png)  
   
  Poniższy przykład pokazuje, jak pokazano na poprzedniej ilustracji relacje klas są wyrażone w języku C#. W przykładzie przedstawiono również sposób `WorkItem` zastępuje metodę wirtualną <xref:System.Object.ToString%2A?displayProperty=nameWithType>oraz sposób, w jaki `ChangeRequest` klasa dziedziczy `WorkItem` implementacji metody.  
   

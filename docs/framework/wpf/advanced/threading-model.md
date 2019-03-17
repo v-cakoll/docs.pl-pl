@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353039"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125684"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Służy do zapisywania deweloperów trudności wątkowości. W rezultacie, większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deweloperzy nie będą musieli napisać interfejs, który korzysta z więcej niż jeden wątek. Ponieważ złożonej i trudnej do debugowania programów wielowątkowych, należy ich unikać gdy istnieje jednowątkowe rozwiązania.  
@@ -62,7 +62,7 @@ ms.locfileid: "57353039"
   
  Rozważmy następujący przykład:  
   
- ![Zrzut ekranu przedstawiający liczby pierwsze](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![Zrzut ekranu pokazujący wątkowości liczb pierwszych.](./media/threading-model/threading-prime-numbers.png)  
   
  Ta prosta aplikacja, do góry liczy się z trzech, wyszukując liczb pierwszych. Kiedy użytkownik kliknie **Start** przycisku, wyszukiwanie rozpoczyna się. Gdy program znajduje się zapora, aktualizacje interfejsu użytkownika jego poznawania. W dowolnym momencie użytkownik może zatrzymać wyszukiwanie.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "57353039"
   
  Najlepszym sposobem podziału czas przetwarzania między obliczeń i obsługa zdarzeń jest zarządzanie obliczeń z <xref:System.Windows.Threading.Dispatcher>. Za pomocą <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> metody, możemy zaplanować liczba pierwsza kontroli w taki sam kolejki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zdarzenia są pobierane z. W tym przykładzie firma Microsoft zaplanować tylko sprawdzanie pojedyncza liczba prime w danym momencie. Po zakończeniu wyboru liczba pierwsza możemy zaplanować następne sprawdzenie natychmiast. Tego wyboru rozpoczynające się tylko po oczekiwaniu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zdarzenia zostały obsłużone.  
   
- ![Dispatcher queue illustration](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![Zrzut ekranu pokazujący kolejki dyspozytora.](./media/threading-model/threading-dispatcher-queue.png)  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] w ramach przy użyciu tego mechanizmu sprawdzania pisowni. Sprawdzanie pisowni jest wykonywane w tle za pomocą czas bezczynności, po z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Spójrzmy na kod.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "57353039"
   
  W tym przykładzie firma Microsoft naśladować wywołanie procedury zdalnej, która pobiera prognozę pogody. Firma Microsoft wątku roboczego oddzielnych do wykonania tego wywołania, a firma Microsoft zaplanować metodę aktualizacji w <xref:System.Windows.Threading.Dispatcher> z [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku, gdy będziemy zakończone.  
   
- ![Zrzut ekranu interfejsu użytkownika pogodowe](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![Zrzut ekranu pokazujący pogody interfejsu użytkownika.](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -189,7 +189,7 @@ ms.locfileid: "57353039"
 ### <a name="nested-pumping"></a>Zagnieżdżone przekazywanie  
  Czasami nie jest to możliwe, całkowicie blokuje się [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Rozważmy <xref:System.Windows.MessageBox.Show%2A> metody <xref:System.Windows.MessageBox> klasy. <xref:System.Windows.MessageBox.Show%2A> nie zwraca, dopóki użytkownik kliknie przycisk OK. Jednak to utworzyć okno które musi mieć pętli komunikatów, aby być interaktywna. Gdy firma Microsoft oczekuje na użytkownika, kliknij przycisk OK, oryginalnym okna aplikacji nie odpowiada na dane wejściowe użytkownika. Jednak nadal przetwarzać komunikaty dotyczące malowania. Okno oryginalne odrysowuje samego w sobie podczas wchodzi w zakres i reakcja.  
   
- ![MessageBox za pomocą przycisku "OK"](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![Zrzut ekranu, który pokazuje komunikat MessageBox, za pomocą przycisku OK](./media/threading-model/threading-message-loop.png)  
   
  Niektóre wątek musi być odpowiedzialnym za okno komunikatu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] można utworzyć nowego wątku, tylko dla okno komunikatu, ale ten wątek nie będzie można malować wyłączone elementy w oknie oryginalnego (należy pamiętać o wcześniej dyskusji wzajemne wykluczenie). Zamiast tego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa komunikatu zagnieżdżonych, systemu przetwarzania. <xref:System.Windows.Threading.Dispatcher> Klasa zawiera specjalne metodę o nazwie <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, który następnie zapisuje bieżący punkt wykonania aplikacji rozpocznie się nowych pętli komunikatów. Po zakończeniu pętli komunikatów zagnieżdżonych, wykonanie zostanie wznowione po oryginalnej <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> wywołania.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "57353039"
   
  Większość interfejsów nie są tworzone za pomocą bezpieczeństwo wątków, pamiętając, ponieważ deweloperzy pracują przy założeniu, że [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nigdy nie odbywa się przez więcej niż jeden wątek. W tym przypadku jeden wątek mogą wprowadzać zmiany środowiska w nieoczekiwanym czasie, powodując tych źle wpływ, <xref:System.Windows.Threading.DispatcherObject> wzajemne wykluczenie mechanizm powinien rozwiązać. Należy wziąć pod uwagę poniższym pseudokodzie:  
   
- ![Diagram współużytkowania wątkowości](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![Diagram pokazujący wątkowości współużytkowania wątkowości. ](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  W większości przypadków to właściwe, ale istnieją momenty, w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gdzie takie nieoczekiwany współużytkowania wątkowości naprawdę może powodować problemy. Tak, w określonym czasie klucza [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wywołania <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>, który zmienia instrukcji lock dla tego wątku użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wielobieżność bez blokady, zamiast zwykłego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] blokady.  
   

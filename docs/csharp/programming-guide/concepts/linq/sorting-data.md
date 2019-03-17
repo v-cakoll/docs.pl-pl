@@ -2,19 +2,19 @@
 title: Sortowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: dfa0a4a030cab8ec33c90d8edaef0d6070755034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bceb599d9e8eb3c51c07526b9ad22d3d4206efdd
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722014"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125723"
 ---
 # <a name="sorting-data-c"></a>Sortowanie danych (C#)
 Operacja sortowania Porządkuje elementy które sekwencji, w oparciu o jeden lub więcej atrybutów. Kryterium sortowania sortuje podstawowe elementy. Określając drugie kryterium sortowania, możesz sortować elementów w każdej grupie podstawowej sortowania.  
   
- Poniższa ilustracja przedstawia wyniki operacji sortowania alfabetycznego na sekwencję znaków.  
+ Poniższa ilustracja przedstawia wyniki operacji sortowania alfabetycznego na sekwencję znaków: 
   
- ![Sortowanie operację LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![Grafika przedstawiająca operacji sortowania alfabetycznego.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  Metody standardowego operatora zapytań, sortować dane, które są wymienione w poniższej sekcji.  
   

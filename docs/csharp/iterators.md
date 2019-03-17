@@ -1,33 +1,33 @@
 ---
 title: Iteratory
-description: Dowiedz się, jak za pomocą wbudowanych Iteratory C# oraz tworzenie własnych metody iteracyjne niestandardowych.
+description: Dowiedz się, jak używać wbudowanych C# Iteratory oraz jak tworzyć swoje własne metody iteratora niestandardowych.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: d9139f565fb1e426cc1b8cef530187877bdde0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218348"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126048"
 ---
 # <a name="iterators"></a>Iteratory
 
-Niemal wszystkie programy, jaki ma niektóre trzeba Iterowanie przez kolekcję. Będzie pisania kodu, który sprawdza, czy każdy element w kolekcji. 
+Prawie każdy program, który napiszesz będzie miał pewne konieczność iteracji po kolekcji. Napiszesz kod, który sprawdza, czy każdy element w kolekcji. 
 
-Utworzysz także metody iteracyjne, które metod, które tworzy iteratora dla elementów tej klasy. Te mogą służyć do:
+Utworzysz też metody iteratora, które są metodami, które tworzy iterator dla elementów tej klasy. Mogą one być używane dla:
 
-+ Wykonuje akcję na każdego elementu w kolekcji.
++ Wykonując akcję dla każdego elementu w kolekcji.
 + Wyliczanie kolekcji niestandardowej.
-+ Rozszerzanie [LINQ](linq/index.md) lub innych bibliotek.
-+ Tworzenie potoku danych, w którym dane przepływają wydajnie za pośrednictwem metody iteracyjne.
++ Rozszerzanie [LINQ](linq/index.md) lub inne biblioteki.
++ Tworzenie potoku danych, gdzie dane przepływają efektywnie za pośrednictwem metody iteratora.
 
-W języku C# udostępnia funkcje dla obu tych scenariuszy. Ten artykuł zawiera omówienie tych funkcji.
+C# Język oferuje funkcje dla obu tych scenariuszy. Ten artykuł zawiera omówienie tych funkcji.
 
-Ten samouczek ma wiele kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlany jest postęp. Możesz również [wyświetlić lub pobrać przykład wypełnionego](https://github.com/dotnet/samples/blob/master/csharp/iterators) dla tego tematu. Instrukcje pobrania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+W tym samouczku składa się z wielu kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlić postęp. Możesz również [wyświetlanie lub Pobieranie ukończone przykładowe](https://github.com/dotnet/samples/blob/master/csharp/iterators) w tym temacie. Aby uzyskać instrukcje pobierania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="iterating-with-foreach"></a>Iterowanie za pomocą instrukcji foreach
 
-Wyliczanie kolekcji jest prosty: `foreach` — słowo kluczowe wylicza kolekcję wykonywania osadzona instrukcja raz dla każdego elementu w kolekcji:
+Wyliczanie kolekcji jest prosty: `foreach` — Słowo kluczowe wylicza kolekcji, wykonywania osadzona instrukcja jeden raz dla każdego elementu w kolekcji:
  
 ```csharp
 foreach (var item in collection)
@@ -36,15 +36,15 @@ foreach (var item in collection)
 }
 ```
 
-To wszystko jest do niego. Aby przejść przez całą zawartość kolekcji, `foreach` instrukcja jest potrzebna. `foreach` Instrukcja nie jest magic, mimo że. Opiera się na dwóch interfejsach zdefiniowany w bibliotece programu .NET core w celu wygenerowania kodu niezbędne w celu wykonania iteracji w kolekcji: `IEnumerable<T>` i `IEnumerator<T>`. Ten mechanizm jest co omówiono bardziej szczegółowo poniżej.
+To wszystko jest do niego. Iterowanie cała zawartość kolekcji, `foreach` instrukcja to wszystko, czego potrzebujesz. `foreach` Instrukcja nie jest magic, mimo że. Opiera się na dwóch interfejsach ogólnych zdefiniowane w bibliotece programu .NET core w celu wygenerowania kodu niezbędne do iteracji kolekcji: `IEnumerable<T>` i `IEnumerator<T>`. Ten mechanizm jest opisano szczegółowo poniżej.
 
-Z tych interfejsów również mają odpowiedniki nieogólnego: `IEnumerable` i `IEnumerator`. [Ogólnego](programming-guide/generics/index.md) wersje są preferowane dla nowoczesnego kodu.
+Oba te interfejsy mają również odpowiedniki nieogólnego: `IEnumerable` i `IEnumerator`. [Ogólny](programming-guide/generics/index.md) wersje są preferowane dla nowoczesnego kodu.
 
-## <a name="enumeration-sources-with-iterator-methods"></a>Wyliczenie źródeł za pomocą metody iteracyjne
+## <a name="enumeration-sources-with-iterator-methods"></a>Wyliczenie źródeł za pomocą metody iteratora
 
-Inny wspaniałych funkcji języka C# umożliwia tworzenie metody, które utworzyć źródło wyliczania. Są one określane jako *metody iteracyjne*. Iterator — metoda definiuje sposób generowania obiektów w sekwencji na żądanie. Możesz użyć `yield return` kontekstowe słowa kluczowe, aby określić metodę iteratora. 
+Kolejną atrakcyjną funkcją C# języka umożliwia tworzenie metody tworzące źródła dla wyliczenia. Są one określane jako *metody iteracyjne*. Metoda iteratora jest definiuje sposób generowania obiekty w kolejności, w przypadku żądania. Możesz użyć `yield return` kontekstowymi słowami kluczowymi, aby zdefiniować metodę iteratora. 
 
-Można zapisać tę metodę w celu utworzenia sekwencji liczb całkowitych od 0 do 9:
+Można zapisać tę metodę, aby utworzyć sekwencję liczb całkowitych z zakresu od 0 do 9:
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -62,8 +62,8 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-Powyższy kod przedstawia różne `yield return` instrukcje, aby wyróżnić fakt, że można używać wielu odrębny `yield return` instrukcje w metodzie iteracyjnej.
-Można (i często nie) użyć innych konstrukcji językowych, aby uprościć kod metody iteracyjnej. Definicja metody poniżej tworzy dokładnie tej samej sekwencji liczb:
+Powyższy kod przedstawia różne `yield return` instrukcji, aby wyróżnić faktów, których można używać wielu dyskretnych `yield return` instrukcji w metodzie iteratora.
+Można (i często tak robią) korzystanie z innych konstrukcji językowych w celu uproszczenia kodu metody iteratora. Poniżej definicję metody generuje dokładnie tej samej sekwencji liczb:
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -74,7 +74,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-Nie trzeba określić jednego lub drugiego. Może mieć tyle `yield return` instrukcje odpowiednio do potrzeb metodę:
+Nie trzeba zdecydować z jednej z nich. Masz tyle `yield return` instrukcji, co jest niezbędne do potrzeb Twojej formy:
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -91,7 +91,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-To jest podstawowa składnia. Zastanówmy się przykład rzeczywistych, w którym możesz zapisać metodę iteratora. Wyobraź sobie w projekcie IoT i czujników urządzenia generować bardzo duże strumienia danych. Aby uzyskać pewne pojęcie o danych, może być napisanie metody, która przykłady każdego elementu danych w n-ty. Ta metoda małych iteratora wykonuje lewy:
+To podstawowa składnia. Rozważmy przykład rzeczywistych, w którym należy napisać metodę iteratora. Wyobraź sobie, możesz teraz projektu IoT i czujników urządzenia generować bardzo duże strumienia danych. Aby można było uzyskać pewne pojęcie dla danych, można napisać metodę, która pobiera próbki każdy element danych n-ty. Ta metoda iteratora małych wykonuje lewy:
 
 ```csharp
 public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int interval)
@@ -105,7 +105,7 @@ public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int inte
 }
 ```
 
-Istnieje jeden ważne ograniczenia metody iteracyjne: nie może zawierać zarówno `return` instrukcji i `yield return` instrukcji w tej samej metody. Następujące nie zostanie skompilowany:
+Istnieje jeden ważne ograniczenia metody iteracyjne: nie może posiadać równocześnie `return` instrukcji i `yield return` instrukcji w tej samej metody. Następujące nie zostanie skompilowany:
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -122,9 +122,9 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-To ograniczenie jest zazwyczaj problem. Masz do wyboru przy użyciu `yield return` w metodzie lub rozdzielić wiele metod oryginalnej metody, przy użyciu niektóre `return`, a niektóre przy użyciu `yield return`.
+To ograniczenie jest zwykle problemem. Masz do wyboru przy użyciu `yield return` w całej metody lub rozdzielając oryginalnej metody na wiele sposobów, za pomocą niektórych `return`, a niektóre przy użyciu `yield return`.
 
-Można zmodyfikować ostatniego metodę używaną do nieco `yield return` wszędzie:
+Możesz zmodyfikować ostatnie metoda nieco `yield return` wszędzie:
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -141,7 +141,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
  
-Czasami prawidłowa odpowiedź jest podzielić metodę iteratora na dwa sposoby. Taki, który używa `return`i drugie, która używa `yield return`. Rozważmy sytuację, w których warto zwrócić pustą kolekcję lub pierwszych 5 liczb nieparzysta, oparte na logiczną argumentu. Można zapisać który jako tych dwóch metod:
+Czasami prawidłowej odpowiedzi jest podzielić metodę iteratora na dwa sposoby. Jedną, która używa `return`oraz drugiego, który używa `yield return`. Rozważmy sytuację, w których warto zwrócić pustą kolekcję lub 5 pierwszych liczby nieparzyste, w oparciu o argument logiczny. Można napisać, jako tych dwóch metod:
 
 ```csharp
 public IEnumerable<int> GetSingleDigitOddNumbers(bool getCollection)
@@ -161,13 +161,13 @@ private IEnumerable<int> IteratorMethod()
 }
 ```
  
-Przyjrzyj się powyżej metod. Pierwszy korzysta ze standardu `return` instrukcji, aby zwrócić pustą kolekcję lub iteratora tworzone przez metodę drugiego. W drugiej metodzie `yield return` instrukcji można utworzyć żądanego sekwencji.
+Spójrz na powyższych metod. Pierwszy używa standardowych `return` instrukcji, aby zwrócić pustą kolekcję lub iteratora, tworzone przez metodę drugiego. W drugiej metodzie `yield return` instrukcję, aby utworzyć żądany sekwencji.
 
 ## <a name="deeper-dive-into-foreach"></a>Bardziej zgłębić temat do `foreach`
 
-`foreach` Instrukcji rozwija na standardowe idiom, która używa `IEnumerable<T>` i `IEnumerator<T>` interfejsów w celu iteracji przez wszystkie elementy kolekcji. Zmniejsza on również błędów, które deweloperzy tworzą przez nie zostało prawidłowo zarządzania zasobami. 
+`foreach` Instrukcji rozwija się na standardowych idiom, który używa `IEnumerable<T>` i `IEnumerator<T>` interfejsy do iteracji dla wszystkich elementów w kolekcji. Minimalizuje błędy, które deweloperzy mogą stosować przez nie został poprawnie zarządzanie zasobami. 
 
-Kompilator tłumaczy `foreach` pokazano w przykładzie pierwszy na podobny do tej konstrukcji pętli:
+Kompilator tłumaczy `foreach` pętli wyświetlane w pierwszym przykładzie w sposób podobny do tej konstrukcji:
 
 ```csharp
 IEnumerator<int> enumerator = collection.GetEnumerator();
@@ -178,7 +178,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-Konstrukcja powyżej reprezentuje kod wygenerowany przez kompilator języka C# lub nowszym w wersji 5 lub nowszym. Przed w wersji 5 `item` zmienna ma inny zakres:
+Konstrukcja powyżej reprezentuje kod wygenerowany przez C# kompilatora, począwszy od wersji 5 lub nowszym. Przed wersją 5 `item` zmienna ma inny zakres:
 
 ```csharp
 // C# versions 1 through 4:
@@ -191,9 +191,9 @@ while (enumerator.MoveNext())
 }
 ```
 
-Ta zmiana została wprowadzona, ponieważ wcześniej zachowanie może prowadzić do delikatny i trudne do diagnozowanie błędów dotyczących wyrażenia lambda. Zobacz sekcję dotyczącą [wyrażenia lambda](lambda-expressions.md) Aby uzyskać więcej informacji. 
+Ta zmiana została wprowadzona, ponieważ wcześniej zachowanie może prowadzić do subtelnym, trudno Diagnozuj błędy dotyczące wyrażeń lambda. Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażeń Lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md).
 
-Dokładny kod wygenerowany przez kompilator jest nieco bardziej skomplikowane i obsługuje sytuacje, gdy obiekt jest zwracany przez `GetEnumerator()` implementuje `IDisposable` interfejsu. Pełnym rozszerzeniu generuje kod więcej następująco:
+Dokładne kod wygenerowany przez kompilator jest nieco bardziej skomplikowane i obsługuje sytuacje, gdy obiekt jest zwracany przez `GetEnumerator()` implementuje `IDisposable` interfejsu. Pełnym rozszerzeniu generuje kod więcej następująco:
 
 ```csharp
 {
@@ -212,7 +212,7 @@ Dokładny kod wygenerowany przez kompilator jest nieco bardziej skomplikowane i 
 }
 ```
 
-Sposób, w której moduł wyliczający jest usuwane jest zależna od właściwości typu `enumerator`. W przypadku ogólnych `finally` klauzuli rozwijany do:
+Sposób, w którym moduł wyliczający jest usunięty zależy cechy typu `enumerator`. W przypadku ogólnych `finally` klauzula jest rozszerzany, aby:
 
 ```csharp
 finally 
@@ -221,14 +221,14 @@ finally
 } 
 ```
 
-Jednak jeśli typ `enumerator` jest zapieczętowanego typu i nie jest niejawna konwersja z typu `enumerator` do `IDisposable`, `finally` klauzuli rozwijany do bloku pusta:
+Jednak jeśli typ `enumerator` jest typie zapieczętowanym i istnieje niejawna konwersja z typu `enumerator` do `IDisposable`, `finally` klauzuli rozwija do pustego bloku:
 ```csharp
 finally 
 {
 } 
 ```
 
-Jeśli istnieje niejawna konwersja z typu `enumerator` do `IDisposable`, i `enumerator` jest typem wartości niedopuszczającym `finally` klauzuli rozwijany do:
+Jeśli istnieje niejawna konwersja z typu `enumerator` do `IDisposable`, i `enumerator` jest typem wartości niedopuszczającym wartości `finally` klauzula jest rozszerzany, aby:
 
 ```csharp
 finally 
@@ -237,6 +237,6 @@ finally
 } 
 ```
 
-Thankfully nie trzeba pamiętać te szczegóły. `foreach` Instrukcji obsługuje te wszystkie szczegóły dla Ciebie. Kompilator wygeneruje prawidłowego kodu dla każdego z tych konstrukcji. 
+Szczęście nie trzeba pamiętać te szczegóły. `foreach` Instrukcja obsługuje te szczegóły skutecznego dla Ciebie. Kompilator wygeneruje poprawny kod dla każdej z tych konstrukcji. 
 
 

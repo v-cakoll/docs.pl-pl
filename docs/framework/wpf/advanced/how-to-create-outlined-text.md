@@ -11,39 +11,34 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 409981e9c751144d26151210977a45b5e1eccf0a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368154"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125944"
 ---
 # <a name="how-to-create-outlined-text"></a>Instrukcje: Utwórz schemat tekstu
 W większości przypadków, gdy dodajesz ornamentacji do ciągów tekstowych w swojej [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji, w przypadku używania tekstu pod kątem zbiór znaków discrete lub symbole. Na przykład można utworzyć pędzel gradientów liniowych i zastosować je do <xref:System.Windows.Controls.Control.Foreground%2A> właściwość <xref:System.Windows.Controls.TextBox> obiektu. Podczas wyświetlania lub edytowania pola tekstowego, Pędzel gradientów liniowych jest automatycznie stosowany do bieżącego zestawu znaków w ciągu tekstowym.  
   
- ![Tekst wyświetlany za pomocą pędzel gradientów liniowych](./media/outlinedtext01.jpg "OutlinedText01")  
-Przykład pędzel gradientów liniowych stosowany do pola tekstowego  
+ ![Tekst wyświetlany za pomocą pędzel gradientów liniowych](./media/how-to-create-outlined-text/text-linear-gradient.jpg)    
   
  Jednakże można także przekonwertować tekst do <xref:System.Windows.Media.Geometry> obiektów, co pozwala na tworzenie innych rodzajów wizualnie RTF. Na przykład można utworzyć <xref:System.Windows.Media.Geometry> obiektu oparte na konspekt ciąg tekstowy.  
   
- ![Kontur tekstu przy użyciu pędzel gradientów liniowych](./media/outlinedtext02.jpg "OutlinedText02")  
-Przykład pędzel gradientów liniowych dotyczą Geometria konturu tekstu  
+ ![Kontur tekstu przy użyciu pędzel gradientów liniowych](./media/how-to-create-outlined-text/text-outline-linear-gradient.jpg)  
   
  Jeśli tekst jest konwertowany na <xref:System.Windows.Media.Geometry> obiektu nie jest już zbioru znaków — nie można zmodyfikować znaków w ciągu tekstowym. Jednak może wpłynąć na wygląd tekstu przekonwertowany, modyfikując jej obrysu i wypełnienie właściwości. Stroke odwołuje się do konturu tekst skonwertowany; Wypełnienie odnosi się do obszaru w konturze tekst skonwertowany.  
   
  Poniższe przykłady ilustrują kilka sposobów tworzenia efektów wizualnych, modyfikując obrysu i wypełnienia tekst skonwertowany.  
   
- ![Tekst w różnych kolorach wypełnienia i pociągnięcia](./media/outlinedtext03.jpg "OutlinedText03")  
-Przykład ustawień obrysu i wypełnienia na różne kolory  
+ ![Tekst w różnych kolorach wypełnienia i pociągnięcia](./media/how-to-create-outlined-text/fill-stroke-text-effect.jpg)  
   
- ![Tekst z ImageBrush zastosowany do obrysu](./media/outlinedtext04.jpg "OutlinedText04")  
-Przykład ImageBrush dotyczą pociągnięcia  
+ ![Tekst z ImageBrush dotyczą pociągnięcia](./media/how-to-create-outlined-text/image-brush-application.jpg)
   
  Istnieje również możliwość modyfikowania otaczający prostokąta pola lub wyróżnienie przekonwertowanego tekstu. Poniższy przykład ilustruje sposób tworzenia efektów wizualnych, modyfikując obrysu i wyróżnienie tekst skonwertowany.  
   
- ![Tekst z ImageBrush zastosowany do obrysu](./media/outlinedtext05.jpg "OutlinedText05")  
-Przykład ImageBrush stosowane do obrysu i wyróżnienia  
-  
+ ![Tekst z ImageBrush stosowane do obrysu i wyróżnienia](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
+
 ## <a name="example"></a>Przykład  
  Kluczem do konwertowania tekstu do <xref:System.Windows.Media.Geometry> obiektu jest użycie <xref:System.Windows.Media.FormattedText> obiektu. Po utworzeniu tego obiektu można użyć <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> i <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> metod do konwertowania tekstu na <xref:System.Windows.Media.Geometry> obiektów. Pierwsza metoda zwraca geometrii tekstu sformatowanego. Druga metoda zwraca obwiedni geometrii tekstu sformatowanego. Poniższy przykład kodu pokazuje sposób tworzenia <xref:System.Windows.Media.FormattedText> obiektu i pobrać geometrii tekstu sformatowanego i jego obwiedni.  
   

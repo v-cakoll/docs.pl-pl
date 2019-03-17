@@ -2,19 +2,19 @@
 title: Sortowanie danych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: e36ccc72689e756105f51c988d4cafd06d4d8da5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5875b15dbdec69aca653b8f6cca4dd07fc9af343
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520129"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126256"
 ---
 # <a name="sorting-data-visual-basic"></a>Sortowanie danych (Visual Basic)
 Operacja sortowania Porządkuje elementy które sekwencji, w oparciu o jeden lub więcej atrybutów. Kryterium sortowania sortuje podstawowe elementy. Określając drugie kryterium sortowania, możesz sortować elementów w każdej grupie podstawowej sortowania.  
   
  Poniższa ilustracja przedstawia wyniki operacji sortowania alfabetycznego na sekwencję znaków.  
   
- ![Sortowanie operację LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![Grafika przedstawiająca operacji sortowania alfabetycznego.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  Metody standardowego operatora zapytań, sortować dane, które są wymienione w poniższej sekcji.  
   

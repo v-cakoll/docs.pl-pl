@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0a10a3f5fd07c7e3ceb7e08802f2c821b7d9a7f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369750"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125606"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i przejście przez hiperłącza. Struktura stron i sposoby, w którym ich można nawigować, zgodnie z definicją hiperłącza, jest określany jako topologia nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które nawigowania w dokumentach. Na potrzeby takich aplikacji użytkownik może przejść z jednej strony do innej strony bez dowolnej stronie znajomości o innych.  
@@ -37,9 +37,9 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
   
 -   Po powrocie do strony o nazwie wywoływania strony strony o nazwie zostanie usunięty z historii przeglądania do izolowania jedno wystąpienie o nazwie strony z innego.  
   
- Te zachowania zostały przedstawione w poniższej ilustracji.  
+ Te zachowania są zilustrowane w poniższym rysunku:  
   
- ![Przepływ między wywoływania i strony o nazwie](./media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")  
+ ![Zrzut ekranu przedstawia przepływ między wywołania i o nazwie strony.](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)  
   
  Te zachowania można wdrożyć przy użyciu <xref:System.Windows.Navigation.PageFunction%601> jako o nazwie strony.  
   

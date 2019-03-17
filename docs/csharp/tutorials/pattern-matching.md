@@ -3,12 +3,12 @@ title: Użyj funkcji dopasowywania wzorca, aby rozszerzyć typy danych
 description: W tym samouczku zaawansowane pokazuje, jak tworzyć funkcje przy użyciu danych i algorytmy, które są tworzone oddzielnie za pomocą metod dopasowania do wzorca.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 210cb15699057482e36984f80dd08f8b19db55d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58051545"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125814"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Aby rozszerzyć typy danych przy użyciu funkcji dopasowywania wzorca
 
@@ -39,7 +39,7 @@ Należy wziąć pod uwagę głównych Miasto używanej drogi i ceny godziny szcz
 
 Z tego krótkiego opisu może mieć szybko ustalonej hierarchię obiektów do modelu tego systemu. Jednak danych pochodzi z wielu źródeł, takich jak inne systemy zarządzania rejestracji vehicle. Te systemy Podaj różnych klas do modelu danych, a nie masz modelu pojedynczy obiekt, w których można użyć. W tym samouczku użyjesz tych klas uproszczona do modelu danych pojazdu z systemów zewnętrznych, jak pokazano w poniższym kodzie:
 
-[!code-csharp[ExternalSystems](../../../samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 Możesz pobrać kod początkowy, od [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) repozytorium GitHub. Widać klasy pojazdu pochodzą z różnych systemów i znajdują się w różnych obszarach nazw. Nie wspólnej bazy klasy innej niż `System.Object` nadającego się.
 
@@ -76,18 +76,18 @@ namespace toll_calculator
         public decimal CalculateToll(object vehicle) =>
             vehicle switch
         {
-            Car c => 2.00m,
-            Taxi t => 3.50m,
-            Bus b => 5.00m,
+            Car c           => 2.00m,
+            Taxi t          => 3.50m,
+            Bus b           => 5.00m,
             DeliveryTruck t => 10.00m,
-            { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
-            null => throw new ArgumentNullException(nameof(vehicle))
+            { }             => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+            null            => throw new ArgumentNullException(nameof(vehicle))
         };
     }
 }
 ```
 
-W poprzednim kodzie użyto **wyrażenie switch** (nie taka sama, jak [ `switch` ](../language-reference/keywords/switch.md) instrukcji), które testują **wpisz wzór**. A **wyrażenie switch** rozpoczyna się od zmiennej, `vehicle` w poprzednim kodzie, a następnie `switch` — słowo kluczowe. Następnie nadchodzi arms przełącznika umieszczone w nawiasach klamrowych. `switch` Wyrażenie sprawia, że pozostałe elementy składni, która otacza `switch` instrukcji. `case` — Słowo kluczowe zostanie pominięty, a wynik każdego arm jest wyrażeniem. Ostatnie dwa arms wyświetlenie nowej funkcji języka. `{ }` Przypadek pasuje do dowolnego obiektu inną niż null, który nie pasuje do wcześniejszych arm. Ta arm połowy wszelkie nieprawidłowe typy przekazane do tej metody. Na koniec `null` przechwytuje wzorca, gdy `null` jest przekazywany do tej metody. `null` Wzorzec może być ostatnie, ponieważ inne wzorce typ zgodny tylko obiektów innych niż null poprawnego typu.
+W poprzednim kodzie użyto **wyrażenie switch** (nie taka sama, jak [ `switch` ](../language-reference/keywords/switch.md) instrukcji), które testują **wpisz wzór**. A **wyrażenie switch** rozpoczyna się od zmiennej, `vehicle` w poprzednim kodzie, a następnie `switch` — słowo kluczowe. Następnie wszystkie nadchodzi **Przełącz arms** umieszczone w nawiasach klamrowych. `switch` Wyrażenie sprawia, że pozostałe elementy składni, która otacza `switch` instrukcji. `case` — Słowo kluczowe zostanie pominięty, a wynik każdego arm jest wyrażeniem. Ostatnie dwa arms wyświetlenie nowej funkcji języka. `{ }` Przypadek pasuje do dowolnego obiektu inną niż null, który nie pasuje do wcześniejszych arm. Ta arm połowy wszelkie nieprawidłowe typy przekazane do tej metody. Na koniec `null` przechwytuje wzorca, gdy `null` jest przekazywany do tej metody. `null` Wzorzec może być ostatnie, ponieważ inne wzorce typ zgodny tylko obiektów innych niż null poprawnego typu.
 
 Możesz przetestować ten kod, używając następującego kodu w `Program.cs`:
 
@@ -155,16 +155,16 @@ Te reguły można zaimplementować przy użyciu **wzorzec właściwość** w tym
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0} => 2.00m + 0.50m,
-    Car { Passengers: 1 } => 2.0m,
-    Car { Passengers: 2} => 2.0m - 0.50m,
+    Car { Passengers: 0}        => 2.00m + 0.50m,
+    Car { Passengers: 1 }       => 2.0m,
+    Car { Passengers: 2}        => 2.0m - 0.50m,
     Car c when c.Passengers > 2 => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-Pierwsze trzy przypadki testów typ jako `Car`, następnie sprawdź wartość `Passengers` właściwości. Jeśli obie są zgodne, to wyrażenie jest oceniana i zwracana. Pokazuje końcowego klauzuli `when` klauzula dla wzorca właściwości. Możesz użyć `when` klauzulę, aby przetestować warunki niż równość dla właściwości. W powyższym przykładzie `when` klauzuli testy, aby zobaczyć, że są więcej niż 2 pasażerów w samochodu. Ściśle rzecz ujmując nie jest konieczne, w tym przykładzie.
+Pierwsze trzy przypadki testów typ jako `Car`, następnie sprawdź wartość `Passengers` właściwości. Jeśli obie są zgodne, to wyrażenie jest oceniana i zwracana. Pokazuje końcowego klauzuli `when` klauzuli arm przełącznika. Możesz użyć `when` klauzulę, aby przetestować warunki niż równość dla właściwości. W powyższym przykładzie `when` klauzuli testy, aby zobaczyć, że są więcej niż 2 pasażerów w samochodu. Ściśle rzecz ujmując nie jest konieczne, w tym przykładzie.
 
 Może także zwiększyć przypadków dla taksówek w podobny sposób:
 
@@ -173,10 +173,10 @@ vehicle switch
 {
     // ...
 
-    Taxi { Fares: 0} => 3.50m + 1.00m,
+    Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2} => 3.50m - 0.50m,
-    Taxi t => 3.50m - 1.00m,
+    Taxi { Fares: 2}  => 3.50m - 0.50m,
+    Taxi t            => 3.50m - 1.00m,
 
     // ...
 };
@@ -217,15 +217,15 @@ Gdy wszystko będzie gotowe, będziesz mieć na metodę, która wygląda podobni
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0} => 2.00m + 0.50m,
-    Car { Passengers: 1 } => 2.0m,
-    Car { Passengers: 2} => 2.0m - 0.50m,
+    Car { Passengers: 0}        => 2.00m + 0.50m,
+    Car { Passengers: 1}        => 2.0m,
+    Car { Passengers: 2}        => 2.0m - 0.50m,
     Car c when c.Passengers > 2 => 2.00m - 1.0m,
    
-    Taxi { Fares: 0} => 3.50m + 1.00m,
+    Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2} => 3.50m - 0.50m,
-    Taxi t => 3.50m - 1.00m,
+    Taxi { Fares: 2}  => 3.50m - 0.50m,
+    Taxi t            => 3.50m - 1.00m,
     
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
     Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
@@ -237,9 +237,9 @@ vehicle switch
 };
 ```
 
-## <a name="recursive-patterns"></a>Wzorce cykliczne
+Wiele z nich Przełącz arms są przykładami **wzorców cyklicznego**. Na przykład `Car { Passengers: 1}` pokazuje wzór stałej wewnątrz wzorzec właściwości.
 
-Aby włączyć ten kod mniej powtarzających się przy użyciu **wzorców cyklicznego**. `Car` i `Taxi` mają czterech różnych arms w powyższych przykładach. W obu przypadkach można utworzyć wzorzec typ, który trafiają do wzorca właściwości. W poniższym kodzie pokazano tej techniki:
+Możesz wprowadzić ten kod mniej powtarzalne, za pomocą przełączników zagnieżdżonych. `Car` i `Taxi` mają czterech różnych arms w powyższych przykładach. W obu przypadkach można utworzyć wzorzec typ, który trafiają do wzorca właściwości. W poniższym kodzie pokazano tej techniki:
 
 ```csharp
 public decimal CalculateToll(object vehicle) =>
@@ -268,7 +268,8 @@ public decimal CalculateToll(object vehicle) =>
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
-        { } => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
+
+        { }  => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
         null => throw new ArgumentNullException(nameof(vehicle))
     };
 ```
@@ -314,41 +315,29 @@ Korzysta z systemu, który zbiera narzędzia <xref:System.DateTime> struktury pr
 private static bool IsWeekDay(DateTime timeOfToll) =>
     timeOfToll.DayOfWeek switch
     {
-        DayOfWeek.Monday => true,
-        DayOfWeek.Tuesday => true,
+        DayOfWeek.Monday    => true,
+        DayOfWeek.Tuesday   => true,
         DayOfWeek.Wednesday => true,
-        DayOfWeek.Thursday => true,
-        DayOfWeek.Friday => true,
-        DayOfWeek.Saturday => false,
-        DayOfWeek.Sunday => false
+        DayOfWeek.Thursday  => true,
+        DayOfWeek.Friday    => true,
+        DayOfWeek.Saturday  => false,
+        DayOfWeek.Sunday    => false
     };
 ```
 
 Ta metoda działa, ale jest monotonnych. Można uprościć, jak pokazano w poniższym kodzie:
 
-```csharp
-private static bool IsWeekDay(DateTime timeOfToll) =>
-    timeOfToll.DayOfWeek switch
-    {
-        DayOfWeek.Saturday,  => false,
-        DayOfWeek.Sunday => false,
-        _ => true
-    };
-```
-
-Możesz wykonać dalszego uproszczenia na to wyrażenie, łącząc dwie wartości w jednym arm:
-
-[!code-csharp[IsWeekDay](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 Następnie dodaj podobną funkcję do kategoryzowania czasu z bloków:
 
-[!code-csharp[GetTimeBand](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 Poprzednia metoda nie używa dopasowywania do wzorca. Jest bardziej zrozumiały, przy użyciu dobrze znanych kolejne `if` instrukcji. Dodaj prywatnej `enum` do przekonwertowania każdego zakresu czasu wartości dyskretnych.
 
 Po utworzeniu tych metod, możesz użyć innej `switch` wyrażenie **wzór krotki** do obliczania cenowej premium. Można utworzyć `switch` wyrażenia z wszystkich arms 16:
 
-[!code-csharp[FullTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 Powyżej kod działa, ale można uprościć. Wszystkie kombinacje osiem for weekend mają ten sam numer płatny. Możesz zastąpić wszystkie osiem następującym wierszem co:
 
@@ -360,7 +349,7 @@ Ruchu przychodzącego i wychodzącego mają ten sam mnożnik podczas za dzień t
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
-(true, TimeBand.Daytime, _) => 1.5m,
+(true, TimeBand.Daytime, _)   => 1.5m,
 ```
 
 Kod powinien wyglądać podobnie do poniższego kodu, po wprowadzeniu tych dwóch zmian:
@@ -369,13 +358,13 @@ Kod powinien wyglądać podobnie do poniższego kodu, po wprowadzeniu tych dwóc
 public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
     (IsWeekDay(timeOfToll), GetTimeBand(timeOfToll), inbound) switch
     {
-        (true, TimeBand.MorningRush, true) => 2.00m,
+        (true, TimeBand.MorningRush, true)  => 2.00m,
         (true, TimeBand.MorningRush, false) => 1.00m,
-        (true, TimeBand.Daytime, _) => 1.50m,
-        (true, TimeBand.EveningRush, true) => 1.00m,
+        (true, TimeBand.Daytime,     _)     => 1.50m,
+        (true, TimeBand.EveningRush, true)  => 1.00m,
         (true, TimeBand.EveningRush, false) => 2.00m,
-        (true, TimeBand.Overnight, _) => 0.75m,
-        (false, _, _) => 1.00m,
+        (true, TimeBand.Overnight,   _)     => 0.75m,
+        (false, _,                   _)     => 1.00m,
     };
 ```
 

@@ -3,16 +3,16 @@ title: Drzewa wyrażeń
 description: Więcej informacji na temat drzew wyrażeń w .NET Core i jak z nich korzystać, aby reprezentować struktur, które można zbadać, modyfikowania i wykonywanie kodu.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190739"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125840"
 ---
 # <a name="expression-trees"></a>Drzewa wyrażeń
 
-Jeśli używano LINQ, gdy potrafisz dzięki rozbudowanej bibliotece gdzie `Func` typy są częścią zestawu interfejsów API. (Jeśli nie jesteś zaznajomiony z LINQ, prawdopodobnie chcesz odczytać [samouczek LINQ](linq/index.md) i samouczek dotyczący [wyrażeń lambda](lambda-expressions.md) przed to.) *Drzewa wyrażeń* zapewniają bardziej rozbudowane interakcji z argumentów, które są funkcjami.
+Jeśli używano LINQ, gdy potrafisz dzięki rozbudowanej bibliotece gdzie `Func` typy są częścią zestawu interfejsów API. (Jeśli nie jesteś zaznajomiony z LINQ, prawdopodobnie chcesz odczytać [samouczek LINQ](linq/index.md) i artykuł na temat [wyrażeń lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) przed to.) *Drzewa wyrażeń* zapewniają bardziej rozbudowane interakcji z argumentów, które są funkcjami.
 
 Można napisać argumentów funkcji, zazwyczaj przy użyciu wyrażeń Lambda, podczas tworzenia zapytania LINQ. W typowych zapytań LINQ te argumenty funkcji są przekształcane do delegata, który kompilator tworzy. 
 

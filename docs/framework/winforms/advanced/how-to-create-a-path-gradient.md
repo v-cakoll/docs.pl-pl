@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720400"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126230"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Instrukcje: Tworzenie gradientu ścieżki
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasy pozwala dostosować sposób wypełnienia kształtu z stopniowo zmiana kolorów. Na przykład można określić jeden kolor środek ścieżka i innego koloru dla granicy ścieżki. Można również określić różne kolory dla każdego z kilku punktów wzdłuż granic ścieżki.  
@@ -26,13 +26,13 @@ ms.locfileid: "57720400"
   
 -   Poniższy przykład wypełnia elipsę z pędzla gradientu ścieżki. Kolor jest ustawiona na niebieski i Akwamaryna jest ustawiony kolor granic. Poniższa ilustracja przedstawia wypełnioną elipsę.  
   
-     ![Ścieżka gradientu](./media/pathgradient1.png "pathgradient1")  
+     ![Ścieżka gradientu wypełnienia elipsy.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      Domyślnie pędzla gradientu ścieżki nie jest rozszerzana poza granicami ścieżki. Jeśli używasz pędzla gradientu ścieżki do wypełnienia rysunku, który wykracza poza granicę ścieżkę obszaru ekranu poza ścieżka nie zostanie wypełnione.  
   
-     Na poniższej ilustracji pokazano, co się stanie, jeśli zmienisz <xref:System.Drawing.Graphics.FillEllipse%2A> wywołania następujący kod do `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     Na poniższej ilustracji pokazano, co się stanie, jeśli zmienisz <xref:System.Drawing.Graphics.FillEllipse%2A> wywołania następujący kod do `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![Ścieżka gradientu](./media/pathgradient2.png "pathgradient2")  
+     ![Ścieżka gradientu wykracza poza granicę ścieżki.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ ms.locfileid: "57720400"
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   Poniższy przykład pobiera gradientu ścieżki bez <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu w kodzie. Określonych <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> konstruktora w przykładzie odbiera tablicę punkty, ale nie wymaga <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. Ponadto należy pamiętać, że <xref:System.Drawing.Drawing2D.PathGradientBrush> jest używany do wypełniania prostokąt, nie ścieżkę. Prostokąt jest większy niż ścieżki zamkniętej używane do definiowania pędzla, więc niektóre prostokąta nie jest malowane przez pędzla. Na poniższej ilustracji przedstawiono prostokąt (linia przerywana) i części prostokąt malowane przez pędzla gradientu ścieżki.  
+-   Poniższy przykład pobiera gradientu ścieżki bez <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu w kodzie. Określonych <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> konstruktora w przykładzie odbiera tablicę punkty, ale nie wymaga <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. Ponadto należy pamiętać, że <xref:System.Drawing.Drawing2D.PathGradientBrush> jest używany do wypełniania prostokąt, nie ścieżkę. Prostokąt jest większy niż ścieżki zamkniętej używane do definiowania pędzla, więc niektóre prostokąta nie jest malowane przez pędzla. Na poniższej ilustracji przedstawiono prostokąt (linia przerywana) i części prostokąt malowane przez pędzla gradientu ścieżki: 
   
-     ![Gradient](./media/gradient4.png "gradient4")  
+     ![Część gradientu malowane przez pędzla gradientu ścieżki.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ ms.locfileid: "57720400"
   
      Poniższa ilustracja przedstawia dane wyjściowe następujący kod. Elipsa po lewej stronie jest Akwamaryna tylko na punktu centralnego. Wielokropka po prawej stronie jest Akwamaryna wszędzie, gdzie wewnątrz ścieżki wewnętrznego.  
   
- ![Gradient](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![Efekt gradientu skali koncentracji uwagi](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ ms.locfileid: "57720400"
   
      Poniższa ilustracja przedstawia trójkąt wypełnione pędzla gradientu ścieżki niestandardowej.  
   
-     ![Ścieżka gradientu](./media/pathgradient4.png "pathgradient4")  
+     ![Trójkąt wypełniony pędzla gradientu ścieżki niestandardowej.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -92,18 +92,18 @@ ms.locfileid: "57720400"
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     Na poniższej ilustracji przedstawiono wypełnioną elipsę i punktu centralnego pędzla gradientu ścieżki.  
+     Na poniższej ilustracji przedstawiono wypełnioną elipsę i punktu centralnego pędzla gradientu ścieżki:  
   
-     ![Ścieżka gradientu](./media/pathgradient5.png "pathgradient5")  
+     ![Gradientu ścieżki z wypełnioną elipsę i punkt środkowy.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   Można ustawić punktu centralnego pędzla gradientu ścieżki do lokalizacji poza ścieżki, które zostało użyte do konstruowania pędzla. Poniższy przykład zastępuje wywołanie, aby ustawić <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> właściwość w poprzednim kodzie.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     Poniższa ilustracja przedstawia dane wyjściowe z tej zmiany.  
+     Na poniższej ilustracji przedstawiono dane wyjściowe z tej zmiany:  
   
-     ![Ścieżka gradientu](./media/pathgradient6.png "pathgradient6")  
+     ![Gradientu ścieżki z punktu centralnego poza ścieżki.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      Na powyższej ilustracji punkty po prawej stronie elipsy nie są czyste niebieski, (mimo że są one bardzo ścisłej). Kolory gradientu są umieszczone tak, jakby wypełnienie osiągnięty punkt (145, 35), gdzie kolor będzie czysty niebieskiego (0, 0, 255). Ale wypełnienie nigdy nie osiągnie (145, 35), ponieważ ścieżka pędzla gradientów do malowania tylko wewnątrz jego ścieżki.  
   

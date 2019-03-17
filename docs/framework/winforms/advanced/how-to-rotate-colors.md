@@ -8,38 +8,38 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: cb3824d8a5a5674b83124301dbfbd5a3ba60effa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720621"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125892"
 ---
 # <a name="how-to-rotate-colors"></a>Instrukcje: Obracanie kolorów
 Obrót przestrzeni kolorów czterowymiarowego jest trudny do wizualizacji. Firma Microsoft może ułatwić wizualizacji obrotu zgadzając się zachować jeden ze składników koloru, stałej. Załóżmy, że firma Microsoft zobowiązuje się do zachowania ustalony na 1 składnik alfa (całkowicie nieprzezroczyste). Firma Microsoft następnie wizualizować przestrzeń kolorów trójwymiarowej za pomocą czerwonego, zielonego i niebieskiego osi, jak pokazano na poniższej ilustracji.  
   
- ![Ponowne kolorowanie](./media/recoloring03.gif "recoloring03")  
+ ![Ilustracja przedstawiająca obrotu z osiami czerwonego, zielonego i niebieskiego.](./media/how-to-rotate-colors/rotation-red-green-blue-axes.gif)  
   
  Kolor, który można traktować jako punktów w przestrzeni 3D. Na przykład punkt (1, 0, 0), w obszarze reprezentuje kolor czerwony, a punkt (0, 1, 0), w obszarze reprezentuje kolor zielony.  
   
  Poniższa ilustracja przedstawia się pod kątem 60 stopni na płaszczyźnie czerwony zielony oznacza obracanie kolorów (1, 0, 0). Obrót równolegle płaszczyzny do płaszczyzny czerwonego mogą być uważane za obrót wokół osi niebieski.  
   
- ![Ponowne kolorowanie](./media/recoloring04.gif "recoloring04")  
+ ![Ilustracja przedstawiająca obrót wokół osi niebieski.](./media/how-to-rotate-colors/rotation-about-blue-axis.gif)  
   
- Na poniższej ilustracji pokazano, jak zainicjować macierzy kolorów do wykonania wymiany o każdej z trzech osi współrzędnych (czerwony, zielony, niebieski).  
+ Poniższa ilustracja przedstawia sposób inicjowania macierzy kolorów do wykonania wymiany o każdej z trzech osi współrzędnych (czerwony, zielony, niebieski):  
   
- ![Ponowne kolorowanie](./media/recoloring05.gif "recoloring05")  
+ ![Zainicjuj macierzy kolorów do wykonania wymiany o trzech osi.](./media/how-to-rotate-colors/rotation-about-three-axes.gif)  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pobiera obraz, który jednego koloru (1, 0, 0.6) oraz będzie miało zastosowanie 60 stopni niebieski osi. Kąt obrotu przechwytywana się na płaszczyźnie, który jest zbliżony do płaszczyzny czerwony zielony.  
   
- Poniższa ilustracja przedstawia oryginalny obraz po lewej i obracać kolor obraz po prawej stronie.  
+ Poniższa ilustracja przedstawia oryginalny obraz po lewej i obracać kolor obraz po prawej stronie:  
   
- ![Obracanie kolorów](./media/colortrans5.png "colortrans5")  
+ ![Ilustracja pokazujący oryginalny obraz i obracać kolor obrazu.](./media/how-to-rotate-colors/original-color-rotated-images.png)  
   
- Na poniższej ilustracji przedstawiono wizualizację obracanie kolorów wykonywane w poniższym kodzie.  
+ Na poniższej ilustracji przedstawiono wizualizację obracanie kolorów wykonywane w poniższym kodzie:
   
- ![Ponowne kolorowanie](./media/recoloring06.gif "recoloring06")  
+ ![Ilustracja przedstawiająca wizualizacji obracanie kolorów.](./media/how-to-rotate-colors/visualization-color-rotation.gif)  
   
  [!code-csharp[System.Drawing.RotateColors#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  

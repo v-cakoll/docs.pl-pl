@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: bd4e12a861207e5318e8f3f34b38204f6724e7b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652595"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125450"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem systemu Windows
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez usługę Windows security. Aby uzyskać więcej informacji na temat programowania, zobacz [jak: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
  Intranet usługi sieci Web Wyświetla informacje o zasobów ludzkich. Klient to aplikacja formularza Windows. Aplikacja jest wdrażana w domenie za pomocą kontrolera Kerberos zabezpieczanie domeny.  
   
- ![Transport security przy użyciu uwierzytelniania Windows](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![Zabezpieczenia transportu z uwierzytelnianiem Windows](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
@@ -27,7 +27,7 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 |Integralność|Tak|  
 |Poufność|Tak|  
 |Transport|NET.TCP|  
-|Powiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
+|Wiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Usługa  
  Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  

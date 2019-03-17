@@ -2,12 +2,12 @@
 title: Przewodnik po F#
 description: Sprawdź, niektóre najważniejsze funkcje w języku programowania w ten samouczek przy użyciu przykładów kodu F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968299"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125580"
 ---
 # <a name="tour-of-f"></a>Przewodnik po F\#
 
@@ -136,10 +136,6 @@ Nie można wykonać powyższego spowoduje błąd kompilacji.
 [Wzorzec dopasowywania](language-reference/pattern-matching.md) to funkcja języka F#, co umożliwia poprawność dla korzysta z typów F#.  W powyższych przykładach można zauważyć znacznej liczby `match x with ...` składni.  Ta konstrukcja umożliwia kompilatora, który może zrozumieć "kształt" typy danych, aby wymusić konta dla wszystkich przypadków możliwe, korzystając z typu danych, przez co to jest znany jako wyczerpujący dopasowywania do wzorca.  To ogromne możliwości pod kątem poprawności i może służyć sprytnie "kiwnięcia" jaki byłyby zwykle dotyczą środowiska uruchomieniowego, w czasie kompilacji.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-Możesz również użyć skrótu `function` konstrukcji dopasowywanie do wzorców, co jest przydatne podczas pisania funkcji, które powodują, że użycie [aplikacja częściowa](language-reference/functions/index.md#partial-application-of-arguments):
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 Coś, co można zauważyć polega na użyciu `_` wzorca.  Jest to nazywane [wzór symboli wieloznacznych](language-reference/pattern-matching.md#wildcard-pattern), która określa sposób powiedzenie "I nie zależy coś, co jest".  Mimo że jest to wygodne, możesz przypadkowo obejścia wyczerpujący dopasowywania do wzorca i nie korzystają z enforcements kompilacji, jeśli nie chcesz zachować ostrożność przy użyciu `_`.  Najlepiej jest używany podczas nie dba o niektórych rodzajów rozkładany typu podczas wzorca dopasowania lub końcowego klauzuli, gdy masz wyliczyć wszystkich istotnych przypadkach w wyrażeniu dopasowania do wzorca.
 

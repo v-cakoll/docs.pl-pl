@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372181"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125437"
 ---
 # <a name="drawing-formatted-text"></a>Rysowanie formatowanego tekstu
 Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt zapewnia kontrolę niskiego poziomu dla Rysowanie tekstu w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -24,8 +24,7 @@ Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> o
 ## <a name="technology-overview"></a>Omówienie technologii  
  <xref:System.Windows.Media.FormattedText> Obiekt umożliwia rysowanie tekstu wielowierszowego, w którym każdy znak w tekście mogą indywidualnie sformatowane. Poniższy przykład pokazuje tekst, który ma kilka formaty stosowane do niego.  
   
- ![Tekst wyświetlany za pomocą obiektu FormattedText](./media/formattedtext01.jpg "FormattedText01")  
-Tekst wyświetlany za pomocą metody FormattedText  
+ ![Tekst wyświetlany za pomocą obiektu FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
 >  Dla tych deweloperów migracji z [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] interfejsu API tabeli w [migracji Win32](#win32_migration) sekcji list [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText flag i przybliżony odpowiedniej wartości wyrażonej w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -42,8 +41,7 @@ Tekst wyświetlany za pomocą metody FormattedText
   
  Użyj <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> właściwości, aby ograniczyć tekst, który ma określonej szerokości. Tekst będzie automatycznie zawijany w celu uniknięcia przekroczenia określonej szerokości. Użyj <xref:System.Windows.Media.FormattedText.MaxTextHeight%2A> właściwości, aby ograniczyć tekst, który ma określonej wysokości. Tekst zostanie wyświetlona wielokropek "..." na tekst, który przekracza określonej wysokości.  
   
- ![Tekst wyświetlany za pomocą obiektu FormattedText](./media/formattedtext02.png "FormattedText02")  
-Wyświetlany tekst zawierający wordwrapping i wielokropek  
+ ![Tekst wyświetlany za pomocą wordwrap i wielokropek.](./media/drawing-formatted-text/formatted-text-wordwrap-ellipsis.png)    
   
  Wiele stylów formatowania można zastosować do co najmniej jeden znak. Na przykład można nazwać zarówno <xref:System.Windows.Media.FormattedText.SetFontSize%2A> i <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> metody, aby zmienić formatowanie pięć pierwszych znaków w tekście.  
   
@@ -62,19 +60,15 @@ Wyświetlany tekst zawierający wordwrapping i wielokropek
 ### <a name="converting-formatted-text-to-a-geometry"></a>Konwertowanie sformatowany tekst do geometrii  
  Możesz przekonwertować sformatowany tekst do <xref:System.Windows.Media.Geometry> obiektów, co pozwala na tworzenie innych rodzajów wizualnie tekstu. Na przykład można utworzyć <xref:System.Windows.Media.Geometry> obiektu oparte na konspekt ciąg tekstowy.  
   
- ![Kontur tekstu przy użyciu pędzel gradientów liniowych](./media/outlinedtext02.jpg "OutlinedText02")  
-Kontur tekstu przy użyciu pędzel gradientów liniowych  
+ ![Kontur tekstu przy użyciu pędzel gradientów liniowych](./media/typography-in-wpf/text-outline-linear-gradient.jpg)    
   
  Poniższe przykłady ilustrują kilka sposobów tworzenia efektów wizualnych interesujące, modyfikując obrysu, wypełnij i wyróżnienie tekst skonwertowany.  
   
- ![Tekst w różnych kolorach wypełnienia i pociągnięcia](./media/outlinedtext03.jpg "OutlinedText03")  
-Przykład ustawień obrysu i wypełnienia na różne kolory  
+ ![Tekst w różnych kolorach wypełnienia i pociągnięcia](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![Tekst z ImageBrush zastosowany do obrysu](./media/outlinedtext04.jpg "OutlinedText04")  
-Przykład ImageBrush dotyczą pociągnięcia  
+ ![Tekst z ImageBrush dotyczą pociągnięcia](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![Tekst z ImageBrush zastosowany do obrysu](./media/outlinedtext05.jpg "OutlinedText05")  
-Przykład ImageBrush stosowane do obrysu i wyróżnienia  
+ ![Tekst z ImageBrush stosowane do obrysu i wyróżnienia](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  Jeśli tekst jest konwertowany na <xref:System.Windows.Media.Geometry> obiektu nie jest już zbioru znaków — nie można zmodyfikować znaków w ciągu tekstowym. Jednak może wpłynąć na wygląd tekstu przekonwertowany, modyfikując jej obrysu i wypełnienie właściwości. Stroke odwołuje się do konturu tekst skonwertowany; Wypełnienie odnosi się do obszaru w konturze tekst skonwertowany. Aby uzyskać więcej informacji, zobacz [Utwórz tekst opisane](how-to-create-outlined-text.md).  
   
@@ -82,15 +76,14 @@ Przykład ImageBrush stosowane do obrysu i wyróżnienia
   
  W poniższym przykładzie pokazano tekstu sformatowanego, który został przekonwertowany na <xref:System.Windows.Media.PathGeometry> obiektu. Animowany elipsy postępuje zgodnie ze ścieżką pociągnięć renderowanego tekstu.  
   
- ![Kula geometrią ścieżki tekstu](./media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![Kula geometrią ścieżki tekstu](./media/drawing-formatted-text/sphere-following-geometry-path.gif)  
 Kula geometrią ścieżki tekstu  
   
  Aby uzyskać więcej informacji, zobacz [jak: Tworzenie animacji PathGeometry tekstu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  Możesz utworzyć inne interesujące zastosowania tekstu sformatowanego, po został przekonwertowany na <xref:System.Windows.Media.PathGeometry> obiektu. Można na przykład klipu wideo, aby wyświetlić wewnątrz niego.  
   
- ![Wyświetlanie wideo geometrii ścieżki tekstu](./media/videotextdemo01.png "VideoTextDemo01")  
-Wyświetlanie wideo geometrii ścieżki tekstu  
+ ![Wyświetlanie wideo geometrii ścieżki tekstu](./media/drawing-formatted-text/video-displaying-text-path-geometry.png)
   
 <a name="win32_migration"></a>   
 ## <a name="win32-migration"></a>Migracja Win32  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379149"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186120"
 ---
 # <a name="listview-overview"></a>ListView — Przegląd
 <xref:System.Windows.Controls.ListView> Control oferuje infrastrukturę do wyświetlenia zbiór elementów danych w różnych układów lub widoków. Na przykład użytkownik może być do wyświetlenia elementów danych w tabeli, a także do sortowania kolumn.  
@@ -33,7 +33,7 @@ ms.locfileid: "57379149"
   
  Poniższa ilustracja przedstawia, jak dane są wyświetlane w poprzednim przykładzie.  
   
- ![ListView z danymi wyjściowymi GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Zrzut ekranu pokazujący ListView z danymi wyjściowymi GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
  Można utworzyć niestandardowy tryb widoku, definiując klasę, która dziedziczy po elemencie <xref:System.Windows.Controls.ViewBase> klasy. <xref:System.Windows.Controls.ViewBase> Klasy zapewnia infrastrukturę, który chcesz utworzyć widok niestandardowy. Aby uzyskać więcej informacji o tym, jak utworzyć widok niestandardowy, zobacz [Tworzenie niestandardowego trybu widoku dla ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360202"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185444"
 ---
 # <a name="gridview-overview"></a>GridView — Przegląd
 <xref:System.Windows.Controls.GridView> tryb widoku to jeden z trybów wyświetlania dla <xref:System.Windows.Controls.ListView> kontroli. <xref:System.Windows.Controls.GridView> Klasy i jej klasy pomocnicze umożliwiają Ty i Twoi użytkownicy elementu przeglądać kolekcje w tabeli, która zwykle używa przyciski jako nagłówków kolumn interaktywne. W tym temacie przedstawiono <xref:System.Windows.Controls.GridView> klasy i opisano jego użycia.  
@@ -26,10 +26,8 @@ ms.locfileid: "57360202"
 >  Formanty przycisków, które <xref:System.Windows.Controls.GridView> zastosowań nagłówki kolumn są uzyskiwane z <xref:System.Windows.Controls.Primitives.ButtonBase>.  
   
  Poniższa ilustracja przedstawia <xref:System.Windows.Controls.GridView> widoku <xref:System.Windows.Controls.ListView> zawartości.  
-  
- **Widok GridView zawartości ListView**  
-  
- ![Różne ListView](./media/styledlistview.PNG "StyledListView")  
+    
+ ![Zrzut ekranu przedstawiający widok GridView zawartości ListView.](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> kolumny są reprezentowane przez <xref:System.Windows.Controls.GridViewColumn> obiektów, które można automatycznie rozmiar do ich zawartości. Opcjonalnie można jawnie ustawić <xref:System.Windows.Controls.GridViewColumn> określonej szerokości. Można zmienić rozmiar kolumn przez przeciągnięcie uchwytu między nagłówków kolumn. Możesz również dynamicznie dodać, usunąć, Zastąp i zmienić kolejność kolumn, ponieważ ta funkcja jest wbudowana w <xref:System.Windows.Controls.GridView>. Jednak <xref:System.Windows.Controls.GridView> bezpośrednio nie można zaktualizować danych, który jest wyświetlany.  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360202"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- Na poniższej ilustracji przedstawiono tabelę w poprzednim przykładzie tworzona.  
-  
- **GridView, która wyświetla dane z ItemsSource**  
-  
- ![ListView z danymi wyjściowymi GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ Na poniższej ilustracji przedstawiono tabelę w poprzednim przykładzie tworzona. W kontrolce GridView wyświetla dane z obiektu ItemsSource:
+    
+ ![Zrzut ekranu pokazujący ListView z danymi wyjściowymi GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>Styl i układ widoku GridView  

@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212212"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185743"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
@@ -254,12 +254,12 @@ Blokuje bieżący wątek, co oznacza, że oczekiwania na zakończenie zadania mo
 
 Nie należy polegać na stan obiektów globalnych lub wykonywanie niektórych metod. Zamiast tego należy być zależne tylko od wartości zwracane metod. Dlaczego?
 
-  * Kod będzie łatwiej przeglądanie informacji o.
-  * Kod będzie łatwiejsze testowanie.
-  * Mieszanie asynchroniczne i synchroniczne kodu jest znacznie łatwiejsze.
-  * Zazwyczaj można całkowicie uniknąć wyścigu.
-  * W zależności od wartości zwracane upraszcza koordynującego kod asynchroniczny.
-  * (Dodatkowe) działa bardzo dobrze z iniekcji zależności.
+* Kod będzie łatwiej przeglądanie informacji o.
+* Kod będzie łatwiejsze testowanie.
+* Mieszanie asynchroniczne i synchroniczne kodu jest znacznie łatwiejsze.
+* Zazwyczaj można całkowicie uniknąć wyścigu.
+* W zależności od wartości zwracane upraszcza koordynującego kod asynchroniczny.
+* (Dodatkowe) działa bardzo dobrze z iniekcji zależności.
 
 Zalecane dowiesz się, jak osiągnąć pełną lub prawie pełną [referencyjną przezroczystości](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) w kodzie. To spowoduje w bardzo przewidywalny, zakresie testować i obsługiwać bazy kodu.
 

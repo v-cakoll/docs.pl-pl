@@ -4,12 +4,12 @@ description: Dowiedz się, jak .NET kieruje typów na natywną reprezentację.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416246"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185418"
 ---
 # <a name="type-marshalling"></a>Typ zarządzany
 
@@ -38,8 +38,8 @@ Pierwsza tabela zawiera opis mapowania dla różnych typów, dla których kierow
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | Albo `char` lub `char16_t` w zależności od `CharSet` P/Invoke lub struktury. Zobacz [dokumentacji charset](/.charset.md). |
-| `string`  | Albo `char*` lub `char16_t*` w zależności od `CharSet` P/Invoke lub struktury. Zobacz [dokumentacji charset](/.charset.md). |
+| `char`    | Albo `char` lub `char16_t` w zależności od `CharSet` P/Invoke lub struktury. Zobacz [dokumentacji charset](charset.md). |
+| `string`  | Albo `char*` lub `char16_t*` w zależności od `CharSet` P/Invoke lub struktury. Zobacz [dokumentacji charset](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | Typy wskaźników .NET (np.) `void*`)  | `void*` |
@@ -73,7 +73,7 @@ Niektóre typy mogą tylko skierowany, jako parametry, a nie pola. Te typy są w
 
 | Typ architektury .NET | Typ macierzysty (tylko parametr) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | Albo `char*` lub `char16_t*` w zależności od `CharSet` elementu P/Invoke.  Zobacz [dokumentacji charset](/.charset.md). |
+| `System.Text.StringBuilder` | Albo `char*` lub `char16_t*` w zależności od `CharSet` elementu P/Invoke.  Zobacz [dokumentacji charset](charset.md). |
 | `System.ArgIterator` | `va_list` (na Windows x86/x64/arm64 tylko) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |

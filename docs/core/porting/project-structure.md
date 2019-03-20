@@ -4,12 +4,12 @@ description: Pomoc dla właścicieli projektu, którzy chcą Kompiluj swoje rozw
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904025"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186068"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Zorganizować projekt do obsługi środowiska .NET Framework i .NET Core
 
@@ -36,7 +36,7 @@ Dowiedz się, jak utworzyć rozwiązanie, które jest kompilowany dla środowisk
 
 Należy wziąć pod uwagę poniższe repozytorium:
 
-![Istniejący projekt](media/project-structure/project.png)
+![Istniejący projekt](./media/project-structure/existing-project-structure.png)
 
 [**Kod źródłowy**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
@@ -46,7 +46,7 @@ Poniżej przedstawiono kilka sposobów dodawania pomocy technicznej dla platform
 
 Reorganizować tak, aby każda istniejącego repozytorium  *\*.csproj* pliki są usuwane i pojedynczą  *\*.csproj* tworzony jest plik, który jest przeznaczony dla wielu platform. Jest to doskonałe rozwiązanie, ponieważ jeden projekt jest w stanie kompilowanie dla różnych platform. Ma również uprawnienia do obsługi opcji różnych kompilacji i zależności dla platformy docelowej.
 
-![Tworzenie pliku csproj, który jest przeznaczony dla wielu platform](media/project-structure/project.csproj.png)
+![Tworzenie pliku csproj, który jest przeznaczony dla wielu platform](./media/project-structure/multi-targeted-project.png)
 
 [**Kod źródłowy**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -58,7 +58,7 @@ Zmiany, należy pamiętać, są następujące:
 
 W przypadku istniejących projektów przeznaczonych dla platform starszych można pozostawić te projekty w charakterze, a przyszłe ustalać platformy docelowe za pomocą projektu .NET Core.
 
-![Projekt .NET core z istniejącego projektu w innym folderze](media/project-structure/project.csproj.different.png)
+![Projekt .NET core z istniejącego projektu w innym folderze](./media/project-structure/separate-projects-same-source.png)
 
 [**Kod źródłowy**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 

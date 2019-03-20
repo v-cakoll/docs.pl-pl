@@ -3,13 +3,13 @@ title: Technologii .NET framework jest niedostępna na platformie .NET Core
 description: Dowiedz się więcej o technologii .NET Framework, które nie są dostępne na platformie .NET Core
 author: cartermp
 ms.author: mairaw
-ms.date: 12/7/2018
-ms.openlocfilehash: 9d7860184806288dd0d5eb3b0447839d5e47c27f
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.date: 12/07/2018
+ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125476"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185808"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologii .NET framework jest niedostępna na platformie .NET Core
 

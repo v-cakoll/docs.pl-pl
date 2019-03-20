@@ -2,12 +2,12 @@
 title: Co nowego w języku C# 7.2
 description: Omówienie nowych funkcji w języku C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673226"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185353"
 ---
 # <a name="whats-new-in-c-72"></a>Co nowego w języku C# 7.2
 
@@ -22,7 +22,7 @@ Dostępne są następujące nowe funkcje języka w tej wersji:
 
 * [Techniki do pisania kodu efektywne bezpieczne](#safe-efficient-code-enhancements)
   - Kombinacja ulepszenia składni, które umożliwiają pracę z typów wartości za pomocą semantyki odwołania.
-* [Inne niż końcowe argumenty nazwane](#non-trailing-named-arguments)
+* [Argumenty nazwane inne niż końcowe](#non-trailing-named-arguments)
   - Argumenty nazwane może następować argumentów pozycyjnych.
 * [Wiodące znaki podkreślenia w literałach numerycznych](#leading-underscores-in-numeric-literals)
   - Literały numeryczne, mogą teraz zawierać podkreśleniami wiodącymi przed wszystkie cyfry drukowanych.
@@ -35,10 +35,10 @@ Dostępne są następujące nowe funkcje języka w tej wersji:
 
 Funkcje językowe, które wprowadzono w 7.2 pozwalają pracować z typami wartości podczas korzystania z semantyką odwołań. Są one przeznaczone do zwiększenia wydajności, minimalizując kopiowania typów wartości bez powodowania alokacji pamięci, związanych z użyciem typów odwołań. Funkcje obejmują:
 
- - `in` Modyfikator parametrów, aby określić, że argument jest przekazywany przez odwołanie, ale nie jest modyfikowany przez metodę o nazwie. Dodawanie `in` modyfikator do argumentu jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes).
- - `ref readonly` Modyfikator na zwraca metodę, aby wskazać, że metoda zwraca wartość przez odwołanie, ale nie zezwala na operacje zapisu do tego obiektu. Dodawanie `ref readonly` modyfikator jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes), jeśli zwracana jest przypisany do wartości. Dodawanie `readonly` modyfikator do istniejącego `ref` zwracany jest instrukcja [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Wymaga ona wywołań zaktualizować deklaracji `ref` zmienne lokalne, aby uwzględnić `readonly` modyfikator.
- - `readonly struct` Deklaracji, aby wskazać, że struktury jest niemodyfikowalna i mają być przekazywane jako `in` parametru do metody jego elementu członkowskiego. Dodawanie `readonly` modyfikator do istniejącej deklaracji struktury jest [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
- - `ref struct` Deklaracji, aby wskazać, że typ struktury uzyskuje dostęp do pamięci zarządzanej bezpośrednio i muszą zawsze być stosu przydzielone. Dodawanie `ref` modyfikator do istniejącego `struct` deklaracja jest [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Element `ref struct` nie może być składową klasy ani używane w innych lokalizacjach, w którym może zostać przydzielone na stercie.
+- `in` Modyfikator parametrów, aby określić, że argument jest przekazywany przez odwołanie, ale nie jest modyfikowany przez metodę o nazwie. Dodawanie `in` modyfikator do argumentu jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes).
+- `ref readonly` Modyfikator na zwraca metodę, aby wskazać, że metoda zwraca wartość przez odwołanie, ale nie zezwala na operacje zapisu do tego obiektu. Dodawanie `ref readonly` modyfikator jest [źródła zmiany zgodne](version-update-considerations.md#source-compatible-changes), jeśli zwracana jest przypisany do wartości. Dodawanie `readonly` modyfikator do istniejącego `ref` zwracany jest instrukcja [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Wymaga ona wywołań zaktualizować deklaracji `ref` zmienne lokalne, aby uwzględnić `readonly` modyfikator.
+- `readonly struct` Deklaracji, aby wskazać, że struktury jest niemodyfikowalna i mają być przekazywane jako `in` parametru do metody jego elementu członkowskiego. Dodawanie `readonly` modyfikator do istniejącej deklaracji struktury jest [binarne zmiany zgodne](version-update-considerations.md#binary-compatible-changes).
+- `ref struct` Deklaracji, aby wskazać, że typ struktury uzyskuje dostęp do pamięci zarządzanej bezpośrednio i muszą zawsze być stosu przydzielone. Dodawanie `ref` modyfikator do istniejącego `struct` deklaracja jest [niezgodna zmiana](version-update-considerations.md#incompatible-changes). Element `ref struct` nie może być składową klasy ani używane w innych lokalizacjach, w którym może zostać przydzielone na stercie.
 
 Możesz przeczytać więcej na temat wszystkich tych zmian w [pisanie kodu efektywne bezpieczne](../write-safe-efficient-code.md).
 

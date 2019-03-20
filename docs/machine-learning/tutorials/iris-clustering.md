@@ -3,22 +3,22 @@ title: Kwiatów iris klastra przy użyciu klastrowania uczeń - strukturze ML.NE
 description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klastrowania
 author: pkulikov
 ms.author: johalex
-ms.date: 02/19/2019
+ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d8d324cdcad793ac8ade8124f56734bade695421
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488165"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186133"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Samouczek: Kwiatów iris klastra przy użyciu klastrowania uczeń za pomocą platformy ML.NET
 
 > [!NOTE]
 > W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, zobacz [Wprowadzenie do struktury ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
+Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET wersji 0,11**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [repozytorium GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 W tym samouczku pokazano, jak za pomocą strukturze ML.NET tworzyć [model klastra](../resources/tasks.md#clustering) dla [zbiór danych na temat irysów](https://en.wikipedia.org/wiki/Iris_flower_data_set).
 
@@ -129,11 +129,7 @@ Dodaj następujący kod do `Main` metodę, aby skonfigurować sposób ładowania
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Użyj [ogólny `CreateTextLoader` ](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) metoda zostać wywnioskowany schemat zestawu danych z `IrisData` definicji klasy.
-
-Użyj wystąpienia <xref:Microsoft.ML.Data.TextLoader> wystąpienia, aby utworzyć <xref:Microsoft.Data.DataView.IDataView> wystąpienia, która reprezentuje źródło danych dla zestawu danych szkolenia:
-
-[!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
+Ładowanie danych za pomocą ogólnego `MLContext.Data.LoadFromTextFile` otoki dla [metoda LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Zwraca <xref:Microsoft.Data.DataView.IDataView> którego wnioskuje schemat zestawu danych z `IrisData` typ modelu danych używa nagłówka zestawu danych a jest oddzielona przecinkiem.
 
 ## <a name="create-a-learning-pipeline"></a>Tworzenie potoku uczenia
 

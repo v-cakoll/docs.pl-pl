@@ -2,12 +2,12 @@
 title: skojarzenie i liczebność
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 6d1b31c5b5ead701fbe808b91d7191fb84dc86c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 151b15a6df021a25f6c3ecea00af147c6b7196ff
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502640"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185678"
 ---
 # <a name="association-end-multiplicity"></a>skojarzenie i liczebność
 *Skojarzenie i liczebność* definiuje liczbę [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) wystąpień, które mogą być na jednym końcu [skojarzenie](../../../../docs/framework/data/adonet/association-type.md).  
@@ -18,12 +18,12 @@ ms.locfileid: "54502640"
   
 -   zero lub jeden (od 0 do 1): Oznacza, że na końcu skojarzenia zera lub jednego wystąpienia typu jednostki.  
   
--   wiele (*): oznacza, że wartość zero, jeden lub więcej wystąpień typu jednostki na końcu skojarzenia.  
+-   wiele (\*): oznacza, że wartość zero, jeden lub więcej wystąpień typu jednostki na końcu skojarzenia.  
   
- Skojarzenie często jest określony przez jego liczebność punktów końcowych skojarzenia. Na przykład jeśli kończy się skojarzenia ma liczebność punktów jeden (1) i jest wielu (*), skojarzenia nosi nazwę skojarzenia typu jeden do wielu. W poniższym przykładzie `PublishedBy` skojarzenie jest skojarzenia typu jeden do wielu (wydawca publikuje wiele książek i książki opublikowana przez jedną wydawcą). `WrittenBy` Skojarzenie jest skojarzenie wiele do wielu (książki może mieć wielu autorów i Autor może zapisywać wiele książek).  
+ Skojarzenie często jest określony przez jego liczebność punktów końcowych skojarzenia. Na przykład, jeśli Liczebność punktów jeden (1) i jest wiele końcach asocjacji (\*), skojarzenia nosi nazwę skojarzenia typu jeden do wielu. W poniższym przykładzie `PublishedBy` skojarzenie jest skojarzenia typu jeden do wielu (wydawca publikuje wiele książek i książki opublikowana przez jedną wydawcą). `WrittenBy` Skojarzenie jest skojarzenie wiele do wielu (książki może mieć wielu autorów i Autor może zapisywać wiele książek).  
   
 ## <a name="example"></a>Przykład  
- Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `PublishedBy` i `WrittenBy`. Punkty końcowe dla skojarzenia `PublishedBy` to skojarzenie `Book` i `Publisher` typów jednostek. Liczebność `Publisher` end jest jeden (1), a liczebność `Book` end jest wielu (*).  
+ Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `PublishedBy` i `WrittenBy`. Punkty końcowe dla skojarzenia `PublishedBy` to skojarzenie `Book` i `Publisher` typów jednostek. Liczebność `Publisher` end jest jeden (1), a liczebność `Book` end jest wiele (\*).  
   
  ![Przykładowy Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   

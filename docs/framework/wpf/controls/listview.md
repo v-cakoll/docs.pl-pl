@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376224"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186055"
 ---
 # <a name="listview"></a>ListView
 <xref:System.Windows.Controls.ListView> Control oferuje infrastrukturę do wyświetlenia zbiór elementów danych w różnych układów lub widoków.  
   
  Poniższa ilustracja przedstawia <xref:System.Windows.Controls.ListView>.  
   
- ![ListView z danymi wyjściowymi GridView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Zrzut ekranu pokazujący ListView z danymi wyjściowymi GridView.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Omówienia](listview-overviews.md)  

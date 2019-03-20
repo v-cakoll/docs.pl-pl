@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202681"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186081"
 ---
 # <a name="methods"></a>Metody
 
@@ -62,7 +62,7 @@ Należy pamiętać, że `Motorcycle` klasa zawiera metody przeciążonej, `Drive
 
 ## <a name="method-invocation"></a>Wywołanie metody
 
-Metody mogą być albo *wystąpienia* lub *statyczne*. Wywoływanie metody wystąpienia wymaga utworzenia wystąpienia obiektu, a następnie wywołać metodę dla tego obiektu; Metoda wystąpienia działa na tego wystąpienia i jego danych. Wywołaj metodę statyczną, odwołując się do nazwy typu, do którego należy metoda; działania metod statycznych nie działają na dane wystąpienia. Próba wywołania metody statycznej za pomocą wystąpienia obiektu generuje błąd kompilatora.
+Metody mogą być albo *wystąpienia* lub *statyczne*. Wywoływanie metody wystąpienia wymaga utworzenia wystąpienia obiektu, a następnie wywołać metodę dla tego obiektu; Metoda wystąpienia działa na tego wystąpienia i jego danych. Wywołaj metodę statyczną, odwołując się do nazwy typu, do którego należy metoda; metody statyczne nie działają na dane wystąpienia. Próba wywołania metody statycznej za pomocą wystąpienia obiektu generuje błąd kompilatora.
 
 Wywołanie metody jest jak uzyskiwanie dostępu do pola. Po nazwę obiektu (jeśli wywołujesz metodę wystąpienia) lub nazwę typu (w przypadku wywołania `static` metoda), Dodaj okres, nazwy metody i nawiasy. Argumenty są wyświetlane w nawiasach i są oddzielone przecinkami.
 

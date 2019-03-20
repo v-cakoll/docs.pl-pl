@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125499"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186107"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 
@@ -17,12 +17,12 @@ Jak zauważono, należy po przeczytaniu w poprzednich sekcjach, platforma Azure 
 
 Jako *domyślnie* zalecenia, poniżej przedstawiono główne kryteria, zaleca się w tych wskazówkach:
 
-  - **Pojedynczy monolityczną aplikację:** Wybierz usługi Azure App Service
-  - **Aplikacja N-warstwowa:** Wybierz koordynatorów, takich jak Azure Kubernetes Service (AKS), Usługa Service Fabric (CPP) lub usługi App Service, jeśli masz jeden lub kilka usług zaplecza
-  - **Mikrousługi systemu Linux:** Wybierz usługi AKS/Kubernetes
-  - **Mikrousługi Windows:** Wybierz usługę Service Fabric
-  - **Funkcje bezserwerowe & procedury obsługi zdarzeń:** Wybierz usługę Azure Functions
-  - **Na dużą skalę usługi Batch:** Wybierz usługi Azure Batch
+- **Pojedynczy monolityczną aplikację:** Wybierz usługi Azure App Service
+- **Aplikacja N-warstwowa:** Wybierz koordynatorów, takich jak Azure Kubernetes Service (AKS), Usługa Service Fabric (CPP) lub usługi App Service, jeśli masz jeden lub kilka usług zaplecza
+- **Mikrousługi systemu Linux:** Wybierz usługi AKS/Kubernetes
+- **Mikrousługi Windows:** Choose Service Fabric
+- **Funkcje bezserwerowe & procedury obsługi zdarzeń:** Wybierz usługę Azure Functions
+- **Na dużą skalę usługi Batch:** Wybierz usługi Azure Batch
 
 Jednak to zalecenie powinna zostać podjęta uszczypnięcia soli, jak wybór produktu będzie zależeć od określonej aplikacji potrzebom i właściwości. Nie wszystkie aplikacje są takie same, nawet wtedy, gdy początkowo może wyglądać podobnych typów.
 
@@ -36,6 +36,6 @@ Zwróć uwagę sposób, w jaki bazowego systemu operacyjnego (Windows vs. System
 
 Jednak te różnice w dojrzałości system operacyjny będzie w przyszłości zanikanie i wiele platform będą mieć porównywalne dojrzałości systemu operacyjnego i decyzji będzie określić więcej informacji na temat Preferencje na podstawie konkretnych cech, aplikacja może być konieczne lub oparte na każdej z platform ekosystem przyczyny.
 
->[!div class="step-by-step"]
->[Poprzednie](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[dalej](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [Poprzednie](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [dalej](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

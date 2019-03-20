@@ -3,12 +3,12 @@ title: Użyj funkcji dopasowywania wzorca, aby rozszerzyć typy danych
 description: W tym samouczku zaawansowane pokazuje, jak tworzyć funkcje przy użyciu danych i algorytmy, które są tworzone oddzielnie za pomocą metod dopasowania do wzorca.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 78b7215631a3988cff1ab942b677bcd5205e311c
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125814"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185834"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Aby rozszerzyć typy danych przy użyciu funkcji dopasowywania wzorca
 
@@ -17,9 +17,9 @@ C#7 wprowadzono podstawowy wzorzec dopasowywania funkcji. Te funkcje zostały ro
 W tym samouczku dowiesz się, jak:
 
 > [!div class="checklist"]
-> * Jak rozpoznać sytuacji, w którym dopasowywania do wzorca powinny być używane.
-> * Jak zaimplementować zachowanie na podstawie typu i wartości właściwości za pomocą wyrażeniach dopasowania do wzorca.
-> * Jak połączyć dopasowania z innymi technikami, aby utworzyć pełną algorytmów do wzorca.
+> * Rozpoznaje sytuacji, w którym dopasowywania do wzorca powinny być używane.
+> * Aby zaimplementować zachowanie na podstawie typu i wartości właściwości, należy wykonać wyrażeniach dopasowania do wzorca.
+> * Połącz dopasowania z innymi technikami, aby utworzyć pełną algorytmów do wzorca.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -45,12 +45,12 @@ Możesz pobrać kod początkowy, od [dotnet/samples](https://github.com/dotnet/s
 
 ## <a name="pattern-matching-designs"></a>Wzorzec dopasowania projektów
 
-Scenariusz, w tym samouczku używane są wyróżnione rodzaje problemów, które są odpowiednie na potrzeby dopasowywania do wzorca rozwiązania: 
+Scenariusz używane w tym samouczek najważniejsze funkcje rodzaje problemów, które dopasowanie wzorca jest dobrze nadaje się do rozwiązania:
 
 - Obiekty, które są potrzebne do pracy z nie występują w hierarchię obiektów, która pasuje do określonych celów. Możliwe, że pracujesz z klasami, które są częścią niepowiązanych systemów.
 - Funkcje, które dodajesz nie jest częścią abstrakcji core dla tych klas. Płatny sposób zapłaty pojazdu *zmiany* dla różnych typów pojazdów, ale płatny nie jest podstawowa funkcja pojazdu.
 
-Gdy *kształt* danych i *operacji* na tym dane nie zostały opisane razem, funkcje dopasowania wzorca C# ułatwienia pracy z. 
+Gdy *kształt* danych i *operacji* na tym dane nie zostały opisane razem, funkcje dopasowania wzorca C# ułatwienia pracy z.
 
 ## <a name="implement-the-basic-toll-calculations"></a>Implementowanie obliczeń płatny podstawowe
 
@@ -150,7 +150,7 @@ Urząd płatny chce, aby zachęcić pojazdów przechodzić z maksymalną wydajno
 - Autobusów, które są mniej niż 50% zapełnienia zapłacić dodatkowy $2.00.
 - Autobusów, które są ponad 90% zapełnienia uzyskać rabat $1.00.
 
-Te reguły można zaimplementować przy użyciu **wzorzec właściwość** w tym samym wyrażenie switch. Wzorzec właściwość sprawdza, czy właściwości obiektu po określeniu typu.  W przypadku pojedynczego `Car` rozwija do czterech różnych przypadków:
+Te reguły można zaimplementować przy użyciu **wzorzec właściwość** w tym samym wyrażenie switch. Wzorzec właściwość sprawdza, czy właściwości obiektu po określeniu typu. W przypadku pojedynczego `Car` rozwija do czterech różnych przypadków:
 
 ```csharp
 vehicle switch
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-Urząd płatny nie jest związana z liczby pasażerów ciężarówek dostarczania. Zamiast tego są opłaty za bardziej oparte na klasę wagi ciężarówek. Ciężarówek ponad 5000 modułów równoważenia obciążenia jest naliczana dodatkowa 5.00 $. Ciężarówek światła, w obszarze 3000 lbs otrzymują rabat w wysokości $2.00.  Tej reguły jest implementowane za pomocą następującego kodu:
+Urząd płatny nie jest związana z liczby pasażerów ciężarówek dostarczania. Zamiast tego są opłaty za bardziej oparte na klasę wagi ciężarówek. Ciężarówek ponad 5000 modułów równoważenia obciążenia jest naliczana dodatkowa 5.00 $. Ciężarówek światła w obszarze 3000 lbs otrzymują rabat w wysokości $2.00. Tej reguły jest implementowane za pomocą następującego kodu:
 
 ```csharp
 vehicle switch
@@ -221,16 +221,16 @@ vehicle switch
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
     Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -274,13 +274,13 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-W poprzednim przykładzie, za pomocą wyrażenia cyklicznego oznacza, że nie powtarzaj `Car` i `Taxi` arms zawierają arms podrzędne, które testują wartości właściwości. Ta technika nie jest używany dla `Bus` i `DeliveryTruck` aktywacji, ponieważ te arms testujesz zakresów dla właściwości wartości dyskretnych nie.
+W poprzednim przykładzie, za pomocą wyrażenia cyklicznego oznacza, że nie powtarzaj `Car` i `Taxi` arms zawierający arms podrzędne, które testują wartości właściwości. Ta technika nie jest używany dla `Bus` i `DeliveryTruck` aktywacji, ponieważ te arms testujesz zakresów dla właściwości wartości dyskretnych nie.
 
 ## <a name="add-peak-pricing"></a>Dodaj ceny szczytowa
 
 Dla funkcji końcowego urząd płatny chce dodać ceny szczytowa poufnych czasowo. Podczas rano i wieczorem łazienkowych godzin zostaną podwojone drogi. Tej reguły ma wpływ tylko na ruch sieciowy w jeden kierunek: przychodzący do miasta rano i wychodzących w ciągu godziny łazienkowych wieczór. W innych przypadkach w pracy drogi Zwiększ o 50%. Godziny nocne i wcześnie rano, drogi zostały zredukowane przez 25%. Weekend jest normalną szybkość, niezależnie od tego, w tym czasie.
 
-Użyjesz dopasowywania do wzorca dla tej funkcji, ale będzie zintegrować ją z innymi technikami. Można utworzyć wyrażenie dopasowania do wzorca pojedynczej będzie konta wszystkie kombinacje kierunku, dnia tygodnia i godzinę. Wynik byłby skomplikowanego wyrażenia. Jest trudny do odczytania i trudne do zrozumienia. Które czyni go trudno sprawdzić ich poprawność. Zamiast tego należy połączyć te metody do tworzenia krotki wartości, która zwięźle opisuje te stany. Następnie użyj dopasowywania wzorców do obliczania mnożnik dla płatny. Spójna kolekcja znajdująca się zawiera trzy osobne warunki:
+Użyjesz dopasowywania do wzorca dla tej funkcji, ale będzie zintegrować ją z innymi technikami. Można utworzyć wyrażenie dopasowania do wzorca pojedynczej będzie uwzględnić wszystkie kombinacje kierunku, dnia tygodnia i godzinę. Wynik byłby skomplikowanego wyrażenia. Jest trudny do odczytania i trudne do zrozumienia. Które czyni go trudno sprawdzić ich poprawność. Zamiast tego należy połączyć te metody do tworzenia krotki wartości, która zwięźle opisuje te stany. Następnie użyj dopasowywania wzorców do obliczania mnożnik dla płatny. Spójna kolekcja znajdująca się zawiera trzy osobne warunki:
 
 - Dzień jest dniem powszednim lub weekendy.
 - Pasmo czas, kiedy są zbierane płatny.
@@ -309,7 +309,7 @@ W poniższej tabeli przedstawiono kombinacje wartości wejściowe i ze szczytow�
 
 Istnieją różne kombinacje 16 trzech zmiennych. Łącząc niektóre warunki uprościmy wyrażenie switch końcowej.
 
-Korzysta z systemu, który zbiera narzędzia <xref:System.DateTime> struktury przez czas, kiedy płatny był kolekcji. Tworzenie metody elementu członkowskiego, które Utwórz zmienne z powyższej tabeli.  Następująca funkcja używa wzorca dopasowania wyrażenie switch programu express czy <xref:System.DateTime> reprezentuje weekend lub dzień tygodnia:
+System, który zbiera drogi używa <xref:System.DateTime> struktury przez czas, kiedy został zebrany płatny. Tworzenie metody elementu członkowskiego, które Utwórz zmienne z powyższej tabeli. Poniższa funkcja używa przełącznika wyrażeniu dopasowania do wzorca do express czy <xref:System.DateTime> reprezentuje weekend lub dzień tygodnia:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -339,13 +339,13 @@ Po utworzeniu tych metod, możesz użyć innej `switch` wyrażenie **wzór krotk
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
-Powyżej kod działa, ale można uprościć. Wszystkie kombinacje osiem for weekend mają ten sam numer płatny. Możesz zastąpić wszystkie osiem następującym wierszem co:
+Powyżej kod działa, ale można uprościć. Wszystkie kombinacje osiem for weekend mają ten sam numer płatny. Możesz zastąpić wszystkie osiem o następujący wiersz:
 
 ```csharp
 (false, _, _) => 1.0m,
 ```
 
-Ruchu przychodzącego i wychodzącego mają ten sam mnożnik podczas za dzień tygodnia, dnia i godziny na następny dzień. Arms tych czterech przełącznika, można zastąpić następujące dwa wiersze:
+Ruchu przychodzącego i wychodzącego mają ten sam mnożnik podczas za dzień tygodnia, dnia i godziny na następny dzień. Te cztery przełącznika arms, można zastąpić następujące dwa wiersze:
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
@@ -372,9 +372,9 @@ Na koniec można usunąć łazienkowych dwie godziny prób wina regularne. Po us
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-W tym przykładzie podkreślono jedną z zalet dopasowywania do wzorca. Wzorzec gałęzie, które są obliczane w kolejności. Jeśli można ponownie rozmieścić je tak, aby starszych gałęzi obsługuje jedną ze spraw nowsze kompilatora ostrzega o. Te reguły języka wprowadzone wykonaj poprzedni definiowaniu bez obaw, że kod nie został zmieniony.
+W tym przykładzie podkreślono, jedną z zalet dopasowywania do wzorca: wzorzec gałęzie, które są obliczane w kolejności. Jeśli można ponownie rozmieścić je tak, aby starszych gałęzi obsługuje jedną ze spraw nowsze kompilatora ostrzega o. Te reguły języka wprowadzone wykonaj poprzedni definiowaniu bez obaw, że kod nie został zmieniony.
 
-Dopasowanie wzorca zapewnia naturalnych składni wdrożenia różnych rozwiązań, nie należy utworzyć Jeśli używane techniki zorientowane obiektowo. Chmura jest przyczyną, danych i funkcji na żywo od siebie. *Kształt* danych i *operacji* na jej nie są zawsze opisane ze sobą. W tym samouczku istniejące dane jest używane w całkowicie różnych sposobów z jego funkcja pierwotna. Dopasowanie wzorca udostępniła Ci możliwość pisania tego over tych typów, funkcji, mimo że nie można rozszerzyć je.
+Dopasowanie wzorca zapewnia naturalnych składni wdrożenia różnych rozwiązań, nie należy utworzyć Jeśli używane techniki zorientowane obiektowo. Chmura jest przyczyną, danych i funkcji na żywo od siebie. *Kształt* danych i *operacji* na jej nie są zawsze opisane ze sobą. W tym samouczku istniejące dane jest używane w całkowicie różnych sposobów z jego funkcja pierwotna. Dopasowanie wzorca udostępniła Ci możliwość pisania funkcji, które overrode tych typów, nawet jeśli nie można rozszerzyć je.
 
 ## <a name="next-steps"></a>Następne kroki
 

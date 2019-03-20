@@ -2,12 +2,12 @@
 title: 'Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 790f8f24ed8a6c3b7592fb8e78befc8ee5e2214d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653700"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185431"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy
 W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji konsoli przepływu pracy. To zależy od ukończenia [jak: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu. Mimo że w tym temacie opisano sposób wywoływania usługi przepływu pracy z poziomu aplikacji przepływu pracy, te same metody można wywołać dowolną usługę Windows Communication Foundation (WCF) z poziomu aplikacji przepływu pracy.
@@ -20,7 +20,7 @@ W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji 
 
 3.  Kliknij prawym przyciskiem myszy **MyWFService** rozwiązania **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy projekt**. Wybierz **przepływu pracy** w **zainstalowane szablony** i **Aplikacja konsoli przepływu pracy** z listy typów projektów. Nazwij projekt MyWFClient i użyj domyślnej lokalizacji, jak pokazano na poniższej ilustracji.
 
-     ![Dodawanie okna dialogowego Nowy projekt](../../../../docs/framework/wcf/feature-details/media/addnewprojectdlg.JPG "AddNewProjectDlg")
+     ![Dodaj okno dialogowe nowego projektu](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
      Kliknij przycisk **OK** przycisk, aby odrzucić **okna dialogowego Dodawanie nowego projektu**.
 
@@ -28,37 +28,37 @@ W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji 
 
 5.  Naciśnij klawisz **Ctrl**+**F5** Aby skompilować i uruchomić usługę. Tak jak poprzednio jest uruchamiane w ASP.NET Development Server i programu Internet Explorer wyświetla stronę pomocy programu WCF. Należy zauważyć identyfikator URI dla tej strony, ponieważ musisz ją wykorzystać w następnym kroku.
 
-     ![IE wyświetlanie Pomocy programu WCF — strona oraz identyfikatora URI](../../../../docs/framework/wcf/feature-details/media/iewcfhelppagewuri.JPG "IEWCFHelpPageWURI")
+     ![Wyświetlanie strony pomocy usługi WCF i identyfikator URI programu Internet Explorer](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
 6.  Kliknij prawym przyciskiem myszy **MyWFClient** projektu w **Eksploratora rozwiązań** i wybierz **Dodaj** > **odwołanie do usługi**. Kliknij przycisk **odnajdź** przycisk, aby wyszukać bieżące rozwiązanie dla wszystkich usług. Kliknij przycisk trójkąta obok Service1.xamlx na liście usług. Kliknij przycisk trójkąta obok Service1, aby wyświetlić listę zamówień implementowane przez usługę Service1. Rozwiń **Service1** w węźle **usług** listy. Operacja echa są wyświetlane w **operacji** listy, jak pokazano na poniższej ilustracji.
 
-     ![Dodaj odwołanie do usługi w oknie dialogowym](../../../../docs/framework/wcf/feature-details/media/addservicereference.JPG "AddServiceReference")
+     ![Dodaj okno dialogowe odwołanie do usługi](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
      Zachowaj domyślny obszar nazw i kliknij przycisk **OK** odrzucać **Dodaj odwołanie do usługi** okna dialogowego. Zostanie wyświetlone następujące okno dialogowe.
 
-     ![Okno dialogowe Dodawanie usługi odwołanie powiadomień](../../../../docs/framework/wcf/feature-details/media/asrdlg.JPG "ASRDlg")
+     ![Dodaj okno dialogowe powiadomienia odwołanie do usługi](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference-dialog.jpg)
 
      Kliknij przycisk **OK** aby zamknąć okno dialogowe. Następnie naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie. Powiadomienia w przyborniku dodano nową sekcję o nazwie **MyWFClient.ServiceReference1.Activities**. Rozwiń tę sekcję i zwróć uwagę, działanie Echo, do którego dodano, jak pokazano na poniższej ilustracji.
 
-     ![Echo działania w przyborniku](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
+     ![Echo działania w przyborniku](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
 7.  Przeciąganie i upuszczanie <xref:System.Activities.Statements.Sequence> działania na powierzchnię projektanta. Jest on w **przepływ sterowania** sekcji przybornika.
 
 8.  Za pomocą <xref:System.Activities.Statements.Sequence> działania w trybie koncentracji uwagi, kliknij przycisk **zmienne** łącze i Dodaj zmienną ciągu o nazwie `inString`. Jej nadać wartość domyślną `"Hello, world"` oraz na zmienną ciągu o nazwie `outString` jak pokazano na poniższym diagramie.
 
-     ![Dodawanie zmiennej](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
+     ![Dodawanie zmiennej inString](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 
 9. Przeciąganie i upuszczanie **Echo** działanie do <xref:System.Activities.Statements.Sequence>. W oknie dialogowym Właściwości powiązania `inMsg` argument `inString` zmiennej i `outMsg` argument `outString` zmiennej, jak pokazano na poniższej ilustracji. To powoduje przekazanie wartości `inString` zmiennej do operacji i przyjmuje wartość zwracaną i umieszcza je w `outString` zmiennej.
 
-     ![Powiązywanie argumenty zmienne](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
+     ![Powiązywanie argumentów zmiennych](./media/how-to-access-a-service-from-a-workflow-application/bind-arguments-variables.jpg)
 
 10. Przeciąganie i upuszczanie **WriteLine** działania poniżej **Echo** działanie, aby wyświetlić ciąg zwracany przez wywołanie usługi. **WriteLine** działań znajduje się w **podstawowych** węzła w przyborniku. Powiązanie **tekstu** argument **WriteLine** działanie `outString` zmiennej, wpisując `outString` w polu tekstowym na **WriteLine** działania. Przepływ pracy powinien teraz wyglądać podobnie do poniższej ilustracji.
 
-     ![Przepływ pracy klienta pełną](../../../../docs/framework/wcf/feature-details/media/completeclientwf.JPG "CompleteClientWF")
+     ![Klient pełną przepływu pracy](./media/how-to-access-a-service-from-a-workflow-application/complete-client-workflow.jpg)
 
 11. Kliknij prawym przyciskiem myszy rozwiązanie MyWFService, a następnie wybierz pozycję **Ustaw projekty startowe...** . Wybierz **wiele projektów startowych** przycisk radiowy, a następnie wybierz pozycję **Start** dla każdego projektu w **akcji** kolumny, jak pokazano na poniższej ilustracji.
 
-     ![Uruchamianie projektów opcje](../../../../docs/framework/wcf/feature-details/media/startupprojects.JPG "projektów startowych")
+     ![Opcje projektów uruchamiania](./media/how-to-access-a-service-from-a-workflow-application/startup-project-options.jpg)
 
 12. Naciśnij klawisze Ctrl + F5, aby uruchomić usługę i klienta. ASP.NET Development Server hostuje usługę, program Internet Explorer wyświetla programu WCF — strona pomocy, a aplikacja kliencka przepływu pracy jest uruchamiany w oknie konsoli i wyświetla ciąg zwracany przez usługę ("Hello, world").
 

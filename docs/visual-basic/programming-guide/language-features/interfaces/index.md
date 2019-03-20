@@ -1,5 +1,5 @@
 ---
-title: Interfejsy (Visual Studio)
+title: Interfejsy (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
   - 'Visual Basic code, interfaces'
@@ -8,7 +8,7 @@ helpviewer_keywords:
   - 'interfaces [Visual Basic]'
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 ---
-# <a name="interfaces-visual-basic"></a>Interfejsy (Visual Studio)
+# <a name="interfaces-visual-basic"></a>Interfejsy (Visual Basic)
 *Interfejsy* zdefiniować właściwości, metody i zdarzenia, które można zaimplementować klasy. Interfejsy umożliwiają definiowanie funkcji jako mniejszym grupom ściśle powiązanych właściwości, metod i zdarzeń; Zmniejsza to problemów ze zgodnością, ponieważ możesz tworzyć rozszerzone implementacji interfejsów sieci bez narażenia istniejącego kodu. Opracowując implementacji i dodatkowe interfejsy, można dodać nowe funkcje w dowolnym momencie.  
   
  Istnieje kilka innych powodów dlaczego warto używać interfejsów zamiast dziedziczenia klasy:  

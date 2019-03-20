@@ -1,5 +1,5 @@
 ---
-title: Uzyskiwanie dostępu do danych użytkownika (Visual Studio)
+title: Uzyskiwanie dostępu do danych użytkownika (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - domain names [Visual Basic], retrieving
@@ -18,7 +18,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54605492"
 ---
-# <a name="accessing-user-data-visual-basic"></a>Uzyskiwanie dostępu do danych użytkownika (Visual Studio)
+# <a name="accessing-user-data-visual-basic"></a>Uzyskiwanie dostępu do danych użytkownika (Visual Basic)
 Ta sekcja zawiera tematy dotyczące `My.User` obiektu i zadań, które można wykonać za pomocą go.  
   
  `My.User` Obiekt umożliwia dostęp do informacji na temat zalogowanego użytkownika, zwracając obiekt, który implementuje <xref:System.Security.Principal.IPrincipal> interfejsu.  

@@ -1,5 +1,5 @@
 ---
-title: Rozszerzanie przestrzeni nazw My w Visual Studio
+title: Rozszerzanie przestrzeni nazw My w Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vb.AddingMyExtensions
@@ -15,7 +15,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/05/2019
 ms.locfileid: "57361203"
 ---
-# <a name="extending-the-my-namespace-in-visual-basic"></a>Rozszerzanie przestrzeni nazw My w Visual Studio
+# <a name="extending-the-my-namespace-in-visual-basic"></a>Rozszerzanie przestrzeni nazw My w Visual Basic
 `My` Przestrzeni nazw w języku Visual Basic udostępnia właściwości i metod, które umożliwiają użytkownikowi łatwo korzystać z możliwości programu .NET Framework. `My` Przestrzeni nazw upraszcza typowe problemy programowania, często zmniejszanie trudne do jednego wiersza kodu. Ponadto `My` przestrzeń nazw jest całkowicie rozszerzalny, dzięki czemu możesz dostosować zachowanie `My` i dodawanie nowych usług do swojej hierarchii w celu dostosowania do potrzeb konkretnej aplikacji. W tym temacie omówiono zarówno jak dostosować istniejący członkowie `My` przestrzeni nazw oraz sposób dodawania niestandardowych klas do `My` przestrzeni nazw.  
   
  **Zawartość tematów**  

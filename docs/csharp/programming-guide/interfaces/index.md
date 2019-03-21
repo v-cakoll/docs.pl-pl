@@ -21,7 +21,7 @@ Nazwa struktury musi być prawidłową C# [nazwa identyfikatora](../inside-a-pro
 
 Wszystkie klasy lub struktury, która implementuje <xref:System.IEquatable%601> interfejs musi zawierać definicję <xref:System.IEquatable%601.Equals%2A> metodę, która pasuje do podpisu, który określa interfejs. Dlatego możesz liczyć na klasę, która implementuje `IEquatable<T>` zawierać `Equals` metoda, za pomocą którego wystąpienia klasy można określić, czy jest równy do innego wystąpienia tej samej klasy.  
   
-Definicja `IEquatable<T>` nie dostarcza implementację `Equals`. Interfejs definiuje tylko podpisu. W ten sposób interfejs w języku C# jest podobny do klasy abstrakcyjnej, w którym wszystkie metody są abstrakcyjne. Jednak klasy lub struktury, można zaimplementować wiele interfejsów, ale klasa może odziedziczyć tylko jedną klasę abstrakcyjną, czy nie. W związku z tym korzystając z interfejsów, można dołączyć zachowanie z wielu źródeł w klasie.  
+Definicja `IEquatable<T>` nie dostarcza implementację `Equals`. Interfejs definiuje tylko podpisu. W ten sposób interfejs w języku C# jest podobny do klasy abstrakcyjnej, w którym wszystkie metody są abstrakcyjne. Jednak klasy lub struktury, można zaimplementować wiele interfejsów, ale klasa może odziedziczyć tylko jedną klasę abstrakcyjną, czy nie.
   
 Aby uzyskać więcej informacji na temat klasy abstrakcyjne, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -45,7 +45,7 @@ Klasa bazowa również wdrożyć składowych interfejsu przy użyciu wirtualnych
 
 Interfejs ma następujące właściwości:  
 
-- Interfejs przypomina abstrakcyjną klasę bazową. Wszystkie klasy lub struktury, która implementuje interfejs musi implementować wszystkich jej członków.
+- Interfejs przypomina abstrakcyjną klasę bazową przy użyciu tylko członków abstrakcyjnych. Wszystkie klasy lub struktury, która implementuje interfejs musi implementować wszystkich jej członków.
 - Nie można bezpośrednio utworzyć wystąpienia interfejsu. Jego członkowie są implementowane przez klasy lub struktury, która implementuje interfejs.
 - Interfejsy mogą zawierać zdarzenia, indeksatory, metod i właściwości.
 - Interfejsy zawierać żadnej implementacji metody.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592853"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262485"
 ---
 # <a name="members-c-programming-guide"></a>Członkowie (Przewodnik programowania w języku C#)
 Klasy i struktury mają elementów członkowskich, które reprezentują ich danych i działania. Elementy członkowskie klasy obejmują wszystkie elementy członkowskie zadeklarowana w klasie, oraz wszystkie elementy członkowskie (z wyjątkiem konstruktorów i finalizatory) zadeklarowane dla wszystkich klas w hierarchii dziedziczenia. Prywatne składowe w klasach bazowych są dziedziczone, ale nie są dostępne z klas pochodnych.  
@@ -21,7 +21,7 @@ Klasy i struktury mają elementów członkowskich, które reprezentują ich dany
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |[Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)|Pola są zmiennych zadeklarowanych w zakresie klasy. Pole może być wbudowanego typu liczbowego lub wystąpienie innej klasy. Na przykład klasa kalendarza mogą mieć pola, które zawiera bieżącą datę.|  
-|[Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)|Stałe są pola lub właściwości, którego wartość jest ustawiana na czas kompilacji i nie można zmienić.|  
+|[Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)|Stałe są pola, którego wartość jest ustawiana na czas kompilacji i nie można zmienić.|  
 |[Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)|Właściwości są metody klasy, które są dostępne, tak jakby pól dla tej klasy. Właściwość może zapewnić ochronę pola klasy uniemożliwić zmianę bez wiedzy obiektu.|  
 |[Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)|Metody zdefiniowania akcji, które można wykonywać klasy. Metody może przyjąć parametry, które zawierają dane wejściowe i może zwrócić danych wyjściowych za pomocą parametrów. Metody może również zwracać wartość bezpośrednio, bez korzystania z parametru.|  
 |[Zdarzenia](../../../csharp/programming-guide/events/index.md)|Zdarzenia udostępniają powiadomienia dotyczące zdarzenia, takie jak kliknięcia przycisków lub pomyślne zakończenie metody, do innych obiektów. Zdarzenia są zdefiniowane i wyzwalane za pomocą obiektów delegowanych.|  

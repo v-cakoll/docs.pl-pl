@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bef18468ef02e37b857316cd9fa2bf4cf5f9e9b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369343"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262469"
 ---
 # <a name="formatfromrawvalue-function"></a>Funkcja FormatFromRawValue
 Konwertuje jedną wartość danych pierwotnych wydajności w określonym formacie lub dwóch wartości danych pierwotnych wydajności, jeśli Konwersja formatu jest oparte na czasie. 
@@ -85,7 +85,7 @@ Następujące wartości są zwracane przez tę funkcję:
 
 ## <a name="remarks"></a>Uwagi
 
-Ta funkcja zawija wywołanie do [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) funkcji.
+Ta funkcja zawija wywołanie do [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) funkcji.
 
 ## <a name="requirements"></a>Wymagania
 

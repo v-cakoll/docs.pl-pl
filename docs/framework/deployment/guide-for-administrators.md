@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50ea2b1fefe5c41f0c67ab8c12362f19ea125b5b
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: be053c9f8b431a9e157e53ec2d32fef874cf2d6b
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186218"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262453"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego zależności systemowe przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe dotyczące instalowania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).  
@@ -186,20 +186,20 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
  Teraz pakiet zostanie wdrożony w kolekcji docelowej i rozpocznie się dyskretna instalacja programu .NET Framework 4.5. Aby uzyskać informacje o kodach błędów instalacji programu .NET Framework 4.5, zobacz [kody powrotne](#return_codes) w dalszej części tego tematu.  
   
 <a name="resources"></a>   
-## <a name="resources"></a>Resources  
+## <a name="resources"></a>Zasoby  
  Aby uzyskać więcej informacji dotyczących infrastruktury do testowania wdrożenia [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] do dystrybucji pakietu, zobacz następujące zasoby.  
   
- **Usługa Active Directory, DNS, DHCP:**  
+ **Active Directory, DNS, DHCP:**  
   
--   [Usług domenowych Active Directory](/windows/desktop/ad/active-directory-domain-services)  
+-   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
   
 -   [System nazw domen (DNS)](/windows-server/networking/dns/dns-top)  
   
 -   [Protokół dynamicznej konfiguracji hosta (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
- **Program SQL Server 2008:**  
+ **SQL Server 2008:**  
   
--   [Instalowanie programu SQL Server 2008 (SQL Server wideo)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
+-   [Instalowanie programu SQL Server 2008 (SQL Server wideo)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))  
   
 -   [Omówienie zabezpieczeń usługi SQL Server 2008 dla administratorów baz danych](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   

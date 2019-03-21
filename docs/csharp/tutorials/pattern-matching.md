@@ -3,12 +3,12 @@ title: Użyj funkcji dopasowywania wzorca, aby rozszerzyć typy danych
 description: W tym samouczku zaawansowane pokazuje, jak tworzyć funkcje przy użyciu danych i algorytmy, które są tworzone oddzielnie za pomocą metod dopasowania do wzorca.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 78b7215631a3988cff1ab942b677bcd5205e311c
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185834"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262526"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Aby rozszerzyć typy danych przy użyciu funkcji dopasowywania wzorca
 
@@ -61,7 +61,7 @@ Najbardziej podstawowa obliczeń płatny opiera się tylko pod względem typu po
 - Element `Bus` jest 5,00 zł.
 - Element `DeliveryTruck` jest 10,00 zł
 
-Utwórz nową `TollCalculator` klasy i implementuje dopasowania do wzorca w pojeździe można pobrać kwota opłaty.
+Utwórz nową `TollCalculator` klasy i implementuje dopasowania do wzorca w pojeździe można pobrać kwota opłaty. Poniższy kod przedstawia wstępnej implementacji `TollCalculator`.
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-W poprzednim kodzie użyto **wyrażenie switch** (nie taka sama, jak [ `switch` ](../language-reference/keywords/switch.md) instrukcji), które testują **wpisz wzór**. A **wyrażenie switch** rozpoczyna się od zmiennej, `vehicle` w poprzednim kodzie, a następnie `switch` — słowo kluczowe. Następnie wszystkie nadchodzi **Przełącz arms** umieszczone w nawiasach klamrowych. `switch` Wyrażenie sprawia, że pozostałe elementy składni, która otacza `switch` instrukcji. `case` — Słowo kluczowe zostanie pominięty, a wynik każdego arm jest wyrażeniem. Ostatnie dwa arms wyświetlenie nowej funkcji języka. `{ }` Przypadek pasuje do dowolnego obiektu inną niż null, który nie pasuje do wcześniejszych arm. Ta arm połowy wszelkie nieprawidłowe typy przekazane do tej metody. Na koniec `null` przechwytuje wzorca, gdy `null` jest przekazywany do tej metody. `null` Wzorzec może być ostatnie, ponieważ inne wzorce typ zgodny tylko obiektów innych niż null poprawnego typu.
+W poprzednim kodzie użyto **wyrażenie switch** (nie taka sama, jak [ `switch` ](../language-reference/keywords/switch.md) instrukcji), które testują **wpisz wzór**. A **wyrażenie switch** rozpoczyna się od zmiennej, `vehicle` w poprzednim kodzie, a następnie `switch` — słowo kluczowe. Następnie wszystkie nadchodzi **Przełącz arms** umieszczone w nawiasach klamrowych. `switch` Wyrażenie sprawia, że pozostałe elementy składni, która otacza `switch` instrukcji. `case` — Słowo kluczowe zostanie pominięty, a wynik każdego arm jest wyrażeniem. Ostatnie dwa arms wyświetlenie nowej funkcji języka. `{ }` Przypadek pasuje do dowolnego obiektu inną niż null, który nie pasuje do wcześniejszych arm. Ta arm połowy wszelkie nieprawidłowe typy przekazane do tej metody.  `{ }` Przypadku należy wykonać przypadków dla każdego typu vehicle. Jeśli kolejność zostały cofnięte, `{ }` przypadku pierwszeństwo. Na koniec `null` wykrywa wzorzec, kiedy `null` jest przekazywany do tej metody. `null` Wzorzec może być ostatnie, ponieważ inne wzorce typ zgodny tylko obiektów innych niż null poprawnego typu.
 
 Możesz przetestować ten kod, używając następującego kodu w `Program.cs`:
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-Pierwsze trzy przypadki testów typ jako `Car`, następnie sprawdź wartość `Passengers` właściwości. Jeśli obie są zgodne, to wyrażenie jest oceniana i zwracana. Pokazuje końcowego klauzuli `when` klauzuli arm przełącznika. Możesz użyć `when` klauzulę, aby przetestować warunki niż równość dla właściwości. W powyższym przykładzie `when` klauzuli testy, aby zobaczyć, że są więcej niż 2 pasażerów w samochodu. Ściśle rzecz ujmując nie jest konieczne, w tym przykładzie.
+Pierwsze trzy przypadki testów typ jako `Car`, następnie sprawdź wartość `Passengers` właściwości. Jeśli obie są zgodne, to wyrażenie jest oceniana i zwracana.
 
 Może także zwiększyć przypadków dla taksówek w podobny sposób:
 
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-Gdy wszystko będzie gotowe, będziesz mieć na metodę, która wygląda podobnie do następujących:
+W poprzednim kodzie `when` klauzuli arm przełącznika. Możesz użyć `when` klauzulę, aby przetestować warunki niż równość dla właściwości. Gdy wszystko będzie gotowe, będziesz mieć na metodę, która wygląda podobnie do następujących:
 
 ```csharp
 vehicle switch
@@ -220,7 +220,7 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
@@ -372,9 +372,9 @@ Na koniec można usunąć łazienkowych dwie godziny prób wina regularne. Po us
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-W tym przykładzie podkreślono, jedną z zalet dopasowywania do wzorca: wzorzec gałęzie, które są obliczane w kolejności. Jeśli można ponownie rozmieścić je tak, aby starszych gałęzi obsługuje jedną ze spraw nowsze kompilatora ostrzega o. Te reguły języka wprowadzone wykonaj poprzedni definiowaniu bez obaw, że kod nie został zmieniony.
+W tym przykładzie podkreślono, jedną z zalet dopasowywania do wzorca: wzorzec gałęzie, które są obliczane w kolejności. Jeśli można ponownie rozmieścić je tak, aby starszych gałęzi obsługuje jedną ze spraw nowsze kompilatora ostrzega o nieosiągalnego kodu. Te reguły języka wprowadzone wykonaj poprzedni definiowaniu bez obaw, że kod nie został zmieniony.
 
-Dopasowanie wzorca zapewnia naturalnych składni wdrożenia różnych rozwiązań, nie należy utworzyć Jeśli używane techniki zorientowane obiektowo. Chmura jest przyczyną, danych i funkcji na żywo od siebie. *Kształt* danych i *operacji* na jej nie są zawsze opisane ze sobą. W tym samouczku istniejące dane jest używane w całkowicie różnych sposobów z jego funkcja pierwotna. Dopasowanie wzorca udostępniła Ci możliwość pisania funkcji, które overrode tych typów, nawet jeśli nie można rozszerzyć je.
+Dopasowanie wzorca czytelność niektórych rodzajów kodu i oferuje alternatywa technik zorientowane obiektowo, gdy nie można dodać kod do swoich klas. Chmura jest przyczyną, danych i funkcji na żywo od siebie. *Kształt* danych i *operacji* na jej nie są zawsze opisane ze sobą. W tym samouczku istniejące dane jest używane w całkowicie różnych sposobów z jego funkcja pierwotna. Dopasowanie wzorca udostępniła Ci możliwość pisania funkcji, które overrode tych typów, nawet jeśli nie można rozszerzyć je.
 
 ## <a name="next-steps"></a>Następne kroki
 

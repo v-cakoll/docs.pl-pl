@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719640"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262576"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Instrukcje: Tworzenie sekwencyjnego przepływu pracy
 Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.Sequence> działanie i działań niestandardowych z poprzedniego [jak: Utwórz działanie](how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb.  
@@ -21,7 +21,7 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
 > [!NOTE]
 >  Aby pobrać pełną wersję tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
-### <a name="to-create-the-workflow"></a>Aby utworzyć przepływ pracy  
+## <a name="to-create-the-workflow"></a>Aby utworzyć przepływ pracy  
   
 1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowActivities** w **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy element**.  
   
@@ -31,7 +31,7 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
   
 4.  Przeciągnij **sekwencji** działanie z **przepływ sterowania** części **przybornika** i upuść je na **Upuść działanie tutaj** etykiety na przepływ pracy powierzchni projektowej.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>Aby utworzyć zmienne przepływu pracy i argumenty  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>Aby utworzyć zmienne przepływu pracy i argumenty  
   
 1.  Kliknij dwukrotnie **SequentialNumberGuessWorkflow.xaml** w **Eksploratora rozwiązań** do wyświetlania w Projektancie przepływu pracy, jeśli nie jest wyświetlany.  
   
@@ -62,7 +62,7 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
   
 13. Kliknij przycisk **zmienne** w lewym dolnym rogu projektanta działań, aby zamknąć **zmienne** okienka.  
   
-### <a name="to-add-the-workflow-activities"></a>Aby dodać działania przepływu pracy  
+## <a name="to-add-the-workflow-activities"></a>Aby dodać działania przepływu pracy  
   
 1.  Przeciągnij **przypisać** działanie z **podstawowych** części **przybornika** i upuść je na **sekwencji** działania. Typ `Target` do **do** pole i następującego wyrażenia do **wprowadź wyrażenie języka C#** lub **wprowadź wyrażenie VB** pole.  
   
@@ -137,13 +137,13 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
   
 13. Kliknij przycisk **WriteLine** działania w **następnie** sekcji, aby go zaznaczyć, a następnie wpisz następujące wyrażenie do **tekstu** pole wartości właściwości.  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. Kliknij przycisk **WriteLine** działania w **Else** sekcji, aby go zaznaczyć, a następnie wpisz następujące wyrażenie do **tekstu** pole wartości właściwości.  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -151,7 +151,7 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
   
      ![Ukończono sekwencyjnego przepływu pracy](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>Tworzenie przepływu pracy  
+## <a name="to-build-the-workflow"></a>Tworzenie przepływu pracy  
   
 1.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   

@@ -3,12 +3,12 @@ title: Obsługiwać Model w interfejsie Web API platformy ASP.NET Core uczenia m
 description: Obsługiwać model uczenia maszynowego analizy tonacji strukturze ML.NET w Internecie przy użyciu interfejsu API sieci Web programu ASP.NET Core
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 07b751caff8ef0ca9a23bed68ddf88feb7b5ae4f
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57849063"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307918"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Instrukcje: Obsługiwać Model przy użyciu interfejsu API sieci Web platformy ASP.NET Core uczenia maszynowego
 
@@ -96,56 +96,9 @@ public class SentimentPrediction
 }
 ```
 
-## <a name="create-prediction-service"></a>Tworzenie prognoz usługi
+## <a name="register-predictionengine-for-use-in-application"></a>Zarejestruj PredictionEngine do użycia w aplikacji
 
-Do organizowania i ponowne wykorzystanie logiki prognozowania w całej aplikacji, Utwórz usługę prognozy.
-
-1. Utwórz katalog o nazwie *usług* w projekcie, aby pomieścić usługi, który będzie używany przez aplikację:
-
-    W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz **Dodaj > Nowy Folder**. Wpisz "Usługi", a następnie kliknij przycisk **Enter**.
-
-1. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy *usług* katalogu, a następnie wybierz **Dodaj > Nowy element**.
-1. W **Dodaj nowy element** okno dialogowe, wybierz opcję **klasy** i zmień **nazwa** pole *PredictionService.cs*. Następnie wybierz **Dodaj** przycisku. *PredictionService.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujące za pomocą instrukcji na górze *PredictionService.cs*:
-
-```csharp
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-Usuń istniejącą definicję klasy i Dodaj następujący kod do *PredictionService.cs* pliku:
-
-```csharp
-public class PredictionService
-{
-    private readonly PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
-    public PredictionService(PredictionEngine<SentimentData,SentimentPrediction> predictionEngine)
-    {
-        _predictionEngine = predictionEngine;
-    }
-
-    public string Predict(SentimentData input)
-    {
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
-
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        return isToxic;
-
-    }
-}
-```
-
-## <a name="register-predictions-service-for-use-in-application"></a>Zarejestruj usługę prognoz do użycia w aplikacji
-
-Do korzystania z usługi prognozowania w aplikacji należy go utworzyć, za każdym razem, gdy jest to konieczne. W takim przypadku najlepszym rozwiązaniem należy wziąć pod uwagę jest wstrzykiwanie zależności platformy ASP.NET Core.
+Przewiduje pojedynczego, można użyć `PredictionEngine`. Aby można było używać `PredictionEngine` w Twojej aplikacji, musisz go utworzyć, za każdym razem, gdy jest to konieczne. W takim przypadku najlepszym rozwiązaniem należy wziąć pod uwagę jest wstrzykiwanie zależności platformy ASP.NET Core.
 
 Kliknięcie następującego łącza zawiera więcej informacji, jeśli chcesz dowiedzieć się więcej na temat [wstrzykiwanie zależności](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
@@ -161,18 +114,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
 ```
 
-1. Dodaj następujące wiersze kodu w celu *ConfigureServices* metody:
+2. Dodaj następujące wiersze kodu w celu *ConfigureServices* metody:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddSingleton<MLContext>();
-    services.AddSingleton<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    services.AddScoped<MLContext>();
+    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
     {
         MLContext mlContext = ctx.GetRequiredService<MLContext>();
         string modelFilePathName = "MLModels/sentiment_model.zip";
@@ -187,9 +139,11 @@ public void ConfigureServices(IServiceCollection services)
         // Return prediction engine
         return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
     });
-    services.AddSingleton<PredictionService>();
 }
 ```
+
+> [!WARNING]
+> `PredictionEngine` nie jest metodą o bezpiecznych wątkach. Sposób ograniczyć koszty tworzenia obiektu jest, wprowadzając jego okres istnienia usługi *polu*. *Zakres* obiekty są takie same, w żądaniu, ale o różnych żądań. Skorzystaj z następującego linku, aby dowiedzieć się więcej na temat [usługi okresy istnienia](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes).
 
 Na wysokim poziomie ten kod inicjalizuje obiektami i usługami, automatycznie, gdy jest to wymagane przez aplikację, nie trzeba to zrobić ręcznie.
 
@@ -202,9 +156,10 @@ Do przetwarzania przychodzących żądań HTTP, musisz utworzyć kontroler.
 1. Zmiana monitu **nazwy kontrolera** pole *PredictController.cs*. Następnie wybierz przycisk Dodaj. *PredictController.cs* plik zostanie otwarty w edytorze kodu. Dodaj następujące za pomocą instrukcji na górze *PredictController.cs*:
 
 ```csharp
+using System;
 using Microsoft.AspNetCore.Mvc;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
+using Microsoft.ML;
 ```
 
 Usuń istniejącą definicję klasy i Dodaj następujący kod do *PredictController.cs* pliku:
@@ -212,12 +167,12 @@ Usuń istniejącą definicję klasy i Dodaj następujący kod do *PredictControl
 ```csharp
 public class PredictController : ControllerBase
 {
+    
+    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
 
-    private readonly PredictionService _predictionService;
-
-    public PredictController(PredictionService predictionService)
+    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
     {
-        _predictionService = predictionService; //Define prediction service
+        _predictionEngine = predictionEngine; //Define prediction engine
     }
 
     [HttpPost]
@@ -227,13 +182,20 @@ public class PredictController : ControllerBase
         {
             return BadRequest();
         }
-        return Ok(_predictionService.Predict(input));
-    }
 
+        // Make a prediction
+        SentimentPrediction prediction = _predictionEngine.Predict(input);
+
+        //If prediction is true then it is toxic. If it is false, the it is not.
+        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+        return Ok(isToxic);
+    }
+    
 }
 ```
 
-Jest to przypisanie usługi prognozowania przez przekazanie jej do konstruktora kontrolera, którego można uzyskać za pomocą iniekcji zależności. Następnie we WPISIE metody tego kontrolera usługi prognoz jest używany do tworzenia prognoz i zwracają wyniki do użytkownika, jeśli to się powiedzie.
+Jest to przypisanie `PredictionEngine` przez przekazanie jej do konstruktora kontrolera, którego można uzyskać za pomocą iniekcji zależności. Następnie, w metodzie POST tego kontrolera `PredictionEngine` jest używany do tworzenia prognoz i zwracają wyniki do użytkownika, jeśli to się powiedzie.
 
 ## <a name="test-web-api-locally"></a>Test internetowy interfejs API lokalnie
 

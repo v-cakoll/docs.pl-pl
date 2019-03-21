@@ -3,15 +3,15 @@ title: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
 description: Przewidywanie ceny za pomocą platformy ML.NET przy użyciu uczeń regresji.
 author: aditidugar
 ms.author: johalex
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 7830849efaff2aa36f9bd436851a22f948908bb6
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0a027b3b4930f7dda48d884faf0484cf33856c8d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846337"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307983"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Samouczek: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
 
@@ -152,7 +152,7 @@ Firma Microsoft kończy się sukcesem dwa parametry do `Train` metoda; `MLContex
 
 Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
 
-W strukturze ML.NET dane są podobne do widoku SQL. Jest opóźnieniem ocenianą informatycznych i heterogenicznych. Obiekt jest pierwszą częścią potoku i służy do ładowania danych. W tym samouczku ładuje zestaw danych o komentarze i odpowiednie toksyczne lub inne niż toksyczne tonacji. Służy do tworzenia modelu i szkoleń.
+W strukturze ML.NET dane są podobne do widoku SQL. Jest opóźnieniem ocenianą informatycznych i heterogenicznych. Obiekt jest pierwszą częścią potoku i służy do ładowania danych. W tym samouczku ładuje zestaw danych z podróży taksówek informacje o cenach. Służy do tworzenia modelu i szkoleń.
 
 Dodaj następujący kod jako pierwsza linia `Train` metody:
 
@@ -187,8 +187,6 @@ Dodaj następujący kod do `Train` metody w celu dodania `FastTreeRegressionTrai
 Ostatnim krokiem jest do nauczenia modelu. Uczenie modelu, <xref:Microsoft.ML.Data.TransformerChain>zgodnie z zestawu danych, który został załadowany i przekształcone. Po zdefiniowaniu estymatora uczenie modelu przy użyciu <xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> przy jednoczesnym zapewnieniu dane szkoleniowe już załadowana. Spowoduje to zwrócenie modelu na potrzeby prognozy. `pipeline.Fit()` szkolenie modeli potoku i zwraca `Transformer` na podstawie `DataView` przekazany. Eksperyment nie jest wykonywane, dopóki nie dzieje.
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
-
-I to wszystko! Zostały pomyślnie uczony model, który potrafi prognozować taryf taksówek w NYC uczenia maszynowego. Teraz sklonujemy zapoznaj się z zrozumieć, jak dokładna jest model i Dowiedz się, jak go używać do prognozowania wartości taryfy taksówek.
 
 ### <a name="save-the-model"></a>Zapisz model
 

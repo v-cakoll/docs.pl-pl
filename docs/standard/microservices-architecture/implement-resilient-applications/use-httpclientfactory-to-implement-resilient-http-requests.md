@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać HttpClientFactory dostępne od platformy
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 73faa847dae2f844784ae5d85ce905b7e1e64cd0
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 679de8577d1ce876823954cb7917c50daae9e230
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479818"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348716"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Użyj HttpClientFactory do zaimplementowania odporne na błędy żądań HTTP
 
@@ -161,7 +161,7 @@ Do tej pory kod przedstawiony jest po prostu wykonując regularne żądań Http,
   [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 - **Repozytorium HttpClientFactory GitHub**\
-  [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
+  [*https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory*](https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory)
 
 >[!div class="step-by-step"]
 >[Poprzednie](explore-custom-http-call-retries-exponential-backoff.md)

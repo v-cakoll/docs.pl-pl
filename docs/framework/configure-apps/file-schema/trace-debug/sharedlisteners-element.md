@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 56a4111f2e0fd290321756c43c7f245e46044b02
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254941"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348820"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > Element
 Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obiektów nasłuchujących.  Te odbiorniki nie otrzymasz żadnych śladów domyślnie i nie jest możliwe pobrać te odbiorniki w czasie wykonywania. Odbiorniki zidentyfikowane jako współdzielonych detektorów można dodać do źródła lub śledzenie według nazwy.  
@@ -85,7 +85,7 @@ Zawiera dowolnego źródła i elementu śledzenia można odwoływać się do obi
       </listeners>  
     </trace>  
   </system.diagnostics>  
-</configuration></system.diagnostics>   
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Zobacz także

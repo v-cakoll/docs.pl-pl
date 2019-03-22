@@ -3,12 +3,12 @@ title: Aplikacja konsoli
 description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058402"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348833"
 ---
 # <a name="console-application"></a>Aplikacja konsoli
 
@@ -230,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -258,8 +254,6 @@ Umieść tej klasy w nowym pliku a następnie zamieścić tej klasy w `Telepromp
 ```csharp
 using static System.Math;
 ```
-
-Z innych funkcji języka, co nowego jest [ `lock` ](../language-reference/keywords/lock-statement.md) instrukcji. Niniejszych gwarantuje, że tylko jednego wątku może należeć ten kod w dowolnym momencie. Jeśli jeden wątek znajduje się w sekcji zablokowane, inne wątki musi czekać na pierwszym wątku zakończyć tę sekcję. `lock` Instrukcja używa obiektu, który chroni sekcji blokady. Ta klasa jest zgodna standardowa idiom można zablokować obiektu prywatnego w klasie.
 
 Następnie należy zaktualizować `ShowTeleprompter` i `GetInput` metody, aby użyć nowego `config` obiektu. Zapis jeden końcowy `Task` zwracanie `async` metodę, aby uruchomić zarówno do zadań i Zakończ po zakończeniu pierwszego zadania:
 

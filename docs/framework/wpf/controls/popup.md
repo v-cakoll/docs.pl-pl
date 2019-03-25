@@ -9,26 +9,26 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370660"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410111"
 ---
-# <a name="popup"></a><span data-ttu-id="d575f-102">Okno podręczne</span><span class="sxs-lookup"><span data-stu-id="d575f-102">Popup</span></span>
-<span data-ttu-id="d575f-103"><xref:System.Windows.Controls.Primitives.Popup> Kontrolka Wyświetla zawartość w osobnym oknie, które pojawia się za pośrednictwem bieżącego okna aplikacji.</span><span class="sxs-lookup"><span data-stu-id="d575f-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup"></a><span data-ttu-id="22a71-102">Okno podręczne</span><span class="sxs-lookup"><span data-stu-id="22a71-102">Popup</span></span>
+<span data-ttu-id="22a71-103"><xref:System.Windows.Controls.Primitives.Popup> Kontrolka Wyświetla zawartość w osobnym oknie, które pojawia się za pośrednictwem bieżącego okna aplikacji.</span><span class="sxs-lookup"><span data-stu-id="22a71-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  
   
- <span data-ttu-id="d575f-104">Poniższa ilustracja przedstawia <xref:System.Windows.Controls.Primitives.Popup> formant, który jest umieszczony w odniesieniu do <xref:System.Windows.Controls.Button> oznacza to jego obiektu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="d575f-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent.</span></span>  
+ <span data-ttu-id="22a71-104">Poniższa ilustracja przedstawia <xref:System.Windows.Controls.Primitives.Popup> formant, który jest umieszczony w odniesieniu do <xref:System.Windows.Controls.Button> oznacza to jego elementu nadrzędnego:</span><span class="sxs-lookup"><span data-stu-id="22a71-104">The following illustration shows a <xref:System.Windows.Controls.Primitives.Popup> control that is positioned with respect to a <xref:System.Windows.Controls.Button> that is its parent:</span></span>  
   
- <span data-ttu-id="d575f-105">![Rysunek podręcznym](./media/popuppicture.JPG "PopupPicture")</span><span class="sxs-lookup"><span data-stu-id="d575f-105">![Popup illustration](./media/popuppicture.JPG "PopupPicture")</span></span>  
+ ![Ilustracja okna podręcznego](./media/popup/popup-picture-button.jpg)  
   
-## <a name="in-this-section"></a><span data-ttu-id="d575f-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d575f-106">In This Section</span></span>  
- [<span data-ttu-id="d575f-107">Okno podręczne — omówienie</span><span class="sxs-lookup"><span data-stu-id="d575f-107">Popup Overview</span></span>](popup-overview.md)  
- [<span data-ttu-id="d575f-108">Zachowanie położenia okna podręcznego</span><span class="sxs-lookup"><span data-stu-id="d575f-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
- [<span data-ttu-id="d575f-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="d575f-109">How-to Topics</span></span>](popup-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="22a71-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="22a71-106">In This Section</span></span>  
+ [<span data-ttu-id="22a71-107">Okno podręczne — omówienie</span><span class="sxs-lookup"><span data-stu-id="22a71-107">Popup Overview</span></span>](popup-overview.md)  
+ [<span data-ttu-id="22a71-108">Zachowanie położenia okna podręcznego</span><span class="sxs-lookup"><span data-stu-id="22a71-108">Popup Placement Behavior</span></span>](popup-placement-behavior.md)  
+ [<span data-ttu-id="22a71-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="22a71-109">How-to Topics</span></span>](popup-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d575f-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="d575f-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="22a71-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="22a71-110">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="d575f-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="d575f-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="22a71-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="22a71-111">Related Sections</span></span>

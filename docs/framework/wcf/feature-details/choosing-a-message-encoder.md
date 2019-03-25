@@ -2,12 +2,12 @@
 title: Wybieranie kodera komunikatów
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538430"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409487"
 ---
 # <a name="choosing-a-message-encoder"></a>Wybieranie kodera komunikatów
 W tym temacie omówiono kryteria wybierania koderów wiadomości, które znajdują się w Windows Communication Foundation (WCF): plik binarny, tekst i komunikat transmisji optymalizacji mechanizm (MTOM).  
@@ -65,9 +65,9 @@ Ustawienie IgnoreWhitespace zostanie zignorowane.
 
 Począwszy od programu WCF 4.5 kodera binarnego WCF dodaje obsługę kompresji. To pozwala na użycie algorytmu gzip nebo deflate do wysyłania wiadomości skompresowany z klienta programu WCF i odpowiada także skompresowane komunikaty o z obsługiwanej samodzielnie usługi WCF. Ta funkcja umożliwia kompresję transportu HTTP i TCP. Usługi WCF hostowanej w programie IIS zawsze być włączona usługa wysyłania skompresowane odpowiedzi, konfigurując serwer hosta usług IIS. Typ kompresji jest skonfigurowany przy użyciu <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType> właściwości. Ta właściwość jest ustawiona na jedną z <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType> wartości wyliczenia:
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 Ponieważ ta właściwość jest dostępne tylko BinaryMessageEncodingBindingElement, należy utworzyć niestandardowego powiązania podobnie do poniższego, aby użyć tej funkcji:
 

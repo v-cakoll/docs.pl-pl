@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375535"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409656"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Przegląd Renderowanie grafiki WPF
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwy visual. Dotyczy on rolę <xref:System.Windows.Media.Visual> klasy renderowania pomocy technicznej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelu.  
@@ -49,8 +49,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  <xref:System.Windows.Media.Visual> jest udostępniany jako publiczny klasa abstrakcyjna, z których mogą pochodzić klasy podrzędne. Poniższa ilustracja pokazuje hierarchię obiektów wizualnych, które są widoczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- ![Diagram klas pochodnych obiekt wizualny](./media/visualclass01.png "VisualClass01")  
-Hierarchia klas Visual  
+ ![Diagram klas pochodzących z obiektów wizualnych](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>Klasa DrawingVisual  
  <xref:System.Windows.Media.DrawingVisual> To lekkie rysowania klasę, która jest używany do renderowania kształty, obrazy i tekst. Ta klasa jest uważany za uproszczone, ponieważ nie dostarcza obsługi układu lub zdarzeń, która zwiększa wydajność środowiska uruchomieniowego. Z tego powodu rysunki są doskonałe do tła i obiekty clipart. <xref:System.Windows.Media.DrawingVisual> Może służyć do tworzenia niestandardowych obiektów wizualnych. Aby uzyskać więcej informacji, zobacz [przy użyciu obiektów DrawingVisual](using-drawingvisual-objects.md).  
@@ -110,8 +109,7 @@ Kolejność operacji DrawingGroup
   
  Zostałby wyliczyć obiektów wizualnych, wchodzące w skład domyślnie <xref:System.Windows.Controls.Button> kontroli, czy okażą się hierarchii obiektów wizualnych, które przedstawiono poniżej:  
   
- ![Diagram hierarchii drzewa wizualnego](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
-Diagram hierarchii drzewa wizualnego  
+ ![Diagram hierarchii drzewa wizualnego](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
  <xref:System.Windows.Controls.Button> Kontrolka zawiera <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> element, który z kolei zawiera <xref:System.Windows.Controls.ContentPresenter> elementu. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Element jest odpowiedzialne za narysowanie obramowania i tło <xref:System.Windows.Controls.Button>. <xref:System.Windows.Controls.ContentPresenter> Element jest odpowiedzialny za wyświetlania zawartości <xref:System.Windows.Controls.Button>. W takim przypadku od wyświetlanie tekstu, <xref:System.Windows.Controls.ContentPresenter> element zawiera <xref:System.Windows.Controls.TextBlock> elementu. Fakt, <xref:System.Windows.Controls.Button> kontrolować używa <xref:System.Windows.Controls.ContentPresenter> oznacza, że zawartość mogą być reprezentowane przez inne elementy, takie jak <xref:System.Windows.Controls.Image> lub geometrii, takie jak <xref:System.Windows.Media.EllipseGeometry>.  
   
@@ -124,8 +122,7 @@ Diagram hierarchii drzewa wizualnego
   
  Gdyby wyliczyć obiektów wizualnych i wektorowej listy instrukcji grafiki, wchodzące w skład <xref:System.Windows.Controls.Button> kontroli, czy okażą się hierarchię obiektów, które przedstawiono poniżej:  
   
- ![Diagram drzewa wizualnego i danych renderowania](./media/visuallayeroverview04.png "VisualLayerOverview04")  
-Diagram drzewa wizualnego i danych renderowania  
+ ![Diagram drzewa wizualnego i danych renderowania](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
  <xref:System.Windows.Controls.Button> Kontrolka zawiera <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> element, który z kolei zawiera <xref:System.Windows.Controls.ContentPresenter> elementu. <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Element jest odpowiedzialne za narysowanie wszystkie dyskretnych elementy, które tworzą obramowania i tło przycisku. <xref:System.Windows.Controls.ContentPresenter> Element jest odpowiedzialny za wyświetlania zawartości <xref:System.Windows.Controls.Button>. W takim przypadku od wyświetlanie obrazów, <xref:System.Windows.Controls.ContentPresenter> element zawiera <xref:System.Windows.Controls.Image> elementu.  
   
@@ -149,14 +146,12 @@ Diagram drzewa wizualnego i danych renderowania
   
  Jeśli masz zamiar wyliczyć obiektów wizualnych, wchodzące w skład <xref:System.Windows.Controls.StackPanel> elementu w przykładzie znaczników, czy okażą się hierarchii obiektów wizualnych, które przedstawiono poniżej:  
   
- ![Diagram hierarchii drzewa wizualnego](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
-Diagram hierarchii drzewa wizualnego  
+ ![Diagram hierarchii drzewa wizualnego](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
 ### <a name="rendering-order"></a>Kolejność renderowania  
  Drzewo wizualne określa kolejność renderowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektów wizualnych i rysowania. Kolejność przechodzenia rozpoczyna się od katalogu głównego wizualizację, która jest najbardziej na wierzchu węzeł w drzewie wizualnym. Dzieci wizualizacji główny jest następnie przesunięta, od lewej do prawej. Jeśli wizualizacja ma elementy podrzędne, jego elementów podrzędnych jest przesunięta przed elementami równorzędnymi elementu wizualnego. Oznacza to, że zawartość elementu podrzędnego visual jest renderowany przed zawartością elementu wizualnego.  
   
- ![Diagram kolejności renderowania w drzewie wizualnym](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
-Diagram przedstawiający kolejność renderowania drzewo wizualne  
+ ![Diagram przedstawiający kolejność renderowania drzewo wizualne](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>Główny Visual  
  **Głównego visual** jest umieszczony najwyżej elementu w hierarchii drzewa wizualnego. W większości aplikacji klasy bazowej głównego visual jest <xref:System.Windows.Window> lub <xref:System.Windows.Navigation.NavigationWindow>. Jednak jeśli były hosting obiektów visual w aplikacji Win32, główny visual będzie visual najważniejsze, które zostały hostingu w oknie Win32. Aby uzyskać więcej informacji, zobacz [samouczka: Hosting obiektów Visual w aplikacji Win32](tutorial-hosting-visual-objects-in-a-win32-application.md).  
@@ -178,9 +173,8 @@ Diagram przedstawiający drzewo logiczne
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Wyświetlanie drzewa wizualnego, za pomocą edytor XamlPad  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Narzędzia edytor XamlPad, udostępnia opcję umożliwiające wyświetlanie i eksploracji drzewa wizualnego, który odnosi się do aktualnie zdefiniowanych [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] zawartości. Kliknij przycisk **Pokaż drzewa wizualnego** przycisk na pasku menu, aby wyświetlić drzewo wizualne. Poniższy rysunek ilustruje rozszerzenie [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] zawartość w węzłach drzewa wizualnego w **wizualnego drzewa Eksploratora** panelu edytor XamlPad:  
   
- ![Panel Eksploratora drzewa wizualnego w edytor XamlPad](./media/visuallayeroverview08.png "VisualLayerOverview08")  
-Panel Eksploratora drzewa wizualnego w edytor XamlPad  
-  
+ ![Panel Eksploratora drzewa wizualnego w edytor XamlPad](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
+
  Zwróć uwagę sposób, w jaki <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, i <xref:System.Windows.Controls.Button> formantów każdego wyświetlić hierarchię oddzielny obiekt wizualny w **wizualnego drzewa Eksploratora** panelu edytor XamlPad. Jest to spowodowane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formanty mają <xref:System.Windows.Controls.ControlTemplate> zawiera drzewo wizualne tej kontrolki. Gdy odwołujesz się jawnie kontrolki, możesz niejawnie odwoływać się hierarchii visual.  
   
 ### <a name="profiling-visual-performance"></a>Profilowanie wydajności Visual  
@@ -196,14 +190,12 @@ Wizualne dane wyjściowe Profiler
 ### <a name="retained-mode-graphics"></a>Tryb zachowanej grafiki  
  Jeden z kluczy do zrozumienia roli obiekt wizualny jest zrozumieć różnicę między **tryb natychmiastowy** i **przechowywane tryb** systemy graficzne. Standardowa aplikacja Win32 na podstawie GDI lub GDI + używa systemu grafiki w trybie natychmiastowym. Oznacza to, że aplikacja jest odpowiedzialna za odświeżenie część obszaru klienckiego, który zostaje unieważniony z powodu akcja, taka jak okna zmiany rozmiaru, lub zmiana jego wygląd obiektu.  
   
- ![Diagram sekwencji renderowania Win32](./media/visuallayeroverview01.png "VisualLayerOverview01")  
-Diagram sekwencji renderowania Win32  
+ ![Diagram sekwencji renderowania Win32](./media/wpf-graphics-rendering-overview/win32-rendering-squence.png)  
   
  Z kolei [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] korzysta z zachowanej trybu systemu. Oznacza to, że obiektów aplikacji, które mają wygląd definiują zestaw serializacji danych rysunku. Po zdefiniowaniu rysowania danych system jest odpowiedzialny po tej dacie odpowiadanie na wszystkie żądania repaint renderowania obiektów aplikacji. Nawet w czasie wykonywania można zmodyfikować lub utworzyć obiekty aplikacji i nadal korzystają z systemu pod kątem odpowiada na żądania malowania. Zasilania w systemie grafiki zachowanej tryb jest, czy rysowanie informacji jest zawsze utrwalony w Zserializowany stan aplikacji, ale odpowiedzialność renderowania od lewej do systemu. Na poniższym diagramie przedstawiono, jak aplikacja zależy od [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] reagowania namalować żądań.  
   
- ![Diagram sekwencji renderowania WPF](./media/visuallayeroverview02.png "VisualLayerOverview02")  
-Diagram sekwencji renderowania WPF  
-  
+ ![Diagram sekwencji renderowania WPF](./media/wpf-graphics-rendering-overview/wpf-rendering-sequence.png)  
+
 #### <a name="intelligent-redrawing"></a>Inteligentne ponownego narysowania  
  Jedną z największych zalet używania trybu zachowanej grafiki jest to, że [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] efektywnie można zoptymalizować, czego potrzebuje do narysowania w aplikacji. Nawet, jeśli masz złożone sceny z różnymi poziomami nieprzezroczystość, zazwyczaj nie trzeba napisać kod specjalnych zoptymalizować ponownego narysowania. Porównaj to dzięki programowaniu Win32, w którym możesz poświęcić wiele wysiłku w optymalizacji aplikacji, minimalizując ilość osadzeniu w regionie aktualizacji. Zobacz [osadzeniu w regionie aktualizacji](/windows/desktop/gdi/redrawing-in-the-update-region) przykład typu złożoności związane z optymalizacją, odświeżanie w aplikacji Win32.  
   
@@ -214,8 +206,7 @@ Diagram sekwencji renderowania WPF
   
  Poniższa ilustracja przedstawia obrazu źródłowego, który został zmieniony przez 300%. Zwróć uwagę, zakłócenia, które są wyświetlane, gdy obraz źródłowy jest rozciągana jako obraz mapy bitowej grafiki zamiast skalować jako obraz grafiki wektorowej.  
   
- ![Różnice między grafiki wektorowej i rastrowych](./media/vectorgraphics01.png "VectorGraphics01")  
-Różnice między grafiki wektorowej i rastrowe  
+ ![Różnice między grafiki wektorowej i rastrowe](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
  Następujący kod przedstawia dwa <xref:System.Windows.Shapes.Path> elementy zdefiniowane. Drugi element używa <xref:System.Windows.Media.ScaleTransform> zmiany rozmiaru instrukcje rysowania pierwszego elementu przez 300%. Należy zauważyć, że instrukcje rysowania w <xref:System.Windows.Shapes.Path> elementy pozostają niezmienione.  
   

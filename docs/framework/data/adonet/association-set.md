@@ -2,12 +2,12 @@
 title: zestaw skojarzeń
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 29150eea7781784c2cdbd1f0137e02b94f66e106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eaa4d3c70e0efbf9705b4285d1abd4753bd1db9
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565933"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411268"
 ---
 # <a name="association-set"></a>zestaw skojarzeń
 *Zestaw skojarzeń* to logiczny kontener przeznaczony do [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) wystąpień tego samego typu. Zestaw skojarzeń nie jest konstrukcja; modelowania danych oznacza to, że nie opisano strukturę danych lub relacje. Zamiast tego zestaw skojarzeń zapewnia konstrukcję w środowisku hostingu lub magazynu (np. środowisko uruchomieniowe języka wspólnego lub bazą danych programu SQL Server) do wystąpień skojarzenia grupy mogą być mapowane do magazynu danych.  
@@ -25,11 +25,11 @@ ms.locfileid: "54565933"
 ## <a name="example"></a>Przykład  
  Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `PublishedBy`, i `WrittenBy`. Mimo że informacji na temat zestawów skojarzenie nie jest przekazywany w diagramie, następny diagram pokazuje przykład zestawów skojarzeń i zestawy jednostek, w oparciu o ten model.  
   
- ![Przykładowy Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Przykładowy model przy użyciu trzech typów jednostek](./media/association-set/example-model-three-entity-types.gif)  
   
  W poniższym przykładzie przedstawiono zestaw skojarzeń (`PublishedBy`) i dwa zestawy jednostek (`Books` i `Publishers`) oparte na modelu koncepcyjnego przedstawionych powyżej. Analizy biznesowej w `Books` zestaw jednostek reprezentuje wystąpienie `Book` typu jednostki w czasie wykonywania. Podobnie, reprezentuje Pj `Publisher` wystąpienia w `Publishers` zestawu jednostek. BiPj reprezentuje wystąpienie `PublishedBy` skojarzenia w `PublishedBy` zestaw skojarzeń.  
   
- ![Ustawia przykład](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![Zrzut ekranu przedstawia przykład zestawów.](./media/association-set/sets-example-association.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Następujące CSDL definiuje kontener jednostek z jednej skojarzenia dla każdego skojarzenia na powyższym diagramie. Należy zauważyć, że nazwa i skojarzenia dla każdego skojarzenia należy ustawić są definiowane przy użyciu atrybutów XML.  
   

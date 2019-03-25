@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące zabezpieczeń obejmujące metadane
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585568"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411916"
 ---
 # <a name="security-considerations-with-metadata"></a>Zagadnienia dotyczące zabezpieczeń obejmujące metadane
 Korzystając z funkcji metadanych w Windows Communication Foundation (WCF), należy wziąć pod uwagę ryzyko związane z publikowania, pobieranie i używanie usług metadanych.  
@@ -28,7 +28,7 @@ Korzystając z funkcji metadanych w Windows Communication Foundation (WCF), nale
 ## <a name="using-safe-techniques-for-processing-metadata"></a>Przy użyciu bezpiecznych technik przetwarzania metadanych  
  Metadane usługi są często pobierane z usługi za pośrednictwem sieci przy użyciu standardowych protokołów, takich jak usługi WS-MetadataExchange (MEX). Wiele formatów metadane obejmują odwołujące się do mechanizmy wskazuje dodatkowe metadane. <xref:System.ServiceModel.Description.MetadataExchangeClient> Typu automatycznie przetwarza odwołania dla Ciebie w dokumentach sieci Web Services Description Language (WSDL), schematu XML i MEX dokumentów. Rozmiar <xref:System.ServiceModel.Description.MetadataSet> obiektu utworzonego na podstawie metadanych pobrane jest wprost proporcjonalna do <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> wartość <xref:System.ServiceModel.Description.MetadataExchangeClient> wystąpienia, która jest używana i `MaxReceivedMessageSize` wartość do powiązania, używany przez to <xref:System.ServiceModel.Description.MetadataExchangeClient> wystąpienia. Ustaw te przydziały odpowiednie wartości zgodnie z ustawieniem danego scenariusza.  
   
- W programie WCF metadane usługi są przetwarzane w formacie XML. Podczas przetwarzania dokumentów XML, aplikacje powinny ochrony przed złośliwymi struktury XML. Użyj `XmlDictionaryReader` z odpowiednie limity przydziału podczas przetwarzania XML, a także ustawić <xref:System.Xml.XmlTextReader.DtdProcessing%2A> właściwość `Prohibit`.  
+ W programie WCF metadane usługi są przetwarzane w formacie XML. Podczas przetwarzania dokumentów XML, aplikacje powinny ochrony przed złośliwymi struktury XML. Użyj <xref:System.Xml.XmlDictionaryReader> z odpowiednie limity przydziału podczas przetwarzania XML, a także ustawić <xref:System.Xml.XmlTextReader.DtdProcessing%2A> właściwość <xref:System.Xml.DtdProcessing.Prohibit>.  
   
  System metadanych w programie WCF jest wszechstronne i metadanych rozszerzeń mogą być rejestrowane w pliku konfiguracyjnym aplikacji (zobacz [rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). Metadane rozszerzenia może uruchomić dowolny kod, dlatego powinna zapewniać ochronę pliku konfiguracji aplikacji przy użyciu kontroli dostępu odpowiednie list kontroli dostępu (ACL) i zarejestrować tylko metadane zaufanego rozszerzenia implementacji.  
   

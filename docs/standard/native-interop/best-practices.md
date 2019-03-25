@@ -4,12 +4,12 @@ description: Dowiedz się, najlepsze rozwiązania dotyczące komunikacji z usłu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54858018"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412061"
 ---
 # <a name="native-interoperability-best-practices"></a>Współdziałanie natywne najlepszych rozwiązań
 
@@ -160,7 +160,7 @@ Nie należy zapominać, że `GCHandle` musi jawnie zwolniona w celu uniknięcia 
 
 ## <a name="common-windows-data-types"></a>Standardowe typy danych Windows
 
-W tym miejscu znajduje się lista typów danych najczęściej używanych interfejsów API systemu Win32, które C# typów do użycia podczas wywoływania w kodzie Win32.
+W tym miejscu znajduje się lista typów danych najczęściej używanych interfejsów API Windows, które C# typów do użycia podczas wywoływania w kodzie Windows.
 
 Taki sam rozmiar na 32-bitowych i 64-bitowych Windows, niezależnie od ich nazwy są następujące typy.
 

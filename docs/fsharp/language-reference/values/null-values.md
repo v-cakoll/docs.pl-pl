@@ -1,13 +1,13 @@
 ---
 title: Wartości zerowe
 description: Dowiedz się, jak używana jest wartość null w F# języka programowania.
-ms.date: 05/16/2016
-ms.openlocfilehash: 58c54065a98a84c4d4e912cbc42d59cfea8c6de1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 03/22/2019
+ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610999"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409643"
 ---
 # <a name="null-values"></a>Wartości zerowe
 
@@ -19,7 +19,7 @@ Wartość null nie jest zwykle używany w F# dla wartości lub zmienne. Jednak j
 
 Dla typu zdefiniowanego w F# i używane wyłącznie z F#, jedynym sposobem utworzyć przy użyciu wartości null F# bezpośrednio biblioteki jest użycie [Unchecked.defaultof](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977) lub [Array.zeroCreate](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2). Jednak w przypadku F# typ, który jest używany z innymi językami .NET lub jeśli używasz tego typu za pomocą interfejsu API, które nie są zapisywane w F#, takich jak .NET Framework, może wystąpić wartości null.
 
-Możesz użyć `option` wpisać F# może zastosowania zmienną odwołania o wartości null możliwe w innym języku .NET. Zamiast wartości null za pomocą F# `option` typu, użyj wartości opcji `None` , jeśli nie ma obiektu. Użyj wartości opcji `Some(obj)` z obiektem `obj` po obiektu. Aby uzyskać więcej informacji, zobacz [opcje](../options.md).
+Możesz użyć `option` wpisać F# może zastosowania zmienną odwołania o wartości null możliwe w innym języku .NET. Zamiast wartości null za pomocą F# `option` typu, użyj wartości opcji `None` , jeśli nie ma obiektu. Użyj wartości opcji `Some(obj)` z obiektem `obj` po obiektu. Aby uzyskać więcej informacji, zobacz [opcje](../options.md). Należy zauważyć, że nadal dodatkiem Service pack `null` wartości do opcji if, for `Some x`, `x` ma miejsce `null`. W związku z tym jest ważne, możesz użyć `None` po wartości `null`.
 
 `null` — Słowo kluczowe jest nieprawidłowy — słowo kluczowe w F# języka i trzeba go było używać podczas pracy z interfejsów API programu .NET Framework lub innych interfejsów API, które są zapisywane w innym języku .NET. Dwie sytuacje, w których możesz potrzebować wartości null są podczas wywoływania interfejsu API platformy .NET i przekazać wartości null jako argument i zinterpretować wartość zwracana lub parametr wyjściowy z wywołania metody .NET.
 

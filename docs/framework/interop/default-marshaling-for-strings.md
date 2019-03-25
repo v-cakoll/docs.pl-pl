@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221072"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409318"
 ---
 # <a name="default-marshaling-for-strings"></a>Organizowanie domyślne dotyczące ciągów
 Zarówno <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy mają podobne zachowanie organizowania.  
@@ -220,7 +220,7 @@ struct StringInfoT {
   
  To rozwiązanie służy do przekazywania <xref:System.Text.StringBuilder> buforu jako argument zamiast ciągu. A `StringBuilder` wyłuskiwany i zmodyfikowane przez obiekt wywoływany, pod warunkiem nie przekracza pojemność `StringBuilder`. Ponadto może zostać zainicjowane do stałej długości. Na przykład, jeśli należy zainicjować `StringBuilder` buforu na pojemność `N`, organizator udostępnia bufor o rozmiarze (`N`+ 1) znaków. Konta + 1 fakt, że niezarządzanego ciągu ma terminatora null podczas `StringBuilder` nie.  
   
- Na przykład Microsoft Win32 API `GetWindowText` — funkcja (zdefiniowanymi w Windows.h) to muszą być przekazywane do kodu niezarządzanego ustawianych bufor znaków o stałej długości. `LpString` Wskazuje przydzielonej przez obiekt wywołujący bufor o rozmiarze `nMaxCount`. Obiekt wywołujący oczekuje się, aby przydzielić bufor i ustawić `nMaxCount` argumentu rozmiaru przydzielonego buforu. Poniższy kod przedstawia `GetWindowText` deklaracji funkcji, zgodnie z definicją w Windows.h.  
+ Na przykład Windows interfejsu API programu Microsoft `GetWindowText` — funkcja (zdefiniowanymi w Windows.h) to muszą być przekazywane do kodu niezarządzanego ustawianych bufor znaków o stałej długości. `LpString` Wskazuje przydzielonej przez obiekt wywołujący bufor o rozmiarze `nMaxCount`. Obiekt wywołujący oczekuje się, aby przydzielić bufor i ustawić `nMaxCount` argumentu rozmiaru przydzielonego buforu. Poniższy kod przedstawia `GetWindowText` deklaracji funkcji, zgodnie z definicją w Windows.h.  
   
 ```  
 int GetWindowText(  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738355"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409474"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych
 Ten temat zawiera najlepsze rozwiązania dotyczące tworzenia kontraktów danych, które można łatwo ewoluować wraz z upływem czasu. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -70,7 +70,7 @@ Ten temat zawiera najlepsze rozwiązania dotyczące tworzenia kontraktów danych
   
     2.  Jeśli wartość domyślną `null` lub zero dla elementu członkowskiego jest nieodpowiednia, można określić metodę wywołania zwrotnego za pomocą <xref:System.Runtime.Serialization.OnDeserializingAttribute> do zapewniania domyślnego uzasadnione, w przypadku, gdy element członkowski nie jest obecny w strumienia przychodzącego. Aby uzyskać więcej informacji na temat wywołania zwrotnego, zobacz [wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  `Order` Właściwość `DataMemberAttribute` należy się upewnić, że wszystkie elementy członkowskie nowo dodane dane zostaną wyświetlone po istniejące elementy członkowskie danych. Zalecanym sposobem w ten sposób jest następująca: Żaden z elementów członkowskich danych w pierwszej wersji kontraktu danych powinny mieć ich `Order` zestawu właściwości. Wszystkie elementy członkowskie danych dodane w wersji 2 kontraktu danych powinny mieć ich `Order` właściwość ustawioną na 2. Wszystkie elementy członkowskie danych dodane w wersji 3 kontraktu danych powinny mieć ich `Order` ustawiony na wartość 3 i tak dalej. Dopuszcza się mieć więcej niż jeden element członkowski danych takie same `Order` numer.  
+    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> Właściwość powinna być używana, aby upewnić się, czy wszystkie elementy członkowskie nowo dodane dane są wyświetlane po istniejące elementy członkowskie danych. Zalecanym sposobem w ten sposób jest następująca: Żaden z elementów członkowskich danych w pierwszej wersji kontraktu danych powinny mieć ich `Order` zestawu właściwości. Wszystkie elementy członkowskie danych dodane w wersji 2 kontraktu danych powinny mieć ich `Order` właściwość ustawioną na 2. Wszystkie elementy członkowskie danych dodane w wersji 3 kontraktu danych powinny mieć ich `Order` ustawiony na wartość 3 i tak dalej. Dopuszcza się mieć więcej niż jeden element członkowski danych takie same `Order` numer.  
   
 9. Nie usuwaj elementy członkowskie danych w nowszych wersjach, nawet wtedy, gdy <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość pozostawało na jego domyślna właściwość `false` w poprzednich wersjach.  
   

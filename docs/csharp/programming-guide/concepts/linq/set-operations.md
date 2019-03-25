@@ -2,12 +2,12 @@
 title: Operacje na zestawie (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 169f7608409fcc0205a1f8edc69ee7a0b7785a51
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675514"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408915"
 ---
 # <a name="set-operations-c"></a>Operacje na zestawie (C#)
 Operacje na zestawie w składniku LINQ dotyczą operacje zapytań, które tworzą zestaw wyników, który zależy od obecności lub braku równoważne elementów w obrębie tego samego lub oddzielne kolekcje (lub zestawy).  
@@ -28,7 +28,7 @@ Operacje na zestawie w składniku LINQ dotyczą operacje zapytań, które tworz�
 ### <a name="distinct"></a>Distinct  
  Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> metody w sekwencji znaków. Zwracana sekwencja zawiera unikatowych elementów z sekwencji wejściowych.  
   
- ![Grafika przedstawiająca zachowanie słowa kluczowego DISTINCT&#40;&#41;. ](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Odrębne")  
+ ![Grafika przedstawiająca zachowanie słowa kluczowego DISTINCT&#40;&#41;.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Z wyjątkiem  
  Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Zwracana sekwencja zawiera tylko elementy z pierwszej sekwencji wejściowych, które nie znajdują się w drugiej sekwencji wejściowych.  
@@ -38,13 +38,12 @@ Operacje na zestawie w składniku LINQ dotyczą operacje zapytań, które tworz�
 ### <a name="intersect"></a>INTERSECT  
  Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Zwracana sekwencja zawiera elementy, które są wspólne dla obu sekwencji wejściowych.  
   
- ![Grafika przedstawiająca części wspólnych dwóch sekwencji. ](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![Grafika przedstawiająca części wspólnych dwóch sekwencji.](./media/set-operations/intersection-two-sequences.png)  
+ 
 ### <a name="union"></a>Union  
  Poniższa ilustracja przedstawia operacji union na dwie sekwencje znaków. Zwracana sekwencja zawiera unikatowych elementów z obu sekwencji wejściowych.  
   
- ![Grafika przedstawiająca sumę dwóch sekwencji. ](../../../../csharp/programming-guide/concepts/linq/media/union.png "Unii")  
-  
+ ![Grafika przedstawiająca sumę dwóch sekwencji.](./media/set-operations/union-operation-two-sequences.png)  
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>

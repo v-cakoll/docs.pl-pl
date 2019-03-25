@@ -2,12 +2,12 @@
 title: Wprowadzenie do routingu
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: d13a5cc86b7f0bbd67e1ef3ab6094bfb004972c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563772"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409851"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólny podłączanych SOAP pośrednie umożliwiającym routing wiadomości na podstawie zawartości komunikatu. Usługa routingu umożliwia tworzenie złożoną logikę routingu, która pozwala na implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi, routing priorytet i routing multiemisji. Usługa routingu znajdują się również dodanymi komentarzami, która pozwala na konfigurowanie wykaz kopii zapasowych punktów końcowych, do którego są wysyłane wiadomości, jeśli wystąpi błąd podczas wysyłania do docelowego podstawowego punktu końcowego.  
@@ -357,19 +357,19 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Wzorzec|Sesja|Transakcja|Kontekstu odbierania|Lista kopii zapasowych jest obsługiwana|Uwagi|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
 |Komunikacja jednokierunkowa||||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Jeśli ten komunikat jest multiemisji, tylko wiadomość na kanale zakończonych niepowodzeniem jest przenoszony do miejsca docelowego kopii zapasowej.|  
-|Komunikacja jednokierunkowa||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
-|Komunikacja jednokierunkowa|||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnie odebrany komunikat pełny otrzymywać wszystkich kontekstów. Jeśli komunikat nie zostanie pomyślnie odebrany przez dowolnego punktu końcowego, kontekstu odbierania nie jest ukończona.<br /><br /> Jeśli ten komunikat jest multiemisji kontekstu odbierania jest wypełniane, jeśli wiadomość została odebrana pomyślnie co najmniej jeden punkt końcowy (podstawowych lub zapasowych). Jeśli żaden z punktów końcowych, które w żadnym z multiemisji ścieżki pomyślnie wiadomości, kontekstu odbierania nie jest ukończona.|  
-|Komunikacja jednokierunkowa||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|Tak|Przerwij poprzednia transakcja, Utwórz nową transakcję i ponownie wysłać wszystkie wiadomości. Komunikaty, które napotkały błąd są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji w którym wszystkie transmisje powiedzie się, wykonaj kontekstów odbierania i zatwierdzania transakcji.|  
-|Komunikacja jednokierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. W przypadku multiemisji tylko wiadomości w sesji, która napotkała błąd lub którego sesja zamknąć sesji nie powiodło się są wysyłane ponownie do tworzenia kopii zapasowej miejsc docelowych.|  
-|Komunikacja jednokierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
-|Komunikacja jednokierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po wszystkich komunikatów wysyła ukończone bez błędów, sesja wskazuje dalszych komunikatów i usługa routingu pomyślnie zamyka wszystkie kanały wychodzących sesji, wszystkie otrzymywać konteksty są wykonywane i kanałów przychodzących sesji jest zamknięty.|  
-|Komunikacja jednokierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|Tak|Przerwanie bieżącej transakcji i Utwórz nową. Wyślij ponownie wszystkie poprzednie komunikaty o w sesji. Po utworzeniu transakcji, w którym wszystkie komunikaty zostały pomyślnie wysłane i sesji wskazuje, że odbieranie dalszych komunikatów, wszystkie kanały wychodzących sesji są zamknięte, konteksty są wykonywane przy użyciu transakcji, kanał przychodzących sesji jest zamknięte, a transakcja została zatwierdzona.<br /><br /> Gdy sesje są multiemisji w wiadomości, które miały błąd nie są wysyłane ponownie do tego samego miejsca docelowego jako przed i komunikaty, które napotkał błąd są wysyłane do miejsca docelowe kopii zapasowej.|  
+|Komunikacja jednokierunkowa||✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
+|Komunikacja jednokierunkowa|||✓|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnie odebrany komunikat pełny otrzymywać wszystkich kontekstów. Jeśli komunikat nie zostanie pomyślnie odebrany przez dowolnego punktu końcowego, kontekstu odbierania nie jest ukończona.<br /><br /> Jeśli ten komunikat jest multiemisji kontekstu odbierania jest wypełniane, jeśli wiadomość została odebrana pomyślnie co najmniej jeden punkt końcowy (podstawowych lub zapasowych). Jeśli żaden z punktów końcowych, które w żadnym z multiemisji ścieżki pomyślnie wiadomości, kontekstu odbierania nie jest ukończona.|  
+|Komunikacja jednokierunkowa||✓|✓|Tak|Przerwij poprzednia transakcja, Utwórz nową transakcję i ponownie wysłać wszystkie wiadomości. Komunikaty, które napotkały błąd są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji w którym wszystkie transmisje powiedzie się, wykonaj kontekstów odbierania i zatwierdzania transakcji.|  
+|Komunikacja jednokierunkowa|✓|||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. W przypadku multiemisji tylko wiadomości w sesji, która napotkała błąd lub którego sesja zamknąć sesji nie powiodło się są wysyłane ponownie do tworzenia kopii zapasowej miejsc docelowych.|  
+|Komunikacja jednokierunkowa|✓|✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
+|Komunikacja jednokierunkowa|✓||✓|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po wszystkich komunikatów wysyła ukończone bez błędów, sesja wskazuje dalszych komunikatów i usługa routingu pomyślnie zamyka wszystkie kanały wychodzących sesji, wszystkie otrzymywać konteksty są wykonywane i kanałów przychodzących sesji jest zamknięty.|  
+|Komunikacja jednokierunkowa|✓|✓|✓|Tak|Przerwanie bieżącej transakcji i Utwórz nową. Wyślij ponownie wszystkie poprzednie komunikaty o w sesji. Po utworzeniu transakcji, w którym wszystkie komunikaty zostały pomyślnie wysłane i sesji wskazuje, że odbieranie dalszych komunikatów, wszystkie kanały wychodzących sesji są zamknięte, konteksty są wykonywane przy użyciu transakcji, kanał przychodzących sesji jest zamknięte, a transakcja została zatwierdzona.<br /><br /> Gdy sesje są multiemisji w wiadomości, które miały błąd nie są wysyłane ponownie do tego samego miejsca docelowego jako przed i komunikaty, które napotkał błąd są wysyłane do miejsca docelowe kopii zapasowej.|  
 |Dwukierunkowa||||Tak|Wyślij do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
-|Dwukierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|||Tak|Wszystkie wiadomości na kanale można wysłać do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
-|Dwukierunkowa||![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
-|Dwukierunkowa|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
+|Dwukierunkowa|✓|||Tak|Wszystkie wiadomości na kanale można wysłać do miejsca docelowego kopii zapasowej.  Po kanał zwraca komunikat odpowiedzi, zwraca odpowiedź do oryginalnego klienta.|  
+|Dwukierunkowa||✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
+|Dwukierunkowa|✓|✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Dupleks||||Nie|Komunikację dupleksową non sesji nie jest obecnie obsługiwane.|  
-|Dupleks|![Znacznik wyboru](media/checkmark.gif "znacznik wyboru")|||Tak|Wyślij do miejsca docelowego kopii zapasowej.|  
+|Dupleks|✓|||Tak|Wyślij do miejsca docelowego kopii zapasowej.|  
   
 ## <a name="hosting"></a>Hosting  
  Ponieważ usługa routingu jest zaimplementowana jako usługa WCF, musi być albo może być samodzielnie hostowane w aplikacji lub hostowanych przez usługi IIS i WAS. Zaleca się, że usługa routingu znajdować IIS, WAS, lub aplikacji usługi Windows można skorzystać z automatycznego uruchamiania i cyklu życia funkcje zarządzania dostępne w tych środowiskach hostingu.  

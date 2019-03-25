@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352779"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409409"
 ---
 # <a name="optimizing-performance-text"></a>Optymalizacja wydajności: Tekst
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obejmuje obsługę prezentacji zawartość tekstu przy użyciu bogate [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrolki. Ogólnie rzecz biorąc można podzielić renderowanie tekstu w trzech warstwach:  
@@ -133,8 +133,9 @@ ms.locfileid: "57352779"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Widać podkreśleń hiperłącza tylko dla zdarzeń MouseEnter  
  A <xref:System.Windows.TextDecoration> obiekt jest ornamentacji visual, można dodać na tekst; jednak może być intensywnie do utworzenia wystąpienia wydajności. Jeśli wprowadzisz zwiększone użycie <xref:System.Windows.Documents.Hyperlink> elementów, należy wziąć pod uwagę przedstawiający podkreślenie, tylko wtedy, gdy wyzwalanie zdarzenia, takie jak <xref:System.Windows.ContentElement.MouseEnter> zdarzeń. Aby uzyskać więcej informacji, zobacz [określ czy hiperłącze jest podkreślone](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![Wyświetlanie właściwości TextDecorations hiperłącza](./media/textdecoration03.png "TextDecoration03")  
-Hiperłącza znajdującego się na MouseEnter  
+  Na poniższej ilustracji przedstawiono, jak zdarzeń MouseEnter wyzwala podkreślony hiperłącze:
+
+  ![Wyświetlanie właściwości TextDecorations hiperłącza](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  Ilustruje poniższy przykład kodu znaczników <xref:System.Windows.Documents.Hyperlink> zdefiniowane z lub bez podkreślenie:  
   

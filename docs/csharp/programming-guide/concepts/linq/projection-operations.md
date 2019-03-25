@@ -2,12 +2,12 @@
 title: Operacje rzutowania (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: fa9b1d2a0dc63be89e8a93fd5d234f131a2943e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74792c1a58aa17c65f3a153216d50c672e0b6cf6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723956"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411216"
 ---
 # <a name="projection-operations-c"></a>Operacje rzutowania (C#)
 Projekcja odnosi się do operacji przekształcania obiektu w nowy formularz, który często składa się tylko z tych właściwości, które zostaną następnie użyte. Korzystając z funkcji projekcji, możesz utworzyć nowy typ, który jest zbudowany z każdego obiektu. Można właściwość projektu i wykonywać w niej funkcji matematycznych. Można również projektu oryginalnego obiektu, nie zmieniając go.  
@@ -77,11 +77,11 @@ foreach (string s in query)
   
  Ta ilustracja przedstawia sposób `Select()` zwraca kolekcję, która ma taką samą liczbę elementów jako kolekcja źródłowa.  
   
- ![Ilustracja akcji wybierz&#40;&#41;](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Grafika przedstawiająca akcji Select&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
   
  Ta ilustracja przedstawia sposób `SelectMany()` łączy pośrednich sekwencję tablic w jedną wartość na wynik końcowy zawierający wartość każdej z każdej macierzy pośrednich.  
   
- ![Grafika przedstawiająca akcji SelectMany&#40;&#41;. ](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ ![Grafika przedstawiająca akcji SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>Przykład kodu  
  W poniższym przykładzie porównano zachowanie `Select()` i `SelectMany()`. Ten kod tworzy "bouquet" kwiatów, pobierając dwóch pierwszych elementów z każdego listę nazw Kwiatek w kolekcji źródłowej. W tym przykładzie "pojedyncza wartość", funkcja transformacji <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> używa jest kolekcją wartości. Ta migracja wymaga nadmiarowe `foreach` pętli, aby można było wyliczyć każdego ciągu w każdej podrzędnej sekwencji.  

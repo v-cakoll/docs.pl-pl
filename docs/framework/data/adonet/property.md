@@ -2,12 +2,12 @@
 title: property
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: bc8f890479e195f1e6ef847219a74f165c722fd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80c4bb3ccbab75c17b098723fc10b8b996e40576
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589428"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409721"
 ---
 # <a name="property"></a>property
 *Właściwości* są podstawowymi blokami konstrukcyjnymi miejsc z [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) i [typy złożone](../../../../docs/framework/data/adonet/complex-type.md). Właściwości definiują kształt i charakterystyki danych, która będzie zawierać wystąpienia typu jednostki lub typ złożony. Właściwości w modelu koncepcyjnym są analogiczne do właściwości zdefiniowane w klasie. W ten sam sposób, że właściwości w klasie określenia kształtu elementu klasy i zawierają informacje o obiektach właściwości w modelu koncepcyjnym określenia kształtu typu jednostki i zawierają informacje na temat wystąpień typu jednostki.  
@@ -31,7 +31,7 @@ ms.locfileid: "54589428"
 ## <a name="example"></a>Przykład  
  Poniższy diagram przedstawia modelu koncepcyjnego z trzech typów jednostek: `Book`, `Publisher`, i `Author`. Każdy typ jednostki ma kilka właściwości, mimo że nie zamieszczono informacje o typie dla każdej właściwości w schemacie. Właściwości, które są [klucze jednostek](../../../../docs/framework/data/adonet/entity-key.md) są oznaczone symbolem (klucz).  
   
- ![Przykładowy Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Przykładowy model przy użyciu trzech typów jednostek](./media/property/example-model-three-entity-types.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Definiuje następujące CSDL `Book` jednostki typu (jak pokazano na powyższym diagramie) i wskazuje typ i nazwa każdej właściwości przy użyciu atrybutów XML. Opcjonalnie zestawu reguł, `Nullable`, jest również definiowany przy użyciu atrybutu XML.  
   

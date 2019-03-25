@@ -3,12 +3,12 @@ title: Usługi Machine learning — słownik w strukturze ML.NET
 description: Słownik ważne terminy dotyczące uczenia maszynowego, które są przydatne podczas tworzenia niestandardowych modeli w strukturze ML.NET.
 ms.custom: seodec18
 ms.date: 03/05/2019
-ms.openlocfilehash: 52f4aa7300edbbdabcc37d7710654dab455d27b0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cc236aaa99fd8a7b05af666a5b96f657d8bd3ad4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498903"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410241"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine learning słownik terminów ważne
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office — C# przewodnik programowania'
+title: 'Porady: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office — C# przewodnik programowania'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: af5f2d13365a93e758962daea2b08ea3ae089aeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966804"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412204"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Instrukcje: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office (C# Programming Guide)
 Nazwy argumentów i argumenty opcjonalne, wprowadzona w [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], zwiększenia wygody, elastyczność i czytelności w programowaniu w języku C#. Ponadto funkcje te znacznie ułatwiają dostęp do interfejsów COM, takich jak interfejsów API automatyzacji programu Microsoft Office.  
@@ -79,8 +79,7 @@ Nazwy argumentów i argumenty opcjonalne, wprowadzona w [!INCLUDE[csharp_dev10_l
   
 1.  Użyj `ConvertToTable` metodę, aby umieścić tekst w tabeli. Metoda ma szesnastu parametrów opcjonalnych. Funkcja IntelliSense zawiera następujące parametry opcjonalne w nawiasach kwadratowych, jak pokazano na poniższej ilustracji.  
   
-     ![Lista parametrów dla metody ConvertToTable. ](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-Parametry ConvertToTable  
+     ![Lista parametrów dla metody ConvertToTable](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
      Nazwane i opcjonalne argumenty umożliwiają określenie wartości parametrów, które chcesz zmienić. Dodaj następujący kod na końcu metody `DisplayInWord` do utworzenia prostej tabeli. Argument określa, że przecinkami w tekście ciągu w `range` oddziel komórki tabeli.  
   

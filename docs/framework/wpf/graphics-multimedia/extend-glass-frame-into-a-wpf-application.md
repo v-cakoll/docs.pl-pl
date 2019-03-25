@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843535"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412217"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Rozszerz szklaną klatkę na aplikację WPF
 
@@ -26,11 +26,9 @@ W tym temacie pokazano, jak rozszerzyć [!INCLUDE[TLA#tla_winvista](../../../../
 
 ## <a name="example"></a>Przykład
 
-Na poniższym obrazie przedstawiono szklaną klatkę rozszerzony do adresu pasek w programie Internet Explorer 7.
+Na poniższym obrazie przedstawiono szklaną klatkę rozszerzony do adresu pasek w programie Internet Explorer 7:
 
-**Internet Explorer przy użyciu rozszerzonych szklaną klatkę poza pasek adresu.**
-
-![IE7 ramki szkła rozszerzony poza pasek adresu. ](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![Zrzut ekranu przedstawiający szklaną klatkę rozszerzony poza IE7 pasek adresu](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 Aby rozszerzyć szklaną klatkę na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, dostęp do niezarządzanego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] jest wymagana. Poniższy przykład kodu jest wywołanie platformy (funkcja pinvoke) dla dwóch [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] spełnić w celu rozszerzenia ramki do obszaru klienckiego. Każda z tych [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] są zadeklarowane w klasie o nazwie **NonClientRegionAPI**.
 
@@ -147,11 +145,9 @@ Proste okno, w którym ramki jest rozszerzony do obszaru klienckiego można znal
 </Window>
 ```
 
-Na poniższym obrazie przedstawiono szklaną klatkę rozszerzone do postaci [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.
+Na poniższym obrazie przedstawiono szklaną klatkę rozszerzone do postaci [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji:
 
-**Ramki szkła rozszerzone do postaci**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**aplikacji.**
-
-![Szkła ramki rozszerzone do postaci aplikacji WPF. ](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![Zrzut ekranu przedstawiający szklaną klatkę rozszerzone do postaci aplikacji WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Zobacz także
 

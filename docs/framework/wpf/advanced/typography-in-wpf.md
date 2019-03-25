@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125632"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412139"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują poprawy jakości i wydajności renderowania tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii obsługi rozszerzonego tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
@@ -121,7 +121,7 @@ Tekst z antialiasingu kierunku y ClearType
  Aby uzyskać więcej informacji, zobacz [dokumenty w WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Rysowanie tekstu lekkie  
- Rysowanie tekstu w bezpośrednio do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektów przy użyciu <xref:System.Windows.Media.DrawingContext.DrawText%2A> metody <xref:System.Windows.Media.DrawingContext> obiektu. Aby użyć tej metody, należy utworzyć <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt umożliwia rysowanie tekstu wielowierszowego, w którym każdy znak w tekście mogą indywidualnie sformatowane. Funkcje <xref:System.Windows.Media.FormattedText> obiekt zawiera wiele funkcji flagi DrawText w interfejsie API Win32. Ponadto <xref:System.Windows.Media.FormattedText> obiekt zawiera funkcje, takie jak obsługa wielokropka, w którym wielokropka jest wyświetlane, gdy tekst przekracza jego granice. Poniższy przykład pokazuje tekst, który ma kilka formatów zastosowano, tym gradientu liniowego na drugi i trzeci słów.  
+ Rysowanie tekstu w bezpośrednio do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektów przy użyciu <xref:System.Windows.Media.DrawingContext.DrawText%2A> metody <xref:System.Windows.Media.DrawingContext> obiektu. Aby użyć tej metody, należy utworzyć <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt umożliwia rysowanie tekstu wielowierszowego, w którym każdy znak w tekście mogą indywidualnie sformatowane. Funkcje <xref:System.Windows.Media.FormattedText> obiekt zawiera wiele funkcji flagi DrawText w interfejsie API Windows. Ponadto <xref:System.Windows.Media.FormattedText> obiekt zawiera funkcje, takie jak obsługa wielokropka, w którym wielokropka jest wyświetlane, gdy tekst przekracza jego granice. Poniższy przykład pokazuje tekst, który ma kilka formatów zastosowano, tym gradientu liniowego na drugi i trzeci słów.  
   
  ![Tekst wyświetlany za pomocą obiektu FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

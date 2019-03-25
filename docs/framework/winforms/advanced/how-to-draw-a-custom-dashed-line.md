@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 830fa45fc88c35b8aa5f047e065ae1efc161f581
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718951"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410228"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>Instrukcje: Rysowanie niestandardowej linii kreskowanej
+# <a name="how-to-draw-a-custom-dashed-line"></a>Porady: Rysowanie niestandardowej linii kreskowanej
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dostępnych jest kilka typów dash, które są wymienione w <xref:System.Drawing.Drawing2D.DashStyle> wyliczenia. Jeśli te style standard dash nie spełnia Twoich potrzeb, można utworzyć wzorze kreskowym niestandardowych.  
   
 ## <a name="example"></a>Przykład  
@@ -24,7 +24,7 @@ ms.locfileid: "57718951"
   
  Poniższa ilustracja przedstawia wynikowy linia przerywana. Należy zauważyć, że końcowej kreski, musi być krótsza niż 25 jednostek, tak, aby zakończyć w wierszu (405, 5).  
   
- ![Pióra](./media/pens6.gif "pens6")  
+ ![Ilustracja przedstawiająca linia przerywana. ](./media/how-to-draw-a-custom-dashed-line/dashed-line-illustration.gif "pens6")  
   
  [!code-csharp[System.Drawing.UsingAPen#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.UsingAPen#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  

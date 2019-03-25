@@ -2,12 +2,12 @@
 title: Niestandardowe kodery
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: a438ad327cdd75e981af2ef8ca3999a2f482a2b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509369"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411372"
 ---
 # <a name="custom-encoders"></a>Niestandardowe kodery
 W tym temacie omówiono, jak utworzyć niestandardowe kodery.  
@@ -50,7 +50,7 @@ W tym temacie omówiono, jak utworzyć niestandardowe kodery.
 ### <a name="pooling"></a>Buforowanie  
  Każda z implementacji kodera próbuje jak najszerzej w puli. Zmniejszenie alokacji jest kluczowe sposób poprawienia wydajności kodu zarządzanego. Aby wykonać tej buforowanie, należy użyć implementacji `SynchronizedPool` klasy. C# Plik zawiera opis dodatkowe optymalizacje używane przez tę klasę.  
   
- `XmlDictionaryReader` i `XmlDictionaryWriter` wystąpienia są w puli i ponownie zainicjować w celu zapobieżenia alokowania nowe dla każdego komunikatu. Czytniki `OnClose` wywołania zwrotnego odzyskuje czytnik podczas `Close()` jest wywoływana. Koder odtwarza również niektóre obiekty stan komunikatu używany podczas tworzenia wiadomości. Rozmiary te pule są konfigurowane przez `MaxReadPoolSize` i `MaxWritePoolSize` właściwości na wszystkich trzech klasach pochodnych <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
+ <xref:System.Xml.XmlDictionaryReader> i <xref:System.Xml.XmlDictionaryWriter> wystąpienia są w puli i ponownie zainicjować w celu zapobieżenia alokowania nowe dla każdego komunikatu. Czytniki `OnClose` wywołania zwrotnego odzyskuje czytnik podczas `Close()` jest wywoływana. Koder odtwarza również niektóre obiekty stan komunikatu używany podczas tworzenia wiadomości. Rozmiary te pule są konfigurowane przez `MaxReadPoolSize` i `MaxWritePoolSize` właściwości na wszystkich trzech klasach pochodnych <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   
 ### <a name="binary-encoding"></a>Kodowanie binarne  
  Gdy binarny sesje używa kodowania, ciąg dynamiczny słownik muszą przekazane odbiorcy wiadomości. Odbywa się to przez dodanie przedrostka wiadomości z ciągami dynamiczny słownik. Odbiornik paski Wyłącz ciągi, dodaje je do sesji i przetwarza wiadomości. Poprawnie przekazywanie ciągów w słowniku wymaga buforowane transportu.  

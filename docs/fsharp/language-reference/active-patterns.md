@@ -2,12 +2,12 @@
 title: Wzorce aktywne
 description: Dowiedz się, jak zdefiniować nazwanych partycji, które należy podzielić dane wejściowe w przy użyciu wzorców F# języka programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612845"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412087"
 ---
 # <a name="active-patterns"></a>Wzorce aktywne
 
@@ -86,23 +86,23 @@ Dane wyjściowe poprzedniego przykładu, jest następujący:
 Something else : Not matched.
 ```
 
-Korzystając z częściowego wzorców, czasami poszczególne opcje mogą być rozłączne lub wzajemnie się wykluczają, ale nie muszą być. W poniższym przykładzie kwadrat wzorca i wzorzec modułu nie są rozłączne, ponieważ niektóre numery kwadratów i modułów, takich jak 64. Następujący program drukowania wszystkich liczb całkowitych do 1000000, które są zarówno kwadratów i moduły.
+Korzystając z częściowego wzorców, czasami poszczególne opcje mogą być rozłączne lub wzajemnie się wykluczają, ale nie muszą być. W poniższym przykładzie kwadrat wzorca i wzorzec modułu nie są rozłączne, ponieważ niektóre numery kwadratów i modułów, takich jak 64. Następujący program używa wzorca i połączyć wzorców kwadratu i moduł. Wydrukować wszystkich liczb całkowitych maksymalnie 1000, które są zarówno kwadratów i modułów, a także tych, które są tylko moduły. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 Wynik jest następujący:
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>Wzorce aktywne sparametryzowane

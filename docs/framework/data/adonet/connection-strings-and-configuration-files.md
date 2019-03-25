@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828348"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409955"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego kompilowane do kodu źródłowego aplikacji można przeglądać za pomocą [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli nigdy nie zmieni się parametry połączenia, aplikacji musi być ponownie kompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracji aplikacji.  
@@ -81,7 +81,7 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Parametry połączenia. Mapuje **connectionString** atrybutu.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Przykład: Wyświetlanie listy wszystkich parametrów połączenia  
- Ten przykład wykonuje iterację przez `ConnectionStringSettings` kolekcji i wyświetla <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>, i <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> właściwości w oknie konsoli.  
+ Ten przykład wykonuje iterację przez <xref:System.Configuration.ConnectionStringSettingsCollection> i wyświetla <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, i <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> właściwości w oknie konsoli.  
   
 > [!NOTE]
 >  System.Configuration.dll nie są objęte wszystkich typów projektów i może być konieczne Ustaw odwołanie do niej, aby można było używać klas konfiguracji. Nazwę i lokalizację pliku konfiguracji określonej aplikacji jest zależna od typu aplikacji i proces hostingu.  
@@ -139,7 +139,7 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Używa algorytmu szyfrowania RSA do szyfrowania i odszyfrowywania danych. Algorytm RSA może służyć do szyfrowanie kluczem publicznym i podpisy cyfrowe. Jest także znana jako "klucz publiczny" lub szyfrowanie asymetryczne ponieważ wykorzystuje on dwa różne klucze. Możesz użyć [narzędzie rejestracji programu ASP.NET usług IIS (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) do szyfrowania sekcji w pliku Web.config i zarządzać kluczami szyfrowania. ASP.NET odszyfrowuje plik konfiguracyjny podczas przetwarzania pliku. Tożsamość aplikacji ASP.NET musi mieć dostęp do odczytu do klucza szyfrowania, który jest używany do szyfrowania i odszyfrowywania zaszyfrowanych sekcje.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Używa interfejsu API ochrony danych Windows (DPAPI) do szyfrowania sekcji konfiguracji. Używa wbudowanych usług kryptograficznych Windows i mogą być skonfigurowane dla ochrony specyficzny dla komputera lub konta — specyficzne dla użytkownika. Ochrona specyficzny dla komputera jest przydatne w przypadku wielu aplikacji na tym samym serwerze, który muszą udostępniać informacje. Ochrona konta — specyficzne dla użytkownika może być stosowana z usługami, które działają z określona tożsamość użytkownika, takie jak udostępnione Środowisko hostingu. Każda aplikacja uruchamiana osobne tożsamości, która ogranicza dostęp do zasobów, takich jak pliki i bazy danych.|  
   
- Obaj dostawcy oferują silnego szyfrowania danych. Jednakże jeśli planujesz użyć tego samego pliku konfiguracji zaszyfrowane na wielu serwerach, np. kolektywu serwerów sieci Web, tylko `RsaProtectedConfigurationProvider` umożliwia eksportowanie kluczy szyfrowania używany do szyfrowania danych i zaimportuj je na innym serwerze. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie chronione Konfiguracja RSA kontenery kluczy](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Obaj dostawcy oferują silnego szyfrowania danych. Jednakże jeśli planujesz użyć tego samego pliku konfiguracji zaszyfrowane na wielu serwerach, np. kolektywu serwerów sieci Web, tylko <xref:System.Configuration.RsaProtectedConfigurationProvider> umożliwia eksportowanie kluczy szyfrowania używany do szyfrowania danych i zaimportuj je na innym serwerze. Aby uzyskać więcej informacji, zobacz [importowanie i eksportowanie chronione Konfiguracja RSA kontenery kluczy](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Przy użyciu klas konfiguracji  
  <xref:System.Configuration> Przestrzeń nazwy udostępnia klasy do pracy z ustawieniami konfiguracji programowo. <xref:System.Configuration.ConfigurationManager> Klasy zapewnia dostęp do plików konfiguracji komputera, aplikacji i użytkownika. Jeśli tworzysz aplikację ASP.NET, możesz użyć <xref:System.Web.Configuration.WebConfigurationManager> klasy, która zawiera te same funkcje, podczas umożliwiającego dostęp do ustawień, które są unikatowe dla aplikacji ASP.NET, takich jak znajdują się w  **\< System.Web >**.  

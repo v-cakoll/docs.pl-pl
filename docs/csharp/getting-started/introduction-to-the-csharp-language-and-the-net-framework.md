@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153946"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409227"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i systemu .NET Framework
 
@@ -58,7 +58,7 @@ C# to elegancki i bezpieczny typowo język obiektowy, który umożliwia dewelope
   
  Gdy wykonany zostaje program C#, zestaw jest ładowany do CLR, który może wykonać różne akcje w oparciu o informacje zawarte w manifeście. Następnie jeśli spełnione są wymagania bezpieczeństwa, CLR wykonuje dokładnie na czas (JIT) kompilacja, aby skonwertować kod IL do instrukcji maszyny macierzystej. Środowisko CLR oferuje również inne usługi związane z automatycznym wyrzucania elementów bezużytecznych, obsługa wyjątków i zarządzanie zasobami. Kod, który jest wykonywany przez środowisko CLR jest czasami określane jako "kod zarządzany" w przeciwieństwie do "Kod niezarządzanego" który jest skompilowany w macierzystym języku maszynowym, który jest przeznaczony dla określonego systemu. Poniższy diagram ilustruje relacje kompilacji i środowiska wykonawczego języka C# plików kodu źródłowego, biblioteki klas .NET Framework, zespołów i środowiska CLR.  
   
- ![Od C&#35; źródła kodu w celu wykonania maszyny](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
+ ![Od C&#35; źródła kodu w celu wykonania maszyny](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
  Współdziałanie języków jest kluczowym elementem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Ponieważ kod IL produkowany przez kompilator języka C# jest zgodny do wspólnych specyfikacji typu (CTS), kod IL generowany z C# mogą współdziałać z kodem, który został wygenerowany z wersji .NET, Visual Basic, Visual C++ lub ponad 20 innymi językami zgodnymi z CTS. Pojedynczy zestaw może zawierać wiele modułów napisanych w różnych językach .NET i typy mogą odwoływać się wzajemnie tak, jakby były one napisane w języku.  
   

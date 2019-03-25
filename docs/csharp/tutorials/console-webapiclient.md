@@ -3,12 +3,12 @@ title: Tworzenie klienta REST przy użyciu platformy .NET Core
 description: W tym samouczku pokazano pewną liczbę funkcji platformy .NET Core i języka C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: e7859e9db53e8b126fd66b88d9a5e7565ea1a4ad
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846171"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412308"
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -213,9 +213,9 @@ Skompilować i uruchomić aplikację. Zostanie ona wydrukowana nazwy repozytoria
 
 ## <a name="controlling-serialization"></a>Kontrolowanie serializacji
 
-Zanim dodasz więcej funkcji, możemy adresów `repo` wpisz i przypisz ją konwencjami bardziej standard języka C#. Możesz to zrobić poprzez dodawanie adnotacji do `repo` to typ *atrybuty* które kontrolują, jak działa serializator JSON. W Twoim przypadku użyjesz tych atrybutów do definiowania mapowania między nazwami kluczy JSON i języka C# nazwy klas i składowych. Są dwa atrybuty używane `DataContract` atrybutu i `DataMember` atrybutu. Zgodnie z Konwencją wszystkie klasy atrybutu kończyć się sufiksem `Attribute`. Jednak nie należy używać tego sufiksu, po zastosowaniu atrybutu.
+Zanim dodasz więcej funkcji, możemy adresów `repo` wpisz i przypisz ją konwencjami bardziej standard języka C#. Możesz to zrobić poprzez dodawanie adnotacji do `repo` to typ *atrybuty* które kontrolują, jak działa serializator JSON. W Twoim przypadku użyjesz tych atrybutów do definiowania mapowania między nazwami kluczy JSON i języka C# nazwy klas i składowych. Są dwa atrybuty używane <xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutów. Zgodnie z Konwencją wszystkie klasy atrybutu kończyć się sufiksem `Attribute`. Jednak nie należy używać tego sufiksu, po zastosowaniu atrybutu.
 
-`DataContract` i `DataMember` atrybuty są w innej biblioteki, więc musisz dodać tej biblioteki do pliku projektu C# jako zależność. Dodaj następujący wiersz do `<ItemGroup>` sekcji w pliku projektu:
+<xref:System.Runtime.Serialization.DataContractAttribute> i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybuty są w innej biblioteki, więc musisz dodać tej biblioteki do pliku projektu C# jako zależność. Dodaj następujący wiersz do `<ItemGroup>` sekcji w pliku projektu:
 
 ```xml
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
@@ -223,7 +223,7 @@ Zanim dodasz więcej funkcji, możemy adresów `repo` wpisz i przypisz ją konwe
 
 Po zapisaniu pliku Uruchom `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) do pobrania tego pakietu.
 
-Następnie otwórz `repo.cs` pliku. Zmienimy nazwę pisanymi wielkimi literami, a w pełni pisowni nazwiska `Repository`. Firma Microsoft nadal chcesz mapy JSON "repo" węzłów do tego typu, więc musisz dodać `DataContract` atrybutu deklaracji klasy. Użytkownik ustawia `Name` właściwość atrybutu nazwy węzłów JSON, które mapują do tego typu:
+Następnie otwórz `repo.cs` pliku. Zmienimy nazwę pisanymi wielkimi literami, a w pełni pisowni nazwiska `Repository`. Firma Microsoft nadal chcesz mapy JSON "repo" węzłów do tego typu, więc musisz dodać <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu deklaracji klasy. Użytkownik ustawia `Name` właściwość atrybutu nazwy węzłów JSON, które mapują do tego typu:
 
 ```csharp
 [DataContract(Name="repo")]
@@ -357,7 +357,7 @@ Ten format nie jest zgodna z dowolnego programu standard .NET <xref:System.DateT
 private string JsonDate { get; set; }
 ```
 
-`DataMember` Atrybut informuje serializator, powinna to być przetworzone, mimo że nie ma publicznej składowej. Następnie należy napisać właściwość publiczna tylko do odczytu, która konwertuje ciąg na prawidłowym <xref:System.DateTime> obiektu i zwraca ją <xref:System.DateTime>:
+<xref:System.Runtime.Serialization.DataMemberAttribute> Atrybut informuje serializator, powinna to być przetworzone, mimo że nie ma publicznej składowej. Następnie należy napisać właściwość publiczna tylko do odczytu, która konwertuje ciąg na prawidłowym <xref:System.DateTime> obiektu i zwraca ją <xref:System.DateTime>:
 
 ```csharp
 [IgnoreDataMember]

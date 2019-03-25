@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196697"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408877"
 ---
 # <a name="data-contract-names"></a>Nazwy kontraktów danych
 
@@ -64,7 +64,7 @@ W tym przykładzie typ `Drawing<Square,RegularRedBrush>` ma nazwie kontraktu dan
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>Dostosowywanie nazwy kontraktów danych do typów ogólnych
 
-Czasami nazwy kontraktu danych, które są generowane dla typów ogólnych, jak opisano wcześniej, są nie do przyjęcia. Na przykład może znasz wcześniej nie będzie działać do konfliktów nazw, a następnie usunąć wartości mieszania. W takim przypadku można użyć <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> właściwość `DataContractAttribute` atrybutu, aby określić inny sposób na potrzeby generowania nazw. Liczby można użyć w nawiasach klamrowych wewnątrz `Name` właściwości do odwoływania się do danych kontraktu nazwy parametrów ogólnych. (0, który odnosi się do pierwszego parametru, 1, który odwołuje się do drugiej i tak dalej). Znak numeru (#) wewnątrz nawiasów klamrowych służy do odwoływania się do mieszania. Możesz użyć każdej z tych odwołań wiele razy lub wcale.
+Czasami nazwy kontraktu danych, które są generowane dla typów ogólnych, jak opisano wcześniej, są nie do przyjęcia. Na przykład może znasz wcześniej nie będzie działać do konfliktów nazw, a następnie usunąć wartości mieszania. W takim przypadku można użyć <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> właściwość, aby określić inny sposób na potrzeby generowania nazw. Liczby można użyć w nawiasach klamrowych wewnątrz `Name` właściwości do odwoływania się do danych kontraktu nazwy parametrów ogólnych. (0, który odnosi się do pierwszego parametru, 1, który odwołuje się do drugiej i tak dalej). Znak numeru (#) wewnątrz nawiasów klamrowych służy do odwoływania się do mieszania. Możesz użyć każdej z tych odwołań wiele razy lub wcale.
 
 Na przykład poprzednim ogólny `Drawing` typu można zadeklarowano jak pokazano w poniższym przykładzie.
 

@@ -4,12 +4,12 @@ description: Ten dokument zawiera kroki i przepływ pracy, aby utworzyć rozwią
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788456"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409500"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>Rozpoczynanie pracy z platformą .NET Core w systemie macOS
 
@@ -215,7 +215,7 @@ Ustaw punkt przerwania w `WriteLine` instrukcji w `Main` metody. W tym celu albo
 
 Otwórz kartę debuger, wybierając ikonę debugowania na pasku narzędzi programu Visual Studio Code, wybierając **Widok > debugowanie** z paska menu lub za pomocą skrótu klawiaturowego <kbd>CTRL</kbd> + <kbd> SHIFT</kbd>+<kbd>D</kbd>:
 
-![Visual Studio Code Debugger](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code Debugger](./media/using-on-macos/visual-studio-code-debugger.png)
 
 Naciśnij przycisk Odtwórz, aby uruchomić aplikację w debugerze. Aplikacja rozpoczyna wykonywanie i uruchamia punkt przerwania, gdzie zatrzymuje. Wejdź do `Get` metody i upewnij się, że przeszły w poprawne argumenty. Upewnij się, że odpowiedź zawiera się 42.
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353078"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409877"
 ---
 # <a name="reliability-best-practices"></a>Najlepsze rozwiązania dotyczące niezawodności
 
@@ -241,7 +241,7 @@ Dla programu SQL Server wszystkie metody używane do wprowadzania synchronizacji
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>W kodzie niezarządzanym nie blokują przez czas nieokreślony
 
-Blokowanie w programie kodu niezarządzanego, zamiast w kodzie zarządzanym może spowodować "odmowa usługi", ponieważ środowisko CLR nie jest w stanie przerwania wątku.  Zablokowany wątek zapobiega CLR zwalnianie <xref:System.AppDomain>, co najmniej bez wykonania tej czynności kilka bardzo niebezpieczny operacji.  Blokuje, za pomocą systemu Win32 synchronizacji jest wyczyść przykładem coś, co firma Microsoft nie może dopuścić.  Blokowanie w wywołaniu `ReadFile` na gniazdo należy unikać, jeśli jest to możliwe — najlepiej Win32 API należy zapewnić mechanizm operacji, takiej jak to przekroczenie limitu czasu.
+Blokowanie w programie kodu niezarządzanego, zamiast w kodzie zarządzanym może spowodować "odmowa usługi", ponieważ środowisko CLR nie jest w stanie przerwania wątku.  Zablokowany wątek zapobiega CLR zwalnianie <xref:System.AppDomain>, co najmniej bez wykonania tej czynności kilka bardzo niebezpieczny operacji.  Blokuje, przy użyciu Windows synchronizacji jest wyczyść przykładem coś, co firma Microsoft nie może dopuścić.  Blokowanie w wywołaniu `ReadFile` na gniazdo należy unikać, jeśli jest to możliwe — najlepiej interfejsu Windows API powinien udostępniać mechanizm operacji, takiej jak to przekroczenie limitu czasu.
 
 Dowolną metodę, która wywołuje native najlepiej należy używać wywołanie Win32 z rozsądne, ograniczone Przekroczono limit czasu.  Jeśli użytkownik może określić limit czasu, użytkownik nie powinien określić nieskończony limit czasu bez pewnych uprawnień zabezpieczeń.  Zaleca się, jeśli metoda zablokuje się przez więcej niż ~ 10 sekund, należy korzystać z wersji, który obsługuje limity czasu lub potrzebujesz dodatkowej pomocy CLR.
 

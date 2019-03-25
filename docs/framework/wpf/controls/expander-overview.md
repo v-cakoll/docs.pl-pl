@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369932"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409461"
 ---
 # <a name="expander-overview"></a>Przegląd Ekspander
 <xref:System.Windows.Controls.Expander> Kontroli umożliwia dostarczanie zawartości w obszarze rozwijania przypomina okna, która zawiera nagłówek.  
@@ -45,7 +45,7 @@ ms.locfileid: "57369932"
   
  **Ekspander w ScrollViewer**  
   
- ![Ekspander za pomocą paska przewijania](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Zrzut ekranu pokazujący ekspander za pomocą paska przewijania.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  Po umieszczeniu <xref:System.Windows.Controls.Expander> w kontrolce <xref:System.Windows.Controls.ScrollViewer>ustaw <xref:System.Windows.Controls.ScrollViewer> wymiaru właściwość, która odpowiada kierunek, w którym <xref:System.Windows.Controls.Expander> otwiera zawartość do rozmiaru <xref:System.Windows.Controls.Expander> obszar zawartości. Na przykład jeśli ustawisz <xref:System.Windows.Controls.Expander.ExpandDirection%2A> właściwość <xref:System.Windows.Controls.Expander> do <xref:System.Windows.Controls.ExpandDirection.Down> (obszar zawartości jest otwierany w dół), ustaw <xref:System.Windows.FrameworkElement.Height%2A> właściwość <xref:System.Windows.Controls.ScrollViewer> kontrolki wymagane wysokość obszaru zawartości. Jeśli zamiast tego wartość wysokości zawartości, <xref:System.Windows.Controls.ScrollViewer> to ustawienie nie jest rozpoznawane i dlatego nie zapewnia przewijanej treści.  
   

@@ -868,7 +868,7 @@ To zachowanie nie jest pożądane, podczas nawiązywania połączenia z baz dany
 
 Dodawanie nowej `PoolBlockingPeriod` — słowo kluczowe pozwala wybrać okres blokowania najodpowiedniejsza dla twojej aplikacji. Wartości:
 
-`Auto`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
 Puli połączeń blokuje okres dla aplikacji, który nawiązuje połączenie z bazą danych Azure SQL Database jest wyłączona, a puli połączeń blokuje okres dla aplikacji, która łączy do innego wystąpienia programu SQL Server jest włączona. Jest to wartość domyślna. Jeśli nazwa punktu końcowego serwera zakończy się z dowolnymi z następujących czynności, są one traktowane jako bazy danych SQL Azure:
 
@@ -880,11 +880,11 @@ Puli połączeń blokuje okres dla aplikacji, który nawiązuje połączenie z b
 
 - .database.cloudapi.de
 
-`AlwaysBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
 Połączenia czasu blokowania puli jest zawsze włączona.
 
-`NeverBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock>
 
 Połączenia czasu blokowania puli jest zawsze wyłączona.
 

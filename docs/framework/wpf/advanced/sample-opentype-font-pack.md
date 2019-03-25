@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: aa7eca674bd2758358bec244f2a21a341526d4b8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0a2db2392c2380a397da42474a311449c8fdf9fb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377269"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412165"
 ---
 # <a name="sample-opentype-font-pack"></a>Przykład pakietu czcionek OpenType
 Ten temat zawiera omówienie przykładu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek, które są dystrybuowane za pomocą [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Rozszerzono obsługę czcionki przykładowe [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] funkcje, które mogą być używane przez [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -34,8 +34,7 @@ Ten temat zawiera omówienie przykładu [!INCLUDE[TLA#tla_opentype](../../../../
   
  Na poniższej ilustracji przedstawiono przykładu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] wyglądać czcionki.  
   
- ![Listy nazw czcionki, na przykład pakietu czcionek](./media/samplefontpack01.gif "samplefontpack01")  
-Czcionki w pakietu czcionek OpenType  
+ ![Listy nazw czcionki, na przykład pakietu czcionek](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
  Czcionki próbki są dostarczane w ramach licencji Wydłużenie górne Corporation. Wydłużenie górne to dostawca produktów zaawansowane czcionki. Licencje wersji rozszerzonej lub niestandardowych czcionek przykładowe, zobacz [witryny sieci Web Corporation Wydłużenie górne](https://go.microsoft.com/fwlink/?LinkId=182627).  
   

@@ -2,12 +2,12 @@
 title: klucz jednostki
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 02b877efb463e47f9147239c895c482f2d716714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664027"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408967"
 ---
 # <a name="entity-key"></a>klucz jednostki
 *Klucz jednostki* jest [właściwość](../../../../docs/framework/data/adonet/property.md) lub zbiór właściwości [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) które są używane w celu ustalenia tożsamości. Właściwości, które tworzą klucz jednostki są wybierane w czasie projektowania. Wartości właściwości klucza jednostki musi jednoznacznie identyfikować wystąpienia typu jednostki, w ramach [zestaw jednostek](../../../../docs/framework/data/adonet/entity-set.md) w czasie wykonywania. Należy wybrać właściwości, które tworzą klucz jednostki w celu zagwarantowania unikatowości wystąpień w zestawie jednostek.  
@@ -25,7 +25,7 @@ ms.locfileid: "54664027"
 ## <a name="example"></a>Przykład  
  Poniższy diagram przedstawia modelu koncepcyjnego z trzech typów jednostek: `Book`, `Publisher`, i `Author`. Właściwości każdego typu jednostki, które tworzą klucz jednostki są oznaczone symbolem "(klucz)". Należy pamiętać, że `Author` typ jednostki ma klucz jednostki, która składa się z dwóch właściwości `Name` i `Address`.  
   
- ![Przykładowy Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Przykładowy model przy użyciu trzech typów jednostek](./media/entity-key/example-model-three-entity-types.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Definiuje CSDL poniżej `Book` typu jednostki, które pokazano na powyższym diagramie. Należy pamiętać, że klucz jest zdefiniowana, odwołując się do `ISBN` właściwość typu jednostki.  
   

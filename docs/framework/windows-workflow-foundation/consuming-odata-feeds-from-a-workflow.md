@@ -2,12 +2,12 @@
 title: Korzystanie z protokołu OData źródeł z przepływu pracy — WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: ac7a5aef6a699f85ac5a1ce7417d02d42f6c0281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275824"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408998"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Zużyć OData, źródła danych z przepływu pracy
 
@@ -25,7 +25,7 @@ WCF Data Services zawiera biblioteki klienckie, które umożliwiają używanie �
 
 Aby wygenerować Northwind bibliotek klienta, można użyć **Dodaj odwołanie do usługi** okno dialogowe w programie Visual Studio 2012 można dodać odwołania do usługi Northwind OData.
 
-![Dodaj odwołanie do usługi](./media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")
+![Zrzut ekranu pokazujący okno dialogowe Dodaj odwołanie do usługi.](./media/consuming-odata-feeds-from-a-workflow/add-service-reference-dialog.gif)
 
 Należy pamiętać, że nie istnieją żadne operacje usługi udostępniane przez usługę, a następnie w **usług** listy istnieją elementów reprezentujących podmioty udostępnianych przez usługę danych Northwind. Po dodaniu odwołania do usługi, klas, które będą generowane dla tych jednostek i mogą być używane w kodzie klienta. W przykładach w tym temacie używany w ramach tych zajęć i `NorthwindEntities` klasy do wykonywania zapytań.
 
@@ -43,7 +43,7 @@ Do adresu możliwych problemów z opóźnieniem, które mogą wystąpić podczas
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> Klasa udostępnia <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> i <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> metody asynchroniczne wykonywanie zapytań usługi OData. Te metody mogą być wywoływane z <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> i <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> przesłonięć o <xref:System.Activities.AsyncCodeActivity> klasy pochodnej. Gdy <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> zwraca zastąpienie, przepływ pracy można go bezczynności (ale nie utrzymują), a po ukończeniu pracę asynchroniczną <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> jest wywoływana w czasie wykonywania.
 
-W poniższym przykładzie `OrdersByCustomer` działania jest zdefiniowana, że ma dwa wprowadzanie argumentów. `CustomerId` Argument reprezentuje klienta, który identyfikuje zamówienia przywrócić, i `ServiceUri` argument reprezentuje identyfikator URI usługi OData można wykonywać zapytania. Ponieważ pochodzi od klasy działania `AsyncCodeActivity<IEnumerable<Order>>` dostępna jest również <xref:System.Activities.Activity%601.Result%2A> danych wyjściowych argumentu, który służy do zwracania wyników zapytania. <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> Zastąpienie tworzy zapytanie LINQ, który wybiera wszystkie zamówienia klienta określony. To zapytanie jest określony jako <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> przekazanych <xref:System.Activities.AsyncCodeActivityContext>, a następnie kwerendy <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> metoda jest wywoływana. Należy pamiętać, że wywołania zwrotnego i stanu, które są przekazywane do kwerendy <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> są tymi, które są przekazywane do działania <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> metody. Gdy zapytanie zostało zakończone, wykonywania działań <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> metoda jest wywoływana. Zapytanie jest pobierana z <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, a następnie kwerendy <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> metoda jest wywoływana. Ta metoda zwraca <xref:System.Collections.Generic.IEnumerable%601> określonego typu jednostek; w tym przypadku `Order`. Ponieważ `IEnumerable<Order>` jest ogólny typ <xref:System.Activities.AsyncCodeActivity%601>ten `IEnumerable` jest ustawiony jako <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> działania.
+W poniższym przykładzie `OrdersByCustomer` działania jest zdefiniowana, że ma dwa wprowadzanie argumentów. `CustomerId` Argument reprezentuje klienta, który identyfikuje zamówienia przywrócić, i `ServiceUri` argument reprezentuje identyfikator URI usługi OData można wykonywać zapytania. Ponieważ pochodzi od klasy działania `AsyncCodeActivity<IEnumerable<Order>>` dostępna jest również <xref:System.Activities.Activity%601.Result%2A> danych wyjściowych argumentu, który służy do zwracania wyników zapytania. <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> Zastąpienie tworzy zapytanie LINQ, który wybiera wszystkie zamówienia klienta określony. To zapytanie jest określony jako <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> przekazanych <xref:System.Activities.AsyncCodeActivityContext>, a następnie kwerendy <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> metoda jest wywoływana. Należy pamiętać, że wywołania zwrotnego i stanu, które są przekazywane do kwerendy <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> są tymi, które są przekazywane do działania <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> metody. Gdy zapytanie zostało zakończone, wykonywania działań <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> metoda jest wywoływana. Zapytanie jest pobierana z <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>, a następnie kwerendy <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> metoda jest wywoływana. Ta metoda zwraca <xref:System.Collections.Generic.IEnumerable%601> określonego typu jednostek; w tym przypadku `Order`. Ponieważ `IEnumerable<Order>` jest ogólny typ <xref:System.Activities.AsyncCodeActivity%601>ten <xref:System.Collections.IEnumerable> jest ustawiony jako <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> działania.
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 

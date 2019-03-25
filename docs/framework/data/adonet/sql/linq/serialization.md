@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 12d7dd8d47262f8eefe8f71f144c5648f089be45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593579"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408928"
 ---
 # <a name="serialization"></a>Serializacja
 W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] możliwości serializacji. Sekcjach poniżej zawierają informacje dotyczące sposobu dodawania serializacji podczas generowania kodu w czasie projektowania i zachowania czasu wykonywania serializacji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] klasy.  
@@ -50,7 +50,7 @@ W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- Dla `Order` klasy w poniższym przykładzie, tylko do właściwości skojarzenia odwrotnej odpowiadający `Customer` klasy jest wyświetlany w celu skrócenia programu. Nie ma `DataMember` atrybutu, aby uniknąć cyklu.  
+ Dla `Order` klasy w poniższym przykładzie, tylko do właściwości skojarzenia odwrotnej odpowiadający `Customer` klasy jest wyświetlany w celu skrócenia programu. Nie ma <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu, aby uniknąć cyklu.  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -65,7 +65,7 @@ W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
 ### <a name="self-recursive-relationships"></a>Relacje cykliczne samodzielnie  
- Relacje cykliczne Self postępuj zgodnie z tym samym wzorcem. Właściwość skojarzenia odpowiadający klucza obcego nie ma `DataMember` atrybutu właściwość nadrzędna nie.  
+ Relacje cykliczne Self postępuj zgodnie z tym samym wzorcem. Właściwość skojarzenia odpowiadający klucza obcego nie ma <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu właściwość nadrzędna nie.  
   
  Należy wziąć pod uwagę następujące klasy, która ma dwie relacje cykliczne samoobsługowego: Employee.Manager/Reports i Employee.Mentor/Mentees.  
   

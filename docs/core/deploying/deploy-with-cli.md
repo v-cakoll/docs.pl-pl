@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359734"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410267"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie .NET Core z aplikacji przy użyciu interfejsu wiersza polecenia
 
@@ -50,7 +50,7 @@ Jeśli używasz platformy .NET Core SDK 2.1, domyślnie opublikować tryb dla we
 
 ### <a name="native-dependencies"></a>Natywne zależności
 
-Jeśli aplikacja ma zależności natywnych, może nie działać w innym systemie operacyjnym. Na przykład jeśli aplikacja używa natywnego interfejsu API Win32, nie będzie uruchomić w systemie macOS lub Linux. Będzie konieczne podanie kodu specyficznego dla platformy i skompiluj plik wykonywalny dla każdej platformy.
+Jeśli aplikacja ma zależności natywnych, może nie działać w innym systemie operacyjnym. Na przykład jeśli aplikacja używa natywnego interfejsu API Windows, nie będzie uruchomić w systemie macOS lub Linux. Będzie konieczne podanie kodu specyficznego dla platformy i skompiluj plik wykonywalny dla każdej platformy.
 
 Rozważ również, jeśli biblioteka odwołaniu ma zależności natywnych, aplikacja może nie działać na każdej platformie. Jednak jest możliwe, pakietu NuGet, który jest odwołanie do pakietu wersji specyficzne dla platformy do obsługi wymaganych zależności natywnych dla Ciebie.
 

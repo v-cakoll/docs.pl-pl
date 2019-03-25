@@ -7,17 +7,17 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718912"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409396"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ustawienia zabezpieczeń może spowodować aplikację do uruchamiania inaczej w środowisku częściowej relacji zaufania, niż na komputerze lokalnym. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ogranicza dostęp do takich krytycznych zasobów lokalnych, jak system plików, sieci i niezarządzanych interfejsów API, między innymi. Ustawienia zabezpieczeń wpływają na możliwość wywołania interfejsu API Win32 firmy Microsoft lub innych interfejsów API, którego nie można zweryfikować przez system zabezpieczeń. Zabezpieczenia wpływa również na innych aspektach związanych z aplikacji, w tym pliku i dostęp do danych i drukowania. Aby uzyskać więcej informacji na temat plików i dostęp do danych w środowisku częściowej relacji zaufania, zobacz [więcej bezpieczny plik i dostęp do danych w formularzach Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Aby uzyskać więcej informacji na temat Drukowanie w środowisku częściowej relacji zaufania, zobacz [więcej Secure drukowanie w formularzach Windows Forms](more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ustawienia zabezpieczeń może spowodować aplikację do uruchamiania inaczej w środowisku częściowej relacji zaufania, niż na komputerze lokalnym. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ogranicza dostęp do takich krytycznych zasobów lokalnych, jak system plików, sieci i niezarządzanych interfejsów API, między innymi. Ustawienia zabezpieczeń wpływają na możliwość wywołania interfejsu API programu Microsoft Windows lub innych interfejsów API, którego nie można zweryfikować przez system zabezpieczeń. Zabezpieczenia wpływa również na innych aspektach związanych z aplikacji, w tym pliku i dostęp do danych i drukowania. Aby uzyskać więcej informacji na temat plików i dostęp do danych w środowisku częściowej relacji zaufania, zobacz [więcej bezpieczny plik i dostęp do danych w formularzach Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Aby uzyskać więcej informacji na temat Drukowanie w środowisku częściowej relacji zaufania, zobacz [więcej Secure drukowanie w formularzach Windows Forms](more-secure-printing-in-windows-forms.md).  
   
- W poniższych sekcjach omówiono sposób pracy ze Schowka, wykonywać operacje na okno i wywoływanie interfejsu API systemu Win32 z aplikacji, które są uruchomione w środowisku częściowej relacji zaufania.  
+ W poniższych sekcjach omówiono sposób pracy ze Schowka, wykonywać operacje na okno i wywoływanie interfejsu API Windows z aplikacji, które są uruchomione w środowisku częściowej relacji zaufania.  
   
 ## <a name="clipboard-access"></a>Dostęp do Schowka  
  <xref:System.Security.Permissions.UIPermission> Klasy kontrolowanie dostępu do Schowka i skojarzonej <xref:System.Security.Permissions.UIPermissionClipboard> wartość wyliczenia wskazuje poziom dostępu. W poniższej tabeli przedstawiono poziomy uprawnień możliwe.  
@@ -69,8 +69,8 @@ ms.locfileid: "57718912"
   
  Aby ograniczyć to potencjalne zagrożenie, formanty innych firm tylko od dostawców, w której można zaufać. Jeśli używasz formanty innych firm, które zostały pobrane ze źródła niemożliwy, firma Microsoft zaleca zapoznanie się kod źródłowy potencjalne luki w zabezpieczeniach. Po zweryfikowaniu, czy źródło jest niezłośliwych, należy skompilować zestawu sobie, aby zapewnić zgodność źródło zestawu.  
   
-## <a name="win32-api-calls"></a>Wywołania interfejsu API Win32  
- Jeśli projekt wymaga, wywołanie funkcji z interfejsu API Win32, uzyskujesz dostęp do kodu niezarządzanego. W tym przypadku nie można określić akcje kodu do okna lub systemu operacyjnego, podczas pracy z wywołania interfejsu API systemu Win32 lub wartości. <xref:System.Security.Permissions.SecurityPermission> Klasy i <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> wartość <xref:System.Security.Permissions.SecurityPermissionFlag> wyliczenie kontrola dostępu do kodu niezarządzanego. Aplikacja ma dostęp do kodu niezarządzanego, tylko w przypadku, gdy udzielany jest <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnień. Domyślnie tylko aplikacje, które działają lokalnie może wywoływać kod niezarządzany.  
+## <a name="windows-api-calls"></a>Wywołania interfejsu API Windows  
+ Jeśli projekt wymaga, wywołanie funkcji z interfejsu API Windows, uzyskujesz dostęp do kodu niezarządzanego. W tym przypadku nie można określić akcje kodu do okna lub systemu operacyjnego, podczas pracy z wywołania interfejsu API Windows lub wartości. <xref:System.Security.Permissions.SecurityPermission> Klasy i <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> wartość <xref:System.Security.Permissions.SecurityPermissionFlag> wyliczenie kontrola dostępu do kodu niezarządzanego. Aplikacja ma dostęp do kodu niezarządzanego, tylko w przypadku, gdy udzielany jest <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnień. Domyślnie tylko aplikacje, które działają lokalnie może wywoływać kod niezarządzany.  
   
  Niektóre elementy członkowskie Windows Forms dostęp niezarządzanych wymagającego <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnień. Poniższa tabela zawiera listę elementów członkowskich w <xref:System.Windows.Forms> przestrzeni nazw, które wymagają uprawnień. Aby uzyskać więcej informacji na temat uprawnień, które są wymagane dla elementu członkowskiego zobacz dokumentację biblioteki klas .NET Framework.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "57718912"
 |<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> — Metoda|  
 |<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> — Metoda<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> — Metoda|  
   
- Jeśli aplikacja nie ma uprawnień do wywoływania niezarządzanego kodu, aplikacja musi żądać <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnień lub należy wziąć pod uwagę alternatywnych sposobów implementowania funkcji, w wielu przypadkach, Windows Forms zapewnia alternatywnego kodu zarządzanego interfejsu API Win32 funkcje. Jeśli nie ma innego oznacza, że istnieje i aplikacja muszą uzyskiwać dostęp do kodu niezarządzanego, trzeba będzie podnoszenia uprawnień dla aplikacji.  
+ Jeśli aplikacja nie ma uprawnień do wywoływania niezarządzanego kodu, aplikacja musi żądać <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> uprawnień lub należy wziąć pod uwagę alternatywnych sposobów implementowania funkcji, w wielu przypadkach, Windows Forms zapewnia alternatywnego kodu zarządzanego do Windows Funkcje interfejsu API. Jeśli nie ma innego oznacza, że istnieje i aplikacja muszą uzyskiwać dostęp do kodu niezarządzanego, trzeba będzie podnoszenia uprawnień dla aplikacji.  
   
  Uprawnień do wywoływania niezarządzanego kodu umożliwia aplikacji przeprowadzenie najbardziej niczego. W związku z tym, aby wywoływać kod niezarządzany należy tylko udzielić zezwolenia dla aplikacji, które pochodzą z zaufanego źródła. Alternatywnie w zależności od aplikacji, część funkcjonalności aplikacji, która wywołuje tę funkcję do kodu niezarządzanego może być opcjonalne lub włączonych w środowisku pełnego zaufania tylko. Aby uzyskać więcej informacji na temat niebezpieczne uprawnienia Zobacz [niebezpieczne uprawnienia i administrowanie zasadami](../misc/dangerous-permissions-and-policy-administration.md). Aby uzyskać więcej informacji o uprawnieniach wzrasta, zobacz [ogólne administrowanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   

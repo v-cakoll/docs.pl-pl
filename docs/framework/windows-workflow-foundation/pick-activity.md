@@ -2,19 +2,19 @@
 title: Wybieranie działania
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 7626dda3689f89831d98ad484d7eab62c25def5b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b9ee6c06377760d27bc54d39c1d1f3ecf67ea0d8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717950"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409994"
 ---
 # <a name="pick-activity"></a>Wybieranie działania
 <xref:System.Activities.Statements.Pick> Działania upraszcza modelowania zestawu wyzwalaczy zdarzeń, następuje ich odpowiednie programy obsługi.  A <xref:System.Activities.Statements.Pick> aktywności zawiera zbiór <xref:System.Activities.Statements.PickBranch> działań, gdzie każdy <xref:System.Activities.Statements.PickBranch> jest powiązany między <xref:System.Activities.Statements.PickBranch.Trigger%2A> działania i <xref:System.Activities.Statements.PickBranch.Action%2A> działania.  W czasie wykonywania wyzwalaczy dla wszystkich oddziałów są wykonywane równolegle.  Po zakończeniu jeden wyzwalacz, następnie jest wykonywany swoje działania odpowiednie, a inne wyzwalacze są anulowane.  Zachowanie [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> działanie jest podobne do [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] <xref:System.Workflow.Activities.ListenActivity> działania.  
   
  Poniższy zrzut ekranu z [przy użyciu działania wybierz](./samples/using-the-pick-activity.md) Przykładowy zestaw SDK zawiera działania Pick, za pomocą dwóch gałęzi.  Jedna gałąź ma wyzwalacza o nazwie **odczytu danych wejściowych**, niestandardowe działanie, które odczytuje dane wejściowe z wiersza polecenia. Drugi gałęzi ma <xref:System.Activities.Statements.Delay> działania wyzwalacza. Jeśli **odczytu danych wejściowych** działania odbiera dane przed <xref:System.Activities.Statements.Delay> zakończy działanie <xref:System.Activities.Statements.Delay> opóźnienie zostanie anulowane i powitanie zostanie zapisany do konsoli.  W przeciwnym razie, jeśli **odczytu danych wejściowych** działania nie odbiera danych w wyznaczonym czasie, a następnie zostanie anulowane i komunikat o limicie czasu będą zapisywane w konsoli programu.  Jest to typowy wzorzec używany do zwiększenia limitu czasu żadnych działań.  
   
- ![Pick Activity](./media/pickconceptual.JPG "PickConceptual")  
+ ![Wybieranie działania](./media/pick-activity/pick-activity-two-branches.jpg)  
   
 ## <a name="best-practices"></a>Najlepsze rozwiązania  
  Korzystając z pobrań, gałęzi, który jest wykonywany jest gałęzi, w której wyzwalacz zakończy się najpierw.  Koncepcyjnie wszystkie wyzwalacze są wykonywane równolegle, a jeden wyzwalacz może zostać wykonane większość swojej logiki zanim zostanie anulowane po zakończeniu kolejnego wyzwalacza.  Mając to na uwadze ogólne wytyczne, które należy wykonać podczas używanie działania Pick jest zaliczenie reprezentujący pojedyncze zdarzenie wyzwalacza i zostać umieszczona jako nieco logiki możliwie go.  W idealnym przypadku wyzwalacz powinien zawierać wystarczający logikę w celu odbierania zdarzeń, a przetwarzanie zdarzenia powinny należeć do akcji w gałęzi.  Ta metoda pozwala zmniejszyć nakładania się wykonywanie wyzwalacze.  Na przykład, rozważmy <xref:System.Activities.Statements.Pick> za pomocą dwóch wyzwalaczy, w którym każdy wyzwalacz ma <xref:System.ServiceModel.Activities.Receive> aktywności następuje dodatkowej logiki.  Jeśli dodatkowej logiki wprowadza punkt bezczynności, a następnie jest możliwość zarówno <xref:System.ServiceModel.Activities.Receive> działania pomyślne zakończenie działania.  Jeden wyzwalacz będzie w pełni zakończeniu podczas będzie innego częściowo ukończone.  W niektórych scenariuszach akceptowania wiadomości, a częściowo ukończenie przetwarzania go jest nie do przyjęcia.  W związku z tym korzystając z wbudowanych działań dotyczących komunikatów WF takich jak <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply>, podczas gdy <xref:System.ServiceModel.Activities.Receive> jest powszechnie używana do wyzwalacza <xref:System.ServiceModel.Activities.SendReply> oraz innych logik należy umieścić w akcji, jeśli to możliwe.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268031"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409929"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne oparte na zadanie
 
@@ -236,7 +236,7 @@ Aby uzyskać więcej informacji dotyczących wyjątków i zadań, zobacz [wyjąt
 
 ## <a name="canceling-tasks"></a>Anulowanie zadania
 
-`Task` Klasy obsługuje kooperatywne anulowanie i jest w pełni zintegrowana z <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> i <xref:System.Threading.CancellationToken?displayProperty=nameWithType> klasy, które zostały wprowadzone w programie .NET Framework 4. Wiele konstruktorów w <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> take klasy <xref:System.Threading.CancellationToken> obiekt jako parametr wejściowy. Wiele <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> i <xref:System.Threading.Tasks.Task.Run%2A> przeciążenia również obejmować <xref:System.Threading.CancellationToken> parametru.
+<xref:System.Threading.Tasks.Task> Klasy obsługuje kooperatywne anulowanie i jest w pełni zintegrowana z <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> i <xref:System.Threading.CancellationToken?displayProperty=nameWithType> klasy, które zostały wprowadzone w programie .NET Framework 4. Wiele konstruktorów w <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> take klasy <xref:System.Threading.CancellationToken> obiekt jako parametr wejściowy. Wiele <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> i <xref:System.Threading.Tasks.Task.Run%2A> przeciążenia również obejmować <xref:System.Threading.CancellationToken> parametru.
 
 Możesz utworzyć token i wydawać żądanie anulowania w późniejszym czasie, przy użyciu <xref:System.Threading.CancellationTokenSource> klasy. Przekaż token do <xref:System.Threading.Tasks.Task> jako argument, a także odwołanie do tego samego tokenu w swoim delegacie użytkownika, który wykonuje pracę odpowiadania na żądanie anulowania.
 

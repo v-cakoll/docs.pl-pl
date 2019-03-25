@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła'
+title: 'Porady: Uwierzytelnianie za pomocą nazwy użytkownika i hasła'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 2fb384fe0012b5c0a72e961f027c3db629891e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532295"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412269"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła
 
@@ -21,7 +21,7 @@ W tym temacie pokazano, jak włączyć usługę Windows Communication Foundation
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Aby skonfigurować usługi WCF w celu uwierzytelnienia przy użyciu Windows domena nazwa użytkownika i hasło
   
-1.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.WSHttpBinding>, ustawianie trybu zabezpieczeń wiązania `SecurityMode.Message`ustaw `ClientCredentialType` wiązania `MessageCredentialType.UserName`i Dodaj punkt końcowy usługi za pomocą skonfigurowanego powiązania host usługi, jak pokazano w poniższym kodzie:  
+1.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.WSHttpBinding>, ustawianie trybu zabezpieczeń wiązania <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>ustaw `ClientCredentialType` wiązania <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>i Dodaj punkt końcowy usługi za pomocą skonfigurowanego powiązania host usługi, jak pokazano w poniższym kodzie:  
   
     ```  
     // ...  

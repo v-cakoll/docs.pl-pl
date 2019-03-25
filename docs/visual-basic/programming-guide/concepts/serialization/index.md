@@ -9,7 +9,7 @@ Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można by�
 ## <a name="how-serialization-works"></a>Jak działa serializacji  
  Ta ilustracja przedstawia ogólny proces serializacji.  
   
- ![Grafika przedstawiająca serializację](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "serializacji")  
+![Grafika przedstawiająca serializację](./media/index/serialization-process.gif)
   
  Obiekt jest serializowany do strumienia, niesie ze sobą nie tylko dane, ale informacje o typie obiektu, takie jak jego nazwa wersji, kultury i zestawu. W strumieniu mogą być przechowywane w bazie danych, plików lub ilości pamięci.  
   

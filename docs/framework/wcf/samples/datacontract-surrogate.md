@@ -2,12 +2,12 @@
 title: DataContract — surogat
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 5729943f455d4669f047eb2d86fb7292824c0f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645421"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409838"
 ---
 # <a name="datacontract-surrogate"></a>DataContract — surogat
 Niniejszy przykład pokazuje, jak procesy takie jak serializacji, deserializacji, schemat eksportu i importu schematu można dostosować za pomocą kontraktu danych zastępczych klas. W tym przykładzie pokazano, jak używać zastępczy w ramach scenariusza klienta i serwera, gdzie dane są serializacji i przesyłane między klientem usługi Windows Communication Foundation (WCF) i usługi.  
@@ -64,9 +64,9 @@ public class Person
 }  
 ```  
   
- Można zastosować `DataContract` atrybutu `Person` klasy, ale nie zawsze jest możliwe. Na przykład `Person` klasy można zdefiniować w oddzielnym zestawie, nad którym masz żadnej kontroli.  
+ Można zastosować <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu `Person` klasy, ale nie zawsze jest możliwe. Na przykład `Person` klasy można zdefiniować w oddzielnym zestawie, nad którym masz żadnej kontroli.  
   
- Biorąc pod uwagę to ograniczenie jest jednym ze sposobów, aby serializować `Person` ma zastąpić inną klasę, która jest oznaczona za pomocą klasy `DataContractAttribute` i skopiuj niezbędne dane do nowej klasy. Celem jest zapewnienie `Person` klasy są traktowane jako DataContract do <xref:System.Runtime.Serialization.DataContractSerializer>. Należy pamiętać, że jest jednym ze sposobów serializacji kontrakt danych innych klas.  
+ Biorąc pod uwagę to ograniczenie jest jednym ze sposobów, aby serializować `Person` ma zastąpić inną klasę, która jest oznaczona za pomocą klasy <xref:System.Runtime.Serialization.DataContractAttribute> i skopiuj niezbędne dane do nowej klasy. Celem jest zapewnienie `Person` klasy są traktowane jako DataContract do <xref:System.Runtime.Serialization.DataContractSerializer>. Należy pamiętać, że jest jednym ze sposobów serializacji kontrakt danych innych klas.  
   
  Przykład logicznie zastępuje `Person` klasy z inną klasę o nazwie `PersonSurrogated`.  
   

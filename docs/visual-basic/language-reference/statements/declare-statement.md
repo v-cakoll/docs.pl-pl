@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973174"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411541"
 ---
 # <a name="declare-statement"></a>Declare — Instrukcja
 Deklaruje odwołanie do procedury zaimplementowanej w zewnętrznym pliku.  
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Mechanizm.** Visual Basic używa programu .NET Framework *wywołania platformy* (funkcja PInvoke) mechanizm rozwiązywania i dostęp do zewnętrznej procedury. `Declare` Instrukcji i <xref:System.Runtime.InteropServices.DllImportAttribute> klasy zarówno automatycznie używać tego mechanizmu, a nie potrzebujesz żadnej wiedzy PInvoke. Aby uzyskać więcej informacji, zobacz [instruktażu: Wywoływanie Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Jeśli procedura zewnętrzna działa poza środowisko uruchomieniowe języka wspólnego (CLR), to *kod niezarządzany*. Podczas wywoływania takiej procedury, na przykład funkcji Win32 API lub metodę modelu COM może narazić aplikację na zagrożenia bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [bezpiecznego kodowania wytyczne dla niezarządzanego kodu](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
+>  Jeśli procedura zewnętrzna działa poza środowisko uruchomieniowe języka wspólnego (CLR), to *kod niezarządzany*. Podczas wywoływania takiej procedury, na przykład funkcja interfejsu API Windows lub metodę modelu COM może narazić aplikację na zagrożenia bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [bezpiecznego kodowania wytyczne dla niezarządzanego kodu](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład deklaruje odwołanie zewnętrzne do `Function` procedury, która zwraca bieżącą nazwę użytkownika. Następnie wywołuje zewnętrzną procedurę `GetUserNameA` jako część `getUser` procedury.  

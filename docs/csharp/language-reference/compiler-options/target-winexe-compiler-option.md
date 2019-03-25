@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: affb06c62baa7f53e46e1d66b522e9ce9e74d976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666062"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411966"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target: winexe (opcje kompilatora C#)
 **-Target: winexe** opcja powoduje, że kompilator, aby utworzyć plik wykonywalny (EXE), Windows program.  
@@ -25,7 +25,7 @@ ms.locfileid: "54666062"
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Zostanie utworzony plik wykonywalny z rozszerzeniem .exe. Windows program to taki, który zapewnia interfejs użytkownika z biblioteki .NET Framework lub za pomocą interfejsów API systemu Win32.  
+ Zostanie utworzony plik wykonywalny z rozszerzeniem .exe. Windows program to taki, który zapewnia interfejs użytkownika z biblioteki .NET Framework lub za pomocą interfejsów API Windows.  
   
  Użyj [-target: exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) do tworzenia aplikacji konsolowej.  
   

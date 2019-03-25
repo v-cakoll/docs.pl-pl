@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219571"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412334"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Tworzenie prototypów w kodzie zarządzanym
 W tym temacie opisano, jak dostęp do funkcji niezarządzanych i wprowadza kilka pól atrybutów, które dodawać adnotacje do definicji metody w kodzie zarządzanym. Aby uzyskać przykłady pokazujące, jak utworzyć. Na podstawie NET deklaracje do użycia z platformą wywołania, zobacz [Marshaling danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
@@ -32,47 +32,60 @@ W tym temacie opisano, jak dostęp do funkcji niezarządzanych i wprowadza kilka
  Przed uzyskujesz dostęp do niezarządzanych funkcji DLL z kodu zarządzanego, musisz znać nazwę funkcji i nazwę pliku dll, który eksportuje go. Dzięki tym informacjom można rozpocząć zapisu zarządzanych definicji niezarządzanej funkcji, która jest zaimplementowana w bibliotece DLL. Ponadto, można dopasować sposób wywołania tej platformy tworzy funkcję i kieruje dane do i z funkcji.  
   
 > [!NOTE]
->  Funkcji Win32 API, które alokują ciąg umożliwiają bezpłatne ciągu przy użyciu metody takie jak `LocalFree`. Wywołanie platformy obsługuje takie parametry w inny sposób. Wywołania platformy, należy parametr `IntPtr` wpisz zamiast `String` typu. Użyj metod, które są dostarczane przez <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> klasy w celu konwersji typu do ciągu ręcznie i bezpłatne go ręcznie.  
+>  Funkcje Windows API, które alokują ciąg umożliwiają bezpłatne ciągu przy użyciu metody takie jak `LocalFree`. Wywołanie platformy obsługuje takie parametry w inny sposób. Wywołania platformy, należy parametr `IntPtr` wpisz zamiast `String` typu. Użyj metod, które są dostarczane przez <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> klasy w celu konwersji typu do ciągu ręcznie i bezpłatne go ręcznie.  
   
 ## <a name="declaration-basics"></a>Podstawowe informacje dotyczące deklaracji  
  Definicje zarządzanych z funkcjami niezarządzanymi są zależne od języka, jak pokazano w poniższych przykładach. Bardziej kompletny przykłady kodu, zobacz [przykłady wywoływania platformy](platform-invoke-examples.md).  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
  Aby zastosować <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>, lub <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> polom [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] deklaracji, należy użyć <xref:System.Runtime.InteropServices.DllImportAttribute> atrybutu zamiast `Declare` instrukcji.  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
-   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-   End Function  
-End Class  
-```  
+```vb
+Imports System
+Imports System.Runtime.InteropServices
+
+Friend Class WindowsAPI
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Friend Shared Function MessageBox(
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+    End Function
+End Class
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-[DllImport("user32.dll")]  
-    public static extern IntPtr MessageBox(int hWnd, String text,   
-                                       String caption, uint type);  
-```  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-```cpp  
-using namespace System::Runtime::InteropServices;  
-[DllImport("user32.dll")]  
-    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
-    String* pCaption unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[DllImport("user32.dll")]
+extern "C" int MessageBox(
+    IntPtr hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="adjusting-the-definition"></a>Dostosowywanie definicji  
  Czy zostaną ustawione jawnie lub nie, atrybutu pola znajdują się na pracy definiująca zachowanie kodu zarządzanego. Wywołanie platformy działa zgodnie z wartościami domyślnymi nastavit różnych pól, które istnieją jako metadane w zestawie. To zachowanie domyślne można zmodyfikować, dopasowując wartości co najmniej jednego pola. W wielu przypadkach użycia <xref:System.Runtime.InteropServices.DllImportAttribute> można ustawić wartości.  

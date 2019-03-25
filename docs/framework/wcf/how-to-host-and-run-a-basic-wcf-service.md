@@ -1,6 +1,6 @@
 ---
-title: Jak hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
-ms.date: 09/14/2018
+title: 'Samouczek: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation'
+ms.date: 03/19/2019
 dev_langs:
 - csharp
 - vb
@@ -8,406 +8,233 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 73633c2c6119204f2fb608b32ae794a2e07b27d0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747077"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410098"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Jak hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
+# <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Samouczek: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
 
-Jest to trzecia sześciu zadań podrzędnych, wymagane do utworzenia aplikacji Windows Communication Foundation (WCF). Omówienie wszystkich sześciu zadań, zobacz [Samouczek wprowadzający](getting-started-tutorial.md) tematu.
+W tym samouczku opisano trzeci pięć zadania wymagane do utworzenia podstawowej aplikacji Windows Communication Foundation (WCF). Aby zapoznać się z omówieniem samouczków, zobacz [samouczka: Rozpoczynanie pracy z aplikacjami Windows Communication Foundation](getting-started-tutorial.md).
 
-W tym temacie opisano, jak hostować usługi Windows Communication Foundation (WCF) w aplikacji konsoli. Ta procedura obejmuje następujące kroki:
+Następne zadanie do tworzenia aplikacji WCF jest hostowanie usługi WCF w aplikacji konsoli. Usługa WCF ujawnia co najmniej jeden *punktów końcowych*, z których każdy ujawnia co najmniej jednej operacji usługi. Punkt końcowy usługi określa następujące informacje: 
+- Adres, gdzie można znaleźć usługi.
+- Wiązanie, który zawiera informacje opisujące, jak klientowi komunikowanie się z usługą. 
+- Kontrakt definiujący funkcje, które usługa zapewnia swoim klientom.
 
-- Utwórz projekt aplikacji konsoli do obsługi usługi.
+Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+> [!div class="checklist"]
+> - Utwórz i skonfiguruj projekt aplikacji konsoli do hostowania usługi WCF.
+> - Dodaj kod do obsługi usługi WCF.
+> - Należy zaktualizować plik konfiguracji.
+> - Uruchom usługę WCF i weryfikować ją jest uruchomiona.
 
-- Utwórz hosta usługi dla usługi.
 
-- Włącz wymiany metadanych.
+## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>Tworzenie i konfigurowanie projektu aplikacji konsoli w do hostowania usługi
 
-- Otworzyć hosta usługi.
+1. Utwórz projekt aplikacji konsoli w programie Visual Studio: 
+ 
+    1. Z **pliku** menu, wybierz opcję **Otwórz** > **projekt/rozwiązanie** i przejdź do **GettingStarted** rozwiązania możesz wcześniej utworzony (*GettingStarted.sln*). Wybierz pozycję **Otwórz**.
 
-Pełną listę kod napisany w ramach tego zadania jest dostępna w przykładzie zamieszczonym po procedurze.
+    2. Z **widoku** menu, wybierz opcję **Eksploratora rozwiązań**.
+    
+    3. W **Eksploratora rozwiązań** wybierz **GettingStarted** rozwiązania (najwyższy węzeł), a następnie wybierz **Dodaj** > **nowy projekt** z menu skrótów. 
 
-## <a name="create-a-new-console-application-to-host-the-service"></a>Utwórz nową aplikację konsoli do obsługi usługi
+    4. W **Dodaj nowy projekt** oknie po lewej stronie wybierz **pulpitu Windows** kategorię w obszarze **Visual C#**  lub **języka Visual Basic**. 
 
-1. Utwórz nowy projekt aplikacji konsoli w programie Visual Studio, klikając prawym przyciskiem myszy na wprowadzenie do rozwiązań i wybierając **Dodaj** > **nowy projekt**. W **Dodaj nowy projekt** okna dialogowego po lewej stronie wybierz **pulpitu Windows** kategorię w obszarze **Visual C#** lub **języka Visual Basic**. Wybierz **Aplikacja konsoli (.NET Framework)** szablonu, a następnie nazwę projektu **GettingStartedHost**.
+    5. Wybierz **Aplikacja konsoli (.NET Framework)** szablonu, a następnie wprowadź *GettingStartedHost* dla **nazwa**. Kliknij przycisk **OK**.
 
-2. Dodaj odwołanie do projektu GettingStartedLib do projektu GettingStartedHost. Kliknij prawym przyciskiem myszy **odwołania** folderu w projekcie GettingStartedHost w **Eksploratora rozwiązań**, a następnie wybierz pozycję **Dodaj odwołanie**. W **Dodaj odwołanie** okno dialogowe, wybierz opcję **rozwiązania** w lewej części okna dialogowego Wybierz GettingStartedLib w górnej części okna dialogowego, a następnie wybierz **Dodaj**. To sprawia, że typy zdefiniowane w GettingStartedLib GettingStartedHost projektowi.
+2. Dodaj odwołanie w **GettingStartedHost** projekt **GettingStartedLib** projektu: 
 
-3. Dodaj odwołanie do System.ServiceModel do projektu GettingStartedHost. Kliknij prawym przyciskiem myszy **odwołania** folderu w projekcie GettingStartedHost w **Eksploratora rozwiązań** i wybierz **Dodaj odwołanie**. W **Dodaj odwołanie** okno dialogowe, wybierz opcję **Framework** po lewej stronie okna dialogowego, w obszarze **zestawy**. Znajdź i zaznacz **System.ServiceModel**, a następnie wybierz **OK**. Zapisz rozwiązanie, wybierając **pliku** > **Zapisz wszystko**.
+    1. W **Eksploratora rozwiązań** wybierz **odwołania** folderze **GettingStartedHost** projektu, a następnie wybierz **Dodaj odwołanie** z menu skrótów. 
 
-## <a name="host-the-service"></a>Host usługi
+    2. W **Dodaj odwołanie** okna dialogowego, w obszarze **projektów** w lewej części okna wybierz **rozwiązania**. 
+ 
+    3. Wybierz **GettingStartedLib** w Centrum części okna, a następnie wybierz pozycję **OK**. 
 
-Otwórz plik Program.cs lub Module.vb i wprowadź następujący kod:
+       Ta akcja powoduje, że typy zdefiniowane w **GettingStartedLib** dostępnych do projektu **GettingStartedHost** projektu.
 
-```csharp
-using System;
-using System.ServiceModel;
-using System.ServiceModel.Description;
-using GettingStartedLib;
+3. Dodaj odwołanie w **GettingStartedHost** projekt <xref:System.ServiceModel> zestawu: 
 
-namespace GettingStartedHost
-{
-    class Program
+    1. W **Eksploratora rozwiązań** wybierz **odwołania** folderze **GettingStartedHost** projektu, a następnie wybierz **Dodaj odwołanie** z menu skrótów.
+    
+    2. W **Dodaj odwołanie** okna, w obszarze **zestawy** w lewej części okna wybierz **Framework**. 
+
+    3. Wybierz **System.ServiceModel**, a następnie wybierz pozycję **OK**. 
+    
+    4. Zapisz rozwiązanie, wybierając **pliku** > **Zapisz wszystko**.
+
+## <a name="add-code-to-host-the-service"></a>Dodaj kod do obsługi usługi
+
+Do obsługi usługi, możesz dodać kod, aby wykonać poniższe kroki: 
+   1. Utwórz identyfikator URI dla adresu podstawowego.
+   2. Utwórz wystąpienie klasy do obsługi usługi.
+   3. Tworzenie punktu końcowego usługi.
+   4. Włącz wymiany metadanych.
+   5. Otwórz hosta usługi do nasłuchiwania pod kątem przychodzących wiadomości.
+  
+Wprowadź następujące zmiany w kodzie:
+
+1. Otwórz **Program.cs** lub **Module1.vb** w pliku **GettingStartedHost** projektu i zastąp jego kod poniższym kodem:
+
+    ```csharp
+    using System;
+    using System.ServiceModel;
+    using System.ServiceModel.Description;
+    using GettingStartedLib;
+
+    namespace GettingStartedHost
     {
-        static void Main(string[] args)
+        class Program
         {
-            // Step 1 Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
-
-            // Step 2 Create a ServiceHost instance
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
-
-            try
+            static void Main(string[] args)
             {
-                // Step 3 Add a service endpoint.
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
+                // Step 1: Create a URI to serve as the base address.
+                Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
 
-                // Step 4 Enable metadata exchange.
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-                smb.HttpGetEnabled = true;
-                selfHost.Description.Behaviors.Add(smb);
+                // Step 2: Create a ServiceHost instance.
+                ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
 
-                // Step 5 Start the service.
-                selfHost.Open();
-                Console.WriteLine("The service is ready.");
-                Console.WriteLine("Press <ENTER> to terminate service.");
-                Console.WriteLine();
-                Console.ReadLine();
+                try
+                {
+                    // Step 3: Add a service endpoint.
+                    selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
 
-                // Close the ServiceHostBase to shutdown the service.
-                selfHost.Close();
-            }
-            catch (CommunicationException ce)
-            {
-                Console.WriteLine("An exception occurred: {0}", ce.Message);
-                selfHost.Abort();
+                    // Step 4: Enable metadata exchange.
+                    ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+                    smb.HttpGetEnabled = true;
+                    selfHost.Description.Behaviors.Add(smb)    ;
+
+                    // Step 5: Start the service.
+                    selfHost.Open();
+                    Console.WriteLine("The service is ready.");
+
+                    // Close the ServiceHost to stop the service.
+                    Console.WriteLine("Press <Enter> to terminate the service.");
+                    Console.WriteLine();
+                    Console.ReadLine();
+                    selfHost.Close();
+                }
+                catch (CommunicationException ce)
+                {
+                    Console.WriteLine("An exception occurred: {0}", ce.Message);
+                    selfHost.Abort();
+                }
             }
         }
     }
-}
-```
+    ```
 
-```vb
-Imports System.ServiceModel
-Imports System.ServiceModel.Description
-Imports GettingStartedLibVB.GettingStartedLib
+    ```vb
+    Imports System.ServiceModel
+    Imports System.ServiceModel.Description
+    Imports GettingStartedLib.GettingStartedLib
 
-Module Service
+    Module Service
 
-    Class Program
-        Shared Sub Main()
-            ' Step 1 Create a URI to serve as the base address
-            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted")
+        Class Program
+            Shared Sub Main()
+                ' Step 1: Create a URI to serve as the base address.
+                Dim baseAddress As New Uri("http://localhost:8000/GettingStarted/")
 
-            ' Step 2 Create a ServiceHost instance
-            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
-           Try
+                ' Step 2: Create a ServiceHost instance.
+                Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
+               Try
 
-                ' Step 3 Add a service endpoint
-                ' Add a service endpoint
-                selfHost.AddServiceEndpoint( _
-                    GetType(ICalculator), _
-                    New WSHttpBinding(), _
-                    "CalculatorService")
+                    ' Step 3: Add a service endpoint.
+                    selfHost.AddServiceEndpoint( _
+                        GetType(ICalculator), _
+                        New WSHttpBinding(), _
+                        "CalculatorService")
 
-                ' Step 4 Enable metadata exchange.
-                Dim smb As New ServiceMetadataBehavior()
-                smb.HttpGetEnabled = True
-                selfHost.Description.Behaviors.Add(smb)
+                    ' Step 4: Enable metadata exchange.
+                    Dim smb As New ServiceMetadataBehavior()
+                    smb.HttpGetEnabled = True
+                    selfHost.Description.Behaviors.Add(smb)
 
-                ' Step 5 Start the service
-                selfHost.Open()
-                Console.WriteLine("The service is ready.")
-                Console.WriteLine("Press <ENTER> to terminate service.")
-                Console.WriteLine()
-                Console.ReadLine()
+                    ' Step 5: Start the service.
+                    selfHost.Open()
+                    Console.WriteLine("The service is ready.")
 
-                ' Close the ServiceHostBase to shutdown the service.
-                selfHost.Close()
-            Catch ce As CommunicationException
-                Console.WriteLine("An exception occurred: {0}", ce.Message)
-                selfHost.Abort()
-            End Try
-        End Sub
-    End Class
+                    ' Close the ServiceHost to stop the service.
+                    Console.WriteLine("Press <Enter> to terminate the service.")
+                    Console.WriteLine()
+                    Console.ReadLine()
+                    selfHost.Close()
 
-End Module
-```
+                Catch ce As CommunicationException
+                    Console.WriteLine("An exception occurred: {0}", ce.Message)
+                    selfHost.Abort()
+                End Try
+            End Sub
+        End Class
 
-**Krok 1** — tworzy wystąpienie klasy Uri do przechowywania adres podstawowy usługi. Usługi są identyfikowane przez adres URL, który zawiera adres podstawowy i opcjonalnie identyfikatora URI. Adres podstawowy jest sformatowany w następujący sposób: [transportu] :// [nazwa komputera lub domeny] [: opcjonalne # portu] / [opcjonalne segmentem identyfikatora URI] adres podstawowy usługi Kalkulator używa protokołu HTTP, localhost, port 8000 i identyfikator URI segmentu "GettingStarted"
+    End Module
+    ```
+    
+    Aby uzyskać informacje o tym, jak działa ten kod, zobacz [usług obsługującego program kroki](#service-hosting-program-steps).
 
-**Krok 2** — tworzy wystąpienie <xref:System.ServiceModel.ServiceHost> klasy do obsługi usługi. Konstruktor przyjmuje dwa parametry typu klasy, który implementuje ten kontrakt usługi i podstawowego adresu usługi.
 
-**Krok 3** — tworzy <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia. Punkt końcowy usługi składa się z adresu, powiązanie i kontraktu usługi. <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor przyjmuje w związku z tym typem interfejsu kontraktu usługi, powiązanie i adres. Umowa serwisowa jest `ICalculator`, zdefiniowane przez użytkownika, która implementuje typu usługi. Wiązanie używane w tym przykładzie jest <xref:System.ServiceModel.WSHttpBinding> czyli wbudowane powiązania, które służy do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](bindings-overview.md). Adres jest dołączany do podstawowego adresu do identyfikowania punktu końcowego. Adres podany w tym kodzie jest "CalculatorService", dlatego jest w pełni kwalifikowany adres punktu końcowego `"http://localhost:8000/GettingStarted/CalculatorService"`.
+2. Zaktualizuj właściwości projektu:
 
-> [!IMPORTANT]
-> Dodawanie punktu końcowego usługi jest opcjonalny podczas korzystania z programu .NET Framework 4 lub nowszej. W tych wersjach Jeśli punkty końcowe nie są dodawane w kodzie lub konfiguracji usługi WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontrakt implementowane przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](specifying-an-endpoint-address.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](simplified-configuration.md) i [uproszczona konfiguracja usług WCF](./samples/simplified-configuration-for-wcf-services.md).
+   1. W **Eksploratora rozwiązań** wybierz **GettingStartedHost** folder, a następnie wybierz **właściwości** z menu skrótów.
 
-**Krok 4** — Włączanie wymiany metadanych. Klienci będą używać wymiany metadanych do Generowanie serwerów proxy, które będą używane do wywoływania operacji usługi. Umożliwia tworzenie wymiany metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia, należy ustawić go w <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwości `true`i dodać zachowanie, aby <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> zbiór <xref:System.ServiceModel.ServiceHost> wystąpienia.
+   2. Na **GettingStartedHost** strony właściwości, zaznacz **aplikacji** karty:
 
-**Krok 5** — Otwórz <xref:System.ServiceModel.ServiceHost> do nasłuchiwania pod kątem przychodzących wiadomości. Zauważ, że kod oczekuje na użytkownika trafić wprowadzić. Jeśli nie tego zrobić, aplikacja zostanie natychmiast zamknięta i usługa zostanie zamknięta. Zwróć również uwagę bloku try/catch używane. Po <xref:System.ServiceModel.ServiceHost> został uruchomiony, inny kod znajduje się w bloku try/catch. Aby uzyskać więcej informacji na temat bezpiecznego przechwytywanie wyjątków zgłaszanych przez <xref:System.ServiceModel.ServiceHost>, zobacz [Użyj Zamknij i Abort, aby zwolnić zasoby klienta WCF](samples/use-close-abort-release-wcf-client-resources.md)
+      - Aby uzyskać C# projektów, wybierz opcję **GettingStartedHost.Program** z **obiekt początkowy** listy.
 
-> [!IMPORTANT]
-> Po dodaniu biblioteki usługi WCF, Visual Studio może obsługiwać go dla Ciebie podczas debugowania przez uruchomienie hosta usługi. Aby uniknąć konfliktów tę opcję można wyłączyć. 
-> 1. Otwórz właściwości projektu dla GettingStartedLib.
-> 2. Przejdź do **opcje WCF** i usuń zaznaczenie pola wyboru **Start podczas debugowania Host usługi WCF**.
+      - Dla projektów języka Visual Basic, wybierz **Service.Program** z **obiekt początkowy** listy.
+
+   3. Z **pliku** menu, wybierz opcję **Zapisz wszystko**.
+
 
 ## <a name="verify-the-service-is-working"></a>Sprawdź, czy usługa działa
 
-1. Uruchom konsolę GettingStartedHost aplikacji z poziomu programu Visual Studio.
+1. Skompiluj rozwiązanie, a następnie uruchom **GettingStartedHost** konsoli aplikacji z poziomu programu Visual Studio. 
 
-   Usługa musi być uruchamiane z uprawnieniami administratora. Ponieważ program Visual Studio została otwarta z uprawnieniami administratora, GettingStartedHost również jest uruchamiane z uprawnieniami administratora. Możesz również otworzyć nowego przy użyciu wiersza polecenia **Uruchom jako administrator** i uruchom service.exe znajdujący się w nim.
+    Usługa musi być uruchamiane z uprawnieniami administratora. Ponieważ otwarty program Visual Studio z uprawnieniami administratora, po uruchomieniu **GettingStartedHost** w programie Visual Studio z uprawnieniami administratora oraz uruchomieniu aplikacji. Alternatywnie, można otworzyć wiersz polecenia jako administrator (wybierz **więcej** > **Uruchom jako administrator** z menu skrótów) i uruchom **GettingStartedHost.exe**  znajdujący się w nim.
 
-2. Otwórz przeglądarkę internetową i przejdź do strony debugowania usługi na `http://localhost:8000/GettingStarted/`. **Uwaga! Końcowy ukośnik jest znaczący.**
+2. Otwórz przeglądarkę internetową i przejdź do strony usługi na `http://localhost:8000/GettingStarted/CalculatorService`.
+   
+   > [!NOTE]
+   > Usługi, takie jak tego wymaga odpowiednie uprawnienia, aby zarejestrować adresy HTTP na komputerze w celu nasłuchiwania. Administrator konta mają to uprawnienie, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. Aby uzyskać więcej informacji o sposobie konfigurowania rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](feature-details/configuring-http-and-https.md). 
 
-## <a name="example"></a>Przykład
 
-Poniższy przykład zawiera kontrakt usługi i implementację z poprzednich kroków samouczka i hostuje usługę w aplikacji konsoli.
+## <a name="service-hosting-program-steps"></a>Usługa hostingu programu kroki
 
-Aby skompilować to za pomocą kompilatora wiersza polecenia, należy skompilować do biblioteki klas, który odwołuje się do IService1.cs i Service1.cs `System.ServiceModel.dll`. Kompiluj plik Program.cs jako aplikację konsolową w języku.
+Kroki opisane w kod, który został dodany do hosta usługi są opisane na następujący:
 
-```csharp
-using System;
-using System.ServiceModel;
+- **Krok 1**: Utwórz wystąpienie obiektu `Uri` klasy utrzymującej adres podstawowy usługi. Adres URL, który zawiera adres podstawowy ma opcjonalny identyfikator URI, który identyfikuje usługę. Adres podstawowy jest sformatowany w następujący sposób: `<transport>://<machine-name or domain><:optional port #>/<optional URI segment>`. Adres podstawowy usługi Kalkulator korzysta z protokołu HTTP "," localhost "," port 8000 "i" segmentem identyfikatora URI, GettingStarted.
 
-namespace GettingStartedLib
-{
-        [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
-        public interface ICalculator
-        {
-            [OperationContract]
-            double Add(double n1, double n2);
-            [OperationContract]
-            double Subtract(double n1, double n2);
-            [OperationContract]
-            double Multiply(double n1, double n2);
-            [OperationContract]
-            double Divide(double n1, double n2);
-        }
-}
-```
+- **Krok 2**: Utwórz wystąpienie obiektu <xref:System.ServiceModel.ServiceHost> klasy, których używasz do obsługi usługi. Konstruktor przyjmuje dwa parametry: typ klasy, która implementuje kontrakt usługi i podstawowego adresu usługi.
 
-```csharp
-using System;
-using System.ServiceModel;
+- **Krok 3**: Utwórz <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienia. Punkt końcowy usługi składa się z adresu, powiązanie i kontraktu usługi. <xref:System.ServiceModel.Description.ServiceEndpoint> Konstruktor składa się z typu interfejsu kontraktu usługi, powiązanie i adres. Umowa serwisowa jest `ICalculator`, zdefiniowane przez użytkownika, która implementuje typu usługi. Powiązanie dla tego przykładu jest <xref:System.ServiceModel.WSHttpBinding>, która jest wbudowana powiązania i nawiązanie połączenia z punktami końcowymi, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](bindings-overview.md). Można dołączyć adres na adres bazowy do identyfikowania punktu końcowego. Kod określa adres CalculatorService oraz adres FQDN dla punktu końcowego jako `http://localhost:8000/GettingStarted/CalculatorService`.
 
-namespace GettingStartedLib
-{
-    public class CalculatorService : ICalculator
-    {
-        public double Add(double n1, double n2)
-        {
-            double result = n1 + n2;
-            Console.WriteLine("Received Add({0},{1})", n1, n2);
-            // Code added to write output to the console window.
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
+    > [!IMPORTANT]
+    > Dla programu .NET Framework w wersji 4 i nowszych dodanie punktu końcowego usługi jest opcjonalne. Dla tych wersji Jeśli nie dodasz kodu lub konfiguracji usługi WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontrakt implementowane przez usługę. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [Określanie adresu punktu końcowego](specifying-an-endpoint-address.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [konfiguracji uproszczony](simplified-configuration.md) i [uproszczony Konfiguracja usług WCF](samples/simplified-configuration-for-wcf-services.md).
 
-        public double Subtract(double n1, double n2)
-        {
-            double result = n1 - n2;
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
+- **Krok 4**: Włącz wymiany metadanych. Klienci używają wymiany metadanych do Generowanie serwerów proxy do wywoływania operacji usługi. Aby włączyć wymiany metadanych, Utwórz <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia, ustaw jego <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled> właściwości `true`i Dodaj `ServiceMetadataBehavior` obiekt <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> zbiór <xref:System.ServiceModel.ServiceHost> wystąpienia.
 
-        public double Multiply(double n1, double n2)
-        {
-            double result = n1 * n2;
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
+- **Krok 5**: Otwórz <xref:System.ServiceModel.ServiceHost> do nasłuchiwania pod kątem przychodzących wiadomości. Aplikacja oczekuje na naciśnij **Enter**. Po tworzy wystąpienie aplikacji <xref:System.ServiceModel.ServiceHost>, wykonuje bloku try/catch. Aby uzyskać więcej informacji na temat bezpiecznego przechwytywanie wyjątków zgłaszanych przez <xref:System.ServiceModel.ServiceHost>, zobacz [Użyj Zamknij i Abort, aby zwolnić zasoby klienta WCF](samples/use-close-abort-release-wcf-client-resources.md).
 
-        public double Divide(double n1, double n2)
-        {
-            double result = n1 / n2;
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-    }
-}
-```
+> [!IMPORTANT]
+> Po dodaniu biblioteki usługi WCF, Visual Studio umieszcza dla Ciebie Jeśli debugujesz przez uruchomienie hosta usługi. Aby uniknąć konfliktów, można zapobiec programu Visual Studio hostowanie biblioteki usługi WCF. 
+> 1. Wybierz **GettingStartedLib** projektu w **Eksploratora rozwiązań** i wybierz polecenie **właściwości** z menu skrótów.
+> 2. Wybierz **opcje WCF** i usuń zaznaczenie pola wyboru **Start podczas debugowania innego projektu w tym samym rozwiązaniu Host usługi WCF**.
 
-```csharp
-using System;
-using System.ServiceModel;
-using System.ServiceModel.Description;
-using GettingStartedLib;
-
-namespace GettingStartedHost
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
-
-            // Step 2 of the hosting procedure: Create ServiceHost
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
-
-            try
-            {
-                // Step 3 of the hosting procedure: Add a service endpoint.
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
-
-                // Step 4 of the hosting procedure: Enable metadata exchange.
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
-                smb.HttpGetEnabled = true;
-                selfHost.Description.Behaviors.Add(smb);
-
-                // Step 5 of the hosting procedure: Start (and then stop) the service.
-                selfHost.Open();
-                Console.WriteLine("The service is ready.");
-                Console.WriteLine("Press <ENTER> to terminate service.");
-                Console.WriteLine();
-                Console.ReadLine();
-
-                // Close the ServiceHostBase to shutdown the service.
-                selfHost.Close();
-            }
-            catch (CommunicationException ce)
-            {
-                Console.WriteLine("An exception occurred: {0}", ce.Message);
-                selfHost.Abort();
-            }
-        }
-    }
-}
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
-    Public Interface ICalculator
-
-        <OperationContract()> _
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
-    End Interface
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    Public Class CalculatorService
-        Implements ICalculator
-
-        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
-            Dim result As Double = n1 + n2
-            ' Code added to write output to the console window.
-            Console.WriteLine("Received Add({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-        End Function
-
-        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
-            Dim result As Double = n1 - n2
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
-            Dim result As Double = n1 * n2
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
-            Dim result As Double = n1 / n2
-            Console.WriteLine("Received Divide({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-    End Class
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-Imports System.ServiceModel.Description
-Imports GettingStartedLibVB.GettingStartedLib
-
-Module Service
-
-    Class Program
-        Shared Sub Main()
-            ' Step 1 of the address configuration procedure: Create a URI to serve as the base address.
-            Dim baseAddress As New Uri("http://localhost:8000/GettingStarted/")
-
-            ' Step 2 of the hosting procedure: Create ServiceHost
-            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
-            Try
-
-                ' Step 3 of the hosting procedure: Add a service endpoint.
-                ' Add a service endpoint
-                selfHost.AddServiceEndpoint( _
-                    GetType(ICalculator), _
-                    New WSHttpBinding(), _
-                    "CalculatorService")
-
-                ' Step 4 of the hosting procedure: Enable metadata exchange.
-                ' Enable metadata exchange
-                Dim smb As New ServiceMetadataBehavior()
-                smb.HttpGetEnabled = True
-                selfHost.Description.Behaviors.Add(smb)
-
-                ' Step 5 of the hosting procedure: Start (and then stop) the service.
-                selfHost.Open()
-                Console.WriteLine("The service is ready.")
-                Console.WriteLine("Press <ENTER> to terminate service.")
-                Console.WriteLine()
-                Console.ReadLine()
-
-                ' Close the ServiceHostBase to shutdown the service.
-                selfHost.Close()
-            Catch ce As CommunicationException
-                Console.WriteLine("An exception occurred: {0}", ce.Message)
-                selfHost.Abort()
-            End Try
-        End Sub
-    End Class
-
-End Module
-```
-
-> [!NOTE]
-> Usługi, takie jak tego wymaga uprawnienia do rejestrowania adresy HTTP na komputerze w celu nasłuchiwania. Administrator konta mają to uprawnienie, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. Aby uzyskać więcej informacji o sposobie konfigurowania rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](feature-details/configuring-http-and-https.md). Podczas uruchamiania w programie Visual Studio, service.exe muszą być uruchomione z uprawnieniami administratora.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Teraz usługa jest uruchomiona. Następne zadanie tworzenia klienta programu WCF.
+W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
+> [!div class="checklist"]
+> - Utwórz i skonfiguruj projekt aplikacji konsoli do hostowania usługi WCF.
+> - Dodaj kod do obsługi usługi WCF.
+> - Należy zaktualizować plik konfiguracji.
+> - Uruchom usługę WCF i weryfikować ją jest uruchomiona.
+
+Przejdź do następnego samouczka, aby dowiedzieć się, jak można utworzyć klienta WCF.
 
 > [!div class="nextstepaction"]
-> [Instrukcje: Utworzenie klienta WCF](how-to-create-a-wcf-client.md)
-
-Aby uzyskać informacje dotyczące rozwiązywania problemów, zobacz [Rozwiązywanie problemów z samouczka Wprowadzenie](troubleshooting-the-getting-started-tutorial.md).
-
-## <a name="see-also"></a>Zobacz także
-
-- [Wprowadzenie](samples/getting-started-sample.md)
-- [Host samodzielny](samples/self-host.md)
-- [Usługi hostingowe](hosting-services.md)
+> [Samouczek: Utworzenie klienta WCF](how-to-create-a-wcf-client.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049729"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412347"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
 <a name="introduction"></a> W tabelach, w tym artykule przedstawiono typy, które są przestarzałe w programie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]zorganizowanym przez zestaw. Poniższe łącza umożliwiają wyświetlenie listy przestarzałych typów i zalecanych rozwiązań alternatywnych, w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementów członkowskich również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](obsolete-members.md).
@@ -205,7 +205,7 @@ ms.locfileid: "58049729"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|Ten interfejs jest przestarzała. Dodaj <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> do obsługi typu <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> zamiast tego.|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|Użyj <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> zamiast tego chcesz pracować z nowym modelem ustawienia.|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Ten atrybut jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>. Na przykład, aby określić projektanta głównego obiektu CodeDom, użyj `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`.|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|Ten atrybut jest przestarzała. Zamiast nich należy używać słów kluczowych <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>.|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|Ta klasa jest przestarzała.|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|Ta klasa jest przestarzała. Używanie liczników wydajności za pośrednictwem <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> klasy zamiast tego.|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Ta klasa jest przestarzała. Użyj <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> zamiast niego dostęp i ustawanie globalnego domyślny serwer proxy. Użyj "null" zamiast <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|

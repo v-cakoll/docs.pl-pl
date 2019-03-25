@@ -2,12 +2,12 @@
 title: Zestaw jednostek
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 3cd212c0bf5eefb73a87aa01c9403d6f2304d506
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d75002d4a5ac55538f76e6bace0fc16095a9ef74
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557123"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412191"
 ---
 # <a name="entity-set"></a>Zestaw jednostek
 *Zestaw jednostek* to kontener logiczny dla wystąpień [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) i wystąpień dowolnego typu opracowane z tego typu jednostki. (Aby uzyskać informacji na temat typów pochodnych, zobacz [modelu danych jednostki: Dziedziczenie](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Relacja między typem encji i zestaw jednostek jest analogiczna do relację wiersz tabeli w relacyjnej bazie danych: Np. wiersz typ jednostki opisujący strukturę danych i jak tabela, zestaw jednostek zawiera wystąpień danego struktury. Zestaw jednostek nie jest konstrukcja; modelowania danych nie opisano w strukturze danych. Zamiast tego zestaw jednostek zapewnia konstrukcję w środowisku hostingu lub magazynu (np. środowisko uruchomieniowe języka wspólnego lub bazą danych programu SQL Server) do wystąpienia typu jednostki grupy, dzięki czemu mogą być mapowane do magazynu danych.  
@@ -30,11 +30,11 @@ ms.locfileid: "54557123"
 ## <a name="example"></a>Przykład  
  Poniższy diagram przedstawia modelu koncepcyjnego z trzech typów jednostek: `Book`, `Publisher`, i `Author`.  
   
- ![Przykładowy Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Przykładowy model przy użyciu trzech typów jednostek](./media/entity-set/example-model-three-entity-types.gif)  
   
  Na poniższym diagramie przedstawiono dwa zestawy jednostek (`Books` i `Publishers`) i powiązanie zestawu (`PublishedBy`) oparte na modelu koncepcyjnego przedstawionych powyżej. Analizy biznesowej w `Books` zestaw jednostek reprezentuje wystąpienie `Book` typu jednostki w czasie wykonywania. Podobnie, reprezentują Pj `Publisher` wystąpienia w `Publishers` zestawu jednostek. BiPj reprezentuje wystąpienie `PublishedBy` skojarzenia w `PublishedBy` zestaw skojarzeń.  
   
- ![Ustawia przykład](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![Zrzut ekranu przedstawia przykład zestawów.](./media/entity-set/sets-example-association.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Następujące CSDL definiuje kontener jednostek o jeden zestaw jednostek dla każdego typu jednostki w modelu koncepcyjnym przedstawionych powyżej. Należy pamiętać, że typ nazwy i jednostki, dla każdego zestawu jednostek są definiowane przy użyciu atrybutów XML.  
   

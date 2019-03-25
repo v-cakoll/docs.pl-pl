@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363088"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411437"
 ---
 # <a name="security-considerations-for-data"></a>Zagadnienia związane z zabezpieczeniami danych
 
@@ -276,7 +276,7 @@ Można uniknąć tej sytuacji jest pamiętać o następujących kwestiach:
 
 - Powinien zachować ostrożność przy użyciu starszych typach oznaczone elementem <xref:System.SerializableAttribute> atrybutu. Wiele z nich zostały zaprojektowane do pracy z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] remoting do użytku z tylko zaufane dane. Istniejące typy oznaczone przy użyciu tego atrybutu może nie jest przeznaczony stanu bezpieczeństwa na uwadze.
 
-- Nie należy polegać na <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość `DataMemberAttribute` atrybutu, aby zagwarantować obecności danych w zakresie dotyczącym bezpieczeństwa stanu jest. Dane można zawsze być `null`, `zero`, lub `invalid`.
+- Nie należy polegać na <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu, aby zagwarantować obecności danych w zakresie dotyczącym bezpieczeństwa stanu jest. Dane można zawsze być `null`, `zero`, lub `invalid`.
 
 - Nigdy nie zaufanie wykresu obiektu deserializacji ze źródła danych w niezaufanych bez najpierw sprawdzania poprawności. Poszczególnych obiektów może być w stanie spójności, ale wykresu obiektu jako całości może nie być. Ponadto nawet po wyłączeniu trybu konserwacji wykresu obiektu wykresu po deserializacji może mieć wiele odwołań do tego samego obiektu lub masz odwołania cykliczne. Aby uzyskać więcej informacji, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
@@ -312,33 +312,33 @@ Należy zwrócić uwagę następujące kwestie dotyczące zagrożeń związanych
 
 - Jeśli zezwolisz na dostęp częściowo zaufany kod, aby Twoje <xref:System.Runtime.Serialization.DataContractSerializer> wystąpienia lub w inny sposób kontroluje [surogaty kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md), może on wykonywać dużą kontrolę nad procesem serializacji/deserializacji. Na przykład go mogą wprowadzać dowolne typy, doprowadzić do ujawnienia informacji, manipulowanie wynikowy wykres obiektu lub serializowane dane lub przepełnienie wynikowe serializowanym strumieniu. Odpowiednik <xref:System.Runtime.Serialization.NetDataContractSerializer> zagrożeń zostało opisane w sekcji "Przy użyciu NetDataContractSerializer Securely".
 
-- Jeśli <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do typu (lub typ jest oznaczony jako `[Serializable]` , ale nie jest `ISerializable`), Deserializator można utworzyć wystąpienie takiego typu, nawet jeśli wszystkie konstruktory niepubliczne lub chronione przez żądania.
+- Jeśli <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do typu (lub typ jest oznaczony jako <xref:System.SerializableAttribute> , ale nie jest <xref:System.Runtime.Serialization.ISerializable>), Deserializator można utworzyć wystąpienie takiego typu, nawet jeśli wszystkie konstruktory niepubliczne lub chronione przez żądania.
 
 - Nigdy nie należy zakładać wynik deserializacji, chyba że danych ma zostać przeprowadzona jest zaufany, a masz pewność, że wszystkie znane typy są typami, które można zaufać. Należy zauważyć, że znanych typów nie są ładowane z pliku konfiguracji aplikacji, (a zostaną załadowane z pliku konfiguracji komputera) podczas uruchamiania w trybie częściowego zaufania.
 
-- W przypadku przekazania `DataContractSerializer` wystąpienie z surogatu dodane do częściowo zaufany kod, kod może zmienić ustawienia można modyfikować w tym zastępczy.
+- W przypadku przekazania <xref:System.Runtime.Serialization.DataContractSerializer> wystąpienie z surogatu dodane do częściowo zaufany kod, kod może zmienić ustawienia można modyfikować w tym zastępczy.
 
 - Dla obiektu po deserializacji Jeśli odczytującego XML (lub je tam) pochodzi z częściowo zaufany kod zaliczenie wynikowego obiektu po deserializacji niezaufanych danych.
 
 - Fakt, <xref:System.Runtime.Serialization.ExtensionDataObject> typ nie ma publicznych elementów członkowskich oznacza, że w nim dane nie jest bezpieczne. Na przykład, jeśli zdeserializować źródła danych uprzywilejowanego na obiekt, w której niektóre znajdują się dane, następnie ręcznie, który obiekt częściowo zaufany kod częściowo zaufany kod może odczytywać dane w `ExtensionDataObject` przez serializacji obiektu. Rozważ ustawienie <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> do `true` podczas deserializacji źródła danych uprzywilejowanych do obiektu, który jest późniejsza przekazany do częściowo zaufany kod.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obsługuje serializacji prywatnych, chronionych, wewnętrzne i publiczne elementy członkowskie w trybie pełnego zaufania. Jednak w częściowej relacji zaufania, może być Zserializowany tylko publiczne elementy członkowskie. Element `SecurityException` jest generowany, jeśli aplikacja próbuje serializacji niepublicznego elementu członkowskiego.
+- <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obsługuje serializacji prywatnych, chronionych, wewnętrzne i publiczne elementy członkowskie w trybie pełnego zaufania. Jednak w częściowej relacji zaufania, może być Zserializowany tylko publiczne elementy członkowskie. Element <xref:System.Security.SecurityException> jest generowany, jeśli aplikacja próbuje serializacji niepublicznego elementu członkowskiego.
 
-    Aby zezwolić na wewnętrzny lub chronionych wewnętrznych składowych być serializowana w częściowej relacji zaufania, użyj `System.Runtime.CompilerServices.InternalsVisibleTo` atrybutu zestawu. Ten atrybut umożliwia zestawu, aby zadeklarować, że jej składowe wewnętrzne są widoczne dla niektórych innych zestawów. W tym przypadku zestaw, który chce mieć jego wewnętrznych składowych serializacji oświadcza, że jej składowe wewnętrzne są widoczne dla System.Runtime.Serialization.dll.
+    Aby zezwolić na wewnętrzny lub chronionych wewnętrznych składowych być serializowana w częściowej relacji zaufania, użyj <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu zestawu. Ten atrybut umożliwia zestawu, aby zadeklarować, że jej składowe wewnętrzne są widoczne dla niektórych innych zestawów. W tym przypadku zestaw, który chce mieć jego wewnętrznych składowych serializacji oświadcza, że jej składowe wewnętrzne są widoczne dla System.Runtime.Serialization.dll.
 
     Zaletą tego podejścia jest to, że nie wymaga ścieżką generowanie kodu z podwyższonym poziomem uprawnień.
 
     W tym samym czasie istnieją dwie główne wady.
 
-    Pierwszy wadą jest to, że opcjonalna właściwość `InternalsVisibleTo` atrybutu jest całego zestawu. Oznacza to nie można określić, że tylko niektórych klasa może mieć jego wewnętrznych składowych serializacji. Oczywiście nadal możesz nie serializacji określonego elementu członkowskiego wewnętrznego, po prostu dodając nie `DataMember` atrybutu tego elementu członkowskiego. Podobnie Deweloper można też dołączyć do wewnętrznego zamiast prywatnych lub chronionych, za pomocą widoczność nieznaczne problemy.
+    Pierwszy wadą jest to, że opcjonalna właściwość <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu jest całego zestawu. Oznacza to nie można określić, że tylko niektórych klasa może mieć jego wewnętrznych składowych serializacji. Oczywiście nadal możesz nie serializacji określonego elementu członkowskiego wewnętrznego, po prostu dodając nie <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu tego elementu członkowskiego. Podobnie Deweloper można też dołączyć do wewnętrznego zamiast prywatnych lub chronionych, za pomocą widoczność nieznaczne problemy.
 
     Drugi Wadą jest to, że nadal nie obsługuje prywatnych ani chronionych elementów członkowskich.
 
-    Aby zilustrować użytkowania `InternalsVisibleTo` atrybutu w częściowej relacji zaufania, należy wziąć pod uwagę następujący program:
+    Aby zilustrować użytkowania <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu w częściowej relacji zaufania, należy wziąć pod uwagę następujący program:
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    W powyższym przykładzie `PermissionsHelper.InternetZone` odpowiada `PermissionSet` częściowego zaufania. Teraz, bez `InternalsVisibleToAttribute`, aplikacja zakończy się niepowodzeniem, zostanie zgłoszony `SecurityException` wskazujący, że niepubliczne składowe nie może być serializowana w częściowej relacji zaufania.
+    W powyższym przykładzie `PermissionsHelper.InternetZone` odpowiada <xref:System.Security.PermissionSet> częściowego zaufania. Teraz, bez <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aplikacja zakończy się niepowodzeniem, zostanie zgłoszony <xref:System.Security.SecurityException> wskazujący, że niepubliczne składowe nie może być serializowana w częściowej relacji zaufania.
 
     Jednak jeśli dodamy następujący wiersz do pliku źródłowego, program zostanie uruchomiony pomyślnie.
 

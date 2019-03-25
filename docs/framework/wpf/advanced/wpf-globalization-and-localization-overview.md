@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492676"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412035"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Przegląd Lokalizacja i globalizacja WPF
 
@@ -144,9 +144,9 @@ Proces lokalizacji rozpoczyna się po Niezlokalizowany `MyDialog.resources.dll` 
   
  Należy zauważyć, że przykład używa funkcji udostępnionych rozmiaru <xref:System.Windows.Controls.Grid>. Ostatnie trzy kolumny zalet tego użytkownika, umieszczając się w tej samej <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Zgodnie z jedną powinna mieć nazwę właściwości, dzięki temu kolumn udostępnić ten sam rozmiar. Dlatego jeśli "Przeglądaj..." zlokalizowania dłuższy ciąg "Durchsuchen...", wszystkie przyciski powiększać szerokość zamiast małego przycisku "OK", a nieproporcjonalnie duży przycisk "Durchsuchen...".  
   
- **Xml:lang**
+ **xml:lang**
   
- `Xml:lang="en-US"`  
+ `xml:lang="en-US"`  
   
  Zwróć uwagę [XML: lang — Obsługa w XAML](../../xaml-services/xml-lang-handling-in-xaml.md) umieszczone na element główny [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Ta właściwość opisuje kultura danego elementu i jego elementy podrzędne. Ta wartość jest używana przez kilka funkcji w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i należy odpowiednio zmienić podczas lokalizacji. Ta wartość zmienia się, jakie słownika jest używany do dzielenia i słów sprawdzania pisowni. Wpływa również na wyświetlanie cyfry oraz sposobu wybierania czcionki, która do użycia przez system rezerwowy czcionki. Na koniec kształt ma wpływ na właściwość, wyświetlane są numery sposób i zapisywane w złożonych skryptach teksty sposób. Wartość domyślna to "en US".  
   

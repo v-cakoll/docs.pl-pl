@@ -2,12 +2,12 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: ddd25d3d25f4c4be1a9e26d444fa799a55c9cccc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90d081c1287362669286aaa1185ed3b0bbe09b07
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283286"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412113"
 ---
 # <a name="netpipe"></a>\<net.pipe>
 Określa ustawienia konfiguracyjne o nazwie potoku aktywacji usługi, która zarządza czasem istnienia połączenia nazwanego potoku i obsługuje żądania aktywacyjne przychodzące za pośrednictwem nazwanych potoków.  
@@ -52,7 +52,7 @@ Określa ustawienia konfiguracyjne o nazwie potoku aktywacji usługi, która zar
 |---------------|-----------------|  
 |`maxPendingAccepts`|Liczba całkowita określająca maksymalną liczbę oczekujących współbieżnych wątków na punkcie końcowym nasłuchiwania dla usługi udostępniania. Wartość domyślna to 2.|  
 |`maxPendingConnections`|Liczba całkowita określająca maksymalną liczbę połączeń, które mogą poczekać na wysłanie. Wartość domyślna to 100.|  
-|`receiveTimeout`|Element `TimeSpan` , który określa limit czasu dla odczytu danych z ramek i wykonania przekazania połączenia z połączeń podkreślonych. Wartość domyślna to "00: 00:10"|  
+|`receiveTimeout`|Element <xref:System.TimeSpan> , który określa limit czasu dla odczytu danych z ramek i wykonania przekazania połączenia z połączeń podkreślonych. Wartość domyślna to "00: 00:10"|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   

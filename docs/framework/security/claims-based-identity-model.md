@@ -3,12 +3,12 @@ title: Modelu tożsamości opartej na oświadczeniach
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 7248cf51946d4bf798209c047ec2c7ed3bb04ebe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197945"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411737"
 ---
 # <a name="claims-based-identity-model"></a>Modelu tożsamości opartej na oświadczeniach
 W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użytkownika jest reprezentowana w aplikacji jako zestaw oświadczeń. Jednym oświadczeniem może być nazwa użytkownika, a innym adres e-mail. Chodzi o to, że zewnętrzny system tożsamości jest skonfigurowany do podawania aplikacji wszystkiego, co musi wiedzieć o użytkowniku przy każdym wysyłanym przez niego żądaniu, a przy tym o kryptograficzne zapewnianie, że dane o tożsamości, które otrzymujesz, pochodzą z zaufanego źródła.  
@@ -75,8 +75,8 @@ W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użyt
   
 1.  Gdy nieuwierzytelniony użytkownik zgłasza żądanie strony, jego przeglądarka jest przekierowywana na strony dostawcy tożsamości.  
   
-2.  Dostawca tożsamości wymaga od użytkownika przedstawienia poświadczeń, np. nazwy użytkownika/hasła, biletu protokołu Kerberos itp.  
+2.  Dostawca tożsamości wymaga od użytkownika przedstawienia poświadczeń, takich jak nazwa użytkownika/hasło lub uwierzytelnianie Kerberos.  
   
-3.  Dostawca tożsamości wystawia token, który jest zwracany z powrotem do przeglądarki.  
+3.  Problemy z dostawcy tożsamości, token, do którego są zwracane do przeglądarki.  
   
 4.  Przeglądarka zostaje teraz przekierowana z powrotem na pierwotnie żądaną stronę, gdzie program WIF określa, czy token spełnia wymagania niezbędne do uzyskania dostępu do strony. Jeśli tak, wystawiany jest plik cookie w celu ustanowienia sesji, więc wystarczy jednokrotne przeprowadzenie uwierzytelnienia i sterowanie jest przekazywane do aplikacji.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221293"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409448"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Marshaling międzyoperacyjny działa w regułach tego dyktować, jak dane skojarzone z parametrami metody zachowuje się jak przekazuje między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolować takie kierowania działań jako przekształcenia typu danych, / / wywoływany można zmienić danych przekazanych do niego i zwracają te zmiany do obiektu wywołującego, a w ramach której okolicznościach Organizator udostępnia optymalizację wydajności.  
@@ -33,7 +33,7 @@ Marshaling międzyoperacyjny działa w regułach tego dyktować, jak dane skojar
   
 ### <a name="unmanaged-signature"></a>Niezarządzane podpisu  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -101,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>Reprezentacja biblioteki typów  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -164,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>Organizowanie domyślne dotyczące typów wartości  
  Większość typów wartości, takich jak liczby całkowite i liczby zmiennoprzecinkowe są [danych kopiowalnych](blittable-and-non-blittable-types.md) i nie wymagają szeregowanie. Inne [niekopiowalnych](blittable-and-non-blittable-types.md) typy mają różne reprezentacje w pamięci zarządzanych i niezarządzanych i wymagają szeregowanie. Nadal innych typów wymaga jawnego formatowanie wewnątrz międzyoperacyjnej granicy.  
   
- Ten temat zawiera informacje poniżej, dla typów wartości sformatowane:  
+ Ta sekcja zawiera informacje na następujących typach sformatowaną wartość:  
   
--   [Typy wartości używane na platformie wywołania](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [Typy wartości używane na platformie wywołania](#value-types-used-in-platform-invoke)  
   
--   [Typy wartości używane w modelu COM](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [Typy wartości używane w modelu COM](#value-types-used-in-com-interop)  
   
- Oprócz zawierająca opis typów sformatowane, ten temat zawiera informacje o [System typów wartości](#cpcondefaultmarshalingforvaluetypesanchor1) , które mają nietypowe zachowanie organizowania.  
+ Oprócz zawierająca opis typów sformatowane, ten temat zawiera informacje o [System typów wartości](#system-value-types) , które mają nietypowe zachowanie organizowania.  
   
  Sformatowana typ to typ złożony, który zawiera informacje, które jawnie kontroluje układ składowych w pamięci. Informacje o układzie składowej jest realizowane przy użyciu <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu. Układ może być jedną z następujących <xref:System.Runtime.InteropServices.LayoutKind> wartości wyliczenia:  
   
@@ -186,7 +186,6 @@ internal class DelegateTest {
   
      Wskazuje, czy członkowie są ułożone zgodnie z opisem w <xref:System.Runtime.InteropServices.FieldOffsetAttribute> dostarczony z każdym polem.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>Typy wartości używane na platformie wywołania  
  W poniższym przykładzie `Point` i `Rect` typy zapewniają elementu członkowskiego informacji o układzie przy użyciu **structlayoutattribute —**.  
   
@@ -221,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- Podczas przekazywania do kodu niezarządzanego, te typy sformatowane jest organizowana jako struktury stylu C. Zapewnia to prosty sposób wywoływania niezarządzanego interfejsu API, która przyjmuje argumenty struktury. Na przykład `POINT` i `RECT` struktury mogą być przekazywane do firmy Microsoft Win32 API **PtInRect** funkcji w następujący sposób:  
+ Podczas przekazywania do kodu niezarządzanego, te typy sformatowane jest organizowana jako struktury stylu C. Zapewnia to prosty sposób wywoływania niezarządzanego interfejsu API, która przyjmuje argumenty struktury. Na przykład `POINT` i `RECT` struktury mogą być przekazywane do interfejsu API programu Microsoft Windows **PtInRect** funkcji w następujący sposób:  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  Można przekazać struktury za pomocą platformy następujące wywołania definicji:  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  `Rect` Typ wartości muszą być przekazywane przez odwołanie, ponieważ niezarządzany API oczekuje wskaźnika do `RECT` mają być przekazane do funkcji. `Point` Typ wartości jest przekazywany przez wartość, ponieważ oczekuje niezarządzany interfejs API `POINT` przekazywane na stosie. Bardzo ważne jest to niewielka różnica. Odwołania są przekazywane do kodu niezarządzanego jako wskaźniki. Wartości są przekazywane do kodu niezarządzanego na stosie.  
   
@@ -253,7 +253,7 @@ class Win32API {
 > [!NOTE]
 >  Jeśli typ odwołania ma składowe typów niekopiowalnych, wymagana jest konwersja dwa razy: podczas pierwszego, gdy argument jest przekazywany niezarządzanym, a drugi raz na powrót z wywołania. Ze względu na to dodatkowe obciążenie/Ściemnianie parametry muszą być jawnie stosowana do argumentu Jeśli obiekt wywołujący chce, aby zobaczyć zmiany wprowadzone przez obiekt wywoływany.  
   
- W poniższym przykładzie `SystemTime` klasa ma układ składowych sekwencyjne i mogą być przekazywane do interfejsu API Win32 **GetSystemTime** funkcji.  
+ W poniższym przykładzie `SystemTime` klasa ma układ składowych sekwencyjne i mogą być przekazywane do interfejsu API Windows **GetSystemTime** funkcji.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -284,25 +284,26 @@ End Class
   
  **GetSystemTime** funkcja jest zdefiniowana w następujący sposób:  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  Definicja wywołanie równoważnej platformy **GetSystemTime** jest następująca:  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  Należy zauważyć, że `SystemTime` argument nie jest typu jako argument odwołania, ponieważ `SystemTime` jest klasą nie jest typem wartości. Inaczej niż w przypadku typów wartości klasy zawsze są przekazywane przez odwołanie.  
   
@@ -329,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>Typy wartości używane w modelu COM  
  Typy sformatowane również mogą być przekazywane do wywołania metody międzyoperacyjnego modelu COM. W rzeczywistości podczas eksportowania do biblioteki typów, typy wartości są automatycznie konwertowane do struktur. Jak pokazano na poniższym przykładzie, `Point` typ wartości staje się definicję typu (typedef) o nazwie `Point`. Wszystkie odwołania do `Point` typu wartości w innym miejscu w bibliotece typów są zastępowane `Point` typedef.  
   
  **Reprezentacja biblioteki typów**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -353,7 +353,6 @@ interface _Graphics {
 > [!NOTE]
 >  Struktury o <xref:System.Runtime.InteropServices.LayoutKind> równa wartości wyliczenia **jawne** nie można używać w modelu COM, ponieważ wyeksportowanej biblioteki typów nie express jawnego układu.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>System typów wartości  
  <xref:System> Przestrzeń nazw ma kilka typów wartości, które reprezentują formy opakowanej typów pierwotnych w czasie wykonywania. Na przykład typ wartości <xref:System.Int32?displayProperty=nameWithType> struktury reprezentuje spakowany formie **ELEMENT_TYPE_I4**. Zamiast kierowania tych typów jako struktury, jak inne typy sformatowane, można kierować je w taki sam sposób, jak typy pierwotne, które one polu. **System.Int32** w związku z tym jest organizowana jako **ELEMENT_TYPE_I4** zamiast w strukturze zawierający pojedynczy element członkowski typu **długie**. Poniższa tabela zawiera listę typów wartości w **systemu** obszar nazw, który jest spakowany reprezentacje typów pierwotnych.  
   
@@ -388,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>Reprezentacja biblioteki typów  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -430,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>Reprezentacja biblioteki typów  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

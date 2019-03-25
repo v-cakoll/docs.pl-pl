@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: c2a5a69186e41642abf77357db8b04e2611a43f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513147"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409214"
 ---
 # <a name="serialization"></a>Serializacja
 Serializacja jest proces konwersji obiektu do formatu, który można łatwo utrwalona lub transportowana. Na przykład możesz wykonać serializację obiektu, transport go w Internecie przy użyciu protokołu HTTP i deserializować go na komputerze docelowym.  
@@ -86,14 +86,16 @@ Serializacja jest proces konwersji obiektu do formatu, który można łatwo utrw
   
 ```csharp
 [Serializable]  
-public class Person : ISerializable {  
-    protected Person(SerializationInfo info, StreamingContext context) {  
-        ...  
+public class Person : ISerializable
+{  
+    protected Person(SerializationInfo info, StreamingContext context)
+    {  
+        // ...  
     }  
 }  
 ```
   
- **✓ DO** zaimplementować `ISerializable` elementy członkowskie jawnie.  
+ **✓ DO** zaimplementować <xref:System.Runtime.Serialization.ISerializable> elementy członkowskie jawnie.  
   
  **✓ DO** Zastosuj żądanie łącza do <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> implementacji. Dzięki temu który tylko w pełni zaufanego podstawowych oraz serializator środowiska wykonawczego ma dostęp do elementu członkowskiego.  
   

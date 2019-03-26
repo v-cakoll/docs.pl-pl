@@ -1,8 +1,0 @@
-# [Tablice](index.md)
-## [Użycie tablic jako obiektów](arrays-as-objects.md)
-## [Tablice jednowymiarowe](single-dimensional-arrays.md)
-## [Tablice wielowymiarowe](multidimensional-arrays.md)
-## [Tablice nieregularne](jagged-arrays.md)
-## [Używanie instrukcji foreach z tablicami](using-foreach-with-arrays.md)
-## [Przekazywanie tablic jako argumentów](passing-arrays-as-arguments.md)
-## [Niejawnie wpisane tablice](implicitly-typed-arrays.md)

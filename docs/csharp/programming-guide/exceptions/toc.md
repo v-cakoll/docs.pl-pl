@@ -1,8 +1,0 @@
-# [Wyjątki i obsługa wyjątków](index.md)
-## [Używanie wyjątków](using-exceptions.md)
-## [Obsługa wyjątków](exception-handling.md)
-## [Tworzenie i zgłaszanie wyjątków](creating-and-throwing-exceptions.md)
-## [Wyjątki generowane przez kompilator](compiler-generated-exceptions.md)
-## [Instrukcje: obsługa wyjątków za pomocą bloku try-catch](how-to-handle-an-exception-using-try-catch.md)
-## [Instrukcje: wykonywanie czyszczenia kodu za pomocą instrukcji finally](how-to-execute-cleanup-code-using-finally.md)
-## [Instrukcje: przechwytywanie wyjątku typu non-CLS](how-to-catch-a-non-cls-exception.md)

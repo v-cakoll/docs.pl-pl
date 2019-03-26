@@ -1,6 +1,0 @@
-# [Tablice w Visual Basic](index.md)
-## [Wymiary tablicy](array-dimensions.md)
-## [Instrukcje: inicjowanie zmiennej tablicy](how-to-initialize-an-array-variable.md)
-## [Instrukcje: sortowanie tablicy](how-to-sort-an-array.md)
-## [Instrukcje: przypisywanie tablicy do innej tablicy](how-to-assign-one-array-to-another-array.md)
-## [Rozwiązywanie problemów związanych z tablicami](troubleshooting-arrays.md)

@@ -1,5 +1,0 @@
-# [Main() i argumenty wiersza polecenia](index.md)
-## [Argumenty wiersza polecenia](command-line-arguments.md)
-## [Instrukcje: wyświetlanie argumentów wiersza polecenia](how-to-display-command-line-arguments.md)
-## [Instrukcje: uzyskiwanie dostępu do argumentów wiersza polecenia za pomocą instrukcji foreach](how-to-access-command-line-arguments-using-foreach.md)
-## [Main() — zwracane wartości](main-return-values.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms'
+title: 'Przewodnik: Korzystanie z przepływu danych w aplikacji Windows Forms'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49935c471d10e438763e41b07944047b0924af09
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c6d27500332c59f24e121c9c15ac27a36ed93d07
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864673"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465805"
 ---
-# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Przewodnik: Korzystanie z przepływu danych w aplikacji Windows Forms
 W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które wykonują przetwarzania obrazów w aplikacji Windows Forms.  
   
  W tym przykładzie ładuje pliki obrazów z określonego folderu, do tworzenia obrazu złożonego i wyświetla wynik. W przykładzie użyto modelu przepływu danych do trasy obrazów za pośrednictwem sieci. W modelu przepływu danych niezależnie od składników programu komunikować się ze sobą, wysyłając komunikaty. Gdy składnik otrzymuje komunikat, wykonuje niektóre akcje, a następnie przekazuje jego wynik do innego składnika. Porównać ją z modelu przepływu sterowania, w której aplikacja używa struktury sterujące, na przykład, instrukcje warunkowe, pętli i tak dalej, aby kontrolować kolejność operacji w programie.  
@@ -95,13 +95,13 @@ W tym dokumencie pokazano, jak utworzyć sieć bloków przepływu danych, które
   
  Aby połączyć z bloków przepływu danych w celu utworzenia sieci, w tym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> metody. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Metoda zawiera przeciążona wersja, która przyjmuje <xref:System.Predicate%601> obiekt, który określa, czy blok docelowy akceptuje lub odrzuca komunikat. Ten mechanizm filtrowania umożliwiają blokadom odbierać tylko niektóre wartości. W tym przykładzie sieci można rozgałęziać w jeden z dwóch sposobów. Główna gałąź ładuje obrazy z dysku, do tworzenia obrazu złożonego i wyświetla tego obrazu w formularzu. Alternatywne gałęzi anuluje bieżącą operację. <xref:System.Predicate%601> Obiektów umożliwiają blokom przepływu danych, wraz z głównej gałęzi, aby przełączyć się do alternatywnego gałęzi przez odrzucenie niektórych komunikatów. Na przykład, jeśli użytkownik anuluje operację, bloku przepływu danych `createCompositeBitmap` tworzy `null` (`Nothing` w języku Visual Basic) jako dane wyjściowe. W bloku przepływu danych `displayCompositeBitmap` odrzuca `null` wartości wejściowych, a w związku z tym, komunikat jest oferowany `operationCancelled`. W bloku przepływu danych `operationCancelled` akceptuje wszystkie komunikaty i dlatego wyświetla obraz, aby wskazać, że operacja została anulowana.  
   
- Poniższa ilustracja przedstawia sieci przetwarzania obrazów.  
+ Poniższa ilustracja przedstawia sieci przetwarzania obrazów:  
   
- ![Sieci przetwarzania obrazów](../../../docs/standard/parallel-programming/media/dataflowwinforms.png "DataflowWinForms")  
+ ![Ilustracja przedstawiająca sieci przetwarzania obrazów.](./media/walkthrough-using-dataflow-in-a-windows-forms-application/dataflow-winforms-image-processing.png)  
   
  Ponieważ `displayCompositeBitmap` i `operationCancelled` przepływu danych blokuje działanie w interfejsie użytkownika, ważne jest, czy w wątku interfejsu użytkownika są wykonywane następujące akcje. Aby to osiągnąć, podczas konstruowania, należy podać tych obiektów, każdy <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> obiekt, który ma <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> właściwością <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> Metoda tworzy <xref:System.Threading.Tasks.TaskScheduler> obiektu, który wykonuje pracę w bieżącym kontekście synchronizacji. Ponieważ `CreateImageProcessingNetwork` metoda jest wywoływana w procedurze obsługi **wybierz Folder** przycisku, w którym działa w interfejsie użytkownika wątku akcje w przypadku `displayCompositeBitmap` i `operationCancelled` bloków przepływu danych również uruchomić na wątek interfejsu użytkownika.  
   
- W tym przykładzie użyto token anulowania udostępnionego zamiast ustawiać <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> właściwość ponieważ <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> właściwość trwale anuluje wykonanie bloku przepływu danych. Token anulowania umożliwia w tym przykładzie ponownie użyć tej samej sieci przepływu danych wielokrotnie, nawet wtedy, gdy użytkownik anuluje co najmniej jednej operacji. Aby uzyskać przykład, który używa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> trwale anulować wykonanie bloku przepływu danych, zobacz [porady: anulowanie bloku przepływu danych](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
+ W tym przykładzie użyto token anulowania udostępnionego zamiast ustawiać <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> właściwość ponieważ <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> właściwość trwale anuluje wykonanie bloku przepływu danych. Token anulowania umożliwia w tym przykładzie ponownie użyć tej samej sieci przepływu danych wielokrotnie, nawet wtedy, gdy użytkownik anuluje co najmniej jednej operacji. Aby uzyskać przykład, który używa <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> trwale anulować wykonanie bloku przepływu danych, zobacz [jak: Anulowanie bloku przepływu danych](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md).  
   
 <a name="ui"></a>   
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Proces łączenia dwóch sieci przepływu danych interfejsu użytkownika  

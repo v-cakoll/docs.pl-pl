@@ -1,8 +1,16 @@
-### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>Contract.Invariant lub Contract.Requires<TException> należy wziąć pod uwagę String.IsNullOrEmpty być czysty
+---
+ms.openlocfilehash: 91e09e71a32bb6d410ff52a97a8d14384ee3a5f1
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58467092"
+---
+### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>Contract.Invariant lub Contract.Requires\<TException > należy wziąć pod uwagę String.IsNullOrEmpty być czysty
 
 |   |   |
 |---|---|
-|Szczegóły|Dla aplikacji przeznaczonych dla platformy .NET Framework 4.6.1, jeśli niezmiennej kontrakt dla <xref:System.Diagnostics.Contracts.Contract.Invariant%2A?displayProperty=nameWithType> lub kontrakt warunek wstępny dla <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType)> wywołania <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> metody dysków emituje ostrzeżenia CC1036 kompilatora: &quot;Wykryto wywołanie metody "System.String.IsNullOrWhteSpace(System.String)" bez [czystej] w metodzie.&quot; Są to ostrzeżenia kompilatora, nie błędu kompilatora.|
+|Szczegóły|Dla aplikacji przeznaczonych dla platformy .NET Framework 4.6.1, jeśli niezmiennej kontrakt dla <xref:System.Diagnostics.Contracts.Contract.Invariant%2A?displayProperty=nameWithType> lub kontrakt warunek wstępny dla <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType)> wywołania <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> metody dysków emituje ostrzeżenia CC1036 kompilatora: &quot;Wykryto wywołanie metody <xref:System.String.IsNullOrWhiteSpace%2A?displayProperty=nameWithType> bez [czystej] w metodzie.&quot; Są to ostrzeżenia kompilatora, nie błędu kompilatora.|
 |Sugestia|To zachowanie zostało rozwiązane w [339 # problem usługi GitHub](https://github.com/Microsoft/CodeContracts/issues/339). Aby usunąć to ostrzeżenie, możesz pobrać i skompilować zaktualizowaną wersję kodu źródłowego narzędzia kontrakty kodu z [GitHub](https://github.com/Microsoft/CodeContracts/blob/master/README.md). Pobierz informacje znajdują się w dolnej części strony.|
 |Zakres|Mały|
 |Wersja|4.6.1|

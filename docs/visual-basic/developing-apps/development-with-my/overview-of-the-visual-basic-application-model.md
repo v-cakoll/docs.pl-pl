@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517386"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464102"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Omówienie modelu aplikacji Visual Basic
 Dobrze zdefiniowany model zapewnia Visual Basic sterujące zachowaniem aplikacji Windows Forms: model aplikacji Visual Basic. Ten model zawiera zdarzenia do obsługi aplikacji uruchamiania i zamykania, a także zdarzenia dla połowowe nieobsłużonych wyjątków. Zapewnia również obsługę do tworzenia aplikacji w jednym wystąpieniu. Model aplikacji jest rozszerzalny, dzięki czemu deweloperzy, którzy potrzebują więcej kontroli można dostosować jego możliwym do zastąpienia metody.  
@@ -26,9 +26,9 @@ Dobrze zdefiniowany model zapewnia Visual Basic sterujące zachowaniem aplikacji
   
 -   Każda próba uruchomienia aplikacji, podczas pierwszego wystąpienia powoduje zachowanie bardzo różnią się. Kolejna próba powiadamia pierwszego wystąpienia o argumenty wiersza polecenia, a następnie natychmiast kończy działanie. Uchwyty pierwszego wystąpienia `StartupNextInstance` zdarzenie, aby określić, co kolejne wystąpienie argumenty wiersza polecenia zostały i kontynuuje działanie.  
   
-     Ten diagram przedstawia, jak kolejne wystąpienie sygnalizuje pierwszego wystąpienia.  
+     Ten diagram przedstawia, jak kolejne wystąpienie sygnalizuje pierwsze wystąpienie:  
   
-     ![Pojedynczego wystąpienia aplikacji obrazu](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Diagram przedstawiający obrazu aplikacji pojedynczego wystąpienia.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  Obsługa `StartupNextInstance` zdarzenia, można kontrolować, jak działa aplikacja o pojedynczym wystąpieniu. Na przykład program Microsoft Outlook jest zazwyczaj uruchamiany jako pojedyncze wystąpienie aplikacji; gdy program Outlook jest uruchomiony, a próba uruchomienia programu Outlook ponownie, otrzymuje fokus do oryginalnego wystąpienia, ale nie można otworzyć inne wystąpienie.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703026"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464466"
 ---
 # <a name="how-to-translate-image-colors"></a>Instrukcje: Przesuwanie kolorów obrazu
 Tłumaczenie dodaje wartość do przynajmniej jednej z czterech składowych. Wpisów macierzy kolorów, które reprezentują tłumaczenia są podane w poniższej tabeli.  
@@ -29,9 +29,9 @@ Tłumaczenie dodaje wartość do przynajmniej jednej z czterech składowych. Wpi
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy <xref:System.Drawing.Image> obiektu na podstawie pliku ColorBars.bmp. Następnie kod dodaje wartość 0,75 do składnika czerwony każdego piksela na obrazie. Oryginalny obraz jest rysowany wraz z obrazu przekształcone.  
   
- Poniższa ilustracja pokazuje oryginalny obraz po lewej stronie i przekształcone obraz po prawej stronie.  
+ Na poniższej ilustracji przedstawiono oryginalny obraz po lewej stronie i przekształcone obraz po prawej stronie:  
   
- ![Translate Colors](./media/colortrans2.png "colortrans2")  
+ ![Zrzut ekranu przedstawiający obrazu oryginalnego i przekształcone.](./media/how-to-translate-image-colors/original-image-translate-colors.png)  
   
  W poniższej tabeli wymieniono wektorów kolor słupków cztery przed i po nim czerwony tłumaczenia. Należy pamiętać, że maksymalna wartość dla składnika koloru jest 1, składnik czerwony, w drugim wierszu nie zmienia się. (Podobnie, wartość minimalna dla składnika koloru wynosi 0).  
   

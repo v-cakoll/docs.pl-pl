@@ -2,12 +2,12 @@
 title: Omówienie programu Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 385be91538bb6ee9ee570107c22d4b0ffc6afcba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 049d955b191e14ac79702df3fe218e23a555e6d3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718756"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464687"
 ---
 # <a name="windows-workflow-overview"></a>Omówienie programu Windows Workflow
 Przepływ pracy jest zbiorem elemental jednostek nazywanych *działania* , są przechowywane jako obiekty modelu, który zawiera opis procesu rzeczywistych. Przepływy pracy, zapewniają sposób opisania kolejności wykonania i zależności między elementami krótkotrwałej pracy krótkim lub długim. Ta Praca przechodzi przez model od początku do końca, a działania może być wykonywane przez osoby lub funkcji systemu.  
@@ -31,7 +31,7 @@ Składniki przepływu pracy w procesie hosta
 ## <a name="interaction-between-workflow-components"></a>Interakcje między składnikami przepływu pracy  
  Poniższy diagram przedstawia, jak składniki przepływu pracy współdziałają ze sobą.  
   
- ![Przepływ pracy interakcji](./media/workflowinteraction.gif "WorkflowInteraction")  
+ ![Diagram przedstawiający sposób interakcji części przepływu pracy.](./media/overview/workflow-component-interatction.gif)  
   
  Na powyższym diagramie <xref:System.Activities.WorkflowInvoker.Invoke%2A> metody <xref:System.Activities.WorkflowInvoker> klasa jest używana do wywołania kilka wystąpień przepływu pracy. <xref:System.Activities.WorkflowInvoker> Służy do uproszczonego przepływów pracy, które nie ma potrzeby zarządzania z hosta przepływy pracy, wymagających zarządzania z hosta (takie jak <xref:System.Activities.Bookmark> wznowienie) musi zostać wykonana przy użyciu <xref:System.Activities.WorkflowApplication.Run%2A> zamiast tego. Nie jest wymagane oczekiwania dla jednego wystąpienia przepływu pracy do wykonania przed wywołaniem Aparat środowiska wykonawczego obsługuje jednoczesne uruchamianie wielu wystąpień przepływu pracy.  Przepływy pracy wywoływane są następujące:  
   

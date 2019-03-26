@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379643"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464960"
 ---
 # <a name="toolbar-overview"></a>ToolBar — Przegląd
 <xref:System.Windows.Controls.ToolBar> Formanty są kontenerami dla grupy poleceń lub kontrolek, które są zazwyczaj powiązane w ich funkcji. A <xref:System.Windows.Controls.ToolBar> zwykle zawiera przyciski, które wywołują polecenia.  
@@ -28,10 +28,9 @@ ms.locfileid: "57379643"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>Paski narzędzi z elementami przepełnienia  
- Często <xref:System.Windows.Controls.ToolBar> kontrolki zawiera więcej elementów niż można zmieścić na pasku narzędzi rozmiar. W takim przypadku <xref:System.Windows.Controls.ToolBar> powoduje wyświetlenie przycisku przepełnienia. Aby wyświetlić elementy przepełnienia, użytkownik klika przycisk przepełnienie i elementy są wyświetlane w oknie podręcznym poniżej <xref:System.Windows.Controls.ToolBar>. Pokazano grafiki <xref:System.Windows.Controls.ToolBar> z elementami przepełnienia.  
+ Często <xref:System.Windows.Controls.ToolBar> kontrolki zawiera więcej elementów niż można zmieścić na pasku narzędzi rozmiar. W takim przypadku <xref:System.Windows.Controls.ToolBar> powoduje wyświetlenie przycisku przepełnienia. Aby wyświetlić elementy przepełnienia, użytkownik klika przycisk przepełnienie i elementy są wyświetlane w oknie podręcznym poniżej <xref:System.Windows.Controls.ToolBar>. Pokazano grafiki <xref:System.Windows.Controls.ToolBar> z elementami overflow:  
   
- ![Pasek narzędzi z przepełnienia](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-Pasek narzędzi z elementami przepełnienia  
+ ![Zrzut ekranu pokazujący narzędzi z elementami przepełnienia.](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  Można określić, gdy element na pasku narzędzi jest umieszczony na panelu przepełnienia, ustawiając <xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType> dołączonych właściwości <xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>, <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>, lub <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>. W poniższym przykładzie określono, że ostatnie cztery przyciski na pasku narzędzi powinny zawsze być na panelu przepełnienia.  
   

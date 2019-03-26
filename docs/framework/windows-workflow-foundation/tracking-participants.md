@@ -2,12 +2,12 @@
 title: Uczestnicy śledzenia
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711970"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462997"
 ---
 # <a name="tracking-participants"></a>Uczestnicy śledzenia
 Śledzenie uczestników są punkty rozszerzeń, zezwalających na dewelopera przepływu pracy, aby uzyskać dostęp do <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> obiektów i ich przetwarzania. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera standardowe śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia.  
@@ -60,7 +60,7 @@ ms.locfileid: "57711970"
   
  Poniższa ilustracja przedstawia przepływ danych za pomocą funkcji ETW śledzenia uczestnika śledzenia. Gdy dane śledzenia osiągnie sesja funkcji ETW, możliwy jest wiele sposobów. Jest jednym z najbardziej przydatnych sposobów uzyskać dostęp do tych zdarzeń za pomocą Podglądu zdarzeń, popularnego narzędzia Windows używane do wyświetlania dzienników i ślady z aplikacji i usług.  
   
- ![Przepływ śledzenia i dostawcy śledzenia funkcji ETW](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Przepływ danych za pośrednictwem dostawcy śledzenia funkcji ETW śledzenia.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>Dane zdarzeń uczestników śledzenia  
  Śledzenia uczestnika, który serializuje dane zdarzeń rejestrowanych w formacie jedno zdarzenie na rekord śledzenia sesji funkcji ETW.  Zdarzenie jest identyfikowane za pomocą Identyfikatora w zakresie od 100 do 199. Dla definicji zdarzeń śledzenia rekordów emitowane przez uczestnika śledzenia, zobacz [śledzenia informacje o zdarzeniach](tracking-events-reference.md) tematu.  

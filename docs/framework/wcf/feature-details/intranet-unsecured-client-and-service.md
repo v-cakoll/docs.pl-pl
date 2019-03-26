@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603121"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466234"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Niezabezpieczony klient i usługa w intranecie
 Poniższa ilustracja przedstawia prostą usługę Windows Communication Foundation (WCF) opracowany, aby udostępniać informacje o bezpiecznej sieci prywatnej dla aplikacji WCF. Zabezpieczeń nie jest wymagany, dane o niskiej ważności, powinien być założenia bezpieczne sieci, ponieważ zabezpieczenia przez warstwę poniżej infrastruktury usług WCF.  
   
- ![Niezabezpieczony klient i intranecie scenariusz obsługi](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![Niezabezpieczony klient i intranecie scenariusz obsługi.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  
 |Tryb zabezpieczeń|Brak|  
 |Transport|TCP|  
-|Powiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
+|Wiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
 |Współdziałanie|Tylko usługi WCF|  
 |Uwierzytelnianie|Brak|  
 |Integralność|Brak|  

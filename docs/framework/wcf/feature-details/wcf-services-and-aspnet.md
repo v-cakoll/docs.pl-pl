@@ -2,12 +2,12 @@
 title: Usługi WCF i platforma ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282610"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463478"
 ---
 # <a name="wcf-services-and-aspnet"></a>Usługi WCF i platforma ASP.NET
 
@@ -17,7 +17,7 @@ W tym temacie omówiono hostingu usług Windows Communication Foundation (WCF) u
 
 Usługi WCF hostowanej w Internet Information Services (IIS) może znajdować się za pomocą. Strony ASPX i usług sieci Web ASMX wewnątrz jednej, wspólnej domeny aplikacji. ASP.NET udostępnia wspólne usługi infrastruktury, takie jak zarządzanie AppDomain i kompilacji dynamicznej dla środowiska uruchomieniowego HTTP platformy ASP.NET i WCF. W domyślnej konfiguracji programu WCF jest side-by-side za pomocą platformy ASP.NET.
 
-![Usługi WCF i ASP .NET: udostępnianie stanu](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![Zrzut ekranu przedstawiający usług WCF i ASP .NET: udostępnianie stanu.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 Środowisko uruchomieniowe ASP.NET HTTP obsługuje żądania programu ASP.NET, ale nie uczestniczy w przetwarzanie żądania kierowane do usługi WCF, nawet jeśli te usługi znajdują się w tej samej domenie aplikacji, ponieważ jest zawartości platformy ASP.NET. Zamiast tego modelu usług WCF przechwytuje komunikaty adresowane do usług WCF i kieruje je za pomocą stosu transportu/kanału WCF.
 

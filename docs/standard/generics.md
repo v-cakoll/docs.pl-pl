@@ -4,16 +4,16 @@ description: Dowiedz się, jak ogólne działają jako szablony kodu, które umo
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835294"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465428"
 ---
 # <a name="generic-types-overview"></a>Przegląd typów ogólnych
 
-Deweloperzy używaj typów ogólnych przez cały czas na platformie .NET, czy jawnie lub niejawnie. Korzystając z programu LINQ na platformie .NET, nigdy nie Zwróć uwagę, że pracujesz z <xref:System.Collections.Generic.IEnumerable%601>? Lub Jeśli nigdy nie był wyświetlany próbki online "ogólnego repozytorium" do rozmowy baz danych przy użyciu platformy Entity Framework, czy zobaczysz, że większość metod zwracają IQueryable<T>? Użytkownik może być bardziej co **T** znajduje się w tych przykładach i dlaczego jest tam.
+Deweloperzy używaj typów ogólnych przez cały czas na platformie .NET, czy jawnie lub niejawnie. Korzystając z programu LINQ na platformie .NET, nigdy nie Zwróć uwagę, że pracujesz z <xref:System.Collections.Generic.IEnumerable%601>? Lub Jeśli nigdy nie był wyświetlany próbki online "ogólnego repozytorium" do rozmowy baz danych przy użyciu platformy Entity Framework, czy zobaczysz, że większość metod zwracają IQueryable\<T >? Użytkownik może być bardziej co **T** znajduje się w tych przykładach i dlaczego jest tam.
 
 Po raz pierwszy wprowadzone w programie .NET Framework 2.0 **ogólne** są zasadniczo "kodu szablon", umożliwia deweloperom definiowanie [bezpieczny](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) struktur danych, nie poświęcając na to rzeczywisty typ danych. Na przykład <xref:System.Collections.Generic.List%601> jest [kolekcji generycznej](xref:System.Collections.Generic) , zadeklarowany i używać z dowolnego typu, takie jak `List<int>`, `List<string>`, lub `List<Person>`.
 

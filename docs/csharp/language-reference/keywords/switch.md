@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084722"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463257"
 ---
 # <a name="switch-c-reference"></a>Switch (odwołanie w C#)
 
@@ -59,7 +59,7 @@ A `switch` instrukcji może zawierać dowolną liczbę sekcji przełącznika, a 
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Wykonuje sekcji tylko jednego przełącznika w instrukcji switch. C# nie zezwala na wykonywanie kontynuowało z jednej sekcji przełączania do następnej. W związku z tym poniższy kod generuje błąd kompilatora CS0163: "Sterowanie nie może przechodzić od jednej etykiety case (<case label>) do innego."
+Wykonuje sekcji tylko jednego przełącznika w instrukcji switch. C# nie zezwala na wykonywanie kontynuowało z jednej sekcji przełączania do następnej. W związku z tym poniższy kod generuje błąd kompilatora CS0163: "Sterowanie nie może przechodzić od jednej etykiety case (\<etykietę" case ">) do innego."
 
 ```csharp
 switch (caseSwitch)

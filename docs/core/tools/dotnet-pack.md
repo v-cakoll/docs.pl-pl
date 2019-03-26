@@ -2,12 +2,12 @@
 title: polecenie pakietu DotNet
 description: Polecenie pakietu dotnet tworzy pakiety NuGet do projektu .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: 43ee31c7cd070cf0e73975c1444ef13496afae91
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58020931"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464479"
 ---
 # <a name="dotnet-pack"></a>pakietu DotNet
 
@@ -77,7 +77,7 @@ Możesz podać właściwości programu MSBuild do `dotnet pack` polecenie, aby u
 
 * **`--no-build`**
 
-  Nie da się skompilować projektu przed pakowania. Ustawia ona również niejawne `--no-restore` flagi.
+  Nie da się skompilować projektu przed pakowania. Ustawia również niejawnie `--no-restore` flagi.
 
 * **`--no-dependencies`**
 

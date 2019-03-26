@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 05bec31cb0d1dca3dc906c183d001fb526173bb5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502555"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465870"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Równoległe przechowywanie wersji w klasie WorkflowServiceHost
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> Versioning side-by-side wprowadzona w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] umożliwia hostowanie wielu wersji usługi przepływu pracy w jednym punkcie końcowym. Side-by-side funkcjonalność umożliwia usługi przepływu pracy, należy skonfigurować tak, aby nowe wystąpienia usługi przepływu pracy są tworzone przy użyciu nową definicję przepływu pracy podczas uruchamiania wystąpienia pełną, przy użyciu istniejącą definicję. Ten temat zawiera omówienie przepływu pracy usługi wykonywania side-by-side przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -46,7 +46,7 @@ ms.locfileid: "43502555"
 ### <a name="configuring-the-definitionidentity"></a>Konfigurowanie DefinitionIdentity  
  Podczas tworzenia usługi przepływu pracy za pomocą projektanta przepływów pracy <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> można ustawić przy użyciu **właściwości** okna. Kliknij poza działania głównego usługi w projektancie, aby wybrać usługi przepływu pracy, a następnie wybierz **okno właściwości** z **widoku** menu. Wybierz **obiektu WorkflowIdentity** z listy rozwijanej, która pojawia się obok **DefinitionIdentity** właściwości, a następnie rozwiń węzeł i określ żądany <xref:System.Activities.WorkflowIdentity> właściwości. W poniższym przykładzie <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> skonfigurowano <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` i <xref:System.Activities.WorkflowIdentity.Version%2A> z `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> jest opcjonalny, a w tym przykładzie jest `null`.  
   
- ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv1.bmp "WorkflowServiceDefinitionIdentityv1")  
+ ![Zrzut ekranu pokazujący właściwość DefinitionIdentity.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-property.bmp)  
   
  Gdy usługi przepływu pracy jest samodzielnie hostowana, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> jest skonfigurowany, gdy jest konstruowany usługi przepływu pracy. W poniższym przykładzie <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> skonfigurowano przy użyciu tej samej wartości jak w poprzednim przykładzie <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` i <xref:System.Activities.WorkflowIdentity.Name%2A> z `1.0.0.0`.  
   
@@ -84,7 +84,7 @@ End With
 ### <a name="adding-a-new-version-to-a-web-hosted-workflow-service"></a>Dodawanie nowej wersji do usługi hostowanej w sieci Web przepływu pracy  
  Pierwszym etapem konfigurowania nowej wersji usługi przepływu pracy w usłudze hostowanej w sieci web jest utworzenie nowego folderu w `App_Code` folder, który ma taką samą nazwę jak plik usługi. Jeśli usługa `xamlx` nosi nazwę pliku `MortgageWorkflow.xamlx`, musi nosić nazwę folderu, a następnie `MortgageWorkflow`. Umieść kopię oryginalnego usługi `xamlx` pliku do tego folderu i zmień jego nazwę na nową nazwę, taką jak `MortgageWorkflowV1.xamlx`. Wprowadź żądane zmiany do podstawowej usługi, zaktualizuj jego <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, a następnie wdrożyć usługę. W poniższym przykładzie <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> został zaktualizowany o <xref:System.Activities.WorkflowIdentity.Name%2A> z `MortageWorkflow` i <xref:System.Activities.WorkflowIdentity.Version%2A> z `2.0.0.0`.  
   
- ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv2.bmp "WorkflowServiceDefinitionIdentityv2")  
+ ![Zrzut ekranu pokazujący DefinitionIdentity obiektu WorkflowIdentity.](./media/side-by-side-versioning-in-workflowservicehost/definitionidentity-workflowidentity.bmp)  
   
  Po ponownym uruchomieniu usługi, poprzednia wersja zostaną automatycznie dodane do <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> kolekcji, ponieważ znajduje się w wyznaczonej `App_Code` podfolderu. Należy pamiętać, że jeśli głównej wersji usługi przepływu pracy ma `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> poprzednie wersje nie zostaną dodane. Może mieć jedną wersję `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, ale istnieje wiele wersji głównej wersji nie może być jednym z `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> lub inne poprzednich wersji, nie zostanie dodany do <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> kolekcji.  
   

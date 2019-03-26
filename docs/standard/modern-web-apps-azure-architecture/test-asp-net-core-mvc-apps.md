@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827555"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463712"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie platformy ASP.NET Core MVC aplikacji
 
@@ -197,7 +197,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Często, należy wykonać pewne dodatkowe czynności konfiguracyjne witryny, przed uruchomieniem każdego testu, takie jak konfigurowanie aplikacji do korzystania z pamięci magazynu danych, a następnie rozmieszczania aplikacji z danymi. Aby to zrobić, należy utworzyć własną podklasę klasy WebApplicationFactory<TEntry> i jej metoda ConfigureWebHost musi zostać zastąpiona. W poniższym przykładzie pochodzi z projektu FunctionalTests eShopOnWeb i jest używana jako część testów aplikacji sieci web głównego.
+Często, należy wykonać pewne dodatkowe czynności konfiguracyjne witryny, przed uruchomieniem każdego testu, takie jak konfigurowanie aplikacji do korzystania z pamięci magazynu danych, a następnie rozmieszczania aplikacji z danymi. Aby to zrobić, należy utworzyć własną podklasę klasy WebApplicationFactory\<TEntry > i jego metoda ConfigureWebHost musi zostać zastąpiona. W poniższym przykładzie pochodzi z projektu FunctionalTests eShopOnWeb i jest używana jako część testów aplikacji sieci web głównego.
 
 ```cs
 using Microsoft.AspNetCore.Hosting;

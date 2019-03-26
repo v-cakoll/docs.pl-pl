@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654662"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466156"
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do wydzielonej pamięci masowej zawsze jest ograniczony do użytkownika, który go utworzył. Wdrożenie tego typu izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, który rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod, gdy jest otwierany magazyn. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować, że tożsamość bieżącego użytkownika, aby zmienić dynamicznie.  
@@ -46,10 +46,9 @@ Dostęp do wydzielonej pamięci masowej zawsze jest ograniczony do użytkownika,
   
  Jedną z tych izolacji można łączyć z profilu użytkownika mobilnego. Aby uzyskać więcej informacji, zobacz sekcję [izolowany magazyn i Roaming](#Roaming).  
   
- Poniższa ilustracja przedstawia, jak magazyny są izolowane w różnych zakresach.  
+ Poniższa ilustracja przedstawia, jak magazyny są izolowane w różnych zakresach:  
   
- ![Izolacja według użytkownika i zestawu](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Typy wydzielonej pamięci masowej  
+ ![Diagram przedstawiający Izolacja według użytkownika i zestawu.](./media/types-of-isolation/isolated-storage-types.gif)  
   
  Należy zauważyć, że z wyjątkiem roamingu magazynów, wydzielona pamięć masowa jest zawsze niejawnie izolowane przez komputer ponieważ używa ona magazynów, które są lokalne dla danego komputera.  
   

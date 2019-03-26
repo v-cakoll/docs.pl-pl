@@ -205,18 +205,18 @@ Obsługa dekompresji przy użyciu interfejsów API Windows jest domyślnie włą
 
 - `TryGetValue` metody, które rozszerzyć wzorzec spróbuj używany w inne typy kolekcji do tych dwóch typów. Dostępne są następujące metody:
 
-   - [bool publiczny zestaw HashSet<T>. TryGetValue (out T actualValue T equalValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
-   - [publiczne bool SortedSet<T>. TryGetValue (out T actualValue T equalValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+   - [bool publiczny zestaw HashSet\<T >. TryGetValue (out T actualValue T equalValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+   - [publiczne bool SortedSet\<T >. TryGetValue (out T actualValue T equalValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
 - `Enumerable.To*` metody rozszerzenia, które kolekcję, aby przekonwertować <xref:System.Collections.Generic.HashSet%601>:
 
-   - [publiczne statyczne hashset —<TSource> ToHashSet<TSource>(to interfejs IEnumerable<TSource> źródła)](xref:System.Linq.Enumerable.ToHashSet%2A)
-   - [publiczne statyczne hashset —<TSource> ToHashSet<TSource>(to interfejs IEnumerable<TSource> źródła IEqualityComparer<TSource> modułu porównującego)](xref:System.Linq.Enumerable.ToHashSet%2A)
+   - [publiczne statyczne hashset —\<TSource > ToHashSet\<TSource > (ten interfejs IEnumerable\<TSource > Źródło)](xref:System.Linq.Enumerable.ToHashSet%2A)
+   - [publiczne statyczne hashset —\<TSource > ToHashSet\<TSource > (ten interfejs IEnumerable\<TSource > źródło IEqualityComparer\<TSource > Moduł porównujący)](xref:System.Linq.Enumerable.ToHashSet%2A)
 
 - Nowe <xref:System.Collections.Generic.HashSet%601> konstruktorów, które pozwalają ustawić pojemności kolekcji stopa wydajności, gdy wiesz rozmiar <xref:System.Collections.Generic.HashSet%601> wcześniej:
 
    - [publiczny zestaw HashSet (pojemność int)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32))
-   - [hashset — publiczny (int pojemności, IEqualityComparer<T> modułu porównującego)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
+   - [hashset — publiczny (int pojemności, IEqualityComparer\<T > Moduł porównujący)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> Klasa zawiera nowe przeciążenia <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> metody do pobierania wartości ze słownika lub dodać go, jeśli nie zostanie znaleziony, a także dodać wartość do słownika lub zaktualizować go, jeśli już istnieje.
 

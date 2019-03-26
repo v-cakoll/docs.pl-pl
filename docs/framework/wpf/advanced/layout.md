@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369854"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464570"
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system układu. Zrozumienie, jak i kiedy układ obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -41,7 +41,7 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Poniższa ilustracja przedstawia układu prostego.  
   
- ![Typowa siatka, brak nałożonego pola. ](./media/boundingbox1.png "boundingbox1")  
+ ![Zrzut ekranu pokazujący typowe siatki, brak nałożonego pola.](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  Ten układ można osiągnąć za pomocą następujących [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
@@ -49,7 +49,7 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Pojedynczy <xref:System.Windows.Controls.TextBlock> element znajduje się w obrębie <xref:System.Windows.Controls.Grid>. Gdy tekst wypełnia tylko lewym górnym rogu pierwszej kolumny, a ilość miejsca przydzielonego dla <xref:System.Windows.Controls.TextBlock> jest faktycznie znacznie większa. Pole dowolnego <xref:System.Windows.FrameworkElement> mogą być pobierane przy użyciu <xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A> metody. Na poniższej ilustracji przedstawiono obwiedni <xref:System.Windows.Controls.TextBlock> elementu.  
   
- ![Pole TextBlock jest teraz widoczne. ](./media/boundingbox2.png "boundingbox2")  
+ ![Zrzut ekranu pokazujący okno otaczający blok tekstu jest teraz widoczne.](./media/layout/visible-textblock-bounding-box.png)  
   
  Jak to przedstawiono w żółtą prostokącie ilość miejsca przydzielonego dla <xref:System.Windows.Controls.TextBlock> element jest faktycznie znacznie większe niż wygląda na to. Jako dodatkowe elementy są dodawane do <xref:System.Windows.Controls.Grid>, tego przydziału można powiększyć lub pomniejszyć, w zależności od typu i rozmiaru elementów, które są dodawane.  
   

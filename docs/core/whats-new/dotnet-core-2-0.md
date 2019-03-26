@@ -4,12 +4,12 @@ description: Więcej informacji na temat nowych funkcji, które znajdują się w
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679896"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464076"
 ---
 # <a name="whats-new-in-net-core-20"></a>What's new in .NET Core 2.0
 
@@ -144,7 +144,7 @@ Aby uzyskać więcej informacji, zobacz [Live Unit Testing w programie Visual St
 
 Jeśli tworzysz projekt dla wielu platform docelowych można teraz wybrać platformę docelową menu najwyższego poziomu. Na poniższej ilustracji, projekt o nazwie SCD1 cele 64-bitowym z systemem macOS X 10.11 (`osx.10.11-x64`) i 64-bitowego systemu Windows 10/Windows Server 2016 (`win10-x64`). Przed wybraniem przycisku projektu, w tym przypadku kompilację debugowania, możesz wybrać platformy docelowej.
 
-![Wybieranie platformy docelowej podczas kompilowania projektu](media/multitarget.png)
+![Zrzut ekranu przedstawiający wybór framework docelowego podczas kompilowania projektu.](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>Side-by-side obsługę zestawów .NET Core SDK
 

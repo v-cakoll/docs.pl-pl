@@ -4,12 +4,12 @@ description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 92dd63fa155ea6e49ddb1eee9c201d5d9dc0418e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a8016b2b55313cb6e1d84bfb2c50a62347858de9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679531"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464362"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -64,10 +64,10 @@ Możesz rozpocząć kodowanie swoją aplikację w zwykły .NET (zwykle w .NET Co
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wprowadzenie do platformy Docker CE dla Windows** \
-  [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
+  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [*https://visualstudio.microsoft.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 ![2 — pisanie plików Dockerfile](./media/image4.png)
 
@@ -119,16 +119,16 @@ Można określić dodatkowe ustawienia konfiguracji w pliku Dockerfile, w zależ
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Tworzenie obrazów platformy Docker dla aplikacji .NET Core** \
-  [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **Tworzenie własnego obrazu**. W oficjalnej dokumentacji platformy Docker. \
-  [*https://docs.docker.com/engine/tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
+  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
 
 - **Uzyskuje obrazów kontenerów platformy .NET** \
-  *<https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>*
+  <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
 
 - **Przy użyciu platformy .NET i Docker wspólnie - DockerCon 2018 Update** \
-  *<https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>*
+  <https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>
 
 ### <a name="using-multi-arch-image-repositories"></a>Przy użyciu repozytoriów wielu architektury obrazu
 
@@ -290,10 +290,10 @@ Można utworzyć własny obraz podstawowy platformy Docker, od podstaw. W tym sc
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wielu architektury obrazów platformy .NET Core**. \
-  [*https://github.com/dotnet/announcements/issues/14*](https://github.com/dotnet/announcements/issues/14)
+  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
 
 - **Tworzenie obrazu podstawowego**. Oficjalna dokumentacja platformy Docker. \
-  [*https://docs.docker.com/engine/userguide/eng-image/baseimages/*](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
 
 ![3 — Tworzenie obrazów zdefiniowany z numerem plików Dockerfile](./media/image7.png)
 
@@ -485,7 +485,7 @@ Istotną kwestią jest, jak pokazano na rysunku 5-12, w programie Visual Studio 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wdrażanie kontenera platformy ASP.NET ha zdalnym hoście platformy Docker** \
-  [*https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker*](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Uwaga dotycząca testowanie i wdrażanie przy użyciu koordynatorów
 
@@ -522,10 +522,10 @@ Jeżeli projektujesz przy użyciu podejścia edytora/CLI debugowanie kontenerów
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Debugowanie aplikacji w lokalnym kontenerze Docker** \
-  [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 - **Steve Lasker. Kompilowanie, debugowanie, wdrażanie aplikacji platformy ASP.NET Core przy użyciu platformy Docker.** Film wideo. \
-  [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Uproszczone przepływu pracy podczas tworzenia kontenerów przy użyciu programu Visual Studio
 
@@ -540,7 +540,7 @@ Ponadto należy wykonać tylko raz w kroku 2 (Dodawanie obsługę platformy Dock
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Steve Lasker. Programowanie na platformie .NET platformy docker przy użyciu programu Visual Studio 2017** \
-  [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Używanie poleceń programu PowerShell w pliku Dockerfile do konfigurowania kontenerów Windows 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **aspnet-docker/Dockerfile.** Przykładowe polecenia programu PowerShell do uruchamiania z plików dockerfile w celu uwzględnienia funkcji Windows. \
-  [*https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
 
 >[!div class="step-by-step"]
 >[Poprzednie](index.md)

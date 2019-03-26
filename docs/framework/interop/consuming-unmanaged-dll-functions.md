@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 771d1e56d323ee4b450f25773569f7a0b7b038e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411164"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463088"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Wykorzystywanie niezarządzanych funkcji DLL
 Wywołanie platformy jest usługą, że umożliwia zarządzanemu kodowi wywoływanie funkcji niezarządzanych zaimplementowane w biblioteki dołączanej dynamicznie (dll), takich jak te w interfejsie API Windows. Lokalizuje i wywołuje eksportowanych funkcji i kieruje argumentów (liczby całkowite, ciągi, tablice, struktur i tak dalej) wewnątrz międzyoperacyjnej granicy, zgodnie z potrzebami.  
@@ -54,8 +54,7 @@ Wywołanie platformy jest usługą, że umożliwia zarządzanemu kodowi wywoływ
 ## <a name="a-closer-look-at-platform-invoke"></a>Im bliżej wywołania platformy  
  Wywołanie platformy opiera się na metadanych w celu zlokalizowania wyeksportowanych funkcji i kierowania ich argumentów w czasie wykonywania. Poniższa ilustracja przedstawia ten proces.  
   
- ![Wywołanie platformy](../../../docs/framework/interop/media/pinvoke.gif "funkcji pinvoke")  
-Wywołanie niezarządzanych funkcji DLL wywołania platformy  
+ ![Diagram przedstawiający platformę wywołania wywołania.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
  Gdy wywołanie platformy wywołania funkcji niezarządzanej, wykonuje następującą sekwencję czynności:  
   

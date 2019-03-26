@@ -4,12 +4,12 @@ description: Architektura Mikrousług jest nie tylko dla zaplecza. Uzyskaj obraz
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 95f6c9dca62f3c524a6530b344daaebb118040b9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b481a76052efdd1ce0da406732230d41701ac354
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126041"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464843"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach
 
@@ -42,19 +42,19 @@ Jednak firma Microsoft zachęca Dowiedz się więcej o złożonego interfejsu u�
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Złożonego interfejsu użytkownika za pomocą programu ASP.NET (w szczególności Workshop)** \
-  [*https://github.com/Particular/Workshop/tree/master/demos/asp-net-core*](https://github.com/Particular/Workshop/tree/master/demos/asp-net-core)
+  [https://github.com/Particular/Workshop/tree/master/demos/asp-net-core](https://github.com/Particular/Workshop/tree/master/demos/asp-net-core)
 
 - **Ruben Oostinga. Monolityczny frontonu w architekturze Mikrousług** \
-  [*https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+  [https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/](https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
 - **Mauro Servienti. Klucz tajny lepsze kompozycji interfejsu użytkownika** \
-  [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
+  [https://particular.net/blog/secret-of-better-ui-composition](https://particular.net/blog/secret-of-better-ui-composition)
 
 - **VIKTOR Farcic. W tym składników frontonu sieci Web na Mikrousługi** \
-  [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
+  [https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 - **Zarządzanie frontonu w architekturze Mikrousług** \
-  [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+  [https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 >[!div class="step-by-step"]
 >[Poprzednie](microservices-addressability-service-registry.md)

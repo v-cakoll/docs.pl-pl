@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676372"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465896"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
@@ -58,13 +58,13 @@ Niektóre osoby powiedzieć o tym, że model domeny anemic jest zapobieganie wzo
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **DevIQ. Jednostka domeny** \
-  [*https://deviq.com/entity/*](https://deviq.com/entity/)
+  [https://deviq.com/entity/](https://deviq.com/entity/)
 
 - **Martin Fowler. Model domeny** \
-  [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
 
 - **Martin Fowler. Model domeny Anemic** \
-  [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>Wzorzec wartość obiektu
 
@@ -83,16 +83,16 @@ EF Core 2.0 obejmuje [należące do jednostek](https://devblogs.microsoft.com/do
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Martin Fowler. Value — wzorzec obiektu** \
-  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
 
 - **Obiekt wartości** \
-  [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+  [https://deviq.com/value-object/](https://deviq.com/value-object/)
 
 - **Obiekty wartości w Test-Driven Development** \
-  [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+  [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans. Projektowania opartego na domenie: Co dzień do czynienia złożoności serce oprogramowania.** (Zarezerwuj; zawiera omówienie obiekty wartości) \
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Wzorzec agregacji
 
@@ -145,13 +145,13 @@ Identyfikowanie i Praca z agregacjami wymaga badania i doświadczenie. Aby uzysk
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. Wzorce projektowe taktyczne DDD** \
-  [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
 - **Chris Richardson. Tworzenie transakcji Mikrousług przy użyciu wartości zagregowanych** \
-  [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 - **DevIQ. Wzorzec agregacji** \
-  [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
 >[Poprzednie](ddd-oriented-microservice.md)

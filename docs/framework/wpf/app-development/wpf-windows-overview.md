@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373113"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466221"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Presentation Foundation (WPF) za pośrednictwem systemu windows. Głównym celem okna jest do hostowania zawartości, która wizualizuje dane oraz umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemem windows w aplikacje autonomiczne.  
@@ -44,9 +44,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Klasy okna  
- Na poniższym rysunku przedstawiono części składowe okna.  
+ Na poniższym rysunku przedstawiono części składowe okna:  
   
- ![Elementy okna](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Zrzut ekranu pokazujący elementy okna.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Okno jest podzielony na dwóch obszarach: obszaru nieklienckiego i obszaru klienta.  
   
@@ -146,7 +146,7 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  Na koniec otwierania okna przez wywołanie metody <xref:System.Windows.Window.Show%2A> metody; wynik jest wyświetlany na poniższej ilustracji.  
   
- ![Okno otwierane przez wywołanie metody Window.Show](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Okno otwarte przez wywołanie metody Window.Show](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  Okno, w którym jest otwarta przez wywołanie <xref:System.Windows.Window.Show%2A> jest oknem niemodalnym, co oznacza, że aplikacja działa w trybie który pozwala użytkownikom na uaktywnienie innych okien w tej samej aplikacji.  
   
@@ -282,13 +282,13 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Zdarzenia okresu istnienia okna  
- Poniższa ilustracja przedstawia kolejność zdarzeń jednostki w okres istnienia okna.  
+ Poniższa ilustracja przedstawia kolejność zdarzeń główną w trakcie trwania okna:  
   
- ![Okres istnienia okna](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Diagram pokazujący zdarzenia w okresie istnienia okna.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- Poniższa ilustracja przedstawia kolejność zdarzeń jednostki w okres istnienia okna, która jest wyświetlana bez aktywacji (<xref:System.Windows.Window.ShowActivated%2A> ustawiono `false` przed pokazaniem okna).  
+ Poniższa ilustracja przedstawia kolejność zdarzeń jednostki w okres istnienia okna, która jest wyświetlana bez aktywacji (<xref:System.Windows.Window.ShowActivated%2A> ustawiono `false` przed pokazaniem okna):  
   
- ![Window Lifetime &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Diagram pokazujący zdarzenia w okresie istnienia okna, bez aktywacji.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Położenie okna  
@@ -351,21 +351,21 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  **Dla właściwości wysokości:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Dla właściwości szerokości:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- Efekt te style okna ramowego zostały zilustrowane na poniższym rysunku.  
+ Efekt te style okna ramowego zostały zilustrowane na poniższym rysunku:  
   
- ![Style okna ramowego](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Ilustracja style obramowania okna.](./media/wpf-windows-overview/window-border-styles.png)  
   
  Możesz ustawić <xref:System.Windows.Window.WindowStyle%2A> za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników lub innego kodu; ponieważ jest to raczej nie ulegnie zmianie w okresie istnienia okna, najprawdopodobniej skonfigurujesz go za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników.  
   
@@ -448,9 +448,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 #### <a name="non-rectangular-window-style"></a>Styl okna niż prostokątny  
  Istnieją również sytuacji, w którym obramowania style, które <xref:System.Windows.Window.WindowStyle%2A> umożliwia posiadania nie są wystarczające. Na przykład, warto utworzyć aplikację z innych niż prostokątne obramowania, takich jak [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] używa.  
   
- Na przykład należy wziąć pod uwagę okna bąbelków mowy pokazano na poniższej ilustracji.  
+ Na przykład należy wziąć pod uwagę okna bąbelków mowy pokazano na poniższej ilustracji:  
   
- ![Okno nieprostokątne](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Okno bąbelków mowy, które mówi mnie przeciągania.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  Okna tego typu mogą być tworzone przez ustawienie <xref:System.Windows.Window.WindowStyle%2A> właściwości <xref:System.Windows.WindowStyle.None>i za pomocą specjalnych obsługują <xref:System.Windows.Window> ma przezroczystości.  
   
@@ -460,9 +460,10 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>Obecność na pasku zadań  
- Domyślny wygląd okna zawiera przycisk paska zadań, tak jak pokazano na poniższej ilustracji.  
-  
- ![Okno z przyciskiem paska zadań](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+Domyślny wygląd okna zawiera przycisk na pasku zadań, tak jak pokazano na poniższej ilustracji:
+
+ ![Zrzut ekranu pokazujący okno z przyciskiem paska zadań.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  Niektóre typy systemu windows nie mają przycisk paska zadań, takich jak komunikatów i okien dialogowych (zobacz [Przegląd okien dialogowych](dialog-boxes-overview.md)). Można kontrolować, czy przycisk paska zadań dla okna jest pokazywane, ustawiając <xref:System.Windows.Window.ShowInTaskbar%2A> właściwości (`true` domyślnie).  
   

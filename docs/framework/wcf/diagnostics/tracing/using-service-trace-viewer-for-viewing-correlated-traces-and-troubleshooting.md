@@ -2,12 +2,12 @@
 title: Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594814"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465064"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 W tym temacie opisano format danych śledzenia, jak wyświetlać i metod, które umożliwiają rozwiązywanie problemów z aplikacji przeglądarki danych śledzenia usługi.  
@@ -130,20 +130,23 @@ W tym temacie opisano format danych śledzenia, jak wyświetlać i metod, które
 > [!NOTE]
 >  W programie WCF, pokazujemy wiadomości odpowiedzi początkowo przetwarzanych w oddzielnych działania (proces komunikat) przed możemy skorelować do odpowiadającego im działania akcji procesu, który zawiera komunikat żądania, w ramach transferu. To się dzieje w przypadku infrastruktury komunikatów i żądań asynchronicznych a wynika z faktu, że firma Microsoft musi sprawdzanie wiadomości, odczytać nagłówka activityId i zidentyfikować istniejące działania procesu akcji o takim identyfikatorze skorelować do niego. Dla żądań synchronicznych firma Microsoft blokują dla odpowiedzi, a więc wiedzieć, jaka akcja proces odpowiedzi odnosi się do.  
   
- ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
-Godzina utworzenia (panelu po lewej stronie) i ich zagnieżdżonych działań i ślady (w górnym prawym panelu) na liście działania klienta WCF  
+Na poniższej ilustracji przedstawiono działania klienta WCF, wyświetlane przez czas utworzenia (panelu po lewej stronie) oraz ich zagnieżdżonych działań i ślady (w górnym prawym panelu):
+
+ ![Zrzut ekranu przedstawiający czynności wymienionych w czasie tworzenia klienta platformy WCF.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-client-activities-creation-time.gif)  
   
  Gdy wybierzemy działania w panelu po lewej stronie widać zagnieżdżonych działań i dane śledzenia w górnym prawym panelu. Dlatego jest obniżona hierarchiczny widok Lista działań związanych z lewej strony, na podstawie wybranej nadrzędnej działania. Ponieważ wybranej akcji procesu Dodaj pierwszego żądania wprowadzone, to działanie zawiera działanie Ustaw się zabezpieczyć sesji (przesyłanie danych do przeniesienia powrót po awarii z) i śledzi w celu przetwarzania rzeczywiste Dodaj akcję.  
   
  Kliknij dwukrotnie działanie procesu działania Dodaj w lewym panelu, widać graficzną reprezentację działania WCF klienta, które są związane z Dodaj. Pierwsze działanie po lewej stronie jest działania głównego (0000), który jest domyślne działanie. Transfery WCF ze otoczenia działania. Jeśli to nie jest zdefiniowany, WCF przesyła poza 0000. W tym miejscu drugiego działania, przetwórz operację dodawania akcji, przesyła poza 0. Wtedy wyświetlone ustawienia zabezpieczenia sesji.  
-  
- ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Widok wykresu działania klienta WCF: Otoczenia działania (tutaj 0), działanie procesu oraz ustawić się Secure sesję  
+
+ Na poniższej ilustracji przedstawiono widok wykresu klienta WCF działań, w szczególności otoczenia działania (tutaj 0), przetwarzania akcji i konfigurowania bezpiecznej sesji:   
+
+ ![Wykres w podglądzie śledzenia przedstawiający działanie otoczenia i procesu akcji.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-activities-graph-ambient-process.gif)   
   
  W górnym prawym panelu widać wszystkie ślady dotyczące działań Przetwórz operację dodawania akcji. W szczególności firma Microsoft ma wysłała komunikat żądania ("Wysłano wiadomość w kanale") i odebrał odpowiedź ("Odebrano wiadomość w kanale"), w ramach tego samego działania. Jest to pokazane na poniższym wykresie. W celu uściślenia Konfigurowanie aktywność sesji bezpiecznego jest zwinięte na wykresie.  
   
- ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace6.gif "e2eTrace6")  
-Lista śledzenia dla działania procesu akcji: możemy wysłać żądanie i otrzymywać odpowiedzi w ramach tego samego działania.  
+ Na poniższej ilustracji przedstawiono listę ślady działania procesu akcji. Firma Microsoft może wysłać żądanie, a następnie odbierania odpowiedzi w ramach tego samego działania.
+ 
+ ![Zrzut ekranu z przeglądarki danych śledzenia pokazanie listy ślady działania procesu działania](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/process-action-traces.gif)  
   
  W tym miejscu możemy załadować śladów klienta tylko w celu uściślenia, ale śladów usługi (Odebrano komunikat żądania i odpowiedzi wiadomością wysłaną) pojawić się w tym samym działaniu, jeśli one również są ładowane w narzędziu i `propagateActivity` została ustawiona na `true.` przedstawiono na ilustracji nowsze.  
   
@@ -162,14 +165,17 @@ Lista śledzenia dla działania procesu akcji: możemy wysłać żądanie i otrz
 6.  Dla akcji poza procesem możemy utworzyć aktywności "Wykonywanie kodu użytkownika" do izolowania danych śledzenia emitowane w kodzie użytkownika z tymi emitowane w programie WCF. W poprzednim przykładzie śledzenia "Usługa wysyła odpowiedź Dodaj" w działaniu "Użytkownika wykonaj kod" w aktywności propagowane przez klienta, nie jest emitowane, jeśli ma to zastosowanie.  
   
  Na ilustracji poniżej pierwsze działanie po lewej stronie jest działania głównego (0000), który jest domyślne działanie. Następne trzy działania są można otworzyć elementu ServiceHost. Działanie w kolumnie 5 jest odbiornik i pozostałych działań (od 6 do 8) opisano WCF przetwarzania wiadomości w bajtach przetwarzania aktywację kodu użytkownika.  
+
+ Na poniższej ilustracji przedstawiono widok wykresu działań usługi WCF:   
+
+ ![Zrzut ekranu z przeglądarki danych śledzenia przedstawiający listę działań usługi WCF](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
   
- ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace7.gif "e2eTrace7")  
-Listę działań usługi WCF  
   
  Poniższy zrzut ekranu przedstawia działania dla klienta i usługi i prezentuje działanie Przetwórz operację dodawania akcji między procesami (kolor pomarańczowy). Strzałki komunikatów żądań i odpowiedzi wysyłane i odbierane przez klienta i usługi są ze sobą powiązane. Ślady działania procesu są rozdzielane między procesami na wykresie, ale widoczne jako część tego samego działania w prawym górnym rogu panelu. W tym panelu widać ślady klienta dla wysłanych komunikatów, następuje śladów usługi odebranych i przetworzonych komunikatów.  
   
- ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace8.gif "e2eTrace8")  
-Widok wykresu obu działań klienta i usługi WCF  
+ Poniższych ilustracjach przedstawiono widok wykresu zarówno działania klienta i usługi WCF  
+ 
+ ![Wykres z podglądu śledzenia, który zawiera oba działania klienta i usługi WCF.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-client-service-activities.gif)   
   
  W poniższym scenariuszu błąd błąd i zapisy ostrzeżeń na usługi i klienta są powiązane. Najpierw jest zgłaszany wyjątek w kodzie użytkownika w usłudze (najdalej z prawej strony działania zielony, który obejmuje Ostrzeżenie śledzenia dla wyjątku "Usługa nie może przetworzyć tego żądania, w kodzie użytkownika."). Gdy odpowiedź jest wysyłana do klienta, śledzenia ostrzeżenie ponownie jest emitowany do oznaczania komunikat o błędzie (po lewej stronie różowy działanie). Klient następnie zamyka jego klienta WCF (żółty działanie po stronie lewej dolnej), który przerywa połączenie z usługą. Usługa zgłasza błąd (najdłuższy różowy działanie po prawej stronie).  
   
@@ -181,8 +187,9 @@ Korelowanie błąd usługi i klienta
 ## <a name="troubleshooting-using-the-service-trace-viewer"></a>Rozwiązywanie problemów przy użyciu przeglądarki danych śledzenia usługi  
  Podczas ładowania plików śledzenia w narzędziu Podgląd śledzenia usługi można wybrać wszelkich czerwony threshold lub Yellow threshold działań w panelu po lewej stronie, aby Śledzenie przyczyny problemu w aplikacji. Zazwyczaj 000 działanie ma nieobsługiwany wyjątki, które będą się pojawiać do użytkownika.  
   
- ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace10.gif "e2eTrace10")  
-Wybierając czerwoną threshold lub Yellow threshold działania Znajdź główny problem  
+  Na poniższej ilustracji przedstawiono, jak wybrać czerwony threshold lub Yellow threshold działania Znajdź główny problem.   
+ ![Zrzut ekranu przedstawiający czerwony threshold lub Yellow threshold działań do lokalizowania głównego problemu.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
+ 
   
  W górnym prawym panelu można sprawdzić ślady działania, które wybrano po lewej stronie. Następnie można badać ślady czerwony threshold lub Yellow Threshold w panelu i zobacz, jak są skorelowane. Na poprzednim wykresie widzimy zapisy ostrzeżeń, zarówno dla klienta i usługi, w tym samym działaniu działania procesu.  
   
@@ -195,8 +202,9 @@ Rozwijanie działania śledzenia głównej przyczyny problemu
   
  Po włączeniu rejestrowania komunikatów można użyć karta wiadomość, aby wyświetlić komunikat, który jest wpływ ten błąd. Dwukrotne kliknięcie komunikatu na czerwono lub żółty, możesz zobaczyć w widoku wykresu powiązanych działań. Te działania są najbardziej związane z żądaniem gdzie wystąpił błąd.  
   
- ![Używanie przeglądarki danych śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
-Aby rozpocząć rozwiązywanie problemów, możesz również wybierz czerwony threshold lub Yellow threshold komunikat śledzenia i dwukrotnie kliknij go, aby śledzić głównej przyczyny  
+ ![Zrzut ekranu z przeglądarki danych śledzenia przy użyciu włączone rejestrowanie komunikatów.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/message-logging-enabled.gif)  
+
+Zacząć Rozwiązywanie problemów, możesz wybrać czerwony threshold lub Yellow threshold komunikat śledzenia i dwukrotnie kliknij go, aby śledzić głównej przyczyny problemu.  
   
 ## <a name="see-also"></a>Zobacz także
 - [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

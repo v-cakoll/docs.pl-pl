@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 41f02013feb1405e5640afa73b954dc84921c924
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351486"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463322"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Instrukcje: Użyj wzorca szczegółowego z danymi hierarchicznymi
 W tym przykładzie pokazano, jak można implementować scenariusza wzorzec / szczegół.  
@@ -23,7 +23,7 @@ W tym przykładzie pokazano, jak można implementować scenariusza wzorzec / szc
   
  Poniżej przedstawiono zrzut ekranu przykładu. `Divisions` <xref:System.Windows.Controls.ListBox> Automatyczne śledzenie zaznaczenia w `Leagues` <xref:System.Windows.Controls.ListBox> i wyświetlić odpowiednie dane. `Teams` <xref:System.Windows.Controls.ListBox> Śledzi wybory w dwóch pozostałych <xref:System.Windows.Controls.ListBox> kontrolki.  
   
- ![Wzorzec&#45;przykład szczegółów](./media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![Zrzut ekranu przedstawiający wzorzec&#45;przykładowy scenariusz szczegółów.](./media/how-to-use-the-master-detail-pattern-with-hierarchical-data/databinding-master-detail-scenario.png)  
   
  Dostępne są następujące dwie czynności należy zwrócić uwagę, w tym przykładzie:  
   

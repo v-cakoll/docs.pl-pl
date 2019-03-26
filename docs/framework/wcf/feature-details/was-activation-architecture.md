@@ -2,12 +2,12 @@
 title: Architektura aktywacji WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71546bf6fb13c9d2fecf09b79460a953f60e4e3b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557110"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465762"
 ---
 # <a name="was-activation-architecture"></a>Architektura aktywacji WAS
 W tym temacie wyszczególniono oraz omówienie składników usługi aktywacji procesów systemu Windows (znany także jako WAS).  
@@ -27,7 +27,7 @@ W tym temacie wyszczególniono oraz omówienie składników usługi aktywacji pr
   
  Gdy WAS aktywuje wystąpienia procesu roboczego ładuje obsługi protokołu procesu, które są wymagane do procesu roboczego i używa Menedżera aplikacji, aby utworzyć domenę aplikacji do hostowania aplikacji. Domeny aplikacji, ładuje kod aplikacji, a także obsługi protokołu domeny aplikacji, które protokoły sieciowe używane przez wymagają aplikacji.  
   
- ![Architektura WAS](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![Zrzut ekranu pokazujący architekturę WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Odbiornik kart  
  Odbiornik karty są poszczególnych usług Windows, które implementują logikę komunikacji sieciowej używaną do odbierania komunikatów za pomocą protokołu sieciowego, na którym się one nasłuchiwanie. W poniższej tabeli wymieniono kart odbiornika protokołu Windows Communication Foundation (WCF).  

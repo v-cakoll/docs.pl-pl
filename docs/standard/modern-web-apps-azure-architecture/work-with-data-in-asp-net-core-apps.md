@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827178"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463738"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacji platformy ASP.NET Core
 
@@ -51,7 +51,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-Twoje DbContext posiadanie Konstruktor, który akceptuje DbContextOptions oraz przekazania tego argumentu do konstruktora bazowego typu DbContext. Należy pamiętać, że jeśli masz tylko jeden kontekst DbContext w aplikacji, można przekazać wystąpienia DbContextOptions, ale jeśli masz więcej niż jeden należy użyć ogólnego DbContextOptions<T> typu, przekazując jako parametr ogólny typu DbContext.
+Twoje DbContext posiadanie Konstruktor, który akceptuje DbContextOptions oraz przekazania tego argumentu do konstruktora bazowego typu DbContext. Należy pamiętać, że jeśli masz tylko jeden kontekst DbContext w aplikacji, można przekazać wystąpienia DbContextOptions, ale jeśli masz więcej niż jeden należy użyć ogólnego DbContextOptions\<T > typu, przekazując jako parametr ogólny typu DbContext.
 
 ### <a name="configuring-ef-core"></a>Konfigurowanie programu EF Core
 
@@ -89,7 +89,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Jest ważne w powyższym przykładzie, aby dodać wywołanie do ToListAsync, aby można było przeprowadzić zapytanie natychmiastowo. W przeciwnym razie instrukcji przypisze element IQueryable<SelectListItem> do brandItems, który nie zostanie wykonany dopóki go wyliczenia. Istnieją zalety i wady do zwracania wyników IQueryable z metod. Umożliwia to zapytanie, które programu EF Core będzie konstruowania można dalej modyfikować, ale może również powodować błędy występujące tylko w czasie wykonywania, jeśli działania są dodawane do zapytania, które nie może tłumaczyć programu EF Core. Zazwyczaj bezpieczniej przekazać jakiekolwiek filtry do metody wykonywania dostępu do danych, a zwracany z powrotem kolekcji w pamięci (na przykład listy<T>) jako wynik.
+Jest ważne w powyższym przykładzie, aby dodać wywołanie do ToListAsync, aby można było przeprowadzić zapytanie natychmiastowo. W przeciwnym razie instrukcji przypisze element IQueryable\<SelectListItem > do brandItems, który nie zostanie wykonany dopóki go wyliczenia. Istnieją zalety i wady do zwracania wyników IQueryable z metod. Umożliwia to zapytanie, które programu EF Core będzie konstruowania można dalej modyfikować, ale może również powodować błędy występujące tylko w czasie wykonywania, jeśli działania są dodawane do zapytania, które nie może tłumaczyć programu EF Core. Zazwyczaj bezpieczniej przekazać jakiekolwiek filtry do metody wykonywania dostępu do danych, a zwracany z powrotem kolekcji w pamięci (na przykład listy\<T >) w wyniku.
 
 EF Core śledzi zmiany w jednostkach, który pobiera się go z trwałości. Aby zapisać zmiany do śledzonych jednostki, po prostu Wywołaj metodę SaveChanges dla kontekstu DbContext, upewniając się, że jest to samo wystąpienie typu DbContext, który został użyty do pobrania jednostki. Dodawanie i usuwanie jednostek odbywa się bezpośrednio na odpowiedniej właściwości DbSet ponownie z wywołaniem funkcji SaveChanges można wykonać polecenia bazy danych. Poniższy przykład pokazuje, dodawanie, aktualizowanie i usuwanie jednostek trwałości.
 

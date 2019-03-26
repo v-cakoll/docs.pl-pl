@@ -26,13 +26,13 @@ Instalując [Docker Community Edition (CE)](https://www.docker.com/community-edi
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Visual Studio**. Oficjalna witryna. \
-  [*https://visualstudio.microsoft.com/vs/*](https://visualstudio.microsoft.com/vs/)
+  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
 
 - **Program Visual Studio Code** Oficjalna witryna. \
-  [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
+  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
 - **Platformę docker Community Edition (CE) dla systemów Mac i Windows** \
-  [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
+  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET, języków i struktur dla kontenerów Docker
 

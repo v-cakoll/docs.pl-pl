@@ -3,12 +3,12 @@ title: System.Delegate i `delegate` — słowo kluczowe
 description: Więcej informacji na temat klas .NET Framework, które obsługują delegatów oraz sposób mapowania tych — słowo kluczowe "delegowanie".
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126178"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465779"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate i `delegate` — słowo kluczowe
 
@@ -92,7 +92,7 @@ phrases.Sort(CompareLength);
 
 Należy zauważyć, że nazwa metody jest używana, bez nawiasów. Przy użyciu metody jako argument informuje kompilator, aby konwertować odwołanie do metody odwołania, który może służyć jako cel wywołania delegata, a następnie Dołącz tę metodę jako obiekt docelowy wywołania.
 
-Możesz również mogło być jawne przez zadeklarowanie zmiennej typu "porównanie<string>" i wykonując przypisania:
+Możesz również mogło być jawne przez zadeklarowanie zmiennej typu `Comparison<string>` i wykonując przypisania:
 
 ```csharp
 Comparison<string> comparer = CompareLength;

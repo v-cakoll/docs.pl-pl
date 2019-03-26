@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836646"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463816"
 ---
 # <a name="inheritance-in-c-and-net"></a>Dziedziczenie w języku C# i .NET
 
@@ -61,7 +61,7 @@ Podczas wszystkich innych członków klasy podstawowej są dziedziczone przez kl
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Klasy pochodne mogą również *zastąpienia* odziedziczone składowe, zapewniając alternatywnej implementacji. Aby można było przesłonić składowej, składowej w klasie podstawowej musi być oznaczony przez [wirtualnego](../language-reference/keywords/virtual.md) — słowo kluczowe. Domyślnie składowych klasy bazowej nie są oznaczane jako `virtual` i nie może zostać zastąpiona. Próba zastąpienia niewirtualną elementu członkowskiego, jak poniższy przykład generuje błąd kompilatora CS0506: "<member> nie można przesłonić odziedziczonej składowej <member> , ponieważ nie jest oznaczony wirtualnego, abstract" ani "override.
+Klasy pochodne mogą również *zastąpienia* odziedziczone składowe, zapewniając alternatywnej implementacji. Aby można było przesłonić składowej, składowej w klasie podstawowej musi być oznaczony przez [wirtualnego](../language-reference/keywords/virtual.md) — słowo kluczowe. Domyślnie składowych klasy bazowej nie są oznaczane jako `virtual` i nie może zostać zastąpiona. Próba zastąpienia niewirtualną elementu członkowskiego, jak poniższy przykład generuje błąd kompilatora CS0506: "\<składowej > nie można przesłonić odziedziczonej składowej \<składowej >, ponieważ nie jest oznaczony wirtualnego, abstract" ani "override.
 
 ```csharp
 public class A
@@ -194,7 +194,7 @@ W projektowaniu swoje `Publication` klasy, musisz wprowadzić kilka decyzje doty
 
  `Publication` Klasa nie ma żadnych `abstract` metody, ale sama klasa `abstract`.
 
-- Czy klasę pochodną reprezentuje ostatnią klasę w hierarchii dziedziczenia, a nie sam można użyć jako klasę bazową dla dodatkowych klasach pochodnych. Domyślnie każda klasa może służyć jako klasę bazową. Można zastosować [zapieczętowanego](../language-reference/keywords/sealed.md) — słowo kluczowe, aby wskazać, że klasa nie może służyć jako klasę bazową dla wszelkich dodatkowych zajęć. Podjęto próbę pochodzi od klasy zapieczętowanej generowany błąd kompilatora CS0509, "nie może pochodzić od typu zapieczętowanego <typeName>".
+- Czy klasę pochodną reprezentuje ostatnią klasę w hierarchii dziedziczenia, a nie sam można użyć jako klasę bazową dla dodatkowych klasach pochodnych. Domyślnie każda klasa może służyć jako klasę bazową. Można zastosować [zapieczętowanego](../language-reference/keywords/sealed.md) — słowo kluczowe, aby wskazać, że klasa nie może służyć jako klasę bazową dla wszelkich dodatkowych zajęć. Podjęto próbę pochodzi od klasy zapieczętowanej generowany błąd kompilatora CS0509, "nie może pochodzić od typu zapieczętowanego \<typeName >".
 
   Dla przykładu, możesz oznaczyć klasy pochodnej jako `sealed`.
 

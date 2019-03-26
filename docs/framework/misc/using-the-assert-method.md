@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516518"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463010"
 ---
 # <a name="using-the-assert-method"></a>Korzystanie z metody Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516518"
   
 -   Metoda A znajduje się w zestawie A, metoda B jest zawarty w zestawie B i tak dalej.  
   
- ![](../../../docs/framework/misc/media/assert.gif "Assert")  
-Za pomocą potwierdzeń  
+ ![Diagram pokazujący zestawy metody Assert.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  W tym scenariuszu, metoda A wywołuje usługę B, wywołania B, C, wywołania C E, wywołania E F. Metoda C potwierdza uprawnienie do odczytania plików na dysku C (uprawnienie P1) i metody E żądania uprawnień do odczytu plików txt na dysku C (uprawnienie P1A). Po napotkaniu w czasie wykonywania żądanie w F przeszukiwania stosu jest wykonywane, aby sprawdzić uprawnienia wszystkich obiektów wywołujących f, począwszy od E. E ma uprawnienia P1A, więc przeszukiwania stosu przechodzi do sprawdzania uprawnień C, gdzie odnaleziono potwierdzenia C. Ponieważ żądane uprawnienia (P1A) jest podzbiorem potwierdzone uprawnienia (P1), zatrzymanie przeszukiwania stosu i sprawdzanie zabezpieczeń automatycznie zakończy się pomyślnie. Nie ma znaczenia w tym zestawów, które A i B nie przyznano uprawnień P1A. Potwierdzanie P1, Metoda C zapewnia wywołujące dostęp zasobów chronionych przez P1, nawet wtedy, gdy funkcja wywołująca nie przyznano uprawnień dostępu do tego zasobu.  
   

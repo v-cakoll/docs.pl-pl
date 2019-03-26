@@ -1,5 +1,5 @@
 ---
-title: Ścieżka "<pathname>" nie znaleziono
+title: Ścieżka '<pathname>' nie znaleziono
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58041444"
 ---
-# <a name="path-pathname-not-found"></a>Ścieżka "\<pathname >' nie znaleziono
+# <a name="path-pathname-not-found"></a>Ścieżka '\<pathname >' nie znaleziono
 System operacyjny nie może znaleźć określonej ścieżki ścieżkę podczas operacji uzyskiwania dostępu do plików lub dostępu do dysku. Ścieżka do pliku musi zawierać wskazaniem litery dysku i katalogów oraz podkatalogów, które muszą przejść, aby zlokalizować plik. Ścieżka może być względna lub bezwzględna.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

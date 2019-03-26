@@ -1,5 +1,5 @@
 ---
-title: Operator jest nieprawidłowy dla typu "<typename>"
+title: Operator jest nieprawidłowy dla typu '<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_OneOperand
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58035246"
 ---
-# <a name="operator-is-not-valid-for-type-typename"></a>Operator jest nieprawidłowy dla typu "\<typename >"
+# <a name="operator-is-not-valid-for-type-typename"></a>Operator jest nieprawidłowy dla typu '\<typename >'
 Operator nie jest odpowiedni dla typów.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

@@ -1,5 +1,5 @@
 ---
-title: Operator jest nieprawidłowy dla typu "<typename>"
+title: Operator jest nieprawidłowy dla typu '<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_OneOperand
@@ -11,13 +11,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58035246"
 ---
-# <a name="operator-is-not-valid-for-type-typename"></a><span data-ttu-id="235ee-102">Operator jest nieprawidłowy dla typu "\<typename >"</span><span class="sxs-lookup"><span data-stu-id="235ee-102">Operator is not valid for type '\<typename>'</span></span>
-<span data-ttu-id="235ee-103">Operator nie jest odpowiedni dla typów.</span><span class="sxs-lookup"><span data-stu-id="235ee-103">An operator is not appropriate for the types.</span></span>  
+# <a name="operator-is-not-valid-for-type-typename"></a><span data-ttu-id="afda3-102">Operator jest nieprawidłowy dla typu '\<typename >'</span><span class="sxs-lookup"><span data-stu-id="afda3-102">Operator is not valid for type '\<typename>'</span></span>
+<span data-ttu-id="afda3-103">Operator nie jest odpowiedni dla typów.</span><span class="sxs-lookup"><span data-stu-id="afda3-103">An operator is not appropriate for the types.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="235ee-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="235ee-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="afda3-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="afda3-104">To correct this error</span></span>  
   
--   <span data-ttu-id="235ee-105">Upewnij się, że operator jest odpowiedni dla typów, w której są wykonywane działania na.</span><span class="sxs-lookup"><span data-stu-id="235ee-105">Ensure that the operator is appropriate for the types being operated on.</span></span>  
+-   <span data-ttu-id="afda3-105">Upewnij się, że operator jest odpowiedni dla typów, w której są wykonywane działania na.</span><span class="sxs-lookup"><span data-stu-id="afda3-105">Ensure that the operator is appropriate for the types being operated on.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="235ee-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="235ee-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="afda3-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="afda3-106">See also</span></span>
 
-- [<span data-ttu-id="235ee-107">Operatory</span><span class="sxs-lookup"><span data-stu-id="235ee-107">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)
+- [<span data-ttu-id="afda3-107">Operatory</span><span class="sxs-lookup"><span data-stu-id="afda3-107">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)

@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 998f44d691231db14d24c36bdf769b502642d8c5
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f508d814fb1e23c59606fcf78ad38f7661609c26
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758719"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411294"
 ---
 # <a name="nettcpcontextbinding"></a>\<netTcpContextBinding>
 Określa kontekst dla <xref:System.ServiceModel.NetTcpBinding> wymaga, aby poziom ochrony były podpisane. Wartość właściwości contextExchangeMechanism dla NetTcpContextBinding jest SOAPHeader.  
@@ -68,8 +68,8 @@ Określa kontekst dla <xref:System.ServiceModel.NetTcpBinding> wymaga, aby pozio
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |closeTimeout|A <xref:System.TimeSpan> wartość, która określa przedział czasu przewidzianego na zakończenie operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|contextProtectionLevel|Nieprawidłowy <xref:System.Net.Security.ProtectionLevel> wartość, która określa poziom ochrony żądany nagłówek SOAP, wykorzystywany do propagowania informacje o kontekście.  Wartość domyślna to `Sign`.|  
-|hostnameComparisonMode|Określa tryb porównywania nazwy hosta HTTP używany do analizowania identyfikatorów URI. Ten atrybut jest typu `System.ServiceModel.HostnameComparisonMode`, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI. Wartość domyślna to `StrongWildcard`, który ignoruje hostname dopasowania.|  
+|contextProtectionLevel|Nieprawidłowy <xref:System.Net.Security.ProtectionLevel> wartość, która określa poziom ochrony żądany nagłówek SOAP, wykorzystywany do propagowania informacje o kontekście.  Wartość domyślna to <xref:System.Net.Security.ProtectionLevel.Sign>.|  
+|hostnameComparisonMode|Określa tryb porównywania nazwy hosta HTTP używany do analizowania identyfikatorów URI. Ten atrybut jest typu <xref:System.ServiceModel.HostNameComparisonMode>, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI. Wartość domyślna to <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, który ignoruje hostname dopasowania.|  
 |listenBacklog|Dodatnia liczba całkowita, określająca maksymalną liczbę kanałów, które oczekuje na zatwierdzenie na odbiorniku. Połączenia przekraczające ten limit są umieszczane w kolejce, dopóki miejsce poniżej limitu staje się dostępna. `connectionTimeout` Atrybut ogranicza czas, klient będzie czekać połączenia zanim zostanie zgłoszony wyjątek połączenia. Wartość domyślna wynosi 10.|  
 |maxBufferPoolSize|Liczba całkowita określająca maksymalny rozmiar puli buforów dla tego powiązania. Wartość domyślna to 512 * 1024 bajty. Wiele części programu Windows Communication Foundation (WCF) za pomocą buforów. Tworzenie i niszczenie buforów za każdym razem, gdy są one używane jest kosztowne, a także jest kosztowne wyrzucania elementów bezużytecznych dla buforów. Dzięki pulom buforu zająć buforu z puli, go używać i przywrócić go do puli, gdy wszystko będzie gotowe. Ten sposób unika się obciążenie tworzeniem i likwidowaniem buforów.|  
 |maxBufferSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar w bajtach buforu używany do przechowywania komunikatów w pamięci. Jeśli bufor jest pełna, nadmiar danych pozostaje w podstawowej gniazda, aż buforu, będzie miał miejsce ponownie. Ta wartość nie może być mniejsza niż `maxReceivedMessageSize` atrybutu. Wartość domyślna to 65536. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  

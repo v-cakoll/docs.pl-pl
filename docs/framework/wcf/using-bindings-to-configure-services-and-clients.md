@@ -1,17 +1,17 @@
 ---
-title: Konfigurowanie usług i klientów za pomocą powiązań
+title: Konfigurowanie usług i klientów za pomocą wiązań
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 8aed2b2efa0408371a8da47fef64340fd30fffcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577103"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410423"
 ---
-# <a name="using-bindings-to-configure-services-and-clients"></a>Konfigurowanie usług i klientów za pomocą powiązań
+# <a name="using-bindings-to-configure-services-and-clients"></a>Konfigurowanie usług i klientów za pomocą wiązań
 Powiązania są obiekty, które określają szczegółów komunikacji wymagane do połączenia z punktem końcowym. W szczególności powiązania zawierają informacje o konfiguracji, który jest używany do tworzenia środowiska uruchomieniowego klienta lub usługę, definiując szczegółowe informacje na temat transportu, formatów łańcuchowych (kodowanie komunikatu) i protokoły używane dla odpowiednich klienta lub punktu końcowego kanału. Aby utworzyć funkcjonalności usługi Windows Communication Foundation (WCF), każdy punkt końcowy usługi wymaga powiązania. W tym temacie opisano powiązania są, jak są one definiowane i jak określonego powiązania jest określony dla punktu końcowego.  
   
 ## <a name="what-a-binding-defines"></a>Definiuje powiązanie  
@@ -26,7 +26,7 @@ Powiązania są obiekty, które określają szczegółów komunikacji wymagane d
  Kodowanie  
  Określa kodowanie komunikatu, na przykład, tekstu/XML, binarne lub komunikat transmisji optymalizacji mechanizm (MTOM), określający, jak wiadomości są reprezentowane jako strumienie bajtów na potrzeby przesyłu.  
   
-## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
+## <a name="system-provided-bindings"></a>Wiązania dostarczane przez system  
  Usługi WCF zawiera zestaw powiązań dostarczanych przez system, które są przeznaczone do większości wymagań aplikacji i scenariuszy. Następujące klasy reprezentują kilka przykładów powiązania dostarczane przez system:  
   
 -   <xref:System.ServiceModel.BasicHttpBinding>: Protokół HTTP powiązanie odpowiednie do łączenia się z usługami sieci Web, który jest zgodny z WS-I Basic Profile 1.1 specyfikacji (na przykład ASP.NET Web services [ASMX]-na podstawie usług).  
@@ -54,7 +54,7 @@ Powiązania są obiekty, które określają szczegółów komunikacji wymagane d
   
 -   [Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md) stanowi przykład tworzenia powiązania w kodzie.  
   
--   [Instrukcje: Konfigurowanie klienta](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md) stanowi przykład tworzenia klienta za pomocą konfiguracji.  
+-   [Samouczek: Tworzenie klienta Windows Communication Foundation](../../../docs/framework/wcf/how-to-create-a-wcf-client.md) stanowi przykład tworzenia klienta przy użyciu konfiguracji.  
   
 ## <a name="see-also"></a>Zobacz także
 - [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md)

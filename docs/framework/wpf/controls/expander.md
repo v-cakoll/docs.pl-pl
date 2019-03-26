@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371947"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410514"
 ---
 # <a name="expander"></a>Ekspander
 <xref:System.Windows.Controls.Expander> Umożliwia użytkownikowi wyświetlanie nagłówek i rozwiń ten nagłówek, aby zobaczyć więcej informacji lub Zwiń sekcję do nagłówka.  
   
  Następująca ilustracja przedstawia przykład tej kontrolki w położeniu rozwinięty.  
   
- ![Przykład ekspander](./media/expanderexample.JPG "ExpanderExample")  
-formant ekspandera  
+ ![Przykład ekspandera](./media/expander/expander-control-example.jpg)
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Ekspander — omówienie](expander-overview.md)  

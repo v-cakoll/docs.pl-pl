@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: efc568990c6af87f24f93790886388e4c505456c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289786"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411320"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Określa protokół transportu HTTP przekazywania wiadomości SOAP do niestandardowego powiązania.  
@@ -54,7 +54,7 @@ Określa protokół transportu HTTP przekazywania wiadomości SOAP do niestandar
 |maxBufferSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar buforu. Wartość domyślna to 524288|  
 |maxReceivedMessageSize|Dodatnia liczba całkowita, określająca rozmiar maksymalny dopuszczalny rozmiar komunikatu, który może zostać odebrany. Wartość domyślna to 65536.|  
 |proxyAddress|Identyfikator URI, który określa adres serwera proxy HTTP. Jeśli `useSystemWebProxy` jest `true`, to ustawienie musi być `null`. Wartość domyślna to `null`.|  
-|proxyAuthenticationScheme|Określa protokół używany do uwierzytelniania żądań klienta przetwarzanych przez serwer proxy HTTP. Prawidłowe wartości są następujące:<br /><br /> -Brak: Uwierzytelnianie nie jest wykonywane.<br />-Podsumowanie: Określa uwierzytelnianie szyfrowane.<br />-Negocjowania: Negocjuje z klientem, aby określić schemat uwierzytelniania. Jeśli zarówno klient, jak i serwer obsługują protokół Kerberos, jest używany; w przeciwnym razie uwierzytelnianie NTLM jest używany.<br />-Ntlm: Określa uwierzytelniania NTLM.<br />-Podstawowa: Określa uwierzytelnianie podstawowe.<br />-Anonimowe: Określa uwierzytelnianie anonimowe.<br /><br /> Wartość domyślna to anonimowe. Ten atrybut jest typu <xref:System.Net.AuthenticationSchemes>. Należy pamiętać, że `IntegratedWindowsAuthentication` nie jest obsługiwane.|  
+|proxyAuthenticationScheme|Określa protokół używany do uwierzytelniania żądań klienta przetwarzanych przez serwer proxy HTTP. Prawidłowe wartości są następujące:<br /><br /> -Brak: Uwierzytelnianie nie jest wykonywane.<br />-Podsumowanie: Określa uwierzytelnianie szyfrowane.<br />-Negocjowania: Negocjuje z klientem, aby określić schemat uwierzytelniania. Jeśli zarówno klient, jak i serwer obsługują protokół Kerberos, jest używany; w przeciwnym razie uwierzytelnianie NTLM jest używany.<br />-Ntlm: Określa uwierzytelniania NTLM.<br />-Podstawowa: Określa uwierzytelnianie podstawowe.<br />-Anonimowe: Określa uwierzytelnianie anonimowe.<br /><br /> Wartość domyślna to anonimowe. Ten atrybut jest typu <xref:System.Net.AuthenticationSchemes>. Należy pamiętać, że <xref:System.Net.AuthenticationSchemes.IntegratedWindowsAuthentication?displayProperty=nameWithType> nie jest obsługiwane.|  
 |obszar|Ciąg, który określa obszar na użycie na proxy/serwerze. Wartość domyślna to ciąg pusty.<br /><br /> Serwery używają obszary do partycjonowania chronionych zasobów. Każda partycja może mieć własny schemat i/lub autoryzacji bazy danych uwierzytelniania. Obszarów są używane tylko w przypadku podstawowe i uwierzytelnianie szyfrowane. Po klient pomyślnie uwierzytelnia, uwierzytelniania jest prawidłowy dla wszystkich zasobów w danego obszaru. Aby uzyskać szczegółowy opis obszarów, zobacz RFC 2617 na [IETF witryny sieci Web](https://www.ietf.org).|  
 |requireClientCertificate|Wartość logiczna określająca, czy serwer wymaga od klienta zapewnienia certyfikatu klienta jako część uzgadniania przez HTTPS. Wartość domyślna to `false`.|  
 |transferMode|Określa, czy komunikaty są buforowane lub przesyłane strumieniowo lub żądania lub odpowiedzi. Prawidłowe wartości są następujące:<br /><br /> -Buforowane: Komunikaty żądań i odpowiedzi są buforowane.<br />-Strumieniowo: Komunikaty żądań i odpowiedzi są przesyłane strumieniowo.<br />-StreamedRequest: Komunikat żądania są przesyłane strumieniowo, a komunikat odpowiedzi są buforowane.<br />-StreamedResponse: Komunikat żądania są buforowane, a komunikat odpowiedzi są przesyłane strumieniowo.<br /><br /> Domyślnie są buforowane. Ten atrybut jest typu <xref:System.ServiceModel.TransferMode>.|  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379019"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410826"
 ---
 # <a name="table-overview"></a>Przegląd Tabela
 <xref:System.Windows.Documents.Table> jest element poziomu bloku, który obsługuje oparte na siatce prezentacji zawartości dokumentu przepływu. Elastyczność tego elementu sprawia, że bardzo przydatne, ale także stanowi bardziej skomplikowane, aby zrozumieć i zastosować poprawnie.  
@@ -72,7 +72,7 @@ ms.locfileid: "57379019"
   
  Na poniższej ilustracji przedstawiono, jak powoduje wyświetlenie w tym przykładzie.  
   
- ![Zrzut ekranu: Renderowanie podstawowej tabeli](./media/basictablerrender.png "BasicTablerRender")  
+ ![Zrzut ekranu pokazujący, jak renderuje tabeli podstawowej.](./media/table-overview/basic-table-render-example.png)  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Tabela zawierania  

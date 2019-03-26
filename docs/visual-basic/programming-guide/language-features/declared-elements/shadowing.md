@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580866"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411008"
 ---
 # <a name="shadowing-in-visual-basic"></a>Przesłanianie w Visual Basic
 Gdy dwa elementy programowania mają taką samą nazwę, jeden z nich można ukryć, lub *w tle*, jeden z nich. W takiej sytuacji zasłonięte element nie jest dostępne do użytku; Zamiast tego gdy kod używa nazwy elementu, kompilator Visual Basic jest rozpoznawany jako jej przesłaniania elementu.  
@@ -41,8 +41,7 @@ Gdy dwa elementy programowania mają taką samą nazwę, jeden z nich można ukr
   
  Na poniższej ilustracji przedstawiono dwie zmienne, o nazwie `temp`. Zmienna lokalna `temp` zasłania zmiennej składowej `temp` podczas uzyskiwania dostępu do z, w ramach własnej procedury `p`. Jednak `MyClass` — słowo kluczowe pomija przesłanianiem i uzyskuje dostęp do zmiennej elementu członkowskiego.  
   
- ![Graficzny diagram cieniowania przez zakres](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-Cieniowania przez zakres  
+ ![Grafika przedstawiająca cieniowania przez zakres.](./media/shadowing/shadow-scope-diagram.gif)
   
  Na przykład cieniowania przez zakres zobacz [jak: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
@@ -51,8 +50,7 @@ Cieniowania przez zakres
   
  Na poniższej ilustracji przedstawiono klasę bazową `b` i Klasa pochodna `d` tej, która dziedziczy `b`. Klasa bazowa definiuje procedurę o nazwie `proc`, i Klasa pochodna zasłania go przy użyciu innej procedury o takiej samej nazwie. Pierwszy `Call` uzyskuje dostęp do instrukcji, przesłanianie `proc` w klasie pochodnej. Jednak `MyBase` — słowo kluczowe pomija przesłanianiem i uzyskuje dostęp do zasłonięte procedury w klasie bazowej.  
   
- ![Diagram graficzny cieniowania poprzez dziedziczenie](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-Przesłanianie poprzez dziedziczenie  
+ ![Diagram graficzny cieniowania poprzez dziedziczenie](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  Na przykład cieniowania przez dziedziczenie zobacz [jak: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) i [jak: Ukrywanie dziedziczonej zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   

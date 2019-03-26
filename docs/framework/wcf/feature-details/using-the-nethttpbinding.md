@@ -2,21 +2,21 @@
 title: Używanie elementu NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: b00b4ed24d15519baf91ce38678fd91056eff521
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47a4da6dd709c300b62a7380e6e0754e31782dd8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658731"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411073"
 ---
 # <a name="using-the-nethttpbinding"></a>Używanie elementu NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> jest przeznaczony dla korzystanie z usług HTTP i WebSocket powiązanie i używa kodowania binarnego domyślnie. <xref:System.ServiceModel.NetHttpBinding> wykryje, czy jest używana za pomocą kontraktu dwukierunkowego lub kontraktu "żądanie odpowiedź" i zmianę jej zachowania, aby dopasować — go będzie używany protokół HTTP dla kontraktów "żądanie odpowiedź" i technologia WebSockets kontrakty dwukierunkowe. To zachowanie można przesłonić przy użyciu <xref:System.ServiceModel.Channels.WebSocketTransportUsage> ustawienia:  
   
-1. `Always` -Wymusza WebSockets ma być używany, nawet w przypadku kontraktów "żądanie odpowiedź".  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -Wymusza WebSockets ma być używany, nawet w przypadku kontraktów "żądanie odpowiedź".  
   
-2. `Never` Zapobiega — używana przez protokół WebSockets. Podjęto próbę użycia kontrakt dupleksowy, to ustawienie powoduje wyjątek.  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never> Zapobiega — używana przez protokół WebSockets. Podjęto próbę użycia kontrakt dupleksowy, to ustawienie powoduje wyjątek.  
   
-3. `WhenDuplex` -Jest wartością domyślną i zachowuje się zgodnie z powyższym opisem.  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -Jest wartością domyślną i zachowuje się zgodnie z powyższym opisem.  
   
  <xref:System.ServiceModel.NetHttpBinding> niezawodne sesje obsługuje zarówno w trybie HTTP, jak i w trybie protokołu WebSocket. W WebSocket trybu sesji są dostarczane przez transportu.  
   

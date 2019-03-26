@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 35e47d582a6b8534597945a626904d084fbeeade
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 01b8f20607de1cdd9c6b1ad9fc030c1d050ed749
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377004"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410644"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding>
 Definiuje interoperacyjne powiązanie, które zapewnia obsługę dla poprawnych wersji <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, i <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementów wiązania.  
@@ -67,7 +67,7 @@ Definiuje interoperacyjne powiązanie, które zapewnia obsługę dla poprawnych 
 |`allowCookies`|Wartość, która wskazuje, czy klient akceptuje pliki cookie i propaguje je do przyszłych żądań. Wartość domyślna to `false`.<br /><br /> Można użyć tej właściwości, gdy wchodzisz w interakcję z usług sieci Web platformy ASP.NET (ASMX), które używają plików cookie. Daje to gwarancję, że pliki cookie, które serwer zwraca są automatycznie kopiowane do wszystkich przyszłych żądań za daną usługę.|  
 |`bypassProxyOnLocal`|Wartość, która wskazuje, czy pominąć serwer proxy dla adresów lokalnych. Wartość domyślna to `false`.|  
 |`closeTimeout`|A <xref:System.TimeSpan> wartość, która określa przedział czasu na zakończenie operacji zamknięcia. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
-|`hostnameComparisonMode`|Określa tryb porównywania nazwy hosta HTTP używany do analizowania Uniform Resource Identifier (URI). Ten atrybut jest typu <xref:System.ServiceModel.HostNameComparisonMode>, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI. Wartość domyślna to <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, który ignoruje hostname dopasowania.|  
+|`hostNameComparisonMode`|Określa tryb porównywania nazwy hosta HTTP używany do analizowania Uniform Resource Identifier (URI). Ten atrybut jest typu <xref:System.ServiceModel.HostNameComparisonMode>, która wskazuje, czy nazwa hosta jest używana w celu dotarcia do usługi podczas dopasowywania identyfikatora URI. Wartość domyślna to <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, który ignoruje hostname dopasowania.|  
 |`maxBufferPoolSize`|Maksymalny rozmiar puli buforów dla tego powiązania. Wartość domyślna to 524,288 bajtów (512 x 1024). Wiele części programu Windows Communication Foundation (WCF) za pomocą buforów. Tworzenie i niszczenie buforów za każdym razem, gdy są one używane jest kosztowne, podobnie jak wyrzucanie elementów bezużytecznych dla buforów. Dzięki pulom buforu zająć buforu z puli, go używać i przywrócić go do puli, gdy wszystko będzie gotowe. Umożliwia to uniknięcie obciążenie tworzeniem i likwidowaniem buforów.|  
 |`maxReceivedMessageSize`|Maksymalny rozmiar wiadomości, w bajtach, włącznie z nagłówkami, które mogą odbierać kanał, który został skonfigurowany tym wiązaniem. Nadawca wiadomości przekroczenie tego limitu otrzyma błąd protokołu SOAP. Należy określić odbiorcę porzuca wiadomość i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536.|  
 |`messageEncoding`|Definiuje encoder umożliwia kodowanie wiadomości. Prawidłowe wartości są następujące:<br /><br /> -   `Text`: Za pomocą kodera komunikatów tekstu.<br />-   `Mtom`: Za pomocą kodera komunikatów transmisji organizacji mechanizm 1.0 (MTOM).<br /><br /> Wartość domyślna to `Text`.<br /><br /> Ten atrybut jest typu <xref:System.ServiceModel.WSMessageEncoding>.|  

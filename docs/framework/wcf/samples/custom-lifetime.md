@@ -2,12 +2,12 @@
 title: Niestandardowy okres istnienia
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520774"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410384"
 ---
 # <a name="custom-lifetime"></a>Niestandardowy okres istnienia
 
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Na koniec <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementacja jest podłączany do modelu usługi za pomocą <xref:System.ServiceModel.Description.IServiceBehavior> implementacji. Ta implementacja jest umieszczany w `CustomLeaseTimeAttribute` klasy, a także pochodzi od klasy `Attribute` klasy bazowej na udostępnianie tego zachowania jako atrybut.
+ Na koniec <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> implementacja jest podłączany do modelu usługi za pomocą <xref:System.ServiceModel.Description.IServiceBehavior> implementacji. Ta implementacja jest umieszczany w `CustomLeaseTimeAttribute` klasy, a także pochodzi od klasy <xref:System.Attribute> klasy bazowej na udostępnianie tego zachowania jako atrybut.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,

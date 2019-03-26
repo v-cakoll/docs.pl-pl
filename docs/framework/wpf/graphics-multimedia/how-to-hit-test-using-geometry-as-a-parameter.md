@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przeprowadź test trafienia przy użyciu geometrii jako parametru'
+title: 'Porady: Przeprowadź test trafienia przy użyciu geometrii jako parametru'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 15a33d05cb3ca4fd40f04170bd1756e466631275
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366364"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410618"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Instrukcje: Przeprowadź test trafienia przy użyciu geometrii jako parametru
 W tym przykładzie pokazano, jak przeprowadzić test trafień na obiekt wizualny przy użyciu <xref:System.Windows.Media.Geometry> jako hit test parametru.  
@@ -27,8 +27,7 @@ W tym przykładzie pokazano, jak przeprowadzić test trafień na obiekt wizualny
   
  <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> Właściwość <xref:System.Windows.Media.GeometryHitTestResult> zawiera informacje o wynikach hit test, który używa <xref:System.Windows.Media.Geometry> jako hit test parametru. Poniższa ilustracja przedstawia relację między testu trafienia geometrii (jasnoniebieski okrąg) i renderowanej zawartości visual obiektu docelowego (czerwony kwadrat).  
   
- ![Test trafienia Diagram właściwości IntersectionDetail użytej w](./media/intersectiondetail01.png "IntersectionDetail01")  
-Przecięcia testu trafienia geometrii i docelowy obiekt wizualny  
+ ![Diagram pokazujący właściwości IntersectionDetail użytej podczas testowania trafień.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
  Poniższy przykład pokazuje, jak zaimplementować wywołanie zwrotne testu trafienia przy <xref:System.Windows.Media.Geometry> jest używany jako parametr testu trafienia. `result` Parametru jest rzutowany na <xref:System.Windows.Media.GeometryHitTestResult> w celu pobierania wartości <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> właściwości. Wartość właściwości służy do określenia, czy <xref:System.Windows.Media.Geometry> parametru test trafień jest całkowicie lub częściowo zawarty w renderowanej zawartości elementu docelowego testu trafienia. W takim przypadku przykładowy kod jest dodawanie wyników testu trafienia do listy elementów wizualnych, które są w pełni zawarte w obrębie docelowego.  
   

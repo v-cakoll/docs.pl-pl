@@ -2,12 +2,12 @@
 title: Dołącz do operacji (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 6113949986aafdcaa2afa55d0a56d8e2186811b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527864"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411151"
 ---
 # <a name="join-operations-visual-basic"></a>Dołącz do operacji (Visual Basic)
 A *sprzężenia* dwóch źródeł danych jest skojarzenie obiektów w jednym źródle danych z obiektów mających wspólny atrybut w innym źródle danych.  
@@ -18,7 +18,7 @@ A *sprzężenia* dwóch źródeł danych jest skojarzenie obiektów w jednym źr
   
  Na poniższej ilustracji przedstawiono koncepcyjny widok dwa zestawy i elementów w obrębie tych zestawów, które są zawarte w sprzężenie wewnętrzne lub lewego sprzężenia zewnętrznego.  
   
- ![Dwa nakładających się okręgów przedstawiający wewnętrzny&#47;zewnętrznego. ](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![Dwa nakładających się okręgów przedstawiający wewnętrzny&#47;zewnętrznego.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Metody  
   

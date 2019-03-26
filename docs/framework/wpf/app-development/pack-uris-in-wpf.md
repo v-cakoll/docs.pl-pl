@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 9e7ded2869e3553eab302e150d80608b8dd7091f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e84f586e621aa54d7e8a8f62e605ec3016cfb757
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377323"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411281"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] są używane do identyfikowania i ładowanie plików na wiele sposobów, w tym następujące:  
@@ -44,7 +44,7 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
 ## <a name="the-pack-uri-scheme"></a>Pakowanie schematu URI  
  Ten pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schematu jest używany przez [otwarte konwencje pakietów](https://go.microsoft.com/fwlink/?LinkID=71255) specyfikacji (OPC) w tym artykule opisano model do organizowania i identyfikowanie zawartości. Kluczowe elementy modelu są pakiety i części, gdzie *pakietu* to logiczny kontener przeznaczony dla jednego lub więcej logicznej *części*. Na poniższym rysunku przedstawiono tę koncepcję.  
   
- ![Diagram pakietu i części](./media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
+ ![Diagram pakietu i części](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)  
   
  Aby zidentyfikować elementy, specyfikacji OPC wykorzystuje rozszerzalności RFC 2396 (identyfikatory URI (Uniform Resource): Ogólna składnia) do definiowania pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schematu.  
   
@@ -56,7 +56,7 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  Poniższy rysunek przedstawia tę koncepcję:  
   
- ![Relacja między pakietu, uprawnienia i ścieżki](./media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
+ ![Relacja między pakietu, uprawnienia i ścieżki](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)  
   
  Pakiety i części są analogiczne do aplikacji i plików, w której aplikacja (pakiet) może zawierać jeden lub więcej plików (części), w tym:  
   
@@ -72,7 +72,7 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  Aby uzyskiwać dostęp do tych typów plików, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje dwa urzędy: aplikacja: / / / oraz siteoforigin: / / /. Aplikacja: / / / Urząd identyfikuje pliki danych aplikacji, które są znane w czasie kompilacji, w tym pliki zasobów i zawartości. Siteoforigin: / / / Urząd identyfikuje witrynę pochodzenia plików. Zakres każdego uprawnień jest wyświetlany na poniższej ilustracji.  
   
- ![Pack URI diagram](./media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![Schemat identyfikatora URI pakietu](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)  
   
 > [!NOTE]
 >  Składnik wystawcy pod pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] jest osadzony [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , wskazuje pakietu i muszą być zgodne z RFC 2396. Ponadto muszą zostać zastąpione przez znak "," znakiem "/", a zastrzeżone znaki, takie jak "%" i "?" musi być poprzedzone znakiem zmiany znaczenia. Zobacz OPC, aby uzyskać szczegółowe informacje.  

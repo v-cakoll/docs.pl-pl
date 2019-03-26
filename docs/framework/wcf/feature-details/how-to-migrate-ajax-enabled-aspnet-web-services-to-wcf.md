@@ -1,13 +1,13 @@
 ---
-title: 'Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF'
+title: 'Porady: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638291"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410943"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Instrukcje: Migrowanie usług sieci Web obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF
 W tym temacie opisano procedury migracji podstawowej usługi ASP.NET AJAX do równoważne usługi obsługujące technologie AJAX Windows Communication Foundation (WCF). Widoczny jest sposób utworzyć funkcjonalnie równoważne wersję usługi ASP.NET AJAX WCF. Te dwie usługi mogą następnie służyć obok siebie lub usługi WCF umożliwia zastąpienie usługi ASP.NET AJAX.
@@ -113,7 +113,7 @@ W tym temacie opisano procedury migracji podstawowej usługi ASP.NET AJAX do ró
 ## <a name="example"></a>Przykład
  Kod, który jest wynikiem procedury opisane w tym temacie znajduje się w następującym przykładzie.
 
-```
+```csharp
 //This is the ASP.NET code in the Service1.asmx.cs file.
 
 using System;
@@ -203,7 +203,7 @@ d.Add("two", 2);
 
 |Kategoria różnice|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
-|Podczas deserializacji pusty bufor (nowe byte[0]) do <xref:System.Object> (lub <xref:System.Uri>, lub niektóre inne klasy).|SerializationException|null|
+|Podczas deserializacji pusty bufor (nowe byte[0]) do <xref:System.Object> (lub <xref:System.Uri>, lub niektóre inne klasy).|SerializationException|wartość null|
 |Serializacja <xref:System.DBNull.Value>|{} (lub {"__type": "#System"})|Null|
 |Serializacja prywatnych składowych typów [Serializable].|serializacji|nie serializacji|
 |Serializacja publicznymi właściwościami <xref:System.Runtime.Serialization.ISerializable> typów.|nie serializacji|serializacji|

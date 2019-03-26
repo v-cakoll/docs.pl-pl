@@ -2,12 +2,12 @@
 title: punkt końcowy skojarzenia
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: c1b43dea98b65427065387aedd2305f9c7b370bd
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 7fb9b48c5ed832e83f2a1e344d17d9a9797d393b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185587"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410332"
 ---
 # <a name="association-end"></a>punkt końcowy skojarzenia
 *End skojarzenia* identyfikuje [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) na jednym końcu [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) i liczby jednostek typu wystąpienia, które może znajdować się na końcu tego skojarzenia. Skojarzenia są zdefiniowane jako część skojarzenia; Skojarzenie musi mieć dokładnie dwa punkty końcowe skojarzenia. [Właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) umożliwiają nawigacji z elementu end skojarzenia jednego do drugiego.  
@@ -28,7 +28,7 @@ ms.locfileid: "58185587"
 ## <a name="example"></a>Przykład  
  Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `PublishedBy` i `WrittenBy`. Punkty końcowe dla skojarzenia `PublishedBy` to skojarzenie `Book` i `Publisher` typów jednostek. Liczebność `Publisher` end jest jeden (1), a liczebność `Book` end jest wiele (\*), informujący, że wydawca publikuje wiele książek i książki opublikowana przez jedną wydawcą.  
   
- ![Przykładowy Model](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Przykładowy model przy użyciu trzech typów jednostek](./media/association-end/example-model-three-entity-types.gif)  
   
  ADO.NET Entity Framework używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Definiuje CSDL poniżej `PublishedBy` skojarzenia pokazano na powyższym diagramie. Należy pamiętać, że typ, nazwa i liczebność każdy punkt końcowy skojarzenia są określone przez atrybuty XML ( `Type`, `Role`, i `Multiplicity` , odpowiednio, atrybutów). Opcjonalne informacje o operacji wykonywanych na koniec jest określony w elemencie XML ( `OnDelete` elementu). W tym przypadku Jeśli wydawca zostanie usunięty, dlatego są wszystkie skojarzone książki.  
   

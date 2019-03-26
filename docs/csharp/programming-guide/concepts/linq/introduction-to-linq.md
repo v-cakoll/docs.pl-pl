@@ -2,12 +2,12 @@
 title: Wprowadzenie do LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-ms.openlocfilehash: c74c4d3261354bdd2b8194371b4b37f014397e85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea17de41bbbc03158179f207aa0bc9fc9cceb863
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626566"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410696"
 ---
 # <a name="introduction-to-linq-c"></a>Wprowadzenie do LINQ (C#)
 Language-Integrated Query (LINQ) jest innowacje wprowadzone w programie .NET Framework w wersji 3.5 tego mostków lukę między obiektami w świecie, a światem danych.  
@@ -18,9 +18,9 @@ Language-Integrated Query (LINQ) jest innowacje wprowadzone w programie .NET Fra
   
  W nowych projektach, lub obok zapytania non-LINQ w istniejących projektów, można użyć zapytań LINQ. Jedynym wymaganiem jest, że projekt przeznaczony dla .NET Framework 3.5 lub nowszy.  
   
- Na poniższej ilustracji w programie Visual Studio pokazuje zapytanie LINQ z częściowo ukończone w bazie danych programu SQL Server w językach C# i Visual Basic z obsługą funkcji IntelliSense i kontrola typów w pełnej.  
+ Na poniższej ilustracji w programie Visual Studio pokazuje zapytanie LINQ z częściowo ukończone w bazie danych programu SQL Server w obu C# i Visual Basic z pełną sprawdzenie i obsługę funkcji IntelliSense:  
   
- ![Zapytania LINQ za pomocą funkcji Intellisense](../../../../csharp/programming-guide/concepts/linq/media/query_intell.png "Query_Intell")  
+ ![Diagram, który pokazuje zapytanie LINQ, za pomocą funkcji Intellisense.](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>Następne kroki  
  Aby dowiedzieć się więcej na temat LINQ, należy rozpocząć od staje się poznać niektóre podstawowe pojęcia związane z sekcji wprowadzenie [wprowadzenie do LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md), a następnie zapoznaj się z dokumentacją dla technologii LINQ, w którym interesuje Cię:  

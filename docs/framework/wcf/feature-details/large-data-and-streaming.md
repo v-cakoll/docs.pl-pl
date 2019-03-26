@@ -2,12 +2,12 @@
 title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674118"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411060"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML zwykle jest zakodowane w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), połączone systemy, deweloperów i architektów są zazwyczaj zajmującym się ochroną zużycie o komunikacji sieciowej (lub rozmiar) komunikaty wysyłane między sieć i kodowanie oparte na tekście XML stanowi szczególne wyzwanie wydajny transfer danych binarnych.  
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na
   
 |Koder elementu powiązania|Opis|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Koder komunikatów tekstu jest kodera domyślnego dla wszystkich opartych na protokole HTTP powiązań i odpowiednim wyborem dla wszystkich powiązań niestandardowych, gdzie współdziałanie jest kwestią najwyższy. Ten koder odczytuje i zapisuje standardowego protokołu SOAP 1.1 SOAP 1.2 wiadomości SMS za pomocą nie specjalnej obsługi dla danych binarnych. Jeśli <xref:System.ServiceModel.Channels.MessageVersion> wiadomości jest równa `None`otoki koperty protokołu SOAP jest pomijane w danych wyjściowych i zawartość treści komunikatu jest serializowana.|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Koder komunikatów tekstu jest kodera domyślnego dla wszystkich opartych na protokole HTTP powiązań i odpowiednim wyborem dla wszystkich powiązań niestandardowych, gdzie współdziałanie jest kwestią najwyższy. Ten koder odczytuje i zapisuje standardowego protokołu SOAP 1.1 SOAP 1.2 wiadomości SMS za pomocą nie specjalnej obsługi dla danych binarnych. Jeśli <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> wiadomości jest właściwością <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>otoki koperty protokołu SOAP jest pomijane w danych wyjściowych i zawartość treści komunikatu jest serializowana.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|Koder komunikatów MTOM jest koder tekstu, który implementuje specjalnej obsługi dla danych binarnych i nie jest używany domyślnie we wszystkich standardowych powiązania, ponieważ jest on ściśle narzędzie optymalizacji w każdym przypadku. Jeśli komunikat zawiera dane binarne, która przekracza próg, w którym kodowanie MTOM stopa, dane są zewnętrznych do części MIME, zgodnie z koperty wiadomości. Zobacz Włączanie MTOM w dalszej części tej sekcji.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|Koder komunikatu binarnego jest kodera domyślnego dla Net * powiązań i odpowiednim wyborem zawsze wtedy, gdy obie strony komunikujące się opierają się na WCF. Koder komunikatu binarnego w formacie .NET binarne XML, reprezentacja binarna specyficzne dla firmy Microsoft, dla zestawów informacji XML (Infosets), która jest ogólnie daje mniejszy wyświetlacz niż równoważnych reprezentacji XML 1.0 koduje dane binarne w postaci bajtów strumień.|  
   

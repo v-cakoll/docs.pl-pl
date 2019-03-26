@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 74c68aec535515803b9048aeed8395b53a4aaa4b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262440"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411047"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.
 
@@ -44,14 +44,14 @@ Aby uzyskać listę wersji programu .NET Framework zainstalowana na komputerze, 
      - [Użyj Edytora rejestru, aby znaleźć wersji programu .NET Framework](#net_b)  
      - [Wykonaj zapytanie dotyczące rejestru dla wersji programu .NET Framework przy użyciu kodu](#net_d)  
      - [Wykonaj zapytanie dotyczące rejestru dla wersji programu .NET Framework za pomocą programu PowerShell](#ps_a)
- - Znajdź starsze wersje programu .NET Framework (1&#8211;4):
+- Znajdź starsze wersje programu .NET Framework (1&#8211;4):
      - [Użyj Edytora rejestru, aby znaleźć wersji programu .NET Framework](#net_a)
      - [Wykonaj zapytanie dotyczące rejestru dla wersji programu .NET Framework przy użyciu kodu](#net_c)   
 
 Aby uzyskać listę wersji środowiska CLR, zainstalowane na komputerze, użyj narzędzia lub kodu:  
   
- - [Użyj narzędzia Clrver](#clr_a)  
- - [Tworzenie zapytania klasę Environment przy użyciu kodu](#clr_b)  
+- [Użyj narzędzia Clrver](#clr_a)  
+- [Tworzenie zapytania klasę Environment przy użyciu kodu](#clr_b)  
 
 Aby uzyskać informacje dotyczące wykrywania zainstalowanych aktualizacji dla każdej wersji programu .NET Framework, zobacz [jak: Określanie, które aktualizacje programu .NET Framework są zainstalowane](how-to-determine-which-net-framework-updates-are-installed.md). 
   

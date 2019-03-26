@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 11435dc6f941a566427c0e0cb797e84f33dd66a2
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303650"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411034"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi WCF
 Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić między klientem a usługą Windows Communication Foundation (WCF), nawet jeśli usługa nie jest dostępna w czasie komunikacji. Poniższe procedury pokazują, jak zapewnić niezawodne komunikacji między klientem a usługą przy użyciu standardu w kolejce wiążące podczas implementowania usługi WCF.  
@@ -24,7 +24,7 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2.  Gdy kontrakt usługi przekazuje typy zdefiniowane przez użytkownika, należy zdefiniować kontraktów danych do tych typów. W poniższym kodzie pokazano dwa kontraktów danych `PurchaseOrder` i `PurchaseOrderLineItem`. Tych dwóch typów zdefiniować dane, które są wysyłane do usługi. (Zwróć uwagę, że klasy, które definiują ten kontrakt danych również zdefiniować na wiele sposobów. Te metody nie są uważane za część kontraktu danych. Tylko te elementy członkowskie, które są zadeklarowane za pomocą `DataMember` atrybutu są częścią kontraktu danych.)  
+2.  Gdy kontrakt usługi przekazuje typy zdefiniowane przez użytkownika, należy zdefiniować kontraktów danych do tych typów. W poniższym kodzie pokazano dwa kontraktów danych `PurchaseOrder` i `PurchaseOrderLineItem`. Tych dwóch typów zdefiniować dane, które są wysyłane do usługi. (Zwróć uwagę, że klasy, które definiują ten kontrakt danych również zdefiniować na wiele sposobów. Te metody nie są uważane za część kontraktu danych. Tylko te elementy członkowskie, które są zadeklarowane za pomocą <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu są częścią kontraktu danych.)  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  

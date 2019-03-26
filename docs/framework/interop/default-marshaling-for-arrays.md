@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219688"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410748"
 ---
 # <a name="default-marshaling-for-arrays"></a>Organizowanie domyślne dotyczące tablic
 W aplikacji składających się wyłącznie z kodu zarządzanego środowisko uruchomieniowe języka wspólnego przekazuje typy tablic jako we/wy parametrów. Z kolei Organizator międzyoperacyjny przekazuje tablicę, tak jak parametry domyślne.  
   
  Za pomocą [przypinania optymalizacji](copying-and-pinning.md), tablicy danych kopiowalnych może okazać się działać jako In/Out parametru podczas interakcji z obiektów w tej samej typu apartment. Jeśli później wyeksportować kod na bibliotekę typów, używany do generowania serwera proxy między komputerami oraz biblioteki jest używany do organizowania wywołania w apartamentach wywołania można przywrócić na wartość true w zachowaniu parametru.  
   
- Tablice są skomplikowane ze względu na charakter, a różnice między zarządzanymi i niezarządzanymi macierzami oświadcza informacji od innych typów niekopiowalnych. Ten temat zawiera następujące informacje dotyczące organizowanie tablic:  
+ Tablice są skomplikowane ze względu na charakter, a różnice między zarządzanymi i niezarządzanymi macierzami oświadcza informacji od innych typów niekopiowalnych.  
   
--   [Zarządzane tablice](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [Tablice niezarządzanych](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [Przekazywanie parametrów tablicy do kodu platformy .NET](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [Przekazywanie tablic modelowi COM](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Zarządzane tablice  
  Zarządzane tablicy, która może się różnić typów; jednak <xref:System.Array?displayProperty=nameWithType> klasy jest klasą bazową wszystkich typów tablicowych. **System.Array** klasa posiada właściwości, określając rangę, długość i dolną i górną granicę, tablica, a także metody uzyskiwania dostępu do, sortowanie, wyszukiwanie, kopiowanie i tworzenie tablic.  
   
@@ -46,11 +37,9 @@ W aplikacji składających się wyłącznie z kodu zarządzanego środowisko uru
 |**ELEMENT_TYPE_CLASS**|Nieznany|Nieznany|Nieznany|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|Określony według typu.|1|0|*Typ* **[** *n* **]**|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Tablice niezarządzanych  
  Niezarządzane tablice są tablic bezpiecznych styl modelu COM lub tablice stylu C o długości stałą lub zmienną. Tablice bezpieczne są samoopisujące tablic, wykonujących typu, rangę i granice skojarzonych danych. Tablice stylu C są jednowymiarowe tablice o określonym typie ze stałym dolną granicę równą 0. Usługa kierowania ma ograniczoną obsługę oba typy tablic.  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>Przekazywanie parametrów tablicy do kodu platformy .NET  
  Tablice stylu C i tablic bezpiecznych programu mogą być przekazywane do kodu platformy .NET z niezarządzanego kodu jako bezpiecznego tablicy lub tablicy stylu C. W poniższej tabeli przedstawiono wartości typu niezarządzanego i zaimportowanym typem.  
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  Organizator międzyoperacyjny używa **CoTaskMemAlloc** i **CoTaskMemFree** metody przydzielania i pobrać pamięci. Alokacja pamięci wykonywane przez kod niezarządzany, należy również użyć tych metod.  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>Przekazywanie tablic modelowi COM  
  Wszystkie typy tablic zarządzanych mogą być przekazywane do kodu niezarządzanego z kodu zarządzanego. W zależności od typu zarządzanego i atrybuty stosowane do niego tablicy może zostać oceniony jako bezpiecznej tablicy lub tablicy stylu C, jak pokazano w poniższej tabeli.  
   

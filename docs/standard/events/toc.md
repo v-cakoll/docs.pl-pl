@@ -1,8 +1,0 @@
-# [Zdarzenia](index.md)
-## [Instrukcje: Wywoływanie zdarzeń i korzystanie z nich](how-to-raise-and-consume-events.md)
-## [Instrukcje: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](how-to-handle-multiple-events-using-event-properties.md)
-## [Instrukcje: Korzystanie ze zdarzeń w aplikacjach formularzy internetowych](how-to-consume-events-in-a-web-forms-application.md)
-## [Wzorzec projektowy obserwatora](observer-design-pattern.md)
-### [Wzorzec projektowy obserwatora — najlepsze rozwiązania](observer-design-pattern-best-practices.md)
-### [Instrukcje: Implementowanie dostawcy](how-to-implement-a-provider.md)
-### [Instrukcje: Implementowanie obserwatora](how-to-implement-an-observer.md)

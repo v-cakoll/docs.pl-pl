@@ -1,6 +1,0 @@
-# [Atrybuty](index.md)
-## [Tworzenie atrybutów niestandardowych](creating-custom-attributes.md)
-### [AttributeUsage](attributeusage.md)
-## [Dostęp do atrybutów przy użyciu odbicia](accessing-attributes-by-using-reflection.md)
-## [Instrukcje: tworzenie unii C/C++ za pomocą atrybutów](how-to-create-a-c-cpp-union-by-using-attributes.md)
-## [Atrybuty wspólne](common-attributes.md)

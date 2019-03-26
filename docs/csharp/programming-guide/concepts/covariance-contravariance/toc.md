@@ -1,7 +1,0 @@
-# [Kowariancja i kontrawariancja](index.md)
-## [Wariancje w interfejsach ogólnych](variance-in-generic-interfaces.md)
-### [Tworzenie interfejsów ogólnych typu Variant](creating-variant-generic-interfaces.md)
-### [Korzystanie z wariancji w interfejsach dla kolekcji ogólnych](using-variance-in-interfaces-for-generic-collections.md)
-## [Wariancje w delegatach](variance-in-delegates.md)
-### [Korzystanie z wariancji w delegatach](using-variance-in-delegates.md)
-### [Korzystanie z wariancji dla delegatów ogólnych Func i Action](using-variance-for-func-and-action-generic-delegates.md)

@@ -1,6 +1,0 @@
-# [Wprowadzenie](index.md)
-## [Wprowadzenie do platformy WPF w programie Visual Studio](introduction-to-wpf-in-vs.md)
-## [Nowości w WPF w wersji 4.5](whats-new.md)
-## [Przewodnik: moja pierwsza aplikacja klasyczna WPF](walkthrough-my-first-wpf-desktop-application.md)
-## [Przewodniki dotyczące programu WPF](wpf-walkthroughs.md)
-## [Opinia społeczności WPF](community-feedback.md)

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Język wyrażeń regularnych — podręczny wykaz
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
@@ -16,35 +16,23 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836308"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410527"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
-<a name="top"></a> Wyrażenie regularne to wzorzec, który aparat wyrażeń regularnych próbuje dopasować w tekście wejściowym. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie – zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
+ Wyrażenie regularne to wzorzec, który aparat wyrażeń regularnych próbuje dopasować w tekście wejściowym. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie – zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
   
- Każda sekcja w tym krótkim opisie przedstawia pewną kategorię znaków, operatorów i konstrukcji, które służą do definiowania wyrażeń regularnych:  
-  
- [Sekwencje ucieczki znaków](#character_escapes)  
- [Klasy znaków](#character_classes)  
- [Kotwice](#anchors)  
- [Konstrukcje grupujące](#grouping_constructs)  
- [Kwantyfikatory](#quantifiers)  
- [Konstrukcje dopasowywania wstecznego](#backreference_constructs)  
- [Konstrukcje warunkowe](#alternation_constructs)  
- [Zastąpienia](#substitutions)  
- [Opcje wyrażeń regularnych](#options)  
- [Inne konstrukcje](#miscellaneous_constructs)  
+ Każda sekcja w tym krótkim opisie przedstawia pewną kategorię znaków, operatorów i konstrukcji, które służą do definiowania wyrażeń regularnych.  
   
  Udostępniliśmy również te informacje w dwa formaty, które można pobrać i wydrukować łatwiejszego odwoływania:  
   
  [Pobierz w formacie programu Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [Pobierz w formacie PDF (PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-<a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Znaki unikowe  
  Znak ukośnika odwrotnego (\\) w wyrażeniu regularnym wskazuje, że znak, który następuje po nim jest znakiem specjalnym (jak pokazano w poniższej tabeli) lub powinien być interpretowany literalnie. Aby uzyskać więcej informacji, zobacz [Znaki specjalne](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md).   
   
@@ -66,7 +54,6 @@ ms.locfileid: "56836308"
   
  [Powrót do początku](#top)  
   
-<a name="character_classes"></a>   
 ## <a name="character-classes"></a>Klasy znaku  
  Klasa znaków dopasowuje dowolny zestaw znaków. Klasy znaków obejmują elementy języka wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [klas znaków](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
@@ -103,17 +90,16 @@ ms.locfileid: "56836308"
   
  [Powrót do początku](#top)  
   
-<a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Konstrukty grupujące  
- Konstrukcje grupujące wyznaczają podwyrażenia wyrażeń regularnych i często przechwytywane podciągi ciągu wejściowego. Konstrukcje grupowania obejmują elementy języka wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [Konstrukty grupujące](grouping-constructs-in-regular-expressions.md).  
+ Konstrukcje grupujące wyznaczają podwyrażenia wyrażeń regularnych i często przechwytywane podciągi ciągu wejściowego. Konstrukcje grupowania obejmują elementy języka wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [Konstrukcje grupujące](grouping-constructs-in-regular-expressions.md).  
   
 |Konstrukcja grupująca|Opis|Wzorzec|Dopasowania|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *Podwyrażenie* `)`|Przechwytuje dopasowane podwyrażenia i przypisuje mu liczbę porządkową (liczone od zera).|`(\w)\1`|`"ee"` W `"deep"`|  
 |`(?<` *Nazwa* `>` *Podwyrażenie* `)`|Przechwytuje dopasowane podwyrażenie do nazwanej grupy.|`(?<double>\w)\k<double>`|`"ee"` W `"deep"`|  
-|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|Określa definicję grupy równoważącej. Aby uzyskać więcej informacji, zobacz sekcję "Definicja grupy równoważącej" w [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` W `"3+2^((1-3)*(3-1))"`|  
+|`(?<` *name1* `-` *name2* `>` *subexpression* `)`|Określa definicję grupy równoważącej. Aby uzyskać więcej informacji, zobacz sekcję "Definicja grupy równoważącej" w [Konstrukcje grupujące](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` W `"3+2^((1-3)*(3-1))"`|  
 |`(?:` *Podwyrażenie* `)`|Definiuje nieprzechwytywaną grupę.|`Write(?:Line)?`|`"WriteLine"` W `"Console.WriteLine()"`<br /><br /> `"Write"` W `"Console.Write(value)"`|  
-|`(?imnsx-imnsx:` *Podwyrażenie* `)`|Stosuje lub wyłącza określone opcje w *Podwyrażenie*. Aby uzyskać więcej informacji, zobacz [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` w `"A12xl A12XL a12xl"`|  
+|`(?imnsx-imnsx:` *Podwyrażenie* `)`|Stosuje lub wyłącza określone opcje w *Podwyrażenie*. Aby uzyskać więcej informacji, zobacz [Opcje wyrażeń regularnych](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` w `"A12xl A12XL a12xl"`|  
 |`(?=` *Podwyrażenie* `)`|Pozytywna asercja wyprzedzająca o zerowej szerokości.|`\w+(?=\.)`|`"is"`, `"ran"`, i `"out"` w `"He is. The dog ran. The sun is out."`|  
 |`(?!` *Podwyrażenie* `)`|Negatywna asercja wyprzedzająca o zerowej szerokości.|`\b(?!un)\w+\b`|`"sure"`, `"used"` w `"unsure sure unity used"`|  
 |`(?<=` *Podwyrażenie* `)`|Pozytywna asercja wsteczna o zerowej szerokości.|`(?<=19)\d{2}\b`|`"99"`, `"50"`, `"05"` w `"1851 1999 1950 1905 2003"`|  
@@ -122,7 +108,6 @@ ms.locfileid: "56836308"
   
  [Powrót do początku](#top)  
   
-<a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Kwantyfikatory  
  Kwantyfikator określa, ile wystąpień poprzedniego elementu (którym może być znak, grupa lub klasa znaków) musi znajdować się w ciągu wejściowym, aby wystąpiło dopasowanie. Kwantyfikatory obejmują elementy języka wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [Kwantyfikatory](quantifiers-in-regular-expressions.md).  
   
@@ -143,7 +128,6 @@ ms.locfileid: "56836308"
   
  [Powrót do początku](#top)  
   
-<a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Konstrukty grupowania wstecznego  
  Dopasowywanie wsteczne umożliwia kolejne identyfikacje uprzednio dopasowanego podwyrażenia w tym samym wyrażeniu regularnym. W poniższej tabeli wymieniono konstrukcje dopasowywania wstecznego obsługiwane przez wyrażenia regularne w .NET. Aby uzyskać więcej informacji, zobacz [konstrukcje dopasowywania wstecznego](backreference-constructs-in-regular-expressions.md).  
   
@@ -154,7 +138,6 @@ ms.locfileid: "56836308"
   
  [Powrót do początku](#top)  
   
-<a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Konstrukty naprzemienne  
  Konstrukcje zmiany modyfikują wyrażenie regularne, aby umożliwić dopasowanie typu albo/albo. Te konstrukcje obejmują elementy języka wyszczególnione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz [konstrukcje](alternation-constructs-in-regular-expressions.md).  
   
@@ -166,7 +149,6 @@ ms.locfileid: "56836308"
   
  [Powrót do początku](#top)  
   
-<a name="substitutions"></a>   
 ## <a name="substitutions"></a>Zastępstwa  
  Podstawienia są elementami języka wyrażeń regularnych, które są obsługiwane we wzorcach zamieniania. Aby uzyskać więcej informacji, zobacz [podstawienia](substitutions-in-regular-expressions.md). Metaznaki wymienione w poniższej tabeli są niepodzielnymi asercjami o zerowej szerokości.  
   
@@ -183,7 +165,6 @@ ms.locfileid: "56836308"
   
  [Powrót do początku](#top)  
   
-<a name="options"></a>   
 ## <a name="regular-expression-options"></a>Opcje wyrażeń regularnych  
  Można określić opcje sterujące sposobem, w jaki aparat wyrażeń regularnych interpretuje wzorzec wyrażenia regularnego. Wiele z tych opcji można określić jako wbudowane (we wzorcu wyrażenia regularnego) lub jako jedną lub więcej <xref:System.Text.RegularExpressions.RegexOptions> stałe. W tym krótkim opisie wymieniono tylko opcje określane w tekście. Aby uzyskać więcej informacji dotyczących wbudowania i <xref:System.Text.RegularExpressions.RegexOptions> opcji, zapoznaj się z artykułem [Opcje wyrażeń regularnych](regular-expression-options.md).  
   
@@ -205,7 +186,6 @@ ms.locfileid: "56836308"
   
  [Powrót do początku](#top)  
   
-<a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Różne konstruktory  
  Konstrukcje inne służą do modyfikowania wzorca wyrażenia regularnego lub dostarczania informacji na jego temat. W poniższej tabeli wymieniono różne konstrukcje obsługiwane przez .NET. Aby uzyskać więcej informacji, zobacz [różne konstrukcje](miscellaneous-constructs-in-regular-expressions.md).  
   

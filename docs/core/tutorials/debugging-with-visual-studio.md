@@ -3,12 +3,12 @@ title: Debugowanie aplikacji Hello World platformy .NET Core za pomocą programu
 description: Dowiedz się, jak debugować aplikację Hello World w języku C# lub Visual Basic w programie Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170668"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463426"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debugowanie usługi C# lub Visual Basic .NET Core aplikacji Hello World przy użyciu programu Visual Studio 2017
 
@@ -39,7 +39,7 @@ Uruchom program w trybie debugowania, a następnie spróbuj kilka funkcji debugo
 
 1. Zatrzymuje wykonywanie programów, po osiągnięciu punktu przerwania i przed `Console.WriteLine` metoda jest wykonywana. **Autos** okno wyświetla wartości zmiennych, które są używane w całym bieżącego wiersza. **Lokalne** okna (który można wyświetlić, klikając **lokalne** kartę) wyświetla wartości zmiennych, które są zdefiniowane w aktualnie wykonywanej metody.
 
-   ![Okno aplikacji w usłudze Visual Studio](./media/debugging-with-visual-studio/break.png)
+   ![Zrzut ekranu przedstawiający punkt przerwania w programie Visual Studio.](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. Można zmienić wartości zmiennych, aby zobaczyć, jak wpływa na program. Jeśli **bezpośrednim** nie jest widoczny, go wyświetlić, wybierając **debugowania** > **Windows** > **bezpośrednie**elementu menu. **Bezpośrednim** umożliwia interakcję z aplikacją debugowania.
 

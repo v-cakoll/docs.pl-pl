@@ -3,12 +3,12 @@ title: Klasy i obiekty w C# — Przewodnik po przykładzie C# języka
 description: Jesteś nowym użytkownikiem C#? Przeczytaj omówienie klas, obiektów i dziedziczenie
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846145"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466261"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -217,7 +217,7 @@ Jak pokazano na przykładzie, zawsze można wybrać określoną metodę przez ja
 
 Elementy członkowskie, które zawierają kod wykonywalny są nazywane zbiorczo *funkcji elementów członkowskich* klasy. W poprzedniej sekcji opisano metody, które są podstawowym typem funkcji elementów członkowskich. W tej sekcji opisano inne rodzaje elementów członkowskich funkcji obsługiwanych przez C#: konstruktory, właściwości, indeksatory, zdarzenia, operatorów i finalizatorów.
 
-Poniżej pokazano klasę ogólną o nazwie listy<T>, który implementuje growable listy obiektów. Klasa zawiera kilka przykładów typowych rodzajów funkcji elementów członkowskich.
+Poniżej pokazano klasę ogólną o nazwie listy\<T >, który implementuje growable listy obiektów. Klasa zawiera kilka przykładów typowych rodzajów funkcji elementów członkowskich.
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 

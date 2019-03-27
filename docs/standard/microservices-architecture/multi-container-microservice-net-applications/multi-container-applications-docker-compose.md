@@ -4,12 +4,12 @@ description: Jak określić kompozycji mikrousług dla aplikacji z wieloma konte
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: bde29f1c67e7c6636932f063f35bc500a27abcef
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712360"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463530"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą platformy docker-compose.yml
 
@@ -422,11 +422,11 @@ Należy pamiętać, że wartości ustawione w środowisku uruchomieniowym zawsze
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Przegląd platformy Docker Compose** <br/>
-    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
+- **Przegląd platformy Docker Compose** \
+    [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
 
-- **Wiele pliki narzędzia Compose** <br/>
-    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+- **Wiele pliki narzędzia Compose** \
+    [https://docs.docker.com/compose/extends/\#multiple-compose-files](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Tworzenie zoptymalizowanych obrazów platformy Docker programu ASP.NET Core
 
@@ -464,11 +464,11 @@ W celu przyspieszenia uruchamiania obrazów środowiska uruchomieniowego równie
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Tworzenie zoptymalizowane pod kątem obrazów platformy Docker z platformą ASP.NET Core** <br/>
-    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+- **Tworzenie zoptymalizowane pod kątem obrazów platformy Docker z platformą ASP.NET Core** \
+    [https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
-- **Tworzenie obrazów platformy Docker dla aplikacji .NET Core** <br/>
-    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+- **Tworzenie obrazów platformy Docker dla aplikacji .NET Core** \
+    [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 > [!div class="step-by-step"]
 > [Poprzednie](data-driven-crud-microservice.md)

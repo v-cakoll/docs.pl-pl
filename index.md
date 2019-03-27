@@ -3,16 +3,11 @@ layout: HubPage
 ms.topic: hub-page
 hide_bc: true
 title: Dokumentacja platformy .NET
-description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
+description: 'Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.'
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 1eb9f263c26dd86873df1320f77c3944e9bfd7d2
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286510"
 ---
+<!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">

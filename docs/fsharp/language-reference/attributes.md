@@ -2,12 +2,12 @@
 title: Atrybuty
 description: Dowiedz się, jak F# atrybuty Włącz metadane, które mają być stosowane do konstrukcji programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 34223523efbb3bd89bb73f35fac3dfd8113d8611
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6e80bc4e32ee4ff5ff132270bde8e2fd018369e1
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611845"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464661"
 ---
 # <a name="attributes"></a>Atrybuty
 
@@ -70,37 +70,36 @@ Mimo że nie zwykle należy określić atrybut docelowy jawnie, prawidłowe wart
   </tr>
   <tr>
     <td>zestaw</td>
-    <td>`[<assembly: AssemblyVersionAttribute("1.0.0.0")>]`</td> 
+    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]<code></pre></td> 
   </tr>
   <tr>
     <td>return</td>
-    <td>"let function1 x: [<return: Obsolete>] int = x + 1"</td> 
+    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1<code></pre></td> 
   </tr>
   <tr>
     <td>pole</td>
-    <td>"[<field: DefaultValue>] val mutable x: int"</td> 
+    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int<code></pre></td> 
   </tr>
   <tr>
     <td>property</td>
-    <td>"[<property: Obsolete>] to. MyProperty = x "</td> 
+    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x<code></pre></td> 
   </tr>
   <tr>
     <td>param</td>
-    <td>"element członkowski to. MyMethod ([<param: Out>] x: ref<int>) = x: = 10'.</td> 
+    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10<code></pre></td> 
   </tr>
   <tr>
-    <td>— typ</td>
+    <td> — typ</td>
     <td>
-
-        ```
-        [<type: StructLayout(Sequential)>] 
+        <pre lang="fsharp"><code>
+        [&lt;type: StructLayout(Sequential)&gt;] 
         type MyStruct = 
         struct 
         x : byte
         y : int
         end
-        ```
-    </td> 
+        <code></pre>
+    </td>
   </tr>
 </table>
 

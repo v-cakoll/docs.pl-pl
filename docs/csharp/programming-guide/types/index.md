@@ -66,10 +66,12 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
   
 -   Każdy typ w CTS jest zdefiniowany jako *typu wartości* lub *odwołania do typu*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas programu .NET, a także typy własne zdefiniowane przez użytkownika. Typy, które są definiowane za pomocą [struktury](../../../csharp/language-reference/keywords/struct.md) — słowo kluczowe to typy wartości; wszystkie wbudowane typy liczbowe są `structs`. Typy, które są definiowane za pomocą [klasy](../../../csharp/language-reference/keywords/class.md) słów kluczowych to odwołanie do typów. Typy odwołań i typy wartości mają różne zasady czasu kompilacji i różny sposób w czasie wykonywania.  
   
- Poniższa ilustracja przedstawia relację między typami wartości a typami odwołań w CTS.  
+ Poniższa ilustracja przedstawia relację między typami wartości a typami odwołań w CTS.
+
+ Na poniższej ilustracji przedstawiono typy wartości i odwołań w CTS: 
   
- ![Typy wartości i odwołań](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")  
-Typy wartości i typy odwołań w CTS  
+  
+ ![Zrzut ekranu, że CTS przedstawia typy wartości i typy referencyjne.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
 >  Widać, że najczęściej używane typy są zorganizowane w <xref:System> przestrzeni nazw. Jednakże przestrzeń nazw, w którym zawarty jest typ nie ma związku tego, czy jest to wartość typu lub typów referencyjnych.  

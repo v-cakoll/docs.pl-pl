@@ -1,0 +1,252 @@
+items:
+- name: Ułatwienia dostępu
+  href: index.md
+  items:
+  - name: Najlepsze praktyki dotyczące ułatwień dostępu
+    href: accessibility-best-practices.md
+  - name: Podstawowe założenia automatyzacji interfejsu użytkownika
+    href: ui-automation-fundamentals.md
+    items:
+    - name: Przegląd automatyzacji interfejsu użytkownika
+      href: ui-automation-overview.md
+    - name: Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility
+      href: ui-automation-and-microsoft-active-accessibility.md
+    - name: Przegląd drzewa automatyzacji interfejsu użytkownika
+      href: ui-automation-tree-overview.md
+    - name: Wzorce formantów automatyzacji interfejsu użytkownika — omówienie
+      href: ui-automation-control-patterns-overview.md
+    - name: Przegląd właściwości automatyzacji interfejsu użytkownika
+      href: ui-automation-properties-overview.md
+    - name: Przegląd zdarzeń automatyzacji interfejsu użytkownika
+      href: ui-automation-events-overview.md
+    - name: Przegląd zabezpieczeń automatyzacji interfejsu użytkownika
+      href: ui-automation-security-overview.md
+    - name: Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych
+      href: using-ui-automation-for-automated-testing.md
+  - name: Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego
+    href: ui-automation-providers-for-managed-code.md
+    items:
+    - name: Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera
+      href: server-side-ui-automation-provider-implementation.md
+    - name: Przegląd dostawców automatyzacji interfejsu użytkownika
+      href: ui-automation-providers-overview.md
+    - name: Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta
+      href: client-side-ui-automation-provider-implementation.md
+    - name: " — Tematy porad"
+      href: ui-automation-providers-for-managed-code-how-to-topics.md
+      items:
+      - name: Udostępnianie dostawcy automatyzacji interfejsu użytkownika po stronie serwera
+        href: expose-a-server-side-ui-automation-provider.md
+      - name: Zwracanie właściwości od dostawcy automatyzacji interfejsu użytkownika
+        href: return-properties-from-a-ui-automation-provider.md
+      - name: Wywoływanie zdarzeń od dostawcy automatyzacji interfejsu użytkownika
+        href: raise-events-from-a-ui-automation-provider.md
+      - name: Włączanie nawigacji w dostawcy fragmentu automatyzacji interfejsu użytkownika
+        href: enable-navigation-in-a-ui-automation-fragment-provider.md
+      - name: Obsługa wzorców formantów dostawcy automatyzacji interfejsu użytkownika
+        href: support-control-patterns-in-a-ui-automation-provider.md
+      - name: Tworzenie dostawcy automatyzacji interfejsu użytkownika po stronie klienta
+        href: create-a-client-side-ui-automation-provider.md
+      - name: Implementacja dostawców automatyzacji interfejsu użytkownika w aplikacji klienta
+        href: implement-ui-automation-providers-in-a-client-application.md
+  - name: Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego
+    href: ui-automation-clients-for-managed-code.md
+    items:
+    - name: Automatyzacja interfejsu użytkownika a skalowanie ekranu
+      href: ui-automation-and-screen-scaling.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla standardowych formantów
+      href: ui-automation-support-for-standard-controls.md
+    - name: Właściwości zdarzeń automatyzacji interfejsu użytkownika dla klientów
+      href: ui-automation-events-for-clients.md
+    - name: Buforowanie w klientach automatyzacji interfejsu użytkownika
+      href: caching-in-ui-automation-clients.md
+    - name: Właściwości automatyzacji interfejsu użytkownika dla klientów
+      href: ui-automation-properties-for-clients.md
+    - name: Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika
+      href: control-pattern-mapping-for-ui-automation-clients.md
+    - name: Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów
+      href: ui-automation-control-patterns-for-clients.md
+    - name: Uzyskiwanie elementów automatyzacji interfejsu użytkownika
+      href: obtaining-ui-automation-elements.md
+    - name: Problemy wielowątkowości dotyczące automatyzacji interfejsu użytkownika
+      href: ui-automation-threading-issues.md
+    - name: " — Tematy porad"
+      href: ui-automation-clients-for-managed-code-how-to-topics.md
+      items:
+      - name: Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości
+        href: find-a-ui-automation-element-based-on-a-property-condition.md
+      - name: Nawigowanie po elementach automatyzacji interfejsu użytkownika przy użyciu opcji TreeWalker
+        href: navigate-among-ui-automation-elements-with-treewalker.md
+      - name: Odnalezienie elementu automatyzacji interfejsu użytkownika dla elementu listy
+        href: find-a-ui-automation-element-for-a-list-item.md
+      - name: Pobierz właściwości elementu automatyzacji interfejsu użytkownika
+        href: get-ui-automation-element-properties.md
+      - name: Używanie buforowania w automatyzacji interfejsu użytkownika
+        href: use-caching-in-ui-automation.md
+      - name: Subskrybowanie zdarzeń automatyzacji interfejsu użytkownika
+        href: subscribe-to-ui-automation-events.md
+      - name: Rejestrowanie zestawów dostawcy po stronie klienta
+        href: register-a-client-side-provider-assembly.md
+      - name: Użyj właściwości AutomationID
+        href: use-the-automationid-property.md
+  - name: Wzorce kontrolek automatyzacji interfejsu użytkownika
+    href: ui-automation-control-patterns.md
+    items:
+    - name: Implementacja wzorca formantu dokowania automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-dock-control-pattern.md
+    - name: Implementacja wzorca formantu ExpandCollapse dla automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-expandcollapse-control-pattern.md
+    - name: Implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-grid-control-pattern.md
+    - name: Implementacja wzorca kontrolki GridItem dla automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-griditem-control-pattern.md
+    - name: Implementacja wzorca kontrolki wywołania automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-invoke-control-pattern.md
+    - name: Implementacja wzorca kontrolki MultipleView dla automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-multipleview-control-pattern.md
+    - name: Implementacja wzorca formantu RangeValue dla automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-rangevalue-control-pattern.md
+    - name: Implementacja wzorca kontrolki przewijania automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-scroll-control-pattern.md
+    - name: Implementacja wzorca kontrolki ScrollItem dla automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-scrollitem-control-pattern.md
+    - name: Implementacja wzorca formantu wyboru automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-selection-control-pattern.md
+    - name: Implementacja wzorca formantu SelectionItem dla automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-selectionitem-control-pattern.md
+    - name: Implementacja wzorca formantu tabeli automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-table-control-pattern.md
+    - name: Implementacja wzorca kontrolki TableItem dla automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-tableitem-control-pattern.md
+    - name: Implementacja wzorca formantu przełącznika automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-toggle-control-pattern.md
+    - name: Implementacja wzorca formantu przekształcania automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-transform-control-pattern.md
+    - name: Implementacja wzorca formantu wartości automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-value-control-pattern.md
+    - name: Implementacja wzorca kontrolki okna automatyzacji interfejsu użytkownika
+      href: implementing-the-ui-automation-window-control-pattern.md
+    - name: " — Tematy porad"
+      href: ui-automation-control-patterns-how-to-topics.md
+      items:
+      - name: Udostępnianie zawartości tabel za pomocą automatyzacji interfejsu użytkownika
+        href: expose-the-content-of-a-table-using-ui-automation.md
+      - name: Pobierz obsługiwane wzorce kontrolek automatyzacji interfejsu użytkownika
+        href: get-supported-ui-automation-control-patterns.md
+      - name: Pobierz stan przełączenia pola wyboru przy użyciu automatyzacji interfejsu użytkownika
+        href: get-the-toggle-state-of-a-check-box-using-ui-automation.md
+      - name: Wywoływanie kontrolki przy użyciu automatyzacji interfejsu użytkownika
+        href: invoke-a-control-using-ui-automation.md
+      - name: Przenoszenie elementu automatyzacji interfejsu użytkownika
+        href: move-a-ui-automation-element.md
+  - name: Wzorzec tekstu automatyzacji interfejsu użytkownika
+    href: ui-automation-text-pattern.md
+    items:
+    - name: Przegląd automatyzacji interfejsu użytkownika — TextPattern
+      href: ui-automation-textpattern-overview.md
+    - name: TextPattern i obiekty osadzone — omówienie
+      href: textpattern-and-embedded-objects-overview.md
+    - name: " — Tematy porad"
+      href: ui-automation-text-pattern-how-to-topics.md
+      items:
+      - name: Dodawanie zawartości do pola tekstowego przy użyciu automatyzacji interfejsu użytkownika
+        href: add-content-to-a-text-box-using-ui-automation.md
+      - name: Znajdowanie i wyróżnianie tekstu przy użyciu automatyzacji interfejsu użytkownika
+        href: find-and-highlight-text-using-ui-automation.md
+      - name: Uzyskiwanie atrybutów tekstu przy użyciu automatyzacji interfejsu użytkownika
+        href: obtain-text-attributes-using-ui-automation.md
+      - name: Uzyskiwanie szczegółów atrybutów tekstu mieszanego przy użyciu automatyzacji interfejsu użytkownika
+        href: obtain-mixed-text-attribute-details-using-ui-automation.md
+      - name: Przenoszenie tekstu przy użyciu automatyzacji interfejsu użytkownika
+        href: traverse-text-using-ui-automation.md
+      - name: Uzyskiwanie dostępu do obiektów osadzonych przy użyciu automatyzacji interfejsu użytkownika
+        href: access-embedded-objects-using-ui-automation.md
+  - name: Typy formantów automatyzacji interfejsu użytkownika
+    href: ui-automation-control-types.md
+    items:
+    - name: Typy formantów automatyzacji interfejsu użytkownika — omówienie
+      href: ui-automation-control-types-overview.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu przycisk
+      href: ui-automation-support-for-the-button-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla formantów typu kalendarz
+      href: ui-automation-support-for-the-calendar-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu CheckBox
+      href: ui-automation-support-for-the-checkbox-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu ComboBox
+      href: ui-automation-support-for-the-combobox-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu DataGrid
+      href: ui-automation-support-for-the-datagrid-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataItem
+      href: ui-automation-support-for-the-dataitem-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu dokument
+      href: ui-automation-support-for-the-document-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu edycja
+      href: ui-automation-support-for-the-edit-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu grupa
+      href: ui-automation-support-for-the-group-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu nagłówek
+      href: ui-automation-support-for-the-header-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu HeaderItem
+      href: ui-automation-support-for-the-headeritem-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla formantów typu hiperłącze
+      href: ui-automation-support-for-the-hyperlink-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla formantów typu obraz
+      href: ui-automation-support-for-the-image-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu lista
+      href: ui-automation-support-for-the-list-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu ListItem
+      href: ui-automation-support-for-the-listitem-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu menu
+      href: ui-automation-support-for-the-menu-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu MenuBar
+      href: ui-automation-support-for-the-menubar-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu MenuItem
+      href: ui-automation-support-for-the-menuitem-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu okienko
+      href: ui-automation-support-for-the-pane-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ProgressBar
+      href: ui-automation-support-for-the-progressbar-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu RadioButton
+      href: ui-automation-support-for-the-radiobutton-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ScrollBar
+      href: ui-automation-support-for-the-scrollbar-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla formantów typu separator
+      href: ui-automation-support-for-the-separator-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu suwak
+      href: ui-automation-support-for-the-slider-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla formantów typu pokrętło
+      href: ui-automation-support-for-the-spinner-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu SplitButton
+      href: ui-automation-support-for-the-splitbutton-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu StatusBar
+      href: ui-automation-support-for-the-statusbar-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla formantów typu karta
+      href: ui-automation-support-for-the-tab-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu TabItem
+      href: ui-automation-support-for-the-tabitem-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu tabela
+      href: ui-automation-support-for-the-table-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu tekst
+      href: ui-automation-support-for-the-text-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu miniatura
+      href: ui-automation-support-for-the-thumb-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu TitleBar
+      href: ui-automation-support-for-the-titlebar-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ToolBar
+      href: ui-automation-support-for-the-toolbar-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu formantu ToolTip
+      href: ui-automation-support-for-the-tooltip-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla formantów typu drzewo
+      href: ui-automation-support-for-the-tree-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla typu kontrolki TreeItem
+      href: ui-automation-support-for-the-treeitem-control-type.md
+    - name: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu okno
+      href: ui-automation-support-for-the-window-control-type.md
+  - name: Specyfikacja automatyzacji interfejsu użytkownika i obietnica dla społeczności
+    href: ui-automation-specification-and-community-promise.md
+ms.openlocfilehash: b30bb47e5b2bfb91c64a07c055889e83310da789
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471470"

@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: f84792e5d973f2b2d8bcf418f68e7038fd7a81f5
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 97cf42c78154375ce06639d4a3029ed87b993ced
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747853"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504356"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Testowanie jednostek języka C# w .NET Core za pomocą polecenia dotnet test i struktury xUnit
 
@@ -50,7 +50,7 @@ Zmień katalog kopii do *testowania — przy użyciu dotnet-test jednostkowy* ka
 Uruchom [dotnet sln](../tools/dotnet-sln.md) polecenie, aby dodać projekt biblioteki klas do rozwiązania:
 
 ```
-dotnet sln add .\PrimeService\PrimeService.csproj
+dotnet sln add ./PrimeService/PrimeService.csproj
 ```
 
 ## <a name="creating-the-test-project"></a>Tworzenie projektu testu
@@ -100,7 +100,7 @@ Na poniższym obrazie przedstawiono układ ostateczne rozwiązanie:
 Aby dodać projekt testu w rozwiązaniu, uruchom [dotnet sln](../tools/dotnet-sln.md) polecenia w pliku *testowania — przy użyciu dotnet-test jednostkowy* katalogu:
 
 ```
-dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu

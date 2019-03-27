@@ -1,29 +1,23 @@
 ---
-title: C#Operatory
+title: 'C#Operatory'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333411"
 ---
 # <a name="c-operators"></a>C#Operatory
 
@@ -47,9 +41,9 @@ Są to najwyższy pierwszeństwo operatorów.
 
 [&#91;x&#93; ](index-operator.md) — indeksowanie obiektu agregacji.
 
-[x ++](increment-operator.md) — zwiększenie przyrostkowe. Zwraca wartość x, a następnie aktualizuje lokalizację przechowywania z wartością x, która jest większa o jeden (zazwyczaj dodaje liczbę całkowitą 1).
+[x ++](arithmetic-operators.md#increment-operator-) — zwiększenie przyrostkowe. Zwraca wartość x, a następnie aktualizuje lokalizację przechowywania z wartością x, która jest większa o jeden (zazwyczaj dodaje liczbę całkowitą 1).
 
-[x —](decrement-operator.md) — zmniejszenie przyrostkowe. Zwraca wartość x, a następnie aktualizuje lokalizację przechowywania z wartością x, która jest mniejsza (zazwyczaj odejmuje liczbę całkowitą 1).
+[x —](arithmetic-operators.md#decrement-operator---) — zmniejszenie przyrostkowe. Zwraca wartość x, a następnie aktualizuje lokalizację przechowywania z wartością x, która jest mniejsza (zazwyczaj odejmuje liczbę całkowitą 1).
 
 [nowe](../keywords/new-operator.md) — podczas tworzenia wystąpienia typu.
 
@@ -79,9 +73,9 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [~ x](bitwise-complement-operator.md) — uzupełnienie bitowe.
 
-[++ x](increment-operator.md) — przedrostkowe. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu z wartością x, który jest jednym większą (zazwyczaj dodaje liczbę całkowitą 1).
+[++ x](arithmetic-operators.md#increment-operator-) — przedrostkowe. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu z wartością x, który jest jednym większą (zazwyczaj dodaje liczbę całkowitą 1).
 
-[--x](decrement-operator.md) — przedrostkowe. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, która jest mniejsza (zazwyczaj odejmuje liczbę całkowitą 1).
+[--x](arithmetic-operators.md#decrement-operator---) — przedrostkowe. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, która jest mniejsza (zazwyczaj odejmuje liczbę całkowitą 1).
 
 [(T) x](invocation-operator.md) — typ rzutowania.
 
@@ -95,19 +89,19 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x * y](multiplication-operator.md) — mnożenia.
+[x * y](arithmetic-operators.md#multiplication-operator-) — mnożenia.
 
-[x / y](division-operator.md) — dzielenia. Jeśli argumenty są liczbami całkowitymi, wynik jest liczbą całkowitą obcięte w kierunku zera (na przykład `-7 / 2 is -3`).
+[x / y](arithmetic-operators.md#division-operator-) — dzielenia. Jeśli argumenty są liczbami całkowitymi, wynik jest liczbą całkowitą obcięte w kierunku zera (na przykład `-7 / 2 is -3`).
 
-[x, % y](remainder-operator.md) — resztę. Jeśli argumenty są liczbami całkowitymi, to zwraca resztę z dzielenia podziału x, y.  Jeśli `q = x / y` i `r = x % y`, następnie `x = q * y + r`.
+[x, % y](arithmetic-operators.md#remainder-operator-) — resztę. Jeśli argumenty są liczbami całkowitymi, to zwraca resztę z dzielenia podziału x, y.  Jeśli `q = x / y` i `r = x % y`, następnie `x = q * y + r`.
 
 ## <a name="additive-operators"></a>Operatory addytywne
 
 Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x + y](addition-operator.md) — Dodawanie.
+[x + y](arithmetic-operators.md#addition-operator-) — Dodawanie.
 
-[x – y](subtraction-operator.md) — odejmowania.
+[x – y](arithmetic-operators.md#subtraction-operator--) — odejmowania.
 
 ## <a name="shift-operators"></a>Operatory przesunięcia
 
@@ -195,9 +189,9 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [x * = y](multiplication-assignment-operator.md) — mnożenie i przypisanie. Mnoży wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość.
 
-[x / = y](division-assignment-operator.md) — dzielenie i przypisanie. Dzieli wartość `x` przez wartość `y`, zapisują wynik w `x`i zwraca nową wartość.
+[x / = y](arithmetic-operators.md#compound-assignment) — dzielenie i przypisanie. Dzieli wartość `x` przez wartość `y`, zapisują wynik w `x`i zwraca nową wartość.
 
-[x % = y](remainder-assignment-operator.md) — remainder przypisania. Dzieli wartość `x` przez wartość `y`, przechowywać resztę w `x`i zwraca nową wartość.
+[x % = y](arithmetic-operators.md#compound-assignment) — remainder przypisania. Dzieli wartość `x` przez wartość `y`, przechowywać resztę w `x`i zwraca nową wartość.
 
 [x & = y](and-assignment-operator.md) — i przypisanie. I wartość `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.
 
@@ -210,20 +204,6 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 [x >> = y](right-shift-assignment-operator.md) — przypisania przesunięcia w prawo. Przesuwa wartość `x` bezpośrednio przez `y` miejscach, zapisują wynik w `x`i zwraca nową wartość.
 
 [=>](lambda-operator.md) — deklaracji lambda.
-
-## <a name="arithmetic-overflow"></a>Przepełnienie arytmetyczne
-
-Operatory arytmetyczne ([+](addition-operator.md), [ - ](subtraction-operator.md), [ * ](multiplication-operator.md), [ / ](division-operator.md)) może generuje wyniki, które wykraczają poza zakres możliwych wartości dla typu liczbowego. Należy zapoznać się z sekcją na konkretnym operatorze, aby uzyskać szczegółowe informacje, ale ogólnie rzecz biorąc:
-
-- Arytmetyka przepełnienia liczb całkowitych zgłasza <xref:System.OverflowException> lub odrzuca najbardziej znaczące bity wyniku. Dzielenie liczby całkowitej przez zero zawsze generuje wyjątek <xref:System.DivideByZeroException>.
-
-   Jeśli występuje przepełnienie liczby całkowitej, co się stanie, zależy od kontekstu wykonywania, który może być [zaznaczony lub niezaznaczony](../keywords/checked-and-unchecked.md). W kontekście sprawdzanym <xref:System.OverflowException> zgłaszany. W kontekście niesprawdzanym najbardziej znaczące bity wyniku są odrzucane, a wykonywanie jest kontynuowane. W związku z tym C# umożliwia wybranie obsługi lub zignorowanie przepełnienie. Domyślnie operacje arytmetyczne występują w *unchecked* kontekstu.
-
-   Oprócz operacje arytmetyczne rzutowania typu całkowitego do typu całkowitego mogą spowodować przepełnienie (np. Jeśli zrzutować [długie](../keywords/long.md) do [int](../keywords/int.md)) i podlegają wykonaniu sprawdzanemu lub niesprawdzanemu. Jednakże operatory bitowe i operatory przesunięcia nigdy nie powodują przepełnienia.
-
-- Zmiennoprzecinkowe przepełnienia arytmetycznego lub dzielenie przez zero nigdy nie zgłasza wyjątek, ponieważ typy zmiennoprzecinkowe są oparte na standardzie IEEE 754, dlatego mają mechanizmy reprezentowania nieskończoności i NaN (nieliczbową).
-
-- [Dziesiętna](../keywords/decimal.md) przepełnienie arytmetyczne zawsze wyrzuca <xref:System.OverflowException>. Dzielenie dziesiętne przez zero zawsze generuje wyjątek <xref:System.DivideByZeroException>.
 
 ## <a name="see-also"></a>Zobacz także
 

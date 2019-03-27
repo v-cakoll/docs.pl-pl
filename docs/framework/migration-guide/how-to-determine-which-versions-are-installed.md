@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c68aec535515803b9048aeed8395b53a4aaa4b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411047"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504434"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.
 
@@ -133,7 +133,7 @@ Poniższe przykłady należy sprawdzić wartość **wersji** wpis, aby określi�
 
 ```PowerShell
 # PowerShell 4
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 Aby sprawdzić, czy inny minimalna wymagana wersja programu .NET Framework, należy zastąpić *394802* w tych przykładach za pomocą **wersji** wartość z [tabeli wersji .NET Framework](#version_table).

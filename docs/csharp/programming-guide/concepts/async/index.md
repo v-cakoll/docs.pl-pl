@@ -3,7 +3,7 @@ title: 'Programowanie asynchroniczne w języku C#'
 description: 'Omówienie C# Obsługa języków programowania asynchronicznego przy użyciu async, operator await, zadań i zadań<T>'
 ms.date: 03/18/2019
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>Zadania asynchronicznego modelu programowania wC# #
+# <a name="the-task-asynchronous-programming-model-in-c"></a>Zadania asynchronicznego modelu programowania w języku C\#
 
 Z zadań modelu programowania asynchronicznego (TAP) udostępnia abstrakcję za pośrednictwem kodu asynchronicznego. Pisanie kodu jako sekwencja instrukcji, tak jak zawsze. Możesz przeczytać ten kod tak, jakby każda instrukcja kończy się przed rozpoczęciem następnego. Kompilator wykonuje szereg przekształcenia, ponieważ niektóre z tych instrukcji może rozpocząć pracę i zwracają <xref:System.Threading.Tasks.Task> reprezentujący pracy w toku.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 78f52f4aa6e3d27bc7076d3074cb654d5e7fc56d
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981585"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504525"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 
@@ -45,8 +45,8 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x? y|Dostęp do elementu członkowskiego<br /><br /> Warunkowa składowa dostępu|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|Wywołanie metody i delegata|  
 |a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|Dostęp do tablicy i indeksatora<br /><br /> Dostęp warunkowy tablicy i indeksatora|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|Postinkrementacja|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|Postdekrementacja|  
+|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|Postinkrementacja|  
+|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|Postdekrementacja|  
 |[nowe](../../../csharp/language-reference/keywords/new-operator.md) T(...)|Utworzenie obiektu i delegata|  
 |`new` T(...){...}|Utworzenie obiektu za pomocą inicjatora. Zobacz [inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).|  
 |`new` {...}|Inicjator obiektu anonimowego. Zobacz [typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).|  
@@ -65,17 +65,17 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negacja|  
 |[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negacja logiczna|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negacja bitowa|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|Preinkrementacja|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|Predekrementacja|  
+|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Preinkrementacja|  
+|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Predekrementacja|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Jawna konwersja wartości x na typ T|  
   
  **Operatory mnożenia**  
   
 |Wyrażenie|Opis|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Mnożenie|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|Dzielenie|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|Reszta|  
+|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|Mnożenie|  
+|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|Dzielenie|  
+|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|Reszta|  
   
  **Operatory addytywne**  
   
@@ -126,7 +126,7 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |Wyrażenie|Opis|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Przypisanie|  
-|x op= y|Przypisanie złożone Obsługuje następujące operatory: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [ /= ](../../../csharp/language-reference/operators/division-assignment-operator.md), [ %= ](../../../csharp/language-reference/operators/modulus-assignment-operator.md) , [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|Przypisanie złożone Obsługuje następujące operatory: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ /= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ %= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment) , [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [ => ](../../../csharp/language-reference/operators/lambda-operator.md) y|Funkcja anonimowa (wyrażenie lambda)|  
   
 ## <a name="associativity"></a>Łączność

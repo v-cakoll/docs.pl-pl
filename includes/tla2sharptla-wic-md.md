@@ -1,1 +1,9 @@
-<span data-ttu-id="f7969-101">WPF Imaging</span><span class="sxs-lookup"><span data-stu-id="f7969-101">WPF Imaging</span></span>
+---
+ms.openlocfilehash: 6d3eaa4fc3ee50d5f472d9b5bdb829ae6bed39b8
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "25902250"
+---
+<span data-ttu-id="a0335-101">WPF Imaging</span><span class="sxs-lookup"><span data-stu-id="a0335-101">WPF Imaging</span></span>

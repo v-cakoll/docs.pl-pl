@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203113"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545445"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Instrukcje: Definiowanie równości wartości dla typu (C# Programming Guide)
 Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć niestandardowych definicji równości wartość (lub odpowiednik) dla typu. Zazwyczaj równość wartości zaimplementować w sytuacji, gdy oczekiwano obiektów tego typu do dodania do kolekcji jakieś lub w przypadku, gdy ich głównym celem jest zapisanie zestawu pól lub właściwości. Swojej definicji równości wartość można oprzeć na porównanie wszystkie pola i właściwości w typie lub można utworzyć definicję na podzbiorze. Jednak w obu przypadkach, a w klas i struktur, implementacji należy wykonać pięć gwarancje równoważności:  
@@ -37,7 +37,7 @@ Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć ni
   
 2.  Implementowanie <xref:System.IEquatable%601?displayProperty=nameWithType> interfejs, dostarczając specyficznych dla typu `Equals` metody. Jest to, gdy wykonywane jest porównanie równoważności rzeczywistych. Na przykład można zdecydować zdefiniować równości, porównując tylko jeden lub dwa pola w danego typu. Nie zgłaszają wyjątki od `Equals`. Aby uzyskać tylko do klasy: Ta metoda powinna zbadać tylko pola, które są zadeklarowane w klasie. Powinien wywoływać `base.Equals` zbadanie pola, które znajdują się w klasie bazowej. (Nie należy tego robić, jeśli typ dziedziczy bezpośrednio z <xref:System.Object>, ponieważ <xref:System.Object> implementacji <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> przeprowadza sprawdzanie odwołania równości.)  
   
-3.  Opcjonalne, ale zalecane: Przeciążenia [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) i [! =](../../../csharp/language-reference/operators/not-equal-operator.md) operatorów.  
+3.  Opcjonalne, ale zalecane: Przeciążenia [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) i [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) operatorów.  
   
 4.  Zastąp <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> tak, aby dwa obiekty, które mają równość wartości w taki sam wygenerować wartość skrótu.  
   
@@ -61,7 +61,7 @@ Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć ni
   
  Dla struktur, domyślna Implementacja klasy <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (czyli wersji zastąpione w <xref:System.ValueType?displayProperty=nameWithType>) przeprowadza sprawdzanie równość wartości przy użyciu odbicia do porównywania wartości każdego pola w typie. Gdy implementujący zastępuje wirtualny `Equals` metody w strukturze, celem jest, aby zapewnić bardziej wydajny sposób sprawdzanie równość wartości i, opcjonalnie, na podstawie na pewien podzbiór właściwości lub pola struktury.  
   
- [ == ](../../../csharp/language-reference/operators/equality-comparison-operator.md) i [! =](../../../csharp/language-reference/operators/not-equal-operator.md) operatorów nie może działać na struktury, chyba że struktura jawnie je przeciążenia.  
+ [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) i [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) operatorów nie może działać na struktury, chyba że struktura jawnie je przeciążenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

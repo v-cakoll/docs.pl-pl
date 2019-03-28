@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 38a273210e769b8c764c8b67640063e44026f0f3
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: aaa6af8067707162a440ab69b46f08b612eae9b3
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504661"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545510"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 
 Następujące operatory wykonywać operacji arytmetycznych na wartościach typy liczbowe:
 
-- Jednoargumentowy `++` (inkrementacja) `--` (dekrementacja) `+` (znak plus), a `-` (operatorów minus).
-- Binarny `*` (mnożenie) `/` (dział) `%` (resztę) `+` (Dodawanie) i `-` operatorów (odejmowanie).
+- Jednoargumentowy [ `++` (inkrementacja)](#increment-operator-), [ `--` (dekrementacja)](#decrement-operator---), [ `+` (plus)](#unary-plus-and-minus-operators), i [ `-` (minus)](#unary-plus-and-minus-operators) operatorów.
+- Binarny [ `*` (mnożenie)](#multiplication-operator-), [ `/` (dział)](#division-operator-), [ `%` (resztę)](#remainder-operator-), [ `+` () Dodawanie)](#addition-operator-), i [ `-` (odejmowanie)](#subtraction-operator-) operatorów.
 
 Te operatory obsługują wszystkie [całkowitego](../keywords/integral-types-table.md) i [zmiennoprzecinkowych](../keywords/floating-point-types-table.md) typów liczbowych.
 

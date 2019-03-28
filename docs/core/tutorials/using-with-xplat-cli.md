@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 664ff07bad596ae38b4e31a00c7af0579d8245b8
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 92ca5149ad5f0e4a50c809a316123fbf77d4152d
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788313"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545367"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w Windows/Linux/macOS przy użyciu wiersza polecenia
 
@@ -119,7 +119,8 @@ I to wszystko!  Można rozszerzyć `Program.cs` sposób chcesz.
 
 ## <a name="working-with-multiple-files"></a>Praca z wieloma plikami
 
-Pojedynczych plików są w dobrym stanie, proste, jednorazowe programów, ale jeśli tworzysz bardziej złożonych aplikacji są teraz zawierają wiele plików źródłowych w projekcie najczęściej kompilacji zniżki w stosunku do poprzedniego przykładu Fibonacci przez buforowanie niektórych wartości Fibonacci i dodaj kilka cykliczne funkcje.
+Pojedynczych plików są w dobrym stanie, proste, jednorazowe programów, ale jeśli tworzysz bardziej złożonych aplikacji prawdopodobnie będziemy mieć wiele plików źródłowych w projekcie.
+Umożliwia tworzenie na podstawie poprzedniego przykładu Fibonacci przez buforowanie niektórych wartości Fibonacci i dodać niektóre funkcje cykliczne.
 
 1. Dodaj nowy plik wewnątrz *Hello* katalog o nazwie *FibonacciGenerator.cs* następującym kodem:
 

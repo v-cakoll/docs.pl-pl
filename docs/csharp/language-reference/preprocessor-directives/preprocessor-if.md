@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 702d38cf6f3e28d20fbd5d7826cf7f1f56f235a7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758641"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545822"
 ---
 # <a name="if-c-reference"></a>#if (odwołanie w C#)
 
@@ -24,7 +24,7 @@ Gdy kompilator języka C# napotka `#if` dyrektywy, a następnie po pewnym czasie
 #endif
 ```
 
-Można używać operatorów [ == ](../operators/equality-comparison-operator.md) (równości) i [! =](../operators/not-equal-operator.md) (nierówność) tylko do testowania [true](../keywords/true.md) lub [false](../keywords/false.md). PRAWDA oznacza, że symbol jest zdefiniowany. Wykonywanie instrukcji `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można używać operatorów [ && ](../operators/conditional-and-operator.md) (a) [ &#124; &#124; ](../operators/conditional-or-operator.md) (lub) i [!](../operators/logical-negation-operator.md) (nie) do oceny, czy zostały zdefiniowane wiele symboli. Można także grupować symboli i operatorów, za pomocą nawiasów.
+Można używać operatorów [ == ](../operators/equality-operators.md#equality-operator-) (równości) i [! =](../operators/equality-operators.md#inequality-operator-) (nierówność) tylko do testowania [true](../keywords/true.md) lub [false](../keywords/false.md). PRAWDA oznacza, że symbol jest zdefiniowany. Wykonywanie instrukcji `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można używać operatorów [ && ](../operators/conditional-and-operator.md) (a) [ &#124; &#124; ](../operators/conditional-or-operator.md) (lub) i [!](../operators/logical-negation-operator.md) (nie) do oceny, czy zostały zdefiniowane wiele symboli. Można także grupować symboli i operatorów, za pomocą nawiasów.
 
 ## <a name="remarks"></a>Uwagi
 

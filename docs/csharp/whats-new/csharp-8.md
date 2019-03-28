@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
-ms.openlocfilehash: faef8a0a0c1f38766482384f46959928e378a3fd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463517"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545562"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -164,22 +164,37 @@ public class Point
 }
 ```
 
-Używa następującej metody **pozycyjne wzorzec** do wyodrębnienia wartości `x` i `y`. Następnie używa `when` klauzuli, aby określić quadrant punktu:
+Ponadto należy wziąć pod uwagę następujące wyliczenia, który reprezentuje różne stanowiska quadrant:
 
 ```csharp
-static string Quadrant(Point p) => p switch
+public enum Quadrant
 {
-    (0, 0) => "origin",
-    (var x, var y) when x > 0 && y > 0 => "Quadrant 1",
-    (var x, var y) when x < 0 && y > 0 => "Quadrant 2",
-    (var x, var y) when x < 0 && y < 0 => "Quadrant 3",
-    (var x, var y) when x > 0 && y < 0 => "Quadrant 4",
-    (var x, var y) => "on a border",
-    _ => "unknown"
+    Unknown,
+    Origin,
+    One,
+    Two,
+    Three,
+    Four,
+    OnBorder
+}
+```
+
+Używa następującej metody **pozycyjne wzorzec** do wyodrębnienia wartości `x` i `y`. Następnie używa `when` klauzuli, aby określić `Quadrant` punktu:
+
+```csharp
+static Quadrant GetQuadrant(Point point) => point switch
+{
+    (0, 0) => Quadrant.Origin,
+    var (x, y) when x > 0 && y > 0 => Quadrant.One,
+    var (x, y) when x < 0 && y > 0 => Quadrant.Two,
+    var (x, y) when x < 0 && y < 0 => Quadrant.Three,
+    var (x, y) when x > 0 && y < 0 => Quadrant.Four,
+    var (_, _) => Quadrant.OnBorder,
+    _ => Quadrant.Unknown
 };
 ```
 
-Wzorca odrzucania w poprzednim przełącznika pasuje, podczas albo `x` lub `y`, ale nie obu wynosi 0. Wyrażenie switch musi mieć wartość albo zgłosić wyjątek. Wyrażenie switch zgłasza wyjątek, jeśli żaden z przypadków są zgodne. Kompilator generuje ostrzeżenia dla Ciebie, jeśli nie obejmują wszystkich możliwych przypadków w wyrażeniu przełącznika.
+Podczas pasuje do wzorca odrzucania w poprzednim przełącznika albo `x` lub `y` jest 0, ale nie oba. Wyrażenie switch musi mieć wartość albo zgłosić wyjątek. Wyrażenie switch zgłasza wyjątek, jeśli żaden z przypadków są zgodne. Kompilator generuje ostrzeżenia dla Ciebie, jeśli nie obejmują wszystkich możliwych przypadków w wyrażeniu przełącznika.
 
 Możesz zapoznać się z technik, w tym dopasowania do wzorca [zaawansowane samouczek na temat dopasowywania do wzorca](../tutorials/pattern-matching.md).
 

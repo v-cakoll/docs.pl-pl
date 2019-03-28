@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | U�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2e5bea524dbf636d6532f99ee6ac6abfea59a2b0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463829"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545731"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (klasy bazowe wielokrotnego użytku i interfejsy dla modelu domeny)
 
@@ -25,7 +25,7 @@ Jest to typ, kopiowanie i wklejanie ponowne używanie wielu deweloperów na udzi
 
 ## <a name="the-custom-entity-base-class"></a>Niestandardowe klasy podstawowej jednostki
 
-Poniższy kod jest przykładem klasy podstawowej jednostki, gdy umieścisz kod, który może być taki sam sposób używany przez wszystkie jednostki domeny, takich jak identyfikator jednostki [Operatory równości](~/docs/csharp/language-reference/operators/equality-comparison-operator.md), listy zdarzeń domeny na jednostkę, np.
+Poniższy kod jest przykładem klasy podstawowej jednostki, gdy umieścisz kod, który może być taki sam sposób używany przez wszystkie jednostki domeny, takich jak identyfikator jednostki [Operatory równości](~/docs/csharp/language-reference/operators/equality-operators.md), listy zdarzeń domeny na jednostkę, np.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)

@@ -3,8 +3,7 @@ title: Właściwość SqlStreamChars.Length (System.Data.SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -14,39 +13,39 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 3b4e5828a90de7d2f874010b79a9ddbcb8e12341
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: c2ef66fa493512e1fa062e22858ea251ced39453
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827699"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634144"
 ---
-# <a name="sqlstreamcharslength-property"></a><span data-ttu-id="95010-102">SqlStreamChars.Length Property</span><span class="sxs-lookup"><span data-stu-id="95010-102">SqlStreamChars.Length Property</span></span>
+# <a name="sqlstreamcharslength-property"></a><span data-ttu-id="1e7a9-102">SqlStreamChars.Length Property</span><span class="sxs-lookup"><span data-stu-id="1e7a9-102">SqlStreamChars.Length Property</span></span>
 
-<span data-ttu-id="95010-103">W przypadku przesłonięcia w klasie pochodnej pobiera długość strumienia bieżącego.</span><span class="sxs-lookup"><span data-stu-id="95010-103">When overridden in a derived class, gets the length of the current stream.</span></span> <span data-ttu-id="95010-104">Zestaw, który zawiera właściwość ta ma relację zaprzyjaźniona z SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="95010-104">The assembly that contains this property has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="95010-105">Jest przeznaczony do użytku przez program SQL Server.</span><span class="sxs-lookup"><span data-stu-id="95010-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="95010-106">W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.</span><span class="sxs-lookup"><span data-stu-id="95010-106">For other databases, use the hosting mechanism provided by that database.</span></span>
+<span data-ttu-id="1e7a9-103">W przypadku przesłonięcia w klasie pochodnej pobiera długość strumienia bieżącego.</span><span class="sxs-lookup"><span data-stu-id="1e7a9-103">When overridden in a derived class, gets the length of the current stream.</span></span> <span data-ttu-id="1e7a9-104">Zestaw, który zawiera właściwość ta ma relację zaprzyjaźniona z SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="1e7a9-104">The assembly that contains this property has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="1e7a9-105">Jest przeznaczony do użytku przez program SQL Server.</span><span class="sxs-lookup"><span data-stu-id="1e7a9-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="1e7a9-106">W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.</span><span class="sxs-lookup"><span data-stu-id="1e7a9-106">For other databases, use the hosting mechanism provided by that database.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="95010-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="95010-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="1e7a9-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="1e7a9-107">Syntax</span></span>
 
 ```csharp
 public abstract long Length { get; }
 ```
 
-## <a name="property-value"></a><span data-ttu-id="95010-108">Wartość właściwości</span><span class="sxs-lookup"><span data-stu-id="95010-108">Property value</span></span>
+## <a name="property-value"></a><span data-ttu-id="1e7a9-108">Wartość właściwości</span><span class="sxs-lookup"><span data-stu-id="1e7a9-108">Property value</span></span>
 
 <xref:System.Int64>\
-<span data-ttu-id="95010-109">Długość strumienia.</span><span class="sxs-lookup"><span data-stu-id="95010-109">The length of the stream.</span></span>
+<span data-ttu-id="1e7a9-109">Długość strumienia.</span><span class="sxs-lookup"><span data-stu-id="1e7a9-109">The length of the stream.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="95010-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="95010-110">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="1e7a9-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1e7a9-110">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="95010-111">`SqlStreamChars.Length` Właściwość jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="95010-111">The `SqlStreamChars.Length` property is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="1e7a9-111">`SqlStreamChars.Length` Właściwość jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="1e7a9-111">The `SqlStreamChars.Length` property is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="95010-112">Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.</span><span class="sxs-lookup"><span data-stu-id="95010-112">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="1e7a9-112">Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.</span><span class="sxs-lookup"><span data-stu-id="1e7a9-112">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="95010-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="95010-113">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="1e7a9-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1e7a9-113">Requirements</span></span>
 
-<span data-ttu-id="95010-114">**Namespace:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="95010-114">**Namespace:** <xref:System.Data.SqlTypes></span></span>
+<span data-ttu-id="1e7a9-114">**Namespace:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="1e7a9-114">**Namespace:** <xref:System.Data.SqlTypes></span></span>
 
-<span data-ttu-id="95010-115">**Zestaw:** Dane systemowe (w System.Data.dll)</span><span class="sxs-lookup"><span data-stu-id="95010-115">**Assembly:** System.Data (in System.Data.dll)</span></span>
+<span data-ttu-id="1e7a9-115">**Zestaw:** Dane systemowe (w System.Data.dll)</span><span class="sxs-lookup"><span data-stu-id="1e7a9-115">**Assembly:** System.Data (in System.Data.dll)</span></span>
 
-<span data-ttu-id="95010-116">**Wersje programu .NET framework:** Dostępne od wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="95010-116">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="1e7a9-116">**Wersje programu .NET framework:** Dostępne od wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="1e7a9-116">**.NET Framework versions:** Available since 2.0.</span></span>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364830"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634560"
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takie jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> posiada wbudowanej funkcji, aby umożliwić elastyczne stylu pojedynczymi elementami danych lub kolekcje elementów danych. Sortowanie, filtrowanie i widoki grup mogą być generowane na podstawie danych.  
@@ -61,7 +61,7 @@ ms.locfileid: "57364830"
   
  Niezależnie od tego, jaki element powiązania i rodzaj źródła danych każdego powiązania zawsze korzysta z modelu zilustrowane na poniższym rysunku:  
   
- ![Diagram podstawowego powiązania danych](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![Diagram pokazujący model powiązania danych podstawowych.](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  Jak pokazano na rysunku powyżej, wiązanie danych jest zasadniczo Most między urządzenie docelowe powiązania i źródła powiązania. Rysunek przedstawia następujące podstawowe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] koncepcji powiązań danych:  
   
@@ -101,7 +101,7 @@ ms.locfileid: "57364830"
   
  Jednak wartość źródła aktualizowany podczas edytowania tekstu lub po Zakończ edycję tekstu i wskaż przy użyciu myszy poza pole tekstowe? <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Właściwości powiązania Określa, co wyzwala aktualizacji źródła. Kropki prawo strzałki na poniższej ilustracji ilustrują rolę <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> właściwości:  
   
- ![Diagram obiektu UpdateSourceTrigger](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![Diagram przedstawiający rolę właściwości obiektu UpdateSourceTrigger.](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  Jeśli <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> wartość <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, następnie wartość wskazywana przez strzałki w prawo działania <xref:System.Windows.Data.BindingMode.TwoWay> lub <xref:System.Windows.Data.BindingMode.OneWayToSource> powiązania jest aktualizowany tak szybko, jak zmiany właściwości docelowej. Jednak jeśli <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> wartość <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>, a następnie ta wartość tylko jest aktualizowany przy użyciu nowej wartości po utracie fokusu przez właściwość docelowa.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "57364830"
   
  Jeśli zastosujemy w tym przykładzie do naszych diagram podstawowy, wynikowy ilustracja wygląda podobnie do poniższego. Jest to <xref:System.Windows.Data.BindingMode.OneWay> powiązania, ponieważ właściwość tła obsługuje <xref:System.Windows.Data.BindingMode.OneWay> powiązanie domyślnie.  
   
- ![Diagram powiązania danych](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![Diagram pokazujący właściwość tło powiązanie danych.](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  Możesz się zastanawiać, dlaczego to działa, nawet jeśli *ColorName* właściwość jest typu String podczas <xref:System.Windows.Controls.Control.Background%2A> właściwość jest typu <xref:System.Windows.Media.Brush>. To jest domyślne konwersji typów w miejscu pracy i został omówiony w [Konwersja danych](#data_conversion) sekcji.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "57364830"
   
  Aby dodać te informacje do rysunku w [tworzenia powiązania](#creating_a_binding) sekcji diagramu wygląda podobnie do następującej:  
   
- ![Diagram powiązania danych](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![Diagram pokazujący domyślną właściwość powiązania danych.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  Jednakże, co się stanie, jeśli zamiast właściwość typu String obiektu źródłowego powiązania ma *kolor* właściwości typu <xref:System.Windows.Media.Color>? W takim przypadku w kolejności dla powiązania do pracy będziesz potrzebować do pierwszego Włącz *kolor* wartość właściwości na coś, <xref:System.Windows.Controls.Control.Background%2A> właściwość przyjmuje. Będziesz potrzebować do tworzenia niestandardowych konwerter implementując <xref:System.Windows.Data.IValueConverter> interfejsu, jak w poniższym przykładzie:  
   
@@ -196,7 +196,7 @@ ms.locfileid: "57364830"
   
  Teraz konwerter niestandardowy jest używany zamiast domyślnej konwersji, a nasze diagram wygląda następująco:  
   
- ![Diagram powiązania danych](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![Diagram przedstawiający konwertera niestandardowe powiązanie danych.](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  Do przypomnę konwersje domyślne mogą być dostępne ze względu na konwertery typu, które znajdują się w typie związania z. To zachowanie będzie zależeć od konwerterów typów, które są dostępne w elemencie docelowym. W razie wątpliwości należy utworzyć własny konwertera.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "57364830"
   
  Na szczęście naszych diagram podstawowy nadal istnieje. Jeśli dokonywane jest wiązanie <xref:System.Windows.Controls.ItemsControl> do kolekcji, diagram wygląda następująco:  
   
- ![Powiązanie danych elementu ItemsControl diagram](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![Diagram przedstawiający obiekt elementu ItemsControl powiązanie danych.](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  Jak pokazano na poniższym diagramie można powiązać <xref:System.Windows.Controls.ItemsControl> do obiektu kolekcji <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> właściwość jest właściwością do użycia. Można potraktować <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> właściwość jako zawartość <xref:System.Windows.Controls.ItemsControl>. Należy zauważyć, że powiązanie <xref:System.Windows.Data.BindingMode.OneWay> ponieważ <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> obsługuje właściwość <xref:System.Windows.Data.BindingMode.OneWay> powiązanie domyślnie.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "57364830"
 ## <a name="data-templating"></a>Szablonowanie danych  
  Bez użycia szablonów danych, nasza aplikacja [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] w [co to jest powiązanie danych?](#what_is_data_binding) sekcji będzie wyglądać podobnie do poniższego:  
   
- ![Pokaz bez użycia szablonów danych tworzenia powiązania danych](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![Pokaz bez użycia szablonów danych tworzenia powiązania danych](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  Jak pokazano w przykładzie w poprzedniej sekcji, zarówno <xref:System.Windows.Controls.ListBox> kontroli i <xref:System.Windows.Controls.ContentControl> są powiązane z obiektu całą kolekcję (lub dokładniej, widok za pośrednictwem obiektu kolekcji) *AuctionItem*s. Bez szczegółowych instrukcji sposób wyświetlania zbierania danych <xref:System.Windows.Controls.ListBox> Wyświetla reprezentację ciągu każdego obiektu w kolekcji źródłowej i <xref:System.Windows.Controls.ContentControl> wyświetla ciąg reprezentujący obiekt jest powiązana.  
   

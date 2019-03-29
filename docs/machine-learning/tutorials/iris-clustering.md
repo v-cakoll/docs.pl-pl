@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186133"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634417"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Samouczek: Kwiatów iris klastra przy użyciu klastrowania uczeń za pomocą platformy ML.NET
 
@@ -136,7 +136,7 @@ Dodaj następujący kod do `Main` metodę, aby skonfigurować sposób ładowania
 W tym samouczku potok nauczania klastrowania zadania obejmuje dwa następujące czynności:
 
 - łączenie kolumn załadowanych w jednym **funkcji** kolumny, która jest używana przez trainer klastrowania.
-- Użyj <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer> trainer do nauczenia modelu, używając k — oznacza, że ++ algorytmu klastrowania.
+- Użyj <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> trainer do nauczenia modelu, używając k — oznacza, że ++ algorytmu klastrowania.
 
 Dodaj następujący kod do `Main` metody:
 

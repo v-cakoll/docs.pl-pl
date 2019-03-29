@@ -4,12 +4,12 @@ description: Dowiedz się, jak wykonać istniejącą aplikację konsoli .NET Fra
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126087"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633845"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Uruchamianie aplikacji konsoli w kontenerach Windows
 
@@ -55,7 +55,9 @@ Musisz mieć Docker for Windows, wersja 1.12 26 lub nowszej wersji Beta do obsł
 ## <a name="building-the-application"></a>Tworzenie aplikacji
 Zazwyczaj aplikacje konsoli są dystrybuowane za pośrednictwem Instalatora, FTP lub udziału plików wdrożenia. Podczas wdrażania do kontenera, zasoby muszą być kompilowane i umieszczane w lokalizacji, która może być używany podczas tworzenia obrazu platformy Docker.
 
-W *build.ps1*, skrypt używa [MSBuild](/visualstudio/msbuild/msbuild) skompilować aplikację, aby ukończyć zadanie tworzenia zasobów. Istnieje kilka parametrów przekazywanych do programu MSBuild, aby zakończyć potrzebne zasoby. Nazwa pliku projektu lub rozwiązania jest kompilowana, lokalizację dla danych wyjściowych, a na koniec konfiguracji (wydania lub debugowania).
+Poniżej przedstawiono przykładową aplikację: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+W *build.ps1*<sup>[[źródło]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup>, skrypt używa [MSBuild](/visualstudio/msbuild/msbuild) skompilować aplikację, aby ukończyć zadanie tworzenia zasobów. Istnieje kilka parametrów przekazywanych do programu MSBuild, aby zakończyć potrzebne zasoby. Nazwa pliku projektu lub rozwiązania jest kompilowana, lokalizację dla danych wyjściowych, a na koniec konfiguracji (wydania lub debugowania).
 
 W wywołaniu `Invoke-MSBuild` `OutputPath` ustawiono **publikowania** i `Configuration` równa **wersji**. 
 

@@ -2,14 +2,14 @@
 title: Zadania asynchronicznego programowania modelu (TAP) za pomocą async i await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: a8497364e0ec9294d84fb669fcada6452df71392
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b89b36f7645d3cb40945b14a4cf88b4a83dea89c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472159"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634547"
 ---
-# <a name="task-asynchronous-programming-model"></a>Zadania asynchronicznego modelu programowania
+# <a name="task-asynchronous-programming-model"></a>Model programowania asynchronicznego zadań (APM)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
   
 [C# 5](../../../whats-new/csharp-version-history.md#c-version-50) wprowadzone uproszczone podejście, programowanie async, wykorzystującego obsługi komunikacji asynchronicznej w .NET Framework 4.5 lub nowszym, .NET Core i środowiska wykonawczego Windows. Kompilator wykonuje trudną pracę, którą kiedyś wykonywał programista, a aplikacja zachowuje strukturę logiczną przypominającą kod synchroniczny. W efekcie masz wszystkie korzyści wynikające z programowania asynchronicznego przy ułamkowym nakładzie pracy.  
@@ -62,10 +62,10 @@ async Task<int> AccessTheWebAsync()
 
  Zwracać szczególną uwagę na `await` operatora. Zawiesza `AccessTheWebAsync`;
  
-    - `AccessTheWebAsync` Nie można kontynuować do momentu `getStringTask` zostało zakończone.  
-    - W międzyczasie formant powraca do obiektu wywołującego `AccessTheWebAsync`.  
-    - Kontrolka wznawia tutaj po `getStringTask` zostało zakończone.   
-    - `await` Operator następnie pobiera `string `wynikiem `getStringTask`.  
+- `AccessTheWebAsync` Nie można kontynuować do momentu `getStringTask` zostało zakończone.  
+- W międzyczasie formant powraca do obiektu wywołującego `AccessTheWebAsync`.  
+- Kontrolka wznawia tutaj po `getStringTask` zostało zakończone.   
+- `await` Operator następnie pobiera `string `wynikiem `getStringTask`.  
 
  Instrukcja return określa wyniku liczby całkowitej. Wszystkie metody, które oczekują na `AccessTheWebAsync` pobrać wartość długości.  
 

@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: aaa6af8067707162a440ab69b46f08b612eae9b3
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545510"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633806"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 
 Następujące operatory wykonywać operacji arytmetycznych na wartościach typy liczbowe:
 
 - Jednoargumentowy [ `++` (inkrementacja)](#increment-operator-), [ `--` (dekrementacja)](#decrement-operator---), [ `+` (plus)](#unary-plus-and-minus-operators), i [ `-` (minus)](#unary-plus-and-minus-operators) operatorów.
-- Binarny [ `*` (mnożenie)](#multiplication-operator-), [ `/` (dział)](#division-operator-), [ `%` (resztę)](#remainder-operator-), [ `+` () Dodawanie)](#addition-operator-), i [ `-` (odejmowanie)](#subtraction-operator-) operatorów.
+- Binarny [ `*` (mnożenie)](#multiplication-operator-), [ `/` (dział)](#division-operator-), [ `%` (resztę)](#remainder-operator-), [ `+` () Dodawanie)](#addition-operator-), i [ `-` (odejmowanie)](#subtraction-operator--) operatorów.
 
 Te operatory obsługują wszystkie [całkowitego](../keywords/integral-types-table.md) i [zmiennoprzecinkowych](../keywords/floating-point-types-table.md) typów liczbowych.
 
@@ -234,6 +234,8 @@ Dla argumentów operacji `decimal` typu arytmetycznego przepełnienia zawsze zg�
 Ze względu na ograniczenia ogólne zmiennoprzecinkowych reprezentacji w postaci liczby rzeczywiste i arytmetyki zmiennoprzecinkowej mogą wystąpić błędy zaokrąglania, w obliczeniach z typów zmiennoprzecinkowych. Oznacza to, że utworzone wynik wyrażenia różnić się od oczekiwanego wyniku matematyczne. W poniższym przykładzie pokazano kilka takich przypadkach:
 
 [!code-csharp-interactive[round-off errors](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
+
+Aby uzyskać więcej informacji, zobacz uwagi w [System.Double](/dotnet/api/system.double#remarks), [System.Single](/dotnet/api/system.single#remarks), lub [System.Decimal](/dotnet/api/system.decimal#remarks) odwoływać się do strony.
 
 ## <a name="operator-overloadability"></a>Overloadability — operator
 

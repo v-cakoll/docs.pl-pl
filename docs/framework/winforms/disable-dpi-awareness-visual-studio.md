@@ -1,17 +1,17 @@
 ---
 title: Wyłącz rozpoznawanie DPI w programie Visual Studio
 description: W tym artykule omówiono ograniczenia Windows Forms Designer na monitorach HDPI oraz sposobu uruchamiania programu Visual Studio jako proces świadomości DPI.
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710540"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633871"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Wyłącz rozpoznawanie DPI w programie Visual Studio
 
@@ -23,11 +23,14 @@ Program Visual Studio jest kropki na aplikację świadomą CAL (DPI), co oznacza
 
 ![Windows Forms Designer w monitorze HDPI](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-W programie Visual Studio 2017 w wersji należy zachować 15,8 i nowszych, po otwarciu formularza w **Windows Forms Designer** na monitorem HDPI programu Visual Studio wyświetli żółte informacyjny paska w górnej części projektanta:
+Po otwarciu formularza w **Windows Forms Designer** w programie Visual Studio na monitorze HDPI programu Visual Studio Wyświetla żółty informacyjny paska w górnej części projektanta:
 
 ![Pasek informacyjny w programie Visual Studio, aby ponownie uruchomić w trybie świadomości DPI](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Odczytuje komunikat **skalowanie na ekranie głównym jest ustawiona na 200% (192 dpi). Może to spowodować problemy z renderowaniem w oknie projektanta.**
+
+> [!NOTE]
+> Ten pasek informacyjny została wprowadzona w Visual Studio 2017 w wersji 15.8.
 
 Jeśli nie działają w projektancie, a nie trzeba dostosować układ formularza, można zignorować pasek informacyjny i kontynuować pracę w edytorze kodu lub w innych typach projektantów. (Możesz również [wyłączyć powiadomienia](#disable-notifications) tak, aby pasek informacyjny nie w dalszym ciągu są wyświetlane.) Tylko **Windows Forms Designer** dotyczy problem. Jeśli musisz pracować w **Windows Forms Designer**, następna sekcja pomoże Ci [stwierdzenie](#to-resolve-the-problem).
 
@@ -51,10 +54,13 @@ Ważne jest, aby ponownie program Visual Studio jako obsługującą ustawienia D
 
 Visual Studio można oznaczyć jako świadomości DPI przez modyfikację rejestru. Otwórz **Edytora rejestru** i Dodaj wpis do **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** podklucz:
 
-**Wpis**: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Wpis**: W zależności od tego, czy używasz programu Visual Studio 2017 lub 2019 r należy użyć jednej z następujących wartości:
 
-   > [!NOTE]
-   > Jeśli używasz programu Visual Studio 2017 w wersji Professional lub Enterprise, należy zastąpić **społeczności** z **Professional** lub **Enterprise** we wpisie. Również zastąpić literę dysku, zgodnie z potrzebami.
+- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Jeśli używasz wersji Professional lub Enterprise programu Visual Studio, należy zastąpić **społeczności** z **Professional** lub **Enterprise** we wpisie. Również zastąpić literę dysku, zgodnie z potrzebami.
 
 **Typ**: REG_SZ
 

@@ -2,12 +2,12 @@
 title: 'Pola jawne: Val — słowo kluczowe'
 description: Dowiedz się więcej o F# słowo kluczowe "val", które jest używane do deklarowania lokalizację do przechowywania wartości w typie klasy lub struktury, bez inicjowania typu.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773630"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634014"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Pola jawne: Val — słowo kluczowe
 
@@ -40,7 +40,7 @@ Na przykład niezmienne pole o nazwie `someField` został skompilowany polem zap
 Modyfikowalne pola reprezentacja .NET skompilowanych jest polem .NET.
 
 >[!WARNING]
-`Note` Przestrzeń nazw .NET Framework `System.ComponentModel` zawiera atrybut, który ma taką samą nazwę. Aby uzyskać informacji na temat tego atrybutu, zobacz `System.ComponentModel.DefaultValueAttribute`.
+>Przestrzeń nazw .NET Framework `System.ComponentModel` zawiera atrybut, który ma taką samą nazwę. Aby uzyskać informacji na temat tego atrybutu, zobacz `System.ComponentModel.DefaultValueAttribute`.
 
 Poniższy kod przedstawia użycie pola jawne i dla porównania `let` powiązania w klasie, która ma konstruktora podstawowego. Należy pamiętać, że `let`— pole związane `myInt1` jest prywatny. Gdy `let`— pola związanego `myInt1` jest wywoływany przez metodę elementu członkowskiego własny identyfikator `this` nie jest wymagana. Jednak gdy odwołujesz się do pola jawne `myInt2` i `myString`, własny identyfikator jest wymagany.
 

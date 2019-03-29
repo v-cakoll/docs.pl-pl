@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359136"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634456"
 ---
 # <a name="dialog-boxes-overview"></a>Przegląd okien dialogowych
 Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetlenie danych głównych, względem której aplikacja działa i uwidacznia funkcje przetwarzania tych danych za pośrednictwem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak pasek menu, paski narzędzi i pasków stanu. — Prosta aplikacja może również wyświetlić dodatkowe okna, wykonaj następujące czynności:  
@@ -40,7 +40,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 ## <a name="message-boxes"></a>Okna komunikatów  
  A *okno komunikatu* to okno dialogowe, który może służyć do wyświetlania informacji tekstowych i Zezwalaj użytkownikom na podejmowanie decyzji za pomocą przycisków. Na poniższej ilustracji przedstawiono okno komunikatu, który wyświetla informacje tekstowe, zadaje pytanie i zapewnia użytkownikowi dostęp do trzech przycisków, aby znaleźć odpowiedź na pytanie.  
   
- ![Okno dialogowe Edytor tekstów](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![Edytor tekstów okno dialogowe z pytaniem, czy chcesz zapisać zmiany w dokumencie, zanim aplikacja zostanie zamknięta.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  Aby utworzyć okno komunikatu, należy użyć <xref:System.Windows.MessageBox> klasy. <xref:System.Windows.MessageBox> Umożliwia skonfigurowanie tekst okno komunikatu, tytuł, ikona i przyciski, za pomocą kodu, jak pokazano poniżej.  
   
@@ -73,7 +73,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 ### <a name="open-file-dialog"></a>Okno dialogowe Otwieranie pliku  
  Okno dialogowe Otwieranie pliku pokazano na poniższym rysunku, służy funkcji otwierania pliku do pobierania nazwę pliku, aby otworzyć.  
   
- ![Okno dialogowe Otwieranie](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![Otwarte okno dialogowe wskazuje lokalizację, aby pobrać plik.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  Wspólne okno dialogowe Otwieranie pliku jest implementowany jako <xref:Microsoft.Win32.OpenFileDialog> klasy i znajduje się w <xref:Microsoft.Win32> przestrzeni nazw. Poniższy kod przedstawia sposób tworzenia, konfigurowania i jeden oraz sposób przetwarzania wyniku.  
   
@@ -89,7 +89,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 ### <a name="save-file-dialog-box"></a>Zapisz plik, okno dialogowe  
  Zapisz plik, okno dialogowe, pokazane na poniższej ilustracji jest używany przez funkcje zapisywania pliku pobrać nazwy pliku do zapisywania.  
   
- ![Okno dialogowe Zapisz jako](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![Zapisz jako okno dialogowe wskazuje lokalizację, aby zapisać plik.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  Typowe, Zapisz plik, okno dialogowe jest implementowany jako <xref:Microsoft.Win32.SaveFileDialog> klasy i znajduje się w <xref:Microsoft.Win32> przestrzeni nazw. Poniższy kod przedstawia sposób tworzenia, konfigurowania i jeden oraz sposób przetwarzania wyniku.  
   
@@ -102,7 +102,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 ### <a name="print-dialog-box"></a>Okno dialogowe drukowania  
  Okno dialogowe drukowania, pokazano na poniższym rysunku, służy funkcja drukowania można wybrać i skonfigurować drukarki, użytkownik chce drukowanie danych do.  
   
- ![Okno dialogowe drukowania](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![Zrzut ekranu pokazujący okno dialogowe drukowania.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  Wspólne okno dialogowe drukowania jest implementowany jako <xref:System.Windows.Controls.PrintDialog> klasy i znajduje się w <xref:System.Windows.Controls> przestrzeni nazw. Poniższy kod przedstawia sposób tworzenia, konfigurowania i jeden.  
   
@@ -119,7 +119,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 ### <a name="creating-a-modal-custom-dialog-box"></a>Tworzenie modalnych niestandardowe okno dialogowe  
  W tym temacie pokazano, jak używać <xref:System.Windows.Window> do utworzenia z implementacją okno typowej modalnego okna dialogowego za pomocą `Margins` okno dialogowe, na przykład (zobacz [przykładowe okno dialogowe](https://go.microsoft.com/fwlink/?LinkID=159984)). `Margins` Na poniższej ilustracji przedstawiono okno dialogowe.  
   
- ![Okno dialogowe marginesy](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![Okno dialogowe marginesy z pola do definiowania lewy margines, górny margines, prawy margines i dolny margines.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>Konfigurowanie modalne okno dialogowe  
  Interfejs użytkownika dla typowych okno dialogowe obejmuje następujące funkcje:  
@@ -208,7 +208,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
   
  Po skojarzeniu, reguła sprawdzania poprawności [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] spowoduje automatyczne zastosowanie go po wprowadzeniu danych do powiązanej kontrolki. Gdy kontrolka zawiera nieprawidłowe dane [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zostaną wyświetlone czerwone obramowanie wokół nieprawidłowej kontrolki, jak pokazano na poniższej ilustracji.  
   
- ![Nieprawidłowy lewy margines](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![Okno dialogowe marginesy z czerwonym obramowaniem wartość Nieprawidłowy lewy margines.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nie ogranicza użytkownika do nieprawidłowej kontrolki, dopóki ich zostały wprowadzone prawidłowe dane. Jest to dobry zachowanie dla okna dialogowego; Użytkownik powinien móc swobodnie Przejdź formantów w oknie dialogowym, czy dane są prawidłowe. Oznacza to jednak użytkownik może wprowadzić nieprawidłowe dane, a następnie naciśnij klawisz **OK** przycisku. Z tego powodu kod musi także sprawdzić poprawność wszystkich kontrolek w oknie dialogowym przypadku **OK** naciśnięciu przycisku obsługi <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
   
@@ -277,7 +277,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Tworzenie niemodalnego okna dialogowego niestandardowe  
  Niemodalne okno dialogowe, takie jak pokazano na poniższym rysunku, okno dialogowe Znajdź ma taki sam wygląd podstawowe jako modalne okno dialogowe.  
   
- ![Okno dialogowe Znajdź](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![Zrzut ekranu pokazujący okno dialogowe Znajdź.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  Jednak to zachowanie jest nieco inna, zgodnie z opisem w poniższych sekcjach.  
   

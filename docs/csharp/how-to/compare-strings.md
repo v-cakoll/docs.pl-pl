@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563993"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634235"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Sposób porównywania ciągów w języku C\#
 
@@ -55,7 +55,7 @@ Podczas przeprowadzania porównania bez uwzględniania porządkowe, metody te za
 ## <a name="linguistic-comparisons"></a>Porównania
 
 Ciągi również może zostać określona za pomocą reguł językowej dla bieżącej kultury.
-To jest czasami określane jako "kolejność sortowania słowo". Podczas wykonywania lingwistyczne porównanie, niektóre znaki niealfanumeryczne Unicode mogą mieć specjalnie przypisane wagi. Na przykład łącznik "-" może być bardzo małą wagę, przypisane do niego "zawiera" i "coop" będą wyświetlane obok siebie w kolejności sortowania. Ponadto niektóre znaki Unicode mogą być odpowiednikiem sekwencji <xref:System.Char> wystąpień. W poniższym przykładzie użyto frazę "One za na ulicy." w języku niemieckim (U + 0073 U + 0073) w jednym ciągu "ss" i "ß" (U + 00DF) w innym. Językowo (w Windows), "ss" jest równy Essetz niemiecki: znak "ß" w "en US" i "de-DE" kultur.
+To jest czasami określane jako "kolejność sortowania słowo". Podczas wykonywania lingwistyczne porównanie, niektóre znaki niealfanumeryczne Unicode mogą mieć specjalnie przypisane wagi. Na przykład łącznik "-" może być bardzo małą wagę, przypisane do niego "zawiera" i "coop" będą wyświetlane obok siebie w kolejności sortowania. Ponadto niektóre znaki Unicode mogą być odpowiednikiem sekwencji <xref:System.Char> wystąpień. W poniższym przykładzie użyto frazę "One za na ulicy." w języku niemieckim (U + 0073 U + 0073) w jednym ciągu "ss" i "ß" (U + 00DF) w innym. Językowo (w Windows), "ss" jest równy Esszet niemiecki: znak "ß" w "en US" i "de-DE" kultur.
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 

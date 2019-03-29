@@ -2,7 +2,7 @@
 title: Analizatory — oparte na platformie Roslyn platformy .NET
 description: 'Więcej informacji na temat analizatorów Roslyn na podstawie, znajdować problemy, które sugerują poprawkami tych problemów.'
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ---

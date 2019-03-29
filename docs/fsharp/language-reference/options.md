@@ -2,12 +2,12 @@
 title: Opcje
 description: Dowiedz się, jak używać F# opcji typów, gdy rzeczywista wartość może nie istnieć dla nazwanej wartości lub zmiennej.
 ms.date: 05/16/2016
-ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613508"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634105"
 ---
 # <a name="options"></a>Opcje
 
@@ -41,6 +41,8 @@ Opcje również może być przydatne, gdy wartość może nie istnieć, na przyk
 
 `openFile` Funkcja w poprzednim przykładzie ma typ `string -> File option` ponieważ zwraca `File` obiektu, jeśli plik zostanie pomyślnie otwarty i `None` Jeśli wystąpi wyjątek. W zależności od sytuacji może nie być odpowiednie uzasadnienie wyboru tych elementów się zostać przechwycony wyjątek, a nie zezwolenie na jego propagację.
 
+Ponadto jest nadal możliwe przekazać `null` lub wartość, która ma wartość null, aby `Some` przypadków opcji. Zwykle jest to należy unikać i zazwyczaj znajduje się w procedurze F# programowania, ale jest możliwe ze względu na charakter typów referencyjnych na platformie .NET.
+
 ## <a name="option-properties-and-methods"></a>Opcja właściwości i metody
 
 Typ opcji obsługuje poniższe właściwości i metody.
@@ -49,7 +51,7 @@ Typ opcji obsługuje poniższe właściwości i metody.
 |------------------|----|-----------|
 |[Brak](https://msdn.microsoft.com/library/83ef260a-aa33-4e6f-aee6-b9bf0a461476)|`'T option`|Właściwość statyczna, która pozwala na tworzenie wartość opcji, która ma `None` wartość.|
 |[Isnone —](https://msdn.microsoft.com/library/f08532ca-1716-4f60-ae59-8ef6256df234)|`bool`|Zwraca `true` Jeśli opcja `None` wartość.|
-|[Issome —](https://msdn.microsoft.com/library/c5088d51-c5d7-425f-a77f-12c379bb356f)|`bool`|Zwraca `true` Jeśli opcja ma wartość, która nie jest `None`.|
+|[IsSome](https://msdn.microsoft.com/library/c5088d51-c5d7-425f-a77f-12c379bb356f)|`bool`|Zwraca `true` Jeśli opcja ma wartość, która nie jest `None`.|
 |[Niektóre](https://msdn.microsoft.com/library/12f048d2-e293-4596-accb-de036ecd63fc)|`'T option`|Statyczny element członkowski, tworzącą opcja ma wartość, która nie jest `None`.|
 |[Wartość](https://msdn.microsoft.com/library/c79f68e8-11fd-45b1-a053-e8fc38b56df7)|`'T`|Zwraca podstawową wartość lub zgłasza `System.NullReferenceException` Jeśli wartość jest `None`.|
 

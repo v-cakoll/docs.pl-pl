@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Za
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 0b4bef8c80f26cea5552d4f59468811ae1f18a8d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4c039356e94f843c75430ff61d5fe68906c5c0ed
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462802"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633832"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Weryfikacja po stronie klienta (Weryfikacja w warstwach prezentacji)
 
@@ -23,7 +23,7 @@ Nawet korzystając z weryfikacji po stronie klienta, należy zawsze sprawdzić p
 
 W związku z tym w kodzie po stronie klienta zazwyczaj zweryfikowanie modele widoków. Można również sprawdzić poprawności klienta przed wysłaniem ich do usługi danych wyjściowych dto ani nowych poleceń.
 
-Implementacja weryfikacji po stronie klienta zależy od tego, jakiego rodzaju aplikacji klienckiej, którą tworzysz. Będzie on być inny, Jeśli zatwierdzasz danych w sieci web aplikacji sieci web MVC za pomocą większość kodu na platformie .NET, SPA aplikacji sieci web za pomocą tego sprawdzania poprawności są kodowane w języku JavaScript, TypeScript, czy lub aplikacji mobilnej kodowanego z rozwiązaniami Xamarin i C#.
+Implementacja weryfikacji po stronie klienta zależy od tego, jakiego rodzaju aplikacji klienckiej, którą tworzysz. Będzie on być inny, Jeśli zatwierdzasz danych w sieci web aplikacji sieci web MVC za pomocą większość kodu na platformie .NET, SPA aplikacji sieci web z tego są kodowane w języku JavaScript, TypeScript, czy lub aplikacji mobilnej są kodowane za pomocą platformy Xamarin i C#.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 

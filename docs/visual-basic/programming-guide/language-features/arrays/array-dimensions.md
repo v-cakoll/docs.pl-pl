@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708535"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634170"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Wymiary tablic w Visual Basic
 A *wymiaru* jest kierunek, w którym mogą się różnić specyfikację elementów tablicy. Tablica, która przechowuje Sprzedaż całkowita za każdy dzień miesiąca ma jeden wymiar (dzień miesiąca). Tablica, która przechowuje Sprzedaż całkowita przez dział za każdy dzień miesiąca, ma dwa wymiary (numer działu i dzień miesiąca). Nosi nazwę liczbę wymiarów tablicy zawierającej jej *ranga*.  
@@ -27,14 +27,11 @@ A *wymiaru* jest kierunek, w którym mogą się różnić specyfikację element�
   
  Na poniższych ilustracjach przedstawiono koncepcyjny struktury tablic o różnym stopniu. Każdy element na ilustracjach przedstawiono wartości indeksu, mających do niej dostęp. Na przykład, możesz uzyskać dostęp pierwszego elementu w drugim wierszu dwuwymiarowej tablicy, określając indeksów `(1, 0)`.  
   
- ![Graficzny diagram jednego&#45;tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-Jednowymiarowa tablica  
+ ![Diagram przedstawiający Jednowymiarowa tablica.](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![Graficzny diagram przedstawiający dwa&#45;tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-dwuwymiarową tablicę  
+ ![Diagram przedstawia dwuwymiarową tablicę.](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![Graficzny diagram przedstawiający trzy&#45;tablicą wielowymiarową](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-tablicy trójwymiarowej  
+ ![Diagram przedstawiający tablicę trójwymiarową.](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>Jeden wymiar  
  Wiele macierzy mają tylko jeden wymiar, takie jak liczba osób w każdym wieku. Jedynym wymaganiem, aby określić element jest okres ważności, dla którego ten element zawiera liczbę. W związku z tym takiej tablicy używa tylko jednego indeksu. Poniższy przykład deklaruje zmienną do przechowywania *jednowymiarową* wieku liczba w wieku od 0 do 120.  

@@ -1,8 +1,7 @@
 ---
 title: Datamemberfieldeditor, klasa
 ms.date: 03/30/2017
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 api_name:
 - System.Windows.Forms.Design.DataMemberListEditor
 api_location:
@@ -14,12 +13,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 734af2951572d01d78edd44deee7fc5803169c83
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7b79da7832a797cce0163de42363f0d3812a2376
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147697"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634352"
 ---
 # <a name="datamemberlisteditor-class"></a>Datamemberfieldeditor, klasa
 
@@ -40,7 +39,7 @@ internal class DataMemberListEditor : UITypeEditor
 
 **Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Zestaw:** System.Design (w System.Design.dll)  
+**Zestaw:** System.Design (in System.Design.dll)  
   
 **Wersje programu .NET framework:** Dostępne od wersji 2.0.  
   

@@ -1,0 +1,162 @@
+items:
+- name: Elementy DataSet, DataTable i DataView
+  href: index.md
+  items:
+  - name: Tworzenie elementu DataSet
+    href: creating-a-dataset.md
+  - name: Dodawanie elementu DataTable do elementu DataSet
+    href: adding-a-datatable-to-a-dataset.md
+  - name: Dodawanie elementów DataRelation
+    href: adding-datarelations.md
+  - name: Nawigowanie w elementach DataRelation
+    href: navigating-datarelations.md
+  - name: Scalanie zawartości elementu DataSet
+    href: merging-dataset-contents.md
+  - name: Kopiowanie zawartości elementu DataSet
+    href: copying-dataset-contents.md
+  - name: Obsługa zdarzeń elementu DataSet
+    href: handling-dataset-events.md
+  - name: Typizowane elementy DataSet
+    href: typed-datasets.md
+    items:
+    - name: Generowanie silnie typizowanych elementów DataSet
+      href: generating-strongly-typed-datasets.md
+    - name: Dodawanie adnotacji do typizowanych elementów DataSet
+      href: annotating-typed-datasets.md
+  - name: Elementy DataTable
+    href: datatables.md
+    items:
+    - name: Tworzenie elementu DataTable
+      href: creating-a-datatable.md
+    - name: Definicja schematu elementu DataTable
+      href: datatable-schema-definition.md
+      items:
+      - name: Dodawanie kolumn do elementu DataTable
+        href: adding-columns-to-a-datatable.md
+      - name: Tworzenie kolumn wyrażeń
+        href: creating-expression-columns.md
+      - name: Tworzenie kolumn typu AutoIncrement
+        href: creating-autoincrement-columns.md
+      - name: Definiowanie kluczy podstawowych
+        href: defining-primary-keys.md
+      - name: Ograniczenia elementu DataTable
+        href: datatable-constraints.md
+    - name: Operowanie na danych w elemencie DataTable
+      href: manipulating-data-in-a-datatable.md
+      items:
+      - name: Dodawanie danych do elementu DataTable
+        href: adding-data-to-a-datatable.md
+      - name: Wyświetlanie danych w elemencie DataTable
+        href: viewing-data-in-a-datatable.md
+      - name: Metoda Load
+        href: the-load-method.md
+      - name: Edycje elementu DataTable
+        href: datatable-edits.md
+      - name: Stany wiersza i wersje wiersza
+        href: row-states-and-row-versions.md
+      - name: Usuwanie elementu DataRow
+        href: datarow-deletion.md
+      - name: Informacje o błędzie wiersza
+        href: row-error-information.md
+      - name: Metody AcceptChanges i RejectChanges
+        href: acceptchanges-and-rejectchanges.md
+    - name: Obsługa zdarzeń elementu DataTable
+      href: handling-datatable-events.md
+  - name: Elementy DataTableReader
+    href: datatablereaders.md
+    items:
+    - name: Tworzenie elementu DataReader
+      href: creating-a-datareader.md
+    - name: Nawigowanie w elementach DataTable
+      href: navigating-datatables.md
+  - name: Elementy DataView
+    href: dataviews.md
+    items:
+    - name: Tworzenie elementu DataView
+      href: creating-a-dataview.md
+    - name: Sortowanie i filtrowanie danych
+      href: sorting-and-filtering-data.md
+    - name: Elementy DataRow i DataRowView
+      href: datarows-and-datarowviews.md
+    - name: Znajdowanie wierszy
+      href: finding-rows.md
+    - name: Elementy ChildView i relacje
+      href: childviews-and-relations.md
+    - name: Modyfikowanie elementów DataView
+      href: modifying-dataviews.md
+    - name: Obsługa zdarzeń elementu DataView
+      href: handling-dataview-events.md
+    - name: Zarządzanie elementami DataView
+      href: managing-dataviews.md
+    - name: Tworzenie elementu DataTable przy użyciu elementu DataView
+      href: creating-a-datatable-from-a-dataview.md
+  - name: Używanie języka XML w elemencie DataSet
+    href: using-xml-in-a-dataset.md
+    items:
+    - name: Elementy DiffGram
+      href: diffgrams.md
+    - name: Ładowanie elementu DataSet z pliku XML
+      href: loading-a-dataset-from-xml.md
+    - name: Zapisywanie zawartości elementu DataSet jako danych XML
+      href: writing-dataset-contents-as-xml-data.md
+    - name: Ładowanie informacji o schemacie elementu DataSet z pliku XML
+      href: loading-dataset-schema-information-from-xml.md
+    - name: Zapisywanie informacji o schemacie elementu DataSet jako pliku XSD
+      href: writing-dataset-schema-information-as-xsd.md
+    - name: Synchronizacja elementów DataSet i XmlDataDocument
+      href: dataset-and-xmldatadocument-synchronization.md
+      items:
+      - name: Synchronizowanie elementu DataSet z elementem XmlDataDocument
+        href: synchronizing-a-dataset-with-an-xmldatadocument.md
+      - name: Wykonywanie zapytania XPath w elemencie DataSet
+        href: performing-an-xpath-query-on-a-dataset.md
+      - name: Stosowanie transformacji XSLT do elementu DataSet
+        href: applying-an-xslt-transform-to-a-dataset.md
+    - name: Zagnieżdżanie elementów DataRelation
+      href: nesting-datarelations.md
+    - name: Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
+      href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+      items:
+      - name: Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet
+        href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
+        items:
+        - name: Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet
+          href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
+        - name: Mapowanie ograniczeń key schematu XML (XSD) na ograniczenia elementu DataSet
+          href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
+        - name: Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
+          href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
+      - name: Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)
+        href: generating-dataset-relations-from-xml-schema-xsd.md
+        items:
+        - name: Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
+          href: map-implicit-relations-between-nested-schema-elements.md
+        - name: Mapowanie relacji określonych dla zagnieżdżonych elementów
+          href: map-relations-specified-for-nested-elements.md
+        - name: Określanie relacji między elementami bez zagnieżdżania
+          href: specify-relations-between-elements-with-no-nesting.md
+      - name: Relacje i ograniczenia schematu XML
+        href: xml-schema-constraints-and-relationships.md
+    - name: Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML
+      href: inferring-dataset-relational-structure-from-xml.md
+      items:
+      - name: Podsumowanie procesu wnioskowania schematu elementu DataSet
+        href: summary-of-the-dataset-schema-inference-process.md
+      - name: Wnioskowanie tabel
+        href: inferring-tables.md
+      - name: Wnioskowanie kolumn
+        href: inferring-columns.md
+      - name: Wnioskowanie relacji
+        href: inferring-relationships.md
+      - name: Wnioskowanie tekstu elementu
+        href: inferring-element-text.md
+      - name: Ograniczenia wnioskowania
+        href: inference-limitations.md
+  - name: Korzystanie z elementu DataSet w usłudze internetowej XML
+    href: consuming-a-dataset-from-an-xml-web-service.md
+ms.openlocfilehash: 739874c03720eac9e49db2f1e80a8bcafd28d1f8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471364"

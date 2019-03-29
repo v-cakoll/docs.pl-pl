@@ -1,0 +1,36 @@
+items:
+- name: Stałe i wyliczenia
+  href: index.md
+  items:
+  - name: Stałe — przegląd
+    href: constants-overview.md
+    items:
+    - name: 'Instrukcje: Deklarowanie stałej'
+      href: how-to-declare-a-constant.md
+    - name: Stałe zdefiniowane przez użytkownika
+      href: user-defined-constants.md
+    - name: Typy danych Stała i Literał
+      href: constant-and-literal-data-types.md
+    - name: 'Instrukcje: Grupowanie powiązanych wartości stałych'
+      href: how-to-group-related-constant-values-together.md
+  - name: Wyliczenia — przegląd
+    href: enumerations-overview.md
+    items:
+    - name: 'Instrukcje: Deklarowanie wyliczeń'
+      href: how-to-declare-enumerations.md
+    - name: 'Instrukcje: Odwoływanie się do elementu członkowskiego wyliczenia'
+      href: how-to-refer-to-an-enumeration-member.md
+    - name: Wyliczenia i kwalifikacja nazw
+      href: enumerations-and-name-qualification.md
+    - name: 'Instrukcje: Iterowanie za pomocą wyliczenia'
+      href: how-to-iterate-through-an-enumeration.md
+    - name: 'Instrukcje: Określanie ciągu skojarzonego z wartością wyliczenia'
+      href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+    - name: Kiedy stosować wyliczanie
+      href: when-to-use-an-enumeration.md
+ms.openlocfilehash: d04784aa644ef5d37a7b3d416f8a15f2e5113f98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471992"

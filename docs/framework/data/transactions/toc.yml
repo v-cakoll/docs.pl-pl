@@ -1,0 +1,45 @@
+items:
+- name: Przetwarzanie transakcji
+  href: index.md
+  items:
+  - name: Podstawowe informacje dotyczące transakcji
+    href: transaction-fundamentals.md
+  - name: Funkcje oferowane przez bibliotekę System.Transactions
+    href: features-provided-by-system-transactions.md
+    items:
+    - name: Zapisywanie aplikacji transakcyjnej
+      href: writing-a-transactional-application.md
+      items:
+      - name: Implementowanie transakcji niejawnej przy użyciu zakresu transakcji
+        href: implementing-an-implicit-transaction-using-transaction-scope.md
+      - name: Implementowanie transakcji jawnej przy użyciu CommitableTransaction
+        href: implementing-an-explicit-transaction-using-committabletransaction.md
+      - name: Zarządzanie współbieżnością za pomocą DependentTransaction
+        href: managing-concurrency-with-dependenttransaction.md
+      - name: Współdziałanie z usługami przedsiębiorstwa i transakcjami COM+
+        href: interoperability-with-enterprise-services-and-com-transactions.md
+      - name: Eskalacja zarządzania transakcjami
+        href: transaction-management-escalation.md
+      - name: Dane śledzenia diagnostycznego
+        href: diagnostic-traces.md
+      - name: Używanie elementu System.Transactions w programie ASP.NET
+        href: using-system-transactions-in-aspnet.md
+    - name: Implementowanie Menedżera zasobów
+      href: implementing-a-resource-manager.md
+      items:
+      - name: Rejestrowanie zasobów jako uczestników transakcji
+        href: enlisting-resources-as-participants-in-a-transaction.md
+      - name: Jednofazowe i wielofazowe zatwierdzanie transakcji
+        href: committing-a-transaction-in-single-phase-and-multi-phase.md
+      - name: Odzyskiwanie systemu
+        href: performing-recovery.md
+      - name: Poziomy zaufania zabezpieczeń podczas uzyskiwania dostępu do zasobów
+        href: security-trust-levels-in-accessing-resources.md
+      - name: Optymalizacja za pomocą zatwierdzania jednofazowego i umożliwiającego awansowanie powiadomienia jednofazowego
+        href: optimization-spc-and-promotable-spn.md
+ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471484"

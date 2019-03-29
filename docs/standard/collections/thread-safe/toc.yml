@@ -1,0 +1,26 @@
+items:
+- name: Kolekcje bezpieczne wątkowo
+  href: index.md
+  items:
+  - name: BlockingCollection — Przegląd
+    href: blockingcollection-overview.md
+  - name: Kiedy należy używać kolekcji bezpiecznych wątkowo
+    href: when-to-use-a-thread-safe-collection.md
+  - name: 'Instrukcje: Dodawanie i pobieranie elementów osobno w ramach kolekcji BlockingCollection'
+    href: how-to-add-and-take-items.md
+  - name: 'Instrukcje: Używanie metody ForEach do usuwania elementów z kolekcji BlockingCollection'
+    href: how-to-use-foreach-to-remove.md
+  - name: 'Instrukcje: Dodawanie elementów do kolekcji ConcurrentDictionary i ich usuwanie'
+    href: how-to-add-and-remove-items.md
+  - name: 'Instrukcje: Dodawanie funkcji blokujących i ograniczających do kolekcji'
+    href: how-to-add-bounding-and-blocking.md
+  - name: 'Instrukcje: Używanie tablic kolekcji blokujących w potoku'
+    href: how-to-use-arrays-of-blockingcollections.md
+  - name: 'Instrukcje: Tworzenie puli obiektów przy użyciu obiektu ConcurrentBag'
+    href: how-to-create-an-object-pool.md
+ms.openlocfilehash: 6b17867548e1089eaa58d2c8a262fe4c6438948f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471464"

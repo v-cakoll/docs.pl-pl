@@ -1,0 +1,32 @@
+items:
+- name: Przewodnik po środowisku C#
+  href: index.md
+  items:
+  - name: Struktura programu
+    href: program-structure.md
+  - name: Typy i zmienne
+    href: types-and-variables.md
+  - name: Wyrażenia
+    href: expressions.md
+  - name: Instrukcje
+    href: statements.md
+  - name: Klasy i obiekty
+    href: classes-and-objects.md
+  - name: Struktury
+    href: structs.md
+  - name: Tablice
+    href: arrays.md
+  - name: Interfejsy
+    href: interfaces.md
+  - name: Wyliczenia
+    href: enums.md
+  - name: Delegaty
+    href: delegates.md
+  - name: Atrybuty
+    href: attributes.md
+ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471436"

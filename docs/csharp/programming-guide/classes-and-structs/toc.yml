@@ -1,0 +1,127 @@
+items:
+- name: Klasy i struktury
+  href: index.md
+  items:
+  - name: Klasy
+    href: classes.md
+  - name: Obiekty
+    href: objects.md
+  - name: Struktury
+    href: structs.md
+    items:
+    - name: Używanie struktur
+      href: using-structs.md
+  - name: Dziedziczenie
+    href: inheritance.md
+  - name: Polimorfizm
+    href: polymorphism.md
+    items:
+    - name: Przechowywanie wersji przesłonięć i nowych słów kluczowych
+      href: versioning-with-the-override-and-new-keywords.md
+    - name: Użycie przesłonięć i nowych słów kluczowych
+      href: knowing-when-to-use-override-and-new-keywords.md
+    - name: 'Instrukcje: Przesłonięcie metody ToString'
+      href: how-to-override-the-tostring-method.md
+  - name: Klasy abstrakcyjne i zapieczętowane oraz składowe klas
+    href: abstract-and-sealed-classes-and-class-members.md
+    items:
+    - name: 'Instrukcje: Definiowanie właściwości abstrakcyjnych'
+      href: how-to-define-abstract-properties.md
+  - name: Klasy statyczne i statyczne składowe klas
+    href: static-classes-and-static-class-members.md
+  - name: Elementy członkowskie
+    href: members.md
+  - name: Modyfikatory dostępu
+    href: access-modifiers.md
+  - name: Pola
+    href: fields.md
+  - name: Stałe
+    href: constants.md
+    items:
+    - name: 'Instrukcje: Definiowanie stałych w języku C#'
+      href: how-to-define-constants.md
+  - name: Właściwości
+    href: properties.md
+    items:
+    - name: Używanie właściwości
+      href: using-properties.md
+    - name: Właściwości interfejsu
+      href: interface-properties.md
+    - name: Ograniczanie dostępności metody dostępu
+      href: restricting-accessor-accessibility.md
+    - name: 'Instrukcje: Deklarowanie i używanie właściwości odczytu/zapisu'
+      href: how-to-declare-and-use-read-write-properties.md
+    - name: Właściwości zaimplementowane automatycznie
+      href: auto-implemented-properties.md
+    - name: 'Instrukcje: Implementowanie klasy Lightweight przy użyciu automatycznie zaimplementowanych właściwości'
+      href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+  - name: Metody
+    href: methods.md
+    items:
+    - name: Funkcje lokalne
+      href: local-functions.md
+    - name: Wartości zwracane ref i zmienne lokalne ref
+      href: ref-returns.md
+    - name: Przekazywanie parametrów
+      href: passing-parameters.md
+      items:
+      - name: Przekazywanie parametrów typu wartość
+        href: passing-value-type-parameters.md
+      - name: Przekazywanie parametrów typu odwołanie
+        href: passing-reference-type-parameters.md
+      - name: 'Instrukcje: Różnica między przekazywaniem struktury a przekazywaniem odwołań do klas do metody'
+        href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+    - name: Jawnie wpisana zmienna lokalna
+      href: implicitly-typed-local-variables.md
+      items:
+      - name: 'Instrukcje: Użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania'
+        href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+    - name: Metody rozszerzeń
+      href: extension-methods.md
+      items:
+      - name: 'Instrukcje: Implementowanie i wywoływanie niestandardowej metody rozszerzenia'
+        href: how-to-implement-and-call-a-custom-extension-method.md
+      - name: 'Instrukcje: Tworzenie nowej metody wyliczania'
+        href: how-to-create-a-new-method-for-an-enumeration.md
+    - name: Argumenty nazwane i opcjonalne
+      href: named-and-optional-arguments.md
+      items:
+      - name: 'Instrukcje: Użycie argumentów nazwanych i opcjonalnych w programowaniu Office'
+        href: how-to-use-named-and-optional-arguments-in-office-programming.md
+  - name: Konstruktorów
+    href: constructors.md
+    items:
+    - name: Używanie konstruktorów
+      href: using-constructors.md
+    - name: Konstruktory wystąpień
+      href: instance-constructors.md
+    - name: Konstruktory prywatne
+      href: private-constructors.md
+    - name: Konstruktory statyczne
+      href: static-constructors.md
+    - name: 'Instrukcje: Zapisywanie konstruktora kopiowania'
+      href: how-to-write-a-copy-constructor.md
+  - name: Finalizatory
+    href: destructors.md
+  - name: Inicjatory obiektów i kolekcji
+    href: object-and-collection-initializers.md
+    items:
+    - name: 'Instrukcje: Inicjowanie obiektów za pomocą inicjatora obiektów'
+      href: how-to-initialize-objects-by-using-an-object-initializer.md
+    - name: 'Instrukcje: Inicjowanie słownika przy użyciu inicjatora kolekcji'
+      href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
+  - name: Zagnieżdżone typy
+    href: nested-types.md
+  - name: Klasy częściowe i metody
+    href: partial-classes-and-methods.md
+  - name: Typy anonimowe
+    href: anonymous-types.md
+    items:
+    - name: 'Instrukcje: Zwracanie podzbiorów właściwości elementu w zapytaniu'
+      href: how-to-return-subsets-of-element-properties-in-a-query.md
+ms.openlocfilehash: ab61eea92fcbfb960038eb09b6e83c31d55eb24e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471486"

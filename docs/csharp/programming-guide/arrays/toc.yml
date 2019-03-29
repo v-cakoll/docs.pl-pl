@@ -1,0 +1,24 @@
+items:
+- name: Tablice
+  href: index.md
+  items:
+  - name: Użycie tablic jako obiektów
+    href: arrays-as-objects.md
+  - name: Tablice jednowymiarowe
+    href: single-dimensional-arrays.md
+  - name: Tablice wielowymiarowe
+    href: multidimensional-arrays.md
+  - name: Tablice nieregularne
+    href: jagged-arrays.md
+  - name: Używanie instrukcji foreach z tablicami
+    href: using-foreach-with-arrays.md
+  - name: Przekazywanie tablic jako argumentów
+    href: passing-arrays-as-arguments.md
+  - name: Niejawnie wpisane tablice
+    href: implicitly-typed-arrays.md
+ms.openlocfilehash: b587998861fba9ae9f13da1e58fd24e9279c6224
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58472040"

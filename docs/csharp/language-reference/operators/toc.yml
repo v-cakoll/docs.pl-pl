@@ -1,0 +1,94 @@
+items:
+- name: Operatory języka C#
+  href: index.md
+  items:
+  - name: '[], operator'
+    href: index-operator.md
+  - name: (), operator
+    href: invocation-operator.md
+  - name: . Operator
+    href: member-access-operator.md
+  - name: ?. i ?[], operatory
+    href: null-conditional-operators.md
+  - name: ':: Operator'
+    href: namespace-alias-qualifer.md
+  - name: + Operator
+    href: addition-operator.md
+  - name: '- Operator'
+    href: subtraction-operator.md
+  - name: '* Operator'
+    href: multiplication-operator.md
+  - name: /, operator
+    href: division-operator.md
+  - name: '%, operator'
+    href: modulus-operator.md
+  - name: '&, operator'
+    href: and-operator.md
+  - name: '|, operator'
+    href: or-operator.md
+  - name: ^, operator
+    href: xor-operator.md
+  - name: '! Operator'
+    href: logical-negation-operator.md
+  - name: ~, operator
+    href: bitwise-complement-operator.md
+  - name: =, operator
+    href: assignment-operator.md
+  - name: <, operator
+    href: less-than-operator.md
+  - name: '> Operator'
+    href: greater-than-operator.md
+  - name: '?: Operator'
+    href: conditional-operator.md
+  - name: ++, operator
+    href: increment-operator.md
+  - name: --, operator
+    href: decrement-operator.md
+  - name: '&&, operator'
+    href: conditional-and-operator.md
+  - name: '||, operator'
+    href: conditional-or-operator.md
+  - name: <<, operator
+    href: left-shift-operator.md
+  - name: '>> Operator'
+    href: right-shift-operator.md
+  - name: ==, operator
+    href: equality-comparison-operator.md
+  - name: '!=, operator'
+    href: not-equal-operator.md
+  - name: <=, operator
+    href: less-than-equal-operator.md
+  - name: '>=, operator'
+    href: greater-than-equal-operator.md
+  - name: +=, operator
+    href: addition-assignment-operator.md
+  - name: -=, operator
+    href: subtraction-assignment-operator.md
+  - name: '*=, operator'
+    href: multiplication-assignment-operator.md
+  - name: /=, operator
+    href: division-assignment-operator.md
+  - name: '%=, operator'
+    href: modulus-assignment-operator.md
+  - name: '&=, operator'
+    href: and-assignment-operator.md
+  - name: '|=, operator'
+    href: or-assignment-operator.md
+  - name: ^=, operator
+    href: xor-assignment-operator.md
+  - name: <<=, operator
+    href: left-shift-assignment-operator.md
+  - name: '>>=, operator'
+    href: right-shift-assignment-operator.md
+  - name: ->, operator
+    href: dereference-operator.md
+  - name: ?? Operator
+    href: null-coalescing-operator.md
+  - name: =>, operator
+    href: lambda-operator.md
+ms.openlocfilehash: 43c791ad292ef95e3e3e2bc8f58e7b92280e6747
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471418"

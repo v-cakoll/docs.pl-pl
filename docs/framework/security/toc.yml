@@ -1,0 +1,103 @@
+items:
+- name: Windows Identity Foundation
+  href: index.md
+  items:
+  - name: Co nowego w programie Windows Identity Foundation 4.5
+    href: whats-new-in-wif.md
+  - name: Omówienie programu Windows Identity Foundation 4.5
+    href: wif-overview.md
+    items:
+    - name: Model tożsamości oparty na oświadczeniach
+      href: claims-based-identity-model.md
+    - name: Autoryzacja oparta na oświadczeniach przy użyciu programu WIF
+      href: claims-based-authorization-using-wif.md
+    - name: Model programowania oświadczeń programu WIF
+      href: wif-claims-programming-model.md
+  - name: Wprowadzenie do korzystania z programu WIF
+    href: getting-started-with-wif.md
+    items:
+    - name: Tworzenie pierwszej aplikacji internetowej ASP.NET obsługującej oświadczenia
+      href: building-my-first-claims-aware-aspnet-web-app.md
+    - name: Tworzenie pierwszej usługi WCF obsługującej oświadczenia
+      href: building-my-first-claims-aware-wcf-service.md
+  - name: Funkcje programu WIF
+    href: wif-features.md
+    items:
+    - name: Niestandardowe programy obsługi tokenów
+      href: custom-token-handlers.md
+    - name: Narzędzie tożsamości i dostępu dla programu Visual Studio 2012
+      href: identity-and-access-tool-for-vs.md
+    - name: Zarządzanie sesjami programu WIF
+      href: wif-session-management.md
+    - name: Program WIF i farmy serwerów internetowych
+      href: wif-and-web-farms.md
+    - name: Omówienie modułu uwierzytelniania WSFederation
+      href: wsfederation-authentication-module-overview.md
+    - name: WSTrustChannelFactory i WSTrustChannel
+      href: wstrustchannelfactory-and-wstrustchannel.md
+  - name: Indeks instrukcji dotyczących programu WIF
+    href: wif-how-tos-index.md
+    items:
+    - name: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji internetowej MVC ASP.NET za pomocą programu WIF'
+      href: how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md
+    - name: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji formularzy internetowych ASP.NET za pomocą programu WIF'
+      href: how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md
+    - name: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania opartego na formularzach'
+      href: claims-aware-aspnet-app-forms-authentication.md
+    - name: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania systemu Windows'
+      href: how-to-build-claims-aware-aspnet-app-using-windows-authentication.md
+    - name: 'Instrukcje: Debugowanie aplikacji obsługujących oświadczenia i usług za pomocą śledzenia programu WIF'
+      href: how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md
+    - name: 'Instrukcje: Wyświetlanie stanu zalogowania przy użyciu programu WIF'
+      href: how-to-display-signed-in-status-using-wif.md
+    - name: 'Instrukcje: Włączanie śledzenia programu WIF'
+      href: how-to-enable-wif-tracing.md
+    - name: 'Instrukcje: Włączanie wykrywania ponownego odtwarzania tokenu'
+      href: how-to-enable-token-replay-detection.md
+    - name: 'Instrukcje: Włączanie programu WIF dla aplikacji usługi internetowej WCF'
+      href: how-to-enable-wif-for-a-wcf-web-service-application.md
+    - name: 'Instrukcje: Przekształcanie oświadczeń przychodzących'
+      href: how-to-transform-incoming-claims.md
+  - name: Zalecenia dotyczące programu WIF
+    href: wif-guidelines.md
+    items:
+    - name: Wskazówki dotyczące migrowania aplikacji utworzonych za pomocą programu WIF 3.5 do wersji WIF 4.5
+      href: guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md
+    - name: Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5
+      href: namespace-mapping-between-wif-3-5-and-wif-4-5.md
+  - name: Indeks przykładów kodu programu WIF
+    href: wif-code-sample-index.md
+  - name: rozszerzenia WIF
+    href: wif-extensions.md
+    items:
+    - name: Program obsługi tokenów sieci Web JSON
+      href: json-web-token-handler.md
+      items:
+      - name: Pobieranie pakietu programu obsługi tokenów sieci Web JSON
+        href: downloading-the-json-web-token-handler-package.md
+      - name: Odwołanie do biblioteki API
+        href: json-web-token-handler-api-reference.md
+    - name: Sprawdzanie poprawności rejestru nazwy dostawcy
+      href: validating-issuer-name-registry.md
+      items:
+      - name: Pobieranie pakietu sprawdzania poprawności rejestru nazwy dostawcy
+        href: downloading-the-validating-issuer-name-registry-package.md
+      - name: Odwołanie do biblioteki API
+        href: validating-issuer-name-registry-api-reference.md
+  - name: Dokumentacja interfejsu API programu WIF
+    href: wif-api-reference.md
+  - name: Odwołanie konfiguracji programu WIF
+    href: wif-configuration-reference.md
+    items:
+    - name: Konwencje schematu konfiguracji programu WIF
+      href: wif-configuration-schema-conventions.md
+- name: Zmiany zabezpieczeń
+  href: security-changes.md
+- name: Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu
+  href: secure-coding-guidelines-for-unmanaged-code.md
+ms.openlocfilehash: 4f8faea87ecbc2f3cc379aa9ed2eb7c912387e11
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471361"

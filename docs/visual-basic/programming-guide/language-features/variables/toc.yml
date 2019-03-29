@@ -1,0 +1,51 @@
+items:
+- name: Zmienne w Visual Basic
+  href: index.md
+  items:
+  - name: Deklaracja zmiennej
+    href: variable-declaration.md
+    items:
+    - name: 'Instrukcje: Tworzenie nowej zmiennej'
+      href: how-to-create-a-new-variable.md
+    - name: 'Instrukcje: Tworzenie zmiennej, która nie zmienia wartości'
+      href: how-to-create-a-variable-that-does-not-change-in-value.md
+    - name: 'Instrukcje: Przenoszenie danych do zmiennej i z niej'
+      href: how-to-move-data-into-and-out-of-a-variable.md
+  - name: Zmienne obiektów
+    href: object-variables.md
+    items:
+    - name: 'Instrukcje: Przyspieszanie dostępu do obiektu z długą ścieżką kwalifikacji'
+      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+  - name: Deklaracja zmiennej obiektu
+    href: object-variable-declaration.md
+    items:
+    - name: 'Instrukcje: Dostęp do elementów członkowskich obiektu'
+      href: how-to-access-members-of-an-object.md
+    - name: Przypisanie zmiennej obiektu
+      href: object-variable-assignment.md
+      items:
+      - name: 'Instrukcje: Deklarowanie zmiennej obiektu i przypisywanie do niej obiektu'
+        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+      - name: 'Instrukcje: Sprawianie, aby zmienna obiektu nie odwoływała się do żadnego wystąpienia'
+        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+    - name: Wartości zmiennej obiektu
+      href: object-variable-values.md
+      items:
+      - name: 'Instrukcje: Odwoływanie się do bieżącego wystąpienia obiektu'
+        href: how-to-refer-to-the-current-instance-of-an-object.md
+      - name: 'Instrukcje: Określanie, do jakiego typu odnosi się zmienna obiektu'
+        href: how-to-determine-what-type-an-object-variable-refers-to.md
+      - name: 'Instrukcje: Określanie, czy dwa obiekty są powiązane'
+        href: how-to-determine-whether-two-objects-are-related.md
+      - name: 'Instrukcje: Określanie, czy dwa obiekty są jednakowe'
+        href: how-to-determine-whether-two-objects-are-identical.md
+  - name: Wnioskowanie o typie lokalnym
+    href: local-type-inference.md
+  - name: Rozwiązywanie problemów związanych ze zmiennymi
+    href: troubleshooting-variables.md
+ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471884"

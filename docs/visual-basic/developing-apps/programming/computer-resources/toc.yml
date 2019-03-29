@@ -1,0 +1,58 @@
+items:
+- name: Uzyskiwanie dostępu do zasobów komputera
+  href: index.md
+  items:
+  - name: Odtwarzanie dźwięków
+    href: playing-sounds.md
+  - name: Zapisywanie danych w schowku i odczytywanie ich z niego
+    href: storing-data-to-and-reading-from-the-clipboard.md
+  - name: Pobieranie informacji na temat komputera
+    href: getting-information-about-the-computer.md
+  - name: Uzyskiwanie dostępu do klawiatury
+    href: accessing-the-keyboard.md
+    items:
+    - name: 'Instrukcje: uruchamianie aplikacji i wysyłanie do niej naciśnięć klawiszy'
+      href: how-to-start-an-application-and-send-it-keystrokes.md
+  - name: Uzyskiwanie dostępu do myszy
+    href: accessing-the-mouse.md
+  - name: Przeprowadzanie operacji sieciowych
+    href: performing-network-operations.md
+    items:
+    - name: 'Instrukcje: przekazywanie pliku'
+      href: how-to-upload-a-file.md
+    - name: 'Instrukcje: pobieranie pliku'
+      href: how-to-download-a-file.md
+    - name: 'Instrukcje: sprawdzanie stanu połączenia'
+      href: how-to-check-connection-status.md
+  - name: Uzyskiwanie dostępu do portów komputera
+    href: accessing-the-computer-s-ports.md
+    items:
+    - name: 'Instrukcje: wyświetlanie dostępnych portów seryjnych'
+      href: how-to-show-available-serial-ports.md
+    - name: 'Instrukcje: modemy dostępowe powiązane z portami seryjnymi'
+      href: how-to-dial-modems-attached-to-serial-ports.md
+    - name: 'Instrukcje: wysyłanie ciągów do portów seryjnych'
+      href: how-to-send-strings-to-serial-ports.md
+    - name: 'Instrukcje: odbieranie ciągów z portów seryjnych'
+      href: how-to-receive-strings-from-serial-ports.md
+    - name: Operacje związane z portem w oprogramowaniu .NET Framework
+      href: port-operations-in-the-net-framework.md
+  - name: Odczytywanie z rejestru i zapisywanie w nim
+    href: reading-from-and-writing-to-the-registry.md
+    items:
+    - name: 'Instrukcje: tworzenie klucza rejestru i określanie jego wartości'
+      href: how-to-create-a-registry-key-and-set-its-value.md
+    - name: 'Instrukcje: odczytywanie wartości z klucza rejestru'
+      href: how-to-read-a-value-from-a-registry-key.md
+    - name: 'Instrukcje: usuwanie klucza rejestru'
+      href: how-to-delete-a-registry-key.md
+    - name: Odczytywanie z rejestru i zapisywanie w nim za pomocą przestrzeni nazw Microsoft.Win32
+      href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+    - name: Bezpieczeństwo i rejestr
+      href: security-and-the-registry.md
+ms.openlocfilehash: b45e258b05c06cb8494a1644bd43cca447578e6c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471349"

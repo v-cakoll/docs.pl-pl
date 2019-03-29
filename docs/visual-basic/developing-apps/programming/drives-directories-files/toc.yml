@@ -1,0 +1,87 @@
+items:
+- name: Przetwarzanie dysków, katalogów i plików
+  href: processing.md
+  items:
+  - name: Dostęp do plików za pomocą Visual Basic
+    href: file-access.md
+    items:
+    - name: Odczyt z plików
+      href: reading-from-files.md
+      items:
+      - name: 'Instrukcje: Odczyt z plików tekstowych'
+        href: how-to-read-from-text-files.md
+      - name: 'Instrukcje: Odczyt z rozdzielonych przecinkami plików testowych'
+        href: how-to-read-from-comma-delimited-text-files.md
+      - name: 'Instrukcje: Odczyt z plików testowych o stałej szerokości'
+        href: how-to-read-from-fixed-width-text-files.md
+      - name: 'Instrukcje: Odczyt z plików tekstowych w wielu formatach'
+        href: how-to-read-from-text-files-with-multiple-formats.md
+      - name: 'Instrukcje: Odczyt z plików binarnych'
+        href: how-to-read-from-binary-files.md
+      - name: 'Instrukcje: Odczyt tekstu z plików za pomocą StreamReader'
+        href: how-to-read-text-from-files-with-a-streamreader.md
+    - name: Zapisywanie w plikach
+      href: writing-to-files.md
+      items:
+      - name: 'Instrukcje: Zapisywanie tekstu w plikach'
+        href: how-to-write-text-to-files.md
+      - name: 'Instrukcje: Dołączanie do plików tekstowych'
+        href: how-to-append-to-text-files.md
+      - name: 'Instrukcje: Zapisywanie w plikach binarnych'
+        href: how-to-write-to-binary-files.md
+      - name: 'Instrukcje: Zapisywanie tekstu w plikach w katalogu Moje dokumenty'
+        href: how-to-write-text-to-files-in-the-my-documents-directory.md
+      - name: 'Instrukcje: Zapisywanie tekstu w plikach za pomocą StreamWriter'
+        href: how-to-write-text-to-files-with-a-streamwriter.md
+    - name: Tworzenie, usuwanie i przenoszenie plików i katalogów
+      href: creating-deleting-and-moving-files-and-directories.md
+      items:
+      - name: 'Instrukcje: Kopiowanie plików z określonym wzorcem do katalogu'
+        href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
+      - name: 'Instrukcje: Tworzenie kopii pliku w tym samym katalogu'
+        href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
+      - name: 'Instrukcje: Tworzenie kopii pliku w innym katalogu'
+        href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
+      - name: 'Instrukcje: Tworzenie pliku'
+        href: how-to-create-a-file.md
+      - name: 'Instrukcje: Usuwanie pliku'
+        href: how-to-delete-a-file.md
+      - name: 'Instrukcje: Znajdowanie plików z określonym wzorcem'
+        href: how-to-find-files-with-a-specific-pattern.md
+      - name: 'Instrukcje: Przenoszenie pliku'
+        href: how-to-move-a-file.md
+      - name: 'Instrukcje: Zmienianie nazwy pliku'
+        href: how-to-rename-a-file.md
+      - name: 'Instrukcje: Kopiowanie katalogu do innego katalogu'
+        href: how-to-copy-a-directory-to-another-directory.md
+      - name: 'Instrukcje: Tworzenie katalogu'
+        href: how-to-create-a-directory.md
+      - name: 'Instrukcje: Znajdowanie podkatalogów z określonym wzorcem'
+        href: how-to-find-subdirectories-with-a-specific-pattern.md
+      - name: 'Instrukcje: Pobieranie kolekcji plików z katalogu'
+        href: how-to-get-the-collection-of-files-in-a-directory.md
+      - name: 'Instrukcje: Pobieranie zawartości katalogu Moje dokumenty'
+        href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
+      - name: 'Instrukcje: Analizowanie ścieżek plików'
+        href: how-to-parse-file-paths.md
+    - name: Analizowanie plików tekstowych za pomocą obiektu TextFieldParser
+      href: parsing-text-files-with-the-textfieldparser-object.md
+    - name: Kodowanie pliku
+      href: file-encodings.md
+    - name: 'Rozwiązywanie problemów: Odczytywanie z plików tekstowych oraz zapisywanie w nich'
+      href: troubleshooting-reading-from-and-writing-to-text-files.md
+  - name: Podstawowe informacje o operacjach We/Wy platformy .NET Framework i systemie plików
+    href: basics-of-net-framework-file-io-and-the-file-system.md
+    items:
+    - name: Klasy stosowane w operacjach We/Wy platformy .NET Framework i systemie plików
+      href: classes-used-in-net-framework-file-io-and-the-file-system.md
+  - name: 'Przewodnik: Manipulowanie plikami za pomocą metod .NET Framework'
+    href: walkthrough-manipulating-files-by-using-net-framework-methods.md
+  - name: 'Przewodnik: Manipulowanie plikami i katalogami'
+    href: walkthrough-manipulating-files-and-directories.md
+ms.openlocfilehash: 04d5b3252fa087fcbba7d29662e7ad1e3fb24d2e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471961"

@@ -1,0 +1,61 @@
+items:
+- name: Programowanie dynamiczne
+  href: index.md
+  items:
+  - name: Odbicie
+    href: reflection.md
+    items:
+    - name: Wyświetlanie informacji o typie
+      href: viewing-type-information.md
+    - name: Odbicie i typy ogólne
+      href: reflection-and-generic-types.md
+    - name: 'Instrukcje: Badanie i tworzenie wystąpień typów ogólnych za pomocą odbicia'
+      href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+    - name: Zagadnienia dotyczące zabezpieczeń dla odbicia
+      href: security-considerations-for-reflection.md
+    - name: Dynamiczne ładowanie i używanie typów
+      href: dynamically-loading-and-using-types.md
+    - name: 'Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only'
+      href: how-to-load-assemblies-into-the-reflection-only-context.md
+    - name: Uzyskiwanie dostępu do atrybutów niestandardowych
+      href: accessing-custom-attributes.md
+    - name: Określanie w pełni kwalifikowanych nazw typów
+      href: specifying-fully-qualified-type-names.md
+    - name: 'Instrukcje: Podłączanie delegata za pomocą odbicia'
+      href: how-to-hook-up-a-delegate-using-reflection.md
+    - name: Odbicia w .NET Framework dla aplikacji sklepu Windows Store
+      href: reflection-for-windows-store-apps.md
+  - name: Emitowanie dynamicznych metod i zestawów
+    href: emitting-dynamic-methods-and-assemblies.md
+    items:
+    - name: Problemy związane z zabezpieczeniami w emisji odbicia
+      href: security-issues-in-reflection-emit.md
+    - name: 'Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych'
+      href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+    - name: 'Instrukcje: Definiowanie i wykonywanie metod dynamicznych'
+      href: how-to-define-and-execute-dynamic-methods.md
+    - name: 'Instrukcje: Definiowanie typu ogólnego przy użyciu emisji odbicia'
+      href: how-to-define-a-generic-type-with-reflection-emit.md
+    - name: 'Instrukcje: Definiowanie metody ogólnej przy użyciu emisji odbicia'
+      href: how-to-define-a-generic-method-with-reflection-emit.md
+    - name: Zestawy kolekcjonowane dla dynamicznego generowania typów
+      href: collectible-assemblies.md
+  - name: Przegląd środowiska uruchomieniowego języka dynamicznego
+    href: dynamic-language-runtime-overview.md
+  - name: Dynamiczne generowanie i kompilacja kodu źródłowego
+    href: dynamic-source-code-generation-and-compilation.md
+    items:
+    - name: Używanie modelu CodeDOM
+      href: using-the-codedom.md
+    - name: Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
+      href: generating-and-compiling-source-code-from-a-codedom-graph.md
+    - name: 'Instrukcje: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM'
+      href: how-to-create-an-xml-documentation-file-using-codedom.md
+    - name: 'Instrukcje: Tworzenie klasy za pomocą modelu CodeDOM'
+      href: how-to-create-a-class-using-codedom.md
+ms.openlocfilehash: 00d24c89f04d5bfb257fa3e7835741190c8fcbdc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471395"

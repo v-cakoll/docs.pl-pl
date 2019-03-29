@@ -1,0 +1,24 @@
+items:
+- name: Wyjątki i obsługa wyjątków
+  href: index.md
+  items:
+  - name: Używanie wyjątków
+    href: using-exceptions.md
+  - name: Obsługa wyjątków
+    href: exception-handling.md
+  - name: Tworzenie i zgłaszanie wyjątków
+    href: creating-and-throwing-exceptions.md
+  - name: Wyjątki generowane przez kompilator
+    href: compiler-generated-exceptions.md
+  - name: 'Instrukcje: Obsługa wyjątków za pomocą bloku try-catch'
+    href: how-to-handle-an-exception-using-try-catch.md
+  - name: 'Instrukcje: Wykonywanie czyszczenia kodu za pomocą instrukcji finally'
+    href: how-to-execute-cleanup-code-using-finally.md
+  - name: 'Instrukcje: Przechwytywanie wyjątku typu non-CLS'
+    href: how-to-catch-a-non-cls-exception.md
+ms.openlocfilehash: 391605df4d623451a4a1c830a48322c7a14eef7c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471368"

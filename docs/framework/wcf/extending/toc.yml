@@ -1,0 +1,153 @@
+items:
+- name: Rozszerzanie architektury WCF
+  href: index.md
+  items:
+  - name: Rozszerzanie elementu ServiceHost i warstwy modelu usług
+    href: extending-servicehost-and-the-service-model-layer.md
+    items:
+    - name: Rozszerzanie klientów
+      href: extending-clients.md
+      items:
+      - name: 'Instrukcje: sprawdzanie lub modyfikowanie komunikatów na kliencie'
+        href: how-to-inspect-or-modify-messages-on-the-client.md
+      - name: 'Instrukcje: sprawdzanie lub modyfikowanie parametrów'
+        href: how-to-inspect-or-modify-parameters.md
+    - name: Rozszerzanie dyspozytorów
+      href: extending-dispatchers.md
+      items:
+      - name: 'Instrukcje: sprawdzanie i modyfikowanie komunikatów w usłudze'
+        href: how-to-inspect-and-modify-messages-on-the-service.md
+      - name: 'Instrukcje: blokowanie punktów końcowych w przedsiębiorstwie'
+        href: how-to-lock-down-endpoints-in-the-enterprise.md
+    - name: Obiekty rozszerzalne
+      href: extensible-objects.md
+    - name: Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań
+      href: configuring-and-extending-the-runtime-with-behaviors.md
+    - name: Rozszerzanie hostingu za pomocą elementu ServiceHostFactory
+      href: extending-hosting-using-servicehostfactory.md
+  - name: Rozszerzanie powiązań
+    href: extending-bindings.md
+    items:
+    - name: Wiązania i elementy wiązań
+      href: bindings-and-binding-elements.md
+    - name: Powiązania niestandardowe
+      href: custom-bindings.md
+      items:
+      - name: 'Instrukcje: dostosowywanie wiązania udostępnionego przez system'
+        href: how-to-customize-a-system-provided-binding.md
+    - name: Tworzenie wiązań zdefiniowanych przez użytkownika
+      href: creating-user-defined-bindings.md
+  - name: Rozszerzanie warstwy kanału
+    href: extending-the-channel-layer.md
+    items:
+    - name: Przegląd modelu kanału
+      href: channel-model-overview.md
+      items:
+      - name: Programowanie na poziomie kanału klienta
+        href: client-channel-level-programming.md
+      - name: Programowanie na poziomie kanału usługi
+        href: service-channel-level-programming.md
+      - name: Opis zmian stanu
+        href: understanding-state-changes.md
+      - name: Wybieranie platformy wymiany komunikatów
+        href: choosing-a-message-exchange-pattern.md
+      - name: Obsługa wyjątków i błędów
+        href: handling-exceptions-and-faults.md
+    - name: Opracowywanie kanałów
+      href: developing-channels.md
+      items:
+      - name: 'Usługa: Odbiorniki kanałów i kanały'
+        href: service-channel-listeners-and-channels.md
+      - name: 'Klient: Fabryki kanałów i kanały'
+        href: client-channel-factories-and-channels.md
+      - name: Tworzenie elementu BindingElement
+        href: creating-a-bindingelement.md
+      - name: Konfiguracja i obsługa metadanych
+        href: configuration-and-metadata-support.md
+    - name: Niestandardowe kodery
+      href: custom-encoders.md
+    - name: Niestandardowe uaktualnienia strumienia
+      href: custom-stream-upgrades.md
+  - name: Rozszerzanie zabezpieczeń
+    href: extending-security.md
+    items:
+    - name: Określanie niestandardowego algorytmu kryptograficznego
+      href: specifying-a-custom-crypto-algorithm.md
+    - name: Niestandardowe poświadczenia i weryfikacja poświadczeń
+      href: custom-credential-and-credential-validation.md
+      items:
+      - name: 'Przewodnik: tworzenie niestandardowego klienta i poświadczeń usługi'
+        href: walkthrough-creating-custom-client-and-service-credentials.md
+      - name: 'Instrukcje: tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów'
+        href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
+      - name: 'Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń'
+        href: how-to-create-a-custom-security-token-provider.md
+      - name: 'Instrukcje: tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń'
+        href: how-to-create-a-custom-security-token-authenticator.md
+    - name: Tokeny niestandardowe
+      href: custom-tokens.md
+      items:
+      - name: 'Instrukcje: tworzenie tokenu niestandardowego'
+        href: how-to-create-a-custom-token.md
+    - name: Autoryzacja niestandardowa
+      href: custom-authorization.md
+      items:
+      - name: 'Instrukcje: tworzenie niestandardowych zasad autoryzacji'
+        href: how-to-create-a-custom-authorization-policy.md
+      - name: 'Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi'
+        href: how-to-create-a-custom-authorization-manager-for-a-service.md
+      - name: 'Instrukcje: tworzenie oświadczenia niestandardowego'
+        href: how-to-create-a-custom-claim.md
+      - name: 'Instrukcje: porównywanie oświadczeń'
+        href: how-to-compare-claims.md
+      - name: 'Instrukcje: tworzenie niestandardowej tożsamości podmiotu zabezpieczeń'
+        href: how-to-create-a-custom-principal-identity.md
+    - name: Przesłanianie tożsamości usługi na potrzeby uwierzytelniania
+      href: overriding-the-identity-of-a-service-for-authentication.md
+    - name: 'Instrukcje: tworzenie niestandardowego weryfikatora tożsamości klienta'
+      href: how-to-create-a-custom-client-identity-verifier.md
+    - name: 'Instrukcje: używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania'
+      href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
+    - name: 'Instrukcje: zmienianie dostawcy kryptograficznego dla klucza prywatnego certyfikatu X.509'
+      href: change-cryptographic-provider-x509-certificate-private-key.md
+  - name: Rozszerzanie systemu metadanych
+    href: extending-the-metadata-system.md
+    items:
+    - name: Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia programu WCF
+      href: exporting-custom-metadata-for-a-wcf-extension.md
+      items:
+      - name: 'Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL'
+        href: how-to-export-custom-wsdl.md
+      - name: 'Instrukcje: eksportowanie niestandardowych asercji zasad'
+        href: how-to-export-custom-policy-assertions.md
+    - name: Importowanie niestandardowych metadanych dla rozszerzenia WCF
+      href: importing-custom-metadata-for-a-wcf-extension.md
+      items:
+      - name: 'Instrukcje: importowanie niestandardowych plików WSDL'
+        href: how-to-import-custom-wsdl.md
+      - name: 'Instrukcje: importowanie niestandardowych asercji zasad'
+        href: how-to-import-custom-policy-assertions.md
+      - name: 'Instrukcje: pisanie rozszerzenia dla typu ServiceContractGenerator'
+        href: how-to-write-an-extension-for-the-servicecontractgenerator.md
+    - name: Publikowanie i pobieranie metadanych za pośrednictwem powiązania niestandardowego
+      href: publishing-and-retrieving-metadata-over-a-custom-binding.md
+      items:
+      - name: Powiązania elementu WS-MetadataExchange
+        href: ws-metadataexchange-bindings.md
+      - name: 'Instrukcje: konfigurowanie niestandardowego wiązania WS-Metadata Exchange'
+        href: how-to-configure-a-custom-ws-metadata-exchange-binding.md
+      - name: 'Instrukcje: pobieranie metadanych przez wiązanie inne niż wymiany metadanych'
+        href: how-to-retrieve-metadata-over-a-non-mex-binding.md
+  - name: Rozszerzanie koderów i serializatorów
+    href: extending-encoders-and-serializers.md
+    items:
+    - name: Surogaty kontraktu danych
+      href: data-contract-surrogates.md
+    - name: Niestandardowe elementy formatujące komunikaty
+      href: custom-message-formatters.md
+ms.openlocfilehash: 0d1efdeca48a3bf64f26a69635707398737420fd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471840"

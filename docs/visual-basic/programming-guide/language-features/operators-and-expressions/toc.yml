@@ -1,0 +1,32 @@
+items:
+- name: Operatory i wyrażenia
+  href: index.md
+  items:
+  - name: Typowe zadania przeprowadzane przy użyciu operatorów
+    href: common-tasks-performed-with-visual-basic-operators.md
+  - name: Operatory arytmetyczne
+    href: arithmetic-operators.md
+  - name: Operatory porównania
+    href: comparison-operators.md
+  - name: 'Instrukcje: Testowanie, czy dwa obiekty są takie same'
+    href: how-to-test-whether-two-objects-are-the-same.md
+  - name: 'Instrukcje: Dopasowywanie ciągu do wzorca'
+    href: how-to-match-a-string-against-a-pattern.md
+  - name: Operatory łączenia
+    href: concatenation-operators.md
+  - name: Operatory logiczne i bitowe
+    href: logical-and-bitwise-operators.md
+  - name: Skuteczna kombinacja operatorów
+    href: efficient-combination-of-operators.md
+  - name: 'Instrukcje: Obliczanie wartości liczbowych'
+    href: how-to-calculate-numeric-values.md
+  - name: Porównania wartości
+    href: value-comparisons.md
+  - name: Wyrażenia logiczne
+    href: boolean-expressions.md
+ms.openlocfilehash: b16598c335031cf099e0549d491adfc204fc6d35
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471477"

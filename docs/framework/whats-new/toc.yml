@@ -1,0 +1,19 @@
+items:
+- name: Nowości
+  href: index.md
+  items:
+  - name: Nowości w ułatwieniach dostępu
+    href: whats-new-in-accessibility.md
+  - name: Przestarzałe elementy w bibliotece klas
+    href: whats-obsolete.md
+    items:
+    - name: Przestarzałe typy
+      href: obsolete-types.md
+    - name: Przestarzałe składowe
+      href: obsolete-members.md
+ms.openlocfilehash: 2c01bcec7ed118bc8d32338a04686d158770d140
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471379"

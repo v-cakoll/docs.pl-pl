@@ -1,0 +1,48 @@
+items:
+- name: Daty, godziny i strefy czasowe
+  href: index.md
+  items:
+  - name: Strefy czasowe — omówienie
+    href: time-zone-overview.md
+  - name: Wybieranie pomiędzy elementem DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo
+    href: choosing-between-datetime.md
+  - name: Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym
+    href: finding-the-time-zones-on-local-system.md
+  - name: 'Instrukcje: Wyliczanie stref czasowych na komputerze'
+    href: enumerate-time-zones.md
+  - name: 'Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów lokalnej strefy czasowej i strefy czasowej UTC'
+    href: access-utc-and-local.md
+  - name: 'Instrukcje: Tworzenie wystąpień obiektów TimeZoneInfo'
+    href: instantiate-time-zone-info.md
+  - name: Tworzenie wystąpień obiektów DateTimeOffset
+    href: instantiating-a-datetimeoffset-object.md
+  - name: 'Instrukcje: Tworzenie stref czasowych bez reguł korygowania'
+    href: create-time-zones-without-adjustment-rules.md
+  - name: 'Instrukcje: Tworzenie stref czasowych przy użyciu reguł korygowania'
+    href: create-time-zones-with-adjustment-rules.md
+  - name: Zapisywanie i przywracanie stref czasowych
+    href: saving-and-restoring-time-zones.md
+  - name: 'Instrukcje: Zapisywanie stref czasowych w zasobie osadzonym'
+    href: save-time-zones-to-an-embedded-resource.md
+  - name: 'Instrukcje: Przywracanie stref czasowych z zasobu osadzonego'
+    href: restore-time-zones-from-an-embedded-resource.md
+  - name: Praca z kalendarzami
+    href: working-with-calendars.md
+  - name: Wykonywanie operacji arytmetycznych na wartościach dat i godzin
+    href: performing-arithmetic-operations.md
+  - name: 'Instrukcje: Używanie stref czasowych w arytmetyce wartości daty i godziny'
+    href: use-time-zones-in-arithmetic.md
+  - name: Konwertowanie pomiędzy DateTime i DateTimeOffset
+    href: converting-between-datetime-and-offset.md
+  - name: Konwertowanie godzin między strefami czasowymi
+    href: converting-between-time-zones.md
+  - name: 'Instrukcje: Rozwiązywanie niejednoznacznych wartości czasu'
+    href: resolve-ambiguous-times.md
+  - name: 'Instrukcje: Pozwalanie użytkownikom na rozwiązywanie niejednoznacznych wartości czasu'
+    href: let-users-resolve-ambiguous-times.md
+ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471497"

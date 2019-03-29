@@ -1,0 +1,57 @@
+items:
+- name: Ciągi w Visual Basic
+  href: index.md
+  items:
+  - name: Wprowadzenie do ciągów
+    href: introduction-to-strings.md
+    items:
+    - name: Podstawowe informacje o ciągach
+      href: string-basics.md
+    - name: Typy metod manipulowania ciągami
+      href: types-of-string-manipulation-methods.md
+    - name: Nothing i ciągi
+      href: nothing-and-strings.md
+    - name: Wpływ kultury na ciągi
+      href: how-culture-affects-strings.md
+    - name: Ciągi interpolowane
+      href: interpolated-strings.md
+    - name: Dostęp do ciągu liczonego od zera a dostęp do ciągu liczonego od jednego
+      href: zero-based-vs-one-based-string-access.md
+  - name: 'Instrukcje: tworzenie ciągów za pomocą StringBuilder'
+    href: how-to-create-strings-using-a-stringbuilder.md
+  - name: 'Instrukcje: wyszukiwanie wewnątrz ciągu'
+    href: how-to-search-within-a-string.md
+  - name: Konwertowanie pomiędzy ciągami a innymi typami danych
+    href: converting-between-strings-and-other-data-types.md
+    items:
+    - name: 'Instrukcje: konwertowanie tablicy bajtów na ciąg'
+      href: how-to-convert-an-array-of-bytes-into-a-string.md
+    - name: 'Instrukcje: konwertowanie ciągów na tablice bajtów'
+      href: how-to-convert-strings-into-an-array-of-bytes.md
+    - name: 'Instrukcje: tworzenie ciągu z tablicy wartości znaków'
+      href: how-to-create-a-string-from-an-array-of-char-values.md
+    - name: 'Instrukcje: konwertowanie ciągów szesnastkowych na liczby'
+      href: how-to-convert-hexadecimal-strings-to-numbers.md
+    - name: 'Instrukcje: konwertowanie ciągu na tablicę znaków'
+      href: how-to-convert-a-string-to-an-array-of-characters.md
+    - name: 'Instrukcje: uzyskiwanie dostępu do znaków w ciągach'
+      href: how-to-access-characters-in-strings.md
+  - name: Weryfikowanie ciągów
+    href: validating-strings.md
+    items:
+    - name: 'Instrukcje: weryfikowanie nazw plików oraz ścieżek'
+      href: how-to-validate-file-names-and-paths.md
+    - name: 'Instrukcje: weryfikowanie ciągów reprezentujących daty lub godziny'
+      href: how-to-validate-strings-that-represent-dates-or-times.md
+    - name: Używanie wyrażeń regularnych z kontrolką MaskedTextBox
+      href: using-regular-expressions-with-the-maskedtextbox-control.md
+    - name: 'Przewodnik: weryfikowanie złożoności haseł'
+      href: walkthrough-validating-that-passwords-are-complex.md
+  - name: 'Przewodnik: szyfrowanie i odszyfrowywanie danych'
+    href: walkthrough-encrypting-and-decrypting-strings.md
+ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471876"

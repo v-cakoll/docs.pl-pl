@@ -1,0 +1,30 @@
+items:
+- name: Wskazówki dotyczące biblioteki typu open-source
+  href: index.md
+  items:
+  - name: Wprowadzenie
+    href: get-started.md
+  - name: Obsługiwane rozwiązania międzyplatformowe
+    href: cross-platform-targeting.md
+  - name: Silne nazewnictwo
+    href: strong-naming.md
+  - name: NuGet
+    href: nuget.md
+    items:
+    - name: Zależności
+      href: dependencies.md
+    - name: Link do źródła
+      href: sourcelink.md
+    - name: Publikowanie
+      href: publish-nuget-package.md
+  - name: Przechowywanie wersji
+    href: versioning.md
+    items:
+    - name: Fundamentalne zmiany
+      href: breaking-changes.md
+ms.openlocfilehash: eb2748f71480aee063efadd8291c76440347169b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471359"

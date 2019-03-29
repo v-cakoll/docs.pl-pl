@@ -1,0 +1,20 @@
+items:
+- name: Wprowadzenie
+  href: index.md
+  items:
+  - name: Wprowadzenie do platformy WPF w programie Visual Studio
+    href: introduction-to-wpf-in-vs.md
+  - name: Nowości w WPF w wersji 4.5
+    href: whats-new.md
+  - name: 'Przewodnik: Moja pierwsza aplikacja klasyczna WPF'
+    href: walkthrough-my-first-wpf-desktop-application.md
+  - name: Wskazówki dotyczące WPF
+    href: wpf-walkthroughs.md
+  - name: Opinia społeczności WPF
+    href: community-feedback.md
+ms.openlocfilehash: bebf111d94212c0a337602a7921f7ec5e639eed6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58472037"

@@ -1,0 +1,66 @@
+items:
+- name: Schemat pliku konfiguracji
+  href: index.md
+  items:
+  - name: <configuration>, element
+    href: configuration-element.md
+  - name: <assemblyBinding>, element
+    href: assemblybinding-element-for-configuration.md
+  - name: <linkedConfiguration>, element
+    href: linkedconfiguration-element.md
+  - name: <configSections>, element
+    href: configsections-element-for-configuration.md
+  - name: <clear>, element dla <configSections>
+    href: clear-element-for-configsections.md
+  - name: <remove>, element dla <configSections>
+    href: remove-element-for-configsections.md
+  - name: <sectionGroup>, element
+    href: sectiongroup-element-for-configsections.md
+  - name: Element niestandardowy dla SingleTagSectionHandler
+    href: custom-element-1.md
+  - name: Element niestandardowy dla NameValueSectionHandler i DictionarySectionHandler
+    href: custom-element-2.md
+  - name: <add>, element
+    href: add-element-for-custom-2.md
+  - name: <clear>, element dla NameValueSectionHandler i DictionarySectionHandler
+    href: clear-element-for-custom-2.md
+  - name: <remove>, element dla NameValueSectionHandler i DictionarySectionHandler
+    href: remove-element-for-custom-2.md
+  - name: <section> Element
+    href: section-element.md
+  - name: Schemat ustawień aplikacji
+    href: appsettings/index.md
+  - name: Schemat ustawień aplikacji
+    href: application-settings-schema.md
+  - name: Schemat ustawień kompilatora i dostawcy języka
+    href: compiler/index.md
+  - name: Schemat sekcji konfiguracji
+    href: configuration-sections-schema.md
+  - name: Schemat ustawień kryptografii
+    href: cryptography/index.md
+  - name: Schemat ustawień sieci
+    href: network/index.md
+  - name: Schemat ustawień środowiska uruchomieniowego
+    href: runtime/index.md
+  - name: Schemat ustawień uruchamiania
+    href: startup/index.md
+  - name: Schemat ustawień śledzenia i debugowania
+    href: trace-debug/index.md
+  - name: Schemat ustawień sieci Web
+    href: web/index.md
+  - name: Schemat konfiguracji programu WCF
+    href: wcf/index.md
+  - name: Składnia dyrektyw programu WCF
+    href: wcf-directive/index.md
+  - name: Schemat konfiguracji programu WIF
+    href: windows-identity-foundation/index.md
+  - name: Sekcja konfiguracji programu Windows Forms
+    href: winforms/index.md
+  - name: Schemat konfiguracji programu Windows Workflow Foundation
+    href: windows-workflow-foundation/index.md
+ms.openlocfilehash: 69b0e7862ab6c9a7540469f79d6870a8f9976f14
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471346"

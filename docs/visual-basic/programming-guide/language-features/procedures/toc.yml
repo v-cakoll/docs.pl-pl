@@ -1,0 +1,121 @@
+items:
+- name: Procedury w Visual Basic
+  href: index.md
+  items:
+  - name: 'Instrukcje: Tworzenie procedury'
+    href: how-to-create-a-procedure.md
+  - name: Sub, procedury
+    href: sub-procedures.md
+    items:
+    - name: 'Instrukcje: Wywoływanie procedury, która nie zwraca wartości'
+      href: how-to-call-a-procedure-that-does-not-return-a-value.md
+    - name: 'Instrukcje: Wywoływanie programu do obsługi zdarzeń'
+      href: how-to-call-an-event-handler.md
+  - name: Procedury funkcji
+    href: function-procedures.md
+    items:
+    - name: 'Instrukcje: Tworzenie procedury, która zwraca wartość'
+      href: how-to-create-a-procedure-that-returns-a-value.md
+    - name: 'Instrukcje: Zwracanie wartości z procedury'
+      href: how-to-return-a-value-from-a-procedure.md
+    - name: 'Instrukcje: Wywoływanie procedury zwracającej wartość'
+      href: how-to-call-a-procedure-that-returns-a-value.md
+  - name: Procedury właściwości
+    href: property-procedures.md
+    items:
+    - name: Właściwości zaimplementowane automatycznie
+      href: auto-implemented-properties.md
+    - name: Różnice między właściwościami i zmiennymi
+      href: differences-between-properties-and-variables.md
+    - name: 'Instrukcje: Tworzenie właściwości'
+      href: how-to-create-a-property.md
+    - name: 'Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu'
+      href: how-to-declare-a-property-with-mixed-access-levels.md
+    - name: 'Instrukcje: Wywoływanie procedury właściwości'
+      href: how-to-call-a-property-procedure.md
+    - name: 'Instrukcje: Deklarowanie i wywoływanie właściwości domyślnej'
+      href: how-to-declare-and-call-a-default-property.md
+    - name: 'Instrukcje: Umieszczanie wartości we właściwości'
+      href: how-to-put-a-value-in-a-property.md
+    - name: 'Instrukcje: Pobieranie wartości z właściwości'
+      href: how-to-get-a-value-from-a-property.md
+  - name: Procedury operatorów
+    href: operator-procedures.md
+    items:
+    - name: 'Instrukcje: Definiowanie operatora'
+      href: how-to-define-an-operator.md
+    - name: 'Instrukcje: Definiowanie operatora konwersji'
+      href: how-to-define-a-conversion-operator.md
+    - name: 'Instrukcje: Wywoływanie procedury operatora'
+      href: how-to-call-an-operator-procedure.md
+    - name: 'Instrukcje: Używanie klasy definiującej operatory'
+      href: how-to-use-a-class-that-defines-operators.md
+  - name: Parametry i argumenty procedur
+    href: procedure-parameters-and-arguments.md
+    items:
+    - name: Różnice między parametrami i argumentami
+      href: differences-between-parameters-and-arguments.md
+    - name: 'Instrukcje: Definiowanie parametru dla procedury'
+      href: how-to-define-a-parameter-for-a-procedure.md
+    - name: 'Instrukcje: Przekazywanie argumentów do procedury'
+      href: how-to-pass-arguments-to-a-procedure.md
+    - name: Przekazywanie argumentów według wartości i według odwołania
+      href: passing-arguments-by-value-and-by-reference.md
+      items:
+      - name: Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi
+        href: differences-between-modifiable-and-nonmodifiable-arguments.md
+      - name: Różnice między przekazywaniem argumentu według wartości i według odwołania
+        href: differences-between-passing-an-argument-by-value-and-by-reference.md
+      - name: 'Instrukcje: Zmiana wartości argumentu procedury'
+        href: how-to-change-the-value-of-a-procedure-argument.md
+      - name: 'Instrukcje: Ochrona argumentu procedury przed zmianami wartości'
+        href: how-to-protect-a-procedure-argument-against-value-changes.md
+      - name: 'Instrukcje: Wymuszanie przekazywania argumentu przez wartość'
+        href: how-to-force-an-argument-to-be-passed-by-value.md
+    - name: Przekazywanie argumentów przez pozycję i przez nazwę
+      href: passing-arguments-by-position-and-by-name.md
+    - name: Parametry opcjonalne
+      href: optional-parameters.md
+    - name: Parameter — Tablice
+      href: parameter-arrays.md
+  - name: Odwoływanie się do zwracanych wartości
+    href: ref-return-values.md
+  - name: Procedury rekursywne
+    href: recursive-procedures.md
+  - name: Przeciążanie procedury
+    href: procedure-overloading.md
+    items:
+    - name: 'Instrukcje: Definiowanie wielu wersji procedury'
+      href: how-to-define-multiple-versions-of-a-procedure.md
+    - name: 'Instrukcje: Wywoływanie procedury przeciążonej'
+      href: how-to-call-an-overloaded-procedure.md
+    - name: 'Instrukcje: Przeciążanie procedury korzystającej z parametrów opcjonalnych'
+      href: how-to-overload-a-procedure-that-takes-optional-parameters.md
+    - name: 'Instrukcje: Przeciążanie procedury korzystającej z nieskończonej liczby parametrów'
+      href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
+    - name: Zagadnienia dotyczące przeciążania procedur
+      href: considerations-in-overloading-procedures.md
+    - name: Rozpoznanie przeciążenia
+      href: overload-resolution.md
+  - name: Rozwiązywanie problemów z procedurami
+    href: troubleshooting-procedures.md
+  - name: Metody rozszerzeń
+    href: extension-methods.md
+    items:
+    - name: 'Instrukcje: Zapisywanie metody rozszerzenia'
+      href: how-to-write-an-extension-method.md
+    - name: 'Instrukcje: Wywoływanie metody rozszerzenia'
+      href: how-to-call-an-extension-method.md
+  - name: Wyrażenia lambda
+    href: lambda-expressions.md
+    items:
+    - name: 'Instrukcje: Tworzenie wyrażenia lambda'
+      href: how-to-create-a-lambda-expression.md
+  - name: Metody częściowe
+    href: partial-methods.md
+ms.openlocfilehash: 56cc10bf082515dcf646f005522162b4c9e3bdf0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471415"

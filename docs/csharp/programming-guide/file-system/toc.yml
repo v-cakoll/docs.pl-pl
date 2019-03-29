@@ -1,0 +1,28 @@
+items:
+- name: System plików i rejestr
+  href: index.md
+  items:
+  - name: 'Instrukcje: Iterowanie po drzewie katalogów'
+    href: how-to-iterate-through-a-directory-tree.md
+  - name: 'Instrukcje: Pobieranie informacji o plikach, folderach i dyskach'
+    href: how-to-get-information-about-files-folders-and-drives.md
+  - name: 'Instrukcje: Tworzenie pliku lub folderu'
+    href: how-to-create-a-file-or-folder.md
+  - name: 'Instrukcje: Kopiowanie, usuwanie i przenoszenie plików i folderów'
+    href: how-to-copy-delete-and-move-files-and-folders.md
+  - name: 'Instrukcje: Dostarczanie okna dialogowego postępu dla operacji na plikach'
+    href: how-to-provide-a-progress-dialog-box-for-file-operations.md
+  - name: 'Instrukcje: Zapisywanie do pliku tekstowego'
+    href: how-to-write-to-a-text-file.md
+  - name: 'Instrukcje: Odczytywanie z pliku tekstowego'
+    href: how-to-read-from-a-text-file.md
+  - name: 'Instrukcje: Odczytywanie pliku tekstowego po jednym wierszu (Visual C#)'
+    href: how-to-read-a-text-file-one-line-at-a-time.md
+  - name: 'Instrukcje: Tworzenie klucza w rejestrze (Visual C#)'
+    href: how-to-create-a-key-in-the-registry.md
+ms.openlocfilehash: 779f7fad6c2ba693a27f2657fc55c5db55ce00ed
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471417"

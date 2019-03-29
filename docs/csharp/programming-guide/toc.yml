@@ -1,0 +1,52 @@
+items:
+- name: Przewodnik programowania w języku C#
+  href: index.md
+  items:
+  - name: Konstrukcja programu C#
+    href: inside-a-program/
+  - name: Main() i argumenty wiersza polecenia
+    href: main-and-command-args/
+  - name: Pojęcia związane z programowaniem
+    href: concepts/
+  - name: Instrukcje, wyrażenia i operatory
+    href: statements-expressions-operators/
+  - name: Types
+    href: types/
+  - name: Klasy i struktury
+    href: classes-and-structs/
+  - name: Interfejsy
+    href: interfaces/
+  - name: Typy wyliczeniowe
+    href: enumeration-types.md
+  - name: Delegaty
+    href: delegates/index.md
+  - name: Tablice
+    href: arrays/
+  - name: Ciągi
+    href: strings/
+  - name: Indeksatory
+    href: indexers/
+  - name: Zdarzenia
+    href: events/
+  - name: Typy ogólne
+    href: generics/
+  - name: Namespaces
+    href: namespaces/
+  - name: Typy dopuszczające wartości null
+    href: nullable-types/
+  - name: Niebezpieczny kod i wskaźniki
+    href: unsafe-code-pointers/
+  - name: Komentarze dokumentacji XML
+    href: xmldoc/
+  - name: Wyjątki i obsługa wyjątków
+    href: exceptions/
+  - name: System plików i rejestr
+    href: file-system/
+  - name: Współdziałanie
+    href: interop/
+ms.openlocfilehash: 735c939dd903ff7e713fc9870afeda99786f8e77
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58472103"

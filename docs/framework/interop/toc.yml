@@ -1,0 +1,122 @@
+items:
+- name: Współdziałanie z kodem niezarządzanym
+  href: index.md
+  items:
+  - name: Udostępnianie składników COM programowi.NET Framework
+    href: exposing-com-components.md
+    items:
+    - name: Importowanie biblioteki typów jako zestawu
+      href: importing-a-type-library-as-an-assembly.md
+    - name: 'Instrukcje: Dodawanie odwołań do bibliotek typów'
+      href: how-to-add-references-to-type-libraries.md
+    - name: 'Instrukcje: Generowanie zestawów międzyoperacyjnych z bibliotek typów'
+      href: how-to-generate-interop-assemblies-from-type-libraries.md
+    - name: Kompilowanie projektu międzyoperacyjnego
+      href: compiling-an-interop-project.md
+    - name: Wdrażanie aplikacji międzyoperacyjnych
+      href: deploying-an-interop-application.md
+    - name: 'Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM'
+      href: com-interop-sample-net-client-and-com-server.md
+  - name: Udostępnianie składników .NET Framework modelowi COM
+    href: exposing-dotnet-components-to-com.md
+    items:
+    - name: Kwalifikowanie typów .NET do międzyoperacyjności
+      href: qualifying-net-types-for-interoperation.md
+    - name: Stosowanie atrybutów międzyoperacyjności
+      href: applying-interop-attributes.md
+    - name: Pakowanie zestawu dla modelu COM
+      href: packaging-an-assembly-for-com.md
+    - name: Rejestrowanie zestawów do użycia z modelem COM
+      href: registering-assemblies-with-com.md
+    - name: 'Instrukcje: Odwołania do typów .NET z modelu COM'
+      href: how-to-reference-net-types-from-com.md
+    - name: 'Przykład usługi międzyoperacyjnej modelu COM: Klient modelu COM i serwer .NET'
+      href: com-interop-sample-com-client-and-net-server.md
+  - name: Wykorzystywanie niezarządzanych funkcji DLL
+    href: consuming-unmanaged-dll-functions.md
+    items:
+    - name: Identyfikowanie funkcji w bibliotekach DLL
+      href: identifying-functions-in-dlls.md
+    - name: Tworzenie klasy utrzymującej funkcje DLL
+      href: creating-a-class-to-hold-dll-functions.md
+    - name: Tworzenie prototypów w kodzie zarządzanym
+      href: creating-prototypes-in-managed-code.md
+      items:
+      - name: Określanie punktu wejścia
+        href: specifying-an-entry-point.md
+      - name: Określanie zestawu znaków
+        href: specifying-a-character-set.md
+      - name: Przykłady wywołań platformy
+        href: platform-invoke-examples.md
+    - name: Wywołanie funkcji DLL
+      href: calling-a-dll-function.md
+      items:
+      - name: Przekazywanie struktur
+        href: passing-structures.md
+      - name: Funkcje wywołania zwrotnego
+        href: callback-functions.md
+      - name: 'Instrukcje: Implementowanie funkcji wywołania zwrotnego'
+        href: how-to-implement-callback-functions.md
+  - name: Organizowanie międzyoperacyjne
+    href: interop-marshaling.md
+    items:
+    - name: Domyślne zachowanie marshalingu
+      href: default-marshaling-behavior.md
+      items:
+      - name: Typy kopiowalne i niekopiowalne
+        href: blittable-and-non-blittable-types.md
+      - name: Kopiowanie i przypinanie
+        href: copying-and-pinning.md
+      - name: Organizowanie domyślne dotyczące tablic
+        href: default-marshaling-for-arrays.md
+      - name: Domyślny marshaling dla obiektów
+        href: default-marshaling-for-objects.md
+      - name: Organizowanie domyślne dotyczące ciągów
+        href: default-marshaling-for-strings.md
+    - name: Organizowanie danych w wywołaniu platformy
+      href: marshaling-data-with-platform-invoke.md
+      items:
+      - name: Organizowanie ciągów
+        href: marshaling-strings.md
+      - name: MsgBox — Przykład
+        href: msgbox-sample.md
+      - name: Marshaling klas, struktur i unii
+        href: marshaling-classes-structures-and-unions.md
+      - name: Organizowanie różnych typów tablic
+        href: marshaling-different-types-of-arrays.md
+      - name: Marshaling delegata jako metoda wywołania zwrotnego
+        href: marshaling-a-delegate-as-a-callback-method.md
+    - name: Organizowanie danych za pomocą modelu COM
+      href: marshaling-data-with-com-interop.md
+      items:
+      - name: 'Instrukcje: Ręczne tworzenie otok'
+        href: how-to-create-wrappers-manually.md
+      - name: 'Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF'
+        href: how-to-migrate-managed-code-dcom-to-wcf.md
+  - name: 'Instrukcje: Mapowanie wyników HRESULT i wyjątków'
+    href: how-to-map-hresults-and-exceptions.md
+  - name: Otoki COM
+    href: com-wrappers.md
+    items:
+    - name: Wywoływana otoka środowiska uruchomieniowego
+      href: runtime-callable-wrapper.md
+    - name: Wywoływana otoka COM
+      href: com-callable-wrapper.md
+    - name: 'Instrukcje: Tworzenie otok COM'
+      href: how-to-create-com-wrappers.md
+  - name: Równoważność typów i osadzone typy międzyoperacyjne
+    href: type-equivalence-and-embedded-interop-types.md
+  - name: 'Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe'
+    href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
+  - name: 'Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych'
+    href: how-to-register-primary-interop-assemblies.md
+  - name: Współdziałanie z modelem COM bez rejestrowania
+    href: registration-free-com-interop.md
+  - name: 'Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework'
+    href: configure-net-framework-based-com-components-for-reg.md
+ms.openlocfilehash: be9d4bcdaeb8b7389d72bddfa36e1594b5149ce4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471370"

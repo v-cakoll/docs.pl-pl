@@ -1,0 +1,71 @@
+items:
+- name: Wydajność
+  href: index.md
+  items:
+  - name: Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
+    href: writing-large-responsive-apps.md
+  - name: Buforowanie w aplikacjach .NET Framework
+    href: caching-in-net-framework-applications.md
+  - name: Inicjalizacja z opóźnieniem
+    href: lazy-initialization.md
+    items:
+    - name: 'Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem'
+      href: how-to-perform-lazy-initialization-of-objects.md
+  - name: Zdarzenia ETW w programie .NET Framework
+    href: etw-events.md
+    items:
+    - name: Zdarzenia ETW w bibliotece równoległych zadań i PLINQ
+      href: etw-events-in-task-parallel-library-and-plinq.md
+    - name: Zdarzenia ETW w środowisku CLR
+      href: etw-events-in-the-common-language-runtime.md
+      items:
+      - name: Kontrolowanie logowania w programie .NET Framework
+        href: controlling-logging.md
+      - name: Dostawcy CLR ETW
+        href: clr-etw-providers.md
+      - name: Słowa kluczowe i poziomy ETW CLR
+        href: clr-etw-keywords-and-levels.md
+      - name: Zdarzenia ETW CLR
+        href: clr-etw-events.md
+        items:
+        - name: Informacje o zdarzeniach środowiska uruchomieniowego
+          href: runtime-information-etw-events.md
+        - name: Zdarzenie wyjątku ETW Thrown_V1
+          href: exception-thrown-v1-etw-event.md
+        - name: Zdarzenia rywalizacji
+          href: contention-etw-events.md
+        - name: Zdarzenia puli wątków
+          href: thread-pool-etw-events.md
+        - name: Zdarzenia modułu ładującego
+          href: loader-etw-events.md
+        - name: Zdarzenia metod
+          href: method-etw-events.md
+        - name: Zdarzenia odzyskiwania pamięci
+          href: garbage-collection-etw-events.md
+        - name: Zdarzenia śledzenia JIT
+          href: jit-tracing-etw-events.md
+        - name: Zdarzenia międzyoperacyjności
+          href: interop-etw-events.md
+        - name: Zdarzenia ARM
+          href: application-domain-resource-monitoring-arm-etw-events.md
+        - name: Zdarzenia zabezpieczeń
+          href: security-etw-events.md
+        - name: Zdarzenie stosu
+          href: stack-etw-event.md
+  - name: Niezawodność
+    href: reliability.md
+    items:
+    - name: Atrybuty ochrony hosta i programowanie SQL Server
+      href: sql-server-programming-and-host-protection-attributes.md
+    - name: Najlepsze rozwiązania dotyczące niezawodności
+      href: reliability-best-practices.md
+    - name: Ograniczone regiony wykonania
+      href: constrained-execution-regions.md
+  - name: Wskazówki dotyczące wydajności
+    href: performance-tips.md
+ms.openlocfilehash: 9030bc17ebfe2cda3b6b1ebb15196a24ac992715
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471857"

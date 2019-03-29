@@ -1,0 +1,87 @@
+items:
+- name: Wątkowość
+  href: index.md
+  items:
+  - name: Zarządzana wątkowość — podstawy
+    href: managed-threading-basics.md
+    items:
+    - name: Wątki i wątkowość
+      href: threads-and-threading.md
+    - name: Wyjątki w zarządzanych wątkach
+      href: exceptions-in-managed-threads.md
+    - name: Synchronizowanie danych na potrzeby wielowątkowości
+      href: synchronizing-data-for-multithreading.md
+    - name: Wątki pierwszego planu i tła
+      href: foreground-and-background-threads.md
+    - name: Zarządzana i niezarządzana wątkowość w systemie Windows
+      href: managed-and-unmanaged-threading-in-windows.md
+    - name: Thread.Suspend, wyrzucanie elementów bezużytecznych i punkty bezpieczeństwa
+      href: thread-suspend-garbage-collection-and-safe-points.md
+    - name: 'Pamięć lokalna wątku: Powiązane z wątkiem pola statyczne i gniazda danych'
+      href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+  - name: Używanie wątków i wątkowości
+    href: using-threads-and-threading.md
+    items:
+    - name: Tworzenie wątków i przekazywanie danych w czasie rozpoczęcia
+      href: creating-threads-and-passing-data-at-start-time.md
+    - name: Wstrzymywanie i przerywanie wątków
+      href: pausing-and-resuming-threads.md
+    - name: Niszczenie wątków
+      href: destroying-threads.md
+    - name: Harmonogram wątków
+      href: scheduling-threads.md
+    - name: Anulowanie w zarządzanych wątkach
+      href: cancellation-in-managed-threads.md
+      items:
+      - name: Wspólne anulowanie wątków
+        href: canceling-threads-cooperatively.md
+      - name: 'Instrukcje: Nasłuchiwanie żądań anulowania za pomocą sondowania'
+        href: how-to-listen-for-cancellation-requests-by-polling.md
+      - name: 'Instrukcje: Rejestrowanie wywołań zwrotnych żądań anulowania'
+        href: how-to-register-callbacks-for-cancellation-requests.md
+      - name: 'Instrukcje: Nasłuchiwanie żądań anulowania z dojściami oczekiwania'
+        href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+      - name: 'Instrukcje: Nasłuchiwanie wielu żądań anulowania'
+        href: how-to-listen-for-multiple-cancellation-requests.md
+  - name: Zarządzana wątkowość — najlepsze rozwiązania
+    href: managed-threading-best-practices.md
+  - name: Wątkowość obiektów i funkcji
+    href: threading-objects-and-features.md
+    items:
+    - name: Zarządzana pula wątków
+      href: the-managed-thread-pool.md
+    - name: Czasomierze
+      href: timers.md
+    - name: Przegląd elementów podstawowych synchronizacji
+      href: overview-of-synchronization-primitives.md
+    - name: EventWaitHandle
+      href: eventwaithandle.md
+    - name: CountdownEvent
+      href: countdownevent.md
+    - name: Muteksy
+      href: mutexes.md
+    - name: Semafor i klasa SemaphoreSlim
+      href: semaphore-and-semaphoreslim.md
+    - name: Bariera
+      href: barrier.md
+      items:
+      - name: 'Instrukcje: Synchronizacja jednoczesnych operacji za pomocą elementu Barrier'
+        href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+    - name: SpinLock
+      href: spinlock.md
+      items:
+      - name: 'Instrukcje: Używanie struktury SpinLock do synchronizacji niskiego poziomu'
+        href: how-to-use-spinlock-for-low-level-synchronization.md
+      - name: 'Instrukcje: Włączanie śledzenia wątków w strukturze SpinLock'
+        href: how-to-enable-thread-tracking-mode-in-spinlock.md
+    - name: SpinWait
+      href: spinwait.md
+      items:
+      - name: 'Instrukcje: Korzystanie z metody SpinWait do implementacji dwufazowej operacji oczekiwania'
+        href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
+ms.openlocfilehash: c015db2bc66897ca487e29e36d93e7d84a0897f1
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471378"

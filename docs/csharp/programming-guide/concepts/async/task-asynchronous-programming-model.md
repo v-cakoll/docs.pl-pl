@@ -2,12 +2,12 @@
 title: Zadania asynchronicznego programowania modelu (TAP) za pomocą async i await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: b89b36f7645d3cb40945b14a4cf88b4a83dea89c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: edcf9222c34b7cf29fedabd676605db95133d68c
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634547"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675890"
 ---
 # <a name="task-asynchronous-programming-model"></a>Model programowania asynchronicznego zadań (APM)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -65,7 +65,7 @@ async Task<int> AccessTheWebAsync()
 - `AccessTheWebAsync` Nie można kontynuować do momentu `getStringTask` zostało zakończone.  
 - W międzyczasie formant powraca do obiektu wywołującego `AccessTheWebAsync`.  
 - Kontrolka wznawia tutaj po `getStringTask` zostało zakończone.   
-- `await` Operator następnie pobiera `string `wynikiem `getStringTask`.  
+- `await` Operator następnie pobiera `string` wynikiem `getStringTask`.  
 
  Instrukcja return określa wyniku liczby całkowitej. Wszystkie metody, które oczekują na `AccessTheWebAsync` pobrać wartość długości.  
 

@@ -8,12 +8,12 @@ metadata:
   ms.date: 03/20/2019
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: f488d6c05a8be1b2e6ad73d241533ac23b65b9ce
-  ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-  ms.translationtype: HT
+  ms.openlocfilehash: 70f4e93460c69b54702f160d502163827ec73218
+  ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+  ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 03/29/2019
-  ms.locfileid: "58655538"
+  ms.lasthandoff: 03/30/2019
+  ms.locfileid: "58675526"
 items:
 - durationInMinutes: 1
   content: >
@@ -57,11 +57,6 @@ items:
 
 
     Nie będzie powyższych kompilacji ponieważ `number` nie jest przypisana w `else` gałęzi. Jest tylko przypisana w `true` gałęzi `if` instrukcji.
-
-
-    > [!NOTE]
-
-    > Brak [problem](https://github.com/dotnet/try/issues/175) gdzie mogą uzyskać nieprawidłowych danych wyjściowych w poprzednim przykładzie.
 
 
     `is` Wyrażenia typu wzorzec jest przydatny w przypadku, gdy masz małą liczbą typów na potrzeby testowania wstępnego. Często konieczne może być wiele typów testów. Wymagającym dopasowanie wzorca `switch` instrukcji.
@@ -125,7 +120,108 @@ items:
     Dowiedz się więcej o dopasowywaniu do wzorca w artykule dedykowane [dopasowywania wzorca w C# ](../../pattern-matching.md).
 - title: Optymalizuj magazynowanie pamięci przy użyciu zmienne lokalne ref i zwraca
   durationInMinutes: 2
-  content: "Ta funkcja umożliwia algorytmy, które używają i zwracać odwołań do zmiennych określonych gdzie indziej. Przykładem jest duże macierzy, a znalezienie jednej lokalizacji, z określoną wspólną charakterystykę. Jedna metoda zwróci dwa indeksy jednej lokalizacji w macierzy:\n\n```csharp\npublic class Program\n{\n    private static (int i, int j) Find(int[,] matrix, Func<int, bool> predicate)\n    {\n        for (int i = 0; i < matrix.GetLength(0); i++)\n            for (int j = 0; j < matrix.GetLength(1); j++)\n                if (predicate(matrix[i, j]))\n                    return (i, j);\n        return (-1, -1); // Not found\n    }\n\n    public static void Main()\n    {\n        int[,] sourceMatrix = new int[10, 10];\n        for (int x = 0; x < 10; x++)\n            for (int y = 0; y < 10; y++)\n                sourceMatrix[x, y] = x * 10 + y;\n\n        var indices = Find(sourceMatrix, (val) => val == 42);\n        Console.WriteLine(indices);\n        sourceMatrix[indices.i, indices.j] = 24;        \n    }\n\n}\n```\n\n\nTo `Find` metoda zwraca wskaźników do elementów w macierzy. Prowadzi to obiekty wywołujące do pisania kodu, który używa tych indeksów w celu wyłuskania macierzy i modyfikowania pojedynczego elementu. Należy zamiast napisać metodę, która zwraca *odwołania* do elementu macierzy, który chcesz zmienić.\n\nPrzejdźmy teraz przez szereg zmian, które przedstawiono tu funkcji lokalnego odwołania i pokazują, jak utworzyć metodę, która zwraca odwołanie do pamięci wewnętrznej. Po drodze dowiesz się, zasady zwracane ref i funkcji lokalnych ref, które chronić klientów przed przypadkowym niewłaściwie korzysta.\n\nRozpoczynanie pracy od modyfikowania `Find` deklaracji metody, tak że zwraca `ref int` zamiast spójnej kolekcji.\n\n```csharp\nprivate static ref int Find(int[,] matrix, Func<int, bool> predicate)\n```\n\nZmodyfikuj instrukcję return do zwrócenia elementu na poprawne indeksów:\n\n```csharp\nreturn matrix[i,j];\n```\n\nOstateczny powrót do zgłaszania wyjątków, zamiast tego zmiany:\n\n```csharp\nthrow new InvalidOperationException(\"Not found\");\n```\n\nPamiętaj, że nie będzie to kompilacji. Deklaracja metody wskazuje `ref` zwrotu, ale instrukcja return określa wartość zwracaną. Należy dodać `ref` — słowo kluczowe do każdej instrukcji return. Oznacza to zwracanie przez odwołanie, a następnie pomaga deweloperom czytania dalszej części kodu, należy pamiętać, że metoda zwraca wartość przez odwołanie:\n\n```csharp\nreturn ref matrix[i,j];\n```\n\nTeraz, metoda zwraca odwołanie do wartości całkowitej w macierzy, należy zmodyfikować, gdzie jest wywoływana. `var` Deklaracji oznacza, że `valItem` jest teraz `int` zamiast spójnej kolekcji. Zmień kod wywołujący w `Main` metody do następującego:\n\n```csharp\nvar valItem = Find(matrix, (val) => val == 42);\nConsole.WriteLine(valItem);\nvalItem = 24;\nConsole.WriteLine(matrix[4, 2]);\n```\n\nDrugi `WriteLine` instrukcja w powyższym przykładzie drukuje się wartość `42`, a nie `24`. Zmienna `valItem` jest `int`, a nie `ref int`. `var` — Słowo kluczowe umożliwia kompilatorowi Określ typ, ale nie spowoduje dodanie niejawnie `ref` modyfikator. Zamiast tego wartość odwołuje się `ref return` jest *skopiowane* do zmiennej po lewej stronie przypisania. Zmienna nie jest `ref` lokalnego.\n\nAby zmodyfikować zwracane odwołanie, musisz dodać `ref` modyfikator deklaracji zmiennej lokalnej i przed wywołaniem do `Find` do ustaw dla zmiennej odwołania, gdy wartość zwracana jest odwołaniem. Modyfikowanie `Main` metody w przeglądarce, aby dopasować następujące czynności:\n\n```csharp\npublic static void Main()\n{\n    int[,] sourceMatrix = new int[10, 10];\n    for (int x = 0; x < 10; x++)\n        for (int y = 0; y < 10; y++)\n            sourceMatrix[x, y] = x * 10 + y;\n\n    ref var item = ref Find(sourceMatrix, (val) => val == 42);\n    Console.WriteLine(item);\n    item = 24;\n    Console.WriteLine(sourceMatrix[4, 2]);\n}\n```\n\nTeraz, drugi `WriteLine` instrukcja w powyższym przykładzie drukuje się wartość `24`, wskazującą, czy zostały zmodyfikowane magazynu w macierzy. Zmienna lokalna została zadeklarowana przy użyciu `ref` modyfikator i potrwa `ref` powrócić. Należy zainicjować `ref` zmiennej gdy jest on zadeklarowany; nie można podzielić deklaracji i inicjowania.\n\nW języku C# ma trzy inne reguły, które można chronić przed używaniem `ref` zmiennych lokalnych i zwraca:\n\n* Nie można przypisać wartość zwracaną standardową metodę, aby `ref` zmiennej lokalnej.\n* Nie można zwrócić `ref` do zmiennej, którego okres istnienia nie wykracza poza wykonywanie metody.\n* `ref` Zmienne lokalne i nie można używać metod asynchronicznych.\n\nZmienne lokalne ref i ref zwraca algorytmy Włącz, które są bardziej wydajne, unikając kopiowania wartości lub wykonywanie operacji dereferencji wiele razy.\n\nAby uzyskać więcej informacji, zobacz [ref — słowo kluczowe](../../language-reference/keywords/ref.md) artykułu.\n"
+  content: >
+    Ta funkcja umożliwia algorytmy, które używają i zwracać odwołań do zmiennych określonych gdzie indziej. Przykładem jest duże macierzy, a znalezienie jednej lokalizacji, z określoną wspólną charakterystykę. Jedna metoda zwróci dwa indeksy jednej lokalizacji w macierzy:
+
+
+    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#EverythingByValue "return indices by value")]
+
+
+    Można przetestować tę metodę, używając następującego kodu:
+
+
+    [!code-csharp[TestByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return indices by value")]
+
+
+
+    To `Find` metoda zwraca wskaźników do elementów w macierzy. Prowadzi to obiekty wywołujące do pisania kodu, który używa tych indeksów w celu wyłuskania macierzy i modyfikowania pojedynczego elementu. Należy zamiast napisać metodę, która zwraca *odwołania* do elementu macierzy, który chcesz zmienić.
+
+
+    Przejdźmy teraz przez szereg zmian, które przedstawiono tu funkcji lokalnego odwołania i pokazują, jak utworzyć metodę, która zwraca odwołanie do pamięci wewnętrznej. Po drodze dowiesz się, zasady zwracane ref i funkcji lokalnych ref, które chronić klientów przed przypadkowym niewłaściwie korzysta.
+
+
+    Rozpoczynanie pracy od modyfikowania `Find` deklaracji metody, tak że zwraca `ref int` zamiast spójnej kolekcji.
+
+
+    ```csharp
+
+    ref int Find(int[,] matrix, Func<int, bool> predicate)
+
+    ```
+
+
+    Zmodyfikuj instrukcję return do zwrócenia elementu na poprawne indeksów:
+
+
+    ```csharp
+
+    return matrix[i,j];
+
+    ```
+
+
+    Ostateczny powrót do zgłaszania wyjątków, zamiast tego zmiany:
+
+
+    ```csharp
+
+    throw new InvalidOperationException("Not found");
+
+    ```
+
+
+    Pamiętaj, że nie będzie to kompilacji. Deklaracja metody wskazuje `ref` zwrotu, ale instrukcja return określa wartość zwracaną. Należy dodać `ref` — słowo kluczowe do każdej instrukcji return. Oznacza to zwracanie przez odwołanie, a następnie pomaga deweloperom czytania dalszej części kodu, należy pamiętać, że metoda zwraca wartość przez odwołanie:
+
+
+    ```csharp
+
+    return ref matrix[i,j];
+
+    ```
+
+
+    Teraz, metoda zwraca odwołanie do wartości całkowitej w macierzy, należy zmodyfikować, gdzie jest wywoływana. `var` Deklaracji oznacza, że `valItem` jest teraz `int` zamiast spójnej kolekcji. Zmień kod wywołujący na następujący:
+
+
+    ```csharp
+
+    var valItem = Find(matrix, (val) => val == 42);
+
+    Console.WriteLine(valItem);
+
+    valItem = 24;
+
+    Console.WriteLine(matrix[4, 2]);
+
+    ```
+
+
+    Drugi `WriteLine` instrukcja w powyższym przykładzie drukuje się wartość `42`, a nie `24`. Zmienna `valItem` jest `int`, a nie `ref int`. `var` — Słowo kluczowe umożliwia kompilatorowi Określ typ, ale nie spowoduje dodanie niejawnie `ref` modyfikator. Zamiast tego wartość odwołuje się `ref return` jest *skopiowane* do zmiennej po lewej stronie przypisania. Zmienna nie jest `ref` lokalnego.
+
+
+    Aby zmodyfikować zwracane odwołanie, musisz dodać `ref` modyfikator deklaracji zmiennej lokalnej i przed wywołaniem do `Find` do ustaw dla zmiennej odwołania, gdy wartość zwracana jest odwołaniem. Zmodyfikuj kod testu w przeglądarce, aby dopasować następujące czynności:
+
+
+    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return object by reference")]
+
+
+    Teraz, drugi `WriteLine` instrukcja w powyższym przykładzie drukuje się wartość `24`, wskazującą, czy zostały zmodyfikowane magazynu w macierzy. Zmienna lokalna została zadeklarowana przy użyciu `ref` modyfikator i potrwa `ref` powrócić. Należy zainicjować `ref` zmiennej gdy jest on zadeklarowany; nie można podzielić deklaracji i inicjowania.
+
+
+    W języku C# ma trzy inne reguły, które można chronić przed używaniem `ref` zmiennych lokalnych i zwraca:
+
+
+    * Nie można przypisać wartość zwracaną standardową metodę, aby `ref` zmiennej lokalnej.
+
+    * Nie można zwrócić `ref` do zmiennej, którego okres istnienia nie wykracza poza wykonywanie metody.
+
+    * `ref` Zmienne lokalne i nie można używać metod asynchronicznych.
+
+
+    Zmienne lokalne ref i ref zwraca algorytmy Włącz, które są bardziej wydajne, unikając kopiowania wartości lub wykonywanie operacji dereferencji wiele razy.
+
+
+    Aby uzyskać więcej informacji, zobacz [ref — słowo kluczowe](../../language-reference/keywords/ref.md) artykułu.
 - title: Minimalizacja dostępu kodu, korzystając z funkcji lokalnych
   durationInMinutes: 2
   content: "Możesz teraz zadeklarować funkcje lokalne, które są zagnieżdżone w innych funkcjach. Dzięki temu można zminimalizować widoczność tych funkcji. Istnieją trzy przypadki użycia oczywiste funkcje lokalne:\n\n- Funkcje rekursywne.\n- Metody iteratorów.\n- Metody asynchroniczne.\n\nZacznijmy od metody cykliczne. Wypróbuj poniższy kod w przeglądarce, aby obliczyć `6!` (silnię):\n\n```csharp\nint LocalFunctionFactorial(int n)\n{\n    return nthFactorial(n);\n\n    int nthFactorial(int number) => (number < 2) ? \n        1 : number * nthFactorial(number - 1);\n}\n\nConsole.WriteLine(LocalFunctionFactorial(6));\n```\n\nFunkcje lokalne są doskonałym sposobem realizowania algorytmy cykliczne. Inne typowe zastosowania są przeznaczone dla metod publicznych iteratora i metod asynchronicznych publicznych. Oba rodzaje metod wygenerować kod, który zgłasza błędy nowsze niż programiści mogą oczekiwać. W przypadku metody iteracyjne wszelkie wyjątki pojawiają się tylko podczas wywoływania kodu, który wylicza zwracanej sekwencji. W przypadku metod asynchronicznych wyjątków tylko obserwuje się kiedy zwracanego `Task` jest oczekiwane.\n\nMetody iteratorów są łatwiejsze do eksplorowania na przeglądarce, więc ich użyć w tej prezentacji. Wypróbuj poniższy kod, który wywołuje metodę iteratora w przeglądarce:\n\n[!code-csharp[IteratorMethod](~/samples/snippets/csharp/new-in-7/Iterator.cs#SnippetIteratorMethod \"Iterator method\")]\n\nUruchom kod. Należy zauważyć, że wyjątek jest zgłaszany, gdy kod, który zaczyna się iteracja drugi zestaw wyników. Kod, który iteruje po pierwszy zestaw wyników zostało już uruchomione. W tym przykładzie jest zarówno małe i nie zmienia się wszelkich struktur danych dso jest nieszkodliwe i łatwo rozwiązać. Jednak w większego programu, gdzie dwa obiekty iteratora może zostać utworzony za pomocą podrzędnej różnych metod głównego przyczyną może być trudne do znalezienia. Pierwsza metoda iteratora, zmiana stanu danych, można nawet powodować uszkodzenie danych. Wolisz, czy wyjątek został zgłoszony natychmiast, zanim wszystkie zadania są wykonywane. Można zrefaktoryzuj kod, tak aby publiczny metoda sprawdza wszystkie argumenty, a funkcja lokalna, która wykonuje wyliczenia:\n\n[!code-csharp[IteratorMethodRefactored](~/samples/snippets/csharp/new-in-7/Iterator.cs#IteratorMethodLocalInteractive \"Iterator method refactored\")]\n\nPoprzednią sprawia, że Wyczyść, do której odwołanie lokalne metody tylko w kontekście metodzie zewnętrznej. Reguły dotyczące funkcji lokalnych upewnij się, Projektant nie może przypadkowo wywołania funkcji lokalnej z innej lokalizacji w klasie i pominąć walidacji argumentów.\n\nMożna zastosować za pomocą tej samej techniki `async` metod w celu zapewnienia, że wynikające z walidacji argumentów zgłaszania wyjątków przed rozpoczęciem pracy asynchronicznej.\n\n> [!NOTE]\n> Niektóre projekty, które są obsługiwane przez funkcje lokalne mogą być również wykonywane przy użyciu *wyrażeń lambda*. Te zainteresowane można [Dowiedz się więcej o różnicach](../../local-functions-vs-lambdas.md).\n"

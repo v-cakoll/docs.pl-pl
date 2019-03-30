@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094012"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675916"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET framework — przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] wraz ze swoimi aplikacjami.
@@ -307,7 +307,7 @@ Type: DWORD
  Aby zainstalować pakiet językowy z Instalatora w trybie offline programu .NET Framework, można go połączyć z własnym Instalatorem aplikacji. Na przykład, aby wdrożyć [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] Instalator w trybie offline z pakietem języka japońskiego, należy użyć następującego polecenia:
 
 ```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductName>
+NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
 ```
 
  Nie masz do łańcucha pakietów językowych, jeśli używasz Instalatora sieci web; Instalator zainstaluje pakiet językowy, który odpowiada ustawieniu MUI użytkownika. Jeśli chcesz zainstalować inny język, możesz użyć `/LCID` opcję, aby określić pakiet językowy.

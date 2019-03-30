@@ -36,10 +36,6 @@ Dostępne są następujące tematy:
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-* [Używanie środowiska programistycznego Visual Studio dla C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    Zawiera przewodnik korzystania ze zintegrowanego środowiska programistycznego dla języka Visual C#.
-
 * [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)
 
     Zawiera informacje o pojęciach programistycznych w C# oraz opisuje sposób wykonywania różnych zadań w tym języku.
@@ -48,14 +44,10 @@ Dostępne są następujące tematy:
 
     Zawiera szczegółową dokumentację o słowach kluczowych, operatorach, dyrektywach preprocesora, opcjach kompilatora oraz błędach i ostrzeżeniach w czasie kompilacji.
 
-* [Przykłady w Visual Studio](/visualstudio/ide/visual-studio-samples)
-
-    Zawiera informacje o uzyskiwaniu dostępu do przykładów online.
-
 * [Przewodniki](../../csharp/walkthroughs.md)
 
     Zawiera linki do przewodników programowania w języku C# wraz z krótkimi opisami poszczególnych przewodników.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do języków Visual C# i Visual Basic w programie Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [C#Tworzenie aplikacji przy użyciu programu Visual Studio](/visualstudio/get-started/csharp/)

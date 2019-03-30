@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219467"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654617"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Organizowanie różnych typów tablic
 Tablica jest typem odwołania w kodzie zarządzanym, który zawiera co najmniej jeden element tego samego typu. Mimo że tablice są typami odwołań, są one przekazywane tak jak parametry z funkcjami niezarządzanymi. To zachowanie jest niespójny z sposób zarządzanych tablic są przekazywane do obiektów zarządzanych, jak we/wy parametrów. Aby uzyskać więcej informacji, zobacz [kopiowanie i przypinanie](copying-and-pinning.md).  
@@ -29,7 +29,7 @@ Tablica jest typem odwołania w kodzie zarządzanym, który zawiera co najmniej 
 |Liczby całkowite przez wartość (dwuwymiarową).|Przekazuje macierzy liczb całkowitych jako parametrem In.|  
 |Ciągów według wartości.|Przekazuje tablicę ciągów, jako parametr w.|  
 |Struktury z liczbami całkowitymi.|Przekazuje tablicę struktury, które zawierają liczb całkowitych jako parametr w.|  
-|Struktury z ciągami.|Przekazuje tablicę struktur, które zawierają tylko liczby całkowite jako parametr wejście/wyjście. Elementy członkowskie tablicy można zmieniać.|  
+|Struktury z ciągami.|Przekazuje tablicy struktur, które zawierają tylko ciągi jako parametr wejście/wyjście. Elementy członkowskie tablicy można zmieniać.|  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie pokazano, jak przekazać następujące typy tablic:  

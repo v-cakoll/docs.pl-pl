@@ -2,12 +2,12 @@
 title: Aktualizacja dynamiczna
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724482"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653889"
 ---
 # <a name="dynamic-update"></a>Aktualizacja dynamiczna
 
@@ -101,7 +101,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefinitions\MortgageWork
 }
 ```
 
-Gdy <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> zwraca definicji sklonowany przepływu pracy i inne informacje aktualizacja dynamiczna, która została dodana w wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> zostanie usunięty, i definicji modyfikacji przepływu pracy jest gotowa do zapisania tak, aby go można korzystać później podczas wznawianie zaktualizować wystąpienia przepływu pracy. W poniższym przykładzie jest zapisywana definicja przepływu pracy zmodyfikowane `MortgageWorkflow_v2.xaml`.
+Gdy <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> zwraca definicji sklonowany przepływu pracy i inne informacje aktualizacja dynamiczna, która została dodana w wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> zostanie usunięty, i definicji modyfikacji przepływu pracy jest gotowa do zapisania tak, aby go można korzystać później podczas wznawianie zaktualizować wystąpienia przepływu pracy. W poniższym przykładzie jest zapisywana definicja przepływu pracy zmodyfikowane `MortgageWorkflow_v1.1.xaml`.
 
 ```csharp
 // Save the modified workflow definition.

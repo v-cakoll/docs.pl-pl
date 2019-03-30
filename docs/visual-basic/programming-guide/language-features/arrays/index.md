@@ -56,7 +56,7 @@ Poniższa ilustracja przedstawia `students` tablicy. Dla każdego elementu tabli
 
 - Wartość, która jest zawarta w elemencie reprezentuje liczbę studentów w tej klasie.
 
-![Obraz przedstawiający liczby studentów tablicy](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") elementów tablicy "studenci"
+![Diagram przedstawiający tablicy liczb studentów](./media/index/students-array-elements.gif)
 
 Poniższy przykład zawiera kod języka Visual Basic, który tworzy i używa tablicy:
 

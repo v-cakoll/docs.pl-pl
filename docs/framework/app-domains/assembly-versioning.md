@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724073"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675955"
 ---
 # <a name="assembly-versioning"></a>Przechowywanie wersji zestawu
 Zarządzanie wszystkimi wersjami zestawów używających środowiska uruchomieniowego języka wspólnego odbywa się na poziomie zestawów. Konkretna wersja zestawu oraz wersje zestawów zależnych są rejestrowane w manifeście zestawu. Domyślna zasada dotycząca wersji środowiska dla środowiska uruchomieniowego stanowi, że aplikacje są uruchamiane tylko w wersjach, w których zostały skompilowane i przetestowane, chyba że inaczej stanowią jawnie zasady dotyczące wersji określone w plikach konfiguracji (plik konfiguracji aplikacji, plik zasad wydawcy i plik konfiguracji administratora komputera).  
@@ -33,10 +33,9 @@ Zarządzanie wszystkimi wersjami zestawów używających środowiska uruchomieni
   
 4.  Sprawdza, czy globalnej pamięci podręcznej zestawów, bazy kodów określone w plikach konfiguracji, a następnie katalog i podkatalogi, przy użyciu zasad sondowania wyjaśnionych aplikacji wyjaśnione w [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
- Poniższa ilustracja przedstawia te kroki.  
+ Poniższa ilustracja przedstawia następujące kroki:  
   
- ![Deklaracja extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
-Rozpoznawanie żądania powiązania zestawu  
+ ![Diagram przedstawiający kroki w zestawie rozpoznawanie żądania powiązania.](./media/assembly-versioning/resolve-assembly-binding-request.gif)
   
  Aby uzyskać więcej informacji na temat konfigurowania aplikacji, zobacz [konfigurowania aplikacji](../../../docs/framework/configure-apps/index.md). Aby uzyskać więcej informacji na temat zasad tworzenia powiązań, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   

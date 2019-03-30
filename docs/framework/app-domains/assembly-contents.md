@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be1aad4d222917364a57abc93b414af40b1e9ae
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649170"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675656"
 ---
 # <a name="assembly-contents"></a>Zawartość zestawu
 Ogólnie rzecz biorąc statyczny zestaw może składać się z czterech elementów:  
@@ -31,15 +31,13 @@ Ogólnie rzecz biorąc statyczny zestaw może składać się z czterech element�
   
  Istnieje kilka sposobów na grupowanie tych elementów w zestawie. Można grupować wszystkie elementy w jednym fizycznym pliku, który jest pokazany na poniższej ilustracji.  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover1.gif "assemblyover1")  
-Zestaw jednoplikowy  
+ ![Diagram przedstawiający zestawu pojedynczego pliku o nazwie MyAssembly.dll.](./media/assembly-contents/single-file-assembly.gif)  
   
  Alternatywnie elementy zestawu mogą być zawarte w kilku plikach. Pliki te mogą być modułami skompilowanego kodu (.netmodule), zasobami (takimi jak pliki .bmp lub .jpg), lub innymi plikami wymaganymi przez tę aplikację. Należy utworzyć zestaw wieloplikowy gdy zajdzie potrzeba połączenia modułów napisanych w różnych językach oraz optymalizacji pobierania aplikacji poprzez umieszczenie rzadko używanych typów w module, który jest pobierany tylko w razie potrzeby.  
   
  Na poniższej ilustracji Deweloper hipotetycznej aplikacji zdecydował się oddzielić część kodu narzędziowego do innego modułu i zachować duży plik zasobów (w tym przypadku obraz .bmp) w jego oryginalnym pliku. .NET Framework pobiera plik tylko wtedy, gdy istnieje do niego odwołanie; przechowywanie rzadko używanego kodu w osobnym pliku niż aplikacja optymalizuje pobieranie kodu.  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover2.gif "assemblyover2")  
-Zestaw wieloplikowy  
+ ![Diagram przedstawiający zestawu wieloplikowego.](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
 >  Pliki z których składają się wieloplikowe zestawy nie są fizycznie połączone przez system plików. Przeciwnie, są one połączone za pośrednictwem manifestu zestawu i aparatu plików wykonywalnych języka wspólnego zarządza nimi osobno.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 257462cea4d4926ce5ad22a9d97a3a56e1d6c2a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d38a9c67edb5df89554e9e02274410a825b3384b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368275"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654552"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej efektywne rozszerzyć istniejącą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , a nie do jego przepisania od podstaw. Jest to typowy scenariusz, gdy chcesz osadzić jedną lub większą liczbę opcji implementowane za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji Windows Forms. Aby uzyskać więcej informacji na temat dostosowywania kontrolek WPF, zobacz [niestandardowe Dostosowywanie formantu](../controls/control-customization.md).  
@@ -31,10 +31,12 @@ ms.locfileid: "57368275"
 Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>Implementowanie złożonej kontrolki WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Złożonej kontrolki używane w tym przykładzie jest formularz proste wprowadzanie danych, który przyjmuje nazwę użytkownika i adres. Gdy użytkownik kliknie jeden z dwóch przycisków, aby wskazać, że zadanie jest zakończone, formant zgłasza zdarzenie niestandardowe do zwracania tych informacji do hosta. Poniższa ilustracja przedstawia renderowanych kontroli.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Złożonej kontrolki używane w tym przykładzie jest formularz proste wprowadzanie danych, który przyjmuje nazwę użytkownika i adres. Gdy użytkownik kliknie jeden z dwóch przycisków, aby wskazać, że zadanie jest zakończone, formant zgłasza zdarzenie niestandardowe do zwracania tych informacji do hosta. Poniższa ilustracja przedstawia renderowanych kontroli. 
+
+ Na poniższej ilustracji przedstawiono złożonego formantu WPF: 
+
   
- ![Proste kontrolki WPF](./media/avaloncontrol.png "AvalonControl")  
-Złożonej kontrolki WPF  
+ ![Zrzut ekranu pokazujący prostego formantu WPF.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>Tworzenie projektu  
  Aby uruchomić projekt:  
@@ -180,9 +182,10 @@ namespace MyControls
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>Wdrażanie aplikacji hosta Windows Forms  
  Formularze Windows hostowanie aplikacji używa <xref:System.Windows.Forms.Integration.ElementHost> obiektu hosta [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] złożonego formantu. Uchwyty aplikacji `OnButtonClick` zdarzenia w celu odbierania danych z złożonego formantu. Aplikacja ma również zestaw przycisków opcji, które można użyć w celu zmodyfikowania wyglądu formantu. Na poniższej ilustracji przedstawiono aplikację.  
-  
- ![Formularz Windows Hosting kontrolki Avalon](./media/wfhost.png "WFHost")  
-Hostowany w aplikacji Windows Forms złożonej kontrolki WPF  
+
+Na poniższej ilustracji przedstawiono złożonego formantu WPF hostowany w aplikacji Windows Forms"  
+
+ ![Scteenshot pokazujący kontroli Avalon hostingu formularza Windows.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Tworzenie projektu  
  Aby uruchomić projekt:  

@@ -8,7 +8,7 @@ ms.date: 01/30/2019
 
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure
 
-![Obraz okładki](./media/cover.png)
+![Obejmuje obraz przewodnik architektury nowoczesnych aplikacji sieci Web.](./media/index/web-application-guide-cover-image.png)
 
 OPUBLIKOWANE PRZEZ
 

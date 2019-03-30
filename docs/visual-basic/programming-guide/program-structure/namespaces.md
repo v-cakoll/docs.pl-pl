@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6a93124789d629b1d1a953345d4b0b02a8c6ffa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977256"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654669"
 ---
 # <a name="namespaces-in-visual-basic"></a>Przestrzenie nazw w Visual Basic
 Przestrzenie nazw organizują obiekty zdefiniowane w zestawie. Zespoły mogą zawierać wiele przestrzeni nazw, który z kolei może zawierać innych przestrzeniach nazw. Przestrzenie nazw uniknąć niejednoznaczności i uprościć odwołania, korzystając z dużych grup obiektów, takich jak biblioteki klas.  
@@ -37,9 +37,9 @@ Przestrzenie nazw organizują obiekty zdefiniowane w zestawie. Zespoły mogą za
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- Na poniższej ilustracji przedstawiono dwie hierarchie przestrzeni nazw, w obu zawierającą obiekt o nazwie `ListBox`.  
+ Na poniższej ilustracji przedstawiono dwie hierarchie przestrzeni nazw, w obu zawierającą obiekt o nazwie `ListBox`:  
   
- ![Hierarchia Namespace](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
+ ![Zrzut ekranu pokazujący dwie hierarchie przestrzeni nazw.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
  Domyślnie co plik wykonywalny, utworzonej za pomocą Visual Basic zawiera przestrzeń nazw o takiej samej nazwie co projekt. Na przykład, jeśli zdefiniujesz obiekt w ramach projektu o nazwie `ListBoxProject`, plik wykonywalny ListBoxProject.exe zawiera przestrzeń nazw o nazwie `ListBoxProject`.  
   

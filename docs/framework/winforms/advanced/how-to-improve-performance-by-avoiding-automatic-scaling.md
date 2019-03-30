@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705349"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653798"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Instrukcje: Poprawianie wydajności dzięki unikaniu automatycznego skalowania
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] może skalować automatycznie obrazu podczas rysowania, które mogłoby obniżyć wydajność. Alternatywnie, można kontrolować, skalowanie obrazu, przekazując wymiary prostokąta docelowego, aby <xref:System.Drawing.Graphics.DrawImage%2A> metody.  
@@ -30,9 +30,9 @@ ms.locfileid: "57705349"
  Nawet jeśli rozdzielczość ekranu jest inny niż 96 punktów na cal, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] prawdopodobnie spowoduje skalowania obrazu tak, jakby rozdzielczość ekranu zostały 96 punktów na cal. To dlatego, że [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> obiekt jest skojarzony z kontekstem urządzenia i kiedy [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zapytania kontekst urządzenia dla rozdzielczość ekranu, a wynik jest zazwyczaj 96, niezależnie od rzeczywistej rozdzielczości. Możesz uniknąć automatycznego skalowania, określając prostokąta docelowego w <xref:System.Drawing.Graphics.DrawImage%2A> metody.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pobiera ten sam obraz, dwa razy. W pierwszym przypadku szerokość i wysokość prostokąta docelowego nie są określone, a obraz jest automatycznie skalowany. W drugim przypadku szerokość i wysokość (mierzonego w pikselach) prostokąta docelowego są określane być taka sama jak szerokość i wysokość oryginalnego obrazu. Poniższa ilustracja przedstawia obrazu renderowania dwa razy.  
+ Poniższy przykład pobiera ten sam obraz, dwa razy. W pierwszym przypadku szerokość i wysokość prostokąta docelowego nie są określone, a obraz jest automatycznie skalowany. W drugim przypadku szerokość i wysokość (mierzonego w pikselach) prostokąta docelowego są określane być taka sama jak szerokość i wysokość oryginalnego obrazu. Poniższa ilustracja przedstawia obrazu renderowania dwa razy:  
   
- ![Skalowanie tekstury](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![Zrzut ekranu pokazujący obrazów za pomocą skalowane tekstury.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  

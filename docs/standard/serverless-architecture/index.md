@@ -1,19 +1,14 @@
 ---
 title: 'Aplikacje niewymagające użycia serwera: Architektura, wzorce i implementacji platformy Azure'
-description: Przewodnik dotyczący architektury bezserwerowej. Dowiedz się, kiedy, dlaczego i jak zaimplementować architekturę bezserwerową (w przeciwieństwie do infrastruktury jako usługi [IaaS] lub platforma jako usługa [PaaS]) w twoich aplikacjach firmowych.
+description: 'Przewodnik dotyczący architektury bezserwerowej. Dowiedz się, kiedy, dlaczego i jak zaimplementować architekturę bezserwerową (w przeciwieństwie do infrastruktury jako usługi [IaaS] lub platforma jako usługa [PaaS]) w twoich aplikacjach firmowych.'
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745319"
 ---
+
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplikacje niewymagające użycia serwera: Architektura, wzorce i implementacji platformy Azure
 
-![](./media/Cover.jpg)
+![Zrzut ekranu pokazujący cover książki elektronicznej aplikacje niewymagające użycia serwera.](./media/index/serverless-apps-cover.jpg)
 
 > Pobierz dostępne pod adresem: <https://aka.ms/serverless-ebook>
 
@@ -43,11 +38,11 @@ Wszystkie inne znaki i logo są własnością ich prawnych właścicieli.
 
 Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)**, Stanowisko kierownicze wyższego Chmura dla deweloperów Ambasador, WIERZCHOŁKU, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**, Sr. Cloud Developer Advocate, APEX, Microsoft Corp.
 
 Współautor:
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)**, Cloud Developer Ambasador II, WIERZCHOŁKU, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)**, Cloud Developer Advocate II, APEX, Microsoft Corp.
 
 Edytory:
 

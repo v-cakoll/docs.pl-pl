@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359721"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654227"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej efektywne ponownie użyć co najmniej część tego kodu w swojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, a nie do jego przepisania od podstaw. Najbardziej typowym scenariuszem jest w przypadku istniejących kontrolek Windows Forms. W niektórych przypadkach możesz nawet utracić dostęp do kodu źródłowego dla tych formantów. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera procedury prostym do hostowania te kontrolki w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Na przykład, można użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dla większości programowania w hostujący usługi specjalistyczne <xref:System.Windows.Forms.DataGridView> kontrolki.  
@@ -36,9 +36,10 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Implementowanie formantu złożonego programu Windows Forms  
  Kontrolek złożonych Windows Forms używane w tym przykładzie jest formą proste wprowadzanie danych. Ten formularz przyjmuje nazwę użytkownika i adres, a następnie używa niestandardowego zdarzenia w celu zwracania tych informacji do hosta. Poniższa ilustracja przedstawia renderowanych kontroli.  
-  
- ![Kontrolka prostego formularza Windows](./media/wfcontrol.gif "WFControl")  
-Złożonego formantu Windows Forms  
+
+ Na poniższej ilustracji przedstawiono złożonego formantu Windows Forms:  
+
+ ![Zrzut ekranu, który pokazuje prosty formant Windows Forms.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>Tworzenie projektu  
  Aby uruchomić projekt:  
@@ -128,7 +129,9 @@ Złożonego formantu Windows Forms
 ## <a name="implementing-the-wpf-host-application"></a>Implementowanie aplikacja hosta WPF
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hostowanie aplikacji używa <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontrolki hosta `MyControl1`. Uchwyty aplikacji `OnButtonClick` zdarzenia w celu odbierania danych z formantu. Ma również zbiór przycisków opcji, które umożliwiają zmianę niektórych właściwości formantu z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Na poniższej ilustracji przedstawiono ukończonej aplikacji.
 
- ![Formant osadzony na stronie programu WPF](./media/avalonhost.gif "AvalonHost") kompletnej aplikacji, przedstawiający formantu osadzonego w aplikacji WPF
+Na poniższej ilustracji przedstawiono kompletnej aplikacji, w tym formantu osadzonego w aplikacji WPF:
+
+ ![Zrzut ekranu pokazujący kontrolki osadzony na stronie programu WPF.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>Tworzenie projektu
  Aby uruchomić projekt:

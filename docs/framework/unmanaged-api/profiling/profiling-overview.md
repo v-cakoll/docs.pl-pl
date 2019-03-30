@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862319"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654097"
 ---
 # <a name="profiling-overview"></a>Omówienie profilowania
 <a name="top"></a> Program profilujący to narzędzie, które monitoruje wykonanie innej aplikacji. Typowe profiler środowiska uruchomieniowego (języka wspólnego CLR) języka jest biblioteki dołączanej dynamicznie (DLL), która składa się z funkcji, które odbierają wiadomości ze i wysyłanie komunikatów do środowiska CLR przy użyciu profilowania interfejsu API. Program profilujący DLL jest ładowany przez środowisko CLR w czasie wykonywania.  
@@ -78,8 +78,7 @@ ms.locfileid: "43862319"
   
  Poniższa ilustracja przedstawia, jak profiler DLL współdziała z aplikacji, która jest profilowana i środowiska CLR.  
   
- ![Profilowanie architektury](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-Profilowanie architektury  
+ ![Zrzut ekranu pokazujący architekturę profilowania.](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>Interfejsy powiadomień  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) jest uznawana za interfejsy powiadomień. Interfejsy te składają się z metody takie jak [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), i [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Każdorazowo CLR ładuje i zwalnia klasy, kompiluje funkcję i itd., wywołuje odpowiedniej metody w profilerze `ICorProfilerCallback` lub `ICorProfilerCallback2` interfejsu.  

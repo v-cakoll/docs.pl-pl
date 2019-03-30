@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221228"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653928"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 Podczas pracy z zlokalizowane zasoby w aplikacjach pulpitu .NET Framework, należy najlepiej pakietów zasobów dla kultury neutralnej lub domyślne przy użyciu zestawu głównego i utworzyć zestaw satelicki osobne dla każdego języka lub kultury, którą obsługuje aplikacja. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do zasobów o nazwie. Jeśli nie chcesz osadzić zasobów w głównym zestawie i zestawy satelickie, można również przejść binarnych plików Resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików Resources](#from_file) później w tym artykuł.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) w Centrum deweloperów Windows.  
@@ -149,10 +149,11 @@ GetObject.exe
  Jeśli zrezygnujesz z wdrażania zasobów w zestawach satelickich, można nadal używać <xref:System.Resources.ResourceManager> obiekt dostępu do zasobów z Resources pliki bezpośrednio. Aby to zrobić, należy wdrożyć plików Resources poprawnie. Możesz użyć <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> metodę, aby utworzyć wystąpienie <xref:System.Resources.ResourceManager> obiektu i określ katalog, który zawiera pliki Resources autonomicznych.  
   
 ### <a name="deploying-resources-files"></a>Wdrażanie plików Resources  
- Po osadzeniu plików Resources w zestawie aplikacji i zestawy satelickie każdego zestawu satelickiego ma taką samą nazwę pliku, ale jest umieszczana w podkatalogu, który odzwierciedla kultury zestawu satelickiego. Natomiast gdy uzyskujesz dostęp do zasobów z plików Resources bezpośrednio, możesz umieścić wszystkie pliki Resources w jednym katalogu, zwykle podkatalogu katalogu aplikacji. Nazwa pliku Resources domyślnej aplikacji składa się z tylko nazwę katalogu głównego nie wskazuje na jej kultury (na przykład strings.resources). Zasoby dla każdej zlokalizowanej kultury są przechowywane w pliku o nazwie składa się z nazwy głównej kultury (na przykład strings.ja.resources lub strings.de-DE.resources). Poniższa ilustracja przedstawia lokalizację plików źródłowych w strukturze katalogów.  
-  
- ![Katalog główny aplikacji](../../../docs/framework/resources/media/resappdir.gif "resappdir")  
-Struktura katalogu i konwencje nazewnictwa dla plików Resources  
+ Po osadzeniu plików Resources w zestawie aplikacji i zestawy satelickie każdego zestawu satelickiego ma taką samą nazwę pliku, ale jest umieszczana w podkatalogu, który odzwierciedla kultury zestawu satelickiego. Natomiast gdy uzyskujesz dostęp do zasobów z plików Resources bezpośrednio, możesz umieścić wszystkie pliki Resources w jednym katalogu, zwykle podkatalogu katalogu aplikacji. Nazwa pliku Resources domyślnej aplikacji składa się z tylko nazwę katalogu głównego nie wskazuje na jej kultury (na przykład strings.resources). Zasoby dla każdej zlokalizowanej kultury są przechowywane w pliku o nazwie składa się z nazwy głównej kultury (na przykład strings.ja.resources lub strings.de-DE.resources). 
+ 
+ Poniższa ilustracja przedstawia lokalizację plików źródłowych w strukturze katalogów. Daje ona również konwencje nazewnictwa dla .resource plików.  
+
+ ![Ilustracja przedstawiająca katalog główny aplikacji.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>Przy użyciu usługi Resource Manager  
  Po utworzeniu zasobów i umieścić je w odpowiednim katalogu, możesz utworzyć <xref:System.Resources.ResourceManager> obiektu na korzystanie z zasobów przez wywołanie metody <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> metody. Pierwszy parametr określa nazwę katalogu głównego pliku Resources domyślnej aplikacji (będzie to "ciągi", na przykład w poprzedniej sekcji). Drugi parametr określa lokalizację zasobów ("zasoby" w poprzednim przykładzie). Trzeci parametr określa <xref:System.Resources.ResourceSet> wdrożenia do użycia. Jeśli trzeci parametr jest `null`, domyślne środowisko uruchomieniowe <xref:System.Resources.ResourceSet> jest używany.  

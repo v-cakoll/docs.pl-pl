@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356094"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654591"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 Udostępnia konfigurację dla <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -52,7 +52,7 @@ Udostępnia konfigurację dla <xref:System.IdentityModel.Services.WSFederationAu
 |---------------|-----------------|  
 |Element authenticationType|Identyfikator URI, który określa typ uwierzytelniania. Ustawia parametr wauth żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr wauth nie jest uwzględniony w żądaniu.|  
 |aktualność|Żądany maksymalny wiek żądań uwierzytelniania, w ciągu kilku minut. Ustawia parametr wfresh żądanie logowania usługi WS-Federation. Opcjonalna. Wartością domyślną jest zero. Opcjonalna. **Ostrzeżenie:**  W kolejnej wersji programu .NET Framework 4.5 `freshness` atrybut będzie mieć typ `xs:string` i jego wartość domyślna będzie `null`.|  
-|homeRealm|Obszar macierzysty dostawcy tożsamości (IP) w celu użycia na potrzeby uwierzytelniania. Ustawia parametr Wh żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr Wh nie jest uwzględniony w żądaniu.|  
+|homeRealm|Obszar macierzysty dostawcy tożsamości (IdP) do użycia na potrzeby uwierzytelniania. Ustawia parametr Wh żądanie logowania usługi WS-Federation. Opcjonalna. Wartość domyślna to pusty ciąg, który określa, że parametr Wh nie jest uwzględniony w żądaniu.|  
 |issuer|Identyfikator URI zamierzony wystawcy tokenów. Ustawia podstawowy adres URL protokołu WS-Federation logowania żądania i żądania wylogowania wymagane.|  
 |persistentCookiesOnPassiveRedirects|Określa, czy trwałe pliki cookie są wydawane na uwierzytelnianie. Opcjonalna. Wartość domyślna to "false", pliki cookie nie są wydawane.|  
 |passiveRedirectEnabled|Określa, czy WSFAM jest włączone automatyczne przekierowywanie nieautoryzowanych żądań do usługi STS. Opcjonalna. Wartość domyślna to "true", automatycznie przekierowany nieautoryzowanych żądań.|  

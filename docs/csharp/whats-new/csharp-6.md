@@ -2,18 +2,18 @@
 title: Co nowego w języku C# 6 — Przewodnik po języku C#
 description: Dowiedz się, nowych funkcji w języku C# w wersji 6
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084683"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654578"
 ---
 # <a name="whats-new-in-c-6"></a>Co nowego w języku C# 6
 
 Wersja 6.0 C# zawiera wiele funkcji, które zwiększają produktywność dla deweloperów. Ogólny efekt tych funkcji jest pisania bardziej zwięzły widok kodu, który jest również bardziej czytelne. Składnia zawiera mniej procedury dla wielu typowych rozwiązań. Jest łatwiej zobaczyć założenia projektowe z mniej procedury. Dowiedz się również, te funkcje i zostanie mu bardziej wydajnej pracy i napisać bardziej czytelny kod. Możesz skoncentrować się więcej na temat Twojej funkcji niż w konstrukcji języka.
 
-W pozostałej części tego artykułu zawiera omówienie każdego z tych funkcji, za pomocą łącza, aby zapoznać się z każdej funkcji. Możesz też zapoznać się z funkcjami w [interaktywny samouczek dotyczący C# 6](../tutorials/exploration/csharp-6.yml) w sekcji samouczków.
+W pozostałej części tego artykułu zawiera omówienie każdego z tych funkcji, za pomocą łącza, aby zapoznać się z każdej funkcji. Możesz też zapoznać się z funkcjami w [możliwość interaktywnego eksplorowania na C# 6](../tutorials/exploration/csharp-6.yml) w sekcji samouczków.
 
 ## <a name="read-only-auto-properties"></a>Auto właściwości tylko do odczytu
 

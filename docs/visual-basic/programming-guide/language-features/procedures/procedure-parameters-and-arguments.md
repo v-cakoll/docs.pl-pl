@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972561"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654240"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parametry i argumenty procedur (Visual Basic)
 W większości przypadków procedura potrzebuje pewnych informacji o sytuacjach, w których została wywołana. Procedura, która wykonuje zadania powtórzonych lub udostępnione używa różne informacje dla każdego wywołania. Ten zawiera zmienne, stałe i wyrażeń, które przekazujesz do procedury, gdy wywołujesz ją.  
@@ -36,8 +36,7 @@ W większości przypadków procedura potrzebuje pewnych informacji o sytuacjach,
   
  Na poniższej ilustracji przedstawiono kodu wywołującego procedurę `safeSquareRoot` w dwóch różnych miejscach. Pierwsze wywołanie przekazuje wartość zmiennej `x` (4.0) do parametru `number`i wartość zwracana w `root` (2.0) jest przypisany do zmiennej `y`. Drugie wywołanie przekazuje wartość literału 9.0 do `number`, a następnie przypisuje wartość zwracaną (3.0) do zmiennej `z`.  
   
- ![Przekazywanie argumentów do parametrów graficzny diagram](./media/parametersargue.gif "ParametersArgue")  
-Przekazywanie argumentu do parametru  
+ ![Diagram przedstawiający przekazywanie argumentu do parametru](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  Aby uzyskać więcej informacji, zobacz [różnice pomiędzy parametrami i argumentami](./differences-between-parameters-and-arguments.md).  
   

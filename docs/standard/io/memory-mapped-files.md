@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835359"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654357"
 ---
 # <a name="memory-mapped-files"></a>Pliki mapowane w pamięci
 Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To mapowanie między pliku i pamięci miejsca umożliwia aplikacji, w tym wiele procesów można modyfikować plik przez odczyt i zapis bezpośrednio do pamięci. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć kodu zarządzanego dostępu do zamapowanych w pamięci plików w taki sam sposób, że funkcji natywnych Windows dostęp do plików zamapowanych w pamięci, zgodnie z opisem w [pliki Managing Memory-Mapped](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -42,10 +42,11 @@ Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To map
   
  Pliki mapowane w pamięci są dostępne za pośrednictwem Menedżera pamięci systemu operacyjnego, plik automatycznie zostanie poddana partycjonowaniu na liczbę stron i dostępne, zgodnie z potrzebami. Nie masz do obsługi zarządzania pamięcią, samodzielnie.  
   
- Na poniższej ilustracji przedstawiono sposób wielu procesów może mieć wiele i nakładających się widoki do tego samego pliku mapowane w pamięci, w tym samym czasie.  
+ Na poniższej ilustracji przedstawiono sposób wielu procesów może mieć wiele i nakładających się widoki do tego samego pliku mapowane w pamięci, w tym samym czasie.
+
+ Poniższa ilustracja przedstawia wiele i nakładających się widoków z plikiem mapowane w pamięci:  
   
- ![Zawiera widoki pamięci&#45;mapowane pliku. ](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-Wiele i nakładających się widoków z plikiem mapowane w pamięci  
+ ![Zrzut ekranu pokazujący widoki pamięci&#45;mapowane pliku.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Programowanie za pomocą pliki mapowane w pamięci  
  W poniższej tabeli przedstawiono wskazówki dotyczące korzystania z obiektów plików zamapowanych w pamięci oraz ich elementów członkowskich.  

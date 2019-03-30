@@ -4,12 +4,12 @@ description: Dowiedz się, obsługa środowiska uruchomieniowego .NET Core z kod
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980376"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654058"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Napisać niestandardowego hosta platformy .NET Core do kontrolowania środowiska uruchomieniowego .NET z kodu natywnego
 
@@ -208,4 +208,4 @@ Po skompilowaniu hosta może zostać przetestowany, uruchamiając go z poziomu w
 
 Jeśli elementy nie działa początkowo, dokładnie sprawdzić, które *coreclr.dll* jest dostępny w lokalizacji, oczekiwanego przez hosta, wszystkie wymagane biblioteki Framework znajdują się na liście elementu TPA, która pasuje do tego CoreCLR bitowych (32 - lub 64-bitowy) jak Host został skompilowany.
 
-Hostowanie środowiska uruchomieniowego .NET Core to zaawansowany scenariusz nie będzie wymagać wielu programistów, że dla tych, którzy muszą do uruchomienia kodu zarządzanego z macierzysty proces lub potrzebują większą kontrolę nad zachowanie środowiska uruchomieniowego .NET Core, może być bardzo przydatne. Ponieważ platformy .NET Core jest w stanie uruchomić side-by-side z samym sobą, istnieje nawet możliwość tworzenie hostów, które zainicjować i wiele wersji środowiska uruchomieniowego .NET Core, a wykonanie aplikacji na wszystkich z nich w tym samym procesie.
+Hostowanie środowiska uruchomieniowego .NET Core to zaawansowany scenariusz nie będzie wymagać wielu programistów, że dla tych, którzy muszą do uruchomienia kodu zarządzanego z macierzysty proces lub potrzebują większą kontrolę nad zachowanie środowiska uruchomieniowego .NET Core, może być bardzo przydatne.

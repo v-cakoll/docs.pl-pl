@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717625"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653785"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Zarządzanie stanem obiektu graficznego
 <xref:System.Drawing.Graphics> Klasy to serce [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Aby narysować niczego, należy uzyskać <xref:System.Drawing.Graphics> obiektu, ustaw jej właściwości i wywołać jego metody <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>i tym podobne).  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  Poniższa ilustracja przedstawia dwie elipsy. Należy pamiętać, że 30 stopni o pochodzenia w układzie współrzędnych (lewym górnym rogu obszaru klienta), nie o centra wielokropek. Należy również zauważyć, że szerokość pióra 1 oznacza, że 1 piksel w pierwszym elipsy i 1 milimetra drugi elipsy.  
   
- ![Ovals](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Ilustracja przedstawiająca dwie elipsy: szerokość rotacji i Pióro.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>Obszar przycinania  
  A <xref:System.Drawing.Graphics> obiekt zachowuje obszaru przycinania, która ma zastosowanie do wszystkich elementów rysowane przez to <xref:System.Drawing.Graphics> obiektu. Możesz ustawić obszaru przycinania, wywołując <xref:System.Drawing.Graphics.SetClip%2A> metody.  
@@ -146,9 +146,9 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- Poniższa ilustracja przedstawia obciętych wierszy.  
+ Poniższa ilustracja przedstawia obciętych wiersze:  
   
- ![Ograniczone obszar przycinania](./media/graphicsascon2.png "graphicsascon2")  
+ ![Diagram przedstawiający ograniczony obszar przycinania.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>Zobacz także
 - [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)

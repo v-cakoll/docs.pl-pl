@@ -1,5 +1,5 @@
 ---
-title: 'Okres istnienia obiektów: Jak obiekty są tworzone i niszczone (Visual Basic)'
+title: 'Okres istnienia obiektu: Jak obiekty są tworzone i niszczone (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Constructor
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979466"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654537"
 ---
-# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektów: Jak obiekty są tworzone i niszczone (Visual Basic)
+# <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektu: Jak obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  
   
  Obiekt zwolnionego zakres jest on zwalniany przez środowisko uruchomieniowe języka wspólnego (CLR). Visual Basic kontroluje zwolnienia zasobów systemowych za pomocą procedur o nazwie *destruktory*. Razem konstruktory i destruktory obsługuje tworzenie bibliotek klas niezawodne i przewidywalne.  
@@ -70,11 +70,11 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
   
  Po utworzeniu wystąpienia klasy pochodnej `Sub New` wykonaniem konstruktora klasy bazowej, najpierw następuje konstruktory w klasach pochodnych. Zdarza się to pierwszy wiersz kodu w `Sub New` Konstruktor używa składni `MyBase.New()`wywołać konstruktora klasy bezpośrednio nad sama w hierarchii klas. `Sub New` Konstruktor jest następnie wywoływana dla każdej klasy w hierarchii klas do konstruktora dla klasy bazowej zostanie osiągnięty. W tym momencie kod w Konstruktorze dla klasy bazowej jest wykonywana, a następnie kod w każdym konstruktora dla wszystkich klas pochodnych, a ostatnia wykonywany jest kod w najbardziej pochodnej klasy.  
   
- ![Konstruktory i dziedziczenie](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "vaConstructorsInheritance")  
+ ![Zrzut ekranu przedstawiający konstruktorów hierarchii klas i dziedziczenie.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)  
   
  Gdy obiekt nie jest już potrzebny, środowisko CLR wywołuje <xref:System.Object.Finalize%2A> metodę dla tego obiektu, przed zwolnieniem pamięci. <xref:System.Object.Finalize%2A> Wywoływana jest metoda `destructor` ponieważ wykonuje zadania oczyszczania, takie jak zapisywanie informacji o stanie, zamykanie plików i połączenia z bazami danych i innych zadań, które muszą być wykonane przed zwolnieniem obiektu.  
   
- ![Dziedziczenie konstruktorów 2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
+ ![Zrzut ekranu przedstawiający destruktor metody Finalize.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)  
   
 ## <a name="idisposable-interface"></a>Interfejs IDisposable  
  Wystąpienia klasy często kontrolować zasoby, które nie są zarządzane przez środowisko CLR, takich jak Windows obsługuje i połączenia z bazą danych. Te zasoby muszą być usuwane w `Finalize` metody klasy, tak aby ich zwolniony, kiedy niszczony jest obiekt przez moduł odśmiecania pamięci. Jednak moduł odśmiecania pamięci niszczy obiektów tylko wtedy, gdy środowisko CLR wymaga więcej pamięci. Oznacza to, że zasoby mogą nie być dostępne aż do czasu, po obiekt wykracza poza zakres.  

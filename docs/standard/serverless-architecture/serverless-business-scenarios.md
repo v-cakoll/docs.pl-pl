@@ -4,14 +4,14 @@ description: Dowiedz się bez użycia serwera, praktyczne podejście przez uzysk
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153790"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653902"
 ---
-# <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe bez użycia serwera i przypadki użycia
+# <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe i przypadki użycia bez korzystania z serwera
 
 Istnieje wiele przypadków użycia i scenariuszy dla aplikacji bez użycia serwera. Ten rozdział zawiera przykłady ilustrujące różnych scenariuszy. Scenariusze obejmują linki do powiązanej dokumentacji i publicznych repozytoriach kodów źródłowych. Przykłady w tym rozdziale umożliwiają rozpoczęcie pracy własne kompilowanie i wdrażanie rozwiązań nieużywających serwera.
 
@@ -61,7 +61,7 @@ Możesz wyświetlić film wideo, który przeprowadzi migrację całej: [Lift- an
 
 Wyodrębnianie, przekształcanie, i ładowania (ETL) jest typowych funkcji biznesowych, która integruje różne systemy. Tradycyjne podejścia często oznaczać między innymi konfigurowaniu dedykowanych serwerów FTP, a następnie wdrażania zaplanowanych zadań, aby przeanalizować pliki i tłumaczyć je do użytku służbowego. Architektura bezserwerowa ułatwia zadania, ponieważ wyzwalacz może wyzwalać po przekazaniu pliku. Zadania Associates usługi Azure Functions, takich jak ETL za pomocą jego idealne skład małych fragmentów kodu, które koncentrują się na konkretnego problemu.
 
-![Architektura ETL](./media/csvimport.png)
+![Zrzut ekranu pokazujący analizy procesu csv.](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
 Kod źródłowy i praktycznym laboratorium, zobacz [CSV zaimportować laboratorium](https://github.com/JeremyLikness/azure-fn-file-process-hol).
 

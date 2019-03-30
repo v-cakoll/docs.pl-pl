@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978658"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654045"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Składnia zapytania i metody w technologii LINQ (C#)
 Większość zapytań w wprowadzające Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) dokumentacji są tworzone za pomocą składni deklaratywne zapytań LINQ. Jednak składnia zapytania muszą być przetłumaczone do wywołania metody dla platformy .NET środowisko uruchomieniowe języka wspólnego (CLR), gdy kod jest kompilowany. Te wywołania metody wywołania standardowych operatorów zapytań, które mają nazwy, takie jak `Where`, `Select`, `GroupBy`, `Join`, `Max`, i `Average`. Możesz je wywołać bezpośrednio przy użyciu składni metody zamiast składni zapytań.  
@@ -26,7 +26,7 @@ Większość zapytań w wprowadzające Language Integrated Query ([!INCLUDE[vbte
   
  Aby dowiedzieć się kwerendy oparte na metodzie, Przeanalizujmy jej dokładniej. Po prawej stronie wyrażenia, zwróć uwagę, że `where` klauzuli teraz jest wyrażona jako metodę wystąpienia na `numbers` obiektu, który będzie przypominać, jak ma typ `IEnumerable<int>`. Jeśli znasz nazwę rodzajową <xref:System.Collections.Generic.IEnumerable%601> interfejsu, wiesz, że nie ma `Where` metody. Jednak jeśli wywołujesz lista dokańczania IntelliSense w środowisku IDE programu Visual Studio, zobaczysz nie tylko `Where` metody, ale także wiele innych metod, takich jak `Select`, `SelectMany`, `Join`, i `Orderby`. Są to wszystkie standardowe operatory zapytań.  
   
- ![Standardowe operatory zapytań w technologii Intellisense](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Zrzut ekranu przedstawiający wszystkich standardowych operatorów zapytań w technologii Intellisense.](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  Chociaż wygląda tak, jakby <xref:System.Collections.Generic.IEnumerable%601> został zdefiniowany ponownie, aby uwzględnić te dodatkowe metody, w rzeczywistości nie jest to wymagane. Standardowe operatory zapytań są implementowane jako nowego rodzaju metody o nazwie *metody rozszerzenia*. Metody rozszerzenia "rozszerzenia" istniejącego typu; może być wywoływana tak, jakby były metodami wystąpień w typie. Rozszerzenie standardowych operatorów zapytań <xref:System.Collections.Generic.IEnumerable%601> i oznacza to dlaczego możesz zapisywać `numbers.Where(...)`.  
   

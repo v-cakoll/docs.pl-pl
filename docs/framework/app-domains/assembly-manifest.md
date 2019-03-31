@@ -10,20 +10,19 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8422c0b22f2286df98acbed874344f7664cb8903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529767"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58676072"
 ---
 # <a name="assembly-manifest"></a>Manifest zestawu
 Każdy zestaw statyczny i dynamiczny zawiera kolekcję danych, które opisują powiązania między elementami zawartymi w zestawie. Manifest zestawu zawiera metadane zestawu. W manifeście zestawu znajdują się wszystkie metadane potrzebne do określenia wymagań w zakresie wersji zestawu i tożsamości jego zabezpieczeń, a także wszystkie metadane niezbędne do definiowania zakresu zestawu oraz rozpoznawania odwołań do zasobów i klas. Manifest zestawu może być przechowywany w pliku PE (.exe lub .dll) mającym kod w języku Microsoft Intermediate Language (MSIL) lub w samodzielnym pliku PE, który zawiera tylko dane manifestu zestawu.  
   
  Na ilustracji poniżej widać różne sposoby przechowywania manifestu.  
   
- ![Pojedynczy&#45;pliku zestawu](../../../docs/framework/app-domains/media/assemblytypes.gif "assemblytypes")  
-Typy zestawów  
+ ![Diagram przedstawiający manifest w zestawu pojedynczego pliku i zestawu wieloplikowego konfiguracji.](./media/assembly-manifest/assembly-types-diagram.gif)  
   
  Dla zestawu o jednym skojarzonym pliku manifest jest umieszczony w pliku PE, co tworzy zestaw jednoplikowy. Zestaw wieloplikowy może zawierać autonomiczny plik manifestu lub manifest umieszczony w jednym z plików PE w zestawie.  
   

@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" musi być z zakresu od 0 do 99
+title: Argument '<argumentname>' musi być z zakresu od 0 do 99
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range0to99_1
@@ -11,15 +11,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58032111"
 ---
-# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a><span data-ttu-id="687a3-102">Argument "\<argumentname >" musi być z zakresu od 0 do 99</span><span class="sxs-lookup"><span data-stu-id="687a3-102">Argument '\<argumentname>' must be within the range 0 to 99</span></span>
-<span data-ttu-id="687a3-103">Argument jest nieprawidłowy, ponieważ znajduje się on poza zakresem od 0 do 99.</span><span class="sxs-lookup"><span data-stu-id="687a3-103">An argument is not valid because it falls outside of the range 0 to 99.</span></span>  
+# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a><span data-ttu-id="1a856-102">Argument '\<argumentname >' musi być z zakresu od 0 do 99</span><span class="sxs-lookup"><span data-stu-id="1a856-102">Argument '\<argumentname>' must be within the range 0 to 99</span></span>
+<span data-ttu-id="1a856-103">Argument jest nieprawidłowy, ponieważ znajduje się on poza zakresem od 0 do 99.</span><span class="sxs-lookup"><span data-stu-id="1a856-103">An argument is not valid because it falls outside of the range 0 to 99.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="687a3-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="687a3-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1a856-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="1a856-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="687a3-105">Sprawdź pisownię argumentów w wyrażeniu.</span><span class="sxs-lookup"><span data-stu-id="687a3-105">Check the spelling of arguments in the expression.</span></span> <span data-ttu-id="687a3-106">Nieprawidłowo zapisana nazwa zmiennej może niejawnie utworzyć zmienną liczbową, której wartość jest ustawiana na zero.</span><span class="sxs-lookup"><span data-stu-id="687a3-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
+1.  <span data-ttu-id="1a856-105">Sprawdź pisownię argumentów w wyrażeniu.</span><span class="sxs-lookup"><span data-stu-id="1a856-105">Check the spelling of arguments in the expression.</span></span> <span data-ttu-id="1a856-106">Nieprawidłowo zapisana nazwa zmiennej może niejawnie utworzyć zmienną liczbową, której wartość jest ustawiana na zero.</span><span class="sxs-lookup"><span data-stu-id="1a856-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
   
-2.  <span data-ttu-id="687a3-107">Sprawdź poprzednie operacje na zmiennych w wyrażeniu, zwłaszcza tych, które przekazano do procedury jako argumenty z innych procedur.</span><span class="sxs-lookup"><span data-stu-id="687a3-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
+2.  <span data-ttu-id="1a856-107">Sprawdź poprzednie operacje na zmiennych w wyrażeniu, zwłaszcza tych, które przekazano do procedury jako argumenty z innych procedur.</span><span class="sxs-lookup"><span data-stu-id="1a856-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="687a3-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="687a3-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a856-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1a856-108">See also</span></span>
 
-- [<span data-ttu-id="687a3-109">Przekazywanie argumentów według wartości i według odwołania</span><span class="sxs-lookup"><span data-stu-id="687a3-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="1a856-109">Przekazywanie argumentów według wartości i według odwołania</span><span class="sxs-lookup"><span data-stu-id="1a856-109">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

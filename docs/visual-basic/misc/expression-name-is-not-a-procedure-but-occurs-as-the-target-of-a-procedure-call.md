@@ -1,5 +1,5 @@
 ---
-title: Wyrażenie "<name>" nie jest procedurą, ale występuje jako obiekt docelowy wywołania procedury
+title: Wyrażenie '<name>' nie jest procedurą, ale występuje jako obiekt docelowy wywołania procedury
 ms.date: 07/20/2015
 f1_keywords:
 - vbrExpressionNotProcedure
@@ -11,15 +11,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58026522"
 ---
-# <a name="expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a><span data-ttu-id="61b9a-102">Wyrażenie "\<name >' nie jest procedurą, ale występuje jako obiekt docelowy wywołania procedury</span><span class="sxs-lookup"><span data-stu-id="61b9a-102">Expression '\<name>' is not a procedure, but occurs as the target of a procedure call</span></span>
-<span data-ttu-id="61b9a-103">Wprowadzone wyrażenie, które nie jest procedurą wywołanie procedury.</span><span class="sxs-lookup"><span data-stu-id="61b9a-103">You have made a procedure call to an expression that is not a procedure.</span></span>  
+# <a name="expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a><span data-ttu-id="5a7ef-102">Wyrażenie '\<name >' nie jest procedurą, ale występuje jako obiekt docelowy wywołania procedury</span><span class="sxs-lookup"><span data-stu-id="5a7ef-102">Expression '\<name>' is not a procedure, but occurs as the target of a procedure call</span></span>
+<span data-ttu-id="5a7ef-103">Wprowadzone wyrażenie, które nie jest procedurą wywołanie procedury.</span><span class="sxs-lookup"><span data-stu-id="5a7ef-103">You have made a procedure call to an expression that is not a procedure.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="61b9a-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="61b9a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5a7ef-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="5a7ef-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="61b9a-105">Upewnij się, że nie błędnie Nazwa procedury.</span><span class="sxs-lookup"><span data-stu-id="61b9a-105">Make sure you did not misspell the name of the procedure.</span></span>  
+1.  <span data-ttu-id="5a7ef-105">Upewnij się, że nie błędnie Nazwa procedury.</span><span class="sxs-lookup"><span data-stu-id="5a7ef-105">Make sure you did not misspell the name of the procedure.</span></span>  
   
-2.  <span data-ttu-id="61b9a-106">Podaj procedurą, <`name`> wywołania.</span><span class="sxs-lookup"><span data-stu-id="61b9a-106">Supply the procedure that <`name`> calls.</span></span>  
+2.  <span data-ttu-id="5a7ef-106">Podaj procedurą, <`name`> wywołania.</span><span class="sxs-lookup"><span data-stu-id="5a7ef-106">Supply the procedure that <`name`> calls.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61b9a-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="61b9a-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a7ef-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5a7ef-107">See also</span></span>
 
-- [<span data-ttu-id="61b9a-108">Procedury</span><span class="sxs-lookup"><span data-stu-id="61b9a-108">Procedures</span></span>](../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [<span data-ttu-id="5a7ef-108">Procedury</span><span class="sxs-lookup"><span data-stu-id="5a7ef-108">Procedures</span></span>](../../visual-basic/programming-guide/language-features/procedures/index.md)

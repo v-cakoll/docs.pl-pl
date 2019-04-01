@@ -1,5 +1,5 @@
 ---
-title: 'Przeciążone nie dostępne "<methodname>" można wywołać z tymi argumentami: <list>'
+title: "Przeciążone nie dostępne '<methodname>' można wywołać z tymi argumentami: <list>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_ExactMatch2
@@ -11,15 +11,15 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58051469"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list"></a><span data-ttu-id="abaf8-102">Przeciążone nie dostępne "\<methodname >" można wywołać z tymi argumentami: \<listy ></span><span class="sxs-lookup"><span data-stu-id="abaf8-102">No accessible overloaded '\<methodname>' can be called with these arguments: \<list></span></span>
-<span data-ttu-id="abaf8-103">Przeciążona metoda jest wywoływana, ale można dopasować do żadnej metody z listą argumentów.</span><span class="sxs-lookup"><span data-stu-id="abaf8-103">An overloaded method is called, but no method can be matched with the list of arguments provided.</span></span>  
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list"></a><span data-ttu-id="b9819-102">Przeciążone nie dostępne '\<methodname >' można wywołać z tymi argumentami: \<listy ></span><span class="sxs-lookup"><span data-stu-id="b9819-102">No accessible overloaded '\<methodname>' can be called with these arguments: \<list></span></span>
+<span data-ttu-id="b9819-103">Przeciążona metoda jest wywoływana, ale można dopasować do żadnej metody z listą argumentów.</span><span class="sxs-lookup"><span data-stu-id="b9819-103">An overloaded method is called, but no method can be matched with the list of arguments provided.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="abaf8-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="abaf8-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b9819-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="b9819-104">To correct this error</span></span>  
   
--   <span data-ttu-id="abaf8-105">Odpowiadają liście argumentów przeciążeń, przeznaczonych do wywołania.</span><span class="sxs-lookup"><span data-stu-id="abaf8-105">Match the argument list against the overload you intended to call.</span></span>  
+-   <span data-ttu-id="b9819-105">Odpowiadają liście argumentów przeciążeń, przeznaczonych do wywołania.</span><span class="sxs-lookup"><span data-stu-id="b9819-105">Match the argument list against the overload you intended to call.</span></span>  
   
--   <span data-ttu-id="abaf8-106">Dostosuj listę argumentów, tak, aby Podpis pasuje do przeciążenia.</span><span class="sxs-lookup"><span data-stu-id="abaf8-106">Adjust the argument list so that the signature matches the overload.</span></span>  
+-   <span data-ttu-id="b9819-106">Dostosuj listę argumentów, tak, aby Podpis pasuje do przeciążenia.</span><span class="sxs-lookup"><span data-stu-id="b9819-106">Adjust the argument list so that the signature matches the overload.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abaf8-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="abaf8-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9819-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b9819-107">See also</span></span>
 
-- [<span data-ttu-id="abaf8-108">Przekazywanie argumentów według wartości i według odwołania</span><span class="sxs-lookup"><span data-stu-id="abaf8-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="b9819-108">Przekazywanie argumentów według wartości i według odwołania</span><span class="sxs-lookup"><span data-stu-id="b9819-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Nie można przekonwertować na wartość początkową typu "<type1>"i krok wartości typu"<type2>" do typu wspólnego
+title: Nie można przekonwertować na wartość początkową typu '<type1>'i krok wartości typu'<type2>' do typu wspólnego
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType2
@@ -11,14 +11,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58021907"
 ---
-# <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a><span data-ttu-id="f430d-102">Nie można przekonwertować na wartość początkową typu "\<type1 >" i wartość typu "\<type2 >" do typu wspólnego</span><span class="sxs-lookup"><span data-stu-id="f430d-102">Cannot convert start value of type '\<type1>' and step value of type '\<type2>' to a common type</span></span>
-<span data-ttu-id="f430d-103">Określony `For...Next` wartości kontrolki mają różne typy i dlatego są nieprawidłowe, ponieważ nie można przekonwertować do typu wspólnego.</span><span class="sxs-lookup"><span data-stu-id="f430d-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
+# <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a><span data-ttu-id="037bc-102">Nie można przekonwertować na wartość początkową typu '\<type1 >' i wartość typu '\<type2 >' do typu wspólnego</span><span class="sxs-lookup"><span data-stu-id="037bc-102">Cannot convert start value of type '\<type1>' and step value of type '\<type2>' to a common type</span></span>
+<span data-ttu-id="037bc-103">Określony `For...Next` wartości kontrolki mają różne typy i dlatego są nieprawidłowe, ponieważ nie można przekonwertować do typu wspólnego.</span><span class="sxs-lookup"><span data-stu-id="037bc-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f430d-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="f430d-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="037bc-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="037bc-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="f430d-105">Zmiana rodzaju co najmniej jedna z wartości, dzięki czemu można przekonwertować wszystkie wartości do typu wspólnego.</span><span class="sxs-lookup"><span data-stu-id="f430d-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
+1.  <span data-ttu-id="037bc-105">Zmiana rodzaju co najmniej jedna z wartości, dzięki czemu można przekonwertować wszystkie wartości do typu wspólnego.</span><span class="sxs-lookup"><span data-stu-id="037bc-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f430d-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f430d-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="037bc-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="037bc-106">See also</span></span>
 
-- [<span data-ttu-id="f430d-107">Nawigowanie po kodzie za pomocą debugera</span><span class="sxs-lookup"><span data-stu-id="f430d-107">Navigating through Code with the Debugger</span></span>](/visualstudio/debugger/navigating-through-code-with-the-debugger)
-- [<span data-ttu-id="f430d-108">For...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="f430d-108">For...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-next-statement.md)
+- [<span data-ttu-id="037bc-107">Nawigowanie po kodzie za pomocą debugera</span><span class="sxs-lookup"><span data-stu-id="037bc-107">Navigating through Code with the Debugger</span></span>](/visualstudio/debugger/navigating-through-code-with-the-debugger)
+- [<span data-ttu-id="037bc-108">For...Next, instrukcja</span><span class="sxs-lookup"><span data-stu-id="037bc-108">For...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-next-statement.md)

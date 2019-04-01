@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" musi być większa od zera.
+title: Argument '<argumentname>' musi być większa od zera.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GTZero1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58019148"
 ---
-# <a name="argument-argumentname-must-be-greater-than-zero"></a>Argument "\<argumentname >" musi być większa od zera.
+# <a name="argument-argumentname-must-be-greater-than-zero"></a>Argument '\<argumentname >' musi być większa od zera.
 Argument jest nieprawidłowy, ponieważ jest on mniejszy niż lub równy zeru.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

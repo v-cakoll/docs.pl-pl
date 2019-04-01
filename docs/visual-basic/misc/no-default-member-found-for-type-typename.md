@@ -1,5 +1,5 @@
 ---
-title: Nie domyślnego elementu członkowskiego znaleziono dla typu "<typename>"
+title: Nie domyślnego elementu członkowskiego znaleziono dla typu '<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58022445"
 ---
-# <a name="no-default-member-found-for-type-typename"></a>Nie domyślnego elementu członkowskiego znaleziono dla typu "\<typename >"
+# <a name="no-default-member-found-for-type-typename"></a>Nie domyślnego elementu członkowskiego znaleziono dla typu '\<typename >'
 Indeks z późnym wiązaniem `Get` lub `Set` podjęto próbę wywołania.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

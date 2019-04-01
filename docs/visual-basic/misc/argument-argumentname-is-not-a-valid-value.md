@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" nie jest prawidłową wartością
+title: Argument '<argumentname>' nie jest prawidłową wartością
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValue1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58032044"
 ---
-# <a name="argument-argumentname-is-not-a-valid-value"></a>Argument "\<argumentname >' nie jest prawidłową wartością
+# <a name="argument-argumentname-is-not-a-valid-value"></a>Argument '\<argumentname >' nie jest prawidłową wartością
 Wartość argumentu jest nieprawidłowa.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

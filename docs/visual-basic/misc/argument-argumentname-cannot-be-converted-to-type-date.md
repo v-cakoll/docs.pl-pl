@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" nie można przekonwertować na typ, "Date"
+title: Argument '<argumentname>' nie można przekonwertować na typ, 'Date'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidDateValue1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58038609"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-date"></a>Argument "\<argumentname >" nie można przekonwertować na typ, "Date"
+# <a name="argument-argumentname-cannot-be-converted-to-type-date"></a>Argument '\<argumentname >' nie można przekonwertować na typ, 'Date'
 Konwersja podjęła próbę zmiany na zmienną typu `Date`, ale wartość nie został rozpoznany jako prawidłowa data.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

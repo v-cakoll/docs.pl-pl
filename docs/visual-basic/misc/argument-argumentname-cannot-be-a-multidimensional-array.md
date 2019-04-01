@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" nie może być tablicy wielowymiarowej
+title: Argument '<argumentname>' nie może być tablicy wielowymiarowej
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_RankEQOne1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58041565"
 ---
-# <a name="argument-argumentname-cannot-be-a-multidimensional-array"></a>Argument "\<argumentname >' nie może być tablicy wielowymiarowej
+# <a name="argument-argumentname-cannot-be-a-multidimensional-array"></a>Argument '\<argumentname >' nie może być tablicy wielowymiarowej
 Ranga tablicy argumentu jest większa niż 1, ale może być tylko Jednowymiarowa tablica.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

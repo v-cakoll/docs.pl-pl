@@ -1,5 +1,5 @@
 ---
-title: Operator nie jest prawidłowy dla "<name1>"i"<name2>"
+title: Operator nie jest prawidłowy dla '<name1>'i'<name2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_TwoOperands
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58026877"
 ---
-# <a name="operator-is-not-valid-for-name1-and-name2"></a>Operator nie jest prawidłowy dla "\<name1 >" i "\<Nazwa2 >"
+# <a name="operator-is-not-valid-for-name1-and-name2"></a>Operator nie jest prawidłowy dla '\<name1 >' i '\<Nazwa2 >'
 Operator nie jest odpowiedni dla typów, w której są wykonywane działania na.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

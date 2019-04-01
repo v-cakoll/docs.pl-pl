@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" musi być z zakresu od 0 do 99
+title: Argument '<argumentname>' musi być z zakresu od 0 do 99
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range0to99_1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58032111"
 ---
-# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a>Argument "\<argumentname >" musi być z zakresu od 0 do 99
+# <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a>Argument '\<argumentname >' musi być z zakresu od 0 do 99
 Argument jest nieprawidłowy, ponieważ znajduje się on poza zakresem od 0 do 99.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

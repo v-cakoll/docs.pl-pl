@@ -1,5 +1,5 @@
 ---
-title: Plik we/wy o typie "<typename>" jest nieprawidłowa
+title: Plik we/wy o typie '<typename>' jest nieprawidłowa
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedIOType1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58026426"
 ---
-# <a name="file-io-with-type-typename-is-not-valid"></a>Plik we/wy o typie "\<typename >" jest nieprawidłowa
+# <a name="file-io-with-type-typename-is-not-valid"></a>Plik we/wy o typie '\<typename >' jest nieprawidłowa
 Podjęto próbę zapisu nieobsługiwany typ pliku.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

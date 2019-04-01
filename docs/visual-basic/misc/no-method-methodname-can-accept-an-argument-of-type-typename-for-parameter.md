@@ -1,5 +1,5 @@
 ---
-title: Brak metody "<methodname>"może akceptować argumentu typu"<typename>"dla parametru"<parametername>"
+title: Brak metody '<methodname>'może akceptować argumentu typu'<typename>'dla parametru'<parametername>'
 ms.date: 07/20/2015
 ms.assetid: 175c01dc-279c-4996-8501-d19a6671fdeb
 ms.openlocfilehash: 5125cde4ffb1f50bbfd43eb3cc8e20de4f4f5660
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58028731"
 ---
-# <a name="no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter-parametername"></a>Brak metody "\<methodname >" może akceptować argumentu typu "\<typename >" dla parametru "\<parametername >"
+# <a name="no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter-parametername"></a>Brak metody '\<methodname >' może akceptować argumentu typu '\<typename >' dla parametru '\<parametername >'
 Wywołanie metody zawiera argument typu, który jest nieprawidłowy.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

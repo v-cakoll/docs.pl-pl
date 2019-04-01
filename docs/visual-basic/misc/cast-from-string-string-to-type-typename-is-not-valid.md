@@ -1,5 +1,5 @@
 ---
-title: Rzutowanie z ciągu &quot; <string> &quot; na typ "<typename>" jest nieprawidłowa
+title: Rzutowanie z ciągu &quot; <string> &quot; na typ '<typename>' jest nieprawidłowa
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromStringTo
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58035361"
 ---
-# <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>Rzutowanie z ciągu &quot; \<ciągu >&quot; na typ "\<typename >" jest nieprawidłowa
+# <a name="cast-from-string-quotstringquot-to-type-typename-is-not-valid"></a>Rzutowanie z ciągu &quot; \<ciągu >&quot; na typ '\<typename >' jest nieprawidłowa
 Próba konwersji na zmienną ciągu do innego typu jest nieprawidłowy.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

@@ -1,5 +1,5 @@
 ---
-title: Metoda "<methodname>" nelze volat <number> argumentów
+title: Metoda '<methodname>' nelze volat <number> argumentów
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58025114"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Metoda "\<methodname >' nie może zostać wywołany z \<numer > argumentów
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Metoda '\<methodname >' nie może zostać wywołany z \<numer > argumentów
 Wywołanie metody zawiera nieprawidłową liczbę argumentów.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

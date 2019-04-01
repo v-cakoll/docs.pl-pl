@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" musi być większa niż 0 lub równy-1
+title: Argument '<argumentname>' musi być większa niż 0 lub równy-1
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58024446"
 ---
-# <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>Argument "\<argumentname >" musi być większa niż 0 lub równy-1
+# <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>Argument '\<argumentname >' musi być większa niż 0 lub równy-1
 Wartość argumentu jest mniejsza niż 0, ale nie ma wartości -1.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

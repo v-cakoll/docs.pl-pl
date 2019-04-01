@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" nie można przekonwertować na wartość liczbową
+title: Argument '<argumentname>' nie można przekonwertować na wartość liczbową
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgumentNotNumeric1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58028394"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-a-numeric-value"></a>Argument "\<argumentname >" nie można przekonwertować na wartość liczbową
+# <a name="argument-argumentname-cannot-be-converted-to-a-numeric-value"></a>Argument '\<argumentname >' nie można przekonwertować na wartość liczbową
 Konwersja podjął próbę przekonwertowania zmiennej, takie jak ciąg, wartość liczbową.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

@@ -1,5 +1,5 @@
 ---
-title: Dysk "<drivename>" nie znaleziono
+title: Dysk '<drivename>' nie znaleziono
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58034409"
 ---
-# <a name="drive-drivename-not-found"></a>Dysk "\<drivename >' nie znaleziono
+# <a name="drive-drivename-not-found"></a>Dysk '\<drivename >' nie znaleziono
 Nie można odnaleźć dysku. Utracono połączenie z siecią albo dysk, który próbujesz uzyskać dostęp, jest w trybie offline lub nie istnieje.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

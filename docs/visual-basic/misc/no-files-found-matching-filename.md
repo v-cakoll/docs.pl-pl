@@ -1,5 +1,5 @@
 ---
-title: Nie można odnaleźć plików pasujących "<filename>"
+title: Nie można odnaleźć plików pasujących '<filename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrKILL_NoFilesFound1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58038063"
 ---
-# <a name="no-files-found-matching-filename"></a>Nie można odnaleźć plików pasujących "\<nazwa pliku >"
+# <a name="no-files-found-matching-filename"></a>Nie można odnaleźć plików pasujących '\<nazwa pliku >'
 Nazwa pliku jest nieprawidłowa lub plik nie istnieje.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

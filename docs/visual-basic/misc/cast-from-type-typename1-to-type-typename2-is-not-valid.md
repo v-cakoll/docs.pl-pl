@@ -1,5 +1,5 @@
 ---
-title: Rzutowania z typu "<typename1>" na typ"<typename2>" jest nieprawidłowa
+title: Rzutowania z typu '<typename1>' na typ'<typename2>' jest nieprawidłowa
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromTo
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58021601"
 ---
-# <a name="cast-from-type-typename1-to-type-typename2-is-not-valid"></a>Rzutowania z typu "\<typename1 >" na typ "\<typename2 >" jest nieprawidłowa
+# <a name="cast-from-type-typename1-to-type-typename2-is-not-valid"></a>Rzutowania z typu '\<typename1 >' na typ '\<typename2 >' jest nieprawidłowa
 Próba konwersji jeden typ zmiennej jest nieprawidłowa.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

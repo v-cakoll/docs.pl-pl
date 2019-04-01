@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" nic nie lub być puste
+title: Argument '<argumentname>' nic nie lub być puste
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_PathNullOrEmpty1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58036908"
 ---
-# <a name="argument-argumentname-is-nothing-or-empty"></a>Argument "\<argumentname >" nic nie lub być puste
+# <a name="argument-argumentname-is-nothing-or-empty"></a>Argument '\<argumentname >' nic nie lub być puste
 Nazwa argumentu jest nieprawidłowa, ponieważ jest on zainicjowany jako `Nothing` lub jest pusty. Argument musi mieć typ danych i prawidłową nazwę. Argument musi mieć typ danych i prawidłową nazwę.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

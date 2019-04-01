@@ -1,5 +1,5 @@
 ---
-title: Pole "<fieldname>"typu"<typename>" to "ReadOnly"
+title: Pole '<fieldname>'typu'<typename>' to 'ReadOnly'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_ReadOnlyField2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58043720"
 ---
-# <a name="field-fieldname-of-type-typename-is-readonly"></a>Pole "\<fieldname >" typu "\<typename >" jest "ReadOnly"
+# <a name="field-fieldname-of-type-typename-is-readonly"></a>Pole '\<fieldname >' typu '\<typename >' jest 'ReadOnly'
 Próba zapisu do pola, która jest zadeklarowana `ReadOnly`.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

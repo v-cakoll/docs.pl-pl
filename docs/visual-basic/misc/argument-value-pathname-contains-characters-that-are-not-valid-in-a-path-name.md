@@ -1,5 +1,5 @@
 ---
-title: Wartość argumentu "<pathname>' zawiera znaki, które są nieprawidłowe w nazwie ścieżki
+title: Wartość argumentu '<pathname>' zawiera znaki, które są nieprawidłowe w nazwie ścieżki
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidPathChars1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58026183"
 ---
-# <a name="argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name"></a>Wartość argumentu "\<pathname >' zawiera znaki, które są nieprawidłowe w nazwie ścieżki
+# <a name="argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name"></a>Wartość argumentu '\<pathname >' zawiera znaki, które są nieprawidłowe w nazwie ścieżki
 Nazwa ścieżki zawiera jeden lub więcej znaków, które nie są prawidłowe.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

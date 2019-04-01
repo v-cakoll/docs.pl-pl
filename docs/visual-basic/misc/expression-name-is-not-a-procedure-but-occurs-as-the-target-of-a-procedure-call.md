@@ -1,5 +1,5 @@
 ---
-title: Wyrażenie "<name>" nie jest procedurą, ale występuje jako obiekt docelowy wywołania procedury
+title: Wyrażenie '<name>' nie jest procedurą, ale występuje jako obiekt docelowy wywołania procedury
 ms.date: 07/20/2015
 f1_keywords:
 - vbrExpressionNotProcedure
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58026522"
 ---
-# <a name="expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>Wyrażenie "\<name >' nie jest procedurą, ale występuje jako obiekt docelowy wywołania procedury
+# <a name="expression-name-is-not-a-procedure-but-occurs-as-the-target-of-a-procedure-call"></a>Wyrażenie '\<name >' nie jest procedurą, ale występuje jako obiekt docelowy wywołania procedury
 Wprowadzone wyrażenie, które nie jest procedurą wywołanie procedury.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

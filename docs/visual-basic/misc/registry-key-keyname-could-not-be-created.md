@@ -1,5 +1,5 @@
 ---
-title: Klucz rejestru "<keyname>" nie można utworzyć
+title: Klucz rejestru '<keyname>' nie można utworzyć
 ms.date: 07/20/2015
 f1_keywords:
 - vbrInteraction_ResKeyNotCreated1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58048527"
 ---
-# <a name="registry-key-keyname-could-not-be-created"></a>Klucz rejestru "\<keyname >" nie można utworzyć
+# <a name="registry-key-keyname-could-not-be-created"></a>Klucz rejestru '\<keyname >' nie można utworzyć
 Określony klucz rejestru nie można utworzyć, prawdopodobnie z powodu niewystarczającymi uprawnieniami.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

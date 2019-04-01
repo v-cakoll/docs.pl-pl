@@ -1,5 +1,5 @@
 ---
-title: Długość argumentu "<argumentname>" musi być większa od zera.
+title: Długość argumentu '<argumentname>' musi być większa od zera.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LengthGTZero1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58042555"
 ---
-# <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>Długość argumentu "\<argumentname >" musi być większa od zera.
+# <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>Długość argumentu '\<argumentname >' musi być większa od zera.
 Argument ma wartość, która jest równa lub mniejsza od zera.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

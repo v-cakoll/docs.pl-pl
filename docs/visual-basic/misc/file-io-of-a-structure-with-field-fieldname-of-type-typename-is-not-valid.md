@@ -1,5 +1,5 @@
 ---
-title: Plik we/wy struktury z polem "<fieldname>"typu"<typename>" jest nieprawidłowa
+title: Plik we/wy struktury z polem '<fieldname>'typu'<typename>' jest nieprawidłowa
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedFieldType2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58048118"
 ---
-# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>Plik we/wy struktury z polem "\<fieldname >" typu "\<typename >" jest nieprawidłowa
+# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>Plik we/wy struktury z polem '\<fieldname >' typu '\<typename >' jest nieprawidłowa
 Struktura, którą próbujesz zapisać do pliku zawiera nieobsługiwanego typu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

@@ -1,5 +1,5 @@
 ---
-title: Typ argumentu "<argumentname>"is"<typename>", który nie jest liczbą
+title: Typ argumentu '<argumentname>'is'<typename>', który nie jest liczbą
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_NotNumericType2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58031238"
 ---
-# <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>Typ argumentu "\<argumentname >" jest "\<typename >", który nie jest liczbą
+# <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>Typ argumentu '\<argumentname >' jest '\<typename >', który nie jest liczbą
 Argument nienumeryczny występuje w sytuacji, w którym oczekiwano liczbowego argumentu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

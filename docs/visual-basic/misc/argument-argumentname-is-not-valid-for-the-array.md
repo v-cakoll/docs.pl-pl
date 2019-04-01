@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" jest nieprawidłowa dla tablicy
+title: Argument '<argumentname>' jest nieprawidłowa dla tablicy
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidRank1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58024325"
 ---
-# <a name="argument-argumentname-is-not-valid-for-the-array"></a>Argument "\<argumentname >" jest nieprawidłowa dla tablicy
+# <a name="argument-argumentname-is-not-valid-for-the-array"></a>Argument '\<argumentname >' jest nieprawidłowa dla tablicy
 Tablica zawiera argument, który jest nieprawidłowy.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

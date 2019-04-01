@@ -1,5 +1,5 @@
 ---
-title: Klucz rejestru "<keyname>" nie można odnaleźć
+title: Klucz rejestru '<keyname>' nie można odnaleźć
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 291501bb464418bb8cef9fb55b28f0afd97e20ed
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58045395"
 ---
-# <a name="registry-key-keyname-could-not-be-found"></a>Klucz rejestru "\<keyname >' nie został odnaleziony
+# <a name="registry-key-keyname-could-not-be-found"></a>Klucz rejestru '\<keyname >' nie został odnaleziony
 Nie można odnaleźć klucza rejestru.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

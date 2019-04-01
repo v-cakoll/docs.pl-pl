@@ -1,5 +1,5 @@
 ---
-title: Nie można przekonwertować na wartość początkową typu "<type1>"i krok wartości typu"<type2>" do typu wspólnego
+title: Nie można przekonwertować na wartość początkową typu '<type1>'i krok wartości typu'<type2>' do typu wspólnego
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58021907"
 ---
-# <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>Nie można przekonwertować na wartość początkową typu "\<type1 >" i wartość typu "\<type2 >" do typu wspólnego
+# <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>Nie można przekonwertować na wartość początkową typu '\<type1 >' i wartość typu '\<type2 >' do typu wspólnego
 Określony `For...Next` wartości kontrolki mają różne typy i dlatego są nieprawidłowe, ponieważ nie można przekonwertować do typu wspólnego.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

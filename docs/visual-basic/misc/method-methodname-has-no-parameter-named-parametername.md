@@ -1,5 +1,5 @@
 ---
-title: Metoda "<methodname>"nie ma parametru o nazwie"<parametername>"
+title: Metoda '<methodname>'nie ma parametru o nazwie'<parametername>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNamedArg2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58043774"
 ---
-# <a name="method-methodname-has-no-parameter-named-parametername"></a>Metoda "\<methodname >" nie ma parametru o nazwie "\<parametername >"
+# <a name="method-methodname-has-no-parameter-named-parametername"></a>Metoda '\<methodname >' nie ma parametru o nazwie '\<parametername >'
 Podany argument nazwany nie pasuje do żadnego z argumentów metody docelowej.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

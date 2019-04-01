@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>"nie można przekonwertować na typ"<typename>"
+title: Argument '<argumentname>'nie można przekonwertować na typ'<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidValueType2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58018574"
 ---
-# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a>Argument "\<argumentname >" nie można przekonwertować na typ "\<typename >"
+# <a name="argument-argumentname-cannot-be-converted-to-type-typename"></a>Argument '\<argumentname >' nie można przekonwertować na typ '\<typename >'
 Konwersja spróbuje argumentem typu, który jest nieprawidłowy.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

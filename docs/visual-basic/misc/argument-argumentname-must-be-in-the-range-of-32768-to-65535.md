@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" musi należeć do zakresu od -32768 do 65535
+title: Argument '<argumentname>' musi należeć do zakresu od -32768 do 65535
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_RangeTwoBytes1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58037181"
 ---
-# <a name="argument-argumentname-must-be-in-the-range-of--32768-to-65535"></a>Argument "\<argumentname >" musi należeć do zakresu od -32768 do 65535
+# <a name="argument-argumentname-must-be-in-the-range-of--32768-to-65535"></a>Argument '\<argumentname >' musi należeć do zakresu od -32768 do 65535
 Wartość argumentu znajduje się poza dozwolonym zakresem-32 768 do 65 535.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

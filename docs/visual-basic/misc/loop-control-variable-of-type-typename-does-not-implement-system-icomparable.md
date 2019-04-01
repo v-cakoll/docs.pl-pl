@@ -1,5 +1,5 @@
 ---
-title: Zmienna sterująca pętli typu "<typename>" nie implementuje interfejsu "System.IComparable"
+title: Zmienna sterująca pętli typu '<typename>' nie implementuje interfejsu 'System.IComparable'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IComparable2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58029474"
 ---
-# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>Zmienna sterująca pętli typu "\<typename >' nie implementuje interfejsu"System.IComparable"
+# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>Zmienna sterująca pętli typu '\<typename >' nie implementuje interfejsu'System.IComparable'
 Zmienna jest typu, który nie implementuje `System.IComparable` interfejsu. `System.IComparable` muszą być zaimplementowane przez typ wartości lub klasą.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

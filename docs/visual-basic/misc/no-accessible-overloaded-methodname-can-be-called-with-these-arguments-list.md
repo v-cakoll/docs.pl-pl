@@ -1,5 +1,5 @@
 ---
-title: 'Przeciążone nie dostępne "<methodname>" można wywołać z tymi argumentami: <list>'
+title: "Przeciążone nie dostępne '<methodname>' można wywołać z tymi argumentami: <list>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_ExactMatch2
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58051469"
 ---
-# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list"></a>Przeciążone nie dostępne "\<methodname >" można wywołać z tymi argumentami: \<listy >
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list"></a>Przeciążone nie dostępne '\<methodname >' można wywołać z tymi argumentami: \<listy >
 Przeciążona metoda jest wywoływana, ale można dopasować do żadnej metody z listą argumentów.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

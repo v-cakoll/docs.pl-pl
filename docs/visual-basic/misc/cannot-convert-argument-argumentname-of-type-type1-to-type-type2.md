@@ -1,5 +1,5 @@
 ---
-title: Nie można przekonwertować argumentu "<argumentname>"typu"<type1>" na typ"<type2>"
+title: Nie można przekonwertować argumentu '<argumentname>'typu'<type1>' na typ'<type2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58049970"
 ---
-# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Nie można przekonwertować argumentu "\<argumentname >" typu "\<type1 >" na typ "\<type2 >"
+# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Nie można przekonwertować argumentu '\<argumentname >' typu '\<type1 >' na typ '\<type2 >'
 Operacji konwersji próbuje przekonwertować na niezgodny typ argumentu.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

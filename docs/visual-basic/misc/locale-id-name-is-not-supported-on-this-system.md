@@ -1,5 +1,5 @@
 ---
-title: Identyfikator ustawień regionalnych "<name>" nie jest obsługiwany w tym systemie
+title: Identyfikator ustawień regionalnych '<name>' nie jest obsługiwany w tym systemie
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58038997"
 ---
-# <a name="locale-id-name-is-not-supported-on-this-system"></a>Identyfikator ustawień regionalnych "\<name >' nie jest obsługiwany w tym systemie
+# <a name="locale-id-name-is-not-supported-on-this-system"></a>Identyfikator ustawień regionalnych '\<name >' nie jest obsługiwany w tym systemie
 Podjęto próbę użycia `VbStrConv`, ale system nie obsługuje określonych ustawień regionalnych.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

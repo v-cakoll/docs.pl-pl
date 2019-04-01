@@ -1,5 +1,5 @@
 ---
-title: Argument "<argumentname>" nic nie
+title: Argument '<argumentname>' nic nie
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNullValue1
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58036257"
 ---
-# <a name="argument-argumentname-is-nothing"></a>Argument "\<argumentname >" nic nie
+# <a name="argument-argumentname-is-nothing"></a>Argument '\<argumentname >' nic nie
 Wyrażenie zawiera argumentu o wartości null.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  

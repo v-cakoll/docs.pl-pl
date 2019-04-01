@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f7f8cec632965a75ac262fd6f1853a954d02ebec
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760302"
+---
 ### <a name="accessibility-improvements-in-windows-workflow-foundation-wf-workflow-designer"></a>Ulepszenia ułatwień dostępu w Projektancie przepływów pracy Windows Workflow Foundation (WF)
 
 |   |   |

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2bb40294685c987de84138ee889e6b88f7184bb0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "50746667"
+---
 ### <a name="chained-popups-with-staysopenfalse"></a>Tworzenie łańcucha okna podręczne z StaysOpen = False
 
 |   |   |

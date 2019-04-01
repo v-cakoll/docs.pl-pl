@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9605352c66f85b6942ba24942cb07c88bdd81f2a
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760640"
+---
 ### <a name="connection-pool-blocking-period-for-azure-sql-databases-is-removed"></a>Pula połączeń blokuje okres dla baz danych Azure SQL jest usuwany.
 
 |   |   |

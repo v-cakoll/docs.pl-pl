@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e613f0c52c77efebf250f5935d5cbfc29bc09a6b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760449"
+---
 ### <a name="wpf-printing-stack-update"></a>Aktualizację stosu drukowanie WPF
 
 |   |   |

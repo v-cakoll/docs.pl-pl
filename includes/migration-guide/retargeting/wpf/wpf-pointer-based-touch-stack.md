@@ -1,4 +1,12 @@
-### <a name="wpf-pointer-based-touch-stack"></a>Stos oparte na wskaźnikach Touch WPF
+---
+ms.openlocfilehash: a620028a4e286799a6762c57145264ac0e2dbaf9
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760292"
+---
+### <a name="wpf-pointer-based-touch-stack"></a>WPF Pointer-Based Touch Stack
 
 |   |   |
 |---|---|
@@ -6,5 +14,5 @@
 |Sugestia|Deweloperzy, którzy chcą włączyć ten stos można dodać/merge następujące polecenie, aby ich stosowania pliku App.config:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Input.Stylus.EnablePointerSupport=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Usunięcie tej lub ustawienie wartości FALSE spowoduje wyłączenie tego stosu opcjonalne. Należy pamiętać, że ten stos jest dostępna tylko w systemie Windows 10 Creators Update i nowszych.|
 |Zakres|Krawędź|
 |Wersja|4.7|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 

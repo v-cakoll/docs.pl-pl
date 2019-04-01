@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 060da3ebc60057554fd572bd2569652afee6bd0f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761075"
+---
 ### <a name="il-ret-not-allowed-in-a-try-region"></a>Instrukcji IL, nie są dozwolone w regionie try
 
 |   |   |

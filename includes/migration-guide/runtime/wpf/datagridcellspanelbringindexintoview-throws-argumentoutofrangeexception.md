@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e8fcd496b9c1921753ad0e1c2632f29bc5036956
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760669"
+---
 ### <a name="datagridcellspanelbringindexintoview-throws-argumentoutofrangeexception"></a>DataGridCellsPanel.BringIndexIntoView zgłasza trwa wyjątku ArgumentOutOfRangeException
 
 |   |   |

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 4f92d773197c914a74dd7e9c18f5aab5309358ae
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760891"
+---
 ### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>Upewnij się, że System.Uri używa zestawu znaków zarezerwowanych spójne
 
 |   |   |

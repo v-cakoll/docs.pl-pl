@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 38c50244b1cee41bd95c232ac5d1691c59c55488
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760933"
+---
 ### <a name="wpf-focusvisual-for-radiobutton-and-checkbox-now-displays-correctly-when-the-controls-have-no-content"></a>WPF FocusVisual RadioButton i teraz pole wyboru jest wyświetlane prawidłowo, gdy formanty nie ma zawartości
 
 |   |   |
@@ -6,5 +14,5 @@
 |Sugestia|Deweloper przeznaczonych dla platformy .NET Framework 4.7.2 chce, aby przywrócić działanie na platformie .NET 4.7.1 należy ustawić następujące flagi AppContext.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures.2=true;&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Dla deweloperów, który chce korzystać z tej zmiany podczas określania wartości docelowej framework w wersji starszej niż .NET 4.7.2 należy ustawić następujące flagi AppContext. Pamiętaj, że wszystkie flagi muszą być odpowiednio ustawione, a zainstalowana wersja programu .NET Framework, musi być 4.7.2 lub nowszej. Aplikacje WPF są wymagane do zgadzaj się na wszystkie wcześniej ulepszenia ułatwień dostępu, aby uzyskać najnowsze ulepszenia. Aby to zrobić, upewnij się, że oba AppContext serwerów, które "Switch.UseLegacyAccessibilityFeatures" i "Switch.UseLegacyAccessibilityFeatures.2" są ustawione na wartość false.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
 |Zakres|Krawędź|
 |Wersja|4.7.2|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f221f923381d874e1d9e8b420811a770d86f7578
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761371"
+---
 ### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>TargetFrameworkName dla domyślnej domeny aplikacji nie jest już domyślnie przyjmuje wartość null Jeśli nie zostanie ustawiona
 
 |   |   |

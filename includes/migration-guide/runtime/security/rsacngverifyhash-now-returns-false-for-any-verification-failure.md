@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7d60578ac2913037e1cdeda329f06f9a4986574d
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760659"
+---
 ### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a>Jakiekolwiek niepowodzenie weryfikacji RSACng.VerifyHash teraz zwraca wartość False
 
 |   |   |

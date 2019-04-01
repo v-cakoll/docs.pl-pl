@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 63a38f33fef09577c5ed621727b8c38e4c7e1bdf
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760940"
+---
 ### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>Domyślny algorytm skrótu dla WPF przez kompilator znaczników jest teraz SHA256
 
 |   |   |

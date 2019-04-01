@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a3f54bec98f220af48e932e6485d06732a4c6ddd
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761347"
+---
 ### <a name="calling-attributegetcustomattributes-on-an-indexer-property-no-longer-throws-ambiguousmatchexception-if-the-ambiguity-can-be-resolved-by-indexs-type"></a>Podczas wywoływania Attribute.GetCustomAttributes w właściwości indeksatora już zgłasza ambiguousmatchexception —, jeśli niejednoznaczności może zostać rozpoznana przez typ indeksu
 
 |   |   |

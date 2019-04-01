@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 37d771305bb0a4a38eeac9713e8667d158962174
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
+ms.lasthandoff: 04/01/2019
 ms.locfileid: "57788906"
 ---
 ### <a name="remove-ssl3-from-the-wcf-transportdefaults"></a>Usuwanie Ssl3 WCF TransportDefaults

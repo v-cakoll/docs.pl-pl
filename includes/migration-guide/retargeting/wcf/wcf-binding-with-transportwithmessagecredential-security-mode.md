@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ce7e2db3f74ec24f47b1c224335451c997c4c349
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761062"
+---
 ### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a>Powiązania WCF przy użyciu trybu zabezpieczeń TransportWithMessageCredential
 
 |   |   |

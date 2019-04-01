@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 79005f19ac31ba32e7e468ef61eb867a052eff40
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760273"
+---
 ### <a name="improved-accessibility-for-some-net-sdk-tools"></a>Ulepszone ułatwienia dostępu dla niektórych narzędzi zestawu SDK platformy .NET
 
 |   |   |

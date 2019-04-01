@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 5850e3359dab6503d5745a2266c7bf77780e5cc0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760885"
+---
 ### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>Unikanie nieskończoną rekursję IWorkflowInstanceManagement.TransactedCancel i IWorkflowInstanceManagement.TransactedTerminate
 
 |   |   |
@@ -6,5 +14,5 @@
 |Sugestia|Jeśli używasz rozwiązania AppFabric lub innym <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> klienta i czy wystąpią przepełnienia stosu w wystąpieniu usługi przepływu pracy, podczas próby anulowania lub zakończenia wystąpienia przepływu pracy, można dodać następujące polecenie, aby <code>&lt;appSettings&gt;</code> sekcji web.config/ Plik App.config dla usługi przepływu pracy:<pre><code class="lang-xml">&lt;add key=&quot;microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate&quot; value=&quot;true&quot;/&gt;&#13;&#10;</code></pre>Jeśli nie napotkasz ten problem, nie musisz to zrobić.|
 |Zakres|Krawędź|
 |Wersja|4.7.2|
-|Typ|Trwa przekierowywanie|
+|Typ|Przekierowanie|
 

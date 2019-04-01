@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: fca31a98c2dd3427501b3c6bfe4f52fcec086709
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761388"
+---
 ### <a name="product-versioning-changes-in-the-net-framework-46-and-later-versions"></a>Zmiany wersji produktu w .NET Framework 4.6 lub nowszy
 
 |   |   |

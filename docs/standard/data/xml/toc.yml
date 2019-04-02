@@ -1,0 +1,288 @@
+items:
+- name: Dokumenty i dane XML
+  href: index.md
+  items:
+  - name: Opcje przetwarzania XML
+    href: xml-processing-options.md
+  - name: Przetwarzanie danych XML w pamięci
+    href: processing-xml-data-in-memory.md
+    items:
+    - name: Przetwarzanie danych XML przy użyciu modelu DOM
+      href: process-xml-data-using-the-dom-model.md
+      items:
+      - name: XML Document Object Model (DOM)
+        href: xml-document-object-model-dom.md
+      - name: Typy węzłów XML
+        href: types-of-xml-nodes.md
+      - name: Hierarchia modelu DOM (XML Document Object Model)
+        href: xml-document-object-model-dom-hierarchy.md
+      - name: Mapowanie hierarchii obiektów na dane XML
+        href: mapping-the-object-hierarchy-to-xml-data.md
+      - name: Tworzenie dokumentu XML
+        href: xml-document-creation.md
+      - name: Wczytywanie dokumentu XML do modelu DOM
+        href: reading-an-xml-document-into-the-dom.md
+        items:
+        - name: Dyrektywy dotyczące arkusza stylów osadzone w dokumencie
+          href: style-sheet-directives-embedded-in-a-document.md
+        - name: Ładowanie danych z czytnika
+          href: load-data-from-a-reader.md
+        - name: Obsługa białych znaków i istotnych białych znaków podczas ładowania modelu DOM
+          href: white-space-and-significant-white-space-handling-when-loading-the-dom.md
+        - name: Uzyskiwanie dostępu do atrybutów w modelu DOM
+          href: accessing-attributes-in-the-dom.md
+        - name: Wczytywanie deklaracji jednostek i odwołań do jednostek do modelu DOM
+          href: reading-entity-declarations-and-entity-references-into-the-dom.md
+        - name: Zachowane odwołania do jednostek
+          href: entity-references-are-preserved.md
+        - name: Rozwinięte odwołania do jednostek, które nie zostały zachowane
+          href: entity-references-are-expanded-and-not-preserved.md
+      - name: Wstawianie węzłów do dokumentu XML
+        href: inserting-nodes-into-an-xml-document.md
+        items:
+        - name: Tworzenie nowych węzłów w modelu DOM
+          href: create-new-nodes-in-the-dom.md
+          items:
+          - name: Tworzenie nowych atrybutów dla elementów w modelu DOM
+            href: creating-new-attributes-for-elements-in-the-dom.md
+          - name: Weryfikacja nazw elementów i atrybutów XML podczas tworzenia nowych węzłów
+            href: xml-element-and-attribute-name-verification-when-creating-new-nodes.md
+          - name: Tworzenie nowych odwołań do jednostek
+            href: creating-new-entity-references.md
+          - name: Wpływ przestrzeni nazw na rozwijanie odwołań do jednostek w przypadku nowych węzłów zawierających elementy i atrybuty
+            href: namespace-affect-on-entity-ref-expansion-for-new-nodes.md
+        - name: Kopiowanie istniejących węzłów
+          href: copy-existing-nodes.md
+        - name: Kopiowanie istniejących węzłów z jednego dokumentu do innego
+          href: copying-existing-nodes-from-one-document-to-another.md
+        - name: Kopiowanie fragmentów dokumentu
+          href: copying-document-fragments.md
+      - name: Usuwanie węzłów, zawartości i wartości z dokumentu XML
+        href: removing-nodes-content-and-values-from-an-xml-document.md
+        items:
+        - name: Usuwanie węzłów z modelu DOM
+          href: removing-nodes-from-the-dom.md
+        - name: Usuwanie atrybutów z węzła elementu w ramach modelu DOM
+          href: removing-attributes-from-an-element-node-in-the-dom.md
+        - name: Usuwanie zawartości węzła z modelu DOM
+          href: removing-node-content-in-the-dom.md
+      - name: Modyfikowanie węzłów, zawartości i wartości w dokumencie XML
+        href: modifying-nodes-content-and-values-in-an-xml-document.md
+      - name: Weryfikowanie dokumentu XML w modelu DOM
+        href: validating-an-xml-document-in-the-dom.md
+      - name: Zapisywanie dokumentu
+        href: saving-and-writing-a-document.md
+      - name: Wybieranie węzłów za pomocą nawigacji XPath
+        href: select-nodes-using-xpath-navigation.md
+      - name: Rozpoznawanie zasobów zewnętrznych
+        href: resolving-external-resources.md
+      - name: Porównywanie obiektów przy użyciu tabeli XmlNameTable
+        href: object-comparison-using-xmlnametable.md
+      - name: 'Kolekcje węzłów: NamedNodeMaps i NodeLists'
+        href: node-collections-in-namednodemaps-and-nodelists.md
+        items:
+        - name: Pobieranie nieuporządkowanych węzłów na podstawie nazwy lub indeksu
+          href: unordered-node-retrieval-by-name-or-index.md
+        - name: Pobieranie uporządkowanych węzłów na podstawie indeksu
+          href: ordered-node-retrieval-by-index.md
+      - name: Aktualizacja dynamiczna obiektów NodeLists i NamedNodeMaps
+        href: dynamic-updates-to-nodelists-and-namednodemaps.md
+      - name: Obsługa przestrzeni nazw w modelu DOM
+        href: namespace-support-in-the-dom.md
+        items:
+        - name: Przestrzenie nazw i definicje DTD w modelu DOM
+          href: namespaces-and-dtds-in-the-dom.md
+        - name: Zmienianie deklaracji przestrzeni nazw w dokumencie XML
+          href: changing-namespace-declarations-in-an-xml-document.md
+        - name: Zmienianie właściwości prefiksu przestrzeni nazw
+          href: changing-namespace-prefix-properties.md
+      - name: Obsługa zdarzeń w dokumencie XML przy użyciu klasy XmlNodeChangedEventArgs
+        href: event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md
+      - name: Rozszerzanie modelu DOM
+        href: extending-the-dom.md
+    - name: Przetwarzanie danych XML przy użyciu modelu danych XPath
+      href: process-xml-data-using-the-xpath-data-model.md
+      items:
+      - name: Wczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument
+        href: reading-xml-data-using-xpathdocument-and-xmldocument.md
+      - name: Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator
+        href: selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md
+        items:
+        - name: Wybieranie danych XML przy użyciu klasy XPathNavigator
+          href: select-xml-data-using-xpathnavigator.md
+        - name: Obliczanie wyrażeń XPath przy użyciu klasy XPathNavigator
+          href: evaluate-xpath-expressions-using-xpathnavigator.md
+        - name: Dopasowywanie węzłów przy użyciu klasy XPathNavigator
+          href: matching-nodes-using-xpathnavigator.md
+        - name: Typy węzłów rozpoznawanych w zapytaniach XPath
+          href: node-types-recognized-with-xpath-queries.md
+        - name: Zapytania XPath i przestrzenie nazw
+          href: xpath-queries-and-namespaces.md
+        - name: Skompilowane wyrażenia XPath
+          href: compiled-xpath-expressions.md
+        - name: Nawigacja po przestrzeni nazw XPath
+          href: xpath-namespace-navigation.md
+      - name: Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator
+        href: accessing-xml-data-using-xpathnavigator.md
+        items:
+        - name: Nawigacja po zestawie węzłów przy użyciu klasy XPathNavigator
+          href: node-set-navigation-using-xpathnavigator.md
+        - name: Nawigacja po atrybutach i przestrzeni nazw węzła przy użyciu klasy XPathNavigator
+          href: attribute-and-namespace-node-navigation-using-xpathnavigator.md
+        - name: Wyodrębnianie danych XML przy użyciu klasy XPathNavigator
+          href: extract-xml-data-using-xpathnavigator.md
+        - name: Uzyskiwanie dostępu do silnie typizowanych danych XML przy użyciu klasy XPathNavigator
+          href: accessing-strongly-typed-xml-data-using-xpathnavigator.md
+        - name: Funkcje i zmienne zdefiniowane przez użytkownika
+          href: user-defined-functions-and-variables.md
+      - name: Edytowanie danych XML przy użyciu klasy XPathNavigator
+        href: editing-xml-data-using-xpathnavigator.md
+        items:
+        - name: Wstawianie danych XML przy użyciu klasy XPathNavigator
+          href: insert-xml-data-using-xpathnavigator.md
+        - name: Modyfikowanie danych XML przy użyciu klasy XPathNavigator
+          href: modify-xml-data-using-xpathnavigator.md
+        - name: Usuwanie danych XML przy użyciu klasy XPathNavigator
+          href: remove-xml-data-using-xpathnavigator.md
+      - name: Weryfikacja schematu przy użyciu klasy XPathNavigator
+        href: schema-validation-using-xpathnavigator.md
+    - name: Przetwarzanie danych XML przy użyciu modelu LINQ to XML
+      href: process-xml-data-using-linq-to-xml.md
+  - name: Przekształcenia XSLT
+    href: xslt-transformations.md
+    items:
+    - name: Używanie klasy XslCompiledTransform
+      href: using-the-xslcompiledtransform-class.md
+      items:
+      - name: Dane wejściowe klasy XslCompiledTransform
+        href: inputs-to-the-xslcompiledtransform-class.md
+      - name: Opcje danych wyjściowych klasy XslCompiledTransform
+        href: output-options-on-the-xslcompiledtransform-class.md
+      - name: Rozpoznawanie zewnętrznych zasobów podczas przetwarzania XSLT
+        href: resolving-external-resources-during-xslt-processing.md
+      - name: Rozszerzanie arkuszy stylów XSLT
+        href: extending-xslt-style-sheets.md
+        items:
+        - name: Obiekty rozszerzeń XSLT
+          href: xslt-extension-objects.md
+        - name: Parametry XSLT
+          href: xslt-parameters.md
+        - name: Bloki skryptów i element msxsl:script
+          href: script-blocks-using-msxsl-script.md
+      - name: Odwracalne błędy XSLT
+        href: recoverable-xslt-errors.md
+      - name: 'Instrukcje: Przekształcanie fragmentu węzła'
+        href: how-to-transform-a-node-fragment.md
+    - name: Migrowanie z klasy XslTransform
+      href: migrating-from-the-xsltransform-class.md
+      items:
+      - name: 'Instrukcje: Migrowanie kodu XslTransform'
+        href: how-to-migrate-your-xsltransform-code.md
+    - name: Zagadnienia dotyczące bezpieczeństwa danych XSLT
+      href: xslt-security-considerations.md
+    - name: Kompilator XSLT (xsltc.exe)
+      href: xslt-compiler-xsltc-exe.md
+      items:
+      - name: 'Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu'
+        href: how-to-perform-an-xslt-transformation-by-using-an-assembly.md
+    - name: Przekształcenia XSLT przy użyciu klasy XslTransform
+      href: xslt-transformations-with-the-xsltransform-class.md
+      items:
+      - name: Implementowanie zachowań uznaniowych w klasie XslTransform
+        href: implementation-of-discretionary-behaviors-in-the-xsltransform-class.md
+      - name: Implementowanie procesora XSLT przy użyciu klasy XslTransform
+        href: xsltransform-class-implements-the-xslt-processor.md
+        items:
+        - name: Dane wyjściowe klasy XslTransform
+          href: outputs-from-an-xsltransform.md
+        - name: Przekształcenia XSLT w różnych magazynach
+          href: xslt-transformations-over-different-stores.md
+        - name: Rozpoznawanie zewnętrznych arkuszy stylów i dokumentów XSLT
+          href: resolving-external-xslt-style-sheets-and-documents.md
+        - name: Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
+          href: xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md
+        - name: Wykonywanie skryptów arkusza stylów XSLT przy użyciu elementu <msxsl:script>
+          href: xslt-stylesheet-scripting-using-msxsl-script.md
+        - name: Obsługa funkcji msxsl:node-set()
+          href: support-for-the-msxsl-node-set-function.md
+        - name: Zestawy węzłów w przekształceniach
+          href: node-sets-in-transformations.md
+        - name: Wynikowy fragment drzewa w przekształceniach
+          href: result-tree-fragment-in-transformations.md
+      - name: Klasa XPathNavigator w przekształceniach
+        href: xpathnavigator-in-transformations.md
+      - name: Klasa XPathNodeIterator w przekształceniach
+        href: xpathnodeiterator-in-transformations.md
+      - name: Dane wejściowe obiektu XPathDocument klasy XslTransform
+        href: xpathdocument-input-to-xsltransform.md
+      - name: Dane wejściowe obiektu XmlDataDocument klasy XslTransform
+        href: xmldatadocument-input-to-xsltransform.md
+      - name: Dane wejściowe obiektu XmlDocument klasy XslTransform
+        href: xmldocument-input-to-xsltransform.md
+  - name: Praca ze schematami XML
+    href: working-with-xml-schemas.md
+    items:
+    - name: Model SOM (XML Schema Object Model)
+      href: xml-schema-object-model-som.md
+      items:
+      - name: Model SOM (XML Schema Object Model) ― omówienie
+        href: xml-schema-object-model-overview.md
+      - name: Odczytywanie i zapisywanie schematów XML
+        href: reading-and-writing-xml-schemas.md
+      - name: Tworzenie schematów XML
+        href: building-xml-schemas.md
+      - name: Przechodzenie schematów XML
+        href: traversing-xml-schemas.md
+      - name: Edytowanie schematów XML
+        href: editing-xml-schemas.md
+      - name: Uwzględnianie lub importowanie schematów XML
+        href: including-or-importing-xml-schemas.md
+    - name: Klasa XmlSchemaSet na potrzeby kompilacji schematu
+      href: xmlschemaset-for-schema-compilation.md
+      items:
+      - name: Zestaw informacji po kompilacji schematu
+        href: post-schema-compilation-infoset.md
+      - name: Sprawdzanie poprawności schematu XML (XSD) przy użyciu klasy XmlSchemaSet
+        href: xml-schema-xsd-validation-with-xmlschemaset.md
+      - name: Kompilacja schematu a klasa XmlSchemaCollection
+        href: xmlschemacollection-schema-compilation.md
+        items:
+        - name: Weryfikacja XDR przy użyciu klasy XmlSchemaCollection
+          href: xdr-validation-with-xmlschemacollection.md
+        - name: Weryfikacja schematu XML (XSD) przy użyciu klasy XmlSchemaCollection
+          href: xml-schema-xsd-validation-with-xmlschemacollection.md
+    - name: Weryfikacja oparta na wypchnięciach przy użyciu klasy XmlSchemaValidator
+      href: xmlschemavalidator-push-based-validation.md
+    - name: Wnioskowanie schematu XML
+      href: inferring-an-xml-schema.md
+      items:
+      - name: Wnioskowanie schematów na podstawie dokumentów XML
+        href: inferring-schemas-from-xml-documents.md
+      - name: Zasady wnioskowania typów węzłów schematu i struktury
+        href: rules-for-inferring-schema-node-types-and-structure.md
+      - name: Zasady wnioskowania typów prostych
+        href: rules-for-inferring-simple-types.md
+  - name: Integracja XML z danymi relacyjnymi i sterownikiem ADO.NET
+    href: xml-integration-with-relational-data-and-adonet.md
+  - name: Zarządzanie przestrzeniami nazw w dokumencie XML
+    href: managing-namespaces-in-an-xml-document.md
+  - name: Obsługa typu w ramach klas zestawu System.Xml
+    href: type-support-in-the-system-xml-classes.md
+    items:
+    - name: Mapowanie typów danych XML na typy CLR
+      href: mapping-xml-data-types-to-clr-types.md
+    - name: Obsługiwane typy XML — uwagi dotyczące implementacji
+      href: xml-type-support-implementation-notes.md
+    - name: Konwersja typów danych XML
+      href: conversion-of-xml-data-types.md
+      items:
+      - name: Konwertowanie ciągów na typy danych programu .NET Framework
+        href: converting-strings-to-dotnet-data-types.md
+      - name: Konwertowanie typów programu .NET Framework na ciągi
+        href: converting-dotnet-types-to-strings.md
+ms.openlocfilehash: da588944eecde3fd6e05e765797648c3c48ff46d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471988"

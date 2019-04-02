@@ -1,0 +1,143 @@
+items:
+- name: Programowanie równoległe
+  href: index.md
+  items:
+  - name: Biblioteka zadań równoległych (TPL)
+    href: task-parallel-library-tpl.md
+    items:
+    - name: Równoległość danych
+      href: data-parallelism-task-parallel-library.md
+      items:
+      - name: 'Instrukcje: Zapisywanie prostej pętli Parallel.For'
+        href: how-to-write-a-simple-parallel-for-loop.md
+      - name: 'Instrukcje: Zapisywanie prostej pętli Parallel.ForEach'
+        href: how-to-write-a-simple-parallel-foreach-loop.md
+      - name: 'Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku'
+        href: how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+      - name: 'Instrukcje: Zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji'
+        href: how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+      - name: 'Instrukcje: Anulowanie pętli Parallel.For lub ForEach'
+        href: how-to-cancel-a-parallel-for-or-foreach-loop.md
+      - name: 'Instrukcje: Obsługa wyjątków w pętlach równoległych'
+        href: how-to-handle-exceptions-in-parallel-loops.md
+      - name: 'Instrukcje: Przyspieszanie małych jednostek pętli'
+        href: how-to-speed-up-small-loop-bodies.md
+      - name: 'Instrukcje: Iteracja katalogów plików przy użyciu klas równoległych'
+        href: how-to-iterate-file-directories-with-the-parallel-class.md
+    - name: Programowanie asynchroniczne oparte na zadaniach
+      href: task-based-asynchronous-programming.md
+      items:
+      - name: Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
+        href: chaining-tasks-by-using-continuation-tasks.md
+      - name: Dołączone i odłączone zadania podrzędne
+        href: attached-and-detached-child-tasks.md
+      - name: Anulowanie zadania
+        href: task-cancellation.md
+      - name: Obsługa wyjątków
+        href: exception-handling-task-parallel-library.md
+      - name: 'Instrukcje: Wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke'
+        href: how-to-use-parallel-invoke-to-execute-parallel-operations.md
+      - name: 'Instrukcje: Zwracanie wartości z zadania'
+        href: how-to-return-a-value-from-a-task.md
+      - name: 'Instrukcje: Anulowanie zadania i jego elementów podrzędnych'
+        href: how-to-cancel-a-task-and-its-children.md
+      - name: 'Instrukcje: Tworzenie wstępnie obliczonych zadań'
+        href: how-to-create-pre-computed-tasks.md
+      - name: 'Instrukcje: Przenoszenie drzewa binarnego z zadaniami równoległymi'
+        href: how-to-traverse-a-binary-tree-with-parallel-tasks.md
+      - name: 'Instrukcje: Odpakowywanie zadania zagnieżdżonego'
+        href: how-to-unwrap-a-nested-task.md
+      - name: 'Instrukcje: Zapobieganie łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym'
+        href: how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+    - name: Przepływ danych
+      href: dataflow-task-parallel-library.md
+      items:
+      - name: 'Instrukcje: Zapisywanie komunikatów w bloku przepływu danych i odczytywanie ich z tego bloku'
+        href: how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+      - name: 'Instrukcje: Implementowanie wzorca przepływu danych producent — konsument'
+        href: how-to-implement-a-producer-consumer-dataflow-pattern.md
+      - name: 'Instrukcje: Wykonywanie akcji w przypadku odebrania danych przez blok przepływu danych'
+        href: how-to-perform-action-when-a-dataflow-block-receives-data.md
+      - name: 'Przewodnik: Tworzenie potoku przepływu danych'
+        href: walkthrough-creating-a-dataflow-pipeline.md
+      - name: 'Instrukcje: Rozłączanie bloków przepływu danych'
+        href: how-to-unlink-dataflow-blocks.md
+      - name: 'Przewodnik: Korzystanie z przepływu danych w aplikacji Windows Forms'
+        href: walkthrough-using-dataflow-in-a-windows-forms-application.md
+      - name: 'Instrukcje: Anulowanie bloku przepływu danych'
+        href: how-to-cancel-a-dataflow-block.md
+      - name: 'Przewodnik: Tworzenie niestandardowego typu bloku przepływu danych'
+        href: walkthrough-creating-a-custom-dataflow-block-type.md
+      - name: 'Instrukcje: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł'
+        href: how-to-use-joinblock-to-read-data-from-multiple-sources.md
+      - name: 'Instrukcje: Określanie stopnia równoległości w bloku przepływu danych'
+        href: how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+      - name: 'Instrukcje: Określanie harmonogramu zadań w bloku przepływu danych'
+        href: how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+      - name: 'Przewodnik: Poprawa wydajności przy użyciu klas BatchBlock i BatchedJoinBlock'
+        href: walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+    - name: Korzystanie z modelu TPL z innymi wzorami asynchronicznymi
+      href: using-tpl-with-other-asynchronous-patterns.md
+      items:
+      - name: Programowanie asynchroniczne w TPL i standardowym .NET Framework
+        href: tpl-and-traditional-async-programming.md
+      - name: 'Instrukcje: Opakowywanie wzorców EAP w zadaniu'
+        href: how-to-wrap-eap-patterns-in-a-task.md
+    - name: Potencjalne pułapki związane z równoległością danych i zadań
+      href: potential-pitfalls-in-data-and-task-parallelism.md
+  - name: Równoległe LINQ (PLINQ)
+    href: parallel-linq-plinq.md
+    items:
+    - name: Wprowadzenie do PLINQ
+      href: introduction-to-plinq.md
+    - name: Ogólne informacje o przyspieszeniach w PLINQ
+      href: understanding-speedup-in-plinq.md
+    - name: Zamawianie zachowywania w PLINQ
+      href: order-preservation-in-plinq.md
+    - name: Opcje scalania w PLINQ
+      href: merge-options-in-plinq.md
+    - name: Potencjalne pułapki związane z PLINQ
+      href: potential-pitfalls-with-plinq.md
+    - name: 'Instrukcje: Tworzenie i wykonywanie prostego zapytania PLINQ'
+      href: how-to-create-and-execute-a-simple-plinq-query.md
+    - name: 'Instrukcje: Sterowanie szeregowaniem w zapytaniu PLINQ'
+      href: how-to-control-ordering-in-a-plinq-query.md
+    - name: 'Instrukcje: Łączenie równoległych i sekwencyjnych zapytań LINQ'
+      href: how-to-combine-parallel-and-sequential-linq-queries.md
+    - name: 'Instrukcje: Obsługa wyjątków w zapytaniu PLINQ'
+      href: how-to-handle-exceptions-in-a-plinq-query.md
+    - name: 'Instrukcje: Anulowanie zapytania PLINQ'
+      href: how-to-cancel-a-plinq-query.md
+    - name: 'Instrukcje: Pisanie niestandardowej funkcji agregowania w PLINQ'
+      href: how-to-write-a-custom-plinq-aggregate-function.md
+    - name: 'Instrukcje: Określanie trybu wykonywania w PLINQ'
+      href: how-to-specify-the-execution-mode-in-plinq.md
+    - name: 'Instrukcje: Określanie opcji scalania w PLINQ'
+      href: how-to-specify-merge-options-in-plinq.md
+    - name: 'Instrukcje: Iteracja katalogów plików przy użyciu technologii PLINQ'
+      href: how-to-iterate-file-directories-with-plinq.md
+    - name: 'Instrukcje: Mierzenie wydajności zapytań PLINQ'
+      href: how-to-measure-plinq-query-performance.md
+    - name: Próbka danych PLINQ
+      href: plinq-data-sample.md
+  - name: Struktury danych dla Programowania równoległego
+    href: data-structures-for-parallel-programming.md
+  - name: Równoległe narzędzia diagnostyczne
+    href: parallel-diagnostic-tools.md
+  - name: Niestandardowe partycjonery dla PLINQ i TPL
+    href: custom-partitioners-for-plinq-and-tpl.md
+    items:
+    - name: 'Instrukcje: Implementowanie partycji dynamicznych'
+      href: how-to-implement-dynamic-partitions.md
+    - name: 'Instrukcje: Implementowanie partycjonera dla partycjonowania statycznego'
+      href: how-to-implement-a-partitioner-for-static-partitioning.md
+  - name: Wyrażenia Lambda w PLINQ i TPL
+    href: lambda-expressions-in-plinq-and-tpl.md
+  - name: Dalsze informacje
+    href: for-further-reading-parallel-programming.md
+ms.openlocfilehash: b4b7cd0e6e93175d223cbd076712fe3b9fe436f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58471933"

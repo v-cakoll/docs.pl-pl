@@ -2,12 +2,12 @@
 title: 'Instrukcje: Projektowanie nowego typu (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 8cfb24f5-89b2-4cfb-b85d-e7963f8f1845
-ms.openlocfilehash: 5d0679c3c6f1fa26408905799f5b7a5d0cef6266
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a94180705674c8aee3ce45607f89fdbba1c873b7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592101"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834663"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-visual-basic"></a>Instrukcje: Projektowanie nowego typu (LINQ to XML) (Visual Basic)
 Inne przykłady w tej sekcji wykazały zapytań, które zwracają wyniki w postaci <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> z `string`, i <xref:System.Collections.Generic.IEnumerable%601> z `int`. Są to typowe typy wyników, ale nie są odpowiednie dla każdego scenariusza. W wielu przypadkach można zapytania do zwrócenia <xref:System.Collections.Generic.IEnumerable%601> z innego typu.  
@@ -53,4 +53,5 @@ Baby Monitor:2
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

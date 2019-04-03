@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980779"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841176"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Instrukcje: Definiowanie wielu wersji procedury (Visual Basic)
 Procedurę można zdefiniować w wielu wersjach, *przeciążenie* go przy użyciu tej samej nazwie, ale inną listą parametrów dla każdej wersji. Przeciążanie ma na celu zdefiniować kilka wersji ściśle powiązanych procedury bez konieczności odróżnić je według nazwy.  
@@ -43,6 +43,7 @@ Procedurę można zdefiniować w wielu wersjach, *przeciążenie* go przy użyci
  Upewnij się, że każdy z usługi przeciążone wersje ma taką samą nazwę procedury, ale z inną listą parametrów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury](./index.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)

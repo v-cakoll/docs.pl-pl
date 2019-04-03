@@ -2,12 +2,12 @@
 title: 'Instrukcje: Tworzenie drzewa na podstawie elementu XmlReader (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
-ms.openlocfilehash: 49769fea96f1ed09420f4646a21f75093ef35fce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0826112821394ac6a81ba03e7803187aaec2796
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502181"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836470"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>Instrukcje: Tworzenie drzewa na podstawie elementu XmlReader (Visual Basic)
 W tym temacie przedstawiono sposób tworzenia drzewa XML bezpośrednio z <xref:System.Xml.XmlReader>. Aby utworzyć <xref:System.Xml.Linq.XElement> z <xref:System.Xml.XmlReader>, należy umieścić <xref:System.Xml.XmlReader> węzeł elementu. <xref:System.Xml.XmlReader> Pozwoli na pominięcie komentarze i przetwarzania instrukcji, ale jeśli <xref:System.Xml.XmlReader> znajduje się w węźle tekst, zostanie zgłoszony błąd. Aby uniknąć takich błędów, umieść zawsze <xref:System.Xml.XmlReader> w elemencie przed przystąpieniem do tworzenia drzewa XML z <xref:System.Xml.XmlReader>.  
@@ -53,4 +53,5 @@ Console.WriteLine(e)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

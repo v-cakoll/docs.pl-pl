@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967741"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818478"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Instrukcje: Przekazywanie procedur do innej procedury w Visual Basic
 Ten przykład pokazuje, jak używać delegatów do przekazania procedury do innej procedury.  
@@ -46,6 +46,7 @@ Ten przykład pokazuje, jak używać delegatów do przekazania procedury do inne
      Gdy `Test` jest wywoływana, najpierw wyświetla wynik `AddNumbers` działającym na `5` i `3`, czyli 8. Następnie wynik `SubtractNumbers` na `9` i `3` jest wyświetlany, czyli 6.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Delegaty](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf, operator](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate, instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)

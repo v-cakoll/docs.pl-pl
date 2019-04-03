@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 5677108ac31733577915e15972386d8de5ccba49
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2f72f493d99c1e0b0469150c041649486e5ed124
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203353"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818998"
 ---
 # <a name="myresponse-object"></a>My.Response — Obiekt
 Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.Page>. Ten obiekt umożliwia wysyłanie danych odpowiedzi HTTP do klienta i zawiera informacje dotyczące tej odpowiedzi.  
@@ -28,5 +28,6 @@ Pobiera <xref:System.Web.HttpResponse> obiekt skojarzony z <xref:System.Web.UI.P
  [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Web.HttpResponse>
 - [My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)

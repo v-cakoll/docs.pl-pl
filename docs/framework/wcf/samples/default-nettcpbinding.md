@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: ad76a06815be61c883d083d1f794831725665c03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333355"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840968"
 ---
 # <a name="default-nettcpbinding"></a>Domyślny element NetTcpBinding
 Ten przykład demonstruje użycie <xref:System.ServiceModel.NetTcpBinding> powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. W tym przykładzie usługa jest samodzielnie hostowana. Klient i usługa są aplikacji konsoli.  
@@ -122,4 +122,3 @@ Press ENTER to terminate client.
     </client>  
     ```  
   
-## <a name="see-also"></a>Zobacz także

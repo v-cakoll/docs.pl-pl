@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 601f8f3a5ea86da060b2d26796b2299d87946443
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547803"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824310"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Przykładowe wiersze poleceń kompilacji (Visual Basic)
 Jako alternatywę do kompilowania programów Visual Basic z poziomu programu Visual Studio można kompilować z poziomu wiersza polecenia, aby wygenerować pliki wykonywalne (.exe) lub biblioteka dołączana dynamicznie (dll).  
@@ -36,5 +36,6 @@ Jako alternatywę do kompilowania programów Visual Basic z poziomu programu Vis
 >  Gdy tworzysz projekt za pomocą środowiska IDE programu Visual Studio można wyświetlić informacje o skojarzonego **vbc** swoich opcje kompilatora w oknie danych wyjściowych polecenia. Aby wyświetlić te informacje, otwórz [okno dialogowe Opcje, projekty i rozwiązania, kompilacji i uruchomienia](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), a następnie ustaw **poziom szczegółowości danych wyjściowych kompilacji projektu programu MSBuild** do **normalny** lub wyższym poziomie szczegółowości.   
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

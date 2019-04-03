@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654537"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839824"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektu: Jak obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwierania plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic kontroluje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktory* (specjalne metody, które umożliwiają kontrolę nad inicjowania).  
@@ -147,6 +147,7 @@ End Sub
  Inna różnica między systemami wyrzucania elementów bezużytecznych obejmuje użycie `Nothing`. Z zalet zliczanie w Visual Basic 6.0 i starszych wersjach, programiści czasami przypisane `Nothing` do obiektu zmiennych, aby zwolnić odwołań tych zmiennych przechowywanych. Jeśli zmienna przechowywane ostatnie odwołanie do obiektu, obiekt zasoby zostały wydane natychmiast. W nowszych wersjach programu Visual Basic gdy można wykluczyć sytuacji, w których ta procedura jest bardzo przydatna wykonywanie jej nigdy nie powoduje, że przywoływanego obiektu zwolnić jego zasoby, od razu. Aby zwolnić zasoby natychmiast, użyj obiektu <xref:System.IDisposable.Dispose%2A> metody, jeśli jest dostępny. Tylko wtedy należy ustawić zmienną `Nothing` jest, gdy czas względem czasu, moduł odśmiecania pamięci ma wykryć obiekty oddzielone cały okres ich istnienia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IDisposable.Dispose%2A>
 - [Inicjowanie i kończenie działania składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
 - [New, operator](../../../../visual-basic/language-reference/operators/new-operator.md)

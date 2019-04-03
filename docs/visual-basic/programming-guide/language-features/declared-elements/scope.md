@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537250"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823548"
 ---
 # <a name="scope-in-visual-basic"></a>Zakres w Visual Basic
 *Zakres* zadeklarowanych elementów to zbiór cały kod, który może odwoływać się do niego bez kwalifikowania nazwy i udostępniając je za pośrednictwem [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Element może mieć zakresu w jednej z następujących poziomach:  
@@ -135,6 +135,7 @@ Public strMsg As String
  Ogólnie rzecz biorąc, deklarując dowolną zmienną lub stałą ona dobrą praktyką programowania jest zapewnienie zakres jak to możliwe (zakres bloku jest najmniejsza). To pomaga zachować pamięci i minimalizuje ryzyko swój kod, błędnie odwołujące się do niewłaściwej zmiennej. Podobnie, należy zadeklarować zmienną [statyczne](../../../../visual-basic/language-reference/modifiers/static.md) tylko kiedy jest niezbędne w celu zachowania jego wartość z zakresu od wywołania procedur.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Instrukcje: Kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

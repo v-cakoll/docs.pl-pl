@@ -14,12 +14,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: f55dae51d485bfcd5c8e93910776f4c98c96ea2d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 311ba2d9c4be75e77cf134bf44dc96eab957736d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976034"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838173"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Instrukcje: Znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania za pomocą LINQ (Visual Basic)
 Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i wykonywania zapytań.  
@@ -77,6 +77,7 @@ Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i
 4.  Naciśnij klawisz F5, aby uruchomić projekt i wyświetlić wyniki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

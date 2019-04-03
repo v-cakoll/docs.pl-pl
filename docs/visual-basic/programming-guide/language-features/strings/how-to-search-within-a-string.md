@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: c150299efe07809d0d33edf882771f552c3e5b63
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982014"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823301"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>Instrukcje: Wyszukiwanie wewnątrz ciągu (Visual Basic)
 Ten przykład wywołuje <xref:System.String.IndexOf%2A> metody <xref:System.String> obiektu, aby zgłosić indeks pierwszego wystąpienia podciągu.  
@@ -34,6 +34,7 @@ Ten przykład wywołuje <xref:System.String.IndexOf%2A> metody <xref:System.Stri
  Dla formantu optymalne błąd, możesz chcieć ująć wyszukiwania ciągów w `Try` bloku [spróbuj... CATCH... Na koniec instrukcji](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) konstrukcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.String.IndexOf%2A>
 - [Try...Catch...Finally, instrukcja](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

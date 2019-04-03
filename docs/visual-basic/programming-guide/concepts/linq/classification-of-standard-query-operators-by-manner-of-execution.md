@@ -2,12 +2,12 @@
 title: Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 5e4204c3fa80acced42649e76abfa2be05f35d82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595178"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823224"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (Visual Basic)
 LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonania w jednym z dwa główne sposoby: odejścia. Operatory zapytań, które używają odroczonego wykonania można dodatkowo podzielić na dwie kategorie: przesyłanie strumieniowe i obsługiwane strumieniowo. Jeśli wiesz, jak wykonać operatory inne zapytanie, jego może ułatwić zrozumienie wyników, które otrzymasz od określonego zapytania. Jest to szczególnie istotne, jeśli zmienia się ze źródłem danych lub jeśli tworzysz kwerendy na podstawie innego zapytania. W tym temacie klasyfikuje standardowych operatorów zapytań zgodnie z ich sposób działania.  
@@ -34,7 +34,7 @@ LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonan
 > [!NOTE]
 >  Jeśli operator jest oznaczony w dwóch kolumnach, dwóch sekwencji wejściowych biorących udział w operacji, a każda sekwencja jest obliczane inaczej. W takich przypadkach jest zawsze pierwszej sekwencji na liście parametrów, które jest obliczane w odroczonego, przesyłanie strumieniowe sposób.  
   
-|Standardowego operatora zapytania|Zwracany typ|Natychmiastowe wykonanie|Wykonanie odroczone przesyłania strumieniowego|Odroczone obsługiwane strumieniowo wykonywania|  
+|Standardowego operatora zapytania|Typ zwracany|Natychmiastowe wykonanie|Wykonanie odroczone przesyłania strumieniowego|Odroczone obsługiwane strumieniowo wykonywania|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
 |<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|X|||  
@@ -88,6 +88,7 @@ LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonan
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Linq.Enumerable>
 - [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Składnia wyrażeń dla standardowych operatorów zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)

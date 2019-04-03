@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Boolean values [Visual Basic]
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
-ms.openlocfilehash: d29553071d68319d754406b3104da6e096f908fd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8e01a0f5a3f99fdbc424d6cd7d224367c7bad08
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975527"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835807"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>Instrukcje: Sprawdzanie poprawności nazw plików oraz ścieżek w języku Visual Basic
 W tym przykładzie zwraca `Boolean` wartość, która wskazuje, czy ciąg reprezentuje nazwę pliku lub ścieżkę. Sprawdzanie poprawności sprawdza, czy nazwa zawiera znaki, które nie są dozwolone przez system plików.  
@@ -23,5 +23,6 @@ W tym przykładzie zwraca `Boolean` wartość, która wskazuje, czy ciąg reprez
  W tym przykładzie nie sprawdza, czy nazwa niepoprawnie został umieszczony w dwukropki lub katalogi bez nazwy, czy długość nazwy przekracza maksymalną długość zdefiniowaną przez system. Ponadto nie sprawdza ona, czy aplikacja ma uprawnienia dostępu do zasobu systemu plików przy użyciu określonej nazwy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IO.Path.GetInvalidPathChars%2A>
 - [Sprawdzanie poprawności ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

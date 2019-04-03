@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 522526392dd12ede729fe8b96677029c05af57c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 437107bb522e1635dffa4a2de88c5d10d6707592
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665698"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825147"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Typy o wartości zerowalnej (Visual Basic)
 Czasami pracuje się z typem wartości, która nie ma zdefiniowanej wartości w pewnych okolicznościach. Na przykład pola w bazie danych może być do rozróżniania masz przypisaną wartość, która ma znaczenie i nie ma przypisaną wartość. Typy wartości można rozszerzyć do wykonania w ich normalnym wartości lub wartość null. Takie rozszerzenia jest wywoływana *typu dopuszczającego wartość null*.  
@@ -98,6 +98,7 @@ Czasami pracuje się z typem wartości, która nie ma zdefiniowanej wartości w 
  Baza danych jest jednym z najważniejszych miejsc do użycia typy dopuszczające wartości null. Nie wszystkie obiekty bazy danych obecnie obsługuje typy dopuszczające wartości null, ale działają adaptery wygenerowany przez projektanta tabel. Zobacz sekcję "Obsługa TableAdapter typów dopuszczających wartości zerowe" w [TableAdapter — Przegląd](/visualstudio/data-tools/tableadapter-overview).
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Używanie typów dopuszczających wartości null](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

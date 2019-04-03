@@ -11,12 +11,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 937206c5efeb4767f0c1f3d5a98f58314da105d4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ab1bebae4fe88e8b4e630a6f7eca70ca8d1b32c5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967792"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829164"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Instrukcje: Sortowanie wyników zapytania za pomocą LINQ (Visual Basic)
 Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i wykonywania zapytań.  
@@ -74,6 +74,7 @@ Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i
 4.  Naciśnij klawisz F5, aby uruchomić projekt i wyświetlić wyniki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

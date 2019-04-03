@@ -2,12 +2,12 @@
 title: Kluczowe założenia modelu danych jednostki
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825667"
 ---
 # <a name="entity-data-model-key-concepts"></a>Kluczowe założenia modelu danych jednostki
 Do opisania struktury danych Entity Data Model (EDM) używa trzech kluczowych pojęć: *typu jednostki*, *typ skojarzenia*, i *właściwość*. Oto najważniejsze pojęcia do opisywania struktury danych w implementacji EDM.  
@@ -32,7 +32,7 @@ Do opisania struktury danych Entity Data Model (EDM) używa trzech kluczowych po
 ## <a name="representations-of-a-conceptual-model"></a>Reprezentacje Model koncepcyjny  
  A *modelu koncepcyjnego* to reprezentacja określonej struktury niektórych danych jako jednostek i relacji. Jest jednym ze sposobów do reprezentowania modelu koncepcyjnego z diagramu. Poniższy diagram przedstawia modelu koncepcyjnego z trzech typów jednostki (`Book`, `Publisher`, i `Author`) i dwa powiązania (`PublishedBy` i `WrittenBy`):  
   
- ![Model przy użyciu właściwości nawigacji](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![Diagram przedstawiający modelu koncepcyjnego z trzech typów jednostek.](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
  Taka reprezentacja ma jednak niektórych niedoskonałości, jeśli chodzi o przekazywania niektóre szczegóły na temat modelu. Na przykład właściwość jednostki Ustaw informacje dotyczące typu i nie są przekazywane na diagramie. Bogactwa modelu koncepcyjnego mogą być przeniesione wyraźniej języka specyficznego dla domeny (DSL). [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) używa DSL oparty na formacie XML o nazwie *język definicji schematu koncepcyjnego* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Poniżej przedstawiono definicję CSDL modelu koncepcyjnego na powyższym diagramie:  
   

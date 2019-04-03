@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971640"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818465"
 ---
 # <a name="function-statement-visual-basic"></a>Function — Instrukcja (Visual Basic)
 Deklaruje nazwę, parametry i kod, który definiuje `Function` procedury.  
@@ -255,6 +255,7 @@ End Function
  [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Sub, instrukcja](sub-statement.md)
 - [Procedury funkcji](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [Lista parametrów](parameter-list.md)

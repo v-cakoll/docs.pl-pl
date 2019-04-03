@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 0757c3ce0528f76eab5607e20ebca2e66a903900
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974149"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840929"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Przewodnik: Obsługa zdarzeń (Visual Basic)
 Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwszy temat [instruktażu: Deklarujący i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje, jak deklarować i wywoływać zdarzenia. Ta sekcja używa formularza i klasy z tego przewodnika, aby pokazują, jak obsługiwać zdarzenia w przypadku mogą mieć miejsce.  
@@ -117,5 +117,6 @@ Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwsz
 >  Można zadeklarować dowolną liczbę `WithEvents` zmiennych, jak należy, ale tablic `WithEvents` zmienne nie są obsługiwane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przewodnik: Deklarowanie i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)

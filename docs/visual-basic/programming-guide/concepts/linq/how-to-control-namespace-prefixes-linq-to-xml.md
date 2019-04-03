@@ -2,12 +2,12 @@
 title: 'Instrukcje: Prefiksy Namespace kontroli (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 91117307caf7e55bd8b512fbd841760616f0b2c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623745"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839040"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Instrukcje: Prefiksy Namespace kontroli (LINQ to XML) (Visual Basic)
 W tym temacie opisano, jak można kontrolować prefiksy przestrzeni nazw.  
@@ -54,4 +54,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Praca z przestrzeniami nazw XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

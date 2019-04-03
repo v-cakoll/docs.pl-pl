@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 572e1d74810aad6d24e6eefc8d37729f5dc950c9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0619db618abd562bda86836bdd41bbcd6caee0f9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286952"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836509"
 ---
 # <a name="class-statement-must-end-with-a-matching-end-class"></a>Instrukcja „Class” musi być zakończona odpowiadającą jej instrukcją „End Class”
 `Class` Służy do inicjowania `Class` Blokuj; dlatego tylko może występować na początku bloku, odpowiadającą jej instrukcją `End Class` instrukcji blok końcowy. Albo masz nadmiarowe `Class` instrukcji lub użytkownik nie zakończył swojej `Class` blokowania z `End Class`.  
@@ -26,5 +26,6 @@ ms.locfileid: "55286952"
 -   Zawrzeć `Class` bloku odpowiadającą jej instrukcją `End Class`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Koniec \<— słowo kluczowe > — instrukcja](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
 - [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)

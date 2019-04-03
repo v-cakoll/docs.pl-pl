@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 29b2602664387ee233574686440691d2f4da830b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279165"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819570"
 ---
 # <a name="option-keyword-statement"></a>Opcja \<— słowo kluczowe > — instrukcja
 Wprowadza instrukcję określającą opcję kompilatora, która ma zastosowanie do całego pliku źródłowego.  
@@ -30,4 +30,5 @@ Wprowadza instrukcję określającą opcję kompilatora, która ma zastosowanie 
  [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

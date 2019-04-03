@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976502"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819310"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Operatory logiczne i bitowe w Visual Basic
 Operatory logiczne, porównanie `Boolean` wyrażeń i zwrócenia `Boolean` wynik. `And`, `Or`, `AndAlso`, `OrElse`, I `Xor` operatory są *binarne* ponieważ przyjmują dwa argumenty operacji, podczas gdy `Not` operator jest *jednoargumentowe* z powodu jeden argument operacji. Niektóre z tych operatorów można również wykonać operacje logiczne bitowe dla wartości całkowitych.  
@@ -96,6 +96,7 @@ Operatory logiczne, porównanie `Boolean` wyrażeń i zwrócenia `Boolean` wynik
 >  Operacje bitowe można wykonać na tylko w przypadku typów całkowitych. Wartości zmiennoprzecinkowe można przekonwertować do typów całkowitych, przed rozpoczęciem operacji na poziomie bitowym.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operatory logiczne/bitowe (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Wyrażenia logiczne](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Operatory arytmetyczne w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

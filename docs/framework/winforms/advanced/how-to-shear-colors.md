@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720228"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826395"
 ---
 # <a name="how-to-shear-colors"></a>Instrukcje: Zmienianie kolorów
 Pochylanie zwiększa lub zmniejsza składnika koloru o kwotę proporcjonalną do innego składnika koloru. Na przykład należy wziąć pod uwagę transformacji, w której składnik czerwony jest zwiększana o połowę wartość składnik niebieski. W obszarze takie przekształcenia kolorów (0,2, 0,5, 1) staną się (0,7, 0,5, 1). Nowy składnik czerwony jest wymagane 0,2 + (1/2)(1) = 0,7.  
@@ -21,9 +21,9 @@ Pochylanie zwiększa lub zmniejsza składnika koloru o kwotę proporcjonalną do
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy <xref:System.Drawing.Image> obiektu na podstawie pliku ColorBars4.bmp. Następnie kod stosuje transformację nożycy opisane w poprzednim akapicie do każdego piksela na obrazie.  
   
- Poniższa ilustracja pokazuje oryginalny obraz po lewej stronie i pochylone obraz po prawej stronie.  
+ Na poniższej ilustracji przedstawiono oryginalny obraz po lewej stronie i pochylone obraz po prawej stronie: 
   
- ![Zmienianie kolorów](./media/colortrans6.png "colortrans6")  
+ ![Dwa pola z kolorowe paski side-by-side pokazujący oryginalnego obrazu i pochylone obrazu.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  W poniższej tabeli wymieniono wektorów kolor słupków cztery przed i po nim nożycy transformacji.  
   

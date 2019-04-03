@@ -2,12 +2,12 @@
 title: 'Instrukcje: Znajdowanie elementów w Namespace (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c7cb3b77-3424-4b54-9efa-4dc715948e41
-ms.openlocfilehash: 3e8220c1dc34a56306d78db5d90ab5697ba5f632
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f48ae0a03d625a3510b2280aa6361e2a731e5afe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714792"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825366"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie elementów w Namespace (XPath-LINQ to XML) (Visual Basic)
 Wyrażenia XPath można znaleźć węzły w określonej przestrzeni nazw. Wyrażenia XPath używać prefiksów przestrzeni nazw do określania przestrzeni nazw. Aby analizować wyrażenie XPath, który zawiera prefiksy przestrzeni nazw, należy przekazać obiekt do metody XPath, które implementuje <xref:System.Xml.IXmlNamespaceResolver>. W tym przykładzie użyto <xref:System.Xml.XmlNamespaceManager>.  
@@ -81,4 +81,5 @@ Results are identical
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ to XML dla użytkowników metody XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

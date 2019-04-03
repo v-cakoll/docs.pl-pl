@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356783"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819596"
 ---
 # <a name="navigation-topologies-overview"></a>Przegląd Topologia nawigacji
 <a name="introduction"></a> W tym omówieniu przedstawiono wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Następnie opisano trzy popularne topologie nawigacji, z przykładami.  
@@ -46,7 +46,7 @@ ms.locfileid: "57356783"
   
  W tym temacie opisano trzy popularne topologie nawigacji: *stała liniowa*, *stała hierarchiczna*, i *dynamicznie generowanym*. Każda topologia nawigacji przedstawiono przykład, który ma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jak te, które przedstawiono na poniższej ilustracji:  
   
- ![Zadanie strony z elementami danych](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![Strony zadania przy użyciu elementów danych i przycisków nawigacji.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>Topologie strukturyzowana Nawigacja  
@@ -60,9 +60,9 @@ ms.locfileid: "57356783"
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
 ## <a name="navigation-over-a-fixed-linear-topology"></a>Nawigacja za pośrednictwem stały liniowa topologia  
- Naprawiono liniowa topologia jest analogiczne do struktury kreatora, który ma co najmniej jednej strony kreatora, które są przejście w stałej kolejności. Na poniższej ilustracji przedstawiono ogólną strukturę i przepływ kreatora bez stały liniowa topologia.  
+ Naprawiono liniowa topologia jest analogiczne do struktury kreatora, który ma co najmniej jednej strony kreatora, które są przejście w stałej kolejności. Na poniższej ilustracji przedstawiono ogólną strukturę i przepływ kreatora bez stały liniowa topologia:  
   
- ![Diagram topologii nawigacji](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![Diagram, który pokazuje stały liniowa topologia.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
  Następujące typowe zachowania do nawigowania w stałym liniowa topologia:  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57356783"
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Dynamicznej nawigacji nad stały hierarchiczna topologia  
- W niektórych aplikacjach strony umożliwiają przechodzenie do co najmniej dwóch innych stron, jak pokazano na poniższej ilustracji.  
+ W niektórych aplikacjach strony umożliwiają przechodzenie do co najmniej dwóch innych stron, jak pokazano na poniższej ilustracji: 
   
- ![Strona, która można przejść do wielu stronach](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![Diagram przedstawiający strona, która można przejść do wielu stron.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- Ta struktura jest znany jako stały topologii hierarchicznej i sekwencji, w którym hierarchii, o ile jest często określana w czasie wykonywania przez użytkownika lub aplikacji. W czasie wykonywania każda strona w hierarchii, która umożliwia przechodzenie do co najmniej dwóch innych stron zbiera dane wymagane do określenia, które strony dla przejścia. Na poniższym rysunku przedstawiono jeden z kilku sekwencji nawigacji możliwe oparte na poprzednim rysunku.  
+ Ta struktura jest znany jako stały topologii hierarchicznej i sekwencji, w którym hierarchii, o ile jest często określana w czasie wykonywania przez użytkownika lub aplikacji. W czasie wykonywania każda strona w hierarchii, która umożliwia przechodzenie do co najmniej dwóch innych stron zbiera dane wymagane do określenia, które strony dla przejścia. Na poniższym rysunku przedstawiono jeden z kilku sekwencji nawigacji możliwe oparte na poprzedniej ilustracji:  
   
- ![Diagram topologii nawigacji](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![Diagram przedstawiający sekwencję nawigacji to możliwe.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
  Mimo że sekwencji, w którym są przejście stron w strukturze hierarchicznej stałej jest określana w czasie wykonywania, środowisko użytkownika jest taki sam jak środowiska użytkownika dla stałych liniowa topologia:  
   
@@ -114,13 +114,13 @@ ms.locfileid: "57356783"
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Nawigacja w dynamicznie generowanym topologii  
- W niektórych aplikacjach sekwencji, w którym są przejście, dwóch lub więcej stron można tylko można określić w czasie wykonywania przez użytkownika, aplikacji lub danych zewnętrznych. Na poniższym rysunku przedstawiono zestaw stron z sekwencją nieokreślonej nawigacji.  
+ W niektórych aplikacjach sekwencji, w którym są przejście, dwóch lub więcej stron można tylko można określić w czasie wykonywania przez użytkownika, aplikacji lub danych zewnętrznych. Na poniższym rysunku przedstawiono zestaw stron z sekwencją nieokreślonej nawigacji:  
   
- ![Diagram topologii nawigacji](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![Zestaw stron z sekwencją nieokreślonej nawigacji.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- Następny rysunek przedstawia sekwencję nawigacji, który został wybrany przez użytkownika w czasie wykonywania.  
+ Następny rysunek przedstawia sekwencję nawigacji, który został wybrany przez użytkownika w czasie wykonywania:  
   
- ![Diagram nawigacji](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![Diagram przedstawiający sekwencję nawigacji wybranej w czasie wykonywania.](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
  Sekwencję nawigacji jest określany jako dynamicznie generowanym topologii. Dla użytkownika jako przy użyciu innych topologie nawigacji środowisko użytkownika jest taka sama jak w przypadku poprzedniego topologii:  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: d2f9ca8fe453f120dd52f4c4b20e75b9f933b251
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974123"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816177"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Przegląd LINQ to XML w Visual Basic
 Visual Basic zapewnia obsługę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przy użyciu literałów XML i właściwości osi XML. Dzięki temu można używać składni znana i wygodna do pracy z danymi XML w kodzie języka Visual Basic. *Literały XML* umożliwiają objęcie XML bezpośrednio w kodzie. *Właściwości osi XML* umożliwiają dostęp do węzłów podrzędnych, węzły podrzędne i atrybuty literał XML. Aby uzyskać więcej informacji, zobacz [literały XML-Przegląd](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) i [uzyskiwania dostępu do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
@@ -22,7 +22,7 @@ Visual Basic zapewnia obsługę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md
   
  ![Link do wideo](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") uzyskać pokrewne pokazy wideo, zobacz [jak zacząć korzystać z LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) i [jak mogę utworzyć arkusze kalkulacyjne programu Excel za pomocą LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).  
   
-## <a name="creating-xml"></a>Tworzenie XML  
+## <a name="creating-xml"></a>Tworzenie kodu XML  
  Istnieją dwa sposoby tworzenia drzew XML w Visual Basic. Można zadeklarować literału bezpośrednio w kodzie XML lub użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] interfejsów API, aby utworzyć drzewo. Oba procesy Włącz kod w celu odzwierciedlenia końcowego struktury drzewa XML. Na przykład poniższy kod tworzy XML element:  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
@@ -62,6 +62,7 @@ Visual Basic zapewnia obsługę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md
  [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Uzyskiwanie dostępu do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

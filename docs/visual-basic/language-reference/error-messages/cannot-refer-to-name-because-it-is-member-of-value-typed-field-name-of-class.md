@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-ms.openlocfilehash: c29d3def2299dc1d7e3b084b3408b3f919addc63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: aac190119ced74496c4dd012d200fca6d895ff28
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279591"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826772"
 ---
 # <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a>Nie może odwoływać się do "\<nazwa >", ponieważ jest to składowa pola "\<nazwa >" klasy\<nazwa_klasy > "mającego"System.MarshalByRefObject"klasy bazowej
 `System.MarshalByRefObject` Klasa umożliwia aplikacji, które obsługują zdalny dostęp do obiektów poza granice domeny aplikacji. Typy musi dziedziczyć `MarshalByRejectObject` klasy, gdy typ jest używany poza granice domeny aplikacji. Nie można skopiować stan obiektu, ponieważ elementy członkowskie obiektu nie są użyteczne spoza domeny aplikacji, w którym zostały utworzone.  
@@ -26,5 +26,6 @@ ms.locfileid: "55279591"
 2.  Kwalifikuj jawnie elementu członkowskiego z `Me` — słowo kluczowe.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.MarshalByRefObject>
 - [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)

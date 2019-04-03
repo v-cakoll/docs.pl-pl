@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 29213be5c70337dfe82c54b7b818df210aa1ab24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8761f5fbf4e6137c1ae6b202b6717579c6f78d4f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538742"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816684"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Instrukcje: Wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)
 Czasami trzeba Przekształcanie dużych plików XML i pisania aplikacji, więc, że zużycie pamięci aplikacji jest przewidywalne. Jeśli zostanie podjęta próba wypełnianie drzewa XML z bardzo dużego pliku XML, wykorzystanie pamięci będzie proporcjonalny do rozmiaru pliku (oznacza to, że nadmierne). W związku z tym należy zamiast tego użyj technika przesyłania strumieniowego.  
@@ -440,4 +440,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

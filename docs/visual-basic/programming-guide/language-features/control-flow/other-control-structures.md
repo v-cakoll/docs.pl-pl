@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: a383d0c95de5286cce722c05bd8888d5acffb173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590003"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819323"
 ---
 # <a name="other-control-structures-visual-basic"></a>Inne struktury sterujące (Visual Basic)
 Visual Basic zapewnia struktury sterujące, które ułatwiają Usuwanie zasobu lub Zmniejsz liczbę razy, należy powtórzyć odwołanie do obiektu.  
@@ -22,6 +22,7 @@ Visual Basic zapewnia struktury sterujące, które ułatwiają Usuwanie zasobu l
  `With...End With` Konstrukcji pozwala określić odwołanie do obiektu tylko raz, a następnie uruchom serię instrukcji uzyskujących dostęp do jego członków. Może to uprościć kod i zwiększyć wydajność, ponieważ Visual Basic nie trzeba ponownie ustanowić odwołanie dla każdej instrukcji, która uzyskuje do niej dostęp. Aby uzyskać więcej informacji, zobacz [za pomocą... End With — instrukcja](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

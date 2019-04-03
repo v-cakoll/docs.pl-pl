@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-ms.openlocfilehash: e33d396dac8ae5f9afd057a27f27bee700092f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634353"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819687"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nazwy deklarowanych elementów XML oraz atrybuty (Visual Basic)
 Ten temat zawiera wskazówki dotyczące języka Visual Basic nazewnictwa elementów XML oraz atrybuty w literałach XML.  W literał XML można określić nazwę lokalnego lub nazwą kwalifikowaną. Kwalifikowana nazwa składa się z prefiksu przestrzeni nazw XML, dwukropek i lokalna nazwa. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XML, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -45,5 +45,6 @@ Ten temat zawiera wskazówki dotyczące języka Visual Basic nazewnictwa element
  Podczas tworzenia elementu XML literału, można określić prefiks przestrzeni nazw XML dla nazwy elementu. Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

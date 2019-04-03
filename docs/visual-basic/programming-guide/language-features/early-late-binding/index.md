@@ -2,17 +2,23 @@
 title: Wczesne i późne wiązania (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'early binding [Visual Basic]'
-  - 'objects [Visual Basic], late-bound'
-  - 'objects [Visual Basic], early-bound'
-  - 'objects [Visual Basic], late bound'
-  - 'early binding [Visual Basic], Visual Basic compiler'
-  - 'binding [Visual Basic], late and early'
-  - 'objects [Visual Basic], early bound'
-  - 'Visual Basic compiler, early and late binding'
-  - 'late binding [Visual Basic]'
-  - 'late binding [Visual Basic], Visual Basic compiler'
+- early binding [Visual Basic]
+- objects [Visual Basic], late-bound
+- objects [Visual Basic], early-bound
+- objects [Visual Basic], late bound
+- early binding [Visual Basic], Visual Basic compiler
+- binding [Visual Basic], late and early
+- objects [Visual Basic], early bound
+- Visual Basic compiler, early and late binding
+- late binding [Visual Basic]
+- late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
+ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824796"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Wczesne i późne wiązania (Visual Basic)
 Kompilator języka Visual Basic wykonuje w procesie zwanym `binding` gdy obiekt jest przypisany do zmiennej obiektu. Obiekt jest *z wczesnym wiązaniem* gdy jest przypisany do zmiennej zadeklarowany typ określonego obiektu. Wczesne obiektów powiązanych umożliwić kompilatorowi przydzielić pamięci i wykonywać inne optymalizacje, przed wykonaniem aplikacji. Na przykład poniższy fragment kodu deklaruje zmienną typu <xref:System.IO.FileStream>:  
@@ -32,6 +38,7 @@ Kompilator języka Visual Basic wykonuje w procesie zwanym `binding` gdy obiekt 
 >  Rozpoznanie późnego wiązania należy używać tylko na dostęp do elementów członkowskich typu, które są zadeklarowane jako `Public`. Uzyskiwanie dostępu do elementów zadeklarowane jako `Friend` lub `Protected Friend` powoduje błąd w czasie wykonywania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
 - [Okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)

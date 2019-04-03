@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572724"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835287"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Instrukcje: Przypisywanie tablicy do innej tablicy (Visual Basic)
 Ponieważ tablice są obiektami, będziesz ich używać w instrukcji przypisania, podobnie jak inne typy obiektów. Zmienną tablicową mieści wskaźnik do danych stanowiące elementów tablicy i informacji Ranga i długość i przypisania kopiuje tylko ten wskaźnik.  
@@ -43,6 +43,7 @@ Ponieważ tablice są obiektami, będziesz ich używać w instrukcji przypisania
  Kompilator zgłasza błąd, jeśli powyższe zasady są naruszone, na przykład jeśli typy danych nie są zgodne lub rangę są nierówne. Możesz dodać obsługę błędów do kodu w taki sposób, aby upewnić się, że tablice są zgodne, przed podjęciem próby wykonania przypisania. Można również użyć [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) — słowo kluczowe, jeśli chcesz uniknąć, zostanie zgłoszony wyjątek.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Rozwiązywanie problemów związanych z tablicami](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum, instrukcja](../../../../visual-basic/language-reference/statements/enum-statement.md)

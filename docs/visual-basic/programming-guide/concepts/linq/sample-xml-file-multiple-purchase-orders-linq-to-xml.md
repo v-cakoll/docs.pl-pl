@@ -1,15 +1,15 @@
 ---
-title: 'Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)'
+title: 'Przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
-ms.openlocfilehash: 676592b0bd77a10fa8bb5fa01bf3b3a06af1ca46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a3edba9d071b04e67d5350c9833fc515a08f218
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623485"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835677"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Przykładowy plik XML: Wiele zamówień zakupu (LINQ to XML)
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera wiele zamówień zakupu.  
   
 ## <a name="purchaseordersxml"></a>PurchaseOrders.xml  
@@ -110,4 +110,5 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykładowe dokumenty XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

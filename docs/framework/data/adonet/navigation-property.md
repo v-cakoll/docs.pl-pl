@@ -2,12 +2,12 @@
 title: Właściwość nawigacji — ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 6729b22dbc012d5ccfabd64cd83b710833fe1b9d
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857947"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836602"
 ---
 # <a name="navigation-property"></a>Właściwość nawigacji
 
@@ -29,7 +29,7 @@ Typ danych właściwości nawigacji jest określana przez [liczebność](associa
 
 Poniższy diagram przedstawia modelu koncepcyjnego z trzech typów jednostek: `Book`, `Publisher`, i `Author`. Właściwości nawigacji `Publisher` i `Authors`, są zdefiniowane w typie jednostki książki. Właściwość nawigacji `Books` jest zdefiniowany w obu typ jednostki wydawcy i `Author` typu jednostki.
 
-![Model przy użyciu właściwości nawigacji](/media/modelwithnavprops.gif "ModelWithNavProps")
+ ![Diagram przedstawiający modelu koncepcyjnego z trzech typów jednostek.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 [ADO.NET Entity Framework](./ef/index.md) używa języka specyficznego dla domeny (DSL), o nazwie język definicji schematu koncepcyjnego ([CSDL](./ef/language-reference/csdl-specification.md)) do definiowania modeli koncepcyjnych. Definiuje następujące CSDL `Book` typu jednostki, które pokazano na powyższym diagramie:
 

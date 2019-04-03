@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 8334691ff5ac09c19287dbc2ec2503dbd5149f7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3558976002e273aee239e518f0387033cb82873
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572490"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836145"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -36,7 +36,7 @@ Kompilator traktuje następujące dane wejściowe na potrzeby determinizm:
     - Pliki źródłowe
     - przywoływanych zestawach
     - Moduły odwołania
-    - Resources
+    - Zasoby
     - Plik klucza silnej nazwy
     - @ pliki odpowiedzi
     - Analizatory
@@ -51,5 +51,6 @@ Kompilator traktuje następujące dane wejściowe na potrzeby determinizm:
 W przypadku publicznie dostępnego źródła kompilacji deterministycznej może służyć do ustalenia, czy plik binarny jest kompilowany z zaufanego źródła. Również może być przydatne w systemie kompilacji ciągłej do określenia, czy należy wykonać kroki kompilacji, które są zależne od zmian w pliku binarnym. 
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

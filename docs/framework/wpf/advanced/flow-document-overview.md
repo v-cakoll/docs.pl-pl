@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: a396bede9e0004c9f0681e3399af95f31592a0b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361411"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828475"
 ---
 # <a name="flow-document-overview"></a>Przegląd Dokument przepływu
 Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelności. Zamiast jest ustawiona na jeden układ wstępnie zdefiniowanych, dokumenty przepływu dynamicznie Dostosuj i przepełnieniem ich zawartości na podstawie zmiennych czasu wykonywania, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Ponadto dokumenty przepływu oferują funkcje zaawansowane dokumentu, takie jak podział na strony i kolumn. Ten temat zawiera omówienie dokumenty przepływu i jak je utworzyć.  
@@ -128,9 +128,9 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
   
  [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
- Na poniższej ilustracji przedstawiono, jak powoduje wyświetlenie w tym przykładzie.  
+ Na poniższej ilustracji przedstawiono, jak renderuje się następująco:  
   
- ![Zrzut ekranu: UIElement osadzony w zawartości przepływu](./media/blockuicontainer.png "BlockUIContainer")  
+ ![Zrzut ekranu przedstawiający element interfejsu użytkownika są osadzone w dowolnej zawartości.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
  **Lista**  
   

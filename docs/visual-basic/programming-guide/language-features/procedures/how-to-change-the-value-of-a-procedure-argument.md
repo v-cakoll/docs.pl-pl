@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974916"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837504"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Instrukcje: Zmień wartość argumentu procedury (Visual Basic)
 Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z parametrów zdefiniowanych w procedurze. W niektórych przypadkach kod procedury można zmienić wartości bazowe argumentu w wywoływanym kodzie. W innych przypadkach procedura może zmienić tylko w swojej lokalnej kopii argumentu.  
@@ -78,6 +78,7 @@ Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z
  Z zezwoleniem na procedury zmienić wartość argumentu w wywoływanym kodzie bazowego zawsze to potencjalne zagrożenie. Upewnij się, że oczekiwane tę wartość można zmienić i przygotowywane do sprawdzania poprawności, przed jego użyciem.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury](./index.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Instrukcje: Przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)

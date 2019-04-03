@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 17b65a39082ddaf54aabf12ca9b95e49af80f5f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1024cf6f2c1fa112db29cb710eef190a5022d3af
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666309"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838602"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>Nie można wywnioskować argumentów typu na podstawie obiektu delegowanego
 Używa instrukcji przypisania `AddressOf` na przypisanie adresu ogólnej procedury, aby obiekt delegowany, ale nie dostarcza żadnych argumentów typu rodzajowego procedury.  
@@ -26,6 +26,7 @@ Używa instrukcji przypisania `AddressOf` na przypisanie adresu ogólnej procedu
 -   Określ argumenty tupu ogólnego procedury w `AddressOf` wyrażenia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Procedury ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)

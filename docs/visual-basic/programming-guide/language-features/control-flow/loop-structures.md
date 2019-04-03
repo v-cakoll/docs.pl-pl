@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654370"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833322"
 ---
 # <a name="loop-structures-visual-basic"></a>Struktury pętli (Visual Basic)
 Struktury pętli w języku Visual Basic pozwalają kilkukrotnie uruchomić jeden lub więcej wierszy kodu. Możesz powtórzyć instrukcji w strukturze pętli, dopóki warunek jest `True`, dopóki nie zostanie warunek `False`, określona liczba razy lub jeden raz dla każdego elementu w kolekcji.  
@@ -37,6 +37,7 @@ Struktury pętli w języku Visual Basic pozwalają kilkukrotnie uruchomić jeden
  `For Each`... `Next` konstrukcji uruchamia zestaw instrukcji jeden raz dla każdego elementu w kolekcji. Określ zmienna sterująca pętli, ale nie trzeba określić rozpoczęcia lub zakończenia wartości dla niego. Aby uzyskać więcej informacji, zobacz [For Each... Następna instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

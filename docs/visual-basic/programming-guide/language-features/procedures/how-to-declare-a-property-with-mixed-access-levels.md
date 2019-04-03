@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972589"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832128"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu (Visual Basic)
 Jeśli chcesz `Get` i `Set` procedury dotyczące właściwości, aby mieć różne poziomy dostępu, możesz użyć mniej ograniczająca poziom w `Property` instrukcji i bardziej restrykcyjny poziom albo `Get` lub `Set` Instrukcja. Za pomocą mieszanymi poziomami dostępu we właściwości niektórych części kodu, aby można było pobrać wartości właściwości, a niektóre części kodu, aby można było zmienić wartość.  
@@ -35,6 +35,7 @@ Jeśli chcesz `Get` i `Set` procedury dotyczące właściwości, aby mieć róż
      W poprzednim przykładzie `Get` procedura ma taką samą `Protected` dostępu jako właściwość, podczas gdy `Set` procedura ma `Private` dostępu. Klasa pochodząca z `employee` może odczytywać `salary` wartość, ale tylko `employee` klasy można ustawić go.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury](./index.md)
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)

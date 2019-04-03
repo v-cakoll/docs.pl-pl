@@ -9,20 +9,21 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b6413c8481a021afa34b7de228df14c109a50889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703312"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834234"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator — Informacje o formancie [Formularze systemu Windows]
 Możesz użyć <xref:System.Windows.Forms.BindingNavigator> formantu, aby utworzyć standardowe oznacza, że dla użytkowników wyszukać i zmiany danych w formularzu Windows. Często używane <xref:System.Windows.Forms.BindingNavigator> z <xref:System.Windows.Forms.BindingSource> składnika, aby umożliwić użytkownikom przechodzenie między rekordów danych na formularzu i interakcję z rekordami.  
   
 ## <a name="how-the-bindingnavigator-works"></a>Jak działa BindingNavigator  
- <xref:System.Windows.Forms.BindingNavigator> Kontroli składa się z <xref:System.Windows.Forms.ToolStrip> z serią <xref:System.Windows.Forms.ToolStripItem> obiektów dla najbardziej typowych akcji związanych z danymi: Dodawanie danych, usuwanie danych ani nawigować przez dane. Domyślnie <xref:System.Windows.Forms.BindingNavigator> kontrolka zawiera następujące przyciski standardowe. Poniższy ekran zrzut pokazuje <xref:System.Windows.Forms.BindingNavigator> kontrolkę w formularzu.  
+
+ <xref:System.Windows.Forms.BindingNavigator> Kontroli składa się z <xref:System.Windows.Forms.ToolStrip> z serią <xref:System.Windows.Forms.ToolStripItem> obiektów dla najbardziej typowych akcji związanych z danymi: Dodawanie danych, usuwanie danych ani nawigować przez dane. Domyślnie <xref:System.Windows.Forms.BindingNavigator> kontrolka zawiera następujące przyciski standardowe. Poniższy zrzut ekranu przedstawia <xref:System.Windows.Forms.BindingNavigator> kontrolki na formularzu:
   
- ![BindingNavigator Control](./media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ ![Zrzut ekranu przedstawiający BindingNavigator — kontrolka.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
  Poniższej tabeli wymieniono kontrolek i opisano ich funkcje.  
   

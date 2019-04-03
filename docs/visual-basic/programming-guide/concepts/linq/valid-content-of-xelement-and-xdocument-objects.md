@@ -2,12 +2,12 @@
 title: Nieprawidłowa zawartość XElement i XDocument Objects2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 168c87f23d4545afe7b80579673c050068ee697b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502705"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828807"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Weryfikowanie zawartości obiektów XElement i XDocument
 W tym temacie opisano prawidłowe argumenty, które mogą być przekazywane do konstruktorów i metod, których używasz do dodawania zawartości do elementów i dokumentów.  
@@ -89,4 +89,5 @@ W tym temacie opisano prawidłowe argumenty, które mogą być przekazywane do k
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Zamienia węzeł nowej zawartości.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

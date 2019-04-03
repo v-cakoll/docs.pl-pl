@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 18e35bab219003439136bc5d88f4b2f0ea6cdd1c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965751"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817100"
 ---
 # <a name="inherits-statement"></a>Inherits — Instrukcja
 Powoduje, że bieżącą klasę lub interfejs dziedziczy atrybuty, zmiennych, właściwości, procedur i zdarzeń z innej klasy lub zestawu interfejsów.  
@@ -64,6 +64,7 @@ Inherits basetypenames
  Interfejs o nazwie `thisInterface` zawiera teraz wszystkie definicje w <xref:System.IComparable>, <xref:System.IDisposable>, i <xref:System.IFormattable> interfejsów dziedziczone elementy Członkowskie zapewniają odpowiednio specyficznych dla typu porównanie dwóch obiektów, zwalniając przydzielone zasoby oraz wartość obiektu jako `String`. Klasa, która implementuje `thisInterface` musi implementować każdy członek każdy interfejs podstawowy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

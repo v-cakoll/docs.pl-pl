@@ -1,15 +1,15 @@
 ---
-title: 'Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)'
+title: 'Przykładowy plik XML: klienci i zamówienia (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
-ms.openlocfilehash: 1ee702b8a487544f89454f35a1c1bdb5658c393d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d5bf7600f99085ec860e88ab58c5b97aa9fae4c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671606"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816697"
 ---
-# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)
+# <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>Przykładowy plik XML: klienci i zamówienia (LINQ to XML)
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik zawiera klienci i zamówienia.  
   
  Temat [przykładowy plik XSD: Klienci i zamówienia](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) zawiera XSD, który może służyć do sprawdzania poprawności w tym dokumencie. Używa ona `xs:key` i `xs:keyref` funkcji XSD ustalenie, czy `CustomerID` atrybutu `Customer` element jest klucz oraz do ustanawiania relacji między `CustomerID` elementu w każdym `Order` elementu i `CustomerID` atrybutu w każdym `Customer` elementu.  
@@ -435,4 +435,5 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykładowe dokumenty XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: da3aa17c55a4ccc95e5f4c98d0f12712ef77d5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729226"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822576"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Do składowej wystąpienia klasy nie można odwołać się z obrębu udostępnionej metody lub udostępnionego inicjatora składowej bez jawnego wystąpienia klasy
 Wykonano do odwoływania się do elementu członkowskiego klasy z w ramach procedury udostępnianej nieudostępnione. W poniższym przykładzie pokazano takiej sytuacji.  
@@ -44,4 +44,5 @@ End Class
 3.  Jeśli chcesz, aby każde wystąpienie ma swój własny pojedyncza kopia elementu członkowskiego, nie należy określać `Shared` deklaracji elementu członkowskiego. Usuń `Shared` słowo kluczowe z deklaracja procedury.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689526"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842905"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Różnice pomiędzy właściwościami i zmiennymi w Visual Basic
 Zmienne i właściwości reprezentują wartości, do których masz dostęp. Jednak istnieją różnice w pamięci masowej i implementacji.  
@@ -45,6 +45,7 @@ Zmienne i właściwości reprezentują wartości, do których masz dostęp. Jedn
  <sup>1</sup> w przeciwieństwie do zmiennej, wartość właściwości nie może odpowiadać bezpośrednio do jednego elementu magazynu. Magazyn może zostać podzielony na fragmenty dla wygody lub zabezpieczeń, lub wartość mogą być przechowywane w postaci zaszyfrowanej. W takich przypadkach `Get` procedury może tworzyć elementy lub odszyfrować przechowywaną wartość i `Set` procedury czy szyfrowanie nową wartość lub podzielić składników magazynu. Wartości właściwości mogą być efemeryczne, takich jak porę dnia, w którym to przypadku `Get` procedury może obliczyć go na bieżąco zawsze dostęp do właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)

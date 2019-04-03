@@ -15,12 +15,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 9ff57029768c89e584fd2d7381fd79e38fbed14f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3ee518928bccaedeaa54c642944ff4e73620ef39
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203457"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819141"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>Instrukcje: Liczba, Sum lub uśrednianie danych za pomocą LINQ (Visual Basic)
 Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i wykonywania zapytań.  
@@ -78,6 +78,7 @@ Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i
 4.  Naciśnij klawisz F5, aby uruchomić projekt i wyświetlić wyniki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

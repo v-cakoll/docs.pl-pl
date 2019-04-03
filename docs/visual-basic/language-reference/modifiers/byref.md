@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic]
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
-ms.openlocfilehash: a19df60d6eb272c7bb81972106e12e0efe903131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e553f350ea95f04996496b65f98f277795838e25
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619503"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822788"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
 Określa, że argument jest przekazywany w taki sposób, że wywoływana procedura może zmienić wartość zmiennej bazowego argumentu w wywoływanym kodzie.  
@@ -28,5 +28,6 @@ Określa, że argument jest przekazywany w taki sposób, że wywoływana procedu
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
 - [Przekazywanie argumentów według wartości i według odwołania](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

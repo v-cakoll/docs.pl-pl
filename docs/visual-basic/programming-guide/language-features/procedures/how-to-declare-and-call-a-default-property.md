@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977555"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829333"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic
 A *właściwość domyślna* jest właściwością klasy lub struktury, których Twój kod może uzyskać dostęp bez określania go. Podczas wywoływania kodu nazwy klasy lub struktury, ale nie właściwości i kontekst zezwala na dostęp do właściwości, Visual Basic jest rozpoznawana jako dostęp do tej klasy lub struktury domyślnej właściwości jeśli taka istnieje.  
@@ -82,6 +82,7 @@ A *właściwość domyślna* jest właściwością klasy lub struktury, których
  Z powodu niedogodności należy rozważyć nie definiuje właściwości domyślnych. Aby zwiększyć czytelność kodu należy również wziąć pod uwagę zawsze odwołujące się do wszystkich właściwości jawnie, nawet domyślne właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)

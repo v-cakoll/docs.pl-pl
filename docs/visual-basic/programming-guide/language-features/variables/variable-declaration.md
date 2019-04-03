@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: fc531bb619ed54cf35d2e89b8e6df3ec7175f3f9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973551"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833285"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Deklaracja zmiennej w Visual Basic
 Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcji deklaracji zmiennych jest [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Jej lokalizacja i zawartości należy określić charakterystyki zmiennej.  
@@ -78,6 +78,7 @@ Dim l, m As Long, x, y As Single
  Zmienna *poziom dostępu* jest w zakresie kodu, który ma uprawnienia dostępu do niego. Jest to określane przez modyfikator dostępu (takich jak [publicznych](../../../../visual-basic/language-reference/modifiers/public.md) lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md)) używanego w `Dim` instrukcji. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Utwórz nową zmienną](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [Instrukcje: Przenoszenie danych do zmiennej i z niej](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
 - [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)

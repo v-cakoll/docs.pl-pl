@@ -2,12 +2,12 @@
 title: Przykład, który wyprowadza części dokumentu programu Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 0ad7dc9d6f68ecde88888b0f0250632f3f946f92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98ef8390c75b7efbf57040e9723c117a6ae18a66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670254"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838641"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Przykład, który wyprowadza części dokumentu programu Office Open XML (Visual Basic)
 W tym temacie przedstawiono sposób Otwórz dokument XML otwórz pakietu Office i przejdź do części znajdujący się w nim.  
@@ -65,4 +65,5 @@ End Using
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

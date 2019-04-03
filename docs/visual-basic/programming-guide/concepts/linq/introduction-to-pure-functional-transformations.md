@@ -2,12 +2,12 @@
 title: Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
-ms.openlocfilehash: a4e9cdf98dfe3a54ecb9ff4316742d76b51ba782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32cd588d527dbc3e995ea8629f024498c80cba2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573032"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824887"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)
 Ta sekcja wprowadza przekształceń funkcjonalnych, w tym podstawowe pojęcia i konstrukcje językowe pomocniczych. Różni się znacząco przekształcania zorientowane obiektowo i funkcjonalności sposoby programowania, w tym porady na temat przechodzenia do nich. Mimo że przekształceń funkcjonalnych mogą być używane w wielu scenariuszach programowania, transformacje XML jest używany tutaj jako konkretny przykład.  
@@ -23,4 +23,5 @@ Ta sekcja wprowadza przekształceń funkcjonalnych, w tym podstawowe pojęcia i 
 |[Przekształcanie funkcjonalne kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|W tym artykule opisano Przekształcanie funkcjonalne w kontekście Przekształcanie drzew XML.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

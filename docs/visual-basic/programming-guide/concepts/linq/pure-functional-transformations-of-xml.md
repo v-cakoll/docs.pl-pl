@@ -2,12 +2,12 @@
 title: Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-ms.openlocfilehash: 1af777296c8b8d9736b701b297b2253326c9da7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584743"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843425"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)
 Ta sekcja zawiera samouczek Przekształcanie funkcjonalne dla formatu XML. W tym wyjaśnienia główne pojęcia i konstrukcji językowych należy poznać przekształceń funkcjonalnych i przykłady użycia przekształceń funkcjonalnych do manipulowania dokumentu XML. Chociaż ten samouczek zawiera LINQ do XML przykłady kodu, wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.  
@@ -27,4 +27,5 @@ Ta sekcja zawiera samouczek Przekształcanie funkcjonalne dla formatu XML. W tym
 |[Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Samouczek, który pokazuje Przekształcanie funkcjonalne.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wykonywanie zapytań do drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

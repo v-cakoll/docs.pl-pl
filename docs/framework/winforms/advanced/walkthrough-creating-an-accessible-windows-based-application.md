@@ -1,19 +1,19 @@
 ---
-title: 'Przewodnik: Tworzenie dostępnej aplikacji z systemem Windows'
+title: 'Przewodnik: Tworzenie dostępnej aplikacji bazującej na systemie Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823470"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Przewodnik: Tworzenie dostępnej aplikacji z systemem Windows
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Przewodnik: Tworzenie dostępnej aplikacji bazującej na systemie Windows
 Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć ułatwień dostępu przepisami lub ustaleniami dotyczącymi oprogramowania zakupionego. Logo Certified for Windows zawiera wymagania dotyczące ułatwień dostępu. Szacowany mieszkańcy 30 mln Stanów Zjednoczonych samodzielnie, wiele potencjalnych klientów, są zagrożone dostępność oprogramowania.  
   
  Ten przewodnik pozwala sprostać pięć wymagania dotyczące ułatwień dostępu, logo Certified for Windows. Zgodnie z tymi wymaganiami dostępnej aplikacji wykonują następujące czynności:  
@@ -135,10 +135,12 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
     |Element MenuItem|Nazwa|fileCommands|  
     ||Tekst|&File|  
     |Element MenuItem|Nazwa|exitApp|  
-    ||Tekst|Za & kończ|  
-  
-     ![Formularz zamówienia pizza](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-Formularza będzie wyglądać następująco:  
+    ||Tekst|Za & kończ|
+    
+      Formularz będzie wyglądać podobnie do następującego:
+    
+      ![Formularz kolejności pizza z pola tekstowego, a rozmiar i toppings wybór nazwy.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>Obsługa trybu wysokiego kontrastu  
  Trybu wysokiego kontrastu jest ustawienie systemu Windows, który poprawia czytelność przy użyciu kontrastujących i rozmiary czcionek, które są przydatne dla użytkowników niedowidzących. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Właściwość została podana w celu ustalenia, czy ustawiono trybu wysokiego kontrastu.  

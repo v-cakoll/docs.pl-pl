@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 5d5d9f21069c7b9aa54940525b7678bc3987b77c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 64bd7771820c2a4073350b7a5189d3a32c4775be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264154"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832368"
 ---
 # <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>"\<interfacename >. \<membername > "został już zaimplementowany przez klasę bazową\<baseclassname >". Ponowną implementację elementu \<typ > zakłada, że
 Właściwość, procedura lub zdarzenia w klasie pochodnej używa `Implements` klauzulę określania składowej interfejsu, który został już zaimplementowany w klasie bazowej.  
@@ -30,4 +30,5 @@ Właściwość, procedura lub zdarzenia w klasie pochodnej używa `Implements` k
 -   Jeśli nie zamierzasz ponownie składowej interfejsu, Usuń `Implements` klauzuli z deklaracji właściwość, procedura lub zdarzenie.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Interfejsy](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

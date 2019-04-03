@@ -1,5 +1,5 @@
 ---
-title: -filealign —
+title: -filealign
 ms.date: 03/10/2018
 helpviewer_keywords:
 - sections compiler option [Visual Basic]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-ms.openlocfilehash: 551d151ab923110c73a528a5def639fb383c889f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a844515a4596064937762ac05b850463f1b5e14
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715923"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819180"
 ---
-# <a name="-filealign"></a>-filealign —
+# <a name="-filealign"></a>-filealign
 Określa, gdzie należy wyrównać sekcje pliku wyjściowego.  
   
 ## <a name="syntax"></a>Składnia  
@@ -40,4 +40,5 @@ Określa, gdzie należy wyrównać sekcje pliku wyjściowego.
 >  `-filealign` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

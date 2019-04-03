@@ -2,12 +2,12 @@
 title: Atrybuty wspólne (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375405"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834549"
 ---
 # <a name="common-attributes-visual-basic"></a>Atrybuty wspólne (Visual Basic)
 W tym temacie opisano atrybuty, które są najczęściej używane w programach Visual Basic.  
@@ -255,6 +255,7 @@ End Structure
  Użyj `VBFixedArrayAttribute` do deklarują tablice, które zostały rozwiązane w rozmiarze. Na przykład ciągi języka Visual Basic tablice są o zmiennej długości, domyślnie. Ten atrybut jest przydatna, gdy serializacji lub zapisywanie danych w plikach.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)

@@ -2,9 +2,15 @@
 title: Zmienne w Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'variables [Visual Basic]'
-  - 'values [Visual Basic], storing'
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
+ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840384"
 ---
 # <a name="variables-in-visual-basic"></a>Zmienne w Visual Basic
 Często muszą przechowywać wartości, wykonując obliczenia za pomocą Visual Basic. Na przykład możesz chcieć obliczanie kilka wartości, porównaj je i wykonywania różnych operacji na nich w zależności od wyniku porównania. Należy zachować wartości, jeśli chcesz je porównywać.  
@@ -28,6 +34,7 @@ Często muszą przechowywać wartości, wykonując obliczenia za pomocą Visual 
  Zmienna, takich jak *właściwość* reprezentuje wartość, której będziesz mieć dostęp. Jednak jest bardziej skomplikowane niż zmienną. Właściwość używa bloków kodu, które kontrolują sposób ustawiania i pobierania jej wartość. Aby uzyskać więcej informacji, zobacz [różnice między właściwościami i zmiennymi w Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Rozwiązywanie problemów związanych ze zmiennymi](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

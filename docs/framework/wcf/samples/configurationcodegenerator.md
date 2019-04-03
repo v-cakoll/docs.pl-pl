@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: eb547c89dc5d4af9330a6881d64f433de9bdad94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669084"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821936"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator jest narzędziem, które można użyć do udostępnienia implementacji usługi niestandardowym kanale w celu system konfiguracji. Dzięki temu użytkownicy niestandardowy kanał skonfigurować kanał przy użyciu pliku config, zgodnie z ich konfigurowania, dostarczane przez system powiązań takich jak `NetTcpBinding` lub niestandardowego powiązania za pomocą `TcpTransportBindingElement`.  
@@ -50,4 +50,3 @@ ConfigurationCodeGenerator jest narzędziem, które można użyć do udostępnie
   
      Plik SampleConfig.xml zawiera kod konfiguracji, które należy dodać do pliku konfiguracji, który rejestruje programy obsługi zdefiniowane w poprzednim kroku, 1 lub 2.  
   
-## <a name="see-also"></a>Zobacz także

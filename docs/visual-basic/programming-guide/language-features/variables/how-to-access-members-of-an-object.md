@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 5e91f1b99a17f4bbdc65a77ab26050ee57e96ac4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724846"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819657"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Instrukcje: Dostęp do elementów członkowskich obiektu (Visual Basic)
 Jeśli masz zmienną obiektu, który odwołuje się do obiektu, często chcą pracować z członkami tego obiektu, takie jak metody, właściwości, pola i zdarzenia. Na przykład po utworzeniu nowego <xref:System.Windows.Forms.Form> obiektu, warto ustawić jej <xref:System.Windows.Forms.Control.Text%2A> właściwość lub wywołanie jego <xref:System.Windows.Forms.Control.Focus%2A> metody.  
@@ -71,6 +71,7 @@ Jeśli masz zmienną obiektu, który odwołuje się do obiektu, często chcą pr
      Aby umożliwić dostęp do elementów członkowskich obiektu można przypisać do zmiennej obiektu, należy ustawić `Option Strict Off`. Gdy to zrobisz, kompilator nie może zagwarantować, że dany element jest uwidaczniany przez obiekt, który można przypisać do zmiennej. Jeśli obiekt nie ujawnia członka, nastąpi próba uzyskania dostępu, <xref:System.MemberAccessException> wystąpi wyjątek.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>

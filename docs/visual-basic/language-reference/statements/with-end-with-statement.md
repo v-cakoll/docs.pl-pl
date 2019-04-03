@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: b9d2ce983398f34747f09d4ffd2cc8fa9e6b2b53
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968260"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825363"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With — Instrukcja (Visual Basic)
 Wykonuje szereg instrukcji, które wielokrotnie odwołują się do pojedynczego obiektu lub struktury, dzięki czemu instrukcje mogą używać uproszczonej składni podczas uzyskiwania dostępu do członków obiektu lub struktury.  Korzystając ze struktury możesz jedynie odczytać wartości członków lub wywoływać metody i wystąpi błąd, jeśli zostanie podjęta próba przypisania wartości do członków struktury używanych w `With...End With` instrukcji.  
@@ -80,6 +80,7 @@ End With
  [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Collections.Generic.List%601>
 - [Zagnieżdżone struktury sterujące](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

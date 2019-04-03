@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 899c33e6615e2979ba7abe0f537dbe05fd104beb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05b4b1cb29abff97c44c33d462375fc4d5ab159d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965569"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818582"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Instrukcje: Wywoływanie procedury, która nie zwraca wartości (Visual Basic)
 A `Sub` procedury nie zwraca wartości do wywołującego kodu. Możesz wywołać ją jawnie za pomocą autonomicznego instrukcji wywołujące. Nie można jej wywołać przy użyciu jego nazwy w wyrażeniu.  
@@ -29,6 +29,7 @@ A `Sub` procedury nie zwraca wartości do wywołującego kodu. Możesz wywołać
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
 - [Procedury](./index.md)

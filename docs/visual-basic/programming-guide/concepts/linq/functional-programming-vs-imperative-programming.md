@@ -2,17 +2,17 @@
 title: Programowanie funkcjonalne a Programowanie imperatywne (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579813"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827341"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Programowanie funkcjonalne a Programowanie imperatywne (Visual Basic)
 W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, przy użyciu bardziej tradycyjny imperatywnego (proceduralne).  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Programowanie funkcjonalne a Programowanie imperatywne  
+## <a name="functional-programming-vs-imperative-programming"></a>Programowanie funkcjonalne a programowanie imperatywne  
  *Programowania funkcjonalnego* paradygmat jawnie został utworzony w celu obsługi czystego funkcjonalności służące do rozwiązywania problemów. Programowanie funkcjonalne jest formą *programowanie deklaratywne*. Z kolei większość mainstream języków, w tym zorientowane obiektowo (Obiektowo) języków programowania, takich jak C#, Visual Basic, C++ i Java, zostały zaprojektowane do obsługi przede wszystkim *imperatywne* (proceduralne).  
   
  Przy użyciu podejścia imperatywnego Deweloper pisze kod, który opisano w ponoszenia szczegółowo czynności, które należy wykonać komputera w celu osiągnięcia tego celu. To jest czasami określane jako *konsolidatorze* programowania. Z kolei funkcjonalności podejścia polega na tworzenie problemu jako zbiór funkcji do wykonania. Należy zdefiniować dokładnie dane wejściowe do każdej funkcji i jakie każda funkcja zwraca. W poniższej tabeli opisano niektóre ogólne różnice między dwóm metodom.  
@@ -51,6 +51,7 @@ W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, p
  Na szczęście języka Visual Basic nie wymaga pełnej przestępnym do programowania funkcyjnego, ponieważ obsługuje ona zarówno imperatywną lub funkcjonalności metody programowania. Deweloper można wybrać, które rozwiązanie jest najbardziej odpowiednie dla danego scenariusza. W rzeczywistości programy często połączyć oba podejścia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Przekształcenia XSLT](../../../../standard/data/xml/xslt-transformations.md)
 - [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

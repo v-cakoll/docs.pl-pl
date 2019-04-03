@@ -2,12 +2,12 @@
 title: Przykład odnajdywania z zakresami
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 0d874116b90f423fbb78803a3641ef55fc848952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba49021022c33c1490f3dbaafc5bba1352ecf55c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508772"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814297"
 ---
 # <a name="discovery-with-scopes-sample"></a>Przykład odnajdywania z zakresami
 Ten przykład przedstawia sposób użycia zakresów do kategoryzowania punktów końcowych wykrywalne jako dobrze, jak używać <xref:System.ServiceModel.Discovery.DiscoveryClient> z asynchronicznego wyszukiwania dla punktów końcowych. W usłudze w tym przykładzie pokazano, jak dostosować odnajdywania dla każdego punktu końcowego, dodając zachowanie punktu końcowego odnajdywania i dodawanie przy użyciu jego zakres do punktu końcowego, a także kontrolowanie punktu końcowego odnajdywania. Na komputerze klienckim, przykładzie pokazano, jak klienci mogą tworzyć <xref:System.ServiceModel.Discovery.DiscoveryClient> i dostosowanie parametrów do dołączania zakresów, dodając zakres wyszukiwania <xref:System.ServiceModel.Discovery.FindCriteria>. Niniejszy przykład pokazuje również, jak ograniczyć odpowiedzi przez dodanie kryterium kończenia żądań klientów.  
@@ -37,4 +37,3 @@ Ten przykład przedstawia sposób użycia zakresów do kategoryzowania punktów 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   
-## <a name="see-also"></a>Zobacz także

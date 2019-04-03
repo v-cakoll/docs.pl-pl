@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354833"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839642"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Praca z dziennikami aplikacji w Visual Basic
 
@@ -23,11 +23,11 @@ Najpierw ważności komunikatu został sprawdzony i <xref:System.Diagnostics.Tra
 
 Na poniższym diagramie przedstawiono, w jaki sposób wiadomość zapisywane `WriteEntry` przekazywane do metody `WriteLine` obiekty nasłuchujące śledzenia metody dziennika:
 
-![My Log Call](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![Diagram przedstawiający Moje wywołania dziennika.](./media/working-with-application-logs/my-log-call-messages.png)
 
 Możesz zmienić zachowanie dziennika i śledzenia słuchaczy, zmieniając pliku konfiguracji aplikacji. Na poniższym diagramie przedstawiono związek między częściami dziennika i pliku konfiguracji.
 
-![Moje konfiguracji dziennika](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![Diagram przedstawiający konfigurację dziennika.](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>Gdzie są rejestrowane komunikaty
 

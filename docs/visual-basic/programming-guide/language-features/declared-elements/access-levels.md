@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203629"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843105"
 ---
 # <a name="access-levels-in-visual-basic"></a>Poziomy dostępu w Visual Basic
 *Poziom dostępu* zadeklarowanych elementów jest w zakresie możliwości dostępu do niego, oznacza to, jaki kod ma uprawnienia do jego odczytu lub zapisanie w nim. Jest to ustalane nie tylko, jak zadeklarować elementu, ale z poziomem dostępu do kontenera elementu. Kod, który nie może uzyskać dostępu zawierającego element nie może uzyskać dostępu do dowolnego z jego zawartych elementów, nawet te zadeklarowane jako `Public`. Na przykład `Public` zmienną `Private` struktury jest możliwy z wewnątrz klasy, która zawiera strukturę, ale nie z spoza tej klasy.  
@@ -115,6 +115,7 @@ Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach
 |`Private Protected`|Kod w klasie, która deklaruje element prywatny chroniony lub kod w klasie pochodnej, w tym samym zestawie co klasa bas.|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Class|
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Static](../../../../visual-basic/language-reference/modifiers/static.md)
 - [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066119"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825100"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Instrukcje: Deklarowanie struktury (Visual Basic)
 Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md), i kończy z `End Structure` instrukcji. Między te dwie instrukcje należy zadeklarować co najmniej jeden *elementu*. Elementy mogą być dowolnego typu danych, ale co najmniej jedna musi być zmienną nieudostępnionych lub nieudostępnionych, niestandardowych zdarzeń.  
@@ -56,6 +56,7 @@ Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-
      Oprócz zmiennych `Sub` procedur i zdarzeń, można również zdefiniować stałych, `Function` procedur i właściwości w strukturze. Możesz wyznaczyć co najwyżej jedną właściwość jako *właściwość domyślna*, o ile trwa co najmniej jednego argumentu. Można obsługiwać zdarzenia z [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procedury. Aby uzyskać więcej informacji, zobacz [jak: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

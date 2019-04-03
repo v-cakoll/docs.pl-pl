@@ -9,12 +9,12 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 5151265235868c2a7991bee61b26a4a0da09f901
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 124f0ca0cd01d7fd218fd89dfb78e70fe8aad9e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978101"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835729"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Operatory łączenia w Visual Basic
 Concatenation — operatory Dołącz do wielu ciągów w jeden ciąg. Istnieją dwa operatory łączenia, `+` i `&`. Zarówno przeprowadzenie operacji łączenia podstawowe, jak w poniższym przykładzie pokazano.  
@@ -38,6 +38,7 @@ Dim y As String = "Mic" + "ro" + "soft"
  Jeśli to zrobisz, znaczna liczba manipulacje na ciąg, takie jak konkatenacji, usuwania i zamiany, wydajność może być zysk z <xref:System.Text.StringBuilder> klasy w <xref:System.Text> przestrzeni nazw. Zajmuje dodatkowy instrukcji, aby utworzyć i zainicjować <xref:System.Text.StringBuilder> obiekt i innej instrukcji jego końcowa wartość, aby przekonwertować `String`, ale może odzyskać to czas, ponieważ <xref:System.Text.StringBuilder> może działać szybciej.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Typy metod manipulowania ciągami w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
 - [Operatory arytmetyczne w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

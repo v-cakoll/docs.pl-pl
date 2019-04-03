@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c22e8046a8b88890f25bc6b671825eb6d68ec6b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731923"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814006"
 ---
 # <a name="file-encodings-visual-basic"></a>Kodowanie pliku (Visual Basic)
 Określ kodowanie pliku, znany także jako kodowanie znaków do reprezentowania znaków, kiedy przetwarzanie tekstu. Jednego formatu kodowania może być preferowane zamiast innego pod względem znaki języków, które mogą lub nie może obsłużyć, mimo że Unicode jest zwykle preferowany.  
@@ -36,5 +36,6 @@ Określ kodowanie pliku, znany także jako kodowanie znaków do reprezentowania 
 |<xref:System.Text.UTF8Encoding>|Reprezentuje kodowania UTF-8 znaków Unicode.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [Zapisywanie w plikach](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

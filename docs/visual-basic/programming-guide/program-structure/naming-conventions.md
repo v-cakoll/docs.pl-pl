@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672139"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837081"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic — Konwencje nazewnictwa
 Nazwa elementu w aplikacji Visual Basic, musi być pierwszym znakiem tej nazwy, litery alfabetu lub znaku podkreślenia. Należy jednak pamiętać, że nazwy rozpoczynające się od znaku podkreślenia nie są zgodne z [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
@@ -41,6 +41,7 @@ Nazwa elementu w aplikacji Visual Basic, musi być pierwszym znakiem tej nazwy, 
 -   Unikaj używania nazw w zakresie wewnętrznym, które są takie same jak nazwy w zewnętrznym zakresie. Jeśli problem wchodzisz, mogą wystąpić błędy. Jeśli występuje konflikt między zmienną i słowo kluczowe o takiej samej nazwie, należy określić słowo kluczowe, poprzedzając je za pomocą biblioteki odpowiedniego typu. Na przykład, jeśli masz zmienną o nazwie `Date`, można użyć wewnętrznego `Date` funkcji tylko przez wywołanie metody <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Słowa kluczowe jako nazwy elementów w kodzie](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me, My, MyBase i MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Nazwy zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

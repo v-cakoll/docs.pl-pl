@@ -2,12 +2,12 @@
 title: Nieopakowane komunikaty
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: a3f3548e8dc8a85127eae3d080888c304bfa4b90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa3e9e02d2cb7bfb815eb107d29a0c84204ddcdf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623134"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841202"
 ---
 # <a name="unwrapped-messages"></a>Nieopakowane komunikaty
 Niniejszy przykład pokazuje nieopakowane komunikaty. Domyślnie treść komunikatu jest sformatowany w taki sposób, że zostaną opakowane parametrów do operacji usługi. Następujące przykładowe pokazuje `Add` komunikat żądania do `ICalculator` usługi w trybie opakowana.  
@@ -112,4 +112,3 @@ public class ResponseMessage
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  
   
-## <a name="see-also"></a>Zobacz także

@@ -2,12 +2,12 @@
 title: Oczekiwane wyjątki
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: ff4241d6843158d859efbb010f165b27f5477286
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16b7a4029c9225984d71e5252605376d2d4b6d53
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539626"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832037"
 ---
 # <a name="expected-exceptions"></a>Oczekiwane wyjątki
 W tym przykładzie pokazano, jak przechwytywać wyjątki oczekiwane, korzystając z klient z typowaniem. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. W tym przykładzie klient to aplikacja konsoli (.exe), a usługa jest hostowana przez Internetowe usługi informacyjne (IIS).  
@@ -80,4 +80,3 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   
-## <a name="see-also"></a>Zobacz także

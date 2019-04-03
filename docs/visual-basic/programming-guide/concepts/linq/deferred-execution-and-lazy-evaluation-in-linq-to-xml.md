@@ -2,12 +2,12 @@
 title: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: dc1676070488a75186def3327a84ec8b5ea5415f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5c3e2a484aa16df22742ddf77d6438ec2a699bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492443"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839041"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (Visual Basic)
 Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. W tym temacie opisano wymagania i zalety wykonanie odroczone i kilka kwestii dotyczących wdrażania.  
@@ -32,6 +32,7 @@ Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. 
 -   [Przykład wykonania odroczonego (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Samouczek: Wykonanie odroczone (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
 - [Pojęcia i terminologia (Przekształcanie funkcjonalne) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
 - [Operacje agregacji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)

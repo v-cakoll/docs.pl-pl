@@ -8,12 +8,12 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: 15cfe48797066986f5c4679e85d5899230c516e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fea91731694f18625e43c5545b353851e72234a6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484956"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821091"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield — Instrukcja (Visual Basic)
 Wysyła następnego elementu kolekcji do `For Each...Next` instrukcji.  
@@ -94,4 +94,5 @@ Next
  Aby uzyskać więcej przykładów, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje](../../../visual-basic/language-reference/statements/index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 832d56f5c51aea87185f36ec306c3fec036a40e0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975618"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825550"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definicja typu anonimowego (Visual Basic)
 W odpowiedzi na deklarację wystąpienia typu anonimowego kompilator utworzy nową definicję klasy, która zawiera określone właściwości typu.  
@@ -82,5 +82,6 @@ End Class
 >  Deklaracjach typu anonimowego utworzyć ten sam typ anonimowy, tylko wtedy, gdy występują one w tym samym zestawie, ich właściwości o tych samych nazwach wywnioskować takie same typy, właściwości są deklarowane w tej samej kolejności i te same właściwości są oznaczone jako właściwości klucza.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Instrukcje: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

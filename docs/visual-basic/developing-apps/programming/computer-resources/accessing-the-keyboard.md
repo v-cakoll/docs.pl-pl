@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: f4b719727f3264886f8c4c313d4e1154f0d04728
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549267"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823574"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>Uzyskiwanie dostępu do klawiatury (Visual Basic)
 `My.Computer.Keyboard` Obiekt zawiera właściwości do uzyskiwania dostępu do bieżącego stanu klawiatury, takie jak klucze, które są aktualnie naciśnięciu i udostępnia metodę Wyślij naciśnięcia klawiszy do aktywnego okna.  
@@ -31,5 +31,6 @@ ms.locfileid: "54549267"
 |Uruchom aplikację i wysyłać je naciśnięć klawiszy|[Instrukcje: Uruchamianie aplikacji i wysyłanie do niej uderzeń w klawisze (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.Devices.Keyboard>
 - <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640605"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816333"
 ---
 # <a name="structure-variables-visual-basic"></a>Zmienne struktur (Visual Basic)
 Po utworzeniu struktury można zadeklarować zmienne poziom procedury i poziom modułu jako tego typu. Na przykład można utworzyć struktury rejestrującą informacje o systemie komputerowym. Poniższy przykład przedstawia to.  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  Jeśli element struktury jest typu odwołania, takich jak `String`, `Object`, lub tablicy, wskaźnik do danych jest kopiowany. W poprzednim przykładzie Jeśli `systemInfo` zawiera zmienną obiektu, a następnie w poprzednim przykładzie będą kopiowane wskaźnika z `mySystem` do `yourSystem`, a zmiany do obiektu danych za pomocą jedną strukturę będzie obowiązywać podczas uzyskiwania dostępu do za pomocą innych struktury.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

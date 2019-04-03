@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 292ec8c76695427ab00110d83502f7d16c6504b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719745"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821664"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konwertowanie pomiędzy ciągami a innymi typami danych (Visual Basic)
 Możesz przekonwertować numeryczne, `Boolean`, lub wartość daty/godziny `String`. Można również przeprowadzić konwersję w odwrotnym kierunku — od wartości ciągu na liczbowe `Boolean`, lub `Date` — pod warunkiem zawartość ciągu mogą być interpretowane jako prawidłowa wartość docelowego typu danych. Jeśli nie jest to możliwe, wystąpi błąd czasu wykonywania.  
@@ -41,6 +41,7 @@ Str = "The total count is " & count
  Gdy Visual Basic konwertuje ciąg na wartość liczbową, używa **Opcje regionalne** ustawień określonych w Windows **Panelu sterowania** interpretowanie tysięcy separator, separator dziesiętny, i symbol waluty. Oznacza to, że konwersja może się powieść w jednej ustawienie, ale nie do innego. Na przykład `"$14.20"` jest dopuszczalna w ustawieniach regionalnych języka angielskiego (Stany Zjednoczone), ale nie w dowolnych francuska ustawień regionalnych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

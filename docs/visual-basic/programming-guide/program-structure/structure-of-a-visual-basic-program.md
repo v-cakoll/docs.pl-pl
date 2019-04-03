@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746526"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828124"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktura programu Visual Basic
 Program Visual Basic jest tworzone na podstawie standardowych bloków konstrukcyjnych. A *rozwiązania* składa się z co najmniej jeden projekt. A *projektu* z kolei może zawierać jeden lub więcej zestawów. Każdy *zestawu* jest kompilowany przy użyciu jednego lub więcej plików źródłowych. A *plik źródłowy* zawiera definicję i implementację klasy, struktury, moduły i interfejsy, które ostatecznie zawierają całego kodu.  
@@ -93,6 +93,7 @@ Program Visual Basic jest tworzone na podstawie standardowych bloków konstrukcy
  Najbardziej typowe odmiana tej procedury jest `Sub Main()`. Aby uzyskać więcej informacji, zobacz [procedura Main w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedura główna w Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic — konwencje nazewnictwa](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Ograniczenia Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)

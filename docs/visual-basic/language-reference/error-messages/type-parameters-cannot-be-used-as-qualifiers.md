@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 8ee0fd5822c22da090aa0abee679e2f68e0fc1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 974d2935e64151109b688f576229fb008b59b229
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659716"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819804"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Parametrów typu nie można używać jako kwalifikatorów
 Elementu programistycznego kwalifikuje się ciągiem kwalifikacji, który zawiera parametr typu.  
@@ -39,6 +39,7 @@ End Function
 2.  Jeśli musisz użyć skonstruowanego typu można zlokalizować elementu programistycznego, jest kwalifikowana, należy użyć dodatkowej logiki programu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Odwołania do elementów zadeklarowanych](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)

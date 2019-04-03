@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 56d753c9bb4e3585049eb98929774ac810d8ed40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978179"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821065"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Przewodnik: Manipulowanie plikami za pomocą metod .NET Framework (Visual Basic)
 W tym instruktażu pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:System.IO.StreamReader> klasy, sprawdź, jeśli plik jest dostępny, wyszukiwanie ciągu w pliku odczytu z wystąpieniem <xref:System.IO.StreamReader> klasy, a następnie zapisać do pliku za pomocą <xref:System.IO.StreamWriter> klasy.  
@@ -148,6 +148,7 @@ W tym instruktażu pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sy
  Aby przetestować kod, naciśnij klawisz F5, aby skompilować aplikację. Kliknij przycisk **Pobierz zapisy**, wybierz wpis, a następnie kliknij **wyświetlania**. Wpis zostanie wyświetlony w `DisplayEntry` <xref:System.Windows.Forms.TextBox>. Kliknij przycisk **Edytuj wpis**. Wpis zostanie wyświetlony w `Entry` <xref:System.Windows.Forms.TextBox>. Edytuj wpis w `Entry` <xref:System.Windows.Forms.TextBox> i kliknij przycisk **przesyłania edycji**. Otwórz `MyDiary.txt` plik, aby potwierdzić poprawny. Wybierz wpis i kliknij **Usuń wpis**. Gdy <xref:System.Windows.Forms.MessageBox> zażąda potwierdzenia, kliknij przycisk **OK**. Zamknij aplikację i Otwórz `MyDiary.txt` o potwierdzenie usunięcia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
 - [Przewodniki](../../../../visual-basic/walkthroughs.md)

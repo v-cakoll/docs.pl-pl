@@ -5,12 +5,12 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: 0d3a4caf0967ab77de7d91470e43e52521dbd2da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1f72cb86ffa38dc929062fab2f5592a781f2de27
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975514"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831829"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>Instrukcje: Tworzenie ciągu z tablicy wartości znaków (Visual Basic)
 W tym przykładzie tworzy ciągu "abcd" na podstawie poszczególnych znaków.  
@@ -27,6 +27,7 @@ W tym przykładzie tworzy ciągu "abcd" na podstawie poszczególnych znaków.
  Znaki null (równoważne `Chr(0)`) w ciągu prowadzić do nieoczekiwanych wyników przy użyciu ciągu. Znak null, będzie ona uwzględniona w ciągu, ale znaki po znaku null nie będą wyświetlane w niektórych sytuacjach.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.String>
 - [Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

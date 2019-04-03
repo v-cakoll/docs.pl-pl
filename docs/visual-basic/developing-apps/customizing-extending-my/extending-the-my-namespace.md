@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 843ea95cded81aa7870f8a7bef20df586c4085a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361203"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814164"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Rozszerzanie przestrzeni nazw My w Visual Basic
 `My` Przestrzeni nazw w języku Visual Basic udostępnia właściwości i metod, które umożliwiają użytkownikowi łatwo korzystać z możliwości programu .NET Framework. `My` Przestrzeni nazw upraszcza typowe problemy programowania, często zmniejszanie trudne do jednego wiersza kodu. Ponadto `My` przestrzeń nazw jest całkowicie rozszerzalny, dzięki czemu możesz dostosować zachowanie `My` i dodawanie nowych usług do swojej hierarchii w celu dostosowania do potrzeb konkretnej aplikacji. W tym temacie omówiono zarówno jak dostosować istniejący członkowie `My` przestrzeni nazw oraz sposób dodawania niestandardowych klas do `My` przestrzeni nazw.  
@@ -101,6 +101,7 @@ ms.locfileid: "57361203"
  Aby uzyskać szczegółowe informacje o sposobie wdrażania `My` rozszerzenia przestrzeni nazw, zobacz [pakowanie i wdrażanie niestandardowych rozszerzeń Moje](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pakowanie i wdrażanie niestandardowych rozszerzeń My](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 - [Rozszerzanie modelu aplikacji Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
 - [Dostosowywanie, które obiekty są dostępne w My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

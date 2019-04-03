@@ -2,12 +2,12 @@
 title: Zastosowanie przekształcania funkcjonalnego (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 01ebc25e77e7098d0aad5ec612e57d7f6b078d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7efeab82dafc284f64a950eb7f5e4a6ee3f2e73d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699405"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827617"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>Zastosowanie przekształcania funkcjonalnego (Visual Basic)
 Czyste Przekształcanie funkcjonalne mają zastosowanie w wielu różnych sytuacjach.  
@@ -33,6 +33,7 @@ Czyste Przekształcanie funkcjonalne mają zastosowanie w wielu różnych sytuac
  Ponownie należy pamiętać, że Visual Basic obsługuje podejścia imperatywnego i funkcjonalności, dzięki czemu najlepsze projekt aplikacji może uwzględniać oba elementy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Przekształcanie funkcjonalne kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
 - [Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

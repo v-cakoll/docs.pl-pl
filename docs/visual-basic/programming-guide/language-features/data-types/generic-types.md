@@ -36,20 +36,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978504"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831439"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Typy ogólne w Visual Basic (Visual Basic)
 A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosowuje się do wykonywania funkcji dla różnych typów danych. Po zdefiniowaniu klasy ogólnej lub procedura ma definiuje oddzielnych wersji dla każdego typu danych, dla którego możesz chcieć wykonać tę funkcję.  
   
  Analogii jest śrubokręta zestawu przy użyciu głowic wymiennych. Zbadaj gwintowanym, należy włączyć, a następnie wybierz poprawny nagłówek dla tego gwintowanym (prosty, progów, oznaczone). Gdy wstawiasz head prawidłowe dojście śrubokręt, wykonujesz dokładnie tej samej funkcji z śrubokręt, a mianowicie włączenie śrubę.  
   
- ![Diagram przedstawiający śrubokręt ustawiony jako ogólnego narzędzia](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
-Ustaw jako ogólnego narzędzia śrubokręt  
+ ![Diagram przedstawiający śrubokręt zestawu przy użyciu różnych głowic.](./media/generic-types/generic-screwdriver-set.gif)  
   
  Podczas definiowania typu ogólnego parametryzuj z co najmniej jeden typ danych. Dzięki temu używając kodu, aby dostosować typy danych do swoich wymagań. Kod można zadeklarować kilka różnych elementów programowania, od ogólnego elementu każdej z nich na inny zestaw typów danych. Jednak wszystkie elementy zadeklarowane wykonać identyczne, niezależnie od tego, jakiego typu dane, które używają.  
   

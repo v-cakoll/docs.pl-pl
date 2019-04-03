@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974266"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814500"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Funkcje Visual Basic obsługujące LINQ
 Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do technologii w języku Visual Basic, że obsługuje składni zapytania i innym języku tworzy bezpośrednio w języku. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], nie trzeba uczenia się nowego języka dla zewnętrznego źródła danych zapytania. Aby wykonać zapytanie względem danych w relacyjnych baz danych, Magazyny XML lub obiektów w języku Visual Basic. Ta integracja możliwości kwerend języka umożliwia kompilacji sprawdzania pod kątem błędów składniowych i bezpieczeństwo typów. Ta integracja zapewnia również znanych większość co musisz wiedzieć, aby pisać rozbudowane, zróżnicowane zapytania w języku Visual Basic.  
@@ -94,6 +94,7 @@ Nazwa [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] odnosi się do tec
  Aby uzyskać więcej informacji, zobacz [wyrażeń Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

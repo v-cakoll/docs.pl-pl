@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464102"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819765"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Omówienie modelu aplikacji Visual Basic
 Dobrze zdefiniowany model zapewnia Visual Basic sterujące zachowaniem aplikacji Windows Forms: model aplikacji Visual Basic. Ten model zawiera zdarzenia do obsługi aplikacji uruchamiania i zamykania, a także zdarzenia dla połowowe nieobsłużonych wyjątków. Zapewnia również obsługę do tworzenia aplikacji w jednym wystąpieniu. Model aplikacji jest rozszerzalny, dzięki czemu deweloperzy, którzy potrzebują więcej kontroli można dostosować jego możliwym do zastąpienia metody.  
@@ -55,6 +55,7 @@ Dobrze zdefiniowany model zapewnia Visual Basic sterujące zachowaniem aplikacji
  Domyślnie model aplikacji Visual Basic jest dostępne dla projektów Windows Forms. Jeśli Konfigurowanie aplikacji do korzystania z obiektu uruchamiania różnych, lub uruchomić kod aplikacji niestandardowej `Sub Main`, następnie obiekt lub klasa może być konieczne podanie implementację <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy modelu aplikacji. Aby uzyskać informacje o zmianie obiekt początkowy, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705326"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832531"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)
 W poniższej tabeli wymieniono klasy często używane dla .NET Framework w pliku we/wy, podzielone na kategorie klas we/wy pliku klasy służące do tworzenia strumieni i klas używanych do odczytu i zapisu do strumieni.  
@@ -57,6 +57,7 @@ W poniższej tabeli wymieniono klasy często używane dla .NET Framework w pliku
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Zapisuje znaki `String`. Dane wyjściowe mogą być strumień w kodowanie lub `String`.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie strumieni](../../../../standard/io/composing-streams.md)
 - [We/Wy plików i strumieni](../../../../standard/io/index.md)
 - [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)

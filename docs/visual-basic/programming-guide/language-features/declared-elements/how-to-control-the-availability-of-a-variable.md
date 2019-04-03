@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 4d5db7fe474d8732e0ae37f3d95d0187eef68ec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582493"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841696"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Instrukcje: Kontrolowanie dostępności zmiennej (Visual Basic)
 Kontrolowanie dostępności zmiennej, określając jego *poziom dostępu*. Poziom dostępu decyduje o tym, jaki kod ma uprawnienie do odczytu lub zapisu do zmiennej.  
@@ -87,6 +87,7 @@ Private numberForMeOnly As Integer
  Bardziej restrykcyjny poziom dostępu do zmiennej, z niego korzystać mniejszy szanse, że złośliwy kod może być niepoprawne.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)

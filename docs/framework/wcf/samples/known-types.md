@@ -2,12 +2,12 @@
 title: Znane typy
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 0f9d24f469feb3e2cc5c58cd73f671ac4837f725
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d43cdd9fff58a7918aa98616bb4195183cf3be48
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717145"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828373"
 ---
 # <a name="known-types"></a>Znane typy
 W tym przykładzie pokazano, jak Podaj informacje o typach pochodnych w kontraktu danych. Kontrakty danych umożliwia przekazanie ze strukturą danych do i z usługi. W programowanie zorientowane obiektowo, typu, który dziedziczy z innego typu, może służyć zamiast oryginalnego typu. Podczas programowania zorientowanego na usługi, schematów, a nie typy są przekazywane, a w związku z tym, nie są zachowywane relacji między typami. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybut umożliwia informacji na temat typów pochodnych, które mają zostać uwzględnione w kontraktu danych. Mechanizm ten nie jest używany, typem pochodnym nie wysyłane lub odbierane, gdy oczekiwany jest typ podstawowy.  
@@ -171,4 +171,3 @@ No magnitude was sent from the service
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownTypes`  
   
-## <a name="see-also"></a>Zobacz także

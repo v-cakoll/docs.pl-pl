@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wyszukiwanie elementów potomnych o określonej nazwie elementu (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 4311eb0a4062c01b2c8e1c19355c5284298e39dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557163"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816841"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Instrukcje: Wyszukiwanie elementów potomnych o określonej nazwie elementu (Visual Basic)
 Czasami chcesz znaleźć wszystkie elementy podrzędne o określonej nazwie. Można napisać kod, aby wykonać iterację przez wszystkie elementy podrzędne, ale jest łatwiejszy w obsłudze <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
@@ -101,5 +101,6 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - [Podstawowe zapytania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

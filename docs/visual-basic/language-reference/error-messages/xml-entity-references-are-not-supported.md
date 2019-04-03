@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31180
 ms.assetid: 2a393327-d8e2-4187-85b1-642b4f53b4ae
-ms.openlocfilehash: 78cdf8a77cff187912e41a2aa374c8dc669ff395
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd7add295641e6a27c361c663d6075413b0f499c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574667"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824692"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>Odwołania do jednostek XML nie są obsługiwane
 Odwołania do jednostki (na przykład `©`) nie jest zdefiniowany w XML 1.0 specyfikacji jest dołączony jako wartość literał XML. Tylko `&`, `"`, `<`, `>`, i `'` odwołania do jednostek XML są obsługiwane w literałach XML.  
@@ -24,6 +24,7 @@ Odwołania do jednostki (na przykład `©`) nie jest zdefiniowany w XML 1.0 spec
 -   Usuń odwołania do nieobsługiwanych jednostki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Literały XML i specyfikacja XML 1.0](../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)
 - [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

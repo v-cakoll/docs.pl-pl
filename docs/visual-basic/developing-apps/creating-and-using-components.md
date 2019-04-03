@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551923"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828085"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Tworzenie składników i korzystanie z nich w Visual Basic
 A *składnika* to klasa, która implementuje <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> interfejsu, lub który pochodzi bezpośrednio lub pośrednio z klasy, która implementuje <xref:System.ComponentModel.IComponent>. A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] składnik to obiekt wielokrotnego użytku, mogą wchodzić w interakcje z innymi obiektami i zapewnia kontrolę nad zasobami zewnętrznymi i obsługi w czasie projektowania.  
@@ -63,5 +63,5 @@ A *składnika* to klasa, która implementuje <xref:System.ComponentModel.ICompon
  Wyjaśnia, jak rozwiązać typowe problemy.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Dostęp do obsługi w czasie projektowania w formularzach Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
 
+- [Instrukcje: Dostęp do obsługi w czasie projektowania w formularzach Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

@@ -2,6 +2,12 @@
 title: Omówienie atrybuty (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827695"
 ---
 # <a name="attributes-overview-visual-basic"></a>Omówienie atrybuty (Visual Basic)
 Atrybuty zawierają zaawansowaną metodą kojarzenia metadanych lub informacji deklaratywne, przy użyciu kodu (zestawy, typy, metody, właściwości i tak dalej). Po atrybutu jest skojarzony z jednostką program, ten atrybut można wykonywać zapytania w czasie wykonywania za pomocą technikę o nazwie *odbicia*. Aby uzyskać więcej informacji, zobacz [odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -137,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [Informacje o wywołującym (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)
 - [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Atrybuty](../../../../standard/attributes/index.md)

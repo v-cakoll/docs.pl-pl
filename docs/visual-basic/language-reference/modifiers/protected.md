@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 40dda40f68e535380a82a241e3ccd383b0c9809f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e13fcd03c6a10cf1450cec90f9ca60aedc3eb1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536298"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819167"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 Modyfikator dostępu elementu członkowskiego, który określa, że co najmniej jeden zadeklarowany element programistyczny jest dostępny tylko w obrębie swojej klasy lub z klasy pochodnej.  
@@ -67,6 +67,7 @@ Modyfikator dostępu elementu członkowskiego, który określa, że co najmniej 
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)

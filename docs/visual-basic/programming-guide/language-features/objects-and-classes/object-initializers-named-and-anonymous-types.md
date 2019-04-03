@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: d4f82cab8bcdeb3e0553649f8a569ae24bafc707
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974357"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821375"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicjatory obiektów: Typy nazwane i anonimowe (Visual Basic)
 Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złożonego za pomocą pojedynczego wyrażenia. One może służyć do tworzenia wystąpień nazwanych typów i typów anonimowych.  
@@ -128,6 +128,7 @@ Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złoż
      Aby uzyskać więcej informacji na temat opcji do definiowania właściwości typów anonimowych, zobacz [jak: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

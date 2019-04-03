@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261246"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829029"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Wartość typu "\<typename1 >" nie można przekonwertować na "\<typename2 >"
 Wartość typu "\<typename1 >" nie można przekonwertować na "\<typename2 >". Niezgodność typów przyczyną może być połączenie odwołania pliku z odwołaniem projektu do zestawu "\<nazwa_zestawu >". Spróbuj wymienić odwołanie pliku do "\<ścieżka_pliku >' w projekcie"\<projectname1 > "z odwołaniem projektu do"\<projectname2 > ".  
@@ -60,6 +60,6 @@ Wartość typu "\<typename1 >" nie można przekonwertować na "\<typename2 >". N
 -   Zmień odwołanie do pliku z odwołaniem projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konwersje typów w języku Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)
-

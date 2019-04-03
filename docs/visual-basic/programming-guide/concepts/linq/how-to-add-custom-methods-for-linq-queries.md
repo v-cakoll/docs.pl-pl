@@ -2,12 +2,12 @@
 title: 'Instrukcje: Dodawanie metod niestandardowych do kwerend LINQ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: e45dfc6b516f1e5f5e9f7f667bbbfd5768330ffa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58ced83a01e41be707f2483cabe9c8e867e2c1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645590"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829177"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>Instrukcje: Dodawanie metod niestandardowych do kwerend LINQ (Visual Basic)
 Można rozszerzyć zbiór metod, które służy do zapytań LINQ, dodając metody rozszerzenia umożliwiające <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Na przykład oprócz standardowych średnia lub maksymalna operacje, możesz utworzyć niestandardowe metody agregacji do obliczenia pojedynczej wartości z sekwencji wartości. Można również utworzyć metodę, która działa jako filtr niestandardowy lub przekształcenia danych określonego dla sekwencji wartości i zwraca nową sekwencję. Przykłady takich metod <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, i <xref:System.Linq.Enumerable.Reverse%2A>.  
@@ -198,5 +198,6 @@ Next
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Metody rozszerzeń](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

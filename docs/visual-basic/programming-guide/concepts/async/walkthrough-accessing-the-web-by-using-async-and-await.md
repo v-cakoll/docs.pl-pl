@@ -2,17 +2,17 @@
 title: 'Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4d8f650f5150f862a77cd194d91d906f505723a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379123"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816998"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)
 Asynchroniczne programy można napisać bardziej łatwo i intuicyjnie za pomocą funkcji async/await. Można napisać kod asynchroniczny, który wygląda jak synchroniczny kod i pozwolić kompilatorowi obsługi funkcji wywołania zwrotnego trudne i kontynuacje, które kodu asynchronicznego zazwyczaj pociąga za sobą.  
   
- Aby uzyskać więcej informacji na temat funkcji asynchronicznych, zobacz [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+ Aby uzyskać więcej informacji na temat funkcji asynchronicznych, zobacz [Programowanie asynchroniczne z Async i Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  W tym przewodniku rozpoczyna się od synchroniczne aplikacji Windows Presentation Foundation (WPF), która sumuje liczba bajtów na liście witryn sieci Web. Instruktaż następnie konwertuje ją do asynchronicznego rozwiązania przy użyciu nowych funkcji.  
   
@@ -674,6 +674,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Próbka asynchroniczna: Uzyskiwanie dostępu do instruktażu sieci Web (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)

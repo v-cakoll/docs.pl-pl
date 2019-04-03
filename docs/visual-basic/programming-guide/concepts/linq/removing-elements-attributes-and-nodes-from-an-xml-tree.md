@@ -2,12 +2,12 @@
 title: Usuwanie elementów, atrybutów i węzłów z drzewa XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5cf21919-4360-4b49-b29d-58ea3164ac72
-ms.openlocfilehash: eee761772d920c6f6fa49b3ddd8b3142ec9f5e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a7a3b4047e269c562177cfa045b952472aaac2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495776"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814916"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-visual-basic"></a>Usuwanie elementów, atrybutów i węzłów z drzewa XML (Visual Basic)
 Możesz zmodyfikować drzewa XML, usunięcie elementów, atrybutów i innych typów węzłów.  
@@ -80,4 +80,5 @@ Console.WriteLine(root)
  Należy zauważyć, że pierwszy element podwójnym została usunięta z `Child1`. Wszystkie elementy podrzędne zostały usunięte z `Child2` i `Child3`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

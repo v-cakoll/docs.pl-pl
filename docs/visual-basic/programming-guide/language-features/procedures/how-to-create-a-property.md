@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3e3f1168a983b2fa608cbadffba0531afef7c92b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970964"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816852"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Instrukcje: Tworzenie właściwości (Visual Basic)
 Ujmij definicji właściwości między `Property` instrukcji i `End Property` instrukcji. W ramach tej definicji należy zdefiniować `Get` procedury `Set` procedury lub obu. Wszystkie właściwości kod znajduje się w ramach tych procedur.  
@@ -61,6 +61,7 @@ Ujmij definicji właściwości między `Property` instrukcji i `End Property` in
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury](./index.md)
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)

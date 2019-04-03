@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: e1464421866ee22f27f9cf0a3611bc09a631c004
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975839"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838368"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Wskazuje częściową definicję typu deklaracji typu.  
@@ -94,6 +94,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
  Dwie definicje częściowe w poprzednim przykładzie może być w tym samym pliku źródłowym lub w dwóch innych plików źródłowych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Promocja typu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

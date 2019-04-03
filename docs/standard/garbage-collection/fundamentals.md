@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712477"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826603"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a> W środowisko uruchomieniowe języka wspólnego (CLR) wyrzucanie elementów bezużytecznych działa jako automatycznych Menadżer pamięci. Zapewnia następujące korzyści:  
@@ -261,21 +261,19 @@ Współbieżne wyrzucanie elementów bezużytecznych
   
  Wyrzucanie elementów bezużytecznych w tle usuwa ograniczenia alokacji nałożone przez współbieżne wyrzucanie elementów bezużytecznych, ponieważ tymczasowe wyrzucanie elementów bezużytecznych może wystąpić podczas wyrzucanie elementów bezużytecznych w tle. Oznacza to, że wyrzucania elementów bezużytecznych w tle może usunąć obiekty martwe w generacje efemeryczne i może także zwiększyć na stosie, w razie potrzeby podczas generację 1 wyrzucania elementów bezużytecznych.  
   
- Na poniższej ilustracji przedstawiono bezużytecznych w tle wykonywane w osobnym dedykowanym wątku na stacji roboczej.  
+Poniższa ilustracja przedstawia bezużytecznych w tle wykonywane w osobnym dedykowanym wątku na stacji roboczej:
   
- ![Wyrzucanie elementów bezużytecznych w tle](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-Tło wyrzucanie elementów bezużytecznych  
-  
+ ![Diagram przedstawiający tle wyrzucanie elementów bezużytecznych.](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [Powrót do początku](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>Tło serwer wyrzucania elementów bezużytecznych  
  Począwszy od programu .NET Framework 4.5, wyrzucanie elementów bezużytecznych serwera tła jest to domyślny tryb wyrzucanie elementów bezużytecznych serwera. Aby wybrać ten tryb, ustaw `enabled` atrybutu [ \<gcserver — > element](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) do `true` w schemacie konfiguracji środowiska uruchomieniowego. Ten tryb działa podobnie do tła wyrzucanie elementów bezużytecznych, opisanego w poprzedniej sekcji, ale istnieje kilka różnic. Tle wyrzucanie elementów bezużytecznych używa jednego dedykowanego wątku wyrzucania elementów bezużytecznych, natomiast w tle wyrzucanie elementów bezużytecznych dla serwera korzysta z wielu wątków, zazwyczaj z dedykowanego wątku dla każdego procesora logicznego. W przeciwieństwie do stacji roboczej tła wątku wyrzucania elementów bezużytecznych te wątki nie mają limitu czasu.  
   
- Na poniższej ilustracji przedstawiono bezużytecznych w tle wykonywane w osobnym dedykowanym wątku na serwerze.  
+ Poniższa ilustracja przedstawia bezużytecznych w tle wykonywane w osobnym dedykowanym wątku na serwerze:  
   
- ![Serwer wyrzucania elementów bezużytecznych w tle](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-Tło serwer wyrzucania elementów bezużytecznych  
+ ![Diagram przedstawiający tle wyrzucanie elementów bezużytecznych dla serwera.](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>Zobacz także
 

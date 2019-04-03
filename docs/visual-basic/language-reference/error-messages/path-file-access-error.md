@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: 53f021faa9e4ae69a71d825ca823e1180421afc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c364296997f571956caad995581102ed990549d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522482"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842567"
 ---
 # <a name="pathfile-access-error"></a>Błąd dostępu do ścieżki/pliku
 Podczas operacji uzyskiwania dostępu do plików lub dostępu do dysku systemu operacyjnego nie można ustanowić połączenia między ścieżkę i nazwę pliku.  
@@ -25,4 +25,5 @@ Podczas operacji uzyskiwania dostępu do plików lub dostępu do dysku systemu o
 4.  Upewnij się, że nie podjęła próby zmiany w projektach Visual Basic w bazie danych lub dokumentu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

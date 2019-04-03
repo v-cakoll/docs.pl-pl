@@ -2,12 +2,12 @@
 title: Zachowywanie białych znaków podczas Serializing2
 ms.date: 07/20/2015
 ms.assetid: 2d7abbd4-37f4-422b-89dd-0a694b5edc17
-ms.openlocfilehash: 8a69916627c25e4c90131e5eb9a1939bb6dea207
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a8903268f5ae1c2bc6c71a0998ba7d932f01e0ec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374001"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814474"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Zachowywanie białych znaków podczas serializowania
 W tym temacie opisano sposób kontrolowania biały znak podczas serializowania drzewa XML.  
@@ -32,4 +32,5 @@ W tym temacie opisano sposób kontrolowania biały znak podczas serializowania d
  Jeśli metoda <xref:System.Xml.Linq.SaveOptions> jako argument, a następnie można określić metody nie formatu (wcięcie) serializacji XML. W takim przypadku wszystkie biały znak w drzewie XML są zachowywane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Serializowanie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

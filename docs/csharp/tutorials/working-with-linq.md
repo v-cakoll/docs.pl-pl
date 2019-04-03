@@ -3,12 +3,12 @@ title: Praca z technologią LINQ
 description: Ten samouczek omawia sposób generowania sekwencji za pomocą LINQ, pisanie metody używane w kwerendach LINQ i rozróżnienie między eager i leniwa ocena.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679661"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815590"
 ---
 # <a name="working-with-linq"></a>Praca z technologią LINQ
 
@@ -115,7 +115,7 @@ Kompilator tłumaczy instrukcji LINQ, zapisane ze składnią kwerendy w składni
 
 Przejdź dalej i uruchom aplikację przykładową na tym etapie konstruowania. Wszystkie karty 52 będzie wyświetlany w talii kart. Może okazać się bardzo pomocne uruchomić ten przykład w debugerze, aby obserwować sposób, w jaki `Suits()` i `Ranks()` wykonywania metody. Wyraźnie widać, że każdego ciągu w każdej sekwencji jest generowany tylko wtedy, gdy jest to konieczne.
 
-![Okno konsoli aplikacji wypisywanie 52 kart](./media/working-with-linq/console.png)
+![Wyświetlanie aplikacji wypisywanie 52 kart okna konsoli.](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>Manipulowanie kolejności
 

@@ -2,12 +2,12 @@
 title: Sumy rozłączne
 description: Dowiedz się, jak używać F# związków wyróżniających.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611870"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821429"
 ---
 # <a name="discriminated-unions"></a>Sumy rozłączne
 
@@ -156,7 +156,7 @@ Połączenia rozróżniane mogą być cykliczne, co oznacza, że samo połączen
 
 W poprzednim kodzie `resultSumTree` ma wartość 10. Poniższa ilustracja przedstawia strukturę drzewa dla `myTree`.
 
-![Struktura drzewa dla myTree](../media/TreeStructureDiagram.png)
+![Diagram przedstawia strukturę drzewa dla myTree.](../media/discriminated-unions/tree-structure-mytree.png)
 
 Połączenia rozróżniane działają dobrze, jeśli węzłów w drzewie są heterogeniczne. W poniższym kodzie typ `Expression` reprezentuje drzewo abstrakcyjnej składni wyrażenia w prostym języku programowania, który obsługuje dodawanie i mnożenie liczb i zmiennych. Niektórych przypadki nie są cykliczne i reprezentują liczby (`Number`) lub zmienne (`Variable`). Inne przypadki są cykliczne i reprezentują operacje (`Add` i `Multiply`), gdzie argumenty operacji są również wyrażeniami. `Evaluate` Funkcja używa wyrażenia dopasowania, aby procesu cyklicznie przetwarzać drzewo składni.
 

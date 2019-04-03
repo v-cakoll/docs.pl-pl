@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970551"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822079"
 ---
 # <a name="extension-methods-visual-basic"></a>Metody rozszerzeń (Visual Basic)
 Metody rozszerzające umożliwiają programistom dodawanie niestandardowych funkcji do typów danych, które są już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzające umożliwiają napisanie metody, która może być wywoływany tak, jakby jego była wystąpieniem metody istniejącego typu.  
@@ -175,6 +175,7 @@ End Module
  Jeśli pierwszeństwo nie rozwiązuje niejasności, można użyć w pełni kwalifikowana nazwa, aby określić metodę, którą wywołujesz. Jeśli `Print` metoda we wcześniejszym przykładzie jest zdefiniowana w module o nazwie `StringExtensions`, w pełni kwalifikowana nazwa to `StringExtensions.Print(example)` zamiast `example.Print()`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

@@ -1,15 +1,15 @@
 ---
-title: Zewnętrzne Przybornik zestawu reguł
+title: Zewnętrzne przybornik zestawu reguł
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710046"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840240"
 ---
-# <a name="external-ruleset-toolkit"></a>Zewnętrzne Przybornik zestawu reguł
+# <a name="external-ruleset-toolkit"></a>Zewnętrzne przybornik zestawu reguł
 
 Zwykle, gdy zasady są używane w aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych przypadkach warto zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponownego tworzenia i wdrażania zestawu przepływu pracy. Ten przykład umożliwia zarządzanie i Edytuj zestawów reguł w bazie danych i uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Umożliwia to uruchamianie wystąpienia przepływu pracy automatycznie zastosować zmian zestaw reguł.
 
@@ -28,11 +28,9 @@ Składnik to między innymi próbki:
 
 - `ExternalPolicy` Działania, żądania zestaw reguł z usługi zestaw reguł, która jest uruchamiana zestaw reguł dla przepływu pracy.
 
-Interakcja składników przedstawiono na rysunku 1. W kolejnych sekcjach opisano każdego składnika.
+Interakcja składników jest wyświetlany na poniższej ilustracji. W kolejnych sekcjach opisano każdego składnika.
 
-![Omówienie pojęć dotyczących zewnętrznych Przykładowy zestaw reguł](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
-
-Rysunek 1: Omówienie przykładowych
+![Diagram przedstawiający omówienie przykładowych zewnętrzne Przybornik zestawu reguł.](./media/external-ruleset-toolkit/ruleset-toolkit-overview.gif)
 
 > [!IMPORTANT]
 > Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
@@ -45,19 +43,15 @@ Rysunek 1: Omówienie przykładowych
 
 ## <a name="ruleset-tool"></a>Narzędzia zestawu reguł
 
-Zrzut ekranu narzędzia do zestaw reguł jest pokazany na rysunku 2. Z **Store reguły** menu, można załadować dostępne zestawy reguł z bazy danych i zapisać zmodyfikowane zestawów reguł do sklepu. Plik konfiguracji aplikacji zawiera parametry połączenia bazy danych dla bazy danych zestaw reguł. Możesz uruchomić to narzędzie, automatycznie ładuje zestawy reguł z bazy danych skonfigurowane.
+Poniższej ilustracji przedstawiono zrzut ekranu narzędzia do zestawu reguł. Z **Store reguły** menu, można załadować dostępne zestawy reguł z bazy danych i zapisać zmodyfikowane zestawów reguł do sklepu. Plik konfiguracji aplikacji zawiera parametry połączenia bazy danych dla bazy danych zestaw reguł. Możesz uruchomić to narzędzie, automatycznie ładuje zestawy reguł z bazy danych skonfigurowane.
 
-![Dnia zewnętrzny zestaw reguł Toolkit przykładowe dane wyjściowe](./media/rulesetbrowser.gif "RuleSetBrowser")
-
-Rysunek 2: Zestaw reguł przeglądarki
+![Zrzut ekranu przedstawiający przeglądarkę zestaw reguł.](./media/external-ruleset-toolkit/ruleset-browser-dialog.gif)
 
 Narzędzie RuleSet dotyczy numery wersji głównych i pomocniczych zestawów reguł, umożliwiając jednocześnie obsługiwać i przechowywać wiele wersji (to narzędzie zawiera bez blokowania lub innych konfiguracji funkcji zarządzania, oprócz możliwości przechowywania wersji). Za pomocą narzędzia, możesz utworzyć nowe wersje zestawu reguł lub usunąć istniejące wersje. Po kliknięciu **New**, narzędzie tworzy nową nazwę zestawu reguł i stosuje w wersji 1.0. Podczas kopiowania wersję narzędzia tworzy kopię wybranej wersji zestawu reguł, włączając reguły zawarte i przypisuje numery wersji nowych, unikatowych. Te numery wersji są oparte na numery wersji istniejących zestawów reguł. Można zmienić numery nazwą i wersją zestawu reguł przy użyciu skojarzonego pola w formularzu.
 
-Po kliknięciu **Edycja reguł**, uruchomiony Edytor zestawu reguł, jak pokazano na rysunku 3.
+Po kliknięciu **Edycja reguł**, uruchomiony Edytor zestawu reguł, jak pokazano na poniższej ilustracji:
 
-![Zewnętrzne Przybornik zestawu przykładowych danych wyjściowych](./media/ruleseteditor.gif "RuleSetEditor")
-
-Rysunek 3: Edytor zestawu reguł
+![Zrzut ekranu przedstawiający z edytora zestawu reguł.](./media/external-ruleset-toolkit/ruleset-editor-dialog.gif)
 
 Jest to, ponownie hostingu okno dialogowe Edytor, który jest częścią dodatku Windows Workflow Foundation programu Visual Studio. Zapewnia te same funkcje, w tym obsługę funkcji Intellisense. Zasady są tworzone na typ docelowy (np. przepływ pracy), który jest skojarzony z zestawu reguł w narzędziu; Po kliknięciu **Przeglądaj** w oknie dialogowym Narzędzia główne **selektor przepływu pracy i typu** zostanie wyświetlone okno dialogowe, jak pokazano na rysunku 4.
 
@@ -69,21 +63,17 @@ Możesz użyć **selektor przepływu pracy i typu** okna dialogowego, aby okreś
 
 Ścieżka do pliku zestawu i typu `name are stored with the` zestaw reguł w bazie danych, tak, aby przy zestaw reguł są pobierane z bazy danych, narzędzie próbuje automatycznie załadować typ docelowy.
 
-Po kliknięciu **OK** w **selektor przepływu pracy i typu** okno dialogowe, sprawdza poprawność wybranego typu względem zestaw reguł, aby upewnić się, że typ docelowy wszystkie elementy członkowskie przywoływany przez zasady. Błędy są wyświetlane w **błędy sprawdzania poprawności** okna dialogowego (zobacz rysunek 5). Można kontynuować zmiany, pomimo błędów, lub kliknij przycisk **anulować**. Z **narzędzia** menu w oknie dialogowym Narzędzia główne, możesz kliknąć pozycję **weryfikacji** do ponownego sprawdzania poprawności wersji zestaw reguł względem działanie docelowe.
+Po kliknięciu **OK** w **selektor przepływu pracy i typu** okno dialogowe, sprawdza poprawność wybranego typu względem zestaw reguł, aby upewnić się, że typ docelowy wszystkie elementy członkowskie przywoływany przez zasady. Błędy są wyświetlane w **błędy sprawdzania poprawności** okna dialogowego. Można kontynuować zmiany, pomimo błędów, lub kliknij przycisk **anulować**. Z **narzędzia** menu w oknie dialogowym Narzędzia główne, możesz kliknąć pozycję **weryfikacji** do ponownego sprawdzania poprawności wersji zestaw reguł względem działanie docelowe.
 
-![Błędy sprawdzania poprawności z zewnętrznego zestawu reguł próbki](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
-
-Rysunek 5: Błędy sprawdzania poprawności
+![Zrzut ekranu przedstawiający okno dialogowe błędy sprawdzania poprawności.](./media/external-ruleset-toolkit/validation-errors-dialog.png)
 
 Z **danych** menu Narzędzia, można importować i eksportować zestawów reguł. Po kliknięciu **importu**, pojawi się okno dialogowe selektora plików, w którym można wybrać plik rules. To może lub nie może być plikiem początkowo utworzona w programie Visual Studio. Ten plik Rules powinien zawierać Zserializowany obiekt `RuleDefinitions` wystąpienia, które zawiera kolekcję warunków i kolekcji zestawów reguł. Narzędzie nie używa Kolekcja warunków, ale zajmuje `RuleDefinitions` format Rules umożliwiające interakcje ze środowiskiem programu Visual Studio.
 
-Po wybraniu pliku Rules **selektor RuleSet** zostanie wyświetlone okno dialogowe (patrz rysunek 6). Okno dialogowe umożliwia wybieranie zestawów reguł z pliku, który chcesz zaimportować (wartość domyślna Określa wszystkie zestawy reguł). Zestawy reguł w pliku Rules nie mają numery wersji, ponieważ ich przechowywanie wersji w ramach projektu WF jest taka sama jak wersja zestawu. Podczas procesu importowania narzędzie automatycznie przypisuje następny dostępny główny numer wersji (która może zostać zmieniona po zaimportowaniu); można wyświetlić numery wersji przypisane w **selektor RuleSet** listy.
+Po wybraniu pliku Rules **selektor RuleSet** zostanie wyświetlone okno dialogowe. Okno dialogowe umożliwia wybieranie zestawów reguł z pliku, który chcesz zaimportować (wartość domyślna Określa wszystkie zestawy reguł). Zestawy reguł w pliku Rules nie mają numery wersji, ponieważ ich przechowywanie wersji w ramach projektu WF jest taka sama jak wersja zestawu. Podczas procesu importowania narzędzie automatycznie przypisuje następny dostępny główny numer wersji (która może zostać zmieniona po zaimportowaniu); można wyświetlić numery wersji przypisane w **selektor RuleSet** listy.
 
-Dla każdego zestawu reguł, który importuje narzędzie spróbuje znaleźć skojarzony typ z folderu bin\Debug znajdujące się w lokalizacji pliku Rules (jeśli istnieje), na podstawie elementów członkowskich, używany w zestawie reguł. Jeśli narzędzie wykryje wiele typów zgodnych, próbuje wybierz typ na podstawie dopasowania między nazwę typu i nazwę pliku Rules (na przykład `Workflow1` typ odpowiada Workflow1.rules). Jeśli istnieje wiele dopasowań, pojawia się monit o wybranie typu. Jeśli ten mechanizm automatycznej identyfikacji nie znajdzie zgodnego zestawu lub typu, a następnie po zaimportowaniu można kliknąć **Przeglądaj** w oknie dialogowym Narzędzia główne, aby przejść do skojarzonego typu.
+Dla każdego zestawu reguł, który importuje narzędzie spróbuje znaleźć skojarzony typ z folderu bin\Debug znajdujące się w lokalizacji pliku Rules (jeśli istnieje), na podstawie elementów członkowskich, używany w zestawie reguł. Jeśli narzędzie wykryje wiele typów zgodnych, próbuje wybierz typ na podstawie dopasowania między nazwę typu i nazwę pliku Rules (na przykład `Workflow1` typ odpowiada Workflow1.rules). Jeśli istnieje wiele dopasowań, pojawia się monit o wybranie typu. Jeśli ten mechanizm automatycznej identyfikacji nie znajdzie zgodnego zestawu lub typu, a następnie po zaimportowaniu można kliknąć **Przeglądaj** w oknie dialogowym Narzędzia główne, aby przejść do skojarzonego typu. Na poniższej ilustracji pokazano selektor zestaw reguł:
 
-![Selektor zestawu reguł](./media/rulesetselector.gif "RuleSetSelector")
-
-Rysunek 6: Selektor zestawu reguł
+![Zrzut ekranu przedstawiający okno dialogowe selektora zestaw reguł.](./media/external-ruleset-toolkit/ruleset-selector-dialog.gif)
 
 Po kliknięciu **Eksport danych** menu głównego narzędzia **selektor RuleSet** zostanie wyświetlone okno dialogowe, w którym można określić zestawy reguł z bazy danych, które powinny być wyeksportowane. Po kliknięciu **OK**, **Zapisz plik** zostanie wyświetlone okno dialogowe, w którym można określić nazwę i lokalizację pliku wynikowego rules. Ponieważ plik Rules nie zawiera informacji o wersji, można wybrać tylko jedną wersję zestawu reguł o danej nazwie zestawu reguł.
 

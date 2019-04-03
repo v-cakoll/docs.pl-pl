@@ -6,12 +6,12 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 2c2a48e99f99e3e00aca61fdcf688798affa214f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507307"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832479"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Katalogi i pliki — Podsumowanie (Visual Basic)
 Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są uszeregowane według celu i użycia.  
@@ -34,6 +34,7 @@ Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonaw
 |Ustaw informacje o atrybutach pliku.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
 - [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Odczyt z plików](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975943"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813915"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Stałe zdefiniowane przez użytkownika (Visual Basic)
 Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, który nie jest zmieniany. Stałe przechowywać wartości, które jak wskazuje nazwa, pozostają stałe w trakcie wykonywania aplikacji. Można użyć stałe, które są definiowane przez formanty lub składników, którymi pracujesz, lub możesz utworzyć swój własny. Stałe utworzone samodzielnie są określane jako *zdefiniowanych przez użytkownika*.  
@@ -56,6 +56,7 @@ Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, któr
  W przypadku cyklu Visual Basic generuje błąd kompilatora.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Const, instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [Typy danych Stała i Literał](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [Stałe i wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)

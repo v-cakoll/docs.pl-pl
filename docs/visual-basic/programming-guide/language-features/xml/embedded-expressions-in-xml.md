@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965790"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827578"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Wyrażenia osadzone w XML (Visual Basic)
 Wyrażenia osadzone umożliwiają tworzenie literałów XML, które zawierają wyrażenia, które są oceniane w czasie wykonywania. Składnia wyrażenia osadzone jest `<%=` `expression` `%>`, która jest taka sama jak składnia używane w [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -81,6 +81,7 @@ Wyrażenia osadzone umożliwiają tworzenie literałów XML, które zawierają w
 >  Kiedy Deklarujesz prefiks przestrzeni nazw XML przy użyciu `xmlns` atrybut przestrzeni nazw, wartość atrybutu musi być ciągiem stałym. W tym zakresie za pomocą `xmlns` przypomina za pomocą atrybutu `Imports` instrukcję, aby zadeklarować przestrzeni nazw XML. Wyrażenia osadzone nie można użyć do określenia wartości przestrzeni nazw XML.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Literał dokumentu XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [Literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

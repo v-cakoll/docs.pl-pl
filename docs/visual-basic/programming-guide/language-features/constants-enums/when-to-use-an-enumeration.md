@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: 826f8fffedb8c983423fbef0fbf1f4014d93be91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535024"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825108"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>Kiedy stosować wyliczanie (Visual Basic)
 Wyliczenia oferują prosty sposób pracy z zestawami pokrewnych stałych. Moduł wyliczenia lub `Enum`, to Symboliczna nazwa zestawu wartości. Wyliczenia są traktowane jako typy danych i umożliwia im tworzenie zestawów stałych do użycia z zmienne i ich właściwości.  
@@ -36,6 +36,7 @@ Wyliczenia oferują prosty sposób pracy z zestawami pokrewnych stałych. Moduł
  Visual Basic zawiera szereg wstępnie zdefiniowanych wyliczenia, takich jak `FirstDayOfWeek` i `MsgBoxResult`, aby ułatwić swój kod. Aby uzyskać listę tych zobacz [stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Instrukcje: Odnoszą się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

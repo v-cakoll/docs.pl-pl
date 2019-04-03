@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 46bc87c653742c8469ffaff1decb9549a29feaeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972082"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816970"
 ---
 # <a name="-operator-visual-basic"></a>>> — Operator (Visual Basic)
 Wykonuje arytmetyczne przesunięcie w prawo przy użyciu wzorca bitowego.  
@@ -87,6 +87,7 @@ result = pattern >> amount
 -   `negresult2` wynosi -1 (propagowane bitem znaku).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operatory Bit Shift](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [>>=, operator](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)

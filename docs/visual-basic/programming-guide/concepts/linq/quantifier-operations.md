@@ -2,12 +2,12 @@
 title: Operacje kwantyfikatora (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: c358c3181ecbefeedcbe22e6f3c877d2924c66b3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e871a77caf0b7cfe361f11462085180c17bf2057
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409513"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816047"
 ---
 # <a name="quantifier-operations-visual-basic"></a>Operacje kwantyfikatora (Visual Basic)
 Operacje kwantyfikatora zwracają <xref:System.Boolean> wartość, która wskazuje, czy niektóre lub wszystkie elementy w sekwencji spełniają warunek.  
@@ -38,6 +38,7 @@ Operacje kwantyfikatora zwracają <xref:System.Boolean> wartość, która wskazu
  [!code-vb[CsLINQAnyAll#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAnyAll/VB/AnyAll.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Linq>
 - [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Klauzula Aggregate](../../../../visual-basic/language-reference/queries/aggregate-clause.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 6cf45b12bebc254a0d96516ab262d7aae3d70746
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842515"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Instrukcje: Ukrywanie dziedziczonej zmiennej (Visual Basic)
 Klasa pochodna dziedziczy wszystkie definicje klasy bazowej. Jeśli chcesz zdefiniować zmienną przy użyciu tej samej nazwie jako element klasy podstawowej, można ukryć, lub *w tle*, ten element klasy bazowej podczas definiowania zmiennej w klasie pochodnej. Jeśli to zrobisz, kod w klasie pochodnej uzyskuje dostęp do zmiennej, chyba że jawnie pomija mechanizm przesłaniania.  
@@ -56,6 +56,7 @@ Klasa pochodna dziedziczy wszystkie definicje klasy bazowej. Jeśli chcesz zdefi
  Przesłanianie wprowadza więcej niż jedna wersja zmienna o takiej samej nazwie. Instrukcja kodu odwołuje się do nazwy zmiennej, wersja, do której kompilator rozpoznaje odwołania zależy od czynników, takich jak lokalizacja instrukcja kodu i występowania ciągu kwalifikującym się. Może to zwiększyć ryzyko odnoszące się do niezamierzonych wersję zasłonięte zmiennej. Możesz obniżyć ryzyko kwalifikując pełni wszystkie odwołania do zmiennej zasłonięte.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Różnice między przesłanianiem i zastępowaniem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

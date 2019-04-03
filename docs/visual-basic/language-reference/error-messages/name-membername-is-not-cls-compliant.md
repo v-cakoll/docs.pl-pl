@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 74b625cc3a60e591417530c6a6229c01666038e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271255"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824627"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>Nazwa \<membername > nie jest zgodny ze specyfikacją CLS
 Zestaw jest oznaczony jako `<CLSCompliant(True)>` , ale udostępnia element członkowski o nazwie rozpoczynającej się od znaku podkreślenia (`_`).  
@@ -34,6 +34,6 @@ Zestaw jest oznaczony jako `<CLSCompliant(True)>` , ale udostępnia element czł
 -   Jeśli potrzebujesz, że nazwa elementu członkowskiego pozostają niezmienione, Usuń <xref:System.CLSCompliantAttribute> z jego definicji lub oznaczyć go jako `<CLSCompliant(False)>`. Nadal możesz oznaczyć zestaw jako `<CLSCompliant(True)>`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Nazwy zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Visual Basic — konwencje nazewnictwa](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-

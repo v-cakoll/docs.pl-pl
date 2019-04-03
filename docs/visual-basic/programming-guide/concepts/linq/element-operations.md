@@ -2,12 +2,12 @@
 title: Operacje na elementach (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: bbc16599a2688d5e0fe8b1e510946580fa2ca012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501246"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836925"
 ---
 # <a name="element-operations-visual-basic"></a>Operacje na elementach (Visual Basic)
 Operacje na elementach Zwróć element jednej, określonej sekwencji.  
@@ -28,6 +28,7 @@ Operacje na elementach Zwróć element jednej, określonej sekwencji.
 |SingleOrDefault|Zwraca tylko element kolekcji lub jedynym elementem, który spełnia warunek. Zwraca wartość domyślną, jeśli taki element nie istnieje lub kolekcja nie zawiera dokładnie jeden element.|Nie dotyczy.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Linq>
 - [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

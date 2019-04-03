@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974305"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825758"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Instrukcje: Obliczanie wartości liczbowych (Visual Basic)
 Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyrażenia liczbowego* to wyrażenie, które zawiera literały, stałe i zmienne reprezentujące wartości liczbowe i operatory, które działają w tych wartości.  
@@ -63,6 +63,7 @@ Można obliczyć wartości liczbowych za pomocą wyrażeń liczbowych. A *wyraż
      Aby uzyskać więcej informacji, zobacz [pierwszeństwo operatorów w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operatory i wyrażenia](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Porównania wartości](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Instrukcje](../../../../visual-basic/language-reference/statements/index.md)

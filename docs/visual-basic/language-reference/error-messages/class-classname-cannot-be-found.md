@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: cdc610bf70480981442d6de08975dc1cafddd8d0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5003b6d4892839d43ba9da103473c4c7e3d947a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271606"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817139"
 ---
 # <a name="class-classname-cannot-be-found"></a>Klasy\<nazwa_klasy > "nie można odnaleźć
-Klasy\<nazwa_klasy > "nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem niedopasowania biblioteki "Microsoft.VisualBasic.dll".  
+Klasy\<nazwa_klasy > "nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem niedopasowania biblioteki 'Microsoft.VisualBasic.dll'.  
   
  Nie można zlokalizować zdefiniowanego elementu członkowskiego.  
   
@@ -32,4 +32,5 @@ Klasy\<nazwa_klasy > "nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem
 4.  Jeśli ten błąd będzie występował po ponownej instalacji, powiadom pomoc techniczna firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

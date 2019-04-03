@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521416"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818726"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Instrukcje: Kontrolowanie zakresu zmiennej (Visual Basic)
 Zazwyczaj jest zmienną *zakres*, lub widoczny dla odwołania w całym regionie, w którym trzeba je zadeklarować. W niektórych przypadkach zmienna firmy *poziom dostępu* mogą mieć wpływ na jego zakres.  
@@ -87,6 +87,7 @@ Public strMsg As String
  Im bardziej doprecyzowane zakres zmiennej z niego korzystać mniejszy szanse, że złośliwy kod może być niepoprawne.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

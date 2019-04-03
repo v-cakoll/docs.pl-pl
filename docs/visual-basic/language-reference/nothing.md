@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981429"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826096"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Reprezentuje wartość domyślną każdego typu danych. Dla typów odwołań, wartość domyślna to `null` odwołania. Dla typów wartości wartość domyślna zależy od tego, czy typ wartości ma wartość null.  
@@ -51,6 +51,7 @@ Reprezentuje wartość domyślną każdego typu danych. Dla typów odwołań, wa
  `Nothing` różni się od <xref:System.DBNull> obiektu, który reprezentuje niezainicjowanej wariantu lub kolumny nieistniejącej bazy danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dim, instrukcja](../../visual-basic/language-reference/statements/dim-statement.md)
 - [Okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Okres istnienia w Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: 827d7d1574e85a30ec2724f7739f6c3a08dbd975
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b10876c22d2f6dd5832baa0d498db7c4205a3fcb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519727"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816294"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Instrukcje: Przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji (Visual Basic)
 Jeśli często uzyskujesz dostęp do obiektu, który wymaga ścieżką kwalifikacji kilka metod i właściwości, można przyspieszyć swój kod, powtarzając nie ścieżką kwantyfikacji.  
@@ -54,5 +54,6 @@ Jeśli często uzyskujesz dostęp do obiektu, który wymaga ścieżką kwalifika
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [With...End With, instrukcja](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

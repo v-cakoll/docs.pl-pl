@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981273"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820779"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatory arytmetyczne w Visual Basic
 Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytmetyczne, które obejmują obliczanie wartości liczbowych, reprezentowane przez literały, zmienne, innych wyrażeń, funkcji i wywołania właściwości i stałe. Również sklasyfikowane za pomocą operatorów arytmetycznych są bit-shift — operatory, które działają na poziomie pojedynczych bitów operandu- and -shift ich wzorców bitowych do lewej lub prawej strony.  
@@ -95,6 +95,7 @@ Operatory arytmetyczne są używane do wykonywania wielu znanych operacje arytme
  Jeśli ustawisz `Option Strict Off`, jednak języka Visual Basic umożliwia niejawne konwersje zawężające została wykonana, chociaż może spowodować nieoczekiwane utraty danych lub precyzji. Z tego powodu zaleca się, że używasz `Option Strict On` podczas pisania kodu produkcyjnego. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operatory arytmetyczne](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Operatory Bit Shift](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Operatory porównania w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

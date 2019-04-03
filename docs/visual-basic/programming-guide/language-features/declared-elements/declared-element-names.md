@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5311bba92043d3fded34a5d9337b6af13e213d4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573390"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814071"
 ---
 # <a name="declared-element-names-visual-basic"></a>Zadeklarowane nazwy elementów (Visual Basic)
 Każdy element zadeklarowany ma nazwę, nazywany również *identyfikator*, czyli kod używa się do niego.  
@@ -90,6 +90,7 @@ Każdy element zadeklarowany ma nazwę, nazywany również *identyfikator*, czyl
  Porównanie nazw jest niezależne od ustawień regionalnych. Jeśli dwie nazwy są zgodne w jednym ustawień regionalnych, mają gwarancję, że odpowiada we wszystkich ustawieniach regionalnych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zadeklarowane elementy](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

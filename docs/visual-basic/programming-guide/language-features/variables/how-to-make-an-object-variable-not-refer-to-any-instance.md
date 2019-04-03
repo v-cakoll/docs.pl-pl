@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: ceee1b47fb66cfb8e24b6871af3be6475031504f
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738880"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818692"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Instrukcje: Sprawianie Aby zmienna obiektu nie odwoływała się do dowolnego wystąpienia (Visual Basic)
 Usuń skojarzenie zmiennej obiektu z dowolnego wystąpienia obiektu przez ustawienie [nic](../../../../visual-basic/language-reference/nothing.md).  
@@ -32,6 +32,7 @@ Usuń skojarzenie zmiennej obiektu z dowolnego wystąpienia obiektu przez ustawi
  Użycie zmiennej obiektu dla obiektów, które zawierają dane poufne, można ustawić zmiennej `Nothing` kiedy masz nie aktywnie do czynienia z jedną z tych obiektów. Zmniejsza to prawdopodobieństwo złośliwego kodu, uzyskiwanie dostępu do danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.NullReferenceException>
 - [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Przypisanie zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

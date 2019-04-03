@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 626b46123e3047b391cd67d3e85c25c5432b2a69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640202"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823327"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Instrukcje: Tworzenie zmiennej, która nie zmienia wartości (Visual Basic)
 Pojęcie zmienną, która nie zmienia jej wartość może się wydawać sprzeczne. Istnieją sytuacje, gdy stała nie jest możliwe, ale warto mieć zmienną o stałej wartości. W takim przypadku można zdefiniować zmienną składową za pomocą [tylko do odczytu](../../../../visual-basic/language-reference/modifiers/readonly.md) — słowo kluczowe.  
@@ -44,5 +44,6 @@ Pojęcie zmienną, która nie zmienia jej wartość może się wydawać sprzeczn
      Jeśli nie znasz wartości w czasie kompilacji lub nie można obliczyć w czasie kompilacji w pojedynczej instrukcji, można je przypisać w czasie wykonywania w konstruktorze. Aby to zrobić, należy zadeklarować `ReadOnly` zmiennej na poziomie klasy lub struktury. W Konstruktorze tej klasy lub struktury obliczenia stałą wartość zmiennej, a następnie przypisać ją do zmiennej przed zwróceniem z konstruktora.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Const, instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)

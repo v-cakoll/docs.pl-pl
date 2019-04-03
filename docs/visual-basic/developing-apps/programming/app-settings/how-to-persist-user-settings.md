@@ -6,12 +6,12 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: 45d5fbf6fda34407d8b7eb3f959f215e7621f1c5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 35997db52a59aeaff5a2c404ea83b15639ea23a0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966948"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825184"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>Instrukcje: Utrwalanie ustawień użytkownika w języku Visual Basic
 Możesz użyć `My.Settings.Save` metodę, aby utrwalić zmiany ustawień użytkownika.  
@@ -31,6 +31,7 @@ Możesz użyć `My.Settings.Save` metodę, aby utrwalić zmiany ustawień użytk
  W tym przykładzie do pracy, aplikacja musi mieć `LastChanged` ustawienia użytkownika, typu `Date`. Aby uzyskać więcej informacji, zobacz [ustawienia zarządzania aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [My.Settings, obiekt](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Instrukcje: Odczytywanie ustawień aplikacji w języku Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [Instrukcje: Zmienianie ustawień użytkownika w języku Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

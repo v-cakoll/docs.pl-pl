@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: a2c476280009a617573fb7989b2184cd9baa6a8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660687"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840279"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Przypisanie zmiennej obiektu (Visual Basic)
 Instrukcja przypisania normalne umożliwia przydzielanie obiektu do zmiennej obiektu. Możesz przypisać wyrażenie obiektu lub [nic](../../../../visual-basic/language-reference/nothing.md) — słowo kluczowe, w poniższym przykładzie pokazano.  
@@ -76,6 +76,7 @@ addStandardText(Me)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Deklaracja zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

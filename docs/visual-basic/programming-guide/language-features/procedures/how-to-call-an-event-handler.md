@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973525"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837770"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Instrukcje: Wywoływanie programu do obsługi zdarzeń w języku Visual Basic
 *Zdarzeń* jest akcja lub zdarzenie — takich jak myszy kliknij lub limit środków przekroczyła — który jest rozpoznawany przez inny składnik programu i dla którego można napisać kod odpowiedzi. *Programu obsługi zdarzeń* znajduje się kod pisany w celu reagowania na zdarzenie.  
@@ -53,6 +53,7 @@ ms.locfileid: "56973525"
      Usuń skojarzenie program obsługi zdarzenia ze zdarzenia, wykonując [RemoveHandler — instrukcja](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury](./index.md)
 - [Sub, procedury](./sub-procedures.md)
 - [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523223"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829918"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Instrukcje: Usuwanie zasobu systemu (Visual Basic)
 Możesz użyć `Using` bloku, aby zagwarantować, że system Usuwa zasób po kodzie zamyka blok. Jest to przydatne, jeśli używasz zasób systemowy, który używa dużej ilości pamięci, lub też używać innych składników.  
@@ -45,6 +45,7 @@ Możesz użyć `Using` bloku, aby zagwarantować, że system Usuwa zasób po kod
      Można użyć tej samej techniki, w zasobach systemu, takie jak dojście do pliku lub otoka COM. Możesz użyć `Using` zablokować, jeśli chcesz mieć pewność, że opuścić zasób jest dostępny dla innych składników po zostały zakończone `Using` bloku.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.SqlClient.SqlConnection>
 - [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

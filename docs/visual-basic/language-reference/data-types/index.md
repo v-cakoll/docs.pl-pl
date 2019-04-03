@@ -37,12 +37,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 14eaacda83576b6c38d4783fba7c898a8c4aaa5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746822"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821975"
 ---
 # <a name="data-type-summary-visual-basic"></a>Typ danych — Podsumowanie (Visual Basic)
 W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługi popularnych typów środowiska wykonawczego dla języka, ich nominalnych alokacji i ich zakresami wartości.  
@@ -92,6 +92,7 @@ W poniższej tabeli przedstawiono typy danych Visual Basic, ich obsługi popular
  `Object` Odwołujące się do żadnych danych podstawowych lub złożonego typu używa 4 bajtów oprócz danych znajdujących się na typ danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)

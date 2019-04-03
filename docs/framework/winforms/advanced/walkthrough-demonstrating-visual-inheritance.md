@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Demonstrowanie dziedziczenia wizualizacji'
+title: 'Przewodnik: Demonstrowanie dziedziczenia Visual'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816320"
 ---
-# <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia wizualizacji
+# <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia Visual
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym instruktażu utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Będzie zaimportować tej biblioteki klas do innego projektu i utworzyć nowy formularz, który dziedziczy z formularza podstawowego. Z tego instruktażu dowiesz się jak:  
   
 -   Utwórz projekt biblioteki klas zawierający formularz podstawowy.  
@@ -140,7 +140,7 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
 5.  Otwórz odziedziczony formularz (**formularz2**) w projektancie, klikając dwukrotnie plik, go, jeśli nie jest już otwarty.  
   
-     W Projektancie dziedziczone przyciski powinny mieć symbol (![VisualBasicInheritanceSymbol — zrzut ekranu](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) w górnym rogu, wskazując, są one dziedziczone.  
+     W Projektancie dziedziczone przyciski powinny mieć symbol (![Zrzut ekranu przedstawiający symbolu dziedziczenie Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) w górnym rogu, wskazując, są one dziedziczone.  
   
 6.  Wybierz **Say Hello** przycisk i obserwuj uchwytami zmiany rozmiaru. Ponieważ ten przycisk jest chroniony, obiektów dziedziczących można go przenieść, zmienić jego rozmiar, zmień swój podpis i wprowadzać inne modyfikacje.  
   

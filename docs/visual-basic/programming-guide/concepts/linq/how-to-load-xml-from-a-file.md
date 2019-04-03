@@ -2,12 +2,12 @@
 title: 'Instrukcje: Ładowanie kodu XML z pliku (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-ms.openlocfilehash: 9ca19868629c89c10a8aca8f88860115a9efe7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494668"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814965"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>Instrukcje: Ładowanie kodu XML z pliku (Visual Basic)
 W tym temacie pokazano, jak załadować XML z identyfikatora URI przy użyciu <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> metody.  
@@ -49,4 +49,5 @@ Console.WriteLine(booksFromFile)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: d7cdf5a309da1f32b337bea4d609fe34487a5457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746353"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819999"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Rejestrowanie informacji z aplikacji (Visual Basic)
 Ta sekcja zawiera tematy, które opisano, jak rejestrowanie informacji z aplikacji przy użyciu `My.Application.Log` lub `My.Log` obiektu i jak rozszerzyć możliwości rejestrowania zdarzeń aplikacji.  
@@ -38,6 +38,7 @@ Ta sekcja zawiera tematy, które opisano, jak rejestrowanie informacji z aplikac
 |Filtrowanie danych wyjściowych `My.Application.Log` dzienniki.|[Przewodnik: Filtrowanie danych wyjściowych My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Rozwiązywanie problemów: Odbiorniki logu](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

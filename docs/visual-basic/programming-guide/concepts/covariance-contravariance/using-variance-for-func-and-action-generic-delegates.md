@@ -2,12 +2,12 @@
 title: Korzystanie z wariancji dla Func i akcji delegatów ogólnych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: 134b3c0776e100a4bdc7e902bc8b41477a0ee264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549460"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814307"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Korzystanie z wariancji dla Func i akcji delegatów ogólnych (Visual Basic)
 Te przykłady przedstawiają sposób zastosowania kowariancji i kontrawariancji w `Func` i `Action` delegatów ogólnych, które umożliwiają wielokrotne użycie metod i zapewniają większą elastyczność w kodzie.  
@@ -90,5 +90,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kowariancja i Kontrawariancja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [Typy ogólne](~/docs/standard/generics/index.md)

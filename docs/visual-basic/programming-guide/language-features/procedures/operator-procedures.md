@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974929"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815573"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedury operatorów (Visual Basic)
 Procedury operatora to szereg instrukcji, które definiują zachowanie standardowego operatora (takie jak `*`, `<>`, lub `And`) dla klasy lub struktury, które zostały zdefiniowane. Jest to również nazywane *przeciążenia operatora*.  
@@ -81,6 +81,7 @@ Procedury operatora to szereg instrukcji, które definiują zachowanie standardo
   
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury](./index.md)
 - [Sub, procedury](./sub-procedures.md)
 - [Procedury funkcji](./function-procedures.md)

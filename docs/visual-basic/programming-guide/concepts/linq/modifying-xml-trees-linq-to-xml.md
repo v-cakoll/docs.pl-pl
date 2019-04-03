@@ -2,12 +2,12 @@
 title: Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
-ms.openlocfilehash: b34324b993a9c65aad6c2b7c92b33bf4ce9037cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4673902880822e6e4ed0bc144aedc2428faa5b69
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814890"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest magazyn w pamięci dla drzewa XML. Po ładowania lub analizowania drzewa XML z źródła, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] umożliwia modyfikowanie tego drzewa w miejscu, a następnie serializacji drzewa, może być zapisanie go do pliku i wysyłaniu ich do serwera zdalnego.  
@@ -28,4 +28,5 @@ ms.locfileid: "54725648"
 |[Instrukcje: Zmień Namespace dla całego drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Pokazuje sposób przenoszenia drzewa XML z jednego obszaru nazw do innego.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: a87407fe863569ff961f4a2dc320e73719ed4d9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601769"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830035"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Kolejność wykonywania działań (Visual Basic)
 Po wystąpieniu kilka operacji w wyrażeniach, każda część jest obliczane i rozwiązane w określonej kolejności, o nazwie *pierwszeństwo operatorów*.  
@@ -112,6 +112,7 @@ g = (a - (b + c)) / (d * e)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [=, operator](../../../visual-basic/language-reference/operators/assignment-operator.md)
 - [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)

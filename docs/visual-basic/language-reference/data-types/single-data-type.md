@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: cd94411629f18557f677a6d1f65bfc0dede43e83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534518"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833333"
 ---
 # <a name="single-data-type-visual-basic"></a>Single — Typ danych (Visual Basic)
 Przechowuje podpisany IEEE 32-bitowe (4-bajtową) pojedynczej precyzji liczb zmiennoprzecinkowych z zakresu od - 3.4028235E + 38 do - 1, 401298E-45 dla wartości ujemnych i 1, 401298E-45 za pośrednictwem 3.4028235E + 38 dla wartości dodatnich. Liczby o pojedynczej precyzji przechowywać przybliżeniem liczbą rzeczywistą.  
@@ -48,6 +48,7 @@ Przechowuje podpisany IEEE 32-bitowe (4-bajtową) pojedynczej precyzji liczb zmi
 -   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Single?displayProperty=nameWithType> struktury.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Single?displayProperty=nameWithType>
 - [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
 - [Decimal, typ danych](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272653"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814058"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Nie można zastosować przeciążenia późnego "\<nazwaprocedury >", ponieważ wystąpienie uzyskujące dostęp jest typem interfejsu
 Kompilator próbuje rozpoznać odwołania do elementu przeciążona właściwość lub procedura, ale odwołania nie powiedzie się, ponieważ typ argumentu jest `Object` i odwołuje się do innych obiektów o typie danych interfejsu. `Object` Argument wymusza na kompilatorze rozpoznać odwołania jako z późnym wiązaniem.  
@@ -65,6 +65,7 @@ refer.s1(CType(o1, Double))
  Każdy z poprzednich wierszy kodu jawnie rzutuje `Object` zmiennej `o1` do jednego z typów parametrów zdefiniowanych dla przeciążenia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przeciążanie procedury](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Rozpoznanie przeciążenia](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
 - [Funkcja CType](../../../visual-basic/language-reference/functions/ctype-function.md)

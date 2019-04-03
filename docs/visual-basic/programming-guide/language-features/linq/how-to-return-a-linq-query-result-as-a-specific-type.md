@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 784a848b02e75d2ae9a6c6530141e69a05a9041b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ba6479852f7a78fb26743a04fd08adea07c1ffff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973499"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835872"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Instrukcje: Zwracanie wyniku zapytania LINQ jako określonego typu (Visual Basic)
 Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i wykonywania zapytań. Domyślnie zapytania LINQ zwracają listę obiektów jako typu anonimowego. Można również określić, że zapytanie zwraca listę określonego typu przy użyciu `Select` klauzuli.  
@@ -76,6 +76,7 @@ Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i
 5.  Naciśnij klawisz F5, aby uruchomić projekt i wyświetlić wyniki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

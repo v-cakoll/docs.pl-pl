@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: 7002589b303c41b26b611588f339fa70dd19f959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91a1cedc66fd66e336b6e7976ad87ad638cb43c3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537598"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816887"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
 Określa, że właściwość lub procedura może być zastąpione o identycznej nazwie właściwość lub procedura w klasie pochodnej.  
@@ -54,6 +54,7 @@ Określa, że właściwość lub procedura może być zastąpione o identycznej 
  [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Modyfikatory](../../../visual-basic/language-reference/modifiers/index.md)
 - [Podstawowe informacje o dziedziczeniu](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)

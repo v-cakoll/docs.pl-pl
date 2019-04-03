@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: 5a81cde63de258f0996c3ddbc99e0102d58d79b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973915"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839369"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Domyślne wystąpienia obiektu zapewniane przez My.Forms i My.WebServices (Visual Basic)
 [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) i [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) obiekty zapewniają dostęp do formularzy, źródła danych i usług sieci Web XML używanych przez aplikację. Mogą to zrobić, podając kolekcji *domyślne wystąpień* każdego z tych obiektów.  
@@ -27,6 +27,7 @@ ms.locfileid: "56973915"
  `My.Forms` Obiektu zwraca kolekcję wystąpień domyślną dla każdego `Form` klasę, która istnieje w projekcie. Podobnie `My.WebServices` zapewnia domyślne wystąpienie klasy proxy dla każdej usługi w sieci Web, że utworzono odwołanie do aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
 - [Jak My zależy od typu projektu](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

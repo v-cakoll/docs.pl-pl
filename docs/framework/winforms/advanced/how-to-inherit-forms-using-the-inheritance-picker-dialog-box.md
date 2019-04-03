@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Dziedziczenie formularzy przy użyciu okna dialogowego selektora dziedziczenia'
+title: 'Instrukcje: Dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719363"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841168"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Instrukcje: Dziedziczenie formularzy przy użyciu okna dialogowego selektora dziedziczenia
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Instrukcje: Dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia
 Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **selektor dziedziczenia** okno dialogowe. Dzięki niemu można korzystać z zalet interfejsów kodu lub użytkownika (UI), utworzono już w innych rozwiązaniach.  
   
 > [!NOTE]
@@ -41,7 +41,7 @@ Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **sele
   
 6.  Wybierz składnik.  
   
-     W **Eksploratora rozwiązań**, składnik zostanie dodany do projektu. Ma interfejs użytkownika, kontrolek, które są częścią odziedziczony formularz będą oznaczone znakiem glif (![VisualBasicInheritanceSymbol — zrzut ekranu](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")), i po wybraniu wskazujący obramowania poziom zabezpieczeń, które kontrolkę w formularzu podklasy. W poniższej tabeli wymieniono zachowań, które odnoszą się do różnych poziomów ochrony.  
+     W **Eksploratora rozwiązań**, składnik zostanie dodany do projektu. Ma interfejs użytkownika, kontrolek, które są częścią odziedziczony formularz będą oznaczone znakiem glif (![zrzut ekranu przedstawiający symboli dziedziczenie Visual Basic.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)), a po wybraniu miała obramowanie wskazujący poziom zabezpieczeń, między formantem podklasy formularz. W poniższej tabeli wymieniono zachowań, które odnoszą się do różnych poziomów ochrony.  
   
     |Poziom kontroli zabezpieczeń|Dostępne interakcji za pomocą projektanta i edytora kodu za pomocą formularza dziedziczone|  
     |-------------------------------|--------------------------------------------------------------------------------|  

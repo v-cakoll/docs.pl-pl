@@ -3,12 +3,12 @@ title: Narzędzia programu .NET core interfejsu wiersza polecenia (CLI)
 description: Przegląd funkcji i narzędzi .NET Core interfejsu wiersza polecenia (CLI).
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 5af0dfa01763aaa2ec35576ff30117d458ca7f7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565803"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826317"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Narzędzia interfejsu wiersza polecenia (CLI) platformy .NET core
 
@@ -122,11 +122,17 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Sterownik
 
-Nosi nazwę sterownika [dotnet](dotnet.md) i ma dwa odpowiedzialności, albo uruchamianie [zależny od struktury aplikacji](../deploying/index.md) lub wykonywania polecenia. Jedyną sytuacją `dotnet` jest używany bez jest poleceniem, gdy jest używany do uruchomienia aplikacji.
+Nosi nazwę sterownika [dotnet](dotnet.md) i ma dwa odpowiedzialności, albo uruchamianie [zależny od struktury aplikacji](../deploying/index.md) lub wykonywania polecenia. 
 
-Uruchamianie aplikacji zależny od struktury, na przykład określić aplikację po sterownika, `dotnet /path/to/my_app.dll`. Podczas wykonywania polecenia z folderu, w którym znajduje się biblioteki DLL z aplikacji, po prostu wykonaj `dotnet my_app.dll`.
+Uruchamianie aplikacji zależny od struktury, na przykład określić aplikację po sterownika, `dotnet /path/to/my_app.dll`. Podczas wykonywania polecenia z folderu, w którym znajduje się biblioteki DLL z aplikacji, po prostu wykonaj `dotnet my_app.dll`. Jeśli chcesz użyć określonej wersji środowiska uruchomieniowego programu .NET Core, użyj `--fx-version <VERSION>` opcji (zobacz [polecenia dotnet](dotnet.md) odwołania).
 
-Podczas dostarczania polecenia do sterownika, `dotnet.exe` rozpoczyna się proces wykonywania polecenia interfejsu wiersza polecenia. Po pierwsze sterownik Określa wersję zestawu SDK do użycia. Jeśli wersja nie jest określona w opcji polecenia, sterownik używa najnowsza dostępna wersja. Aby określić wersję innego niż jego Najnowsza zainstalowana wersja, należy użyć `--fx-version <VERSION>` opcji (zobacz [polecenia dotnet](dotnet.md) odwołania). Po określeniu wersji zestawu SDK sterownik wykonuje polecenie.
+Podczas dostarczania polecenia do sterownika, `dotnet.exe` rozpoczyna się proces wykonywania polecenia interfejsu wiersza polecenia. Na przykład:
+
+```bash
+> dotnet build
+```
+
+Po pierwsze sterownik Określa wersję zestawu SDK do użycia. Jeśli ma nie ["global.json"](global-json.md), służy najnowszą wersję zestawu SDK, które są dostępne. Może to być w wersji zapoznawczej albo stabilną wersję, w zależności od tego, co to jest najnowsze na komputerze.  Po określeniu wersji zestawu SDK wykonuje polecenie.
 
 ### <a name="command-verb"></a>Polecenie ("verb")
 

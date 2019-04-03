@@ -2,12 +2,12 @@
 title: LINQ i ciągi (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 0ffff11243b96d46cfd9424502ec43ed2319136d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569995"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818959"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ i ciągi (Visual Basic)
 LINQ mogą służyć do wykonywania zapytań i przekształcanie ciągów i zbiorów ciągów. Może być szczególnie przydatne w przypadku danych z częściową strukturą w plikach tekstowych. Zapytania LINQ można łączyć z funkcji tradycyjnego ciągów i wyrażeń regularnych. Na przykład, można użyć <xref:System.String.Split%2A> lub <xref:System.Text.RegularExpressions.Regex.Split%2A> metodę, aby utworzyć tablicę ciągów, które można zbadać lub zmodyfikować za pomocą LINQ. Możesz użyć <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> method in Class metoda `where` klauzula zapytania LINQ. I LINQ umożliwia zapytania lub zmodyfikować <xref:System.Text.RegularExpressions.MatchCollection> wyniki zwrócone przez wyrażenie regularne.  
@@ -60,5 +60,6 @@ LINQ mogą służyć do wykonywania zapytań i przekształcanie ciągów i zbior
  Pokazuje sposób wykonywania obliczeń matematycznych na danych tekstu w plikach CSV.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](index.md)
 - [Instrukcje: Generowanie kodu XML z plików CSV](how-to-generate-xml-from-csv-files.md)

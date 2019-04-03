@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965713"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831127"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Rozwiązywanie problemów związanych ze zmiennymi w Visual Basic
 Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpić podczas pracy ze zmiennymi w Visual Basic.  
@@ -48,6 +48,7 @@ Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpi�
  Należy unikać używania zmiennych o tej samej nazwie, ale inny zakres. Jeśli używasz innych projektów lub zestawów, należy unikać żadnych nazw zdefiniowane w tych składników zewnętrznych, jak to możliwe. Jeśli masz więcej niż jedną zmienną o takiej samej nazwie, upewnij się, że spełniasz każde odwołanie do niego. Aby uzyskać więcej informacji, zobacz [Odwołania do zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

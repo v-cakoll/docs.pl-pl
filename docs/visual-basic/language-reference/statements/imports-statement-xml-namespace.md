@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 8cce1cc918b150fdf30449f127b1e2f0a73e6f6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97d08113a37477add9d770b0a680c303fe7e3040
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841410"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports — Instrukcja (przestrzeń nazw XML)
 Importuje prefiksy przestrzeni nazw XML do użycia w literałach XML i właściwości osi XML.  
@@ -89,6 +89,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  `Patrick Hines`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)
 - [Nazwy deklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

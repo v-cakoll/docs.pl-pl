@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: 796c16e912283d86496a4ccbd3b675ac1433f02d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0966cea26c5dde8f116081c7a6411b4275e50f40
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356406"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817048"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>Odwołanie do przyjaznego zestawu \<odwołanie > jest nieprawidłowy
 Odwołanie do przyjaznego zestawu \<odwołanie > jest nieprawidłowy. Zestawy podpisane silnymi nazwami muszą określać klucz publiczny w swoich deklaracjach InternalsVisibleTo.  
@@ -26,7 +26,6 @@ Odwołanie do przyjaznego zestawu \<odwołanie > jest nieprawidłowy. Zestawy po
 1.  Określ klucz publiczny dla zestawu o silnej nazwie przyjaciela. Dołącz klucz publiczny, jako część nazwy zestawu przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybut konstruktora przy użyciu `PublicKey` atrybutu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Reflection.AssemblyName>
 - [Przyjazne zestawy](../../../standard/assembly/friend-assemblies.md)
-
-

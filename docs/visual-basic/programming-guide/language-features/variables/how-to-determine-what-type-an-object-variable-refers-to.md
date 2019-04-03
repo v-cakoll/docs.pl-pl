@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571181"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816411"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Instrukcje: Wyznaczyć, jakiego typu odnosi się zmienna obiektu (Visual Basic)
 Zmienna obiektu zawiera wskaźnik do danych przechowywanych w różnych miejscach. Typ danych można zmienić w czasie wykonywania. W każdej chwili możesz użyć <xref:System.Type.GetTypeCode%2A> metodę pozwala ustalić bieżącego typu run-time lub [TypeOf — Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) można sprawdzić, czy bieżący typu run-time jest zgodny z określonym typem.  
@@ -53,6 +53,7 @@ Zmienna obiektu zawiera wskaźnik do danych przechowywanych w różnych miejscac
  Należy pamiętać, że określony typ nie może być zmiennej lub wyrażenia. Musi to być nazwa zdefiniowanego typu, takich jak klasy, struktury lub interfejsu. Obejmuje to typy wewnętrzne takie jak `Integer` i `String`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

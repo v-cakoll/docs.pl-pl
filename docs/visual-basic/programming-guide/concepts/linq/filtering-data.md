@@ -2,19 +2,19 @@
 title: Filtrowanie danych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: d65b9941ceffa7ea23c4ead192ec6b97b7b4ead8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527838"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837450"
 ---
 # <a name="filtering-data-visual-basic"></a>Filtrowanie danych (Visual Basic)
 Filtrowanie odnosi się do operacji ograniczyć zestaw wyników, aby zawiera tylko te elementy, które spełniają określony warunek. Jest również nazywany zaznaczenia.  
   
  Poniższa ilustracja przedstawia wyniki filtrowania sekwencji znaków. Predykat dla filtrowania operacji określa, że znak musi być "A".  
   
- ![Filtrowanie operację LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_filter.png "LINQ_Filter")  
+ ![Diagram przedstawiający filtrowanie operację LINQ](./media/filtering-data/linq-filter-operation.png)  
   
  Metody standardowego operatora zapytań, które wykonują wyboru są wymienione w poniższej sekcji.  
   
@@ -50,6 +50,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Linq>
 - [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Where, klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)

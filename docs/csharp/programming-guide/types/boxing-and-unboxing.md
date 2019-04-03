@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 8340d05b18c4fb19e9ba8f8ecffa5657b7febd79
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201758"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835170"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Konwersja boxing i konwersja unboxing (Przewodnik programowania w języku C#)
 OPAKOWYWANIE to proces konwersji [typu wartości](../../../csharp/language-reference/keywords/value-types.md) typowi `object` lub dowolny typ interfejsu implementowany przez ten typ wartości. Gdy środowisko CLR opakowuje typ wartości, otacza wartość wewnątrz elementu System.Object i zapisuje go w zarządzanym stosie. Rozpakowywanie wyodrębnia typ wartości z obiektu. OPAKOWYWANIE jest niejawne; Rozpakowywanie jest jawne. Pojęcie pakowania i rozpakowywania źródłową C# postrzega system typów, w którym wartość dowolnego typu może być traktowana jako obiekt.  
@@ -46,10 +46,9 @@ OPAKOWYWANIE to proces konwersji [typu wartości](../../../csharp/language-refer
   
  [!code-csharp[csProgGuideTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#18)]  
   
- Wyniku tego instrukcja tworzy odwołanie do obiektu `o`, na stosie, który odwołuje się do wartości typu `int`, na stosie. Ta wartość jest kopią wartości Typ-wartość przypisana do zmiennej `i`. Różnica między dwiema zmiennymi `i` i `o`, przedstawiono na poniższej ilustracji.  
+ Wyniku tego instrukcja tworzy odwołanie do obiektu `o`, na stosie, który odwołuje się do wartości typu `int`, na stosie. Ta wartość jest kopią wartości Typ-wartość przypisana do zmiennej `i`. Różnica między dwiema zmiennymi `i` i `o`, przedstawiono na poniższej ilustracji konwersji pakującej:  
   
- ![BoxingConversion — grafika](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")  
-Konwersja boxing  
+ ![Grafika przedstawiająca różnicy i oraz o zmiennych.](./media/boxing-and-unboxing/boxing-operation-i-o-variables.gif)    
   
  Jest również możliwe przeprowadzenie pakowania, które jawnie jak w poniższym przykładzie, ale jawne pakowanie nigdy nie jest wymagane:  
   
@@ -72,10 +71,9 @@ Konwersja boxing
   
  [!code-csharp[csProgGuideTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#21)]  
   
- Następujący rysunek ilustruje wynik poprzednich instrukcji.  
+ Następujący rysunek ilustruje wynik poprzednich instrukcji: 
   
- ![Grafika przedstawiająca konwersję unBoxing](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
-Konwersja rozpakowująca  
+ ![Grafika przedstawiająca konwersji rozpakowującej.](./media/boxing-and-unboxing/unboxing-conversion-operation.gif)
   
  Dla rozpakowywania typów wartości, które zakończyło się sukcesem w czasie wykonywania, rozpakowywany element musi być odwołaniem do obiektu, który został wcześniej utworzony przez pakowanie instancji tego typu wartości. Próba rozpakowania `null` powoduje, że <xref:System.NullReferenceException>. Próba rozpakowania odwołania do niezgodną wartość typu powoduje, że <xref:System.InvalidCastException>.  
   

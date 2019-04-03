@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32005
 ms.assetid: 4039f51b-e0ee-4789-a89b-45d06de06b5d
-ms.openlocfilehash: 0cee52f0ca00395d93c469aae6498fd3793f1085
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 85573099ec0a3f8a23c17bdf384c4c105f9157df
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266320"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825797"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-if-statement"></a>Instrukcja nie może kończyć bloku poza instrukcją „If” wiersza
 Jeden wiersz `If` instrukcja zawiera kilka instrukcji oddzielone dwukropkiem (:), z których jedna jest `End` instrukcji w bloku kontroli, poza jednym wierszem `If`. Jeden wiersz `If` nie należy używać instrukcji `End If` instrukcji.  
@@ -24,4 +24,5 @@ Jeden wiersz `If` instrukcja zawiera kilka instrukcji oddzielone dwukropkiem (:)
 -   Przenieś jeden wiersz `If` instrukcji poza blok sterowania, który zawiera `End If` instrukcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

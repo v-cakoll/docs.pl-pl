@@ -2,12 +2,12 @@
 title: Niestandardowy filtr komunikatów
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 583c390c1f1a85df5b2dde3bcd06adf419eef668
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d71f147a5664b44cf6ef37b4432e295344f0aee2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632143"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829390"
 ---
 # <a name="custom-message-filter"></a>Niestandardowy filtr komunikatów
 Niniejszy przykład pokazuje, jak zastąpić filtry komunikatów, używane przez program Windows Communication Foundation (WCF) do wysyłania wiadomości do punktów końcowych.  
@@ -135,4 +135,3 @@ Hello
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  
   
-## <a name="see-also"></a>Zobacz także

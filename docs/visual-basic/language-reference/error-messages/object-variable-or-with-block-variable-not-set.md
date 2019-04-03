@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: bde0150e1e20fb96d079e21b593f1ac6e27e6af7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611374"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831660"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Zmienna obiektu lub zmienna bloku With nie jest ustawiona
 Odwołuje się do nieprawidłowego obiektu zmiennej.   Ten błąd może wystąpić z kilku powodów:  
@@ -53,6 +53,7 @@ Option Strict On
 5.  Upewnij się, że Twoje `With` bloku jest inicjowany przez wykonanie `With` instrukcji punktu wejścia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Deklaracja zmiennej obiektu](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [ReDim, instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [With...End With, instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

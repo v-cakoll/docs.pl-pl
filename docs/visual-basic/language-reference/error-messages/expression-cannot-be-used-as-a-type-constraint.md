@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: 02d5035daa1ff3da4d7d3bac7c95ef8e8379b3f7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8dbf510d7c6ee80e2dcd2f9d2552bc870413cbab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264677"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838108"
 ---
 # <a name="expression-cannot-be-used-as-a-type-constraint"></a>"\<wyrażenia >" nie można użyć jako ograniczenia typu
 Lista ograniczeń zawiera wyrażenie, które nie stanowi prawidłowe ograniczenie dotyczące parametru typu.  
@@ -44,7 +44,7 @@ Lista ograniczeń zawiera wyrażenie, które nie stanowi prawidłowe ograniczeni
 -   Wyrażenie odwołuje się do interfejsu lub klasy, sprawdź, czy kompilator ma dostęp do tego interfejsu lub klasy. Może być konieczne jego nazwy i może być konieczne dodać odwołanie do projektu. Aby uzyskać więcej informacji, zobacz "Odwołania do projektów" w [odwołania do elementów zadeklarowany](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Typy wartości i odwołań](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Odwołania do elementów zadeklarowanych](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-

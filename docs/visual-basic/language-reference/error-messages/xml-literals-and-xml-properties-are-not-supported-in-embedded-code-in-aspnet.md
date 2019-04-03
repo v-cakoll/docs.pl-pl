@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: 7bec146f0100971d78eed69412ce27889e7a6263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79be695478983055ae1f016cf841d733d3f4c430
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597167"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813928"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w programie ASP.NET.
 Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w programie ASP.NET. Aby użyć funkcje języka XML, należy przenieść kod związany z kodem.  
@@ -26,6 +26,7 @@ Literały XML i właściwości XML nie są obsługiwane w kodzie osadzonym w pro
 -   Przenieś kod, który zawiera literał XML i właściwości osi XML w pliku związanym z kodem programu ASP.NET.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
 - [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

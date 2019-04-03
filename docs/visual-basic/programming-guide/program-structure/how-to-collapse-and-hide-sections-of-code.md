@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980129"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822302"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Instrukcje: Zwijanie i ukrywanie fragmentów kodu (Visual Basic)
 `#Region` Dyrektywy umożliwia zwijanie i ukrywanie fragmentów kodu w plikach języka Visual Basic. `#Region` Dyrektywy umożliwia określenie blok kodu, który będzie można rozszerzać lub Zwiń, korzystając z edytora kodu Visual Studio. Możliwość selektywnego Ukryj kod sprawia, że pliki w zarządzaniu i czytelne. Aby uzyskać więcej informacji, zobacz [konspekt](/visualstudio/ide/outlining).  
@@ -30,6 +30,7 @@ ms.locfileid: "56980129"
     >  Ukrywanie kodu nie zapobiega on kompilowany i nie ma wpływu na `#If...#End If` instrukcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [#Region, dyrektywa](../../../visual-basic/language-reference/directives/region-directive.md)
 - [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

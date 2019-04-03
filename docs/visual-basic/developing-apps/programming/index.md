@@ -5,12 +5,12 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 5c5f105a573cd783348a41dc3f4897f2e04ca5c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709874"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819063"
 ---
 # <a name="programming-in-visual-basic"></a>Programowanie w Visual Basic
 W tej sekcji omówiono zadań programistycznych, które chcesz więcej informacji na temat tworzenia aplikacji Visual Basic.  
@@ -38,6 +38,7 @@ W tej sekcji omówiono zadań programistycznych, które chcesz więcej informacj
  Zawiera dokumentacja dotycząca sposobu dostępu do systemu plików przy użyciu `My.Computer.FileSystem` obiektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Funkcje języka Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
 - [Pojęcia związane z programowaniem](../../../visual-basic/programming-guide/concepts/index.md)
 - [Kolekcje](../../../visual-basic/programming-guide/concepts/collections.md)

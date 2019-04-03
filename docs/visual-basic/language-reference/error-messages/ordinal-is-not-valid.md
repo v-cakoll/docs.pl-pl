@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 351b7ee7f1cfc5199d878c33965770693227ccc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3207c2cc237ae22c295c2b3ed56f18601625226
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618966"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822278"
 ---
 # <a name="ordinal-is-not-valid"></a>Liczba porządkowa nie jest prawidłowa
 Wywołania do biblioteki dołączanej (dynamicznie DLL) wskazane Użyj numeru zamiast nazwy procedury przy użyciu `#num` składni. Ten błąd ma następujące możliwe przyczyny:  
@@ -29,4 +29,5 @@ Wywołania do biblioteki dołączanej (dynamicznie DLL) wskazane Użyj numeru za
 3.  Izolowanie po wywołaniu procedury, które powoduje problem, zakomentowując kodu. Zapis `Declare` poufności informacji dotyczące procedury i raport problem z dostawcą biblioteki typów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)

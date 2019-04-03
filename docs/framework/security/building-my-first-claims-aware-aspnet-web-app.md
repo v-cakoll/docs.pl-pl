@@ -1,16 +1,16 @@
 ---
-title: Tworzenie pierwszą aplikację sieci Web programu ASP.NET obsługującej oświadczenia
+title: Tworzenie pierwszej aplikacji internetowej ASP.NET obsługującej oświadczenia
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588967"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838134"
 ---
-# <a name="building-my-first-claims-aware-aspnet-web-application"></a>Tworzenie pierwszą aplikację sieci Web programu ASP.NET obsługującej oświadczenia
+# <a name="building-my-first-claims-aware-aspnet-web-application"></a>Tworzenie pierwszej aplikacji internetowej ASP.NET obsługującej oświadczenia
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Windows Identity Foundation (WIF)  
@@ -19,7 +19,7 @@ ms.locfileid: "54588967"
   
  W tym temacie opisano scenariusz tworzenia przy użyciu programu WIF aplikacji internetowych programu ASP.NET obsługujących oświadczenia. W scenariuszu aplikacji obsługującej oświadczenia zazwyczaj uczestniczą trzy strony: sama aplikacja, użytkownik końcowy i usługa tokenu zabezpieczającego (STS). Następujący rysunek opisuje ten scenariusz:  
   
- ![Program WIF podstawowej aplikacji sieci Web](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")  
+ ![Diagram przedstawiający składników WIF podstawową aplikację internetową.](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1.  Aplikacja obsługująca oświadczenia używa programu WIF do identyfikowania nieuwierzytelnionych żądań i przekierowywania ich do usługi STS.  
   

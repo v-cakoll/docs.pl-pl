@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655052"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821768"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Różne typy danych (Visual Basic)
 Visual Basic dostarcza kilka typów danych, które nie są opracowane głównie pod kątem liczby lub znaki. Zamiast tego mają do czynienia wyspecjalizowane danych takich jak tak/nie wartości, wartości daty/godziny i adresy obiektów.  
@@ -31,6 +31,7 @@ Visual Basic dostarcza kilka typów danych, które nie są opracowane głównie 
  Zaletą `Object` typ danych jest, że służy do przechowywania danych dowolnego typu danych. Wadą jest to pociągnąć za sobą dodatkowych operacji, które zająć więcej czasu wykonywania i aplikacja działać wolniej. Jeśli używasz `Object` zmiennej dla typów wartości, wiąże się z *pakowania* i *Rozpakowywanie*. Jeśli używasz dla typów odwołań wiąże się z *późnym wiązaniu*.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Typy danych liczbowych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)

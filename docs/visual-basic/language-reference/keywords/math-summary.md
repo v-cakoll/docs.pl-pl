@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math functions, Visual Basic
 - math functions
 ms.assetid: 6abf2dd7-92d2-488a-8e2b-819be9b30c3f
-ms.openlocfilehash: 1314bd56ab7fb26dc5bb53b959370caa2287dc87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7447a3155c9727a9c55ea86826d1ef15ac21243
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731858"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838836"
 ---
 # <a name="math-summary-visual-basic"></a>Podsumowanie matematyczne (Visual Basic)
 Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są uszeregowane według celu i użycia.  
@@ -27,6 +27,7 @@ Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonaw
 |Wykonywania konwersji liczbowych.|<xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A>|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pochodne funkcje matematyczne](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
 - [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

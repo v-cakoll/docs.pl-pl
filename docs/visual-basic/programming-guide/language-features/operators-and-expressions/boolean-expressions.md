@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965543"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825537"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Wyrażenia logiczne (Visual Basic)
 A *wyrażenia logicznego* jest wyrażeniem, którego wynikiem jest wartość [typ danych Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` lub `False`. `Boolean` wyrażenia może przybierać różne formy. Najprostszą jest bezpośrednie porównanie wartości `Boolean` zmienną `Boolean` literału, jak pokazano w poniższym przykładzie.  
@@ -67,6 +67,7 @@ A *wyrażenia logicznego* jest wyrażeniem, którego wynikiem jest wartość [ty
  Można użyć nawiasów, można określić kolejność obliczania wyrażeń logicznych. Najpierw należy ocenić wyrażenia ujętego w nawiasy. Wiele poziomów zagnieżdżenia przyznano pierwszeństwo najgłębiej zagnieżdżoną wyrażenia. Wewnątrz nawiasów ocena będzie kontynuowana zgodnie z regułami pierwszeństwo operatorów. Aby uzyskać więcej informacji, zobacz [pierwszeństwo operatorów w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operatory logiczne i bitowe w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Porównania wartości](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Instrukcje](../../../../visual-basic/programming-guide/language-features/statements.md)

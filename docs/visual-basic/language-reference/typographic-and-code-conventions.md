@@ -10,12 +10,12 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-ms.openlocfilehash: c915d12fa633ec2f95cd82d5f795d48d0f551662
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3255dff8268cd5500a1244716f37bf30f5b43cfb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604131"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828631"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Konwencje związane z typografią i kodami (Visual Basic)
 Dokumentacja języka Visual Basic używa następujących związane z typografią i konwencje związane.  
@@ -47,6 +47,7 @@ Dokumentacja języka Visual Basic używa następujących związane z typografią
 |`sampleVar = "This is an " _`<br /><br /> `& "example" _`<br /><br /> `& " of how to continue code."`|Odstęp następuje znaku podkreślenia (_) na końcu wiersza wskazuje, że instrukcja jest kontynuowane od następujący wiersz.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)
 - [Słowa kluczowe](../../visual-basic/language-reference/keywords/index.md)
 - [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../visual-basic/language-reference/runtime-library-members.md)

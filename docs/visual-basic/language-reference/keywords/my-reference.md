@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: 637eecf9526c64c47ef3559cd5b65f16dd886a6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618938"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824757"
 ---
 # <a name="my-reference-visual-basic"></a>Moje odwołanie (Visual Basic)
 `My` Programowania, szybsze i prostsze dzięki funkcji dzięki zapewnieniu intuicyjnych dostępu do najczęściej używanych metod, właściwości i zdarzeń. Poniższa tabela zawiera listę obiektów znajdujących się w `My`i akcji, które mogą być wykonywane przez poszczególne.  
@@ -29,5 +29,6 @@ ms.locfileid: "54618938"
 |Uzyskiwanie dostępu do usług sieci Web XML odwołuje się do bieżącego projektu.|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie modelu aplikacji Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [Rozwój za pomocą My](../../../visual-basic/developing-apps/development-with-my/index.md)

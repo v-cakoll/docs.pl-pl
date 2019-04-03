@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-ms.openlocfilehash: ef6ce3fe62bd45716184ccbbb0f5a29f18e7477f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061782dbd0ac54286a6c0da74fe769d98848f118
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514806"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828722"
 ---
 # <a name="visual-basic-runtime-library-members"></a>Elementy członkowskie biblioteki wykonawczej programu Visual Basic
 `Microsoft.VisualBasic` Przestrzeń nazw zawiera klasy, moduły, stałe i wyliczenia wchodzących w skład Biblioteka środowiska uruchomieniowego języka Visual Basic. Te elementy członkowskie biblioteki zawierają procedury, właściwości i wartości stałe, których można użyć w kodzie. Każdy moduł i klasa reprezentuje określoną kategorię funkcji.  
@@ -194,5 +194,6 @@ ms.locfileid: "54514806"
  `Microsoft.VisualBasic` Przestrzeń nazw zapewnia stałe i wyliczenia jako część biblioteki wykonawczej języka Visual Basic. Te wartości stałych można użyć w kodzie. Każde wyliczenie reprezentuje określoną kategorię funkcji. Aby uzyskać więcej informacji, zobacz [stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md)
 - [Słowa kluczowe](../../visual-basic/language-reference/keywords/index.md)

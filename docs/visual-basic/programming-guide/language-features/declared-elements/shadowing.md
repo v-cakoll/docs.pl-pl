@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411008"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839395"
 ---
 # <a name="shadowing-in-visual-basic"></a>Przesłanianie w Visual Basic
 Gdy dwa elementy programowania mają taką samą nazwę, jeden z nich można ukryć, lub *w tle*, jeden z nich. W takiej sytuacji zasłonięte element nie jest dostępne do użytku; Zamiast tego gdy kod używa nazwy elementu, kompilator Visual Basic jest rozpoznawany jako jej przesłaniania elementu.  
@@ -138,6 +138,7 @@ End Class
  W poprzednim przykładzie, zmienna `basObj` jest zadeklarowany jako klasa bazowa. Przypisywanie `dervCls` obiektu do niego stanowi konwersją rozszerzającą, a w związku z tym jest prawidłowy. Jednak klasy bazowej nie może uzyskiwać dostęp do wersji przesłaniania w zmiennej `z` w klasie pochodnej, dlatego kompilator rozpoznaje `basObj.z` do oryginalnej wartości klasy bazowej.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

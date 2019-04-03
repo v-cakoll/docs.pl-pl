@@ -2,18 +2,18 @@
 title: 'Instrukcje: Tworzenie Unii C-C++ za pomocą atrybutów (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: e37aac03db7a24e6519acb4eb843b46b8c60b4f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663287"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829307"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="4f25a-102">Instrukcje: Tworzenie złożenia C/C++ za pomocą atrybutów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f25a-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
-<span data-ttu-id="4f25a-103">Za pomocą atrybutów można dostosować, jak struktury są ułożone w pamięci.</span><span class="sxs-lookup"><span data-stu-id="4f25a-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="4f25a-104">Na przykład można utworzyć, co jest nazywane Unia w języku C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` i `FieldOffset` atrybutów.</span><span class="sxs-lookup"><span data-stu-id="4f25a-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a><span data-ttu-id="1a4b1-102">Instrukcje: Tworzenie złożenia C/C++ za pomocą atrybutów (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1a4b1-102">How to: Create a C/C++ Union by Using Attributes (Visual Basic)</span></span>
+<span data-ttu-id="1a4b1-103">Za pomocą atrybutów można dostosować, jak struktury są ułożone w pamięci.</span><span class="sxs-lookup"><span data-stu-id="1a4b1-103">By using attributes you can customize how structs are laid out in memory.</span></span> <span data-ttu-id="1a4b1-104">Na przykład można utworzyć, co jest nazywane Unia w języku C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` i `FieldOffset` atrybutów.</span><span class="sxs-lookup"><span data-stu-id="1a4b1-104">For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="4f25a-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="4f25a-105">Example</span></span>  
- <span data-ttu-id="4f25a-106">W tym segmencie kodu, wszystkie pola z `TestUnion` rozpoczynają się od tej samej lokalizacji w pamięci.</span><span class="sxs-lookup"><span data-stu-id="4f25a-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
+## <a name="example"></a><span data-ttu-id="1a4b1-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="1a4b1-105">Example</span></span>  
+ <span data-ttu-id="1a4b1-106">W tym segmencie kodu, wszystkie pola z `TestUnion` rozpoczynają się od tej samej lokalizacji w pamięci.</span><span class="sxs-lookup"><span data-stu-id="1a4b1-106">In this code segment, all of the fields of `TestUnion` start at the same location in memory.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -35,8 +35,8 @@ Structure TestUnion
 End Structure  
 ```  
   
-## <a name="example"></a><span data-ttu-id="4f25a-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="4f25a-107">Example</span></span>  
- <span data-ttu-id="4f25a-108">Oto inny przykład gdzie pola zaczynają się w różnych jawnie ustawić lokalizacje.</span><span class="sxs-lookup"><span data-stu-id="4f25a-108">The following is another example where fields start at different explicitly set locations.</span></span>  
+## <a name="example"></a><span data-ttu-id="1a4b1-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="1a4b1-107">Example</span></span>  
+ <span data-ttu-id="1a4b1-108">Oto inny przykład gdzie pola zaczynają się w różnych jawnie ustawić lokalizacje.</span><span class="sxs-lookup"><span data-stu-id="1a4b1-108">The following is another example where fields start at different explicitly set locations.</span></span>  
   
 ```vb  
 ' Add an Imports statement for System.Runtime.InteropServices.  
@@ -64,14 +64,15 @@ Structure TestExplicit
  End Structure  
 ```  
   
- <span data-ttu-id="4f25a-109">Pola dwóch liczb całkowitych, `i1` i `i2`, Udostępnij te same lokalizacje pamięci jako `lg`.</span><span class="sxs-lookup"><span data-stu-id="4f25a-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="4f25a-110">Tego rodzaju kontrolę nad układzie struktury jest przydatne, gdy za pomocą wywołania platformy.</span><span class="sxs-lookup"><span data-stu-id="4f25a-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
+ <span data-ttu-id="1a4b1-109">Pola dwóch liczb całkowitych, `i1` i `i2`, Udostępnij te same lokalizacje pamięci jako `lg`.</span><span class="sxs-lookup"><span data-stu-id="1a4b1-109">The two integer fields, `i1` and `i2`, share the same memory locations as `lg`.</span></span> <span data-ttu-id="1a4b1-110">Tego rodzaju kontrolę nad układzie struktury jest przydatne, gdy za pomocą wywołania platformy.</span><span class="sxs-lookup"><span data-stu-id="1a4b1-110">This sort of control over struct layout is useful when using platform invocation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4f25a-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4f25a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a4b1-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1a4b1-111">See also</span></span>
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [<span data-ttu-id="4f25a-112">Przewodnik programowania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="4f25a-112">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
-- [<span data-ttu-id="4f25a-113">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="4f25a-113">Attributes</span></span>](../../../../standard/attributes/index.md)
-- [<span data-ttu-id="4f25a-114">Odbicie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f25a-114">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [<span data-ttu-id="4f25a-115">Atrybuty (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f25a-115">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
-- [<span data-ttu-id="4f25a-116">Tworzenie atrybutów niestandardowych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f25a-116">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [<span data-ttu-id="4f25a-117">Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f25a-117">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [<span data-ttu-id="1a4b1-112">Przewodnik programowania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1a4b1-112">Visual Basic Programming Guide</span></span>](../../../../visual-basic/programming-guide/index.md)
+- [<span data-ttu-id="1a4b1-113">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="1a4b1-113">Attributes</span></span>](../../../../standard/attributes/index.md)
+- [<span data-ttu-id="1a4b1-114">Odbicie (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1a4b1-114">Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [<span data-ttu-id="1a4b1-115">Atrybuty (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1a4b1-115">Attributes (Visual Basic)</span></span>](../../../../visual-basic/language-reference/attributes.md)
+- [<span data-ttu-id="1a4b1-116">Tworzenie atrybutów niestandardowych (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1a4b1-116">Creating Custom Attributes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [<span data-ttu-id="1a4b1-117">Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1a4b1-117">Accessing Attributes by Using Reflection (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

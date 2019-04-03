@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: fa798e8a2c82bdf204edb1812b0020f874b1e978
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257710"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814279"
 ---
-# <a name="module-keyword-visual-basic"></a><span data-ttu-id="5a186-102">Moduł \<— słowo kluczowe > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a186-102">Module \<keyword> (Visual Basic)</span></span>
-<span data-ttu-id="5a186-103">Określa, że atrybut znajdujący się na początku pliku źródłowego ma zastosowanie do bieżącego zestawu modułu.</span><span class="sxs-lookup"><span data-stu-id="5a186-103">Specifies that an attribute at the beginning of a source file applies to the current assembly module.</span></span>  
+# <a name="module-keyword-visual-basic"></a><span data-ttu-id="69c0e-102">Moduł \<— słowo kluczowe > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="69c0e-102">Module \<keyword> (Visual Basic)</span></span>
+<span data-ttu-id="69c0e-103">Określa, że atrybut znajdujący się na początku pliku źródłowego ma zastosowanie do bieżącego zestawu modułu.</span><span class="sxs-lookup"><span data-stu-id="69c0e-103">Specifies that an attribute at the beginning of a source file applies to the current assembly module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5a186-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5a186-104">Remarks</span></span>  
- <span data-ttu-id="5a186-105">Wiele atrybutów odnoszą się do pojedynczego elementu programistycznego, takiego jak klasa lub właściwość.</span><span class="sxs-lookup"><span data-stu-id="5a186-105">Many attributes pertain to an individual programming element, such as a class or property.</span></span> <span data-ttu-id="5a186-106">Stosowanie takiego atrybutu, dołączając bloku atrybutów w nawiasach kątowych (`< >`), bezpośrednio do instrukcji deklaracji.</span><span class="sxs-lookup"><span data-stu-id="5a186-106">You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="69c0e-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="69c0e-104">Remarks</span></span>  
+ <span data-ttu-id="69c0e-105">Wiele atrybutów odnoszą się do pojedynczego elementu programistycznego, takiego jak klasa lub właściwość.</span><span class="sxs-lookup"><span data-stu-id="69c0e-105">Many attributes pertain to an individual programming element, such as a class or property.</span></span> <span data-ttu-id="69c0e-106">Stosowanie takiego atrybutu, dołączając bloku atrybutów w nawiasach kątowych (`< >`), bezpośrednio do instrukcji deklaracji.</span><span class="sxs-lookup"><span data-stu-id="69c0e-106">You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.</span></span>  
   
- <span data-ttu-id="5a186-107">Jeśli atrybut dotyczy nie tylko następujący element, ale bieżącego zestawu modułu, można umieścić blok atrybut na początku pliku źródłowego i zidentyfikować atrybut o `Module` — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="5a186-107">If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword.</span></span> <span data-ttu-id="5a186-108">Jeśli ma zastosowanie do całego zestawu, należy użyć [zestawu](../../../visual-basic/language-reference/modifiers/assembly.md) — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="5a186-108">If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.</span></span>  
+ <span data-ttu-id="69c0e-107">Jeśli atrybut dotyczy nie tylko następujący element, ale bieżącego zestawu modułu, można umieścić blok atrybut na początku pliku źródłowego i zidentyfikować atrybut o `Module` — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="69c0e-107">If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword.</span></span> <span data-ttu-id="69c0e-108">Jeśli ma zastosowanie do całego zestawu, należy użyć [zestawu](../../../visual-basic/language-reference/modifiers/assembly.md) — słowo kluczowe.</span><span class="sxs-lookup"><span data-stu-id="69c0e-108">If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.</span></span>  
   
- <span data-ttu-id="5a186-109">`Module` Modyfikator nie jest taka sama jak [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md).</span><span class="sxs-lookup"><span data-stu-id="5a186-109">The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
+ <span data-ttu-id="69c0e-109">`Module` Modyfikator nie jest taka sama jak [Module — instrukcja](../../../visual-basic/language-reference/statements/module-statement.md).</span><span class="sxs-lookup"><span data-stu-id="69c0e-109">The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a186-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5a186-110">See also</span></span>
-- [<span data-ttu-id="5a186-111">Assembly</span><span class="sxs-lookup"><span data-stu-id="5a186-111">Assembly</span></span>](../../../visual-basic/language-reference/modifiers/assembly.md)
-- [<span data-ttu-id="5a186-112">Instrukcja Module</span><span class="sxs-lookup"><span data-stu-id="5a186-112">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
-- [<span data-ttu-id="5a186-113">Omówienie atrybuty</span><span class="sxs-lookup"><span data-stu-id="5a186-113">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="69c0e-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="69c0e-110">See also</span></span>
 
+- [<span data-ttu-id="69c0e-111">Assembly</span><span class="sxs-lookup"><span data-stu-id="69c0e-111">Assembly</span></span>](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [<span data-ttu-id="69c0e-112">Instrukcja Module</span><span class="sxs-lookup"><span data-stu-id="69c0e-112">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
+- [<span data-ttu-id="69c0e-113">Omówienie atrybuty</span><span class="sxs-lookup"><span data-stu-id="69c0e-113">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -2,18 +2,18 @@
 title: 'Instrukcje: Pobieranie kolekcji atrybutów (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a07e9645-b45b-403b-b698-f652f904c7d2
-ms.openlocfilehash: 691ec9edda6051ba1f598891dfb9331b85ceb278
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e99e561c1d479412c7c5cd2a19563446b872049
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716621"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833545"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a><span data-ttu-id="06def-102">Instrukcje: Pobieranie kolekcji atrybutów (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06def-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="06def-103">W tym temacie przedstawiono <xref:System.Xml.Linq.XElement.Attributes%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="06def-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="06def-104">Ta metoda pobiera atrybuty elementu.</span><span class="sxs-lookup"><span data-stu-id="06def-104">This method retrieves the attributes of an element.</span></span>  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a><span data-ttu-id="0dd65-102">Instrukcje: Pobieranie kolekcji atrybutów (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0dd65-102">How to: Retrieve a Collection of Attributes (LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="0dd65-103">W tym temacie przedstawiono <xref:System.Xml.Linq.XElement.Attributes%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="0dd65-103">This topic introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="0dd65-104">Ta metoda pobiera atrybuty elementu.</span><span class="sxs-lookup"><span data-stu-id="0dd65-104">This method retrieves the attributes of an element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="06def-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="06def-105">Example</span></span>  
- <span data-ttu-id="06def-106">Poniższy przykład pokazuje, jak do iteracji przez kolekcję atrybutów elementu.</span><span class="sxs-lookup"><span data-stu-id="06def-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
+## <a name="example"></a><span data-ttu-id="0dd65-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="0dd65-105">Example</span></span>  
+ <span data-ttu-id="0dd65-106">Poniższy przykład pokazuje, jak do iteracji przez kolekcję atrybutów elementu.</span><span class="sxs-lookup"><span data-stu-id="0dd65-106">The following example shows how to iterate through the collection of attributes of an element.</span></span>  
   
 ```vb  
 Dim val = _  
@@ -26,7 +26,7 @@ For Each att As XAttribute In listOfAttributes
 Next  
 ```  
   
- <span data-ttu-id="06def-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="06def-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="0dd65-107">Ten kod generuje następujące dane wyjściowe:</span><span class="sxs-lookup"><span data-stu-id="0dd65-107">This code produces the following output:</span></span>  
   
 ```  
 ID="1243"  
@@ -34,5 +34,6 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="06def-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="06def-108">See also</span></span>
-- [<span data-ttu-id="06def-109">LINQ do osi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06def-109">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a><span data-ttu-id="0dd65-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0dd65-108">See also</span></span>
+
+- [<span data-ttu-id="0dd65-109">LINQ do osi XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0dd65-109">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

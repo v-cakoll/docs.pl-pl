@@ -1,25 +1,27 @@
 ---
-title: <issuerChannelBehaviors>, element
+title: <issuerChannelBehaviors> Element
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 3386a287d577681b67bd3ad54a75b0276e29da1f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7cbd50daa82b0ca937a1bba93786545898b03c8b
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357251"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890478"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors> Element
 
 Zawiera zbiór zachowań punktu końcowego klienta usługi Windows Communication Foundation (WCF) (zdefiniowane w konfiguracji), który będzie używany podczas komunikacji z określonej usługi tokenu usługi. Zachowania zdefiniowane nie może zawierać żadnego [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementów.
 
-\<system.ServiceModel>\
-\<zachowania > \
-endpointBehaviors section\
-\<zachowanie > \
-\<clientCredentials>\
-\<issuedToken > \
-\<issuerChannelBehaviors>
+```xml
+<system.ServiceModel>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior>
+        <clientCredentials>
+          <issuedToken>
+            <issuerChannelBehaviors>
+```
 
 ## <a name="syntax"></a>Składnia
 
@@ -64,7 +66,7 @@ Użyj tego elementu, gdy którykolwiek zachowania (innych niż zachowania, któr
 - [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
-- [Instrukcje: Tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Zabezpieczanie klientów [WCF]](../../../../../docs/framework/wcf/securing-clients.md)
+- [Instrukcje: tworzenie klienta federacyjnego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: konfigurowanie lokalnego wystawcy](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

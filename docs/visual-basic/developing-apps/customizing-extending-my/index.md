@@ -6,18 +6,18 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820948"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890400"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Dostosowywanie projektów i rozszerzanie My za pomocą Visual Basic
 Można dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów. Dzięki temu można łatwo innym deweloperom do znalezienia i użycia obiektów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Rozszerzanie mojej Namespace w języku Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Rozszerzanie przestrzeni nazw My w Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  W tym artykule opisano sposób dodawania niestandardowych elementów członkowskich i wartości do `My` przestrzeni nazw w języku Visual Basic.  
   
  [Pakowanie i wdrażanie niestandardowych rozszerzeń My](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
@@ -27,7 +27,7 @@ Można dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów. 
  Opisuje sposób określenia własne rozszerzenia model aplikacji poprzez zastąpienie członkowie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy.  
   
  [Dostosowywanie, które obiekty są dostępne w My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- W tym artykule opisano sposób kontrolowania której `My` obiekty są włączone, ustawiając Stała kompilacji warunkowej _MYTYPE projektu.  
+ W tym artykule opisano sposób kontrolowania której `My` obiekty są włączone, ustawiając projektu \_Stała kompilacji warunkowej MYTYPE.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Rozwój za pomocą My](../../../visual-basic/developing-apps/development-with-my/index.md)  
@@ -47,4 +47,4 @@ Można dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów. 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie aplikacji za pomocą języka Visual Basic](../../../visual-basic/developing-apps/index.md)
+- [Tworzenie aplikacji za pomocą Visual Basic](../../../visual-basic/developing-apps/index.md)

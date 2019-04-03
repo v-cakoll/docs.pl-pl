@@ -4,12 +4,12 @@ description: Informacje o sposobie tworzenia i debugowania pierwszej aplikacji p
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788339"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890556"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i Visual Studio Code
 
@@ -91,14 +91,14 @@ Możesz też obejrzeć krótki samouczek wideo, aby uzyskać dalszą pomoc Insta
 ## <a name="add-a-class"></a>Dodaj klasę
 
 1. Aby dodać nowe kliknij prawym przyciskiem myszy klasy w Eksploratorze programu VSCode i wybierz **nowy plik**. Spowoduje to dodanie nowego pliku do folderu otwartych w VSCode.
-2. Nadaj plikowi nazwę `Class1.cs`. Musisz zapisać ją z `.cs` rozszerzenia na końcu, aby mogła zostać rozpoznany jako plik csharp.
+2. Nadaj plikowi nazwę `MyClass.cs`. Musisz zapisać ją z `.cs` rozszerzenia na końcu, aby mogła zostać rozpoznany jako plik csharp.
 3. Dodaj poniższy kod, aby tworzenie swojej pierwszej klasy. Upewnij się, że zawiera poprawną przestrzeń nazw, więc możesz odwoływać się do niej z usługi `Program.cs` pliku.
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }

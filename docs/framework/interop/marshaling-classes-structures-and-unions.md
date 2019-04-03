@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221280"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890296"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling klas, struktur i unii
 Klasy i struktury są podobne w .NET Framework. Jednocześnie może mieć pola, właściwości i zdarzenia. Może to być również metody statyczne i Niestatyczne. Jeden zauważalnej różnicy jest struktury są typami wartości a klasy są typami odwołań.  
@@ -68,7 +68,7 @@ Klasy i struktury są podobne w .NET Framework. Jednocześnie może mieć pola, 
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) jest niestandardową biblioteką niezarządzaną, która zawiera implementacje dla wyżej wymienionych funkcji i cztery struktury: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, i **MYARRAYSTRUCT**. Te struktury zawierają następujące elementy:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) jest niestandardową biblioteką niezarządzaną, która zawiera implementacje dla wyżej wymienionych funkcji i cztery struktury: **MYPERSON**, **MYPERSON2**, **MYPERSON3**, i **MYARRAYSTRUCT**. Te struktury zawierają następujące elementy:  
   
 ```  
 typedef struct _MYPERSON  
@@ -182,7 +182,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) jest niestandardową biblioteką niezarządzaną, zawierający implementację wyżej wymienionych funkcji i dwa rozłączne **MYUNION** i **MYUNION2**. Unie zawierają następujące elementy:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) jest niestandardową biblioteką niezarządzaną, zawierający implementację wyżej wymienionych funkcji i dwa rozłączne **MYUNION** i **MYUNION2**. Unie zawierają następujące elementy:  
   
 ```  
 union MYUNION  
@@ -254,7 +254,7 @@ typedef struct _SYSTEMTIME {
   
  Ten przykład pokazuje sposób wywołania funkcji natywnej przy użyciu <xref:System.Runtime.InteropServices.Marshal> klasy i za pomocą niebezpieczny kod.  
   
- W tym przykładzie użyto funkcji otoki, a platforma wywołuje zdefiniowane w [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100))także dostępny w folderze plików źródłowych. Używa ona `TestOutArrayOfStructs` funkcji i `MYSTRSTRUCT2` struktury. Struktura zawiera następujące elementy:  
+ W tym przykładzie użyto funkcji otoki, a platforma wywołuje zdefiniowane w [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll)także dostępny w folderze plików źródłowych. Używa ona `TestOutArrayOfStructs` funkcji i `MYSTRSTRUCT2` struktury. Struktura zawiera następujące elementy:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -289,6 +289,6 @@ typedef struct _MYSTRSTRUCT2
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
-- [Marshaling ciągów](marshaling-strings.md)
+- [Organizowanie danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
+- [Organizowanie ciągów](marshaling-strings.md)
 - [Organizowanie różnych typów tablic](marshaling-different-types-of-arrays.md)

@@ -2,20 +2,22 @@
 title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-ms.openlocfilehash: 3ff65e995f6a0d405eac3c1fc4a23917b117fdc0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e6215465acbf9bb94298d282d15f8735a0e20c8c
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409175"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890257"
 ---
 # <a name="ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding>
 
 Bezpieczne i interoperacyjne powiązanie pochodzi od klasy [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i obsługuje federacyjnego zabezpieczenia.
 
-\<system.ServiceModel>\
-\<powiązania > \
-\<ws2007FederationHttpBinding>
+```xml
+<system.ServiceModel>
+  <bindings>
+    <ws2007FederationHttpBinding>
+```
 
 ## <a name="syntax"></a>Składnia
 
@@ -85,9 +87,9 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiadomości. Ten element jest typu <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiadomości. Ten element jest typu <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Określa, czy niezawodnej sesji są ustanawiane między punktami końcowymi kanału.|
+|[\<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Określa, czy niezawodnej sesji są ustanawiane między punktami końcowymi kanału.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
@@ -139,5 +141,5 @@ Federacja znajduje się możliwość udostępniania tożsamości w wielu przedsi
 - [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

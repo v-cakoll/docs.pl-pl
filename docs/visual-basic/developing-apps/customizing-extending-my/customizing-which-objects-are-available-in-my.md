@@ -5,18 +5,20 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843542"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890374"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Dostosowywanie, które obiekty są dostępne w My (Visual Basic)
+
 W tym temacie opisano, jak można kontrolować, które `My` obiekty są włączone, ustawiając projektu `_MYTYPE` Stała kompilacji warunkowej. Przechowuje zintegrowanego rozwoju środowiska (IDE) Visual Studio `_MYTYPE` Stała kompilacji warunkowej w projekcie w synchronizacji z typem projektu.  
   
-## <a name="predefined-mytype-values"></a>_MYTYPE wstępnie zdefiniowane wartości  
- Należy użyć `/define` opcję kompilatora, aby ustawić `_MYTYPE` Stała kompilacji warunkowej. Określając wartość dla `_MYTYPE` wartością stałą, należy ująć wartość ciągu w odwróconej kreski ułamkowej/znak cudzysłowu (\\") sekwencji. Na przykład można użyć:  
+## <a name="predefined-mytype-values"></a>Wstępnie zdefiniowane \_MYTYPE wartości  
+
+Należy użyć `/define` opcję kompilatora, aby ustawić `_MYTYPE` Stała kompilacji warunkowej. Określając wartość dla `_MYTYPE` wartością stałą, należy ująć wartość ciągu w odwróconej kreski ułamkowej/znak cudzysłowu (\\") sekwencji. Na przykład można użyć:  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
@@ -24,7 +26,7 @@ W tym temacie opisano, jak można kontrolować, które `My` obiekty są włączo
   
  W poniższej tabeli przedstawiono co `_MYTYPE` Stała kompilacji warunkowej jest ustawiona na dla kilku typów projektów.  
   
-|Typ projektu|Wartość _MYTYPE|  
+|Typ projektu|\_Wartość MYTYPE|  
 |------------------|--------------------|  
 |Biblioteka klas|"Windows"|  
 |Aplikacja konsoli|"Konsola"|  
@@ -37,12 +39,13 @@ W tym temacie opisano, jak można kontrolować, które `My` obiekty są włączo
 |Pusty|"Pusty"|  
   
 > [!NOTE]
->  Wszystkie porównania ciągu kompilacji warunkowej uwzględniają wielkość liter, niezależnie od tego, jak `Option Compare` ustawić instrukcji.  
+> Wszystkie porównania ciągu kompilacji warunkowej uwzględniają wielkość liter, niezależnie od tego, jak `Option Compare` ustawić instrukcji.  
   
-## <a name="dependent-my-compilation-constants"></a>Stałe kompilacji _MY zależne  
- `_MYTYPE` Stała kompilacji warunkowej, z kolei kontroluje wartości kilka innych `_MY` stałe kompilacji:  
+## <a name="dependent-my-compilation-constants"></a>Zależne \_Moje stałe kompilacji  
+
+`_MYTYPE` Stała kompilacji warunkowej, z kolei kontroluje wartości kilka innych `_MY` stałe kompilacji:  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
 |"Konsola"|"Konsola"|"Windows"|Niezdefiniowane|"Windows"|WARTOŚĆ TRUE|  
 |"Niestandardowe"|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|Niezdefiniowane|  
@@ -56,7 +59,7 @@ W tym temacie opisano, jak można kontrolować, które `My` obiekty są włączo
  Domyślnie, niezdefiniowane stałe kompilacji warunkowej rozpoznać `FALSE`. Można określić wartości dla stałych Niezdefiniowany, podczas kompilowania projektu, aby zastąpić domyślne zachowanie.  
   
 > [!NOTE]
->  Gdy `_MYTYPE` jest ustawiona na "Niestandardowe", projekt zawiera `My` przestrzeni nazw, ale nie zawiera obiektów. Jednak ustawienie `_MYTYPE` do "Puste" uniemożliwia kompilator Dodawanie `My` przestrzeni nazw i jej obiektów.  
+> Gdy `_MYTYPE` jest ustawiona na "Niestandardowe", projekt zawiera `My` przestrzeni nazw, ale nie zawiera obiektów. Jednak ustawienie `_MYTYPE` do "Puste" uniemożliwia kompilator Dodawanie `My` przestrzeni nazw i jej obiektów.  
   
  W tej tabeli opisano wpływ wstępnie zdefiniowane wartości `_MY` stałe kompilacji.  
   
@@ -77,8 +80,8 @@ W tym temacie opisano, jak można kontrolować, które `My` obiekty są włączo
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>
 - [Jak My zależy od typu projektu](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 - [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
-- [My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)
-- [My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)
-- [My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+- [My.Forms — Obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Request — Obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)
+- [My.Response — Obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)
+- [My.WebServices — Obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)

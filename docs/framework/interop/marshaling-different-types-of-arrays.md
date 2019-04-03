@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: ef5c9acab6fd8fa852b619eeeee150eb33b69507
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654617"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890439"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Organizowanie różnych typów tablic
 Tablica jest typem odwołania w kodzie zarządzanym, który zawiera co najmniej jeden element tego samego typu. Mimo że tablice są typami odwołań, są one przekazywane tak jak parametry z funkcjami niezarządzanymi. To zachowanie jest niespójny z sposób zarządzanych tablic są przekazywane do obiektów zarządzanych, jak we/wy parametrów. Aby uzyskać więcej informacji, zobacz [kopiowanie i przypinanie](copying-and-pinning.md).  
@@ -86,7 +86,7 @@ Tablica jest typem odwołania w kodzie zarządzanym, który zawiera co najmniej 
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) jest niestandardową biblioteką niezarządzaną, która zawiera implementacje dla wyżej wymienionych funkcji i dwie zmienne struktury, **MYPOINT** i **MYPERSON**. Struktury zawierają następujące elementy:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) jest niestandardową biblioteką niezarządzaną, która zawiera implementacje dla wyżej wymienionych funkcji i dwie zmienne struktury, **MYPOINT** i **MYPERSON**. Struktury zawierają następujące elementy:  
   
 ```  
 typedef struct _MYPOINT  

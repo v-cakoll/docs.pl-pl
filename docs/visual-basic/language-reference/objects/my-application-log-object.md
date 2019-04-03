@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
 ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829190"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890787"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log — Obiekt
 Udostępnia właściwości i metody w celu zapisywania zdarzeń i wyjątków informacji odbiorniki logu aplikacji.  
@@ -23,7 +23,7 @@ Udostępnia właściwości i metody w celu zapisywania zdarzeń i wyjątków inf
 >  Umożliwia także klas .NET Framework do rejestrowania informacji z aplikacji. Aby uzyskać więcej informacji, zobacz [śledzenie i Instrumentacja aplikacji](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
+ **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.Logging>  
   
  **Klasa:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
@@ -31,4 +31,4 @@ Udostępnia właściwości i metody w celu zapisywania zdarzeń i wyjątków inf
   
 ## <a name="see-also"></a>Zobacz także
 
-- [My.Application, obiekt](../../../visual-basic/language-reference/objects/my-application-object.md)
+- [My.Application — Obiekt](../../../visual-basic/language-reference/objects/my-application-object.md)

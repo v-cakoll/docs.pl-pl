@@ -2,12 +2,12 @@
 title: Informacje o wywołującym
 description: Opisuje sposób używania Caller — atrybuty Argument informacji, aby uzyskać informacje o wywołującym z metody.
 ms.date: 04/25/2017
-ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613820"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890309"
 ---
 # <a name="caller-information"></a>Informacje o wywołującym
 
@@ -30,9 +30,9 @@ open System.Diagnostics
 open System.Runtime.CompilerServices
 
 type Tracer() =
-    member __.DoTrace(msg: string,
+    member __.DoTrace(message: string,
                       [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string
+                      [<CallerFilePath>] ?path: string,
                       [<CallerLineNumber>] ?line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
         match (memberName, path, line) with

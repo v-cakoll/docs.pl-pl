@@ -9,40 +9,41 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: 4e53398f97cbd320c0c98250ac5abbc2e4e98027
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8a9dc5874629c1687318496bd7c4016eb318c25a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981039"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831686"
 ---
-# <a name="removehandler-statement"></a><span data-ttu-id="40692-102">RemoveHandler — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="40692-102">RemoveHandler Statement</span></span>
-<span data-ttu-id="40692-103">Usuwa skojarzenie między zdarzeniem, a program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="40692-103">Removes the association between an event and an event handler.</span></span>  
+# <a name="removehandler-statement"></a><span data-ttu-id="e2f9b-102">RemoveHandler — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="e2f9b-102">RemoveHandler Statement</span></span>
+<span data-ttu-id="e2f9b-103">Usuwa skojarzenie między zdarzeniem, a program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="e2f9b-103">Removes the association between an event and an event handler.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="40692-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="40692-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e2f9b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e2f9b-104">Syntax</span></span>  
   
 ```  
 RemoveHandler event, AddressOf eventhandler  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="40692-105">Części</span><span class="sxs-lookup"><span data-stu-id="40692-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="e2f9b-105">Części</span><span class="sxs-lookup"><span data-stu-id="e2f9b-105">Parts</span></span>  
   
-|<span data-ttu-id="40692-106">Termin</span><span class="sxs-lookup"><span data-stu-id="40692-106">Term</span></span>|<span data-ttu-id="40692-107">Definicja</span><span class="sxs-lookup"><span data-stu-id="40692-107">Definition</span></span>|  
+|<span data-ttu-id="e2f9b-106">Termin</span><span class="sxs-lookup"><span data-stu-id="e2f9b-106">Term</span></span>|<span data-ttu-id="e2f9b-107">Definicja</span><span class="sxs-lookup"><span data-stu-id="e2f9b-107">Definition</span></span>|  
 |---|---|  
-|`event`|<span data-ttu-id="40692-108">Nazwa przetwarzanego zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="40692-108">The name of the event being handled.</span></span>|  
-|`eventhandler`|<span data-ttu-id="40692-109">Nazwa procedury obecnie obsługi zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="40692-109">The name of the procedure currently handling the event.</span></span>|  
+|`event`|<span data-ttu-id="e2f9b-108">Nazwa przetwarzanego zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="e2f9b-108">The name of the event being handled.</span></span>|  
+|`eventhandler`|<span data-ttu-id="e2f9b-109">Nazwa procedury obecnie obsługi zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="e2f9b-109">The name of the procedure currently handling the event.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="40692-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="40692-110">Remarks</span></span>  
- <span data-ttu-id="40692-111">`AddHandler` i `RemoveHandler` instrukcje umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń dla określonego zdarzenia w dowolnym momencie podczas wykonywania programu.</span><span class="sxs-lookup"><span data-stu-id="40692-111">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e2f9b-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e2f9b-110">Remarks</span></span>  
+ <span data-ttu-id="e2f9b-111">`AddHandler` i `RemoveHandler` instrukcje umożliwiają uruchamianie i zatrzymywanie obsługi zdarzeń dla określonego zdarzenia w dowolnym momencie podczas wykonywania programu.</span><span class="sxs-lookup"><span data-stu-id="e2f9b-111">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="40692-112">W przypadku zdarzeń niestandardowych instrukcja `RemoveHandler` wywołuje metodę dostępu zdarzenia `RemoveHandler`.</span><span class="sxs-lookup"><span data-stu-id="40692-112">For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor.</span></span> <span data-ttu-id="40692-113">Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)</span><span class="sxs-lookup"><span data-stu-id="40692-113">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
+>  <span data-ttu-id="e2f9b-112">W przypadku zdarzeń niestandardowych instrukcja `RemoveHandler` wywołuje metodę dostępu zdarzenia `RemoveHandler`.</span><span class="sxs-lookup"><span data-stu-id="e2f9b-112">For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor.</span></span> <span data-ttu-id="e2f9b-113">Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz artykuł [Instrukcja Event](../../../visual-basic/language-reference/statements/event-statement.md)</span><span class="sxs-lookup"><span data-stu-id="e2f9b-113">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="40692-114">Przykład</span><span class="sxs-lookup"><span data-stu-id="40692-114">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e2f9b-114">Przykład</span><span class="sxs-lookup"><span data-stu-id="e2f9b-114">Example</span></span>  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
-## <a name="see-also"></a><span data-ttu-id="40692-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="40692-115">See also</span></span>
-- [<span data-ttu-id="40692-116">AddHandler, instrukcja</span><span class="sxs-lookup"><span data-stu-id="40692-116">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [<span data-ttu-id="40692-117">Handles</span><span class="sxs-lookup"><span data-stu-id="40692-117">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [<span data-ttu-id="40692-118">Event, instrukcja</span><span class="sxs-lookup"><span data-stu-id="40692-118">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="40692-119">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="40692-119">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="e2f9b-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e2f9b-115">See also</span></span>
+
+- [<span data-ttu-id="e2f9b-116">AddHandler, instrukcja</span><span class="sxs-lookup"><span data-stu-id="e2f9b-116">AddHandler Statement</span></span>](../../../visual-basic/language-reference/statements/addhandler-statement.md)
+- [<span data-ttu-id="e2f9b-117">Handles</span><span class="sxs-lookup"><span data-stu-id="e2f9b-117">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [<span data-ttu-id="e2f9b-118">Event, instrukcja</span><span class="sxs-lookup"><span data-stu-id="e2f9b-118">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="e2f9b-119">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="e2f9b-119">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

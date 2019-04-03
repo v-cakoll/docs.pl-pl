@@ -4,33 +4,34 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: e2d7f5d570e187393b76f4af6301a81dbb350f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82b513b89d661e49853e55f26df13eb354945038
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518530"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828599"
 ---
-# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a><span data-ttu-id="76ebe-102">Wystąpił nieoczekiwany błąd, ponieważ zasób systemu operacyjnego zażądany dla uruchomienia pojedynczego wystąpienia nie może zostać pobrany</span><span class="sxs-lookup"><span data-stu-id="76ebe-102">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>
-<span data-ttu-id="76ebe-103">Aplikacja nie można uzyskać zasobu systemu operacyjnego wymagane.</span><span class="sxs-lookup"><span data-stu-id="76ebe-103">The application could not acquire a necessary operating system resource.</span></span> <span data-ttu-id="76ebe-104">Możliwe przyczyny tego problemu, należą:</span><span class="sxs-lookup"><span data-stu-id="76ebe-104">Some of the possible causes for this problem are:</span></span>  
+# <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a><span data-ttu-id="33fcc-102">Wystąpił nieoczekiwany błąd, ponieważ zasób systemu operacyjnego zażądany dla uruchomienia pojedynczego wystąpienia nie może zostać pobrany</span><span class="sxs-lookup"><span data-stu-id="33fcc-102">An unexpected error has occurred because an operating system resource required for single instance startup cannot be acquired</span></span>
+<span data-ttu-id="33fcc-103">Aplikacja nie można uzyskać zasobu systemu operacyjnego wymagane.</span><span class="sxs-lookup"><span data-stu-id="33fcc-103">The application could not acquire a necessary operating system resource.</span></span> <span data-ttu-id="33fcc-104">Możliwe przyczyny tego problemu, należą:</span><span class="sxs-lookup"><span data-stu-id="33fcc-104">Some of the possible causes for this problem are:</span></span>  
   
--   <span data-ttu-id="76ebe-105">Aplikacja nie ma uprawnień do utworzenia nazwane obiekty systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="76ebe-105">The application does not have permissions to create named operating-system objects.</span></span>  
+-   <span data-ttu-id="33fcc-105">Aplikacja nie ma uprawnień do utworzenia nazwane obiekty systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="33fcc-105">The application does not have permissions to create named operating-system objects.</span></span>  
   
--   <span data-ttu-id="76ebe-106">Środowisko uruchomieniowe języka wspólnego nie ma uprawnień, aby utworzyć pliki mapowane w pamięci.</span><span class="sxs-lookup"><span data-stu-id="76ebe-106">The common language runtime does not have permissions to create memory-mapped files.</span></span>  
+-   <span data-ttu-id="33fcc-106">Środowisko uruchomieniowe języka wspólnego nie ma uprawnień, aby utworzyć pliki mapowane w pamięci.</span><span class="sxs-lookup"><span data-stu-id="33fcc-106">The common language runtime does not have permissions to create memory-mapped files.</span></span>  
   
--   <span data-ttu-id="76ebe-107">Aplikacja potrzebuje dostępu do obiektu systemu operacyjnego, ale jest używany przez inny proces.</span><span class="sxs-lookup"><span data-stu-id="76ebe-107">The application needs to access an operating-system object, but another process is using it.</span></span>  
+-   <span data-ttu-id="33fcc-107">Aplikacja potrzebuje dostępu do obiektu systemu operacyjnego, ale jest używany przez inny proces.</span><span class="sxs-lookup"><span data-stu-id="33fcc-107">The application needs to access an operating-system object, but another process is using it.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="76ebe-108">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="76ebe-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="33fcc-108">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="33fcc-108">To correct this error</span></span>  
   
-1.  <span data-ttu-id="76ebe-109">Sprawdź, czy aplikacja ma wystarczające uprawnienia do tworzenia obiektów usługi o nazwie system operacyjny.</span><span class="sxs-lookup"><span data-stu-id="76ebe-109">Check that the application has sufficient permissions to create named operating-system objects.</span></span>  
+1.  <span data-ttu-id="33fcc-109">Sprawdź, czy aplikacja ma wystarczające uprawnienia do tworzenia obiektów usługi o nazwie system operacyjny.</span><span class="sxs-lookup"><span data-stu-id="33fcc-109">Check that the application has sufficient permissions to create named operating-system objects.</span></span>  
   
-2.  <span data-ttu-id="76ebe-110">Sprawdź, czy środowisko uruchomieniowe języka wspólnego, ma wystarczające uprawnienia do tworzenia plików mapowanych na pamięć.</span><span class="sxs-lookup"><span data-stu-id="76ebe-110">Check that the common language runtime has sufficient permissions to create memory-mapped files.</span></span>  
+2.  <span data-ttu-id="33fcc-110">Sprawdź, czy środowisko uruchomieniowe języka wspólnego, ma wystarczające uprawnienia do tworzenia plików mapowanych na pamięć.</span><span class="sxs-lookup"><span data-stu-id="33fcc-110">Check that the common language runtime has sufficient permissions to create memory-mapped files.</span></span>  
   
-3.  <span data-ttu-id="76ebe-111">Uruchom ponownie komputer, aby wyczyścić każdy proces, który może używać zasobów wymaganych do połączenia do oryginalnego wystąpienia aplikacji.</span><span class="sxs-lookup"><span data-stu-id="76ebe-111">Restart the computer to clear any process that may be using the resource needed to connect to the original instance application.</span></span>  
+3.  <span data-ttu-id="33fcc-111">Uruchom ponownie komputer, aby wyczyścić każdy proces, który może używać zasobów wymaganych do połączenia do oryginalnego wystąpienia aplikacji.</span><span class="sxs-lookup"><span data-stu-id="33fcc-111">Restart the computer to clear any process that may be using the resource needed to connect to the original instance application.</span></span>  
   
-4.  <span data-ttu-id="76ebe-112">Należy pamiętać, okoliczności, w których wystąpił błąd i wywołać pomoc techniczna firmy Microsoft</span><span class="sxs-lookup"><span data-stu-id="76ebe-112">Note the circumstances under which the error occurred, and call Microsoft Product Support Services</span></span>  
+4.  <span data-ttu-id="33fcc-112">Należy pamiętać, okoliczności, w których wystąpił błąd i wywołać pomoc techniczna firmy Microsoft</span><span class="sxs-lookup"><span data-stu-id="33fcc-112">Note the circumstances under which the error occurred, and call Microsoft Product Support Services</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="76ebe-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="76ebe-113">See also</span></span>
-- [<span data-ttu-id="76ebe-114">Strona aplikacji, Projektant projektu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="76ebe-114">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [<span data-ttu-id="76ebe-115">Podstawowe informacje o debugerze</span><span class="sxs-lookup"><span data-stu-id="76ebe-115">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
-- [<span data-ttu-id="76ebe-116">Porozmawiaj z nami</span><span class="sxs-lookup"><span data-stu-id="76ebe-116">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="33fcc-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="33fcc-113">See also</span></span>
+
+- [<span data-ttu-id="33fcc-114">Strona aplikacji, Projektant projektu (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="33fcc-114">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [<span data-ttu-id="33fcc-115">Podstawowe informacje o debugerze</span><span class="sxs-lookup"><span data-stu-id="33fcc-115">Debugger Basics</span></span>](/visualstudio/debugger/debugger-basics)
+- [<span data-ttu-id="33fcc-116">Porozmawiaj z nami</span><span class="sxs-lookup"><span data-stu-id="33fcc-116">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)

@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: e2e2c41d713b0b04b8bc7208a83d059f0d16bf06
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a4561359e4d7cb0f6ebe44a5deb09b3374556ed8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278723"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826187"
 ---
-# <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a><span data-ttu-id="046a9-102">Atrybut „Extension” można stosować tylko w deklaracjach „Module”, „Sub” lub „Function”</span><span class="sxs-lookup"><span data-stu-id="046a9-102">'Extension' attribute can be applied only to 'Module', 'Sub', or 'Function' declarations</span></span>
-<span data-ttu-id="046a9-103">Jedynym sposobem, aby rozszerzyć typu danych w języku Visual Basic jest zdefiniować metodę rozszerzenia w ramach standardowego modułu.</span><span class="sxs-lookup"><span data-stu-id="046a9-103">The only way to extend a data type in Visual Basic is to define an extension method inside a standard module.</span></span> <span data-ttu-id="046a9-104">Metoda rozszerzenia może być `Sub` procedury lub `Function` procedury.</span><span class="sxs-lookup"><span data-stu-id="046a9-104">The extension method can be a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="046a9-105">Wszystkie metody rozszerzenia muszą być oznaczone atrybutem rozszerzenia, `<Extension()>`, z <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="046a9-105">All extension methods must be marked with the extension attribute, `<Extension()>`, from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="046a9-106">Opcjonalnie moduł, który zawiera metodę rozszerzającą może być oznaczony w taki sam sposób.</span><span class="sxs-lookup"><span data-stu-id="046a9-106">Optionally, a module that contains an extension method may be marked in the same way.</span></span> <span data-ttu-id="046a9-107">Zakaz używania atrybutu rozszerzenia jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="046a9-107">No other use of the extension attribute is valid.</span></span>  
+# <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a><span data-ttu-id="d6d38-102">Atrybut „Extension” można stosować tylko w deklaracjach „Module”, „Sub” lub „Function”</span><span class="sxs-lookup"><span data-stu-id="d6d38-102">'Extension' attribute can be applied only to 'Module', 'Sub', or 'Function' declarations</span></span>
+<span data-ttu-id="d6d38-103">Jedynym sposobem, aby rozszerzyć typu danych w języku Visual Basic jest zdefiniować metodę rozszerzenia w ramach standardowego modułu.</span><span class="sxs-lookup"><span data-stu-id="d6d38-103">The only way to extend a data type in Visual Basic is to define an extension method inside a standard module.</span></span> <span data-ttu-id="d6d38-104">Metoda rozszerzenia może być `Sub` procedury lub `Function` procedury.</span><span class="sxs-lookup"><span data-stu-id="d6d38-104">The extension method can be a `Sub` procedure or a `Function` procedure.</span></span> <span data-ttu-id="d6d38-105">Wszystkie metody rozszerzenia muszą być oznaczone atrybutem rozszerzenia, `<Extension()>`, z <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="d6d38-105">All extension methods must be marked with the extension attribute, `<Extension()>`, from the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="d6d38-106">Opcjonalnie moduł, który zawiera metodę rozszerzającą może być oznaczony w taki sam sposób.</span><span class="sxs-lookup"><span data-stu-id="d6d38-106">Optionally, a module that contains an extension method may be marked in the same way.</span></span> <span data-ttu-id="d6d38-107">Zakaz używania atrybutu rozszerzenia jest nieprawidłowy.</span><span class="sxs-lookup"><span data-stu-id="d6d38-107">No other use of the extension attribute is valid.</span></span>  
   
- <span data-ttu-id="046a9-108">**Identyfikator błędu:** BC36550</span><span class="sxs-lookup"><span data-stu-id="046a9-108">**Error ID:** BC36550</span></span>  
+ <span data-ttu-id="d6d38-108">**Identyfikator błędu:** BC36550</span><span class="sxs-lookup"><span data-stu-id="d6d38-108">**Error ID:** BC36550</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="046a9-109">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="046a9-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d6d38-109">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="d6d38-109">To correct this error</span></span>  
   
--   <span data-ttu-id="046a9-110">Usuń atrybut rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="046a9-110">Remove the extension attribute.</span></span>  
+-   <span data-ttu-id="d6d38-110">Usuń atrybut rozszerzenia.</span><span class="sxs-lookup"><span data-stu-id="d6d38-110">Remove the extension attribute.</span></span>  
   
--   <span data-ttu-id="046a9-111">Zmodyfikowanie Twojego rozszerzenia jako metoda, zdefiniowana w module otaczającej.</span><span class="sxs-lookup"><span data-stu-id="046a9-111">Redesign your extension as a method, defined in an enclosing module.</span></span>  
+-   <span data-ttu-id="d6d38-111">Zmodyfikowanie Twojego rozszerzenia jako metoda, zdefiniowana w module otaczającej.</span><span class="sxs-lookup"><span data-stu-id="d6d38-111">Redesign your extension as a method, defined in an enclosing module.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="046a9-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="046a9-112">Example</span></span>  
- <span data-ttu-id="046a9-113">W poniższym przykładzie zdefiniowano `Print` metodę `String` typu danych.</span><span class="sxs-lookup"><span data-stu-id="046a9-113">The following example defines a `Print` method for the `String` data type.</span></span>  
+## <a name="example"></a><span data-ttu-id="d6d38-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="d6d38-112">Example</span></span>  
+ <span data-ttu-id="d6d38-113">W poniższym przykładzie zdefiniowano `Print` metodę `String` typu danych.</span><span class="sxs-lookup"><span data-stu-id="d6d38-113">The following example defines a `Print` method for the `String` data type.</span></span>  
   
 ```  
 Imports StringUtility  
@@ -42,7 +42,8 @@ Namespace StringUtility
 End Namespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="046a9-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="046a9-114">See also</span></span>
-- [<span data-ttu-id="046a9-115">Omówienie atrybuty</span><span class="sxs-lookup"><span data-stu-id="046a9-115">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [<span data-ttu-id="046a9-116">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="046a9-116">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
-- [<span data-ttu-id="046a9-117">Instrukcja Module</span><span class="sxs-lookup"><span data-stu-id="046a9-117">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)
+## <a name="see-also"></a><span data-ttu-id="d6d38-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d6d38-114">See also</span></span>
+
+- [<span data-ttu-id="d6d38-115">Omówienie atrybuty</span><span class="sxs-lookup"><span data-stu-id="d6d38-115">Attributes overview</span></span>](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [<span data-ttu-id="d6d38-116">Metody rozszerzeń</span><span class="sxs-lookup"><span data-stu-id="d6d38-116">Extension Methods</span></span>](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [<span data-ttu-id="d6d38-117">Instrukcja Module</span><span class="sxs-lookup"><span data-stu-id="d6d38-117">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)

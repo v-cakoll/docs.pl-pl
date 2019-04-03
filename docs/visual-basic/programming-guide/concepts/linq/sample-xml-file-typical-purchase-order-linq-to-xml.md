@@ -1,18 +1,18 @@
 ---
-title: 'Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)'
+title: 'Przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
-ms.openlocfilehash: cd3478c6f8cf246d7c3f9df34c597d4d265881b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a36d5cafaa276bac667b13d0cf3ada00683acb13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729310"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820337"
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="2262a-102">Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2262a-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
-<span data-ttu-id="2262a-103">Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="2262a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2262a-104">Ten plik ma typowe zamówienie zakupu.</span><span class="sxs-lookup"><span data-stu-id="2262a-104">This file is a typical purchase order.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="babff-102">Przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="babff-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="babff-103">Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.</span><span class="sxs-lookup"><span data-stu-id="babff-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="babff-104">Ten plik ma typowe zamówienie zakupu.</span><span class="sxs-lookup"><span data-stu-id="babff-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a><span data-ttu-id="2262a-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="2262a-105">PurchaseOrder.xml</span></span>  
+## <a name="purchaseorderxml"></a><span data-ttu-id="babff-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="babff-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -51,5 +51,6 @@ ms.locfileid: "54729310"
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2262a-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2262a-106">See also</span></span>
-- [<span data-ttu-id="2262a-107">Przykładowe dokumenty XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2262a-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="babff-106">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="babff-106">See also</span></span>
+
+- [<span data-ttu-id="babff-107">Przykładowe dokumenty XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="babff-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

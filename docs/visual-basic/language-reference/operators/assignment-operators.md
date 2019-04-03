@@ -7,12 +7,12 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: 7a7af78864069cd6d6743623298d81ce1f3f96a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 217ae092872b5de1638d88051aed1f8a4e785b7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568039"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829060"
 ---
 # <a name="assignment-operators-visual-basic"></a>Operatory przypisania (Visual Basic)
 Dostępne są następujące operatory przypisania zdefiniowane w języku Visual Basic.  
@@ -38,6 +38,7 @@ Dostępne są następujące operatory przypisania zdefiniowane w języku Visual 
  [&=, operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Instrukcje](../../../visual-basic/language-reference/statements/index.md)

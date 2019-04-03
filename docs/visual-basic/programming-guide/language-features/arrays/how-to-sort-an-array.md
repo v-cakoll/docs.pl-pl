@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 0b04bfbedf9d7266d1b2e190fa85b8a64cf6efbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f4dbd6dce0957de3451b1f29c3a67ccd6791045
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558439"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838082"
 ---
 # <a name="how-to-sort-an-array-in-visual-basic"></a>Instrukcje: Sortowanie tablicy w języku Visual Basic
 Ten przykład deklaruje tablicę `String` obiektów o nazwie `zooAnimals`, wypełnia ją i następnie sortuje ją alfabetycznie.  
@@ -44,6 +44,7 @@ End Sub
 -   Nie należy implementować jeden lub więcej elementów tablicy <xref:System.IComparable> interfejsu (<xref:System.InvalidOperationException> klasy)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Array.Sort%2A?displayProperty=nameWithType>
 - [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Rozwiązywanie problemów związanych z tablicami](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

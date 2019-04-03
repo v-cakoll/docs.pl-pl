@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: ce38089e91b25cf50e738d956881f3a44bfa3306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588738"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840396"
 ---
 # <a name="object-variable-values-visual-basic"></a>Wartości zmiennej obiektu (Visual Basic)
 Zmienna [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md) mogą odwoływać się do danych dowolnego typu. Wartości są przechowywane w `Object` zmiennej jest przechowywana gdzie indziej w pamięci, a sama zmienna przechowuje wskaźnik do danych.  
@@ -67,6 +67,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  Można zadeklarować i używać tablicy `Object` zmiennych. Jest to przydatne, gdy wymagana jest obsługa różnych typów danych i klas obiektów. Wszystkie elementy w tablicy musi mieć ten sam typ danych zadeklarowany. Deklarowanie ten typ danych jako `Object` pozwala przechowywać obiekty i klasy wystąpienia wraz z innymi typami danych w tablicy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Deklaracja zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Przypisanie zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

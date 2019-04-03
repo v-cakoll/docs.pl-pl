@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409799"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835196"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Zagnieżdżone struktury sterujące (Visual Basic)
 Instrukcje kontroli wewnątrz innych instrukcji sterowania można umieścić na przykład `If...Then...Else` blokowania w ramach `For...Next` pętli. Instrukcją sterowania, umieszczone wewnątrz innej instrukcji sterowania jest nazywany *zagnieżdżonych*.  
@@ -72,6 +72,7 @@ Next ctl
  Kompilator Visual Basic wykrywa takie nakładających się struktury sterujące i sygnalizuje błąd kompilacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Struktury decyzji](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

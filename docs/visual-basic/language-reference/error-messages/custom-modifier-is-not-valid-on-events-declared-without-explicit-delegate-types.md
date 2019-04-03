@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c50cee530cab0d5d164d930678651f302ddc7f09
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980766"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827227"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>Modyfikator „Custom” jest nieprawidłowy w zdarzeniach deklarowanych bez jawnych typów delegowanych
 W przeciwieństwie do zdarzenia niestandardowe nie `Custom Event` deklaracja wymaga `As` klauzuli po nazwie zdarzeń, który jawnie określa typ delegata zdarzenia.  
@@ -41,6 +41,7 @@ W przeciwieństwie do zdarzenia niestandardowe nie `Custom Event` deklaracja wym
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)

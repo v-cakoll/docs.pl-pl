@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: f26cadc4f64626f2a79eb37352f4906cea9092bb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 38e56b8c0ec6bab89052ee42a2cd9c24053c658e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979942"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835703"
 ---
 # <a name="like-operator-visual-basic"></a>Like — Operator (Visual Basic)
 Porównuje ciąg do wzorca.  
@@ -106,6 +106,7 @@ result = string Like pattern
  [!code-vb[VbVbalrOperators#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#30)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)

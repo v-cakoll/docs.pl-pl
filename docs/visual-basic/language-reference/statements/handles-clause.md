@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 3be28ee718675b1f6bebfaff03baaf561a6fff43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 50a449ea8a5131c878cf703f44695cd2e2304444
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974071"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842580"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles — Klauzula (Visual Basic)
 Deklaruje, że procedura obsługuje określone zdarzenie.  
@@ -55,6 +55,7 @@ proceduredeclaration Handles eventlist
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
 - [AddHandler, instrukcja](../../../visual-basic/language-reference/statements/addhandler-statement.md)
 - [RemoveHandler, instrukcja](../../../visual-basic/language-reference/statements/removehandler-statement.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: 9e83029b7b5fd635ff08e608760b6c64c7945da0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e8aa1c96766fc1b63326415c879e9821dc1de7f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965933"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833693"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>Instrukcje: Zapis w plikach binarnych w Visual Basic
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> Metoda zapisuje dane w pliku binarnym. Jeśli `append` parametr jest `True`, dołączy je do pliku; w przeciwnym razie zostanie zastąpiony dane w pliku.  
@@ -42,5 +42,6 @@ ms.locfileid: "56965933"
 -   Użytkownik nie ma wystarczających uprawnień do wyświetlania ścieżki (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [Instrukcje: Zapisywanie tekstu do plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

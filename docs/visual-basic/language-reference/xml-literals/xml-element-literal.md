@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979937"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842255"
 ---
 # <a name="xml-element-literal-visual-basic"></a>Literał elementu XML (Visual Basic)
 
@@ -160,6 +160,7 @@ Literał, która reprezentuje <xref:System.Xml.Linq.XElement> obiektu.
  Należy zauważyć, że kompilator konwertowane prefiks globalnej przestrzeni nazw XML na definicję prefiksu przestrzeni nazw XML. \<Ns:middle > element redefiniuje prefiks przestrzeni nazw XML dla \<ns:inner1 > element. Jednak \<ns:inner2 > element korzysta z przestrzenią nazw zdefiniowaną przez `Imports` instrukcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Xml.Linq.XElement>
 - [Nazwy deklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [Literał komentarza XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)

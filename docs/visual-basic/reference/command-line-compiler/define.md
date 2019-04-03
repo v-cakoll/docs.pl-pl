@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: c21223cc353b7a4614511aa97340c6bc5d61e70e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200661"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834312"
 ---
 # <a name="-define-visual-basic"></a>-Definiowanie (Visual Basic)
 Definiuje stałe warunkowe kompilatora.  
@@ -53,6 +53,7 @@ Definiuje stałe warunkowe kompilatora.
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [#Const, dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)

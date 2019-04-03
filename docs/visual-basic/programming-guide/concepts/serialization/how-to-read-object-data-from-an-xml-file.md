@@ -2,12 +2,12 @@
 title: 'Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: cd546e167afe45e2d324a784679f5a05cc1473c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521247"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834897"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)
 W tym przykładzie odczytuje dane obiektów, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
@@ -49,6 +49,7 @@ End Sub
  Zawsze sprawdzić dane wejściowe i nigdy nie deserializowanie danych z niezaufanego źródła. Ponownie utworzyć obiekt działa na komputerze lokalnym z uprawnieniami kod, który deserializacji go. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IO.StreamWriter>
 - [Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
 - [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

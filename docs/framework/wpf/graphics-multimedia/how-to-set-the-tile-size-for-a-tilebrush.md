@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Ustaw rozmiar sąsiadujących kafelków dla TileBrush'
+title: 'Instrukcje: Ustawianie rozmiaru kafelka dla elementu TileBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: ecac41b0ca40abf59dfcba1efffc076687c2f1ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502231"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839699"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Instrukcje: Ustaw rozmiar sąsiadujących kafelków dla TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Instrukcje: Ustawianie rozmiaru kafelka dla elementu TileBrush
 
 W tym przykładzie pokazano, jak Ustaw rozmiar sąsiadujących kafelków dla <xref:System.Windows.Media.TileBrush>. Domyślnie <xref:System.Windows.Media.TileBrush> generuje pojedynczy fragment, który całkowicie wypełnienia malowanego obszaru. Zachowanie to można zastąpić, ustawiając <xref:System.Windows.Media.TileBrush.Viewport%2A> i <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> właściwości.
 
@@ -22,17 +22,17 @@ W tym przykładzie pokazano, jak Ustaw rozmiar sąsiadujących kafelków dla <xr
 
 W poniższym przykładzie użyto <xref:System.Windows.Media.ImageBrush>, typem <xref:System.Windows.Media.TileBrush>, do malowania prostokąt z kafelków. W przykładzie ustawiono każdego fragmentu do 50 procent o 50% do obszaru wyjściowego (prostokąt). W rezultacie prostokąta jest malowany cztery projekcje obrazu.
 
-Poniższa ilustracja przedstawia przykład generuje dane wyjściowe.
+Na poniższej ilustracji przedstawiono przykład generuje dane wyjściowe:
 
-![Przykład fragmentacji pędzlem obraz](./media/0.png "0")
+![Prostokąt z czterech wiśni ukazujące fragmentacji pędzlem obrazu.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
 Następny przykład tworzy <xref:System.Windows.Media.ImageBrush>, ustawia jego <xref:System.Windows.Media.TileBrush.Viewport%2A> do `0,0,25,25` i jego <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> do <xref:System.Windows.Media.BrushMappingMode.Absolute>i używa ich do rysowania innego prostokąta. W rezultacie pędzel tworzy Kafelki, które mają 25 pikseli szerokości i wysokości 25 pikseli.
 
-Poniższa ilustracja przedstawia przykład generuje dane wyjściowe.
+Na poniższej ilustracji przedstawiono przykład generuje dane wyjściowe:
 
-![A sąsiadująco obiekt TileBrush z 0,0,0.25,0.25](./media/25x25viewport.png "25x25viewport")
+![Prostokąt z wiśni 48 ukazujące fragmentacji obiekt TileBrush.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 

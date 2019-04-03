@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: cb47670e8417e903b2886887394b972d1ac138b0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284638"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838628"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Typem pierwszego operandu w binarnym wyrażeniu „If” musi być typ zerowalny lub typ referencyjny
 `If` Wyrażenie może przyjmować dwa lub trzy argumenty. Podczas wysyłania tylko dwóch argumentów pierwszy argument musi być typem referencyjnym lub typ dopuszczający wartość null. Jeśli pierwszy argument daje w wyniku nic innego niż `Nothing`, zwracana jest jego wartość. Jeśli pierwszy argument daje w wyniku `Nothing`, drugi argument funkcji jest obliczany i zwracany.  
@@ -54,6 +54,7 @@ Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [If, operator](../../../visual-basic/language-reference/operators/if-operator.md)
 - [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Typy wartości dopuszczających wartości null](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

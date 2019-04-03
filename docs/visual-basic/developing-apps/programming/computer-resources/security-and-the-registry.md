@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: 62e9e68eafe55c4d4c3fb2bba05d54f55df74114
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc0071d1fddf99bd712ebe8aea5c61bbc3522f93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671633"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839361"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>Bezpieczeństwo i rejestr (Visual Basic)
 Ta strona zawiera omówienie ryzyko związane z przechowywaniem danych w rejestrze.  
@@ -39,5 +39,6 @@ Ta strona zawiera omówienie ryzyko związane z przechowywaniem danych w rejestr
 >  Podczas odczytywania rejestru z aplikacji sieci Web, tożsamość bieżącego użytkownika zależy od uwierzytelniania i personifikacji zaimplementowane w aplikacji sieci Web.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - [Odczytywanie z rejestru i zapisywanie w nim](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

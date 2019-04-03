@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 526ef4c14649c1840b8c310af45de9b5095909de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d5a41cab961f2ec054085b02a0047b69b488a1d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495955"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843152"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Instrukcje: Wiele żądań sieci Web równolegle za pomocą Async i Await (Visual Basic)
 W metodzie asynchronicznej zadania są uruchamiane po ich utworzeniu. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator jest stosowany do zadania w tym punkcie metody, których nie można kontynuować przetwarzania przed zakończeniem zadania. Często zadanie jest oczekiwane, zaraz po jego utworzeniu, co ilustruje poniższy przykład.  
@@ -204,6 +204,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Instrukcje: Rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

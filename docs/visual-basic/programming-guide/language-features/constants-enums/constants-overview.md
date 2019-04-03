@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737692"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841302"
 ---
 # <a name="constants-overview-visual-basic"></a>Stałe — Przegląd (Visual Basic)
 Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, który nie jest zmieniany. Stałe przechowywać wartości, które jak wskazuje nazwa, pozostają takie same w całej wykonywania aplikacji. Można znacznie zwiększyć czytelność kodu i ułatwić obsługę przy użyciu stałych. Ich używać w kodzie, który zawiera wartości, które się ponownie lub zależy niektórych liczb, które są trudne do zapamiętania lub nie mają oczywiste znaczenia.  
@@ -45,5 +45,6 @@ Stałe są znaczącą nazwę, która zajmuje miejsce liczbą lub ciągiem, któr
 |[Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|W tym artykule opisano `Option Strict` instrukcji i jego użycia.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [Instrukcje: Inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

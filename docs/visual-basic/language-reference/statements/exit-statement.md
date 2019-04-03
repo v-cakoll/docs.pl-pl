@@ -12,12 +12,12 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: e08d436686876a0a3d63f15167d35383e32221e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1f386694bd7425ee530b9305ab684b730f9b73c8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967805"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832635"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit — Instrukcja (Visual Basic)
 Opuszcza procedurę lub blok i natychmiast przekazuje sterowanie do instrukcji następującej po wywołaniu procedury lub definicji bloku.  
@@ -80,6 +80,7 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
  [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Continue, instrukcja](../../../visual-basic/language-reference/statements/continue-statement.md)
 - [Do...Loop, instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [Instrukcja End](../../../visual-basic/language-reference/statements/end-statement.md)

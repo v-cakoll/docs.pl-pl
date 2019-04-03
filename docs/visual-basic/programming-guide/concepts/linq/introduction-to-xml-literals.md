@@ -2,12 +2,12 @@
 title: Wprowadzenie do literałów XML w Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624031"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841303"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Wprowadzenie do literałów XML w Visual Basic
 Ta sekcja zawiera informacje dotyczące tworzenia drzew XML w Visual Basic.  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>Klonowanie a Dołączanie  
+### <a name="cloning-vs-attaching"></a>Klonowanie a dołączanie  
  Jak wspomniano wcześniej, korzystając z wyrażenia osadzone dodać istniejące węzły (w tym elementy) i atrybuty do nowego drzewa XML, jeśli istniejące węzły są już nadrzędny, węzły są klonowane, a nowo sklonowanego węzły są dołączone do nowego drzewa XML. Jeśli istniejące węzły są elementu nadrzędnego, są one po prostu dołączone do nowego drzewa XML.  
   
 ```vb  
@@ -196,4 +196,5 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

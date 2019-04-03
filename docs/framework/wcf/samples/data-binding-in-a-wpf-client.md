@@ -1,15 +1,15 @@
 ---
-title: Powiązywanie danych w kliencie WPF (Windows Presentation Foundation)
+title: Wiązanie danych w kliencie WPF (Windows Presentation Foundation)
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: 467a81c3f574137bc95390f70d6913a532da6ffe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8382df188c7a2e47394ec73741c1e583f46fba6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626904"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839018"
 ---
-# <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Powiązywanie danych w kliencie WPF (Windows Presentation Foundation)
+# <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Wiązanie danych w kliencie WPF (Windows Presentation Foundation)
 Niniejszy przykład pokazuje użycie powiązanie danych w kliencie Windows Presentation Foundation (WPF). W przykładzie użyto usługi Windows Communication Foundation (WCF), który losowo generuje tablicę ze zdjęciami, aby powrócić do klienta. Każdego albumu ma nazwę, cenę i listę ścieżek albumu. Śledzi albumu mają nazwy i czasu trwania. Informacje, które są zwracane przez usługę jest automatycznie powiązany z interfejsu użytkownika (UI), dostarczonego przez klienta programu Windows Presentation Foundation (WPF).  
   
 > [!NOTE]
@@ -82,4 +82,3 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   
-## <a name="see-also"></a>Zobacz także

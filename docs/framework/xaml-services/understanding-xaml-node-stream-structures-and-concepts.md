@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034743"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824432"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
 
@@ -218,7 +218,7 @@ Poniższe listy informacje o wszystkich przypadkach, gdzie czytnik XAML jest ocz
 
 - **Nieznany zawartość:** Nazwa tego węzła elementu członkowskiego jest `_UnknownContent`. Ściśle rzecz ujmując, jest <xref:System.Xaml.XamlDirective>, i jest on zdefiniowany w przestrzeni nazw XAML dla języka XAML. Ta dyrektywa służy jako wskaźnikowych w przypadkach, gdy XAML object element zawiera zawartość w źródle, XAML, ale żadnej zawartości właściwości można określić w ramach aktualnie dostępne kontekst schematu XAML. Można wykryć tego przypadku w strumień węzłów XAML przez sprawdzenie, czy elementy członkowskie o nazwie `_UnknownContent`. Jeśli żadna inna akcja nie zostaną podjęte w postaci strumienia węzłów XAML ścieżki obciążenia o domyślnie <xref:System.Xaml.XamlObjectWriter> zgłoszenie próba `WriteEndObject` po napotkaniu `_UnknownContent` Członkowskie dowolnego obiektu. Wartość domyślna <xref:System.Xaml.XamlXmlWriter> nie generuje i traktuje elementu członkowskiego jako niejawne. Możesz uzyskać statyczne jednostki dla `_UnknownContent` z <xref:System.Xaml.XamlLanguage.UnknownContent%2A>.
 
-- **Właściwość kolekcji kolekcji:** mimo że zapasowy typ CLR klasy kolekcji, która jest zwykle używany dla XAML ma dedykowany nazwane właściwości, który zawiera elementy kolekcji, ta właściwość nie jest znany w systemie typu XAML przed wykonaniem kopii typu rozdzielczość. Zamiast tego strumienia węzłów XAML wprowadzono `Items` symbol zastępczy jest członkiem kolekcji typu XAML. W implementacji .NET Framework XAML Services nazwę tej dyrektywy / element członkowski w strumieniu węzła jest `_Items`. Stała tym dyrektywy można uzyskać z <xref:System.Xaml.XamlLanguage.Items%2A>.
+- **Właściwość kolekcji kolekcji:** Mimo że zapasowy typ CLR klasy kolekcji, która jest zwykle używany dla XAML ma dedykowany nazwane właściwości, który zawiera elementy kolekcji, tej właściwości jest nieznany w systemie typu XAML przed wykonaniem kopii rozpoznawanie typu. Zamiast tego strumienia węzłów XAML wprowadzono `Items` symbol zastępczy jest członkiem kolekcji typu XAML. W implementacji .NET Framework XAML Services nazwę tej dyrektywy / element członkowski w strumieniu węzła jest `_Items`. Stała tym dyrektywy można uzyskać z <xref:System.Xaml.XamlLanguage.Items%2A>.
 
     Należy pamiętać, że strumień węzłów XAML może zawierać elementy slajdu elementy, które okazały się nie można przeanalizować na podstawie zapasowego typu rozwiązania i kontekst schematu XAML. Na przykład
 

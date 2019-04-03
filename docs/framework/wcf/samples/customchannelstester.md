@@ -2,12 +2,12 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 0ede9e6b2c2b4d4bf027ff729bc0418d7ac48f06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372e4128667a0ab1288372ce0ec077b3a4ee2ec6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596647"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842073"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` To narzędzie, które można użyć do testowania implementacji usługi niestandardowym kanale z zestawem kontraktów predefiniowaną usługę. Można wybrać zestaw kontraktów usług i przekazać go do narzędzia, za pomocą pliku XML. Narzędzie generuje następnie usługi i klienta, który korzysta z implementacjami niestandardowym kanale podczas wymiany komunikatów.  
@@ -69,4 +69,3 @@ ms.locfileid: "54596647"
     </TestSpec>  
     ```  
   
-## <a name="see-also"></a>Zobacz także

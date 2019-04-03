@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: 1f0e50de6217e01a7bcb68ab27a9595d91981dd4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a7b70669131ae35135088418e4b33b3ae289d322
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968832"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839889"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Literały XML - Przegląd (Visual Basic)
 *Literał XML* umożliwia włączenie XML bezpośrednio w kodzie języka Visual Basic. Literał składnia XML przedstawia [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] obiektów który jest podobny do składni XML 1.0. Ta funkcja ułatwia programistycznym tworzeniu elementów XML i dokumentów, ponieważ kod ma tę samą strukturę jako ostatecznego XML.  
@@ -55,6 +55,7 @@ ms.locfileid: "56968832"
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Xml.Linq.XElement>
 - [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Wyrażenia osadzone w XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)

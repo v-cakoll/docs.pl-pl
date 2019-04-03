@@ -2,12 +2,12 @@
 title: Przykładowe dokumenty XML (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: 9e1c8dc073a0079766e1239c9a31ea00696da84f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652387"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837730"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Przykładowe dokumenty XML (LINQ to XML)
 Następujące pliki przykładowe są używane w przykłady kodu i fragmenty kodu w całym [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji.  
@@ -34,4 +34,5 @@ Następujące pliki przykładowe są używane w przykłady kodu i fragmenty kodu
 |[Przykładowy plik XML: Skonsolidowane zamówienia zakupu](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|Przedstawia informacje o dokumentu XML, który zawiera zamówienia zakupu, które znajdują się w różnych obszarach nazw.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: Znajdowanie domyślnego stylu akapitu (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
-ms.openlocfilehash: 0485e22778f9b5d4e2be9c22e44a22c1601411c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0694c9144e44e4a5de262f97581eb18943937243
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621659"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841111"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>Znajdowanie domyślnego stylu akapitu (Visual Basic)
 Pierwsze zadanie w manipulowanie informacje przedstawione w samouczku dokumentu WordprocessingML jest znajdowanie domyślnego stylu akapitów w dokumencie.  
@@ -92,4 +92,5 @@ The default style is: Normal
 -   [Pobieranie akapitów i ich stylów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

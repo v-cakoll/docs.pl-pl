@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: fb937a5a9d4688730085829350cb20172db50e97
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5458bbebc6064eb6273b8deb5447b8941e1d233f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967051"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842268"
 ---
 # <a name="const-directive"></a>#Const — dyrektywa
 Definiuje stałe warunkowe kompilatora dla języka Visual Basic.  
@@ -49,6 +49,7 @@ Definiuje stałe warunkowe kompilatora dla języka Visual Basic.
  [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustaw położenie ToolTip'
+title: 'Instrukcje: Ustawianie położenia elementu ToolTip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: d20eea0890708eb2ec2ada503f5c871d54ccc035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364540"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840500"
 ---
-# <a name="how-to-position-a-tooltip"></a>Instrukcje: Ustaw położenie ToolTip
+# <a name="how-to-position-a-tooltip"></a>Instrukcje: Ustawianie położenia elementu ToolTip
 Ten przykład przedstawia sposób określania położenia etykietki narzędzia na ekranie.  
   
 ## <a name="example"></a>Przykład  
@@ -34,16 +34,19 @@ Ten przykład przedstawia sposób określania położenia etykietki narzędzia n
  Możesz definiować zawartość etykietka narzędzia za pomocą <xref:System.Windows.Controls.ToolTip> obiektu, można użyć właściwości każdej klasy; jednak <xref:System.Windows.Controls.ToolTipService> właściwości mają pierwszeństwo. Użyj <xref:System.Windows.Controls.ToolTipService> właściwości dla etykietki narzędzi, które nie są zdefiniowane jako <xref:System.Windows.Controls.ToolTip> obiektów.  
   
  Na poniższych ilustracjach przedstawiono sposób położenie tooltip przy użyciu tych właściwości. Mimo że, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] te ilustracje przykładach w sposób ustawiania właściwości, które są definiowane przez <xref:System.Windows.Controls.ToolTip> klasy odpowiednie właściwości <xref:System.Windows.Controls.ToolTipService> klasy są zgodne z regułami układu. Aby uzyskać więcej informacji na temat możliwych wartości dla właściwości umieszczania, zobacz [zachowanie położenia okna podręcznego](popup-placement-behavior.md).  
+ 
+ Na poniższej ilustracji przedstawiono położenia etykietki narzędzia, za pomocą właściwości umieszczania:  
   
- ![Położenie ToolTip](./media/tooltipplacement.png "ToolTipPlacement")  
-Położenia etykietki narzędzia, za pomocą właściwości umieszczania  
+ ![Diagram przedstawiający położenia etykietki narzędzia, za pomocą właściwości umieszczania.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
+ 
+ Na poniższej ilustracji przedstawiono położenia etykietki narzędzia, za pomocą właściwości umieszczania i PlacementRectangle:   
+
+ ![Diagram przedstawiający położenia etykietki narzędzia, za pomocą właściwości PlacementRectangle.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+ 
+ Na poniższej ilustracji przedstawiono położenia etykietki narzędzia, za pomocą właściwości Placement, PlacementRectangle i przesunięcie:   
   
- ![Umieszczenie etykietka narzędzia, za pomocą prostokąta umieszczania](./media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
-Położenia etykietki narzędzia, za pomocą właściwości umieszczania i PlacementRectangle  
-  
- ![Diagram położenie ToolTip](./media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-Położenie ToolTip przy użyciu właściwości Placement, PlacementRectangle i przesunięcia  
-  
+ ![Diagram przedstawiający położenia etykietki narzędzia, za pomocą właściwości przesunięcie.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
  Poniższy przykład pokazuje, jak używać <xref:System.Windows.Controls.ToolTip> właściwości, aby określić położenie tooltip, którego zawartość ma <xref:System.Windows.Controls.ToolTip> obiektu.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  

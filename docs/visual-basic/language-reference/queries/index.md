@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 79ae5f1c2184f99390b1ef36a91f556cc617e51f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746351"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836899"
 ---
 # <a name="queries-visual-basic"></a>Zapytania (Visual Basic)
 Visual Basic umożliwia tworzenie [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeń w kodzie.  
@@ -59,5 +59,6 @@ Visual Basic umożliwia tworzenie [!INCLUDE[vbteclinqext](~/includes/vbteclinqex
  W tym artykule opisano `Where` klauzula, która określa warunek filtrowania dla zapytania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

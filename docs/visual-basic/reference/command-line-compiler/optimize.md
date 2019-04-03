@@ -1,5 +1,5 @@
 ---
-title: -Optymalizacja
+title: -optimize
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optimize compiler option [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: ddb12eb473ce53e60835acb8f1076655f78fafd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574381"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842164"
 ---
-# <a name="-optimize"></a>-Optymalizacja
+# <a name="-optimize"></a>-optimize
 Włącza lub wyłącza optymalizacje kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
@@ -48,6 +48,7 @@ vbc t2.vb -optimize
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: daaf75256b3449209b4e3c030cc6b54692c6a172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620436"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841267"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>Skuteczna kombinacja operatorów (Visual Basic)
 Złożonych wyrażeń może zawierać wiele różnych operatorów. Ilustruje to poniższy przykład.  
@@ -46,6 +46,7 @@ Złożonych wyrażeń może zawierać wiele różnych operatorów. Ilustruje to 
  W powyższym przykładzie `z + 2` jest pierwszy ocenione, a następnie inne wyrażenia w nawiasach. Zapis wykładniczy, która zwykle ma wyższy priorytet niż dodawanie i mnożenie, jest oceniany w ostatniej w tym przykładzie, ponieważ inne wyrażenia są ujęte w nawiasy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operatory arytmetyczne w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Operatory porównania w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Operatory logiczne i bitowe w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

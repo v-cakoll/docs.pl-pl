@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID67
 ms.assetid: 2ff203e2-bba6-43ae-b72f-8e92a881c98f
-ms.openlocfilehash: 15e08cedbd58016959f00e1ca817019937775df2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ceacb5d83fcfc9fcbd341cc5d9579c4e2e181353
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737234"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829892"
 ---
 # <a name="too-many-files"></a>Za dużo plików
 Im więcej plików zostały utworzone w katalogu głównym niż zezwala systemu operacyjnego lub więcej plików zostały otwarte niż liczba określona w **plików =** ustawienia w pliku CONFIG. SYS plik.  
@@ -21,4 +21,5 @@ Im więcej plików zostały utworzone w katalogu głównym niż zezwala systemu 
 2.  Zwiększ liczbę plików określonych w swojej **plików =** ustawienia w pliku CONFIG. SYS plik, a następnie ponownie uruchom komputer.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

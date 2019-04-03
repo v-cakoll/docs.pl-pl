@@ -2,12 +2,12 @@
 title: 'Instrukcje: Modyfikowanie drzew wyrażeń (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: d1309fff-28bd-4d8e-a2cf-75725999e8f2
-ms.openlocfilehash: 41af4ba3933931eb62f85cd4ad69eb1b8cc50ac2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c53983c6dfc601a7e8e32ad020f5f7feb66cfe04
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603538"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834338"
 ---
 # <a name="how-to-modify-expression-trees-visual-basic"></a>Instrukcje: Modyfikowanie drzew wyrażeń (Visual Basic)
 W tym temacie przedstawiono sposób modyfikowania drzewo wyrażenia. Drzewa wyrażeń są niezmienne, co oznacza, że nie można ich modyfikować bezpośrednio. Aby zmienić drzewo wyrażenia, należy utworzyć kopię istniejącej drzewa wyrażeń i podczas tworzenia kopii, wprowadź wymagane zmiany. Możesz użyć <xref:System.Linq.Expressions.ExpressionVisitor> klasy Przenoszenie istniejących drzewa wyrażeń i skopiuj każdy węzeł, który go wizyty.  
@@ -71,5 +71,6 @@ W tym temacie przedstawiono sposób modyfikowania drzewo wyrażenia. Drzewa wyra
 6.  Skompilować i uruchomić aplikację.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Wykonywanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Drzewa wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)

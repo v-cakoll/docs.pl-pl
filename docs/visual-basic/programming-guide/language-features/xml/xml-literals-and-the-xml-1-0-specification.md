@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 5f40eb8c3fd1a90a285dfb660a48819d3d38c4f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560571"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832427"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Literały XML i specyfikacja XML 1.0 (Visual Basic)
 Składnia literał XML w Visual Basic obsługuje większość specyfikacji języka XML (Extensible Markup) 1.0. Aby uzyskać szczegółowe informacje o Specyfikacja XML 1.0, zobacz [języka XML (Extensible Markup) 1.0](https://www.w3.org/TR/xml) w witrynie internetowej W3C.  
@@ -29,6 +29,7 @@ Składnia literał XML w Visual Basic obsługuje większość specyfikacji języ
 -   Składnia wyrażenia osadzone, dozwolone w literałach dokument i element nie jest prawidłowym kodem XML.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Literał dokumentu XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [Literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

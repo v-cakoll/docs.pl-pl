@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrDIR_IllegalCall
 ms.assetid: 7b5d149f-be91-4ac3-8262-86a360894e7d
-ms.openlocfilehash: 828c715d9aaceef17d030113e7eda302f025ca9d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1a5d6ed145199ae995a98b6c1180fa3aedf9942c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282597"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834163"
 ---
 # <a name="dir-function-must-first-be-called-with-a-pathname-argument"></a>Należy najpierw wywołać funkcję „Dir” z argumentem „PathName”
 Początkowe wywołanie `Dir` nie ma funkcji `PathName` argumentu. Pierwsze wywołanie `Dir` musi zawierać `PathName`, ale kolejne wywołania `Dir` nie trzeba podawać parametrów, aby pobrać następny element.  
@@ -19,4 +19,5 @@ Początkowe wywołanie `Dir` nie ma funkcji `PathName` argumentu. Pierwsze wywo�
 1.  Podaj `PathName` argumentu w wywołaniu funkcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.FileSystem.Dir%2A>

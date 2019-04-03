@@ -2,12 +2,12 @@
 title: LINQ i katalogi plików (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: bd6889c087f9347c2c056ed10356ae2a55565a4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56967a82bf63d8421d34af48dcc6384ded85e2ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566869"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825121"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ i katalogi plików (Visual Basic)
 Wiele operacji systemu plików są zasadniczo zapytań i dlatego są dobrze nadaje się do metody LINQ.  
@@ -41,4 +41,5 @@ Wiele operacji systemu plików są zasadniczo zapytań i dlatego są dobrze nada
  Złożoność jest związane z tworzeniem źródła danych, które dokładnie reprezentuje zawartość systemu plików i bez problemu zmieniała obsługuje wyjątki. Przykłady w tej sekcji utworzyć kolekcję migawki <xref:System.IO.FileInfo> obiektów, które reprezentuje wszystkie pliki w określonym katalogu głównym folderu i jego podfolderach. Rzeczywisty stan <xref:System.IO.FileInfo> mogą ulec zmianie w okresie między podczas rozpoczęcia i zakończenia wykonywania zapytania. Na przykład można utworzyć listę <xref:System.IO.FileInfo> obiekty do użycia jako źródło danych. Jeśli próbujesz uzyskać dostęp do `Length` właściwości w zapytaniu, <xref:System.IO.FileInfo> obiektu podejmie próbę dostęp do systemu plików, aby zaktualizować wartość `Length`. Jeśli plik już istnieje, zostanie wyświetlony <xref:System.IO.FileNotFoundException> w zapytaniu, nawet jeśli nie wyszukując system plików bezpośrednio. Niektóre zapytania w tej sekcji Użyj oddzielnych metodach, który wykorzystuje te wyjątki określonego w niektórych przypadkach. Innym rozwiązaniem jest zapewnienie źródła danych, aktualizowane dynamicznie przy użyciu <xref:System.IO.FileSystemWatcher>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

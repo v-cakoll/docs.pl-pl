@@ -1,17 +1,17 @@
 ---
-title: Liczony od zera programu vs. Dostęp do ciągu liczonego od jednego w języku Visual Basic
+title: Dostęp do ciągu liczonego od zera a Dostęp do ciągu liczonego od jednego w języku Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: d4b2f73f8955b103e70e240e714e2b31d6198438
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6ceb10d4a3cb9463551d8c85375ddbbb607ffdc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535541"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830334"
 ---
-# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Liczony od zera programu vs. Dostęp do ciągu liczonego od jednego w języku Visual Basic
+# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Dostęp do ciągu liczonego od zera a Dostęp do ciągu liczonego od jednego w języku Visual Basic
 W tym temacie porównano jak Visual Basic i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zapewniają dostęp do znaków w ciągu. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Zawsze udostępnia liczony od zera dla znaków w ciągu, Visual Basic przewiduje liczony od zera i oparte na jednym dostępu, w zależności od funkcji.  
   
 ## <a name="one-based"></a>Liczonego od jednego  
@@ -21,6 +21,7 @@ W tym temacie porównano jak Visual Basic i [!INCLUDE[dnprdnshort](~/includes/dn
  Na przykład liczony od zera funkcja języka Visual Basic należy wziąć pod uwagę `Split` funkcji. On dzieli ciąg i zwraca tablicę zawierającą podciągów. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.String.Split%2A?displayProperty=nameWithType> Metoda również dzieli ciąg i zwraca tablicę zawierającą podciągów. Ponieważ `Split` funkcji i <xref:System.String.Split%2A> zwrotu metody [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] tablic, muszą one być liczony od zera.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:System.String.Substring%2A>

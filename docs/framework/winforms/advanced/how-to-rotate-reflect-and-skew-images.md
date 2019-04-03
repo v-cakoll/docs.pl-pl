@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711502"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839915"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>Instrukcje: Obracanie, odzwierciedlanie i pochylanie obrazów
 Można obracanie, odzwierciedlanie i pochylanie obrazów, określając docelowe punkty narożników lewym, prawym górnym rogu i lewym dolnym oryginalnego obrazu. Docelowe trzy punkty określają affine — przekształcenia, które mapuje równoległobok oryginalny obraz prostokątny.  
@@ -30,15 +30,15 @@ Można obracanie, odzwierciedlanie i pochylanie obrazów, określając docelowe 
   
  Na poniższej ilustracji pokazuje oryginalny obraz i obraz, który mapowany do równoległobok. Oryginalny obraz ma zostały nierówne, zostaną uwzględnione, obracać i translacji. Oś x wzdłuż górnej krawędzi oryginalny obraz jest mapowany na wierszu, który jest uruchamiany za pośrednictwem (200, 20) i (110, 100). Oś y wzdłuż lewej krawędzi oryginalny obraz jest mapowany na wierszu, który jest uruchamiany za pośrednictwem (200, 20) i (250, 30).  
   
- ![Rozkłada](./media/stripes1.gif "Stripes1")  
+ ![Oryginalny obraz i obraz, który mapowany do równoległobok.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
- Poniższa ilustracja przedstawia podobne przekształcenie zastosowane do obrazu fotograficznych.  
+ Na poniższej ilustracji przedstawiono podobne przekształcenie zastosowane do obrazu fotograficzne:  
   
- ![Transformed Climber](./media/transformedclimber.png "TransformedClimber")  
+ ![Obraz obiekt climber i obraz mapowane na równoległobok.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- Poniższa ilustracja przedstawia podobne przekształcenie zastosowane do metaplik.  
+ Na poniższej ilustracji przedstawiono podobne przekształcenie zastosowane do metaplik:  
   
- ![Przekształcono metaplik](./media/transformedmetafile.png "TransformedMetafile")  
+ ![Ilustracja kształtów, tekstu i że mapowane na równoległobok.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  Poniższy przykład tworzy obrazy z pierwszą ilustracją.  
   

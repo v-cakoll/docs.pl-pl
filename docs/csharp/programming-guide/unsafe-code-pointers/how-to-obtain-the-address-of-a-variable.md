@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: cba33803c31ccc144479ad3e7b073ea7057495d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b12d3bf99f32a3526bd4a1ec8c49b1fd88afd68a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490561"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832349"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>Porady: uzyskiwanie adresu zmiennej (C# Programming Guide)
 
@@ -23,7 +23,7 @@ int number;
 int* p = &number; //address-of operator &  
 ```  
   
- Operatora address-of może być tylko zastosowany do zmiennej. Jeśli zmienna jest zmienną ruchome, możesz użyć [stałej instrukcji](../../../csharp/language-reference/keywords/fixed-statement.md) tymczasowo naprawić zmiennej przed uzyskaniem adresu.  
+ Operatora address-of może być tylko zastosowany do zmiennej. Jeśli zmienna jest zmienną ruchome, możesz użyć [stałej instrukcji](../../../csharp/language-reference/keywords/fixed-statement.md) tymczasowo naprawić zmiennej przed uzyskaniem adresu. Aby uzyskać więcej informacji na temat zmiennych ruchome, zobacz [stałe i zmienne ruchome](/dotnet/csharp/language-reference/language-specification/unsafe-code#fixed-and-moveable-variables). 
   
  Jest odpowiedzialny za zapewnienie, że zmienna jest inicjowana. Kompilator nie wygeneruje komunikat o błędzie, jeśli zmienna nie jest zainicjowany.  
   

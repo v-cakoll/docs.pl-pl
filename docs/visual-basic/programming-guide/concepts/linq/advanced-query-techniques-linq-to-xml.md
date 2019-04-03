@@ -2,12 +2,12 @@
 title: Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
-ms.openlocfilehash: 140c8dcf5098a474dc2be48d9debc16e92886bb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 609ac419eea5c320bb51bad2193d10ec63a2e651
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610035"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833701"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>Zaawansowane techniki zapytań (LINQ to XML) (Visual Basic)
 Ta sekcja zawiera przykłady bardziej zaawansowanych [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapytania technik.  
@@ -26,4 +26,5 @@ Ta sekcja zawiera przykłady bardziej zaawansowanych [!INCLUDE[sqltecxlinq](~/in
 |[Instrukcje: Wypełnianie drzewa XML z systemu plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Przedstawia informacje o kod, który tworzy drzewa XML z systemu plików.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wykonywanie zapytań do drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

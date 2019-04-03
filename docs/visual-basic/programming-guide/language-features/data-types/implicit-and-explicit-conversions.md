@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596010"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834000"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Konwersje jawne i niejawne (Visual Basic)
 *Niejawna konwersja* nie wymaga żadnych specjalnej składni w kodzie źródłowym. W poniższym przykładzie Visual Basic niejawnie konwertuje wartość `k` na wartość zmiennoprzecinkową o pojedynczej dokładności przed przypisaniem go do `q`.  
@@ -130,6 +130,7 @@ End If
  Wykonywania konwersji jawnej jest także znana jako *rzutowania* wyrażenia klasy danych danego typu lub obiektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [Instrukcje: Konwertowanie obiektu na inny typ w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: d60d668c97019418b30b89147e86f7beea1c31f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640689"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827929"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Różnice pomiędzy przesłanianiem i zastępowaniem (Visual Basic)
 Podczas definiowania klasy, która dziedziczy z klasy bazowej, czasami trzeba na nowo zdefiniować co najmniej jeden z elementów klasy podstawowej w klasie pochodnej. Przesłanianiem i zastępowaniem są dostępne w tym celu.  
@@ -22,7 +22,7 @@ Podczas definiowania klasy, która dziedziczy z klasy bazowej, czasami trzeba na
   
 ||||  
 |---|---|---|  
-|Punkt odniesienia|Przesłanianie|Zastępowanie|  
+|Punkt odniesienia|Zasłanianie|Zastępowanie|  
 |Cel|Chroni przed modyfikację klasy bazowej, w której wprowadzono elementu członkowskiego, które są już zdefiniowane w klasie pochodnej|Osiąga polimorfizm, definiując z inną implementacją procedura lub właściwość o tej samej sekwencja wywoływania<sup>1</sup>|  
 |Zmieniony element|Dowolny zadeklarowany typ elementu|Tylko procedurę (`Function`, `Sub`, lub `Operator`) lub właściwości|  
 |Zmiana definicji elementu|Dowolny zadeklarowany typ elementu|Procedura lub właściwość o identycznych sekwencja wywoływania<sup>1</sup>|  
@@ -52,6 +52,7 @@ Podczas definiowania klasy, która dziedziczy z klasy bazowej, czasami trzeba na
 -   Możesz korzystać ze swobody zmieniając typ elementu lub sekwencja wywoływania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Instrukcje: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

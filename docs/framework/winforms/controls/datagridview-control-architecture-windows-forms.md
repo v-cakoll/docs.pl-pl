@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: d215eeaa367156c6228615a8f6e0a7f889efdf60
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81ac17c9f78baa71d005883c9dd928e398b10a33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713816"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842346"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView — Architektura formantu (Formularze systemu Windows)
 <xref:System.Windows.Forms.DataGridView> Kontroli oraz ich powiązanymi klasami, które są przeznaczone do elastyczny i rozszerzalny system do wyświetlania i edytowania danych tabelarycznych. Te klasy są zawarte w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw, dlatego są nazywane z prefiksem "DataGridView".  
@@ -17,8 +17,7 @@ ms.locfileid: "57713816"
 ## <a name="architecture-elements"></a>Elementy architektury  
  Podstawowy <xref:System.Windows.Forms.DataGridView> klasy pomocnika pochodzić od <xref:System.Windows.Forms.DataGridViewElement>. Ilustruje następujące modelu obiektów <xref:System.Windows.Forms.DataGridViewElement> hierarchii dziedziczenia.  
   
- ![Model obiektu DataGridViewElement](./media/datagridviewelement.gif "DataGridViewElement")  
-Model obiektu DataGridViewElement  
+ ![Diagram przedstawiający hierarchii DataGridViewElement obiektu modelu.](./media/datagridview-control-architecture-windows-forms/datagridviewelement-object-model.gif)  
   
  <xref:System.Windows.Forms.DataGridViewElement> Klasy zawiera odwołanie do elementu nadrzędnego <xref:System.Windows.Forms.DataGridView> kontroli i ma <xref:System.Windows.Forms.DataGridViewElement.State%2A> właściwość, która przechowuje wartość, która reprezentuje kombinację wartości z <xref:System.Windows.Forms.DataGridViewElementStates> wyliczenia.  
   
@@ -51,8 +50,7 @@ Model obiektu DataGridViewElement
 ### <a name="datagridviewcell"></a>DataGridViewCell  
  Komórka jest podstawową jednostką interakcji dla <xref:System.Windows.Forms.DataGridView>. Wyświetlanie skupia się na komórki i wprowadzania danych często odbywa się za pośrednictwem komórek. Dostęp do komórki za pomocą <xref:System.Windows.Forms.DataGridViewRow.Cells%2A> zbiór <xref:System.Windows.Forms.DataGridViewRow> klasy, a dostęp zaznaczonych komórek przy użyciu <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> zbiór <xref:System.Windows.Forms.DataGridView> kontroli. Poniższy model obiektów ilustruje użycie tych i pokazuje <xref:System.Windows.Forms.DataGridViewCell> hierarchii dziedziczenia.  
   
- ![Model obiektu DataGridViewCell](./media/datagridviewcell.gif "DataGridViewCell")  
-Model obiektu DataGridViewCell  
+ ![Diagram przedstawiający hierarchii DataGridViewCell obiektu modelu.](./media/datagridview-control-architecture-windows-forms/datagridviewcell-object-model.gif)  
   
  <xref:System.Windows.Forms.DataGridViewCell> Typ jest abstrakcyjna klasa bazowa, z której pochodzą wszystkie typy komórki. <xref:System.Windows.Forms.DataGridViewCell> i jego typów pochodnych nie kontrolek formularzy Windows Forms, ale niektóre formanty Windows Forms hosta. Żadnych funkcji dotyczących edytowania objęte komórki jest zazwyczaj obsługiwana przez kontrolkę hostowanej.  
   
@@ -85,8 +83,7 @@ Model obiektu DataGridViewCell
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  Schemat <xref:System.Windows.Forms.DataGridView> kontrolki dołączonych danych magazynu danych jest wyrażona w <xref:System.Windows.Forms.DataGridView> kolumn formantu. Możesz uzyskać dostęp <xref:System.Windows.Forms.DataGridView> kolumn do formantu za pomocą <xref:System.Windows.Forms.DataGridView.Columns%2A> kolekcji. Dostęp do wybranych kolumn przy użyciu <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> kolekcji. Poniższy model obiektów ilustruje użycie tych i pokazuje <xref:System.Windows.Forms.DataGridViewColumn> hierarchii dziedziczenia.  
   
- ![Model obiektu DataGridViewColumn](./media/datagridviewcolumn.gif "DataGridViewColumn")  
-Model obiektu DataGridViewColumn  
+ ![Diagram przedstawiający hierarchia modeli obiektów DataGridViewColumn.](./media/datagridview-control-architecture-windows-forms/datagridviewcolumn-object-model.gif)  
   
  Niektóre typy kluczy komórki mają odpowiednie typy kolumn. Te są uzyskiwane z <xref:System.Windows.Forms.DataGridViewColumn> klasy bazowej.  
   
@@ -109,8 +106,7 @@ Model obiektu DataGridViewColumn
 ### <a name="datagridview-editing-controls"></a>Formanty edycji DataGridView  
  Komórki, które zazwyczaj obsługują zaawansowane funkcje edycji, użyj obsługiwanego formantu, który pochodzi z kontrolki formularzy Windows Forms. Te kontrolki także implementować <xref:System.Windows.Forms.IDataGridViewEditingControl> interfejsu. Poniższy model obiektów ilustruje użycie tych kontrolek.  
   
- ![Edytowanie modelu obiektu formantu DataGridView](./media/datagridviewediting.gif "DataGridViewEditing")  
-Model obiektów usługi edycji kontrolki DataGridView  
+ ![Diagram przedstawiający hierarchii DataGridView Model obiektu.](./media/datagridview-control-architecture-windows-forms/datagridviewediting-object-model.gif)  
   
  Następujące elementy sterujące edycji są dostarczane z <xref:System.Windows.Forms.DataGridView> sterowania:  
   
@@ -134,8 +130,7 @@ Model obiektów usługi edycji kontrolki DataGridView
 ### <a name="datagridviewrow"></a>DataGridViewRow  
  <xref:System.Windows.Forms.DataGridViewRow> Klasy wyświetla rekord danych pola z danych przechowywania, do której <xref:System.Windows.Forms.DataGridView> związana jest kontrola. Możesz uzyskać dostęp <xref:System.Windows.Forms.DataGridView> wierszy formantu za pomocą <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji. Dostęp do wybranych wierszy przy użyciu <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> kolekcji. Poniższy model obiektów ilustruje użycie tych i pokazuje <xref:System.Windows.Forms.DataGridViewRow> hierarchii dziedziczenia.  
   
- ![Model obiektów DataGridViewRow](./media/datagridviewrow.gif "DataGridViewRow")  
-Model obiektowy DataGridViewRow  
+ ![Diagram przedstawiający hierarchii DataGridViewRow obiektu modelu.](./media/datagridview-control-architecture-windows-forms/datagridviewrow-object-model.gif)
   
  Uzyskujesz własnych typów z <xref:System.Windows.Forms.DataGridViewRow> klasy, chociaż zazwyczaj nie będzie to konieczne. <xref:System.Windows.Forms.DataGridView> Kontrolka ma kilka zdarzeń związanych z wierszy, jak i właściwości dostosowywania zachowania jego <xref:System.Windows.Forms.DataGridViewRow> obiektów.  
   

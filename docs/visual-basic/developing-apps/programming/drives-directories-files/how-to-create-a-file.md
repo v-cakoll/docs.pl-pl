@@ -5,12 +5,12 @@ helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: 397db70cc8f5977bd861e9e6d6df2f0c8f884db2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967020"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839421"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Instrukcje: Utwórz plik w języku Visual Basic
 W tym przykładzie tworzy pusty plik tekstowy w określonej ścieżki przy użyciu <xref:System.IO.File.Create%2A> method in Class metoda <xref:System.IO.File> klasy.  
@@ -46,6 +46,7 @@ W tym przykładzie tworzy pusty plik tekstowy w określonej ścieżki przy użyc
  <xref:System.UnauthorizedAccessException> Jest generowany, jeśli użytkownik nie ma uprawnień do utworzenia pliku.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>
 - [Używanie bibliotek pochodzących z częściowo zaufanego kodu](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)

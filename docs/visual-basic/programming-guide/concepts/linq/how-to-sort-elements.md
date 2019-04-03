@@ -2,12 +2,12 @@
 title: 'Instrukcje: Sortowanie elementów (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: f049c4d0e8180781cb6581d4efda2297d4b7151d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746224"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841224"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Instrukcje: Sortowanie elementów (Visual Basic)
 W tym przykładzie pokazano, jak napisać zapytanie sortujące wyniki.  
@@ -75,5 +75,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Sortowanie danych](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
 - [Podstawowe zapytania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: a7784566cba7b9cf85914a410b78240856879ba8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715832"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843737"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Instrukcje: Zapisywania obiektów danych do pliku XML (Visual Basic)
 Ten przykład Przepisuje obiekt z klasy do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
@@ -55,6 +55,7 @@ End Module
  W tym przykładzie tworzy nowy plik, jeśli go jeszcze nie istnieje. Jeśli aplikacja musi utworzyć plik, ta aplikacja musi mieć `Create` dostępu do folderu. Jeśli plik już istnieje, aplikacja potrzebuje tylko `Write` dostępu, mniejsze uprawnienia. Jeśli to możliwe, bezpieczniej jest tworzyć plik podczas wdrożenia i udzielić `Read` dostępu do pojedynczego pliku, zamiast `Create` dostępu do folderu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IO.StreamWriter>
 - [Instrukcje: Odczytywanie danych o obiektach z pliku XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

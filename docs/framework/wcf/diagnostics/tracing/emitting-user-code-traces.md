@@ -2,12 +2,12 @@
 title: Emitowanie danych śledzenia elementu User-Code
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eadfe1a77f815f904fb54b8bab51440f3d9f5532
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492667"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831782"
 ---
 # <a name="emitting-user-code-traces"></a>Emitowanie danych śledzenia elementu User-Code
 Oprócz włączenia śledzenia w konfiguracji, aby zebrać dane Instrumentacji wygenerowane przez Windows Communication Foundation (WCF), można również wysyłać ślady programowo w kodzie użytkownika. W ten sposób można utworzyć z wyprzedzeniem danych instrumentacji, które można przejrzeć w dalszej części w celu diagnostyki. W tym temacie omówiono, jak to zrobić.  
@@ -126,15 +126,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![Przeglądarki danych śledzenia: Emitowanie użytkownika&#45;kodu ślady](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Listę działań w oparciu o czas utworzenia (panelu po lewej stronie) oraz ich zagnieżdżonych działania (w prawym górnym rogu panelu)  
   
- Jeśli kod usługi zgłasza wyjątek, który powoduje, że klient throw również (na przykład, gdy klient nie uzyskano odpowiedź na żądanie), w tym samym działaniu dla bezpośrednia korelacja wystąpić, zarówno usługi i klienta, ostrzeżenie lub komunikaty o błędach. Na poniższym diagramie usługa zgłasza wyjątek informacją "Usługa odmówi przetworzenia tego żądania, w kodzie użytkownika." Klient również zgłasza wyjątek, informacją "serwer nie może przetworzyć żądania z powodu błędu wewnętrznego."  
+ Jeśli kod usługi zgłasza wyjątek, który powoduje, że klient throw również (na przykład, gdy klient nie uzyskano odpowiedź na żądanie), w tym samym działaniu dla bezpośrednia korelacja wystąpić, zarówno usługi i klienta, ostrzeżenie lub komunikaty o błędach. Na poniższej ilustracji usługa zgłasza wyjątek informacją "Usługa odmówi przetworzenia tego żądania, w kodzie użytkownika." Klient również zgłasza wyjątek, informacją "serwer nie może przetworzyć żądania z powodu błędu wewnętrznego."
+ 
+ Następujące obrazy pokazuje, czy błędy w obrębie punktów końcowych dla danego żądania są wyświetlane w tym samym działaniu, jeśli identyfikator działania żądania został rozpropagowany:       
   
- ![Używanie przeglądarki danych śledzenia do emitowania użytkownika&#45;kodu ślady](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
-Błędy w obrębie punktów końcowych dla danego żądania są wyświetlane w tym samym działaniu, gdy został rozpropagowany identyfikator działania żądania  
+ ![Zrzut ekranu pokazujący błędy w obrębie punktów końcowych dla danego żądania.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)  
   
- Dwukrotne kliknięcie wielokrotnie działania na lewym panelu pokazuje kolejnym wykresie ślady mnożenia działanie dla każdego procesu, które są zaangażowani. Można zauważyć, że najpierw wystąpiło ostrzeżenie w punkcie usług (wystąpienie wyjątku), który następuje ostrzeżeń i błędów na komputerze klienckim, ponieważ nie można przetworzyć żądania. Dlatego firma Microsoft oznaczać błąd przyczynowego relacji między punktami końcowymi i pochodzić główną przyczynę tego błędu.  
+ Dwukrotne kliknięcie wielokrotnie działania na lewym panelu pokazuje kolejnym wykresie ślady mnożenia działanie dla każdego procesu, które są zaangażowani. Można zauważyć, że najpierw wystąpiło ostrzeżenie w punkcie usług (wystąpienie wyjątku), który następuje ostrzeżeń i błędów na komputerze klienckim, ponieważ nie można przetworzyć żądania. Dlatego firma Microsoft oznaczać błąd przyczynowego relacji między punktami końcowymi i pochodzić główną przyczynę tego błędu. 
+
+ Na poniższej ilustracji przedstawiono widok wykresu korelacji błąd:    
   
- ![Używanie przeglądarki danych śledzenia do emitowania użytkownika&#45;kodu ślady](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
-Widok wykresu korelacji błąd  
+ ![Zrzut ekranu pokazujący widoku wykresu korelacji błędu.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)  
   
  Uzyskanie ślady poprzedniego, ustawiliśmy `ActivityTracing` dla źródła śledzenia użytkowników i `propagateActivity=true` dla `System.ServiceModel` źródła śledzenia. Firma Microsoft nie ustawiła prawidłowo `ActivityTracing` dla `System.ServiceModel` źródła śledzenia, aby włączyć kod użytkownika do propagowania działań kodu użytkownika. (Gdy ServiceModel działania śledzenia jest włączona, identyfikator działania zdefiniowane w obiekcie klienta nie są propagowane do kodu użytkownika usługi; Transfery, jednak skorelować działaniach kodu użytkownika klienta i usługi pośrednie działań usługi WCF.)  
   

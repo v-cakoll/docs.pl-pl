@@ -2,14 +2,14 @@
 title: 'Przykładowy plik XML: Typowe zamówienie zakupu w Namespace3'
 ms.date: 07/20/2015
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
-ms.openlocfilehash: 2929900865814127250acb2e24c7f674995705da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de0ac574b0f7b086592bc2d6afa3db3fdcebda78
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646032"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839681"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Przykładowy plik XML: Typowe zamówienie zakupu w Namespace
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Przykładowy plik XML: typowe zamówienie zakupu w przestrzeni nazw
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Ten plik ma typowe zamówienie zakupu. Kod XML jest w przestrzeni nazw.  
   
 ## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace.xml  
@@ -55,4 +55,5 @@ Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlin
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykładowe dokumenty XML (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

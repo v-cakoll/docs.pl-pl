@@ -2,12 +2,12 @@
 title: 'Instrukcje: Filtrowanie nazw elementów (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: 6b685da79f149298df14db0d0793130325aa95d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 868647ba9536886ea84fa10d94738ff0f29d8f02
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578708"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836392"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>Instrukcje: Filtrowanie nazw elementów (LINQ to XML) (Visual Basic)
 Wywołanie jednej z metod, które zwracają <xref:System.Collections.Generic.IEnumerable%601> z <xref:System.Xml.Linq.XElement>, możesz przefiltrować listę według nazwy elementu.  
@@ -79,4 +79,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ do osi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

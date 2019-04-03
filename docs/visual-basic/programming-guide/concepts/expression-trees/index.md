@@ -2,6 +2,12 @@
 title: Drzewa wyrażeń (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
+ms.openlocfilehash: c1e576439956a735962978d37430949ed6bc39d8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832502"
 ---
 # <a name="expression-trees-visual-basic"></a>Drzewa wyrażeń (Visual Basic)
 Drzew wyrażeń reprezentują kodu struktury drzewa danych, gdzie każdy węzeł jest wyrażeniem, na przykład, wywołanie metody lub operacja binarna, takich jak `x < y`.  
@@ -136,6 +142,7 @@ Console.WriteLine(expr.Compile()(4))
  Aby uzyskać więcej informacji, zobacz [jak: Wykonywanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Linq.Expressions>
 - [Instrukcje: Wykonywanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Instrukcje: Modyfikowanie drzew wyrażeń (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

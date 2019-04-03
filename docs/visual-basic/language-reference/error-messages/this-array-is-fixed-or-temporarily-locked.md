@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: f70b984fc493e79d7a83b33236615a3220405786
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0b80e2be007ff44569365f37a2331f1ecd7a216
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516996"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839408"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Ta tablica ma ustalony rozmiar lub jest tymczasowo zablokowana (Visual Basic)
 Ten błąd ma następujące możliwe przyczyny:  
@@ -29,4 +29,5 @@ Ten błąd ma następujące możliwe przyczyny:
 3.  Określić, co blokuje `Variant` i usunięcia go.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md)

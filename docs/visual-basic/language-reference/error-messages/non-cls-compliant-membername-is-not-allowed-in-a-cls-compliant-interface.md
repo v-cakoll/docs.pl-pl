@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288980"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840461"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Non zgodne ze specyfikacją CLS \<membername > jest niedozwolone w interfejsie zgodnym ze specyfikacją CLS
 Właściwość, procedura lub zdarzenie w interfejsie jest oznaczony jako `<CLSCompliant(True)>` po interfejsie, sama jest oznaczony jako `<CLSCompliant(False)>` lub nie jest oznaczona.  
@@ -36,5 +36,5 @@ Właściwość, procedura lub zdarzenie w interfejsie jest oznaczony jako `<CLSC
 -   Jeśli wymagana jest pozostawienie tego elementu członkowskiego w interfejsie bieżącej, Usuń <xref:System.CLSCompliantAttribute> z jego definicji lub oznaczyć go jako `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
 
+- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)

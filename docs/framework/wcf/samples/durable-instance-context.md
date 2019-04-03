@@ -2,12 +2,12 @@
 title: Kontekst niezawodnej instancji
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527497"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841454"
 ---
 # <a name="durable-instance-context"></a>Kontekst niezawodnej instancji
 Niniejszy przykład pokazuje sposób dostosowywania środowiska uruchomieniowego Windows Communication Foundation (WCF), aby włączyć kontekst niezawodnej instancji. Jako jej zapasowy magazyn (SQL Server 2005 Express w tym przypadku) używa programu SQL Server 2005. Jednak także zapewnia możliwość dostępu do magazynu niestandardowego mechanizmów.  
@@ -460,4 +460,3 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## <a name="see-also"></a>Zobacz także

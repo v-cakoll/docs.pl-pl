@@ -2,12 +2,12 @@
 title: Osie o języku zintegrowanym w języku Visual Basic (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d450a556-a134-4261-b011-44e399660894
-ms.openlocfilehash: 2bae085e82c01644127a9dbdb3a3fe6b775a08f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0de88ad55724f71f5671a044dbadcb2f6c59e829
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702122"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840994"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Osie o języku zintegrowanym w języku Visual Basic (LINQ to XML)
 W tej sekcji opisano funkcje wbudowane bezpośrednio w języka Visual Basic, aby ułatwić dostęp do XML. W przykładach w LINQ do XML dokumentacji korzystać te zintegrowane osi języka Visual Basic.  
@@ -22,4 +22,5 @@ W tej sekcji opisano funkcje wbudowane bezpośrednio w języka Visual Basic, aby
 |[Właściwość indeksatora rozszerzenia](../../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|Zapewnia dostęp do poszczególnych elementów w kolekcji.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ do osi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

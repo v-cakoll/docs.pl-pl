@@ -2,21 +2,21 @@
 title: Usługa HTTP w sieci Web dla programu WCF — strona pomocy
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121210"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826837"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Usługa HTTP w sieci Web dla programu WCF — strona pomocy
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] zawiera strona pomocy automatycznych dla usług WCF WEB HTTP. Ta strona pomocy Wyświetla opis każdej operacji, żądania i odpowiedzi formatów i schematy. Ta funkcja jest domyślnie wyłączona. Gdy użytkownik przechodzi do usługi WCF WEB HTTP i dołącza "/ Help" na końcu adresu URL, na przykład `http://localhost:8000/Customers/Help`, strona pomocy, takich jak wyświetlane są następujące.  
   
- ![REST programu WCF — strona pomocy](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![Otwórz okno przeglądarki ze stroną pomocy REST programu WCF.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  Użytkownik może następnie kliknąć dowolną metodę na liście na stronie pomocy i zostanie wyświetlona strona szczegółowe, dla tej operacji, wyświetlanie informacji o metodzie, w tym formaty wiadomości i przykładowe odpowiedzi. Poniższej ilustracji przedstawiono przykładowy strony pomocy dla metody.  
   
- ![Szczegóły REST programu WCF — strona pomocy](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![Otwórz okno przeglądarki ze szczegółowymi informacjami strony pomocy REST programu WCF dla metody GetCustomers.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Przy użyciu protokołu HTTP sieci Web programu WCF — strona pomocy  
  Na stronie pomocy programu WCF WEB HTTP wyświetla krótki opis dla każdej operacji, pod warunkiem, że możesz określić ją przy użyciu <xref:System.ComponentModel.DescriptionAttribute>. Ten atrybut przyjmuje ciąg, który zawiera krótki opis operacji, który jest stosowany do. Na przykład, poniższy kod przedstawia sposób użycia <xref:System.ComponentModel.DescriptionAttribute> do Podaj krótki opis.  

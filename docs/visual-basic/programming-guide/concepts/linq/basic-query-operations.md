@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 141040a715487b3cbcfff1c3b9969a0869c8a3d8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201715"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826200"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Podstawowe operacje zapytań (Visual Basic)
 Ten temat zawiera krótkie wprowadzenie do [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażenia w języku Visual Basic i niektóre typowe rodzaje operacji, które można wykonywać w zapytaniu. Więcej informacji znajduje się w następujących tematach:  
@@ -153,6 +153,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Aby uzyskać więcej informacji na temat `Group By`, zobacz [grupy przez klauzulę](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Zapytania](../../../../visual-basic/language-reference/queries/index.md)

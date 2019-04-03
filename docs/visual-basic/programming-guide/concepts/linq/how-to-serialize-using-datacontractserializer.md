@@ -2,12 +2,12 @@
 title: 'Instrukcje: Serializowanie przy użyciu elementu DataContractSerializer (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: cde857e1883d822b442b51c2931fd2fb92c24247
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714324"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826716"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Instrukcje: Serializowanie przy użyciu elementu DataContractSerializer (Visual Basic)
 W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -84,4 +84,5 @@ Testing for type: XElementNullContainer
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Serializowanie wykresów obiektów, które zawierają obiekty XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

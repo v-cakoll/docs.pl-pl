@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 147dad822a8bc8b8e9692b88f6b498f841bac1fa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 245e00402196ab2a8c5998e9515205bb6f37cce0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966752"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828410"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Instrukcje: Zapisywanie tekstu do plików w katalogu Moje dokumenty w języku Visual Basic
 `My.Computer.FileSystem.SpecialDirectories` Obiekt umożliwia dostęp do specjalnych katalogi, takich jak **Moje dokumenty** katalogu.  
@@ -44,6 +44,7 @@ ms.locfileid: "56966752"
  Ten przykład tworzy nowy plik. Jeśli aplikacja musi utworzyć plik, ta aplikacja musi mieć uprawnienia do tworzenia folderu. Uprawnienia są ustawiane przy użyciu list kontroli dostępu. Jeśli plik już istnieje, aplikacja musi uprawnienie, mniejsze uprawnienia tylko do zapisu. W przypadku, gdy jest to możliwe, bezpieczniej jest tworzyć plik podczas wdrożenia i udzielić uprawnień do odczytu do pojedynczego pliku, a nie do przyznawania uprawnień Tworzenie folderu. Ponadto jest bardziej bezpieczne, można zapisać danych do folderów użytkowników niż do folderu głównego lub **Program Files** folderu. Aby uzyskać więcej informacji, zobacz [Przegląd technologii ACL](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

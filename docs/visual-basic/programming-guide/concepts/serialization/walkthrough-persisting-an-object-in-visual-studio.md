@@ -2,12 +2,12 @@
 title: Przechowywanie obiektu w programie Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 002c5470765b33d038ab0fd463fcc6ccfdf6f109
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690439"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841584"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Przewodnik: Przechowywanie obiektu w programie Visual Studio (Visual Basic)
 Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasie projektowania, wszystkie wartości wprowadzone w czasie wykonywania zostaną utracone, kiedy niszczony jest obiekt. Można użyć serializacji do utrwalenia danych obiektu między wystąpieniami, dzięki czemu możesz przechowywać wartości, a następnie pobrać jednego z nich przy następnym uruchomieniu jest tworzone wystąpienie obiektu.  
@@ -216,5 +216,6 @@ Chociaż można ustawić właściwości obiektu do wartości domyślnych w czasi
  W tym momencie możesz ponownie skompiluj i uruchom aplikację. Początkowo wartości domyślne są wyświetlane w polach tekstowych. Spróbuj zmienić wartości i wprowadź nazwę w polu tekstowym czwarty. Zamknij aplikację, a następnie uruchom ją ponownie. Pamiętaj, że pojawiają się nowe wartości w polach tekstowych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Serializacja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)

@@ -1,18 +1,18 @@
 ---
-title: Integracja XML z danymi relacyjnymi i ADO.NET
+title: Integracja XML z danymi relacyjnymi i sterownikiem ADO.NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183148"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831985"
 ---
-# <a name="xml-integration-with-relational-data-and-adonet"></a>Integracja XML z danymi relacyjnymi i ADO.NET
+# <a name="xml-integration-with-relational-data-and-adonet"></a>Integracja XML z danymi relacyjnymi i sterownikiem ADO.NET
 **XmlDataDocument** klasa jest klasy pochodnej **XmlDocument**i zawiera dane XML. Zaletą **XmlDataDocument** jest zapewnianie Most między danymi relacyjne i hierarchiczne. Jest **XmlDocument** może być powiązana z **DataSet** i obie klasy można synchronizować zmiany wprowadzone do danych znajdujących się w dwóch klas. **XmlDocument** , jest powiązany z **DataSet** umożliwia XML w celu integracji z danymi relacyjnymi i jest konieczne dane reprezentowane jako obu XML lub w formacie relacyjnym. Obie opcje, a nie być ograniczone do pojedynczego reprezentację danych.  
   
  Korzyści dostępnych danych w dwóch widoków są:  
@@ -29,9 +29,9 @@ ms.locfileid: "44183148"
   
  Ponieważ **XmlDataDocument** jest dziedziczony z **XmlDocument**, zapewnia implementacja modelu DOM. W3C Fakt, **XmlDataDocument** jest skojarzony, a następnie przechowuje podzbiór danych w obrębie, **zestawu danych** nie ograniczenia lub zmienić jego użycie jako **XmlDocument** w dowolny sposób. Kod napisany z **XmlDocument** działa niezmienione względem **XmlDataDocument**. **DataSet** zapewnia relacyjny widok tych samych danych, definiując tabele, kolumny, relacje i ograniczenia i jest do przechowywania danych użytkownika autonomicznych, w pamięci.  
   
- Na poniższej ilustracji przedstawiono różne skojarzenia, dane XML ma z **DataSet** i **XmlDataDocument**.  
+ Na poniższej ilustracji przedstawiono różne skojarzenia, dane XML ma z **DataSet** i **XmlDataDocument**: 
   
- ![Zestaw danych XML](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ ![Diagram przedstawiający różne skojarzenia z zestawem danych XML.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
  Na ilustracji przedstawiono, że dane XML mogą być ładowane bezpośrednio do **DataSet**, co umożliwia bezpośrednią manipulację za pomocą XML w relacyjnej sposób. Lub, w pliku XML mogą być ładowane do klasy pochodnej modelu DOM, który jest **XmlDataDocument**, a następnie załadować i zsynchronizowane z usługą **zestawu danych**. Ponieważ **DataSet** i **XmlDataDocument** są synchronizowane dla jednego zestawu danych, zmiany wprowadzone do danych w jednym magazynie są odzwierciedlane w innym magazynie.  
   

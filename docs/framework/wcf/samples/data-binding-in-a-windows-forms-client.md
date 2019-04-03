@@ -2,12 +2,12 @@
 title: Powiązanie danych w kliencie formularzy systemu Windows
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: afca572fcc2c4e519d799511010d66859dc8b472
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d41310108bfffedc38297f2c981e90007b59fb9a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652114"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832154"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Powiązanie danych w kliencie formularzy systemu Windows
 Niniejszy przykład pokazuje jak powiązać dane zwracane przez usługę Windows Communication Foundation (WCF) w aplikacji Windows Forms.  
@@ -38,4 +38,3 @@ Niniejszy przykład pokazuje jak powiązać dane zwracane przez usługę Windows
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  
   
-## <a name="see-also"></a>Zobacz także

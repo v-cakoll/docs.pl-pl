@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-ms.openlocfilehash: 4e2c7a37f8d8a0fc71e0fd80d04dc5e24ad498ed
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 486351bc140a2bbf18bb8f85f761fc491f028bba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840357"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Instrukcje: Przekaż plik w języku Visual Basic
 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> Metoda może służyć do przekazywania pliku i zapisz go w lokalizacji zdalnej. Jeśli `ShowUI` parametr ma wartość `True`, wyświetlane jest okno dialogowe, której jest przedstawiony postęp przekazywania, która umożliwia użytkownikom anulować operację.  
@@ -46,6 +46,7 @@ ms.locfileid: "56972368"
 -   Upłynął limit czasu połączenia (<xref:System.TimeoutException>).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
 - [Instrukcje: Pobierz plik](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)

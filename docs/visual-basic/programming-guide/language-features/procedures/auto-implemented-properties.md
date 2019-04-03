@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967207"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841290"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Właściwości zaimplementowane automatycznie (Visual Basic)
 *Właściwości zaimplementowane automatycznie* umożliwiają szybko określić właściwość klasy bez konieczności pisania kodu w celu `Get` i `Set` właściwości. Podczas pisania kodu dotyczący automatycznie implementowanej właściwości, kompilator Visual Basic automatycznie tworzy pole prywatne do przechowania zmiennej właściwość, oprócz tworzenia skojarzonego `Get` i `Set` procedur.  
@@ -94,6 +94,7 @@ End Class
  Jeśli trzeba przekonwertować automatycznie implementowana właściwość rozszerzona właściwość, która zawiera `Get` lub `Set` procedury, Edytor kodu Visual Basic automatycznie wygenerować `Get` i `Set` procedur i `End Property`instrukcji dla właściwości. Kod jest generowany, jeżeli umieścisz kursor w następującym pustym wierszu `Property` instrukcji, wpisz `G` (dla `Get`) lub `S` (dla `Set`) i naciśnij klawisz ENTER. Edytor kodu Visual Basic automatycznie generuje `Get` lub `Set` procedury dla właściwości tylko do odczytu i tylko do zapisu, po naciśnięciu klawisza ENTER na końcu `Property` instrukcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)

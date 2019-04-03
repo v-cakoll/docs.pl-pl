@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: a7a0952ebe13b732ce706c3dad97a6da3b5cb85d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e07a775eec003a3e488f6909181aed3f742b4b91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966557"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833519"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot — Operator (Visual Basic)
 Porównuje dwie zmienne odwołań do obiektów.  
@@ -48,6 +48,7 @@ result = object1 IsNot object2
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)
 - [TypeOf, operator](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

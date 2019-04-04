@@ -1,10 +1,16 @@
 ---
 title: Samouczki programu .NET core
-description: 'Wykonaj samouczki zawierające platformy .NET Core do tworzenia aplikacji i bibliotek na komputerach Mac, Linux i Windows.'
+description: Wykonaj samouczki zawierające platformy .NET Core do tworzenia aplikacji i bibliotek na komputerach Mac, Linux i Windows.
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
+ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788300"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a><span data-ttu-id="75215-103">Dowiedz się, .NET Core oraz narzędzia .NET Core SDK, eksplorując te samouczki</span><span class="sxs-lookup"><span data-stu-id="75215-103">Learn .NET Core and the .NET Core SDK tools by exploring these Tutorials</span></span>
 

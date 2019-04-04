@@ -1,8 +1,14 @@
 ---
 title: Migracja platformy .NET core z pliku project.json
-description: 'Dowiedz się, jak przeprowadzić migrację starszych projektu .NET Core przy użyciu pliku project.json'
+description: Dowiedz się, jak przeprowadzić migrację starszych projektu .NET Core przy użyciu pliku project.json
 ms.date: 07/19/2017
 ms.custom: seodec18
+ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675917"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a><span data-ttu-id="5306e-103">Migrowanie projektów .NET Core z pliku project.json</span><span class="sxs-lookup"><span data-stu-id="5306e-103">Migrating .NET Core projects from project.json</span></span>
 

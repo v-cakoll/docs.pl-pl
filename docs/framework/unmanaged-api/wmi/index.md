@@ -4,8 +4,13 @@ description: Zawiera podsumowanie programu .NET Framework niezarządzanych inter
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377459"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a><span data-ttu-id="ea098-103">Instrumentacja zarządzania Windows (WMI) oraz z liczników wydajności (niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="ea098-103">Windows Management Instrumentation (WMI) and Performance Counters (Unmanaged API Reference)</span></span>
 
 <span data-ttu-id="ea098-104">Niezarządzany API .NET Framework WMI i liczniki wydajności zawiera zestaw funkcji, które owijają odwołania do [natywnych interfejsów API usługi Instrumentacja zarządzania Windows](/windows/desktop/WmiSdk/com-api-for-wmi).</span><span class="sxs-lookup"><span data-stu-id="ea098-104">The .NET Framework WMI and Performance Counters unmanaged API consists of a set of functions that wrap calls to the [native Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi).</span></span> <span data-ttu-id="ea098-105">Umożliwia tworzenie narzędzi i bibliotek, które zarządzanie i monitorowanie komputerów zdalnych.</span><span class="sxs-lookup"><span data-stu-id="ea098-105">It allows you to develop tools and libraries that manage and monitor remote computer systems.</span></span>

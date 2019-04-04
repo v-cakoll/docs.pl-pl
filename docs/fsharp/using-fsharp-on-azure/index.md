@@ -1,10 +1,15 @@
 ---
-title: 'Używanie języka F# na platformie Azure'
-description: 'Przewodnik dotyczący korzystania z usług Azure za pomocąF#'
+title: Używanie języka F# na platformie Azure
+description: Przewodnik dotyczący korzystania z usług Azure za pomocąF#
 author: sylvanc
 ms.date: 09/22/2016
+ms.openlocfilehash: 8243c021b8bc3ea9b067b278a5d9c6e3619232b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371055"
 ---
-
 # <a name="using-f-on-azure"></a><span data-ttu-id="b178e-103">Używanie języka F# na platformie Azure</span><span class="sxs-lookup"><span data-stu-id="b178e-103">Using F# on Azure</span></span>
 
 <span data-ttu-id="b178e-104">F#jest obracanym język programowania w chmurze i często służy do pisania aplikacji sieci web, usług w chmurze, w przypadku mikrousługi hostowane w chmurze i skalowalna przetwarzania danych.</span><span class="sxs-lookup"><span data-stu-id="b178e-104">F# is a superb language for cloud programming and is frequently used to write web applications, cloud services, cloud-hosted microservices, and for scalable data processing.</span></span>

@@ -1,13 +1,19 @@
 ---
-title: 'Odwołanie w C#'
+title: Odwołanie w C#
 ms.date: 02/14/2017
 helpviewer_keywords:
-  - 'Visual C#, language reference'
-  - 'language reference [C#]'
-  - 'Programmer''s Reference for C#'
-  - 'C# language, reference'
-  - 'reference, C# language'
+- Visual C#, language reference
+- language reference [C#]
+- Programmer's Reference for C#
+- C# language, reference
+- reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
+ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845421"
 ---
 # <a name="c-reference"></a><span data-ttu-id="40fd7-102">Odwołanie w C#</span><span class="sxs-lookup"><span data-stu-id="40fd7-102">C# Reference</span></span>
 <span data-ttu-id="40fd7-103">Ta sekcja zawiera materiały źródłowe dotyczące C# słów kluczowych, operatorów, znaki specjalne, dyrektyw preprocesora, opcji kompilatora i kompilatora błędy i ostrzeżenia.</span><span class="sxs-lookup"><span data-stu-id="40fd7-103">This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.</span></span>  

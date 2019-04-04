@@ -1,9 +1,15 @@
 ---
 title: Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
-description: 'Ustal, jakimi oferty firmy Microsoft do obsługi cykl życia aplikacji platformy Docker.'
+description: Ustal, jakimi oferty firmy Microsoft do obsługi cykl życia aplikacji platformy Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680203"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a><span data-ttu-id="e73b7-103">Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych</span><span class="sxs-lookup"><span data-stu-id="e73b7-103">Introduction to the Microsoft platform and tools for containerized apps</span></span>
 

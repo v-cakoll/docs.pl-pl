@@ -2,10 +2,16 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723117"
 ---
 # <a name="windows-forms"></a><span data-ttu-id="157c7-102">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="157c7-102">Windows Forms</span></span>
 <span data-ttu-id="157c7-103">Ponieważ formularze są jednostki podstawowej aplikacji, istotne jest, nadaj rozwagą do swoich funkcji i projektowania.</span><span class="sxs-lookup"><span data-stu-id="157c7-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="157c7-104">Formularz jest ostatecznie bazie pustego czy, jako programista, zwiększanie za pomocą kontrolek, aby utworzyć interfejs użytkownika i kod służący do manipulowania danymi.</span><span class="sxs-lookup"><span data-stu-id="157c7-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="157c7-105">W tym celu program Visual Studio zapewnia zintegrowanym środowisku programistycznym (IDE) do pomocy w pisaniu kodu, a także zaawansowane kontrolki Ustaw napisane przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="157c7-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="157c7-106">W uzupełnieniu funkcji te kontrolki w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.</span><span class="sxs-lookup"><span data-stu-id="157c7-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  

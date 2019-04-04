@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185509"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="ad862-103">Testowanie jednostek w .NET Core i .NET Standard</span><span class="sxs-lookup"><span data-stu-id="ad862-103">Unit testing in .NET Core and .NET Standard</span></span>
 
 <span data-ttu-id="ad862-104">.NET core ułatwia tworzenie testów jednostkowych.</span><span class="sxs-lookup"><span data-stu-id="ad862-104">.NET Core makes it easy to create unit tests.</span></span> <span data-ttu-id="ad862-105">Ten artykuł wprowadza testów jednostkowych i pokazano, jak różnią się od innych rodzajów testów.</span><span class="sxs-lookup"><span data-stu-id="ad862-105">This article introduces unit tests and illustrates how they differ from other kinds of tests.</span></span> <span data-ttu-id="ad862-106">Połączone zasoby w dolnej części strony pokazują, jak dodać projekt testu do rozwiązania.</span><span class="sxs-lookup"><span data-stu-id="ad862-106">The linked resources near the bottom of the page show you how to add a test project to your solution.</span></span> <span data-ttu-id="ad862-107">Po skonfigurowaniu projektu testu, będzie można uruchomić testy jednostkowe przy użyciu wiersza polecenia lub programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ad862-107">After you set up your test project, you will be able to run your unit tests using the command line or Visual Studio.</span></span>

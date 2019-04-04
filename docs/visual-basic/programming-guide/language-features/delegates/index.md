@@ -2,11 +2,16 @@
 title: Delegaty (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674032"
 ---
-
 # <a name="delegates-visual-basic"></a><span data-ttu-id="1f8c9-102">Delegaty (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f8c9-102">Delegates (Visual Basic)</span></span>
 
 <span data-ttu-id="1f8c9-103">Obiekty delegowane są obiekty, które odwołują się do metody.</span><span class="sxs-lookup"><span data-stu-id="1f8c9-103">Delegates are objects that refer to methods.</span></span> <span data-ttu-id="1f8c9-104">Są czasami określane jako *wskaźniki funkcji bezpiecznego typu* ponieważ są one podobne do wskaźników funkcji używanych w innych językach programowania.</span><span class="sxs-lookup"><span data-stu-id="1f8c9-104">They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages.</span></span> <span data-ttu-id="1f8c9-105">Ale w przeciwieństwie do wskaźników funkcji delegatów w języku Visual Basic typu odwołania na podstawie klasy <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1f8c9-105">But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="1f8c9-106">Delegatów można odwoływać się do obu metod udostępnionego — metody, które mogą być wywoływane bez określonego wystąpienia klasy — lub wystąpienie metody.</span><span class="sxs-lookup"><span data-stu-id="1f8c9-106">Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.</span></span>

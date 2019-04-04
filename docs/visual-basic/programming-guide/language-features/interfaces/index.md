@@ -2,11 +2,17 @@
 title: Interfejsy (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972390"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="aa988-102">Interfejsy (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aa988-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="aa988-103">*Interfejsy* zdefiniować właściwości, metody i zdarzenia, które można zaimplementować klasy.</span><span class="sxs-lookup"><span data-stu-id="aa988-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="aa988-104">Interfejsy umożliwiają definiowanie funkcji jako mniejszym grupom ściśle powiązanych właściwości, metod i zdarzeń; Zmniejsza to problemów ze zgodnością, ponieważ możesz tworzyć rozszerzone implementacji interfejsów sieci bez narażenia istniejącego kodu.</span><span class="sxs-lookup"><span data-stu-id="aa988-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="aa988-105">Opracowując implementacji i dodatkowe interfejsy, można dodać nowe funkcje w dowolnym momencie.</span><span class="sxs-lookup"><span data-stu-id="aa988-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

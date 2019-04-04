@@ -1,13 +1,19 @@
 ---
-title: 'Współdziałanie — C# przewodnik programowania'
+title: Współdziałanie — C# przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - COM interop
-  - interoperability
-  - 'platform invoke, accessing APIs with C#'
-  - 'C# language, interoperability'
+- COM interop
+- interoperability
+- platform invoke, accessing APIs with C#
+- C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
+ms.openlocfilehash: 50f2a72bf4981a49d5597a9bc8922db81197d810
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411346"
 ---
 # <a name="interoperability-c-programming-guide"></a><span data-ttu-id="aaf01-102">Współdziałanie (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="aaf01-102">Interoperability (C# Programming Guide)</span></span>
 <span data-ttu-id="aaf01-103">Współdziałanie pozwala na zachowanie i wykorzystać istniejące inwestycje w niezarządzanym kodzie.</span><span class="sxs-lookup"><span data-stu-id="aaf01-103">Interoperability enables you to preserve and take advantage of existing investments in unmanaged code.</span></span> <span data-ttu-id="aaf01-104">Kod, który działa pod kontrolą środowisko uruchomieniowe języka wspólnego (CLR) jest nazywany *kodu zarządzanego*, a kod, który działa poza środowisko CLR jest nazywana *kod niezarządzany*.</span><span class="sxs-lookup"><span data-stu-id="aaf01-104">Code that runs under the control of the common language runtime (CLR) is called *managed code*, and code that runs outside the CLR is called *unmanaged code*.</span></span> <span data-ttu-id="aaf01-105">COM, COM +, składniki C++, składników ActiveX i interfejsu API programu Microsoft Windows są przykłady kodu niezarządzanego.</span><span class="sxs-lookup"><span data-stu-id="aaf01-105">COM, COM+, C++ components, ActiveX components, and Microsoft Windows API are examples of unmanaged code.</span></span>  

@@ -3,10 +3,16 @@ title: Programowanie równoległe w .NET
 ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - parallel programming
+- parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 07b5426f5af9cd6ca919d8da0de0acfed76a2e63
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970392"
 ---
 # <a name="parallel-programming-in-net"></a><span data-ttu-id="3d8cb-102">Programowanie równoległe w .NET</span><span class="sxs-lookup"><span data-stu-id="3d8cb-102">Parallel Programming in .NET</span></span>
 

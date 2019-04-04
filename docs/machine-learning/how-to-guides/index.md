@@ -1,10 +1,15 @@
 ---
 title: .NET machine learning przewodniki z instrukcjami — strukturze ML.NET
-description: 'Dowiedz się, jak wykonywać określone zadania na potrzeby niestandardowych tworzenie rozwiązań sztucznej Inteligencji i uczenia maszynowego integracji w aplikacjach .NET.'
+description: Dowiedz się, jak wykonywać określone zadania na potrzeby niestandardowych tworzenie rozwiązań sztucznej Inteligencji i uczenia maszynowego integracji w aplikacjach .NET.
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 9e5bd146d636b46dcf3835c670207b647e7743c6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673057"
 ---
-
 # <a name="net-machine-learning-how-to-guides---mlnet"></a><span data-ttu-id="8bc95-103">.NET machine learning przewodniki z instrukcjami — strukturze ML.NET</span><span class="sxs-lookup"><span data-stu-id="8bc95-103">.NET Machine learning how-to guides - ML.NET</span></span>
 
 <span data-ttu-id="8bc95-104">W sekcji Przewodnik po strukturze ML.NET jak możesz znaleźć szybkich odpowiedzi na często zadawane pytania.</span><span class="sxs-lookup"><span data-stu-id="8bc95-104">In the How to section of the ML.NET Guide, you can find quick answers to common questions.</span></span> <span data-ttu-id="8bc95-105">W niektórych przypadkach artykuły mogą być wymienione w wielu sekcjach, aby były łatwe do znalezienia.</span><span class="sxs-lookup"><span data-stu-id="8bc95-105">In some cases, articles may be listed in multiple sections to make them easy to find.</span></span>

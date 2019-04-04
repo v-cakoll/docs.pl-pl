@@ -2,10 +2,16 @@
 title: Formanty formularzy systemu Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms controls
-  - 'controls [Windows Forms]'
-  - 'Windows Forms controls, about Windows Forms controls'
+- Windows Forms controls
+- controls [Windows Forms]
+- Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
+ms.openlocfilehash: da5f0b4418d61b973044a89d4902900247efb115
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707788"
 ---
 # <a name="windows-forms-controls"></a><span data-ttu-id="3b6de-102">Formanty formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="3b6de-102">Windows Forms Controls</span></span>
 <span data-ttu-id="3b6de-103">W przypadku projektowania i modyfikowania interfejsu użytkownika aplikacji Windows Forms, konieczne będzie dodawanie, wyrównanie i ustawianie formantów.</span><span class="sxs-lookup"><span data-stu-id="3b6de-103">As you design and modify the user interface of your Windows Forms applications, you will need to add, align, and position controls.</span></span> <span data-ttu-id="3b6de-104">Formanty są obiekty, które są zawarte w postaci obiektów.</span><span class="sxs-lookup"><span data-stu-id="3b6de-104">Controls are objects that are contained within form objects.</span></span> <span data-ttu-id="3b6de-105">Każdy typ kontrolki ma swój własny zestaw właściwości, metod i zdarzeń, które ułatwiają nadające się do określonego celu.</span><span class="sxs-lookup"><span data-stu-id="3b6de-105">Each type of control has its own set of properties, methods, and events that make it suitable for a particular purpose.</span></span> <span data-ttu-id="3b6de-106">Można manipulować formantów w projektancie, a następnie napisać kod, aby dodać formanty dynamicznie w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="3b6de-106">You can manipulate controls in the designer and write code to add controls dynamically at run time.</span></span>  

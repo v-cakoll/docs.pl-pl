@@ -5,6 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
+ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745450"
 ---
 # <a name="net-core-application-deployment"></a><span data-ttu-id="2a68e-103">Wdrażanie aplikacji .NET core</span><span class="sxs-lookup"><span data-stu-id="2a68e-103">.NET Core application deployment</span></span>
 

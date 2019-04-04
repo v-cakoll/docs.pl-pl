@@ -1,8 +1,14 @@
 ---
-title: 'Wprowadzenie do C# — interakcyjne samouczki'
-description: 'Dowiedz się, C# w przeglądarce i Rozpocznij pracę ze środowiskiem programistycznym'
+title: Wprowadzenie do C# — interakcyjne samouczki
+description: Dowiedz się, C# w przeglądarce i Rozpocznij pracę ze środowiskiem programistycznym
 ms.date: 01/30/2018
 ms.custom: mvc
+ms.openlocfilehash: bee52ba5e8242d4d2700949cb623df27e42e8938
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975189"
 ---
 # <a name="introduction-to-c"></a><span data-ttu-id="9b627-103">Wprowadzenie do języka C\#</span><span class="sxs-lookup"><span data-stu-id="9b627-103">Introduction to C\#</span></span>
 

@@ -2,11 +2,17 @@
 title: Formanty
 ms.date: 03/30/2017
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - 'controls [WPF], about WPF controls'
+- controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
+ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363153"
 ---
 # <a name="controls"></a><span data-ttu-id="251a3-102">Formanty</span><span class="sxs-lookup"><span data-stu-id="251a3-102">Controls</span></span>
 <a name="introduction"></a>

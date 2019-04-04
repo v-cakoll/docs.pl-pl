@@ -3,12 +3,12 @@ title: Gałęzie i pętle — wprowadzenie do C# samouczek
 description: W tym samouczku omawiającym gałęzie i pętle zapisu C# kodu, aby poznać składnię języka, obsługującego warunkowych gałęzi i pętli, aby wykonać instrukcje wielokrotnie.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677789"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920951"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dowiedz się, logikę warunkową instrukcji gałęzi i pętli
 
@@ -249,11 +249,11 @@ Wypróbuj ją samodzielnie. Sprawdź, jak Ci poszło. Odpowiedź powinna wynosi�
 
 Pomyślnie ukończono samouczek "gałęzi i pętli".
 
-Możesz kontynuować [Interpolacja ciągów](interpolated-strings-local.md) samouczków w środowisku projektowym.
+Możesz kontynuować [tablice i kolekcje](arrays-and-collections.md) samouczków w środowisku projektowym.
 
 Możesz dowiedzieć się więcej na temat tych pojęć w następujących tematach:
 
 - [Jeśli i else, instrukcja](../../language-reference/keywords/if-else.md)
-- [while — instrukcja](../../language-reference/keywords/while.md)
-- [— Instrukcja](../../language-reference/keywords/do.md)
-- [For — instrukcja](../../language-reference/keywords/for.md)
+- [While — Instrukcja](../../language-reference/keywords/while.md)
+- [Do — Instrukcja](../../language-reference/keywords/do.md)
+- [For — Instrukcja](../../language-reference/keywords/for.md)

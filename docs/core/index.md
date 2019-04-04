@@ -4,12 +4,12 @@ description: Platforma .NET core to moduły, wysokowydajnych implementacji .NET 
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030285"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920626"
 ---
 # <a name="net-core-guide"></a>Przewodnik platformy .NET Core
 
@@ -21,11 +21,11 @@ Zapoznaj się z [Samouczki programu .NET Core](tutorials/index.md) dowiesz się,
 
 ## <a name="download-net-core-22"></a>Pobierz program .NET Core 2.2
 
-Pobierz [zestawu .NET Core 2.2 SDK](https://www.microsoft.com/net/download) próby platformy .NET Core na komputerze Windows, macOS lub Linux. Odwiedź stronę [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) Jeśli wolisz używać kontenerów platformy Docker.
+Pobierz [zestawu .NET Core 2.2 SDK](https://www.microsoft.com/net/download) próby platformy .NET Core na komputerze Windows, macOS lub Linux. Odwiedź stronę [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) Jeśli wolisz używać kontenerów platformy Docker.
 
 Wszystkie wersje platformy .NET Core są dostępne pod adresem [pobierania programu .NET Core](https://www.microsoft.com/net/download/archives) interesuje Cię bliższa dla innej wersji programu .NET Core.
 
-## <a name="net-core-22"></a>.NET core 2.2
+## <a name="net-core-22"></a>.NET Core 2.2
 
 Najnowsza wersja to [platformy .NET Core 2.2](whats-new/dotnet-core-2-2.md). Nowe funkcje obejmują: wdrożeń zależny od struktury, punkty zaczepienia uruchamiania, uwierzytelnianie w usłudze AAD przy użyciu usługi Azure SQL i pomoc techniczna dla Windows ARM32.
 
@@ -44,7 +44,7 @@ Powinny zostać wyświetlone następujące dane wyjściowe:
 Hello World!
 ```
 
-## <a name="support"></a>Obsługa
+## <a name="support"></a>Pomoc techniczna
 
 Platforma .NET core to [obsługiwane przez firmę Microsoft](https://www.microsoft.com/net/support/policy)na Windows, macOS i Linux. Bezpieczeństwo i jakości jest aktualizowany kilka razy w roku, zazwyczaj co miesiąc.
 

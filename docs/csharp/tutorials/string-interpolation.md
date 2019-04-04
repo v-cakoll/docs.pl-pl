@@ -3,16 +3,16 @@ title: Interpolacja ciągów w języku C#
 description: Dowiedz się, jak obejmują wyrażenie sformatowane wyniki w ciągu wynikowym w języku C# przy użyciu interpolacji ciągu.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976060"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920717"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolacja ciągów w języku C\#
 
-W tym samouczku dowiesz się, jak używać [Interpolacja ciągów](../language-reference/tokens/interpolated.md) do formatu i Dołącz wyniki wyrażenia w ciągu wynikowym. W przykładach założono, że znasz podstawowe pojęcia języka C# i .NET typu formatowania. Jeśli jesteś nowym użytkownikiem Interpolacja ciągów lub formatowanie typu .NET, zapoznaj się z [samouczek interpolacji ciągu interaktywne](../tutorials/intro-to-csharp/interpolated-strings.yml) pierwszy. Aby uzyskać więcej informacji na temat typy formatowania w programie .NET, zobacz [typy formatowania na platformie .NET](../../standard/base-types/formatting-types.md) tematu.
+W tym samouczku dowiesz się, jak używać [Interpolacja ciągów](../language-reference/tokens/interpolated.md) do formatu i Dołącz wyniki wyrażenia w ciągu wynikowym. W przykładach założono, że znasz podstawowe pojęcia języka C# i .NET typu formatowania. Jeśli jesteś nowym użytkownikiem Interpolacja ciągów lub formatowanie typu .NET, zapoznaj się z [samouczek interpolacji ciągu interaktywne](exploration/interpolated-strings.yml) pierwszy. Aby uzyskać więcej informacji na temat typy formatowania w programie .NET, zobacz [typy formatowania na platformie .NET](../../standard/base-types/formatting-types.md) tematu.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

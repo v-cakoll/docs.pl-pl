@@ -1,7 +1,13 @@
 ---
-title: 'Koncepcje programowania (C#)'
+title: Koncepcje programowania (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
+ms.openlocfilehash: bfe4046d6d54693867ebe5d8529a4744b9e69c3b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748248"
 ---
 # <a name="programming-concepts-c"></a>Koncepcje programowania (C#)
 Ten rozdział opisuje pojęcia programowania w języku C#.  

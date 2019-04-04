@@ -1,7 +1,13 @@
 ---
-title: 'Materiały referencyjne dotyczące języka F#'
-description: 'Znajdź F# informacji o funkcji języka z tego odwołania tokeny języka, pojęć, typów, wyrażenia i obsługiwane przez kompilator konstrukcji tematów.'
+title: Materiały referencyjne dotyczące języka F#
+description: Znajdź F# informacji o funkcji języka z tego odwołania tokeny języka, pojęć, typów, wyrażenia i obsługiwane przez kompilator konstrukcji tematów.
 ms.date: 05/16/2016
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846639"
 ---
 # <a name="f-language-reference"></a>Materiały referencyjne dotyczące języka F#
 

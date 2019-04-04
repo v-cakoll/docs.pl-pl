@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185509"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testowanie jednostek w .NET Core i .NET Standard
 
 .NET core ułatwia tworzenie testów jednostkowych. Ten artykuł wprowadza testów jednostkowych i pokazano, jak różnią się od innych rodzajów testów. Połączone zasoby w dolnej części strony pokazują, jak dodać projekt testu do rozwiązania. Po skonfigurowaniu projektu testu, będzie można uruchomić testy jednostkowe przy użyciu wiersza polecenia lub programu Visual Studio.

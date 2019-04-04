@@ -9,14 +9,14 @@ metadata:
   ms.date: 08/24/2018
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: interpolated-strings.yml
-  nextTutorialTitle: Interpolacja ciągów w języku C#
-  ms.openlocfilehash: bb539fe50ee6cc2d45a44e3742072059a990c2aa
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  nextTutorialHref: list-collection.yml
+  nextTutorialTitle: Kolekcja listy
+  ms.openlocfilehash: 49fec69db0d3ae08b4f4904838be8bd5a2df3b10
+  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030233"
+  ms.lasthandoff: 04/04/2019
+  ms.locfileid: "58921068"
 items:
 - durationInMinutes: 1
   content: >
@@ -217,4 +217,4 @@ items:
 
     > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - title: Gratulacje!
-  content: "\"Gałęzie i pętle\" interaktywnego samouczka został ukończony. Możesz kliknąć pozycję **ciągi interpolowane** poniższe łącze do uruchomienia interaktywnego samouczka dalej lub mogą odwiedzić [lokacji .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) można pobrać zestawu .NET Core SDK, Utwórz projekt na komputerze i Zachowaj kodowania. W kroku \"Zachowaj Learning\" łączy do tych samouczków.\n\nMożesz dowiedzieć się więcej na temat tych pojęć w następujących tematach:\n\n- [Jeśli i else, instrukcja](../../language-reference/keywords/if-else.md)\n- [while — instrukcja](../../language-reference/keywords/while.md)\n- [— Instrukcja](../../language-reference/keywords/do.md)\n- [For — instrukcja](../../language-reference/keywords/for.md)"
+  content: "\"Gałęzie i pętle\" interaktywnego samouczka został ukończony. Możesz kliknąć pozycję **ciągi interpolowane** poniższe łącze do uruchomienia interaktywnego samouczka dalej lub mogą odwiedzić [lokacji .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) można pobrać zestawu .NET Core SDK, Utwórz projekt na komputerze i Zachowaj kodowania. W kroku \"Zachowaj Learning\" łączy do tych samouczków.\n\nMożesz dowiedzieć się więcej na temat tych pojęć w następujących tematach:\n\n- [Jeśli i else, instrukcja](../../language-reference/keywords/if-else.md)\n- [While — Instrukcja](../../language-reference/keywords/while.md)\n- [Do — Instrukcja](../../language-reference/keywords/do.md)\n- [For — Instrukcja](../../language-reference/keywords/for.md)"

@@ -1,12 +1,17 @@
 ---
 title: Analizatory — oparte na platformie Roslyn platformy .NET
-description: 'Więcej informacji na temat analizatorów Roslyn na podstawie, znajdować problemy, które sugerują poprawkami tych problemów.'
+description: Więcej informacji na temat analizatorów Roslyn na podstawie, znajdować problemy, które sugerują poprawkami tych problemów.
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634248"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a>Roslyn na podstawie analizatorów
 
 Oparte na programie Roslyn analizatory Użyj kompilatora zestawu SDK programu .NET (interfejsy API Roslyn) do analizowania kodu źródłowego projektu można znaleźć problemy, a także sugerują poprawki. Analizatory różnych poszukaj różne rodzaje problemów, począwszy od praktyk, które mogą być przyczyną błędów z bezpieczeństwem się zgodnością z interfejsem API.

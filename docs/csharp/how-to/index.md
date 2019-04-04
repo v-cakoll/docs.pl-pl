@@ -1,9 +1,14 @@
 ---
-title: 'Jak artykułów (Przewodnik C#)'
-description: 'Szybkie wskazówki i przykłady kodu krótki, ukierunkowane kolekcję'
+title: Jak artykułów (Przewodnik C#)
+description: Szybkie wskazówki i przykłady kodu krótki, ukierunkowane kolekcję
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202343"
 ---
-
 # <a name="how-to-c"></a>Instrukcje (C#)
 
 W sposób części przewodnika C# można znaleźć szybkich odpowiedzi na często zadawane pytania. W niektórych przypadkach artykuły mogą być wymienione w wielu sekcjach. Chcieliśmy były łatwo dostępne dla wielu ścieżek wyszukiwania. 

@@ -3,6 +3,12 @@ title: Machine learning zasoby — strukturze ML.NET
 description: Zapoznaj się z tych zasobów strukturze ML.NET uzyskanymi niestandardowe tworzenie rozwiązań sztucznej Inteligencji i integracji w aplikacjach .NET.
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 30d0ed07c8799657f12767a0c90822d9ff88b021
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251069"
 ---
 # <a name="machine-learning-resources---mlnet"></a>Machine learning zasoby — strukturze ML.NET
 

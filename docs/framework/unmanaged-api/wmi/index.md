@@ -4,8 +4,13 @@ description: Zawiera podsumowanie programu .NET Framework niezarządzanych inter
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377459"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumentacja zarządzania Windows (WMI) oraz z liczników wydajności (niezarządzany wykaz interfejsów API)
 
 Niezarządzany API .NET Framework WMI i liczniki wydajności zawiera zestaw funkcji, które owijają odwołania do [natywnych interfejsów API usługi Instrumentacja zarządzania Windows](/windows/desktop/WmiSdk/com-api-for-wmi). Umożliwia tworzenie narzędzi i bibliotek, które zarządzanie i monitorowanie komputerów zdalnych.

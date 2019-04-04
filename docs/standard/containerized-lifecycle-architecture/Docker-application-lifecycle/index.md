@@ -4,6 +4,12 @@ description: Rozpocznij tutaj podróży opracowywanie konteneryzowanych aplikacj
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
+ms.openlocfilehash: 5d569cf5edc9f1e39b9c53908b7fbe075d3f2bf5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584359"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Wprowadzenie do cyklu życia aplikacji platformy Docker
 

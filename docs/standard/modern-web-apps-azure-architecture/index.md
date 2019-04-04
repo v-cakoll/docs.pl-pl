@@ -1,11 +1,16 @@
 ---
 title: Projektowania nowoczesnych aplikacji sieci web za pomocą platformy ASP.NET Core i platformy Azure
-description: 'Przewodnik, który dostarcza wskazówki end-to-end na tworzeniu aplikacji monolitycznych internetowych przy użyciu platformy ASP.NET Core i platformy Azure.'
+description: Przewodnik, który dostarcza wskazówki end-to-end na tworzeniu aplikacji monolitycznych internetowych przy użyciu platformy ASP.NET Core i platformy Azure.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
+ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675838"
 ---
-
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure
 
 ![Obejmuje obraz przewodnik architektury nowoczesnych aplikacji sieci Web.](./media/index/web-application-guide-cover-image.png)

@@ -2,6 +2,12 @@
 title: Serializacja (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
+ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409708"
 ---
 # <a name="serialization-visual-basic"></a>Serializacja (Visual Basic)
 Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można było zapisać obiekt lub przekazuje je do pamięci, bazie danych lub pliku. Głównym celem jest zapisanie stanu obiektu, aby można było utworzyć ponownie w razie. Zwrotny proces jest nazywany deserializacji.  

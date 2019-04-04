@@ -2,11 +2,16 @@
 title: Delegaty (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674032"
 ---
-
 # <a name="delegates-visual-basic"></a>Delegaty (Visual Basic)
 
 Obiekty delegowane są obiekty, które odwołują się do metody. Są czasami określane jako *wskaźniki funkcji bezpiecznego typu* ponieważ są one podobne do wskaźników funkcji używanych w innych językach programowania. Ale w przeciwieństwie do wskaźników funkcji delegatów w języku Visual Basic typu odwołania na podstawie klasy <xref:System.Delegate?displayProperty=nameWithType>. Delegatów można odwoływać się do obu metod udostępnionego — metody, które mogą być wywoływane bez określonego wystąpienia klasy — lub wystąpienie metody.

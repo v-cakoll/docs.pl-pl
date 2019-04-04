@@ -2,6 +2,12 @@
 title: Zestawy w środowisku .NET
 ms.date: 07/10/2018
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
+ms.openlocfilehash: 4a92eea623abc8aaad170dafc4bc3c917a36a474
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464713"
 ---
 # <a name="assemblies-in-net"></a>Zestawy w środowisku .NET
 

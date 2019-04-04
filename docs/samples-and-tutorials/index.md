@@ -1,11 +1,16 @@
 ---
 title: Samouczki i przykłady kodu platformy .NET
-description: 'Informacji na temat samouczki i przykłady kodu dla platformy .NET Core, ASP.NET Core i C# języka, które pomagają więcej informacji na temat platformy .NET.'
+description: Informacji na temat samouczki i przykłady kodu dla platformy .NET Core, ASP.NET Core i C# języka, które pomagają więcej informacji na temat platformy .NET.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558965"
 ---
-
 # <a name="net-samples-and-tutorials"></a>Samouczki i przykłady kodu platformy .NET
 
 Dokumentacja platformy .NET zawiera zbiór przykłady i samouczki, które nauczą Cię temat platformy .NET. W tym temacie opisano sposób znaleźć, Wyświetl i Pobierz program .NET Core, ASP.NET Core i C# przykłady i samouczki. Znajdź zasoby, aby dowiedzieć się więcej F# język programowania na [ F# lokacji Fundacji](https://fsharp.org/learn.html). Jeśli interesuje Cię Eksplorowanie C# za pomocą edytora kodu w trybie online, rozpoczynać [tego interaktywnego samouczka](https://www.microsoft.com/net/learn/in-browser-tutorial/1) i kontynuować [ C# interaktywny samouczek dotyczący](../csharp/tutorials/intro-to-csharp/index.md). Aby uzyskać instrukcje, jak wyświetlić i pobrać przykładowy kod, zobacz [wyświetlanie i pobieranie próbek](#viewing-and-downloading-samples) sekcji.

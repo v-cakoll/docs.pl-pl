@@ -1,26 +1,26 @@
 ---
 title: Praca z kalendarzami
-ms.date: 02/23/2019
+ms.date: 04/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], calendars
+- globalization [.NET], calendars
 - calendars, global applications
 - global applications, calendars
 - world-ready applications, calendars
-- international applications [.NET Framework], calendars
+- international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bc41f6881c8a876e77ac385c715a5517b95842c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845989"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921354"
 ---
 # <a name="working-with-calendars"></a>Praca z kalendarzami
 
@@ -138,13 +138,16 @@ Istnieje jednak jeden ważny wyjątek. Wartość domyślna (niezainicjowana) <xr
 Daty w kalendarzach są zazwyczaj dzielone na ery. Jednak <xref:System.Globalization.Calendar> klas na platformie .NET nie obsługują każdej ery zdefiniowanej w kalendarzu, a większość <xref:System.Globalization.Calendar> klasy obsługuje tylko jedną erę. Tylko <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar> klasy obsługują wiele er.
 
 > [!IMPORTANT]
->  W nowej ery usług w <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar> zaczyna się od 1 maja 2019 r. Ta zmiana ma wpływ na wszystkie aplikacje, które używają tych kalendarzy. Zobacz [obsługi nowej ery usług w kalendarza japońskiego na platformie .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/) uzyskać więcej informacji, jak i do określenia aplikacji, których dotyczy problem. Zobacz [przygotowanie aplikacji w taki sposób, aby ta zmiana era japoński](/windows/uwp/design/globalizing/japanese-era-change) instrukcje dotyczące testowania aplikacji na Windows w celu zapewnienia ich gotowości, aby ta zmiana era.
+>  Ery Reiwa, nową erę w <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar>, rozpoczyna się 1 maja 2019 r. Ta zmiana ma wpływ na wszystkie aplikacje, które używają tych kalendarzy. Zobacz następujące artykuły, aby uzyskać więcej informacji:
+> - [Obsługa nowej ery usług w kalendarza japońskiego na platformie .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), która dokumentuje funkcji dodanych do platformy .NET w celu obsługi kalendarze i o wiele ER i omówiono najlepsze rozwiązania do użycia podczas obsługi wielu erze kalendarzy.
+> - [Przygotowanie aplikacji w taki sposób, aby ta zmiana era japoński](/windows/uwp/design/globalizing/japanese-era-change), który zawiera informacje dotyczące testowania aplikacji na Windows w celu zapewnienia ich gotowości, aby ta zmiana era.
+> - [Podsumowanie nowej erze japoński aktualizacje programu .NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework), który zawiera listę aktualizacji .NET Framework dla poszczególnych wersji Windows that are related to nowej ery kalendarza japońskiego, informacje o nowe funkcje .NET Framework do obsługi wielu erze i zawiera elementy do wyszukania w testowania aplikacji.
 
-Ery w większości kalendarzy wskazuje, że okres bardzo dużo czasu. W kalendarzu gregoriańskim na przykład bieżącej ery obejmuje więcej niż dwóch millenia. Aby uzyskać <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar>dwa kalendarze, które obsługują wiele er, nie jest to wymagane. Ery odnosi się do okresu emperor reign. Obsługa wiele er, szczególnie w przypadku, gdy górny limit bieżącej ery jest nieznany, stanowią szczególne wyzwanie. 
+Ery w większości kalendarzy wskazuje, że okres bardzo dużo czasu. W kalendarzu gregoriańskim na przykład bieżącej ery obejmuje więcej niż dwóch tysiącleciu. Aby uzyskać <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar>dwa kalendarze, które obsługują wiele er, nie jest to wymagane. Ery odnosi się do okresu emperor reign. Obsługa wiele er, szczególnie w przypadku, gdy górny limit bieżącej ery jest nieznany, stanowią szczególne wyzwanie. 
 
 ### <a name="eras-and-era-names"></a>Ery i nazwy er
 
-Na platformie .NET, liczby całkowite reprezentujące ery obsługiwane przez określoną implementację kalendarza są przechowywane w odwrotnej kolejności w <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tablicy. Bieżąca era ma indeks zero, a dla <xref:System.Globalization.Calendar> klasy, które obsługują wiele er, każdy kolejny indeks odzwierciedla poprzednią erę. Statyczne <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> właściwość definiuje indeks bieżącej ery w <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tablicy; jest stałą, której wartość jest zawsze zero. Poszczególne <xref:System.Globalization.Calendar> klasy zawierają także pola statyczne, które zwracają wartość bieżącej ery. Zostały one wymienione w poniższej tabeli.
+Na platformie .NET, liczby całkowite reprezentujące ery obsługiwane przez określoną implementację kalendarza są przechowywane w odwrotnej kolejności w <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tablicy. Bieżącej ery (czyli ery przy użyciu najnowszych zakresu czasu) jest indeks zero, a dla <xref:System.Globalization.Calendar> klasy, które obsługują wiele er, każdy kolejny indeks odzwierciedla poprzednią erę. Statyczne <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> właściwość definiuje indeks bieżącej ery w <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tablicy; jest stałą, której wartość jest zawsze zero. Poszczególne <xref:System.Globalization.Calendar> klasy zawierają także pola statyczne, które zwracają wartość bieżącej ery. Zostały one wymienione w poniższej tabeli.
 
 | Klasa kalendarza                                        | Pole bieżącej ery                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -162,8 +165,8 @@ Na platformie .NET, liczby całkowite reprezentujące ery obsługiwane przez okr
 
 Nazwa, która odpowiada numerowi ery można pobrać, przekazując numer ery do <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> lub <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> metody. Poniższy przykład wywołuje te metody do pobierania informacji dotyczących obsługi er w <xref:System.Globalization.GregorianCalendar> klasy.
 
-[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
-[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
+[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
+[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
 Ponadto niestandardowy format daty i godziny „g” dołącza nazwę ery kalendarza do reprezentacji daty i godziny w formacie ciągu. Aby uzyskać więcej informacji, zobacz [niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
 
@@ -205,7 +208,7 @@ Podczas określania ery do <xref:System.Globalization.Calendar.ToDateTime(System
 
 ### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Kalendarze, ery i zakresy dat: Swobodna zakresu kontroli
 
-Bardzo tak jak poszczególne kalendarze mają obsługiwane zakresów dat ery w <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar> klasy również mieć obsługiwane zakresów. Wcześniej .NET używać strict ery, który sprawdza zakres, aby upewnić się, że datę ery należała do zakresu tej ery. Data spoza zakresu powodowało zgłoszenie .NET Framework używa swobodna ranged sprawdzanie domyślnie. Oznacza to, jeśli wartość typu date znajduje się poza zakresem określonym ery, metoda zgłasza <xref:System.ArgumentOutOfRangeException>. Aktualizacje do wszystkich wersji programu .NET Framework, wprowadzono złagodzone ery zakresu kontroli. próbie utworzenia wystąpienia datę właściwą dla ery, który znajduje się poza zakresem określonym ery "overflow" następujące ery i żaden wyjątek jest zgłaszany.
+Bardzo tak jak poszczególne kalendarze mają obsługiwane zakresów dat ery w <xref:System.Globalization.JapaneseCalendar> i <xref:System.Globalization.JapaneseLunisolarCalendar> klasy również mieć obsługiwane zakresów. Wcześniej .NET używać strict ery, który sprawdza zakres, aby upewnić się, że datę ery należała do zakresu tej ery. Oznacza to, jeśli wartość typu date znajduje się poza zakresem określonym ery, metoda zgłasza <xref:System.ArgumentOutOfRangeException>. .NET używa obecnie obniżone ranged sprawdzanie domyślnie. Aktualizacje do wszystkich wersji programu .NET wprowadzone swobodna ery zakresu kontroli. Próba utworzenia wystąpienia datę właściwą dla ery, który znajduje się poza zakresem określonym ery "przepełnienia" do następujących ery i jest zgłaszany żaden wyjątek.
 
 Poniższy przykład podejmie próbę utworzenia wystąpienia daty w roku 65 ery Showa, która rozpoczęło się w dniu 25 grudnia 1926 i zakończył się 7 stycznia 1989 roku. Ta data odnosi się do 9 stycznia 1990 r., który jest poza zakresem ery Showa <xref:System.Globalization.JapaneseCalendar>. Tak jak pokazano w danych wyjściowych z przykładu, Data, w przykładzie jest wyświetlana 9 stycznia 1990 r. w drugim roku ery Heisei.
 
@@ -361,3 +364,4 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 - [Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
 - [Przykład: Narzędzie zakresu tydzień kalendarza](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Klasa kalendarza](xref:System.Globalization.Calendar)

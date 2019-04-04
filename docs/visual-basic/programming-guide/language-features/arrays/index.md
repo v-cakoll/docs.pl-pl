@@ -2,13 +2,18 @@
 title: Tablice w Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675968"
 ---
-
 # <a name="arrays-in-visual-basic"></a>Tablice w Visual Basic
 
 Tablica to zbiór wartości, które są określane jako *elementy*, które są logicznie powiązane ze sobą. Na przykład tablicy może składać się z liczby studentów każdej grupy zaszeregowania w liceum; Każdy element tablicy jest liczba uczniów w jednej klasy korporacyjnej. Podobnie Tablica może składać się z ocen studenta dla klasy; Każdy element tablicy jest jednej klasy korporacyjnej.

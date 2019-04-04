@@ -4,12 +4,12 @@ description: W tym artykule dowiesz się, jak zestaw .NET Core SDK i środowisko
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: 86ef49aaf29efcc5988185910520694713e35599
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516762"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921289"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Omówienie sposobu platformy .NET Core jest wersjonowany
 
@@ -107,7 +107,7 @@ Każda wersja programu .NET Core implementuje wersji programu .NET Standard. Zai
 ## <a name="see-also"></a>Zobacz także
 
 - [Platformy docelowe](../../standard/frameworks.md)
-- [Tworzenie pakietów dystrybucji platformy .NET Core](../build/distribution-packaging.md)
+- [Tworzenie pakietów dystrybucji platformy .NET core](../build/distribution-packaging.md)
 - [.NET core pomocy technicznej cyklu życia faktu arkusza](https://www.microsoft.com/net/core/support)
 - [Wiązanie wersji programu .NET core 2 +](https://github.com/dotnet/designs/issues/3)
-- [Obrazy platformy docker dla platformy .NET Core](https://hub.docker.com/r/microsoft/dotnet/)
+- [Obrazy platformy docker dla platformy .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

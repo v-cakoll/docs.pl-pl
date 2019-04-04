@@ -4,12 +4,12 @@ description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a8016b2b55313cb6e1d84bfb2c50a62347858de9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464362"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921094"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -97,14 +97,14 @@ W podobny sposób, program Visual Studio można również dodać plik docker-com
 
 Zazwyczaj Tworzenie niestandardowego obrazu kontenera na podstawie obrazu podstawowego, otrzymasz od oficjalnego repozytorium, takiego jak [usługi Docker Hub](https://hub.docker.com/) rejestru. To jest dokładnie co się dzieje w tle po włączeniu obsługi platformy Docker w programie Visual Studio. Z pliku Dockerfile użyje istniejącej `aspnetcore` obrazu.
 
-Wcześniej opisano firma Microsoft, które obrazów platformy Docker i repozytoriów, można użyć w zależności od framework i systemu operacyjnego zostały wybrane. Na przykład, jeśli chcesz użyć programu ASP.NET Core (Linux lub Windows), jest obrazu do użycia `microsoft/dotnet:2.2-aspnetcore-runtime`. W związku z tym wystarczy określić, jakie podstawowego obrazu platformy Docker, który będzie używany dla kontenera. Można to zrobić, dodając `FROM microsoft/dotnet:2.2-aspnetcore-runtime` do Twojego pliku Dockerfile. To zostanie przeprowadzona przez program Visual Studio, ale w przypadku zaktualizowania wersji zaktualizuj tę wartość.
+Wcześniej opisano firma Microsoft, które obrazów platformy Docker i repozytoriów, można użyć w zależności od framework i systemu operacyjnego zostały wybrane. Na przykład, jeśli chcesz użyć programu ASP.NET Core (Linux lub Windows), jest obrazu do użycia `mcr.microsoft.com/dotnet/core/aspnet:2.2`. W związku z tym wystarczy określić, jakie podstawowego obrazu platformy Docker, który będzie używany dla kontenera. Można to zrobić, dodając `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` do Twojego pliku Dockerfile. To zostanie przeprowadzona przez program Visual Studio, ale w przypadku zaktualizowania wersji zaktualizuj tę wartość.
 
 Oficjalna repozytorium obrazów platformy .NET z usługi Docker Hub przy użyciu numeru wersji zapewnia, że te same funkcje języka są dostępne na wszystkich komputerach (w tym programowanie, testowanie i produkcja).
 
 Poniższy kod przedstawia przykładowy plik Dockerfile dla kontenera platformy ASP.NET Core.
 
 ```Dockerfile
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-W tym przypadku obraz, który zależy od wersji 2.2 oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows). Jest to ustawienie `FROM microsoft/dotnet:2.2-aspnetcore-runtime`. (Aby uzyskać więcej informacji na temat tego obrazu podstawowego zobacz [obrazu platformy Docker programu .NET Core](https://hub.docker.com/r/microsoft/dotnet/) strony.) W pliku Dockerfile trzeba będzie również poinstruować platformy Docker do nasłuchiwania na porcie TCP, używane w czasie wykonywania (w tym przypadku port 80, zgodnie z konfiguracją z ustawieniem UDOSTĘPNIAJĄ).
+W tym przypadku obraz, który zależy od wersji 2.2 oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows). Jest to ustawienie `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Aby uzyskać więcej informacji na temat tego obrazu podstawowego zobacz [obrazu platformy Docker programu .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) strony.) W pliku Dockerfile trzeba będzie również poinstruować platformy Docker do nasłuchiwania na porcie TCP, używane w czasie wykonywania (w tym przypadku port 80, zgodnie z konfiguracją z ustawieniem UDOSTĘPNIAJĄ).
 
 Można określić dodatkowe ustawienia konfiguracji w pliku Dockerfile, w zależności od języka i struktury, którego używasz. Na przykład wiersz punktu wejścia z `["dotnet", "MySingleContainerWebApp.dll"]` platformy docker, aby uruchomić aplikację .NET Core. Jeśli używasz zestawu SDK i .NET Core interfejsu wiersza polecenia (interfejsu wiersza polecenia platformy dotnet) aby skompilować i uruchomić aplikację .NET, to ustawienie będzie inny. Mierzenie to, że wiersz punktu wejścia i inne ustawienia będą różnić w zależności od języka i platformy, wybrany dla aplikacji.
 
@@ -132,7 +132,7 @@ Można określić dodatkowe ustawienia konfiguracji w pliku Dockerfile, w zależ
 
 ### <a name="using-multi-arch-image-repositories"></a>Przy użyciu repozytoriów wielu architektury obrazu
 
-Jednym repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz. Ta funkcja umożliwia dostawców, takich jak Microsoft (obraz podstawowy dla twórców) do utworzenia pojedynczego repozytorium na pokrycie wiele platform (dotyczy to systemów Linux i Windows). Na przykład [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) repozytorium, które są dostępne w rejestrze usługi Docker Hub zapewnia obsługę dla systemów Linux i Windows Nano Server przy użyciu tej samej nazwy repozytorium.
+Jednym repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz. Ta funkcja umożliwia dostawców, takich jak Microsoft (obraz podstawowy dla twórców) do utworzenia pojedynczego repozytorium na pokrycie wiele platform (dotyczy to systemów Linux i Windows). Na przykład [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) repozytorium, które są dostępne w rejestrze usługi Docker Hub zapewnia obsługę dla systemów Linux i Windows Nano Server przy użyciu tej samej nazwy repozytorium.
 
 Jeśli określony tag, przeznaczonych dla platformy, która jest jawne, takich jak w następujących przypadkach:
 
@@ -174,11 +174,11 @@ Prawdopodobnie najlepszym sposobem, aby dowiedzieć się, że wieloetapowych prz
 Początkowy pliku Dockerfile może wyglądać mniej więcej tak:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS build
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -266,11 +266,11 @@ Końcowe optymalizacji te rzeczy dzieją wierszu 20 jest nadmiarowa, jako wiersz
 Wynikowy plik jest następnie:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS publish
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj

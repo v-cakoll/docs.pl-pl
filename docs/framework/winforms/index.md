@@ -2,10 +2,16 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723117"
 ---
 # <a name="windows-forms"></a>Windows Forms
 Ponieważ formularze są jednostki podstawowej aplikacji, istotne jest, nadaj rozwagą do swoich funkcji i projektowania. Formularz jest ostatecznie bazie pustego czy, jako programista, zwiększanie za pomocą kontrolek, aby utworzyć interfejs użytkownika i kod służący do manipulowania danymi. W tym celu program Visual Studio zapewnia zintegrowanym środowisku programistycznym (IDE) do pomocy w pisaniu kodu, a także zaawansowane kontrolki Ustaw napisane przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. W uzupełnieniu funkcji te kontrolki w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.  

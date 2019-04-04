@@ -1,17 +1,17 @@
 ---
-title: Definiowanie aplikacji z wieloma kontenerami za pomocą platformy docker-compose.yml
+title: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 description: Jak określić kompozycji mikrousług dla aplikacji z wieloma kontenerami w celu za pomocą platformy docker-compose.yml.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463530"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920782"
 ---
-# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą platformy docker-compose.yml
+# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 
 W tym przewodniku [docker-compose.yml](https://docs.docker.com/compose/compose-file/) pliku została wprowadzona w sekcji [krok 4. Zdefiniuj swoje usługi w docker-compose.yml, podczas kompilowania aplikacji platformy Docker z wieloma kontenerami](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Istnieją dodatkowe sposoby korzystania z plików docker-compose, które jest wart poznania bardziej szczegółowo.
 
@@ -433,7 +433,7 @@ Należy pamiętać, że wartości ustawione w środowisku uruchomieniowym zawsze
 Jeśli platforma Docker i platformy .NET Core analizujesz źródeł w Internecie, można znaleźć plików Dockerfile, które przedstawiają uproszczenia tworzenia obrazu platformy Docker, kopiując źródła w kontenerze. Te przykłady sugeruje, że za pomocą prostej konfiguracji, masz obraz platformy Docker ze środowiskiem spakować z aplikacją. Poniższy przykład pokazuje prosty plik Dockerfile, w tym względzie.
 
 ```Dockerfile
-FROM microsoft/dotnet
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -446,7 +446,7 @@ Plik Dockerfile, takich jak to będzie działać. Można jednak znacznie zoptyma
 
 W modelu mikrousług i kontenerów, są stale uruchamianie kontenerów. Typowy sposób korzystania z kontenerów nie jest ponownie uruchamiany kontener uśpiony, ponieważ kontener jest możliwe do likwidacji. Koordynatorów (takich jak Kubernetes i usługi Azure Service Fabric) jest po prostu utworzyć nowe wystąpienia obrazów. Oznacza to, że będziesz potrzebować Optymalizowanie wstępnej kompilacji aplikacji, podczas tworzenia procesu tworzenia wystąpienia będą szybciej. Po uruchomieniu kontenera, powinno być gotowe do uruchomienia. Nie powinny przywracania i skompilować wykonywania użycie `dotnet restore` i `dotnet build` poleceń z wiersz polecenia dotnet tym, jak widać w wielu wpisów w blogu o platformy .NET Core i Docker.
 
-Zespołem platformy .NET ma zostały wykonywania pracy zapewnienie platformy .NET Core i ASP.NET Core platforma zoptymalizowane pod kątem kontenera. Nie tylko to platformy .NET Core uproszczone środowisko z zużycie pamięci; zespół koncentruje się na zoptymalizowane obrazy platformy Docker dla trzech głównych scenariuszy i opublikowane je w rejestrze usługi Docker Hub w *microsoft/dotnet*, zaczynające się od wersji 2.1:
+Zespołem platformy .NET ma zostały wykonywania pracy zapewnienie platformy .NET Core i ASP.NET Core platforma zoptymalizowane pod kątem kontenera. Nie tylko to platformy .NET Core uproszczone środowisko z zużycie pamięci; zespół koncentruje się na zoptymalizowane obrazy platformy Docker dla trzech głównych scenariuszy i opublikowane je w rejestrze usługi Docker Hub w *dotnet/core*, zaczynające się od wersji 2.1:
 
 1. **Programowanie**: Gdzie jest możliwość osiągnięcie elastyczności potrzebnej do debugowania zmiany priorytetu, a gdy rozmiar to dodatkowa baza danych.
 
@@ -454,11 +454,12 @@ Zespołem platformy .NET ma zostały wykonywania pracy zapewnienie platformy .NE
 
 3. **Produkcji**: Gdy fokus jest szybkie wdrażanie i uruchamianie kontenerów, dzięki czemu te obrazy są ograniczone do plików binarnych i zawartość wymaganą do uruchomienia aplikacji.
 
-Aby to osiągnąć, zespół .NET dostarcza trzy podstawowe warianty w [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (w usłudze Docker Hub):
+Aby to osiągnąć, zespół .NET dostarcza cztery podstawowego warianty w [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (w usłudze Docker Hub):
 
-1. **zestaw SDK**: dla scenariuszy projektowania i kompilowania.
-2. **środowisko uruchomieniowe**: w scenariuszu produkcji i
-3. **środowisko uruchomieniowe deps**: w scenariuszu produkcyjnym z [aplikacje samodzielne](../../../core/deploying/index.md#self-contained-deployments-scd).
+1. **zestaw SDK**: dla scenariuszy projektowania i kompilowania
+1. **ASPNET**: na potrzeby scenariuszy produkcyjnych platformy ASP.NET
+1. **środowisko uruchomieniowe**: na potrzeby scenariuszy produkcyjnych platformy .NET
+1. **środowisko uruchomieniowe deps**: dla scenariuszy produkcyjnych [aplikacje samodzielne](../../../core/deploying/index.md#self-contained-deployments-scd).
 
 W celu przyspieszenia uruchamiania obrazów środowiska uruchomieniowego również automatycznie ustawiony aspnetcore\_adresów URL do portu 80, a następnie utworzyć pamięci podręcznej obrazów natywnych zestawów za pomocą programu Ngen.
 

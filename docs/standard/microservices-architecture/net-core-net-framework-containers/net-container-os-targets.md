@@ -1,17 +1,17 @@
 ---
-title: Jakiego systemu operacyjnego docelowo z kontenerami .NET
+title: Jakiego systemu operacyjnego należy używać docelowo z kontenerami .NET
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Jakiego systemu operacyjnego docelowo z kontenerami .NET
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14a0fb7cd9ecb8dfd5369da6f6bd5b47b4aea37a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374911"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921302"
 ---
-# <a name="what-os-to-target-with-net-containers"></a>Jakiego systemu operacyjnego docelowo z kontenerami .NET
+# <a name="what-os-to-target-with-net-containers"></a>Jakiego systemu operacyjnego należy używać docelowo z kontenerami .NET
 
 Biorąc pod uwagę różnorodność systemów operacyjnych obsługiwanych przez firmy Docker i różnice między .NET Framework i .NET Core, powinien dotyczyć określonego systemu operacyjnego i określonych wersji, w zależności od tego, w ramach, którego używasz.
 
@@ -38,20 +38,20 @@ Po dodaniu nazwy obrazu do pliku Dockerfile, można wybrać system operacyjny i 
 </thead>
 <tbody>
 <tr>
-<td>Microsoft / dotnet:2.2 — środowisko uruchomieniowe</td>
+<td>MCR.microsoft.com/DotNet/Core/Runtime:2.2</td>
 <td>Architektura wielu platformy .NET core 2.2: Obsługa systemu Linux i Windows Nano Server, w zależności od hosta platformy Docker.</td>
 </tr>
 <tr class="odd">
-<td>Microsoft / dotnet:2.2-aspnetcore-środowiska uruchomieniowego</td>
+<td>MCR.microsoft.com/DotNet/Core/ASPNET:2.2</td>
 <td><p>Architektura wielu platformy ASP.NET Core 2.2: Obsługa systemu Linux i Windows Nano Server, w zależności od hosta platformy Docker.</p>
 <p>Obraz aspnetcore ma kilka optymalizacji dla platformy ASP.NET Core.</p></td>
 </tr>
 <tr class="even">
-<td>Microsoft / dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>MCR.microsoft.com/DotNet/Core/ASPNET:2.2-Alpine</td>
 <td>.NET core 2.2 tylko do środowiska uruchomieniowego na Alpine dystrybucja systemu Linux</td>
 </tr>
 <tr class="odd">
-<td>Microsoft / dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>MCR.microsoft.com/DotNet/Core/ASPNET:2.2-nanoserver-1803</td>
 <td>.NET core 2.2 tylko do środowiska uruchomieniowego na serwerze Windows Nano Server (Windows Server w wersji 1803)</td>
 </tr>
 </tbody>

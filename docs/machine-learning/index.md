@@ -1,8 +1,14 @@
 ---
 title: Przewodnik po zawartości struktury ML.NET
-description: 'Dowiedz się, jak tworzyć niestandardowe rozwiązania za pomocą sztucznej inteligencji i łączyć je z aplikacją .NET za pomocą struktury ML.NET'
+description: Dowiedz się, jak tworzyć niestandardowe rozwiązania za pomocą sztucznej inteligencji i łączyć je z aplikacją .NET za pomocą struktury ML.NET
 ms.date: 01/18/2019
 ms.custom: seodec18
+ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920769"
 ---
 # <a name="mlnet-content-guide"></a>Przewodnik po zawartości struktury ML.NET
 
@@ -21,25 +27,25 @@ Aby poznać podstawy, zobacz [Podstawowe pojęcia dotyczące trenowania modelu w
 
 ## <a name="tutorials"></a>Samouczki
 
-[Analizowanie opinii za pomocą modelu klasyfikacji binarnej](tutorials/sentiment-analysis.md) pokazuje, jak utworzyć aplikację, która określi, czy opinia jest pozytywna czy negatywna.
+[Analizowanie opinii za pomocą modelu klasyfikacji binarnej](./tutorials/sentiment-analysis.md) pokazuje, jak utworzyć aplikację, która określi, czy opinia jest pozytywna czy negatywna.
 
-[Klasyfikowanie problemów w usłudze GitHub za pomocą modelu klasyfikacji wieloklasowej](tutorials/github-issue-classification.md) pokazuje, jak utworzyć aplikację, która określi etykietę obszaru problemu w usłudze GitHub.
+[Klasyfikowanie problemów w usłudze GitHub za pomocą modelu klasyfikacji wieloklasowej](./tutorials/github-issue-classification.md) pokazuje, jak utworzyć aplikację, która określi etykietę obszaru problemu w usłudze GitHub.
 
-[Przewidywanie cen przy użyciu modelu regresji](tutorials/taxi-fare.md) pokazuje, jak stworzyć aplikację, która przewiduje cenę przy użyciu wielu czynników z danych historycznych.
+[Przewidywanie cen przy użyciu modelu regresji](./tutorials/taxi-fare.md) pokazuje, jak stworzyć aplikację, która przewiduje cenę przy użyciu wielu czynników z danych historycznych.
 
-[Klasyfikowanie irysów według ich cech](tutorials/iris-clustering.md) pokazuje w jaki sposób model klastrowania umożliwia analizowanie zestawu danych. 
+[Klasyfikowanie irysów według ich cech](./tutorials/iris-clustering.md) pokazuje w jaki sposób model klastrowania umożliwia analizowanie zestawu danych. 
 
 ## <a name="how-to-guide"></a>Przewodnik z instrukcjami
 
-[Tworzenie aplikacji do dopasowywania graczy do jednej rozgrywki za pomocą Infer.NET i programowania probabilistycznego](how-to-guides/matchup-app-infer-net.md) – poradnik ten pokazuje, jak stworzyć uproszczony system dopasowywania graczy do jednej rozgrywki, podobny do użytego w grach na konsolę Xbox.
+[Tworzenie aplikacji do dopasowywania graczy do jednej rozgrywki za pomocą Infer.NET i programowania probabilistycznego](./how-to-guides/matchup-app-infer-net.md) – poradnik ten pokazuje, jak stworzyć uproszczony system dopasowywania graczy do jednej rozgrywki, podobny do użytego w grach na konsolę Xbox.
 
 ## <a name="resources"></a>Zasoby
 
-[Słownik pojęć na temat uczenia maszynowego](resources/glossary.md) – znajdziesz tutaj wyjaśnienie kluczowych pojęć.
+[Słownik pojęć na temat uczenia maszynowego](./resources/glossary.md) – znajdziesz tutaj wyjaśnienie kluczowych pojęć.
 
-[Zadania do wykonania za pomocą uczenia maszynowego](resources/tasks.md) – w tym artykule opisano zadania, takie jak klasyfikowanie i wykrywanie anomalii. 
+[Zadania do wykonania za pomocą uczenia maszynowego](./resources/tasks.md) – w tym artykule opisano zadania, takie jak klasyfikowanie i wykrywanie anomalii. 
 
-[Przekształcenia danych](resources/transforms.md) zawiera opis możliwości przygotowywania danych w strukturze ML.NET.
+[Przekształcenia danych](./resources/transforms.md) zawiera opis możliwości przygotowywania danych w strukturze ML.NET.
 
 
 ## <a name="api-reference"></a>Dokumentacja interfejsów API

@@ -1,10 +1,15 @@
 ---
-title: 'Przewodnik po przykładzie C# - C# przewodnik'
-description: 'Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.'
+title: Przewodnik po przykładzie C# - C# przewodnik
+description: Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843432"
 ---
-
 # <a name="a-tour-of-the-c-language"></a>Przewodnik po przykładzie C# języka
 
 C# (Wymowa: "Zobacz Sharp") to proste, nowoczesnych, zorientowane obiektowo i bezpieczny typowo język programowania. C#korzenie jego rodziny C języków, będzie znane w programowaniu w języku C, C++, Java i JavaScript.

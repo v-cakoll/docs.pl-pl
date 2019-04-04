@@ -1,17 +1,17 @@
 ---
-title: Przepływ pracy wewnętrznej pętli tworzenia aplikacji platformy Docker
+title: Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
 description: Dowiedz się więcej "wewnętrzną pętlę" przepływu pracy dla opracowywania aplikacji platformy Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676671"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920912"
 ---
-# <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy wewnętrznej pętli tworzenia aplikacji platformy Docker
+# <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
 
 Przed wyzwoleniem zewnętrzna Pętla przepływu pracy, obejmujące cały DevOps cyklu, rozpoczyna na każdy Deweloper maszynie kodowania samej aplikacji, za pomocą swojego preferowanego języków lub platform i testowanie jej lokalnie (rysunek 4-21). Jednak w każdym przypadku, będziesz mieć to ważny punkt, niezależnie od tego, jaki język, struktury lub platform wybierz. W tym określonego przepływu pracy zawsze tworzenia i testowania kontenerów platformy Docker, ale lokalnie.
 
@@ -105,7 +105,7 @@ W rysunek 4 – 24, możesz zobaczyć jak docker-compose plik zostanie dodany pr
 
 **Rysunek 4-24**. Pliki docker dodać za pomocą **plików Dodaj Docker do polecenia obszaru roboczego**
 
-Po dodaniu pliku DockerFile, określ jaki podstawowego obrazu platformy Docker, należy używać (takimi jak wymaganie użycia `FROM microsoft/aspnetcore`). Zazwyczaj utworzysz obraz niestandardowy na podstawie obrazu podstawowego, który można pobrać z dowolnego oficjalne repozytorium na [rejestru usługi Docker Hub](https://hub.docker.com/) (takich jak [obrazu dla platformy .NET Core](https://hub.docker.com/r/microsoft/dotnet/) lub [dla środowiska Node.js](https://hub.docker.com/_/node/)).
+Po dodaniu pliku DockerFile, określ jaki podstawowego obrazu platformy Docker, należy używać (takimi jak wymaganie użycia `FROM mcr.microsoft.com/dotnet/core/aspnet`). Zazwyczaj utworzysz obraz niestandardowy na podstawie obrazu podstawowego, który można pobrać z dowolnego oficjalne repozytorium na [rejestru usługi Docker Hub](https://hub.docker.com/) (takich jak [obrazu dla platformy .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) lub [dla środowiska Node.js](https://hub.docker.com/_/node/)).
 
 ***Użyj istniejącego oficjalny obraz platformy Docker***
 
@@ -115,7 +115,7 @@ Poniżej przedstawiono przykładowy plik DockerFile dla kontenera platformy .NET
 
 ```Dockerfile
 # Base Docker image to use  
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-W tym przypadku obraz, który jest oparty na oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows) dla każdego wiersza w wersji 2.1 `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Aby uzyskać więcej informacji na ten temat, zobacz [obrazu platformy Docker programu ASP.NET Core](https://hub.docker.com/r/microsoft/aspnetcore/) strony i [obrazu platformy Docker programu .NET Core](https://hub.docker.com/r/microsoft/dotnet/) strony).
+W tym przypadku obraz, który jest oparty na oficjalny obraz platformy Docker programu ASP.NET Core (wielu arch dla systemów Linux i Windows) dla każdego wiersza w wersji 2.1 `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Aby uzyskać więcej informacji na ten temat, zobacz [obrazu platformy Docker programu ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) strony i [obrazu platformy Docker programu .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) strony).
 
 W pliku DockerFile można również poinstruować platformy Docker do nasłuchiwania na portach TCP, którego będziesz używać w czasie wykonywania (np. port 80).
 
@@ -143,9 +143,9 @@ Można określić dodatkowe ustawienia konfiguracji w pliku Dockerfile, w zależ
 
 **Użyj wielu architektury obrazu repozytoriów**
 
-Nazwa pojedynczego obrazu w repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz. Ta funkcja umożliwia dostawców, takich jak Microsoft (obraz podstawowy dla twórców) do utworzenia pojedynczego repozytorium na pokrycie wiele platform (oznacza to, Linux i Windows). Na przykład [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) repozytorium, które są dostępne w rejestrze usługi Docker Hub zapewnia obsługę dla systemów Linux i Windows Nano Server, korzystając z taką samą nazwę obrazu.
+Nazwa pojedynczego obrazu w repozytorium może zawierać warianty platformy, takich jak obraz systemu Linux i Windows obraz. Ta funkcja umożliwia dostawców, takich jak Microsoft (obraz podstawowy dla twórców) do utworzenia pojedynczego repozytorium na pokrycie wiele platform (oznacza to, Linux i Windows). Na przykład [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) repozytorium, które są dostępne w rejestrze usługi Docker Hub zapewnia obsługę dla systemów Linux i Windows Nano Server, korzystając z taką samą nazwę obrazu.
 
-Ściąganie [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) obrazu z hosta Windows pobiera wariant Windows, natomiast ściągania taką samą nazwę obrazu na hoście z systemem Linux ściąga wariantów systemu Linux.
+Ściąganie [dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) obrazu z hosta Windows pobiera wariant Windows, natomiast ściągania taką samą nazwę obrazu na hoście z systemem Linux ściąga wariantów systemu Linux.
 
 ***Tworzenie obrazu podstawowego od podstaw***
 
@@ -216,7 +216,7 @@ Używa usługi redis [najnowszego obrazu publicznego redis](https://hub.docker.c
 
 Jeśli aplikacja ma tylko jeden kontener, wystarczy uruchomić go przez wdrożenie jej do hosta platformy Docker (maszyny Wirtualnej lub serwera fizycznego). Jednak jeśli Twoja aplikacja składa się z wielu usług, musisz *została utworzona*również. Teraz widzieć różne opcje.
 
-***Opcja A: Uruchom jeden kontener lub usługi***
+***Option A: Uruchom jeden kontener lub usługi***
 
 Obraz platformy Docker można uruchomić przy użyciu platformy docker, uruchom polecenie, jak pokazano poniżej:
 

@@ -42,7 +42,7 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
- **\<Parametrami sectionName >** element jest elementem niestandardowe zdefiniowane przez  **\<sekcji >** tagów w  **\<configSections >** elementu.
+ **\<Parametrami sectionName>** element jest elementem niestandardowe zdefiniowane przez **\<sekcji>** tagów w **\<configSections>** elementu.
 
 W poniższej tabeli przedstawiono typ obiektu, metoda ConfigurationSettings.GetConfig zwraca dla każdej procedury obsługi sekcji konfiguracji:
 

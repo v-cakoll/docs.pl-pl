@@ -2,12 +2,12 @@
 title: Pojęcia i terminologia (Przekształcanie funkcjonalne) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651867"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820805"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Pojęcia i terminologia (Przekształcanie funkcjonalne) (Visual Basic)
 Ten temat wprowadza pojęcia i terminologia czystych przekształceń funkcjonalnych. Przekształcanie funkcjonalne podejście do przekształcania danych daje kod, który jest zwykle łatwiejsze do programu, bardziej ekspresyjnego i prostsze do debugowania i Obsługa programowania bardziej tradycyjny, imperatywnego.  
@@ -51,7 +51,7 @@ Ten temat wprowadza pojęcia i terminologia czystych przekształceń funkcjonaln
   
  Aby uzyskać więcej informacji na temat, zobacz [wyrażeń Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- — kolekcja  
+  — kolekcja  
  Uporządkowany zestaw danych, zazwyczaj jednolitego typu. Aby były zgodne z LINQ, Kolekcja musi implementować <xref:System.Collections.IEnumerable> interfejsu lub <xref:System.Linq.IQueryable> interfejsu (lub ich odpowiedników ogólny, <xref:System.Collections.Generic.IEnumerator%601> lub <xref:System.Linq.IQueryable%601>).  
   
  krotki (typy anonimowe)  
@@ -72,5 +72,6 @@ Ten temat wprowadza pojęcia i terminologia czystych przekształceń funkcjonaln
  Te funkcje językowe, będzie używany w przykładach kodu w tej sekcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Programowanie funkcjonalne a Programowanie imperatywne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

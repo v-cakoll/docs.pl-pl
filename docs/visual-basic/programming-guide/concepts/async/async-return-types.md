@@ -10,7 +10,7 @@ ms.lasthandoff: 04/02/2019
 ms.locfileid: "58838355"
 ---
 # <a name="async-return-types-visual-basic"></a>Asynchroniczne typy zwracane (Visual Basic)
-Metody asynchroniczne mają trzy możliwe zwracane typy: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>oraz typ void. W języku Visual Basic, zwrócony typ void jest napisany w postaci [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedury. Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+Metody asynchroniczne mają trzy możliwe zwracane typy: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>oraz typ void. W języku Visual Basic, zwrócony typ void jest napisany w postaci [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedury. Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Każdy typ zwracany jest badany w jednej z następujących sekcji, a można znaleźć pełny przykład, który używa wszystkich trzech typów na końcu tego tematu.  
   

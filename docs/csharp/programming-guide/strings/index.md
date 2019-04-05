@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9561393a78ffbf9c2bec98c849c389b92227db78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373455"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920691"
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartością tekstową. Wewnętrznie, tekst jest przechowywany jako sekwencyjną kolekcją tylko do odczytu z <xref:System.Char> obiektów. Brak nie znaku zakończenia o wartości null na końcu ciągu języka C#; w związku z tym ciąg języka C# może zawierać dowolną liczbę osadzone znaki null ('\0'). <xref:System.String.Length%2A> Właściwość ciągu reprezentuje liczbę `Char` obiektów zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punkty kodowe Unicode w ciągu, należy użyć <xref:System.Globalization.StringInfo> obiektu.  
@@ -74,7 +74,7 @@ Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartości�
  Ciąg formatu to ciąg, w których zawartość jest określany dynamicznie w czasie wykonywania. Ciągi formatu są tworzone przez osadzanie *wyrażeń interpolowanych* lub symbole zastępcze w nawiasach klamrowych wewnątrz ciągu. Wszystko wewnątrz nawiasów klamrowych (`{...}`) zostanie rozpoznana jako wartość i dane wyjściowe jako sformatowany ciąg w czasie wykonywania. Istnieją dwie metody tworzenia ciągów formatu: ciąg interpolowania i formatowania złożonego.
 
 ### <a name="string-interpolation"></a>Interpolacja ciągów
-Dostępne w C# 6.0 lub nowszym, [ *ciągi interpolowane* ](../../language-reference/tokens/interpolated.md) są identyfikowane za pomocą `$` specjalne znaków i zawierać wyrażenia interpolowane w nawiasach klamrowych. Jeśli jesteś nowym użytkownikiem Interpolacja ciągów, zobacz [Interpolacja - ciągów C# interaktywny samouczek dotyczący](../../tutorials/intro-to-csharp/interpolated-strings.yml) Aby uzyskać szybki przegląd.
+Dostępne w C# 6.0 lub nowszym, [ *ciągi interpolowane* ](../../language-reference/tokens/interpolated.md) są identyfikowane za pomocą `$` specjalne znaków i zawierać wyrażenia interpolowane w nawiasach klamrowych. Jeśli jesteś nowym użytkownikiem Interpolacja ciągów, zobacz [Interpolacja - ciągów C# interaktywny samouczek dotyczący](../../tutorials/exploration/interpolated-strings.yml) Aby uzyskać szybki przegląd.
 
 Użyj Interpolacja ciągów, aby zwiększyć czytelność i łatwości utrzymania kodu. Interpolacja ciągów osiąga te same wyniki `String.Format` metody, ale zwiększa łatwość użycia i opcji wbudowanej przejrzystości.
 
@@ -133,7 +133,7 @@ string s = String.Empty;
 |[Instrukcje: Łączenie wielu ciągów](../../how-to/concatenate-multiple-strings.md)|Ilustruje różne sposoby, aby dołączyć wielu ciągów w jeden.|
 |[Instrukcje: Analizowanie ciągów za pomocą funkcji String.Split](../../how-to/parse-strings-using-split.md)|Zawiera przykłady kodu, które ilustrują sposób korzystania `String.Split` metodę, aby przeanalizować ciągi.|  
 |[Instrukcje: Wyszukiwanie ciągów](../../how-to/search-strings.md)|Opis sposobu użycia wyszukać określony tekst lub wzorców w ciągach.|  
-|[Instrukcje: Określanie, czy ciąg reprezentuje wartość numeryczną](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie przeanalizować składni ciągu, aby zobaczyć, czy ma prawidłową wartość liczbową.|  
+|[Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak bezpiecznie przeanalizować składni ciągu, aby zobaczyć, czy ma prawidłową wartość liczbową.|  
 |[Interpolacja ciągów](../../language-reference/tokens/interpolated.md)|Zawiera opis funkcji interpolacji ciągu, która udostępnia wygodne Składnia na ciągi formatu.|
 |[Podstawowe operacje na ciągach](../../../../docs/standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które używają <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> metody, aby wykonywać podstawowe operacje na ciągach.|  
 |[Analizowanie ciągów](../../../standard/base-types/parsing-strings.md)|W tym artykule opisano sposób konwertowania ciągów reprezentujących podstawowych typów .NET do wystąpień odpowiednie typy.|  

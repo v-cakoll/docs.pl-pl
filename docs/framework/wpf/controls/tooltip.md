@@ -8,31 +8,31 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367573"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054991"
 ---
-# <a name="tooltip"></a><span data-ttu-id="b5c27-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="b5c27-102">ToolTip</span></span>
-<span data-ttu-id="b5c27-103">Etykietka narzędzia jest niewielkie okno podręczne, który pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="b5c27-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
+# <a name="tooltip"></a><span data-ttu-id="48f49-102">ToolTip</span><span class="sxs-lookup"><span data-stu-id="48f49-102">ToolTip</span></span>
+<span data-ttu-id="48f49-103">Etykietka narzędzia jest niewielkie okno podręczne, który pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="48f49-103">A tooltip is a small pop-up window that appears when a user pauses the mouse pointer over an element, such as over a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="b5c27-104">Na poniższej ilustracji przedstawiono wskaźnik myszy, który wskazuje na **Zamknij**<xref:System.Windows.Controls.Button>, który następnie wyświetla jego identyfikacji <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="b5c27-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
+ <span data-ttu-id="48f49-104">Na poniższej ilustracji przedstawiono wskaźnik myszy, który wskazuje na **Zamknij**<xref:System.Windows.Controls.Button>, który następnie wyświetla jego identyfikacji <xref:System.Windows.Controls.ToolTip>.</span><span class="sxs-lookup"><span data-stu-id="48f49-104">The following illustration shows a mouse pointer that points to the **Close**<xref:System.Windows.Controls.Button>, which then displays its identifying <xref:System.Windows.Controls.ToolTip>.</span></span>  
   
- <span data-ttu-id="b5c27-105">Przycisk Zamknij z jego etykietka narzędzia wyświetlana</span><span class="sxs-lookup"><span data-stu-id="b5c27-105">Close button with its tooltip displayed</span></span>  
+ <span data-ttu-id="48f49-105">Przycisk Zamknij z jego etykietka narzędzia wyświetlana</span><span class="sxs-lookup"><span data-stu-id="48f49-105">Close button with its tooltip displayed</span></span>  
   
- <span data-ttu-id="b5c27-106">![Zrzut ekranu przedstawiający etykietkę narzędzia](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="b5c27-106">![ToolTip screen shot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
+ <span data-ttu-id="48f49-106">![Zrzut ekranu etykietki narzędzia](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span><span class="sxs-lookup"><span data-stu-id="48f49-106">![ToolTip screenshot](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b5c27-107">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="b5c27-107">In This Section</span></span>  
- [<span data-ttu-id="b5c27-108">ToolTip — omówienie</span><span class="sxs-lookup"><span data-stu-id="b5c27-108">ToolTip Overview</span></span>](tooltip-overview.md)  
-  [<span data-ttu-id="b5c27-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="b5c27-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="48f49-107">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="48f49-107">In This Section</span></span>  
+ [<span data-ttu-id="48f49-108">ToolTip — Przegląd</span><span class="sxs-lookup"><span data-stu-id="48f49-108">ToolTip Overview</span></span>](tooltip-overview.md)  
+  [<span data-ttu-id="48f49-109">— Tematy porad</span><span class="sxs-lookup"><span data-stu-id="48f49-109">How-to Topics</span></span>](tooltip-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="b5c27-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="b5c27-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="48f49-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="48f49-110">Reference</span></span>  
  <xref:System.Windows.Controls.ToolTip>  
   <xref:System.Windows.Controls.ToolTipService>  
   <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="b5c27-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="b5c27-111">Related Sections</span></span>  
- [<span data-ttu-id="b5c27-112">Okno podręczne — omówienie</span><span class="sxs-lookup"><span data-stu-id="b5c27-112">Popup Overview</span></span>](popup-overview.md)  
-  [<span data-ttu-id="b5c27-113">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="b5c27-113">How-to Topics</span></span>](popup-how-to-topics.md)
+## <a name="related-sections"></a><span data-ttu-id="48f49-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="48f49-111">Related Sections</span></span>  
+ [<span data-ttu-id="48f49-112">Przegląd Okna podręczne</span><span class="sxs-lookup"><span data-stu-id="48f49-112">Popup Overview</span></span>](popup-overview.md)  
+  [<span data-ttu-id="48f49-113">— Tematy porad</span><span class="sxs-lookup"><span data-stu-id="48f49-113">How-to Topics</span></span>](popup-how-to-topics.md)

@@ -2,21 +2,21 @@
 title: Zkratka
 description: Dowiedz się więcej o byref i typami byref podobne w F#, które są używane do programowania niskiego poziomu.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976554"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055368"
 ---
-# <a name="byrefs"></a><span data-ttu-id="dbe49-103">Zkratka</span><span class="sxs-lookup"><span data-stu-id="dbe49-103">Byrefs</span></span>
+# <a name="byrefs"></a><span data-ttu-id="74856-103">Zkratka</span><span class="sxs-lookup"><span data-stu-id="74856-103">Byrefs</span></span>
 
-<span data-ttu-id="dbe49-104">F#ma dwa obszary najważniejszych funkcji, które zajmują w obszarze programowania niskiego poziomu:</span><span class="sxs-lookup"><span data-stu-id="dbe49-104">F# has two major feature areas that deal in the space of low-level programming:</span></span>
+<span data-ttu-id="74856-104">F#ma dwa obszary najważniejszych funkcji, które zajmują w obszarze programowania niskiego poziomu:</span><span class="sxs-lookup"><span data-stu-id="74856-104">F# has two major feature areas that deal in the space of low-level programming:</span></span>
 
-* <span data-ttu-id="dbe49-105">`byref` / `inref` / `outref` Typów, które są wskaźnikami zarządzanymi.</span><span class="sxs-lookup"><span data-stu-id="dbe49-105">The `byref`/`inref`/`outref` types, which are a managed pointers.</span></span> <span data-ttu-id="dbe49-106">Mają one ograniczenia dotyczące użycia, więc, że nie można skompilować program, który jest nieprawidłowy w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="dbe49-106">They have restrictions on usage so that you cannot compile a program that is invalid at runtime.</span></span>
-* <span data-ttu-id="dbe49-107">A `byref`— takie jak struktury, która jest [struktury](structures.md) ma podobną semantyką i takim samym ograniczeniom kompilacji, jak `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-107">A `byref`-like struct, which is a [structure](structures.md) that has similar semantics and the same compile-time restrictions as `byref<'T>`.</span></span> <span data-ttu-id="dbe49-108">Przykładem jest <xref:System.Span%601>.</span><span class="sxs-lookup"><span data-stu-id="dbe49-108">One example is <xref:System.Span%601>.</span></span>
+* <span data-ttu-id="74856-105">`byref` / `inref` / `outref` Typów, które są wskaźnikami zarządzanymi.</span><span class="sxs-lookup"><span data-stu-id="74856-105">The `byref`/`inref`/`outref` types, which are a managed pointers.</span></span> <span data-ttu-id="74856-106">Mają one ograniczenia dotyczące użycia, więc, że nie można skompilować program, który jest nieprawidłowy w czasie wykonywania.</span><span class="sxs-lookup"><span data-stu-id="74856-106">They have restrictions on usage so that you cannot compile a program that is invalid at runtime.</span></span>
+* <span data-ttu-id="74856-107">A `byref`— takie jak struktury, która jest [struktury](structures.md) ma podobną semantyką i takim samym ograniczeniom kompilacji, jak `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="74856-107">A `byref`-like struct, which is a [structure](structures.md) that has similar semantics and the same compile-time restrictions as `byref<'T>`.</span></span> <span data-ttu-id="74856-108">Przykładem jest <xref:System.Span%601>.</span><span class="sxs-lookup"><span data-stu-id="74856-108">One example is <xref:System.Span%601>.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="dbe49-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="dbe49-109">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="74856-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="74856-109">Syntax</span></span>
 
 ```fsharp
 // Byref types as parameters
@@ -37,31 +37,32 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-## <a name="byref-inref-and-outref"></a><span data-ttu-id="dbe49-110">ByRef, inref i outref</span><span class="sxs-lookup"><span data-stu-id="dbe49-110">Byref, inref, and outref</span></span>
+## <a name="byref-inref-and-outref"></a><span data-ttu-id="74856-110">ByRef, inref i outref</span><span class="sxs-lookup"><span data-stu-id="74856-110">Byref, inref, and outref</span></span>
 
-<span data-ttu-id="dbe49-111">Istnieją trzy rodzaje `byref`:</span><span class="sxs-lookup"><span data-stu-id="dbe49-111">There are three forms of `byref`:</span></span>
+<span data-ttu-id="74856-111">Istnieją trzy rodzaje `byref`:</span><span class="sxs-lookup"><span data-stu-id="74856-111">There are three forms of `byref`:</span></span>
 
-* <span data-ttu-id="dbe49-112">`inref<'T>`, wskaźnika zarządzanych do odczytywania wartości podstawowej.</span><span class="sxs-lookup"><span data-stu-id="dbe49-112">`inref<'T>`, a managed pointer for reading the underlying value.</span></span>
-* <span data-ttu-id="dbe49-113">`outref<'T>`, wskaźnika zarządzanych do zapisywania wartości podstawowej.</span><span class="sxs-lookup"><span data-stu-id="dbe49-113">`outref<'T>`, a managed pointer for writing to the underlying value.</span></span>
-* <span data-ttu-id="dbe49-114">`byref<'T>`, wskaźnika zarządzanych do odczytywania i zapisywania podstawową wartość.</span><span class="sxs-lookup"><span data-stu-id="dbe49-114">`byref<'T>`, a managed pointer for reading and writing the underlying value.</span></span>
+* `inref<'T>`<span data-ttu-id="74856-112">, wskaźnika zarządzanych do odczytywania wartości podstawowej.</span><span class="sxs-lookup"><span data-stu-id="74856-112">, a managed pointer for reading the underlying value.</span></span>
+* `outref<'T>`<span data-ttu-id="74856-113">, wskaźnika zarządzanych do zapisywania wartości podstawowej.</span><span class="sxs-lookup"><span data-stu-id="74856-113">, a managed pointer for writing to the underlying value.</span></span>
+* `byref<'T>`<span data-ttu-id="74856-114">, wskaźnika zarządzanych do odczytywania i zapisywania podstawową wartość.</span><span class="sxs-lookup"><span data-stu-id="74856-114">, a managed pointer for reading and writing the underlying value.</span></span>
 
-<span data-ttu-id="dbe49-115">A `byref<'T>` mogą być przekazywane w przypadku gdy `inref<'T>` oczekuje.</span><span class="sxs-lookup"><span data-stu-id="dbe49-115">A `byref<'T>` can be passed where an `inref<'T>` is expected.</span></span> <span data-ttu-id="dbe49-116">Podobnie `byref<'T>` mogą być przekazywane w przypadku gdy `outref<'T>` oczekuje.</span><span class="sxs-lookup"><span data-stu-id="dbe49-116">Similarly, a `byref<'T>` can be passed where an `outref<'T>` is expected.</span></span>
+<span data-ttu-id="74856-115">A `byref<'T>` mogą być przekazywane w przypadku gdy `inref<'T>` oczekuje.</span><span class="sxs-lookup"><span data-stu-id="74856-115">A `byref<'T>` can be passed where an `inref<'T>` is expected.</span></span> <span data-ttu-id="74856-116">Podobnie `byref<'T>` mogą być przekazywane w przypadku gdy `outref<'T>` oczekuje.</span><span class="sxs-lookup"><span data-stu-id="74856-116">Similarly, a `byref<'T>` can be passed where an `outref<'T>` is expected.</span></span>
 
-## <a name="using-byrefs"></a><span data-ttu-id="dbe49-117">Za pomocą zkratka</span><span class="sxs-lookup"><span data-stu-id="dbe49-117">Using byrefs</span></span>
+## <a name="using-byrefs"></a><span data-ttu-id="74856-117">Za pomocą zkratka</span><span class="sxs-lookup"><span data-stu-id="74856-117">Using byrefs</span></span>
 
-<span data-ttu-id="dbe49-118">Aby użyć `inref<'T>`, należy uzyskać wartość wskaźnika z `&`:</span><span class="sxs-lookup"><span data-stu-id="dbe49-118">To use a `inref<'T>`, you need to get a pointer value with `&`:</span></span>
+<span data-ttu-id="74856-118">Aby użyć `inref<'T>`, należy uzyskać wartość wskaźnika z `&`:</span><span class="sxs-lookup"><span data-stu-id="74856-118">To use a `inref<'T>`, you need to get a pointer value with `&`:</span></span>
 
 ```fsharp
 open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
-<span data-ttu-id="dbe49-119">Można zapisać do wskaźnika za pomocą `outref<'T>` lub `byref<'T>`, należy również upewnić wartość, Pobierz wskaźnik do `mutable`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-119">To write to the pointer by using an `outref<'T>` or `byref<'T>`, you must also make the value you grab a pointer to `mutable`.</span></span>
+<span data-ttu-id="74856-119">Można zapisać do wskaźnika za pomocą `outref<'T>` lub `byref<'T>`, należy również upewnić wartość, Pobierz wskaźnik do `mutable`.</span><span class="sxs-lookup"><span data-stu-id="74856-119">To write to the pointer by using an `outref<'T>` or `byref<'T>`, you must also make the value you grab a pointer to `mutable`.</span></span>
 
 ```fsharp
 open System
@@ -77,63 +78,63 @@ let mutable dt = DateTime.Now
 f &dt
 ```
 
-<span data-ttu-id="dbe49-120">Jeśli piszesz wskaźnika zamiast wczytaniem go, należy wziąć pod uwagę przy użyciu `outref<'T>` zamiast `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-120">If you are only writing the pointer instead of reading it, consider using `outref<'T>` instead of `byref<'T>`.</span></span>
+<span data-ttu-id="74856-120">Jeśli piszesz wskaźnika zamiast wczytaniem go, należy wziąć pod uwagę przy użyciu `outref<'T>` zamiast `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="74856-120">If you are only writing the pointer instead of reading it, consider using `outref<'T>` instead of `byref<'T>`.</span></span>
 
-### <a name="inref-semantics"></a><span data-ttu-id="dbe49-121">Semantyka Inref</span><span class="sxs-lookup"><span data-stu-id="dbe49-121">Inref semantics</span></span>
+### <a name="inref-semantics"></a><span data-ttu-id="74856-121">Semantyka Inref</span><span class="sxs-lookup"><span data-stu-id="74856-121">Inref semantics</span></span>
 
-<span data-ttu-id="dbe49-122">Rozważmy poniższy kod:</span><span class="sxs-lookup"><span data-stu-id="dbe49-122">Consider the following code:</span></span>
+<span data-ttu-id="74856-122">Rozważmy poniższy kod:</span><span class="sxs-lookup"><span data-stu-id="74856-122">Consider the following code:</span></span>
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
-<span data-ttu-id="dbe49-123">Semantycznie oznacza to, że:</span><span class="sxs-lookup"><span data-stu-id="dbe49-123">Semantically, this means the following:</span></span>
+<span data-ttu-id="74856-123">Semantycznie oznacza to, że:</span><span class="sxs-lookup"><span data-stu-id="74856-123">Semantically, this means the following:</span></span>
 
-* <span data-ttu-id="dbe49-124">Posiadacz `x` wskaźnika można używać go tylko odczytać wartości.</span><span class="sxs-lookup"><span data-stu-id="dbe49-124">The holder of the `x` pointer may only use it to read the value.</span></span>
-* <span data-ttu-id="dbe49-125">Dowolny wskaźnik uzyskanych do `struct` pola zagnieżdżone w obrębie `SomeStruct` podano typ `inref<_>`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-125">Any pointer acquired to `struct` fields nested within `SomeStruct` are given type `inref<_>`.</span></span>
+* <span data-ttu-id="74856-124">Posiadacz `x` wskaźnika można używać go tylko odczytać wartości.</span><span class="sxs-lookup"><span data-stu-id="74856-124">The holder of the `x` pointer may only use it to read the value.</span></span>
+* <span data-ttu-id="74856-125">Dowolny wskaźnik uzyskanych do `struct` pola zagnieżdżone w obrębie `SomeStruct` podano typ `inref<_>`.</span><span class="sxs-lookup"><span data-stu-id="74856-125">Any pointer acquired to `struct` fields nested within `SomeStruct` are given type `inref<_>`.</span></span>
 
-<span data-ttu-id="dbe49-126">Oto również wartość true:</span><span class="sxs-lookup"><span data-stu-id="dbe49-126">The following is also true:</span></span>
+<span data-ttu-id="74856-126">Oto również wartość true:</span><span class="sxs-lookup"><span data-stu-id="74856-126">The following is also true:</span></span>
 
-* <span data-ttu-id="dbe49-127">Istnieje nie domniemanie na to, że inne wątki, lub aliasy nie ma dostęp do zapisu `x`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-127">There is no implication that other threads or aliases do not have write access to `x`.</span></span>
-* <span data-ttu-id="dbe49-128">Nie ma żadnych domniemanie, `SomeStruct` można modyfikować na mocy niniejszej `x` trwa `inref`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-128">There is no implication that `SomeStruct` is immutable by virtue of `x` being an `inref`.</span></span>
+* <span data-ttu-id="74856-127">Istnieje nie domniemanie na to, że inne wątki, lub aliasy nie ma dostęp do zapisu `x`.</span><span class="sxs-lookup"><span data-stu-id="74856-127">There is no implication that other threads or aliases do not have write access to `x`.</span></span>
+* <span data-ttu-id="74856-128">Nie ma żadnych domniemanie, `SomeStruct` można modyfikować na mocy niniejszej `x` trwa `inref`.</span><span class="sxs-lookup"><span data-stu-id="74856-128">There is no implication that `SomeStruct` is immutable by virtue of `x` being an `inref`.</span></span>
 
-<span data-ttu-id="dbe49-129">Jednak w przypadku F# typów wartości, które **są** niemodyfikowalny `this` wskaźnik wywnioskowana jest `inref`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-129">However, for F# value types that **are** immutable, the `this` pointer is inferred to be an `inref`.</span></span>
+<span data-ttu-id="74856-129">Jednak w przypadku F# typów wartości, które **są** niemodyfikowalny `this` wskaźnik wywnioskowana jest `inref`.</span><span class="sxs-lookup"><span data-stu-id="74856-129">However, for F# value types that **are** immutable, the `this` pointer is inferred to be an `inref`.</span></span>
 
-<span data-ttu-id="dbe49-130">Wszystkie te reguły, które są razem oznaczają, że właściciel `inref` wskaźnik nie może modyfikować natychmiastowego zawartość pamięci wskazywany.</span><span class="sxs-lookup"><span data-stu-id="dbe49-130">All of these rules together mean that the holder of an `inref` pointer may not modify the immediate contents of the memory being pointed to.</span></span>
+<span data-ttu-id="74856-130">Wszystkie te reguły, które są razem oznaczają, że właściciel `inref` wskaźnik nie może modyfikować natychmiastowego zawartość pamięci wskazywany.</span><span class="sxs-lookup"><span data-stu-id="74856-130">All of these rules together mean that the holder of an `inref` pointer may not modify the immediate contents of the memory being pointed to.</span></span>
 
-### <a name="outref-semantics"></a><span data-ttu-id="dbe49-131">Semantyka Outref</span><span class="sxs-lookup"><span data-stu-id="dbe49-131">Outref semantics</span></span>
+### <a name="outref-semantics"></a><span data-ttu-id="74856-131">Semantyka Outref</span><span class="sxs-lookup"><span data-stu-id="74856-131">Outref semantics</span></span>
 
-<span data-ttu-id="dbe49-132">Celem `outref<'T>` jest, aby wskazać, że wskaźnik powinni czytać tylko z.</span><span class="sxs-lookup"><span data-stu-id="dbe49-132">The purpose of `outref<'T>` is to indicate that the pointer should only be read from.</span></span> <span data-ttu-id="dbe49-133">Nieoczekiwanie `outref<'T>` zezwolenia na odczytywanie podstawowych wartości niezależnie od jego nazwę.</span><span class="sxs-lookup"><span data-stu-id="dbe49-133">Unexpectedly, `outref<'T>` permits reading the underlying value despite its name.</span></span> <span data-ttu-id="dbe49-134">Jest to na potrzeby zgodności.</span><span class="sxs-lookup"><span data-stu-id="dbe49-134">This is for compatibility purposes.</span></span> <span data-ttu-id="dbe49-135">Semantycznie `outref<'T>` nie różni się od `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-135">Semantically, `outref<'T>` is no different than `byref<'T>`.</span></span>
+<span data-ttu-id="74856-132">Celem `outref<'T>` jest, aby wskazać, że wskaźnik powinni czytać tylko z.</span><span class="sxs-lookup"><span data-stu-id="74856-132">The purpose of `outref<'T>` is to indicate that the pointer should only be read from.</span></span> <span data-ttu-id="74856-133">Nieoczekiwanie `outref<'T>` zezwolenia na odczytywanie podstawowych wartości niezależnie od jego nazwę.</span><span class="sxs-lookup"><span data-stu-id="74856-133">Unexpectedly, `outref<'T>` permits reading the underlying value despite its name.</span></span> <span data-ttu-id="74856-134">Jest to na potrzeby zgodności.</span><span class="sxs-lookup"><span data-stu-id="74856-134">This is for compatibility purposes.</span></span> <span data-ttu-id="74856-135">Semantycznie `outref<'T>` nie różni się od `byref<'T>`.</span><span class="sxs-lookup"><span data-stu-id="74856-135">Semantically, `outref<'T>` is no different than `byref<'T>`.</span></span>
 
-### <a name="interop-with-c"></a><span data-ttu-id="dbe49-136">Współdziałanie z języka C\#</span><span class="sxs-lookup"><span data-stu-id="dbe49-136">Interop with C\#</span></span>
+### <a name="interop-with-c"></a><span data-ttu-id="74856-136">Współdziałanie z języka C\#</span><span class="sxs-lookup"><span data-stu-id="74856-136">Interop with C\#</span></span>
 
-<span data-ttu-id="dbe49-137">C# obsługuje `in ref` i `out ref` słów kluczowych, oprócz `ref` zwraca.</span><span class="sxs-lookup"><span data-stu-id="dbe49-137">C# supports the `in ref` and `out ref` keywords, in addition to `ref` returns.</span></span> <span data-ttu-id="dbe49-138">W poniższej tabeli przedstawiono, jak F# interpretuje co C# emituje:</span><span class="sxs-lookup"><span data-stu-id="dbe49-138">The following table shows how F# interprets what C# emits:</span></span>
+<span data-ttu-id="74856-137">C# obsługuje `in ref` i `out ref` słów kluczowych, oprócz `ref` zwraca.</span><span class="sxs-lookup"><span data-stu-id="74856-137">C# supports the `in ref` and `out ref` keywords, in addition to `ref` returns.</span></span> <span data-ttu-id="74856-138">W poniższej tabeli przedstawiono, jak F# interpretuje co C# emituje:</span><span class="sxs-lookup"><span data-stu-id="74856-138">The following table shows how F# interprets what C# emits:</span></span>
 
-|<span data-ttu-id="dbe49-139">Konstrukcja w języku C#</span><span class="sxs-lookup"><span data-stu-id="dbe49-139">C# construct</span></span>|<span data-ttu-id="dbe49-140">F#wnioskuje</span><span class="sxs-lookup"><span data-stu-id="dbe49-140">F# infers</span></span>|
+|<span data-ttu-id="74856-139">Konstrukcja w języku C#</span><span class="sxs-lookup"><span data-stu-id="74856-139">C# construct</span></span>|<span data-ttu-id="74856-140">F#wnioskuje</span><span class="sxs-lookup"><span data-stu-id="74856-140">F# infers</span></span>|
 |------------|---------|
-|<span data-ttu-id="dbe49-141">`ref` Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="dbe49-141">`ref` return value</span></span>|`outref<'T>`|
-|<span data-ttu-id="dbe49-142">`ref readonly` Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="dbe49-142">`ref readonly` return value</span></span>|`inref<'T>`|
-|<span data-ttu-id="dbe49-143">`in ref` Parametr</span><span class="sxs-lookup"><span data-stu-id="dbe49-143">`in ref` parameter</span></span>|`inref<'T>`|
-|<span data-ttu-id="dbe49-144">`out ref` Parametr</span><span class="sxs-lookup"><span data-stu-id="dbe49-144">`out ref` parameter</span></span>|`outref<'T>`|
+|`ref` <span data-ttu-id="74856-141">wartość zwrócona</span><span class="sxs-lookup"><span data-stu-id="74856-141">return value</span></span>|`outref<'T>`|
+|`ref readonly` <span data-ttu-id="74856-142">wartość zwrócona</span><span class="sxs-lookup"><span data-stu-id="74856-142">return value</span></span>|`inref<'T>`|
+|`in ref` <span data-ttu-id="74856-143">parametr</span><span class="sxs-lookup"><span data-stu-id="74856-143">parameter</span></span>|`inref<'T>`|
+|`out ref` <span data-ttu-id="74856-144">parametr</span><span class="sxs-lookup"><span data-stu-id="74856-144">parameter</span></span>|`outref<'T>`|
 
-<span data-ttu-id="dbe49-145">W poniższej tabeli przedstawiono co F# emituje:</span><span class="sxs-lookup"><span data-stu-id="dbe49-145">The following table shows what F# emits:</span></span>
+<span data-ttu-id="74856-145">W poniższej tabeli przedstawiono co F# emituje:</span><span class="sxs-lookup"><span data-stu-id="74856-145">The following table shows what F# emits:</span></span>
 
-|<span data-ttu-id="dbe49-146">F#konstrukcja</span><span class="sxs-lookup"><span data-stu-id="dbe49-146">F# construct</span></span>|<span data-ttu-id="dbe49-147">Konstrukcja emitowany</span><span class="sxs-lookup"><span data-stu-id="dbe49-147">Emitted construct</span></span>|
+|<span data-ttu-id="74856-146">F#konstrukcja</span><span class="sxs-lookup"><span data-stu-id="74856-146">F# construct</span></span>|<span data-ttu-id="74856-147">Konstrukcja emitowany</span><span class="sxs-lookup"><span data-stu-id="74856-147">Emitted construct</span></span>|
 |------------|-----------------|
-|<span data-ttu-id="dbe49-148">`inref<'T>` Argument</span><span class="sxs-lookup"><span data-stu-id="dbe49-148">`inref<'T>` argument</span></span>|<span data-ttu-id="dbe49-149">`[In]` argument atrybutu</span><span class="sxs-lookup"><span data-stu-id="dbe49-149">`[In]` attribute on argument</span></span>|
-|<span data-ttu-id="dbe49-150">`inref<'T>` Wróć</span><span class="sxs-lookup"><span data-stu-id="dbe49-150">`inref<'T>` return</span></span>|<span data-ttu-id="dbe49-151">`modreq` atrybut na wartość</span><span class="sxs-lookup"><span data-stu-id="dbe49-151">`modreq` attribute on value</span></span>|
-|<span data-ttu-id="dbe49-152">`inref<'T>` w abstrakcyjny gniazdo lub wdrożenia</span><span class="sxs-lookup"><span data-stu-id="dbe49-152">`inref<'T>` in abstract slot or implementation</span></span>|<span data-ttu-id="dbe49-153">`modreq` argument lub zwracany</span><span class="sxs-lookup"><span data-stu-id="dbe49-153">`modreq` on argument or return</span></span>|
-|<span data-ttu-id="dbe49-154">`outref<'T>` Argument</span><span class="sxs-lookup"><span data-stu-id="dbe49-154">`outref<'T>` argument</span></span>|<span data-ttu-id="dbe49-155">`[Out]` argument atrybutu</span><span class="sxs-lookup"><span data-stu-id="dbe49-155">`[Out]` attribute on argument</span></span>|
+|`inref<'T>` <span data-ttu-id="74856-148">Argument</span><span class="sxs-lookup"><span data-stu-id="74856-148">argument</span></span>|`[In]` <span data-ttu-id="74856-149">argument atrybutu</span><span class="sxs-lookup"><span data-stu-id="74856-149">attribute on argument</span></span>|
+|`inref<'T>` <span data-ttu-id="74856-150">return</span><span class="sxs-lookup"><span data-stu-id="74856-150">return</span></span>|`modreq` <span data-ttu-id="74856-151">atrybut na wartość</span><span class="sxs-lookup"><span data-stu-id="74856-151">attribute on value</span></span>|
+|`inref<'T>` <span data-ttu-id="74856-152">w abstrakcyjny gniazdo lub wdrożenia</span><span class="sxs-lookup"><span data-stu-id="74856-152">in abstract slot or implementation</span></span>|`modreq` <span data-ttu-id="74856-153">argument lub zwracany</span><span class="sxs-lookup"><span data-stu-id="74856-153">on argument or return</span></span>|
+|`outref<'T>` <span data-ttu-id="74856-154">Argument</span><span class="sxs-lookup"><span data-stu-id="74856-154">argument</span></span>|`[Out]` <span data-ttu-id="74856-155">argument atrybutu</span><span class="sxs-lookup"><span data-stu-id="74856-155">attribute on argument</span></span>|
 
-### <a name="type-inference-and-overloading-rules"></a><span data-ttu-id="dbe49-156">Wnioskowanie o typie i przeciążenie reguły</span><span class="sxs-lookup"><span data-stu-id="dbe49-156">Type inference and overloading rules</span></span>
+### <a name="type-inference-and-overloading-rules"></a><span data-ttu-id="74856-156">Wnioskowanie o typie i przeciążenie reguły</span><span class="sxs-lookup"><span data-stu-id="74856-156">Type inference and overloading rules</span></span>
 
-<span data-ttu-id="dbe49-157">`inref<'T>` Typ jest wnioskowany przez F# kompilatora w następujących przypadkach:</span><span class="sxs-lookup"><span data-stu-id="dbe49-157">An `inref<'T>` type is inferred by the F# compiler in the following cases:</span></span>
+<span data-ttu-id="74856-157">`inref<'T>` Typ jest wnioskowany przez F# kompilatora w następujących przypadkach:</span><span class="sxs-lookup"><span data-stu-id="74856-157">An `inref<'T>` type is inferred by the F# compiler in the following cases:</span></span>
 
-1. <span data-ttu-id="dbe49-158">.NET parametr lub zwracany typ, który ma `IsReadOnly` atrybutu.</span><span class="sxs-lookup"><span data-stu-id="dbe49-158">A .NET parameter or return type that has an `IsReadOnly` attribute.</span></span>
-2. <span data-ttu-id="dbe49-159">`this` Wskaźnika na typie struct, który nie ma tych pól.</span><span class="sxs-lookup"><span data-stu-id="dbe49-159">The `this` pointer on a struct type that has no mutable fields.</span></span>
-3. <span data-ttu-id="dbe49-160">Adres lokalizacji pamięci pochodzi z innego `inref<_>` wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="dbe49-160">The address of a memory location derived from another `inref<_>` pointer.</span></span>
+1. <span data-ttu-id="74856-158">.NET parametr lub zwracany typ, który ma `IsReadOnly` atrybutu.</span><span class="sxs-lookup"><span data-stu-id="74856-158">A .NET parameter or return type that has an `IsReadOnly` attribute.</span></span>
+2. <span data-ttu-id="74856-159">`this` Wskaźnika na typie struct, który nie ma tych pól.</span><span class="sxs-lookup"><span data-stu-id="74856-159">The `this` pointer on a struct type that has no mutable fields.</span></span>
+3. <span data-ttu-id="74856-160">Adres lokalizacji pamięci pochodzi z innego `inref<_>` wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="74856-160">The address of a memory location derived from another `inref<_>` pointer.</span></span>
 
-<span data-ttu-id="dbe49-161">Gdy niejawne adres `inref` jest przełączana, przeciążenia z nieprawidłowym argumentem typu `SomeType` jest preferowany do przeciążenia z nieprawidłowym argumentem typu `inref<SomeType>`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-161">When an implicit address of an `inref` is being taken, an overload with an argument of type `SomeType` is preferred to an overload with an argument of type `inref<SomeType>`.</span></span> <span data-ttu-id="dbe49-162">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="dbe49-162">For example:</span></span>
+<span data-ttu-id="74856-161">Gdy niejawne adres `inref` jest przełączana, przeciążenia z nieprawidłowym argumentem typu `SomeType` jest preferowany do przeciążenia z nieprawidłowym argumentem typu `inref<SomeType>`.</span><span class="sxs-lookup"><span data-stu-id="74856-161">When an implicit address of an `inref` is being taken, an overload with an argument of type `SomeType` is preferred to an overload with an argument of type `inref<SomeType>`.</span></span> <span data-ttu-id="74856-162">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="74856-162">For example:</span></span>
 
 ```fsharp
 type C() =
@@ -147,11 +148,11 @@ let v =  C.M(res)
 let v2 =  C.M2(res, 4)
 ```
 
-<span data-ttu-id="dbe49-163">W obu przypadkach przeciążenia, biorąc `System.DateTime` są rozwiązywane zamiast przeciążenia, biorąc `inref<System.DateTime>`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-163">In both cases, the overloads taking `System.DateTime` are resolved rather than the overloads taking `inref<System.DateTime>`.</span></span>
+<span data-ttu-id="74856-163">W obu przypadkach przeciążenia, biorąc `System.DateTime` są rozwiązywane zamiast przeciążenia, biorąc `inref<System.DateTime>`.</span><span class="sxs-lookup"><span data-stu-id="74856-163">In both cases, the overloads taking `System.DateTime` are resolved rather than the overloads taking `inref<System.DateTime>`.</span></span>
 
-## <a name="byref-like-structs"></a><span data-ttu-id="dbe49-164">ByRef — podobne do struktury</span><span class="sxs-lookup"><span data-stu-id="dbe49-164">Byref-like structs</span></span>
+## <a name="byref-like-structs"></a><span data-ttu-id="74856-164">ByRef — podobne do struktury</span><span class="sxs-lookup"><span data-stu-id="74856-164">Byref-like structs</span></span>
 
-<span data-ttu-id="dbe49-165">Oprócz `byref` / `inref` / `outref` Trójka, można zdefiniować własne struktur, które można stosować się do `byref`— takich jak semantyki.</span><span class="sxs-lookup"><span data-stu-id="dbe49-165">In addition to the `byref`/`inref`/`outref` trio, you can define your own structs that can adhere to `byref`-like semantics.</span></span> <span data-ttu-id="dbe49-166">Jest to zrobić za pomocą <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> atrybutu:</span><span class="sxs-lookup"><span data-stu-id="dbe49-166">This is done with the <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> attribute:</span></span>
+<span data-ttu-id="74856-165">Oprócz `byref` / `inref` / `outref` Trójka, można zdefiniować własne struktur, które można stosować się do `byref`— takich jak semantyki.</span><span class="sxs-lookup"><span data-stu-id="74856-165">In addition to the `byref`/`inref`/`outref` trio, you can define your own structs that can adhere to `byref`-like semantics.</span></span> <span data-ttu-id="74856-166">Jest to zrobić za pomocą <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> atrybutu:</span><span class="sxs-lookup"><span data-stu-id="74856-166">This is done with the <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> attribute:</span></span>
 
 ```fsharp
 open System
@@ -163,22 +164,22 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-<span data-ttu-id="dbe49-167">`IsByRefLike` nie oznacza `Struct`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-167">`IsByRefLike` does not imply `Struct`.</span></span> <span data-ttu-id="dbe49-168">Zarówno musi być obecny w typie.</span><span class="sxs-lookup"><span data-stu-id="dbe49-168">Both must be present on the type.</span></span>
+`IsByRefLike` <span data-ttu-id="74856-167">nie oznacza `Struct`.</span><span class="sxs-lookup"><span data-stu-id="74856-167">does not imply `Struct`.</span></span> <span data-ttu-id="74856-168">Zarówno musi być obecny w typie.</span><span class="sxs-lookup"><span data-stu-id="74856-168">Both must be present on the type.</span></span>
 
-<span data-ttu-id="dbe49-169">Element "`byref`— takich jak" struct w F# jest typem wartości powiązanym ze stosu.</span><span class="sxs-lookup"><span data-stu-id="dbe49-169">A "`byref`-like" struct in F# is a stack-bound value type.</span></span> <span data-ttu-id="dbe49-170">Nigdy nie zostanie przydzielona na stosie zarządzanym.</span><span class="sxs-lookup"><span data-stu-id="dbe49-170">It is never allocated on the managed heap.</span></span> <span data-ttu-id="dbe49-171">A `byref`— takie jak struktura jest przydatne w przypadku programowania o wysokiej wydajności, jak są wymuszane za pomocą zestawu silne testów o okresie istnienia i -capture.</span><span class="sxs-lookup"><span data-stu-id="dbe49-171">A `byref`-like struct is useful for high-performance programming, as it is enforced with set of strong checks about lifetime and non-capture.</span></span> <span data-ttu-id="dbe49-172">Dostępne są następujące reguły:</span><span class="sxs-lookup"><span data-stu-id="dbe49-172">The rules are:</span></span>
+<span data-ttu-id="74856-169">Element "`byref`— takich jak" struct w F# jest typem wartości powiązanym ze stosu.</span><span class="sxs-lookup"><span data-stu-id="74856-169">A "`byref`-like" struct in F# is a stack-bound value type.</span></span> <span data-ttu-id="74856-170">Nigdy nie zostanie przydzielona na stosie zarządzanym.</span><span class="sxs-lookup"><span data-stu-id="74856-170">It is never allocated on the managed heap.</span></span> <span data-ttu-id="74856-171">A `byref`— takie jak struktura jest przydatne w przypadku programowania o wysokiej wydajności, jak są wymuszane za pomocą zestawu silne testów o okresie istnienia i -capture.</span><span class="sxs-lookup"><span data-stu-id="74856-171">A `byref`-like struct is useful for high-performance programming, as it is enforced with set of strong checks about lifetime and non-capture.</span></span> <span data-ttu-id="74856-172">Dostępne są następujące reguły:</span><span class="sxs-lookup"><span data-stu-id="74856-172">The rules are:</span></span>
 
-* <span data-ttu-id="dbe49-173">One może służyć jako parametry funkcji, parametrów metody, zmienne lokalne, metoda zwraca wartość.</span><span class="sxs-lookup"><span data-stu-id="dbe49-173">They can be used as function parameters, method parameters, local variables, method returns.</span></span>
-* <span data-ttu-id="dbe49-174">Nie mogą one być statyczne lub wystąpieniami elementów członkowskich klasy lub struktury normalne.</span><span class="sxs-lookup"><span data-stu-id="dbe49-174">They cannot be static or instance members of a class or normal struct.</span></span>
-* <span data-ttu-id="dbe49-175">Nie można przechwycić według konstrukcji zamknięcia (`async` metod lub wyrażenia lambda).</span><span class="sxs-lookup"><span data-stu-id="dbe49-175">They cannot be captured by any closure construct (`async` methods or lambda expressions).</span></span>
-* <span data-ttu-id="dbe49-176">Nie mogą one służyć jako parametr ogólny.</span><span class="sxs-lookup"><span data-stu-id="dbe49-176">They cannot be used as a generic parameter.</span></span>
+* <span data-ttu-id="74856-173">One może służyć jako parametry funkcji, parametrów metody, zmienne lokalne, metoda zwraca wartość.</span><span class="sxs-lookup"><span data-stu-id="74856-173">They can be used as function parameters, method parameters, local variables, method returns.</span></span>
+* <span data-ttu-id="74856-174">Nie mogą one być statyczne lub wystąpieniami elementów członkowskich klasy lub struktury normalne.</span><span class="sxs-lookup"><span data-stu-id="74856-174">They cannot be static or instance members of a class or normal struct.</span></span>
+* <span data-ttu-id="74856-175">Nie można przechwycić według konstrukcji zamknięcia (`async` metod lub wyrażenia lambda).</span><span class="sxs-lookup"><span data-stu-id="74856-175">They cannot be captured by any closure construct (`async` methods or lambda expressions).</span></span>
+* <span data-ttu-id="74856-176">Nie mogą one służyć jako parametr ogólny.</span><span class="sxs-lookup"><span data-stu-id="74856-176">They cannot be used as a generic parameter.</span></span>
 
-<span data-ttu-id="dbe49-177">Ten ostatni punkt ma kluczowe znaczenie podczas F# programowaniu w stylu potoku jako `|>` jest funkcja ogólna, które parametryzuje dane jego typów wejściowych.</span><span class="sxs-lookup"><span data-stu-id="dbe49-177">This last point is crucial for F# pipeline-style programming, as `|>` is a generic function that parameterizes its input types.</span></span> <span data-ttu-id="dbe49-178">To ograniczenie może zostać złagodzone dla `|>` w przyszłości, ponieważ jest wbudowana i nie wprowadzać wszelkie wywołania-śródwierszowych ogólne funkcje w jej treści.</span><span class="sxs-lookup"><span data-stu-id="dbe49-178">This restriction may be relaxed for `|>` in the future, as it is inline and does not make any calls to non-inlined generic functions in its body.</span></span>
+<span data-ttu-id="74856-177">Ten ostatni punkt ma kluczowe znaczenie podczas F# programowaniu w stylu potoku jako `|>` jest funkcja ogólna, które parametryzuje dane jego typów wejściowych.</span><span class="sxs-lookup"><span data-stu-id="74856-177">This last point is crucial for F# pipeline-style programming, as `|>` is a generic function that parameterizes its input types.</span></span> <span data-ttu-id="74856-178">To ograniczenie może zostać złagodzone dla `|>` w przyszłości, ponieważ jest wbudowana i nie wprowadzać wszelkie wywołania-śródwierszowych ogólne funkcje w jej treści.</span><span class="sxs-lookup"><span data-stu-id="74856-178">This restriction may be relaxed for `|>` in the future, as it is inline and does not make any calls to non-inlined generic functions in its body.</span></span>
 
-<span data-ttu-id="dbe49-179">Mimo że te reguły ograniczają bardzo silnie użycia, to zrobią do spełnienia obietnicy o wysokiej wydajności obliczeniowej w bezpieczny sposób.</span><span class="sxs-lookup"><span data-stu-id="dbe49-179">Although these rules very strongly restrict usage, they do so to fulfill the promise of high-performance computing in a safe manner.</span></span>
+<span data-ttu-id="74856-179">Mimo że te reguły ograniczają bardzo silnie użycia, to zrobią do spełnienia obietnicy o wysokiej wydajności obliczeniowej w bezpieczny sposób.</span><span class="sxs-lookup"><span data-stu-id="74856-179">Although these rules very strongly restrict usage, they do so to fulfill the promise of high-performance computing in a safe manner.</span></span>
 
-## <a name="byref-returns"></a><span data-ttu-id="dbe49-180">Wartości zwracane ByRef</span><span class="sxs-lookup"><span data-stu-id="dbe49-180">Byref returns</span></span>
+## <a name="byref-returns"></a><span data-ttu-id="74856-180">Wartości zwracane ByRef</span><span class="sxs-lookup"><span data-stu-id="74856-180">Byref returns</span></span>
 
-<span data-ttu-id="dbe49-181">Wartości zwracane ByRef z F# tworzone i używane funkcji lub elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="dbe49-181">Byref returns from F# functions or members can be produced and consumed.</span></span> <span data-ttu-id="dbe49-182">Podczas używania `byref`— metodę zwracającą, wartość jest wyłuskiwany niejawnie.</span><span class="sxs-lookup"><span data-stu-id="dbe49-182">When consuming a `byref`-returning method, the value is implicitly dereferenced.</span></span> <span data-ttu-id="dbe49-183">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="dbe49-183">For example:</span></span>
+<span data-ttu-id="74856-181">Wartości zwracane ByRef z F# tworzone i używane funkcji lub elementów członkowskich.</span><span class="sxs-lookup"><span data-stu-id="74856-181">Byref returns from F# functions or members can be produced and consumed.</span></span> <span data-ttu-id="74856-182">Podczas używania `byref`— metodę zwracającą, wartość jest wyłuskiwany niejawnie.</span><span class="sxs-lookup"><span data-stu-id="74856-182">When consuming a `byref`-returning method, the value is implicitly dereferenced.</span></span> <span data-ttu-id="74856-183">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="74856-183">For example:</span></span>
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =
@@ -191,9 +192,9 @@ let sum = safeSum(mySpanOfBytes)
 printfn "%d" sum // 'sum' is of type 'int'
 ```
 
-<span data-ttu-id="dbe49-184">Aby uniknąć niejawne wyłuskania, takich jak przekazywaniem odwołań do wielu wywołań łańcuchowych, należy użyć `&x` (gdzie `x` jest wartością).</span><span class="sxs-lookup"><span data-stu-id="dbe49-184">To avoid the implicit dereference, such as passing a reference through multiple chained calls, use `&x` (where `x` is the value).</span></span>
+<span data-ttu-id="74856-184">Aby uniknąć niejawne wyłuskania, takich jak przekazywaniem odwołań do wielu wywołań łańcuchowych, należy użyć `&x` (gdzie `x` jest wartością).</span><span class="sxs-lookup"><span data-stu-id="74856-184">To avoid the implicit dereference, such as passing a reference through multiple chained calls, use `&x` (where `x` is the value).</span></span>
 
-<span data-ttu-id="dbe49-185">Możesz także bezpośrednio przypisać do zwrotu `byref`.</span><span class="sxs-lookup"><span data-stu-id="dbe49-185">You can also directly assign to a return `byref`.</span></span> <span data-ttu-id="dbe49-186">Należy wziąć pod uwagę następujący program (wysoce imperatywne):</span><span class="sxs-lookup"><span data-stu-id="dbe49-186">Consider the following (highly imperative) program:</span></span>
+<span data-ttu-id="74856-185">Możesz także bezpośrednio przypisać do zwrotu `byref`.</span><span class="sxs-lookup"><span data-stu-id="74856-185">You can also directly assign to a return `byref`.</span></span> <span data-ttu-id="74856-186">Należy wziąć pod uwagę następujący program (wysoce imperatywne):</span><span class="sxs-lookup"><span data-stu-id="74856-186">Consider the following (highly imperative) program:</span></span>
 
 ```fsharp
 type C() =
@@ -222,16 +223,16 @@ let main argv =
     0 // return an integer exit code
 ```
 
-<span data-ttu-id="dbe49-187">Jest to produkt wyjściowy:</span><span class="sxs-lookup"><span data-stu-id="dbe49-187">This is the output:</span></span>
+<span data-ttu-id="74856-187">Jest to produkt wyjściowy:</span><span class="sxs-lookup"><span data-stu-id="74856-187">This is the output:</span></span>
 
 ```console
 Original sequence: 1 3 7 15 31 63 127 255 511 1023
 New sequence:      1 3 7 30 31 63 127 255 511 1023
 ```
 
-## <a name="scoping-for-byrefs"></a><span data-ttu-id="dbe49-188">Wyznaczanie zakresu dla zkratka</span><span class="sxs-lookup"><span data-stu-id="dbe49-188">Scoping for byrefs</span></span>
+## <a name="scoping-for-byrefs"></a><span data-ttu-id="74856-188">Wyznaczanie zakresu dla zkratka</span><span class="sxs-lookup"><span data-stu-id="74856-188">Scoping for byrefs</span></span>
 
-<span data-ttu-id="dbe49-189">A `let`— powiązana wartość nie może zawierać odwołanie, przekracza zakres, w którym został zdefiniowany.</span><span class="sxs-lookup"><span data-stu-id="dbe49-189">A `let`-bound value cannot have its reference exceed the scope in which it was defined.</span></span> <span data-ttu-id="dbe49-190">Na przykład że jest niedozwolone:</span><span class="sxs-lookup"><span data-stu-id="dbe49-190">For example, the following is disallowed:</span></span>
+<span data-ttu-id="74856-189">A `let`— powiązana wartość nie może zawierać odwołanie, przekracza zakres, w którym został zdefiniowany.</span><span class="sxs-lookup"><span data-stu-id="74856-189">A `let`-bound value cannot have its reference exceed the scope in which it was defined.</span></span> <span data-ttu-id="74856-190">Na przykład że jest niedozwolone:</span><span class="sxs-lookup"><span data-stu-id="74856-190">For example, the following is disallowed:</span></span>
 
 ```fsharp
 let test2 () =
@@ -245,4 +246,4 @@ let test () =
     ()
 ```
 
-<span data-ttu-id="dbe49-191">Uniemożliwia to wprowadzenie różne wyniki w zależności od tego, jeśli kompilujesz z optymalizacjami lub wyłączyć.</span><span class="sxs-lookup"><span data-stu-id="dbe49-191">This prevents you from getting different results depending on if you compile with optimizations on or off.</span></span>
+<span data-ttu-id="74856-191">Uniemożliwia to wprowadzenie różne wyniki w zależności od tego, jeśli kompilujesz z optymalizacjami lub wyłączyć.</span><span class="sxs-lookup"><span data-stu-id="74856-191">This prevents you from getting different results depending on if you compile with optimizations on or off.</span></span>

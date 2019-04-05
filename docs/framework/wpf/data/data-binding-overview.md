@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634560"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055355"
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takie jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> posiada wbudowanej funkcji, aby umożliwić elastyczne stylu pojedynczymi elementami danych lub kolekcje elementów danych. Sortowanie, filtrowanie i widoki grup mogą być generowane na podstawie danych.  
@@ -33,7 +33,7 @@ ms.locfileid: "58634560"
   
  Na przykład powiązanie danych zapoznaj się z następującej aplikacji [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] z [pokaz powiązania danych](https://go.microsoft.com/fwlink/?LinkID=163703):  
   
- ![Zrzut ekranu przedstawiający przykładowe powiązania danych](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![Zrzut ekranu przykładu powiązania danych](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  Powyższa procedura jest [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aplikacji, która wyświetla listę licytacją. Aplikacja ilustruje następujące funkcje powiązanie danych:  
   
@@ -432,8 +432,8 @@ ms.locfileid: "58634560"
 ## <a name="see-also"></a>Zobacz także
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Nowości w WPF w wersji 4.5](../getting-started/whats-new.md)
-- [Powiązywanie z wynikami zapytania LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
+- [Wiązanie z wynikami zapytania LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
 - [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)
 - [Pokaz powiązania danych](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
-- [Powiązywanie ze źródłem danych ADO.NET](how-to-bind-to-an-ado-net-data-source.md)
+- [— Tematy porad](data-binding-how-to-topics.md)
+- [Wiązanie ze źródłem danych ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

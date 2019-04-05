@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: cc97fda98badfc27e8b92a0dde6d5e419575ac6c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87ae55c454a72797569de4cd944984ba18c3b2ca
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379565"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055069"
 ---
 # <a name="graphics-and-multimedia"></a>Grafika i multimedia
 <a name="introduction"></a>
@@ -111,7 +111,7 @@ End Class
 ## <a name="3-d-rendering"></a>Renderowanie 3-D  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawiera zestaw [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] możliwości renderowania, które integrują się z [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] obsługi grafiki w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] w kolejności, w celu utworzenia bardziej atrakcyjne układ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i wizualizacja danych. Na jednym końcu spektrum [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Umożliwia renderowanie [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] obrazów na powierzchni [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] kształty, które przedstawiono na poniższej ilustracji.  
   
- ![Zrzut ekranu przedstawiający przykładowy przykład Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
+ ![Zrzut ekranu przykładu przykład Visual3D](./media/wpfintrofigure13.png "WPFIntroFigure13")  
   
  Aby uzyskać więcej informacji, zobacz [Przegląd grafiki 3D](3-d-graphics-overview.md). Wprowadzający przykład znaleźć w artykule [3-przykładowe stałych](https://go.microsoft.com/fwlink/?LinkID=159964).  
   
@@ -130,7 +130,7 @@ End Class
 ### <a name="images"></a>Obrazy  
  Obrazy, które obejmują ikony, tła i nawet części animacji, są podstawowym składnikiem większości aplikacji. Ponieważ często zachodzi potrzeba używania obrazów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia możliwość pracy z nimi w na różne sposoby. Poniższa ilustracja przedstawia tylko jeden z tych sposobów.  
   
- ![Zrzut ekranu przedstawiający przykładowy stylów](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Zrzut ekranu przykładu stylów](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
  Aby uzyskać więcej informacji, zobacz [Przegląd obrazowanie](imaging-overview.md).  
   
@@ -150,9 +150,9 @@ End Class
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
-- [Animacja i chronometraż tematy porad](animation-and-timing-how-to-topics.md)
-- [Grafika 3D — przegląd](3-d-graphics-overview.md)
-- [Multimedia — przegląd](multimedia-overview.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)
+- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
+- [Animacja i chronometraż Tematy porad](animation-and-timing-how-to-topics.md)
+- [Przegląd Grafika 3-D](3-d-graphics-overview.md)
+- [Przegląd Multimedia](multimedia-overview.md)

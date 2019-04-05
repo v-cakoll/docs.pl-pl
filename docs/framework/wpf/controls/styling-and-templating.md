@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370725"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055329"
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Tworzenie szablonów i stylów odnoszą się do zestawu funkcji (style, szablony, wyzwalaczy i scenorysów), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualnie atrakcyjne i utworzyć spójny wygląd swojego produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji, aplikacji, silne modelu Tworzenie szablonów i stylów jest niezbędne w celu umożliwienia obsługi i udostępnianie pojawienia się wewnątrz i pomiędzy aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia tego modelu.  
@@ -45,7 +45,7 @@ ms.locfileid: "57370725"
   
  [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![Zrzut ekranu przedstawiający przykładowy stylów](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![Zrzut ekranu przykładu stylów](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  Domyślny wygląd można zmienić przez ustawienie właściwości, takie jak <xref:System.Windows.Controls.Control.FontSize%2A> i <xref:System.Windows.Controls.Control.FontFamily%2A>, na każdym <xref:System.Windows.Controls.TextBlock> element bezpośrednio. Jednak jeśli chcesz, aby Twoje <xref:System.Windows.Controls.TextBlock> elementy, aby udostępnić niektóre właściwości, można utworzyć <xref:System.Windows.Style> w `Resources` części usługi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku, jak pokazano poniżej:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "57370725"
   
  Teraz <xref:System.Windows.Controls.TextBlock> elementy pojawiają się w następujący sposób:  
   
- ![Zrzut ekranu przedstawiający przykładowy stylów](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![Zrzut ekranu przykładu stylów](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Rozszerzanie style  
  Chcecie Twojego dwu <xref:System.Windows.Controls.TextBlock> elementy, które udostępniają niektóre wartości właściwości, takie jak <xref:System.Windows.Controls.Control.FontFamily%2A> i wyśrodkowany <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, ale ma również tekst "Moje obrazy", aby niektóre dodatkowe właściwości. Możesz to zrobić, tworząc nowy styl, który opiera się na pierwszy stylu, jak pokazano poniżej:  
@@ -165,7 +165,7 @@ ms.locfileid: "57370725"
   
  Na poniższej ilustracji wskazuje myszą trzeci element:  
   
- ![Zrzut ekranu przedstawiający przykładowy stylów](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Zrzut ekranu przykładu stylów](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers DataTriggers i MultiDataTriggers  
  Oprócz <xref:System.Windows.Trigger> i <xref:System.Windows.EventTrigger>, istnieją inne typy wyzwalaczy. <xref:System.Windows.MultiTrigger> Umożliwia ustawienie wartości właściwości, na podstawie wielu warunków. Możesz użyć <xref:System.Windows.DataTrigger> i <xref:System.Windows.MultiDataTrigger> po właściwości warunku jest powiązany z danymi.  
@@ -197,6 +197,6 @@ ms.locfileid: "57370725"
  Jeśli tworzysz motywu dla Ciebie kontrolki niestandardowej, zobacz sekcję biblioteki zewnętrznej kontroli [omówienie tworzenia kontrolek](control-authoring-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Pakowanie URI w WPF](../app-development/pack-uris-in-wpf.md)
-- [Instrukcje: Find ControlTemplate-Generated Elements](how-to-find-controltemplate-generated-elements.md)
+- [Pakuj URI w WPF](../app-development/pack-uris-in-wpf.md)
+- [Instrukcje: znajdowanie elementów generowanych przez element ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

@@ -11,14 +11,14 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: b7ad8afbad212d5c79c9391bd9f6d1da7ff8fb28
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358196"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055251"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>Przewodnik: Mój pierwszy aplikacji klasycznej WPF
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>Przewodnik: Moja pierwsza aplikacja klasyczna WPF
 
 W tym artykule przedstawiono sposób tworzenia prostej aplikacji Windows Presentation Foundation (WPF), który zawiera elementy, które są wspólne dla większości aplikacji WPF: Extensible Application Markup Language (XAML) znaczników, związane z kodem, definicji aplikacji, formanty, układ, powiązanie danych i stylów.
 
@@ -215,7 +215,7 @@ W tej sekcji należy dodać dwie strony i obrazu do aplikacji.
 
     Na poniższej ilustracji przedstawiono aplikację za pomocą <xref:System.Windows.Navigation.NavigationWindow> przyciski:
 
-    ![Zrzut ekranu przedstawiający programu ExpenseIt](./media/gettingstartedfigure1.png)
+    ![Zrzut ekranu przykładu programu ExpenseIt](./media/gettingstartedfigure1.png)
 
 2. Zamknij aplikację, aby powrócić do programu Visual Studio.
 
@@ -285,7 +285,7 @@ Każda kontrolka znajduje się w wierszu <xref:System.Windows.Controls.Grid> , u
 
 Na poniższej ilustracji zawiera kontrolki, które zostały utworzone:
 
-![Zrzut ekranu przedstawiający programu ExpenseIt](./media/gettingstartedfigure2.png)
+![Zrzut ekranu przykładu programu ExpenseIt](./media/gettingstartedfigure2.png)
 
 ## <a name="add-an-image-and-a-title"></a>Dodaj obraz i tytuł
 
@@ -321,7 +321,7 @@ W tej sekcji zostaną zaktualizowane interfejsie użytkownika strony głównej p
 
 Poniższa ilustracja przedstawia wyniki co właśnie został dodany:
 
-![Zrzut ekranu przedstawiający programu ExpenseIt](./media/gettingstartedfigure3.png)
+![Zrzut ekranu przykładu programu ExpenseIt](./media/gettingstartedfigure3.png)
 
 ## <a name="add-code-to-handle-events"></a>Dodaj kod do obsługi zdarzeń
 
@@ -361,7 +361,7 @@ Poniższa ilustracja przedstawia wyniki co właśnie został dodany:
 
 Na poniższej ilustracji przedstawiono elementy interfejsu użytkownika dodano do *ExpenseReportPage.xaml*.
 
-![Zrzut ekranu przedstawiający programu ExpenseIt](./media/gettingstartedfigure4.png)
+![Zrzut ekranu przykładu programu ExpenseIt](./media/gettingstartedfigure4.png)
 
 ## <a name="style-controls"></a>Kontrolki stylu
 
@@ -475,7 +475,7 @@ W tej sekcji zostaną zaktualizowane w interfejsie użytkownika dla każdego ele
 
 Na poniższej ilustracji przedstawiono obie strony `ExpenseIt` aplikacji za pomocą formantów, układ, style, powiązań danych i zastosowanych szablonów danych:
 
-![Przykładowe zrzuty ekranu programu ExpenseIt](./media/gettingstartedfigure5.png)
+![Zrzuty ekranu przykładowej programu ExpenseIt](./media/gettingstartedfigure5.png)
 
 > [!NOTE]
 > Ten przykład demonstruje określonych funkcji, WPF i nie należy wykonać wszystkie najlepsze rozwiązania w zakresie elementów, takich jak bezpieczeństwo, lokalizacja i ułatwienia dostępu. Aby uzyskać kompleksowe informacje na temat WPF i najlepszych rozwiązań projektowania aplikacji .NET Framework Zobacz następujące tematy:
@@ -500,7 +500,7 @@ W tym instruktażu przedstawiono kilka technik tworzenia interfejsu użytkownika
 Aby uzyskać więcej informacji na temat tworzenia aplikacji zobacz następujące tematy:
 
 - [Tworzenie aplikacji](../app-development/index.md)
-- [Kontrolki](../controls/index.md)
+- [Formanty](../controls/index.md)
 - [Przegląd wiązanie danych](../data/data-binding-overview.md)
 - [Grafika i multimedia](../graphics-multimedia/index.md)
 - [Dokumenty w WPF](../advanced/documents-in-wpf.md)

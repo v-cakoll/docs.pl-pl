@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921354"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055316"
 ---
 # <a name="working-with-calendars"></a>Praca z kalendarzami
 
@@ -163,7 +163,7 @@ Na platformie .NET, liczby całkowite reprezentujące ery obsługiwane przez okr
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-Nazwa, która odpowiada numerowi ery można pobrać, przekazując numer ery do <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> lub <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> metody. Poniższy przykład wywołuje te metody do pobierania informacji dotyczących obsługi er w <xref:System.Globalization.GregorianCalendar> klasy.
+Nazwa, która odpowiada numerowi ery można pobrać, przekazując numer ery do <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> lub <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> metody. Poniższy przykład wywołuje te metody do pobierania informacji dotyczących obsługi er w <xref:System.Globalization.GregorianCalendar> klasy. Wyświetla datę kalendarz gregoriański, która odnosi się do 1 stycznia drugiego roku bieżącej ery, a także datę kalendarz gregoriański, która odnosi się do 1 stycznia drugiego roku każdej erze obsługiwanej Kalendarz japoński.
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ Ponadto niestandardowy format daty i godziny „g” dołącza nazwę ery kalend
 
 ### <a name="instantiating-a-date-with-an-era"></a>Tworzenie wystąpienia daty z erą
 
-Dwóch <xref:System.Globalization.Calendar> klas, które obsługują wiele er, datę, która składa się z danego roku, miesiąc i dzień miesiąca wartość może być niejednoznaczna. Na przykład wszystkie ery obsługiwane przez <xref:System.Globalization.JapaneseCalendar> zawierają lata, w których liczba to 1. Normalnie, jeśli era nie jest określona, metody daty i godziny oraz kalendarza zakładają, że wartości należą do bieżącej ery. Dotyczy to <xref:System.DateTime.%23ctor%2A> i <xref:System.DateTimeOffset.%23ctor%2A> konstruktorów, które zawierają parametry typu <xref:System.Globalization.Calendar>, jak również [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) i [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) metody. Poniższy przykład tworzy wystąpienie daty, która reprezentuje 1 stycznia drugi rok z erą nieokreślony. Jak wynika z w przykładzie pokazano Data jest interpretowany jako drugiego roku era Heisei, bieżącej ery w czasie, który został wykonany w tym przykładzie. Ery 平成, poprzedza rok w ciągu zwracanego przez <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> metody i odnosi się do 1 stycznia 1990 r. w kalendarzu gregoriańskim. (Zakres ery Heisei jest od 1989 2019 w kalendarzu gregoriańskim.)
+Dwóch <xref:System.Globalization.Calendar> klas, które obsługują wiele er, datę, która składa się z danego roku, miesiąc i dzień miesiąca wartość może być niejednoznaczna. Na przykład wszystkie ery obsługiwane przez <xref:System.Globalization.JapaneseCalendar> zawierają lata, w których liczba to 1. Normalnie, jeśli era nie jest określona, metody daty i godziny oraz kalendarza zakładają, że wartości należą do bieżącej ery. Dotyczy to <xref:System.DateTime.%23ctor%2A> i <xref:System.DateTimeOffset.%23ctor%2A> konstruktorów, które zawierają parametry typu <xref:System.Globalization.Calendar>, jak również [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) i [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) metody. Poniższy przykład tworzy wystąpienie daty, która reprezentuje 1 stycznia drugi rok z erą nieokreślony. Jeśli przykładzie są wykonywane po ery Reiwa bieżącej ery, data jest interpretowany jako drugi rok ery Reiwa. Ery 令和, poprzedza rok w ciągu zwracanego przez <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> metody i odnosi się do 1 stycznia 2020 roku w kalendarzu gregoriańskim. (Ery Reiwa rozpoczyna się w roku 2019 kalendarza gregoriańskiego).
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kontroluj kiedy tekst TextBox aktualizuje źródło'
+title: 'Instrukcje: Kontrolowanie momentu aktualizowania źródła tekstu kontrolki TextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 702f06a37aa98e3a84858a590655e8a4311cfa48
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362139"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055134"
 ---
-# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Instrukcje: Kontroluj kiedy tekst TextBox aktualizuje źródło
+# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Instrukcje: Kontrolowanie momentu aktualizowania źródła tekstu kontrolki TextBox
 W tym temacie opisano sposób użycia <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> właściwości, aby kontrolować chronometraż aktualizacji źródła powiązania. Temat używa <xref:System.Windows.Controls.TextBox> kontroli jako przykład.  
   
 ## <a name="example"></a>Przykład  
@@ -28,7 +28,7 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Data.Binding.UpdateSo
   
  W rezultacie <xref:System.Windows.Controls.TextBlock> pokazuje ten sam tekst (z powodu zmiany pliku źródłowego), co użytkownik musi wprowadzić tekst do <xref:System.Windows.Controls.TextBox>, jak pokazano na poniższym zrzucie ekranu przykładu:  
   
- ![Zrzut ekranu przedstawiający przykładowe powiązania danych proste](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![Zrzut ekranu przykładu powiązania proste dane](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
   
  Jeśli okno dialogowe lub można edytować użytkownika formularza i mają być odroczone aktualizacje źródła, dopóki użytkownik nie jest gotowy, edycja pól i kliknie przycisk "OK", można ustawić <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> wartości wiązania tak, aby <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, jak w poniższym przykładzie:  
   
@@ -46,4 +46,4 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Data.Binding.UpdateSo
 >  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Właściwość dotyczy źródło aktualizacji i dlatego ma zastosowanie tylko dla <xref:System.Windows.Data.BindingMode.TwoWay> lub <xref:System.Windows.Data.BindingMode.OneWayToSource> powiązania. Aby uzyskać <xref:System.Windows.Data.BindingMode.TwoWay> i <xref:System.Windows.Data.BindingMode.OneWayToSource> powiązania do pracy źródła obiektu musi zapewniać powiadomienia o zmianie właściwości. Mogą odwoływać się do przykładów wymienionych w tym temacie, aby uzyskać więcej informacji. Ponadto można przyjrzeć się [powiadomienie o zmianie właściwości Implementowanie](how-to-implement-property-change-notification.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

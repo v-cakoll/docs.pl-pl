@@ -1,6 +1,6 @@
 ---
 title: 'Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.'
-ms.date: 03/18/2019
+ms.date: 04/02/2019
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504434"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055238"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Instrukcje: Określanie, które wersje programu .NET Framework są zainstalowane.
 
@@ -68,17 +68,13 @@ Aby uzyskać informacje dotyczące wykrywania zainstalowanych aktualizacji dla k
 2. W Edytorze rejestru otwórz następujący podklucz: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full**. Jeśli **pełne** podklucz nie będą dostępne, a następnie nie ma programu .NET Framework 4.5 lub nowszy.
 
     > [!NOTE]
-    > **NET Framework Setup** lokalizacji w rejestrze nie rozpoczyna się kropką.
+    > **NET Framework Setup** folder w rejestrze nie *nie* rozpoczyna się kropką.
 
 3. Sprawdź, czy wpis typu DWORD o nazwie **wersji**. Jeśli istnieje, musisz .NET Framework 4.5 lub nowszy zainstalowany. Jego wartość to klucz wersji, który odnosi się do określonej wersji programu .NET Framework. Na poniższej ilustracji, na przykład, wartość **wersji** wpis jest *378389*, czyli na klucz wersji .NET Framework 4.5. 
 
      ![Wpis rejestru dla programu .NET Framework 4.5](media/clr-installdir.png "wpis rejestru dla programu .NET Framework 4.5")
 
-W poniższej tabeli przedstawiono minimalną wartość **wersji** wpis dla każdej wersji systemu .NET Framework. Można użyć tych wartości w następujący sposób:
-
-- Aby ustalić, czy minimalna wersja architektury .NET Framework jest obecny, test czy **wersji** wartość DWORD znaleziony w rejestrze jest *większa lub równa* wartości wymienione w tabeli. Na przykład, jeśli aplikacja wymaga .NET Framework w wersji 4.7 lub nowszej, możesz przetestować dla wersji minimalnej wartości klucza *460798*.
-
-- Do testowania dla różnych wersji, zaczynają się od najnowszej wersji .NET Framework, a następnie przetestować każda kolejne starszej wersji.
+W poniższej tabeli wymieniono wartości **wersji** DWORD w poszczególnych systemach operacyjnych .NET Framework 4.5 i nowsze wersje.
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
@@ -86,18 +82,23 @@ W poniższej tabeli przedstawiono minimalną wartość **wersji** wpis dla każd
 
 |Wersja programu .NET Framework|Wartość DWORD dotycząca wersji|
 |--------------------------------|-------------|
-|.NET Framework 4.5|378389|
-|.NET Framework 4.5.1|378675|
-|.NET Framework 4.5.2|379893|
-|.NET Framework 4.6|393295|
-|.NET Framework 4.6.1|394254|
-|.NET Framework 4.6.2|394802|
-|.NET framework 4.7|460798|
-|.NET Framework 4.7.1|461308|
-|.NET Framework 4.7.2|461808|
+|.NET Framework 4.5|Wszystkie systemy operacyjne Windows: 378389|
+|.NET Framework 4.5.1|Windows 8.1 i Windows Server 2012 R2: 378675<br />Na wszystkich innych Windows systemów operacyjnych: 378758|
+|.NET Framework 4.5.2|Wszystkie systemy operacyjne Windows: 379893|
+|.NET Framework 4.6|W systemie Windows 10: 393295<br />Na wszystkich innych Windows systemów operacyjnych: 393297|
+|.NET Framework 4.6.1|W systemach Windows 10 listopada Update: 394254<br />Na wszystkich innych Windows systemów (w tym Windows 10): 394271|
+|.NET Framework 4.6.2|W Rocznicowej aktualizacji systemu Windows 10 i Windows Server 2016: 394802<br />Na wszystkich innych Windows systemów (łącznie z innymi systemami operacyjnymi Windows 10): 394806|
+|.NET framework 4.7|W systemie Windows 10 dla kreatywnych: 460798<br />Na wszystkich innych Windows systemów (łącznie z innymi systemami operacyjnymi Windows 10): 460805| 
+|.NET Framework 4.7.1|W Windows 10 Fall Creators Update i Windows Server w wersji 1709. 461308<br/>Na wszystkich innych Windows systemów (łącznie z innymi systemami operacyjnymi Windows 10): 461310|
+|.NET Framework 4.7.2|W systemie Windows 10 kwietnia 2018 Update i Windows Server w wersji 1803: 461808<br/>We wszystkich systemach operacyjnych Windows innych niż Windows 10 kwietnia 2018 Update i Windows Server w wersji 1803: 461814|  
 
-Aby uzyskać pełną tabelę klawiszy wersji dla programu .NET Framework dla określonej wersji systemu operacyjnego Windows, zobacz [kluczy wersji .NET Framework i wersji systemu operacyjnego Windows](release-keys-and-os-versions.md).
+Można użyć tych wartości w następujący sposób:
 
+- Aby ustalić, czy określonej wersji programu .NET Framework jest zainstalowana na konkretnej wersji systemu operacyjnego Windows, należy przetestować czy **wersji** jest wartość DWORD *równa* wartości na liście Tabela. Na przykład, aby ustalić, czy program .NET Framework 4.6 jest obecny w systemie Windows 10, testowania **wersji** wartość, która jest *równa* 393295.
+
+- Aby określić, czy minimalną wersję systemu .NET Framework jest obecny, należy użyć mniejszego **wersji** wartość DWORD dla danej wersji. Na przykład, jeśli aplikacja działa w ramach platformy .NET Framework 4.6 lub nowszej wersji, testowania **wersji** wartość DWORD *większa lub równa* 393295. Aby uzyskać tabelę, która zawiera tylko minimalne **wersji** wartość DWORD dla każdej wersji systemu .NET Framework, zobacz [minimalnej wartości DWORD wersji .NET Framework 4.5 i nowsze wersje](minimum-release-dword.md).
+
+- Aby przetestować dla różnych wersji, najpierw testowanie pod kątem wartość, która jest *większa lub równa* mniejsze wartości DWORD wartości dla najnowszej wersji .NET Framework, a następnie porównanie wartości z mniejszą wartość DWORD dla każdego kolejnych starszej wersji. Na przykład, jeśli aplikacja wymaga programu .NET Framework w wersji 4.7 lub nowszej, a użytkownik chce ustalenie określonej wersji programu .NET Framework jest obecny, Rozpocznij od testowanie pod kątem **wersji** wartość DWORD *większy niż lub równe*  do 461808 (mniejszą wartość DWORD na platformie .NET 4.7.2). Następnie porównaj **wersji** wartość DWORD o mniejszej wartości każdego nowszej wersji .NET Framework. Aby uzyskać tabelę, która zawiera tylko minimalne **wersji** wartość DWORD dla każdej wersji systemu .NET Framework, zobacz [minimalnej wartości DWORD wersji .NET Framework 4.5 i nowsze wersje](minimum-release-dword.md).
 
 <a name="net_d"></a> 
 ### <a name="find-net-framework-versions-45-and-later-with-code"></a>Znajdź wersje programu .NET Framework 4.5 lub nowszy z kodem

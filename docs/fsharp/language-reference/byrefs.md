@@ -2,12 +2,12 @@
 title: Zkratka
 description: Dowiedz się więcej o byref i typami byref podobne w F#, które są używane do programowania niskiego poziomu.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976554"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055368"
 ---
 # <a name="byrefs"></a>Zkratka
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 Można zapisać do wskaźnika za pomocą `outref<'T>` lub `byref<'T>`, należy również upewnić wartość, Pobierz wskaźnik do `mutable`.
@@ -84,7 +85,7 @@ Jeśli piszesz wskaźnika zamiast wczytaniem go, należy wziąć pod uwagę przy
 Rozważmy poniższy kod:
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 Semantycznie oznacza to, że:
@@ -111,17 +112,17 @@ C# obsługuje `in ref` i `out ref` słów kluczowych, oprócz `ref` zwraca. W po
 
 |Konstrukcja w języku C#|F#wnioskuje|
 |------------|---------|
-|`ref` Wartość zwracana|`outref<'T>`|
-|`ref readonly` Wartość zwracana|`inref<'T>`|
-|`in ref` Parametr|`inref<'T>`|
-|`out ref` Parametr|`outref<'T>`|
+|`ref` wartość zwrócona|`outref<'T>`|
+|`ref readonly` wartość zwrócona|`inref<'T>`|
+|`in ref` parametr|`inref<'T>`|
+|`out ref` parametr|`outref<'T>`|
 
 W poniższej tabeli przedstawiono co F# emituje:
 
 |F#konstrukcja|Konstrukcja emitowany|
 |------------|-----------------|
 |`inref<'T>` Argument|`[In]` argument atrybutu|
-|`inref<'T>` Wróć|`modreq` atrybut na wartość|
+|`inref<'T>` return|`modreq` atrybut na wartość|
 |`inref<'T>` w abstrakcyjny gniazdo lub wdrożenia|`modreq` argument lub zwracany|
 |`outref<'T>` Argument|`[Out]` argument atrybutu|
 

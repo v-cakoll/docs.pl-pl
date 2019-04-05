@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376107"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055342"
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
 Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować prezentację danych. Formanty WPF posiada wbudowanej funkcji obsługującej Dostosowywanie prezentacji danych. W tym temacie najpierw pokazano, jak zdefiniować <xref:System.Windows.DataTemplate> i następnie wprowadza inne funkcje szablonów dane, takie jak wybór szablony na podstawie logiki niestandardowej i pomoc techniczna dotycząca wyświetlania danych hierarchicznych.  
@@ -41,7 +41,7 @@ Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować 
 ### <a name="without-a-datatemplate"></a>Bez DataTemplate  
  Bez <xref:System.Windows.DataTemplate>, nasze <xref:System.Windows.Controls.ListBox> obecnie wygląda następująco:  
   
- ![Zrzut ekranu przedstawiający przykład szablonowanie danych](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
  Co się dzieje jest fakt, że bez żadnych szczególnych instrukcji <xref:System.Windows.Controls.ListBox> przez domyślną funkcję wywołania `ToString` podczas próby wyświetlenia obiektów w kolekcji. W związku z tym jeśli `Task` obiektu zastąpienia `ToString` metody, a następnie <xref:System.Windows.Controls.ListBox> wyświetlany jest ciąg reprezentujący każdego obiektu źródłowego w kolekcji źródłowej.  
   
@@ -52,7 +52,7 @@ Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować 
   
  A następnie <xref:System.Windows.Controls.ListBox> wygląda podobnie do następującego:  
   
- ![Zrzut ekranu przedstawiający przykład szablonowanie danych](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
  Dotyczy to jednak ograniczającą i sztywny. Ponadto jeśli dokonywane jest wiązanie [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych, nie będziesz mieć możliwości do zastąpienia `ToString`.  
   
@@ -66,7 +66,7 @@ Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować 
   
  Obecnie nasz <xref:System.Windows.Controls.ListBox> wygląda podobnie do następującego:  
   
- ![Zrzut ekranu przedstawiający przykład szablonowanie danych](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>Tworzenie DataTemplate jako zasób  
@@ -103,7 +103,7 @@ Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować 
   
  Poniższy zrzut ekranu przedstawia <xref:System.Windows.Controls.ListBox> z tym zmodyfikowane <xref:System.Windows.DataTemplate>:  
   
- ![Zrzut ekranu przedstawiający przykład szablonowanie danych](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
  Firma Microsoft można ustawić <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> do <xref:System.Windows.HorizontalAlignment.Stretch> na <xref:System.Windows.Controls.ListBox> się upewnić, że szerokość elementy zajmuje całe miejsce:  
   
@@ -111,7 +111,7 @@ Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować 
   
  Za pomocą <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> właściwością <xref:System.Windows.HorizontalAlignment.Stretch>, <xref:System.Windows.Controls.ListBox> teraz wygląda następująco:  
   
- ![Zrzut ekranu przedstawiający przykład szablonowanie danych](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
 ### <a name="use-datatriggers-to-apply-property-values"></a>Umożliwia stosowanie wartości właściwości DataTriggers  
@@ -125,7 +125,7 @@ Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować 
   
  Obecnie nasza aplikacja wygląda podobnie do poniższego. Głównego zadania są wyświetlane z żółte obramowanie i zadania pakietu office są wyświetlane z obramowaniem Akwamaryna:  
   
- ![Zrzut ekranu przedstawiający przykład szablonowanie danych](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
  W tym przykładzie <xref:System.Windows.DataTrigger> używa <xref:System.Windows.Setter> można ustawić wartości właściwości. Klasy wyzwalacza również mieć <xref:System.Windows.TriggerBase.EnterActions%2A> i <xref:System.Windows.TriggerBase.ExitActions%2A> właściwości, które umożliwiają uruchomienie zestaw akcji, takich jak animacji. Ponadto dostępna jest również <xref:System.Windows.MultiDataTrigger> klasy, która pozwala na zastosowanie zmian na podstawie wielu powiązanych z danymi wartości właściwości.  
   
@@ -165,7 +165,7 @@ W poprzednim przykładzie, możemy umieścić wyzwalacza w ramach <xref:System.W
   
  Za pomocą selektora szablonu w miejscu <xref:System.Windows.Controls.ListBox> wygląda teraz następująco:  
   
- ![Zrzut ekranu przedstawiający przykład szablonowanie danych](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![Zrzut ekranu przykładu szablonowanie danych](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
 Zakończenie naszej dyskusji w tym przykładzie. Aby uzyskać pełny przykład, zobacz [wprowadzenie do próbki Szablonowanie danych](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
 
@@ -191,11 +191,11 @@ Zakończenie naszej dyskusji w tym przykładzie. Aby uzyskać pełny przykład, 
   
  W przykładzie pokazano, że przy użyciu <xref:System.Windows.HierarchicalDataTemplate>, można łatwo wyświetlić dane z listy, który zawiera inne listy. Poniżej przedstawiono zrzut ekranu przykładu.  
   
- ![Zrzut ekranu przedstawiający przykładowy obiekt HierarchicalDataTemplate przykład](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![Zrzut ekranu przykładu przykładowy obiekt HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Zobacz także
 - [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)
 - [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [GridView — style i szablony nagłówków kolumn — omówienie](../controls/gridview-column-header-styles-and-templates-overview.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [Przegląd Style nagłówka kolumn i szablonów GridView](../controls/gridview-column-header-styles-and-templates-overview.md)

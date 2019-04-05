@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: 246c5f489f4cc0076303de8383506898fe053ae5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1135cf211c3a858f495cd1424d3a28f3a6c37f7e
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843155"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054965"
 ---
 # <a name="duplex"></a>Dupleks
 Dwukierunkowe przykładowych pokazano, jak definiować ani implementować kontraktu dwukierunkowego. Komunikację dupleksową występuje, gdy klient ustanawia sesję z usługą i zapewnia usługi kanału, na którym usługa może wysłać wiadomości zwrotnie do klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Kontrakt dupleksu jest zdefiniowany jako pary interfejsów — podstawowy interfejs od klienta do usługi i interfejs wywołania zwrotnego z usługi do klienta. W tym przykładzie `ICalculatorDuplex` interfejs umożliwia klientowi do wykonywania operacji matematycznych obliczania wyniku za pośrednictwem sesji. Usługa zwraca wyniki w `ICalculatorDuplexCallback` interfejsu. Kontrakt dupleksowy wymaga elementu session, ponieważ kontekst muszą być ustalane do skorelowania zestaw komunikatów przesyłanych między klientem a usługą.  
@@ -61,14 +61,14 @@ public class CalculatorService : ICalculatorDuplex
   
     public void Clear()  
     {  
-        Callback.Equation(equation + " = " + result.ToString());  
+        Callback.Equation($"{equation} = {result}");  
         equation = result.ToString();  
     }  
   
     public void AddTo(double n)  
     {  
         result += n;  
-        equation += " + " + n.ToString();  
+        equation += $" + {n}";  
         Callback.Result(result);  
     }  
     

@@ -1,11 +1,17 @@
 ---
-title: 'Parametry - C# przewodnik programowania'
+title: Parametry - C# przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, strings'
-  - 'strings [C#]'
+- C# language, strings
+- strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
+ms.openlocfilehash: 9561393a78ffbf9c2bec98c849c389b92227db78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373455"
 ---
 # <a name="strings-c-programming-guide"></a><span data-ttu-id="b7b6e-102">Ciągi (Przewodnik programowania w języku C#)</span><span class="sxs-lookup"><span data-stu-id="b7b6e-102">Strings (C# Programming Guide)</span></span>
 <span data-ttu-id="b7b6e-103">Ciąg jest obiektem typu <xref:System.String> którego wartość jest wartością tekstową.</span><span class="sxs-lookup"><span data-stu-id="b7b6e-103">A string is an object of type <xref:System.String> whose value is text.</span></span> <span data-ttu-id="b7b6e-104">Wewnętrznie, tekst jest przechowywany jako sekwencyjną kolekcją tylko do odczytu z <xref:System.Char> obiektów.</span><span class="sxs-lookup"><span data-stu-id="b7b6e-104">Internally, the text is stored as a sequential read-only collection of <xref:System.Char> objects.</span></span> <span data-ttu-id="b7b6e-105">Brak nie znaku zakończenia o wartości null na końcu ciągu języka C#; w związku z tym ciąg języka C# może zawierać dowolną liczbę osadzone znaki null ('\0').</span><span class="sxs-lookup"><span data-stu-id="b7b6e-105">There is no null-terminating character at the end of a C# string; therefore a C# string can contain any number of embedded null characters ('\0').</span></span> <span data-ttu-id="b7b6e-106"><xref:System.String.Length%2A> Właściwość ciągu reprezentuje liczbę `Char` obiektów zawiera, nie liczbę znaków Unicode.</span><span class="sxs-lookup"><span data-stu-id="b7b6e-106">The <xref:System.String.Length%2A> property of a string represents the number of `Char` objects it contains, not the number of Unicode characters.</span></span> <span data-ttu-id="b7b6e-107">Aby uzyskać dostęp do poszczególnych punkty kodowe Unicode w ciągu, należy użyć <xref:System.Globalization.StringInfo> obiektu.</span><span class="sxs-lookup"><span data-stu-id="b7b6e-107">To access the individual Unicode code points in a string, use the <xref:System.Globalization.StringInfo> object.</span></span>  

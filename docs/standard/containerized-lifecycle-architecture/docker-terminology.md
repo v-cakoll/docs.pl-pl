@@ -1,17 +1,17 @@
 ---
-title: Terminologia platformy docker
+title: Terminologia platformy Docker
 description: Dowiedz się, niektóre podstawowej terminologii, który został użyty codziennie podczas pracy z platformą Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677185"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920652"
 ---
-# <a name="docker-terminology"></a>Terminologia platformy docker
+# <a name="docker-terminology"></a>Terminologia platformy Docker
 
 W tej sekcji przedstawiono terminów i definicje, które należy zapoznać się z przed pobraniem bardziej platformy docker. Dodatkowo definicji, zobacz rozbudowane [słownik](https://docs.docker.com/glossary/) dostarczane przez platformę Docker.
 
@@ -33,7 +33,7 @@ W tej sekcji przedstawiono terminów i definicje, które należy zapoznać się 
 
 **Rejestr**: To usługa, która zapewnia dostęp do repozytoriów. Rejestr domyślne obrazy najbardziej publiczny jest [usługi Docker Hub](https://hub.docker.com/) (właściciel platformy Docker jako organizacja). Rejestr zawiera zazwyczaj repozytoriów z wielu zespołów. Firmy często mają prywatnych rejestrów do przechowywania i zarządzania obrazami, którym zostały utworzone. Usługa Azure Container Registry jest inny przykład.
 
-**Obraz architektury wielu**: W przypadku wielu architektury jest funkcja, która ułatwia wybór odpowiedniej obrazu, zależnie od platformy, której platformy Docker jest uruchomiona, na przykład, gdy plik Dockerfile żąda obrazu podstawowego **`FROM microsoft/dotnet:2.1-sdk`** z rejestru faktycznie pobiera **`2.1-sdk-nanoserver-1709`**, **`2.1-sdk-nanoserver-1803`** lub **`2.1-sdk-alpine`**, w zależności od systemu operacyjnego i wersji, w którym platformy Docker jest uruchomiona.
+**Obraz architektury wielu**: W przypadku wielu architektury jest funkcja, która ułatwia wybór odpowiedniej obrazu, zależnie od platformy, której platformy Docker jest uruchomiona, na przykład, gdy plik Dockerfile żąda obrazu podstawowego **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** z rejestru faktycznie pobiera **`2.1-nanoserver-1709`**, **`2.1-nanoserver-1803`**, **`2.1-nanoserver-1809`** lub **`2.1-stretch`**, w zależności od systemu operacyjnego i wersji, w którym platformy Docker jest uruchomiona.
 
 **Docker Hub**: Publicznego rejestru przekazywania obrazów i pracować z nimi. Usługi docker Hub udostępnia platformy Docker hostingu obrazu, publicznych lub prywatnych rejestrów, wyzwalaczy kompilacji oraz elementów web hook i integracja z usługą GitHub i Bitbucket.
 

@@ -14,7 +14,7 @@ items:
     href: preprocessor-define.md
   - name: '#undef'
     href: preprocessor-undef.md
-  - name: '#ostrzeżenie'
+  - name: '#warning'
     href: preprocessor-warning.md
   - name: '#error'
     href: preprocessor-error.md

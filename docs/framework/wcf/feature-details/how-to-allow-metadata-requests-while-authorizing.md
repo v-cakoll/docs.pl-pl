@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zezwalanie na żądania metadanych podczas autoryzowania'
+title: 'Instrukcje: zezwalanie na żądania metadanych podczas autoryzowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 820725e22c8f07c10212f434e377d5b039cc75e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4d549bb953ecdcbddd0ea4730a766538b2205d0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082675"
 ---
-# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Instrukcje: Zezwalanie na żądania metadanych podczas autoryzowania
+# <a name="how-to-allow-metadata-requests-while-authorizing"></a>Instrukcje: zezwalanie na żądania metadanych podczas autoryzowania
 Podczas autoryzacji niestandardowej może być konieczne do umożliwienia żądanie metadanych do przetworzenia. Poniższy temat przedstawiono kroki, aby sprawdzić takie żądanie.  
   
  Aby uzyskać więcej informacji na temat autoryzacji Windows Communication Foundation (WCF), zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -36,6 +36,7 @@ Podczas autoryzacji niestandardowej może być konieczne do umożliwienia żąda
  [!code-vb[C_HowtoCheckForMexRequestsInAuthorization#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtocheckformexrequestsinauthorization/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

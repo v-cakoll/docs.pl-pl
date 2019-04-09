@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-ms.openlocfilehash: 60fc567a700bdfc8cfe088f4d31a68fd5de9aa29
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158649"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Formatowanie danych w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Control oferuje automatyczna konwersja między wartości komórek i typy danych, które są wyświetlane kolumny nadrzędnej. Tekst pola kolumny, na przykład wyświetlanie ciągów reprezentujących daty, godziny, liczby i wartości wyliczenia i konwertowanie wartości ciągu wprowadzonych przez użytkownika typy wymagane przez Magazyn danych.  
@@ -32,9 +32,10 @@ ms.locfileid: "57722051"
  Jeśli domyślne podczas analizowania wartości określonych przez użytkownika nie odpowiada Twoim potrzebom, które ułatwią Ci obsługę <xref:System.Windows.Forms.DataGridView.CellParsing> zdarzenia <xref:System.Windows.Forms.DataGridView> formantu, aby podać niestandardowy analizy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
-- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Formatowanie danych w Windows formantu DataGridView formularzy](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Style komórki w formancie DataGridView formularzy systemu Windows](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: formatowanie danych w kontrolce DataGridView formularzy systemu Windows](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy systemu Windows](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

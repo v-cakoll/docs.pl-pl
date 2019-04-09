@@ -1,5 +1,5 @@
 ---
-title: <specifiedPickupDirectory> — Element (Ustawienia sieci)
+title: <specifiedPickupDirectory> Element (ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#specifiedPickupDirectory
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 6abee1b01e690633dabfd225b30fcb9b8b408dad
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a459fee557285935c383dcfaf512c8a8a9aea570
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099277"
 ---
 # <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory >, Element (ustawienia sieci)
 Konfiguruje katalog lokalny dla serwera transportu protokołu SMTP (Simple Mail).  
@@ -71,6 +71,7 @@ Konfiguruje katalog lokalny dla serwera transportu protokołu SMTP (Simple Mail)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>

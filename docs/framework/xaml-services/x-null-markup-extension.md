@@ -12,12 +12,12 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: 34a2de71bec9b0929070aa908741de38b5904643
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58029365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100811"
 ---
 # <a name="xnull-markup-extension"></a>x:Null — Rozszerzenie znaczników
 Określa `null` jako wartość dla elementu członkowskiego XAML.  
@@ -45,6 +45,7 @@ Określa `null` jako wartość dla elementu członkowskiego XAML.
  Należy pamiętać, że `null` niekoniecznie jest początkowa nie ustawiono wartość dla właściwości zależności typu odwołania. Wartość domyślna początkowej mogą się różnić dla każdej właściwości zależności i mogą opierać się na metadane właściwe dla właściwości. Wiele właściwości zależności nie są akceptowane `null` jako wartość za pomocą znaczników lub innego kodu ze względu na ich implementacji wywołanie zwrotne weryfikacji. Aby uzyskać więcej informacji na temat właściwości zależności zobacz [Przegląd właściwości zależności](../wpf/advanced/dependency-properties-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.DependencyProperty.UnsetValue>
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

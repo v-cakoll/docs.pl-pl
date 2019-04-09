@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: 7717c6c2-85fc-418b-a8ed-bad8e61cec5c
-ms.openlocfilehash: 7c536c9420e94e9b8f8bc2656df284d95a9744c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d0967355e64640e0fd5c81f04a5bf4f33c7b3f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158668"
 ---
 # <a name="com-service-model-configuration-tool-comsvcconfigexe"></a>Narzędzie konfiguracji modelu usług COM+ (ComSvcConfig.exe)
 Narzędzie wiersza polecenia w konfiguracji modelu usług COM + (ComSvcConfig.exe) umożliwia skonfigurowanie interfejsów modelu COM + być udostępniane jako usługi sieci Web.  
@@ -44,7 +44,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Określa aplikacji COM +, aby skonfigurować.<br /><br /> Skrócona forma `/a`.|  
+|`/application:` \<*Identyfikator aplikacji* &#124; *ApplicationName*\>|Określa aplikacji COM +, aby skonfigurować.<br /><br /> Skrócona forma `/a`.|  
 |`/contract:` \<*Identyfikator klasy* &#124; *ProgID* &#124; \*,*InterfaceID* &#124; *InterfaceName*    &#124; \*\>|Określa składnik COM + i interfejs, który zostanie skonfigurowany jako kontraktu usługi.<br /><br /> Skrócona forma `/c`.<br /><br /> Podczas gdy znak symbolu wieloznacznego (\*) mogą być używane podczas określenia nazwy składnika i interfejs zaleca się nie korzystać, ponieważ może uwidaczniać interfejsy, które nie ma do.|  
 |`/hosting:` \<*complus*  &#124; *was*\>|Określa, czy używać modelu COM + hosting trybu lub trybie hostingu w sieci Web.<br /><br /> Skrócona forma `/h`.<br /><br /> Za pomocą modelu COM + hosting trybu wymaga jawnego aktywacji aplikacji COM +. Korzystanie z sieci Web w trybie hostingu umożliwia aplikacji COM + automatycznie aktywowane jako wymagane. Jeśli aplikacja COM + jest aplikacja biblioteki, działa w procesie Internet Information Services (IIS). Aplikacja modelu COM + w przypadku aplikacji serwera, jest uruchamiany w procesie Dllhost.exe.|  
 |`/webSite:` \<*WebsiteName*\>|Określa witryny sieci Web do hostowania, gdy tryb hostingu w sieci Web jest używana (zobacz `/hosting` flagi).<br /><br /> Skrócona forma `/w`.<br /><br /> Jeśli ma witryny sieci Web jest określony, domyślna witryna sieci Web jest używana.|  
@@ -95,4 +95,5 @@ ComSvcConfig.exe /list /application:OnlineStore /hosting:complus
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Używanie narzędzia konfiguracji modelu usług COM +](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+
+- [Instrukcje: używanie narzędzia konfiguracji modelu usług COM+](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

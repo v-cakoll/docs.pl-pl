@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 59384900226fbbcfc879650402b1a5df80b69cd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33473eadefabc2bcbbb552d225d021eae4bed0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169016"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Sortowanie elementów w sekwencji
 Użyj <xref:System.Linq.Enumerable.OrderBy%2A> operatora do sortowania sekwencji zgodnie z co najmniej jeden klucz.  
@@ -89,5 +89,6 @@ Użyj <xref:System.Linq.Enumerable.OrderBy%2A> operatora do sortowania sekwencji
  `Carnarvon Tigers`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

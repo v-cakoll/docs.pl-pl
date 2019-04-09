@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Tworzenie usług Windows'
+title: 'Instrukcje: Tworzenie usług systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: d0a450483c05a272fe799c7ee04e691cefbd2085
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 26c903379afcab3d2d534272912c046cdffb6fed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132499"
 ---
-# <a name="how-to-create-windows-services"></a>Instrukcje: Tworzenie usług Windows
+# <a name="how-to-create-windows-services"></a>Instrukcje: Tworzenie usług systemu Windows
 Podczas tworzenia usługi można użyć szablonu projektu programu Visual Studio o nazwie **usługi Windows**. Ten szablon automatycznie wykonuje znaczną część pracy za Ciebie, odwołując się do odpowiednich klas i przestrzenie nazw, konfigurując ustawienia dziedziczenia z klasy bazowej dla usług oraz zastępując kilka metod prawdopodobnie chcesz zastąpić.  
   
 > [!WARNING]
@@ -68,10 +68,11 @@ Podczas tworzenia usługi można użyć szablonu projektu programu Visual Studio
 8.  Zainstaluj usługę. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Instrukcje: Programowane pisanie usług](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)
 - [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Instrukcje: Dziennik informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [Instrukcje: Rejestrowanie informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
 - [Instrukcje: Uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Instrukcje: Określanie kontekstu zabezpieczeń dla usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
 - [Instrukcje: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)

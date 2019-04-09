@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 671ba0a5450918b8e0bee63d1a13b3188ef2ce0f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1291d4e69843db7bd90af07291da415220d98807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131361"
 ---
 # <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a>ICorRuntimeHost::SwitchOutLogicalThreadState — Metoda
 Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -49,4 +49,5 @@ HRESULT SwitchOutLogicalThreadState(
  **Wersja programu .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+
+- [ICorRuntimeHost — Interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

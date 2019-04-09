@@ -2,12 +2,12 @@
 title: Wybierz (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: b7e339764e5baee93ccac64cb41d7fba43438476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5bc3b795eb20551abda2104c2f399c8da10a962
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136022"
 ---
 # <a name="select-entity-sql"></a>Wybierz (jednostka SQL)
 Określa elementów zwróconych przez kwerendę.  
@@ -39,7 +39,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  Wyrażenie formularza:  
   
- `expr` jako `identifier`&#124; `expr`  
+ `expr` as `identifier` &#124; `expr`  
   
  `expr`  
  Literał lub wyrażenie.  
@@ -101,6 +101,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wyrażenia zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Wyrażenia kwerend](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

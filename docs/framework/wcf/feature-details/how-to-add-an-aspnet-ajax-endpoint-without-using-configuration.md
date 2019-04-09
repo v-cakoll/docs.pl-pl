@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji'
+title: 'Instrukcje: dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: df4ba9657fda458a1c6c2b1199fb688135a8fa2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: caaa89573d272c5d11d179b08c2d9e24c76d21e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140624"
 ---
-# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji
+# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Instrukcje: dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji
 Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udostępnia obsługą ASP.NET AJAX punktu końcowego, który może zostać wywołana z języka JavaScript w witrynie sieci Web klienta. Aby utworzyć punkt końcowy, można za pomocą pliku konfiguracji, jak wszystkie inne punkty końcowe WCF lub należy użyć metody, która nie wymaga żadnych elementów konfiguracji. W tym temacie przedstawiono drugiego podejścia.  
   
  Aby tworzyć usługi przy użyciu punktów końcowych ASP.NET AJAX bez konfiguracji, usług musi być hostowany przez Internetowe usługi informacyjne (IIS). Aby aktywować tę funkcję punktu końcowego ASP.NET AJAX przy użyciu tej metody, należy określić <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> jako parametr fabryki w [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy w pliku svc. Ta fabryka niestandardowego jest składnikiem, który automatycznie konfiguruje punktu końcowego ASP.NET AJAX, dzięki czemu może ona zostać wywołana z kodu JavaScript w witrynie sieci Web klienta.  
@@ -97,5 +97,6 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
  <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> Klasa jest klasy pochodnej <xref:System.ServiceModel.Activation.ServiceHostFactory>. Aby uzyskać szczegółowy opis mechanizm fabryka hostów usługi zobacz [rozszerzanie hostingu za pomocą elementu ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) tematu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie usług WCF w technologii AJAX na platformie ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [Instrukcje: Migrowanie usług internetowych platformy ASP.NET z włączoną obsługą technologii AJAX do programu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [Instrukcje: migrowanie usług internetowych obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

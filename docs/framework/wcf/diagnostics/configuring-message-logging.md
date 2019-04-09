@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112089"
 ---
 # <a name="configuring-message-logging"></a>Konfigurowanie rejestrowania komunikatów
 W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla różnych scenariuszy.  
@@ -104,7 +104,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla 
   
 ||Wyślij żądanie|Żądania odbioru|Wyślij odpowiedź|Odebrać odpowiedzi|  
 |-|------------------|---------------------|----------------|-------------------|  
-|Warstwy modelu usług|Usługa<br /><br /> Poziom<br /><br /> Wyślij<br /><br /> Żądanie|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Żądanie|Usługa<br /><br /> Poziom<br /><br /> Wyślij<br /><br /> Odpowiedz|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Odpowiedz|  
+|Warstwy modelu usług|Usługa<br /><br /> Poziom<br /><br /> Wyślij<br /><br /> Request|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Request|Usługa<br /><br /> Poziom<br /><br /> Wyślij<br /><br /> Odpowiedz|Usługa<br /><br /> Poziom<br /><br /> Odbieranie<br /><br /> Odpowiedz|  
 |Warstwa transportu|Transport<br /><br /> Wyślij|Transport<br /><br /> Odbieranie|Transport<br /><br /> Wyślij|Transport<br /><br /> Odbieranie|  
   
  Dla żądania jednokierunkowego  
@@ -164,6 +164,7 @@ W tym temacie opisano, jak można skonfigurować rejestrowanie komunikatów dla 
  Należy pamiętać, że `type` atrybutu powinna być równa kwalifikowaną nazwę typu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
 - [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Zalecane ustawienia śledzenia i rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

@@ -1,15 +1,15 @@
 ---
-title: Obsługa błędów w schematu blokowego przy użyciu działania TryCatch
+title: Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119811"
 ---
-# <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Obsługa błędów w schematu blokowego przy użyciu działania TryCatch
+# <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch
 W tym przykładzie pokazano sposób, w jaki <xref:System.Activities.Statements.TryCatch> działanie może być używane w ramach działania przepływu sterowania złożonego.
 
  W tym przykładzie kodu promocyjnego, a liczba elementów podrzędnych są przekazywane jako zmienne <xref:System.Activities.Statements.Flowchart> działania, który oblicza rabat w wysokości oparte na formuł, które odpowiadają kodu promocyjnego. Przykład obejmuje imperatywne wersje projektanta kodu i przepływ pracy próbki.
@@ -47,5 +47,6 @@ W tym przykładzie pokazano sposób, w jaki <xref:System.Activities.Statements.T
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przepływy pracy schematów blokowych](../flowchart-workflows.md)
 - [Wyjątki](../exceptions.md)

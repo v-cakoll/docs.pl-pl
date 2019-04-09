@@ -4,12 +4,12 @@ description: Obsługiwane wersje systemu macOS i zależności platformy .NET Cor
 author: guardrex
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: e895306164b93cb94dab2161971f99eae3138be9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
-ms.translationtype: MT
+ms.openlocfilehash: 937c9b88bb60fa22942cf9db0c41bec3f1cfecd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139454"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Wymagania wstępne dla platformy .NET Core w systemie macOS
 
@@ -17,7 +17,7 @@ W tym artykule przedstawiono macOS obsługiwane wersje i zależności platformy 
 
 ## <a name="supported-macos-versions"></a>Obsługiwane w systemie macOS w wersji
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 .NET core 2.x jest obsługiwane w następujących wersji systemu MacOS:
 
@@ -27,19 +27,18 @@ Zobacz [obsługiwane wersje systemu operacyjnego platformy .NET Core 2.1](https:
 
 Łącza pobierania oraz więcej informacji, zobacz [platformy .NET Core 2.2 pliki do pobrania](https://www.microsoft.com/net/download/dotnet-core/2.2) lub [platformy .NET Core 2.1 pliki do pobrania](https://www.microsoft.com/net/download/dotnet-core/2.1).
 
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 .NET core 1.x jest obsługiwane w następujących wersji systemu MacOS:
 
-* System macOS 10.12 "Sierra"
+* macOS 10.12 "Sierra"
 * System macOS 10.11 "El Capitan"
 
 Zobacz [obsługiwane wersje systemu operacyjnego platformy .NET Core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) i [obsługiwane wersje systemu operacyjnego platformy .NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pełną listę .NET Core 1.1 i platformy .NET Core 1.0 obsługiwane systemy operacyjne, dystrybucji i wersji, z obsługuje wersje systemów operacyjnych i łącza zasad cyklu życia.
 
 Łącza pobierania oraz więcej informacji, zobacz [pobiera .NET Core 1.1](https://www.microsoft.com/net/download/dotnet-core/1.1) lub [platformy .NET Core 1.0 pliki do pobrania](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET core 3.0 w wersji zapoznawczej 1](#tab/netcore30)
+# [<a name="net-core-30-preview-1"></a>.NET core 3.0 w wersji zapoznawczej 1](#tab/netcore30)
 
 .NET core 3.0 w wersji zapoznawczej 1 jest obsługiwane w następujących wersji systemu MacOS:
 
@@ -53,11 +52,11 @@ Zobacz [obsługiwane wersje systemu operacyjnego platformy .NET Core 3.0](https:
 
 ## <a name="net-core-dependencies"></a>Zależności platformy .NET core
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 Pobierz i zainstaluj zestaw .NET Core SDK z [pobiera .NET](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z [znane problemy dotyczące](https://github.com/dotnet/core/tree/master/release-notes/2.1) temacie zainstalowaną wersję.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 .NET core 1.x wymaga biblioteki OpenSSL, podczas uruchamiania w systemie macOS. Łatwym sposobem uzyskiwania OpenSSL polega na użyciu [Homebrew ("brew")](https://brew.sh/) Menedżer pakietów dla systemu macOS. Po zainstalowaniu *brew*, zainstalować protokół OpenSSL, wykonując następujące polecenia w wierszu terminalu (polecenie):
 
@@ -71,7 +70,7 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 Pobierz i zainstaluj zestaw .NET Core SDK z [pobiera .NET](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z [1.0.0 znane problemy](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) i [1.0.1 — znane problemy](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) tematów.
 
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET core 3.0 w wersji zapoznawczej 1](#tab/netcore30)
+# [<a name="net-core-30-preview-1"></a>.NET core 3.0 w wersji zapoznawczej 1](#tab/netcore30)
 
 Pobierz i zainstaluj zestaw .NET Core SDK z [pobiera .NET](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją w systemie macOS, zapoznaj się z [informacje o wersji](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) temacie zainstalowaną wersję.
 

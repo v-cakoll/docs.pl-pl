@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088824"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mapowanie właściwości Windows Forms i WPF
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] technologie mają dwa modele inną właściwość. *Mapowanie właściwości* obsługuje współdziałanie między dwoma architekturami i zapewnia następujące możliwości:  
@@ -135,9 +135,10 @@ ms.locfileid: "57358564"
 |<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Integration.ElementHost> Kontrolować zestawy <xref:System.Windows.UIElement.Visibility%2A> właściwości hostowanego elementu za pomocą następujących reguł:<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> = `true` mapuje <xref:System.Windows.Visibility.Visible>.<br />-   <xref:System.Windows.Forms.Control.Visible%2A> = `false` mapuje <xref:System.Windows.Visibility.Hidden>.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
+- [WPF i Win32 — Współdziałanie](wpf-and-win32-interoperation.md)
 - [Współdziałanie WPF i Windows Forms](wpf-and-windows-forms-interoperation.md)
-- [Przewodnik: Mapowanie właściwości z użyciem elementu WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Przewodnik: Mapowanie właściwości z użyciem formantu ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [Przewodnik: mapowanie właściwości przy użyciu kontrolki WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [Przewodnik: mapowanie właściwości przy użyciu kontrolki ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)

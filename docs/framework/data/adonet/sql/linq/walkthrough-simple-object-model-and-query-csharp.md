@@ -1,15 +1,15 @@
 ---
-title: 'Przewodnik: Prosty Model obiektu i zapytanie (C#)'
+title: 'Przewodnik: Prosty model obiektu i zapytanie (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 25e23b77f6f5547a5516c6db240537cb00685edc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155132"
 ---
-# <a name="walkthrough-simple-object-model-and-query-c"></a>Przewodnik: Prosty Model obiektu i zapytanie (C#)
+# <a name="walkthrough-simple-object-model-and-query-c"></a>Przewodnik: Prosty model obiektu i zapytanie (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza minimalnej złożoności. Utworzy klasę jednostki, który modeluje tabelę Klienci w przykładowej bazie danych Northwind. Spowoduje to utworzenie prostego zapytania do listy klientów, którzy znajdują się w Londynie.  
   
  Ten przewodnik jest zorientowany kodu zgodnie z projektem, aby ułatwić wyświetlanie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] pojęcia. Zwykle rzecz biorąc, należy użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do tworzenia modelu obiektu.  
@@ -155,4 +155,5 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
  Jeśli chcesz wykonać instrukcje przedstawione zapytań w relacjach, upewnij się zapisać rozwiązanie przewodnik, który właśnie został ukończony, który jest wymaganiem wstępnym.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

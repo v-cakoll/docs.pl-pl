@@ -1,19 +1,19 @@
 ---
-title: 'Przewodnik: Utwórz przycisk przy użyciu Microsoft Expression Blend'
+title: 'Przewodnik: Tworzenie przycisku przy użyciu programu Microsoft Expression Blend'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100122"
 ---
-# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Przewodnik: Utwórz przycisk przy użyciu Microsoft Expression Blend
+# <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Przewodnik: Tworzenie przycisku przy użyciu programu Microsoft Expression Blend
 Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dostosowany przycisk przy użyciu Microsoft Expression Blend.  
   
 > [!IMPORTANT]
@@ -248,8 +248,9 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
 -   Różne: Tworzenie gradientów, Dodaj BitmapEffects, użyj przekształceń i ustaw podstawowe właściwości obiektów.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie przycisku przy użyciu XAML](walkthrough-create-a-button-by-using-xaml.md)
+
+- [Tworzenie przycisku przy użyciu języka XAML](walkthrough-create-a-button-by-using-xaml.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Animacja — przegląd](../graphics-multimedia/animation-overview.md)
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Efekty mapy bitowej — przegląd](../graphics-multimedia/bitmap-effects-overview.md)
+- [Przegląd Animacja](../graphics-multimedia/animation-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Przegląd Efekty mapy bitowej](../graphics-multimedia/bitmap-effects-overview.md)

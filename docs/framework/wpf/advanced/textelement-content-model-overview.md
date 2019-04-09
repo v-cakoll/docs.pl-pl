@@ -9,17 +9,16 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 935d86195acaca94b0115a8cdcf7289c23613f7f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125123"
 ---
 # <a name="textelement-content-model-overview"></a>Przegląd Model zawartości TextElement
 Ten przegląd model zawartości w tym artykule opisano obsługiwane zawartość <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Klasa jest typem <xref:System.Windows.Documents.TextElement>. Model zawartości w tym artykule opisano obiekty/elementy mogą być zawarte w innym. W tym omówieniu przedstawiono podsumowanie model zawartości używane dla obiektów pochodzących od <xref:System.Windows.Documents.TextElement>. Aby uzyskać więcej informacji, zobacz [Przegląd dokumentu przepływu](flow-document-overview.md).  
-  
-  
+
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>Diagram modelu zawartości  
  Poniższy diagram przedstawia model zawartości dla klasy pochodne <xref:System.Windows.Documents.TextElement> oraz jak inne non - `TextElement` klasy do takiego modelu pasuje.  
@@ -102,6 +101,7 @@ Ten przegląd model zawartości w tym artykule opisano obsługiwane zawartość 
  Zobacz [Model zawartości WPF](../controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzanie parametrem FlowDocument przez właściwość Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Zarządzanie przepływem elementów zawartości za pomocą właściwości Blocks](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [Zarządzanie parametrem FlowDocument przez właściwość Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)

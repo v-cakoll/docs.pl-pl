@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Drukowanie formularza Windows'
+title: 'Instrukcje: Drukowanie formularza systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 80bf88ad048e55a381d034d2a796de6f77f8691c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121969"
 ---
-# <a name="how-to-print-a-windows-form"></a>Instrukcje: Drukowanie formularza Windows
+# <a name="how-to-print-a-windows-form"></a>Instrukcje: Drukowanie formularza systemu Windows
 Jako część procesu projektowania zazwyczaj można wydrukować formularza Windows. Poniższy przykład kodu pokazuje jak drukować kopię bieżącego formularza za pomocą <xref:System.Drawing.Graphics.CopyFromScreen%2A> metody.  
   
 ## <a name="example"></a>Przykład  
@@ -38,6 +38,7 @@ Jako część procesu projektowania zazwyczaj można wydrukować formularza Wind
  Aby można było uruchomić ten przykład kodu, musi mieć uprawnienia dostępu do drukarki, używanej do komputera.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Instrukcje: Renderowanie obrazów za pomocą GDI +](how-to-render-images-with-gdi.md)
-- [Instrukcje: Drukowanie grafiki w formularzach Windows Forms](how-to-print-graphics-in-windows-forms.md)
+- [Instrukcje: Renderowanie obrazów za pomocą GDI+](how-to-render-images-with-gdi.md)
+- [Instrukcje: Drukowanie grafiki w formularzach systemu Windows](how-to-print-graphics-in-windows-forms.md)

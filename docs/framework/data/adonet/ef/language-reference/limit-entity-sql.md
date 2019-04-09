@@ -2,12 +2,12 @@
 title: LIMIT (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 945aec734f7e71c2a2f24c9bb3632030cede15ec
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 44b28ec265a18632e936ba05e25840a03f68da90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119018"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (jednostka SQL)
 Stronicowanie fizycznych można wykonać przy użyciu Podklauzula LIMIT w klauzuli ORDER BY. OGRANICZENIE nie może służyć oddzielnie od klauzuli ORDER BY.  
@@ -37,6 +37,7 @@ Stronicowanie fizycznych można wykonać przy użyciu Podklauzula LIMIT w klauzu
  [!code-csharp[DP EntityServices Concepts 2#LIMIT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#limit)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
 - [Instrukcje: Przejrzyj wyniki zapytania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [Stronicowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)

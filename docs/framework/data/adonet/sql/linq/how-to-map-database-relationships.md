@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 907ed58e9828921585135f2319d0db9559b606d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152883"
 ---
 # <a name="how-to-map-database-relationships"></a>Instrukcje: Mapowanie relacji w bazie danych
 Możesz zakodować jako właściwość odwołuje się w klasie jednostki relacji między danymi, które będą zawsze takie same. W bazie danych Northwind na przykład, ponieważ klienci zwykle składanie zamówień, istnieje relacja zawsze w modelu od klientów i zamówienia.  
@@ -54,5 +54,6 @@ Możesz zakodować jako właściwość odwołuje się w klasie jednostki relacji
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

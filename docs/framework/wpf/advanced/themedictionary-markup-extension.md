@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 0bc4b2a11927bd2551dc322c5a856ade9a85c8b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132096"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary — Rozszerzenie znaczników
 Umożliwia autorom kontrolkę niestandardową lub aplikacje, które integrują się formanty innych firm, aby załadować słowniki zasobów specyficznych dla motywów do użycia w style kontrolki.  
@@ -64,7 +64,8 @@ Umożliwia autorom kontrolkę niestandardową lub aplikacje, które integrują s
  `ThemeDictionary` jest rozszerzeniem znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Użyj {i} znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą którego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora rozpoznaje, że rozszerzenie znacznika musi wykonać przetwarzanie atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
-- [Zasoby aplikacji WPF, zawartość i pliki danych](../app-development/wpf-application-resource-content-and-data-files.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Zasoby aplikacji WPF, zawartość, pliki danych](../app-development/wpf-application-resource-content-and-data-files.md)

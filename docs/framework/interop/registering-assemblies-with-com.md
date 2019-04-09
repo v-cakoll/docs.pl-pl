@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169029"
 ---
 # <a name="registering-assemblies-with-com"></a>Rejestrowanie zestawów do użycia z modelem COM
 Można uruchomić z wiersza polecenia narzędzia o nazwie [narzędzie rejestracji zestawów (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) Aby zarejestrować lub wyrejestrować zestawu do użycia w modelu COM. Regasm.exe dodaje informacje o klasie do rejestru systemowego dzięki klientów modelu COM za pomocą klasy .NET Framework w sposób niewidoczny dla użytkownika. <xref:System.Runtime.InteropServices.RegistrationServices> Klasa oferuje podobne funkcje.  
@@ -44,7 +44,8 @@ Można uruchomić z wiersza polecenia narzędzia o nazwie [narzędzie rejestracj
  Aby uzyskać `InprocServer32` podklucza, odwołanie do Mscoree.dll pojawia się zamiast tradycyjnych bibliotece typów modelu COM, aby wskazać, że środowiska uruchomieniowego języka wspólnego tworzy zarządzany obiekt.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
-- [Instrukcje: Odwołanie do typów .NET z modelu COM](how-to-reference-net-types-from-com.md)
+- [Instrukcje: Odwołania do typów .NET z modelu COM](how-to-reference-net-types-from-com.md)
 - [Wywołanie obiektu .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [Wdrażanie aplikacji dla dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Wdrażanie aplikacji do dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

@@ -1,5 +1,5 @@
 ---
-title: <settings> — Element (Ustawienia sieci)
+title: <settings> Element (ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: 839907d9339d459070fff12dbca22d3c2df5b020
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260622"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096930"
 ---
 # <a name="settings-element-network-settings"></a>\<Ustawienia >, Element (ustawienia sieci)
 Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net?displayProperty=nameWithType> przestrzeni nazw.  
@@ -51,7 +51,7 @@ Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net?displayProperty=nameW
 |[Protokół IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Włącza protokołu internetowego w wersji 6 (IPv6) pomocy technicznej.|  
 |[\<performanceCounter >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Liczniki wydajności funkcji sieciowych umożliwia.|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Służy do konfigurowania połączeń z zasobami sieciowymi.|  
-|[Gniazda](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Określa, czy operacje gniazda używają portów.|  
+|[gniazdo](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Określa, czy operacje gniazda używają portów.|  
 |[\<webproxyscript — >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Konfiguruje właściwości skryptu używanej do odnajdywania serwerów proxy sieci Web.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -66,5 +66,6 @@ Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net?displayProperty=nameW
  Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net?displayProperty=nameWithType>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

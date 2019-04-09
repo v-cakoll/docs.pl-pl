@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Rysowanie niestandardowego formantu ToolStrip'
+title: 'Instrukcje: niestandardowy rysunek kontrolki ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172190"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>Instrukcje: Rysowanie niestandardowego formantu ToolStrip
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>Instrukcje: niestandardowy rysunek kontrolki ToolStrip
 <xref:System.Windows.Forms.ToolStrip> Kontrolki skojarzone renderowania klasy (związane z malowaniem) dysponować następującymi elementami:  
   
 -   <xref:System.Windows.Forms.ToolStripSystemRenderer> udostępnia wygląd i rodzaj systemu operacyjnego.  
@@ -134,9 +134,10 @@ ms.locfileid: "57705756"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [Kontrolki z wbudowaną obsługą rysowania przez właściciela](controls-with-built-in-owner-drawing-support.md)
-- [Instrukcje: Tworzenie i ustawienie niestandardowego modułu renderowania dla formantu ToolStrip w formularzach Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Formanty z wbudowaną obsługą rysowania przez właściciela](controls-with-built-in-owner-drawing-support.md)
+- [Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach systemu Windows](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)

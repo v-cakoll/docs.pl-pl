@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153247"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
 Windows Communication Foundation (WCF) zapewnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli już używasz logiki oparty na komponentach aplikacji hostowanej w modelu COM +, można użyć programu WCF do rozszerzenia Twojej istniejącej logiki, a nie po prostu go do. Typowym scenariuszem jest, gdy chcesz udostępnić istniejącej logiki biznesowej modelu COM + lub korporacyjnych usług za pośrednictwem usług sieci Web.  
@@ -102,4 +102,5 @@ Windows Communication Foundation (WCF) zapewnia bogate środowisko tworzenia apl
  Nie można użyć modelu COM + odtwarzanie procesów funkcji w zintegrowanej aplikacji. Jeśli aplikacja jest skonfigurowana do użycia, odtwarzanie procesów i składniki są uruchomione w procesie hostowanych modelu COM +, nie można uruchomić usługi. To wymaganie nie obejmuje usług przy użyciu trybu w trakcie hostowanych w sieci Web, ponieważ nie są stosowane ustawienia odtwarzania procesu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd integrowania z aplikacjami COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+
+- [Przegląd integrowania z aplikacjami modelu COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

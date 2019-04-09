@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użyj słownika zasobów zakresu aplikacji'
+title: 'Instrukcje: Używanie słownika zasobów zakresu aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: a2453ae7fad56205ae06835d8710ca126bba17c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125382"
 ---
-# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Instrukcje: Użyj słownika zasobów zakresu aplikacji
+# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Instrukcje: Używanie słownika zasobów zakresu aplikacji
 Ten przykład pokazuje, jak zdefiniować i użyć słownika niestandardowego zasobów zakresu aplikacji.  
   
 ## <a name="example"></a>Przykład  
@@ -42,6 +42,7 @@ Ten przykład pokazuje, jak zdefiniować i użyć słownika niestandardowego zas
  Istnieją dwie kwestie podczas korzystania z <xref:System.Windows.Application.Resources%2A>. Po pierwsze, słownika *klucza* jest obiektem, więc należy użyć dokładnie tego samego wystąpienia obiektu podczas ustawiania i pobierania wartości właściwości. (Zwróć uwagę, że klucz jest rozróżniana wielkość liter, przy użyciu ciągu). Drugi, słownika *wartość* jest obiektem, dlatego trzeba przekonwertować wartości na żądany typ podczas pobierania wartości właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
 - [Zasoby XAML](../advanced/xaml-resources.md)

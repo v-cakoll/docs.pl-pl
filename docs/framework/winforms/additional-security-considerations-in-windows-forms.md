@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139532"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ustawienia zabezpieczeń może spowodować aplikację do uruchamiania inaczej w środowisku częściowej relacji zaufania, niż na komputerze lokalnym. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ogranicza dostęp do takich krytycznych zasobów lokalnych, jak system plików, sieci i niezarządzanych interfejsów API, między innymi. Ustawienia zabezpieczeń wpływają na możliwość wywołania interfejsu API programu Microsoft Windows lub innych interfejsów API, którego nie można zweryfikować przez system zabezpieczeń. Zabezpieczenia wpływa również na innych aspektach związanych z aplikacji, w tym pliku i dostęp do danych i drukowania. Aby uzyskać więcej informacji na temat plików i dostęp do danych w środowisku częściowej relacji zaufania, zobacz [więcej bezpieczny plik i dostęp do danych w formularzach Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Aby uzyskać więcej informacji na temat Drukowanie w środowisku częściowej relacji zaufania, zobacz [więcej Secure drukowanie w formularzach Windows Forms](more-secure-printing-in-windows-forms.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "58409396"
 |<xref:System.Windows.Forms.Control>|— Wprowadzenie <xref:System.Windows.Forms.Control.Parent%2A> właściwości.<br />-Ustawianie `Region` właściwości.<br />-Wywołanie <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> i <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, lub <xref:System.Windows.Forms.Control.SetTopLevel%2A> metody.<br />-Wywołanie <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> metodę, jeśli zwrócony kontrolki nie jest elementem podrzędnym, wywołujący formantu.<br />-Modyfikowanie fokus kontrolki wewnątrz kontrolki kontenera.|  
 |<xref:System.Windows.Forms.Cursor>|-Ustawianie <xref:System.Windows.Forms.Cursor.Clip%2A> właściwości.<br />-Wywołanie <xref:System.Windows.Forms.Control.Hide%2A> metody.|  
 |<xref:System.Windows.Forms.DataGrid>|-Wywołanie <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> metody.|  
-|<xref:System.Windows.Forms.Form>|— Wprowadzenie <xref:System.Windows.Forms.Form.ActiveForm%2A> lub <xref:System.Windows.Forms.Form.MdiParent%2A> właściwości.<br />-Ustawianie <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, lub <xref:System.Windows.Forms.Form.TopMost%2A> właściwości.<br />-Ustawianie <xref:System.Windows.Forms.Form.Opacity%2A> właściwość spadnie poniżej 50%.<br />-Ustawianie <xref:System.Windows.Forms.Form.WindowState%2A> właściwość <xref:System.Windows.Forms.FormWindowState.Minimized> programowo.<br />-Wywołanie <xref:System.Windows.Forms.Form.Activate%2A> metody.<br />— Za pomocą <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, i <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> wartości wyliczenia.|  
+|<xref:System.Windows.Forms.Form>|— Wprowadzenie <xref:System.Windows.Forms.Form.ActiveForm%2A> lub <xref:System.Windows.Forms.Form.MdiParent%2A> właściwości.<br />-Ustawianie <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, lub <xref:System.Windows.Forms.Form.TopMost%2A> właściwości.<br />-Ustawianie <xref:System.Windows.Forms.Form.Opacity%2A> właściwość spadnie poniżej 50%.<br />-Ustawianie <xref:System.Windows.Forms.Form.WindowState%2A> właściwość <xref:System.Windows.Forms.FormWindowState.Minimized> programowo.<br />-Wywołanie <xref:System.Windows.Forms.Form.Activate%2A> metody.<br />— Za pomocą <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, i <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> wartości wyliczenia.|  
 |<xref:System.Windows.Forms.NotifyIcon>|— Za pomocą <xref:System.Windows.Forms.NotifyIcon> składnik jest całkowicie ograniczony.|  
   
  <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> Wartość ogranicza akcji wymienionych w poniższej tabeli, dodatkowo do ograniczeń nałożonych przez <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> wartość.  
@@ -89,8 +89,9 @@ ms.locfileid: "58409396"
  Uprawnień do wywoływania niezarządzanego kodu umożliwia aplikacji przeprowadzenie najbardziej niczego. W związku z tym, aby wywoływać kod niezarządzany należy tylko udzielić zezwolenia dla aplikacji, które pochodzą z zaufanego źródła. Alternatywnie w zależności od aplikacji, część funkcjonalności aplikacji, która wywołuje tę funkcję do kodu niezarządzanego może być opcjonalne lub włączonych w środowisku pełnego zaufania tylko. Aby uzyskać więcej informacji na temat niebezpieczne uprawnienia Zobacz [niebezpieczne uprawnienia i administrowanie zasadami](../misc/dangerous-permissions-and-policy-administration.md). Aby uzyskać więcej informacji o uprawnieniach wzrasta, zobacz [ogólne administrowanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Bezpieczniejszy dostęp do plików i danych w formularzach Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
-- [Bezpieczniejsze drukowanie w formularzach Windows Forms](more-secure-printing-in-windows-forms.md)
-- [Przegląd zabezpieczeń w formularzach Windows Forms](security-in-windows-forms-overview.md)
-- [Zabezpieczenia formularzy Windows Forms](windows-forms-security.md)
+
+- [Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows](more-secure-file-and-data-access-in-windows-forms.md)
+- [Bezpieczniejsze drukowanie w formularzach systemu Windows](more-secure-printing-in-windows-forms.md)
+- [Przegląd zabezpieczeń w formularzach systemu Windows](security-in-windows-forms-overview.md)
+- [Zabezpieczenia formularzy systemu Windows](windows-forms-security.md)
 - [Zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

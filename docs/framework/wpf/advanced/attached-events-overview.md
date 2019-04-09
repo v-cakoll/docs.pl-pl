@@ -12,18 +12,16 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140858"
 ---
 # <a name="attached-events-overview"></a>Przegląd Załączone zdarzenia
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Definiuje składnika języka i typu zdarzenia o nazwie *dołączone zdarzenie*. Pojęcie dołączone zdarzenie umożliwia dodanie obsługi dla określonego zdarzenia do dowolnego elementu, a nie do elementu, który faktycznie definiuje lub dziedziczy zdarzenia. W tym przypadku obiekt potencjalnie podnoszonego zdarzenia ani docelowym wystąpienia obsługi definiuje lub w przeciwnym razie jego "właścicielem" zdarzenie.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie założono, że użytkownik przeczytał [Przegląd zdarzeń kierowane](routed-events-overview.md) i [Przegląd XAML (WPF)](xaml-overview-wpf.md).  
@@ -92,6 +90,7 @@ ms.locfileid: "57371674"
  Jednak jeśli definiujesz dołączone zdarzenia niestandardowego na podstawie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzeń dołączonych model oparty na <xref:System.Windows.RoutedEvent>, możesz użyć <xref:System.Windows.UIElement.RaiseEvent%2A> aby wywołać zdarzenie dołączonych za pomocą dowolnego <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement>. Podnoszenie zdarzenia trasowanego (dołączone, lub nie) wymaga zadeklarujesz konkretnego elementu w drzewie elementów jako źródło zdarzenia; to źródło jest zgłaszana jako <xref:System.Windows.UIElement.RaiseEvent%2A> obiektu wywołującego. Określanie, który element jest zgłaszana jako źródła w drzewie odpowiada z usługą  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
 - [Szczegóły składni XAML](xaml-syntax-in-detail.md)
 - [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)

@@ -2,12 +2,12 @@
 title: 'Optymistyczna współbieżność: Omówienie'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 5395134a536969788252524ccd7c2936d3d9e2d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106551"
 ---
 # <a name="optimistic-concurrency-overview"></a>Optymistyczna współbieżność: Omówienie
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje mechanizmu kontroli optymistycznej współbieżności. W poniższej tabeli opisano terminy, które dotyczą optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji:  
@@ -89,4 +89,5 @@ ms.locfileid: "54517464"
 -   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

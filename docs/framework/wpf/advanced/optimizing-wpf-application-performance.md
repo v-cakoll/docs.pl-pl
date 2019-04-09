@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: c1dd2587fb3642fb930fb7d5d6855a6e48c2ad2b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141560"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optymalizacja wydajności aplikacji WPF
 Ta sekcja jest przeznaczona jako odniesienie do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deweloperów, którzy szukają sposobów poprawy wydajność ich aplikacji. Jeśli jesteś deweloperem, który jest nowym składnikiem programu Microsoft .NET Framework i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], należy najpierw zapoznać się z obu platform. W tej sekcji zakłada praktyczną wiedzę na temat obu tych elementów i jest przeznaczony dla programistów, którzy już wiedzieć wystarczająco dużo, aby rozpocząć aplikacjach pracę.  
@@ -37,28 +37,29 @@ Ta sekcja jest przeznaczona jako odniesienie do [!INCLUDE[TLA#tla_winclient](../
   
  [Powiązanie danych](optimizing-performance-data-binding.md)  
   
- [Kontrolki](optimizing-performance-controls.md)  
+ [Formanty](optimizing-performance-controls.md)  
   
  [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)  
   
  [Czas uruchamiania aplikacji](application-startup-time.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
-- [Warstwy renderowania grafiki](graphics-rendering-tiers.md)
-- [Renderowanie grafiki WPF — przegląd](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Poziomy zmiany grafiki](graphics-rendering-tiers.md)
+- [Przegląd Renderowanie grafiki WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Układ](layout.md)
 - [Drzewa w WPF](trees-in-wpf.md)
-- [Rysowanie obiektów — przegląd](../graphics-multimedia/drawing-objects-overview.md)
+- [Przegląd Rysowanie obiektów](../graphics-multimedia/drawing-objects-overview.md)
 - [Użycie obiektów DrawingVisual](../graphics-multimedia/using-drawingvisual-objects.md)
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Przegląd obiektów Freezable](freezable-objects-overview.md)
+- [Przegląd Obiekty Freezable](freezable-objects-overview.md)
 - [Zasoby XAML](xaml-resources.md)
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Rysowanie formatowanego tekstu](drawing-formatted-text.md)
 - [Typografia w WPF](typography-in-wpf.md)
-- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
-- [Nawigacja — omówienie](../app-development/navigation-overview.md)
-- [Animacja — porady i wskazówki](../graphics-multimedia/animation-tips-and-tricks.md)
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
+- [Przegląd Nawigacja](../app-development/navigation-overview.md)
+- [Porady i triki animacyjne](../graphics-multimedia/animation-tips-and-tricks.md)
+- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

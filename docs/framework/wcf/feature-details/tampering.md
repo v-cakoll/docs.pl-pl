@@ -2,12 +2,12 @@
 title: Manipulowanie
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
-ms.openlocfilehash: 86446778008782c733629ef94e6b192501bee2da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107890"
 ---
 # <a name="tampering"></a>Manipulowanie
 *Manipulowanie* polega na zmianę wiadomości lub dostarczania wiadomości i przy użyciu zmienionego komunikatu w celu innym niż co zostało przeznaczone.  
@@ -20,7 +20,8 @@ ms.locfileid: "54607189"
  Aby temu zaradzić, nigdy nie ustawiono <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> właściwości <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>i należy unikać użycia <xref:System.ServiceModel.Channels.MessageVersion>, takie jak statyczne <xref:System.ServiceModel.Channels.MessageVersion.Soap12%2A> właściwość, która ustawia <xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A> właściwość <xref:System.ServiceModel.Channels.AddressingVersion.None%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+
+- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)

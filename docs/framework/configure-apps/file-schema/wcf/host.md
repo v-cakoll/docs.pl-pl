@@ -2,12 +2,12 @@
 title: <host>
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-ms.openlocfilehash: 8a8f9db96281d8d775ff5c2923018228b3a9c1e5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3d1f7774f61060880a5c3b0327bdd6c2cc4dd74e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103002"
 ---
 # <a name="host"></a>\<host>
 Określa ustawienia dla usługi hosta.  
@@ -52,6 +52,7 @@ Określa ustawienia dla usługi hosta.
 |[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Określa ustawienia usługi Windows Communication Foundation (WCF).|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)

@@ -2,12 +2,12 @@
 title: 'Szczegóły usługi CustomPeerResolverService: Rejestracje klienta'
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095792"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>Szczegóły usługi CustomPeerResolverService: Rejestracje klienta
 Każdy węzeł w siatce publikuje swoje informacje o punkcie końcowym usługi rozpoznawania nazw za pośrednictwem `Register` funkcji. Usługa rozpoznawania nazw przechowuje te informacje jako rekord rejestracji. Ten rekord zawiera unikatowy identyfikator (identyfikator), a informacje o punkcie końcowym (PeerNodeAddress) dla węzła.  
@@ -34,4 +34,5 @@ Każdy węzeł w siatce publikuje swoje informacje o punkcie końcowym usługi r
  Gdy węzeł rejestruje się za pomocą usługi rozpoznawania nazw, otrzymuje <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> obiektu z usługi. Ten obiekt zawiera `RegistrationLifetime` właściwości, które wskazuje na węzeł, czas, jaki ma przed rejestracją wygaśnie i zostanie usunięty w usłudze rozpoznawania nazw. Jeśli na przykład `RegistrationLifetime` to 2 minuty, węzeł musi wywołać `Refresh` w mniej niż 2 minut zapewnienie rekord pozostaje od nowa i nie zostanie usunięta. Po odebraniu usługi rozpoznawania nazw `Refresh` żądań wyszukuje rekord i resetuje czas wygaśnięcia. Odśwież zwraca <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> obiekt z `RegistrationLifetime` właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Mechanizmy rozpoznawania elementów równorzędnych](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

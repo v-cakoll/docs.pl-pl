@@ -2,12 +2,12 @@
 title: Używanie elementu NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 47a4da6dd709c300b62a7380e6e0754e31782dd8
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5090cfdfeb068acda1e1092e408f3cd747c574c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121020"
 ---
 # <a name="using-the-nethttpbinding"></a>Używanie elementu NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> jest przeznaczony dla korzystanie z usług HTTP i WebSocket powiązanie i używa kodowania binarnego domyślnie. <xref:System.ServiceModel.NetHttpBinding> wykryje, czy jest używana za pomocą kontraktu dwukierunkowego lub kontraktu "żądanie odpowiedź" i zmianę jej zachowania, aby dopasować — go będzie używany protokół HTTP dla kontraktów "żądanie odpowiedź" i technologia WebSockets kontrakty dwukierunkowe. To zachowanie można przesłonić przy użyciu <xref:System.ServiceModel.Channels.WebSocketTransportUsage> ustawienia:  
@@ -59,7 +59,8 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie powiązań dla usług](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Wiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Usługi dwukierunkowe](../../../../docs/framework/wcf/feature-details/duplex-services.md)

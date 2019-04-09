@@ -1,28 +1,27 @@
 ---
 title: Podsumowanie drzew wyrażeń
-description: Recaps, jak używanie drzew wyrażeń do tworzenia dynamicznych programów, które interpretacji kodu jako danych i tworzenie nowych funkcji, na podstawie tego kodu.
+description: Podsumowania, jak można użyć drzew wyrażeń do tworzenia dynamicznych programów, które interpretacji kodu jako dane oraz tworzyć nowe funkcje, w oparciu o ten kod.
 ms.date: 06/20/2016
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: e0d46aa67b61fd4e1d2bcc20b4a567524bb00301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148632"
 ---
 # <a name="expression-trees-summary"></a>Podsumowanie drzew wyrażeń
 
-[Poprzednie — Tłumaczenia wyrażenia](expression-trees-translating.md)
+[Poprzednie — Translacja wyrażeń](expression-trees-translating.md)
 
-W tej serii przedstawiono sposób korzystania *drzew wyrażeń* do tworzenia dynamicznych programów, które interpretacji kodu jako danych i tworzenie nowych funkcji, na podstawie tego kodu.
+W tej serii przedstawiono sposób korzystania *drzew wyrażeń* do tworzenia dynamicznych programów, które interpretacji kodu jako dane oraz tworzyć nowe funkcje, w oparciu o ten kod.
 
-Można sprawdzić drzew wyrażeń do zrozumienia celem algorytmu. Nie można tylko badanie tego kodu. Można utworzyć nowego drzew wyrażeń, które reprezentują zmodyfikowanej wersji oryginalnego kodu.
+Można sprawdzić w drzewach wyrażeń w celu zrozumienia intencji algorytmu. Ten kod nie może tylko sprawdzić. Można tworzyć nowe drzew wyrażeń, które reprezentują zmodyfikowanej wersji oryginalnego kodu.
 
-Można również używanie drzew wyrażeń do przyjrzeć się algorytm i tłumaczenie tego algorytmu inny język lub środowiska. 
+Można również używanie drzew wyrażeń do wzięcia pod algorytmu i tłumaczenie tego algorytmu innego języka lub środowiska. 
 
 ## <a name="limitations"></a>Ograniczenia
 
-Istnieją pewne nowszej C# języka elementy, które nie je łatwo przekształcić w drzewach wyrażeń. Drzewa wyrażeń nie może zawierać `await` wyrażenia, lub `async` wyrażenia lambda. Funkcje dodane w wersji języka C# 6 nie pojawiają się dokładnie, jak podano w drzewach wyrażeń. Zamiast tego nowsze funkcje mają być widoczne w drzewach wyrażeń w składni równorzędną, wcześniej. To nie może być jako część ograniczenia jak się wydaje. W rzeczywistości oznacza to, że swój kod, który interpretuje drzew wyrażeń będzie prawdopodobnie nadal działać w identyczny gdy wprowadzono nowe funkcje języka.
+Brak niektórych nowszych C# elementów języka, które nie je łatwo przekształcić w drzewach wyrażeń. Drzewa wyrażeń nie może zawierać `await` wyrażeń, lub `async` wyrażenia lambda. Funkcje dodane w wielu C# wersji 6 nie pojawiają się dokładnie tak jak napisane w drzewach wyrażeń. Zamiast tego nowsze funkcje zostaną ujawnione w drzewach wyrażeń w składni jego odpowiednika, wcześniej. To może nie być tyle to ograniczenie może myśląc. W rzeczywistości oznacza to, że swój kod, który interpretuje drzew wyrażeń będzie prawdopodobnie nadal działać tak samo, gdy zostaną wprowadzone nowe funkcje języka.
 
-Nawet w przypadku tych ograniczeń drzew wyrażeń umożliwiają tworzenie dynamicznych algorytmy, które opierają się na interpretowanie i modyfikowania kodu, który jest reprezentowany jako struktury danych. Jest zaawansowanym narzędziem i jest jedną z funkcji ekosystemu .NET, który umożliwia sformatowanego biblioteki, takich jak Entity Framework w celu ich działania.
-
+Nawet w przypadku tych ograniczeń drzew wyrażeń umożliwiają tworzenie dynamicznych algorytmy, które opierają się na interpretowaniu i modyfikowania kodu, który jest reprezentowany jako struktury danych. Jest zaawansowanym narzędziem, i jest jedną z funkcji ekosystemu .NET, która umożliwia zaawansowane biblioteki, takim jak Entity Framework, aby osiągnąć, co robią.

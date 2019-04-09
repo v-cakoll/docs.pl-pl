@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9d3f8966f6333487631a0e155c7be49075a6992
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be2dfd6bb521dee14afd3728bdd9c446cb779e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149230"
 ---
 # <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration — funkcja
 Kończy wyliczenie uruchomione z wywołaniem [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) funkcji.  
@@ -68,4 +68,5 @@ To wywołanie jest zalecane, ale nie jest wymagane. Go natychmiast zwalnia zasob
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

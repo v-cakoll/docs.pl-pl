@@ -9,12 +9,12 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 260ff8b2131e1ee3c42197187f7067ab9c1328d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c414d0af033d9d703fcf947d008aeefcef5b876
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169120"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Instrukcje: Personifikowanie klienta w usłudze
 Personifikowanie klienta usługi Windows Communication Foundation (WCF) umożliwia usługi w celu wykonywania zadań w imieniu klienta. Dla akcji z zastrzeżeniem dostępu kontrolki listy (ACL) sprawdza, takich jak dostęp do katalogów i plików na maszynie lub dostęp do bazy danych programu SQL Server, sprawdź listy ACL jest względem konta użytkownika klienta. W tym temacie przedstawiono podstawowe kroki wymagane do włączenia klienta w domenie Windows ustawić poziom personifikacji klienta. Dla pracy na przykład, zobacz [Personifikowanie klienta](../../../docs/framework/wcf/samples/impersonating-the-client.md). Aby uzyskać więcej informacji na temat personifikację klienta, zobacz [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
@@ -46,6 +46,7 @@ Personifikowanie klienta usługi Windows Communication Foundation (WCF) umożliw
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - [Personifikowanie klienta](../../../docs/framework/wcf/samples/impersonating-the-client.md)

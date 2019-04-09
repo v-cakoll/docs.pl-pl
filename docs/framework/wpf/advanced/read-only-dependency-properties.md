@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162426"
 ---
 # <a name="read-only-dependency-properties"></a>Właściwości zależności tylko do odczytu
 W tym temacie opisano właściwości zależności tylko do odczytu, w tym istniejących właściwości zależności tylko do odczytu i scenariuszy i techniki tworzenia właściwości niestandardowej zależności tylko do odczytu.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie założono, że rozumiesz podstawowe scenariusze Implementowanie właściwości zależności i sposób stosowania metadanych właściwości zależności niestandardowej. Zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md) i [metadane zależności właściwości](dependency-property-metadata.md) dla kontekstu.  
@@ -44,6 +42,7 @@ W tym temacie opisano właściwości zależności tylko do odczytu, w tym istnie
  Ponieważ <xref:System.Windows.DependencyPropertyKey> jest prywatny i nie jest propagowany przez system właściwość poza swój kod, ma właściwości zależności tylko do odczytu, lepiej ustawienia zabezpieczeń niż właściwość zależności odczytu i zapisu. Dla właściwości zależności odczytu i zapisu pole identyfikacyjne jest jawnie lub niejawnie publiczny i więc właściwość jest szeroko do ustawienia. Aby uzyskać więcej szczegółowych informacji, zobacz [zabezpieczenia właściwości zależności](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)

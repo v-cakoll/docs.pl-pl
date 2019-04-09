@@ -8,12 +8,12 @@ helpviewer_keywords:
 - calendar controls [Windows Forms], Windows Forms
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-ms.openlocfilehash: a081c4e6d8210a6bb65fa14b31d12d4295931d53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106239"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli przedstawia intuicyjny interfejs graficzny służący do wyświetlania i ustawiania informacji o dacie. Kontrolka ma wyświetlać kalendarz: siatki zawierający numerowane dni miesiąca, uporządkowane według kolumn poniżej dni tygodnia, za pomocą wybranego zakresu dat wyróżnione. Za pomocą przycisków strzałek po obu stronach podpis miesiąca możesz wybrać innego miesiąca. W odróżnieniu od podobny <xref:System.Windows.Forms.DateTimePicker> kontrolki, można wybrać więcej niż jednej daty za pomocą tej kontrolki. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.DateTimePicker> sterowania, zobacz [kontrolki DateTimePicker](datetimepicker-control-windows-forms.md).  
@@ -26,5 +26,6 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli przedstawi
  Właściwość klucza <xref:System.Windows.Forms.MonthCalendar> formant jest <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, zakres dat, wybrana w kontrolce. <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> Wartość nie może przekraczać maksymalną liczbę dni, które można wybrać, ustaw w <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> właściwości. Użytkownik może wybrać daty najwcześniejszej i najnowszych są określane przez <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> i <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.MonthCalendar>
 - [MonthCalendar, kontrolka](monthcalendar-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Przestrzeń nazw dla usług .NET Framework XAML
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153559"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Przestrzeń nazw dla usług .NET Framework XAML
 Przestrzeń nazw XAML jest koncepcji, który rozwija w definicji przestrzeni nazw XML. Podobnie jak w przestrzeni nazw XML, można zdefiniować za pomocą nazw XAML `xmlns` atrybutów w znaczniku. Przestrzenie nazw XAML również jest reprezentowanych w strumień węzłów XAML i innych interfejsów API usług XAML. W tym temacie wprowadzono pojęcie przestrzeń nazw XAML i opisuje, jak przestrzenie nazw XAML mogą być definiowane i są używane przez kontekst schematu XAML i innymi aspektami usług programu .NET Framework XAML.  
@@ -64,4 +64,5 @@ Przestrzeń nazw XAML jest koncepcji, który rozwija w definicji przestrzeni naz
  Dwa API, które są istotne dla przestrzeni nazw XAML, obsługa w .NET Framework XAML Services są atrybuty <xref:System.Windows.Markup.XmlnsDefinitionAttribute> i <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Te atrybuty mają zastosowanie do zestawów. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> jest używany przez kontekst schematu XAML do interpretacji żadnych deklaracji przestrzeni nazw XAML, która zawiera identyfikator URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute> jest używana przez narzędzia, które emitują XAML, dzięki czemu określonej przestrzeni nazw XAML może być serializowany z prefiksem przewidywalne. Aby uzyskać więcej informacji, zobacz [XAML-Related atrybuty CLR dla niestandardowych typów i bibliotek](xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Omówienie struktur i koncepcji strumienia węzłów XAML](understanding-xaml-node-stream-structures-and-concepts.md)
+
+- [Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML](understanding-xaml-node-stream-structures-and-concepts.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145239"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code — Typ funkcji XAML
 Umożliwia umieszczanie kodu w ramach produkcji XAML. Taki kod może być kompilowane albo przez dowolnego implementacji procesora XAML, który kompiluje XAML lub po lewej stronie w środowisku produkcyjnym XAML do nowszych zastosowań, takich jak interpretacji przez środowisko uruchomieniowe.  
@@ -49,6 +49,7 @@ Umożliwia umieszczanie kodu w ramach produkcji XAML. Taki kod może być kompil
 -   Odwołania do jednostek kodu poza przestrzeń nazw środowiska CLR klasy częściowej wszystkie muszą być w pełni kwalifikowana. Jeśli elementy członkowskie deklarowanej zastąpień do przesłonięcia elementów członkowskich klasy częściowej, to można określić za pomocą słowa kluczowego override specyficzny dla języka. W przypadku elementów członkowskich zadeklarowanych w `x:Code` zakres elementów członkowskich klasy częściowej utworzony poza XAML różne, w taki sposób, że kompilator zgłasza konfliktu, plik XAML nie można skompilować lub obciążenia.  
   
 ## <a name="see-also"></a>Zobacz także
-- [x:Class, dyrektywa](x-class-directive.md)
-- [Plik codebehind i XAML w WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+
+- [x:Class — dyrektywa](x-class-directive.md)
+- [Związane z kodem i XAML w WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

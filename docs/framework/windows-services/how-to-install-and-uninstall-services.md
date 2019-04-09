@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: c4eb1e5fd0c0b06f332b1eba7d3445963699415c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100378"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Instrukcje: Instalowanie i odinstalowywanie usług Windows
 Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można szybko zainstalować usługi app service przy użyciu [ *InstallUtil.exe* ](../tools/installutil-exe-installer-tool.md) narzędzie wiersza polecenia. Deweloperzy, którzy mają być wersji usług Windows, które użytkownicy mogą instalować i odinstalowywać należy używać programu InstallShield. Aby uzyskać więcej informacji, zobacz [Utwórz pakiet Instalatora (systemu Windows Windows client)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
@@ -67,6 +67,7 @@ Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można s
 3. Po usunięciu pliku wykonywalnego dla usługi usługi znajdować się w rejestrze. Jeśli tak jest rzeczywiście, użyj polecenia [sc delete](/windows-server/administration/windows-commands/sc-delete) można usunąć wpisu usługi z rejestru.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do aplikacji usług Windows](../windows-services/introduction-to-windows-service-applications.md)
 - [Instrukcje: Tworzenie usług Windows](../windows-services/how-to-create-windows-services.md)
 - [Instrukcje: Dodawanie instalatorów od aplikacji usług](../windows-services/how-to-add-installers-to-your-service-application.md)

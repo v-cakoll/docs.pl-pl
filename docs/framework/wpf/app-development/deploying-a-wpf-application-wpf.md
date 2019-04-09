@@ -5,17 +5,16 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: f0d01dffe0f8dad2b1e9af75d6642c68be3ee0f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 35515d37756c46d7d38ca272d76da3126fde385f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132362"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
 Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] a .NET Framework zawierają kilka technologie wdrażania. Technologie wdrażania, które jest używane do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja jest zależna od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrożenia i jak są używane w połączeniu z wymagań związanych z wdrażaniem każdego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typu aplikacji.  
-  
-   
+
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Technologie wdrażania  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i .NET Framework zawiera kilka technologii wdrożenia, w tym:  
@@ -124,5 +123,6 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
  Aby uzyskać więcej informacji, zobacz [wdrażania aplikacji .NET Framework i](../../deployment/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)
 - [Zabezpieczenia](../security-wpf.md)

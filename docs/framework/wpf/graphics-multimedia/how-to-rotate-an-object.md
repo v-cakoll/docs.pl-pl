@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Obróć obiekt'
+title: 'Instrukcje: Obracanie obiektu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: 49de419f22980ab9101c388079e0348b4c1113f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d1c4700a5dc8f6ed99043552999d8f014116da8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189673"
 ---
-# <a name="how-to-rotate-an-object"></a>Instrukcje: Obróć obiekt
+# <a name="how-to-rotate-an-object"></a>Instrukcje: Obracanie obiektu
 Ten przykład pokazuje, jak obrócić obiekt. W przykładzie najpierw jest tworzony <xref:System.Windows.Media.RotateTransform> , a następnie określa jego <xref:System.Windows.Media.RotateTransform.Angle%2A> w stopniach.  
   
  Poniższy przykład obraca <xref:System.Windows.Shapes.Polyline> obiektu 45 stopni, o jego lewego górnego rogu.  
@@ -45,6 +45,7 @@ Dwa obiekty, które Obrót o 45 stopni za pośrednictwem różnych obrotowych ce
  Aby uzyskać pełny przykład, zobacz [przykładowych przekształceń 2-D](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Transform>
-- [Przekształcenia — przegląd](transforms-overview.md)
-- [Tematy z instrukcjami](transformations-how-to-topics.md)
+- [Przegląd Przekształcenia](transforms-overview.md)
+- [— Tematy porad](transformations-how-to-topics.md)

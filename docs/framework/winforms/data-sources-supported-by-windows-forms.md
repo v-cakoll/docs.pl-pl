@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124621"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzystać z danych przechowywanych w bazach danych. Powiązanie danych formularzy Windows, umożliwia dostęp do danych z bazy danych, a także dane w innych strukturach, takich jak tablice i kolekcje, tak długo, jak niektóre minimalne wymagania zostały spełnione.  
@@ -58,6 +58,7 @@ Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzysta�
 -   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> jest dostosowany widok przedstawiający całą <xref:System.Data.DataSet>, jest odpowiednikiem <xref:System.Data.DataView>, z relacjami uwzględniony, ale. Za pomocą <xref:System.Data.DataViewManager.DataViewSettings%2A> kolekcji, można ustawić domyślne filtry i opcje sortowania dla dowolnego widoków, <xref:System.Data.DataViewManager> ma dla danej tabeli.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
-- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)
+
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows](change-notification-in-windows-forms-data-binding.md)
+- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)
+- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)

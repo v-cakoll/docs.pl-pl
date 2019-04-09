@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: d2e493737adb0a56a55cf497095c648463ee5ee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c2e554b7e6bde3e82190f70723f272b0d39a18a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152415"
 ---
 # <a name="handling-dataview-events"></a>Obsługa zdarzeń elementu DataView
 Możesz użyć <xref:System.Data.DataView.ListChanged> zdarzenia <xref:System.Data.DataView> do określenia, czy widok zostały zaktualizowane. Aktualizacje, które zgłaszają zdarzenia obejmują dodawanie, usuwanie lub modyfikowanie wiersza w tabeli podstawowej; Dodawanie lub usuwanie kolumn do schematu tabeli podstawowej; i zmiany w relacji nadrzędnej lub podrzędnej. **ListChanged** zdarzeń również powiadamia użytkownika, jeśli lista wierszy wyświetlanych zmienił się znacznie ze względu na stosowanie nowych kolejność sortowania lub filtrowania.  
@@ -52,6 +52,7 @@ protected static void OnListChanged(object sender,
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
 - [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)

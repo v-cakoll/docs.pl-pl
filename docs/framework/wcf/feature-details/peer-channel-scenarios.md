@@ -2,12 +2,12 @@
 title: Scenariusze obejmujące kanał elementu równorzędnego
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 05fe7f632b286876dfee36b7d5d22a77c0ae11e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147059"
 ---
 # <a name="peer-channel-scenarios"></a>Scenariusze obejmujące kanał elementu równorzędnego
 Interfejsy API kanał elementu równorzędnego obsługuje następujące scenariusze programowania.  
@@ -25,4 +25,5 @@ Interfejsy API kanał elementu równorzędnego obsługuje następujące scenariu
  Za pomocą kanału równorzędnego, deweloperzy aplikacji można tworzyć wersje bez serwera grą, gdzie przesyłane do gier przenosi i synchronizowane z innymi osobami przez mechanizm peer-to-peer, a nie za pomocą serwera centralnego. Dla małych niezależnych dostawców oprogramowania dzięki temu, Usuń kosztów operacyjnych związanych z wdrażania i obsługi centralne serwery oraz obsługi. Gry napisane przy użyciu architektury peer-to-peer mogą być odtwarzane w Internecie lub w sieci przewodowej lub bezprzewodowej sieci lokalnej. Działań dodatkowej gier, takich jak targach i rozmowy w grze mogą być tworzone przy użyciu sieci peer-to-peer.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pojęcia kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

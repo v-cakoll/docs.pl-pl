@@ -7,18 +7,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158967"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar — Formant
 <xref:System.Windows.Forms.ToolStripProgressBar> Łączy <xref:System.Windows.Forms.ToolStrip> renderowania i rafting funkcji za pomocą jego typowe funkcje śledzenia procesu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ToolStripProgressBar, kontrolka — omówienie](toolstripprogressbar-control-overview.md)  
+ [ToolStripProgressBar — Informacje o formancie](toolstripprogressbar-control-overview.md)  
  Zawiera tematy, które opisano przeznaczenie i główne pojęcia formularzy Windows Forms <xref:System.Windows.Forms.ToolStripProgressBar> kontroli.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -29,4 +29,5 @@ ms.locfileid: "57711887"
  Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.ToolStripProgressBar> kontroli.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)

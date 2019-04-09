@@ -2,12 +2,12 @@
 title: Wyjątki
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145993"
 ---
 # <a name="exceptions"></a>Wyjątki
 Przepływy pracy można użyć <xref:System.Activities.Statements.TryCatch> działania, aby obsłużyć wyjątki, które są wywoływane podczas wykonywania przepływu pracy. Wyjątki te mogą być obsługiwane lub ich może zostać zgłoszony ponownie przy użyciu <xref:System.Activities.Statements.Rethrow> działania. Działania w <xref:System.Activities.Statements.TryCatch.Finally%2A> sekcji są wykonywane, kiedy albo <xref:System.Activities.Statements.TryCatch.Try%2A> sekcji lub <xref:System.Activities.Statements.TryCatch.Catches%2A> kończy sekcji. Przepływy pracy pracujących <xref:System.Activities.WorkflowApplication> wystąpienia można również użyć <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> programu obsługi zdarzeń, aby obsłużyć wyjątki, które nie są obsługiwane przez <xref:System.Activities.Statements.TryCatch> działania.  
@@ -51,6 +51,7 @@ Przepływy pracy można użyć <xref:System.Activities.Statements.TryCatch> dzia
  Różnica między obsługą wyjątków i Kompensacja jest występowanie wyjątków podczas wykonywania działania. Kompensacja występuje po pomyślnym ukończeniu działania. Obsługa wyjątków umożliwia czyszczenie po działanie zgłasza wyjątek, wynagrodzenie stanowi mechanizm, za pomocą którego pomyślnie ukończono pracę wcześniej zakończonego działania może być cofnięte. Aby uzyskać więcej informacji, zobacz [wynagrodzenie](compensation.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

@@ -1,15 +1,15 @@
 ---
-title: Pobieranie i modyfikowanie danych w ADO.NET
+title: Pobieranie i modyfikowanie danych ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097628"
 ---
-# <a name="retrieving-and-modifying-data-in-adonet"></a>Pobieranie i modyfikowanie danych w ADO.NET
+# <a name="retrieving-and-modifying-data-in-adonet"></a>Pobieranie i modyfikowanie danych ADO.NET
 Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłem danych i pobierania danych, które zawiera. Dostawcy danych .NET Framework ADO.NET, które służą jako Most między aplikacją a źródłem danych, co umożliwia wykonywanie poleceń również, aby pobierać dane przy użyciu **DataReader** lub **DataAdapter** . Funkcja klucza aplikacji bazy danych jest możliwość aktualizowania danych, która jest przechowywana w bazie danych. W ADO.NET, aktualizowanie danych polega na użyciu **DataAdapter** i <xref:System.Data.DataSet>, i **polecenia** obiektów; i może również obejmować za pomocą transakcji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
@@ -25,7 +25,7 @@ Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłe
  [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  Zawiera tematy, opisujący sposób tworzenia poleceń i polecenia konstruktorów, konfigurowania parametrów i sposób wykonywania polecenia, aby pobrać i zmodyfikować dane.  
   
- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  Zawiera tematy opisujące DataReaders, elementów DataAdapters, parametry, obsługa zdarzeń elementu DataAdapter i wykonywanie operacji wsadowych.  
   
  [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
@@ -59,6 +59,7 @@ Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłe
  W tym artykule omówiono sposób pisania aplikacji strumienia danych z programu SQL Server bez konieczności jego w pełni załadowany do pamięci.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

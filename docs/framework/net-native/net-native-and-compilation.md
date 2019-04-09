@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd02320f9b899f339efa149838547fd05d1b4079
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139181"
 ---
 # <a name="net-native-and-compilation"></a>Architektura .NET Native i kompilacja
 Aplikacje Windows 8.1 i Windows Desktop aplikacji, przeznaczonych dla środowiska.NET Framework są zapisywane w danym języku programowania i kompilowane do języka pośredniego (IL). W czasie wykonywania kompilator just-in-time (JIT) jest odpowiedzialny za kompilowanie IL do kodu natywnego dla komputera lokalnego, po prostu, zanim metoda jest wykonywana po raz pierwszy. Z kolei łańcucha narzędzi .NET Native konwertuje kod źródłowy do kodu natywnego w czasie kompilacji. W tym temacie porównano .NET Native z innymi technologiami kompilacji dostępne dla aplikacji .NET Framework oraz również zawiera omówienie praktyczne jak .NET Native generuje kodu natywnego, które mogą ułatwić zrozumienie, dlaczego wyjątków, które występują w kodzie są kompilowane przy użyciu platformy .NET Natywne nie występują w kod kompilowany dokładnie na czas.  
@@ -101,6 +101,7 @@ Aplikacje Windows 8.1 i Windows Desktop aplikacji, przeznaczonych dla środowisk
 -   Zwykle obrazów NGEN za słabe. Na przykład poprawki lub zmiany zależność zwykle wymaga zestawów, które go używają również wystąpił ponownie. Dotyczy to zwłaszcza zestawów system w bibliotece klas programu .NET Framework. Z kolei .NET Native umożliwia aplikacjom, które ma zostać dostarczony niezależnie od siebie nawzajem.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Składniki samoopisujące się i metadane](../../../docs/standard/metadata-and-self-describing-components.md)
 - [W obrębie architektury .NET Native (wideo Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)

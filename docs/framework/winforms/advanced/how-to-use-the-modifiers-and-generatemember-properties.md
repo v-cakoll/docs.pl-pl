@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Stosowanie modyfikatorów i właściwości "generatemember"'
+title: 'Instrukcje: Stosowanie modyfikatorów i właściwości „GenerateMember"'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143913"
 ---
-# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Instrukcje: Stosowanie modyfikatorów i właściwości "generatemember"
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Instrukcje: Stosowanie modyfikatorów i właściwości „GenerateMember"
 Po umieszczeniu składnika w formularzu Windows dwie właściwości są dostarczane przez środowisko projektowania: `GenerateMember` i `Modifiers`. `GenerateMember` Właściwość określa, kiedy Windows Forms Designer generuje zmienną składową dla składnika. `Modifiers` Właściwość jest modyfikator dostępu przypisane do tej zmiennej elementu członkowskiego. Jeśli wartość `GenerateMember` właściwość `false`, wartość `Modifiers` właściwość nie ma wpływu.  
   
 > [!NOTE]
@@ -60,7 +60,8 @@ Po umieszczeniu składnika w formularzu Windows dwie właściwości są dostarcz
 >  Domyślnie Windows Forms Designer przypisuje `private` (`Friend` w języku Visual Basic) modyfikatora kontenera formanty, takie jak <xref:System.Windows.Forms.Panel>. Jeśli podstawa <xref:System.Windows.Forms.UserControl> lub <xref:System.Windows.Forms.Form> zawiera formant kontenera nie będzie akceptować nowych elementów podrzędnych formularzy i kontrolek dziedziczone. Rozwiązaniem jest zmiana modyfikator kontrolki podstawowym kontenerem na `protected` lub `public`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Button>
-- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)
-- [Przewodnik: Demonstrowanie dziedziczenia wizualizacji](walkthrough-demonstrating-visual-inheritance.md)
-- [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)
+- [Formularze systemu Windows — dziedziczenie Visual](windows-forms-visual-inheritance.md)
+- [Przewodnik: Demonstrowanie dziedziczenia Visual](walkthrough-demonstrating-visual-inheritance.md)
+- [Instrukcje: Dziedziczenie formularzy systemu Windows](how-to-inherit-windows-forms.md)

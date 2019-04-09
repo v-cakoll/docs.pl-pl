@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095727"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Typy konwerterów dla XAML — Omówienie
 Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z ciągu w znaczniku XAML, w szczególności obiekty wykresu obiektu. W programie .NET Framework XAML Services konwertera typów musi być klasą pochodzącą z <xref:System.ComponentModel.TypeConverter>. Niektóre konwertery również obsługuje XAML ścieżka zapisu i może służyć do serializacji obiektu do postaci ciągu w znacznikach serializacji. W tym temacie opisano, jak i kiedy są wywoływane konwerterów typów w XAML i zawiera porady, implementacja dla przesłonięć metod elementu <xref:System.ComponentModel.TypeConverter>.  
@@ -108,6 +108,7 @@ Typ logika dostawa konwerterów modułu zapisywania obiektu, który konwertuje z
  Jeśli pracujesz z strumień węzłów XAML, akcji lub wynik końcowy konwertera typów nie będą jeszcze wykonane. W ścieżce obciążenia ciąg atrybutu, który ostatecznie trzeba można przekonwertować w celu załadowania pozostaje jako wartości tekstowej w ramach należysz do rozpoczęcia i zakończenia. Konwerter typu, który ostatecznie jest wymagana dla tej operacji można określić za pomocą <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> właściwości. Jednak uzyskiwanie prawidłową wartość z <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> opiera się na potrzeby kontekst schematu XAML, który ma dostęp do takich informacji za pomocą podstawowego elementu członkowskiego lub typu wartości obiektu, który używa elementu członkowskiego. Wywoływanie zachowanie konwersji typu wymaga także kontekst schematu XAML, ponieważ wymaga mapowanie typu i utworzyć wystąpienie konwertera.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ComponentModel.TypeConverterAttribute>
 - [Typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md)
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

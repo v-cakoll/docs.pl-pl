@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Utwórz krzywą Beziera drugiego stopnia'
+title: 'Instrukcje: Tworzenie krzywej Beziera drugiego stopnia'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Bezier curves [WPF], creating
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-ms.openlocfilehash: 8adb5d0348fe53cecbdabf8ffa3b244fe34831e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134878"
 ---
-# <a name="how-to-create-a-quadratic-bezier-curve"></a>Instrukcje: Utwórz krzywą Beziera drugiego stopnia
+# <a name="how-to-create-a-quadratic-bezier-curve"></a>Instrukcje: Tworzenie krzywej Beziera drugiego stopnia
 W tym przykładzie pokazano, jak utworzyć krzywą Beziera drugiego stopnia.  Aby utworzyć krzywą Beziera drugiego stopnia, użyj <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, i <xref:System.Windows.Media.QuadraticBezierSegment> klasy.  
   
 ## <a name="example"></a>Przykład  
@@ -36,5 +36,6 @@ W tym przykładzie pokazano, jak utworzyć krzywą Beziera drugiego stopnia.  Ab
  W tym przykładzie jest częścią większego przykładu; Aby uzyskać pełny przykład, zobacz [przykładowe geometrii](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie łuku eliptycznego](how-to-create-an-elliptical-arc.md)
 - [Tworzenie krzywej Beziera trzeciego stopnia](how-to-create-a-cubic-bezier-curve.md)

@@ -1,5 +1,5 @@
 ---
-title: <compilers>, element
+title: <compilers> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compilers
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 15beb15d7927d616cc09c7e318ef26a6627926af
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130523"
 ---
 # <a name="compilers-element"></a>\<compilers> Element
 Kontener dla elementów konfiguracji, kompilator; zawiera zero lub więcej [ \<kompilatora >](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elementów.  
@@ -78,6 +78,7 @@ Kontener dla elementów konfiguracji, kompilator; zawiera zero lub więcej [ \<k
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

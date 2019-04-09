@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35ff03eb830a02b05dd128da4c072a8c2c918921
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0423946ab32c04274bb3d5656ed8603ec4314d88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128742"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
 Narzędzie PEVerify pomaga deweloperom, którzy generują język Microsoft intermediate language (MSIL) (na przykład twórcom kompilatorów, deweloperom aparatów skryptów itd.), w ustalaniu, czy ich kod MSIL i związane z nim metadane spełniają wymogi bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli jako programista używasz takiego kompilatora, możesz chcieć sprawdzić, czy nie występują zagrożenia bezpieczeństwa typów kodu. W tej sytuacji możesz uruchomić narzędzie PEVerify, aby sprawdzić MSIL i metadane plików.  
@@ -36,12 +36,12 @@ peverify filename [options]
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*Nazwa pliku*|Przenośny plik wykonywalny (PE), który ma zostać sprawdzony pod kątem języka MSIL i metadanych.|  
+|*nazwa_pliku*|Przenośny plik wykonywalny (PE), który ma zostać sprawdzony pod kątem języka MSIL i metadanych.|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Przerywa weryfikację po *maxErrorCount* błędy.<br /><br /> Ten parametr nie jest obsługiwany w .NET Framework w wersji 2.0 lub wyższej.|  
-|**/Clock**|Mierzy i raportuje następujące czasy weryfikacji w milisekundach:<br /><br /> **MD Val. cycle**<br /> Cykl sprawdzania poprawności metadanych<br /><br /> **MD Val. pure**<br /> Czysty czas sprawdzania poprawności metadanych<br /><br /> **IL Ver. cycle**<br /> Cykli weryfikacji języka pośredniego firmy Microsoft (MSIL)<br /><br /> **IL Ver pure**<br /> Czysty czas weryfikacji języka MSIL<br /><br /> **; MD Val. cycle** i **IL Ver. cycle** razy obejmują czas wymagany do wykonania niezbędnych procedur uruchamiania i zamykania. **MD Val. pure** i **IL Ver pure** razy odzwierciedlają czas wymagany do wykonania tylko sprawdzenia poprawności lub tylko weryfikacji.|  
+|**/clock**|Mierzy i raportuje następujące czasy weryfikacji w milisekundach:<br /><br /> **MD Val. Cykl**<br /> Cykl sprawdzania poprawności metadanych<br /><br /> **MD Val. czysty**<br /> Czysty czas sprawdzania poprawności metadanych<br /><br /> **IL Ver. Cykl**<br /> Cykli weryfikacji języka pośredniego firmy Microsoft (MSIL)<br /><br /> **{1&gt;IL Ver pure&lt;1}**<br /> Czysty czas weryfikacji języka MSIL<br /><br /> **; MD Val. cycle** i **IL Ver. cycle** razy obejmują czas wymagany do wykonania niezbędnych procedur uruchamiania i zamykania. **MD Val. pure** i **IL Ver pure** razy odzwierciedlają czas wymagany do wykonania tylko sprawdzenia poprawności lub tylko weryfikacji.|  
 |**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/hresult**|Wyświetla kody błędów w formacie szesnastkowym.|  
 |**/ ignore =** *gt;Hex.Code* [, *gt;Hex.Code*]|Ignoruje wymienione kody błędów.|  
@@ -121,6 +121,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [Sprawdzalnie bezpieczny kod](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
 - [Zabezpieczenia i ochrona typu](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)

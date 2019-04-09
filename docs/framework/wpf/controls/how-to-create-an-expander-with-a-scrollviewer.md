@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz ekspander za pomocą ScrollViewer'
+title: 'Instrukcje: Tworzenie ekspandera za pomocą kontrolki ScrollViewer'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], Expander
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Expander control [WPF], creating
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-ms.openlocfilehash: 9e7c023ec371dd6695ffba3368502e5b593c4608
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef0bc5d344f7d465de9209708430d3e61d40d4f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114653"
 ---
-# <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Instrukcje: Utwórz ekspander za pomocą ScrollViewer
+# <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Instrukcje: Tworzenie ekspandera za pomocą kontrolki ScrollViewer
 W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.Expander> formant, który zawiera złożone zawartości, takiej jak tekstowych i obrazów. Przykład również umieszcza treść <xref:System.Windows.Controls.Expander> w <xref:System.Windows.Controls.ScrollViewer> kontroli.  
   
 ## <a name="example"></a>Przykład  
@@ -27,6 +27,7 @@ W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls
  [!code-csharp[ExpanderRichContent#CreateExpanderCode](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Expander>
-- [Ekspander — omówienie](expander-overview.md)
-- [Tematy z instrukcjami](expander-how-to-topics.md)
+- [Przegląd Ekspander](expander-overview.md)
+- [— Tematy porad](expander-how-to-topics.md)

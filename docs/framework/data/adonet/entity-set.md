@@ -1,15 +1,15 @@
 ---
-title: Zestaw jednostek
+title: zestaw jednostek
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: d75002d4a5ac55538f76e6bace0fc16095a9ef74
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7fcaa2cb9bac02271940a712d4d044df25d7d4cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126623"
 ---
-# <a name="entity-set"></a>Zestaw jednostek
+# <a name="entity-set"></a>zestaw jednostek
 *Zestaw jednostek* to kontener logiczny dla wystąpień [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) i wystąpień dowolnego typu opracowane z tego typu jednostki. (Aby uzyskać informacji na temat typów pochodnych, zobacz [modelu danych jednostki: Dziedziczenie](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md).) Relacja między typem encji i zestaw jednostek jest analogiczna do relację wiersz tabeli w relacyjnej bazie danych: Np. wiersz typ jednostki opisujący strukturę danych i jak tabela, zestaw jednostek zawiera wystąpień danego struktury. Zestaw jednostek nie jest konstrukcja; modelowania danych nie opisano w strukturze danych. Zamiast tego zestaw jednostek zapewnia konstrukcję w środowisku hostingu lub magazynu (np. środowisko uruchomieniowe języka wspólnego lub bazą danych programu SQL Server) do wystąpienia typu jednostki grupy, dzięki czemu mogą być mapowane do magazynu danych.  
   
  Zestaw jednostek jest zdefiniowana w [kontener jednostek](../../../../docs/framework/data/adonet/entity-container.md), który jest logicznym grupowaniem zestawów encji i [zestawów skojarzeń](../../../../docs/framework/data/adonet/association-set.md).  
@@ -45,5 +45,6 @@ ms.locfileid: "58412191"
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

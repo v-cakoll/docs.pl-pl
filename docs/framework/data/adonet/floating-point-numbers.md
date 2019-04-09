@@ -2,12 +2,12 @@
 title: Liczby zmiennoprzecinkowe
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102521"
 ---
 # <a name="floating-point-numbers"></a>Liczby zmiennoprzecinkowe
 W tym temacie opisano niektóre problemy, które często deweloperzy napotykają podczas pracy z liczb zmiennoprzecinkowych w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Te problemy są spowodowane przez sposób komputerom przechowywania liczb zmiennoprzecinkowych i nie są specyficzne dla określonego dostawcy takich jak <xref:System.Data.SqlClient> lub <xref:System.Data.OracleClient>.  
@@ -19,5 +19,6 @@ W tym temacie opisano niektóre problemy, które często deweloperzy napotykają
  Aby uniknąć problemów z funkcją porównania równości, należy wziąć pod uwagę kodowania aplikacji, tak aby zmiany w najmniej znaczącymi cyframi są ignorowane. Na przykład zamiast porównywania, aby zobaczyć, czy dwie liczby są równe, Odejmij jedną cyfrę z drugiej liczby. Jeśli różnica jest dopuszczalne marginesem zaokrąglania, aplikację można traktować liczb, tak, jakby były takie same.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dlaczego liczby zmiennoprzecinkowe mogą tracić dokładność](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
 - [Omówienie ADO.NET](ado-net-overview.md)

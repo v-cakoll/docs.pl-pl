@@ -2,12 +2,12 @@
 title: '! = (Nie równa się) (jednostka SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
-ms.openlocfilehash: d5e59fe61dbc05a48e98f5720dca446482b9968e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3d6e391e708b81c45af82280f200aebdaef41421
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130975"
 ---
 # <a name="-not-equal-to-entity-sql"></a>! = (Nie równa się) (jednostka SQL)
 Porównuje dwa wyrażenia w celu ustalenia, czy po lewej stronie wyrażenia nie jest równa wyrażenie prawej krawędzi. ! = — Operator (nie równa się) jest funkcjonalnym odpowiednikiem < > — operator.  
@@ -37,4 +37,5 @@ expression <> expression
  [!code-csharp[DP EntityServices Concepts 2#NOT_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#not_equals)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza Windows'
+title: 'Instrukcje: odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], from resources
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-ms.openlocfilehash: f52cac4ca16adee232fae6fe2c1540bf5d3cb8cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078580"
 ---
-# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Instrukcje: Odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza Windows
+# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Instrukcje: odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza systemu Windows
 Możesz użyć <xref:System.Media.SoundPlayer> klasy odtwarzanie dźwięku z zasobu osadzonego.  
   
 ## <a name="example"></a>Przykład  
@@ -34,6 +34,7 @@ Możesz użyć <xref:System.Media.SoundPlayer> klasy odtwarzanie dźwięku z zas
  Zastępowanie "\<Nazwa_zestawu >" o nazwie zestawu, w którym jest osadzony w pliku dźwiękowego. Nie zawiera sufiksu ".dll".  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Media.SoundPlayer>
-- [Instrukcje: Odtwarzanie dźwięku za pomocą formularza Windows](how-to-play-a-sound-from-a-windows-form.md)
-- [Instrukcje: Odtwarzanie w formularzu Windows dźwięku w pętli](how-to-loop-a-sound-playing-on-a-windows-form.md)
+- [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](how-to-play-a-sound-from-a-windows-form.md)
+- [Instrukcje: odtwarzanie zapętlonego dźwięku w formularzu systemu Windows](how-to-loop-a-sound-playing-on-a-windows-form.md)

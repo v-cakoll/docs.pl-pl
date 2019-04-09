@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161515"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i przejście przez hiperłącza. Struktura stron i sposoby, w którym ich można nawigować, zgodnie z definicją hiperłącza, jest określany jako topologia nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które nawigowania w dokumentach. Na potrzeby takich aplikacji użytkownik może przejść z jednej strony do innej strony bez dowolnej stronie znajomości o innych.  
@@ -20,9 +20,7 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
  Jednak inne typy aplikacji ma stron, które trzeba wiedzieć, kiedy zostały przejście między. Rozważmy na przykład aplikacja zarządzania zasobami ludzkimi, która ma jedną stronę, aby wyświetlić listę wszystkich pracowników w organizacji — na stronie "Listy Employees". Na tej stronie może także umożliwić użytkownikom dodawanie nowych pracowników, klikając hiperłącze. Po kliknięciu strony powoduje przejście do strony "Dodaj Employee" w taki sposób, aby zebrać szczegółowe dane nowych pracownika i przywrócić je do strony "Listy Employees" do tworzenia nowych pracowników i aktualizowania listy. Ten styl nawigacji jest podobny do wywoływania metody do przetworzenia i zwracają wartość, który jest znany jako programowania ze strukturą. W efekcie ten styl nawigacji jest znany jako *strukturę nawigacji*.  
   
  <xref:System.Windows.Controls.Page> Klasa nie implementuje obsługę strukturyzowana Nawigacja. Zamiast tego <xref:System.Windows.Navigation.PageFunction%601> klasa pochodzi od <xref:System.Windows.Controls.Page> i rozszerza je z podstawowymi konstrukcjami, które są wymagane dla strukturyzowana Nawigacja. W tym temacie pokazano, jak nawiązać strukturyzowana Nawigacja przy użyciu <xref:System.Windows.Navigation.PageFunction%601>.  
-  
- 
-  
+
 <a name="Structured_Navigation"></a>   
 ## <a name="structured-navigation"></a>Strukturyzowana Nawigacja  
  Gdy jedna strona wywołuje innej strony w strukturyzowana Nawigacja, wymagane są niektóre lub wszystkie z następujących problemów:  
@@ -170,6 +168,7 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
  W innych przypadkach aplikacje mogą mieć topologie nawigacji złożonych, które są zależne od strukturyzowana Nawigacja do efektywnego prowadzenia działalności. Aby uzyskać więcej informacji, zobacz [Przegląd topologia nawigacji](navigation-topologies-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
-- [Topologia nawigacji — omówienie](navigation-topologies-overview.md)
+- [Przegląd Topologia nawigacji](navigation-topologies-overview.md)

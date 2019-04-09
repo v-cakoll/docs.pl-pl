@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 6c5bb61f234c8d5b8ffc5e16195a2cb50022d142
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166169"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Definiuje warstwę transportu TCP, który może służyć przez kanał do transferu wiadomości dla niestandardowego powiązania.  
@@ -80,6 +80,7 @@ Definiuje warstwę transportu TCP, który może służyć przez kanał do transf
  `tcpTransport` Element jest punktem wyjścia do tworzenia niestandardowego powiązania, który implementuje protokołu transportu TCP. Tego transportu jest zoptymalizowany pod kątem komunikacji WCF do usługi WCF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

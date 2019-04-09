@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania'
+title: 'Instrukcje: używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160943"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Instrukcje: Używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Instrukcje: używanie osobnych certyfikatów X.509 do podpisywania i szyfrowania
 W tym temacie przedstawiono sposób konfigurowania Windows Communication Foundation (WCF) do użycia różnych certyfikatów do podpisywania komunikatów i szyfrowania w klienta i usługi.  
   
  Aby włączyć oddzielnych certyfikatów służący do podpisywania i szyfrowania, niestandardowe klienta lub usługę poświadczeń (lub obie) należy utworzyć ponieważ WCF nie zapewnia interfejsu API, aby ustawić wielu certyfikatów klienta lub usługę. Ponadto zabezpieczeń Menedżera tokenu należy podać może wykorzystać informacje wiele certyfikatów i utworzyć dostawcę tokenu zabezpieczeń odpowiednich dla określonego klucza kierunku użycia i komunikatu.  
@@ -90,6 +90,7 @@ W tym temacie przedstawiono sposób konfigurowania Windows Communication Foundat
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>

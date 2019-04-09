@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: e2c65044b99e2d5fda7025f24d1d4c4082ded4ec
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101617"
 ---
 # <a name="systemcodedom-element"></a>\<system.codedom> Element
 Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców języka.  
@@ -88,6 +88,7 @@ Określa ustawienia konfiguracyjne kompilatora dla dostępnych dostawców język
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

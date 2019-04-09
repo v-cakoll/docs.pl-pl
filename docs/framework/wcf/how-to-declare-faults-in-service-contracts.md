@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 145e9d7551e59a246d2540c2a7106e1a16686099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90abb29550ce7e027244b220f30e9fe46e282ff3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129496"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Instrukcje: Deklarowanie błędów w kontraktach usługi
 W zarządzanym kodzie są zgłaszane wyjątki, gdy wystąpią błędy. W aplikacjach Windows Communication Foundation (WCF) natomiast kontraktów usług określić informacje o błędach, które są zwracane do klientów przez zadeklarowanie błędach SOAP w kontrakcie usługi. Aby uzyskać przegląd relacji między wyjątków i błędów, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -45,5 +45,6 @@ W zarządzanym kodzie są zgłaszane wyjątki, gdy wystąpią błędy. W aplikac
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

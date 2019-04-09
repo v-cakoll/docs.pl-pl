@@ -2,12 +2,12 @@
 title: Wiele aktywnych zestawów wyników (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
-ms.openlocfilehash: da75cee8faff667f60ca376d835fd39d117e743b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb00fbfec32a9d64fd6661cd5cdfd06fe3aa7410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138921"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Wiele aktywnych zestawów wyników (MARS)
 Wiele aktywnych zestawów wyników (MARS) to funkcja, która umożliwia wykonanie wielu instancji na pojedyncze połączenie. W poprzednich wersjach tylko jedno zadanie wsadowe może zostać wykonany w czasie przed jednego połączenia. Wykonywanie wielu instancji przy użyciu usług MARS nie oznacza jednoczesne wykonywanie operacji.  
@@ -24,5 +24,6 @@ Wiele aktywnych zestawów wyników (MARS) to funkcja, która umożliwia wykonani
  Zawiera szczegółowe informacje na temat korzystania z nowych funkcji asynchronicznej w ADO.NET.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

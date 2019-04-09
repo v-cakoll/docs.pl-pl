@@ -1,5 +1,5 @@
 ---
-title: 'Samouczek: Hosting obiektów Visual w aplikacji Win32'
+title: 'Samouczek: hosting obiektów Visual w aplikacji Win32'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,18 @@ helpviewer_keywords:
 - Win32 code [WPF], visual objects in
 - hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
-ms.openlocfilehash: 68241d679b0f788423b09badfa549a660da0d106
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b260f96246f0d9e5447b74a05e1396bfef176197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111465"
 ---
-# <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>Samouczek: Hosting obiektów Visual w aplikacji Win32
+# <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>Samouczek: hosting obiektów Visual w aplikacji Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej efektywne dodać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji do aplikacji, zamiast ponownego zapisywania kodu. Aby zapewnić obsługę [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podsystemów grafiki jednocześnie używane w aplikacji, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia mechanizm hosting obiektów w [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  
   
  W tym samouczku opisano sposób pisania aplikacji przykładowej, [Test trafień Win32 — współdziałanie przykład](https://go.microsoft.com/fwlink/?LinkID=159995), które hosty [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual obiekty w [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  
-  
 
-  
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Wymagania  
  W tym samouczku założono podstawowe znajomość zarówno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania. Aby uzyskać wstęp do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania, zobacz [wskazówki: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md). Wprowadzenie do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania, zobacz dowolny wiele książek, które w szczególności na ten temat *programowania Windows* przez Charles Petzold.  
@@ -78,6 +76,7 @@ ms.locfileid: "57377310"
  Aby uzyskać więcej informacji na temat testowania trafień względem obiektów wizualnych, zobacz [trafień testowania w warstwie wizualnej](hit-testing-in-the-visual-layer.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Interop.HwndSource>
 - [Hit Test przykład współdziałanie Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Test trafienia w warstwie wizualizacji](hit-testing-in-the-visual-layer.md)
+- [Test trafienia w warstwie Visual](hit-testing-in-the-visual-layer.md)

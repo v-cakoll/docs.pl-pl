@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie i zwracanie wartości liczbowych za pomocą formantu NumericUpDown formularzy Windows'
+title: 'Instrukcje: ustawianie i zwracanie wartości liczbowych za pomocą kontrolki NumericUpDown formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 166b14fca2009d0609fa48a5f07912b33f074071
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 281fbbd4459230056fcac2e6c684422c91dc0817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119889"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Instrukcje: Ustawianie i zwracanie wartości liczbowych za pomocą formantu NumericUpDown formularzy Windows
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Instrukcje: ustawianie i zwracanie wartości liczbowych za pomocą kontrolki NumericUpDown formularzy systemu Windows
 Wartość liczbowa formularzy Windows Forms <xref:System.Windows.Forms.NumericUpDown> kontrolki jest określany przez jego <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwości. Możesz tworzyć testów warunkowych wartości kontrolki podobnie jak w przypadku wszystkich innych właściwości. Gdy <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwość jest ustawiona, możesz je dostosować bezpośrednio przez napisanie kodu, aby wykonywać operacje na nim lub może wywołać <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> i <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> metody.  
   
 ### <a name="to-set-the-numeric-value"></a>Aby ustawić wartość liczbową  
@@ -90,6 +90,7 @@ Wartość liczbowa formularzy Windows Forms <xref:System.Windows.Forms.NumericUp
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>

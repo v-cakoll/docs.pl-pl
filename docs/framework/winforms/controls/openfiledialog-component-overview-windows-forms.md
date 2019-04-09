@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], about OpenFileDialog
 - Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-ms.openlocfilehash: ad2fea74f0f3110ab2868064c588a7611d4261e3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ec275a5923d332d23205c79442fa23bc6e402e3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147345"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>OpenFileDialog — Informacje o składniku (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.OpenFileDialog> składnik to wstępnie skonfigurowane okno dialogowe. Jest to ta sama **Otwórz plik** okno dialogowe ujawnione przez system operacyjny Windows. Dziedziczy <xref:System.Windows.Forms.CommonDialog> klasy.  
@@ -25,5 +25,6 @@ Formularze Windows <xref:System.Windows.Forms.OpenFileDialog> składnik to wstę
  Gdy zostanie dodany do formularza, <xref:System.Windows.Forms.OpenFileDialog> składnika, który pojawia się na pasku w dolnej części projektanta Windows Forms.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.OpenFileDialog>
 - [OpenFileDialog, składnik](openfiledialog-component-windows-forms.md)

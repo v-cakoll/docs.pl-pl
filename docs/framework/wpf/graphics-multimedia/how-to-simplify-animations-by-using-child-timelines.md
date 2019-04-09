@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Uprość animacje przy użyciu podrzędnych szeregów czasowych'
+title: 'Instrukcje: Upraszczanie animacji przy użyciu podrzędnych osi czasu'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - simplifying animations by child timelines [WPF]
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096397"
 ---
-# <a name="how-to-simplify-animations-by-using-child-timelines"></a>Instrukcje: Uprość animacje przy użyciu podrzędnych szeregów czasowych
+# <a name="how-to-simplify-animations-by-using-child-timelines"></a>Instrukcje: Upraszczanie animacji przy użyciu podrzędnych osi czasu
 W tym przykładzie pokazano, jak uprościć animacje przy użyciu podrzędnych <xref:System.Windows.Media.Animation.ParallelTimeline> obiektów. A <xref:System.Windows.Media.Animation.Storyboard> jest typem <xref:System.Windows.Media.Animation.Timeline> zawierające informacje określania wartości docelowej dla osi czasu zawiera. Użyj <xref:System.Windows.Media.Animation.Storyboard> umożliwia określanie wartości docelowej informacji, w tym informacje o obiekcie i właściwości osi czasu.  
   
  Aby rozpocząć animacji, użyj jednego lub kilku <xref:System.Windows.Media.Animation.ParallelTimeline> obiektów jako elementy podrzędne zagnieżdżonych <xref:System.Windows.Media.Animation.Storyboard>. Te <xref:System.Windows.Media.Animation.ParallelTimeline> obiekty mogą zawierać inne animacji i dlatego lepiej umożliwiająca Hermetyzowanie sekwencje chronometrażu w złożonych animacji. Na przykład, jeśli użytkownik animuje <xref:System.Windows.Controls.TextBlock> i kilku kształtów w tej samej <xref:System.Windows.Media.Animation.Storyboard>, można oddzielić animacji dla <xref:System.Windows.Controls.TextBlock> i kształty, umieszczenie każdej w oddzielnych <xref:System.Windows.Media.Animation.ParallelTimeline>. Ponieważ każdy <xref:System.Windows.Media.Animation.ParallelTimeline> ma swój własny <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> i wszystkie elementy podrzędne elementu <xref:System.Windows.Media.Animation.ParallelTimeline> rozpocząć względem to <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A>, czas jest lepiej hermetyzowana.  
@@ -26,5 +26,6 @@ W tym przykładzie pokazano, jak uprościć animacje przy użyciu podrzędnych <
  [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
+
+- [Przegląd Animacja](animation-overview.md)
 - [Określanie elementu HandoffBehavior między animacjami scenorysu](how-to-specify-handoffbehavior-between-storyboard-animations.md)

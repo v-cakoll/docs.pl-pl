@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096267"
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządzane w środowisko uruchomieniowe języka wspólnego, a ponadto jest ważną częścią obsługi integracji wielu języków. Wspólny system typów wykonuje następujące funkcje:  
@@ -43,7 +43,7 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
 -   [Definicje typu](#type_definitions)  
   
--   [Elementy członkowskie typu](#type_members)  
+-   [Składowe typu](#type_members)  
   
 -   [Cechy typów członków](#characteristics_of_type_members)  
   
@@ -165,11 +165,9 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
 > [!NOTE]
 >  Nie jest niezbędne do korzystania z tych metod do delegatów obsługi zdarzeń w języku C#, C++ i Visual Basic, ponieważ te języki zapewniają składnię umożliwiającą Dodawanie i usuwanie programów obsługi zdarzeń.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
-## <a name="type-definitions"></a>Definicje typów  
+## <a name="type-definitions"></a>Definicje typu  
  Definicja typu obejmuje następujące funkcje:  
   
 -   Wszelkie atrybuty zdefiniowane w typie.  
@@ -226,11 +224,9 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
  Typ może odziedziczyć wartości i zachowania innego typu. Wspólny system typów nie zezwala na typy odziedziczone z więcej niż jednego typu podstawowego.  
   
  Typ może implementować dowolną liczbę interfejsów. Aby zaimplementować interfejs, typ musi implementować wirtualnych członków interfejsu. Metoda wirtualna może być implementowana przez typ pochodny i może być wywołana statycznie lub dynamicznie.  
-  
-  
-  
+
 <a name="type_members"></a>   
-## <a name="type-members"></a>Elementy członkowskie typu  
+## <a name="type-members"></a>Składowe typu  
  Środowisko wykonawcze umożliwia zdefiniowanie członków typu, który określa zachowanie i stan typu. Elementy członkowskie typu są następujące:  
   
 -   [Pola](#Fields)  
@@ -239,7 +235,7 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
 -   [Metody](#Methods)  
   
--   [Konstruktory](#Constructors)  
+-   [Konstruktorów](#Constructors)  
   
 -   [Zdarzenia](#Events)  
   
@@ -290,9 +286,7 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
  Typ zagnieżdżony jest typ, który jest członkiem innego typu. Zagnieżdżone typy powinny być ściśle powiązane ich typem zawierającym i nie można ich używać jako typów ogólnego przeznaczenia. Zagnieżdżone typy są przydatne, gdy typ deklarujący używa i tworzy wystąpienia typu zagnieżdżonego, a użycie typu zagnieżdżonego nie jest widoczne w publicznych członkach.  
   
  Zagnieżdżone typy są mylące dla niektórych programistów i nie powinny być publicznie widoczne, chyba że istnieje istotny powód widoczności. W bibliotece dobrze zaprojektowanej deweloperzy rzadko powinni być zmuszeni do używania zagnieżdżonych typów do tworzenia wystąpień obiektów lub deklarowaniu zmiennych.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>Cechy typów członków  
  Wspólny system typów umożliwia członkom typów posiadanie różnych cech; jednak języków nie są wymagane do obsługi wszystkich tych cech. W poniższej tabeli opisano charakterystyki składowych.  
@@ -324,6 +318,6 @@ Wspólny system typów definiuje, jak typy są deklarowane, używane i zarządza
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przeglądarka interfejsu API .NET](/dotnet/api)
-- [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md)
+- [Przeglądarka interfejsów API na platformie .NET](/dotnet/api)
+- [środowiska uruchomieniowe w trakcie wykonania](../../../docs/standard/clr.md)
 - [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)

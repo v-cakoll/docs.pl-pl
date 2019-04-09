@@ -2,12 +2,12 @@
 title: <msmqIntegration>
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 8412862237ccf4c0f5b880d8ae33e0a55f9557f3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 850d117ca17b5929c219c3b7d6453cf76136bad3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165220"
 ---
 # <a name="msmqintegration"></a>\<msmqIntegration>
 Określa usługę transportu MSMQ dla niestandardowego powiązania.  
@@ -80,6 +80,7 @@ Określa usługę transportu MSMQ dla niestandardowego powiązania.
 |[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie funkcje powiązania niestandardowego powiązania.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

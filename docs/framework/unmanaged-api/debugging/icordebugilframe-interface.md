@@ -1,5 +1,5 @@
 ---
-title: ICorDebugILFrame — Interfejs
+title: ICorDebugILFrame, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugILFrame
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a10c39d7df12c86b8fcf0fb40389c087f96e1ee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c60d7685de1e9a1d4f631ad1fba53b981829f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159805"
 ---
-# <a name="icordebugilframe-interface"></a>ICorDebugILFrame — Interfejs
+# <a name="icordebugilframe-interface"></a>ICorDebugILFrame, interfejs
 
 Reprezentuje ramkę stosu kodu języka intermediate language (MSIL) firmy Microsoft. Ten interfejs jest podklasą icordebugframe — interfejs.  
   
@@ -57,4 +57,5 @@ Reprezentuje ramkę stosu kodu języka intermediate language (MSIL) firmy Micros
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

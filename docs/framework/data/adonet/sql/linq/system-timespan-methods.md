@@ -2,14 +2,14 @@
 title: System.TimeSpan Methods
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: a3f3c82f9f8db4b72588f165ed4d897b974eb076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126948"
 ---
-# <a name="systemtimespan-methods"></a>System.TimeSpan Methods
+# <a name="systemtimespan-methods"></a>System.TimeSpan, metody
 Element członkowski obsługę <xref:System.TimeSpan?displayProperty=nameWithType> zależy od wersji .NET Framework i programu Microsoft SQL Server, którego używasz.  
   
  Gdy metoda, operator lub właściwość nie jest obsługiwany; oznacza to, że LINQ to SQL nie może tłumaczyć elementu członkowskiego do wykonania w programie SQL Server. Nadal można użyć tych elementów członkowskich w kodzie. Muszą one jednak obliczane, przed zapytania jest tłumaczony języka Transact-SQL lub po wyniki zostały pobrane z bazy danych.  
@@ -37,6 +37,7 @@ Element członkowski obsługę <xref:System.TimeSpan?displayProperty=nameWithTyp
  Chociaż środowisko CLR <xref:System.TimeSpan?displayProperty=nameWithType> typ obsługuje dodawanie i odejmowanie, SQL `TIME` nie ma typu. W związku z tym Twoje zapytania LINQ to SQL będzie generować błędy, jeśli one próba Dodawanie i odejmowanie, gdy są mapowane do bazy danych SQL `TIME` typu. Możesz znaleźć inne zagadnienia dotyczące pracy z SQL typów daty i godziny w [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

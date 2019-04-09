@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebf2fea9f987818c93a1e865f2ed2ce33142050c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d4bc763d908156f3bbf8998c13073820686903f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132759"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion — Metoda
 Pobiera metodę czytnika symboli podany token metody i numeru wersji edycji i kopiowania. Numery wersji są liczone od 1 i są zwiększane, każdym razem, gdy metoda zostanie zmieniony w wyniku operacji Edytuj i kopiowania.  
@@ -53,4 +53,5 @@ HRESULT GetMethodByVersion (
  **Nagłówek:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+
+- [ISymUnmanagedReader — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115079"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Udostępnianie pętli komunikatów pomiędzy Win32 i WPF
 W tym temacie opisano sposób implementacji pętlę komunikatów do współpracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], przy użyciu istniejących komunikatów narażenia pętli w <xref:System.Windows.Threading.Dispatcher> lub poprzez utworzenie pętli oddzielną wiadomość na [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] obok współdziałanie kodu.  
@@ -62,8 +62,9 @@ W tym temacie opisano sposób implementacji pętlę komunikatów do współpracy
  Komunikat, który prowadzi do ujścia klawiatury nie mogą być wysyłane do HWND, jeśli dodano punkty zaczepienia dla tego komunikatu przy użyciu <xref:System.Windows.Interop.HwndSource.AddHook%2A> metody. Komunikat może być obsługiwany na poziomie pompy komunikatów bezpośrednio i nie są przesyłane do `DispatchMessage` funkcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
+- [WPF i Win32 — Współdziałanie](wpf-and-win32-interoperation.md)
 - [Model wątkowości](threading-model.md)
-- [Przegląd danych wejściowych](input-overview.md)
+- [Przegląd Dane wejściowe](input-overview.md)

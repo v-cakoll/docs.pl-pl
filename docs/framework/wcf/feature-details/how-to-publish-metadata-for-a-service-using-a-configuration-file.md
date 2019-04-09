@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Publikowanie metadanych dla usługi za pomocą pliku konfiguracji'
+title: 'Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 81bf7db9ec25ae112127712dcd0443d3e045bc10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075206"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Instrukcje: Publikowanie metadanych dla usługi za pomocą pliku konfiguracji
+# <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji
 Jest to jedna z dwóch tematy porad, które pokazują Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji.  
   
 > [!CAUTION]
@@ -93,21 +93,13 @@ namespace Metadata.Samples
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Publikowanie metadanych dla usługi WCF, za pomocą pliku konfiguracji aplikacji  
   
 1.  W pliku App.config, po upływie `</services>` elementu, Utwórz `<behaviors>` elementu.  
-  
-  
-  
+
 2.  W ramach `<behaviors>` elementu Dodawanie `<serviceBehaviors>` elementu.  
-  
-  
-  
+
 3.  Dodaj `<behavior>` elementu `<serviceBehaviors>` elementu i określić wartość dla `name` atrybutu `<behavior>` elementu.  
-  
-  
-  
+
 4.  Dodaj `<serviceMetadata>` elementu `<behavior>` elementu. Ustaw `httpGetEnabled` atrybutu `true` i `policyVersion` atrybutu Policy15. `httpGetEnabled` Umożliwia usłudze odpowiadanie na żądania metadanych przez żądanie HTTP GET. `policyVersion` informuje usługę do odpowiadają WS-Policy w wersji 1.5 podczas generowania metadanych.  
-  
-  
-  
+
 5.  Dodaj `behaviorConfiguration` atrybutu `<service>` elementu i określ `name` atrybutu `<behavior>` elementu dodany w kroku 1, jak pokazano w poniższym przykładzie kodu.  
   
     ```xml  
@@ -262,6 +254,7 @@ namespace Metadata.Samples
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - [Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [Host samodzielny](../../../../docs/framework/wcf/samples/self-host.md)

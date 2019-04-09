@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użyj sprawdzania pisowni z menu kontekstowym'
+title: 'Instrukcje: Używanie sprawdzania pisowni z menu kontekstowym'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-ms.openlocfilehash: 38d41aa6710fd13ffd2a5d13a6900a1a05303f35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192982"
 ---
-# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Instrukcje: Użyj sprawdzania pisowni z menu kontekstowym
+# <a name="how-to-use-spell-checking-with-a-context-menu"></a>Instrukcje: Używanie sprawdzania pisowni z menu kontekstowym
 Domyślnie po włączeniu pisowni w formancie edycji, takie jak <xref:System.Windows.Controls.TextBox> lub <xref:System.Windows.Controls.RichTextBox>, Pobierz możliwości sprawdzania pisowni z menu kontekstowego. Na przykład, gdy użytkownicy kliknij prawym przyciskiem myszy wyrazu, otrzymują zestaw sugestie dotyczące pisowni lub opcję, aby **Ignoruj wszystkich**. Jednak aby zastąpić domyślne menu kontekstowe z menu kontekstowego, ta funkcja jest utracone i trzeba napisać kod, aby ponownie włączyć funkcję sprawdzania pisowni z menu kontekstowego. Poniższy przykład pokazuje, jak ją włączyć dla <xref:System.Windows.Controls.TextBox>.  
   
 ## <a name="example"></a>Przykład  
@@ -39,7 +39,8 @@ Domyślnie po włączeniu pisowni w formancie edycji, takie jak <xref:System.Win
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>Zobacz także
-- [TextBox — omówienie](textbox-overview.md)
-- [RichTextBox — omówienie](richtextbox-overview.md)
+
+- [TextBox — Przegląd](textbox-overview.md)
+- [RichTextBox — Przegląd](richtextbox-overview.md)
 - [Włączanie sprawdzania pisowni w kontrolce edycji tekstu](how-to-enable-spell-checking-in-a-text-editing-control.md)
 - [Używanie niestandardowego menu kontekstowego z kontrolką TextBox](how-to-use-a-custom-context-menu-with-a-textbox.md)

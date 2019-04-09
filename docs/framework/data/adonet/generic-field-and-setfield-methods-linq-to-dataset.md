@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 0dfc21264353ac3aa1e20c7fa7b6b8381d47480d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c7f1fef5d1fa575cd6d3bfdb7e6cbbea79ade28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086016"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Pole ogólne i metody SetField (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] udostępnia metody rozszerzenia dla <xref:System.Data.DataRow> klasy do uzyskiwania dostępu do wartości kolumny: <xref:System.Data.DataRowExtensions.Field%2A> metody i <xref:System.Data.DataRowExtensions.SetField%2A> metody. Te metody zapewnienia łatwiejszego dostępu do wartości w kolumnie dla deweloperów, szczególnie w odniesieniu do wartości null. <xref:System.Data.DataSet> Używa <xref:System.DBNull.Value> do reprezentowania wartości null, podczas gdy [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] używa obsługi typu dopuszczającego wartość null, wprowadzona w [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. Przy użyciu istniejących metody dostępu do kolumny w <xref:System.Data.DataRow> wymaga rzutować zwracany obiekt do odpowiedniego typu. Jeśli określonego pola w <xref:System.Data.DataRow> może mieć wartość null, musi jawnie sprawdzenie, czy wartość null, ponieważ zwracanie <xref:System.DBNull.Value> i niejawnie rzutowania go na inny typ zgłasza <xref:System.InvalidCastException>. W poniższym przykładzie Jeśli <xref:System.Data.DataRow.IsNull%2A> metoda nie została użyta pod kątem wartości null, jeśli zwrócony przez indeksator będzie zgłoszony wyjątek <xref:System.DBNull.Value> próbuję rzutować go na <xref:System.String>.  
@@ -30,4 +30,5 @@ ms.locfileid: "54562157"
  <xref:System.Data.DataRowExtensions.SetField%2A> Sama metoda nie wykonuje żadnych konwersji typu. Nie oznacza to, jednak nie nastąpi konwersji typu. <xref:System.Data.DataRowExtensions.SetField%2A> Ujawnia metody [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] zachowanie <xref:System.Data.DataRow> klasy. Konwersja typu może zostać wykonana przez <xref:System.Data.DataRow> obiektu i przekonwertowana wartości następnie zostaną zapisane w <xref:System.Data.DataRow> obiektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataRowExtensions>

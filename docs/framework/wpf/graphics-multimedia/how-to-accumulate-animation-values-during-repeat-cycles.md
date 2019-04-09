@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Gromadź wartości animacji podczas cykli powtórzeń'
+title: 'Instrukcje: Gromadzenie wartości animacji podczas cykli powtórzeń'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-ms.openlocfilehash: e38e1601e2f4eeab2b53918924bc21e05163d948
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146019"
 ---
-# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Instrukcje: Gromadź wartości animacji podczas cykli powtórzeń
+# <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Instrukcje: Gromadzenie wartości animacji podczas cykli powtórzeń
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> właściwość gromadzenie wartości animacji w cyklach.  
   
 ## <a name="example"></a>Przykład  
@@ -33,8 +33,9 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.D
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dodawanie wartości danych wyjściowych animacji do wartości początkowej animacji](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
 - [Powtarzanie animacji](how-to-repeat-an-animation.md)
-- [Animacja — przegląd](animation-overview.md)
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
-- [Tematy z instrukcjami](animation-and-timing-how-to-topics.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
+- [— Tematy porad](animation-and-timing-how-to-topics.md)

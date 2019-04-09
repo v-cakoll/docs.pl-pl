@@ -2,12 +2,12 @@
 title: Tworzenie kolejek w programie WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128768"
 ---
 # <a name="queuing-in-wcf"></a>Tworzenie kolejek w programie WCF
 W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows Communication Foundation (WCF).  
@@ -105,9 +105,9 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows C
 ### <a name="sample-code"></a>Przykładowy kod  
  Aby uzyskać instrukcje krok po kroku dotyczące pisania WCF usług korzystających z usługi MSMQ, zobacz następujące tematy:  
   
--   [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi programu WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Instrukcje: wymiana zakolejkowanych komunikatów z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Aby uzyskać kompletny kod przykładowy pokazujący użycie usługi MSMQ w usłudze WCF, zobacz następujące tematy:  
   
@@ -126,5 +126,6 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows C
 -   [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Punkty końcowe usługi i adresowanie kolejki](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
 - [Sieć Web hostująca aplikację zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

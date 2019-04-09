@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125765"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Instrukcje: Inspekcja zdarzeń zabezpieczeń programu Windows Communication Foundation
 Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpieczeń w dzienniku zdarzeń Windows, które można przeglądać za pomocą Podglądu zdarzeń Windows. W tym temacie wyjaśniono, jak skonfigurować aplikację tak, aby go dzienników zdarzeń zabezpieczeń. Aby uzyskać więcej informacji na temat inspekcji WCF, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpi
  Jeśli <xref:System.ServiceModel.AuditLogLocation> właściwość jest ustawiona na <xref:System.ServiceModel.AuditLogLocation.Security> i **inspekcji dostępu do obiektów** nie jest ustawiona w **zasady zabezpieczeń lokalnych**, zdarzenia inspekcji nie będą zapisywane w dzienniku zabezpieczeń. Należy pamiętać, że zwracany jest bez błędów, ale wpisy inspekcji nie są zapisywane w dzienniku zabezpieczeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

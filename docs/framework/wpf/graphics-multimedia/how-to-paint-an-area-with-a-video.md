@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Maluj obszar za pomocą wideo'
+title: 'Instrukcje: Malowanie obszaru za pomocą wideo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151180"
 ---
-# <a name="how-to-paint-an-area-with-a-video"></a>Instrukcje: Maluj obszar za pomocą wideo
+# <a name="how-to-paint-an-area-with-a-video"></a>Instrukcje: Malowanie obszaru za pomocą wideo
 Ten przykład pokazuje, jak malować obszar za pomocą nośnika. Jednym ze sposobów Maluj obszar za pomocą nośnika jest użycie <xref:System.Windows.Controls.MediaElement> wraz z <xref:System.Windows.Media.VisualBrush>. Użyj <xref:System.Windows.Controls.MediaElement> do ładowania i odtwarzania nośnika i użyj go, aby ustawić <xref:System.Windows.Media.VisualBrush.Visual%2A> właściwość <xref:System.Windows.Media.VisualBrush>. Następnie można użyć <xref:System.Windows.Media.VisualBrush> można malować obszar za pomocą załadowane nośniki.  
   
 ## <a name="example"></a>Przykład  
@@ -38,7 +38,8 @@ Ten przykład pokazuje, jak malować obszar za pomocą nośnika. Jednym ze sposo
  Aby uzyskać informacje dotyczące dodawania pliku zawartości, takich jak plik multimedialny do aplikacji, zobacz [zasoby aplikacji WPF, zawartość i pliki danych](../app-development/wpf-application-resource-content-and-data-files.md). Po dodaniu pliku nośnika, należy dodać jako pliku zawartości, a nie jako plik zasobów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.VisualBrush>
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
-- [TileBrush — przegląd](tilebrush-overview.md)
-- [Multimedia — przegląd](multimedia-overview.md)
+- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
+- [TileBrush — Przegląd](tilebrush-overview.md)
+- [Przegląd Multimedia](multimedia-overview.md)

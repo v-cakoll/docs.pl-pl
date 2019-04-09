@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102742"
 ---
 # <a name="designing-service-contracts"></a>Projektowanie kontraktów usług
 W tym temacie opisano, jakie usługi zamówień są, jak są one definiowane, jakie operacje są dostępne (i wpływ na podstawowej wymianę komunikatów), jakiego typu dane są używane i innych problemów, które ułatwiają Projektuj operacje, które spełniają wymagania wymagania dotyczące scenariusza.  
@@ -270,9 +270,10 @@ End Interface
  Jeden wynik to jest, jeśli nazwy i przestrzenie nazw nie są jawnie ustawione, użycie zasłanianie IL w zestawie zmienia nazwy typów kontraktu i przestrzenie nazw i powoduje modyfikacji WSDL i wymiany o komunikacji sieciowej, które nie są zwykle. Jeśli nie używaj nazw kontraktu i przestrzenie nazw jawnie, ale zamierza się używać zasłanianie, użyj <xref:System.Reflection.ObfuscationAttribute> i <xref:System.Reflection.ObfuscateAssemblyAttribute> atrybutów, aby zapobiec modyfikacji umowy, wpisz nazwy i przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie kontraktu "żądanie-odpowiedź"](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [Instrukcje: Tworzenie kontraktu jednokierunkowego](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [Instrukcje: Tworzenie kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+
+- [Instrukcje: tworzenie kontraktu „żądanie-odpowiedź”](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [Instrukcje: tworzenie kontraktu jednokierunkowego](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [Instrukcje: tworzenie kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Określanie transferu danych w kontraktach usług](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [Korzystanie z sesji](../../../docs/framework/wcf/using-sessions.md)

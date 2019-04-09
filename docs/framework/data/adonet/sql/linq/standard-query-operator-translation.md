@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127949"
 ---
 # <a name="standard-query-operator-translation"></a>Translacja standardowego operatora zapytania
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy standardowych operatorów zapytań do polecenia SQL. Procesor zapytań bazy danych określa semantyka wykonania tłumaczenia SQL.  
@@ -226,7 +226,8 @@ ORDER BY [t0].[CustomerID]
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
 ## <a name="see-also"></a>Zobacz także
-- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [Tematy pomocy](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Zwracanie lub pomijanie elementów w sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
 - [Łączenie dwóch sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
 - [Zwracanie zestawu różnic między dwoma sekwencjami](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)

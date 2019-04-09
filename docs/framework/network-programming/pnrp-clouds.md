@@ -1,15 +1,15 @@
 ---
-title: PNRP Clouds
+title: Chmury PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: d91bf1b68b8446e2700b601d818c493b8edc1b82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110048"
 ---
-# <a name="pnrp-clouds"></a>PNRP Clouds
+# <a name="pnrp-clouds"></a>Chmury PNRP
 PNRP "chmura" reprezentuje zestaw węzłów, które mogą komunikować się ze sobą za pośrednictwem sieci. Termin "chmura" jest synonimem "siatki elementów równorzędnych" i "peer-to-peer grafu".  
   
  Komunikacji między węzłami powinno nigdy nie przechodzą z chmury do innego. A <xref:System.Net.PeerToPeer.Cloud> wystąpienia jest unikatowo identyfikowane przez jego nazwę, która jest uwzględniana wielkość liter. Pojedynczego elementu równorzędnego lub węzeł może być podłączony do więcej niż jednej chmury.  
@@ -32,5 +32,6 @@ PNRP "chmura" reprezentuje zestaw węzłów, które mogą komunikować się ze s
  Po utworzeniu wystąpienia w chmurze lub uzyskane, nazwy elementów równorzędnych może być zarejestrowany go, aby utworzyć siatki elementów równorzędnych znane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.PeerToPeer.Cloud>
 - [Protokół PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)

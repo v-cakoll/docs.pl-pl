@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157680"
 ---
 # <a name="securing-services"></a>Zabezpieczanie usług
 Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dwóch podstawowe wymagania: transfer zabezpieczeń i autoryzacja. (Wymaganie trzeci, inspekcja zdarzeń zabezpieczeń jest opisana w [inspekcji](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Krótko mówiąc bezpieczeństwie transferu zawiera uwierzytelniania (potwierdzenia tożsamości klienta i usługę), poufności (szyfrowanie wiadomości) i integralności (cyfrowego podpisywania naruszeniem). Autoryzacja jest kontrola dostępu do zasobów, na przykład, dzięki czemu tylko użytkownicy uprzywilejowani do odczytu pliku. Korzystając z funkcji usługi WCF, dwa podstawowe wymagania są łatwo zaimplementować.  
@@ -99,6 +99,7 @@ Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dw�
  `ProtectionLevel` Właściwość występuje na kilka klas atrybutów (takie jak <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> klasy). Poziom ochrony jest wartość, która określa, czy wiadomości (lub części wiadomości) obsługujące usługi są podpisane, podpisane i szyfrowane lub wysyłane bez podpisy i szyfrowania. Aby uzyskać więcej informacji na temat właściwości, zobacz [zrozumieć poziom ochrony](../../../docs/framework/wcf/understanding-protection-level.md)i przykłady programowania, zobacz [jak: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Aby uzyskać więcej informacji na temat projektowania kontrakt usługi o `ProtectionLevel` w kontekście, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ServiceContractAttribute>
@@ -110,7 +111,7 @@ Zabezpieczenia usługi Windows Communication Foundation (WCF) składa się z dw�
 - [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md)
 - [Przegląd zabezpieczeń](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Instrukcje: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [Instrukcje: Ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Instrukcje: Określanie typu poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
 - [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)

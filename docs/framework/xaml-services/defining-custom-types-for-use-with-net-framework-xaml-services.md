@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164440"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML
 Definiowanie typów niestandardowych, które są obiektami biznesowych lub typów, które nie są zależne od określonych platform, istnieją niektóre najlepsze rozwiązania dotyczące XAML, które możesz wykonać. Jeśli wykonujesz tych rozwiązań, usług programu .NET Framework XAML, a jego XAML czytników i składników zapisywania XAML może odnajdywać właściwości XAML danego typu i nadaj mu odpowiednią reprezentację w postaci strumienia węzłów XAML w systemie typu XAML. W tym temacie opisano najlepsze rozwiązania dotyczące definicji typu, definicje elementów członkowskich i przypisywanie CLR, typy lub członków.  
@@ -115,5 +115,6 @@ Definiowanie typów niestandardowych, które są obiektami biznesowych lub typó
  W terminologii WPF XAML *wewnętrzny typ* to typ, który jest definiowany przez tego samego zestawu, który również uwzględnia odwołujący się XAML. Za pomocą przestrzeni nazw XAML, które celowo pomija zestawu można zamapować taki typ = fragment mapowania, na przykład `xmlns:local="clr-namespace:WPFApplication1"`.  Jeśli BAML odwołuje się do typu wewnętrznego i typ ma `internal` uzyskać dostęp do poziomu, spowoduje to wygenerowanie `GeneratedInternalTypeHelper` klasy dla zestawu. Jeśli chcesz uniknąć `GeneratedInternalTypeHelper`, należy albo użyć `public` uzyskać dostęp do poziomu, lub należy wziąć pod uwagę odpowiednich klas w osobnym zestawie i udostępnić tego zestawu zależnego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
 - [Usługi XAML](index.md)

@@ -2,12 +2,12 @@
 title: Szczegóły implementacji protokołu usługi danych WCF
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: fdaaa95bdcffa3ae053cc856753faa1a224eebc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fcef8778707f2bac68755762143f4a7528f0bf1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152857"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Szczegóły implementacji protokołu usługi danych WCF
 ## <a name="odata-protocol-implementation-details"></a>Szczegóły implementacji protokołu OData  
@@ -23,5 +23,6 @@ ms.locfileid: "54728755"
  Podczas żądania zapytania, które są wysyłane do usługi danych obejmuje `$top` lub `$skip` systemu opcji zapytania i nie obejmuje `$orderby` opcję zapytania systemu zwróconego źródła danych są posortowane według właściwości klucza, w kolejności rosnącej. Jest to spowodowane porządkowania jest wymagana, aby zapewnić poprawne stronicowania wyników. Aby to zrobić, Usługa danych dodaje szeregowania wyrażenia zapytania. To zachowanie występuje także w przypadku, gdy stronicowania opartych na serwerze jest włączone w usłudze danych. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Aby kontrolować kolejność zwróconego źródła danych, należy uwzględnić `$orderby` zapytania identyfikatora URI.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

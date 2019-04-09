@@ -1,17 +1,17 @@
 ---
-title: 'Przykład: Obsługa wyjątków podczas powiązywania danych'
+title: 'Przykład: Obsługa wyjątków podczas wiązania danych'
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199898"
 ---
-# <a name="example-handling-exceptions-when-binding-data"></a>Przykład: Obsługa wyjątków podczas powiązywania danych
+# <a name="example-handling-exceptions-when-binding-data"></a>Przykład: Obsługa wyjątków podczas wiązania danych
 > [!NOTE]
 >  W tym temacie odnosi się do platformy .NET Native Developer Preview, czyli wstępnej wersji oprogramowania. Możesz pobrać podglądu [witryny sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (wymaga rejestracji).  
   
@@ -60,5 +60,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
  Istnieją sposoby określania `ViewModel` do strony XAML, dzięki czemu można skojarzyć łańcucha narzędzi właściwości powiązania przy użyciu poprawnego typu w czas kompilacji i zachować metadane bez przy użyciu dyrektyw środowiska uruchomieniowego.  Na przykład, można zastosować <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> atrybutu dla właściwości. To powoduje, że kompilator XAML do generowania informacji wymaganych wyszukiwania i pozwala uniknąć konieczności dyrektyw środowiska uruchomieniowego, w pliku Default.rd.xml.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Przykład: Rozwiązywanie problemów z programowaniem dynamicznym](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

@@ -1,5 +1,5 @@
 ---
-title: Interfejs IXCLRDataMethodInstance
+title: IXCLRDataMethodInstance, interfejs
 ms.date: 02/01/2019
 api.name:
 - IXCLRDataMethodInstance Interface
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 03be79e6300afa6d25a005b0a21b8c2bf15d27be
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152961"
 ---
-# <a name="ixclrdatamethodinstance-interface"></a>Interfejs IXCLRDataMethodInstance
+# <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance, interfejs
 
 Udostępnia metody do wykonywania zapytań o wystąpienie metody.
 
@@ -34,7 +34,6 @@ Udostępnia metody do wykonywania zapytań o wystąpienie metody.
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | Pobiera IL, aby informacje dotyczące mapowania adresu. |
 | [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | Pobiera najbardziej reprezentatywnej adres punktu wejścia dla natywnej kompilacji wszystkie możliwe punkty wejścia dla metody. |
-
 
 ## <a name="remarks"></a>Uwagi
 
@@ -50,4 +49,4 @@ Ten interfejs znajduje się wewnątrz środowiska uruchomieniowego i nie jest do
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

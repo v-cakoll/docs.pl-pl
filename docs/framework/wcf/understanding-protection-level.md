@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096052"
 ---
 # <a name="understanding-protection-level"></a>Omówienie poziomów ochrony
 `ProtectionLevel` Właściwość znajduje się na wiele różnych klas, takie jak <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> klasy. Właściwość kontroluje, jak jest chroniona część (lub całość) wiadomości. W tym temacie opisano funkcję Windows Communication Foundation (WCF) i jak działa.  
@@ -95,6 +95,7 @@ ms.locfileid: "54564636"
  Kiedy klient wywołuje `Price` metody go zgłasza wyjątek, gdy odbiera odpowiedź z usługi. Dzieje się tak, ponieważ klient nie ma określonego `ProtectionLevel` na `ServiceContractAttribute`, i w związku z tym klient używa domyślnego (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) dla wszystkich metod, takich jak `Price` metody. Jednak usługa zwraca wartość, przy użyciu <xref:System.Net.Security.ProtectionLevel.Sign> poziomu, ponieważ kontrakt usługi określa pojedynczą metodę, która ma swojego poziomu ochrony, ustaw <xref:System.Net.Security.ProtectionLevel.Sign>. W takim przypadku klient będzie sygnalizować błąd, podczas sprawdzania poprawności odpowiedzi z usługi.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>

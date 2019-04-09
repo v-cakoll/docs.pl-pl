@@ -2,12 +2,12 @@
 title: Używanie śledzenia do rozwiązywania problemów z aplikacjami
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: 1ed95a26f682fcdb609b410251fdb3f8b647016a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142067"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Używanie śledzenia do rozwiązywania problemów z aplikacjami
 Windows Workflow Foundation (WF) umożliwia śledzenie informacji związanych z przepływu pracy, o podanie szczegółów do wykonywania aplikacji Windows Workflow Foundation lub usługi. Hosty programu Windows Workflow Foundation mają możliwość przechwytywania zdarzeń przepływu pracy podczas wykonywania wystąpienia przepływu pracy. Jeśli przepływ pracy generuje błędy lub wyjątki, można użyć programu Windows Workflow Foundation, Szczegóły śledzenia do rozwiązywania problemów z jego przetwarzania.  
@@ -52,5 +52,6 @@ Windows Workflow Foundation (WF) umożliwia śledzenie informacji związanych z 
  Jeśli śledzenie jest włączone, za pomocą funkcji ETW śledzenia uczestnika, zdarzenia błędów są emitowane sesji funkcji ETW. Zdarzenia można przeglądać za pomocą Podglądu zdarzeń w Podglądzie zdarzeń. Ten znajduje się w węźle **Podgląd zdarzeń -> aplikacji i usług -> Microsoft -> Windows -> aplikacje serwera aplikacji** w kanału danych analitycznych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

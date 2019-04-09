@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: 84273d2fab36df287eaca70f5f32fd8024a9204d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143250"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definiowanie właściwości formantów formularzy systemu Windows
 Aby zapoznać się z omówieniem właściwości, zobacz [Przegląd właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Istnieje kilka istotnych kwestii, definiując właściwość:  
@@ -121,7 +121,8 @@ public int Value {
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Właściwości kontrolek formularzy Windows Forms](properties-in-windows-forms-controls.md)
+
+- [Właściwości formantów formularzy systemu Windows](properties-in-windows-forms-controls.md)
 - [Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)
 - [Zdarzenia zmiany właściwości](property-changed-events.md)
-- [Atrybuty w kontrolkach formularzy Windows Forms](attributes-in-windows-forms-controls.md)
+- [Atrybuty w formantach formularzy systemu Windows](attributes-in-windows-forms-controls.md)

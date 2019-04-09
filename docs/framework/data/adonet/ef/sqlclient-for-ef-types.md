@@ -2,12 +2,12 @@
 title: Klient SQL dla typów programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
-ms.openlocfilehash: b121020c8779cfb3959425b1019eaf085b97d6cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147663"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Klient SQL dla typów programu Entity Framework
 Dostawca danych .NET Framework, dla pliku manifestu dostawcy programu SQL Server (SqlClient) zawiera listę dostawcy typów pierwotnych, aspektami dla każdego typu mapowania między koncepcyjnej i typów pierwotnych modelu magazynu i promocji i konwersji reguły między typów pierwotnych modelu koncepcyjnego i magazynu.  
@@ -51,4 +51,5 @@ Dostawca danych .NET Framework, dla pliku manifestu dostawcy programu SQL Server
 |`xml`|Porównywanie równości: False<br /><br /> Porównywanie kolejności: False|`Edm.String`|MaxLength:<br /><br /> — Wartość domyślna: 1073741823<br /><br /> -Stałe: Prawda<br /><br /> Unicode:<br /><br /> — Wartość domyślna: Prawda<br /><br /> -Stałe: Prawda<br /><br /> FixedLength:<br /><br /> — Wartość domyślna: False<br /><br /> -Stałe: Prawda|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Specyfikacje CSDL, SSDL i MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+
+- [CSDL, SSDL i MSL specyfikacji](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

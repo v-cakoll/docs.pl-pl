@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099706"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architektura WCF (Windows Communication Foundation)
 Poniższa ilustracja przedstawia główne warstwy architektury usługi Windows Communication Foundation (WCF).  
@@ -46,5 +46,6 @@ Poniższa ilustracja przedstawia główne warstwy architektury usługi Windows C
  Można też usług *hostowane*, lub w pliku wykonywalnym, zarządzane przez agenta zewnętrznych, takich jak usługi IIS lub Windows Activation Service (WAS). BYŁA WCF umożliwia aplikacjom aktywowana automatycznie podczas wdrażania na komputerze z systemem. Usługi można również ręcznie uruchomić jako pliki wykonywalne (pliki .exe). Usługi można również uruchomić automatycznie jako usługę Windows. Składniki modelu COM +, może też być hostowana w odróżnieniu od usług WCF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

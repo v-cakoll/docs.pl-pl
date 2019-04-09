@@ -2,12 +2,12 @@
 title: WSDL i zasady
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151908"
 ---
 # <a name="wsdl-and-policy"></a>WSDL i zasady
 W tym temacie omówiono WSDL Windows Communication Foundation (WCF) 1.1, szczegóły implementacji protokołu WS-Policy i WS-PolicyAttachment, a także dodatkowe potwierdzenia WS-Policy i rozszerzenia WSDL 1.1 wprowadzone przez architekturę WCF.  
@@ -73,6 +73,7 @@ W tym temacie omówiono WSDL Windows Communication Foundation (WCF) 1.1, szczeg�
 |mssp:RequireClientCertificate|Nested|Ten opcjonalny element określa wymagania certyfikatu klienta należy podać w ramach protokołu TLSNEGO. Jeśli ta asercja jest obecna, musi być podana certyfikatu klienta. Jeśli ta asercja nie jest obecny, następnie certyfikat klienta nie jest wymagany. Ta asercja nie mogą być używane poza mssp:SslContextToken.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Niestandardowa publikacja WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Instrukcje: Eksportowanie niestandardowych plików WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Instrukcje: Import Custom WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Instrukcje: Importowanie niestandardowych plików WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

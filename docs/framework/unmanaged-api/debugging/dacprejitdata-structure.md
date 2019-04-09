@@ -1,5 +1,5 @@
 ---
-title: DacpReJitData Structure
+title: DacpReJitData, struktura
 ms.date: 02/01/2019
 api.name:
 - DacpReJitData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 974b99da085a5cb969ab37cddb0f2f2c62010d14
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122801"
 ---
-# <a name="dacprejitdata-structure"></a>DacpReJitData Structure
+# <a name="dacprejitdata-structure"></a>DacpReJitData, struktura
 
 Definiuje podstawowe informacje o danej metody Instrumentacji profilera.
 
@@ -55,7 +55,6 @@ struct MSLAYOUT DacpReJitData
 | `flags`          | Flaga wskazująca bieżący stan metody ReJit instrumentacji dla danej wersji. |
 | `NativeCodeAddr` | Adres podstawowy implementacji rejitted metody.                                         |
 
-
 ## <a name="remarks"></a>Uwagi
 
 Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Aby go użyć, definiują strukturę, jak określono powyżej. Struktura również musi być zdefiniowane przy użyciu `ms_struct` pakowania, jeśli nie za pomocą kompilatorów Microsoft.
@@ -67,5 +66,6 @@ Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dos
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

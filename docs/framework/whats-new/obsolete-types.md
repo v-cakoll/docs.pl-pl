@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114697"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
 <a name="introduction"></a> W tabelach, w tym artykule przedstawiono typy, które są przestarzałe w programie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]zorganizowanym przez zestaw. Poniższe łącza umożliwiają wyświetlenie listy przestarzałych typów i zalecanych rozwiązań alternatywnych, w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementów członkowskich również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](obsolete-members.md).
@@ -30,7 +30,7 @@ ms.locfileid: "58412347"
 
     -   [System.Design.dll](#design)
 
-    -   [System.dll](#system)
+    -   [PLik System.dll](#system)
 
     -   [System.EnterpriseServices.dll](#enterpriseservices)
 
@@ -779,5 +779,6 @@ Aby uzyskać informacje na temat migracji z programu Visual Basic 6, zobacz [Cen
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll jest przestarzały zestawu i istnieje tylko w przypadku zapewnienia zgodności.|
 
 ## <a name="see-also"></a>Zobacz także
-- [Przestarzałe elementy w ułatwieniach dostępu](whats-obsolete.md)
-- [Przestarzałe elementy członkowskie](obsolete-members.md)
+
+- [Przestarzałe elementy w bibliotece klas](whats-obsolete.md)
+- [Przestarzałe składowe](obsolete-members.md)

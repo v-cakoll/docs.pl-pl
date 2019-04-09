@@ -11,18 +11,16 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d36d30dd336bbe50b192b10a6a60d2c7e382adb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367986"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137712"
 ---
 # <a name="resources-and-code"></a>Zasoby i kod
 W tym omówieniu koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów można uzyskać dostępu do lub utworzone przy użyciu kodu zamiast [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] składni. Aby uzyskać więcej informacji na temat użycia zasobów ogólnych i zasobów z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] perspektywy składni, zobacz [zasoby XAML](xaml-resources.md).  
-  
-  
-  
+
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Uzyskiwanie dostępu do zasobów z poziomu kodu  
  Klucze, określających zasoby, jeśli są one definiowane za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są również używane do pobierania określonych zasobów, jeśli żądanie zasobów w kodzie. Najprostszym sposobem pobrania zasobu z kodu jest wywołanie, albo <xref:System.Windows.FrameworkElement.FindResource%2A> lub <xref:System.Windows.FrameworkElement.TryFindResource%2A> metody z obiektów o poziomie struktury w aplikacji. Zachowania różnica między te metody polega na tym, co się stanie, jeśli nie odnaleziono żądanego klucza. <xref:System.Windows.FrameworkElement.FindResource%2A> zgłasza wyjątek; <xref:System.Windows.FrameworkElement.TryFindResource%2A> nie zgłosi wyjątek, ale zwraca `null`. Każda metoda pobiera klucz zasobu jako parametr wejściowy i zwraca obiekt, co słabo typizowana. Zazwyczaj klucz zasobu jest ciągiem, ale występują sporadyczne typu użycia; zobacz [przy użyciu obiektów jako klucze](#objectaskey) sekcji, aby uzyskać szczegółowe informacje. Zwykle będzie rzutować zwracany obiekt na typ wymagany przez właściwość, dla którego ustawiany podczas żądania zasobu. Logika wyszukiwania do rozpoznawania zasobu kod jest taki sam jak odwołanie do zasobu dynamiczne [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przypadek. Wyszukaj zasoby rozpoczyna się od elementu wywołującego, a następnie w dalszym ciągu kolejnych nadrzędne elementy w drzewie logicznym. Wyszukiwanie jest kontynuowane i nowszych wersjach do zasobów aplikacji, kompozycje i zasobów systemowych, jeśli to konieczne. Żądanie kodu dla zasobu poprawnie będzie uwzględniać zmiany środowiska uruchomieniowego w słownikach zasobów, które może być wprowadzone po tego słownika zasobów ładowana z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a także do zmiany zasobu systemu czasu rzeczywistego.  
@@ -47,5 +45,6 @@ W tym omówieniu koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../..
  Większość użycia zasobów ustawi klucz zasobu jest ciąg. Jednak różne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji celowo nie należy używać typu string do określania kluczy należy zamiast tego parametru jest obiektem. Możliwość wystąpienia zasobu, można wprowadzić za pomocą obiektu jest używany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] styl i motyw pomocy technicznej. Style motywów, które stają się domyślnego stylu dla formantu inaczej niż stylem są każdego kluczach <xref:System.Type> kontrolki, do którego mają dotyczyć. Trwa kluczach typu zapewnia mechanizm niezawodne wyszukiwania, który działa na wystąpień każdego typu formantu, a typ można wykrywane przez odbicie i umożliwiający style klasy pochodne, nawet jeśli typ pochodny, w przeciwnym razie ma nie domyślnego stylu. Można określić <xref:System.Type> klucza dla zasobu zdefiniowanego w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przy użyciu [x: Type Markup Extension](../../xaml-services/x-type-markup-extension.md). Podobne rozszerzenia istnieje inne użycia klucza typu, które obsługują [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje, takie jak [componentresourcekey — rozszerzenie znaczników](componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zasoby XAML](xaml-resources.md)
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)

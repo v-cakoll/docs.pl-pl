@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 217da219dc49c588a7f6bc8d32048553f179d67f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127461"
 ---
 # <a name="data-transfer-architectural-overview"></a>Omówienie architektury transferu danych
 Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura obsługi komunikatów. Może odbierać komunikaty, je przetworzyć i wysyłać je do kodu użytkownika wykonywać dalszych akcji lub można skonstruować wiadomości z dane podane przez kod użytkownika i dostarczania ich do miejsca docelowego. W tym temacie, który jest przeznaczony dla zaawansowanych deweloperów, w tym artykule opisano architekturę do obsługi wiadomości i zawartymi danymi. Prostsze, zorientowane na zadania widoku sposób wysyłania i odbierania danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -273,4 +273,5 @@ Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura 
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> i <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> odpowiedzialność podłączeniem elementy formatujące komunikaty dla zachowania operacji `DataContractSerializer` i `XmlSerializer`, odpowiednio. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> Zachowanie faktycznie mogą pracować z dowolnego serializator, która pochodzi od klasy <xref:System.Runtime.Serialization.XmlObjectSerializer>, w tym <xref:System.Runtime.Serialization.NetDataContractSerializer> (opisanych szczegółowo w temacie przy użyciu autonomicznego serializacji). Jedną z wywołuje `CreateSerializer` przeciążenia metody wirtualnej można uzyskać z serializatora. Monit o podłączenie innego serializatora, Utwórz nową <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> podklasy i zastąpienie `CreateSerializer` przeciążenia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

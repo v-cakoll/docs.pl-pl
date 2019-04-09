@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137881"
 ---
 # <a name="parameter-element-net-native"></a>\<Parametr > (architektura .NET Native)
 Zastosowanie zasad odbicia do typu argumentu przekazanego do metody.  
@@ -74,6 +74,7 @@ Zastosowanie zasad odbicia do typu argumentu przekazanego do metody.
  `<Parameter>` Element jest elementem podrzędnym [ \<metody >](../../../docs/framework/net-native/method-element-net-native.md) elementu i służy do stosowania zasad do parametru konkretnych metod. Parametr określonej metody jest określony przez nazwę, a nie według typu. Co najmniej jeden atrybut, który reprezentuje typ zasad, takich jak `Activate` lub `Dynamic`, musi być obecny.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<Metoda > Element](../../../docs/framework/net-native/method-element-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

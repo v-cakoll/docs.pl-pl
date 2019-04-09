@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162675"
 ---
 # <a name="xaml-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń XAML
 W tym temacie opisano najlepsze rozwiązania dotyczące zabezpieczeń w aplikacji, korzystając z XAML i interfejsu API programu .NET Framework XAML Services.  
@@ -42,4 +42,5 @@ W tym temacie opisano najlepsze rozwiązania dotyczące zabezpieczeń w aplikacj
  XAML obsługuje własny typ w systemie na wiele sposobów elementu równorzędnego do Implementowanie CLR na podstawowy system typu CLR. Dla niektórych aspektów rozpoznawania typu, gdy wykonujesz decyzji dotyczących zaufania o typie, w oparciu o informacje o typie należy Odrocz do informacji o typie w środowisku CLR, typy kopii. Jest tak, ponieważ niektóre z określonych funkcji raportowania w systemie typu XAML są pozostawione otwarte jako metod wirtualnych, a w związku z tym, nie są w pełni pod kontrolą oryginalnej implementacji usług programu .NET Framework XAML. Te punkty rozszerzeń istnieje, ponieważ w systemie typu XAML jest rozszerzalny, aby dopasować rozszerzalności XAML, sama i jego możliwe alternatywnych strategii mapowania typów w porównaniu z domyślną implementację kopii środowiska CLR i domyślny kontekst schematu XAML. Aby uzyskać więcej informacji, zobacz Uwagi dotyczące określonych na kilku właściwości <xref:System.Xaml.XamlType> i <xref:System.Xaml.XamlMember>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj położenie i kolor zatrzymania gradientu'
+title: 'Instrukcje: Animowanie położenia i koloru zatrzymania gradientu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: 6d8c1bb5cd133b2ee9d50a7e851d2ca3b4fff023
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eeaea4732855155bf711912644f2f5b3f5a4f8d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134813"
 ---
-# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Instrukcje: Animuj położenie i kolor zatrzymania gradientu
+# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Instrukcje: Animowanie położenia i koloru zatrzymania gradientu
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.GradientStop.Color%2A> i <xref:System.Windows.Media.GradientStop.Offset%2A> z <xref:System.Windows.Media.GradientStop> obiektów.  
   
 ## <a name="example"></a>Przykład  
@@ -40,6 +40,7 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.GradientSt
  Aby uzyskać więcej przykładów, zobacz [przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.GradientStop>
-- [Animacja — przegląd](animation-overview.md)
-- [Scenorysy — przegląd](storyboards-overview.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Scenorysy](storyboards-overview.md)

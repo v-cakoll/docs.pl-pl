@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 70189fad6d979d0e0ff6ad5d936d8a5b6142eea4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149269"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Udostępnianie składników .NET Framework modelowi COM
 Typ architektury .NET do zapisywania i używania tego typu z niezarządzanego kodu są różne działania, dla deweloperów. W tej sekcji opisano kilka porad dotyczących pisaniu kodu zarządzanego, który współdziała z klientami COM:  
@@ -51,5 +51,6 @@ Typ architektury .NET do zapisywania i używania tego typu z niezarządzanego ko
      Zestawu z silną nazwą, można zainstalować w globalnej pamięci podręcznej i wymaga podpisu od jego wydawcy. Zestawy, które nie są silną nazwę muszą być zainstalowane w katalogu aplikacji klienta.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)
-- [Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Przykład usługi międzyoperacyjnej modelu COM: Klient modelu COM i serwer .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

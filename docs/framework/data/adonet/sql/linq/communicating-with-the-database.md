@@ -1,15 +1,15 @@
 ---
-title: Podczas komunikowania się z bazą danych
+title: Komunikacja z bazą danych
 ms.date: 03/30/2017
 ms.assetid: 659d9817-bcaa-457f-9639-169394177274
-ms.openlocfilehash: 5c360a44e099621f94dcb2092da8551881ca2ff8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d767bbe706b4fc9efb00031fddf8f6bd3369b485
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117147"
 ---
-# <a name="communicating-with-the-database"></a>Podczas komunikowania się z bazą danych
+# <a name="communicating-with-the-database"></a>Komunikacja z bazą danych
 W tematach w tej sekcji opisano niektóre podstawowe aspekty jak utworzyć i utrzymywać komunikacji z bazą danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
@@ -23,4 +23,5 @@ W tematach w tej sekcji opisano niektóre podstawowe aspekty jak utworzyć i utr
  Zawiera przykłady sposobów użycia istniejącego [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] połączenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przewodnik programowania](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118030"
 ---
 # <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych
 W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów dotyczących użycia usług. W tym temacie opisano sposób wersji kontraktów danych. W tym temacie opisano mechanizmy obsługi wersji kontraktu danych. Pełny przegląd i wskazówki wersji przetestowanego rozwiązania ze szczegółami, zobacz [najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -116,6 +116,7 @@ W miarę ewolucji aplikacje, również może być konieczne zmiany danych umów 
 Oczywiście zmiana kontraktu danych treści kolekcji (np. zmiana na liście liczb całkowitych na listę ciągów) jest zmianą przerywającą.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>

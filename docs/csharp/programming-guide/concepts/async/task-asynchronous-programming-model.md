@@ -2,12 +2,12 @@
 title: Zadania asynchronicznego programowania modelu (TAP) za pomocą async i await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: edcf9222c34b7cf29fedabd676605db95133d68c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: 3e4fd21172c71d596dd2ec5d171c9230dc3c803e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166689"
 ---
 # <a name="task-asynchronous-programming-model"></a>Model programowania asynchronicznego zadań (APM)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -223,8 +223,7 @@ Asynchroniczne API w programowaniu Windows Runtime mieć jedną z następującyc
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
 -   <xref:Windows.Foundation.IAsyncOperationWithProgress%602>  
-   
-  
+
 ## <a name="BKMK_NamingConvention"></a> Konwencje nazewnictwa  
 Zgodnie z Konwencją, metody, które często oczekujący typy zwracane (np. `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`) powinny mieć nazwy, które kończą się "Async". Metody, które na początku operacji asynchronicznej, ale nie zwracają oczekujący typ nie powinny mieć nazwy, które kończyć się znakiem "Async", ale mogą rozpoczynać się od "Begin", "Start" lub niektórych innych zlecenie sugerują, ta metoda nie zwraca ani nie zgłosić wyniku operacji.
   

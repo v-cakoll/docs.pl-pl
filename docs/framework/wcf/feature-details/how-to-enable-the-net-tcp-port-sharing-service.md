@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Włączanie usługi współużytkowania portów Net.TCP'
+title: 'Instrukcje: włączanie usługi współużytkowania portów Net.TCP'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-ms.openlocfilehash: 490c0d8c4c95eeb2b1cd9b43134720c9e44467ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 77d1d983da87b37c6267cc38a16db446782797f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130653"
 ---
-# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Instrukcje: Włączanie usługi współużytkowania portów Net.TCP
+# <a name="how-to-enable-the-nettcp-port-sharing-service"></a>Instrukcje: włączanie usługi współużytkowania portów Net.TCP
 Windows Communication Foundation (WCF) używa usługi Windows o nazwie usługi udostępniania portów Net.TCP, ułatwiające Udostępnianie portów TCP wiele procesów. Ta usługa jest instalowana jako część usługi WCF, ale usługa nie jest włączona domyślnie w celu zapewnienia bezpieczeństwa i dlatego musi być włączone ręcznie przed pierwszym użyciu. W tym temacie opisano sposób konfigurowania sieci TCP usługi udostępniania portów za pomocą przystawki programu Microsoft Management Console (MMC).  
   
  Po włączyć usługi udostępniania portów Net.TCP i uruchom ją ręcznie, zobacz [jak: Konfigurowanie usługi WCF na potrzeby współużytkowania portów użyj](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md) informacji o sposobie konfigurowania usługi, aby używać tej usługi.  
@@ -34,5 +34,6 @@ Windows Communication Foundation (WCF) używa usługi Windows o nazwie usługi u
 ## <a name="example"></a>Przykład  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Współużytkowanie portów w składniku Net.TCP](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
 - [Konfigurowanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

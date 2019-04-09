@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Porównywanie oświadczeń'
+title: 'Instrukcje: porównywanie oświadczeń'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122021"
 ---
-# <a name="how-to-compare-claims"></a>Instrukcje: Porównywanie oświadczeń
+# <a name="how-to-compare-claims"></a>Instrukcje: porównywanie oświadczeń
 Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) służy do sprawdzania autoryzacji. W efekcie zadanie często wykonywane jest porównanie oświadczeń w kontekście autoryzacji oświadczeń, wymagane do wykonania żądanej akcji ani uzyskać dostępu do żądanego zasobu. W tym temacie opisano sposób porównywania roszczenia, w tym typów wbudowanych i niestandardowych oświadczeń. Aby uzyskać więcej informacji na temat infrastruktury modelu tożsamości, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Porównywanie oświadczeń obejmuje porównanie trzy części (typ prawa i zasobów) oświadczenia o tej samej części w innym oświadczeń, aby zobaczyć, czy są równe. Zobacz poniższy przykład.  
@@ -71,5 +71,6 @@ Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) słu
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Instrukcje: Tworzenie oświadczenia niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Instrukcje: tworzenie oświadczenia niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj EllipseGeometry'
+title: 'Instrukcje: Animowanie elementu EllipseGeometry'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - EllipseGeometry objects [WPF], animating
 - graphics [WPF], animation
 ms.assetid: 767b9b6e-9cb7-482e-b6c2-fee7750c3995
-ms.openlocfilehash: c82f22ba014918bcc35835d759612e1d3373724e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0f8174a2144435c9ad65904ee587355e8b38e935
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126012"
 ---
-# <a name="how-to-animate-an-ellipsegeometry"></a>Instrukcje: Animuj EllipseGeometry
+# <a name="how-to-animate-an-ellipsegeometry"></a>Instrukcje: Animowanie elementu EllipseGeometry
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.Geometry> w ramach <xref:System.Windows.Shapes.Path> elementu. W poniższym przykładzie <xref:System.Windows.Media.Animation.PointAnimation> jest używana animacji <xref:System.Windows.Media.EllipseGeometry.Center%2A> z <xref:System.Windows.Media.EllipseGeometry>.  
   
 ## <a name="example"></a>Przykład  
@@ -27,5 +27,6 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.Geometry> 
  [!code-vb[animatepath_snip#201](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animatepath_snip/VisualBasic/EllipseGeometryExample.vb#201)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
-- [Geometria — przegląd](geometry-overview.md)
+
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Geometria](geometry-overview.md)

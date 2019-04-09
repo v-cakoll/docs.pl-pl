@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132301"
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Tworzenie szablonów i stylów odnoszą się do zestawu funkcji (style, szablony, wyzwalaczy i scenorysów), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualnie atrakcyjne i utworzyć spójny wygląd swojego produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji, aplikacji, silne modelu Tworzenie szablonów i stylów jest niezbędne w celu umożliwienia obsługi i udostępnianie pojawienia się wewnątrz i pomiędzy aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia tego modelu.  
@@ -197,6 +197,7 @@ ms.locfileid: "59055329"
  Jeśli tworzysz motywu dla Ciebie kontrolki niestandardowej, zobacz sekcję biblioteki zewnętrznej kontroli [omówienie tworzenia kontrolek](control-authoring-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pakuj URI w WPF](../app-development/pack-uris-in-wpf.md)
 - [Instrukcje: znajdowanie elementów generowanych przez element ControlTemplate](how-to-find-controltemplate-generated-elements.md)
 - [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

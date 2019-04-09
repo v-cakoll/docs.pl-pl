@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie tokenu niestandardowego'
+title: 'Instrukcje: tworzenie tokenu niestandardowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 3367a75fc0532e3eaa312400221c662bb35146bf
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 4f2f2d3a1d4263dfc068193f832369b0d82e69fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095662"
 ---
-# <a name="how-to-create-a-custom-token"></a>Instrukcje: Tworzenie tokenu niestandardowego
+# <a name="how-to-create-a-custom-token"></a>Instrukcje: tworzenie tokenu niestandardowego
 W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy użyciu <xref:System.IdentityModel.Tokens.SecurityToken> klasy i jak ją zintegrować z niestandardowego dostawcy tokenów zabezpieczeń i uwierzytelniania. Aby uzyskać pełny przykład kodu zobacz [niestandardowy Token](../../../../docs/framework/wcf/samples/custom-token.md) próbki.  
   
  A *token zabezpieczający* jest zasadniczo element XML, który jest używany przez środowisko zabezpieczeń usługi Windows Communication Foundation (WCF) do reprezentowania oświadczeń o nadawcy w wiadomości protokołu SOAP. Zabezpieczenia WCF zapewnia tokenów różne tryby uwierzytelniania dostarczane przez system. Przykłady obejmują tokenu zabezpieczeń certyfikatu X.509, reprezentowane przez <xref:System.IdentityModel.Tokens.X509SecurityToken> klasy lub token zabezpieczający Username reprezentowany przez <xref:System.IdentityModel.Tokens.UserNameSecurityToken> klasy.  
@@ -149,6 +149,7 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
  W tym temacie przedstawiono niezbędne do zaimplementowania i użycia tokenu niestandardowego różnych fragmentów kodu. Aby zobaczyć pełny przykład jak wszystkie te fragmenty kodu współdziałają ze sobą, zobacz [niestandardowy Token](../../../../docs/framework/wcf/samples/custom-token.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Tokens.SecurityToken>
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>
 - <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>
@@ -160,6 +161,6 @@ W tym temacie pokazano, jak utworzyć token zabezpieczeń niestandardowych przy 
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Instrukcje: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Przewodnik: tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Instrukcje: tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

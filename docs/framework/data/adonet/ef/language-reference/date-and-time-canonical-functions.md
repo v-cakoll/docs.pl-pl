@@ -1,15 +1,15 @@
 ---
-title: Data i godzina funkcje Canonical
+title: Funkcji daty i godziny Canonical
 ms.date: 03/30/2017
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
-ms.openlocfilehash: 46a4b595ccdfcb1a6576ee8cb1e080f0d4b48123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e54fa3d763fa08d7bafd9b002f0458ec3a6293d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119239"
 ---
-# <a name="date-and-time-canonical-functions"></a>Data i godzina funkcje Canonical
+# <a name="date-and-time-canonical-functions"></a>Funkcji daty i godziny Canonical
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obejmuje funkcje canonical daty i godziny.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -57,4 +57,5 @@ ms.locfileid: "54579995"
  Równoważne funkcje są dostępne w Microsoft SQL klienta zarządzanego dostawcy. Aby uzyskać więcej informacji, zobacz [Klient SQL dla funkcji programu Entity Framework](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

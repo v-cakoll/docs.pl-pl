@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie niestandardowego miejsca do okna dialogowego plików'
+title: 'Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087693"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Instrukcje: Dodawanie niestandardowego miejsca do okna dialogowego plików
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików
 Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] ma obszar po lewej stronie okna dialogowego pod tytułem **Ulubione łącza**. Ten obszar nosi nazwę niestandardowych miejsc. <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> klasy umożliwiają dodanie folderów do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji.  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhex
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
 - [Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików](known-folder-guids-for-file-dialog-custom-places.md)

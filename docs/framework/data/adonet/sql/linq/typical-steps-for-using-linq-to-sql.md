@@ -2,12 +2,12 @@
 title: Typowe kroki dotyczące korzystania z LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 32e81d08010f67b8eac19777a40826b18c440f83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132850"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Typowe kroki dotyczące korzystania z LINQ to SQL
 Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, wykonaj czynności opisane w dalszej części tego tematu. Należy pamiętać, że wiele kroki są opcjonalne. Jest bardzo prawdopodobne, że można użyć modelu obiektów w stanie domyślnym.  
@@ -20,7 +20,7 @@ Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Wybierz narzędzia do tworzenia modelu.  
  Trzy narzędzia są dostępne do tworzenia modelu.  
   
--   W [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   Program [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Projektant zawiera zaawansowanego interfejsu użytkownika do tworzenia modeli obiektów z istniejącej bazy danych. To narzędzie jest częścią środowiska IDE programu Visual Studio i najlepiej nadaje się dla małych i średnich baz danych.  
   
@@ -82,6 +82,7 @@ Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
  Aby uzyskać więcej informacji, zobacz [obsługę debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
 - [Tworzenie modelu obiektu](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Procedury składowane](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

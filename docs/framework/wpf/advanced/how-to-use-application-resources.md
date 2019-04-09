@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Użyj zasobów aplikacji'
+title: 'Instrukcje: Używanie zasobów aplikacji'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF]
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
-ms.openlocfilehash: 8712f7c9c60d43cf3d0348b7c3f2f4cbee0b93b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dff8089c4da70fdc61247a0c604cf7ee85d02b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088207"
 ---
-# <a name="how-to-use-application-resources"></a>Instrukcje: Użyj zasobów aplikacji
+# <a name="how-to-use-application-resources"></a>Instrukcje: Używanie zasobów aplikacji
 W tym przykładzie pokazano, jak korzystać z zasobów aplikacji.  
   
 ## <a name="example"></a>Przykład  
@@ -26,6 +26,7 @@ W tym przykładzie pokazano, jak korzystać z zasobów aplikacji.
  [!code-xaml[ResourcesApplication#ConsumingPage](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zasoby XAML](xaml-resources.md)
-- [Zarządzanie aplikacjami — omówienie](../app-development/application-management-overview.md)
-- [Tematy z instrukcjami](resources-how-to-topics.md)
+- [Przegląd Zarządzanie aplikacjami](../app-development/application-management-overview.md)
+- [— Tematy porad](resources-how-to-topics.md)

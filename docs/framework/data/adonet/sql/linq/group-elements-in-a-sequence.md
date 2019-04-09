@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 352951c4ee6a96e0bf91b583ad61b431f490a624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089924"
 ---
 # <a name="group-elements-in-a-sequence"></a>Grupowanie elementów w sekwencji
 <xref:System.Linq.Enumerable.GroupBy%2A> Operator grupuje elementy sekwencji. W poniższych przykładach używane bazy danych Northwind.  
@@ -73,5 +73,6 @@ ms.locfileid: "54518478"
  [!code-vb[DLinqQueryExamples#35](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#35)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

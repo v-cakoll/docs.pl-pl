@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Koduj i dekoduj obraz BMP'
+title: 'Instrukcje: Kodowanie i dekodowanie obrazu BMP'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - BMP decoding [WPF]
 - decoding image formats [WPF]
 ms.assetid: feb5ef27-28ac-40ab-bfc2-e0456990d32c
-ms.openlocfilehash: 5aee77ab70c6a24846967b01bbb458ba4cdbe970
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7d5ace8aead864cb69a9e696a3f1f925e232600
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121904"
 ---
-# <a name="how-to-encode-and-decode-a-bmp-image"></a>Instrukcje: Koduj i dekoduj obraz BMP
+# <a name="how-to-encode-and-decode-a-bmp-image"></a>Instrukcje: Kodowanie i dekodowanie obrazu BMP
 W poniższych przykładach pokazano, jak dekodowanie i kodowanie [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] obrazów przy użyciu określonego <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> i <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> obiektów.  
   
 ## <a name="example"></a>Przykład  
@@ -38,4 +38,5 @@ W poniższych przykładach pokazano, jak dekodowanie i kodowanie [!INCLUDE[TLA#t
  [!code-vb[BmpBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Obrazowanie — przegląd](imaging-overview.md)
+
+- [Przegląd Obrazowanie](imaging-overview.md)

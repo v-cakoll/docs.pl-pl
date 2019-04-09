@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: MenuStrip — Konfiguracja marginesów zaznaczania i marginesów obrazu'
+title: 'Instrukcje: konfiguracja marginesów zaznaczania MenuStrip i marginesów obrazu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - menus [Windows Forms], setting margins
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
-ms.openlocfilehash: f75cce1a9c155174178a55213d6a21ad5ba99772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 09de1a9ca4be1c4ebfb0e13e800c09753bd04f11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134995"
 ---
-# <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Instrukcje: MenuStrip — Konfiguracja marginesów zaznaczania i marginesów obrazu
+# <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Instrukcje: konfiguracja marginesów zaznaczania MenuStrip i marginesów obrazu
 Można dostosować <xref:System.Windows.Forms.MenuStrip> , ustawiając <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> i <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> właściwości w różnych kombinacjach.  
   
 ## <a name="example"></a>Przykład  
@@ -33,8 +33,9 @@ Można dostosować <xref:System.Windows.Forms.MenuStrip> , ustawiając <xref:Sys
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
-- [Instrukcje: Włączanie marginesów zaznaczania i marginesów obrazów w formantach ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [Instrukcje: włączanie marginesów zaznaczania i marginesów obrazów w kontrolkach ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

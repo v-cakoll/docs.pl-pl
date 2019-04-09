@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass — Interfejs
+title: ICorDebugClass, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9beb8930143cbb0cc7dd8dd68a65b42d92563e31
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7e1ad830e728fbe764085a5808a48e4cacedc595
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133630"
 ---
-# <a name="icordebugclass-interface"></a>ICorDebugClass — Interfejs
+# <a name="icordebugclass-interface"></a>ICorDebugClass, interfejs
 
 Reprezentuje typ, który może być podstawowy lub złożony (to jest zdefiniowany przez użytkownika). Jeśli typ ogólny, `ICorDebugClass` reprezentuje typ ogólny bez wystąpień.  
   
@@ -53,4 +53,5 @@ Reprezentuje typ, który może być podstawowy lub złożony (to jest zdefiniowa
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

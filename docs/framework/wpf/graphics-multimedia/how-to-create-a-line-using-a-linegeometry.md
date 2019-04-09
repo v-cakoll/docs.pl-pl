@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz linię używając LineGeometry'
+title: 'Instrukcje: Tworzenie linii przy użyciu elementu LineGeometry'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-ms.openlocfilehash: 6d5d0b413f940a2c7f70e05135ff070c1fe5ba21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123061"
 ---
-# <a name="how-to-create-a-line-using-a-linegeometry"></a>Instrukcje: Utwórz linię używając LineGeometry
+# <a name="how-to-create-a-line-using-a-linegeometry"></a>Instrukcje: Tworzenie linii przy użyciu elementu LineGeometry
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.LineGeometry> klasę do opisania wiersza. Element <xref:System.Windows.Media.LineGeometry> jest definiowany przez jego punkt początkowy i końcowy.  
   
 ## <a name="example"></a>Przykład  
@@ -31,6 +31,7 @@ LineGeometry rysowane z (10,20) (100,130)
  Inne klasy geometrii proste obejmują <xref:System.Windows.Media.LineGeometry> i <xref:System.Windows.Media.EllipseGeometry>. Te geometrii, a także bardziej złożonych te można również utworzyć przy użyciu <xref:System.Windows.Media.PathGeometry> lub <xref:System.Windows.Media.StreamGeometry>. Aby uzyskać więcej informacji, zobacz [Przegląd Geometria](geometry-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Geometria — przegląd](geometry-overview.md)
+
+- [Przegląd Geometria](geometry-overview.md)
 - [Tworzenie kształtu złożonego](how-to-create-a-composite-shape.md)
 - [Tworzenie kształtu przy użyciu elementu PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

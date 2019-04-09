@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Importowanie niestandardowych plików WSDL'
+title: 'Instrukcje: importowanie niestandardowych plików WSDL'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: dba3ec52d03939a306709e7756ff4e801699cf38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 790fee1b798db1c1c2b0b37b0f48b93dd44bc5e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164284"
 ---
-# <a name="how-to-import-custom-wsdl"></a>Instrukcje: Importowanie niestandardowych plików WSDL
+# <a name="how-to-import-custom-wsdl"></a>Instrukcje: importowanie niestandardowych plików WSDL
 W tym temacie opisano sposób importowania niestandardowych plików WSDL. Aby obsłużyć niestandardowych plików WSDL, należy zaimplementować <xref:System.ServiceModel.Description.IWsdlImportExtension> interfejsu.  
   
 ### <a name="to-import-custom-wsdl"></a>Aby zaimportować niestandardowych plików WSDL  
@@ -78,6 +78,7 @@ W tym temacie opisano sposób importowania niestandardowych plików WSDL. Aby ob
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Eksportowanie i importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
 - [Niestandardowa publikacja WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)

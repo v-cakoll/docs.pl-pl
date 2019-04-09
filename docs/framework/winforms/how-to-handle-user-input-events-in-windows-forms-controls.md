@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Obsługa zdarzenia wejściowe użytkownika w kontrolkach formularzy Windows Forms'
+title: 'Instrukcje: Obsługa zdarzeń związanych z danymi użytkownika w kontrolkach Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-ms.openlocfilehash: 886558eb33ffbbec65917f15f4da16673518dce9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5dc1997dffc53632ce8b36bc5fe89e768871fd0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108670"
 ---
-# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Instrukcje: Obsługa zdarzenia wejściowe użytkownika w kontrolkach formularzy Windows Forms
+# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Instrukcje: Obsługa zdarzeń związanych z danymi użytkownika w kontrolkach Windows Forms
 W tym przykładzie pokazano, jak obsługiwać większość klawiatury, myszy, fokus i zdarzenia sprawdzania poprawności, które mogą wystąpić w kontrolce Windows Forms. Pole tekstowe o nazwie `TextBoxInput` odbiera zdarzenia, gdy ma ona fokus, a informacje dotyczące każdego zdarzenia są zapisywane w polu tekstowym o nazwie `TextBoxOutput` w kolejności, w której zdarzenia są wywoływane. Aplikacja zawiera także zestaw pól wyboru, które mogą służyć do filtrowania zdarzeń do raportu.  
   
 ## <a name="example"></a>Przykład  
@@ -32,4 +32,5 @@ W tym przykładzie pokazano, jak obsługiwać większość klawiatury, myszy, fo
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Dane użytkownika w formularzach Windows Forms](user-input-in-windows-forms.md)
+
+- [Dane użytkownika w formularzach systemu Windows](user-input-in-windows-forms.md)

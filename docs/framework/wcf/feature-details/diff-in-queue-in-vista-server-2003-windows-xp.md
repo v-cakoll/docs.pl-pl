@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115989"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP
 Ten temat zawiera podsumowanie różnic w funkcji kolejek usługi Windows Communication Foundation (WCF) między [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -36,5 +36,6 @@ Ten temat zawiera podsumowanie różnic w funkcji kolejek usługi Windows Commun
  Usługa MSMQ na [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje zdalnego transakcyjne operacje odczytu. Dzięki temu aplikacja, która odczytuje z kolejki hostowane na komputerze, który różni się od komputera, na którym jest hostowany kolejki. Zapewnia to możliwość farmy usług odczytu z kolejki centralnej, co zwiększa ogólną przepustowość systemu. Gwarantuje również, że jeśli wystąpi błąd podczas odczytywania i przetwarzania wiadomości, wycofanie transakcji i komunikat pozostaje w kolejce do późniejszego przetwarzania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

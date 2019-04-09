@@ -1,15 +1,15 @@
 ---
-title: Mapowanie typu SQL CLR
+title: Mapowania typów środowiska SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5c8c6456d108975ec927e28ac80c8dcca1567b46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152493"
 ---
-# <a name="sql-clr-type-mapping"></a>Mapowanie typu SQL CLR
+# <a name="sql-clr-type-mapping"></a>Mapowania typów środowiska SQL-CLR
 Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obiektów, które są jest wyrażone w wybranym języku programowania. Gdy aplikacja zostanie uruchomiona, LINQ to SQL tłumaczy języku zintegrowanym zapytania w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników programu LINQ to SQL tłumaczy wyniki z powrotem do obiektów, które może pracować w języku użytkownika, programowania.  
   
  W celu tłumaczenia danych między model obiektu i bazy danych, *mapowania typów* musi być zdefiniowany. LINQ do SQL używa mapowania typów w celu dopasowania każdy typ środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego z określonym typem programu SQL Server. Można zdefiniować mapowanie typu i inne informacje dotyczące mapowania, takich jak bazy danych struktury i relacji między tabelami, wewnątrz modelu obiektów za pomocą mapowania opartych na atrybutach. Alternatywnie można określić informacje dotyczące mapowania poza model obiektów przy użyciu pliku mapowanie zewnętrzne. Aby uzyskać więcej informacji, zobacz [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) i [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -257,6 +257,7 @@ Model danych relacyjnej bazy danych w składniku LINQ to SQL, mapuje modelu obie
  LINQ do SQL nie obsługuje innych mapowania typów dla tych różnych typów.  Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

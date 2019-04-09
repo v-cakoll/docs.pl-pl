@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7800567f51196154f49c93dbbbe819f77cefdfe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5037f335e8d66c341d70d91d955a1ac7571b823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123763"
 ---
 # <a name="corprffinalizerflags-enumeration"></a>COR_PRF_FINALIZER_FLAGS — Wyliczenie
 W tym artykule opisano finalizatora obiektu.  
@@ -53,4 +53,5 @@ typedef enum {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [Profilowanie — Wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

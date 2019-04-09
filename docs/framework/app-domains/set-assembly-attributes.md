@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6c327aad129f685e44f7b456e4ceef8f99fe12b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186566"
 ---
 # <a name="setting-assembly-attributes"></a>Ustawienie atrybutów zestawu
 Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Atrybuty są podzielone na następujące rodzaje informacji:  
@@ -87,5 +87,6 @@ Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Atryb
  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

@@ -2,12 +2,12 @@
 title: Kolekcje schematów OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658458"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164687"
 ---
 # <a name="ole-db-schema-collections"></a>Kolekcje schematów OLE DB
 W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
@@ -35,7 +35,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Identyfikator GUID|  
+|TABLE_GUID|Guid|  
 |OPIS ELEMENTU|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DataGodzina|  
@@ -49,7 +49,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Identyfikator GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -57,7 +57,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Identyfikator GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -143,7 +143,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Identyfikator GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |SORTOWANIE|Int16|  
 |KARDYNALNOŚĆ|Wartość dziesiętna|  
@@ -176,7 +176,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Identyfikator GUID|  
+|TABLE_GUID|Guid|  
 |OPIS ELEMENTU|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DataGodzina|  
@@ -190,7 +190,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Identyfikator GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -198,7 +198,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Identyfikator GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -236,13 +236,13 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Identyfikator GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Identyfikator GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -286,7 +286,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Identyfikator GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |SORTOWANIE|Int16|  
 |KARDYNALNOŚĆ|Wartość dziesiętna|  
@@ -315,7 +315,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Identyfikator GUID|  
+|TABLE_GUID|Guid|  
 |OPIS ELEMENTU|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DataGodzina|  
@@ -329,7 +329,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Identyfikator GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|Boolean|  
@@ -337,7 +337,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|Boolean|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Identyfikator GUID|  
+|TYPE_GUID|Guid|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -403,7 +403,7 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Identyfikator GUID|  
+|COLUMN_GUID|Guid|  
 |COLUMN_PROPID|Int64|  
 |SORTOWANIE|Int16|  
 |KARDYNALNOŚĆ|Wartość dziesiętna|  
@@ -412,4 +412,5 @@ W tej sekcji omówiono Obsługa kolekcję schematu dla dostawcy OLE DB dla progr
 |INTEGRATED|Boolean|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

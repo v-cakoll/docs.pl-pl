@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Obsłuż załadowane zdarzenie'
+title: 'Instrukcje: Obsługa załadowanego zdarzenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - events [WPF], Loaded
 - Loaded events [WPF]
 ms.assetid: 0cf8d003-8441-4df4-807a-6db09347e829
-ms.openlocfilehash: a4916d3cfd20d082a8466f61fc74e16db2f0f346
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b8cd2f5e9d848cebb712e7b4930ca39efe48ecc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122554"
 ---
-# <a name="how-to-handle-a-loaded-event"></a>Instrukcje: Obsłuż załadowane zdarzenie
+# <a name="how-to-handle-a-loaded-event"></a>Instrukcje: Obsługa załadowanego zdarzenia
 W tym przykładzie pokazano, jak obsługiwać <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> zdarzeń i odpowiedni scenariusz obsługi tego zdarzenia. Tworzy program obsługi <xref:System.Windows.Controls.Button> po załadowaniu strony.  
   
 ## <a name="example"></a>Przykład  
@@ -28,7 +28,8 @@ W tym przykładzie pokazano, jak obsługiwać <xref:System.Windows.FrameworkElem
  [!code-vb[FELoaded#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FELoaded/VisualBasic/default.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement>
-- [Zdarzenia okresu istnienia obiektu](object-lifetime-events.md)
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
-- [Tematy z instrukcjami](base-elements-how-to-topics.md)
+- [Obiekt okresu istnienia zdarzeń](object-lifetime-events.md)
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [— Tematy porad](base-elements-how-to-topics.md)

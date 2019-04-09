@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 0bfd07788bd8d2ebf028865478b0db6fb86c2f46
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116366"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Właściwości automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
@@ -104,6 +104,7 @@ ms.locfileid: "57677295"
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(Właściwość statyczna) Katalog główny <xref:System.Windows.Automation.AutomationElement>.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
 - [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
 - [Subskrybowanie zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

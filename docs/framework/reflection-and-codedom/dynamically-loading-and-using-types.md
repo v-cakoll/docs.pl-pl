@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8254d3de7dc282edb8ebe8bf0dd71ce1c943322d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145122"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Dynamiczne ładowanie i używanie typów
 Odbicie zapewnia infrastrukturę, która używane przez Kompilatory języka, takich jak [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] i JScript w celu zaimplementowania ukryte późne powiązania. Powiązanie jest proces lokalizowania deklaracja (wykonanie), która odpowiada jednoznacznie określonym typie. Ten proces odbywa się w czasie wykonywania, a nie w czasie kompilacji, jest nazywany późnego wiązania. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] pozwala na używanie ukryte późne powiązania w kodzie; Kompilator Visual Basic wywołuje metodę pomocnika, która używa odbicia w celu uzyskania typu obiektu. Argumenty przekazane do metody pomocnika spowodować odpowiedniej metody do wywołania w czasie wykonywania. Te argumenty są wystąpienie (obiekt) do wywołania metody, nazwę wywoływanej metody (ciąg), a argumenty przekazane do wywoływanej metody (tablicę obiektów).  
@@ -41,7 +41,7 @@ Module Hello
 End Module  
 ```  
   
-## <a name="custom-binding"></a>Powiązanie niestandardowe  
+## <a name="custom-binding"></a>Wiązanie niestandardowe  
  Oprócz używane niejawnie przez kompilatory dla późne powiązania, odbicie można jawnie w kodzie do wykonywania późnego wiązania.  
   
  [Środowiska uruchomieniowego języka wspólnego](../../../docs/standard/clr.md) obsługuje wiele języków programowania i powiązanie reguły z tych języków różnią się. W przypadku wczesnym wiązaniem generatorów kodu całkowicie można kontrolować to wiązanie. Jednak w późnym wiązaniem przy użyciu odbicia, powiązanie muszą być kontrolowane przez niestandardowe powiązanie. <xref:System.Reflection.Binder> Klasa udostępnia formantu niestandardowego elementu członkowskiego, wybór i wywołania.  
@@ -100,6 +100,7 @@ End Module
  <xref:System.Type> Klasa ma **uzyskać** metody, które używają parametrów typu **integratora** do rozpoznawania odwołań do określonego elementu członkowskiego. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType>, i <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> wyszukiwanie określonego elementu członkowskiego bieżącego typu poprzez dostarczanie informacji podpis dla tego elementu członkowskiego. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> i <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> to wywołanie zwrotne do wybierz informacje o podpisie danego odpowiednich metod.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

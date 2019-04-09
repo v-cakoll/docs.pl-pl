@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129600"
 ---
 # <a name="timing-behaviors-overview"></a>Przegląd Zachowania chronometrażu
 W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.Windows.Media.Animation.Timeline> obiektów.  
@@ -123,8 +123,9 @@ W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.W
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Określa wartość procentową <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego spowolnienie. Aby uzyskać przykład, zobacz [jak: Przyspieszanie lub zwalnianie animacji](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
-- [Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)
-- [Zdarzenia chronometrażu — przegląd](timing-events-overview.md)
-- [Tematy z instrukcjami](animation-and-timing-how-to-topics.md)
+
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Animacja i system chronometrażu](animation-and-timing-system-overview.md)
+- [Przegląd Zdarzenia chronometrażu](timing-events-overview.md)
+- [— Tematy porad](animation-and-timing-how-to-topics.md)
 - [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)

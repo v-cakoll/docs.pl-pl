@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 29ea308ee5147cfb18df312887e933615e349803
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: 80c55b45067405b1204cad0435b46b376f783c57
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151492"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Instrukcje: Port aplikacji klasycznej WPF i .NET Core
 
@@ -36,7 +36,6 @@ W tym artykule różne nazwy są używane do identyfikacji typów plików używa
 - Projekt WPF pracy w rozwiązaniu, który kompiluje i uruchamia bez problemu.
 - Projekt musi być kodowane w C#. 
 - Zainstaluj najnowszą wersję [.NET Core 3.0](https://aka.ms/netcore3download) (wersja zapoznawcza).
-
 
 >[!NOTE]
 >**Program Visual Studio 2017** nie obsługuje projektów .NET Core 3.0. **Program Visual Studio 2019 r w wersji zapoznawczej/RC** obsługuje projekty .NET Core 3.0, ale nie obsługuje jeszcze wizualnego projektanta dla projektów .NET Core 3.0 WPF. Aby użyć projektanta wizualnego, musi mieć projekt .NET WPF w danym rozwiązaniu, który udostępnia swoje pliki z projektu .NET Core.

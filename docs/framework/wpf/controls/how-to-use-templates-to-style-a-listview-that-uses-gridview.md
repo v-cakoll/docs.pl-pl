@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Użyj szablonów do stylu ListView która korzysta z GridView'
+title: 'Instrukcje: Używanie szablonów do nadawania stylu kontrolce ListView korzystającej z GridView'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
-ms.openlocfilehash: baef8bdee73d8493ba406f5eef1e3e3676680704
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147098"
 ---
-# <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Instrukcje: Użyj szablonów do stylu ListView która korzysta z GridView
+# <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Instrukcje: Używanie szablonów do nadawania stylu kontrolce ListView korzystającej z GridView
 W tym przykładzie pokazano, jak używać <xref:System.Windows.DataTemplate> i <xref:System.Windows.Style> obiektów, aby określić wygląd <xref:System.Windows.Controls.ListView> formant, który używa <xref:System.Windows.Controls.GridView> trybu wyświetlania.  
   
 ## <a name="example"></a>Przykład  
@@ -36,8 +36,9 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.DataTemplate> i <
  [!code-xaml[ListViewTemplate#CellTemplateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [GridView — omówienie](gridview-overview.md)
-- [Tematy z instrukcjami](listview-how-to-topics.md)
-- [ListView — omówienie](listview-overview.md)
+- [GridView — Przegląd](gridview-overview.md)
+- [— Tematy porad](listview-how-to-topics.md)
+- [ListView — Przegląd](listview-overview.md)

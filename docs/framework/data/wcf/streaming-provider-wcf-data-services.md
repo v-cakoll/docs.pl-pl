@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087901"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (WCF Data Services)
 Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne może reprezentować strumieni wideo i audio, obrazy, pliki dokumentów lub inne typy nośników binarnego. Gdy jednostki w modelu danych zawiera jedną lub więcej właściwości binarnych, Usługa danych zwraca te dane binarne zakodowanymi w formacie base-64, wewnątrz wpisu w źródle danych odpowiedzi. Ponieważ ładowania i serializacja dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, które są niezależne od jednostki, do której należy. Jest to realizowane przez oddzielenie danych binarnych z jednostki w co najmniej jeden strumień danych.  
@@ -81,18 +81,14 @@ Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne m
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Włączanie dużych strumieni binarnych w środowisku macierzystym  
  Podczas tworzenia usługi danych w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web Windows Communication Foundation (WCF) służy do zapewnienia implementacji protokołu HTTP. Domyślnie program WCF ogranicza rozmiar wiadomości HTTP do tylko 65 KB. Aby można było do strumienia dużych danych binarnych do i z usługi danych, należy również skonfigurować aplikację sieci Web, aby umożliwić duże pliki binarne i strumieni na użytek transferu. Aby to zrobić, Dodaj następujące elementy w `<configuration />` element pliku Web.config aplikacji:  
-  
-  
-  
+
 > [!NOTE]
 >  Należy użyć <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> tryb transferu, aby upewnić się, że dane binarne w komunikatach żądania i odpowiedzi są przesyłane strumieniowo i nie jest buforowana przez architekturę WCF.  
   
  Aby uzyskać więcej informacji, zobacz [przesyłanie strumieniowe przesyłanie komunikatów](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) i [przydziały dla transportu](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
  Domyślnie program Internet Information Services (IIS) ogranicza rozmiar żądania do 4MB. Aby włączyć usługi danych otrzymać strumieni większy niż 4MB, podczas uruchamiania w usługach IIS, należy także ustawić `maxRequestLength` atrybutu [httpRuntime — Element (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) w `<system.web />` sekcji konfiguracji jako pokazano w poniższym przykładzie:  
-  
-  
-  
+
 ## <a name="using-data-streams-in-a-client-application"></a>Za pomocą strumieni danych w aplikacji klienckiej  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka klienta umożliwia pobrania i aktualizacji tych narażonych zasobów jako strumieni binarnych na komputerze klienckim. Aby uzyskać więcej informacji, zobacz [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
@@ -130,6 +126,7 @@ Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne m
  Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Niestandardowi dostawcy usługi danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
 - [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

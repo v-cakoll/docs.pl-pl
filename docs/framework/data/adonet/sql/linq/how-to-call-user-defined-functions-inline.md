@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 76a41ded52ac29b4a8b597188171333a888be5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163712"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>Instrukcje: Wywoływanie wbudowanych funkcji zdefiniowanych przez użytkownika
 Mimo że można wywołać wbudowanych funkcji zdefiniowanych przez użytkownika, funkcji, które są uwzględnione w zapytaniu, których wykonanie jest odroczone nie są wykonywane, dopóki zapytanie jest wykonywane. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -39,4 +39,5 @@ FROM [Customers] AS [t0]
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Funkcje zdefiniowane przez użytkownika](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

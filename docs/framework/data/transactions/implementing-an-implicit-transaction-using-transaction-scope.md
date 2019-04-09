@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120981"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementowanie transakcji niejawnej przy użyciu zakresu transakcji
 <xref:System.Transactions.TransactionScope> Klasa udostępnia prosty sposób zaznaczania bloku kodu jako udział w transakcji, bez konieczności interakcji z transakcja. Zakres transakcji można wybrać i automatycznie zarządzać otoczenia transakcji. Z powodu jej łatwość użycia i wydajności zalecane jest, że używasz <xref:System.Transactions.TransactionScope> klasy podczas projektowania aplikacji transakcji.  
@@ -34,8 +34,7 @@ ms.locfileid: "57375249"
   
  Jeśli <xref:System.Transactions.TransactionScope> obiektu początkowo utworzona transakcja występuje rzeczywista praca z Zatwierdzanie transakcji przez Menedżera transakcji, po ostatnim wierszu kodu w **przy użyciu** bloku. Jeśli nie utworzył transakcji, zatwierdzanie występuje zawsze, gdy <xref:System.Transactions.CommittableTransaction.Commit%2A> jest wywoływana przez właściciela <xref:System.Transactions.CommittableTransaction> obiektu. W tym momencie Menedżer transakcji wywołuje zasobu menedżerów i wysłanie ich do zatwierdzania lub wycofywania na ich podstawie <xref:System.Transactions.TransactionScope.Complete%2A> metoda została wywołana na <xref:System.Transactions.TransactionScope> obiektu.  
   
- **Przy użyciu** instrukcji zapewnia, że <xref:System.Transactions.TransactionScope.Dispose%2A> metody <xref:System.Transactions.TransactionScope> obiektu jest wywoływana, nawet jeśli wystąpi wyjątek. 
-  <xref:System.Transactions.TransactionScope.Dispose%2A> Metody oznacza koniec zakresu transakcji. Wyjątki, które mogą występować po wywołaniu tej metody nie może mieć wpływ na transakcji. Ta metoda również przywraca otoczenia transakcji jej poprzedniego stanu.  
+ **Przy użyciu** instrukcji zapewnia, że <xref:System.Transactions.TransactionScope.Dispose%2A> metody <xref:System.Transactions.TransactionScope> obiektu jest wywoływana, nawet jeśli wystąpi wyjątek. <xref:System.Transactions.TransactionScope.Dispose%2A> Metody oznacza koniec zakresu transakcji. Wyjątki, które mogą występować po wywołaniu tej metody nie może mieć wpływ na transakcji. Ta metoda również przywraca otoczenia transakcji jej poprzedniego stanu.  
   
  Element <xref:System.Transactions.TransactionAbortedException> jest generowany, jeśli zakres tworzy transakcji, a transakcja została przerwana. Element <xref:System.Transactions.TransactionInDoubtException> jest generowany, gdy Menedżer transakcji nie może podjąć decyzję zatwierdzania. Nie wyjątku, jeśli transakcja została zatwierdzona.  
   
@@ -93,7 +92,7 @@ void SomeMethod()
 |Pomiń|Nie|Nie transakcji|  
 |Wymagane|Tak|Otoczenia transakcji|  
 |Wymagane nowe|Tak|Nowa transakcja (będzie główny)|  
-|Pomiń|Tak|Nie transakcji|  
+|Pomiń|Yes|Nie transakcji|  
   
  Gdy <xref:System.Transactions.TransactionScope> obiektu sprzężenia istniejącej transakcji otoczenia, usuwania obiektu zakres nie może kończyć się transakcji, chyba że zakres przerywa transakcję. Jeśli otoczenia transakcji został utworzony przez zakres głównego, tylko wtedy, gdy zakres główny jest usunięty, nie <xref:System.Transactions.CommittableTransaction.Commit%2A> jest wywoływana w transakcji. Jeśli transakcja została utworzona ręcznie, zakończenia transakcji, gdy jest to zostało przerwane lub przydzielonej przez jej twórcę.  
   
@@ -122,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- W przykładzie pokazano blok kodu, bez żadnych transakcji otoczenia nowego zakresu (`scope1`) przy użyciu <xref:System.Transactions.TransactionScopeOption.Required>. Zakres `scope1` jest zakresem głównego, ponieważ tworzy nową transakcję (transakcji A) i sprawia, że transakcja A otoczenia transakcji. `Scope1`następnie tworzy trzy więcej obiektów, każdy z inną <xref:System.Transactions.TransactionScopeOption> wartość. Na przykład `scope2` jest tworzona przy użyciu <xref:System.Transactions.TransactionScopeOption.Required>, i ponieważ istnieje transakcja otoczenia, dołączeniu pierwszej transakcji utworzone przez `scope1`. Należy pamiętać, że `scope3` zakres główny nowej transakcji, a `scope4` ma ma otoczenia transakcji.  
+ W przykładzie pokazano blok kodu, bez żadnych transakcji otoczenia nowego zakresu (`scope1`) przy użyciu <xref:System.Transactions.TransactionScopeOption.Required>. Zakres `scope1` jest zakresem głównego, ponieważ tworzy nową transakcję (transakcji A) i sprawia, że transakcja A otoczenia transakcji. `Scope1` następnie tworzy trzy więcej obiektów, z których każdy z inną <xref:System.Transactions.TransactionScopeOption> wartość. Na przykład `scope2` jest tworzona przy użyciu <xref:System.Transactions.TransactionScopeOption.Required>, i ponieważ istnieje transakcja otoczenia, dołączeniu pierwszej transakcji utworzone przez `scope1`. Należy pamiętać, że `scope3` zakres główny nowej transakcji, a `scope4` ma ma otoczenia transakcji.  
   
  Chociaż często używane wartości domyślne i większość <xref:System.Transactions.TransactionScopeOption> jest <xref:System.Transactions.TransactionScopeOption.Required>, inne wartości ma unikatowy z przeznaczeniem.  
   
- <xref:System.Transactions.TransactionScopeOption.Suppress>jest przydatne, gdy chcesz zachować operacji wykonywanych przez sekcję kodu, a nie chcesz przerwać otoczenia transakcji, jeśli operacje kończą się niepowodzeniem. Na przykład jeśli chcesz wykonać rejestrowania lub inspekcji operacji lub mają być publikowane zdarzeń subskrybentom niezależnie od tego czy otoczenia transakcji zatwierdzeń lub przerywa. Ta wartość umożliwia mają sekcję kodu nietransakcyjnej wewnątrz zakresu transakcji, jak pokazano w poniższym przykładzie.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> jest przydatne, gdy chcesz zachować operacji wykonywanych przez sekcję kodu, a nie chcesz przerwać otoczenia transakcji, jeśli operacje kończą się niepowodzeniem. Na przykład jeśli chcesz wykonać rejestrowania lub inspekcji operacji lub mają być publikowane zdarzeń subskrybentom niezależnie od tego czy otoczenia transakcji zatwierdzeń lub przerywa. Ta wartość umożliwia mają sekcję kodu nietransakcyjnej wewnątrz zakresu transakcji, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  
@@ -170,5 +169,6 @@ using(TransactionScope scope1 = new TransactionScope())
  Podczas tworzenia nowego <xref:System.Transactions.TransactionScope> wystąpienie, można użyć <xref:System.Transactions.EnterpriseServicesInteropOption> wyliczenia w jednym z konstruktorów do określenia sposobu interakcji z modelu COM +. Aby uzyskać więcej informacji na temat tego, zobacz [współdziałanie z usługami przedsiębiorstwa i transakcjami COM +](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Transactions.Transaction.Clone%2A>
 - <xref:System.Transactions.TransactionScope>

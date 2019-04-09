@@ -12,18 +12,16 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165272"
 ---
 # <a name="binding-declarations-overview"></a>Przegląd Wiązanie deklaracji
 W tym temacie omówiono różne sposoby, można zadeklarować powiązania.  
-  
- 
-  
+
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Przed odczytaniem w tym temacie, należy się zapoznać się z pojęciem i użycie rozszerzenia znaczników. Aby uzyskać więcej informacji na temat rozszerzenia znaczników, zobacz [rozszerzenia znacznikowania i WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md).  
@@ -126,7 +124,8 @@ W tym temacie omówiono różne sposoby, można zadeklarować powiązania.
 -   Wartość domyślna <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> wartości waha się między <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> i <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> zależności od tego, jak również właściwość zależności powiązane. Jest wartością domyślną dla większości właściwości zależności <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, podczas gdy <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> właściwość ma wartość domyślną <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)
 - [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)
-- [PropertyPath, składnia XAML](../advanced/propertypath-xaml-syntax.md)
+- [PropertyPath — Składnia XAML](../advanced/propertypath-xaml-syntax.md)

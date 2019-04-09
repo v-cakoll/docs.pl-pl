@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustaw właściwości szerokości elementu'
+title: 'Instrukcje: Ustawianie właściwości szerokości elementu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-ms.openlocfilehash: a8fdc7c6659eb33f948741145c0b2e100bb133e4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a5ed67ba20176398a863a1e9826b1eab71b182f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096878"
 ---
-# <a name="how-to-set-the-width-properties-of-an-element"></a>Instrukcje: Ustaw właściwości szerokości elementu
+# <a name="how-to-set-the-width-properties-of-an-element"></a>Instrukcje: Ustawianie właściwości szerokości elementu
 ## <a name="example"></a>Przykład  
  W tym przykładzie przedstawiono wizualnie różnice między renderowania zachowanie między cztery właściwości związane z szerokość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
@@ -34,12 +34,13 @@ ms.locfileid: "57376848"
  Aby uzyskać pełny przykład, zobacz [przykład porównania właściwości szerokości](https://go.microsoft.com/fwlink/?LinkID=160050).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.ActualWidth%2A>
 - <xref:System.Windows.FrameworkElement.MaxWidth%2A>
 - <xref:System.Windows.FrameworkElement.MinWidth%2A>
 - <xref:System.Windows.FrameworkElement.Width%2A>
-- [Panele — omówienie](panels-overview.md)
+- [Przegląd Panele](panels-overview.md)
 - [Ustawianie właściwości wysokości elementu](how-to-set-the-height-properties-of-an-element.md)
 - [Przykładowe porównanie właściwości szerokości](https://go.microsoft.com/fwlink/?LinkID=160050)

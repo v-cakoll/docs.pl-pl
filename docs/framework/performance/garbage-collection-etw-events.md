@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149737"
 ---
 # <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci
 <a name="top"></a> Te zdarzenia zbierać informacje dotyczące wyrzucania elementów bezużytecznych. Pomagają w diagnostyce i debugowania, w tym określanie, ile razy wyrzucania elementów bezużytecznych zostało wykonane, ile pamięci została zwolniona podczas wyrzucania elementów bezużytecznych i tak dalej.  
@@ -24,11 +24,11 @@ ms.locfileid: "54685220"
   
 -   [Zdarzenie GCEnd_V1](#gcend_v1_event)  
   
--   [GCHeapStats_V1 Event](#gcheapstats_v1_event)  
+-   [Zdarzenie GCHeapStats_V1](#gcheapstats_v1_event)  
   
 -   [Zdarzenie GCCreateSegment_V1](#gccreatesegment_v1_event)  
   
--   [Zdarzenie GCFreeSegment_V1](#gcfreesegment_v1_event)  
+-   [GCFreeSegment_V1 Event](#gcfreesegment_v1_event)  
   
 -   [Zdarzenie GCRestartEEBegin_V1](#gcrestarteebegin_v1_event)  
   
@@ -42,9 +42,9 @@ ms.locfileid: "54685220"
   
 -   [Zdarzenie GCFinalizersBegin_V1](#gcfinalizersbegin_v1_event)  
   
--   [GCFinalizersEnd_V1 Event](#gcfinalizersend_v1_event)  
+-   [Zdarzenie GCFinalizersEnd_V1](#gcfinalizersend_v1_event)  
   
--   [GCCreateConcurrentThread_V1 Event](#gccreateconcurrentthread_v1_event)  
+-   [Zdarzenie GCCreateConcurrentThread_V1](#gccreateconcurrentthread_v1_event)  
   
 -   [Zdarzenie GCTerminateConcurrentThread_V1](#gcterminateconcurrentthread_v1_event)  
   
@@ -367,4 +367,5 @@ ms.locfileid: "54685220"
  Brak danych zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Zdarzenia ETW CLR](../../../docs/framework/performance/clr-etw-events.md)

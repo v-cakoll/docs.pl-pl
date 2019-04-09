@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Wdrażanie aplikacji integracji modelu COM+'
+title: 'Instrukcje: wdrażanie aplikacji integracji modelu COM+'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 0dcaa7d12c7e35170dee155612f824ed22ab8b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 281fe0fb93fffb84f85f19b42e8d90e86dc300c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146734"
 ---
-# <a name="how-to-deploy-a-com-integration-application"></a>Instrukcje: Wdrażanie aplikacji integracji modelu COM+
+# <a name="how-to-deploy-a-com-integration-application"></a>Instrukcje: wdrażanie aplikacji integracji modelu COM+
 Po napisaniu aplikacji COM +, integracja, warto wdrożyć ją na innym komputerze. W tym temacie opisano sposób przenoszenia aplikacji integracji modelu COM + z jednego komputera na inny.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Przenoszenie modelu COM + hostowanych integracji aplikacji  
@@ -39,6 +39,7 @@ Po napisaniu aplikacji COM +, integracja, warto wdrożyć ją na innym komputerz
 5.  Skopiuj plik .svc (componentName.svc) i plik Web.config z głównego katalogu wirtualnego na maszynie, A do nowo utworzonego głównego katalogu wirtualnego na maszynie B.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd integrowania z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
-- [Instrukcje: Konfigurowanie ustawień usługi COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
-- [Instrukcje: Używanie narzędzia konfiguracji modelu usług COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Instrukcje: konfigurowanie ustawień usługi COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Instrukcje: używanie narzędzia konfiguracji modelu usług COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

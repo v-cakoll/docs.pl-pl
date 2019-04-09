@@ -2,12 +2,12 @@
 title: Obsługa komunikatów zanieczyszczonych
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ec7603e547c065b4b86f2c81650c6e8a2ce09e6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146526"
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył maksymalną liczbę prób dostarczenia do aplikacji. Ta sytuacja może wystąpić, gdy aplikacja w kolejce nie może przetworzyć komunikatu z powodu błędów. Aby spełniać wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty, w ramach transakcji. {Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, więc, że komunikat zostanie ponowiony w ramach nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może utknąć w pętli, odbierania i przerywanie ten sam komunikat, dopóki nie przekroczono maksymalną liczbę prób dostarczenia i wyniki Zarządzanie skażonymi komunikatami.  
@@ -77,9 +77,7 @@ A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył mak
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
 4.  Upewnij się, że usługa jest oznaczony za pomocą atrybutu skażone zachowanie.  
-  
-  
-  
+
  Ponadto jeśli `ReceiveErrorHandling` ustawiono `Fault`, `ServiceHost` błędów w przypadku napotkania Zarządzanie skażonymi komunikatami. Można podpiąć zdarzenie uszkodzoną i wyłączenie usługi, akcje naprawcze i ponownie uruchomić. Na przykład `LookupId` w <xref:System.ServiceModel.MsmqPoisonMessageException> propagowane do `IErrorHandler` można zauważyć i kiedy błędy hosta usług, można użyć `System.Messaging` interfejsu API do odbierania wiadomości z kolejki przy użyciu `LookupId` do usunięcia komunikatu z kolejki i przechowywać wiadomości w niektórych magazynu zewnętrznego lub innej kolejki. Następnie można ponownie uruchomić `ServiceHost` Wznowienie normalnego przetwarzania. [Obsługa zanieczyszczonych komunikatów, obsługa w usłudze MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) przedstawia tego zachowania.  
   
 ## <a name="transaction-time-out-and-poison-messages"></a>Limit czasu transakcji i skażone komunikaty  
@@ -106,6 +104,7 @@ A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył mak
 -   Wiadomości usługi MSMQ w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje podejmowana jest próba właściwości wiadomości, która utrzymuje liczbę razy dostarczanie komunikatów. Ta właściwość liczba przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Usługi WCF przechowuje licznik przerwań w pamięci, więc istnieje możliwość, że ta właściwość nie może zawierać dokładną wartość, gdy ten sam komunikat jest odczytywany przez więcej niż jednej usługi WCF w farmie.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
 - [Określanie i obsługa błędów w kontraktach i usługach](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

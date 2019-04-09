@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Testowanie zachowania UserControl w czasie wykonywania'
+title: 'Instrukcje: testowanie zachowania UserControl w czasie wykonywania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 0b87034487ef0f2cabed786354682f394500cafc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1719d0461fbb582a1486dcc0726253ec97a07ac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116496"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Instrukcje: Testowanie zachowania UserControl w czasie wykonywania
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Instrukcje: testowanie zachowania UserControl w czasie wykonywania
 Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetestować jej zachowanie w czasie wykonywania. Można utworzyć projekt oddzielną aplikację z systemem Windows i umieść swój formant na formularzu testu, ale ta procedura jest wygodne. Szybciej i łatwiej metodą jest użycie **UserControl — kontener testowy** dostarczane przez program Visual Studio. Ten kontener testowy uruchamia się bezpośrednio z Twojego Projekt Biblioteka formantów Windows.  
   
 > [!IMPORTANT]
@@ -67,8 +67,9 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
 6.  Użyj **wybierz kontrolkę użytkownika** <xref:System.Windows.Forms.ComboBox> Aby przełączyć się między formantami dwóch użytkowników z **TestContainerExample** projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.UserControl>
-- [Instrukcje: Formanty złożone autora](how-to-author-composite-controls.md)
-- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Instrukcje: autoryzowanie kontrolek złożonych](how-to-author-composite-controls.md)
+- [Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Przewodnik: tworzenie kontrolki złożonej za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Projektant kontrolki użytkownika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

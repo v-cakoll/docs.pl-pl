@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f86c680a10a3dcb1009b4f0cedd777ab9da5ac1f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bcae66fd30c29a0a3c9bd0b5ffc2047efdf3788d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138219"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>ICorProfilerInfo::EndInprocDebugging — Metoda
 Zamyka w trakcie sesji debugowania. Ta metoda jest przestarzała w programie .NET Framework 2.0.  
@@ -53,4 +53,5 @@ HRESULT EndInprocDebugging(
  **Wersja programu .NET framework:** 1.0  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+
+- [ICorProfilerInfo — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: <filter> — Element do <add> dla <listeners> dla <trace>
+title: <filter> Element <add> dla <listeners> dla <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: f364590a419c3f31af49ea2c3dd6fa5901bf0272
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5961125e1b8d0d0f5711f8b942b68ba71d61888f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143432"
 ---
 # <a name="filter-element-for-add-for-listeners-for-trace"></a>\<Filtr >, Element dla \<Dodaj > dla \<odbiorników > dla \<śledzenia >
 Dodaje filtr do odbiornika w `Listeners` kolekcji dla śledzenia.  
@@ -82,6 +82,7 @@ Dodaje filtr do odbiornika w `Listeners` kolekcji dla śledzenia.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>

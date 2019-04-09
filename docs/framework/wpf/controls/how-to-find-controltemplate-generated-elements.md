@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Znajdowanie elementów generowanych przez ControlTemplate'
+title: 'Instrukcje: znajdowanie elementów generowanych przez element ControlTemplate'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ControlTemplates [WPF], finding elements
 - finding ControlTemplate elements [WPF]
 ms.assetid: d7b25447-ceff-4bb4-9be5-fd7c40ef00af
-ms.openlocfilehash: 9a6609d70a6b863f16533aac81ffce4daf171bcf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 426f6c93433711ac72fe67eff2ee3006aa4d9166
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092131"
 ---
-# <a name="how-to-find-controltemplate-generated-elements"></a>Instrukcje: Znajdowanie elementów generowanych przez ControlTemplate
+# <a name="how-to-find-controltemplate-generated-elements"></a>Instrukcje: znajdowanie elementów generowanych przez element ControlTemplate
 W tym przykładzie pokazano, jak znajdowanie elementów generowanych przez <xref:System.Windows.Controls.ControlTemplate>.  
   
 ## <a name="example"></a>Przykład  
@@ -29,6 +29,7 @@ W tym przykładzie pokazano, jak znajdowanie elementów generowanych przez <xref
  [!code-vb[FindGeneratedItems#CTFindElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#ctfindelement)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
 - [Zakresy nazw WPF XAML](../advanced/wpf-xaml-namescopes.md)

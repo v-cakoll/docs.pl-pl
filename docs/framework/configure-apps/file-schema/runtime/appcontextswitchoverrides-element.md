@@ -1,5 +1,5 @@
 ---
-title: <AppContextSwitchOverrides>, element
+title: <AppContextSwitchOverrides> Element
 ms.custom: updateeachrelease
 ms.date: 03/07/2019
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8593dbc8a419048950a852a02057f40f80d992a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136464"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> Element
 Definiuje co najmniej jeden przełączniki posługują się <xref:System.AppContext> Aby klasa zapewniała mechanizm rezygnacji z nowych funkcji.  
@@ -175,6 +175,7 @@ W poniższym przykładzie użyto `<add>` elementu do dodania dwóch ustawień `<
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<środowisko uruchomieniowe > Element](runtime-element.md)
 - [\<Konfiguracja > Element](../configuration-element.md)

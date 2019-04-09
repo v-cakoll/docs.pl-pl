@@ -1,17 +1,17 @@
 ---
-title: Obsługa automatyzacji interfejsu użytkownika dla formantów typu okienko
+title: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu okienko
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Pane control type
 - Pane control type
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
-ms.openlocfilehash: 2fcb116ed0bc2ae06980bbf9a80a661cbcf5ab3f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a610f86e15aadcbbc1ebb62d445c2d677f6f4bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131498"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu okienko
 > [!NOTE]
@@ -54,7 +54,7 @@ ms.locfileid: "57674890"
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować wzorców, wymagane są obsługiwane przez wszystkie kontrolki okienka. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider>|Zależy od|Implementacja tego wzorca kontrolki, jeśli kontrolka okienka mogą być przeniesione, rozmiaru lub zmieniany na ekranie.|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider>|nigdy nie|Jeśli potrzebujesz implementacji tego wzorca formantu, formant powinien być oparty na <xref:System.Windows.Automation.ControlType.Window> kontrolowanie typu.|  
@@ -65,7 +65,7 @@ ms.locfileid: "57674890"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie kontrolki okienka. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa/wartość|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Obsługa/wartość|Uwagi|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|nigdy nie|Brak|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|nigdy nie|Brak|  
@@ -94,6 +94,7 @@ ms.locfileid: "57674890"
 |<ul><li>Pane</li><li>Drzewo (wzorzec przewijania)<br /><br /> <ul><li>TreeItem</li><li>Pane</li><li>Edytuj (wzorca przewijania</li></ul></li></ul>|— Okienko<br />-Drzewa (wzorzec przewijania)<br />— TreeItem<br />-... Okienko<br />— Edytowanie<br />-(Przewiń wzorzec)|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.ControlType.Pane>
-- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

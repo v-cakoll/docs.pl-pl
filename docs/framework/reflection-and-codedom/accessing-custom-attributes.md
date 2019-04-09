@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1017a0326691c2e0f01e2a16df5db566786ee688
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083624"
 ---
 # <a name="accessing-custom-attributes"></a>Uzyskiwanie dostępu do atrybutów niestandardowych
 Po atrybuty zostały skojarzone z elementami program, odbicie może służyć do kwerendy ich istnienie i wartości. W .NET Framework w wersji 1.0 i 1.1 atrybuty niestandardowe są badane w kontekście wykonywania. .NET Framework w wersji 2.0 zapewnia nowy kontekst obciążenia kontekstu reflection-only, którego można użyć, aby sprawdzić kod, którego nie można załadować do wykonania.  
@@ -73,6 +73,7 @@ public class LocalizationExtenderProvider
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

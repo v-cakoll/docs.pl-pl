@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przekształć pędzel'
+title: 'Instrukcje: Przekształcanie pędzla'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: 990c82b4844ce3ca7f5b553b180280b6b37496ca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163010"
 ---
-# <a name="how-to-transform-a-brush"></a>Instrukcje: Przekształć pędzel
+# <a name="how-to-transform-a-brush"></a>Instrukcje: Przekształcanie pędzla
 W tym przykładzie pokazano, jak przekształcić <xref:System.Windows.Media.Brush> obiektów przy użyciu ich właściwości dwóch transformacji: <xref:System.Windows.Media.Brush.RelativeTransform%2A> i <xref:System.Windows.Media.Brush.Transform%2A>.  
   
  W poniższych przykładach używane <xref:System.Windows.Media.RotateTransform> obracanie zawartości <xref:System.Windows.Media.ImageBrush> o 45 stopni.  
@@ -45,6 +45,7 @@ W tym przykładzie pokazano, jak przekształcić <xref:System.Windows.Media.Brus
  Aby uzyskać pełny przykład, zobacz [przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973). Aby uzyskać więcej informacji na temat pędzle, zobacz [malowanie jednolitymi kolorami i gradientami — Przegląd](painting-with-solid-colors-and-gradients-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przekształcanie pędzla — przegląd](brush-transformation-overview.md)
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
-- [Przekształcenia — przegląd](transforms-overview.md)
+
+- [Przegląd Przekształcanie pędzla](brush-transformation-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)
+- [Przegląd Przekształcenia](transforms-overview.md)

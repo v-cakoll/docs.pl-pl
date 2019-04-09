@@ -2,8 +2,14 @@
 title: Liczniki wydajności programu WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance counters [WCF]'
+- performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
+ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087862"
 ---
 # <a name="wcf-performance-counters"></a>Liczniki wydajności programu WCF
 Windows Communication Foundation (WCF) zawiera duży zestaw liczników wydajności, aby ułatwić mierzyć wydajność aplikacji.  
@@ -133,4 +139,5 @@ ServiceName@ServiceBaseAddress
  Aby uzyskać więcej informacji na temat sposobu programowego dostępu do liczników, zobacz [Architektura programowania licznika wydajności](https://go.microsoft.com/fwlink/?LinkId=95179).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

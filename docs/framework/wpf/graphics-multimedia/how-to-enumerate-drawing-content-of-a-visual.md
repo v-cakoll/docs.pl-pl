@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Wykaż zawartość rysowania Visual'
+title: 'Instrukcje: Wyliczanie zawartości rysowania wizualizacji'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - retrieving the DrawingGroup value of a Visual [WPF]
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-ms.openlocfilehash: 6414026090766544585c8e5e940ef9f0c62566d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108007"
 ---
-# <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Instrukcje: Wykaż zawartość rysowania Visual
+# <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Instrukcje: Wyliczanie zawartości rysowania wizualizacji
 <xref:System.Windows.Media.Drawing> Obiektu podaje modelu obiektu dla wyliczanie zawartości <xref:System.Windows.Media.Visual>.  
   
 ## <a name="example"></a>Przykład  
@@ -24,8 +24,9 @@ ms.locfileid: "57360024"
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - <xref:System.Windows.Media.VisualTreeHelper>
-- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
-- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)
+- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)

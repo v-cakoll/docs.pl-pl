@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106746"
 ---
 # <a name="collection-types-in-data-contracts"></a>Typy kolekcji w kontraktach danych
 A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], takie listy mogą być reprezentowane za pomocą tablic lub innych typów (listy ogólnej, ogólny <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, lub <xref:System.Collections.ArrayList>). Na przykład kolekcja może zawierać, listę adresów dla danego klienta. Kolekcje te są nazywane *listy kolekcji*, niezależnie od ich rzeczywistego typu.  
@@ -396,4 +396,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
  Funkcje serializatora w trybie, w których zostaje zachowany odwołania do obiektu, zachowywanie odwołanie do obiektu również zastosowanie do kolekcji. W szczególności tożsamość obiektu są zachowywane dla całej kolekcji i pojedynczych elementów zawartych w kolekcjach. Słowników tożsamość obiektu są zachowywane, zarówno dla obiektów pary klucz/wartość i poszczególnych obiektów kluczy i wartości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

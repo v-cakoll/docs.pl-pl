@@ -1,5 +1,5 @@
 ---
-title: < System.runtime.caching >, Element (ustawienia pamięci podręcznej)
+title: <system.runtime.caching>, element (ustawienia pamięci podręcznej)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <system.runtime.caching> element
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a68af0727e6f2fc92f9c6875ec6566dc969bd65d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: da059e1be7c685eba7792045abf4ffa691525d2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131368"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<System.Runtime.Caching >, Element (ustawienia pamięci podręcznej)
 Udostępnia konfigurację dla domyślnej w pamięci <xref:System.Runtime.Caching.ObjectCache> wdrożenia za pośrednictwem `memoryCache` wpisu w pliku konfiguracji.  
@@ -74,4 +74,5 @@ Udostępnia konfigurację dla domyślnej w pamięci <xref:System.Runtime.Caching
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<memoryCache >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

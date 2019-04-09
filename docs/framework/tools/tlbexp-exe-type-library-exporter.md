@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 805d35ddb74fca847d47298cf283913031af67c4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6bcf1773cfe839d9a4ac197d701d155b68cdb949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109425"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Eksporter biblioteki typów)
 Eksporter biblioteki typów generuje bibliotekę typów, która opisuje typy zdefiniowane w zestawie środowiska uruchomieniowego języka wspólnego.  
@@ -34,7 +34,7 @@ tlbexp assemblyName [options]
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*assemblyName*|Zestaw, dla którego ma zostać wyeksportowana biblioteka typów.|  
+|*nazwaZestawu*|Zestaw, dla którego ma zostać wyeksportowana biblioteka typów.|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
@@ -49,7 +49,7 @@ tlbexp assemblyName [options]
 |**/tlbreference:** *typelibraryname*|Wymusza na Tlbexp.exe jawne rozwiązanie odwołań do biblioteki typów bez konsultacji z rejestrem. Na przykład jeśli zestaw B odwołuje się do zestawu A, można użyć tej opcji, aby dostarczyć jawne odwołanie do biblioteki typów, zamiast polegać na bibliotece typów określonej w rejestrze. Tlbexp.exe wykonuje sprawdzenie wersji, aby zapewnić zgodność wersji biblioteki typów z wersją zestawu; w przeciwnym wypadku wygeneruje błąd.<br /><br /> Należy pamiętać, że **tlbreference** opcji nadal konsultować się z rejestrem w przypadkach, gdzie <xref:System.Runtime.InteropServices.ComImportAttribute> atrybut jest stosowany do interfejsu, który następnie jest implementowany przez innego typu.|  
 |**/tlbrefpath:** *ścieżki*|W pełni kwalifikowana ścieżka do biblioteki typów, do którego się odwoływano.|  
 |**/win32**|Podczas kompilowania na komputerze 64-bitowym ta opcja określa, że Tlbexp.exe generuje biblioteki typów 32-bitowych.|  
-|**/Win64**|Podczas kompilowania kodu na komputerze 32-bitowym, ta opcja określa, że Tlbexp.exe generuje bibliotekę typów 64-bitowych.|  
+|**/win64**|Podczas kompilowania kodu na komputerze 32-bitowym, ta opcja określa, że Tlbexp.exe generuje bibliotekę typów 64-bitowych.|  
 |**/verbose**|Określa tryb informacji pełnej; wyświetla listę wszystkich zestawów, do których się odwoływano i dla których biblioteka typów musi zostać wygenerowana.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
@@ -130,9 +130,10 @@ tlbexp Sample.dll
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Narzędzia](../../../docs/framework/tools/index.md)
-- [Regasm.exe (narzędzie rejestracji zestawów)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Zestaw do wpisz biblioteki konwersja — podsumowanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
-- [Tlbimp.exe (importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Regasm.exe (Narzędzie rejestracji zestawów)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
+- [Podsumowanie informacji o konwersji zestawu na bibliotekę typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
+- [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

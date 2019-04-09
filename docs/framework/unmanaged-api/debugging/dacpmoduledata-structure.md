@@ -1,5 +1,5 @@
 ---
-title: DacpModuleData Structure
+title: DacpModuleData, struktura
 ms.date: 02/01/2019
 api.name:
 - DacpModuleData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: db3fdaa768e3d1b445f08c3964521570631f0965
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132010"
 ---
-# <a name="dacpmoduledata-structure"></a>DacpModuleData Structure
+# <a name="dacpmoduledata-structure"></a>DacpModuleData, struktura
 
 Definiuje bufora transportu dla informacje czasu wykonywania modułu.
 
@@ -49,7 +49,6 @@ struct DacpModuleData
 | `ilBase`  | Adres załadowanego obrazu podstawowego adresu.                                 |
 | `payLoad` | Bufor ładunku modułu dodatkowe informacje używane przez środowisko uruchomieniowe. |
 
-
 ## <a name="remarks"></a>Uwagi
 
 Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Aby go użyć, definiują strukturę, jak określono powyżej.
@@ -61,5 +60,6 @@ Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dos
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

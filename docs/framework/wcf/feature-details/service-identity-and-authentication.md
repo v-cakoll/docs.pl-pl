@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145629"
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
 Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podstawie usługi sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po klient inicjuje komunikację do punktu końcowego i usługa uwierzytelnia klienta, klient porównuje wartości tożsamości punktu końcowego z procesu uwierzytelniania punktu końcowego, zwrócona wartość. Jeśli są zgodne, klient jest pewność, że skontaktuje się z punktem końcowym usługi oczekiwane. Ta opcja działa jako ochrony przed *wyłudzania informacji* poprzez uniemożliwienie nastąpi przekierowanie do punktu końcowego hostowanego przez usługę złośliwego klienta.  
@@ -54,13 +54,9 @@ Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podsta
   
 ## <a name="using-the-identity-element-in-configuration"></a>Za pomocą \<tożsamości > Element w konfiguracji  
  Jeśli zmienisz typ poświadczeń klienta w powiązaniu z wcześniejszymi do `Certificate,` wygenerowanego pliku WSDL zawiera Base64 z serializacji, a następnie certyfikat X.509 dla wartości tożsamości, jak pokazano w poniższym kodzie. Jest to wartość domyślna dla wszystkich typów poświadczeń klienta inne niż Windows.  
-  
-  
-  
+
  Można zmienić wartości domyślnej tożsamości usługi lub zmienić typ tożsamości za pomocą `<identity>` element konfiguracji lub przez ustawienie tożsamości w kodzie. Poniższy kod konfiguracji ustawia tożsamość system (DNS) nazwę domeny, z wartością `contoso.com`.  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>Programowe Ustawianie tożsamości  
  Usługa nie ma jawnie określić tożsamości, ponieważ automatycznie określa WCF. Jednak WCF można określić tożsamość w punkcie końcowym, jeśli jest to wymagane. Poniższy kod dodaje nowy punkt końcowy usługi w kontekście określonej tożsamości DNS.  
   
@@ -69,16 +65,12 @@ Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podsta
   
 ## <a name="specifying-identity-at-the-client"></a>Określanie tożsamości klienta  
  W czasie projektowania, zazwyczaj używa dewelopera klienta [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do wygenerowania konfiguracji klienta. Wygenerowano plik konfiguracyjny (przeznaczone do użytku przez klienta) zawiera tożsamości serwera. Na przykład poniższy kod jest generowany z usługi, która określa tożsamość DNS, jak pokazano w powyższym przykładzie. Należy zauważyć, że wartość tożsamości punktu końcowego klienta jest zgodny z typem usługi. W tym przypadku, gdy klient odbierze poświadczenia Windows (Kerberos) dla usługi, oczekuje, że wartość `contoso.com`.  
-  
-  
-  
+
  Jeśli zamiast Windows, usługa Określa certyfikat jako typu poświadczeń klienta, a następnie właściwość DNS certyfikatu powinien być wartością `contoso.com`. (Lub, jeśli właściwość DNS jest `null`, nazwa podmiotu certyfikatu musi być `contoso.com`.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Przy użyciu określonej wartości tożsamości  
  Następujący plik konfiguracji klienta pokazuje, jak powinna być określona wartość tożsamości usługi. W poniższym przykładzie klient może komunikować się z dwoma punktami końcowymi. Pierwszy jest identyfikowany za pomocą odcisku palca certyfikatu, a druga za pomocą klucza RSA certyfikatu. Oznacza to, że certyfikat, który zawiera tylko publiczny klucz/prywatnego pary kluczy, ale nie jest wystawiony przez zaufany urząd.  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>Tożsamość sprawdzanie w czasie wykonywania  
  W czasie projektowania dewelopera klienta określa tożsamość serwera za pośrednictwem jego metadanych. W czasie wykonywania sprawdzanie tożsamości jest wykonywane przed wywołaniem żadnych punktów końcowych usługi.  
   
@@ -113,11 +105,12 @@ Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podsta
  Aby uzyskać więcej informacji o sposobie stosu powiązanie elementów poprawnie dla niestandardowego powiązania, zobacz [powiązania Creating User-Defined](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Aby uzyskać więcej informacji na temat tworzenia niestandardowego powiązania za pomocą <xref:System.ServiceModel.Channels.SecurityBindingElement>, zobacz [jak: Tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Instrukcje: Tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [Instrukcje: Tworzenie niestandardowego weryfikatora tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Instrukcje: tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Instrukcje: tworzenie niestandardowego weryfikatora tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Wybieranie typu poświadczeń](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Tworzenie powiązań zdefiniowanych przez użytkownika](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [Instrukcje: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Tworzenie wiązań zdefiniowanych przez użytkownika](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+- [Instrukcje: pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: fcc5d3a561eea1e38d0b8a4790af13143cad92d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166156"
 ---
 # <a name="copying-and-pinning"></a>Kopiowanie i przypinanie
 Podczas przekazywania danych, organizator międzyoperacyjny można skopiować lub przypiąć dane są przekazywane. Kopiowanie danych umieszcza kopię danych z jednej lokalizacji pamięci w innej lokalizacji w pamięci. Na poniższej ilustracji przedstawiono różnice między kopiowanie typu wartości i kopiowanie typu przekazywane przez odwołanie z kodu zarządzanego do niezarządzanej pamięci.  
@@ -78,6 +78,7 @@ Typy odwołań przekazywane według wartości i według odwołania
  Gdy <xref:System.Text.StringBuilder?displayProperty=nameWithType> jest przekazywany przez wartość i przekazuje organizatora, a odwołanie do wewnętrznego buforu elementu **StringBuilder** bezpośrednio do obiektu wywołującego. Obiektami wywołującym i wywoływanym należy uzgodnić rozmiar buforu. Obiekt wywołujący jest odpowiedzialny za tworzenie **StringBuilder** odpowiednią długość. Obiekt wywoływany musi podjąć niezbędne środki ostrożności, aby upewnić się, że nie przepełnienie buforu. **StringBuilder** są wyjątkiem od reguły, który przekazywane według wartości typy odwołań są przekazywane w parametrach domyślnie. Jest zawsze przekazywana jako we/wy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
 - [Atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Marshaling międzyoperacyjny](interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](interop-marshaling.md)

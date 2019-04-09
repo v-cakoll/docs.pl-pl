@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110061"
 ---
 # <a name="base-elements-overview"></a>Przegląd Elementy bazy
 Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] są uzyskiwane z czterech klas, które są często określane w [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] przesłać dokumenty będące klasy bazowej elementów. Te klasy są <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, i <xref:System.Windows.FrameworkContentElement>. <xref:System.Windows.DependencyObject> Klasa również odnosi się, ponieważ jest wspólna klasa bazowa obu <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>Base Element API klas WPF  
  Zarówno <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement> są uzyskiwane z <xref:System.Windows.DependencyObject>, za pośrednictwem nieco różne sposoby uzyskiwania dostępu. Podziel na tym poziomie zajmuje się jak <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> są używane w interfejsie użytkownika i co przeznaczenia służą one w aplikacji. <xref:System.Windows.UIElement> ma również <xref:System.Windows.Media.Visual> w jego hierarchii klas, który jest klasa, która udostępnia podstawowe grafiki niższego poziomu pomocy technicznej [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. <xref:System.Windows.Media.Visual> zapewnia ramy renderowania, definiując regiony ekranu prostokątny niezależne. W praktyce <xref:System.Windows.UIElement> jest dla elementów, które będzie obsługiwać większe modelu obiektów przeznaczonych do renderowania i układu w regionach, może być opisany jako regiony ekranu prostokątny i gdzie model zawartości jest celowo bardziej otwarte, aby zezwolić na inny kombinacje elementów. <xref:System.Windows.ContentElement> nie pochodzi od <xref:System.Windows.Media.Visual>; swój model jest fakt, że <xref:System.Windows.ContentElement> może być używane przez coś innego, np. czytnik lub przeglądarkę, która będzie następnie interpretacji elementy i tworzyć pełne <xref:System.Windows.Media.Visual> dla [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] korzystać. Niektóre <xref:System.Windows.UIElement> klasy mają być zawartości hostów: zapewniają hostingu i renderowania dla jednego lub więcej <xref:System.Windows.ContentElement> klasy (<xref:System.Windows.Controls.DocumentViewer> jest przykładem takich klasy). <xref:System.Windows.ContentElement> jest używany jako klasa bazowa dla elementów z nieco mniejsze modele obiektów i więcej adresów tekst informacji, lub zawartości dokumentu, który może zostać umieszczony w elemencie <xref:System.Windows.UIElement>.  
@@ -84,7 +83,7 @@ Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 ### <a name="dispatcherobject"></a>DispatcherObject  
  <xref:System.Windows.Threading.DispatcherObject> zapewnia obsługę [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wątkowości, model i włącza wszystkie obiekty stworzone dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje do skojarzenia z <xref:System.Windows.Threading.Dispatcher>. Nawet jeśli pochodzi od <xref:System.Windows.UIElement>, <xref:System.Windows.DependencyObject>, lub <xref:System.Windows.Media.Visual>, należy rozważyć, wynikające z <xref:System.Windows.Threading.DispatcherObject> Aby uzyskać temu modelu wątkowości. Aby uzyskać więcej informacji, zobacz [Model wątkowy](threading-model.md).  
   
-### <a name="visual"></a>Wizualne  
+### <a name="visual"></a>Visual  
  <xref:System.Windows.Media.Visual> implementuje koncepcji 2D obiektu, który zwykle wymaga wizualnej prezentacji w przybliżeniu prostokątny obszar. Rzeczywiste renderowanie <xref:System.Windows.Media.Visual> odbywa się w innych klas (nie jest ona niezależna), ale <xref:System.Windows.Media.Visual> klasy zawiera znany typ, który jest używany przez procesy renderowania na różnych poziomach. <xref:System.Windows.Media.Visual> Test trafienia implementuje, ale nie uwidacznia zdarzenia, które zgłaszanie testowania trafień alarmów (zostały one <xref:System.Windows.UIElement>). Aby uzyskać więcej informacji, zobacz [programowanie warstwy Visual](../graphics-multimedia/visual-layer-programming.md).  
   
 ### <a name="freezable"></a>Freezable  
@@ -98,7 +97,8 @@ Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
  <xref:System.Windows.Controls.Control> jest zamierzony klasę bazową dla typu obiektu, który różnorodnie jest określane jako kontrola lub składników, w zależności od technologii. Ogólnie rzecz biorąc [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasy kontrolki są klas, które reprezentują kontrolkę interfejsu użytkownika albo bezpośrednio ściśle uczestniczyć w kompozycji formantu. Funkcje podstawowe, <xref:System.Windows.Controls.Control> umożliwia jest szablonów kontrolki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Control>
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Tworzenie kontrolek — omówienie](../controls/control-authoring-overview.md)
+- [Przegląd Autorstwo formantów](../controls/control-authoring-overview.md)
 - [Architektura WPF](wpf-architecture.md)

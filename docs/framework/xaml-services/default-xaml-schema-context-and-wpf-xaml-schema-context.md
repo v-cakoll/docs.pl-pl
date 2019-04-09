@@ -2,12 +2,12 @@
 title: Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124699"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak produkcji XAML, który korzysta z określonego słownika XAML współdziała z obiektu zapisywania zachowania, w tym sposób mapowania typów rozwiązuje, jak zespoły są ładowane, jak w przypadku niektórych czytników i składników zapisywania ustawienia są interpretowane. W tym temacie opisano funkcje usług .NET Framework XAML i kontekst schematu XAML skojarzoną domyślną, który jest oparty na systemie typu CLR. W tym temacie opisano kontekst schematu XAML, który służy do WPF.  
@@ -89,4 +89,5 @@ Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak pr
     -   Użyj krótkiej nazwy i token klucza publicznego do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Omówienie struktur i koncepcji strumienia węzłów XAML](understanding-xaml-node-stream-structures-and-concepts.md)
+
+- [Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML](understanding-xaml-node-stream-structures-and-concepts.md)

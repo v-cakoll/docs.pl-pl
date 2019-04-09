@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc3f9e8c581bc95bea8cfeb549177966eae22a43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129808"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback — Interfejs
 Udostępnia metody do tworzenia wywołań zwrotnych w ramach typu apartment. *Apartamentu* to logiczny kontener, w ramach procesu dla obiektów, które mają takie same wymagania dotyczące dostępu do wątku.  
@@ -42,4 +42,5 @@ Udostępnia metody do tworzenia wywołań zwrotnych w ramach typu apartment. *Ap
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Hosting — Interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

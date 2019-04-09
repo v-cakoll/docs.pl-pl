@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 86f7f485c289d1641605ab538f8500418b77cfd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122242"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegowanie i personifikacja za pomocą programu WCF
 *Personifikacja* jest typową techniką, której usługi użyć do ograniczenia dostępu klienta do zasobów w domenie usługi. Zasobów domeny usługi może być zasoby maszyny, takie jak pliki lokalne (dokona personifikacji) lub zasobów na innej maszynie, na przykład do udziału plików (delegowania). Dla przykładowej aplikacji, zobacz [Personifikowanie klienta](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Na przykład jak używać personifikacji zobacz [jak: Personifikowanie klienta w usłudze](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -111,14 +111,14 @@ ms.locfileid: "54663313"
   
  W poniższej tabeli określono poziom personifikacji, którego usługi uzyskuje podczas personifikacji z tokenu z pamięci podręcznej.  
   
-|`AllowedImpersonationLevel` Wartość|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
+|`AllowedImpersonationLevel` value|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anonimowe|Tak|n/d|Personifikacja|  
+|Anonimowe|Yes|n/d|Personifikacja|  
 |Anonimowe|Nie|n/d|Identyfikacja|  
 |Identyfikacja|n/d|n/d|Identyfikacja|  
-|Personifikacja|Tak|n/d|Personifikacja|  
+|Personifikacja|Yes|n/d|Personifikacja|  
 |Personifikacja|Nie|n/d|Identyfikacja|  
-|Delegowanie|Tak|Tak|Delegowanie|  
+|Delegowanie|Tak|Yes|Delegowanie|  
 |Delegowanie|Tak|Nie|Personifikacja|  
 |Delegowanie|Nie|n/d|Identyfikacja|  
   
@@ -127,7 +127,7 @@ ms.locfileid: "54663313"
   
 |`AllowedImpersonationLevel`|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|n/d|Tak|Tak|Delegowanie|  
+|n/d|Tak|Yes|Delegowanie|  
 |n/d|Tak|Nie|Personifikacja|  
 |n/d|Nie|n/d|Identyfikacja|  
   
@@ -181,7 +181,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Nie|Nie|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Yes|Nie|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Yes|Tak|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Yes|Yes|  
   
  Poniższy przykład kodu pokazuje, jak używać delegowania.  
   
@@ -206,6 +206,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 -   [Protokół Kerberos przejścia i ograniczone delegowanie](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>
 - <xref:System.ServiceModel.ImpersonationOption>

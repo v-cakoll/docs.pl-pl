@@ -2,12 +2,12 @@
 title: Nieobsługiwana funkcja
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
-ms.openlocfilehash: 5022c9011c2aac5b3272e359f991c40236a5673f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a1a8f33a9360b4299648bcd329f4c5f2e7de88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097876"
 ---
 # <a name="unsupported-functionality"></a>Nieobsługiwana funkcja
 W składniku LINQ to SQL tłumaczenie istniejące środowisko uruchomieniowe języka wspólnego (CLR) nie są dostępne następujące funkcje programu SQL i .NET Framework tworzy:  
@@ -27,4 +27,5 @@ W składniku LINQ to SQL tłumaczenie istniejące środowisko uruchomieniowe ję
      LINQ to SQL ma ograniczoną obsługę `ROUND`. Aby uzyskać więcej informacji, zobacz [metody System.Math](system-math-methods.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych i funkcje](data-types-and-functions.md)

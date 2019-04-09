@@ -2,12 +2,12 @@
 title: Definicja schematu elementu DataTable
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: aa275e0a9cbd4f8fb3e851865b9de49eca327727
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163075"
 ---
 # <a name="datatable-schema-definition"></a>Definicja schematu elementu DataTable
 Schemat lub struktura tabeli jest reprezentowany przez kolumn i ograniczeń. Należy zdefiniować schemat <xref:System.Data.DataTable> przy użyciu <xref:System.Data.DataColumn> obiektów także <xref:System.Data.ForeignKeyConstraint> i <xref:System.Data.UniqueConstraint> obiektów. Kolumny w tabeli można zamapować do kolumny w źródle danych, zawierać obliczone wartości w wyrażeniach, automatycznie zwiększyć ich wartości lub wartości klucza podstawowego.  
@@ -36,5 +36,6 @@ Schemat lub struktura tabeli jest reprezentowany przez kolumn i ograniczeń. Nal
  W tym artykule opisano sposób definiowania foreign key i ograniczenia unikatowe dla kolumn w tabeli.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

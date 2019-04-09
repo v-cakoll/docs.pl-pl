@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie przycisków do formantu ToolBar przy użyciu narzędzia Projektant'
+title: 'Instrukcje: dodawanie przycisków do kontrolki ToolBar przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 86184fa92917c53d95da21732a7c52cdd08079ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084027"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Instrukcje: Dodawanie przycisków do formantu ToolBar przy użyciu narzędzia Projektant
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Instrukcje: dodawanie przycisków do kontrolki ToolBar przy użyciu narzędzia Projektant
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
   
@@ -48,8 +48,9 @@ ms.locfileid: "57702844"
 5.  Kliknij przycisk **OK** aby zamknąć okno dialogowe i utworzyć panele określony.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Instrukcje: określanie ikony dla przycisku ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar, kontrolka — omówienie](toolbar-control-overview-windows-forms.md)
-- [ToolBar, kontrolka](toolbar-control-windows-forms.md)
+- [ToolBar — Formant](toolbar-control-windows-forms.md)

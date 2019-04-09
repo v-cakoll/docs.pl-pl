@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konwertuj powiązane dane'
+title: 'Instrukcje: Konwertowanie powiązanych danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: c98f8e4e5c837e6fbbe836a9eb2f228d2d689542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093803"
 ---
-# <a name="how-to-convert-bound-data"></a>Instrukcje: Konwertuj powiązane dane
+# <a name="how-to-convert-bound-data"></a>Instrukcje: Konwertowanie powiązanych danych
 Ten przykład przedstawia sposób zastosowania konwersji na dane, które jest używane w powiązaniach.  
   
  Aby dokonać konwersji danych podczas tworzenia powiązania, należy utworzyć klasę, która implementuje <xref:System.Windows.Data.IValueConverter> interfejsu, który zawiera <xref:System.Windows.Data.IValueConverter.Convert%2A> i <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> metody.  
@@ -38,6 +38,7 @@ Ten przykład przedstawia sposób zastosowania konwersji na dane, które jest u�
  Zasoby stylów, do których odwołuje się w powyższym przykładzie są zdefiniowane w sekcji zasobów nie są wyświetlane w tym temacie.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Implementowanie powiązanej walidacji](how-to-implement-binding-validation.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+
+- [Implementowanie weryfikacji wiązania](how-to-implement-binding-validation.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

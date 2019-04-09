@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a6d5755507ca00de612677235912d86caf98553
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137959"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>Klasa MissingInteropDataException (architektura .NET Native)
 **Platforma .NET dla aplikacji Windows dla systemu Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] tylko**  
@@ -80,6 +80,7 @@ ms.locfileid: "54698066"
  `MissingInteropDataException` Klasa zawiera jeden element członkowski unikatowy, `MissingType` właściwości, który wskazuje na typ, którego metadanych jest wymagany w przypadku wywołania metody pomyślnie. Wszystkie pozostałe elementy członkowskie są dziedziczone z klasy bazowej <xref:System.Exception?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Exception?displayProperty=nameWithType>
 - [Klasa MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

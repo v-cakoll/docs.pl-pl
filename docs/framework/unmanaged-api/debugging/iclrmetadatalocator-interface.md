@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5dd77783c03d6a61d0b5831e44db97a731d8074
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123776"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator — Interfejs
 Używane przez warstwę usług dostępu do danych do lokalizowania metadane zestawów w procesie docelowym.  
@@ -30,7 +30,7 @@ Używane przez warstwę usług dostępu do danych do lokalizowania metadane zest
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetMetaData, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Pobiera metadane obrazu z procesu docelowego.|  
+|[GetMetadata, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Pobiera metadane obrazu z procesu docelowego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Klient API (tzn. debuger) musi implementować ten interfejs stosownie do określonego procesu docelowego. Na przykład to implementacja żywy proces będzie różnić się od tej ze zrzutu pamięci.  
@@ -45,4 +45,5 @@ Używane przez warstwę usług dostępu do danych do lokalizowania metadane zest
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

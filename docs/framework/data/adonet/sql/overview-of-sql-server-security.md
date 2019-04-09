@@ -1,15 +1,15 @@
 ---
-title: Omówienie zabezpieczeń programu SQL Server
+title: Przegląd zabezpieczeń serwera SQL
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148593"
 ---
-# <a name="overview-of-sql-server-security"></a>Omówienie zabezpieczeń programu SQL Server
+# <a name="overview-of-sql-server-security"></a>Przegląd zabezpieczeń serwera SQL
 Strategii ochronę w głębi z nakładającymi się warstw zabezpieczeń, to najlepszy sposób na zagrożenia bezpieczeństwa licznika. SQL Server udostępnia architekturę zabezpieczeń, która umożliwia administratorów baz danych i deweloperom tworzenie aplikacji w bezpiecznej bazie danych i licznik zagrożenia. Każda wersja programu SQL Server zostały udoskonalone w poprzednich wersjach programu SQL Server wraz z wprowadzeniem nowych funkcji. Zabezpieczeń nie jest dostarczany w polu. Każda aplikacja jest unikatowa w jej wymagania dotyczące zabezpieczeń. Deweloperzy muszą poznać kombinację funkcji i funkcje są najbardziej odpowiednie do licznika znanymi zagrożeniami i przewidywać zagrożenia, które mogą się pojawić w przyszłości.  
   
  Wystąpienie programu SQL Server zawiera hierarchiczną kolekcję jednostek, rozpoczynając od serwera. Każdy serwer zawiera wiele baz danych, a każda baza danych zawiera kolekcję obiektów zabezpieczanych. Co zabezpieczanych programu SQL Server ma skojarzone *uprawnienia* , może zostać przydzielony *jednostki*, czyli pojedynczej, grupy lub proces udzielony dostęp do programu SQL Server. Struktura zabezpieczeń programu SQL Server zarządza dostępem do zabezpieczanych obiektów za pomocą *uwierzytelniania* i *autoryzacji*.  
@@ -40,6 +40,7 @@ Strategii ochronę w głębi z nakładającymi się warstw zabezpieczeń, to naj
  Zawiera łącza do zasobów zabezpieczenia integracji CLR.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

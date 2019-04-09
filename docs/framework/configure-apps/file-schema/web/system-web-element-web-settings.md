@@ -1,5 +1,5 @@
 ---
-title: < System.web >, Element (ustawienia internetowe)
+title: <system.web>, element (ustawienia internetowe)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web.config configuration file [ASP.NET]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: a8d0905dc64ae3e3c4977639ccf881a677de73a9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 50566422c5e28585e93171c991144cf12a6866eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131953"
 ---
 # <a name="systemweb-element-web-settings"></a>\<System.Web >, Element (ustawienia sieci Web)
 Zawiera informacje o sposobie zarządzania zachowanie całego procesu w warstwie hostingu platformy ASP.NET.  
@@ -73,4 +73,5 @@ Zawiera informacje o sposobie zarządzania zachowanie całego procesu w warstwie
 |Może być pusta||  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<applicationPool >, Element (ustawienia sieci Web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

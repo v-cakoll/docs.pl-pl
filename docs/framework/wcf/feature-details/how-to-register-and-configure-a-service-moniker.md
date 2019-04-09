@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Rejestrowanie i konfigurowanie monikera usługi'
+title: 'Instrukcje: rejestrowanie i konfigurowanie krótkiej nazwy usługi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141924"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Instrukcje: Rejestrowanie i konfigurowanie monikera usługi
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Instrukcje: rejestrowanie i konfigurowanie krótkiej nazwy usługi
 Przed użyciem monikera programu Windows Communication Foundation (WCF) w ramach aplikacji modelu COM z kontrolą typów kontraktu, musisz zarejestrować wymaganych typów opartego na atrybutach z modelem COM i konfigurowanie aplikacji modelu COM i moniker z powiązaniem wymagane Konfiguracja.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Aby zarejestrować wymaganych typów opartego na atrybutach z modelem COM  
@@ -98,4 +98,5 @@ Przed użyciem monikera programu Windows Communication Foundation (WCF) w ramach
      Modyfikuje definicje interfejsu importowanych, tak, aby zwrócić wszystkie metody `HResult`. Zwracane wartości są konwertowane na parametrów out. Ogólny wykonywanie metody pozostaje taka sama. Dzięki temu można ustalić przyczynę Wystąpił wyjątek podczas wywoływania metody na serwerze proxy. Ta funkcja jest dostępna tylko w kodzie języka C++.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -2,12 +2,12 @@
 title: Usługa routingu
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129444"
 ---
 # <a name="routing-service"></a>Usługa routingu
 Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego jako router wiadomości. Podstawowe funkcje usług routingu jest możliwość przesyłania wiadomości, na podstawie zawartości wiadomości, co pozwala wiadomości były przekazywane do endpoint klienta, na podstawie wartości w wiadomości, w nagłówku lub w treści wiadomości.  
@@ -106,6 +106,7 @@ Usługa routingu jest ogólny pośredniczącego protokołu SOAP, działającego 
 -   Dynamiczna konfiguracja  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
 - [Kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
 - [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)

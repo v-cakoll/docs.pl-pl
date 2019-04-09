@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Aranżowanie formantów z liniami przyciągania oraz siatki w formularzach Windows Forms'
+title: 'Instrukcje: aranżowanie kontrolek z liniami przyciągania oraz siatki w formularzach systemu Windows'
 ms.date: 03/30/2017
 f1_keywords:
 - GridSize
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 23a1c850133982c5f0136e4c21e6b73fcb94e887
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115745"
 ---
-# <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Instrukcje: Aranżowanie formantów z liniami przyciągania oraz siatki w formularzach Windows Forms
+# <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Instrukcje: aranżowanie kontrolek z liniami przyciągania oraz siatki w formularzach systemu Windows
 Korzystanie z funkcji układu w wersji programu Visual Studio, można dokładnie kierować rozmieszczenie kontrolek w formularzu. Formantów dodana do formularza lub przeniesione w formularzu można automatycznie wyrównywane do wierszy i kolumn siatki projektanta Windows Forms, lub można wyrównać formanty, używając funkcji linii przyciągania.  
   
 > [!NOTE]
@@ -36,11 +36,12 @@ Korzystanie z funkcji układu w wersji programu Visual Studio, można dokładnie
      Aby uzyskać więcej informacji, zobacz [instruktażu: Rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Teraz można linii przyciągania wyrównywanie i rozmieszczanie formantów w formularzu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Ogólne, Windows Forms Designer, okno dialogowe Opcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Kontrolki formularzy Windows Forms](index.md)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
-- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
-- [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
+
+- [Ogólny, narzędzie Projektant formularzy systemu Windows, Okno dialogowe dla opcji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Formanty formularzy systemu Windows](index.md)
+- [Instrukcje: dodawanie kontrolek do formularzy systemu Windows](how-to-add-controls-to-windows-forms.md)
+- [Rozmieszczanie formantów na formularzach systemu Windows](arranging-controls-on-windows-forms.md)
+- [Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Formanty formularzy systemu Windows według funkcji](windows-forms-controls-by-function.md)

@@ -9,25 +9,26 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128664"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="d0286-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="d0286-102">ScrollViewer</span></span>
-<span data-ttu-id="d0286-103"><xref:System.Windows.Controls.ScrollViewer> Kontroli tworzy przewijany region, w którym zawartość może być przewijana poziomo czy pionowo.</span><span class="sxs-lookup"><span data-stu-id="d0286-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="53af6-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="53af6-102">ScrollViewer</span></span>
+<span data-ttu-id="53af6-103"><xref:System.Windows.Controls.ScrollViewer> Kontroli tworzy przewijany region, w którym zawartość może być przewijana poziomo czy pionowo.</span><span class="sxs-lookup"><span data-stu-id="53af6-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d0286-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d0286-104">In This Section</span></span>  
- [<span data-ttu-id="d0286-105">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="d0286-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
- [<span data-ttu-id="d0286-106">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="d0286-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="53af6-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="53af6-104">In This Section</span></span>  
+ [<span data-ttu-id="53af6-105">ScrollViewer — Przegląd</span><span class="sxs-lookup"><span data-stu-id="53af6-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="53af6-106">— Tematy porad</span><span class="sxs-lookup"><span data-stu-id="53af6-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d0286-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="d0286-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="53af6-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="53af6-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="d0286-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d0286-108">See also</span></span>
-- [<span data-ttu-id="d0286-109">Panele — omówienie</span><span class="sxs-lookup"><span data-stu-id="d0286-109">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="d0286-110">Układ</span><span class="sxs-lookup"><span data-stu-id="d0286-110">Layout</span></span>](../advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="53af6-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="53af6-108">See also</span></span>
+
+- [<span data-ttu-id="53af6-109">Przegląd Panele</span><span class="sxs-lookup"><span data-stu-id="53af6-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="53af6-110">Układ</span><span class="sxs-lookup"><span data-stu-id="53af6-110">Layout</span></span>](../advanced/layout.md)

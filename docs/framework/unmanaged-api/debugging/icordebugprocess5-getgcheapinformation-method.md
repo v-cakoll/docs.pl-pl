@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81c590dd1f3f6682179645fb384cdd82d1d7ed96
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 50b682a7b3a4aadf7559120745265ef266cf2870
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140546"
 ---
-# <a name="icordebugprocess5getgcheapinformation-method"></a><span data-ttu-id="30fbd-102">ICorDebugProcess5::GetGCHeapInformation — Metoda</span><span class="sxs-lookup"><span data-stu-id="30fbd-102">ICorDebugProcess5::GetGCHeapInformation Method</span></span>
-<span data-ttu-id="30fbd-103">Zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych, w tym, czy jest ono aktualnie wyliczalny.</span><span class="sxs-lookup"><span data-stu-id="30fbd-103">Provides general information about the garbage collection heap, including whether it is currently enumerable.</span></span>  
+# <a name="icordebugprocess5getgcheapinformation-method"></a><span data-ttu-id="d8b51-102">ICorDebugProcess5::GetGCHeapInformation — Metoda</span><span class="sxs-lookup"><span data-stu-id="d8b51-102">ICorDebugProcess5::GetGCHeapInformation Method</span></span>
+<span data-ttu-id="d8b51-103">Zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych, w tym, czy jest ono aktualnie wyliczalny.</span><span class="sxs-lookup"><span data-stu-id="d8b51-103">Provides general information about the garbage collection heap, including whether it is currently enumerable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="30fbd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="30fbd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d8b51-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d8b51-104">Syntax</span></span>  
   
 ```  
 HRESULT GetGCHeapInformation(  
@@ -35,22 +35,23 @@ HRESULT GetGCHeapInformation(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="30fbd-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="30fbd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d8b51-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d8b51-105">Parameters</span></span>  
  `pHeapInfo`  
- <span data-ttu-id="30fbd-106">[out] Wskaźnik do [cor_heapinfo —](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) wartość, która zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="30fbd-106">[out] A pointer to a [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) value that provides general information about the garbage collection heap.</span></span>  
+ <span data-ttu-id="d8b51-106">[out] Wskaźnik do [cor_heapinfo —](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) wartość, która zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="d8b51-106">[out] A pointer to a [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) value that provides general information about the garbage collection heap.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="30fbd-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="30fbd-107">Remarks</span></span>  
- <span data-ttu-id="30fbd-108">`ICorDebugProcess5::GetGCHeapInformation` Metoda musi zostać wywołana przed wyliczanie stosu lub sterty poszczególnych regionów, aby upewnić się, że wyrzucanie elementów bezużytecznych struktury w procesie jest ważny w chwili obecnej.</span><span class="sxs-lookup"><span data-stu-id="30fbd-108">The `ICorDebugProcess5::GetGCHeapInformation` method must be called before enumerating the heap or individual heap regions to ensure that the garbage collection structures in the process are currently valid.</span></span> <span data-ttu-id="30fbd-109">Nie może być dodawanym stercie wyrzucania elementów bezużytecznych, gdy kolekcja jest w toku.</span><span class="sxs-lookup"><span data-stu-id="30fbd-109">The garbage collection heap cannot be walked while a collection is in progress.</span></span> <span data-ttu-id="30fbd-110">W przeciwnym razie wyliczenia mogą przechwytywać struktury kolekcji wyrzucania elementów, które są nieprawidłowe.</span><span class="sxs-lookup"><span data-stu-id="30fbd-110">Otherwise, the enumeration may capture garbage collection structures that are invalid.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d8b51-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d8b51-107">Remarks</span></span>  
+ <span data-ttu-id="d8b51-108">`ICorDebugProcess5::GetGCHeapInformation` Metoda musi zostać wywołana przed wyliczanie stosu lub sterty poszczególnych regionów, aby upewnić się, że wyrzucanie elementów bezużytecznych struktury w procesie jest ważny w chwili obecnej.</span><span class="sxs-lookup"><span data-stu-id="d8b51-108">The `ICorDebugProcess5::GetGCHeapInformation` method must be called before enumerating the heap or individual heap regions to ensure that the garbage collection structures in the process are currently valid.</span></span> <span data-ttu-id="d8b51-109">Nie może być dodawanym stercie wyrzucania elementów bezużytecznych, gdy kolekcja jest w toku.</span><span class="sxs-lookup"><span data-stu-id="d8b51-109">The garbage collection heap cannot be walked while a collection is in progress.</span></span> <span data-ttu-id="d8b51-110">W przeciwnym razie wyliczenia mogą przechwytywać struktury kolekcji wyrzucania elementów, które są nieprawidłowe.</span><span class="sxs-lookup"><span data-stu-id="d8b51-110">Otherwise, the enumeration may capture garbage collection structures that are invalid.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="30fbd-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="30fbd-111">Requirements</span></span>  
- <span data-ttu-id="30fbd-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="30fbd-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d8b51-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d8b51-111">Requirements</span></span>  
+ <span data-ttu-id="d8b51-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8b51-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="30fbd-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="30fbd-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d8b51-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d8b51-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="30fbd-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="30fbd-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d8b51-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8b51-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="30fbd-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="30fbd-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="d8b51-115">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="d8b51-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="30fbd-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="30fbd-116">See also</span></span>
-- [<span data-ttu-id="30fbd-117">ICorDebugProcess5, interfejs</span><span class="sxs-lookup"><span data-stu-id="30fbd-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [<span data-ttu-id="30fbd-118">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="30fbd-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="d8b51-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d8b51-116">See also</span></span>
+
+- [<span data-ttu-id="d8b51-117">ICorDebugProcess5 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="d8b51-117">ICorDebugProcess5 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [<span data-ttu-id="d8b51-118">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="d8b51-118">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

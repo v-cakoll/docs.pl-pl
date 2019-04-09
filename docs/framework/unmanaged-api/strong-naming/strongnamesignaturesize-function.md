@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dac6f2ca813f3b8cbed48d540a991e6396edf679
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 01c0f9ca0299e817618d93133c0eaca9fc63788e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160319"
 ---
-# <a name="strongnamesignaturesize-function"></a><span data-ttu-id="34cc7-102">StrongNameSignatureSize — Funkcja</span><span class="sxs-lookup"><span data-stu-id="34cc7-102">StrongNameSignatureSize Function</span></span>
-<span data-ttu-id="34cc7-103">Zwraca rozmiar podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="34cc7-103">Returns the size of the strong name signature.</span></span> <span data-ttu-id="34cc7-104">`StrongNameSignatureSize` Aby określić, ile miejsca do zarezerwowania w pliku, podczas tworzenia zestawu podpisanego z opóźnieniem zwykle jest używana przez kompilatory.</span><span class="sxs-lookup"><span data-stu-id="34cc7-104">`StrongNameSignatureSize` is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
+# <a name="strongnamesignaturesize-function"></a><span data-ttu-id="0d1be-102">StrongNameSignatureSize — Funkcja</span><span class="sxs-lookup"><span data-stu-id="0d1be-102">StrongNameSignatureSize Function</span></span>
+<span data-ttu-id="0d1be-103">Zwraca rozmiar podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="0d1be-103">Returns the size of the strong name signature.</span></span> `StrongNameSignatureSize` <span data-ttu-id="0d1be-104">Aby określić, ile miejsca do zarezerwowania w pliku, podczas tworzenia zestawu podpisanego z opóźnieniem zwykle jest używana przez kompilatory.</span><span class="sxs-lookup"><span data-stu-id="0d1be-104">is typically used by compilers to determine how much space to reserve in the file when creating a delay-signed assembly.</span></span>  
   
- <span data-ttu-id="34cc7-105">Ta funkcja jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="34cc7-105">This function has been deprecated.</span></span> <span data-ttu-id="34cc7-106">Użyj [iclrstrongname::strongnamesignaturesize —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="34cc7-106">Use the [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) method instead.</span></span>  
+ <span data-ttu-id="0d1be-105">Ta funkcja jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="0d1be-105">This function has been deprecated.</span></span> <span data-ttu-id="0d1be-106">Użyj [iclrstrongname::strongnamesignaturesize —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) metody zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="0d1be-106">Use the [ICLRStrongName::StrongNameSignatureSize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34cc7-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="34cc7-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d1be-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="0d1be-107">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameSignatureSize (   
@@ -38,31 +38,32 @@ BOOLEAN StrongNameSignatureSize (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="34cc7-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="34cc7-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0d1be-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="0d1be-108">Parameters</span></span>  
  `pbPublicKeyBlob`  
- <span data-ttu-id="34cc7-109">[in] Struktury typu [publickeyblob —](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) zawierający publiczną część pary kluczy używanego do generowania podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="34cc7-109">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
+ <span data-ttu-id="0d1be-109">[in] Struktury typu [publickeyblob —](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) zawierający publiczną część pary kluczy używanego do generowania podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="0d1be-109">[in] A structure of type [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) that contains the public portion of the key pair used to generate the strong name signature.</span></span>  
   
  `cbPublicKeyBlob`  
- <span data-ttu-id="34cc7-110">[in] Rozmiar w bajtach z `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="34cc7-110">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
+ <span data-ttu-id="0d1be-110">[in] Rozmiar w bajtach z `pbPublicKeyBlob`.</span><span class="sxs-lookup"><span data-stu-id="0d1be-110">[in] The size, in bytes, of `pbPublicKeyBlob`.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="34cc7-111">[in] Liczba bajtów potrzebnych do przechowania podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="34cc7-111">[in] The number of bytes required to store the strong name signature.</span></span>  
+ <span data-ttu-id="0d1be-111">[in] Liczba bajtów potrzebnych do przechowania podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="0d1be-111">[in] The number of bytes required to store the strong name signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="34cc7-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="34cc7-112">Return Value</span></span>  
- <span data-ttu-id="34cc7-113">`true` Po pomyślnym zakończeniu; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="34cc7-113">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0d1be-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="0d1be-112">Return Value</span></span>  
+ `true` <span data-ttu-id="0d1be-113">Po pomyślnym zakończeniu; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="0d1be-113">on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="34cc7-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="34cc7-114">Remarks</span></span>  
- <span data-ttu-id="34cc7-115">Jeśli `StrongNameSignatureSize` funkcja nie jest ukończone pomyślnie, wywołaj [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcję, aby pobrać ostatni błąd wygenerowany.</span><span class="sxs-lookup"><span data-stu-id="34cc7-115">If the `StrongNameSignatureSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0d1be-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0d1be-114">Remarks</span></span>  
+ <span data-ttu-id="0d1be-115">Jeśli `StrongNameSignatureSize` funkcja nie jest ukończone pomyślnie, wywołaj [strongnameerrorinfo —](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) funkcję, aby pobrać ostatni błąd wygenerowany.</span><span class="sxs-lookup"><span data-stu-id="0d1be-115">If the `StrongNameSignatureSize` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="34cc7-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="34cc7-116">Requirements</span></span>  
- <span data-ttu-id="34cc7-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34cc7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d1be-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0d1be-116">Requirements</span></span>  
+ <span data-ttu-id="0d1be-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d1be-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34cc7-118">**Nagłówek:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="34cc7-118">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="0d1be-118">**Nagłówek:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="0d1be-118">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="34cc7-119">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="34cc7-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0d1be-119">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0d1be-119">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="34cc7-120">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34cc7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="0d1be-120">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="0d1be-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="34cc7-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="34cc7-121">See also</span></span>
-- [<span data-ttu-id="34cc7-122">StrongNameSignatureSize, metoda</span><span class="sxs-lookup"><span data-stu-id="34cc7-122">StrongNameSignatureSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
-- [<span data-ttu-id="34cc7-123">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="34cc7-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0d1be-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0d1be-121">See also</span></span>
+
+- [<span data-ttu-id="0d1be-122">StrongNameSignatureSize, metoda</span><span class="sxs-lookup"><span data-stu-id="0d1be-122">StrongNameSignatureSize Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturesize-method.md)
+- [<span data-ttu-id="0d1be-123">ICLRStrongName — Interfejs</span><span class="sxs-lookup"><span data-stu-id="0d1be-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

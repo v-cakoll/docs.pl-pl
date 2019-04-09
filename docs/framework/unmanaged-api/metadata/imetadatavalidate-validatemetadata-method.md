@@ -17,30 +17,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4eeadadee181a8a726cb0b7a16425d68a112aae4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc2e400d487596dc6c41aff54cae2386a040cfc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116194"
 ---
-# <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="266f3-102">IMetaDataValidate::ValidateMetaData — Metoda</span><span class="sxs-lookup"><span data-stu-id="266f3-102">IMetaDataValidate::ValidateMetaData Method</span></span>
-<span data-ttu-id="266f3-103">Sprawdza poprawność podpisów metadanych obiektów w bieżącym zakresie metadanych.</span><span class="sxs-lookup"><span data-stu-id="266f3-103">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  
+# <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="751dc-102">IMetaDataValidate::ValidateMetaData — Metoda</span><span class="sxs-lookup"><span data-stu-id="751dc-102">IMetaDataValidate::ValidateMetaData Method</span></span>
+<span data-ttu-id="751dc-103">Sprawdza poprawność podpisów metadanych obiektów w bieżącym zakresie metadanych.</span><span class="sxs-lookup"><span data-stu-id="751dc-103">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="266f3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="266f3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="751dc-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="751dc-104">Syntax</span></span>  
   
 ```  
 HRESULT ValidateMetaData ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="266f3-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="266f3-105">Requirements</span></span>  
- <span data-ttu-id="266f3-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="266f3-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="751dc-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="751dc-105">Requirements</span></span>  
+ <span data-ttu-id="751dc-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="751dc-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="266f3-107">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="266f3-107">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="751dc-107">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="751dc-107">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="266f3-108">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="266f3-108">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="751dc-108">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="751dc-108">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="266f3-109">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="266f3-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="751dc-109">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="751dc-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="266f3-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="266f3-110">See also</span></span>
-- [<span data-ttu-id="266f3-111">IMetaDataValidate, interfejs</span><span class="sxs-lookup"><span data-stu-id="266f3-111">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="751dc-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="751dc-110">See also</span></span>
+
+- [<span data-ttu-id="751dc-111">IMetaDataValidate — Interfejs</span><span class="sxs-lookup"><span data-stu-id="751dc-111">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

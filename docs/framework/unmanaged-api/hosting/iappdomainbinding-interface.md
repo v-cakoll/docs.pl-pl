@@ -16,30 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134189"
 ---
-# <a name="iappdomainbinding-interface"></a><span data-ttu-id="382d9-102">IAppDomainBinding — Interfejs</span><span class="sxs-lookup"><span data-stu-id="382d9-102">IAppDomainBinding Interface</span></span>
-<span data-ttu-id="382d9-103">Dostarcza metodę, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), by powiadomić aplikację hosta utworzono domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="382d9-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  
+# <a name="iappdomainbinding-interface"></a><span data-ttu-id="17de1-102">IAppDomainBinding — Interfejs</span><span class="sxs-lookup"><span data-stu-id="17de1-102">IAppDomainBinding Interface</span></span>
+<span data-ttu-id="17de1-103">Dostarcza metodę, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), by powiadomić aplikację hosta utworzono domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="17de1-103">Provides a method that is called by the common language runtime (CLR) to notify the host application that an application domain has been created.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="382d9-104">Metody</span><span class="sxs-lookup"><span data-stu-id="382d9-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="17de1-104">Metody</span><span class="sxs-lookup"><span data-stu-id="17de1-104">Methods</span></span>  
   
-|<span data-ttu-id="382d9-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="382d9-105">Method</span></span>|<span data-ttu-id="382d9-106">Opis</span><span class="sxs-lookup"><span data-stu-id="382d9-106">Description</span></span>|  
+|<span data-ttu-id="17de1-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="17de1-105">Method</span></span>|<span data-ttu-id="17de1-106">Opis</span><span class="sxs-lookup"><span data-stu-id="17de1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="382d9-107">OnAppDomain, metoda</span><span class="sxs-lookup"><span data-stu-id="382d9-107">OnAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|<span data-ttu-id="382d9-108">Metoda wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR) w celu powiadomienia hosta, że utworzono domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="382d9-108">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>|  
+|[<span data-ttu-id="17de1-107">OnAppDomain, metoda</span><span class="sxs-lookup"><span data-stu-id="17de1-107">OnAppDomain Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|<span data-ttu-id="17de1-108">Metoda wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR) w celu powiadomienia hosta, że utworzono domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="17de1-108">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="382d9-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="382d9-109">Requirements</span></span>  
- <span data-ttu-id="382d9-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="382d9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="17de1-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="17de1-109">Requirements</span></span>  
+ <span data-ttu-id="17de1-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17de1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="382d9-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="382d9-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="17de1-111">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="17de1-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="382d9-112">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="382d9-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="17de1-112">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="17de1-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="382d9-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="382d9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="17de1-113">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="17de1-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="382d9-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="382d9-114">See also</span></span>
-- [<span data-ttu-id="382d9-115">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="382d9-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="17de1-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="17de1-114">See also</span></span>
+
+- [<span data-ttu-id="17de1-115">Hosting — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="17de1-115">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

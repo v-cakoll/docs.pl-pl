@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74a54da0bc4257ccc50d2d99177a17b796380fb3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e677aefd5420f71867c1f11a2c9408c77d305c45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161385"
 ---
-# <a name="iclrmetadatalocatorgetmetadata-method"></a><span data-ttu-id="61710-102">ICLRMetadataLocator::GetMetadata — Metoda</span><span class="sxs-lookup"><span data-stu-id="61710-102">ICLRMetadataLocator::GetMetadata Method</span></span>
-<span data-ttu-id="61710-103">Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych do pobierania metadanych obrazu.</span><span class="sxs-lookup"><span data-stu-id="61710-103">Called by the common language runtime (CLR) data access services to retrieve the metadata of an image.</span></span>  
+# <a name="iclrmetadatalocatorgetmetadata-method"></a><span data-ttu-id="f34e6-102">ICLRMetadataLocator::GetMetadata — Metoda</span><span class="sxs-lookup"><span data-stu-id="f34e6-102">ICLRMetadataLocator::GetMetadata Method</span></span>
+<span data-ttu-id="f34e6-103">Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych do pobierania metadanych obrazu.</span><span class="sxs-lookup"><span data-stu-id="f34e6-103">Called by the common language runtime (CLR) data access services to retrieve the metadata of an image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61710-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="61710-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f34e6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f34e6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetadata(  
@@ -44,45 +44,46 @@ HRESULT GetMetadata(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="61710-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="61710-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f34e6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f34e6-105">Parameters</span></span>  
  `imagePath`  
- <span data-ttu-id="61710-106">[in] Ciąg, który określa ścieżkę do pliku obrazu.</span><span class="sxs-lookup"><span data-stu-id="61710-106">[in] A string that specifies the path of the image file.</span></span>  
+ <span data-ttu-id="f34e6-106">[in] Ciąg, który określa ścieżkę do pliku obrazu.</span><span class="sxs-lookup"><span data-stu-id="f34e6-106">[in] A string that specifies the path of the image file.</span></span>  
   
  `imageTimestamp`  
- <span data-ttu-id="61710-107">[in] Sygnatura czasowa pliku obrazu.</span><span class="sxs-lookup"><span data-stu-id="61710-107">[in] The time stamp of the image file.</span></span>  
+ <span data-ttu-id="f34e6-107">[in] Sygnatura czasowa pliku obrazu.</span><span class="sxs-lookup"><span data-stu-id="f34e6-107">[in] The time stamp of the image file.</span></span>  
   
  `imageSize`  
- <span data-ttu-id="61710-108">[in] Rozmiar pliku obrazu.</span><span class="sxs-lookup"><span data-stu-id="61710-108">[in] The size of the image file.</span></span>  
+ <span data-ttu-id="f34e6-108">[in] Rozmiar pliku obrazu.</span><span class="sxs-lookup"><span data-stu-id="f34e6-108">[in] The size of the image file.</span></span>  
   
  `mvid`  
- <span data-ttu-id="61710-109">[in] Unikatowy identyfikator globalny obrazu.</span><span class="sxs-lookup"><span data-stu-id="61710-109">[in] The globally unique identifier of the image.</span></span>  
+ <span data-ttu-id="f34e6-109">[in] Unikatowy identyfikator globalny obrazu.</span><span class="sxs-lookup"><span data-stu-id="f34e6-109">[in] The globally unique identifier of the image.</span></span>  
   
  `mdRva`  
- <span data-ttu-id="61710-110">[in] Wirtualny adres względny (RVA) metadanych.</span><span class="sxs-lookup"><span data-stu-id="61710-110">[in] The relative virtual address (RVA) of the metadata.</span></span> <span data-ttu-id="61710-111">Adres jest określany względem adresu podstawowego obrazu.</span><span class="sxs-lookup"><span data-stu-id="61710-111">The address is relative to the image base address.</span></span>  
+ <span data-ttu-id="f34e6-110">[in] Wirtualny adres względny (RVA) metadanych.</span><span class="sxs-lookup"><span data-stu-id="f34e6-110">[in] The relative virtual address (RVA) of the metadata.</span></span> <span data-ttu-id="f34e6-111">Adres jest określany względem adresu podstawowego obrazu.</span><span class="sxs-lookup"><span data-stu-id="f34e6-111">The address is relative to the image base address.</span></span>  
   
  `flags`  
- <span data-ttu-id="61710-112">[in] Zarezerwowane do użytku w przyszłości.</span><span class="sxs-lookup"><span data-stu-id="61710-112">[in] Reserved for future use.</span></span>  
+ <span data-ttu-id="f34e6-112">[in] Zarezerwowane do użytku w przyszłości.</span><span class="sxs-lookup"><span data-stu-id="f34e6-112">[in] Reserved for future use.</span></span>  
   
  `bufferSize`  
- <span data-ttu-id="61710-113">[in] Rozmiar buforu, w której chcesz umieścić metadanych.</span><span class="sxs-lookup"><span data-stu-id="61710-113">[in] The size of the buffer in which to place the metadata.</span></span>  
+ <span data-ttu-id="f34e6-113">[in] Rozmiar buforu, w której chcesz umieścić metadanych.</span><span class="sxs-lookup"><span data-stu-id="f34e6-113">[in] The size of the buffer in which to place the metadata.</span></span>  
   
  `buffer`  
- <span data-ttu-id="61710-114">[out] Bufor, w której chcesz umieścić metadanych.</span><span class="sxs-lookup"><span data-stu-id="61710-114">[out] The buffer in which to place the metadata.</span></span>  
+ <span data-ttu-id="f34e6-114">[out] Bufor, w której chcesz umieścić metadanych.</span><span class="sxs-lookup"><span data-stu-id="f34e6-114">[out] The buffer in which to place the metadata.</span></span>  
   
  `dataSize`  
- <span data-ttu-id="61710-115">[out] Rozmiar metadanych, który jest zwracany.</span><span class="sxs-lookup"><span data-stu-id="61710-115">[out] The size of the metadata that is returned.</span></span>  
+ <span data-ttu-id="f34e6-115">[out] Rozmiar metadanych, który jest zwracany.</span><span class="sxs-lookup"><span data-stu-id="f34e6-115">[out] The size of the metadata that is returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="61710-116">Uwagi</span><span class="sxs-lookup"><span data-stu-id="61710-116">Remarks</span></span>  
- <span data-ttu-id="61710-117">Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="61710-117">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f34e6-116">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f34e6-116">Remarks</span></span>  
+ <span data-ttu-id="f34e6-117">Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f34e6-117">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61710-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="61710-118">Requirements</span></span>  
- <span data-ttu-id="61710-119">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61710-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f34e6-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f34e6-118">Requirements</span></span>  
+ <span data-ttu-id="f34e6-119">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f34e6-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61710-120">**Nagłówek:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="61710-120">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="f34e6-120">**Nagłówek:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="f34e6-120">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="61710-121">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61710-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f34e6-121">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f34e6-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="61710-122">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61710-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="f34e6-122">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="f34e6-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="61710-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="61710-123">See also</span></span>
-- [<span data-ttu-id="61710-124">ICLRMetadataLocator, interfejs</span><span class="sxs-lookup"><span data-stu-id="61710-124">ICLRMetadataLocator Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f34e6-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f34e6-123">See also</span></span>
+
+- [<span data-ttu-id="f34e6-124">ICLRMetadataLocator — Interfejs</span><span class="sxs-lookup"><span data-stu-id="f34e6-124">ICLRMetadataLocator Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

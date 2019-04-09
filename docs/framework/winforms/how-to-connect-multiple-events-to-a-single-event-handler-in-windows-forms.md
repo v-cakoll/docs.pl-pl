@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Łączenie wielu zdarzeń jedną procedurą obsługi zdarzeń w formularzach Windows Forms'
+title: 'Instrukcje: Łączenie wielu zdarzeń z jednym programem obsługi zdarzeń w formularzach Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d55ccc21efb92ba1e51f4ae88be5025f2f80905b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117965"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a><span data-ttu-id="ff1f5-102">Instrukcje: Łączenie wielu zdarzeń jedną procedurą obsługi zdarzeń w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ff1f5-102">How to: Connect Multiple Events to a Single Event Handler in Windows Forms</span></span>
-<span data-ttu-id="ff1f5-103">W projekcie aplikacji może okazać się niezbędne do obsługi pojedynczego zdarzenia na użytek wielu zdarzeń lub ma wiele zdarzeń, wykonaj tę samą procedurę.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-103">In your application design, you may find it necessary to use a single event handler for multiple events or have multiple events perform the same procedure.</span></span> <span data-ttu-id="ff1f5-104">Na przykład często jest zaawansowane oszczędność czasu do polecenia podnieść te same zdarzenia, jak przycisk w formularzu, jeśli eksponowanie taką samą funkcjonalność.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-104">For example, it is often a powerful time-saver to have a menu command raise the same event as a button on your form does if they expose the same functionality.</span></span> <span data-ttu-id="ff1f5-105">Można to zrobić, korzystając z widoku zdarzenia w oknie właściwości w C# lub za pomocą `Handles` — słowo kluczowe i **Nazwa klasy** i **nazwę metody** list rozwijanych w edytorze kodu języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-105">You can do this by using the Events view of the Properties window in C# or using the `Handles` keyword and the **Class Name** and **Method Name** drop-down boxes in the Visual Basic Code Editor.</span></span>  
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a><span data-ttu-id="b048b-102">Instrukcje: Łączenie wielu zdarzeń z jednym programem obsługi zdarzeń w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b048b-102">How to: Connect Multiple Events to a Single Event Handler in Windows Forms</span></span>
+<span data-ttu-id="b048b-103">W projekcie aplikacji może okazać się niezbędne do obsługi pojedynczego zdarzenia na użytek wielu zdarzeń lub ma wiele zdarzeń, wykonaj tę samą procedurę.</span><span class="sxs-lookup"><span data-stu-id="b048b-103">In your application design, you may find it necessary to use a single event handler for multiple events or have multiple events perform the same procedure.</span></span> <span data-ttu-id="b048b-104">Na przykład często jest zaawansowane oszczędność czasu do polecenia podnieść te same zdarzenia, jak przycisk w formularzu, jeśli eksponowanie taką samą funkcjonalność.</span><span class="sxs-lookup"><span data-stu-id="b048b-104">For example, it is often a powerful time-saver to have a menu command raise the same event as a button on your form does if they expose the same functionality.</span></span> <span data-ttu-id="b048b-105">Można to zrobić, korzystając z widoku zdarzenia w oknie właściwości w C# lub za pomocą `Handles` — słowo kluczowe i **Nazwa klasy** i **nazwę metody** list rozwijanych w edytorze kodu języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b048b-105">You can do this by using the Events view of the Properties window in C# or using the `Handles` keyword and the **Class Name** and **Method Name** drop-down boxes in the Visual Basic Code Editor.</span></span>  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a><span data-ttu-id="ff1f5-106">Aby połączyć wiele zdarzeń do obsługi pojedynczego zdarzenia w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ff1f5-106">To connect multiple events to a single event handler in Visual Basic</span></span>  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a><span data-ttu-id="b048b-106">Aby połączyć wiele zdarzeń do obsługi pojedynczego zdarzenia w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b048b-106">To connect multiple events to a single event handler in Visual Basic</span></span>  
   
-1.  <span data-ttu-id="ff1f5-107">Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-107">Right-click the form and choose **View Code**.</span></span>  
+1.  <span data-ttu-id="b048b-107">Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**.</span><span class="sxs-lookup"><span data-stu-id="b048b-107">Right-click the form and choose **View Code**.</span></span>  
   
-2.  <span data-ttu-id="ff1f5-108">Z **Nazwa klasy** listy rozwijanej, wybierz jeden z elementów sterujących, które chcesz mieć obsługi program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-108">From the **Class Name** drop-down box, select one of the controls that you want to have the event handler handle.</span></span>  
+2.  <span data-ttu-id="b048b-108">Z **Nazwa klasy** listy rozwijanej, wybierz jeden z elementów sterujących, które chcesz mieć obsługi program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="b048b-108">From the **Class Name** drop-down box, select one of the controls that you want to have the event handler handle.</span></span>  
   
-3.  <span data-ttu-id="ff1f5-109">Z **nazwę metody** listy rozwijanej, wybierz jedną z zdarzenia, które chcesz, aby program obsługi zdarzeń do obsługi.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-109">From the **Method Name** drop-down box, select one of the events that you want the event handler to handle.</span></span>  
+3.  <span data-ttu-id="b048b-109">Z **nazwę metody** listy rozwijanej, wybierz jedną z zdarzenia, które chcesz, aby program obsługi zdarzeń do obsługi.</span><span class="sxs-lookup"><span data-stu-id="b048b-109">From the **Method Name** drop-down box, select one of the events that you want the event handler to handle.</span></span>  
   
-4.  <span data-ttu-id="ff1f5-110">Edytor kodu wstawia obsługi odpowiednie zdarzenia i umieszcza kursor w metodzie.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-110">The Code Editor inserts the appropriate event handler and positions the insertion point within the method.</span></span> <span data-ttu-id="ff1f5-111">W poniższym przykładzie jest <xref:System.Windows.Forms.Control.Click> zdarzenie <xref:System.Windows.Forms.Button> kontroli.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-111">In the example below, it is the <xref:System.Windows.Forms.Control.Click> event for the <xref:System.Windows.Forms.Button> control.</span></span>  
+4.  <span data-ttu-id="b048b-110">Edytor kodu wstawia obsługi odpowiednie zdarzenia i umieszcza kursor w metodzie.</span><span class="sxs-lookup"><span data-stu-id="b048b-110">The Code Editor inserts the appropriate event handler and positions the insertion point within the method.</span></span> <span data-ttu-id="b048b-111">W poniższym przykładzie jest <xref:System.Windows.Forms.Control.Click> zdarzenie <xref:System.Windows.Forms.Button> kontroli.</span><span class="sxs-lookup"><span data-stu-id="b048b-111">In the example below, it is the <xref:System.Windows.Forms.Control.Click> event for the <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -36,7 +36,7 @@ ms.locfileid: "57722668"
     End Sub  
     ```  
   
-5.  <span data-ttu-id="ff1f5-112">Dołącz innych zdarzeń chcesz użyte do `Handles` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-112">Append the other events you would like handled to the `Handles` clause.</span></span>  
+5.  <span data-ttu-id="b048b-112">Dołącz innych zdarzeń chcesz użyte do `Handles` klauzuli.</span><span class="sxs-lookup"><span data-stu-id="b048b-112">Append the other events you would like handled to the `Handles` clause.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click, Button2.Click  
@@ -44,22 +44,23 @@ ms.locfileid: "57722668"
     End Sub  
     ```  
   
-6.  <span data-ttu-id="ff1f5-113">Dodaj odpowiedni kod do obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-113">Add the appropriate code to the event handler.</span></span>  
+6.  <span data-ttu-id="b048b-113">Dodaj odpowiedni kod do obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="b048b-113">Add the appropriate code to the event handler.</span></span>  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a><span data-ttu-id="ff1f5-114">Aby połączyć wiele zdarzeń do obsługi pojedynczego zdarzenia w języku C\#</span><span class="sxs-lookup"><span data-stu-id="ff1f5-114">To connect multiple events to a single event handler in C\#</span></span>
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a><span data-ttu-id="b048b-114">Aby połączyć wiele zdarzeń do obsługi pojedynczego zdarzenia w języku C\#</span><span class="sxs-lookup"><span data-stu-id="b048b-114">To connect multiple events to a single event handler in C\#</span></span>
   
-1.  <span data-ttu-id="ff1f5-115">Wybierz kontrolkę, do którego chcesz się połączyć program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-115">Select the control to which you want to connect an event handler.</span></span>  
+1.  <span data-ttu-id="b048b-115">Wybierz kontrolkę, do którego chcesz się połączyć program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="b048b-115">Select the control to which you want to connect an event handler.</span></span>  
   
-2.  <span data-ttu-id="ff1f5-116">W oknie dialogowym właściwości kliknij **zdarzenia** przycisku (![przycisk zdarzeń](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).</span><span class="sxs-lookup"><span data-stu-id="ff1f5-116">In the Properties window, click the **Events** button (![Events Button](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).</span></span>  
+2.  <span data-ttu-id="b048b-116">W oknie dialogowym właściwości kliknij **zdarzenia** przycisku (![przycisk zdarzeń](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).</span><span class="sxs-lookup"><span data-stu-id="b048b-116">In the Properties window, click the **Events** button (![Events Button](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")).</span></span>  
   
-3.  <span data-ttu-id="ff1f5-117">Kliknij nazwę zdarzenia, które mają być obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-117">Click the name of the event that you want to handle.</span></span>  
+3.  <span data-ttu-id="b048b-117">Kliknij nazwę zdarzenia, które mają być obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="b048b-117">Click the name of the event that you want to handle.</span></span>  
   
-4.  <span data-ttu-id="ff1f5-118">W sekcji wartość obok nazwy zdarzeń kliknij przycisk listy rozwijanej, aby wyświetlić listę istniejących programów obsługi zdarzeń, które pasuje do podpisu metody, zdarzenia, które mają być obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-118">In the value section next to the event name, click the drop-down button to display a list of existing event handlers that match the method signature of the event you want to handle.</span></span>  
+4.  <span data-ttu-id="b048b-118">W sekcji wartość obok nazwy zdarzeń kliknij przycisk listy rozwijanej, aby wyświetlić listę istniejących programów obsługi zdarzeń, które pasuje do podpisu metody, zdarzenia, które mają być obsługiwane.</span><span class="sxs-lookup"><span data-stu-id="b048b-118">In the value section next to the event name, click the drop-down button to display a list of existing event handlers that match the method signature of the event you want to handle.</span></span>  
   
-5.  <span data-ttu-id="ff1f5-119">Wybierz odpowiednie zdarzenie obsługi z listy.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-119">Select the appropriate event handler from the list.</span></span>  
+5.  <span data-ttu-id="b048b-119">Wybierz odpowiednie zdarzenie obsługi z listy.</span><span class="sxs-lookup"><span data-stu-id="b048b-119">Select the appropriate event handler from the list.</span></span>  
   
-     <span data-ttu-id="ff1f5-120">Kod zostanie dodany do formularza, aby powiązać zdarzenia istniejącego programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="ff1f5-120">Code will be added to the form to bind the event to the existing event handler.</span></span>  
+     <span data-ttu-id="b048b-120">Kod zostanie dodany do formularza, aby powiązać zdarzenia istniejącego programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="b048b-120">Code will be added to the form to bind the event to the existing event handler.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff1f5-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ff1f5-121">See also</span></span>
-- [<span data-ttu-id="ff1f5-122">Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ff1f5-122">Creating Event Handlers in Windows Forms</span></span>](creating-event-handlers-in-windows-forms.md)
-- [<span data-ttu-id="ff1f5-123">Przegląd procedur obsługi zdarzeń</span><span class="sxs-lookup"><span data-stu-id="ff1f5-123">Event Handlers Overview</span></span>](event-handlers-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b048b-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b048b-121">See also</span></span>
+
+- [<span data-ttu-id="b048b-122">Tworzenie programów obsługi zdarzeń w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="b048b-122">Creating Event Handlers in Windows Forms</span></span>](creating-event-handlers-in-windows-forms.md)
+- [<span data-ttu-id="b048b-123">Przegląd programów obsługi zdarzeń</span><span class="sxs-lookup"><span data-stu-id="b048b-123">Event Handlers Overview</span></span>](event-handlers-overview-windows-forms.md)

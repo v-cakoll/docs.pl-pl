@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dda94acc2ec5da456cdc41ba0902cdc414b11524
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7846eeceeb4d59c4e9aae73c79172c89184396e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123872"
 ---
-# <a name="imetadataimportcloseenum-method"></a><span data-ttu-id="14194-102">IMetaDataImport::CloseEnum — Metoda</span><span class="sxs-lookup"><span data-stu-id="14194-102">IMetaDataImport::CloseEnum Method</span></span>
-<span data-ttu-id="14194-103">Zamyka moduł wyliczający, który jest identyfikowany przez określone dojście.</span><span class="sxs-lookup"><span data-stu-id="14194-103">Closes the enumerator that is identified by the specified handle.</span></span>  
+# <a name="imetadataimportcloseenum-method"></a><span data-ttu-id="7355b-102">IMetaDataImport::CloseEnum — Metoda</span><span class="sxs-lookup"><span data-stu-id="7355b-102">IMetaDataImport::CloseEnum Method</span></span>
+<span data-ttu-id="7355b-103">Zamyka moduł wyliczający, który jest identyfikowany przez określone dojście.</span><span class="sxs-lookup"><span data-stu-id="7355b-103">Closes the enumerator that is identified by the specified handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14194-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="14194-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7355b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7355b-104">Syntax</span></span>  
   
 ```  
 void CloseEnum (  
@@ -35,22 +35,23 @@ void CloseEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="14194-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="14194-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7355b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7355b-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="14194-106">[in] Dojście dla typu wyliczeniowego zamknąć.</span><span class="sxs-lookup"><span data-stu-id="14194-106">[in] The handle for the enumerator to close.</span></span>  
+ <span data-ttu-id="7355b-106">[in] Dojście dla typu wyliczeniowego zamknąć.</span><span class="sxs-lookup"><span data-stu-id="7355b-106">[in] The handle for the enumerator to close.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="14194-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="14194-107">Remarks</span></span>  
- <span data-ttu-id="14194-108">Określone przez dojście `hEnum` są uzyskiwane z poprzedniego `Enum` *nazwa* wywołania (na przykład [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="14194-108">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7355b-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="7355b-107">Remarks</span></span>  
+ <span data-ttu-id="7355b-108">Określone przez dojście `hEnum` są uzyskiwane z poprzedniego `Enum` *nazwa* wywołania (na przykład [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span><span class="sxs-lookup"><span data-stu-id="7355b-108">The handle specified by `hEnum` is obtained from a previous `Enum`*Name* call (for example, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="14194-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="14194-109">Requirements</span></span>  
- <span data-ttu-id="14194-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14194-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7355b-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7355b-109">Requirements</span></span>  
+ <span data-ttu-id="7355b-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7355b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14194-111">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="14194-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7355b-111">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="7355b-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="14194-112">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="14194-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7355b-112">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7355b-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="14194-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14194-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="7355b-113">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="7355b-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="14194-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="14194-114">See also</span></span>
-- [<span data-ttu-id="14194-115">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="14194-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="14194-116">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="14194-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7355b-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7355b-114">See also</span></span>
+
+- [<span data-ttu-id="7355b-115">IMetaDataImport — Interfejs</span><span class="sxs-lookup"><span data-stu-id="7355b-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7355b-116">IMetaDataImport2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="7355b-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: <gcServer>, element
+title: <gcServer> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
@@ -10,65 +10,65 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9125ee35b081a1723f379bd3fbdec808d085c675
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fd91cf0179ef9731c456b41fdc865e3eacdb33eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132811"
 ---
-# <a name="gcserver-element"></a><span data-ttu-id="51dcd-102">\<gcServer> Element</span><span class="sxs-lookup"><span data-stu-id="51dcd-102">\<gcServer> Element</span></span>
-<span data-ttu-id="51dcd-103">Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie elementów bezużytecznych serwera.</span><span class="sxs-lookup"><span data-stu-id="51dcd-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
+# <a name="gcserver-element"></a><span data-ttu-id="2c622-102">\<gcServer> Element</span><span class="sxs-lookup"><span data-stu-id="2c622-102">\<gcServer> Element</span></span>
+<span data-ttu-id="2c622-103">Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia wyrzucanie elementów bezużytecznych serwera.</span><span class="sxs-lookup"><span data-stu-id="2c622-103">Specifies whether the common language runtime runs server garbage collection.</span></span>  
   
- <span data-ttu-id="51dcd-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="51dcd-104">\<configuration></span></span>  
-<span data-ttu-id="51dcd-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="51dcd-105">\<runtime></span></span>  
-<span data-ttu-id="51dcd-106">\<gcServer></span><span class="sxs-lookup"><span data-stu-id="51dcd-106">\<gcServer></span></span>  
+ <span data-ttu-id="2c622-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="2c622-104">\<configuration></span></span>  
+<span data-ttu-id="2c622-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="2c622-105">\<runtime></span></span>  
+<span data-ttu-id="2c622-106">\<gcServer></span><span class="sxs-lookup"><span data-stu-id="2c622-106">\<gcServer></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51dcd-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="51dcd-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c622-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="2c622-107">Syntax</span></span>  
   
 ```xml  
 <gcServer    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="51dcd-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="51dcd-108">Attributes and Elements</span></span>  
- <span data-ttu-id="51dcd-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="51dcd-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2c622-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="2c622-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="2c622-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="2c622-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="51dcd-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="51dcd-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2c622-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="2c622-110">Attributes</span></span>  
   
-|<span data-ttu-id="51dcd-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="51dcd-111">Attribute</span></span>|<span data-ttu-id="51dcd-112">Opis</span><span class="sxs-lookup"><span data-stu-id="51dcd-112">Description</span></span>|  
+|<span data-ttu-id="2c622-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="2c622-111">Attribute</span></span>|<span data-ttu-id="2c622-112">Opis</span><span class="sxs-lookup"><span data-stu-id="2c622-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="51dcd-113">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="51dcd-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="51dcd-114">Określa, czy środowisko uruchomieniowe jest uruchamiany serwer wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="51dcd-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
+|`enabled`|<span data-ttu-id="2c622-113">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="2c622-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="2c622-114">Określa, czy środowisko uruchomieniowe jest uruchamiany serwer wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="2c622-114">Specifies whether the runtime runs server garbage collection.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="51dcd-115">Atrybut włączony</span><span class="sxs-lookup"><span data-stu-id="51dcd-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="2c622-115">Atrybut włączony</span><span class="sxs-lookup"><span data-stu-id="2c622-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="51dcd-116">Wartość</span><span class="sxs-lookup"><span data-stu-id="51dcd-116">Value</span></span>|<span data-ttu-id="51dcd-117">Opis</span><span class="sxs-lookup"><span data-stu-id="51dcd-117">Description</span></span>|  
+|<span data-ttu-id="2c622-116">Wartość</span><span class="sxs-lookup"><span data-stu-id="2c622-116">Value</span></span>|<span data-ttu-id="2c622-117">Opis</span><span class="sxs-lookup"><span data-stu-id="2c622-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="51dcd-118">Nie jest uruchamiany serwer wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="51dcd-118">Does not run server garbage collection.</span></span> <span data-ttu-id="51dcd-119">Domyślnie włączone.</span><span class="sxs-lookup"><span data-stu-id="51dcd-119">This is the default.</span></span>|  
-|`true`|<span data-ttu-id="51dcd-120">Uruchamia serwer wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="51dcd-120">Runs server garbage collection.</span></span>|  
+|`false`|<span data-ttu-id="2c622-118">Nie jest uruchamiany serwer wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="2c622-118">Does not run server garbage collection.</span></span> <span data-ttu-id="2c622-119">Domyślnie włączone.</span><span class="sxs-lookup"><span data-stu-id="2c622-119">This is the default.</span></span>|  
+|`true`|<span data-ttu-id="2c622-120">Uruchamia serwer wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="2c622-120">Runs server garbage collection.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="51dcd-121">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="51dcd-121">Child Elements</span></span>  
- <span data-ttu-id="51dcd-122">Brak.</span><span class="sxs-lookup"><span data-stu-id="51dcd-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2c622-121">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="2c622-121">Child Elements</span></span>  
+ <span data-ttu-id="2c622-122">Brak.</span><span class="sxs-lookup"><span data-stu-id="2c622-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="51dcd-123">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="51dcd-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2c622-123">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="2c622-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="51dcd-124">Element</span><span class="sxs-lookup"><span data-stu-id="51dcd-124">Element</span></span>|<span data-ttu-id="51dcd-125">Opis</span><span class="sxs-lookup"><span data-stu-id="51dcd-125">Description</span></span>|  
+|<span data-ttu-id="2c622-124">Element</span><span class="sxs-lookup"><span data-stu-id="2c622-124">Element</span></span>|<span data-ttu-id="2c622-125">Opis</span><span class="sxs-lookup"><span data-stu-id="2c622-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="51dcd-126">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="51dcd-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="51dcd-127">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="51dcd-127">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="2c622-126">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2c622-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="2c622-127">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="2c622-127">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="51dcd-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="51dcd-128">Remarks</span></span>  
- <span data-ttu-id="51dcd-129">Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje dwa typy operacji wyrzucania elementów bezużytecznych: wyrzucanie elementów bezużytecznych, który jest dostępny we wszystkich systemach, i wyrzucanie elementów bezużytecznych serwera, który jest dostępny w systemach wieloprocesorowych.</span><span class="sxs-lookup"><span data-stu-id="51dcd-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="51dcd-130">Możesz użyć `<gcServer>` wykonuje element, aby kontrolować typ wyrzucania elementów bezużytecznych środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="51dcd-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="51dcd-131">Użyj <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> właściwości w celu określenia, czy włączono serwer wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="51dcd-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c622-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2c622-128">Remarks</span></span>  
+ <span data-ttu-id="2c622-129">Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje dwa typy operacji wyrzucania elementów bezużytecznych: wyrzucanie elementów bezużytecznych, który jest dostępny we wszystkich systemach, i wyrzucanie elementów bezużytecznych serwera, który jest dostępny w systemach wieloprocesorowych.</span><span class="sxs-lookup"><span data-stu-id="2c622-129">The common language runtime (CLR) supports two types of garbage collection: workstation garbage collection, which is available on all systems, and server garbage collection, which is available on multiprocessor systems.</span></span> <span data-ttu-id="2c622-130">Możesz użyć `<gcServer>` wykonuje element, aby kontrolować typ wyrzucania elementów bezużytecznych środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="2c622-130">You use the `<gcServer>` element to control the type of garbage collection the CLR performs.</span></span> <span data-ttu-id="2c622-131">Użyj <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> właściwości w celu określenia, czy włączono serwer wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="2c622-131">Use the <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> property to determine if server garbage collection is enabled.</span></span>  
   
- <span data-ttu-id="51dcd-132">W przypadku komputerów z jednym procesorem wyrzucanie elementów bezużytecznych stacji roboczej domyślne powinny być najszybszą opcję.</span><span class="sxs-lookup"><span data-stu-id="51dcd-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="51dcd-133">Dwa procesory komputerów można stacji roboczej lub serwera.</span><span class="sxs-lookup"><span data-stu-id="51dcd-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="51dcd-134">Wyrzucanie elementów bezużytecznych serwera powinien być najszybszą opcję dla więcej niż dwóch procesorów.</span><span class="sxs-lookup"><span data-stu-id="51dcd-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
+ <span data-ttu-id="2c622-132">W przypadku komputerów z jednym procesorem wyrzucanie elementów bezużytecznych stacji roboczej domyślne powinny być najszybszą opcję.</span><span class="sxs-lookup"><span data-stu-id="2c622-132">For single-processor computers, the default workstation garbage collection should be the fastest option.</span></span> <span data-ttu-id="2c622-133">Dwa procesory komputerów można stacji roboczej lub serwera.</span><span class="sxs-lookup"><span data-stu-id="2c622-133">Either workstation or server can be used for two-processor computers.</span></span> <span data-ttu-id="2c622-134">Wyrzucanie elementów bezużytecznych serwera powinien być najszybszą opcję dla więcej niż dwóch procesorów.</span><span class="sxs-lookup"><span data-stu-id="2c622-134">Server garbage collection should be the fastest option for more than two processors.</span></span>  
   
- <span data-ttu-id="51dcd-135">Ten element może być używany tylko w pliku konfiguracyjnym aplikacji; jest on ignorowany, jeśli znajduje się w pliku konfiguracji komputera.</span><span class="sxs-lookup"><span data-stu-id="51dcd-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
+ <span data-ttu-id="2c622-135">Ten element może być używany tylko w pliku konfiguracyjnym aplikacji; jest on ignorowany, jeśli znajduje się w pliku konfiguracji komputera.</span><span class="sxs-lookup"><span data-stu-id="2c622-135">This element can be used only in the application configuration file; it is ignored if it is in the machine configuration file.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="51dcd-136">W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępna, gdy serwer wyrzucania elementów bezużytecznych jest włączona.</span><span class="sxs-lookup"><span data-stu-id="51dcd-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="51dcd-137">Począwszy od [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], serwer wyrzucania elementów bezużytecznych jest współbieżnych.</span><span class="sxs-lookup"><span data-stu-id="51dcd-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="51dcd-138">Aby użyć serwera niewspółbieżnym wyrzucaniem elementów bezużytecznych, ustaw `<gcServer>` elementu `true` i [ \<gcconcurrent — > element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) do `false`.</span><span class="sxs-lookup"><span data-stu-id="51dcd-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
+>  <span data-ttu-id="2c622-136">W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępna, gdy serwer wyrzucania elementów bezużytecznych jest włączona.</span><span class="sxs-lookup"><span data-stu-id="2c622-136">In the .NET Framework 4 and earlier versions, concurrent garbage collection is not available when server garbage collection is enabled.</span></span> <span data-ttu-id="2c622-137">Począwszy od [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], serwer wyrzucania elementów bezużytecznych jest współbieżnych.</span><span class="sxs-lookup"><span data-stu-id="2c622-137">Starting with the [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], server garbage collection is concurrent.</span></span> <span data-ttu-id="2c622-138">Aby użyć serwera niewspółbieżnym wyrzucaniem elementów bezużytecznych, ustaw `<gcServer>` elementu `true` i [ \<gcconcurrent — > element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) do `false`.</span><span class="sxs-lookup"><span data-stu-id="2c622-138">To use non-concurrent server garbage collection, set the `<gcServer>` element to `true` and the [\<gcConcurrent> element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) to `false`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="51dcd-139">Przykład</span><span class="sxs-lookup"><span data-stu-id="51dcd-139">Example</span></span>  
- <span data-ttu-id="51dcd-140">Poniższy przykład umożliwia wyrzucanie elementów bezużytecznych serwera.</span><span class="sxs-lookup"><span data-stu-id="51dcd-140">The following example enables server garbage collection.</span></span>  
+## <a name="example"></a><span data-ttu-id="2c622-139">Przykład</span><span class="sxs-lookup"><span data-stu-id="2c622-139">Example</span></span>  
+ <span data-ttu-id="2c622-140">Poniższy przykład umożliwia wyrzucanie elementów bezużytecznych serwera.</span><span class="sxs-lookup"><span data-stu-id="2c622-140">The following example enables server garbage collection.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,8 +78,9 @@ ms.locfileid: "55674454"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="51dcd-141">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="51dcd-141">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c622-141">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2c622-141">See also</span></span>
+
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="51dcd-142">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="51dcd-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="51dcd-143">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="51dcd-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="51dcd-144">Aby wyłączyć współbieżne wyrzucanie elementów bezużytecznych</span><span class="sxs-lookup"><span data-stu-id="51dcd-144">To disable concurrent garbage collection</span></span>](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [<span data-ttu-id="2c622-142">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="2c622-142">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="2c622-143">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="2c622-143">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="2c622-144">Aby wyłączyć współbieżne wyrzucanie elementów bezużytecznych</span><span class="sxs-lookup"><span data-stu-id="2c622-144">To disable concurrent garbage collection</span></span>](gcconcurrent-element.md#to-disable-background-garbage-collection)

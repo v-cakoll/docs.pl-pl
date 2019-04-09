@@ -16,32 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f2ea9d0e20cb67cc36d0b5883e483ce98941b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123490"
 ---
-# <a name="ienumreferenceidentity-interface"></a><span data-ttu-id="68a01-102">IEnumReferenceIdentity — Interfejs</span><span class="sxs-lookup"><span data-stu-id="68a01-102">IEnumReferenceIdentity Interface</span></span>
-<span data-ttu-id="68a01-103">Służy jako moduł wyliczający dla kolekcji `IReferenceIdentity` obiektów.</span><span class="sxs-lookup"><span data-stu-id="68a01-103">Serves as an enumerator for a collection of `IReferenceIdentity` objects.</span></span>  
+# <a name="ienumreferenceidentity-interface"></a><span data-ttu-id="0b721-102">IEnumReferenceIdentity — Interfejs</span><span class="sxs-lookup"><span data-stu-id="0b721-102">IEnumReferenceIdentity Interface</span></span>
+<span data-ttu-id="0b721-103">Służy jako moduł wyliczający dla kolekcji `IReferenceIdentity` obiektów.</span><span class="sxs-lookup"><span data-stu-id="0b721-103">Serves as an enumerator for a collection of `IReferenceIdentity` objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="68a01-104">Metody</span><span class="sxs-lookup"><span data-stu-id="68a01-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="0b721-104">Metody</span><span class="sxs-lookup"><span data-stu-id="0b721-104">Methods</span></span>  
   
-|<span data-ttu-id="68a01-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="68a01-105">Method</span></span>|<span data-ttu-id="68a01-106">Opis</span><span class="sxs-lookup"><span data-stu-id="68a01-106">Description</span></span>|  
+|<span data-ttu-id="0b721-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="0b721-105">Method</span></span>|<span data-ttu-id="0b721-106">Opis</span><span class="sxs-lookup"><span data-stu-id="0b721-106">Description</span></span>|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|<span data-ttu-id="68a01-107">Pobiera wskaźnik interfejsu do nowego `IEnumReferenceIdentity` zawiera te same elementy członkowskie, ponieważ `IEnumReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="68a01-107">Gets an interface pointer to a new `IEnumReferenceIdentity` that contains the same members as this `IEnumReferenceIdentity`.</span></span>|  
-|`IEnumReferenceIdentity::Next`|<span data-ttu-id="68a01-108">Pobiera określoną liczbę `IReferenceIdentity` obiektów, począwszy od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="68a01-108">Gets the specified number of `IReferenceIdentity` objects, starting at the current position.</span></span>|  
-|`IEnumReferenceIdentity::Reset`|<span data-ttu-id="68a01-109">Przesuwa wskaźnik instrukcji na początku `IEnumReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="68a01-109">Moves the instruction pointer to the beginning of this `IEnumReferenceIdentity`.</span></span>|  
-|`IEnumReferenceIdentity::Skip`|<span data-ttu-id="68a01-110">Przesuwa wskaźnik instrukcji do przodu o określoną liczbę elementów, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="68a01-110">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
+|`IEnumReferenceIdentity::Clone`|<span data-ttu-id="0b721-107">Pobiera wskaźnik interfejsu do nowego `IEnumReferenceIdentity` zawiera te same elementy członkowskie, ponieważ `IEnumReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="0b721-107">Gets an interface pointer to a new `IEnumReferenceIdentity` that contains the same members as this `IEnumReferenceIdentity`.</span></span>|  
+|`IEnumReferenceIdentity::Next`|<span data-ttu-id="0b721-108">Pobiera określoną liczbę `IReferenceIdentity` obiektów, począwszy od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="0b721-108">Gets the specified number of `IReferenceIdentity` objects, starting at the current position.</span></span>|  
+|`IEnumReferenceIdentity::Reset`|<span data-ttu-id="0b721-109">Przesuwa wskaźnik instrukcji na początku `IEnumReferenceIdentity`.</span><span class="sxs-lookup"><span data-stu-id="0b721-109">Moves the instruction pointer to the beginning of this `IEnumReferenceIdentity`.</span></span>|  
+|`IEnumReferenceIdentity::Skip`|<span data-ttu-id="0b721-110">Przesuwa wskaźnik instrukcji do przodu o określoną liczbę elementów, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="0b721-110">Moves the instruction pointer forward by the specified number of elements, starting at the current position.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="68a01-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="68a01-111">Requirements</span></span>  
- <span data-ttu-id="68a01-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="68a01-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b721-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0b721-111">Requirements</span></span>  
+ <span data-ttu-id="0b721-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b721-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="68a01-113">**Nagłówek:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="68a01-113">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="0b721-113">**Nagłówek:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="0b721-113">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="68a01-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="68a01-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="0b721-114">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="0b721-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="68a01-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="68a01-115">See also</span></span>
-- [<span data-ttu-id="68a01-116">Interfejsy łączenia</span><span class="sxs-lookup"><span data-stu-id="68a01-116">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="68a01-117">IReferenceIdentity, interfejs</span><span class="sxs-lookup"><span data-stu-id="68a01-117">IReferenceIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0b721-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0b721-115">See also</span></span>
+
+- [<span data-ttu-id="0b721-116">Interfejsy łączenia</span><span class="sxs-lookup"><span data-stu-id="0b721-116">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="0b721-117">IReferenceIdentity — Interfejs</span><span class="sxs-lookup"><span data-stu-id="0b721-117">IReferenceIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

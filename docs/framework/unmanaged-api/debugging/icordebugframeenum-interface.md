@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFrameEnum — Interfejs
+title: ICorDebugFrameEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFrameEnum
@@ -16,36 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb1c5bccf43e107cb976016c277c93b146498e1f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cd24dfa6771ca450e79b4b932735968ecc51fc90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093829"
 ---
-# <a name="icordebugframeenum-interface"></a><span data-ttu-id="6c012-102">ICorDebugFrameEnum — Interfejs</span><span class="sxs-lookup"><span data-stu-id="6c012-102">ICorDebugFrameEnum Interface</span></span>
+# <a name="icordebugframeenum-interface"></a><span data-ttu-id="adfcd-102">ICorDebugFrameEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="adfcd-102">ICorDebugFrameEnum Interface</span></span>
 
-<span data-ttu-id="6c012-103">Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugFrame.</span><span class="sxs-lookup"><span data-stu-id="6c012-103">Implements ICorDebugEnum methods, and enumerates ICorDebugFrame arrays.</span></span>  
+<span data-ttu-id="adfcd-103">Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugFrame.</span><span class="sxs-lookup"><span data-stu-id="adfcd-103">Implements ICorDebugEnum methods, and enumerates ICorDebugFrame arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6c012-104">Metody</span><span class="sxs-lookup"><span data-stu-id="6c012-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="adfcd-104">Metody</span><span class="sxs-lookup"><span data-stu-id="adfcd-104">Methods</span></span>  
   
-|<span data-ttu-id="6c012-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="6c012-105">Method</span></span>|<span data-ttu-id="6c012-106">Opis</span><span class="sxs-lookup"><span data-stu-id="6c012-106">Description</span></span>|  
+|<span data-ttu-id="adfcd-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="adfcd-105">Method</span></span>|<span data-ttu-id="adfcd-106">Opis</span><span class="sxs-lookup"><span data-stu-id="adfcd-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6c012-107">Next, metoda</span><span class="sxs-lookup"><span data-stu-id="6c012-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|<span data-ttu-id="6c012-108">Pobiera określoną liczbę `ICorDebugFrame` wystąpień z wyliczenia, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="6c012-108">Gets the specified number of `ICorDebugFrame` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="adfcd-107">Next, metoda</span><span class="sxs-lookup"><span data-stu-id="adfcd-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|<span data-ttu-id="adfcd-108">Pobiera określoną liczbę `ICorDebugFrame` wystąpień z wyliczenia, zaczynając od bieżącej pozycji.</span><span class="sxs-lookup"><span data-stu-id="adfcd-108">Gets the specified number of `ICorDebugFrame` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6c012-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6c012-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="adfcd-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="adfcd-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6c012-110">Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.</span><span class="sxs-lookup"><span data-stu-id="6c012-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="adfcd-110">Ten interfejs może być wywoływany zdalnie, między komputerami ani między procesami.</span><span class="sxs-lookup"><span data-stu-id="adfcd-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6c012-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6c012-111">Requirements</span></span>  
- <span data-ttu-id="6c012-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c012-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="adfcd-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="adfcd-111">Requirements</span></span>  
+ <span data-ttu-id="adfcd-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="adfcd-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6c012-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6c012-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="adfcd-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="adfcd-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6c012-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c012-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="adfcd-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="adfcd-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6c012-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c012-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="adfcd-115">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="adfcd-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6c012-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6c012-116">See also</span></span>
-- [<span data-ttu-id="6c012-117">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="6c012-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="adfcd-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="adfcd-116">See also</span></span>
+
+- [<span data-ttu-id="adfcd-117">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="adfcd-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

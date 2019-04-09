@@ -16,22 +16,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083573"
 ---
-# <a name="iceefilegen-class"></a><span data-ttu-id="70830-102">ICeeFileGen — Klasa</span><span class="sxs-lookup"><span data-stu-id="70830-102">ICeeFileGen Class</span></span>
-<span data-ttu-id="70830-103">Zawiera funkcje do tworzenia natywnych przenośny plik wykonywalny (PE).</span><span class="sxs-lookup"><span data-stu-id="70830-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="70830-104">Interfejs będzie zazwyczaj używane przez kompilatory do generowania ich skompilowanych danych wyjściowych pliku wykonywalnego.</span><span class="sxs-lookup"><span data-stu-id="70830-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
+# <a name="iceefilegen-class"></a><span data-ttu-id="c79fb-102">ICeeFileGen — Klasa</span><span class="sxs-lookup"><span data-stu-id="c79fb-102">ICeeFileGen Class</span></span>
+<span data-ttu-id="c79fb-103">Zawiera funkcje do tworzenia natywnych przenośny plik wykonywalny (PE).</span><span class="sxs-lookup"><span data-stu-id="c79fb-103">Provides functionality for creating a native portable executable (PE) file.</span></span> <span data-ttu-id="c79fb-104">Interfejs będzie zazwyczaj używane przez kompilatory do generowania ich skompilowanych danych wyjściowych pliku wykonywalnego.</span><span class="sxs-lookup"><span data-stu-id="c79fb-104">The interface will typically be used by compilers to generate their compiled output executable.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="70830-105">`ICeeFileGen` obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="70830-105">`ICeeFileGen` supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+>  `ICeeFileGen` <span data-ttu-id="c79fb-105">obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="c79fb-105">supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="70830-106">Ten interfejs jest przestarzała i zostanie usunięta w przyszłej wersji.</span><span class="sxs-lookup"><span data-stu-id="70830-106">This interface has been deprecated and will be removed in a future release.</span></span>  
+ <span data-ttu-id="c79fb-106">Ten interfejs jest przestarzała i zostanie usunięta w przyszłej wersji.</span><span class="sxs-lookup"><span data-stu-id="c79fb-106">This interface has been deprecated and will be removed in a future release.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70830-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="70830-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c79fb-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="c79fb-107">Syntax</span></span>  
   
 ```  
 class ICeeFileGen {  
@@ -236,12 +236,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="70830-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="70830-108">Requirements</span></span>  
- <span data-ttu-id="70830-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70830-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c79fb-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c79fb-108">Requirements</span></span>  
+ <span data-ttu-id="c79fb-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c79fb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70830-110">**Nagłówek:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="70830-110">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="c79fb-110">**Nagłówek:** ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="c79fb-110">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="70830-111">**Wersja programu .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="70830-111">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="c79fb-111">**Wersja programu .NET framework:** 1.0</span><span class="sxs-lookup"><span data-stu-id="c79fb-111">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70830-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="70830-112">See also</span></span>
-- [<span data-ttu-id="70830-113">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="70830-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="c79fb-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c79fb-112">See also</span></span>
+
+- [<span data-ttu-id="c79fb-113">Hosting — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="c79fb-113">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

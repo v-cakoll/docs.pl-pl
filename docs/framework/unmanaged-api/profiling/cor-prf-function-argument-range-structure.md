@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd8e86b119a3c19417306dee056e435a4f5d07a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dffefedf14d5f219736e429be191021b2de7ddd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125596"
 ---
-# <a name="corprffunctionargumentrange-structure"></a><span data-ttu-id="f784e-102">COR_PRF_FUNCTION_ARGUMENT_RANGE — Struktura</span><span class="sxs-lookup"><span data-stu-id="f784e-102">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>
-<span data-ttu-id="f784e-103">Reprezentuje blok argumentów funkcji, przechowywane w sposób ciągły w kolejności od lewej do prawej w pamięci.</span><span class="sxs-lookup"><span data-stu-id="f784e-103">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  
+# <a name="corprffunctionargumentrange-structure"></a><span data-ttu-id="c5d22-102">COR_PRF_FUNCTION_ARGUMENT_RANGE — Struktura</span><span class="sxs-lookup"><span data-stu-id="c5d22-102">COR_PRF_FUNCTION_ARGUMENT_RANGE Structure</span></span>
+<span data-ttu-id="c5d22-103">Reprezentuje blok argumentów funkcji, przechowywane w sposób ciągły w kolejności od lewej do prawej w pamięci.</span><span class="sxs-lookup"><span data-stu-id="c5d22-103">Represents a block of function arguments stored contiguously in left-to-right order in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f784e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f784e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5d22-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c5d22-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {  
@@ -35,21 +35,22 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 } COR_PRF_FUNCTION_ARGUMENT_RANGE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f784e-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="f784e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c5d22-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="c5d22-105">Members</span></span>  
   
-|<span data-ttu-id="f784e-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="f784e-106">Members</span></span>|<span data-ttu-id="f784e-107">Opis</span><span class="sxs-lookup"><span data-stu-id="f784e-107">Description</span></span>|  
+|<span data-ttu-id="c5d22-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="c5d22-106">Members</span></span>|<span data-ttu-id="c5d22-107">Opis</span><span class="sxs-lookup"><span data-stu-id="c5d22-107">Description</span></span>|  
 |-------------|-----------------|  
-|`startAddress`|<span data-ttu-id="f784e-108">Początkowy adres bloku.</span><span class="sxs-lookup"><span data-stu-id="f784e-108">The starting address of the block.</span></span>|  
-|`length`|<span data-ttu-id="f784e-109">Długość ciągłym bloku.</span><span class="sxs-lookup"><span data-stu-id="f784e-109">The length of the contiguous block.</span></span>|  
+|`startAddress`|<span data-ttu-id="c5d22-108">Początkowy adres bloku.</span><span class="sxs-lookup"><span data-stu-id="c5d22-108">The starting address of the block.</span></span>|  
+|`length`|<span data-ttu-id="c5d22-109">Długość ciągłym bloku.</span><span class="sxs-lookup"><span data-stu-id="c5d22-109">The length of the contiguous block.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f784e-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f784e-110">Requirements</span></span>  
- <span data-ttu-id="f784e-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f784e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5d22-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c5d22-110">Requirements</span></span>  
+ <span data-ttu-id="c5d22-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5d22-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f784e-112">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="f784e-112">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="c5d22-112">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="c5d22-112">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="f784e-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f784e-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c5d22-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5d22-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f784e-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f784e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="c5d22-114">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="c5d22-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f784e-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f784e-115">See also</span></span>
-- [<span data-ttu-id="f784e-116">Profiling — struktury</span><span class="sxs-lookup"><span data-stu-id="f784e-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a><span data-ttu-id="c5d22-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c5d22-115">See also</span></span>
+
+- [<span data-ttu-id="c5d22-116">Profiling — Struktury</span><span class="sxs-lookup"><span data-stu-id="c5d22-116">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

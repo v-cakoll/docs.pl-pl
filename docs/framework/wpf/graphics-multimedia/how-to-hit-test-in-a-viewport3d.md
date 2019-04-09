@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przeprowadź test trafienia w Viewport3D'
+title: 'Instrukcje: Przeprowadzanie testu trafienia w elemencie Viewport3D'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,26 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: d795f5aa768c360b6e27a9a1114179a5c27f0b23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3238161a01df67b05be6284b8eed61981ff3974
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098068"
 ---
-# <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="ecefb-102">Instrukcje: Przeprowadź test trafienia w Viewport3D</span><span class="sxs-lookup"><span data-stu-id="ecefb-102">How to: Hit Test in a Viewport3D</span></span>
-<span data-ttu-id="ecefb-103">W tym przykładzie pokazano, jak trafień badania 3D elementów wizualnych w <xref:System.Windows.Controls.Viewport3D>.</span><span class="sxs-lookup"><span data-stu-id="ecefb-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  
+# <a name="how-to-hit-test-in-a-viewport3d"></a><span data-ttu-id="a5f92-102">Instrukcje: Przeprowadzanie testu trafienia w elemencie Viewport3D</span><span class="sxs-lookup"><span data-stu-id="a5f92-102">How to: Hit Test in a Viewport3D</span></span>
+<span data-ttu-id="a5f92-103">W tym przykładzie pokazano, jak trafień badania 3D elementów wizualnych w <xref:System.Windows.Controls.Viewport3D>.</span><span class="sxs-lookup"><span data-stu-id="a5f92-103">This example shows how to hit test for 3D Visuals in a <xref:System.Windows.Controls.Viewport3D>.</span></span>  
   
- <span data-ttu-id="ecefb-104">Ponieważ <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> zwraca informacje o 2D i 3D, istnieje możliwość iteracyjnego przeglądania wyników testu do odczytu tylko 3D wyników.</span><span class="sxs-lookup"><span data-stu-id="ecefb-104">Because <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns 2D and 3D information, it is possible to iterate through the test results to read only 3D results.</span></span>  
+ <span data-ttu-id="a5f92-104">Ponieważ <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> zwraca informacje o 2D i 3D, istnieje możliwość iteracyjnego przeglądania wyników testu do odczytu tylko 3D wyników.</span><span class="sxs-lookup"><span data-stu-id="a5f92-104">Because <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> returns 2D and 3D information, it is possible to iterate through the test results to read only 3D results.</span></span>  
   
  [!code-csharp[HitTest3D#HitTest3D3DN4](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
  [!code-vb[HitTest3D#HitTest3D3DN4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
   
- <span data-ttu-id="ecefb-105"><xref:System.Windows.Media.HitTestResultBehavior> Poniższy kod określa, jak są przetwarzane wyników testu trafienia.</span><span class="sxs-lookup"><span data-stu-id="ecefb-105">The <xref:System.Windows.Media.HitTestResultBehavior> in the following code determines how the hit test results are processed.</span></span>  <span data-ttu-id="ecefb-106">`UpdateResultInfo` i `UpdateMaterial` metod zdefiniowane lokalnie.</span><span class="sxs-lookup"><span data-stu-id="ecefb-106">`UpdateResultInfo` and `UpdateMaterial` are locally defined methods.</span></span>  
+ <span data-ttu-id="a5f92-105"><xref:System.Windows.Media.HitTestResultBehavior> Poniższy kod określa, jak są przetwarzane wyników testu trafienia.</span><span class="sxs-lookup"><span data-stu-id="a5f92-105">The <xref:System.Windows.Media.HitTestResultBehavior> in the following code determines how the hit test results are processed.</span></span>  `UpdateResultInfo` <span data-ttu-id="a5f92-106">i `UpdateMaterial` metod zdefiniowane lokalnie.</span><span class="sxs-lookup"><span data-stu-id="a5f92-106">and `UpdateMaterial` are locally defined methods.</span></span>  
   
  [!code-csharp[HitTest3D#HitTest3D3DN5](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
-## <a name="see-also"></a><span data-ttu-id="ecefb-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ecefb-107">See also</span></span>
-- [<span data-ttu-id="ecefb-108">3-w trafienie w próbce testowej</span><span class="sxs-lookup"><span data-stu-id="ecefb-108">3-D Hit Testing Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159959)
+## <a name="see-also"></a><span data-ttu-id="a5f92-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a5f92-107">See also</span></span>
+
+- [<span data-ttu-id="a5f92-108">3-w trafienie w próbce testowej</span><span class="sxs-lookup"><span data-stu-id="a5f92-108">3-D Hit Testing Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=159959)

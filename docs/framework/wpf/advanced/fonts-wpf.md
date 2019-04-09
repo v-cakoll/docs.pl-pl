@@ -6,24 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169250"
 ---
-# <a name="fonts-wpf"></a><span data-ttu-id="88b51-102">Czcionki (WPF)</span><span class="sxs-lookup"><span data-stu-id="88b51-102">Fonts (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="88b51-103">obejmuje obsługę prezentacji sformatowanego tekstu przy użyciu języka [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki.</span><span class="sxs-lookup"><span data-stu-id="88b51-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="88b51-104">Przykładowy pakiet z [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki jest dołączana do [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="88b51-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
+# <a name="fonts-wpf"></a><span data-ttu-id="b16f0-102">Czcionki (WPF)</span><span class="sxs-lookup"><span data-stu-id="b16f0-102">Fonts (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="b16f0-103">obejmuje obsługę prezentacji sformatowanego tekstu przy użyciu języka [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki.</span><span class="sxs-lookup"><span data-stu-id="b16f0-103">includes support for rich presentation of text using [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts.</span></span> <span data-ttu-id="b16f0-104">Przykładowy pakiet z [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki jest dołączana do [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b16f0-104">A sample pack of [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fonts is included with the [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="88b51-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="88b51-105">In This Section</span></span>  
- [<span data-ttu-id="88b51-106">Funkcje czcionki OpenType</span><span class="sxs-lookup"><span data-stu-id="88b51-106">OpenType Font Features</span></span>](opentype-font-features.md)  
- [<span data-ttu-id="88b51-107">Pakowanie czcionek z aplikacjami</span><span class="sxs-lookup"><span data-stu-id="88b51-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
- [<span data-ttu-id="88b51-108">Przykład pakietu czcionek OpenType</span><span class="sxs-lookup"><span data-stu-id="88b51-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
- [<span data-ttu-id="88b51-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="88b51-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b16f0-105">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="b16f0-105">In This Section</span></span>  
+ [<span data-ttu-id="b16f0-106">OpenType funkcje czcionki</span><span class="sxs-lookup"><span data-stu-id="b16f0-106">OpenType Font Features</span></span>](opentype-font-features.md)  
+ [<span data-ttu-id="b16f0-107">Pakowanie czcionek z aplikacjami</span><span class="sxs-lookup"><span data-stu-id="b16f0-107">Packaging Fonts with Applications</span></span>](packaging-fonts-with-applications.md)  
+ [<span data-ttu-id="b16f0-108">Przykład pakietu czcionek OpenType</span><span class="sxs-lookup"><span data-stu-id="b16f0-108">Sample OpenType Font Pack</span></span>](sample-opentype-font-pack.md)  
+ [<span data-ttu-id="b16f0-109">— Tematy porad</span><span class="sxs-lookup"><span data-stu-id="b16f0-109">How-to Topics</span></span>](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="88b51-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="88b51-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b16f0-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b16f0-110">See also</span></span>
+
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="88b51-111">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="88b51-111">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="88b51-112">Typografia w WPF</span><span class="sxs-lookup"><span data-stu-id="88b51-112">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="b16f0-111">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="b16f0-111">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="b16f0-112">Typografia w WPF</span><span class="sxs-lookup"><span data-stu-id="b16f0-112">Typography in WPF</span></span>](typography-in-wpf.md)

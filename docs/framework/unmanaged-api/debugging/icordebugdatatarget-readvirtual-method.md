@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b401a70e34a1686f3a69c657f6417cf8e1d0d938
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4749bfee22e58ad7c3ca29ec992da88493ca2c5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111530"
 ---
-# <a name="icordebugdatatargetreadvirtual-method"></a><span data-ttu-id="a8078-102">ICorDebugDataTarget::ReadVirtual — Metoda</span><span class="sxs-lookup"><span data-stu-id="a8078-102">ICorDebugDataTarget::ReadVirtual Method</span></span>
-<span data-ttu-id="a8078-103">Pobiera blok pamięci ciągłej uruchamianie pod podanym adresem i zwraca go w dostarczony bufor.</span><span class="sxs-lookup"><span data-stu-id="a8078-103">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>  
+# <a name="icordebugdatatargetreadvirtual-method"></a><span data-ttu-id="e3aef-102">ICorDebugDataTarget::ReadVirtual — Metoda</span><span class="sxs-lookup"><span data-stu-id="e3aef-102">ICorDebugDataTarget::ReadVirtual Method</span></span>
+<span data-ttu-id="e3aef-103">Pobiera blok pamięci ciągłej uruchamianie pod podanym adresem i zwraca go w dostarczony bufor.</span><span class="sxs-lookup"><span data-stu-id="e3aef-103">Gets a block of contiguous memory starting at the specified address, and returns it in the supplied buffer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a8078-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a8078-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3aef-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e3aef-104">Syntax</span></span>  
   
 ```  
 HRESULT ReadVirtual(  
@@ -38,32 +38,33 @@ HRESULT ReadVirtual(
     [out] ULONG32 *  pBytesRead);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a8078-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a8078-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3aef-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e3aef-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="a8078-106">[in] Początkowy adres żądanej pamięci.</span><span class="sxs-lookup"><span data-stu-id="a8078-106">[in] The start address of requested memory.</span></span>  
+ <span data-ttu-id="e3aef-106">[in] Początkowy adres żądanej pamięci.</span><span class="sxs-lookup"><span data-stu-id="e3aef-106">[in] The start address of requested memory.</span></span>  
   
  `pbuffer`  
- <span data-ttu-id="a8078-107">[out] Bufor, w którym będzie przechowywana pamięć.</span><span class="sxs-lookup"><span data-stu-id="a8078-107">[out] The buffer where the memory will be stored.</span></span>  
+ <span data-ttu-id="e3aef-107">[out] Bufor, w którym będzie przechowywana pamięć.</span><span class="sxs-lookup"><span data-stu-id="e3aef-107">[out] The buffer where the memory will be stored.</span></span>  
   
  `bytesRequested`  
- <span data-ttu-id="a8078-108">[in] Liczba bajtów, które można pobrać z adresu docelowego.</span><span class="sxs-lookup"><span data-stu-id="a8078-108">[in] The number of bytes to get from the target address.</span></span>  
+ <span data-ttu-id="e3aef-108">[in] Liczba bajtów, które można pobrać z adresu docelowego.</span><span class="sxs-lookup"><span data-stu-id="e3aef-108">[in] The number of bytes to get from the target address.</span></span>  
   
  `pBytesRead`  
- <span data-ttu-id="a8078-109">[out] Liczba bajtów odczytanych w rzeczywistości z adres docelowy.</span><span class="sxs-lookup"><span data-stu-id="a8078-109">[out] The number of bytes actually read from the target address.</span></span> <span data-ttu-id="a8078-110">Może to być krótsza niż `bytesRequested`.</span><span class="sxs-lookup"><span data-stu-id="a8078-110">This can be fewer than `bytesRequested`.</span></span>  
+ <span data-ttu-id="e3aef-109">[out] Liczba bajtów odczytanych w rzeczywistości z adres docelowy.</span><span class="sxs-lookup"><span data-stu-id="e3aef-109">[out] The number of bytes actually read from the target address.</span></span> <span data-ttu-id="e3aef-110">Może to być krótsza niż `bytesRequested`.</span><span class="sxs-lookup"><span data-stu-id="e3aef-110">This can be fewer than `bytesRequested`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a8078-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a8078-111">Remarks</span></span>  
- <span data-ttu-id="a8078-112">Jeśli pierwszy bajt (pod adresem początkową) może zostać odczytany, wywołanie powinno zwrócić Powodzenie (umożliwiających wydajne odczytywania struktury danych z własnym opisem długości, takich jak ciągi zakończone wartością null).</span><span class="sxs-lookup"><span data-stu-id="a8078-112">If the first byte (at the specified start address) can be read, the call should return success (to support efficient reading of data structures with self-describing length, like null-terminated strings).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e3aef-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e3aef-111">Remarks</span></span>  
+ <span data-ttu-id="e3aef-112">Jeśli pierwszy bajt (pod adresem początkową) może zostać odczytany, wywołanie powinno zwrócić Powodzenie (umożliwiających wydajne odczytywania struktury danych z własnym opisem długości, takich jak ciągi zakończone wartością null).</span><span class="sxs-lookup"><span data-stu-id="e3aef-112">If the first byte (at the specified start address) can be read, the call should return success (to support efficient reading of data structures with self-describing length, like null-terminated strings).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a8078-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a8078-113">Requirements</span></span>  
- <span data-ttu-id="a8078-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a8078-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3aef-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e3aef-113">Requirements</span></span>  
+ <span data-ttu-id="e3aef-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3aef-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a8078-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a8078-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e3aef-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e3aef-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a8078-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a8078-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e3aef-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3aef-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a8078-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a8078-117">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="e3aef-117">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="e3aef-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a8078-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a8078-118">See also</span></span>
-- [<span data-ttu-id="a8078-119">ICorDebugDataTarget, interfejs</span><span class="sxs-lookup"><span data-stu-id="a8078-119">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [<span data-ttu-id="a8078-120">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="a8078-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="a8078-121">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="a8078-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="e3aef-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e3aef-118">See also</span></span>
+
+- [<span data-ttu-id="e3aef-119">ICorDebugDataTarget — Interfejs</span><span class="sxs-lookup"><span data-stu-id="e3aef-119">ICorDebugDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [<span data-ttu-id="e3aef-120">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="e3aef-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="e3aef-121">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="e3aef-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

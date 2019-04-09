@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcdda6f8cdd0fc0b333b81d58a8bff7c21aa1fef
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 64982308c6eb7e9df4b94b4e123857c65939f044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142483"
 ---
-# <a name="isymunmanageddocumentwritersetsource-method"></a><span data-ttu-id="cb2de-102">ISymUnmanagedDocumentWriter::SetSource — Metoda</span><span class="sxs-lookup"><span data-stu-id="cb2de-102">ISymUnmanagedDocumentWriter::SetSource Method</span></span>
-<span data-ttu-id="cb2de-103">Ustawia osadzone źródło dla dokumentu, który jest zapisywany.</span><span class="sxs-lookup"><span data-stu-id="cb2de-103">Sets embedded source for a document that is being written.</span></span>  
+# <a name="isymunmanageddocumentwritersetsource-method"></a><span data-ttu-id="50009-102">ISymUnmanagedDocumentWriter::SetSource — Metoda</span><span class="sxs-lookup"><span data-stu-id="50009-102">ISymUnmanagedDocumentWriter::SetSource Method</span></span>
+<span data-ttu-id="50009-103">Ustawia osadzone źródło dla dokumentu, który jest zapisywany.</span><span class="sxs-lookup"><span data-stu-id="50009-103">Sets embedded source for a document that is being written.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb2de-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cb2de-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50009-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="50009-104">Syntax</span></span>  
   
 ```  
 HRESULT SetSource(  
@@ -35,18 +35,19 @@ HRESULT SetSource(
     [in, size_is(sourceSize)] BYTE  source[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cb2de-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="cb2de-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="50009-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="50009-105">Parameters</span></span>  
  `sourceSize`  
- <span data-ttu-id="cb2de-106">[in] A `ULONG32` zawierający rozmiar `source` buforu.</span><span class="sxs-lookup"><span data-stu-id="cb2de-106">[in] A `ULONG32` that contains the size of the `source` buffer.</span></span>  
+ <span data-ttu-id="50009-106">[in] A `ULONG32` zawierający rozmiar `source` buforu.</span><span class="sxs-lookup"><span data-stu-id="50009-106">[in] A `ULONG32` that contains the size of the `source` buffer.</span></span>  
   
  `source`  
- <span data-ttu-id="cb2de-107">[in] Bufor, który przechowuje osadzonego źródła.</span><span class="sxs-lookup"><span data-stu-id="cb2de-107">[in] The buffer that stores the embedded source.</span></span>  
+ <span data-ttu-id="50009-107">[in] Bufor, który przechowuje osadzonego źródła.</span><span class="sxs-lookup"><span data-stu-id="50009-107">[in] The buffer that stores the embedded source.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cb2de-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="cb2de-108">Return Value</span></span>  
- <span data-ttu-id="cb2de-109">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="cb2de-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="50009-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="50009-108">Return Value</span></span>  
+ <span data-ttu-id="50009-109">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="50009-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb2de-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cb2de-110">Requirements</span></span>  
- <span data-ttu-id="cb2de-111">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cb2de-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50009-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="50009-110">Requirements</span></span>  
+ <span data-ttu-id="50009-111">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="50009-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb2de-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cb2de-112">See also</span></span>
-- [<span data-ttu-id="cb2de-113">ISymUnmanagedDocumentWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="cb2de-113">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="50009-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="50009-112">See also</span></span>
+
+- [<span data-ttu-id="50009-113">ISymUnmanagedDocumentWriter — Interfejs</span><span class="sxs-lookup"><span data-stu-id="50009-113">ISymUnmanagedDocumentWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

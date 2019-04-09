@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4da0e064f507e2330aac27fc5c8bcd56b9d3c1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aebc6dfe4830e6477cda8fd279b8ef2a8040895c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149672"
 ---
-# <a name="createasmnameobjflags-enumeration"></a><span data-ttu-id="7e338-102">CREATE_ASM_NAME_OBJ_FLAGS — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="7e338-102">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>
-<span data-ttu-id="7e338-103">Określa atrybuty elementu [iassemblyname — interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu, kiedy jest tworzony przez [createassemblynameobject —](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="7e338-103">Specifies the attributes of an [IAssemblyName Interface](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
+# <a name="createasmnameobjflags-enumeration"></a><span data-ttu-id="889c5-102">CREATE_ASM_NAME_OBJ_FLAGS — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="889c5-102">CREATE_ASM_NAME_OBJ_FLAGS Enumeration</span></span>
+<span data-ttu-id="889c5-103">Określa atrybuty elementu [iassemblyname — interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) obiektu, kiedy jest tworzony przez [createassemblynameobject —](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) funkcji.</span><span class="sxs-lookup"><span data-stu-id="889c5-103">Specifies the attributes of an [IAssemblyName Interface](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) object when it is constructed by the [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e338-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7e338-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="889c5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="889c5-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -40,23 +40,24 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7e338-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="7e338-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="889c5-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="889c5-105">Members</span></span>  
   
-|<span data-ttu-id="7e338-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="7e338-106">Member</span></span>|<span data-ttu-id="7e338-107">Opis</span><span class="sxs-lookup"><span data-stu-id="7e338-107">Description</span></span>|  
+|<span data-ttu-id="889c5-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="889c5-106">Member</span></span>|<span data-ttu-id="889c5-107">Opis</span><span class="sxs-lookup"><span data-stu-id="889c5-107">Description</span></span>|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|<span data-ttu-id="7e338-108">Wskazuje, że parametr przekazany jest tekstową tożsamości.</span><span class="sxs-lookup"><span data-stu-id="7e338-108">Indicates that the parameter passed is a textual identity.</span></span>|  
-|`CANOF_SET_DEFAULT_VALUES`|<span data-ttu-id="7e338-109">Ustawia kilka wartości domyślne.</span><span class="sxs-lookup"><span data-stu-id="7e338-109">Sets a few default values.</span></span>|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|<span data-ttu-id="7e338-110">Sprawdza reguły zestawu friend (tylko nazwa i klucz publiczny).</span><span class="sxs-lookup"><span data-stu-id="7e338-110">Verifies the friend assembly rule (only name and public key).</span></span> <span data-ttu-id="7e338-111">Ten element jest tylko do użytku wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="7e338-111">This member is for internal use only.</span></span>|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|<span data-ttu-id="7e338-112">Kombinacji `CANOF_PARSE_DISPLAY_NAME` i `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flag.</span><span class="sxs-lookup"><span data-stu-id="7e338-112">A combination of the `CANOF_PARSE_DISPLAY_NAME` and `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flags.</span></span> <span data-ttu-id="7e338-113">Ten element jest tylko do użytku wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="7e338-113">This member is for internal use only.</span></span>|  
+|`CANOF_PARSE_DISPLAY_NAME`|<span data-ttu-id="889c5-108">Wskazuje, że parametr przekazany jest tekstową tożsamości.</span><span class="sxs-lookup"><span data-stu-id="889c5-108">Indicates that the parameter passed is a textual identity.</span></span>|  
+|`CANOF_SET_DEFAULT_VALUES`|<span data-ttu-id="889c5-109">Ustawia kilka wartości domyślne.</span><span class="sxs-lookup"><span data-stu-id="889c5-109">Sets a few default values.</span></span>|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|<span data-ttu-id="889c5-110">Sprawdza reguły zestawu friend (tylko nazwa i klucz publiczny).</span><span class="sxs-lookup"><span data-stu-id="889c5-110">Verifies the friend assembly rule (only name and public key).</span></span> <span data-ttu-id="889c5-111">Ten element jest tylko do użytku wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="889c5-111">This member is for internal use only.</span></span>|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|<span data-ttu-id="889c5-112">Kombinacji `CANOF_PARSE_DISPLAY_NAME` i `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flag.</span><span class="sxs-lookup"><span data-stu-id="889c5-112">A combination of the `CANOF_PARSE_DISPLAY_NAME` and `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` flags.</span></span> <span data-ttu-id="889c5-113">Ten element jest tylko do użytku wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="889c5-113">This member is for internal use only.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7e338-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7e338-114">Requirements</span></span>  
- <span data-ttu-id="7e338-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e338-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="889c5-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="889c5-114">Requirements</span></span>  
+ <span data-ttu-id="889c5-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="889c5-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e338-116">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7e338-116">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="889c5-116">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="889c5-116">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="7e338-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e338-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="889c5-117">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="889c5-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7e338-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7e338-118">See also</span></span>
-- [<span data-ttu-id="7e338-119">IAssemblyName, interfejs</span><span class="sxs-lookup"><span data-stu-id="7e338-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="7e338-120">CreateAssemblyNameObject, funkcja</span><span class="sxs-lookup"><span data-stu-id="7e338-120">CreateAssemblyNameObject Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
-- [<span data-ttu-id="7e338-121">Wyliczenia łączenia</span><span class="sxs-lookup"><span data-stu-id="7e338-121">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="889c5-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="889c5-118">See also</span></span>
+
+- [<span data-ttu-id="889c5-119">IAssemblyName — Interfejs</span><span class="sxs-lookup"><span data-stu-id="889c5-119">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="889c5-120">CreateAssemblyNameObject — Funkcja</span><span class="sxs-lookup"><span data-stu-id="889c5-120">CreateAssemblyNameObject Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)
+- [<span data-ttu-id="889c5-121">Wyliczenia łączenia</span><span class="sxs-lookup"><span data-stu-id="889c5-121">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

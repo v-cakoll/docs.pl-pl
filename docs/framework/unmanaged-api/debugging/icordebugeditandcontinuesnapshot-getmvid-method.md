@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f912ec38f0407f9e2758f231fd43d895b5cdfcb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9218dd87b0794f3972365a4049cd8941e6671312
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193940"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="2e7bb-102">ICorDebugEditAndContinueSnapshot::GetMvid — Metoda</span><span class="sxs-lookup"><span data-stu-id="2e7bb-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-<span data-ttu-id="2e7bb-103">`GetMvid` jest przestarzały.</span><span class="sxs-lookup"><span data-stu-id="2e7bb-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="2e7bb-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="2e7bb-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="017e3-102">ICorDebugEditAndContinueSnapshot::GetMvid — Metoda</span><span class="sxs-lookup"><span data-stu-id="017e3-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+`GetMvid` <span data-ttu-id="017e3-103">jest przestarzały.</span><span class="sxs-lookup"><span data-stu-id="017e3-103">is obsolete.</span></span> <span data-ttu-id="017e3-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="017e3-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2e7bb-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2e7bb-105">See also</span></span>
-- [<span data-ttu-id="2e7bb-106">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="2e7bb-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="017e3-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="017e3-105">See also</span></span>
+
+- [<span data-ttu-id="017e3-106">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="017e3-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

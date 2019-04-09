@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 930c78386eca5a2a9b8662129c1470f6170aed77
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 91b1e4469f07954dc433769911c78d72bb3c36cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096153"
 ---
-# <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="27d30-102">IMetaDataAssemblyImport::GetExportedTypeProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="27d30-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
-<span data-ttu-id="27d30-103">Pobiera zestaw właściwości typu wyeksportowanego za pomocą podpisu określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="27d30-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetexportedtypeprops-method"></a><span data-ttu-id="e51ed-102">IMetaDataAssemblyImport::GetExportedTypeProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="e51ed-102">IMetaDataAssemblyImport::GetExportedTypeProps Method</span></span>
+<span data-ttu-id="e51ed-103">Pobiera zestaw właściwości typu wyeksportowanego za pomocą podpisu określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="e51ed-103">Gets the set of properties of the exported type with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27d30-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="27d30-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e51ed-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e51ed-104">Syntax</span></span>  
   
 ```  
 HRESULT GetExportedTypeProps (  
@@ -41,36 +41,37 @@ HRESULT GetExportedTypeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27d30-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="27d30-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e51ed-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e51ed-105">Parameters</span></span>  
  `mdct`  
- <span data-ttu-id="27d30-106">[in] `mdExportedType` Token metadanych, który reprezentuje typ eksportowany.</span><span class="sxs-lookup"><span data-stu-id="27d30-106">[in] An `mdExportedType` metadata token that represents the exported type.</span></span>  
+ <span data-ttu-id="e51ed-106">[in] `mdExportedType` Token metadanych, który reprezentuje typ eksportowany.</span><span class="sxs-lookup"><span data-stu-id="e51ed-106">[in] An `mdExportedType` metadata token that represents the exported type.</span></span>  
   
  `szName`  
- <span data-ttu-id="27d30-107">[out] Nazwa typu wyeksportowanego.</span><span class="sxs-lookup"><span data-stu-id="27d30-107">[out] The name of the exported type.</span></span>  
+ <span data-ttu-id="e51ed-107">[out] Nazwa typu wyeksportowanego.</span><span class="sxs-lookup"><span data-stu-id="e51ed-107">[out] The name of the exported type.</span></span>  
   
  `cchName`  
- <span data-ttu-id="27d30-108">[in] Rozmiar w szerokich znaków z `szName`.</span><span class="sxs-lookup"><span data-stu-id="27d30-108">[in] The size, in wide characters, of `szName`.</span></span>  
+ <span data-ttu-id="e51ed-108">[in] Rozmiar w szerokich znaków z `szName`.</span><span class="sxs-lookup"><span data-stu-id="e51ed-108">[in] The size, in wide characters, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="27d30-109">[out] Liczba znaków dwubajtowych rzeczywistego zwrotu w `szName`</span><span class="sxs-lookup"><span data-stu-id="27d30-109">[out] The number of wide characters actually returned in `szName`</span></span>  
+ <span data-ttu-id="e51ed-109">[out] Liczba znaków dwubajtowych rzeczywistego zwrotu w</span><span class="sxs-lookup"><span data-stu-id="e51ed-109">[out] The number of wide characters actually returned in</span></span> `szName`  
   
  `ptkImplementation`  
- <span data-ttu-id="27d30-110">[out] `mdFile`, `mdAssemblyRef`, Lub `mdExportedType` token metadanych, który zawiera lub zezwala na dostęp do właściwości wyeksportowanego typu.</span><span class="sxs-lookup"><span data-stu-id="27d30-110">[out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.</span></span>  
+ <span data-ttu-id="e51ed-110">[out] `mdFile`, `mdAssemblyRef`, Lub `mdExportedType` token metadanych, który zawiera lub zezwala na dostęp do właściwości wyeksportowanego typu.</span><span class="sxs-lookup"><span data-stu-id="e51ed-110">[out] An `mdFile`, `mdAssemblyRef`, or `mdExportedType` metadata token that contains or allows access to the properties of the exported type.</span></span>  
   
  `ptkTypeDef`  
- <span data-ttu-id="27d30-111">[out] Wskaźnik do `mdTypeDef` token, który reprezentuje typ w pliku.</span><span class="sxs-lookup"><span data-stu-id="27d30-111">[out] A pointer to an `mdTypeDef` token that represents a type in the file.</span></span>  
+ <span data-ttu-id="e51ed-111">[out] Wskaźnik do `mdTypeDef` token, który reprezentuje typ w pliku.</span><span class="sxs-lookup"><span data-stu-id="e51ed-111">[out] A pointer to an `mdTypeDef` token that represents a type in the file.</span></span>  
   
  `pdwExportedTypeFlags`  
- <span data-ttu-id="27d30-112">[out] Wskaźnik flagi, które opisują metadane stosowane do wyeksportowanego typu.</span><span class="sxs-lookup"><span data-stu-id="27d30-112">[out] A pointer to the flags that describe the metadata applied to the exported type.</span></span> <span data-ttu-id="27d30-113">Wartość flagi może być co najmniej jeden [cortypeattr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) wartości.</span><span class="sxs-lookup"><span data-stu-id="27d30-113">The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.</span></span>  
+ <span data-ttu-id="e51ed-112">[out] Wskaźnik flagi, które opisują metadane stosowane do wyeksportowanego typu.</span><span class="sxs-lookup"><span data-stu-id="e51ed-112">[out] A pointer to the flags that describe the metadata applied to the exported type.</span></span> <span data-ttu-id="e51ed-113">Wartość flagi może być co najmniej jeden [cortypeattr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) wartości.</span><span class="sxs-lookup"><span data-stu-id="e51ed-113">The flags value can be one or more [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27d30-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="27d30-114">Requirements</span></span>  
- <span data-ttu-id="27d30-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27d30-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e51ed-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e51ed-114">Requirements</span></span>  
+ <span data-ttu-id="e51ed-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e51ed-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="27d30-116">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="27d30-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e51ed-116">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="e51ed-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="27d30-117">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="27d30-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e51ed-117">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e51ed-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="27d30-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27d30-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="e51ed-118">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="e51ed-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="27d30-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="27d30-119">See also</span></span>
-- [<span data-ttu-id="27d30-120">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="27d30-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e51ed-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e51ed-119">See also</span></span>
+
+- [<span data-ttu-id="e51ed-120">IMetaDataAssemblyImport — Interfejs</span><span class="sxs-lookup"><span data-stu-id="e51ed-120">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

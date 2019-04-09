@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cca073cfccedacb037478903a603c375c876349c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 846ff76fb1073394cc27597c9a2015148581cc70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165103"
 ---
-# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="d825c-102">ISymUnmanagedReader::GetVariables — Metoda</span><span class="sxs-lookup"><span data-stu-id="d825c-102">ISymUnmanagedReader::GetVariables Method</span></span>
-<span data-ttu-id="d825c-103">Zwraca wartość zmiennej inną niż lokalna, na jej nadrzędnej i nazwę.</span><span class="sxs-lookup"><span data-stu-id="d825c-103">Returns a non-local variable, given its parent and name.</span></span>  
+# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="285a5-102">ISymUnmanagedReader::GetVariables — Metoda</span><span class="sxs-lookup"><span data-stu-id="285a5-102">ISymUnmanagedReader::GetVariables Method</span></span>
+<span data-ttu-id="285a5-103">Zwraca wartość zmiennej inną niż lokalna, na jej nadrzędnej i nazwę.</span><span class="sxs-lookup"><span data-stu-id="285a5-103">Returns a non-local variable, given its parent and name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d825c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d825c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="285a5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="285a5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables (  
@@ -38,24 +38,25 @@ HRESULT GetVariables (
         length_is (*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d825c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d825c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="285a5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="285a5-105">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="d825c-106">[in] Element nadrzędny zmiennej.</span><span class="sxs-lookup"><span data-stu-id="d825c-106">[in] The parent of the variable.</span></span>  
+ <span data-ttu-id="285a5-106">[in] Element nadrzędny zmiennej.</span><span class="sxs-lookup"><span data-stu-id="285a5-106">[in] The parent of the variable.</span></span>  
   
  `cVars`  
- <span data-ttu-id="d825c-107">[in] Rozmiar `pVars` tablicy.</span><span class="sxs-lookup"><span data-stu-id="d825c-107">[in] The size of the `pVars` array.</span></span>  
+ <span data-ttu-id="285a5-107">[in] Rozmiar `pVars` tablicy.</span><span class="sxs-lookup"><span data-stu-id="285a5-107">[in] The size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="d825c-108">[out] Wskaźnik do zmiennej, która odbiera liczbę zwracanych w zmiennych `pVars`.</span><span class="sxs-lookup"><span data-stu-id="d825c-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
+ <span data-ttu-id="285a5-108">[out] Wskaźnik do zmiennej, która odbiera liczbę zwracanych w zmiennych `pVars`.</span><span class="sxs-lookup"><span data-stu-id="285a5-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
   
  `pVars`  
- <span data-ttu-id="d825c-109">[out] Wskaźnik do zmiennej, która odbiera zmienne.</span><span class="sxs-lookup"><span data-stu-id="d825c-109">[out] A pointer to the variable that receives the variables.</span></span>  
+ <span data-ttu-id="285a5-109">[out] Wskaźnik do zmiennej, która odbiera zmienne.</span><span class="sxs-lookup"><span data-stu-id="285a5-109">[out] A pointer to the variable that receives the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d825c-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="d825c-110">Return Value</span></span>  
- <span data-ttu-id="d825c-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="d825c-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="285a5-110">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="285a5-110">Return Value</span></span>  
+ <span data-ttu-id="285a5-111">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="285a5-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d825c-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d825c-112">Requirements</span></span>  
- <span data-ttu-id="d825c-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d825c-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="285a5-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="285a5-112">Requirements</span></span>  
+ <span data-ttu-id="285a5-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="285a5-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d825c-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d825c-114">See also</span></span>
-- [<span data-ttu-id="d825c-115">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="d825c-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="285a5-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="285a5-114">See also</span></span>
+
+- [<span data-ttu-id="285a5-115">ISymUnmanagedReader — Interfejs</span><span class="sxs-lookup"><span data-stu-id="285a5-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

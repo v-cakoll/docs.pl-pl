@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53001d6dfef2813df86dc4bb4f9647900143aae7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c43fd1c63b14fc3254044247213bf09453da870e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175438"
 ---
-# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="a7113-102">IHostMemoryManager::GetMemoryLoad — Metoda</span><span class="sxs-lookup"><span data-stu-id="a7113-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
-<span data-ttu-id="a7113-103">Pobiera ilość pamięci fizycznej, która jest obecnie w użyciu i w związku z tym niedostępny jako zgłaszane przez hosta.</span><span class="sxs-lookup"><span data-stu-id="a7113-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
+# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="dbceb-102">IHostMemoryManager::GetMemoryLoad — Metoda</span><span class="sxs-lookup"><span data-stu-id="dbceb-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
+<span data-ttu-id="dbceb-103">Pobiera ilość pamięci fizycznej, która jest obecnie w użyciu i w związku z tym niedostępny jako zgłaszane przez hosta.</span><span class="sxs-lookup"><span data-stu-id="dbceb-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a7113-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a7113-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbceb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="dbceb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemoryLoad (  
@@ -36,38 +36,39 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a7113-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a7113-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dbceb-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="dbceb-105">Parameters</span></span>  
  `pMemoryLoad`  
- <span data-ttu-id="a7113-106">[out] Wskaźnik do przybliżony procent całkowitej pamięci fizycznej, która jest obecnie w użyciu.</span><span class="sxs-lookup"><span data-stu-id="a7113-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
+ <span data-ttu-id="dbceb-106">[out] Wskaźnik do przybliżony procent całkowitej pamięci fizycznej, która jest obecnie w użyciu.</span><span class="sxs-lookup"><span data-stu-id="dbceb-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
   
  `pAvailableBytes`  
- <span data-ttu-id="a7113-107">[out] Wskaźnik do liczby bajtów dostępnych do środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="a7113-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
+ <span data-ttu-id="dbceb-107">[out] Wskaźnik do liczby bajtów dostępnych do środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="dbceb-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a7113-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a7113-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dbceb-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="dbceb-108">Return Value</span></span>  
   
-|<span data-ttu-id="a7113-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a7113-109">HRESULT</span></span>|<span data-ttu-id="a7113-110">Opis</span><span class="sxs-lookup"><span data-stu-id="a7113-110">Description</span></span>|  
+|<span data-ttu-id="dbceb-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="dbceb-109">HRESULT</span></span>|<span data-ttu-id="dbceb-110">Opis</span><span class="sxs-lookup"><span data-stu-id="dbceb-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a7113-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="a7113-111">S_OK</span></span>|<span data-ttu-id="a7113-112">`GetMemoryLoad` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="a7113-112">`GetMemoryLoad` returned successfully.</span></span>|  
-|<span data-ttu-id="a7113-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="a7113-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="a7113-114">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="a7113-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="a7113-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="a7113-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="a7113-116">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="a7113-116">The call timed out.</span></span>|  
-|<span data-ttu-id="a7113-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="a7113-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="a7113-118">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="a7113-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="a7113-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="a7113-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="a7113-120">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="a7113-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="a7113-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a7113-121">E_FAIL</span></span>|<span data-ttu-id="a7113-122">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="a7113-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="a7113-123">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="a7113-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="a7113-124">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="a7113-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="dbceb-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="dbceb-111">S_OK</span></span>|`GetMemoryLoad` <span data-ttu-id="dbceb-112">pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="dbceb-112">returned successfully.</span></span>|  
+|<span data-ttu-id="dbceb-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="dbceb-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="dbceb-114">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="dbceb-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="dbceb-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="dbceb-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="dbceb-116">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="dbceb-116">The call timed out.</span></span>|  
+|<span data-ttu-id="dbceb-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="dbceb-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="dbceb-118">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="dbceb-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="dbceb-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="dbceb-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="dbceb-120">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="dbceb-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="dbceb-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="dbceb-121">E_FAIL</span></span>|<span data-ttu-id="dbceb-122">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="dbceb-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="dbceb-123">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="dbceb-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="dbceb-124">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="dbceb-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a7113-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a7113-125">Remarks</span></span>  
- <span data-ttu-id="a7113-126">`GetMemoryLoad` opakowuje Win32 `GlobalMemoryStatus` funkcji.</span><span class="sxs-lookup"><span data-stu-id="a7113-126">`GetMemoryLoad` wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="a7113-127">Wartość `pMemoryLoad` jest odpowiednikiem `dwMemoryLoad` pole `MEMORYSTATUS` struktury zwróciło `GlobalMemoryStatus`.</span><span class="sxs-lookup"><span data-stu-id="a7113-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dbceb-125">Uwagi</span><span class="sxs-lookup"><span data-stu-id="dbceb-125">Remarks</span></span>  
+ `GetMemoryLoad` <span data-ttu-id="dbceb-126">opakowuje Win32 `GlobalMemoryStatus` funkcji.</span><span class="sxs-lookup"><span data-stu-id="dbceb-126">wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="dbceb-127">Wartość `pMemoryLoad` jest odpowiednikiem `dwMemoryLoad` pole `MEMORYSTATUS` struktury zwróciło `GlobalMemoryStatus`.</span><span class="sxs-lookup"><span data-stu-id="dbceb-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
   
- <span data-ttu-id="a7113-128">Środowisko wykonawcze używa wartość zwracaną jako heurystykę dla modułu odśmiecania pamięci.</span><span class="sxs-lookup"><span data-stu-id="a7113-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="a7113-129">Na przykład jeśli host zgłasza, że większość pamięci jest w użyciu, wyrzucanie elementów bezużytecznych może zdecydować się na zbieranie z wielu generacji, aby zwiększyć ilość pamięci, która może być potencjalnie staną się dostępne.</span><span class="sxs-lookup"><span data-stu-id="a7113-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
+ <span data-ttu-id="dbceb-128">Środowisko wykonawcze używa wartość zwracaną jako heurystykę dla modułu odśmiecania pamięci.</span><span class="sxs-lookup"><span data-stu-id="dbceb-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="dbceb-129">Na przykład jeśli host zgłasza, że większość pamięci jest w użyciu, wyrzucanie elementów bezużytecznych może zdecydować się na zbieranie z wielu generacji, aby zwiększyć ilość pamięci, która może być potencjalnie staną się dostępne.</span><span class="sxs-lookup"><span data-stu-id="dbceb-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a7113-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a7113-130">Requirements</span></span>  
- <span data-ttu-id="a7113-131">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7113-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbceb-130">Wymagania</span><span class="sxs-lookup"><span data-stu-id="dbceb-130">Requirements</span></span>  
+ <span data-ttu-id="dbceb-131">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dbceb-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a7113-132">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a7113-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="dbceb-132">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dbceb-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a7113-133">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a7113-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dbceb-133">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dbceb-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a7113-134">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7113-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="dbceb-134">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="dbceb-134">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a7113-135">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a7113-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbceb-135">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dbceb-135">See also</span></span>
+
 - <xref:System.GC?displayProperty=nameWithType>
-- [<span data-ttu-id="a7113-136">IHostMemoryManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="a7113-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="dbceb-136">IHostMemoryManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="dbceb-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

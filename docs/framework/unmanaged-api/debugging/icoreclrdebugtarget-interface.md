@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4576d8ea7d601e1b37d0cb6f54802f93bc128622
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2972b87b2d0136f182f8e8223988953e1896f2bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183342"
 ---
-# <a name="icoreclrdebugtarget-interface"></a><span data-ttu-id="fddc5-102">ICoreClrDebugTarget — Interfejs</span><span class="sxs-lookup"><span data-stu-id="fddc5-102">ICoreClrDebugTarget Interface</span></span>
-<span data-ttu-id="fddc5-103">Udostępnia metody, które kontrolować liczbę odwołań, wyliczenie procesów i zwalniają pamięć skojarzone z debugera, który jest dołączony do zdalnego obiektu docelowego Silverlight dla komputerów Macintosh.</span><span class="sxs-lookup"><span data-stu-id="fddc5-103">Provides methods that control reference counts, enumerate processes, and free the memory associated with a debugger that is attached to a remote Macintosh Silverlight target.</span></span>  
+# <a name="icoreclrdebugtarget-interface"></a><span data-ttu-id="3ebfa-102">ICoreClrDebugTarget — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3ebfa-102">ICoreClrDebugTarget Interface</span></span>
+<span data-ttu-id="3ebfa-103">Udostępnia metody, które kontrolować liczbę odwołań, wyliczenie procesów i zwalniają pamięć skojarzone z debugera, który jest dołączony do zdalnego obiektu docelowego Silverlight dla komputerów Macintosh.</span><span class="sxs-lookup"><span data-stu-id="3ebfa-103">Provides methods that control reference counts, enumerate processes, and free the memory associated with a debugger that is attached to a remote Macintosh Silverlight target.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fddc5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fddc5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ebfa-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3ebfa-104">Syntax</span></span>  
   
 ```  
 class ICoreClrDebugTarget {  
@@ -49,28 +49,29 @@ class ICoreClrDebugTarget {
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="fddc5-105">Metody</span><span class="sxs-lookup"><span data-stu-id="fddc5-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3ebfa-105">Metody</span><span class="sxs-lookup"><span data-stu-id="3ebfa-105">Methods</span></span>  
   
-|<span data-ttu-id="fddc5-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="fddc5-106">Method</span></span>|<span data-ttu-id="fddc5-107">Opis</span><span class="sxs-lookup"><span data-stu-id="fddc5-107">Description</span></span>|  
+|<span data-ttu-id="3ebfa-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="3ebfa-106">Method</span></span>|<span data-ttu-id="3ebfa-107">Opis</span><span class="sxs-lookup"><span data-stu-id="3ebfa-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="fddc5-108">ICoreClrDebugTarget::EnumProcesses, metoda</span><span class="sxs-lookup"><span data-stu-id="fddc5-108">ICoreClrDebugTarget::EnumProcesses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|<span data-ttu-id="fddc5-109">Wylicza procesów, które są uruchomione na komputerze zdalnym.</span><span class="sxs-lookup"><span data-stu-id="fddc5-109">Enumerates the processes that are running on a remote computer.</span></span>|  
-|[<span data-ttu-id="fddc5-110">ICoreClrDebugTarget::EnumRuntimes, metoda</span><span class="sxs-lookup"><span data-stu-id="fddc5-110">ICoreClrDebugTarget::EnumRuntimes Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|<span data-ttu-id="fddc5-111">Wylicza środowiska uruchomieniowego języka wspólnego (CLRs) w określonym procesie na komputerze zdalnym.</span><span class="sxs-lookup"><span data-stu-id="fddc5-111">Enumerates the common language runtimes (CLRs) in the specified process on a remote computer.</span></span>|  
-|[<span data-ttu-id="fddc5-112">ICoreClrDebugTarget::FreeMemory, metoda</span><span class="sxs-lookup"><span data-stu-id="fddc5-112">ICoreClrDebugTarget::FreeMemory Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|<span data-ttu-id="fddc5-113">Zwalnia pamięć, która jest przydzielona za pomocą metod wyliczenia w tej klasie.</span><span class="sxs-lookup"><span data-stu-id="fddc5-113">Frees the memory that is allocated by the enumeration methods in this class.</span></span>|  
+|[<span data-ttu-id="3ebfa-108">ICoreClrDebugTarget::EnumProcesses — Metoda</span><span class="sxs-lookup"><span data-stu-id="3ebfa-108">ICoreClrDebugTarget::EnumProcesses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|<span data-ttu-id="3ebfa-109">Wylicza procesów, które są uruchomione na komputerze zdalnym.</span><span class="sxs-lookup"><span data-stu-id="3ebfa-109">Enumerates the processes that are running on a remote computer.</span></span>|  
+|[<span data-ttu-id="3ebfa-110">ICoreClrDebugTarget::EnumRuntimes — Metoda</span><span class="sxs-lookup"><span data-stu-id="3ebfa-110">ICoreClrDebugTarget::EnumRuntimes Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|<span data-ttu-id="3ebfa-111">Wylicza środowiska uruchomieniowego języka wspólnego (CLRs) w określonym procesie na komputerze zdalnym.</span><span class="sxs-lookup"><span data-stu-id="3ebfa-111">Enumerates the common language runtimes (CLRs) in the specified process on a remote computer.</span></span>|  
+|[<span data-ttu-id="3ebfa-112">ICoreClrDebugTarget::FreeMemory — Metoda</span><span class="sxs-lookup"><span data-stu-id="3ebfa-112">ICoreClrDebugTarget::FreeMemory Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|<span data-ttu-id="3ebfa-113">Zwalnia pamięć, która jest przydzielona za pomocą metod wyliczenia w tej klasie.</span><span class="sxs-lookup"><span data-stu-id="3ebfa-113">Frees the memory that is allocated by the enumeration methods in this class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fddc5-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="fddc5-114">Remarks</span></span>  
- <span data-ttu-id="fddc5-115">Obecnie ta funkcja jest obsługiwana tylko w przypadku debugowania element docelowy aplikacji opartych na technologii Silverlight, który jest uruchomiony na komputerze zdalnym dla komputerów Macintosh.</span><span class="sxs-lookup"><span data-stu-id="fddc5-115">Currently, this functionality is supported only for debugging a Silverlight-based application target that is running on a remote Macintosh computer.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3ebfa-114">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3ebfa-114">Remarks</span></span>  
+ <span data-ttu-id="3ebfa-115">Obecnie ta funkcja jest obsługiwana tylko w przypadku debugowania element docelowy aplikacji opartych na technologii Silverlight, który jest uruchomiony na komputerze zdalnym dla komputerów Macintosh.</span><span class="sxs-lookup"><span data-stu-id="3ebfa-115">Currently, this functionality is supported only for debugging a Silverlight-based application target that is running on a remote Macintosh computer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fddc5-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fddc5-116">Requirements</span></span>  
- <span data-ttu-id="fddc5-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fddc5-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ebfa-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3ebfa-116">Requirements</span></span>  
+ <span data-ttu-id="3ebfa-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ebfa-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fddc5-118">**Nagłówek:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="fddc5-118">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="3ebfa-118">**Nagłówek:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="3ebfa-118">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="fddc5-119">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="fddc5-119">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="3ebfa-119">**Library:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="3ebfa-119">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="fddc5-120">**Wersje programu .NET framework:** 3.5 z dodatkiem SP1</span><span class="sxs-lookup"><span data-stu-id="fddc5-120">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="3ebfa-120">**Wersje programu .NET framework:** 3.5 z dodatkiem SP1</span><span class="sxs-lookup"><span data-stu-id="3ebfa-120">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fddc5-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fddc5-121">See also</span></span>
-- [<span data-ttu-id="fddc5-122">ICorDebugRemoteTarget, interfejs</span><span class="sxs-lookup"><span data-stu-id="fddc5-122">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [<span data-ttu-id="fddc5-123">ICorDebug, interfejs</span><span class="sxs-lookup"><span data-stu-id="fddc5-123">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3ebfa-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3ebfa-121">See also</span></span>
 
-- [<span data-ttu-id="fddc5-124">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="fddc5-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3ebfa-122">ICorDebugRemoteTarget — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3ebfa-122">ICorDebugRemoteTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [<span data-ttu-id="3ebfa-123">ICorDebug — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3ebfa-123">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [<span data-ttu-id="3ebfa-124">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="3ebfa-124">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

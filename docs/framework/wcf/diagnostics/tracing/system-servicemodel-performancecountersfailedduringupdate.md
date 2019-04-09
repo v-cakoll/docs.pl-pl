@@ -2,20 +2,21 @@
 title: System.ServiceModel.PerformanceCountersFailedDuringUpdate
 ms.date: 03/30/2017
 ms.assetid: a89ab9b8-4429-4df0-ab62-7db4c58684cc
-ms.openlocfilehash: 6a9a50156500a5bfce48376e94b6d469ec3decd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1aa7fa0ffbd8a7e331541358aefa518c0bc9a90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173926"
 ---
-# <a name="systemservicemodelperformancecountersfailedduringupdate"></a><span data-ttu-id="f1f5a-102">System.ServiceModel.PerformanceCountersFailedDuringUpdate</span><span class="sxs-lookup"><span data-stu-id="f1f5a-102">System.ServiceModel.PerformanceCountersFailedDuringUpdate</span></span>
-<span data-ttu-id="f1f5a-103">System.ServiceModel.PerformanceCountersFailedDuringUpdate</span><span class="sxs-lookup"><span data-stu-id="f1f5a-103">System.ServiceModel.PerformanceCountersFailedDuringUpdate</span></span>  
+# <a name="systemservicemodelperformancecountersfailedduringupdate"></a><span data-ttu-id="c4fb8-102">System.ServiceModel.PerformanceCountersFailedDuringUpdate</span><span class="sxs-lookup"><span data-stu-id="c4fb8-102">System.ServiceModel.PerformanceCountersFailedDuringUpdate</span></span>
+<span data-ttu-id="c4fb8-103">System.ServiceModel.PerformanceCountersFailedDuringUpdate</span><span class="sxs-lookup"><span data-stu-id="c4fb8-103">System.ServiceModel.PerformanceCountersFailedDuringUpdate</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f1f5a-104">Opis</span><span class="sxs-lookup"><span data-stu-id="f1f5a-104">Description</span></span>  
- <span data-ttu-id="f1f5a-105">Wystąpił błąd podczas aktualizowania określony licznik wydajności.</span><span class="sxs-lookup"><span data-stu-id="f1f5a-105">An error occurred while updating the specified performance counter.</span></span> <span data-ttu-id="f1f5a-106">Ten licznik wydajności jest wyłączony.</span><span class="sxs-lookup"><span data-stu-id="f1f5a-106">This performance counter is disabled.</span></span>  
+## <a name="description"></a><span data-ttu-id="c4fb8-104">Opis</span><span class="sxs-lookup"><span data-stu-id="c4fb8-104">Description</span></span>  
+ <span data-ttu-id="c4fb8-105">Wystąpił błąd podczas aktualizowania określony licznik wydajności.</span><span class="sxs-lookup"><span data-stu-id="c4fb8-105">An error occurred while updating the specified performance counter.</span></span> <span data-ttu-id="c4fb8-106">Ten licznik wydajności jest wyłączony.</span><span class="sxs-lookup"><span data-stu-id="c4fb8-106">This performance counter is disabled.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1f5a-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f1f5a-107">See also</span></span>
-- [<span data-ttu-id="f1f5a-108">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="f1f5a-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="f1f5a-109">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="f1f5a-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="f1f5a-110">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="f1f5a-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="c4fb8-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c4fb8-107">See also</span></span>
+
+- [<span data-ttu-id="c4fb8-108">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="c4fb8-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="c4fb8-109">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="c4fb8-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="c4fb8-110">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="c4fb8-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

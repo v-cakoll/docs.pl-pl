@@ -6,22 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: b4a97c97-7f88-4a89-b1d1-cf2c0d087955
-ms.openlocfilehash: 2eb77d478292a5301c0782b860e46edd92ce8478
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b0f5ebdd6884c541c5d4c96cfeea33d378eeeca3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078514"
 ---
-# <a name="fonts-how-to-topics"></a><span data-ttu-id="123e8-102">Czcionki Tematy porad</span><span class="sxs-lookup"><span data-stu-id="123e8-102">Fonts How-to Topics</span></span>
-<span data-ttu-id="123e8-103">Tematy w tej sekcji pokazują, jak używać funkcji czcionek dostępnych w programie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="123e8-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="fonts-how-to-topics"></a><span data-ttu-id="698e0-102">Czcionki Tematy porad</span><span class="sxs-lookup"><span data-stu-id="698e0-102">Fonts How-to Topics</span></span>
+<span data-ttu-id="698e0-103">Tematy w tej sekcji pokazują, jak używać funkcji czcionek dostępnych w programie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="698e0-103">The topics in this section demonstrate how to use the font features included with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="123e8-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="123e8-104">In This Section</span></span>  
- [<span data-ttu-id="123e8-105">Wyliczanie czcionek systemowych</span><span class="sxs-lookup"><span data-stu-id="123e8-105">Enumerate System Fonts</span></span>](how-to-enumerate-system-fonts.md)  
- [<span data-ttu-id="123e8-106">Używanie klasy FontSizeConverter</span><span class="sxs-lookup"><span data-stu-id="123e8-106">Use the FontSizeConverter Class</span></span>](how-to-use-the-fontsizeconverter-class.md)  
+## <a name="in-this-section"></a><span data-ttu-id="698e0-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="698e0-104">In This Section</span></span>  
+ [<span data-ttu-id="698e0-105">Wyliczanie czcionek systemowych</span><span class="sxs-lookup"><span data-stu-id="698e0-105">Enumerate System Fonts</span></span>](how-to-enumerate-system-fonts.md)  
+ [<span data-ttu-id="698e0-106">Używanie klasy FontSizeConverter</span><span class="sxs-lookup"><span data-stu-id="698e0-106">Use the FontSizeConverter Class</span></span>](how-to-use-the-fontsizeconverter-class.md)  
   
-## <a name="see-also"></a><span data-ttu-id="123e8-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="123e8-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="698e0-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="698e0-107">See also</span></span>
+
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [<span data-ttu-id="123e8-108">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="123e8-108">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="123e8-109">Typografia w WPF</span><span class="sxs-lookup"><span data-stu-id="123e8-109">Typography in WPF</span></span>](typography-in-wpf.md)
+- [<span data-ttu-id="698e0-108">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="698e0-108">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="698e0-109">Typografia w WPF</span><span class="sxs-lookup"><span data-stu-id="698e0-109">Typography in WPF</span></span>](typography-in-wpf.md)

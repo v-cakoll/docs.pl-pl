@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11685e8ceba1638ce99a8c4c47b66d0ae2e67714
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 763f2872099fac87138b7e1ab058c60475892b0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107422"
 ---
-# <a name="icordebugmodulegetbaseaddress-method"></a><span data-ttu-id="8259b-102">ICorDebugModule::GetBaseAddress — Metoda</span><span class="sxs-lookup"><span data-stu-id="8259b-102">ICorDebugModule::GetBaseAddress Method</span></span>
-<span data-ttu-id="8259b-103">Pobiera adres podstawowy moduł.</span><span class="sxs-lookup"><span data-stu-id="8259b-103">Gets the base address of the module.</span></span>  
+# <a name="icordebugmodulegetbaseaddress-method"></a><span data-ttu-id="34470-102">ICorDebugModule::GetBaseAddress — Metoda</span><span class="sxs-lookup"><span data-stu-id="34470-102">ICorDebugModule::GetBaseAddress Method</span></span>
+<span data-ttu-id="34470-103">Pobiera adres podstawowy moduł.</span><span class="sxs-lookup"><span data-stu-id="34470-103">Gets the base address of the module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8259b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8259b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="34470-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="34470-104">Syntax</span></span>  
   
 ```  
 HRESULT GetBaseAddress(  
@@ -35,22 +35,20 @@ HRESULT GetBaseAddress(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8259b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8259b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="34470-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="34470-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="8259b-106">[out] A `CORDB_ADDRESS` określający adres podstawowy moduł.</span><span class="sxs-lookup"><span data-stu-id="8259b-106">[out] A `CORDB_ADDRESS` that specifies the base address of the module.</span></span>  
+ <span data-ttu-id="34470-106">[out] A `CORDB_ADDRESS` określający adres podstawowy moduł.</span><span class="sxs-lookup"><span data-stu-id="34470-106">[out] A `CORDB_ADDRESS` that specifies the base address of the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8259b-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8259b-107">Remarks</span></span>  
- <span data-ttu-id="8259b-108">Jeśli moduł jest natywny obraz (to znaczy, jeśli moduł został wyprodukowany przez generator obrazu natywnego, NGen.exe), jej adres podstawowy będzie mieć wartość zero.</span><span class="sxs-lookup"><span data-stu-id="8259b-108">If the module is a native image (that is, if the module was produced by the native image generator, NGen.exe), its base address will be zero.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="34470-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="34470-107">Remarks</span></span>  
+ <span data-ttu-id="34470-108">Jeśli moduł jest natywny obraz (to znaczy, jeśli moduł został wyprodukowany przez generator obrazu natywnego, NGen.exe), jej adres podstawowy będzie mieć wartość zero.</span><span class="sxs-lookup"><span data-stu-id="34470-108">If the module is a native image (that is, if the module was produced by the native image generator, NGen.exe), its base address will be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8259b-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8259b-109">Requirements</span></span>  
- <span data-ttu-id="8259b-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8259b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="34470-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="34470-109">Requirements</span></span>  
+ <span data-ttu-id="34470-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34470-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8259b-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8259b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="34470-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34470-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8259b-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8259b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="34470-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34470-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8259b-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8259b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="34470-113">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="34470-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8259b-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8259b-114">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="34470-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="34470-114">See also</span></span>

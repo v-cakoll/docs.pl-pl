@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65910745aa6291f93fd42d8f99a0e84dc1e38fdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e5fb3ab1d2dedb220fd4a486409512414233021
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176673"
 ---
-# <a name="eclrunhandledexception-enumeration"></a><span data-ttu-id="b314e-102">EClrUnhandledException — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b314e-102">EClrUnhandledException Enumeration</span></span>
-<span data-ttu-id="b314e-103">W tym artykule opisano dostępne opcje zarządzania wyjątki, które są nieobsługiwane w kodzie użytkownika.</span><span class="sxs-lookup"><span data-stu-id="b314e-103">Describes the available options for managing exceptions that are unhandled in user code.</span></span>  
+# <a name="eclrunhandledexception-enumeration"></a><span data-ttu-id="0a7e4-102">EClrUnhandledException — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="0a7e4-102">EClrUnhandledException Enumeration</span></span>
+<span data-ttu-id="0a7e4-103">W tym artykule opisano dostępne opcje zarządzania wyjątki, które są nieobsługiwane w kodzie użytkownika.</span><span class="sxs-lookup"><span data-stu-id="0a7e4-103">Describes the available options for managing exceptions that are unhandled in user code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b314e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b314e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a7e4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0a7e4-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,29 +35,30 @@ typedef enum {
 } EClrUnhandledException;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b314e-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="b314e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0a7e4-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="0a7e4-105">Members</span></span>  
   
-|<span data-ttu-id="b314e-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="b314e-106">Member</span></span>|<span data-ttu-id="b314e-107">Opis</span><span class="sxs-lookup"><span data-stu-id="b314e-107">Description</span></span>|  
+|<span data-ttu-id="0a7e4-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="0a7e4-106">Member</span></span>|<span data-ttu-id="0a7e4-107">Opis</span><span class="sxs-lookup"><span data-stu-id="0a7e4-107">Description</span></span>|  
 |------------|-----------------|  
-|`eRuntimeDeterminedPolicy`|<span data-ttu-id="b314e-108">Określa, że występuje zachowanie domyślne.</span><span class="sxs-lookup"><span data-stu-id="b314e-108">Specifies that the default behavior occurs.</span></span> <span data-ttu-id="b314e-109">Proces zostaje rozłączona.</span><span class="sxs-lookup"><span data-stu-id="b314e-109">The process is torn down.</span></span>|  
-|`eHostDeterminedPolicy`|<span data-ttu-id="b314e-110">Określa, że środowisko uruchomieniowe języka wspólnego (CLR) ignoruje nieobsłużone wyjątki i umożliwia hostowi ustalić żadnych dalszych akcji.</span><span class="sxs-lookup"><span data-stu-id="b314e-110">Specifies that the common language runtime (CLR) ignores unhandled exceptions and lets the host determine any further action.</span></span>|  
+|`eRuntimeDeterminedPolicy`|<span data-ttu-id="0a7e4-108">Określa, że występuje zachowanie domyślne.</span><span class="sxs-lookup"><span data-stu-id="0a7e4-108">Specifies that the default behavior occurs.</span></span> <span data-ttu-id="0a7e4-109">Proces zostaje rozłączona.</span><span class="sxs-lookup"><span data-stu-id="0a7e4-109">The process is torn down.</span></span>|  
+|`eHostDeterminedPolicy`|<span data-ttu-id="0a7e4-110">Określa, że środowisko uruchomieniowe języka wspólnego (CLR) ignoruje nieobsłużone wyjątki i umożliwia hostowi ustalić żadnych dalszych akcji.</span><span class="sxs-lookup"><span data-stu-id="0a7e4-110">Specifies that the common language runtime (CLR) ignores unhandled exceptions and lets the host determine any further action.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b314e-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b314e-111">Remarks</span></span>  
- <span data-ttu-id="b314e-112">Aby określić, czy środowisko CLR zachowują się jak wcześniejszych wersji, użyj `eHostDeterminedPolicy` elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="b314e-112">To specify that the CLR behave like earlier versions, use the `eHostDeterminedPolicy` member.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a7e4-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0a7e4-111">Remarks</span></span>  
+ <span data-ttu-id="0a7e4-112">Aby określić, czy środowisko CLR zachowują się jak wcześniejszych wersji, użyj `eHostDeterminedPolicy` elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="0a7e4-112">To specify that the CLR behave like earlier versions, use the `eHostDeterminedPolicy` member.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b314e-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b314e-113">Requirements</span></span>  
- <span data-ttu-id="b314e-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b314e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a7e4-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0a7e4-113">Requirements</span></span>  
+ <span data-ttu-id="0a7e4-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a7e4-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b314e-115">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b314e-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0a7e4-115">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0a7e4-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b314e-116">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b314e-116">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="0a7e4-116">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0a7e4-116">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b314e-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b314e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="0a7e4-117">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="0a7e4-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b314e-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b314e-118">See also</span></span>
-- [<span data-ttu-id="b314e-119">EClrFailure, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b314e-119">EClrFailure Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [<span data-ttu-id="b314e-120">EClrOperation, wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b314e-120">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [<span data-ttu-id="b314e-121">ICLRPolicyManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="b314e-121">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="b314e-122">SetUnhandledExceptionPolicy, metoda</span><span class="sxs-lookup"><span data-stu-id="b314e-122">SetUnhandledExceptionPolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)
-- [<span data-ttu-id="b314e-123">IHostPolicyManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="b314e-123">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [<span data-ttu-id="b314e-124">Hosting — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="b314e-124">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="0a7e4-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0a7e4-118">See also</span></span>
+
+- [<span data-ttu-id="0a7e4-119">EClrFailure — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="0a7e4-119">EClrFailure Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [<span data-ttu-id="0a7e4-120">EClrOperation — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="0a7e4-120">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [<span data-ttu-id="0a7e4-121">ICLRPolicyManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="0a7e4-121">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="0a7e4-122">SetUnhandledExceptionPolicy, metoda</span><span class="sxs-lookup"><span data-stu-id="0a7e4-122">SetUnhandledExceptionPolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)
+- [<span data-ttu-id="0a7e4-123">IHostPolicyManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="0a7e4-123">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [<span data-ttu-id="0a7e4-124">Hosting — Wyliczenia</span><span class="sxs-lookup"><span data-stu-id="0a7e4-124">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

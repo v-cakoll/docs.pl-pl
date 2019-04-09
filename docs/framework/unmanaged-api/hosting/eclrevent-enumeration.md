@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d66e010340d186eed2222ae2ba8cfb24b8e8d7b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13d564be68d6b49a1616be97710312f33f828d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176348"
 ---
-# <a name="eclrevent-enumeration"></a><span data-ttu-id="56d50-102">EClrEvent — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="56d50-102">EClrEvent Enumeration</span></span>
-<span data-ttu-id="56d50-103">Zawiera opis typowych zdarzeń środowiska uruchomieniowego (języka wspólnego CLR) języka, dla których hosta mogą rejestrować wywołania zwrotne.</span><span class="sxs-lookup"><span data-stu-id="56d50-103">Describes the common language runtime (CLR) events for which the host can register callbacks.</span></span>  
+# <a name="eclrevent-enumeration"></a><span data-ttu-id="35ad3-102">EClrEvent — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="35ad3-102">EClrEvent Enumeration</span></span>
+<span data-ttu-id="35ad3-103">Zawiera opis typowych zdarzeń środowiska uruchomieniowego (języka wspólnego CLR) języka, dla których hosta mogą rejestrować wywołania zwrotne.</span><span class="sxs-lookup"><span data-stu-id="35ad3-103">Describes the common language runtime (CLR) events for which the host can register callbacks.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="56d50-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="56d50-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="35ad3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="35ad3-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,32 +37,33 @@ typedef enum {
 } EClrEvent;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="56d50-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="56d50-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="35ad3-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="35ad3-105">Members</span></span>  
   
-|<span data-ttu-id="56d50-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="56d50-106">Member</span></span>|<span data-ttu-id="56d50-107">Opis</span><span class="sxs-lookup"><span data-stu-id="56d50-107">Description</span></span>|  
+|<span data-ttu-id="35ad3-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="35ad3-106">Member</span></span>|<span data-ttu-id="35ad3-107">Opis</span><span class="sxs-lookup"><span data-stu-id="35ad3-107">Description</span></span>|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|<span data-ttu-id="56d50-108">Określa krytyczny błąd środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="56d50-108">Specifies a fatal CLR error.</span></span>|  
-|`Event_DomainUnload`|<span data-ttu-id="56d50-109">Określa zwolnienie określonego <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="56d50-109">Specifies the unloading of a particular <xref:System.AppDomain>.</span></span>|  
-|`Event_MDAFired`|<span data-ttu-id="56d50-110">Określa komunikat zarządzane debugowanie Asystenta ustawień (MDA) został wygenerowany.</span><span class="sxs-lookup"><span data-stu-id="56d50-110">Specifies that a Managed Debugging Assistant (MDA) message has been generated.</span></span>|  
-|`Event_StackOverflow`|<span data-ttu-id="56d50-111">Określa, że wystąpił błąd przepełnienia stosu.</span><span class="sxs-lookup"><span data-stu-id="56d50-111">Specifies that a stack overflow error has occurred.</span></span>|  
+|`Event_ClrDisabled`|<span data-ttu-id="35ad3-108">Określa krytyczny błąd środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="35ad3-108">Specifies a fatal CLR error.</span></span>|  
+|`Event_DomainUnload`|<span data-ttu-id="35ad3-109">Określa zwolnienie określonego <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="35ad3-109">Specifies the unloading of a particular <xref:System.AppDomain>.</span></span>|  
+|`Event_MDAFired`|<span data-ttu-id="35ad3-110">Określa komunikat zarządzane debugowanie Asystenta ustawień (MDA) został wygenerowany.</span><span class="sxs-lookup"><span data-stu-id="35ad3-110">Specifies that a Managed Debugging Assistant (MDA) message has been generated.</span></span>|  
+|`Event_StackOverflow`|<span data-ttu-id="35ad3-111">Określa, że wystąpił błąd przepełnienia stosu.</span><span class="sxs-lookup"><span data-stu-id="35ad3-111">Specifies that a stack overflow error has occurred.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="56d50-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="56d50-112">Remarks</span></span>  
- <span data-ttu-id="56d50-113">Hosta można zarejestrować wywołania zwrotne dla każdego z typów zdarzeń, opisanego przez `EClrEvent` przez wywołanie metody [iclroneventmanager —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="56d50-113">The host can register callbacks for any of the event types described by `EClrEvent` by calling methods of the [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interface.</span></span> <span data-ttu-id="56d50-114">Host pobiera wskaźnik do tego interfejsu, wywołując [iclrcontrol::getclrmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="56d50-114">The host gets a pointer to this interface by calling the [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="35ad3-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="35ad3-112">Remarks</span></span>  
+ <span data-ttu-id="35ad3-113">Hosta można zarejestrować wywołania zwrotne dla każdego z typów zdarzeń, opisanego przez `EClrEvent` przez wywołanie metody [iclroneventmanager —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="35ad3-113">The host can register callbacks for any of the event types described by `EClrEvent` by calling methods of the [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interface.</span></span> <span data-ttu-id="35ad3-114">Host pobiera wskaźnik do tego interfejsu, wywołując [iclrcontrol::getclrmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="35ad3-114">The host gets a pointer to this interface by calling the [ICLRControl::GetCLRManager](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) method.</span></span>  
   
- <span data-ttu-id="56d50-115">`Event_CLRDisabled` i `Event_DomainUnload` zdarzenia można podnieść więcej niż jeden raz i inne wątki w celu sygnalizowania, że zwolnienie lub wyłączenie środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="56d50-115">The `Event_CLRDisabled` and `Event_DomainUnload` events can be raised more than once and from different threads to signal an unload or the disabling of the CLR.</span></span>  
+ <span data-ttu-id="35ad3-115">`Event_CLRDisabled` i `Event_DomainUnload` zdarzenia można podnieść więcej niż jeden raz i inne wątki w celu sygnalizowania, że zwolnienie lub wyłączenie środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="35ad3-115">The `Event_CLRDisabled` and `Event_DomainUnload` events can be raised more than once and from different threads to signal an unload or the disabling of the CLR.</span></span>  
   
- <span data-ttu-id="56d50-116">`Event_MDAFired` Zdarzeń wywołuje tworzenie [mdainfo —](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) wystąpienia, które zawiera szczegóły komunikatu MDA.</span><span class="sxs-lookup"><span data-stu-id="56d50-116">The `Event_MDAFired` event raises the creation of an [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) instance that contains the details of the MDA message.</span></span> <span data-ttu-id="56d50-117">Aby uzyskać więcej informacji na temat mda zobacz [diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span><span class="sxs-lookup"><span data-stu-id="56d50-117">For more information about MDAs, see [Diagnosing Errors with Managed Debugging Assistants](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span></span>  
+ <span data-ttu-id="35ad3-116">`Event_MDAFired` Zdarzeń wywołuje tworzenie [mdainfo —](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) wystąpienia, które zawiera szczegóły komunikatu MDA.</span><span class="sxs-lookup"><span data-stu-id="35ad3-116">The `Event_MDAFired` event raises the creation of an [MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) instance that contains the details of the MDA message.</span></span> <span data-ttu-id="35ad3-117">Aby uzyskać więcej informacji na temat mda zobacz [diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span><span class="sxs-lookup"><span data-stu-id="35ad3-117">For more information about MDAs, see [Diagnosing Errors with Managed Debugging Assistants](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="56d50-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="56d50-118">Requirements</span></span>  
- <span data-ttu-id="56d50-119">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56d50-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="35ad3-118">Wymagania</span><span class="sxs-lookup"><span data-stu-id="35ad3-118">Requirements</span></span>  
+ <span data-ttu-id="35ad3-119">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="35ad3-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="56d50-120">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="56d50-120">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="35ad3-120">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="35ad3-120">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="56d50-121">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="56d50-121">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="35ad3-121">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="35ad3-121">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="56d50-122">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="56d50-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="35ad3-122">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="35ad3-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="56d50-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="56d50-123">See also</span></span>
-- [<span data-ttu-id="56d50-124">IActionOnCLREvent, interfejs</span><span class="sxs-lookup"><span data-stu-id="56d50-124">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
-- [<span data-ttu-id="56d50-125">ICLRControl, interfejs</span><span class="sxs-lookup"><span data-stu-id="56d50-125">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="56d50-126">Hosting — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="56d50-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="35ad3-123">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="35ad3-123">See also</span></span>
+
+- [<span data-ttu-id="35ad3-124">IActionOnCLREvent — Interfejs</span><span class="sxs-lookup"><span data-stu-id="35ad3-124">IActionOnCLREvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)
+- [<span data-ttu-id="35ad3-125">ICLRControl — Interfejs</span><span class="sxs-lookup"><span data-stu-id="35ad3-125">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="35ad3-126">Hosting — Wyliczenia</span><span class="sxs-lookup"><span data-stu-id="35ad3-126">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

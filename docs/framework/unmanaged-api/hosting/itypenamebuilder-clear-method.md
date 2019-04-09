@@ -17,30 +17,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ff7cdaeb31ba05a53e2d3d28282835b450e57ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a4379a5f3c820889928f9008186b2f95b74b6da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173527"
 ---
-# <a name="itypenamebuilderclear-method"></a><span data-ttu-id="05d05-102">ITypeNameBuilder::Clear — Metoda</span><span class="sxs-lookup"><span data-stu-id="05d05-102">ITypeNameBuilder::Clear Method</span></span>
-<span data-ttu-id="05d05-103">Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="05d05-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderclear-method"></a><span data-ttu-id="f44ad-102">ITypeNameBuilder::Clear — Metoda</span><span class="sxs-lookup"><span data-stu-id="f44ad-102">ITypeNameBuilder::Clear Method</span></span>
+<span data-ttu-id="f44ad-103">Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="f44ad-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05d05-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="05d05-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f44ad-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f44ad-104">Syntax</span></span>  
   
 ```  
 HRESULT Clear ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="05d05-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="05d05-105">Requirements</span></span>  
- <span data-ttu-id="05d05-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05d05-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f44ad-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f44ad-105">Requirements</span></span>  
+ <span data-ttu-id="f44ad-106">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f44ad-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05d05-107">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="05d05-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f44ad-107">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f44ad-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="05d05-108">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="05d05-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f44ad-108">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f44ad-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="05d05-109">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05d05-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="f44ad-109">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="f44ad-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="05d05-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="05d05-110">See also</span></span>
-- [<span data-ttu-id="05d05-111">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="05d05-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f44ad-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f44ad-110">See also</span></span>
+
+- [<span data-ttu-id="f44ad-111">Hosting — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="f44ad-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -12,33 +12,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b13968e999fb737c954fc41ed2ec220e7894b73b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 279a87039c4cbc12c7ec5f734928c851185280f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175724"
 ---
-# <a name="icordebugilcode-interface"></a><span data-ttu-id="f72db-102">Interfejs ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="f72db-102">ICorDebugILCode Interface</span></span>
-<span data-ttu-id="f72db-103">[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="f72db-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode-interface"></a><span data-ttu-id="3a8ed-102">Interfejs ICorDebugILCode</span><span class="sxs-lookup"><span data-stu-id="3a8ed-102">ICorDebugILCode Interface</span></span>
+<span data-ttu-id="3a8ed-103">[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]</span><span class="sxs-lookup"><span data-stu-id="3a8ed-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="f72db-104">Reprezentuje segment kodu języka pośredniego (IL).</span><span class="sxs-lookup"><span data-stu-id="f72db-104">Represents a segment of intermediate language (IL) code.</span></span>  
+ <span data-ttu-id="3a8ed-104">Reprezentuje segment kodu języka pośredniego (IL).</span><span class="sxs-lookup"><span data-stu-id="3a8ed-104">Represents a segment of intermediate language (IL) code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="f72db-105">Metody</span><span class="sxs-lookup"><span data-stu-id="f72db-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="3a8ed-105">Metody</span><span class="sxs-lookup"><span data-stu-id="3a8ed-105">Methods</span></span>  
   
-|<span data-ttu-id="f72db-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="f72db-106">Method</span></span>|<span data-ttu-id="f72db-107">Opis</span><span class="sxs-lookup"><span data-stu-id="f72db-107">Description</span></span>|  
+|<span data-ttu-id="3a8ed-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="3a8ed-106">Method</span></span>|<span data-ttu-id="3a8ed-107">Opis</span><span class="sxs-lookup"><span data-stu-id="3a8ed-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="f72db-108">GetEHClauses, metoda</span><span class="sxs-lookup"><span data-stu-id="f72db-108">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|<span data-ttu-id="f72db-109">Zwraca wskaźnik do listy wyjątków, obsługa klauzule (EH), które są zdefiniowane dla tego IL.</span><span class="sxs-lookup"><span data-stu-id="f72db-109">Returns a pointer to a list of exception handling (EH) clauses that are defined for this IL.</span></span>|  
+|[<span data-ttu-id="3a8ed-108">GetEHClauses, metoda</span><span class="sxs-lookup"><span data-stu-id="3a8ed-108">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|<span data-ttu-id="3a8ed-109">Zwraca wskaźnik do listy wyjątków, obsługa klauzule (EH), które są zdefiniowane dla tego IL.</span><span class="sxs-lookup"><span data-stu-id="3a8ed-109">Returns a pointer to a list of exception handling (EH) clauses that are defined for this IL.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f72db-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f72db-110">Requirements</span></span>  
- <span data-ttu-id="f72db-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f72db-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a8ed-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3a8ed-110">Requirements</span></span>  
+ <span data-ttu-id="3a8ed-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3a8ed-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f72db-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f72db-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3a8ed-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3a8ed-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f72db-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f72db-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3a8ed-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3a8ed-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f72db-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f72db-114">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ **<span data-ttu-id="3a8ed-114">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="3a8ed-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f72db-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f72db-115">See also</span></span>
-- [<span data-ttu-id="f72db-116">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="f72db-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="f72db-117">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="f72db-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="3a8ed-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3a8ed-115">See also</span></span>
+
+- [<span data-ttu-id="3a8ed-116">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="3a8ed-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="3a8ed-117">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="3a8ed-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

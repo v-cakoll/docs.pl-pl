@@ -2,40 +2,41 @@
 title: '- (Dzielenie) (Jednostka SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: 42fc5e2a9f9f159a8a60973dbed6540b3188fba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ca63835a3be23137a1a40d6d6597083ae2128ac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094895"
 ---
-# <a name="-divide-entity-sql"></a><span data-ttu-id="e5d61-102">/ (Dzielenie) (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="e5d61-102">/ (Divide) (Entity SQL)</span></span>
-<span data-ttu-id="e5d61-103">Dzieli liczbę przez inny.</span><span class="sxs-lookup"><span data-stu-id="e5d61-103">Divides one number by another.</span></span>  
+# <a name="-divide-entity-sql"></a><span data-ttu-id="80f2d-102">/ (Dzielenie) (jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="80f2d-102">/ (Divide) (Entity SQL)</span></span>
+<span data-ttu-id="80f2d-103">Dzieli liczbę przez inny.</span><span class="sxs-lookup"><span data-stu-id="80f2d-103">Divides one number by another.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5d61-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e5d61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80f2d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="80f2d-104">Syntax</span></span>  
   
 ```  
 dividend / divisor  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="e5d61-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="e5d61-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="80f2d-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="80f2d-105">Arguments</span></span>  
  `dividend`  
- <span data-ttu-id="e5d61-106">Wyrażenie liczbowe, aby podzielić.</span><span class="sxs-lookup"><span data-stu-id="e5d61-106">The numeric expression to divide.</span></span> <span data-ttu-id="e5d61-107">`dividend` jest dowolne prawidłowe wyrażenie jednego z typów liczbowych.</span><span class="sxs-lookup"><span data-stu-id="e5d61-107">`dividend` is any valid expression of any one of the numeric data types.</span></span>  
+ <span data-ttu-id="80f2d-106">Wyrażenie liczbowe, aby podzielić.</span><span class="sxs-lookup"><span data-stu-id="80f2d-106">The numeric expression to divide.</span></span> `dividend` <span data-ttu-id="80f2d-107">jest dowolne prawidłowe wyrażenie jednego z typów liczbowych.</span><span class="sxs-lookup"><span data-stu-id="80f2d-107">is any valid expression of any one of the numeric data types.</span></span>  
   
  `divisor`  
- <span data-ttu-id="e5d61-108">Wyrażenie liczbowe do dzielenia dzielnej przez.</span><span class="sxs-lookup"><span data-stu-id="e5d61-108">The numeric expression to divide the dividend by.</span></span> <span data-ttu-id="e5d61-109">`divisor` jest dowolne prawidłowe wyrażenie jednego z typów liczbowych.</span><span class="sxs-lookup"><span data-stu-id="e5d61-109">`divisor` is any valid expression of any one of the numeric data types.</span></span>  
+ <span data-ttu-id="80f2d-108">Wyrażenie liczbowe do dzielenia dzielnej przez.</span><span class="sxs-lookup"><span data-stu-id="80f2d-108">The numeric expression to divide the dividend by.</span></span> `divisor` <span data-ttu-id="80f2d-109">jest dowolne prawidłowe wyrażenie jednego z typów liczbowych.</span><span class="sxs-lookup"><span data-stu-id="80f2d-109">is any valid expression of any one of the numeric data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="e5d61-110">Typy wyników</span><span class="sxs-lookup"><span data-stu-id="e5d61-110">Result Types</span></span>  
- <span data-ttu-id="e5d61-111">Typ danych będącą wynikiem promocji niejawnego typu dwa argumenty.</span><span class="sxs-lookup"><span data-stu-id="e5d61-111">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="e5d61-112">Aby uzyskać więcej informacji na temat podwyższania poziomu konwersjom typu niejawnego, zobacz [System typów](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="e5d61-112">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
+## <a name="result-types"></a><span data-ttu-id="80f2d-110">Typy wyników</span><span class="sxs-lookup"><span data-stu-id="80f2d-110">Result Types</span></span>  
+ <span data-ttu-id="80f2d-111">Typ danych będącą wynikiem promocji niejawnego typu dwa argumenty.</span><span class="sxs-lookup"><span data-stu-id="80f2d-111">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="80f2d-112">Aby uzyskać więcej informacji na temat podwyższania poziomu konwersjom typu niejawnego, zobacz [System typów](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="80f2d-112">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e5d61-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="e5d61-113">Example</span></span>  
- <span data-ttu-id="e5d61-114">Następujące zapytanie SQL jednostki używa / arytmetyczne operator dzielnikiem jeden numer innego.</span><span class="sxs-lookup"><span data-stu-id="e5d61-114">The following Entity SQL query uses the / arithmetic operator to divide one number by another.</span></span> <span data-ttu-id="e5d61-115">Zapytanie jest oparty na modelu sprzedaży AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="e5d61-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="e5d61-116">Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:</span><span class="sxs-lookup"><span data-stu-id="e5d61-116">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="80f2d-113">Przykład</span><span class="sxs-lookup"><span data-stu-id="80f2d-113">Example</span></span>  
+ <span data-ttu-id="80f2d-114">Następujące zapytanie SQL jednostki używa / arytmetyczne operator dzielnikiem jeden numer innego.</span><span class="sxs-lookup"><span data-stu-id="80f2d-114">The following Entity SQL query uses the / arithmetic operator to divide one number by another.</span></span> <span data-ttu-id="80f2d-115">Zapytanie jest oparty na modelu sprzedaży AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="80f2d-115">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="80f2d-116">Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:</span><span class="sxs-lookup"><span data-stu-id="80f2d-116">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="e5d61-117">Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="e5d61-117">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="80f2d-117">Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="80f2d-117">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="e5d61-118">Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:</span><span class="sxs-lookup"><span data-stu-id="e5d61-118">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="80f2d-118">Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:</span><span class="sxs-lookup"><span data-stu-id="80f2d-118">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#DIVIDE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#divide)]  
   
-## <a name="see-also"></a><span data-ttu-id="e5d61-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e5d61-119">See also</span></span>
-- [<span data-ttu-id="e5d61-120">Odwołanie do jednostki SQL</span><span class="sxs-lookup"><span data-stu-id="e5d61-120">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="80f2d-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="80f2d-119">See also</span></span>
+
+- [<span data-ttu-id="80f2d-120">Odwołanie do języka Entity SQL</span><span class="sxs-lookup"><span data-stu-id="80f2d-120">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

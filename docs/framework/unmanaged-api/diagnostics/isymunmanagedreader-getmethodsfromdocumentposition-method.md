@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f15e4c9b2421b9d2cafdbabf5f9ca12d1b8b9493
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 64d7f138094e03ca76ec78a50a6f37aa3d9ca2f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091736"
 ---
-# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="c16ef-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition — Metoda</span><span class="sxs-lookup"><span data-stu-id="c16ef-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
-<span data-ttu-id="c16ef-103">Zwraca tablicę z metod, z których każdy zawiera punkt przerwania na pozycji w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="c16ef-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
+# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="f02c3-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition — Metoda</span><span class="sxs-lookup"><span data-stu-id="f02c3-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
+<span data-ttu-id="f02c3-103">Zwraca tablicę z metod, z których każdy zawiera punkt przerwania na pozycji w dokumencie.</span><span class="sxs-lookup"><span data-stu-id="f02c3-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c16ef-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c16ef-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f02c3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f02c3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodsFromDocumentPosition (  
@@ -40,30 +40,31 @@ HRESULT GetMethodsFromDocumentPosition (
         length_is (*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c16ef-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c16ef-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f02c3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f02c3-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="c16ef-106">[in] Określony dokument.</span><span class="sxs-lookup"><span data-stu-id="c16ef-106">[in] The specified document.</span></span>  
+ <span data-ttu-id="f02c3-106">[in] Określony dokument.</span><span class="sxs-lookup"><span data-stu-id="f02c3-106">[in] The specified document.</span></span>  
   
  `line`  
- <span data-ttu-id="c16ef-107">[in] Wiersz określonego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="c16ef-107">[in] The line of the specified document.</span></span>  
+ <span data-ttu-id="f02c3-107">[in] Wiersz określonego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="f02c3-107">[in] The line of the specified document.</span></span>  
   
  `column`  
- <span data-ttu-id="c16ef-108">[in] Kolumna określonego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="c16ef-108">[in] The column of the specified document.</span></span>  
+ <span data-ttu-id="f02c3-108">[in] Kolumna określonego dokumentu.</span><span class="sxs-lookup"><span data-stu-id="f02c3-108">[in] The column of the specified document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="c16ef-109">[in] Rozmiar `pRetVal` tablicy.</span><span class="sxs-lookup"><span data-stu-id="c16ef-109">[in] The size of the `pRetVal` array.</span></span>  
+ <span data-ttu-id="f02c3-109">[in] Rozmiar `pRetVal` tablicy.</span><span class="sxs-lookup"><span data-stu-id="f02c3-109">[in] The size of the `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="c16ef-110">[out] Wskaźnik do zmiennej, która odbiera liczby elementów zwracanych w `pRetVal` tablicy.</span><span class="sxs-lookup"><span data-stu-id="c16ef-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
+ <span data-ttu-id="f02c3-110">[out] Wskaźnik do zmiennej, która odbiera liczby elementów zwracanych w `pRetVal` tablicy.</span><span class="sxs-lookup"><span data-stu-id="f02c3-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="c16ef-111">[out] Tablica wskaźników, z których każdy wskazuje [isymunmanagedmethod —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) obiekt, który reprezentuje metodę zawierającego punkt przerwania.</span><span class="sxs-lookup"><span data-stu-id="c16ef-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
+ <span data-ttu-id="f02c3-111">[out] Tablica wskaźników, z których każdy wskazuje [isymunmanagedmethod —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) obiekt, który reprezentuje metodę zawierającego punkt przerwania.</span><span class="sxs-lookup"><span data-stu-id="f02c3-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c16ef-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c16ef-112">Return Value</span></span>  
- <span data-ttu-id="c16ef-113">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="c16ef-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f02c3-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f02c3-112">Return Value</span></span>  
+ <span data-ttu-id="f02c3-113">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="f02c3-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c16ef-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c16ef-114">Requirements</span></span>  
- <span data-ttu-id="c16ef-115">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c16ef-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f02c3-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f02c3-114">Requirements</span></span>  
+ <span data-ttu-id="f02c3-115">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f02c3-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c16ef-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c16ef-116">See also</span></span>
-- [<span data-ttu-id="c16ef-117">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="c16ef-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f02c3-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f02c3-116">See also</span></span>
+
+- [<span data-ttu-id="f02c3-117">ISymUnmanagedReader — Interfejs</span><span class="sxs-lookup"><span data-stu-id="f02c3-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

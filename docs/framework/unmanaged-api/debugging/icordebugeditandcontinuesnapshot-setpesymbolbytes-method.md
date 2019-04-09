@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a898b20a92ea3256635a64332e4f86dcd92dd69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3691d8015f514cc20e63ad62f45e7317f56f72fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182094"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="ff3c2-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes — Metoda</span><span class="sxs-lookup"><span data-stu-id="ff3c2-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
-<span data-ttu-id="ff3c2-103">`SetPESymbolBytes` jest przestarzały.</span><span class="sxs-lookup"><span data-stu-id="ff3c2-103">`SetPESymbolBytes` is obsolete.</span></span> <span data-ttu-id="ff3c2-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="ff3c2-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpesymbolbytes-method"></a><span data-ttu-id="b8c8b-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes — Metoda</span><span class="sxs-lookup"><span data-stu-id="b8c8b-102">ICorDebugEditAndContinueSnapshot::SetPESymbolBytes Method</span></span>
+`SetPESymbolBytes` <span data-ttu-id="b8c8b-103">jest przestarzały.</span><span class="sxs-lookup"><span data-stu-id="b8c8b-103">is obsolete.</span></span> <span data-ttu-id="b8c8b-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="b8c8b-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ff3c2-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ff3c2-105">See also</span></span>
-- [<span data-ttu-id="ff3c2-106">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="ff3c2-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="b8c8b-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b8c8b-105">See also</span></span>
+
+- [<span data-ttu-id="b8c8b-106">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="b8c8b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

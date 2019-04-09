@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Verify that Strings Are w prawidłowym formacie adresu E-mail'
+title: 'Instrukcje: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy'
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ed0721f2bfa8e272822740cf26173c1592de428
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236651"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890504"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Instrukcje: Verify that Strings Are w prawidłowym formacie adresu E-mail
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Instrukcje: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ciąg jest w prawidłowym formacie adresu e-mail.  
 
 ## <a name="example"></a>Przykład  
@@ -59,8 +59,8 @@ W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ci�
 |`(?("")("".+?(?<!\\)""@)`|Jeśli pierwszym znakiem jest znak cudzysłowu, Dopasuj do początkowego znaku cudzysłowu, a następnie co najmniej jedno wystąpienie dowolnego znaku, w którym następuje końcowy znak cudzysłowu. Końcowy znak cudzysłowu nie muszą być poprzedzone znakiem ukośnika odwrotnego (\\). `(?<!` to początek asercja negatywna asercja wsteczna o zerowej szerokości. Ciąg powinien być zakończony znakiem (@).|  
 |<code>&#124;(([0-9a-z]</code>|Jeśli pierwszy znak nie jest znakiem cudzysłowu, Dopasuj dowolny znaku alfabetyczny od do z i od A do Z (wynik porównania jest uwzględniana wielkość liter) lub dowolną cyfrę z zakresu od 0 do 9.|  
 |`(\.(?!\.))`|Jeśli następny znak jest kropką, Dopasuj do niego. Jeśli nie jest to okres, przód na następny znak i kontynuuje dopasowywanie. `(?!\.)` jest to asercja negatywna asercja wyprzedzająca o zerowej szerokości, która zapobiega wyświetlaniu w lokalnym składniku adresu e-mail dwóch następujących po sobie kropek.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}\&#124;~\w]</code>|Jeśli następny znak nie jest kropką, Dopasuj dowolny znak słowa lub jednego z następujących znaków:-! #$% ' * +=? ^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}\&#124;~\w])*</code>|Dopasowania wzorca naprzemiennego (kropki następuje znak inny niż kropka, lub jeden z wielu znaków) zero lub więcej razy.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>| Jeśli następny znak nie jest kropką, Dopasuj dowolny znak słowa lub jednego z następujących znaków:-! #$% ' * +=? ^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>| Dopasowania wzorca naprzemiennego (kropki następuje znak inny niż kropka, lub jeden z wielu znaków) zero lub więcej razy.|  
 |`@`|Dopasowania znaku @.|  
 |`(?<=[0-9a-z])`|Kontynuuje dopasowywanie, jeśli znak, który poprzedza znak @, jest od A do Z, do z lub od 0 do 9. `(?<=[0-9a-z])` Konstrukcja definiuje potwierdzenia dodatnie asercje wsteczne o zerowej szerokości.|  
 |`(?(\[)`|Sprawdź, czy znak, który następuje po @, jest nawiasem otwierającym.|  
@@ -105,4 +105,4 @@ vbc /t:library RegexUtilities.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyrażeń regularnych programu .NET framework](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET Framework — Wyrażenia regularne](../../../docs/standard/base-types/regular-expressions.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d3dabd48ed63a023e830e1c2b8c983ef3af4519
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c6fbc3f41e95730e93bd907762dd8cd4205037c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187307"
 ---
-# <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a><span data-ttu-id="bce08-102">IMetaDataAssemblyEmit::SetManifestResourceProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="bce08-102">IMetaDataAssemblyEmit::SetManifestResourceProps Method</span></span>
-<span data-ttu-id="bce08-103">Modyfikuje określonego `ManifestResource` struktury metadanych.</span><span class="sxs-lookup"><span data-stu-id="bce08-103">Modifies the specified `ManifestResource` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a><span data-ttu-id="51c86-102">IMetaDataAssemblyEmit::SetManifestResourceProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="51c86-102">IMetaDataAssemblyEmit::SetManifestResourceProps Method</span></span>
+<span data-ttu-id="51c86-103">Modyfikuje określonego `ManifestResource` struktury metadanych.</span><span class="sxs-lookup"><span data-stu-id="51c86-103">Modifies the specified `ManifestResource` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bce08-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="bce08-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="51c86-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="51c86-104">Syntax</span></span>  
   
 ```  
 HRESULT SetManifestResourceProps (  
@@ -38,30 +38,31 @@ HRESULT SetManifestResourceProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bce08-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="bce08-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="51c86-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="51c86-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="bce08-106">[in] Token, który określa `ManifestResource` struktury metadanych do zmodyfikowania.</span><span class="sxs-lookup"><span data-stu-id="bce08-106">[in] The token that specifies the `ManifestResource` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="51c86-106">[in] Token, który określa `ManifestResource` struktury metadanych do zmodyfikowania.</span><span class="sxs-lookup"><span data-stu-id="51c86-106">[in] The token that specifies the `ManifestResource` metadata structure to be modified.</span></span>  
   
  `tkImplementation`  
- <span data-ttu-id="bce08-107">[in] Token typu `File` lub `AssemblyRef`, która jest mapowana na potrzeby dostawcy zasobów.</span><span class="sxs-lookup"><span data-stu-id="bce08-107">[in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.</span></span>  
+ <span data-ttu-id="51c86-107">[in] Token typu `File` lub `AssemblyRef`, która jest mapowana na potrzeby dostawcy zasobów.</span><span class="sxs-lookup"><span data-stu-id="51c86-107">[in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.</span></span>  
   
  `dwOffset`  
- <span data-ttu-id="bce08-108">[in] Przesunięcie początku zasobu w pliku.</span><span class="sxs-lookup"><span data-stu-id="bce08-108">[in] The offset to the beginning of the resource within the file.</span></span>  
+ <span data-ttu-id="51c86-108">[in] Przesunięcie początku zasobu w pliku.</span><span class="sxs-lookup"><span data-stu-id="51c86-108">[in] The offset to the beginning of the resource within the file.</span></span>  
   
  `dwResourceFlags`  
- <span data-ttu-id="bce08-109">[in] Bitowa kombinacja wartości flagi, które określają atrybuty zasobu.</span><span class="sxs-lookup"><span data-stu-id="bce08-109">[in] A bitwise combination of flag values that specify the attributes of the resource.</span></span>  
+ <span data-ttu-id="51c86-109">[in] Bitowa kombinacja wartości flagi, które określają atrybuty zasobu.</span><span class="sxs-lookup"><span data-stu-id="51c86-109">[in] A bitwise combination of flag values that specify the attributes of the resource.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bce08-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="bce08-110">Remarks</span></span>  
- <span data-ttu-id="bce08-111">Aby utworzyć `ManifestResource` struktury metadanych, użyj [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="bce08-111">To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="51c86-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="51c86-110">Remarks</span></span>  
+ <span data-ttu-id="51c86-111">Aby utworzyć `ManifestResource` struktury metadanych, użyj [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="51c86-111">To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bce08-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bce08-112">Requirements</span></span>  
- <span data-ttu-id="bce08-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bce08-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="51c86-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="51c86-112">Requirements</span></span>  
+ <span data-ttu-id="51c86-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="51c86-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bce08-114">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="bce08-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="51c86-114">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="51c86-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bce08-115">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bce08-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="51c86-115">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="51c86-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bce08-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bce08-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="51c86-116">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="51c86-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="bce08-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bce08-117">See also</span></span>
-- [<span data-ttu-id="bce08-118">IMetaDataAssemblyEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="bce08-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="51c86-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="51c86-117">See also</span></span>
+
+- [<span data-ttu-id="51c86-118">IMetaDataAssemblyEmit — Interfejs</span><span class="sxs-lookup"><span data-stu-id="51c86-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

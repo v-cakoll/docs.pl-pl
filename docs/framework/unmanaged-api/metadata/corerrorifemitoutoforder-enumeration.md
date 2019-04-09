@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 628ca1b555d80319312450d784981cfed1bda947
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160449"
 ---
-# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="86eb2-102">CorErrorIfEmitOutOfOrder — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="86eb2-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
-<span data-ttu-id="86eb2-103">Zawiera wartości flagi, które określają warunki, w których mają być generowane metadanych jest emitowane poza kolejnością komunikat o błędzie.</span><span class="sxs-lookup"><span data-stu-id="86eb2-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
+# <a name="corerrorifemitoutoforder-enumeration"></a><span data-ttu-id="b271d-102">CorErrorIfEmitOutOfOrder — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="b271d-102">CorErrorIfEmitOutOfOrder Enumeration</span></span>
+<span data-ttu-id="b271d-103">Zawiera wartości flagi, które określają warunki, w których mają być generowane metadanych jest emitowane poza kolejnością komunikat o błędzie.</span><span class="sxs-lookup"><span data-stu-id="b271d-103">Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86eb2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="86eb2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b271d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b271d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorErrorIfEmitOutOfOrder {  
@@ -43,25 +43,26 @@ typedef enum CorErrorIfEmitOutOfOrder {
 } CorErrorIfEmitOutOfOrder;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="86eb2-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="86eb2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="b271d-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="b271d-105">Members</span></span>  
   
-|<span data-ttu-id="86eb2-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="86eb2-106">Member</span></span>|<span data-ttu-id="86eb2-107">Opis</span><span class="sxs-lookup"><span data-stu-id="86eb2-107">Description</span></span>|  
+|<span data-ttu-id="b271d-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="b271d-106">Member</span></span>|<span data-ttu-id="b271d-107">Opis</span><span class="sxs-lookup"><span data-stu-id="b271d-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|<span data-ttu-id="86eb2-108">Wskazuje zachowanie domyślne, które generują komunikaty o błędach.</span><span class="sxs-lookup"><span data-stu-id="86eb2-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderNone`|<span data-ttu-id="86eb2-109">Wskazuje, że kompilator nie powinna generować komunikaty o błędach.</span><span class="sxs-lookup"><span data-stu-id="86eb2-109">Indicates that the compiler should not generate error messages.</span></span>|  
-|`MDErrorOutOfOrderAll`|<span data-ttu-id="86eb2-110">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy pola, właściwości, zdarzenia, metody lub parametru jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="86eb2-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
-|`MDMethodOutOfOrder`|<span data-ttu-id="86eb2-111">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy metoda jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="86eb2-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
-|`MDFieldOutOfOrder`|<span data-ttu-id="86eb2-112">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy pole jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="86eb2-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
-|`MDParamOutOfOrder`|<span data-ttu-id="86eb2-113">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy parametr jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="86eb2-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
-|`MDPropertyOutOfOrder`|<span data-ttu-id="86eb2-114">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy właściwość jest emitowana poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="86eb2-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
-|`MDEventOutOfOrder`|<span data-ttu-id="86eb2-115">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy zdarzenie jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="86eb2-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
+|`MDErrorOutOfOrderDefault`|<span data-ttu-id="b271d-108">Wskazuje zachowanie domyślne, które generują komunikaty o błędach.</span><span class="sxs-lookup"><span data-stu-id="b271d-108">Indicates the default behavior, which does not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderNone`|<span data-ttu-id="b271d-109">Wskazuje, że kompilator nie powinna generować komunikaty o błędach.</span><span class="sxs-lookup"><span data-stu-id="b271d-109">Indicates that the compiler should not generate error messages.</span></span>|  
+|`MDErrorOutOfOrderAll`|<span data-ttu-id="b271d-110">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy pola, właściwości, zdarzenia, metody lub parametru jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="b271d-110">Indicates that the compiler should generate an error message when a field, property, event, method, or parameter is emitted out of order.</span></span>|  
+|`MDMethodOutOfOrder`|<span data-ttu-id="b271d-111">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy metoda jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="b271d-111">Indicates that the compiler should generate an error message when a method is emitted out of order.</span></span>|  
+|`MDFieldOutOfOrder`|<span data-ttu-id="b271d-112">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy pole jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="b271d-112">Indicates that the compiler should generate an error message when a field is emitted out of order.</span></span>|  
+|`MDParamOutOfOrder`|<span data-ttu-id="b271d-113">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy parametr jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="b271d-113">Indicates that the compiler should generate an error message when a parameter is emitted out of order.</span></span>|  
+|`MDPropertyOutOfOrder`|<span data-ttu-id="b271d-114">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy właściwość jest emitowana poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="b271d-114">Indicates that the compiler should generate an error message when a property is emitted out of order.</span></span>|  
+|`MDEventOutOfOrder`|<span data-ttu-id="b271d-115">Wskazuje, czy kompilator powinien generować komunikat o błędzie, gdy zdarzenie jest emitowane poza kolejnością.</span><span class="sxs-lookup"><span data-stu-id="b271d-115">Indicates that the compiler should generate an error message when an event is emitted out of order.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="86eb2-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="86eb2-116">Requirements</span></span>  
- <span data-ttu-id="86eb2-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86eb2-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b271d-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b271d-116">Requirements</span></span>  
+ <span data-ttu-id="b271d-117">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b271d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86eb2-118">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="86eb2-118">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="b271d-118">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="b271d-118">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="86eb2-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86eb2-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="b271d-119">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="b271d-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="86eb2-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="86eb2-120">See also</span></span>
-- [<span data-ttu-id="86eb2-121">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="86eb2-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b271d-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b271d-120">See also</span></span>
+
+- [<span data-ttu-id="b271d-121">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="b271d-121">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

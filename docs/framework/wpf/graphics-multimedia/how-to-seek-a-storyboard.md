@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyszukaj scenorys'
+title: 'Instrukcje: Wyszukiwanie scenorysu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,27 @@ helpviewer_keywords:
 - Storyboards [WPF], seeking
 - seeking Storyboards [WPF]
 ms.assetid: 887bb39a-0c2a-4ae8-956d-1d9f6f8ebbfc
-ms.openlocfilehash: 7553550f406cc72603aa9f65e4233a13329223a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a57272c17a5bc6f5baaa21fb77233fc5693d1914
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131667"
 ---
-# <a name="how-to-seek-a-storyboard"></a><span data-ttu-id="c0c94-102">Instrukcje: Wyszukaj scenorys</span><span class="sxs-lookup"><span data-stu-id="c0c94-102">How to: Seek a Storyboard</span></span>
-<span data-ttu-id="c0c94-103">Poniższy przykład pokazuje, jak używać <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metody <xref:System.Windows.Media.Animation.Storyboard> aby przejść do dowolnego położenia w animacji scenorysu.</span><span class="sxs-lookup"><span data-stu-id="c0c94-103">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> method of a <xref:System.Windows.Media.Animation.Storyboard> to jump to any position in a storyboard animation.</span></span>  
+# <a name="how-to-seek-a-storyboard"></a><span data-ttu-id="b9f1f-102">Instrukcje: Wyszukiwanie scenorysu</span><span class="sxs-lookup"><span data-stu-id="b9f1f-102">How to: Seek a Storyboard</span></span>
+<span data-ttu-id="b9f1f-103">Poniższy przykład pokazuje, jak używać <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metody <xref:System.Windows.Media.Animation.Storyboard> aby przejść do dowolnego położenia w animacji scenorysu.</span><span class="sxs-lookup"><span data-stu-id="b9f1f-103">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> method of a <xref:System.Windows.Media.Animation.Storyboard> to jump to any position in a storyboard animation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c0c94-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="c0c94-104">Example</span></span>  
- <span data-ttu-id="c0c94-105">Poniżej znajduje się kod XAML znaczników dla przykładu.</span><span class="sxs-lookup"><span data-stu-id="c0c94-105">Below is the XAML markup for the sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="b9f1f-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="b9f1f-104">Example</span></span>  
+ <span data-ttu-id="b9f1f-105">Poniżej znajduje się kod XAML znaczników dla przykładu.</span><span class="sxs-lookup"><span data-stu-id="b9f1f-105">Below is the XAML markup for the sample.</span></span>  
   
  [!code-xaml[SeekStoryboard_snip#SeekStoryboardExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/SeekStoryboard_snip/CSharp/SeekStoryboardExample.xaml#seekstoryboardexamplewholepage)]  
   
-## <a name="example"></a><span data-ttu-id="c0c94-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="c0c94-106">Example</span></span>  
- <span data-ttu-id="c0c94-107">Poniżej przedstawiono kod używany za pomocą powyższego kodu XAML.</span><span class="sxs-lookup"><span data-stu-id="c0c94-107">Below is the code used with the XAML code above.</span></span>  
+## <a name="example"></a><span data-ttu-id="b9f1f-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="b9f1f-106">Example</span></span>  
+ <span data-ttu-id="b9f1f-107">Poniżej przedstawiono kod używany za pomocą powyższego kodu XAML.</span><span class="sxs-lookup"><span data-stu-id="b9f1f-107">Below is the code used with the XAML code above.</span></span>  
   
  [!code-csharp[SeekStoryboard_snip#SeekStoryboardCodeBehindExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/SeekStoryboard_snip/CSharp/SeekStoryboardExample.xaml.cs#seekstoryboardcodebehindexamplewholepage)]
  [!code-vb[SeekStoryboard_snip#SeekStoryboardCodeBehindExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SeekStoryboard_snip/VisualBasic/SeekStoryboardExample.xaml.vb#seekstoryboardcodebehindexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="c0c94-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c0c94-108">See also</span></span>
-- [<span data-ttu-id="c0c94-109">Synchroniczne wyszukiwanie scenorysu</span><span class="sxs-lookup"><span data-stu-id="c0c94-109">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)
+## <a name="see-also"></a><span data-ttu-id="b9f1f-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b9f1f-108">See also</span></span>
+
+- [<span data-ttu-id="b9f1f-109">Synchroniczne wyszukiwanie scenorysu</span><span class="sxs-lookup"><span data-stu-id="b9f1f-109">Seek a Storyboard Synchronously</span></span>](how-to-seek-a-storyboard-synchronously.md)

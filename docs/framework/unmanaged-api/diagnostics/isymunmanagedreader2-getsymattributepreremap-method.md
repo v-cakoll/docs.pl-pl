@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 258d6967d1586974a4258e7906fd71db6c461b07
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 543a8015e944333942b619060059273577902a74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110295"
 ---
-# <a name="isymunmanagedreader2getsymattributepreremap-method"></a><span data-ttu-id="d01b7-102">ISymUnmanagedReader2::GetSymAttributePreRemap — Metoda</span><span class="sxs-lookup"><span data-stu-id="d01b7-102">ISymUnmanagedReader2::GetSymAttributePreRemap Method</span></span>
-<span data-ttu-id="d01b7-103">Pobiera atrybut niestandardowy na podstawie jego nazwy.</span><span class="sxs-lookup"><span data-stu-id="d01b7-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="d01b7-104">W przeciwieństwie do metadanych atrybutów niestandardowych te atrybuty są przechowywane w magazynie symboli.</span><span class="sxs-lookup"><span data-stu-id="d01b7-104">Unlike metadata custom attributes, these attributes are held in the symbol store.</span></span>  
+# <a name="isymunmanagedreader2getsymattributepreremap-method"></a><span data-ttu-id="b518d-102">ISymUnmanagedReader2::GetSymAttributePreRemap — Metoda</span><span class="sxs-lookup"><span data-stu-id="b518d-102">ISymUnmanagedReader2::GetSymAttributePreRemap Method</span></span>
+<span data-ttu-id="b518d-103">Pobiera atrybut niestandardowy na podstawie jego nazwy.</span><span class="sxs-lookup"><span data-stu-id="b518d-103">Gets a custom attribute based upon its name.</span></span> <span data-ttu-id="b518d-104">W przeciwieństwie do metadanych atrybutów niestandardowych te atrybuty są przechowywane w magazynie symboli.</span><span class="sxs-lookup"><span data-stu-id="b518d-104">Unlike metadata custom attributes, these attributes are held in the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d01b7-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="d01b7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b518d-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="b518d-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSymAttributePreRemap(  
@@ -39,27 +39,28 @@ HRESULT GetSymAttributePreRemap(
         length_is(*pcBuffer)] BYTE buffer[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d01b7-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="d01b7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b518d-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="b518d-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="d01b7-107">[in] Token metadanych elementu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="d01b7-107">[in] The metadata token of the parent.</span></span>  
+ <span data-ttu-id="b518d-107">[in] Token metadanych elementu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="b518d-107">[in] The metadata token of the parent.</span></span>  
   
  `name`  
- <span data-ttu-id="d01b7-108">[in] Wskaźnik do `WCHAR` zawierający nazwę.</span><span class="sxs-lookup"><span data-stu-id="d01b7-108">[in] A pointer to a `WCHAR` that contains the name.</span></span>  
+ <span data-ttu-id="b518d-108">[in] Wskaźnik do `WCHAR` zawierający nazwę.</span><span class="sxs-lookup"><span data-stu-id="b518d-108">[in] A pointer to a `WCHAR` that contains the name.</span></span>  
   
  `cBuffer`  
- <span data-ttu-id="d01b7-109">[in] A `ULONG32` oznacza rozmiar `buffer` tablicy.</span><span class="sxs-lookup"><span data-stu-id="d01b7-109">[in] A `ULONG32` that indicates the size of the `buffer` array.</span></span>  
+ <span data-ttu-id="b518d-109">[in] A `ULONG32` oznacza rozmiar `buffer` tablicy.</span><span class="sxs-lookup"><span data-stu-id="b518d-109">[in] A `ULONG32` that indicates the size of the `buffer` array.</span></span>  
   
  `pcBuffer`  
- <span data-ttu-id="d01b7-110">[out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać bajtów atrybutu.</span><span class="sxs-lookup"><span data-stu-id="d01b7-110">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.</span></span>  
+ <span data-ttu-id="b518d-110">[out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać bajtów atrybutu.</span><span class="sxs-lookup"><span data-stu-id="b518d-110">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.</span></span>  
   
  `buffer`  
- <span data-ttu-id="d01b7-111">[out] Wskaźnik do buforu, który otrzymuje bajtów atrybutu.</span><span class="sxs-lookup"><span data-stu-id="d01b7-111">[out] A pointer to the buffer that receives the attribute bytes.</span></span>  
+ <span data-ttu-id="b518d-111">[out] Wskaźnik do buforu, który otrzymuje bajtów atrybutu.</span><span class="sxs-lookup"><span data-stu-id="b518d-111">[out] A pointer to the buffer that receives the attribute bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d01b7-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="d01b7-112">Return Value</span></span>  
- <span data-ttu-id="d01b7-113">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="d01b7-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b518d-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="b518d-112">Return Value</span></span>  
+ <span data-ttu-id="b518d-113">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="b518d-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d01b7-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d01b7-114">Requirements</span></span>  
- <span data-ttu-id="d01b7-115">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d01b7-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b518d-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b518d-114">Requirements</span></span>  
+ <span data-ttu-id="b518d-115">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b518d-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d01b7-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d01b7-116">See also</span></span>
-- [<span data-ttu-id="d01b7-117">ISymUnmanagedReader2, interfejs</span><span class="sxs-lookup"><span data-stu-id="d01b7-117">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b518d-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b518d-116">See also</span></span>
+
+- [<span data-ttu-id="b518d-117">ISymUnmanagedReader2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="b518d-117">ISymUnmanagedReader2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

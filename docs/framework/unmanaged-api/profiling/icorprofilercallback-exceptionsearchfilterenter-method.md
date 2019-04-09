@@ -17,36 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9dd6345cb8b930136f1219144540fde96429a71b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: be91772f07e1a06c7df5b16fd70812e6a522d736
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192592"
 ---
-# <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="b0454-102">ICorProfilerCallback::ExceptionSearchFilterEnter — Metoda</span><span class="sxs-lookup"><span data-stu-id="b0454-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
-<span data-ttu-id="b0454-103">Powiadamia program profilujący, że faza wyszukiwania dla obsługi wyjątków rozpoczął wykonywanie filtru wyjątków zdefiniowanych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="b0454-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a><span data-ttu-id="b550c-102">ICorProfilerCallback::ExceptionSearchFilterEnter — Metoda</span><span class="sxs-lookup"><span data-stu-id="b550c-102">ICorProfilerCallback::ExceptionSearchFilterEnter Method</span></span>
+<span data-ttu-id="b550c-103">Powiadamia program profilujący, że faza wyszukiwania dla obsługi wyjątków rozpoczął wykonywanie filtru wyjątków zdefiniowanych przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="b550c-103">Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0454-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b0454-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b550c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b550c-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionSearchFilterEnter(  
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b0454-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b0454-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b550c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b550c-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="b0454-106">[in] Identyfikator funkcji, która zawiera filtr.</span><span class="sxs-lookup"><span data-stu-id="b0454-106">[in] The ID of the function that contains the filter.</span></span>  
+ <span data-ttu-id="b550c-106">[in] Identyfikator funkcji, która zawiera filtr.</span><span class="sxs-lookup"><span data-stu-id="b550c-106">[in] The ID of the function that contains the filter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0454-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b0454-107">Requirements</span></span>  
- <span data-ttu-id="b0454-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0454-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b550c-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b550c-107">Requirements</span></span>  
+ <span data-ttu-id="b550c-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b550c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0454-109">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b0454-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b550c-109">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b550c-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b0454-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b0454-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b550c-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b550c-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b0454-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0454-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="b550c-111">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="b550c-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b0454-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b0454-112">See also</span></span>
-- [<span data-ttu-id="b0454-113">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="b0454-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="b0454-114">ExceptionSearchFilterLeave, metoda</span><span class="sxs-lookup"><span data-stu-id="b0454-114">ExceptionSearchFilterLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)
+## <a name="see-also"></a><span data-ttu-id="b550c-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b550c-112">See also</span></span>
+
+- [<span data-ttu-id="b550c-113">ICorProfilerCallback — Interfejs</span><span class="sxs-lookup"><span data-stu-id="b550c-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="b550c-114">ExceptionSearchFilterLeave, metoda</span><span class="sxs-lookup"><span data-stu-id="b550c-114">ExceptionSearchFilterLeave Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)

@@ -2,12 +2,12 @@
 title: klucz jednostki
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140117"
 ---
 # <a name="entity-key"></a>klucz jednostki
 *Klucz jednostki* jest [właściwość](../../../../docs/framework/data/adonet/property.md) lub zbiór właściwości [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) które są używane w celu ustalenia tożsamości. Właściwości, które tworzą klucz jednostki są wybierane w czasie projektowania. Wartości właściwości klucza jednostki musi jednoznacznie identyfikować wystąpienia typu jednostki, w ramach [zestaw jednostek](../../../../docs/framework/data/adonet/entity-set.md) w czasie wykonywania. Należy wybrać właściwości, które tworzą klucz jednostki w celu zagwarantowania unikatowości wystąpień w zestawie jednostek.  
@@ -40,5 +40,6 @@ ms.locfileid: "58408967"
  Za pomocą `Name` i `Address` jednostki klucz jest wyboru rozsądny, ponieważ dwóch autorów o takiej samej nazwie jest mało prawdopodobne na żywo na ten sam adres. Jednak ten wybór dla klucza jednostki absolutnie nie gwarantuje klucze unikatowe jednostki w zestawie jednostek. Dodawanie właściwości, takie jak `AuthorId`, który może być używany do jednoznacznego identyfikowania Autor może w tym przypadku zalecane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Rysuj wypełnioną elipsę w formularzu Windows'
+title: 'Instrukcje: Rysowanie wypełnionej elipsy w formularzu systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171011"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Instrukcje: Rysuj wypełnioną elipsę w formularzu Windows
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Instrukcje: Rysowanie wypełnionej elipsy w formularzu systemu Windows
 W tym przykładzie Rysuje wypełnioną elipsę w formularzu.  
   
 ## <a name="example"></a>Przykład  
@@ -37,7 +37,8 @@ W tym przykładzie Rysuje wypełnioną elipsę w formularzu.
  Zawsze powinna wywołać <xref:System.IDisposable.Dispose%2A> na wszystkie obiekty, których wartość użycia zasobów systemowych, takich jak <xref:System.Drawing.Brush> i <xref:System.Drawing.Graphics> obiektów.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
+
+- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)
 - [Wprowadzenie do programowania grafiki](getting-started-with-graphics-programming.md)
 - [Przenikanie alfa linii i wypełnień](alpha-blending-lines-and-fills.md)
 - [Używanie pędzla do wypełniania kształtów](using-a-brush-to-fill-shapes.md)

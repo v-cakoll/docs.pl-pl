@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie ikon dla kontrolki ListView formularzy Windows'
+title: 'Instrukcje: wyświetlanie ikon dla kontrolki ListView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], with ListView control
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
-ms.openlocfilehash: ab515da932a4c73410e6ef22bec5ba8af200f270
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e01035a356c0293959676cd5907d2234bbf79f16
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151388"
 ---
-# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Instrukcje: Wyświetlanie ikon dla kontrolki ListView formularzy Windows
+# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>Instrukcje: wyświetlanie ikon dla kontrolki ListView formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.ListView> formant może wyświetlać ikony z trzema list obrazów. Widoki List, szczegóły i SmallIcon wyświetlanie obrazów z listy obrazów, określone w <xref:System.Windows.Forms.ListView.SmallImageList%2A> właściwości. Wyświetl LargeIcon wyświetla obrazy z listy obrazów, określone w <xref:System.Windows.Forms.ListView.LargeImageList%2A> właściwości. Widok listy można także wyświetlać dodatkowego zestawu ikon w <xref:System.Windows.Forms.ListView.StateImageList%2A> właściwości obok duże lub małe ikony. Aby uzyskać więcej informacji na temat list obrazów, zobacz [składnika ImageList](imagelist-component-windows-forms.md) i [jak: Dodawanie lub usuwanie obrazów za pomocą Windows składnika ImageList formularzy](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
 ### <a name="to-display-images-in-a-list-view"></a>Aby wyświetlić obrazy w widoku listy  
@@ -38,8 +38,9 @@ Formularze Windows <xref:System.Windows.Forms.ListView> formant może wyświetla
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#42)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)
-- [Instrukcje: Dodawanie i usuwanie elementów za pomocą formantu ListView formularzy Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Instrukcje: Dodawanie kolumn do formantu ListView formularzy Windows](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 - [ImageList, składnik](imagelist-component-windows-forms.md)

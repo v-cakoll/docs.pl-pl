@@ -2,12 +2,12 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1e2b3eacbc845ad40030f3a48be2ef93c4ddbd8c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135736"
 ---
 # <a name="backuplist"></a>\<backupList>
 Reprezentuje sekcję konfiguracji dla definiowania listy kopii zapasowych, która wylicza zestaw punktów końcowych, które chcesz, aby usługa routingu do użycia w przypadku, gdy nie można nawiązać połączenia z podstawowego punktu końcowego. Jeśli pierwszy punkt końcowy na liście nie działa, usługa routingu będzie automatycznie przełączać się kolejny na liście.  Dzięki temu możesz szybko dodać niezawodność do Twojej aplikacji bez konieczności nauki aplikacji klienckiej sposobu obsługi złożonych wzorów lub wszystkich usług wdrożonym.  
@@ -48,7 +48,7 @@ Reprezentuje sekcję konfiguracji dla definiowania listy kopii zapasowych, któr
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Lista punktów końcowych kopii zapasowej.|  
+|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Lista punktów końcowych kopii zapasowej.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ta sekcja zawiera uporządkowaną kolekcję punktów końcowych, które wiadomości zostaną przekazane w przypadku wyjątku komunikacji podczas wysyłania do podstawowego punktu końcowego.  
@@ -74,4 +74,5 @@ Reprezentuje sekcję konfiguracji dla definiowania listy kopii zapasowych, któr
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

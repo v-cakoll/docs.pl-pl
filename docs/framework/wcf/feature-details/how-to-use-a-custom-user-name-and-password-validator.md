@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła'
+title: 'Instrukcje: używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160254"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Instrukcje: Używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Instrukcje: używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła
 Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Windows Communication Foundation (WCF) używa Windows do weryfikowania nazwy użytkownika i hasła. Jednak WCF umożliwia niestandardowych użytkownika nazwy i hasła schematy uwierzytelniania, znany także jako *moduły weryfikacji*. Aby dołączyć moduł weryfikacji nazwy i hasła użytkownika niestandardowego, należy utworzyć klasę, która pochodzi od klasy <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , a następnie skonfigurować go.  
   
  Dla przykładowej aplikacji, zobacz [modułu weryfikacji hasła nazwy użytkownika](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -118,6 +118,7 @@ Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Win
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
-- [Instrukcje: Użycie dostawcy członkostwa platformy ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Instrukcje: używanie dostawcy członkostwa platformy ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
 - [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

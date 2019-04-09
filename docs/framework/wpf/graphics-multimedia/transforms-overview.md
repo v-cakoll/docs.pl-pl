@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162207"
 ---
 # <a name="transforms-overview"></a>Przegląd Przekształcenia
 W tym temacie opisano sposób użycia [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> klasy, aby obrócić, skalowanie, Przenieś (tłumaczenia) i pochylanie <xref:System.Windows.FrameworkElement> obiektów.  
-  
-  
+
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>Co to jest przekształcenie?  
  A <xref:System.Windows.Media.Transform> definiuje sposób mapowania lub Przekształcanie punktów z jednej przestrzeni współrzędnych do innej przestrzeni współrzędnych. To mapowanie jest opisana przez przekształcenie <xref:System.Windows.Media.Matrix>, który jest kolekcją trzy wiersze z trzy kolumny <xref:System.Double> wartości.  
@@ -150,7 +149,8 @@ LayoutTransform umożliwiają obracanie przycisku
  Ponieważ dziedziczy on z <xref:System.Windows.Freezable> klasy <xref:System.Windows.Media.Transform> klasy zapewniają kilka funkcji specjalnych: <xref:System.Windows.Media.Transform> obiekty mogą być deklarowane jako [zasobów](../advanced/xaml-resources.md), udostępnione wśród wielu obiektów, aby poprawić jest tylko do odczytu wydajność, sklonować i wprowadzone metodą o bezpiecznych wątkach. Aby uzyskać więcej informacji na temat różnych funkcji, które są dostarczane przez <xref:System.Windows.Freezable> obiekty, zobacz [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Tematy z instrukcjami](transformations-how-to-topics.md)
+- [— Tematy porad](transformations-how-to-topics.md)
 - [Przykładowe transformacje 2-D](https://go.microsoft.com/fwlink/?LinkID=158252)

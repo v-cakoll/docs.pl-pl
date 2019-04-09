@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Używanie elementu MetadataExchangeClient do pobierania metadanych'
+title: 'Instrukcje: używanie elementu MetadataExchangeClient do pobierania metadanych'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: 8f99fcf8a355001908c31c383201da8db78c6d24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168626"
 ---
-# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Instrukcje: Używanie elementu MetadataExchangeClient do pobierania metadanych
+# <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Instrukcje: używanie elementu MetadataExchangeClient do pobierania metadanych
 Użyj <xref:System.ServiceModel.Description.MetadataExchangeClient> klasy można pobrać metadanych przy użyciu protokołu WS-MetadataExchange (MEX). Pliki pobrane metadanych są zwracane jako <xref:System.ServiceModel.Description.MetadataSet> obiektu. Zwrócony <xref:System.ServiceModel.Description.MetadataSet> obiekt zawiera zbiór <xref:System.ServiceModel.Description.MetadataSection> obiektów, z których każdy zawiera dialekt określonych metadanych i identyfikator. Możesz zapisywać zwróconych metadanych plików, lub jeśli zwróconych metadanych zawiera dokumentów sieci Web Services Description Language (WSDL), możesz zaimportować przy użyciu metadanych <xref:System.ServiceModel.Description.WsdlImporter>.  
   
  <xref:System.ServiceModel.Description.MetadataExchangeClient> Konstruktorów, które przyjmują adres stosować powiązanie na <xref:System.ServiceModel.Description.MetadataExchangeBindings> statyczne klasy, która pasuje do schematu identyfikatora URI (Uniform Resource) adresu. Możesz też użyć <xref:System.ServiceModel.Description.MetadataExchangeClient> Konstruktor, który umożliwia jawnie określić powiązania do użycia. Określone powiązanie jest używany do rozpoznawania wszystkie odwołania do metadanych.  
@@ -36,6 +36,7 @@ Użyj <xref:System.ServiceModel.Description.MetadataExchangeClient> klasy można
  Aby skompilować ten przykład kodu, możesz odwoływać się do zestawu System.ServiceModel.dll i zaimportować <xref:System.ServiceModel.Description> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.MetadataResolver>
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>
 - <xref:System.ServiceModel.Description.WsdlImporter>

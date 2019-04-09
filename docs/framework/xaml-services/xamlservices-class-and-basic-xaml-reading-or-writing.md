@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162271"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>Klasa XAMLServices i podstawowy odczyt lub zapis XAML
 <xref:System.Xaml.XamlServices> jest klasą dostarczone przez .NET Framework XAML Services może służyć do scenariuszy XAML, które nie wymagają określonej dostęp do strumienia węzłów XAML lub informacje o systemie typu XAML uzyskany z tych węzłów. <xref:System.Xaml.XamlServices> Interfejs API można podsumować w następujący: `Load` lub `Parse` do obsługi ścieżką obciążenia XAML `Save` do obsługi XAML Zapisz ścieżkę, i `Transform` do udostępniania technika, która dołącza ścieżki obciążenia i Zapisz ścieżkę. `Transform` może służyć do zmiany z jednego schematu XAML do innego. Ten temat zawiera podsumowanie wszystkich te klasyfikacje interfejsu API i opisano różnice między przeciążeń określonej metody.  
@@ -62,6 +62,7 @@ ms.locfileid: "58027131"
  Dla operacji, które opierają się na sprawdzenie każdego węzła w strumień węzłów XAML, zwykle nie jest używana <xref:System.Xaml.XamlServices.Transform%2A>. Zamiast tego należy zdefiniować własne obciążenia Zapisz ścieżkę ścieżki operacji serii i interject własnej logiki. W jednej ze ścieżek za pomocą pary moduł zapisujący czytnika/XAML XAML wokół własne pętli węzła. Na przykład, ładowanie początkowe przy użyciu XAML <xref:System.Xaml.XamlXmlReader> i Wkrocz do węzłów z kolejnych <xref:System.Xaml.XamlXmlReader.Read%2A> wywołania. Działających na poziomie strumienia węzłów XAML można teraz dostosować poszczególne węzły (typy, elementy członkowskie, inne węzły), aby zastosować przekształcenie, lub pozostaw węzła jako-to. Następnie i nowszych wersjach wysłać węzeł odpowiednim `Write` interfejsu API <xref:System.Xaml.XamlObjectWriter> i zapisać obiekt. Aby uzyskać więcej informacji, zobacz [opis XAML węzła Stream strukturami i koncepcjami](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
 - [Usługi XAML](index.md)

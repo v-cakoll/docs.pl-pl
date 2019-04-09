@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141534"
 ---
 # <a name="loader-etw-events"></a>Zdarzenia ETW modułu ładującego
 <a name="top"></a> Te zdarzenia zbierać informacje dotyczące ładowanie i zwalnianie domen aplikacji, zestawów i modułów.  
@@ -37,7 +37,7 @@ ms.locfileid: "54579007"
   
 |Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` i `AppDomainUnLoad_V1`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` and `AppDomainUnLoad_V1`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Komunikat informacyjny (4)|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "54579007"
   
 |Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` i `AssemblyUnload`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`AssemblyLoad` and `AssemblyUnload`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Komunikat informacyjny (4)|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "54579007"
   
 |Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` i `ModuleUnload_V2`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`ModuleLoad_V2` and `ModuleUnload_V2`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Komunikat informacyjny (4)|  
 ||||  
@@ -213,4 +213,5 @@ ms.locfileid: "54579007"
  Zdarzenia zakresu modułu są uruchamiane w ramach dowolnego poziomu ETW większa lub równa 4 i są klasyfikowane jako zdarzenia informacyjne.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Zdarzenia ETW CLR](../../../docs/framework/performance/clr-etw-events.md)

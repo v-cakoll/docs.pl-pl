@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel'
+title: 'Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - layout [Windows Forms], child controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 62cc25b705b382e1f4ef32ae6889df785a6a9173
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 679333186d9f9b791e5ad9c2e1cb74f69e051a62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168549"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel
+# <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel
 <xref:System.Windows.Forms.FlowLayoutPanel> Kontrolować obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jego formantów podrzędnych.  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Aby zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel  
@@ -61,5 +61,6 @@ ms.locfileid: "57709916"
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
-- [FlowLayoutPanel, kontrolka — omówienie](flowlayoutpanel-control-overview.md)
+- [FlowLayoutPanel — Informacje o formancie](flowlayoutpanel-control-overview.md)

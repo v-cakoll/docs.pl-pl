@@ -5,17 +5,16 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166377"
 ---
 # <a name="menu-overview"></a>Przegląd Menu
 <xref:System.Windows.Controls.Menu> Klasy pozwala organizować elementy związane z poleceniami i procedury obsługi zdarzeń w kolejności hierarchicznej. Każdy <xref:System.Windows.Controls.Menu> element zawiera zbiór <xref:System.Windows.Controls.MenuItem> elementów.  
-  
-  
+
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Formant menu  
  <xref:System.Windows.Controls.Menu> Kontrolka Wyświetla listę elementów, które określają polecenia i opcje dla aplikacji. Zazwyczaj kliknięcie <xref:System.Windows.Controls.MenuItem> spowoduje otwarcie podmenu lub powoduje, że aplikacja do wykonania polecenia.  
@@ -60,4 +59,5 @@ ms.locfileid: "57360952"
  [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

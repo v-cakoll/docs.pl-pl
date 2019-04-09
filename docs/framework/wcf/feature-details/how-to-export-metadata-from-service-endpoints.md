@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Eksportowanie metadanych z punktów końcowych usług'
+title: 'Instrukcje: eksportowanie metadanych z punktów końcowych usług'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-ms.openlocfilehash: 86ad062f7b7ee3dd2927f8b5b103adfd719a963d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bd6543e1e22b7a2cb0b870fe2fdb34011f0d2a4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162792"
 ---
-# <a name="how-to-export-metadata-from-service-endpoints"></a>Instrukcje: Eksportowanie metadanych z punktów końcowych usług
+# <a name="how-to-export-metadata-from-service-endpoints"></a>Instrukcje: eksportowanie metadanych z punktów końcowych usług
 W tym temacie opisano sposób eksportowania metadanych z punktów końcowych usługi.  
   
 ### <a name="to-export-metadata-from-service-endpoints"></a>Eksportowanie metadanych z punktów końcowych usług  
@@ -56,6 +56,7 @@ W tym temacie opisano sposób eksportowania metadanych z punktów końcowych us�
  Podczas kompilowania System.ServiceModel.dll odwołanie do pliku Program.cs.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd architektury metadanych](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Punkty końcowe: adresy, wiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

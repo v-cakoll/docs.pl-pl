@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53758b39-bd9b-4640-bb04-cad5ed8d0abf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea1059f541d2449a1a2d5dca1644ce8d9a553e40
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 645c4ea76509bf488b62669f65e03d3690fd5a05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103834"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries-net-framework-only"></a>Instrukcje: Dodawanie lub usuwanie pozycji listy kontroli dostępu (tylko program .NET Framework)
 Aby dodać lub usunąć wpisy listy kontroli dostępu (ACL) do lub z pliku lub katalogu, Uzyskaj <xref:System.Security.AccessControl.FileSecurity> lub <xref:System.Security.AccessControl.DirectorySecurity> obiekt z pliku lub katalogu. Zmodyfikuj obiekt, a następnie zastosować je do pliku lub katalogu.  
@@ -46,4 +46,3 @@ Aby dodać lub usunąć wpisy listy kontroli dostępu (ACL) do lub z pliku lub k
 
  [!code-csharp[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/csharp/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/CS/sample.cs#1)]
  [!code-vb[IO.File.GetAccessControl-SetAccessControl#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/IO.File.GetAccessControl-SetAccessControl/VB/sample.vb#1)]  
-  

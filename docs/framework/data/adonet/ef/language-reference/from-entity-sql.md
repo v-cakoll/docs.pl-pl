@@ -2,12 +2,12 @@
 title: OD (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: a2550b667617ccf945acad79f0d63c52df118061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119837"
 ---
 # <a name="from-entity-sql"></a>OD (jednostka SQL)
 Określa kolekcję używane w [wybierz](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrukcji.  
@@ -153,6 +153,7 @@ select {1} from {2, 3}
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Wyrażenia zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Wyrażenia kwerend](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
 - [Typy strukturalne dopuszczające wartości Null](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

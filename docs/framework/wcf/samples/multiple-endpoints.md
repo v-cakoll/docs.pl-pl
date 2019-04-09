@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 4a9793b6598712265d47af1d31f2455436dfd855
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 438c321e44f04060a733b90ccdbf02caba9406c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817699"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112713"
 ---
 # <a name="multiple-endpoints"></a>Wiele punktów końcowych
 Przykład wiele punktów końcowych pokazuje, jak skonfigurować wiele punktów końcowych usługi oraz jak komunikować się z każdego punktu końcowego z klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Konfiguracja usługi została zmodyfikowana, aby zdefiniować dwa punkty końcowe, które obsługują `ICalculator` kontraktu, ale każdy na inny adres za pomocą różnych powiązania. Konfiguracja klienta i kod zostały zmodyfikowane w celu komunikacji zarówno z punktów końcowych usługi.  
@@ -118,4 +118,3 @@ Press <ENTER> to terminate client.
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
-  

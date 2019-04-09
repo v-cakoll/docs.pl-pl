@@ -1,5 +1,5 @@
 ---
-title: <clear> — Element dla authenticationModules (Ustawienia sieci)
+title: <clear> Element dla authenticationModules (ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: d6760d05a8c2368cd20cae416b0b4b428b6588db
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094375"
 ---
 # <a name="clear-element-for-authenticationmodules-network-settings"></a>\<Wyczyść >, Element dla authenticationModules (ustawienia sieci)
 Czyści wszystkie moduły uwierzytelniania z aplikacji.  
@@ -66,6 +66,7 @@ Czyści wszystkie moduły uwierzytelniania z aplikacji.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3fa71b15a5e4852bc87ad2088edb343704df6ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af9ca932a4c4a12a2c89571f40162a4ecbd5c33d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144498"
 ---
 # <a name="corargtype-enumeration"></a>CorArgType — Wyliczenie
 Zawiera wartości, które opisują typ macierzysty dojścia środowiska uruchomieniowego.  
@@ -54,4 +54,5 @@ typedef enum CorArgType {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

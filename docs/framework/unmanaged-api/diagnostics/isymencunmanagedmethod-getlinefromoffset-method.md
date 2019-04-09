@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90d993bc6b947d309ce1a0fb10ad231a429be567
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3106c6680750826306cffb31e599ee2260bf4ad7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136451"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset — Metoda
 Pobiera informacje o wiersz skojarzony z przesunięcia. Jeśli parametr offset (`dwOffset`) nie jest punktem sekwencji, ta metoda pobiera informacje o wiersz skojarzony z poprzednim przesunięcie.  
@@ -65,4 +65,5 @@ HRESULT GetLineFromOffset(
  **Nagłówek:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymENCUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+
+- [ISymENCUnmanagedMethod — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

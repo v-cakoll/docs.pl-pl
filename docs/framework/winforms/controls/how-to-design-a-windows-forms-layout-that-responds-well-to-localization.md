@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Projektowanie układu formularzy Windows dobrze reagującego na lokalizację'
+title: 'Instrukcje: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, localization
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-ms.openlocfilehash: ff88d876ffc05c85c6d3c1011df776b814ed7aea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 095427ce633ee6db5a448c8f3f69304ed25ab82a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142600"
 ---
-# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Instrukcje: Projektowanie układu formularzy Windows dobrze reagującego na lokalizację
+# <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Instrukcje: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację
 Tworzenie formularzy, które są gotowe do przeniesienia poza zlokalizowany znacznie rozwoju szybkości na rynki międzynarodowe. Możesz użyć <xref:System.Windows.Forms.TableLayoutPanel> formantu do zaimplementowania układy odpowiadać bez problemu zmieniała jak formanty zmiany rozmiaru z powodu zmian w ich <xref:System.Windows.Forms.Control.Text%2A> wartości właściwości.  
   
 ## <a name="example"></a>Przykład  
@@ -29,19 +29,19 @@ Tworzenie formularzy, które są gotowe do przeniesienia poza zlokalizowany znac
  [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
   
 ## <a name="additional-resources"></a>Dodatkowe zasoby
-1.  [Instrukcje: Wyrównaj i rozciągnij kontrolki w kontrolce TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1.  [Instrukcje: wyrównywanie i rozciąganie kontrolki w kontrolce TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+2.  [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
 
-3.  [Instrukcje: Obejmowanie rzędów i kolumn w formancie TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+3.  [Instrukcje: obejmowanie rzędów i kolumn w kontrolce TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-4.  [Instrukcje: Edytowanie rzędów i kolumn w formancie TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+4.  [Instrukcje: edytowanie rzędów i kolumn w kontrolce TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-5.  [Przewodnik: Wykonywania typowych zadań przy użyciu inteligentnych tagów w Windows Forms, formanty](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+5.  [Przewodnik: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy systemu Windows](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
   
-6.  [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+6.  [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7.  [Przewodnik: Układania Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)  
+7.  [Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)  
   
 8.  [Instrukcje: Obsługiwanie lokalizacji na Windows Forms przy użyciu AutoSize i TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
   
@@ -55,6 +55,7 @@ Tworzenie formularzy, które są gotowe do przeniesienia poza zlokalizowany znac
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - [Lokalizacja](../../../standard/globalization-localization/localization.md)

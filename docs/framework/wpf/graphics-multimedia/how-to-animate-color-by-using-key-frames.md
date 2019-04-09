@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj kolor z wykorzystaniem klatek kluczowych'
+title: 'Instrukcje: Animowanie koloru przy użyciu klatek kluczowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: ca669cee0fa978ca45efc57b4807b83df5c9086c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d911b1f14cf71aebf95b566eb710fec8ec9e2a29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095170"
 ---
-# <a name="how-to-animate-color-by-using-key-frames"></a>Instrukcje: Animuj kolor z wykorzystaniem klatek kluczowych
+# <a name="how-to-animate-color-by-using-key-frames"></a>Instrukcje: Animowanie koloru przy użyciu klatek kluczowych
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.SolidColorBrush.Color%2A> z <xref:System.Windows.Media.SolidColorBrush> przy użyciu klatek kluczowych.  
   
 ## <a name="example"></a>Przykład  
@@ -35,8 +35,9 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.SolidColor
  Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.SolidColorBrush.Color%2A>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

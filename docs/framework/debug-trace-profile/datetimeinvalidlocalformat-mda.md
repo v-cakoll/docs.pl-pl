@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78d9d769deefedef0c72b847c86e7b9fc175288c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380334dbe9b91ea369de6cbe58686a9a74254c2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148229"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 `dateTimeInvalidLocalFormat` Zdarzenie MDA jest aktywowane podczas <xref:System.DateTime> wystąpienie, które są przechowywane jako uniwersalny czas koordynowany (UTC) jest formatowana przy użyciu formatu, który jest przeznaczony do użycia tylko w przypadku lokalnego <xref:System.DateTime> wystąpień. To zdarzenie MDA nie została aktywowana, nie określono tego parametru lub domyślna <xref:System.DateTime> wystąpień.  
@@ -87,5 +87,6 @@ String serialized = XmlConvert.ToString(myDateTime,
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Globalization.DateTimeFormatInfo>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

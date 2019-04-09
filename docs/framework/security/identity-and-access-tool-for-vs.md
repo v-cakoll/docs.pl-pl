@@ -3,12 +3,12 @@ title: Narzędzie tożsamości i dostępu dla programu Visual Studio 2012
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9216298889637780e79d1bfc7ac060458c745968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170121"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Narzędzie tożsamości i dostępu dla programu Visual Studio 2012
 W tym temacie opisano nowe narzędzie tożsamości i dostępu dla programu Visual Studio 11. To narzędzie można pobrać spod następującego adresu URL: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) lub bezpośrednio z poziomu programu Visual Studio 11, wyszukując "tożsamość" w Menedżerze rozszerzeń.  
@@ -28,4 +28,5 @@ W tym temacie opisano nowe narzędzie tożsamości i dostępu dla programu Visua
 -   Narzędzie wykorzystuje możliwości systemu Windows Azure Access Control Service (ACS) z prostą listę pól wyboru dla wszystkich dostawców tożsamości, które chcesz użyć: Facebook, Google, Live ID, Yahoo!, dowolny dostawca protokołu OpenID i wszystkich dostawców usługi WS-Federation. Wybierz swoich dostawców tożsamości, kliknij przycisk OK, a następnie naciśnij klawisz F5, i aplikacja i usługa ACS zostaną automatycznie skonfigurowane, a aplikacja testowa będzie obsługiwać usługę ACS.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Funkcje programu WIF](../../../docs/framework/security/wif-features.md)

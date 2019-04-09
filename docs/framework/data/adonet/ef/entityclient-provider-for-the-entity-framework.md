@@ -2,12 +2,12 @@
 title: Dostawca EntityClient dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: ac14840145fb3faca0f6243037c8b27be31f5c7f
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169679"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Dostawca EntityClient dla programu Entity Framework
 Dostawca EntityClient jest dostawcy danych używanych przez aplikacje platformy Entity Framework na dostęp do danych opisanych w modelu koncepcyjnym. Aby uzyskać informacje o modelach koncepcyjnych, zobacz [modelowanie i mapowanie](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). Dostawca EntityClient używa innego dostawcy danych .NET Framework, dostępu do źródła danych. Na przykład dostawca EntityClient używa dostawcy danych .NET Framework dla programu SQL Server (SqlClient) podczas uzyskiwania dostępu do bazy danych programu SQL Server. Aby uzyskać informacje o dostawcy SqlClient, zobacz [SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Dostawca EntityClient jest zaimplementowana w <xref:System.Data.EntityClient> przestrzeni nazw.  
@@ -42,7 +42,7 @@ cmd.CommandText = @"SELECT VALUE p
  Aby zaktualizować dane, która jest dostępna za pośrednictwem modelu koncepcyjnego, zobacz [jak: Zarządzanie transakcjami platformy Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738523(v=vs.100)).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Tworzenie ciągu połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
+ [Instrukcje: Tworzenie parametrów połączenia EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
   
  [Instrukcje: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)  
   
@@ -54,15 +54,16 @@ cmd.CommandText = @"SELECT VALUE p
   
  [Instrukcje: Wykonywanie zapytania, które zwraca kolekcje zagnieżdżone](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [Instrukcje: Wykonywanie zapytania SQL sparametryzowanej jednostki przy użyciu EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [Instrukcje: Wykonywanie zapytania SQL do sparametryzowanej jednostki przy użyciu EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [Instrukcje: Wykonaj procedurę składowaną z parametrami przy użyciu EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [Instrukcje: Wykonywanie zapytania SQL do sparametryzowanej procedury składowanej przy użyciu EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
- [Instrukcje: Wykonywanie zapytania Polimorficznego](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
+ [Instrukcje: Wykonywanie zapytania polimorficznego](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
  [Instrukcje: Nawigowanie po relacjach za pomocą operatora nawigowania](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzania połączeniami i transakcji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Dokumentacja języka](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

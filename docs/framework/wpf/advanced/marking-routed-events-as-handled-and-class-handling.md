@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172110"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy
 Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w ramach danych zdarzenia. Obsługa zdarzenia skróci efektywne trasy. Obsługa klasy jest koncepcji programowania, który jest obsługiwany przez zdarzenia trasowane. Klasa program obsługi ma możliwość obsługi określonego zdarzenia trasowanego na poziomie klasy, za pomocą programu obsługi, które jest wywoływane przed jakakolwiek Obsługa wystąpienia na dowolne wystąpienie klasy.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie rosnącego założenia [Przegląd zdarzeń kierowane](routed-events-overview.md).  
@@ -99,7 +97,8 @@ Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w 
  Druga metoda działa tylko w przypadku zdarzeń wejściowych, gdzie tunelowania i propagacji wersje zdarzenia trasowanego są skojarzone. Te zdarzenia trasowane można dodać procedury obsługi do wersji zapoznawczej/tunelowania równoważne kierowane zdarzeń zamiast tego. To zdarzenie trasowane będzie tunelowania za pośrednictwem trasy, począwszy od katalogu głównego, więc klasa przycisków kod obsługi będzie przechwytuje, przy założeniu dołączonym procedury obsługi podglądu w pewien poziom elementu nadrzędnego w drzewie elementów aplikacji. Jeśli używasz tego podejścia, należy zachować ostrożność oznaczanie dowolnego zdarzenia (wersja zapoznawcza), obsługiwane. Na przykład, biorąc pod uwagę przy użyciu <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> przetwarzanego w elemencie głównym oznaczone zdarzenia jako <xref:System.Windows.RoutedEventArgs.Handled%2A> w implementacji programu obsługi, czy rzeczywiście Pomiń <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. To zwykle nie jest pożądane zachowania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.EventManager>
 - [Podgląd zdarzeń](preview-events.md)
 - [Tworzenie niestandardowego zdarzenia trasowanego](how-to-create-a-custom-routed-event.md)
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)

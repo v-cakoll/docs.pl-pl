@@ -2,12 +2,12 @@
 title: <certificate> z <clientCertificate> — Element
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: 94241d022e8a97253100a67e2a779593861c093c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98e60d750dad1529ffb35055d26e278ceb7c873a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113936"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<certyfikat > z \<clientCertificate > Element
 Określa X.509 certyfikatu używanego do podpisywania i szyfrowania wiadomości.  
@@ -75,9 +75,10 @@ Określa X.509 certyfikatu używanego do podpisywania i szyfrowania wiadomości.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateCredentialsElement>
 - [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Instrukcje: tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
 - [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

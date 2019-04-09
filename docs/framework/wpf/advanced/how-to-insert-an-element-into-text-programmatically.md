@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wstaw element do tekstu za pomocą programowania'
+title: 'Instrukcje: Programowe wstawianie elementu do tekstu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - TextPointer objects [WPF]
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
-ms.openlocfilehash: c93a1c7542a4ddb33b3880de423c256adcc3f1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ea9850c8490ec37032d4565c6b3375e3116d4313
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169588"
 ---
-# <a name="how-to-insert-an-element-into-text-programmatically"></a>Instrukcje: Wstaw element do tekstu za pomocą programowania
+# <a name="how-to-insert-an-element-into-text-programmatically"></a>Instrukcje: Programowe wstawianie elementu do tekstu
 Poniższy przykład pokazuje, jak za pomocą dwóch <xref:System.Windows.Documents.TextPointer> obiektów, aby określić zakres tekstu do zastosowania <xref:System.Windows.Documents.Span> elementu.  
   
 ## <a name="example"></a>Przykład  
@@ -30,4 +30,5 @@ Poniższy przykład pokazuje, jak za pomocą dwóch <xref:System.Windows.Documen
  ![Element Span zastosowany do zakresu tekstu](./media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd dokumentu przepływu](flow-document-overview.md)
+
+- [Przegląd Dokument przepływu](flow-document-overview.md)

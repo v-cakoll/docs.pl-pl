@@ -2,12 +2,12 @@
 title: Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 6852c673ef21c2b2d511b02d4cc146b22c4c7506
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 80a5c18f1e19ef82f490aca705973e027ee0a634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163907"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri
 Niniejszy przykład pokazuje usługi, który obsługuje wiele punktów końcowych w pojedynczym `ListenUri`. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora.  
@@ -78,4 +78,3 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
-  

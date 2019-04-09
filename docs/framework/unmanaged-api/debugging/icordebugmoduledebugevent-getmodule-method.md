@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e99477bd8750f79ae711d47f295b6b39b90c92c3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0c0cc1305f47f03c8c9b35bab5c980cb23d1b157
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138440"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>Metoda ICorDebugModuleDebugEvent::GetModule
 Pobiera scalonych moduł, który został właśnie załadowany lub usunięty z pamięci.  
@@ -42,5 +42,6 @@ HRESULT GetModule(
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ICorDebugModuleDebugEvent, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

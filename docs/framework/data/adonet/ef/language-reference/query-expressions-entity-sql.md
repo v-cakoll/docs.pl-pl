@@ -2,12 +2,12 @@
 title: Wyrażenia zapytań (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
-ms.openlocfilehash: 5a200c8fc5adcb6334d0a0ddf290d275de4eb768
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f89028b9c501dd840f1dc9445418e4757967db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146916"
 ---
 # <a name="query-expressions-entity-sql"></a>Wyrażenia zapytań (jednostka SQL)
 Wyrażenie zapytania łączy wiele operatorów zapytań różnych w jednej składni. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera różne rodzaje wyrażeń, w tym następujące: [literały](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [parametry](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [zmienne](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), operatory, [funkcje](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)operatory zestawu i tak dalej. Aby uzyskać więcej informacji, zobacz [odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  
@@ -19,4 +19,5 @@ Wyrażenie zapytania łączy wiele operatorów zapytań różnych w jednej skła
  Nazwy zdefiniowane w klauzuli FROM są wprowadzane do zakresu od w kolejności występowania, od lewej do prawej. Na liście sprzężenia wyrażenia mogą odwoływać się do nazwy zdefiniowanej wcześniej na liście. Właściwości publiczne elementy określone w klauzuli FROM nie są dodawane do zakresu od: One muszą być zawsze przywoływane za pośrednictwem nazwy kwalifikowanej aliasu. Zwykle wszystkie części Wybierz wyrażenie są uwzględniane w zakresie od.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

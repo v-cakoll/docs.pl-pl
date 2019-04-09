@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: ee63d092eb14bd5c8ab928852e02d30e653baf48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159786"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Instrukcje: Implementowanie interfejsu IListSource
 Implementowanie <xref:System.ComponentModel.IListSource> interfejsu do utworzenia możliwej do wiązania klasy, który nie implementuje <xref:System.Collections.IList> , ale zamiast tego zawiera listę z innej lokalizacji.  
@@ -39,8 +39,9 @@ Implementowanie <xref:System.ComponentModel.IListSource> interfejsu do utworzeni
 -   Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ComponentModel.IListSource>
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
+- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)

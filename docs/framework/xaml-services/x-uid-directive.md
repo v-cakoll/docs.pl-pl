@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152519"
 ---
 # <a name="xuid-directive"></a>x:Uid — dyrektywa
 Zawiera unikatowy identyfikator dla elementów kodu znaczników. W wielu scenariuszach ten unikatowy identyfikator jest używany przez XAML lokalizacji procesów i narzędzi.  
@@ -42,6 +42,7 @@ Zawiera unikatowy identyfikator dla elementów kodu znaczników. W wielu scenari
  Aby uzyskać więcej informacji o roli `x:Uid` w procesie lokalizacji WPF i formularz BAML XAML, zobacz [globalizacja dla WPF](../wpf/advanced/globalization-for-wpf.md) lub <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
 - [Globalizacja dla WPF](../wpf/advanced/globalization-for-wpf.md)

@@ -2,12 +2,12 @@
 title: Odwołanie interakcyjne F# (fsi.exe)
 description: Dowiedz się, jak F# Interactive (fsi.exe) jest używany do uruchamiania F# kodu interaktywnego w konsoli lub wykonać F# skryptów.
 ms.date: 05/16/2016
-ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172266"
 ---
 # <a name="interactive-programming-with-f"></a>Interaktywne programowania w języku F\#
 
@@ -43,10 +43,8 @@ W przypadku otwarciu projektu, który odwołuje się do niektórych bibliotek mo
 
 Możesz kontrolować F# argumenty interaktywne wiersza polecenia (Opcje), dostosowując ustawienia. Na **narzędzia** menu, wybierz opcję **opcje...** , a następnie rozwiń węzeł  **F# narzędzia**. Są dwa ustawienia, które mogą być zmieniane F# Opcje interakcyjne i **64-bitowych F# Interactive** ustawienie, które ma zastosowanie tylko wtedy, gdy są uruchomione F# Interactive na komputerze 64-bitowym. To ustawienie określa, czy chcesz uruchomić dedykowanych 64-bitowej wersji fsi.exe lub fsianycpu.exe, która korzysta z architektury maszyny w celu ustalenia, czy można uruchomić jako proces 32-bitową lub 64-bitowych.
 
-
 ## <a name="scripting-with-f"></a>Obsługa skryptów w programie F\#
 Skrypty za pomocą rozszerzenia pliku **.fsx** lub **.fsscript**. Zamiast kompilowanie kodu źródłowego, a następnie uruchamiając skompilowanego zestawu, można po prostu uruchomisz **fsi.exe** i określ nazwę pliku skryptu na F# kod źródłowy, a F# interaktywne odczytuje kod i wykonuje rzeczywistą czas.
-
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Różnice między środowiskami interaktywne, skryptów i skompilowany
 Gdy kompilujesz kod w F# Interactive, czy są interakcyjnego lub uruchamiając skrypt, symbol **INTERACTIVE** jest zdefiniowana. Gdy kompilujesz kod w kompilatorze symbol **COMPILED** jest zdefiniowana. W związku z tym kod musi różnić się w trybie skompilowane i interaktywnych, można użyć dyrektywy preprocesora dla kompilacji warunkowej do określenia, które do użycia.
@@ -99,5 +97,5 @@ test
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Opcje F# Interactive](../../language-reference/fsharp-interactive-options.md)|W tym artykule opisano składnia wiersza polecenia i opcje dla F# Interactive, fsi.exe.|
-|[F#Odwołanie do biblioteki interakcyjnej](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Zawiera opis funkcji biblioteki, które są dostępne podczas wykonywania kodu w F# interaktywne.|
+|[Opcje interakcyjne F#](../../language-reference/fsharp-interactive-options.md)|W tym artykule opisano składnia wiersza polecenia i opcje dla F# Interactive, fsi.exe.|
+|[Odwołanie do biblioteki interakcyjnej F#](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Zawiera opis funkcji biblioteki, które są dostępne podczas wykonywania kodu w F# interaktywne.|

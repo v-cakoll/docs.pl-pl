@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147111"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
 .NET Framework, za pomocą plików konfiguracji zapewnia deweloperom i administratorom kontrolę i elastyczność nad aplikacjami sposób uruchamiania. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, mogą uzyskiwać dostęp do których chronionych zasobów aplikacji, których wersji zestawów aplikacja będzie używać i gdzie znajdują się zdalne aplikacje i obiekty. Deweloperzy mogą umieścić ustawienia w plikach konfiguracyjnych, eliminując konieczność rekompilacji aplikacji za każdym razem, gdy zmieni się ustawienie. W tej sekcji opisano, co może być skonfigurowane i dlaczego Konfigurowanie aplikacji mogą być przydatne.  
@@ -110,7 +110,7 @@ ms.locfileid: "55826437"
  [Określanie lokalizacji zestawu](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  Opisuje sposób określenia, gdzie środowisko wykonawcze powinno poszukać zestawu.  
   
- [Konfigurowanie klas kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Konfigurowanie klasy kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  Opisuje sposób mapowania nazwy algorytmu na klasy kryptografii i identyfikator obiektu na algorytm kryptograficzny.  
   
  [Instrukcje: Tworzenie zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
@@ -120,10 +120,11 @@ ms.locfileid: "55826437"
  W tym artykule opisano hierarchię schematów dla uruchamiania, środowisko uruchomieniowe, sieci i innych rodzajów ustawień konfiguracji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Określanie lokalizacji zestawu](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
 - [Administrowanie witryną sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Zarządzanie zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (narzędzie zasad zabezpieczeń dostępu do kodu)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
-- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Caspol.exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
+- [Zestawy w środowisku uruchomieniowym języka wspólnego](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

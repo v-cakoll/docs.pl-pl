@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar'
+title: 'Instrukcje: określanie ikony dla przycisku ToolBar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153130"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Instrukcje: określanie ikony dla przycisku ToolBar
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
   
@@ -116,7 +116,8 @@ ms.locfileid: "57712750"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar, kontrolka](toolbar-control-windows-forms.md)
+- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar — Formant](toolbar-control-windows-forms.md)
 - [ImageList, składnik](imagelist-component-windows-forms.md)

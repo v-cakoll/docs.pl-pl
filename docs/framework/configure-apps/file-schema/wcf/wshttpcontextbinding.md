@@ -2,12 +2,12 @@
 title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-ms.openlocfilehash: efd15b5fd7c7c5f9362999e51a5509a0f190cc48
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 20d931dfd1805dd4b56aabbab778e6587caa003a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112466"
 ---
 # <a name="wshttpcontextbinding"></a>\<wsHttpContextBinding>
 Dostarcza kontekst dla <xref:System.ServiceModel.WSHttpBinding> wymaga, aby poziom ochrony były podpisane.  
@@ -88,9 +88,9 @@ Dostarcza kontekst dla <xref:System.ServiceModel.WSHttpBinding> wymaga, aby pozi
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Określa, jeśli niezawodnej sesji są ustanawiane między punktami końcowymi kanału.|  
+|[\<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Określa, jeśli niezawodnej sesji są ustanawiane między punktami końcowymi kanału.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -99,12 +99,13 @@ Dostarcza kontekst dla <xref:System.ServiceModel.WSHttpBinding> wymaga, aby pozi
 |[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpContextBinding>
 - <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>
 - <xref:System.ServiceModel.Channels.ContextBindingElement>
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
 - [\<wsHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

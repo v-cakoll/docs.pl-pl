@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23e70a94c65e37782b5107b688b67ed790fb8d74
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 92bc16091abd3e21ebd226fb13dd47b55b0c9cc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166832"
 ---
 # <a name="icorprofilerinfo4enumjitedfunctions2-method"></a>ICorProfilerInfo4::EnumJITedFunctions2 — Metoda
 Zwraca moduł wyliczający dla wszystkich funkcji, które wcześniej były skompilowane JIT i ponownie skompilowana JIT. Ta metoda zastępuje [icorprofilerinfo3::enumjitedfunctions —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) metody, która nie wyliczyć identyfikatory ponownie skompilowana JIT.  
@@ -50,7 +50,8 @@ HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [EnumJITedFunctions, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md)
-- [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [ICorProfilerInfo4 — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

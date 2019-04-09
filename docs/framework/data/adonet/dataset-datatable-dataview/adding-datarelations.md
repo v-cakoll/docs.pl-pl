@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 9843d5231f6ed95290af6e6d2adaa384f8b47dd7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199365"
 ---
 # <a name="adding-datarelations"></a>Dodawanie elementów DataRelation
 W <xref:System.Data.DataSet> z wieloma <xref:System.Data.DataTable> obiektów, można użyć <xref:System.Data.DataRelation> obiektów do powiązania z jednej tabeli do innej, aby poruszać się po w tabelach i zwracanie podrzędnej lub nadrzędnej wierszy z tabeli powiązanej.  
@@ -36,5 +36,6 @@ customerOrders.Relations.Add("CustOrders",
  A **DataRelation** ma również **zagnieżdżone** właściwość, która po ustawieniu **true**, powoduje, że wiersze z tabeli podrzędnej na być zagnieżdżony w skojarzonych wiersz z tabeli nadrzędnej Podczas zapisywania jako elementów XML przy użyciu <xref:System.Data.DataSet.WriteXml%2A> . Aby uzyskać więcej informacji, zobacz [za pomocą XML w zestawie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

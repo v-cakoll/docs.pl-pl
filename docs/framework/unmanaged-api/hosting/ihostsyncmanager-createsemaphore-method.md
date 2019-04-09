@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7c757b941b879cc63d1b3e2ec1f3b9396193f6d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3ef9a5896c2ecc54b7fd48670f751d193ac74554
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138622"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore — Metoda
 Tworzy [ihostsemaphore —](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) obiektu środowisko uruchomieniowe języka wspólnego (CLR) do użycia jako semafor dla zdarzeń oczekiwania.  
@@ -72,6 +72,7 @@ HRESULT CreateSemaphore (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostSemaphore, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
-- [IHostSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+
+- [ICLRSyncManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostSemaphore — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+- [IHostSyncManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

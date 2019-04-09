@@ -5,17 +5,16 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105330"
 ---
 # <a name="toolbar-overview"></a>ToolBar — Przegląd
 <xref:System.Windows.Controls.ToolBar> Formanty są kontenerami dla grupy poleceń lub kontrolek, które są zazwyczaj powiązane w ich funkcji. A <xref:System.Windows.Controls.ToolBar> zwykle zawiera przyciski, które wywołują polecenia.  
-  
-  
+
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar — Formant  
  <xref:System.Windows.Controls.ToolBar> Kontrolka uzyskuje jego nazwę rozmieszczenie słupkowy przypominających przycisków lub innych kontrolek w pojedynczym wierszu lub kolumnie. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> elementy sterujące udostępniają mechanizm przepełnienia, który umieszcza wszystkie elementy, które nie mieszczą się naturalnie ograniczony rozmiar <xref:System.Windows.Controls.ToolBar> w obszarze specjalne przepełnienia. Ponadto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> formanty są zwykle używane z powiązane <xref:System.Windows.Controls.ToolBarTray> formant, który zapewnia zachowanie specjalnego układu, a także obsługę zainicjowanego przez użytkownika rozmiaru i rozmieszczanie pasków narzędzi.  
@@ -41,6 +40,7 @@ ms.locfileid: "58464960"
  [ToolBar — style i szablony](toolbar-styles-and-templates.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
 - [Kontrolki stylu na pasku ToolBar](how-to-style-controls-on-a-toolbar.md)

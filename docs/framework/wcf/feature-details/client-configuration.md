@@ -2,12 +2,12 @@
 title: Konfiguracja klienta
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 1cd7a066622c7d317b1a9c62658531521082c964
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144693"
 ---
 # <a name="client-configuration"></a>Konfiguracja klienta
 Konfiguracja klienta usługi Windows Communication Foundation (WCF) można użyć, aby określić adres, powiązanie, zachowanie i umowy, właściwości "ABC" punkt końcowy klienta, w których klienci używają połączyć się z punktami końcowymi usługi. [ \<Klienta >](../../configure-apps/file-schema/wcf/client.md) element ma [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu, w których atrybuty są używane do konfigurowania punktu końcowego podstawy. Te atrybuty są omówione w [konfigurowania punktów końcowych](#configuring-endpoints) sekcji.  
@@ -94,5 +94,6 @@ Konfiguracja klienta usługi Windows Communication Foundation (WCF) można uży�
  [ \<Metadanych >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) element jest używany do określania ustawień rejestracji metadane zaimportowanie rozszerzeń. Aby uzyskać więcej informacji na temat rozszerzanie systemu metadanych zobacz [rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+
+- [Punkty końcowe: adresy, wiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Konfigurowanie zachowań klienta](../../../../docs/framework/wcf/configuring-client-behaviors.md)

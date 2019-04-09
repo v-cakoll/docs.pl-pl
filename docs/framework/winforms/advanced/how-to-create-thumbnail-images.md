@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144017"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Instrukcje: Tworzenie obrazów miniatur
 Obraz miniatury jest mały wersję obrazu. Możesz utworzyć obraz miniatury, przez wywołanie metody <xref:System.Drawing.Image.GetThumbnailImage%2A> metody <xref:System.Drawing.Image> obiektu.  
@@ -51,5 +51,6 @@ Obraz miniatury jest mały wersję obrazu. Możesz utworzyć obraz miniatury, pr
      W formularzu pojawi się miniaturę 100 x 100.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)
 - [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -2,12 +2,12 @@
 title: Zabezpieczenia kanału równorzędnego
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
-ms.openlocfilehash: 09979cee48522355631c79e0bdf4c0fba6be782e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129457"
 ---
 # <a name="peer-channel-security"></a>Zabezpieczenia kanału równorzędnego
 Kanał elementu równorzędnego umożliwia różne typy aplikacji rozproszonych, które są zależne od wielostronnej komunikatów. Niektóre przykłady skali Internetu dystrybucji zawartości, gdzie zaufanego źródła dystrybuuje zawartość (np. aktualizacji oprogramowania lub nośników), grupa znajomych programu exchange, muzyka czy zdjęcia lub zespół współpracowników zespołowe przeprowadzanie edytowania dokumentu. Każdy z tych scenariuszy wymaga modelu zabezpieczeń unikatowy. Kanał elementu równorzędnego model zabezpieczeń jest przeznaczona dla tych scenariuszy i oferuje model zabezpieczeń dźwięk dla indywidualnych potrzeb różnych modeli tożsamości, uwierzytelniania i autoryzacji.  
@@ -34,6 +34,7 @@ Kanał elementu równorzędnego umożliwia różne typy aplikacji rozproszonych,
  Kanał elementu równorzędnego nie wymaga modelu określonej tożsamości, tak długo, jak aplikacja wybiera jeden z obsługiwanych typów tokenu. Aplikacje całkowicie właścicielem cyklu życia tych tożsamości i decyzje dotyczące uwierzytelniania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [Pojęcia kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [Tworzenie aplikacji kanału równorzędnego](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

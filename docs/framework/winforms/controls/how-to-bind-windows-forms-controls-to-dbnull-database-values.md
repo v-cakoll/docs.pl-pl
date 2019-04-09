@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Powiązywanie kontrolek formularzy Windows Forms bazy danych DBNull'
+title: 'Instrukcje: wiązanie kontrolek formularzy systemu Windows z wartościami bazy danych DBNull'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
-ms.openlocfilehash: 0c0768b922133fa0be1c8a56b4481048d1e200ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137764"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Instrukcje: Powiązywanie kontrolek formularzy Windows Forms bazy danych DBNull
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Instrukcje: wiązanie kontrolek formularzy systemu Windows z wartościami bazy danych DBNull
 Po powiązaniu kontrolek formularzy Windows Forms do źródła danych i źródła danych zwraca <xref:System.DBNull> wartość odpowiednią wartość można zastąpić bez obsługi, formatowanie i analizowanie zdarzeń. <xref:System.Windows.Forms.Binding.NullValue%2A> Przekonwertuje właściwość <xref:System.DBNull> podanemu obiektowi podczas formatowania lub analizowania wartości źródła danych.  
   
 ## <a name="example"></a>Przykład  
@@ -35,6 +35,7 @@ Po powiązaniu kontrolek formularzy Windows Forms do źródła danych i źródł
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [BindingSource, składnik](bindingsource-component.md)
-- [Instrukcje: Obsługa błędów i wyjątków występujących za powodu powiązania danych](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
+
+- [BindingSource — Składnik](bindingsource-component.md)
+- [Instrukcje: obsługa błędów i wyjątków występujących za powodu powiązania danych](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem](how-to-bind-a-windows-forms-control-to-a-type.md)

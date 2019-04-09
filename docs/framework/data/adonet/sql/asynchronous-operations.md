@@ -2,12 +2,12 @@
 title: Operacje asynchroniczne
 ms.date: 03/30/2017
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-ms.openlocfilehash: b1c6646f666ca1d931ab8caa8cd0a2e0c6a6722f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72c2cc33185cb7fba5b8c8ce8d3805a6bb76f8d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116041"
 ---
 # <a name="asynchronous-operations"></a>Operacje asynchroniczne
 Niektóre operacje bazy danych, takich jak wykonania polecenia może potrwać znaczną ilość czasu, aby zakończyć. W takim przypadku aplikacje jednowątkowe należy blokuje to innych operacji i czekać na zakończenie przed kontynuowaniem pracy ich własnych operacji polecenia. Możliwość przypisywania długotrwałej operacji do wątku w tle z kolei umożliwia wątku na pierwszym planie, pozostaną aktywne podczas operacji. W aplikacji Windows na przykład delegowanie długotrwałej operacji w wątku tła umożliwia wątek interfejsu użytkownika nadal odpowiadać podczas wykonywania operacji.  
@@ -30,6 +30,7 @@ Niektóre operacje bazy danych, takich jak wykonania polecenia może potrwać zn
  Przykład ilustrujące użycie sondowania czekać na zakończenie wykonywania polecenia asynchronicznego z aplikacji konsoli. Ta technika jest również prawidłowe w bibliotece klas lub innych aplikacji bez interfejsu użytkownika.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Wywoływanie metod synchronicznych w sposób asynchroniczny](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
+- [Wywołanie metod synchronicznych w sposób asynchroniczny](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: <qualifyAssembly>, element
+title: <qualifyAssembly> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#qualifyAssembly
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec72b1a1e3a2526dfb52f562be9fe92c677747ec
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109451"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyassembly — > Element
 Określa pełną nazwę zestawu, który powinien być dynamicznie ładowany, gdy część nazwy jest używany.  
@@ -76,6 +76,7 @@ Określa pełną nazwę zestawu, który powinien być dynamicznie ładowany, gdy
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Częściowe odwołania do zestawów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

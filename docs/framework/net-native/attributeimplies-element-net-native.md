@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5412e323b1c4930d7e17d09faa174885611884
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165064"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > (architektura .NET Native)
 Definiuje zasady dla elementów kodu, który zawierającego atrybut jest stosowany do.  
@@ -60,7 +60,7 @@ Definiuje zasady dla elementów kodu, który zawierającego atrybut jest stosowa
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<AttributeImplies>` Element jest używany, jeśli jej typ zawierający jest atrybutem (to znaczy, klasę pochodną <xref:System.Attribute?displayProperty=nameWithType>). Jeśli ten atrybut jest stosowany do elementu określonego programu, zasady zdefiniowane przez `<AttributeImplies>` element ma zastosowanie do tego elementu programu.  
@@ -68,6 +68,7 @@ Definiuje zasady dla elementów kodu, który zawierającego atrybut jest stosowa
  Odbicia, serializacja i atrybutów międzyoperacyjności są wszystkie opcjonalne, ale co najmniej jeden powinien być obecny.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<Typ > Element](../../../docs/framework/net-native/type-element-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)

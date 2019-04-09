@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dziedziczenie formularzy Windows'
+title: 'Instrukcje: Dziedziczenie formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112752"
 ---
-# <a name="how-to-inherit-windows-forms"></a>Instrukcje: Dziedziczenie formularzy Windows
+# <a name="how-to-inherit-windows-forms"></a>Instrukcje: Dziedziczenie formularzy systemu Windows
 Tworzenie nowych formularzy Windows przez dziedziczenie z formularzy podstawowy jest wygodny sposób zduplikowane starań bez przechodzenia przez proces całkowicie ponownego tworzenia formularza, za każdym razem, gdy jej potrzebujesz.  
   
  Aby uzyskać więcej informacji na temat dziedziczenie formularzy przy użyciu czasu projektowania **selektor dziedziczenia** okno dialogowe i jak wizualnie rozróżnienie między poziomy zabezpieczeń dziedziczone formantów, zobacz [jak: Dziedziczenie formularzy przy użyciu okna dialogowego selektora dziedziczenia](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
@@ -41,8 +41,9 @@ Tworzenie nowych formularzy Windows przez dziedziczenie z formularzy podstawowy 
  Gdy dziedziczenie formularzy, należy pamiętać o tym, jakie problemy mogą się pojawić w odniesieniu do programów obsługi zdarzeń, wywoływana dwa razy, ponieważ każde zdarzenie jest obsługiwane zarówno przez klasę bazową i odziedziczoną klasę. Aby uzyskać więcej informacji na temat uniknąć tego problemu, zobacz [Rozwiązywanie problemów z dziedziczone procedury obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [Imports, instrukcja (przestrzeń nazw i typ .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+
+- [Inherits — Instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [Imports — Instrukcja (.NET Namespace i Type)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [korzystanie](~/docs/csharp/language-reference/keywords/using.md)
 - [Efekty modyfikowania wyglądu formularza podstawowego](effects-of-modifying-base-form-appearance.md)
-- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)
+- [Formularze systemu Windows — dziedziczenie Visual](windows-forms-visual-inheritance.md)

@@ -1,5 +1,5 @@
 ---
-title: Za pomocą asynchronicznego gniazda klienta
+title: Używanie asynchronicznego gniazda klienta
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 54a8209c7dee2d1c26b4a66223b5f727d7765c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168899"
 ---
-# <a name="using-an-asynchronous-client-socket"></a>Za pomocą asynchronicznego gniazda klienta
+# <a name="using-an-asynchronous-client-socket"></a>Używanie asynchronicznego gniazda klienta
 Asynchronicznego gniazda klienta nie wstrzymuje aplikacji podczas oczekiwania na zakończenie operacji sieciowych. Zamiast tego używa standardowego modelu programowania asynchronicznego środowiska .NET Framework do przetwarzania połączenia sieciowego w jednym wątku, podczas gdy aplikacja będzie działać w oryginalnym wątku. Asynchronicznego gniazda są odpowiednie dla aplikacji, które intensywnie korzystają z sieci lub które nie może czekać na operacje sieciowe, które należy wykonać przed kontynuowaniem.  
   
  <xref:System.Net.Sockets.Socket> Następujące klasy .NET Framework nazwy wzorca w przypadku metod asynchronicznych; na przykład synchronicznego <xref:System.Net.Sockets.Socket.Receive%2A> metody odpowiada asynchroniczną <xref:System.Net.Sockets.Socket.BeginReceive%2A> i <xref:System.Net.Sockets.Socket.EndReceive%2A> metody.  
@@ -286,6 +286,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie synchronicznego gniazda klienta](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Przykład asynchronicznego gniazda klienta](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

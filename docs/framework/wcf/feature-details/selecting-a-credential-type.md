@@ -2,12 +2,12 @@
 title: Wybieranie typu poświadczeń
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167846"
 ---
 # <a name="selecting-a-credential-type"></a>Wybieranie typu poświadczeń
 *Poświadczenia* jest Windows Communication Foundation (WCF) używanych do ustalenia tożsamości lub możliwości danych. Na przykład usługi passport jest poświadczeń, przez Rząd potwierdzenie zaawansowanych możliwości dostępnych w kraju lub regionie. W programie WCF poświadczenia mogą mieć wiele form, takich jak tokeny nazwy użytkownika i certyfikaty X.509. W tym temacie omówiono poświadczenia, jak są używane w programie WCF i jak wybierać odpowiednie poświadczenia dla aplikacji.  
@@ -98,6 +98,7 @@ ms.locfileid: "54577116"
  Aby uzyskać więcej informacji na temat poświadczeń i bezpieczne sesje, zobacz [zagadnienia dotyczące zabezpieczeń bezpiecznych sesji](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>

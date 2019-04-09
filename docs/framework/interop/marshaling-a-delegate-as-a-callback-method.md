@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc265e4a7ceec291d645346bb012e2ed4600d22
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124816"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshaling delegata jako metoda wywołania zwrotnego
 Niniejszy przykład pokazuje sposób przekazywania delegatów do niezarządzanej funkcji, oczekiwano wskaźników funkcji. Delegat to klasa, która może zawierać odwołanie do metody i jest równoważny wskaźnikowi funkcji bezpiecznego typu lub funkcji wywołania zwrotnego.
@@ -53,6 +53,7 @@ W tym przykładzie `LibWrap` klasa zawiera zarządzane prototypy `TestCallBack` 
 [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Różne przykłady organizowania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [Typy danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Tworzenie prototypów w kodzie zarządzanym](creating-prototypes-in-managed-code.md)

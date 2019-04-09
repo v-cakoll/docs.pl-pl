@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74e106e17c0f0e5702927c4599fb143fb3554ce3
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: df113a2839b0f2651e15f4029d86cc5efc171c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111816"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 — Interfejs
 Podklasa klasy [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) , który zapewnia dostęp do informacji o wyjątku.  
@@ -43,6 +43,7 @@ Podklasa klasy [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugg
  **Wersje programu .NET framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICLRDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
-- [ICLRDataTarget2, interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICLRDataTarget — Interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget2 — Interfejs](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

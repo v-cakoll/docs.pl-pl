@@ -7,21 +7,19 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 449ec3ff30bb4650c32d3f6b9743b5d1a31ad0de
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161503"
 ---
 # <a name="popup-placement-behavior"></a>Zachowanie położenia okna podręcznego
 A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartość w osobnym oknie, które pojawia się za pośrednictwem aplikacji. Można określić położenie <xref:System.Windows.Controls.Primitives.Popup> względem formantu, myszy lub ekranu przy użyciu <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> właściwości.  Właściwości te działają razem, zapewniają elastyczność podczas określania położenia <xref:System.Windows.Controls.Primitives.Popup>.  
   
 > [!NOTE]
 >  <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ContextMenu> klasy również zdefiniować te pięć właściwości i działają w podobny sposób.  
-  
 
-  
 <a name="Positioning"></a>   
 ## <a name="positioning-the-popup"></a>Pozycjonowanie menu podręcznego.  
  Umieszczanie <xref:System.Windows.Controls.Primitives.Popup> może być względem <xref:System.Windows.UIElement> lub cały ekran.  Poniższy przykład tworzy cztery <xref:System.Windows.Controls.Primitives.Popup> formantów, które są względem <xref:System.Windows.UIElement>— w tym przypadku obraz. Wszystkie <xref:System.Windows.Controls.Primitives.Popup> formanty mają <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> właściwością `image1`, ale każdy <xref:System.Windows.Controls.Primitives.Popup> ma inną wartość dla właściwości umieszczania.  
@@ -58,8 +56,7 @@ A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartoś
  Poniższa ilustracja pokazuje, że <xref:System.Windows.Controls.Primitives.Popup> jest umieszczony względem <xref:System.Windows.Controls.Canvas>.  
   
  ![Formant okna podręcznego PlacementTarget](./media/popup-placement-behavior/popup-placement-no-placement-target.png "okno podręczne PlacementTarget.")  
-  
-  
+
  Poniższy przykład tworzy <xref:System.Windows.Controls.Primitives.Popup> czyli elementem podrzędnym elementu <xref:System.Windows.Controls.Canvas>, ale tym razem <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> jest ustawiona na `ellipse1`, dlatego pojawi się okno podręczne poniżej <xref:System.Windows.Shapes.Ellipse>.  
   
  [!code-xaml[PopupPositionSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS/Window1.xaml#2)]  
@@ -81,8 +78,7 @@ A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartoś
  Poniższa ilustracja przedstawia wynik poprzedniego przykładu.  
   
  ![Okno podręczne z lub bez PlacementRectangle](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "okno podręczne z lub bez PlacementRectangle.")  
-  
-  
+
 ### <a name="target-origin-and-popup-alignment-point"></a>Docelowy punkt początkowy i punkt wyrównania okna podręcznego  
  *Docelowe źródło* i *punkt wyrównania okno podręczne* punktów odniesienia w docelowy obszar obsługujący kliknięcia i okno podręczne, odpowiednio, które są używane do pozycjonowania. Możesz użyć <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> właściwości w celu przesunięcia okno podręczne z obszaru docelowego.  <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> i <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> są względne wobec target punkt początkowy i punkt wyrównania okna podręcznego. Wartość <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość określa, gdzie znajdują się docelowy punkt wyrównania pochodzenia i menu podręczne.  
   
@@ -174,8 +170,7 @@ A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartoś
  Poniższa ilustracja pokazuje, że podczas dolnej krawędzi ekranu ukrywa wszystkie lub część <xref:System.Windows.Controls.Primitives.Popup>, okno podręczne wyrównanie punkt znajduje się w lewym dolnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
  ![Nowy punkt wyrównania ze względu na dolnej krawędzi ekranu](./media/popup-placement-behavior/popup-placement-relative-point-screen-edge.png "Popup napotka dolną krawędzią ekranu i zmiany punktu wyrównania okna podręcznego.")  
- 
-  
+
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup> jest ukryty przy prawej krawędzi ekranu, okno podręczne wyrównanie punkt znajduje się w prawym górnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
  ![Nowy punkt wyrównania okno podręczne z powodu krawędzi ekranu](./media/popup-placement-behavior/popup-placement-relative-point-right-screen-edge.png "Popup napotka prawej krawędzi ekranu i zmiany punktu wyrównania okna podręcznego.")    
@@ -196,8 +191,7 @@ A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartoś
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Right> i <xref:System.Windows.Controls.Primitives.Popup> napotka prawej krawędzi ekranu, target punkt początkowy jest lewego górnego rogu obszaru docelowego i menu podręczne wyrównanie punkt znajduje się w prawym górnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
  ![Nowy punkt wyrównania ze względu na prawej krawędzi ekranu](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "umieszczania jest po prawej stronie, a okno podręczne napotka prawą krawędzią ekranu.")  
-  
-  
+
  Poniższa ilustracja pokazuje, że w przypadku <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> jest <xref:System.Windows.Controls.Primitives.PlacementMode.Top> i <xref:System.Windows.Controls.Primitives.Popup> napotka górnej krawędzi ekranu, początek docelowy znajduje się w lewym dolnym rogu obszaru docelowego i menu podręczne wyrównanie punkt znajduje się w lewym górnym rogu <xref:System.Windows.Controls.Primitives.Popup>.  
   
  ![Nowy punkt wyrównania z powodu górnej krawędzi ekranu](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "umieszczania jest wyrównanie do góry i okno podręczne napotka górną krawędzią ekranu.")  
@@ -210,4 +204,5 @@ A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartoś
  Docelowy punkt wyrównania okna podręczne oraz źródła można dostosować przez ustawienie <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Następnie zdefiniuj <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegata, która zwraca zestaw punktów możliwe umieszczanie i osi podstawowej (w kolejności preferencji) dla <xref:System.Windows.Controls.Primitives.Popup>. Punkt, który pokazuje największą część <xref:System.Windows.Controls.Primitives.Popup> jest zaznaczone.  Pozycja <xref:System.Windows.Controls.Primitives.Popup> jest automatycznie dostosowywany Jeśli <xref:System.Windows.Controls.Primitives.Popup> jest ukryta przez krawędzi ekranu. Aby uzyskać przykład, zobacz [Określ niestandardowe położenie okna podręcznego](how-to-specify-a-custom-popup-position.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykładowe położenia okna podręcznego](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

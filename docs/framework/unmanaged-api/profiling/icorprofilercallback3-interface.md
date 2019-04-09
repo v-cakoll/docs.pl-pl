@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 567f124b0a0066f355d057406291e6b3a7f9428d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66e6a67ce022365fa8c9e1005dfecbe4b23abd10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158388"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 — Interfejs
 Udostępnia metody wywołania zwrotnego, używanych przez środowisko uruchomieniowe języka wspólnego (CLR) do komunikacji dołączania i odłączania informacje o stanie do programu profilującego.  
@@ -46,7 +46,8 @@ Udostępnia metody wywołania zwrotnego, używanych przez środowisko uruchomien
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [ICorProfilerCallback4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [ICorProfilerInfo — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerCallback2 — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback4 — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

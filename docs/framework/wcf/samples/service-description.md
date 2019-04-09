@@ -2,12 +2,12 @@
 title: Opis usługi
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 3f6595bae8b27bb6dfb43474be0d9ebc249e88e6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: a1288329283eb611fa82733a2557af73a019796f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159813"
 ---
 # <a name="service-description"></a>Opis usługi
 Przykładowy opis usługi pokazuje, jak usługa można pobrać jego informacje o opisie usługi w czasie wykonywania. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), z operacją dodatkowych usług zdefiniowane, zwracają opisowe informacje na temat usługi. Informacje, która jest zwracana Wyświetla adresy podstawowe i punktów końcowych usługi. Te informacje przy użyciu udostępnianych przez usługę <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, i <xref:System.ServiceModel.Description.ServiceDescription> klasy.  
@@ -101,4 +101,3 @@ Press <ENTER> to terminate client.
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
-  

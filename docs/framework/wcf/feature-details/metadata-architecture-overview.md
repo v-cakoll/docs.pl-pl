@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111478"
 ---
 # <a name="metadata-architecture-overview"></a>Przegląd architektury metadanych
 Windows Communication Foundation (WCF) zapewnia rozbudowane infrastrukturę na potrzeby eksportowania, publikowania, pobieranie i Importowanie metadanych usługi. Usługi WCF umożliwia metadane opisują sposób interakcji z punktami końcowymi usługi, tak aby narzędzi, takich jak Svcutil.exe, może automatycznie generować kod klienta do uzyskania dostępu do usługi.  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) zapewnia rozbudowane infrastrukturę na p
  Może dynamicznie aktualizować powiązania, którego używasz do utworzenia kanału do punktu końcowego usługi, w przypadku, gdy zmieni się powiązanie dla punktu końcowego, lub jeśli chcesz utworzyć kanał powiadomień do punktu końcowego, który używa tej samej umowy, ale ma inne powiązanie. Możesz użyć <xref:System.ServiceModel.Description.MetadataResolver> klasy statycznej, pobieranie i Importowanie metadanych w czasie wykonywania dla punktów końcowych usługi, które implementują określone kontraktu. Następnie można użyć zaimportowanych <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> obiektów, aby utworzyć fabrykę klienta lub kanał do żądanego punktu końcowego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description>
 - [Formaty metadanych](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [Eksportowanie i importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

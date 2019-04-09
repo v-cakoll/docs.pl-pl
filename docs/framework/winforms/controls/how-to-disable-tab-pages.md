@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyłączanie kart'
+title: 'Instrukcje: wyłączanie kart'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107578"
 ---
-# <a name="how-to-disable-tab-pages"></a>Instrukcje: Wyłączanie kart
+# <a name="how-to-disable-tab-pages"></a>Instrukcje: wyłączanie kart
 W niektórych przypadkach można ograniczyć dostęp do danych, która jest dostępna w aplikacji Windows Forms. Przykładem mogą być, jeśli masz dane wyświetlane na kartach kontroli kartę; Administratorzy mogą mają informacje na stronie karty, który chcesz uniemożliwić gościa lub użytkowników niższego poziomu.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>Aby programowo wyłączanie kart  
@@ -102,7 +102,8 @@ W niektórych przypadkach można ograniczyć dostęp do danych, która jest dost
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [TabControl, kontrolka — omówienie](tabcontrol-control-overview-windows-forms.md)
-- [Instrukcje: Dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)
-- [Instrukcje: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Instrukcje: Zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Instrukcje: dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)
+- [Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy systemu Windows](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Instrukcje: zmienianie wyglądu składnika TabControl formularzy systemu Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

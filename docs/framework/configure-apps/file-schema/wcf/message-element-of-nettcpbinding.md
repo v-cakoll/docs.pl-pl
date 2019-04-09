@@ -2,12 +2,12 @@
 title: <message> element <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161021"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<komunikat > element \<netTcpBinding >
 Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe skonfigurowane za pomocą [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -74,12 +74,13 @@ Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe s
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Uwagi  
  Komunikat używa zabezpieczenia na poziomie komunikatu, integralności i poufności komunikatu protokołu SOAP, a także do wzajemnego uwierzytelniania komunikacji elementów równorzędnych. Zaznaczenie tego trybu zabezpieczeń w powiązaniu stosu kanał jest skonfigurowany przy użyciu elementów powiązanie zabezpieczeń komunikatów i komunikaty protokołu SOAP są zabezpieczone zgodnie z protokołu WS-Security * standardy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>
@@ -87,5 +88,5 @@ Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe s
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

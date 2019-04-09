@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163595"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Instrukcje: Poprawianie wydajności dzięki unikaniu automatycznego skalowania
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] może skalować automatycznie obrazu podczas rysowania, które mogłoby obniżyć wydajność. Alternatywnie, można kontrolować, skalowanie obrazu, przekazując wymiary prostokąta docelowego, aby <xref:System.Drawing.Graphics.DrawImage%2A> metody.  
@@ -41,5 +41,6 @@ ms.locfileid: "58653798"
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Zamień na Texture.jpg nazwy obrazu i ścieżki, które są prawidłowe w tym systemie.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)
 - [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)

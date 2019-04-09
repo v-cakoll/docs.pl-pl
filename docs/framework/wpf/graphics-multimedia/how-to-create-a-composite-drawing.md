@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Utwórz złożony rysunek'
+title: 'Instrukcje: Tworzenie złożonego rysunku'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawings [WPF], composite
 - composite drawings [WPF]
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
-ms.openlocfilehash: ec71fb3e2f92444d33e15da38f0c88acc715c46d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0af7fbca593627ebe8cd102a02617a27eac50aa5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132473"
 ---
-# <a name="how-to-create-a-composite-drawing"></a>Instrukcje: Utwórz złożony rysunek
+# <a name="how-to-create-a-composite-drawing"></a>Instrukcje: Tworzenie złożonego rysunku
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.DrawingGroup> do tworzenia złożonych rysunków, łącząc wiele <xref:System.Windows.Media.Drawing> obiekty w jeden złożony.  
   
 ## <a name="example"></a>Przykład  
@@ -42,10 +42,11 @@ Złożonego rysowania, który ma wiele DrawingGroup — obiekty
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Drawing> obiekty, zobacz [Przegląd obiektów rysowania](drawing-objects-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>
 - <xref:System.Windows.Media.DrawingGroup.Transform%2A>
 - <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>
 - <xref:System.Windows.Media.DrawingGroup.Opacity%2A>
 - <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>
 - <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>
-- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
+- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)

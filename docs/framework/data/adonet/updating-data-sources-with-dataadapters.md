@@ -1,18 +1,18 @@
 ---
-title: Aktualizowanie źródeł danych za pomocą elementów DataAdapters
+title: Aktualizowanie źródeł danych za pomocą elementów DataAdapter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 6989204fac64fc18cae547e272f6d52004c3af69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153598"
 ---
-# <a name="updating-data-sources-with-dataadapters"></a>Aktualizowanie źródeł danych za pomocą elementów DataAdapters
+# <a name="updating-data-sources-with-dataadapters"></a>Aktualizowanie źródeł danych za pomocą elementów DataAdapter
 `Update` Metody <xref:System.Data.Common.DataAdapter> jest wywoływana, aby rozwiązać zmian z <xref:System.Data.DataSet> wstecz do źródła danych. `Update` Metody, takiej jak `Fill` metoda, przyjmuje jako argumenty wystąpienie `DataSet`oraz opcjonalny <xref:System.Data.DataTable> obiektu lub `DataTable` nazwy. `DataSet` Wystąpienie jest `DataSet` zawiera zmiany, które zostały wprowadzone, a `DataTable` Określa tabelę, z którego można pobrać zmiany. Jeśli nie `DataTable` jest określony, pierwszy `DataTable` w `DataSet` jest używany.  
   
  Gdy wywołujesz `Update` metody `DataAdapter` analizuje zmiany, które zostały wprowadzone i uruchamia odpowiednie polecenie (INSERT, UPDATE lub DELETE). Gdy `DataAdapter` wykryje zmianę <xref:System.Data.DataRow>, używa ona <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, lub <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> przetworzyć zmiany. Dzięki temu można zmaksymalizować wydajność aplikacji ADO.NET, określając składni polecenia w czasie projektowania i, jeśli jest to możliwe przy użyciu procedur składowanych. Musisz jawnie ustawić polecenia przed wywołaniem `Update`. Jeśli `Update` nosi nazwę i odpowiednie polecenie nie istnieje dla określonej aktualizacji (na przykład nie `DeleteCommand` dla usuniętych wierszy), zgłaszany jest wyjątek.  
@@ -369,7 +369,8 @@ class Program {
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Stany wiersza i wersje wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
 - [Metody AcceptChanges i RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
 - [Scalanie zawartości elementu DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)

@@ -1,15 +1,15 @@
 ---
-title: Generowanie relacji elementu DataSet ze schematu XML (XSD)
+title: Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: b74c992c4569512a8692b70663002fd609d3501e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170225"
 ---
-# <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generowanie relacji elementu DataSet ze schematu XML (XSD)
+# <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)
 W <xref:System.Data.DataSet>, formularza skojarzenia między co najmniej dwóch kolumn, tworząc relację nadrzędny podrzędny. Istnieją trzy sposoby do reprezentowania **DataSet** relacji w ramach schematu języka (XSD) definicji schematu XML:  
   
 -   Określ zagnieżdżonych typów złożonych.  
@@ -98,4 +98,5 @@ msdata:childkey="" />
  Opisano elementy schematu XML, używany do tworzenia unikatowych obcych kluczy ograniczeń i **zestawu danych**.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

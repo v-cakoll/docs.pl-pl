@@ -15,17 +15,16 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e678dcf9606c3ad545e93a4389bccb3d49423dec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148100"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję — rozszerzenia znaczników dla XAML, w tym ich reguły składni, cel i model obiektów klasy, która jest podporządkowana narzędziu je. Rozszerzenia znaczników są ogólną funkcją języka XAML i implementacji .NET usług XAML. W tym temacie szczegółowo specjalnie do użytku w programie WPF XAML — rozszerzenia znaczników.  
-  
-  
+
 <a name="XAML_Processors_and_Markup_Extensions"></a>   
 ## <a name="xaml-processors-and-markup-extensions"></a>Procesory XAML i rozszerzeń znaczników  
  Ogólnie rzecz biorąc analizator składni XAML albo może interpretować wartość atrybutu jako ciąg literału, który można przekonwertować elementu podstawowego lub przekonwertować obiekt za pomocą środków. Jednego takiego oznacza, że jest odwołując konwertera typów; jest to opisane w temacie [TypeConverters i XAML](typeconverters-and-xaml.md). Jednak istnieją scenariusze, w których wymagane są różne zachowanie. Na przykład procesora XAML może się instrukcja, że wartość atrybutu nie powinno spowodować nowy obiekt na grafie obiektu. Zamiast tego atrybutu powinno spowodować wykresu obiektu, który sprawia, że odwołanie do już skonstruowanego obiektu w innej części wykres lub obiekt statyczny. Inny scenariusz polega na tym, że procesor XAML może być zobowiązany do używania składni, która zawiera argumenty inne niż domyślne do konstruktora obiektu. Są to typy scenariuszy, w którym rozszerzenie znaczników mogą udostępniać rozwiązania.  
@@ -118,10 +117,11 @@ W tym temacie przedstawiono koncepcję — rozszerzenia znaczników dla XAML, w 
  Większość rozszerzenia znaczników, gdy są używane w składni obiektów do wypełnienia elementu właściwości, nie będzie zawierało składnia elementu zawartości lub więcej właściwości, w ramach. Ten sposób będzie zamknięcie tagu elementu obiektu i zapewniają nie podrzędnych elementów. Napotkaniu każdy element obiektu przez procesor XAML, Konstruktor dla klasy, nosi nazwę, która tworzy wystąpienie obiektu utworzonego na podstawie przeanalizowany element. Klasa rozszerzenia struktury znaczników nie różni się: Jeśli chcesz, rozszerzenie znaczników w składni obiektów można używać, należy podać domyślnego konstruktora. Niektóre istniejące rozszerzenia znaczników mają co najmniej jedną wartość wymagana właściwość, która musi być określona dla inicjowania skuteczne. Jeśli tak, wartości tej właściwości jest zazwyczaj podawana jako atrybut właściwości w elemencie obiektu. W [Namespace XAML (x:) Funkcje języka](../../xaml-services/xaml-namespace-x-language-features.md) i [WPF XAML rozszerzenia](wpf-xaml-extensions.md) odwoływać się do strony, znaczników, które będą wyświetlane informacje dotyczące rozszerzeń, które mają wymagane właściwości (i nazwy właściwości wymagane). Strony podręcznika udostępniamy również Jeśli składnia elementu obiektu lub Składnia atrybutu jest niedozwolona dla rozszerzenia znaczników określonej. Jest istotne [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md), który nie obsługuje składni atrybutów zawartości tej tablicy muszą być określone w tagowania jako zawartość. Zawartość tablicy są obsługiwane jako obiekty ogólne, w związku z tym nie konwertera typów domyślna dla atrybutu jest to możliwe. Ponadto [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md) wymaga `type` parametru.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
-- [Namespace XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
+
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Przestrzeń nazw XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Rozszerzenia WPF XAML](wpf-xaml-extensions.md)
-- [StaticResource, rozszerzenie znaczników](staticresource-markup-extension.md)
+- [StaticResource — Rozszerzenie znaczników](staticresource-markup-extension.md)
 - [Rozszerzenie znaczników powiązania](binding-markup-extension.md)
-- [DynamicResource, rozszerzenie znaczników](dynamicresource-markup-extension.md)
-- [x:Type, rozszerzenie znaczników](../../xaml-services/x-type-markup-extension.md)
+- [DynamicResource — Rozszerzenie znaczników](dynamicresource-markup-extension.md)
+- [x:Type — Rozszerzenie znaczników](../../xaml-services/x-type-markup-extension.md)

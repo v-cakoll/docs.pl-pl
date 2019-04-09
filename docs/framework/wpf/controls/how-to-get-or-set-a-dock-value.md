@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Pobierz lub ustaw wartość dokowania'
+title: 'Instrukcje: Pobieranie lub ustawianie wartości dokowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Dock values [WPF], setting
 - Dock values [WPF], getting
 ms.assetid: fcf4ab8a-c7cd-4835-8d04-de1c999ab4a8
-ms.openlocfilehash: 7825377146532a6660e1838fa25631b788afe035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb6c8a7d62aa09a6e1d82cb4079d1425a7f39f8c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160743"
 ---
-# <a name="how-to-get-or-set-a-dock-value"></a>Instrukcje: Pobierz lub ustaw wartość dokowania
+# <a name="how-to-get-or-set-a-dock-value"></a>Instrukcje: Pobieranie lub ustawianie wartości dokowania
 Poniższy przykład pokazuje, jak przypisać <xref:System.Windows.Controls.Dock> wartość obiektu. W przykładzie użyto <xref:System.Windows.Controls.DockPanel.GetDock%2A> i <xref:System.Windows.Controls.DockPanel.SetDock%2A> metody <xref:System.Windows.Controls.DockPanel>.  
   
 ## <a name="example"></a>Przykład  
@@ -25,7 +25,8 @@ Poniższy przykład pokazuje, jak przypisać <xref:System.Windows.Controls.Dock>
  [!code-vb[DockPanelSetDock#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelSetDock/VisualBasic/DockPanel_SetDock.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.DockPanel>
 - <xref:System.Windows.Controls.DockPanel.GetDock%2A>
 - <xref:System.Windows.Controls.DockPanel.SetDock%2A>
-- [Panele — omówienie](panels-overview.md)
+- [Przegląd Panele](panels-overview.md)

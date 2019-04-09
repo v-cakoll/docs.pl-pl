@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 23c594fc57b74ea4c40a95d18b060bc6ccee46ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159253"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Określanie wartości XML jako parametrów
 Jeśli zapytanie wymaga parametru, którego wartość jest ciągiem XML, deweloperzy można podać tę wartość przy użyciu wystąpienia **SqlXml** typu danych. Istnieją tak naprawdę nie wskazówki; Kolumn XML w programie SQL Server, zaakceptuj wartości parametrów w dokładnie taki sam sposób jak inne typy danych.  
@@ -160,6 +160,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [Dane XML w programie SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

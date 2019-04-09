@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 12a23970b059e338df05a2f0b58ca67ad6fae6d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159526"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Dostawcy odbicia (WCF Data Services)
 Oprócz udostępnianie danych z modelu danych przy użyciu platformy Entity Framework [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] mogą uwidocznić dane, które nie jest ściśle zdefiniowane w modelu opartego na jednostkę. Dostawca odbicia uwidacznia dane w klasach, które są zwracane typy, które implementują <xref:System.Linq.IQueryable%601> interfejsu. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa odbicia w celu model danych dla tych klas, a można przełożyć zapytania oparte na zasobach na zapytanie o języku zintegrowanym (LINQ)-na podstawie zapytań dotyczących narażonych <xref:System.Linq.IQueryable%601> typów.  
@@ -51,7 +51,7 @@ Oprócz udostępnianie danych z modelu danych przy użyciu platformy Entity Fram
   
 |Typ danych .NET framework|Typ modelu danych|  
 |------------------------------|---------------------|  
-|<xref:System.Byte>`[]`|`Edm.Binary`|  
+|<xref:System.Byte> `[]`|`Edm.Binary`|  
 |<xref:System.Boolean>|`Edm.Boolean`|  
 |<xref:System.Byte>|`Edm.Byte`|  
 |<xref:System.DateTime>|`Edm.DateTime`|  
@@ -95,4 +95,5 @@ Oprócz udostępnianie danych z modelu danych przy użyciu platformy Entity Fram
  Ponieważ Entity Framework jest obsługiwany natywnie domyślne, dostawca danych zalecane jest dotyczące korzystania z danych relacyjnych z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Jednak można użyć dostawcy odbicia używać programu LINQ do klas SQL z usługą danych. <xref:System.Data.Linq.Table%601> Zestawy, które są zwracane przez metody na wyników <xref:System.Data.Linq.DataContext> generowane w składniku LINQ to SQL Object Relational Designer (O/R Designer) implementacja <xref:System.Linq.IQueryable%601> interfejsu. Dzięki temu dostawcy odbicia, dostęp do tych metod oraz zwracanych danych jednostki z programu SQL Server przy użyciu wygenerowanej klasy programu LINQ to SQL. Jednak ponieważ LINQ to SQL nie implementuje <xref:System.Data.Services.IUpdatable> interfejsu, należy dodać częściową klasą, która rozszerza istniejący <xref:System.Data.Linq.DataContext> klasy częściowej, aby dodać <xref:System.Data.Services.IUpdatable> implementacji. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

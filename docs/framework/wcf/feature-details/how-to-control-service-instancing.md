@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie wystąpienia usługi kontroli'
+title: 'Instrukcje: tworzenie wystąpienia usługi kontroli'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: 06324b30d2fbd68a12619375024b9f86019adbb1
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 1c1a08c702ab1bdc4579cb05359db1681e7203b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135021"
 ---
-# <a name="how-to-control-service-instancing"></a>Instrukcje: Tworzenie wystąpienia usługi kontroli
+# <a name="how-to-control-service-instancing"></a>Instrukcje: tworzenie wystąpienia usługi kontroli
 Ustawianie trybu wystąpienia usługi pozwala na określenie, kiedy <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (i jego obiekt skojarzona usługa zdefiniowanych przez użytkownika) jest tworzony. Zobacz <xref:System.ServiceModel.InstanceContextMode> wyliczenie dla możliwe tryby. Aby uzyskać więcej informacji na temat zachowań, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Przykłady pracy, zobacz [zachowania](../../../../docs/framework/wcf/samples/behaviors.md).  
   
 ### <a name="to-control-the-service-instance-lifetime-using-code"></a>Aby kontrolować okres istnienia wystąpienia usługi przy użyciu kodu  
@@ -31,6 +31,7 @@ Ustawianie trybu wystąpienia usługi pozwala na określenie, kiedy <xref:System
  [!code-vb[c_ControlServiceInstancing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ServiceBehaviorAttribute>
 - <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>
 - <xref:System.ServiceModel.InstanceContextMode>

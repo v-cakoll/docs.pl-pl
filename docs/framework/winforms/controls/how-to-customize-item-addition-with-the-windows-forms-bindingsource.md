@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy Windows Forms'
+title: 'Instrukcje: dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - BindingSource component [Windows Forms], examples
 ms.assetid: 1aae11fc-6fb2-4cb9-b3d0-e0638fe77ef0
-ms.openlocfilehash: f199fd55262b1b72bf8bc1a133a09b80db95c27a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a2f8491d0f027ca834257e2ec3a08d0b8bdb7ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129554"
 ---
-# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>Instrukcje: Dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy Windows Forms
+# <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>Instrukcje: dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy systemu Windows
 Kiedy używasz <xref:System.Windows.Forms.BindingSource> składnika, aby powiązać formant programu Windows Forms ze źródłem danych może okazać się konieczne dostosowanie tworzenia nowych elementów. <xref:System.Windows.Forms.BindingSource> Ze składników zgłasza to prosta, zapewniając <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie, które zazwyczaj jest inicjowane, gdy formant związany potrzebne do utworzenia nowego elementu. Procedury obsługi zdarzenia może zapewnić dowolne niestandardowe zachowanie jest wymagana (na przykład, wywołanie metody usługi sieci Web lub wprowadzenie nowego obiektu z fabryki klas).  
   
 > [!NOTE]
@@ -39,8 +39,9 @@ Kiedy używasz <xref:System.Windows.Forms.BindingSource> składnika, aby powiąz
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource, składnik](bindingsource-component.md)
-- [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [BindingSource — Składnik](bindingsource-component.md)
+- [Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem](how-to-bind-a-windows-forms-control-to-a-type.md)

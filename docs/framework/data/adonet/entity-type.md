@@ -1,15 +1,15 @@
 ---
-title: Typ jednostki
+title: typ jednostki
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: cb542a1750a6b45dd2fca4d32501719470d9a78a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108267"
 ---
-# <a name="entity-type"></a>Typ jednostki
+# <a name="entity-type"></a>typ jednostki
 *Typu jednostki* jest elementem składowym podstawowych do opisywania struktury danych z Entity Data Model (EDM). W modelu koncepcyjnym typ jednostki reprezentuje strukturę koncepcje najwyższego poziomu, takich jak klienci i zamówienia. Typ jednostki jest szablonem dla wystąpienia typu jednostki. Każdy szablon zawiera następujące informacje:  
   
 -   Unikatowa nazwa. (Wymagane).  
@@ -36,6 +36,7 @@ ms.locfileid: "58410891"
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [aspekt](../../../../docs/framework/data/adonet/facet.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [facet](../../../../docs/framework/data/adonet/facet.md)

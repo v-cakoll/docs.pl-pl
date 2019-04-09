@@ -2,12 +2,12 @@
 title: Omówienie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170068"
 ---
 # <a name="adonet-overview"></a>Omówienie ADO.NET
 ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML i źródła danych dostępne za pośrednictwem OLE DB i ODBC. Udostępnianie danych aplikacje komercyjne umożliwia ADO.NET nawiązać połączenie z tymi źródłami danych i pobierania, obsługiwać i zaktualizować dane, które zawierają.  
@@ -58,6 +58,7 @@ ADO.NET zapewnia spójny dostęp do źródeł danych, takie jak SQL Server i XML
  W tym artykule opisano, jak połączyć się ze źródłem danych, pobieranie danych i modyfikować dane. Obejmuje to `DataReaders` i `DataAdapters`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

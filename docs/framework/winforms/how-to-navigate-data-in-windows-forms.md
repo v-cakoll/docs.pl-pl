@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154599"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Instrukcje: Nawigowanie po danych w formularzach Windows Forms
 W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwiej można powiązać <xref:System.Windows.Forms.BindingSource> składnik do źródła danych, a następnie kontrolki powiązania <xref:System.Windows.Forms.BindingSource>. Można następnie użyć metody wbudowanej nawigacji na <xref:System.Windows.Forms.BindingSource> takich <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> i <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Przy użyciu tych metod skoryguje <xref:System.Windows.Forms.BindingSource.Position%2A> i <xref:System.Windows.Forms.BindingSource.Current%2A> właściwości <xref:System.Windows.Forms.BindingSource> odpowiednio. Można również znaleźć element i ustaw go jako bieżący element ustawiając <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości.  
@@ -51,7 +51,8 @@ W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwi
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Źródła danych obsługiwane przez formularze Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
-- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)
+
+- [Źródła danych obsługiwane przez formularze systemu Windows](data-sources-supported-by-windows-forms.md)
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows](change-notification-in-windows-forms-data-binding.md)
+- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)
+- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115768"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa uprawnień w celu ochrony zasobów i danych. Gdzie aplikacji może odczytać lub zapisać danych zależy od uprawnienia nadane aplikacji. Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych lub może być zmienić sposób dostępu do danych.  
@@ -359,9 +359,10 @@ public void Write()
  Ponieważ nie można uzyskać dostępu do rejestru w częściowej relacji zaufania, konieczne może być znaleźć inne metody przechowywania danych. Gdy zapisujesz ustawienia aplikacji, należy użyć wydzielonej pamięci masowej zamiast rejestru. Wydzielona pamięć masowa może także służyć do przechowywania inne pliki specyficzne dla aplikacji. Można również przechowywać informacje globalnej aplikacji serwera lub witryny pochodzenia, ponieważ domyślnie aplikacja jest prawo do uzyskiwania dostępu do witryny pochodzenia.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Bezpieczniejsze drukowanie w formularzach Windows Forms](more-secure-printing-in-windows-forms.md)
-- [Dodatkowe zagadnienia z zakresu zabezpieczeń dotyczące formularzy Windows Forms](additional-security-considerations-in-windows-forms.md)
-- [Przegląd zabezpieczeń w formularzach Windows Forms](security-in-windows-forms-overview.md)
-- [Zabezpieczenia formularzy Windows Forms](windows-forms-security.md)
-- [Mage.exe (narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (narzędzie generowania i edytowania manifestu, klient z interfejsem graficznym)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+
+- [Bezpieczniejsze drukowanie w formularzach systemu Windows](more-secure-printing-in-windows-forms.md)
+- [Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows](additional-security-considerations-in-windows-forms.md)
+- [Przegląd zabezpieczeń w formularzach systemu Windows](security-in-windows-forms-overview.md)
+- [Zabezpieczenia formularzy systemu Windows](windows-forms-security.md)
+- [Mage.exe (Narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

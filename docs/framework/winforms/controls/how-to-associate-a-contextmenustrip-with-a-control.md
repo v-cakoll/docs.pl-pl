@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kojarzenie kontrolki ContextMenuStrip z kontrolką'
+title: 'Instrukcje: skojarzenie właściwości ContextMenuStrip z kontrolką'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], associating with controls
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
-ms.openlocfilehash: 4b61da8dc9f36e0a80807547e2049ef512c94747
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4e39769621c46ead92076489014f6e0e9dc7863d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122372"
 ---
-# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Instrukcje: Kojarzenie kontrolki ContextMenuStrip z kontrolką
+# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Instrukcje: skojarzenie właściwości ContextMenuStrip z kontrolką
 Po utworzeniu menu skrótów i kontrolki, na których należy użyć poniższych procedur do wyświetlenia menu skrótów danego, gdy użytkownik kliknie prawym przyciskiem myszy formant. Te procedury skojarzyć <xref:System.Windows.Forms.ContextMenuStrip> z formularza Windows i <xref:System.Windows.Forms.ToolStrip> kontroli.  
   
 ### <a name="to-associate-a-contextmenustrip-with-a-windows-form"></a>Aby skojarzenie właściwości ContextMenuStrip z formularzem Windows  
@@ -42,8 +42,9 @@ Po utworzeniu menu skrótów i kontrolki, na których należy użyć poniższych
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
 - <xref:System.Windows.Forms.ToolStrip>
-- [Instrukcje: Dodawanie elementów Menu do paska ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
-- [ContextMenuStrip, kontrolka](contextmenustrip-control.md)
+- [Instrukcje: dodawanie elementów menu do paska ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
+- [ContextMenuStrip — Formant](contextmenustrip-control.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: c34a923d70c9079a3736732d6815df0329dfd557
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162727"
 ---
 # <a name="extending-dispatchers"></a>Rozszerzanie dyspozytorów
 Dystrybucja jest odpowiedzialny za ściąganie komunikaty przychodzące poza podstawowym kanały, tłumaczenie je na wywołania metody w kodzie aplikacji i wyniki są wysyłane do obiektu wywołującego. Rozszerzenia dyspozytorów umożliwiają modyfikowanie tego przetwarzania.  Możesz zaimplementować wiadomości lub parametr inspektorzy inspekcja lub modyfikowanie zawartości wiadomości lub parametrów.  Możesz zmienić sposób komunikaty są kierowane do operacji lub podaj niektórych innych funkcji.  
@@ -128,8 +128,9 @@ Dystrybucja jest odpowiedzialny za ściąganie komunikaty przychodzące poza pod
 -   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> Właściwość umożliwia wstawianie Inspektor parametru niestandardowego, który umożliwia sprawdzanie lub modyfikowanie parametrów i wartości zwracane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Instrukcje: Sprawdzanie i modyfikowanie komunikatów w usłudze](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Instrukcje: Inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Instrukcje: Blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Instrukcje: sprawdzanie i modyfikowanie komunikatów w usłudze](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Instrukcje: sprawdzanie lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Instrukcje: blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

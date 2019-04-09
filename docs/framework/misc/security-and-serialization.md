@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996231ae035e6518aaceac0ba75b3de3b52a0a22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4deadc175bd4cc3635a6c8d8d8b80100b5a9938
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151791"
 ---
 # <a name="security-and-serialization"></a>Zabezpieczenia i serializacja
 Ponieważ serializacji może pozwalać na inny kod wyświetlić lub zmodyfikować dane wystąpienia obiektu, która mogłaby być niedostępna, specjalne uprawnienie jest wymagane wykonywanie serializacji kodu: <xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> określono flagę. W obszarze domyślne zasady to uprawnienie nie zostanie podany, do pobieranych przez Internet lub z intranetu kod; to uprawnienie udziela się tylko kod na komputerze lokalnym.  
@@ -48,4 +48,5 @@ Ponieważ serializacji może pozwalać na inny kod wyświetlić lub zmodyfikowa�
 -   Specjalnych konstruktora, używanych na potrzeby serializowania również należy wykonać dokładne sprawdzenie poprawności danych wejściowych i powinna być chroniona lub prywatnej, aby chronić przed niewłaściwym użyciem przez złośliwy kod. Powinien on wymuszać samą kontroli bezpieczeństwa i uprawnienia wymagane do uzyskania wystąpienia takich klasy za pomocą innych środków, takich jak jawne utworzenie klasy lub pośrednio ją przy użyciu pewnego rodzaju fabryki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

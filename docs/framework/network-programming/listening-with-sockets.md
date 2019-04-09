@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109957"
 ---
 # <a name="listening-with-sockets"></a>Nasłuchiwanie przy użyciu gniazd
 Gniazda odbiornika lub serwera Otwórz port w sieci, a następnie poczekaj klienta połączyć się z tym portem. Mimo że istnieją inne rodziny adresów sieciowych i protokołów, w tym przykładzie pokazano, jak utworzyć usługi zdalnej sieci TCP/IP.  
@@ -60,8 +60,9 @@ listener.Listen(100);
  **Nasłuchiwania** metoda przyjmuje jeden parametr, który określa liczbę oczekujących połączeń **gniazda** są dozwolone przed zwróceniem błąd zajęty serwera do klienta nawiązującego połączenie. W tym przypadku maksymalnie 100 klientami są umieszczane w kolejce połączenia zanim serwer zajęty odpowiedź jest zwracana do klienta o numerze 101.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Używanie asynchronicznego gniazda serwera](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Używanie gniazd klientów](../../../docs/framework/network-programming/using-client-sockets.md)
-- [Instrukcje: Tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Instrukcje: tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)
 - [Gniazda](../../../docs/framework/network-programming/sockets.md)

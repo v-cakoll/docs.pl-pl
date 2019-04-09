@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156081"
 ---
 # <a name="security-transparent-code-level-2"></a>Kod o przezroczystym poziomie bezpieczeństwa, poziom 2
 <a name="top"></a>
@@ -48,7 +48,7 @@ ms.locfileid: "54567025"
   
 -   [Zastępowanie wzorów](#override)  
   
--   [Reguły dziedziczenia](#inheritance)  
+-   [Zasady dziedziczenia](#inheritance)  
   
 -   [Dodatkowe informacje i zasady](#additional)  
   
@@ -192,5 +192,6 @@ ms.locfileid: "54567025"
  <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> Właściwość `false` domyślnie, więc właściwość musi być równa `true` Aby pominąć weryfikację. To powinno odbywać się wyłącznie do celów optymalizacji. Należy upewnić się, że przezroczysty kod w zestawie jest możliwe do zweryfikowania przy użyciu `transparent` opcji [narzędzie PEVerify](../../../docs/framework/tools/peverify-exe-peverify-tool.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kod o przezroczystym poziomie bezpieczeństwa, poziom 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md)

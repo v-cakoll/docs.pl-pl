@@ -2,12 +2,12 @@
 title: Wprowadzenie do routingu
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158681"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólny podłączanych SOAP pośrednie umożliwiającym routing wiadomości na podstawie zawartości komunikatu. Usługa routingu umożliwia tworzenie złożoną logikę routingu, która pozwala na implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi, routing priorytet i routing multiemisji. Usługa routingu znajdują się również dodanymi komentarzami, która pozwala na konfigurowanie wykaz kopii zapasowych punktów końcowych, do którego są wysyłane wiadomości, jeśli wystąpi błąd podczas wysyłania do docelowego podstawowego punktu końcowego.  
@@ -356,7 +356,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
   
 |Wzorzec|Sesja|Transakcja|Kontekstu odbierania|Lista kopii zapasowych jest obsługiwana|Uwagi|  
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|  
-|Komunikacja jednokierunkowa||||Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Jeśli ten komunikat jest multiemisji, tylko wiadomość na kanale zakończonych niepowodzeniem jest przenoszony do miejsca docelowego kopii zapasowej.|  
+|Komunikacja jednokierunkowa||||Yes|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Jeśli ten komunikat jest multiemisji, tylko wiadomość na kanale zakończonych niepowodzeniem jest przenoszony do miejsca docelowego kopii zapasowej.|  
 |Komunikacja jednokierunkowa||✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Komunikacja jednokierunkowa|||✓|Tak|Próbuje ponownie wysłać wiadomość w punkcie końcowym kopii zapasowej. Po pomyślnie odebrany komunikat pełny otrzymywać wszystkich kontekstów. Jeśli komunikat nie zostanie pomyślnie odebrany przez dowolnego punktu końcowego, kontekstu odbierania nie jest ukończona.<br /><br /> Jeśli ten komunikat jest multiemisji kontekstu odbierania jest wypełniane, jeśli wiadomość została odebrana pomyślnie co najmniej jeden punkt końcowy (podstawowych lub zapasowych). Jeśli żaden z punktów końcowych, które w żadnym z multiemisji ścieżki pomyślnie wiadomości, kontekstu odbierania nie jest ukończona.|  
 |Komunikacja jednokierunkowa||✓|✓|Tak|Przerwij poprzednia transakcja, Utwórz nową transakcję i ponownie wysłać wszystkie wiadomości. Komunikaty, które napotkały błąd są przesyłane do miejsca docelowego kopii zapasowej.<br /><br /> Po utworzeniu transakcji w którym wszystkie transmisje powiedzie się, wykonaj kontekstów odbierania i zatwierdzania transakcji.|  
@@ -369,7 +369,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Dwukierunkowa||✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Dwukierunkowa|✓|✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Dupleks||||Nie|Komunikację dupleksową non sesji nie jest obecnie obsługiwane.|  
-|Dupleks|✓|||Tak|Wyślij do miejsca docelowego kopii zapasowej.|  
+|Dupleks|✓|||Yes|Wyślij do miejsca docelowego kopii zapasowej.|  
   
 ## <a name="hosting"></a>Hosting  
  Ponieważ usługa routingu jest zaimplementowana jako usługa WCF, musi być albo może być samodzielnie hostowane w aplikacji lub hostowanych przez usługi IIS i WAS. Zaleca się, że usługa routingu znajdować IIS, WAS, lub aplikacji usługi Windows można skorzystać z automatycznego uruchamiania i cyklu życia funkcje zarządzania dostępne w tych środowiskach hostingu.  
@@ -402,6 +402,7 @@ using (ServiceHost serviceHost =
  Za pomocą Windows poświadczeń personifikacji należy skonfigurować zarówno poświadczenia usługą routingu i usługi. Obiekt poświadczeń klienta (<xref:System.ServiceModel.Security.WindowsClientCredential>, jest dostępna z <xref:System.ServiceModel.ChannelFactory>) definiuje <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> właściwość, która musi być ustawione na Zezwalaj personifikacji. Na koniec w usłudze, musisz skonfigurować <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> zachowanie, aby ustawić `ImpersonateCallerForAllOperations` do `true`. Usługa routingu używa tej flagi do określania, czy chcesz utworzyć klientów do przekazywania wiadomości z włączona personifikacja.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Filtry komunikatów](message-filters.md)
 - [Kontrakty routingu](routing-contracts.md)
-- [Wybieranie filtru](choosing-a-filter.md)
+- [Wybieranie filtra](choosing-a-filter.md)

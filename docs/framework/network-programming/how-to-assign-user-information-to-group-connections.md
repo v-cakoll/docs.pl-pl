@@ -1,20 +1,19 @@
 ---
-title: 'Instrukcje: Przypisywanie informacji użytkownika do połączeń grupowych'
+title: 'Instrukcje: przypisywanie informacji użytkownika do połączeń grupowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5608f6543cf3a9d123eda4dd64a83085f1e1317c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095064"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Instrukcje: Przypisywanie informacji użytkownika do połączeń grupowych
+# <a name="how-to-assign-user-information-to-group-connections"></a>Instrukcje: przypisywanie informacji użytkownika do połączeń grupowych
 
-  
  Poniższy przykład pokazuje, jak przypisywanie informacji użytkownika do połączeń grupowych, przy założeniu, że aplikacja ustawia zmienne *UserName*, *SecurelyStoredPassword*, i  *Domeny* przed wywołaniem tej sekcji kodu i że *UserName* jest unikatowa.  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>Aby przypisać informacje o użytkowniku połączenie grupy  
@@ -109,5 +108,6 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzanie połączeniami](../../../docs/framework/network-programming/managing-connections.md)
 - [Grupowanie połączeń](../../../docs/framework/network-programming/connection-grouping.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użyj SelectedValue, SelectedValuePath i SelectedItem'
+title: 'Instrukcje: Używanie elementów SelectedValue, SelectedValuePath i SelectedItem'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], SelectedValue properties
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Control class [WPF], SelectedValuePath properties
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
-ms.openlocfilehash: e3f4e5e6a51426581082ab24a1c3a962e38846bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169710"
 ---
-# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Instrukcje: Użyj SelectedValue, SelectedValuePath i SelectedItem
+# <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Instrukcje: Używanie elementów SelectedValue, SelectedValuePath i SelectedItem
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Controls.TreeView.SelectedValue%2A> i <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> właściwości, aby określić wartość dla <xref:System.Windows.Controls.TreeView.SelectedItem%2A> z <xref:System.Windows.Controls.TreeView>.  
   
 ## <a name="example"></a>Przykład  
@@ -38,7 +38,8 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Controls.TreeView
  [!code-xaml[TreeViewSelectedValue#SelectedValuePath](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#selectedvaluepath)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [TreeView — omówienie](treeview-overview.md)
-- [Tematy z instrukcjami](treeview-how-to-topics.md)
+- [TreeView — Przegląd](treeview-overview.md)
+- [— Tematy porad](treeview-how-to-topics.md)

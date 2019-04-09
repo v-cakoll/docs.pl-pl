@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 81a442cc39608e6b24db1f0403e85ee627fc4244
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169575"
 ---
 # <a name="brush-transformation-overview"></a>Przegląd Przekształcanie pędzla
 Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Windows.Media.Brush.Transform%2A> i <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Właściwości umożliwiają obracanie, skalowanie, pochylanie i tłumaczenie zawartość pędzla. W tym temacie opisano różnice między te dwie właściwości i przykłady ich użycia.  
@@ -98,10 +98,11 @@ Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Window
  W tym przykładzie jest częścią większego przykładu. Aby uzyskać pełny przykład, zobacz [przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973). Aby uzyskać więcej informacji na temat pędzle, zobacz [pędzle WPF — Przegląd](wpf-brushes-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Brush>
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
-- [Przekształcenia — przegląd](transforms-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)
+- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
+- [Przegląd Przekształcenia](transforms-overview.md)

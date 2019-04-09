@@ -3,12 +3,12 @@ title: Migrowanie ze środowiska DNX i .NET Core interfejsu wiersza polecenia
 description: Migrację, za pomocą środowiska DNX, narzędzia do narzędzia wiersza polecenia platformy .NET Core.
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 006e909be03ec3d090135f32f7ba13311201f81e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160839"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrowanie ze środowiska DNX i .NET Core interfejsu wiersza polecenia (project.json)
 
@@ -46,7 +46,6 @@ Możesz odwoływać się do środowiska uruchomieniowego w swojej `project.json`
 Jeśli używano środowiska DNX użyto niektórych poleceń z jednego z jego trzy części (środowiska DNX, DNU lub DNVM). Za pomocą interfejsu wiersza polecenia zmienić się niektóre z tych poleceń, niektóre z nich są dostępne i niektóre są takie same, ale mają nieco innej semantyki.
 
 Poniższa tabela zawiera mapowanie między poleceń środowiska DNX/DNU i ich odpowiedniki interfejsu wiersza polecenia.
-
 
 | Polecenie środowiska DNX                    | Polecenia interfejsu wiersza polecenia    | Opis                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|

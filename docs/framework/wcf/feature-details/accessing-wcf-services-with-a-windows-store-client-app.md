@@ -2,12 +2,12 @@
 title: Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167651"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te aplikacje są projektowane na podstawie interfejsem ekranie dotykowym. .NET framework 4.5 umożliwia aplikacji Windows Store do wywołania usługi WCF.  
@@ -175,6 +175,7 @@ void async SomeMethod()
  Zwróć uwagę na async — słowo kluczowe dla metody, dzięki czemu wywołania asynchronicznego i słowo kluczowe await podczas wywoływania metody asynchronicznej.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WCF w blogu aplikacje Windows Store](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
 - [Klienci WCF Windows Store i zabezpieczeń](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
 - [Aplikacje Windows Store i wywołań między maszyny](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)

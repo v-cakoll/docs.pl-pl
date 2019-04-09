@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 721de9957e67412c32e90853215cd4f5e2cf29ae
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 99f76bd19ef274c3d4207fdd071914b736314a3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148580"
 ---
 # <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider::GetMethodLocalSymbols Method
 Pobiera symbole lokalne metody podany wirtualny adres względny (RVA) tej metody.  
@@ -53,6 +53,7 @@ HRESULT GetMethodLocalSymbols(
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [GetMethodParameterSymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodparametersymbols-method.md)
 - [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

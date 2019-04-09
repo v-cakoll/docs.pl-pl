@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127117"
 ---
 # <a name="date-and-time-data"></a>Dane daty i godziny
 Program SQL Server 2008 wprowadzono nowe typy danych do obsługi informacji daty i godziny. Nowe typy danych to oddzielne typy dla daty i godziny i typy danych rozszerzonej z większego zakresu, dokładność i świadomości strefy czasowej. Począwszy od wersji programu .NET Framework 3.5 z dodatkiem Service Pack (SP1), .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) zapewnia pełną obsługę wszystkie nowe funkcje aparatu bazy danych programu SQL Server 2008. Należy zainstalować .NET Framework 3.5 z dodatkiem SP1 (lub nowszym) te nowe funkcje za pomocą SqlClient.  
@@ -99,7 +99,7 @@ Można określić typu danych <xref:System.Data.SqlClient.SqlParameter> przy uż
 >  Wartości czasu, w których wartość jest mniejsza od zera i mniejszy niż 24 godziny będzie zgłaszać wyjątek <xref:System.ArgumentException>.  
   
 ### <a name="creating-parameters"></a>Tworzenie parametrów  
- Możesz utworzyć <xref:System.Data.SqlClient.SqlParameter> obiektu za pomocą jej konstruktora lub przez dodanie jej do <xref:System.Data.SqlClient.SqlCommand> <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji przez wywołanie metody `Add` metody <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` Metoda zajmie się jako dane wejściowe w argumentach konstruktora lub istniejący obiekt parametru.  
+ Możesz utworzyć <xref:System.Data.SqlClient.SqlParameter> obiektu za pomocą jej konstruktora lub przez dodanie jej do <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji przez wywołanie metody `Add` metody <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` Metoda zajmie się jako dane wejściowe w argumentach konstruktora lub istniejący obiekt parametru.  
   
  Następnych sekcjach tego tematu zawierają przykłady sposobu określania parametrów daty i godziny. Aby uzyskać dodatkowe przykłady pracy z parametrami, zobacz [konfigurowania parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) i [parametry elementu DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
@@ -191,7 +191,7 @@ command.Parameters.AddWithValue( _
 |Typ CLR|Wywnioskowane SqlDbType|  
 |--------------|------------------------|  
 |DataGodzina|SqlDbType.DateTime|  
-|Przedział czasu|SqlDbType.Time|  
+|TimeSpan|SqlDbType.Time|  
 |DateTimeOffset|SqlDbType.DateTimeOffset|  
   
 ## <a name="retrieving-date-and-time-data"></a>Trwa pobieranie dane daty i godziny  
@@ -240,6 +240,7 @@ command.Parameters.AddWithValue( _
 |[Typy danych (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Zawiera opis typów danych w programie SQL Server 2008.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Konfigurowanie parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Typy danych programu SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)

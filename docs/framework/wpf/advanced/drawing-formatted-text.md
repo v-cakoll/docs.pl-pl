@@ -10,17 +10,16 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a61031c36dea84449ad07175287bf834544df886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129093"
 ---
 # <a name="drawing-formatted-text"></a>Rysowanie formatowanego tekstu
 Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt zapewnia kontrolę niskiego poziomu dla Rysowanie tekstu w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
-  
-  
+
 ## <a name="technology-overview"></a>Omówienie technologii  
  <xref:System.Windows.Media.FormattedText> Obiekt umożliwia rysowanie tekstu wielowierszowego, w którym każdy znak w tekście mogą indywidualnie sformatowane. Poniższy przykład pokazuje tekst, który ma kilka formaty stosowane do niego.  
   
@@ -117,6 +116,7 @@ Kula geometrią ścieżki tekstu
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Użyj <xref:System.Windows.Media.FormattedText.Trimming%2A> właściwość z wartością <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.FormattedText>
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Typografia w WPF](typography-in-wpf.md)

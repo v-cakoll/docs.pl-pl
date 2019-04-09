@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 502d6298ec7046dcce2b413d6bfaa3ef27529e49
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3d339fbadc3260d20fac848ad7f1a9031c3443aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154664"
 ---
 # <a name="iclrpolicymanagersetdefaultaction-method"></a>ICLRPolicyManager::SetDefaultAction — Metoda
 Określa akcję zasad, które środowisko uruchomieniowe języka wspólnego (CLR) należy wykonać po wystąpieniu określonej operacji.  
@@ -77,6 +77,7 @@ HRESULT SetDefaultAction (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [EClrOperation, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [EPolicyAction, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+
+- [EClrOperation — Wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [EPolicyAction — Wyliczenie](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [ICLRPolicyManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a9ce105c-6495-49ab-b0e5-903a48ebadb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95b1f39ca3504b64df45c47330c6fe3946b2b384
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: aa9583442e9ed76d4064e4f10089b17db961ba9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125972"
 ---
 # <a name="isymunmanagedasyncmethodhascatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset — Metoda
 Zobacz [DefineCatchHandlerILOffset, Metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  
@@ -33,4 +33,5 @@ HRESULT HasCatchHandlerILOffset(    [out, retval] BOOL* pRetVal);
  **Nagłówek:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymUnmanagedAsyncMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)
+
+- [ISymUnmanagedAsyncMethod — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

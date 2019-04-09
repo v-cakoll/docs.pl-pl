@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: 094e71d2f84dff482c689ef1475697d93ce889b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199274"
 ---
 # <a name="common-security-scenarios"></a>Typowe scenariusze zabezpieczeń
 Tematy w tej sekcji wykazu pewną liczbę możliwych klienta i konfiguracje zabezpieczeń usługi. Konfiguracje różnić w zależności od szeregu czynników. Na przykład czy usługi lub klienta jest w sieci intranet lub tego, czy zabezpieczenia są dostarczane przez Windows lub transportu (np. HTTPS).  
@@ -67,7 +67,7 @@ Tematy w tej sekcji wykazu pewną liczbę możliwych klienta i konfiguracje zabe
   
  [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
   
- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [Wiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
  [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
@@ -80,5 +80,6 @@ Tematy w tej sekcji wykazu pewną liczbę możliwych klienta i konfiguracje zabe
  [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

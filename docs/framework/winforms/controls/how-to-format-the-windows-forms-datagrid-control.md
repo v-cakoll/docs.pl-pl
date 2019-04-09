@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Formatowanie kontrolki DataGrid formularzy Windows Forms'
+title: 'Instrukcje: format kontrolki DataGrid formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: 696fdc09d285e0a04148e82b0cece6108b7d5a45
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147904"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control"></a>Instrukcje: Formatowanie kontrolki DataGrid formularzy Windows Forms
+# <a name="how-to-format-the-windows-forms-datagrid-control"></a>Instrukcje: format kontrolki DataGrid formularzy systemu Windows
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -154,8 +154,9 @@ ms.locfileid: "57705912"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Instrukcje: Usuń lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy systemu Windows](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)

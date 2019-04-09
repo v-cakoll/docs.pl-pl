@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abfbea052072f0b90c9d018b520b67878d235701
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70fab3dc418e3eb92e39a7c2b1365e8582b81834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125097"
 ---
 # <a name="mitigation-tls-protocols"></a>Środki zaradcze: Protokoły TLS
 Począwszy od programu .NET Framework 4.6 <xref:System.Net.ServicePointManager?displayProperty=nameWithType> i <xref:System.Net.Security.SslStream?displayProperty=nameWithType> klasy mogą użyć jednego z następujących trzech protokołów: Tls1.0, Tls1.1 lub protokołu Tls 1.2. Protokół SSL3.0 i szyfrowania RC4 nie są obsługiwane.  
@@ -43,4 +43,5 @@ Począwszy od programu .NET Framework 4.6 <xref:System.Net.ServicePointManager?d
  Należy jednak pamiętać, że rezygnacja z domyślnym zachowaniem jest niezalecane, ponieważ dzięki niemu aplikacja mniej bezpieczna opcja.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zmiany retargetingu](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+
+- [Zmiany przekierowania](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

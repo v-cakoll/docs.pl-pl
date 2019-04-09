@@ -11,18 +11,16 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137439"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Optymalizacja wydajności: Zachowanie obiektu
 Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektów ułatwi Ci odpowiednie kompromis między funkcjonalność i wydajność.  
-  
 
-  
 <a name="Not_Removing_Event_Handlers"></a>   
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Nie usuwanie programów obsługi zdarzeń w obiektach może zachować aktywności obiektów  
  Delegat, który przekazuje obiekt, do jej zdarzenia jest skutecznym odniesieniem do tego obiektu. W związku z tym programy obsługi zdarzeń można przechowywać obiekty aktywności dłużej niż oczekiwano. Wykonywanie czyszczenia obiekt, który został zarejestrowany do nasłuchiwania zdarzeń obiektu, jest istotne, aby usunąć ten delegat przed zwolnieniem obiektu. Utrzymywanie zbędnych obiektów aktywności powoduje zwiększenie użycia pamięci aplikacji. Jest to szczególnie istotne w przypadku, gdy obiekt jest głównym drzewa logicznego lub drzewo wizualne.  
@@ -67,7 +65,7 @@ Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
  Zamrażanie <xref:System.Windows.Freezable> może zwiększyć jej wydajność, ponieważ nie jest już musi używać zasobów przy zachowaniu powiadomienia o zmianach. W poniższej tabeli przedstawiono rozmiar prostego <xref:System.Windows.Media.SolidColorBrush> podczas jego <xref:System.Windows.Freezable.IsFrozen%2A> właściwość jest ustawiona na `true`, w porównaniu do kiedy nie jest. Założono, że stosowanie jednej pędzla do <xref:System.Windows.Shapes.Shape.Fill%2A> właściwość dziesięciu <xref:System.Windows.Shapes.Rectangle> obiektów.  
   
-|**State**|**Rozmiar**|  
+|**Stan**|**Rozmiar**|  
 |---------------|--------------|  
 |Zamrożone <xref:System.Windows.Media.SolidColorBrush>|212 bajtów|  
 |Zamrożone inne niż <xref:System.Windows.Media.SolidColorBrush>|972 bajtów|  
@@ -111,6 +109,7 @@ Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
 - [Planowanie wydajności aplikacji](planning-for-application-performance.md)
 - [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)

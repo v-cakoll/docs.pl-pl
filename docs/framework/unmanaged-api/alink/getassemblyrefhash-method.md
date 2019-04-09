@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2597cf14f4f1fc9a99740b4a07502246f80087d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6fa8d42f9e849db6a02f6c62b37e04cf5dee016e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119655"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash — Metoda
 Pobiera obiekt blob wyznaczania wartości skrótu dla danego zestawu.  
@@ -53,6 +53,7 @@ HRESULT GetAssemblyRefHash(
  Wymaga alink.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink — interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

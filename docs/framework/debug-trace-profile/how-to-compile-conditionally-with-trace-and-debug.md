@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158661"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem
 Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjściowe debugowania przejdź do okna danych wyjściowych w programie Visual Studio. Jednak aby włączyć funkcje śledzenia do wdrożonej aplikacji, należy skompilować instrumentowanej aplikacji przy użyciu **śledzenia** dyrektywy kompilatora włączone. Dzięki temu kod śledzenia jest kompilowana do wersji aplikacji. Jeśli nie włączysz **śledzenia** dyrektywy, cały kod śledzenia jest ignorowany podczas kompilacji, a nie znajduje się w kodzie pliku wykonywalnego, który zostanie wdrożony.  
@@ -80,9 +80,9 @@ Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjśc
     ||**#CONST debugowania = true**|Włącza debugowanie|  
     ||**#CONST debugowania = false**|Wyłącza debugowanie|  
     |**C#**|**#define śledzenia**|Umożliwia włączenie śledzenia|  
-    ||**#undef TRACE**|Wyłącza śledzenie|  
+    ||**#undef śledzenia**|Wyłącza śledzenie|  
     ||**#define debugowania**|Włącza debugowanie|  
-    ||**#undef DEBUG**|Wyłącza debugowanie|  
+    ||**#undef debugowania**|Wyłącza debugowanie|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>Aby wyłączyć śledzenia i debugowania  
   
@@ -96,10 +96,11 @@ Dyrektywy kompilatora w komentarz.
 >  Gdy wszystko jest gotowe do kompilowania, możesz wybrać **kompilacji** z **kompilacji** menu lub użyć metody wiersza polecenia, ale bez wpisywania **d:** do definiowania warunkowe symbole kompilacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Obiekty nasłuchujące śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Instrukcje: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Instrukcje: wywoływanie kompilatora z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Instrukcje: Wywoływanie kompilatora wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

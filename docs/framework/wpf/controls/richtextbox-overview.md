@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162714"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox — Przegląd
 <xref:System.Windows.Controls.RichTextBox> Control umożliwia wyświetlanie lub edytowanie zawartości przepływu, w tym akapitów, obrazy, tabele i. W tym temacie przedstawiono <xref:System.Windows.Controls.TextBox> klasy i przykłady dotyczące używania go w obu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i C#.  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox lub RichTextBox?  
  Zarówno <xref:System.Windows.Controls.RichTextBox> i <xref:System.Windows.Controls.TextBox> umożliwia użytkownikom edytowanie tekstu, jednak dwa formanty są używane w różnych scenariuszach. Element <xref:System.Windows.Controls.RichTextBox> jest lepszym rozwiązaniem, gdy jest to niezbędne do użytkownika o taką edycję tekstu sformatowanego, obrazy, tabele lub inne sformatowanej zawartości. Na przykład, edytowanie dokumentów, artykuł lub blogów, która wymaga formatowania, obrazy, itp. najlepiej odbywa się przy użyciu <xref:System.Windows.Controls.RichTextBox>. A <xref:System.Windows.Controls.TextBox> wymaga mniej zasobów systemowych, a następnie <xref:System.Windows.Controls.RichTextBox> i jest idealnym rozwiązaniem, gdy tylko zwykły tekst musi być edytowany (tzn. użycie w formularzach). Zobacz [TextBox — Przegląd](textbox-overview.md) więcej informacji na temat <xref:System.Windows.Controls.TextBox>. Poniższa tabela zawiera podsumowanie najważniejszych funkcji <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.RichTextBox>.  
@@ -26,7 +25,7 @@ ms.locfileid: "57378200"
 |formant|Sprawdzanie pisowni w czasie rzeczywistym|Menu kontekstowe|Formatowanie poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (kont. + B)|<xref:System.Windows.Documents.FlowDocument> zawartość, taką jak obrazy, akapitów, tabelach itp.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Tak|Yes|Nie|Nie.|  
-|<xref:System.Windows.Controls.RichTextBox>|Tak|Yes|Yes|Tak|  
+|<xref:System.Windows.Controls.RichTextBox>|Yes|Yes|Yes|Tak|  
   
  **Uwaga:** Mimo że <xref:System.Windows.Controls.TextBox> nie obsługuje powiązanych poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> kont. + B, wiele podstawowych poleceń są obsługiwane przez oba formanty, takie jak <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>.  
   
@@ -95,5 +94,6 @@ ms.locfileid: "57378200"
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tematy z instrukcjami](richtextbox-how-to-topics.md)
-- [TextBox — omówienie](textbox-overview.md)
+
+- [— Tematy porad](richtextbox-how-to-topics.md)
+- [TextBox — Przegląd](textbox-overview.md)

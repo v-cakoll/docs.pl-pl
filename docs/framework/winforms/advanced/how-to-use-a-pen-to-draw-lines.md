@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
-ms.openlocfilehash: 3af91611eef4b97dc3461ad8cd7e36c7aa10a16f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b4eb7684e15ffd5b0b528771490ba66f3b7bb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156523"
 ---
 # <a name="how-to-use-a-pen-to-draw-lines"></a>Instrukcje: Rysowanie linii za pomocą pióra
 Rysowanie linii, potrzebujesz <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu. <xref:System.Drawing.Graphics> Obiektu <xref:System.Drawing.Graphics.DrawLine%2A> metody i <xref:System.Drawing.Pen> obiekt przechowuje funkcji, takich jak kolor i szerokość linii.  
@@ -25,9 +25,10 @@ Rysowanie linii, potrzebujesz <xref:System.Drawing.Graphics> obiektu i <xref:Sys
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
+ Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs>`e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Pen>
 - [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)
 - [Pióra, linie i prostokąty w GDI+](pens-lines-and-rectangles-in-gdi.md)

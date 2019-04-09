@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource'
+title: 'Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
-ms.openlocfilehash: b01c07208d796044e015b9c64e6414519862d4fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154873"
 ---
-# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Instrukcje: Udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource
+# <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource
 Dane mogą łatwo udostępniać w wielu formularzach za <xref:System.Windows.Forms.BindingSource> składnika. Na przykład można wyświetlić jeden formularz tylko do odczytu, który podsumowuje dane źródło danych i innym edytowalnego formularza, który zawiera szczegółowe informacje dotyczące aktualnie wybranego elementu w źródle danych. Ten przykład pokazuje, w tym scenariuszu.  
   
 ## <a name="example"></a>Przykład  
@@ -37,6 +37,7 @@ Dane mogą łatwo udostępniać w wielu formularzach za <xref:System.Windows.For
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [BindingSource, składnik](bindingsource-component.md)
-- [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)
-- [Instrukcje: Obsługa błędów i wyjątków występujących za powodu powiązania danych](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+
+- [BindingSource — Składnik](bindingsource-component.md)
+- [Powiązywanie danych formularzy systemu Windows](../windows-forms-data-binding.md)
+- [Instrukcje: obsługa błędów i wyjątków występujących za powodu powiązania danych](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

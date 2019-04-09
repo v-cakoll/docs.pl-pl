@@ -1,15 +1,15 @@
 ---
-title: SQL Server Data typów i ADO.NET
+title: Typy danych programu SQL Server i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 14a3c8b2f520efce96667b2028405ca36ed17a28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90589f54728ad5e887b96f37f96ff31928c680ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168418"
 ---
-# <a name="sql-server-data-types-and-adonet"></a>SQL Server Data typów i ADO.NET
+# <a name="sql-server-data-types-and-adonet"></a>Typy danych programu SQL Server i ADO.NET
 Program SQL Server i .NET Framework są oparte na różnych typów systemów, które może spowodować utratę danych. Aby zachować spójność danych, dla programu .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) udostępnia metody typizowane metody dostępu do pracy z danymi programu SQL Server. Można używać wyliczenia w <xref:System.Data.SqlDbType> klasy, aby określić <xref:System.Data.SqlClient.SqlParameter> typów danych.  
   
  Więcej informacji i tabelę, która opisuje mapowanie typu danych między serwerem SQL i typów danych programu .NET Framework, zobacz [mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
@@ -55,6 +55,7 @@ Program SQL Server i .NET Framework są oparte na różnych typów systemów, kt
  W tym artykule opisano `DbType` wyliczenia i wszyscy jej członkowie.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Konfigurowanie parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Parametry o wartościach tabelowych](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)

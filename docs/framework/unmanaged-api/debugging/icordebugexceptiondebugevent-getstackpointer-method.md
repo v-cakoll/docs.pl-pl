@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f5ea632ad8a7dd2e24e71742223936b01298f31
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d9d4c0a1938edd3e2fe88ea6e418b3430f1b5cb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163205"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>Metoda ICorDebugExceptionDebugEvent::GetStackPointer
 Pobiera wskaźnik stosu dla tego zdarzenia debugowania wyjątku.  
@@ -51,5 +51,6 @@ HRESULT GetStackPointer(
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebugExceptionDebugEvent, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfejs ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

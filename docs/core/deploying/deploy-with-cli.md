@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: c71ab84cfd97e65f5e30bd5e1ff651f8e0c2d700
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132083"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie .NET Core z aplikacji przy użyciu interfejsu wiersza polecenia
 
@@ -129,7 +129,8 @@ Publikowanie FDE tworzy aplikację, automatycznie ustala przekazywania dalej na 
 
 Należy najpierw (z wyjątkiem platformy .NET Core 3.x, gdy miejscem docelowym bieżącej platformie) Użyj następujących przełączników z `dotnet publish` polecenie w celu opublikowania FDE:
 
-- `-r <RID>` Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
+- `-r <RID>`
+  Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
 - `--self-contained false` Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako FDE.
 
@@ -148,13 +149,13 @@ Publikowanie — SCD tworzy aplikację, która nie przodu do najnowszych dostęp
 
 Należy użyć następujących przełączników z `dotnet publish` polecenie w celu opublikowania — SCD:
 
-- `-r <RID>` Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
+- `-r <RID>`
+  Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
 - `--self-contained true` Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako — SCD.
 
 > [!NOTE]
 > Można zmniejszyć całkowity rozmiar wdrożenia, włączając **globalizacji niezmiennej tryb**. Ten tryb jest przydatne w przypadku aplikacji, które nie są wspierane i mogą używać konwencji formatowania Konwencji obudowy i ciąg porównywania i sortowania kolejności [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture). Aby uzyskać więcej informacji na temat **globalizacji niezmiennej tryb** i jak go włączyć, zobacz [trybie niezmiennej globalizacji platformy .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)
-
 
 ## <a name="see-also"></a>Zobacz także
 

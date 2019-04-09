@@ -1,5 +1,5 @@
 ---
-title: Automatyczne wykrywanie serwera Proxy
+title: Automatyczne wykrywanie serwera proxy
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 5f79f25e879df85fed7b6e402d47d98f047dd562
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3de9b67d687d23e9f31c3060f5af6ef90d45f217
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164765"
 ---
-# <a name="automatic-proxy-detection"></a>Automatyczne wykrywanie serwera Proxy
+# <a name="automatic-proxy-detection"></a>Automatyczne wykrywanie serwera proxy
 Automatyczne wykrywanie serwera proxy jest procesem, za pomocą którego serwer proxy sieci Web jest identyfikowane przez system i używane do wysyłania żądania w imieniu klienta. Ta funkcja jest również znana jako funkcja autowykrywania serwera Proxy sieci Web (WPAD). Gdy automatyczne wykrywanie serwera proxy jest włączone, system próbuje zlokalizować skryptu konfiguracji serwera proxy, która jest odpowiedzialna za zwrócenie zestaw serwerów proxy, które mogą być używane dla żądania. Jeśli zostanie znaleziony skryptu konfiguracji serwera proxy, skrypt pobrany, skompilowany i uruchom na komputerze lokalnym, jeśli informacje o serwerze proxy, strumienia żądania lub odpowiedzi jest uzyskiwany na żądanie, który używa <xref:System.Net.WebProxy> wystąpienia.  
   
  Automatyczne wykrywanie serwera proxy odbywa się przez <xref:System.Net.WebProxy> klasy i mogą stosować ustawienia na poziomie żądania, ustawienia w plikach konfiguracji i ustawień określonych w programie Internet Explorer **sieci lokalnej (LAN)** okno dialogowe.  
@@ -68,6 +68,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
  Żądania, które nie mają serwer proxy przy użyciu domenę aplikacji domyślny serwer proxy, który jest dostępny w <xref:System.Net.WebRequest.DefaultWebProxy%2A> właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
 - [\<przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

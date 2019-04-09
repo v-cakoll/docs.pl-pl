@@ -1,15 +1,15 @@
 ---
-title: Przechodzenie translatora adresów Sieciowych przy użyciu protokołu IPv6 i Teredo
+title: Przechodzenie translatora adresów sieciowych przy użyciu protokołu IPv6 i Teredo
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: 896c3f9036e76c37f5f6bf2950d3d2d2864b3f37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170775"
 ---
-# <a name="nat-traversal-using-ipv6-and-teredo"></a>Przechodzenie translatora adresów Sieciowych przy użyciu protokołu IPv6 i Teredo
+# <a name="nat-traversal-using-ipv6-and-teredo"></a>Przechodzenie translatora adresów sieciowych przy użyciu protokołu IPv6 i Teredo
 Wprowadzono ulepszenia, które umożliwiają przechodzenie translacji adresów sieciowych (NAT). Te zmiany są skonstruowane do użycia przy użyciu protokołu IPv6 i Teredo, ale są one również zastosowanie do innych adresów IP, tunelowanie technologii. Te ulepszenia wpływają na klas w <xref:System.Net> i pokrewnych przestrzeniach nazw.  
   
  Te zmiany mogą wpływać na klienta i serwera aplikacji, które planujesz używać tunelowania technologii adresu IP.  
@@ -45,6 +45,7 @@ Wprowadzono ulepszenia, które umożliwiają przechodzenie translacji adresów s
  W przypadku aplikacji, które używają <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> i powiązanymi klasami <xref:System.Net.Sockets.Socket.GetSocketOption%2A> i <xref:System.Net.Sockets.Socket.SetSocketOption%2A> metody mogą być używane z <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType> gniazda opcję, aby zbadać, włączyć lub wyłączyć Przechodzenie translatora adresów Sieciowych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.IPAddress.IsIPv6Teredo%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A?displayProperty=nameWithType>
 - <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A?displayProperty=nameWithType>

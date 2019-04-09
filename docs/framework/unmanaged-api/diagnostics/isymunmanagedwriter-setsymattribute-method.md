@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ee3e96a25a224fb5b025e22fa43169a64f6c0d2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155470"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute — Metoda
 Określa atrybut niestandardowy na podstawie jego nazwy. Te atrybuty są przechowywane w magazynie symboli, w przeciwieństwie do atrybutów niestandardowych metadanych.  
@@ -57,4 +57,5 @@ HRESULT SetSymAttribute(
  **Nagłówek:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymUnmanagedWriter, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+
+- [ISymUnmanagedWriter — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

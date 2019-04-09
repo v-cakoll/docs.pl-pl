@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129483"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Instrukcje: Zapewnianie pomocy w aplikacji Windows
 Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby dołączyć tematów pomocy w pliku pomocy do określonych formantów na formularzach Windows Forms. Może to być plik Pomocy HTML lub HTMLHelp 1.x lub większa formatu.  
@@ -56,7 +56,8 @@ Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby
  Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby wyświetlić Pomoc podręczną, nawet jeśli jest skonfigurowany do wyświetlania plików pomocy dla formantów na formularzach Windows. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie pomocy podręcznej](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Wyświetlanie pomocy podręcznej](how-to-display-pop-up-help.md)
-- [Pomoc do kontrolek przy użyciu etykietek narzędzi](control-help-using-tooltips.md)
-- [Integrowanie pomocy użytkownika z formularzami Windows Forms](integrating-user-help-in-windows-forms.md)
+- [Pomoc w kontroli przy użyciu ToolTips](control-help-using-tooltips.md)
+- [Integrowanie pomocy użytkownika z formularzami systemu Windows](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

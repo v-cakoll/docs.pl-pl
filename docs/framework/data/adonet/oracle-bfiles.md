@@ -1,15 +1,15 @@
 ---
-title: Oracle bFile
+title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 825cb9eb4bdb54509c8ca3c20db4dade8b3ece73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142392"
 ---
-# <a name="oracle-bfiles"></a>Oracle bFile
+# <a name="oracle-bfiles"></a>Oracle BFILE
 .NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleBFile> klasę, która zostanie użyta do pracy z bazą danych Oracle <xref:System.Data.OracleClient.OracleType.BFile> typu danych.  
   
  Oracle **BPLIK** ma typ danych Oracle **LOB** typ danych, który zawiera odwołanie do danych binarnych o maksymalnym rozmiarze 4 gigabajty. Oracle **BPLIK** różni się od innych Oracle **LOB** typy danych, w tym jego dane są przechowywane w pliku fizycznego w systemie operacyjnym, a nie na serwerze. Należy pamiętać, że **BPLIK** — typ danych zapewnia dostęp do danych tylko do odczytu.  
@@ -87,5 +87,6 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

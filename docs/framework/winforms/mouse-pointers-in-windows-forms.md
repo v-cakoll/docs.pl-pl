@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122788"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Wskaźniki myszy w formularzach systemu Windows
 Wskaźnik myszy *wskaźnika*, który jest czasami nazywany kursora, jest mapę bitową, która określa punkt koncentracji uwagi na ekranie dla danych wejściowych użytkownika za pomocą myszy. Ten temat zawiera omówienie wskaźnik myszy w formularzach Windows Forms i opisuje kilka sposobów modyfikowania i sterowanie wskaźnikiem myszy.  
@@ -31,6 +31,7 @@ Wskaźnik myszy *wskaźnika*, który jest czasami nazywany kursora, jest mapę b
  Podstawowym sposobem, aby zmienić wskaźnik myszy jest ustawiając <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> lub <xref:System.Windows.Forms.Control.DefaultCursor%2A> właściwości formantu do nowego <xref:System.Windows.Forms.Cursor>. Przykłady Zmienianie wskaźnika myszy można znaleźć w przykładzie kodu w <xref:System.Windows.Forms.Cursor> klasy. Ponadto <xref:System.Windows.Forms.Cursors> klasa udostępnia zestaw <xref:System.Windows.Forms.Cursor> obiektów dla wielu różnych wskaźników, takie jak wskaźnik, który przypomina dłoni. Aby wyświetlić wskaźnik oczekiwania, który przypomina Klepsydra zawsze wtedy, gdy wskaźnik myszy na kontrolce, należy użyć <xref:System.Windows.Forms.Control.UseWaitCursor%2A> właściwość <xref:System.Windows.Forms.Control> klasy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Cursor>
 - [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Funkcjonalność przeciągania i upuszczania w formularzach Windows Forms](drag-and-drop-functionality-in-windows-forms.md)
+- [Funkcjonalność przeciągania i upuszczania w formularzach systemu Windows](drag-and-drop-functionality-in-windows-forms.md)

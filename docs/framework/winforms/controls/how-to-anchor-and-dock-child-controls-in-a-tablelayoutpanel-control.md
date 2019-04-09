@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel'
+title: 'Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: a4fcb4e527825a9946861a46dc336db227e52296
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dbd5d04bc1a4505fd2cb75913110199080ca6323
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200262"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel
 <xref:System.Windows.Forms.TableLayoutPanel> Kontrolować obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jego formantów podrzędnych.  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>Aby wyrównać kontrolki podrzędnej w komórce TableLayoutPanel  
@@ -85,5 +85,6 @@ ms.locfileid: "57709630"
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [TableLayoutPanel, kontrolka](tablelayoutpanel-control-windows-forms.md)
+- [TableLayoutPanel — kontrolka](tablelayoutpanel-control-windows-forms.md)

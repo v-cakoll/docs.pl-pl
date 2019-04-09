@@ -9,27 +9,27 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: 61f3eee6f4690e9bd9141f2eeb6de330bac87550
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105860"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Wybór i używanie schowka za pomocą składnika DataGridView formularzy systemu Windows
 `DataGridView` Kontroli udostępnia szereg opcji dotyczących konfigurowania, jak użytkownicy mogą wybrać komórek, wierszy i kolumn. Na przykład można włączyć wybór jednego lub wielu, wybranych całych wierszy lub kolumn, gdy użytkownik kliknie komórki lub wybór całych wierszy lub kolumn tylko wtedy, gdy użytkownik kliknie ich nagłówki, co umożliwia także zaznaczenie komórki. Jeśli chcesz udostępnić interfejs użytkownika do wyboru, można wyłączyć zwykłych wybór i obsługiwać wszystkie zaznaczenia programowo. Ponadto można umożliwić użytkownikom skopiuj wybrane wartości do Schowka.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tryby wyboru w kontrolce DataGridView formularzy Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)  
+ [Tryby wyboru w formancie DataGridView formularzy systemu Windows](selection-modes-in-the-windows-forms-datagridview-control.md)  
  W tym artykule opisano opcje użytkownika i programowe zaznaczenie w kontrolce.  
   
- [Instrukcje: Ustawianie trybu zaznaczania kontrolki DataGridView formularzy Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ [Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy systemu Windows](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
  W tym artykule opisano sposób konfigurowania kontroli do wyboru pojedynczy wiersz tabeli, gdy użytkownik kliknie komórki.  
   
- [Instrukcje: Pobieranie wybranych komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](selected-cells-rows-and-columns-datagridview.md)  
+ [Instrukcje: pobieranie wybranych komórek, wierszy i kolumn w kontrolce DataGridView formularzy systemu Windows](selected-cells-rows-and-columns-datagridview.md)  
  W tym artykule opisano sposób pracy z wybranymi kolekcjami komórek, wierszy i kolumn.  
   
- [Instrukcje: Umożliwianie użytkownikom kopiowania wielu komórek do Schowka z kontrolki DataGridView formularzy Windows Forms](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [Instrukcje: umożliwianie użytkownikom kopiowania wielu komórek do schowka z kontrolki DataGridView formularzy systemu Windows](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  W tym artykule opisano sposób włączania Obsługa schowka w formancie.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -52,5 +52,6 @@ ms.locfileid: "57715376"
  Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> klasy.  
   
 ## <a name="see-also"></a>Zobacz także
-- [DataGridView, kontrolka](datagridview-control-windows-forms.md)
+
+- [DataGridView — Formant](datagridview-control-windows-forms.md)
 - [Domyślna obsługa myszy i klawiatury w kontrolce DataGridView formularzy Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

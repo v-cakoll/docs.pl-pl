@@ -2,12 +2,12 @@
 title: Przykład strumieniowych kanałów informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: a2bbc51593b4f1c3655d2e1d0df7f14d0005d68c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc09d4c7d0e9ff75806c1c5e9d3ec1ef77507638
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172448"
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
 Niniejszy przykład pokazuje, jak zarządzać zespolone kanały informacyjne, które zawierają dużą liczbę elementów. Na serwerze, w przykładzie pokazano sposób opóźnić tworzenie poszczególnych <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów w ramach źródła danych do momentu natychmiast przed zapisaniem elementu w strumieniu sieci.  
@@ -119,4 +119,5 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
 ## <a name="see-also"></a>Zobacz także
-- [Autonomiczne źródło danych diagnostycznych](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)
+
+- [Autonomiczny kanał diagnostyczny](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

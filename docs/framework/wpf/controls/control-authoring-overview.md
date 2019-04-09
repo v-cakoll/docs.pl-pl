@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171863"
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
 Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] model kontroli znacząco zmniejsza potrzebę tworzenia nowego formantu. Jednak w niektórych przypadkach może być nadal należy utworzyć formant niestandardowy. W tym temacie omówiono funkcje, które zminimalizować potrzebę tworzenia formantu niestandardowego i innej kontrolki tworzenia modeli w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Również w tym temacie pokazano, jak utworzyć nowy formant.  
-  
- 
-  
+
 <a name="when_to_write_a_new_control"></a>   
 ## <a name="alternatives-to-writing-a-new-control"></a>Alternatywy dla zapisywania nowego formantu  
  W przeszłości Jeśli chcesz uzyskać dostosowane środowisko z istniejącej kontrolki ograniczały użytkowników do zmiany standardowe właściwości kontrolki, takie jak kolor tła, szerokość obramowania i rozmiar czcionki. Dalej rozszerzać wygląd i zachowanie kontrolki poza tych wstępnie zdefiniowanych parametrów, należy utworzyć nowy formant, zwykle przez dziedziczenie z istniejącej kontrolki i zastąpienie metody, które są odpowiedzialne za narysowanie formantu.  Mimo że nadal jest opcją, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] umożliwia użytkownikowi dostosowywanie istniejących kontrolek przy użyciu rozbudowanych model zawartości, style, szablonów i wyzwalacze. Poniższa lista zawiera przykłady, jak te funkcje mogą być używane w taki sposób, aby tworzyć niestandardowe i spójne środowiska bez konieczności tworzenia nowego formantu.  
@@ -184,7 +182,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 -   Implementowanie parę `public` `static` CLR metody o nazwie `Set` *PropertyName* i `Get` *PropertyName*. Obie metody powinna obsługiwać klasę pochodną <xref:System.Windows.DependencyProperty> jako swojego pierwszego argumentu. `Set` *PropertyName* metoda akceptuje także argumentem, którego typ jest zgodny z typem danych zarejestrowanych dla właściwości. `Get` *PropertyName* metoda powinna zwrócić wartość tego samego typu. Jeśli `Set` *PropertyName* Brak metoda, właściwość jest oznaczona jako tylko do odczytu.  
   
--   `Set` *PropertyName* i `Get` *PropertyName* musi kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> metod w zależności docelowego obiektu odpowiednio. Projektanci mogą uzyskiwać dostęp do dołączona właściwość wywoływania przez otoki metody lub wybierając bezpośrednie wywołanie do obiektu docelowego zależności.  
+-   `Set` **PropertyName* i `Get` *PropertyName* musi kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> metod w zależności docelowego obiektu odpowiednio.DProjektanci mogą uzyskiwać dostęp do dołączona właściwość wywoływania przez otoki metody lub wybierając bezpośrednie wywołanie do obiektu docelowego zależności.  
   
  Aby uzyskać więcej informacji na temat dołączone właściwości, zobacz [Przegląd właściwości dołączonych](../advanced/attached-properties-overview.md).  
   
@@ -269,6 +267,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
  [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Pakowanie URI w WPF](../app-development/pack-uris-in-wpf.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+- [Pakuj URI w WPF](../app-development/pack-uris-in-wpf.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)

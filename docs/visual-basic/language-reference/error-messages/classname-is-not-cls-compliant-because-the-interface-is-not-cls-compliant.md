@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 6743a0decebb9711a4e44d09b03fe32f88ff2f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101318"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>"\<nazwa_klasy >' nie jest zgodny ze specyfikacją CLS, ponieważ interfejs"\<interfacename > "go implementuje, jest niezgodny ze specyfikacją CLS
 Klasy lub interfejsu, jest oznaczana `<CLSCompliant(True)>` po pochodzi od klasy lub typu, który jest oznaczony jako implementuje `<CLSCompliant(False)>` lub nie jest oznaczona.  
@@ -32,5 +32,3 @@ Klasy lub interfejsu, jest oznaczana `<CLSCompliant(True)>` po pochodzi od klasy
 -   Jeśli wymagana jest zgodność ze specyfikacją CLS, należy zdefiniować tego typu w ramach różnych dziedziczenia hierarchii lub implementacji systemu.  
   
 -   Jeśli potrzebujesz, że tego typu pozostaną w jego bieżącej hierarchii lub implementacji schemat dziedziczenia, Usuń <xref:System.CLSCompliantAttribute> z jego definicji lub oznaczyć go jako `<CLSCompliant(False)>`.  
-  
- 

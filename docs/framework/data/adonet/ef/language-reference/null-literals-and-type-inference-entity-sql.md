@@ -2,12 +2,12 @@
 title: Literały null i wnioskowanie o typie (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 2499579237155ff3f7291f795bd1ce9e8a84163c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22b548f2fc889b20f76a41001438f75c25f99c00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118095"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Literały null i wnioskowanie o typie (jednostka SQL)
 Literały null są zgodne z żadnym typem w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] system typów. Jednak w przypadku typu literałem o wartości null, aby był wywnioskowany poprawnie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nakłada pewne ograniczenia dotyczące użycia właściwość literal o wartości null.  
@@ -41,4 +41,5 @@ Literały null są zgodne z żadnym typem w [!INCLUDE[esql](../../../../../../in
  Swobodny literały null nie można używać w innych scenariuszach. Na przykład nie mogą być używane jako argumenty konstruktorze wierszy.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

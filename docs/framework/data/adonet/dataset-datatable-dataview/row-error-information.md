@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
-ms.openlocfilehash: bc3e4517e0bb194508ccb0598920a3bdd1299e5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152727"
 ---
 # <a name="row-error-information"></a>Informacje o błędzie wiersza
 Aby uniknąć konieczności reagować na błędy wierszy podczas edycji wartości <xref:System.Data.DataTable>, można dodać informacje o błędzie do wiersza w celu późniejszego użycia. <xref:System.Data.DataRow> Obiektu <xref:System.Data.DataRow.RowError%2A> właściwość w każdym wierszu, w tym celu. Dodawanie danych do **RowError** właściwość **DataRow** ustawia <xref:System.Data.DataRow.HasErrors%2A> właściwość **DataRow** do **true**. Jeśli **DataRow** jest częścią **DataTable**, i **DataRow.HasErrors** jest **true**, **DataTable.HasErrors** właściwość jest również **true**. Dotyczy to także do **DataSet** do której **DataTable** należy. Testowanie pod kątem błędów, można sprawdzić **HasErrors** właściwości w celu określenia, jeśli dodano informacje o błędzie do wszystkich wierszy. Jeśli **HasErrors** jest **true**, możesz użyć <xref:System.Data.DataTable.GetErrors%2A> metody **DataTable** powrócić do zbadania tylko wiersze z błędami, jak pokazano w poniższym przykładzie.  
@@ -78,8 +78,9 @@ protected static void OnRowChanged(
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
-- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Operowanie na danych w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

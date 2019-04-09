@@ -3,12 +3,12 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: 383ce39816ec7d3f2567765549b537073ee7e081
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120786"
 ---
 # <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
 Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Ten element może być tylko obecne Jeśli `mode` atrybutu `<cookieHandler>` element to "Default" lub "Fragmentaryczne".  
@@ -64,4 +64,5 @@ Konfiguruje <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Ten eleme
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Services.ChunkedCookieHandler>

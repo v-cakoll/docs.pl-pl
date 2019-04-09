@@ -2,12 +2,12 @@
 title: <serviceAuthorization> — element
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: c967993c3a3f7276cd3a9076741de202e1f4c343
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157349"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > element
 Określa ustawienia, które zezwalają na dostęp do operacji usługi  
@@ -96,10 +96,11 @@ Określa ustawienia, które zezwalają na dostęp do operacji usługi
  Aby uzyskać szczegółowy przykład przy użyciu tego elementu konfiguracji, zobacz [Autoryzowanie dostępu do operacji usługi](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) i [zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Autoryzowanie dostępu do operacji usługi](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Instrukcje: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [Zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md)

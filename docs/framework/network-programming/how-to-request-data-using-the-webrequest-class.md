@@ -11,12 +11,12 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: df61b533801abc4c826d3e711228305c9452498a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 0a2d60a31b1875d948e07615e1613e2b163c15b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171057"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Instrukcje: Żądanie danych przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki, aby zażądać zasobu, np. strony sieci Web lub plik z serwera. Zasób musi być identyfikowany przez identyfikator URI.  
@@ -96,8 +96,8 @@ Poniższy przykład kodu pokazuje, jak utworzyć żądanie do serwera sieci web 
 [!code-csharp[RequestDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/RequestDataUsingWebRequest/cs/WebRequestGetExample.cs)]
 [!code-vb[RequestDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/RequestDataUsingWebRequest/vb/WebRequestGetExample.vb)]
 
-  
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie żądań internetowych](creating-internet-requests.md)
 - [Stosowanie strumieni w sieci](using-streams-on-the-network.md)
 - [Dostęp do Internetu za pośrednictwem serwera proxy](accessing-the-internet-through-a-proxy.md)

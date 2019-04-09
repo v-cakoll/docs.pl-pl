@@ -10,20 +10,18 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 2587a3b4e38aed507688cc86f0e179b3acbb1672
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0d663acc195b36fdc95c196f2233ae997fbd9195
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132772"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Automatyzacja interfejsu użytkownika formantu niestandardowego WPF
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] udostępnia interfejs pojedynczego, uogólnionego tej usługi automation, w których klienci mogą używać do sprawdzania lub działanie interfejsów użytkownika różnych platform i struktur. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] umożliwia aplikacji ułatwień dostępu, takich jak czytniki zawartości ekranu do badania elementy interfejsu użytkownika i symulacji interakcji użytkownika z nimi z innym kodem i kody jakości (test). Aby uzyskać informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] na wszystkich platformach, zobacz funkcje ułatwień dostępu.  
   
  W tym temacie opisano, jak do implementowania dostawcy automatyzacji interfejsu użytkownika po stronie serwera dla formantu niestandardowego, który jest uruchamiany w aplikacji WPF. WPF obsługuje [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] za pośrednictwem drzewa obiektów automatyzacji elementów równorzędnych, które równoleżnikami drzewa elementów interfejsu użytkownika. Testowanie kodu i aplikacje, które udostępniają funkcje ułatwień dostępu, można użyć obiektów równorzędnych automatyzacji bezpośrednio (dla kodu w procesie) lub za pomocą uogólnionej interfejs dostarczony przez [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)].  
-  
- 
-  
+
 <a name="AutomationPeerClasses"></a>   
 ## <a name="automation-peer-classes"></a>Klasy elementu równorzędnego automatyzacji  
  WPF kontroluje pomocy technicznej [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] za pośrednictwem drzewa klas elementów równorzędnych, które wynikają z <xref:System.Windows.Automation.Peers.AutomationPeer>. Zgodnie z konwencją nazw klas elementów równorzędnych zaczynają się od Nazwa klasy kontrolki i kończyć się znakiem "AutomationPeer". Na przykład <xref:System.Windows.Automation.Peers.ButtonAutomationPeer> jest klasą elementu równorzędnego dla <xref:System.Windows.Controls.Button> kontrolować klasy. Klasy elementu równorzędnego są w przybliżeniu do [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować typów, ale są specyficzne dla [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] elementów. Kod automatyzacji, który uzyskuje dostęp do aplikacji WPF przy użyciu [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] interfejsu nie korzysta z elementy równorzędne automatyzacji bezpośrednio, ale kodu automatyzacji w tej samej przestrzeni procesu może bezpośrednio korzystać elementy równorzędne automatyzacji.  
@@ -155,6 +153,7 @@ End Class
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd automatyzacji interfejsu użytkownika](../../ui-automation/ui-automation-overview.md)
 - [Formant NumericUpDown niestandardowe z motywu i przykładowe Obsługa automatyzacji interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=160025)
 - [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../ui-automation/server-side-ui-automation-provider-implementation.md)

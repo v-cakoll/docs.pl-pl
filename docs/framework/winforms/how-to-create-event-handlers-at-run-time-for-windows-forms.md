@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie procedur obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms'
+title: 'Instrukcje: Tworzenie programów obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 7ebafd745290a40fa6f4f83910fb32d67cdcff75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158551"
 ---
-# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Instrukcje: Tworzenie procedur obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms
+# <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Instrukcje: Tworzenie programów obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms
 Oprócz tworzenia zdarzeń za pomocą programu Windows Forms Designer, możesz również utworzyć program obsługi zdarzeń w czasie wykonywania. Ta akcja umożliwia łączenie programów obsługi zdarzeń na podstawie warunków w kodzie w czasie wykonywania, a nie po ich połączone po początkowym uruchomieniu programu.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>Aby utworzyć program obsługi zdarzeń w czasie wykonywania  
@@ -73,6 +73,7 @@ Oprócz tworzenia zdarzeń za pomocą programu Windows Forms Designer, możesz r
      <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> Metoda pokazano w powyższym kodzie języka Visual Basic ustanawia obsługi zdarzeń kliknięcia dla przycisku.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](creating-event-handlers-in-windows-forms.md)
-- [Przegląd procedur obsługi zdarzeń](event-handlers-overview-windows-forms.md)
-- [Rozwiązywanie problemów z odziedziczonymi programami obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+
+- [Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](creating-event-handlers-in-windows-forms.md)
+- [Przegląd programów obsługi zdarzeń](event-handlers-overview-windows-forms.md)
+- [Rozwiązywanie problemów związanych z odziedziczonymi programami obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

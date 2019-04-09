@@ -2,12 +2,12 @@
 title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160767"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestniczą w procesie odnajdowania, można zabezpieczyć. Udoskonalanie komunikaty odnajdywania Dzięki zabezpieczeniom zmniejsza różne rodzaje ataków (komunikat zmiany, odmowa usługi, oparte na metodzie powtórzeń, fałszowanie adresów). W tym przykładzie implementuje niestandardowe kanały, które obliczeń i sprawdzanie podpisów komunikat w formacie compact podpisu (opisanej w sekcji 8.2 specyfikacji WS-Discovery). Przykład obsługuje zarówno [specyfikacji odnajdywania 2005](https://go.microsoft.com/fwlink/?LinkId=177912) i [wersji 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -74,4 +74,3 @@ Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestn
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
-  

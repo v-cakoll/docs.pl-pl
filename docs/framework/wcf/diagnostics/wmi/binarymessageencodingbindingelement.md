@@ -2,12 +2,12 @@
 title: BinaryMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-ms.openlocfilehash: 330496d5f0f80affcb6bc44a1f66f4321a635f00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0551e7b4b05151490625912742aa6b26ef0216e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145681"
 ---
 # <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
 BinaryMessageEncodingBindingElement  
@@ -65,4 +65,5 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

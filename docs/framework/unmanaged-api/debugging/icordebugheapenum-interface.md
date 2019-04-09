@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e9f58a0bc51e8a22672df6ab9bd94009c00f9bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79ef77e52e14fede9949121e7ec4575d10b820c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135853"
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum — Interfejs
 Dostarcza moduł wyliczający dla obiektów na zarządzanej stercie. Ten interfejs jest podklasą icordebugenum — interfejs.  
@@ -47,4 +47,5 @@ Dostarcza moduł wyliczający dla obiektów na zarządzanej stercie. Ten interfe
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz niestandardowy element panelu'
+title: 'Instrukcje: Tworzenie niestandardowego elementu panelu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: 2e778adfb79a64c8f248992aee92de9471906129
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d4fc9d76ada9f27bd52619280b323691af9382c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139571"
 ---
-# <a name="how-to-create-a-custom-panel-element"></a>Instrukcje: Utwórz niestandardowy element panelu
+# <a name="how-to-create-a-custom-panel-element"></a>Instrukcje: Tworzenie niestandardowego elementu panelu
 ## <a name="example"></a>Przykład  
  W tym przykładzie pokazano, jak zastąpić domyślne zachowanie układu <xref:System.Windows.Controls.Panel> elementu i tworzenie elementów układu niestandardowego, które są uzyskiwane z <xref:System.Windows.Controls.Panel>.  
   
@@ -29,6 +29,7 @@ ms.locfileid: "57368704"
  [!code-vb[PlotPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Panel>
-- [Panele — omówienie](panels-overview.md)
+- [Przegląd Panele](panels-overview.md)
 - [Tworzenie niestandardowych przykładowej panelu zawijania zawartości](https://go.microsoft.com/fwlink/?LinkID=159979)

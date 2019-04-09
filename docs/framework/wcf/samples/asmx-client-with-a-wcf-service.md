@@ -2,12 +2,12 @@
 title: Klient ASMX z usługą WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 63938f866083dac56d6ef43fdd8757c60b9a2f2b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e8cf536d93337986882a0a5136194a3ad4a03b58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139558"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Klient ASMX z usługą WCF
 W tym przykładzie przedstawiono sposób tworzenia usługi przy użyciu usługi Windows Communication Foundation (WCF) i następnie uzyskać dostęp do usługi z klienta inne niż WCF, takich jak klient ASMX.  
@@ -148,4 +148,3 @@ Press <ENTER> to terminate client.
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
-  

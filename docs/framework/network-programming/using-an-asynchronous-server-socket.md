@@ -1,5 +1,5 @@
 ---
-title: Za pomocą asynchronicznego gniazda serwera
+title: Używanie asynchronicznego gniazda serwera
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 5bc4e6e43d346c1543cf43d9782fd22718b4fef4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119928"
 ---
-# <a name="using-an-asynchronous-server-socket"></a>Za pomocą asynchronicznego gniazda serwera
+# <a name="using-an-asynchronous-server-socket"></a>Używanie asynchronicznego gniazda serwera
 Server asynchronicznego gniazda używają modelu programowania asynchronicznego środowiska .NET Framework do przetwarzania żądania usługi sieci. <xref:System.Net.Sockets.Socket> Klasy postępuje zgodnie ze standardowym .NET Framework asynchroniczny wzorzec nazewnictwa; na przykład synchronicznego <xref:System.Net.Sockets.Socket.Accept%2A> metody odpowiada asynchroniczną <xref:System.Net.Sockets.Socket.BeginAccept%2A> i <xref:System.Net.Sockets.Socket.EndAccept%2A> metody.  
   
  Asynchronicznego gniazda serwera wymaga metodę, aby zacząć akceptować żądań połączeń od sieci, metody wywołania zwrotnego do obsługi żądań połączenia i zacząć odbierać dane z sieci i metody wywołania zwrotnego do końca odbiera dane. Wszystkie te metody zostały omówione w tej sekcji.  
@@ -269,6 +269,7 @@ public static void ReadCallback(IAsyncResult ar)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Przykład asynchronicznego gniazda serwera](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
 - [Wątkowość](../../../docs/standard/threading/index.md)

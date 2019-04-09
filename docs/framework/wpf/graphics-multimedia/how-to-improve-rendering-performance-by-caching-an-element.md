@@ -8,12 +8,12 @@ helpviewer_keywords:
 - performance [WPF], caching an element
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
-ms.openlocfilehash: b5e39541fdf031b19e9e74483c0de94295e788d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153377"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>Instrukcje: Poprawianie wydajności renderowania przez zapisanie elementu w pamięci podręcznej
 Użyj <xref:System.Windows.Media.BitmapCache> klasy, aby zwiększyć wydajność renderowania złożony <xref:System.Windows.UIElement>. Aby element w pamięci podręcznej, należy utworzyć nowe wystąpienie klasy <xref:System.Windows.Media.BitmapCache> klasy i przypisz je do elementu <xref:System.Windows.UIElement.CacheMode%2A> właściwości. Można użyć ponownie <xref:System.Windows.Media.BitmapCache> wydajnie w <xref:System.Windows.Media.BitmapCacheBrush>.  
@@ -24,7 +24,8 @@ Użyj <xref:System.Windows.Media.BitmapCache> klasy, aby zwiększyć wydajność
  [!code-xaml[System.Windows.Media.BitmapCache#_BitmapCacheXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcache/cs/window1.xaml#_bitmapcachexaml)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [Instrukcje: Użyj pamięci podręcznej elementu jako pędzla](how-to-use-a-cached-element-as-a-brush.md)
+- [Instrukcje: Używanie zachowanego w pamięci podręcznej elementu jako pędzla](how-to-use-a-cached-element-as-a-brush.md)

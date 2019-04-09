@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139428"
 ---
 # <a name="optimizing-performance-application-resources"></a>Optymalizacja wydajności: Zasoby aplikacji
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pozwala na udostępnianie zasobów aplikacji, aby może obsługiwać spójnego wyglądu i zachowania, które znajdują się w podobnych elementów. Ten temat zawiera kilka zaleceń, w tym obszarze, które mogą pomóc poprawić wydajność aplikacji.  
@@ -43,12 +43,13 @@ ms.locfileid: "57352402"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
 - [Planowanie wydajności aplikacji](planning-for-application-performance.md)
 - [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)
 - [Układ i projekt](optimizing-performance-layout-and-design.md)
 - [Grafika 2D i obrazowanie](optimizing-performance-2d-graphics-and-imaging.md)
 - [Zachowanie obiektu](optimizing-performance-object-behavior.md)
-- [Text](optimizing-performance-text.md)
+- [Tekst](optimizing-performance-text.md)
 - [Powiązanie danych](optimizing-performance-data-binding.md)
 - [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)

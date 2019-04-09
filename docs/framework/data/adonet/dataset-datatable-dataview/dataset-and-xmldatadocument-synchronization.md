@@ -1,18 +1,18 @@
 ---
-title: DataSet i XmlDataDocument synchronizacji
+title: Synchronizacja elementów DataSet i XmlDataDocument
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164739"
 ---
-# <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet i XmlDataDocument synchronizacji
+# <a name="dataset-and-xmldatadocument-synchronization"></a>Synchronizacja elementów DataSet i XmlDataDocument
 ADO.NET <xref:System.Data.DataSet> zapewnia relacyjnych reprezentację danych. Uzyskać dostęp do danych hierarchicznych można użyć klasy XML dostępnych w programie .NET Framework. W przeszłości te dwa reprezentacje danych zostały użyte oddzielnie. Jednak .NET Framework udostępnia w czasie rzeczywistym, synchronicznej relacyjne i hierarchiczne reprezentacje danych za pośrednictwem **DataSet** obiektu i <xref:System.Xml.XmlDataDocument> obiektu, odpowiednio.  
   
  Gdy **DataSet** jest zsynchronizowany z **XmlDataDocument**, oba obiekty działają z jednego zestawu danych. Oznacza to, że jeśli zostanie podjęta zmiany **DataSet**, zmiana będzie odzwierciedlona we **XmlDataDocument**i na odwrót. Relacja między **DataSet** i **XmlDataDocument** tworzy dużą elastyczność, umożliwiając pojedynczej aplikacji, dostęp do całego zestawu usług oferowanych przy użyciu jednego zestawu danych, wokół **DataSet** (na przykład kontrolek Windows Forms i formularzy sieci Web i projektantów programu Visual Studio .NET), a także pakiet usług XML, w tym arkusza stylów języka XSL (Extensible), przekształcenia XSL (XSLT) i XML Path Language (XPath). Nie trzeba wybrać zestaw usług do obiektu docelowego przy użyciu aplikacji; obie są dostępne.  
@@ -113,4 +113,5 @@ ADO.NET <xref:System.Data.DataSet> zapewnia relacyjnych reprezentację danych. U
  Zawiera informacje o **XmlDataDocument** klasy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

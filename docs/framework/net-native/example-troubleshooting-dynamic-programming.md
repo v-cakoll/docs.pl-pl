@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137894"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Przykład: Rozwiązywanie problemów z programowaniem dynamicznym
 > [!NOTE]
@@ -61,5 +61,6 @@ AppViewModel.Current.LayoutVM.PageMap
  Jeśli aplikacja była wykorzystywana `typeof(LayoutApplicationVM)` zamiast `Type.GetType("LayoutApplicationVM")`, może mieć zachowane łańcucha narzędzi `browse` metadanych.  Jednak go jeszcze nie zostały utworzone `invoke` metadanych, które doprowadziłoby do [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątek podczas tworzenia wystąpienia typu. Aby zapobiec wyjątku, nadal trzeba dodać dyrektyw środowiska uruchomieniowego w przestrzeni nazw lub typ, który określa `dynamic` zasad. Aby uzyskać informacje dotyczące dyrektywy środowiska uruchomieniowego, zobacz [dyrektywy środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Przykład: Obsługa wyjątków podczas powiązywania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Przykład: Obsługa wyjątków podczas wiązania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

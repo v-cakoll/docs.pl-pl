@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3f18d5e62f4986f880b35825d8e0239dba8d4c6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164557"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode> Element
 Określa, czy środowisko uruchomieniowe pozwala zachować starsze zachowanie w operacjach przy użyciu formatowania <xref:System.TimeSpan?displayProperty=nameWithType> wartości.  
@@ -94,5 +94,6 @@ Invalid Format
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

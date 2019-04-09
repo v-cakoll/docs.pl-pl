@@ -1,15 +1,15 @@
 ---
-title: Tworzenie zagnieżdżonych zapytań jednostki SQL
+title: Tworzenie zagnieżdżonych zapytań w języku Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: b5fc39a25b5b8592117348b150da9d82454a1562
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137985"
 ---
-# <a name="composing-nested-entity-sql-queries"></a>Tworzenie zagnieżdżonych zapytań jednostki SQL
+# <a name="composing-nested-entity-sql-queries"></a>Tworzenie zagnieżdżonych zapytań w języku Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest bogaty język funkcjonalności. Elementem składowym [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażeniem. W przeciwieństwie do poziomu konwencjonalnego SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczona do zestawu wyniku tabelarycznym: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub zagnieżdżonych wyrażeń. Wartości w wyrażeniu można ustawiać parametry lub składa się z niektóre inne wyrażenie.  
   
 ## <a name="nested-expressions"></a>Nested Expressions  
@@ -76,4 +76,5 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

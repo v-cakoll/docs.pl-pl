@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b52b12df9953dbafaeebfe223313288de0e559b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143952"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost — Interfejs
 Udostępnia metody, które zwracają określonej wersji środowiska uruchomieniowego języka wspólnego (CLR) na podstawie jego numeru wersji, listę wszystkich zainstalowanych CLRs, listy wszystkie środowiska uruchomieniowe, które są ładowane w określonym procesie, odnajdź wersję środowiska CLR używane do kompilowania zestawu, Zakończ proces Zamknięcie czyste środowisko uruchomieniowe i powiązań dla zapytań dotyczących starszej wersji interfejsu API.  
@@ -57,5 +57,6 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Hosting — Interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

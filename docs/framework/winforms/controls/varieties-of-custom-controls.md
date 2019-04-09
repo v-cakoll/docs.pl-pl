@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 140b9284d9361aa149b4f739908376d1cbe6902c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170709"
 ---
 # <a name="varieties-of-custom-controls"></a>Różne typy formantów niestandardowych
 Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontrolek. Możesz rozszerzyć funkcjonalność formantu użytkownika z dobrze znanych również jako istniejących kontrolek poprzez dziedziczenie. Można także napisać niestandardowe formanty, które narysowania swoje własne.  
@@ -107,8 +107,9 @@ Za pomocą programu .NET Framework można opracowanie i wdrożenie nowych kontro
  Użyj <xref:System.ComponentModel.DesignerAttribute> do powiązania kontrolki z projektanta. Aby uzyskać więcej informacji, zobacz [rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) i [jak: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
-- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](how-to-develop-a-simple-windows-forms-control.md)
-- [Opracowywanie złożonej kontrolki formularzy Windows Forms](developing-a-composite-windows-forms-control.md)
-- [Rozszerzenie obsługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+
+- [Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
+- [Instrukcje: opracowywanie prostej kontrolki formularzy systemu Windows](how-to-develop-a-simple-windows-forms-control.md)
+- [Opracowywanie złożonego formantu formularzy systemu Windows](developing-a-composite-windows-forms-control.md)
+- [Rozszerzona pomoc techniczna czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Instrukcje: Tworzenie formantu formularzy Windows wykorzystującego funkcje czasu projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

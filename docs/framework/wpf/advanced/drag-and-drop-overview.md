@@ -12,17 +12,16 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139220"
 ---
 # <a name="drag-and-drop-overview"></a>Przegląd Przeciąganie i upuszczanie
 Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Przeciągnij i upuść często odnosi się do metody transferu danych, która polega na użyciu myszy (lub inne urządzenie wskazujące) zaznacz jeden lub więcej obiektów, przeciągając obiekty za pośrednictwem niektórych żądanego miejsca docelowego w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]i upuszczając je.  
-  
-  
+
 <a name="Drag_and_Drop_Support"></a>   
 ## <a name="drag-and-drop-support-in-wpf"></a>Obsługa przeciągania i upuszczania w WPF  
  Operacji przeciągania i upuszczania zwykle obejmują dwie strony: przeciągnij źródło, z której pochodzi przeciągany obiekt i miejsca docelowego, który odbiera upuszczony obiekt.  Docelowy przeciągania źródłowej i docelowej mogą być elementy interfejsu użytkownika w tej samej aplikacji lub innej aplikacji.  
@@ -217,7 +216,8 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Clipboard>
-- [Przewodnik: Włączanie przeciągania i upuszczania w kontrolce użytkownika](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Tematy z instrukcjami](drag-and-drop-how-to-topics.md)
-- [Przeciąganie i upuszczanie](drag-and-drop.md)
+- [Przewodnik: włączanie przeciągania i upuszczania w kontrolce użytkownika](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [— Tematy porad](drag-and-drop-how-to-topics.md)
+- [Przeciągnij i opuść](drag-and-drop.md)

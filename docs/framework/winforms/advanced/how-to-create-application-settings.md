@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166403"
 ---
 # <a name="how-to-create-application-settings"></a>Instrukcje: Tworzenie ustawień aplikacji
 Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wiązania ich z właściwościami w formularzu lub kontrolki formularza tak, aby te ustawienia są ładowane i zapisywane automatycznie w czasie wykonywania.  
@@ -47,7 +47,8 @@ Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wi
  Domyślny dostawca ustawień <xref:System.Configuration.LocalFileSettingsProvider>, będzie nadal występował, informacje w plikach konfiguracji jako zwykły tekst. Ogranicza to zabezpieczeń w celu zabezpieczenia dostępu do plików, które są dostarczane przez system operacyjny dla bieżącego użytkownika. W związku z tym należy uważać, z informacjami przechowywanymi w plikach konfiguracji. Na przykład jeden typowym celem zastosowania ustawienia aplikacji jest przechowywanie parametrów połączenia, prowadzące do aplikacji w magazynie danych. Jednak ze względu na problemy dotyczące zabezpieczeń, takich ciągów nie może zawierać hasła. Aby uzyskać więcej informacji dotyczących parametrów połączenia, zobacz <xref:System.Configuration.SpecialSetting>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Przegląd ustawień aplikacji](application-settings-overview.md)
-- [Instrukcje: Sprawdzanie poprawności ustawień aplikacji](how-to-validate-application-settings.md)
+- [Instrukcje: Walidacja ustawień aplikacji](how-to-validate-application-settings.md)

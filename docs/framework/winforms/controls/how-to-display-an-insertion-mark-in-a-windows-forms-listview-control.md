@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie znacznika wstawiania w formancie ListView formularzy Windows'
+title: 'Instrukcje: wyświetlanie znacznika wstawiania w kontrolce ListView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: 1c588053f9603a796d74fd706254ea150d21573a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145616"
 ---
-# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Instrukcje: Wyświetlanie znacznika wstawiania w formancie ListView formularzy Windows
+# <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Instrukcje: wyświetlanie znacznika wstawiania w kontrolce ListView formularzy systemu Windows
 Znacznika wstawiania w <xref:System.Windows.Forms.ListView> kontrolka pokazuje użytkowników punktu, w którym zostanie wstawiony przeciąganych elementów. Gdy użytkownik przeciąga element do punktu między dwoma innymi elementami, znacznika wstawiania pokazuje oczekiwanych nową lokalizację elementu.  
   
 > [!NOTE]
@@ -43,9 +43,10 @@ Znacznika wstawiania w <xref:System.Windows.Forms.ListView> kontrolka pokazuje u
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
-- [Kontrolka ListView](listview-control-windows-forms.md)
+- [ListView — Formant](listview-control-windows-forms.md)
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)
-- [Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

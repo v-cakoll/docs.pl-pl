@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43349dd3562b4480746948a0e65cc52580e377b3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d47f14ff2adb37fca16cf6774a2b80cb2e074b17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157316"
 ---
 # <a name="icordebugtypeenumnext-method"></a>ICorDebugTypeEnum::Next — Metoda
 Pobiera liczbę wystąpień "ICorDebugType" określonego przez `celt` z wyliczenia, zaczynając od bieżącej pozycji.  
@@ -58,4 +58,3 @@ HRESULT Next (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-

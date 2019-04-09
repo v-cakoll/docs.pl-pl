@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1ee5044c2223d3ff90cf10b53cad4e1b353d87c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c54b2af6e7a200db89bfd7335868a629d7a886fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141313"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState — Wyliczenie
 Wskazuje stan wątku użytkownika.  
@@ -71,4 +71,5 @@ typedef enum CorDebugUserState {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [Debugowanie — wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

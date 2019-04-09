@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 6afa68295c0119cd77b91185abcf2fb9cb407590
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114273"
 ---
 # <a name="using-keyboard-events"></a>Używanie zdarzeń klawiatury
 Większość programów Windows Forms przetwarzać dane wejściowe z klawiatury dzięki obsłudze zdarzeń klawiatury. Ten temat zawiera omówienie zdarzenia klawiatury, w tym informacji o tym, kiedy należy używać każdego zdarzenia i dane, która jest dostarczana dla każdego zdarzenia.  Zobacz też [Przegląd obsługi zdarzeń (Windows Forms)](event-handlers-overview-windows-forms.md) i [Przegląd zdarzeń (systemu Windows Windows Forms)](events-overview-windows-forms.md).  
@@ -39,6 +39,7 @@ Większość programów Windows Forms przetwarzać dane wejściowe z klawiatury 
 |<xref:System.Windows.Forms.Control.KeyUp>|To zdarzenie jest wywoływane, gdy użytkownik zwolni klawisz fizycznych.|Obsługa <xref:System.Windows.Forms.Control.KeyUp> odbiera:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametru:<br /><br /> <ul><li>Co zapewnia <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> właściwości (który określa przycisku klawiatury fizycznych).</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Właściwości (SHIFT, CTRL lub ALT).</li><li><xref:System.Globalization.SortKey.KeyData%2A> Właściwości, (które łączy klucza kodu i modyfikator).</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wprowadzanie z klawiatury w aplikacjach Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+
+- [Wprowadzanie z klawiatury w aplikacjach formularzy systemu Windows](keyboard-input-in-a-windows-forms-application.md)
 - [Działanie wprowadzania z klawiatury](how-keyboard-input-works.md)
 - [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)

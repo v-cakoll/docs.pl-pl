@@ -2,12 +2,12 @@
 title: <connectionPoolSettings> z <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 4828357f392089be14ee04bc672acce0c0973300
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 93363c5ff1753ff02956404da7697780078c9839
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129977"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> of \<tcpTransport>
 Określa ustawienia puli dodatkowego połączenia dla transportu TCP.  
@@ -50,6 +50,7 @@ Określa ustawienia puli dodatkowego połączenia dla transportu TCP.
 |[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Definiuje transport, powodujący przesył kanałem wiadomości używając potoków nazwanych.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

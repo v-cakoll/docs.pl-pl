@@ -3,12 +3,12 @@ title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: ff5bf2b4140665e7af8f8ec0103c32fe2e8a3142
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 747660df58604dd9384abefccb51ea665f97e2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139675"
 ---
 # <a name="trackingprofile"></a>\<trackingProfile>
 Reprezentuje sekcję konfiguracji do tworzenia subskrypcji do śledzenia rekordów w uczestnikiem śledzenia przepływu pracy. Profil śledzenia zawiera śledzenia zapytań, pozwalające uczestnikiem śledzenia do subskrybowania zdarzenia przepływu pracy, które są emitowane po zmianie stanu wystąpienia przepływu pracy w czasie wykonywania. Kwerendy zdefiniowane w profilu śledzenia sekcji zdefiniować rodzaje zdarzenia, które są zwracane w subskrypcji.  
@@ -96,7 +96,7 @@ Reprezentuje sekcję konfiguracji do tworzenia subskrypcji do śledzenia rekord�
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.|  
+|[\<Śledzenie >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.|  
   
 ## <a name="remarks"></a>Uwagi  
  Śledzenie profile zawiera śledzenia zapytań, pozwalające uczestnikiem śledzenia do subskrybowania zdarzenia przepływu pracy, które są emitowane po zmianie stanu wystąpienia przepływu pracy w czasie wykonywania. W zależności od potrzeb może zapisu profil przybliżonego, które subskrybuje niewielkiego zestawu zmian stanu wysokiego poziomu przepływ pracy. Z drugiej strony można utworzyć bardzo określony profil którego wynikowego zdarzenia są rozbudowanych, odtworzenie przepływ wykonania szczegółowe później.  
@@ -126,6 +126,7 @@ Reprezentuje sekcję konfiguracji do tworzenia subskrypcji do śledzenia rekord�
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>
 - <xref:System.Activities.Tracking.TrackingProfile>
 - [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

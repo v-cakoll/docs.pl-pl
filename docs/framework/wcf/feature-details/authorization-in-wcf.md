@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 51bf3c81962c6981affdb96261fc41211142e46d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26aa445f3136fcb16e2eb9cdce6b245476297dfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161374"
 ---
 # <a name="authorization-in-wcf"></a>Autoryzacja w programie WCF
 Autoryzacja to proces nadzoru nad dostępu i uprawnień do zasobów, takich jak usługi lub plików. Tematy w tej sekcji pokazano, jak wykonać to zadanie podstawowe w Windows Communication Foundation (WCF) na różne sposoby.  
@@ -22,10 +22,10 @@ Autoryzacja to proces nadzoru nad dostępu i uprawnień do zasobów, takich jak 
  [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Przedstawia proces ograniczanie dostępu do usługi za pomocą <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
   
- [Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Instrukcje: używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  Omawia konfigurację usługi, aby włączyć go do użycia funkcję dostawcy roli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
- [Instrukcje: Używanie dostawcy roli Menedżera autoryzacji platformy ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [Instrukcje: używanie dostawcy roli menedżera autoryzacji platformy ASP.NET za pomocą usługi](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] można użyć Menedżera autoryzacji do zarządzania autoryzacji dla witryny sieci Web. Podobnie można korzystać z usługi WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]kombinacja /Authorization Menedżera autoryzacji klientów.  
   
  [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
@@ -47,5 +47,6 @@ Autoryzacja to proces nadzoru nad dostępu i uprawnień do zasobów, takich jak 
  [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

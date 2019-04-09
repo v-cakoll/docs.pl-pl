@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b682904a8e7f2eafa8833d784febe7b3b2a1e5f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6de2a5ff4d2743c7aca2e46b3af848138c15fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158785"
 ---
-# <a name="beginenumeration-function"></a>Funkcja Beingenumeration
+# <a name="beginenumeration-function"></a>BeingEnumeration, funkcja
 Rozpoczyna się wyliczenie metody dostępne dla obiektu.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -77,4 +77,5 @@ Wywołanie tej metody jest obsługiwana tylko w przypadku, jeśli bieżący obie
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

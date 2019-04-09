@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c6d3b50cb3589dcd98c53e1abf0ce2be144d8f9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111179"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage — Funkcja
 Sprawdza poprawność obrazów modułu zarządzanego i powiadamia moduł ładujący systemu operacyjnego po ich załadowaniu.  
@@ -83,4 +83,5 @@ STDAPI _CorValidateImage (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

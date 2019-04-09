@@ -3,12 +3,12 @@ title: Dokumentacja interfejsu API programu WIF
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 21b294a58efcad6c3eb7c74e643a2ac3e0ea23fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c94ccd3f25be576c57fda798c6b2b8cc25357022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172214"
 ---
 # <a name="wif-api-reference"></a>Dokumentacja interfejsu API programu WIF
 Klasy Windows Identity Foundation (WIF) są dzielone między następujących zestawów: `mscorlib` (mscorlib.dll) `System.IdentityModel` (System.IdentityModel.dll) `System.IdentityModel.Services` (System.IdentityModel.Services.dll) i `System.ServiceModel` () System.ServiceModel.dll). Ten temat zawiera łącza do przestrzeniach nazw środowiska WIF i krótkie objaśnienia klas, które zawiera każdej przestrzeni nazw.  
@@ -47,5 +47,6 @@ Klasy Windows Identity Foundation (WIF) są dzielone między następujących zes
  Zawiera klasy reprezentujące WCF umów, kanałów i hosty usług oraz innych artefaktów, które są używane w aktywnej scenariuszy (WS-Trust). Ta przestrzeń nazw zawiera także klas specyficznych do programu Windows Communication Foundation (WCF) i które nie są używane przez program WIF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Odwołanie konfiguracji programu WIF](../../../docs/framework/security/wif-configuration-reference.md)
 - [Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)

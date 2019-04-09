@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 647b1807957b611b9ba75ee90a7ac2257246d14c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150751"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace > (architektura .NET Native)
 Zastosowanie zasad odbicia środowiska uruchomieniowego dla wszystkich typów w określonej przestrzeni nazw.  
@@ -66,7 +66,7 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego dla wszystkich typów w 
 |Element|Opis|  
 |-------------|-----------------|  
 |`<Namespace>`|Dotyczy wszystkich typów w przestrzeni nazw nadrzędnego zasad odbicia środowiska uruchomieniowego.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Zastosowanie zasad odbicia do typu.|  
+|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Zastosowanie zasad odbicia do typu.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowanego typu ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -75,7 +75,7 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego dla wszystkich typów w 
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji, typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) element może mieć zero, co najmniej jeden [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) elementów.|  
 |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Dotyczy wszystkich typów w określonym zestawie zasad odbicia środowiska uruchomieniowego.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć zero lub jeden [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) elementu.|  
+|[\<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć zero lub jeden [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) elementu.|  
 |`<Namespace>`|Ma zastosowanie zasad odbicia do wszystkich typów w nadrzędna przestrzeń nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -84,6 +84,7 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego dla wszystkich typów w 
  Gdy jest elementem podrzędnym [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) elementu `<Namespace>` element zastąpienia zasad odbicia środowiska uruchomieniowego, które są definiowane przez [ \<zestawu >](../../../docs/framework/net-native/assembly-element-net-native.md) elementu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)

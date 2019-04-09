@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 241fe7714bfd3dd3fd37f7ac83a836f89b4951bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141755"
 ---
 # <a name="accessibility-domain-c-reference"></a>Domena dostępności (odwołanie w C#)
 Domena dostępności członka Określa, w sekcjach programów, które mogą być przywoływane członka. Jeśli element członkowski jest zagnieżdżony w ramach innego typu, jego domeny dostępności jest określana przez oba [poziom dostępności](../../../csharp/language-reference/keywords/accessibility-levels.md) członka i domena dostępności typu zawierającego.  
@@ -26,7 +26,8 @@ Domena dostępności członka Określa, w sekcjach programów, które mogą być
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+
+- [Odwołanie w C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
 - [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bc1e788f6a55fa6441592141d3a2236a7a0e2d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f14d3dcaad1cc8cac11599b1647d61df3a793301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124452"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo — Struktura
 Zawiera szczegółowe informacje o module odwołania i zestawu, który go zawiera.  
@@ -57,8 +57,9 @@ typedef struct _ModuleBindInfo {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [AssemblyBindInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
-- [ICLRAssemblyIdentityManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [ICLRAssemblyReferenceList, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
-- [IHostAssemblyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
+
+- [Hosting — Struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [AssemblyBindInfo — Struktura](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
+- [ICLRAssemblyIdentityManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [ICLRAssemblyReferenceList — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
+- [IHostAssemblyManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 89459223108c0190a485b25193e44d379a1e1c19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169757"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey — Rozszerzenie znaczników
 Definiuje i odwołuje się do kluczy dla zasobów, które zostały załadowane z zewnętrznych zestawów. Dzięki temu wyszukiwania zasobów określić typ docelowy w zestawie, a nie słownika zasobów jawne, w zestawie lub klasy.  
@@ -75,8 +75,9 @@ Definiuje i odwołuje się do kluczy dla zasobów, które zostały załadowane z
  `ComponentResourceKey` jest rozszerzeniem znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Użyj {i} znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą którego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora rozpoznaje, że rozszerzenie znacznika musi wykonać przetwarzanie atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Tworzenie kontrolek — omówienie](../controls/control-authoring-overview.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Przegląd Autorstwo formantów](../controls/control-authoring-overview.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)

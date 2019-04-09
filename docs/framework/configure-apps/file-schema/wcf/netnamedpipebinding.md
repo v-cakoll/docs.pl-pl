@@ -2,12 +2,12 @@
 title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 6dcbc7842e7e5012075309d2679df238ad33a3c2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: dc1af462222920c7b3c6b66c3822e7b2b326b244
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410683"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169828"
 ---
 # <a name="netnamedpipebinding"></a>\<netNamedPipeBinding>
 Definiuje powiązanie, które jest bezpieczne i niezawodne, zoptymalizowane pod kątem na maszynie komunikacji pomiędzy procesami. Domyślnie generuje ona stosu środowiska uruchomieniowego komunikacji przy użyciu WS-ReliableMessaging niezawodność i zabezpieczenia transportu dla bezpieczeństwa transferu nazwane potoki dostarczania wiadomości i kodowania komunikatu binarnego.  
@@ -70,7 +70,7 @@ Definiuje powiązanie, które jest bezpieczne i niezawodne, zoptymalizowane pod 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Definiuje ustawienia zabezpieczeń dla wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Definiuje ustawienia zabezpieczeń dla wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>.|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -144,9 +144,10 @@ Definiuje powiązanie, które jest bezpieczne i niezawodne, zoptymalizowane pod 
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>
 - <xref:System.ServiceModel.NetNamedPipeBinding>
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

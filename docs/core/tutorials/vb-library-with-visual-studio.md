@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 1fddbfd84164a95505cff1783e241ea9001231f5
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157303"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie biblioteki .NET Standard, w języku Visual Basic i .NET Core SDK w programie Visual Studio 2017
 
@@ -62,8 +62,6 @@ Utwórz projekt biblioteki klas:
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**. Projekt powinien być skompilowana bez błędów.
 
    ![Okienko danych wyjściowych, pokazujący, że kompilacja zakończyła się pomyślnie](./media/library-with-visual-studio/output-pane-successful-build.png)
-
-
 
 ## <a name="next-step"></a>Następny krok
 

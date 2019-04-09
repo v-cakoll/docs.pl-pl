@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
-ms.openlocfilehash: 282ec36a2ad489e77db9fb5b338d3189c3001f03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7edc60c7ab8510aadd9ac273529a88adeb41352a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124283"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>Zwracanie zestawu różnic między dwoma sekwencjami
 Użyj <xref:System.Linq.Queryable.Except%2A> operator ma być zwracanie zestawu różnic między dwoma sekwencjami.  
@@ -24,5 +24,6 @@ Użyj <xref:System.Linq.Queryable.Except%2A> operator ma być zwracanie zestawu 
  W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Linq.Queryable.Except%2A> działa dobrze zdefiniowane tylko na zestawach. Semantyka dla multisets jest niezdefiniowane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [Translacja standardowego operatora zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

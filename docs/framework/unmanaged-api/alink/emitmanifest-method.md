@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28be714a70229b8a4628db2efff0dc2d890e231b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 051b5f47db05301f3a3326a2cc4cc5cf5c8b1ec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137829"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest — Metoda
 Emituje końcowego manifestu. Po zaimportowaniu wszystkich innych plików i ustawieniu wszystkich opcji, należy wywołać tę metodę. Nie wywołuj tej metody dla modułów niepowiązanej.  
@@ -54,6 +54,7 @@ HRESULT EmitManifest(
  Wymaga alink.h.  
   
 ## <a name="see-also"></a>Zobacz także
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink — interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

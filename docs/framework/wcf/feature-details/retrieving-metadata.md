@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
-ms.openlocfilehash: 72a9b8445a83af3cbda15c5f4580a1c1df859339
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb415d88c2bae75cb16aa137bdf867eb463afa63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152402"
 ---
 # <a name="retrieving-metadata"></a>Pobieranie metadanych
 Pobieranie metadanych jest proces żądania i pobierania metadanych z punktu końcowego metadanych, takich jak punkt końcowy metadanych WS-MetadataExchange (MEX) lub punkt końcowy metadanych HTTP/GET.  
@@ -23,14 +23,15 @@ Pobieranie metadanych jest proces żądania i pobierania metadanych z punktu ko�
  Domyślnie <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> wystąpienia jest powiązana z pojedynczej <xref:System.ServiceModel.ChannelFactory> wystąpienia. Możesz zmienić lub Zastąp <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> wystąpienia używanego przez <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> przez zastąpienie <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> metodę wirtualną. Podobnie, można zmienić lub Zastąp <xref:System.Net.HttpWebRequest> wystąpienia używanego przez <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> na wysyłanie żądań HTTP/GET przez zastąpienie <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> metodę wirtualną.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Używanie Svcutil.exe do pobierania dokumentów metadanych](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+ [Instrukcje: używanie programu Svcutil.exe do pobierania dokumentów metadanych](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  Pokazuje sposób użycia Svcutil.exe do pobierania dokumentów metadanych.  
   
- [Instrukcje: Uzyskiwanie metadanych powiązania przy użyciu klasy MetadataResolver](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [Instrukcje: dynamiczne uzyskiwanie metadanych wiązania przy użyciu klasy MetadataResolver](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  Pokazuje sposób użycia <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> można uzyskać metadanych wiązania dynamicznie w czasie wykonywania.  
   
- [Instrukcje: Używanie elementu MetadataExchangeClient do pobierania metadanych](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ [Instrukcje: używanie elementu MetadataExchangeClient do pobierania metadanych](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
  Pokazuje sposób użycia <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> klasy, aby pobrać pliki metadanych do <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> obiekt, który zawiera <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> obiekty do zapisu do plików lub do innych celów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.MetadataExchangeClient>

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Sklonuj drukarkę'
+title: 'Instrukcje: Klonowanie drukarki'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f654c9f1431a0ab8aa4df568b405dabf881bb1bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104094"
 ---
-# <a name="how-to-clone-a-printer"></a>Instrukcje: Sklonuj drukarkę
+# <a name="how-to-clone-a-printer"></a>Instrukcje: Klonowanie drukarki
 Większość firm w pewnym momencie kupić wiele drukarek tego samego modelu. Zazwyczaj te wszystkie są instalowane przy użyciu ustawień konfiguracyjnych niemal identyczne. Instalowanie poszczególnych drukarki może być czasochłonne i podatne. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Przestrzeni nazw i <xref:System.Printing.PrintServer.InstallPrintQueue%2A> klasy, które są udostępniane za pomocą programu Microsoft .NET Framework umożliwia natychmiastowe zainstalować dowolną liczbę dodatkowych kolejek drukowania, które są klonowane z istniejącej kolejki wydruku.  
   
 ## <a name="example"></a>Przykład  
@@ -56,10 +56,11 @@ Większość firm w pewnym momencie kupić wiele drukarek tego samego modelu. Za
  [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Collections.DictionaryEntry>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd drukowania](printing-overview.md)
+- [Przegląd Drukowanie](printing-overview.md)

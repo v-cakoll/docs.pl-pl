@@ -2,12 +2,12 @@
 title: Automatyczna konfiguracja IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2184b02f6f4c8ba4e8a79279f212ffca2cb41959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dc7a148364c9f96a0f6c68c8af71f7668e797b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170081"
 ---
 # <a name="ipv6-auto-configuration"></a>Automatyczna konfiguracja IPv6
 Jeden cel ważne w przypadku protokołu IPv6 jest obsługuje węzeł typu Plug and Play. Oznacza to, że powinno być możliwe do podłączyć węzła do sieci IPv6 i jest automatycznie konfigurowany bez żadnej interwencji człowieka.  
@@ -25,5 +25,6 @@ Jeden cel ważne w przypadku protokołu IPv6 jest obsługuje węzeł typu Plug a
  Powszechne stosowanie urządzeń mobilnych wprowadził nowe wymaganie: Urządzenie musi mieć możliwość dowolnie zmienić lokalizacje w Internecie IPv6 i nadal obsługiwać istniejące połączenia. Do tej funkcji, przenośne węzła jest przypisany adres domowy, w którym ją będą zawsze osiągalni. W momencie przenośnych węzła w domu, łączy się link do strony głównej i używa jej adres domowy. Gdy węzeł przenośny jest witryną, agenta macierzystego, który jest zazwyczaj router, przekazuje wiadomości między węzłem mobilnych i węzłów za pomocą których komunikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Gniazda](../../../docs/framework/network-programming/sockets.md)

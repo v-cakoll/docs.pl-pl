@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168990"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Opcje układu dla elementu WindowsFormsHost
 W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.WindowsFormsHost> element wchodzi w interakcję z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
@@ -99,9 +99,10 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
 -   Jeśli <xref:System.Windows.Forms.Control.Size%2A> właściwość zwraca rozmiar mniejszy niż określony ograniczenie <xref:System.Windows.Forms.Integration.WindowsFormsHost> akceptuje tej wartości rozmiaru i zwraca wartość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Przewodnik: Kontrolek rozmieszczanie Windows Forms w WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Przewodnik: rozmieszczanie kontrolek Windows Forms w WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Windows rozmieszczanie formantów formularzy w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migracja i współdziałanie](migration-and-interoperability.md)

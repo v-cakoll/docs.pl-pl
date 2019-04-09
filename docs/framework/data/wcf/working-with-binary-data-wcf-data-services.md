@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170329"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka klienta umożliwia pobieranie i aktualizację danych binarnych pochodzących ze [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w jednym z następujących sposobów:  
@@ -67,5 +67,6 @@ ms.locfileid: "54570593"
 >  Gdy wywołujesz <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>, strumienia nie są wysyłane do usługi danych, dopóki <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> jest wywoływana.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Wiązanie danych z kontrolką](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

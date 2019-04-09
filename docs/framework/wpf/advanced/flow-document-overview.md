@@ -9,18 +9,16 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139610"
 ---
 # <a name="flow-document-overview"></a>Przegląd Dokument przepływu
 Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelności. Zamiast jest ustawiona na jeden układ wstępnie zdefiniowanych, dokumenty przepływu dynamicznie Dostosuj i przepełnieniem ich zawartości na podstawie zmiennych czasu wykonywania, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Ponadto dokumenty przepływu oferują funkcje zaawansowane dokumentu, takie jak podział na strony i kolumn. Ten temat zawiera omówienie dokumenty przepływu i jak je utworzyć.  
-  
 
-  
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>Co to jest dokument usługi Flow  
  Dokument przepływu jest przeznaczony do "ze zmianą ułożenia zawartości" w zależności od rozmiaru okna, rozdzielczość urządzenia i inne zmienne środowiskowe. Ponadto dokumenty przepływu ma szereg wbudowanych funkcji, w tym wyszukiwanie, wyświetlanie trybów, które optymalizują czytelności i możliwości zmiany rozmiaru i wygląd czcionek. Dokumenty przepływu są wykorzystywane najlepiej, gdy czytelnej jest scenariusz użycia dokumentu głównego. Z kolei Naprawiono dokumenty mają mieć statyczne prezentacji. Naprawiono dokumenty są przydatne, gdy wierności zawartość źródłowa jest niezbędne. Zobacz [dokumenty w WPF](documents-in-wpf.md) Aby uzyskać więcej informacji na temat różnych typów dokumentów.  
@@ -143,7 +141,7 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
   
  **Uwaga:** <xref:System.Windows.Documents.List> jest jedynym elementem przepływ, który używa <xref:System.Windows.Documents.ListItemCollection> do zarządzania elementami podrzędnymi.  
   
- **Tabela**  
+ **tabela**  
   
  <xref:System.Windows.Documents.Table> Służy do tworzenia tabeli. <xref:System.Windows.Documents.Table> jest podobny do <xref:System.Windows.Controls.Grid> elementu, ale ma więcej możliwości i dlatego wymagają większe obciążenie zasobów. Ponieważ <xref:System.Windows.Controls.Grid> jest <xref:System.Windows.UIElement>, chyba że znajduje się w nie można używać w dowolnej zawartości <xref:System.Windows.Documents.BlockUIContainer> lub <xref:System.Windows.Documents.InlineUIContainer>. Aby uzyskać więcej informacji na temat <xref:System.Windows.Documents.Table>, zobacz [Omówienie tabel](table-overview.md).  
   
@@ -349,11 +347,12 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
  Zobacz [Typografia w WPF](typography-in-wpf.md) więcej informacji na temat typografii.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Text](optimizing-performance-text.md)
+
+- [Tekst](optimizing-performance-text.md)
 - [Typografia w WPF](typography-in-wpf.md)
-- [Tematy z instrukcjami](flow-content-elements-how-to-topics.md)
-- [Przegląd modelu zawartości TextElement](textelement-content-model-overview.md)
-- [RichTextBox — omówienie](../controls/richtextbox-overview.md)
+- [— Tematy porad](flow-content-elements-how-to-topics.md)
+- [Przegląd Model zawartości TextElement](textelement-content-model-overview.md)
+- [RichTextBox — Przegląd](../controls/richtextbox-overview.md)
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd tabeli](table-overview.md)
-- [Przegląd adnotacji](annotations-overview.md)
+- [Przegląd Tabela](table-overview.md)
+- [Przegląd Adnotacje](annotations-overview.md)

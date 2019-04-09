@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157875"
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 <xref:System.Windows.Controls.Panel> elementy są składniki, które kontrolują renderowanie elementów — ich rozmiar i wymiarów, ich pozycji i rozmieszczenie ich zawartość elementu podrzędnego. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zawiera szereg wstępnie zdefiniowanych <xref:System.Windows.Controls.Panel> elementów, a także możliwość utworzenia niestandardowych <xref:System.Windows.Controls.Panel> elementów.  
@@ -64,7 +64,7 @@ ms.locfileid: "57377302"
   
 |Nazwa elementu|Panel interfejsu użytkownika?|Opis|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|Tak|Definiuje obszar, w którym możesz jawnie pozycjonować elementy podrzędne współrzędnymi względem <xref:System.Windows.Controls.Canvas> obszaru.|  
+|<xref:System.Windows.Controls.Canvas>|Yes|Definiuje obszar, w którym możesz jawnie pozycjonować elementy podrzędne współrzędnymi względem <xref:System.Windows.Controls.Canvas> obszaru.|  
 |<xref:System.Windows.Controls.DockPanel>|Tak|Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub pionie, względem siebie.|  
 |<xref:System.Windows.Controls.Grid>|Tak|Definiuje elastyczny obszar siatki składający się z kolumnami i wierszami. Elementy podrzędne <xref:System.Windows.Controls.Grid> umieszczony dokładnie przy użyciu <xref:System.Windows.FrameworkElement.Margin%2A> właściwości.|  
 |<xref:System.Windows.Controls.StackPanel>|Tak|Rozmieszcza elementy podrzędne w jednej linii, która może być zorientowana poziomo czy pionowo.|  
@@ -73,7 +73,7 @@ ms.locfileid: "57377302"
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|Nie|<xref:System.Windows.Controls.Primitives.UniformGrid> Służy do Rozmieść elementy podrzędne w siatce, ze wszystkimi rozmiarami równy komórki.|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|Nie|Udostępnia klasę bazową dla paneli, które mogą "Wirtualizacja" ich elementy podrzędne kolekcji.|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|Tak|Rozmieszcza i Wirtualizuje zawartość w jednym wierszu zorientowanej na poziomo czy pionowo.|  
-|<xref:System.Windows.Controls.WrapPanel>|Tak|<xref:System.Windows.Controls.WrapPanel> Ustawia elementy podrzędne na kolejnych pozycjach od od lewej do prawej, istotne zawartości do następnego wiersza na krawędzi zawierającego pole. Kolejne porządkowanie się dzieje sekwencyjnie od góry do dołu lub od prawej do lewej w zależności od wartości <xref:System.Windows.Controls.WrapPanel.Orientation%2A> właściwości.|  
+|<xref:System.Windows.Controls.WrapPanel>|Yes|<xref:System.Windows.Controls.WrapPanel> Ustawia elementy podrzędne na kolejnych pozycjach od od lewej do prawej, istotne zawartości do następnego wiersza na krawędzi zawierającego pole. Kolejne porządkowanie się dzieje sekwencyjnie od góry do dołu lub od prawej do lewej w zależności od wartości <xref:System.Windows.Controls.WrapPanel.Orientation%2A> właściwości.|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>Panele interfejsu użytkownika  
@@ -253,12 +253,13 @@ ms.locfileid: "57377302"
  Aby uzyskać dodatkowe informacje na temat tworzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji przy użyciu możliwych do zlokalizowania [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]s, zobacz [— Przegląd Użyj automatycznego układu](../advanced/use-automatic-layout-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+
+- [Przewodnik: Moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Przykład WPF układu galerii](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Układ](../advanced/layout.md)
 - [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [Przegląd wyrównania, marginesów i wypełnień](../advanced/alignment-margins-and-padding-overview.md)
+- [Przegląd Wyrównanie, marginesy i wypełnienia](../advanced/alignment-margins-and-padding-overview.md)
 - [Tworzenie niestandardowych przykładowej panelu zawijania zawartości](https://go.microsoft.com/fwlink/?LinkID=159979)
-- [Przegląd właściwości dołączonych](../advanced/attached-properties-overview.md)
-- [Przegląd używania automatycznego układu](../advanced/use-automatic-layout-overview.md)
+- [Przegląd Właściwości dołączone](../advanced/attached-properties-overview.md)
+- [Przegląd Użyj automatycznego układu](../advanced/use-automatic-layout-overview.md)
 - [Układ i projekt](../advanced/optimizing-performance-layout-and-design.md)

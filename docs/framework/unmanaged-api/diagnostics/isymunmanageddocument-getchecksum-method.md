@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80cda4c31ca78e0350639df809ec1e9f1dcbbaea
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a60bf279c143559e7410d8dfd8213d3da1d05a6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127565"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum — Metoda
 Pobiera sumy kontrolnej.  
@@ -50,4 +50,5 @@ HRESULT GetCheckSum(
  S_OK, jeśli metoda się powiedzie; w przeciwnym razie kod błędu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymUnmanagedDocument, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+
+- [ISymUnmanagedDocument — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Włączanie wykrywania powtarzania komunikatu'
+title: 'Instrukcje: włączanie wykrywania powtarzania komunikatu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 8a5f693b98d1437ccf0c8a373fcb11aa96ee6191
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3fe43e3f815e0f918e22a1ec0fd485079afadde8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156029"
 ---
-# <a name="how-to-enable-message-replay-detection"></a>Instrukcje: Włączanie wykrywania powtarzania komunikatu
+# <a name="how-to-enable-message-replay-detection"></a>Instrukcje: włączanie wykrywania powtarzania komunikatu
 Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarza strumienia do jednego lub więcej stron. Chyba że skorygowane, komputery, które podlegają ataku przetworzy strumienia jako wiarygodnego wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówienia elementu.  
   
  Aby uzyskać więcej informacji na temat wykrywania powtarzania komunikatu zobacz [wykrywania powtarzania komunikatu](https://go.microsoft.com/fwlink/?LinkId=88536).  
@@ -103,8 +103,9 @@ Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komun
 -   <xref:System.ServiceModel.Channels>  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - [Bezpieczne konwersacje i bezpieczne sesje](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)
 - [\<localClientSettings>](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)
-- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie zadań drukowania formularzy Windows Standard'
+title: 'Instrukcje: Tworzenie standardowych zadań drukowania formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170979"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Instrukcje: Tworzenie zadań drukowania formularzy Windows Standard
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Instrukcje: Tworzenie standardowych zadań drukowania formularzy systemu Windows
 Jest podstawą drukowanie w formularzach Windows Forms <xref:System.Drawing.Printing.PrintDocument> składnika — w szczególności <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzeń. Pisanie kodu do obsługi <xref:System.Drawing.Printing.PrintDocument.PrintPage> zdarzenia, można określić wydruku i jak go wydrukować.  
   
 ### <a name="to-create-a-print-job"></a>Aby utworzyć zadanie drukowania  
@@ -77,5 +77,6 @@ Jest podstawą drukowanie w formularzach Windows Forms <xref:System.Drawing.Prin
      Aby uzyskać więcej informacji o specyfice formularzy Windows Forms zadania drukowania, w tym jak utworzyć zadanie drukowania programowo, zobacz <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Obsługa drukowania w formularzach Windows Forms](windows-forms-print-support.md)
+- [Obsługa drukowania w formularzach systemu Windows](windows-forms-print-support.md)

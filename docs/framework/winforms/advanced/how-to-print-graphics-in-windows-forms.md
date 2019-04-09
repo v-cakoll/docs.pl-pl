@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Drukowanie grafiki w formularzach Windows Forms'
+title: 'Instrukcje: Drukowanie grafiki w formularzach systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167209"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>Instrukcje: Drukowanie grafiki w formularzach Windows Forms
+# <a name="how-to-print-graphics-in-windows-forms"></a>Instrukcje: Drukowanie grafiki w formularzach systemu Windows
 Często mają drukowanie grafiki w aplikacji z systemem Windows. <xref:System.Drawing.Graphics> Klasa dostarcza metody do Rysowanie obiektów na urządzeniu, takie jak ekranu lub drukarki.  
   
 ### <a name="to-print-graphics"></a>Aby wydrukować grafiki  
@@ -67,6 +67,7 @@ Często mają drukowanie grafiki w aplikacji z systemem Windows. <xref:System.Dr
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Obsługa drukowania w formularzach Windows Forms](windows-forms-print-support.md)
+- [Obsługa drukowania w formularzach systemu Windows](windows-forms-print-support.md)

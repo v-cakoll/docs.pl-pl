@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: d0b3bd649da301c563a19450d7d9b42e9d0b29e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165181"
 ---
 # <a name="datatable-constraints"></a>Ograniczenia elementu DataTable
 Ograniczenia służy do wymuszania ograniczeń dotyczących danych w <xref:System.Data.DataTable>, w celu zachowania integralności danych. Ograniczenie jest reguła automatycznego stosowane kolumny lub powiązanych kolumn, który określa sposobu działania przypadku jakiś sposób zmiany wartości wiersza. Ograniczenia są wymuszane podczas `System.Data.DataSet.EnforceConstraints` właściwość <xref:System.Data.DataSet> jest **true**. Dla przykładu kodu, który pokazuje, jak ustawić `EnforceConstraints` właściwości, zobacz <xref:System.Data.DataSet.EnforceConstraints%2A> temat referencyjny.  
@@ -93,6 +93,7 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataRelation>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>

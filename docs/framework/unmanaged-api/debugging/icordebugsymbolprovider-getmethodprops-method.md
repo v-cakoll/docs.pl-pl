@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dacfd6538dbf42a757a0e3534978238421644ae
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 784fcb10e9c0c3c6ff50c25d47bb4fb3fd5762ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161112"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>Metoda ICorDebugSymbolProvider::GetMethodProps
 Zwraca informacje o właściwości metody, takie jak metody token metadanych oraz informacje o jego parametrów ogólnych, biorąc pod uwagę względnych adresów wirtualnych (RVA) w tej metodzie.  
@@ -62,6 +62,7 @@ HRESULT GetMethodProps(
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [GetTypeProps, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
 - [ICorDebugSymbolProvider, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 0c9873638bca43e5e0d005d36053e7c75d48168b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161034"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu DataGrid
 > [!NOTE]
@@ -52,9 +52,9 @@ ms.locfileid: "57679076"
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
  Poniższa tabela zawiera listę wzorców kontrolek, wymagane są obsługiwane przez wszystkie formanty siatki danych. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Tak|Sam formant siatki danych zawsze obsługuje wzorca kontrolki siatki, ponieważ elementy zawierała metadanych, który został rozmieszczony w siatce.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Yes|Sam formant siatki danych zawsze obsługuje wzorca kontrolki siatki, ponieważ elementy zawierała metadanych, który został rozmieszczony w siatce.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Zależy od|Możliwość przewiń w siatce danych, zależy od zawartości i tego, czy paski przewijania są obecne.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Zależy od|Możliwość wybrania siatki danych zależy od zawartości.|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|Tak|Formant siatki danych zawsze ma nagłówek w ramach jego poddrzewa, więc wzorca kontrolki tabeli muszą być obsługiwane.|  
@@ -73,7 +73,7 @@ ms.locfileid: "57679076"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty siatki danych. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
@@ -105,6 +105,7 @@ ms.locfileid: "57679076"
  * Powyższy przykład pokazuje DataGrid, który zawiera wiele poziomów kontroli. Formant grupy ("Contoso") zawiera dwie kontrolki elementu danych ("Kont Receivable.doc" i "Kont Payable.doc"). Para DataGrid/GridItem — jest niezależna od pary na innym poziomie. Kontrolki elementu danych w grupie można również udostępniane, jako typ kontroli wyszczególnij umożliwiające im mają zostać wyświetlone więcej obiektów wyraźnie, jak można wybierać, a nie jako elementy danych proste. W tym przykładzie nie ma elementów podrzędnych elementów pogrupowanych danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.ControlType.DataGrid>
-- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

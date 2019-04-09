@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kontroluj MediaElement z użyciem scenorysu'
+title: 'Instrukcje: Sterowanie elementem MediaElement z użyciem scenorysu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - media [WPF], controlling playback with Storyboards
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
-ms.openlocfilehash: 51d567101ee49095e27e9d440016a81cd49fa876
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100317"
 ---
-# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Instrukcje: Kontroluj MediaElement z użyciem scenorysu
+# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Instrukcje: Sterowanie elementem MediaElement z użyciem scenorysu
 W tym przykładzie pokazano, jak kontrolować <xref:System.Windows.Controls.MediaElement> przy użyciu <xref:System.Windows.Media.MediaTimeline> w <xref:System.Windows.Media.Animation.Storyboard>.  
   
 ## <a name="example"></a>Przykład  
@@ -36,12 +36,13 @@ W tym przykładzie pokazano, jak kontrolować <xref:System.Windows.Controls.Medi
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Sterowanie elementem MediaElement (odtwórz, pauza, zatrzymaj, głośność i szybkość)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)
-- [Scenorysy — przegląd](storyboards-overview.md)
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
-- [Animacja — przegląd](animation-overview.md)
-- [Tematy z instrukcjami](audio-and-video-how-to-topics.md)
+- [Przegląd Scenorysy](storyboards-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
+- [Przegląd Animacja](animation-overview.md)
+- [— Tematy porad](audio-and-video-how-to-topics.md)
 - [Grafika i multimedia](index.md)

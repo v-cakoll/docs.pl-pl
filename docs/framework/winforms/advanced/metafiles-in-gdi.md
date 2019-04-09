@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: 25ce3fdd98560aba0918431bb77d6f3f23a04784
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119863"
 ---
 # <a name="metafiles-in-gdi"></a>Metapliki w GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia <xref:System.Drawing.Imaging.Metafile> klasy, dzięki czemu mogą rejestrować i wyświetlanie metaplików. Metaplik, nazywany również obrazem wektora jest obraz, który jest przechowywany jako sekwencja rysowania poleceń i ustawień. Polecenia i ustawienia są rejestrowane w <xref:System.Drawing.Imaging.Metafile> obiektu, które mogą być przechowywane w pamięci lub zapisany do pliku lub strumienia.  
@@ -38,4 +38,5 @@ ms.locfileid: "57722467"
  [!code-vb[System.Drawing.ImagesBitmapsMetafiles#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ImagesBitmapsMetafiles/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)

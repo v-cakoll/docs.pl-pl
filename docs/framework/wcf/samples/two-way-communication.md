@@ -2,12 +2,12 @@
 title: Komunikacja dwukierunkowa
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 3aa01140ef62bd3658696e889038e099ed76da20
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: a74d40fc8c8d4bfb547bd6b21609b59a42891dfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148944"
 ---
 # <a name="two-way-communication"></a>Komunikacja dwukierunkowa
 Niniejszy przykład pokazuje sposób wykonywania transakcyjne dwukierunkowej komunikacji w kolejce za pośrednictwem usługi MSMQ. W tym przykładzie użyto `netMsmqBinding` powiązania. W tym przypadku usługa jest aplikacja konsolowa samodzielnie hostowanej która pozwala obserwować usługę otrzymywania wiadomości w kolejce.  
@@ -227,7 +227,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     > [!NOTE]
     >  Jeśli używasz Svcutil.exe ponownego generowania konfiguracji dla tego przykładu, należy zmodyfikować nazwy punktów końcowych w konfiguracji klienta, aby dopasować kod klienta.  
   
- Domyślnie <xref:System.ServiceModel.NetMsmqBinding>, zabezpieczenia transportu jest włączona. Istnieją dwie właściwości istotnych dla zabezpieczeń transportu usługi MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> i <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` domyślny tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i podpisywania funkcji musi być częścią domeny i musi być zainstalowany opcji integracji usługi active directory dla usługi MSMQ. Jeśli w tym przykładzie jest uruchomiony na komputerze, który nie spełnia tych kryteriów otrzymasz komunikat o błędzie.  
+ Domyślnie <xref:System.ServiceModel.NetMsmqBinding>, zabezpieczenia transportu jest włączona. Istnieją dwie właściwości istotnych dla zabezpieczeń transportu usługi MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> i <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` domyślny tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i podpisywania funkcji musi być częścią domeny i musi być zainstalowany opcji integracji usługi active directory dla usługi MSMQ. Jeśli w tym przykładzie jest uruchomiony na komputerze, który nie spełnia tych kryteriów otrzymasz komunikat o błędzie.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Do uruchomienia przykładu na komputer przyłączony do grupy roboczej lub bez integracji usługi active directory  
   
@@ -330,4 +330,3 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
-  

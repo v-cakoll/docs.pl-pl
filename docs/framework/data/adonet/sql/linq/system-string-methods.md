@@ -1,15 +1,15 @@
 ---
-title: Metody System.String
+title: System.String, metody
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160501"
 ---
-# <a name="systemstring-methods"></a>Metody System.String
+# <a name="systemstring-methods"></a>System.String, metody
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje następujących <xref:System.String> metody.  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>Ogólnie rzecz biorąc nieobsługiwany metody System.String  
@@ -56,4 +56,5 @@ ms.locfileid: "54618134"
 -   Ponieważ wiele metod, takich jak `Replace`, `ToLower`, `ToUpper`i indeksatora znaków, ma nie prawidłowe tłumaczenia `TEXT` lub `NTEXT` kolumn i XML, `SqlExceptions` wystąpić, jeśli zwykle translacji. To zachowanie jest uważany za akceptowalne dla tych typów. Jednak wszystkie operacje na ciągach musi odpowiadać wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) semantyki dla `VARCHAR`, `NVARCHAR`, `VARCHAR(max)`, i `NVARCHAR(max)`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

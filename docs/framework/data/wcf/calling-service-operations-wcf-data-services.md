@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: c11fe4176ee770e39abcab612e26e496aa2a1457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ef00861624531e68ad5b8a3b080810040ae3ff6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109476"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Wywołania operacji usługi (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Definiuje operacji usługi dla usługi danych. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie takich operacji jako metody na usługę danych. Podobnie jak inne zasoby usługi data operacje te usługi są adresowane za pomocą identyfikatorów URI. Operacja usługi może zwracać kolekcji typów jednostek, wystąpienia typu pojedynczej jednostki i typy pierwotne, takie jak liczba całkowita i ciąg. Operacja usługi może również zwracać `null` (`Nothing` w języku Visual Basic). [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta może służyć do dostępu do operacji usługi, które obsługują żądania HTTP GET. Te rodzaje operacji usługi są zdefiniowane jako metody, które mają <xref:System.ServiceModel.Web.WebGetAttribute> stosowane. Aby uzyskać więcej informacji, zobacz [operacji usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -125,4 +125,5 @@ ms.locfileid: "54543516"
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

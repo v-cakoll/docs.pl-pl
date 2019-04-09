@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Określ, której członkami są sprawdzane pod kątem konfliktów współbieżności'
+title: 'Instrukcje: Określanie, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: 1007cbc0961d01574fd60ec50eb63406ec7adef9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a690e95cadad4ed089fe1bb3ba6fea541a57411f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076305"
 ---
-# <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Instrukcje: Określ, której członkami są sprawdzane pod kątem konfliktów współbieżności
+# <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Instrukcje: Określanie, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności
 Zastosuj jedną z trzech typów wyliczeniowych do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby określić, które elementy członkowskie, które mają być uwzględniane w ramach aktualizacji sprawdza, czy wykrywanie konfliktów optymistycznej współbieżności.  
   
  <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> (Mapowane w czasie projektowania) jest używana w połączeniu z funkcjami współbieżności środowiska wykonawczego w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
@@ -47,5 +47,6 @@ Zastosuj jedną z trzech typów wyliczeniowych do [!INCLUDE[vbtecdlinq](../../..
  [!code-vb[System.Data.Linq.Mapping.UpdateCheck#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.mapping.updatecheck/vb/northwind.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Tworzenie i przesyłanie zmian danych](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

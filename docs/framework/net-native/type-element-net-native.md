@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85c5ae85a07567305d6e7e2a57f4b5459bd647d4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162702"
 ---
 # <a name="type-element-net-native"></a>\<Typ > (architektura .NET Native)
 Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie jak klasy lub struktury.  
@@ -83,8 +83,8 @@ Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie j
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji, typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|  
 |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Zastosowanie zasad odbicia do wszystkich typów w określonym zestawie.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Zastosowanie zasad odbicia do wszystkich typów w przestrzeni nazw.|  
+|[\<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Zastosowanie zasad odbicia do wszystkich typów w przestrzeni nazw.|  
 |`<Type>`|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
   
@@ -132,6 +132,7 @@ Ma zastosowanie zasad środowiska uruchomieniowego do określonego typu, takie j
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

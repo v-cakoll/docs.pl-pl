@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dołączanie ShortCut Menu do węzła TreeView'
+title: 'Instrukcje: dołączanie menu ShortCut do węzła TreeView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding shortcut menus
 - tree nodes in TreeView control [Windows Forms], shortcut menus
 ms.assetid: a23c6752-fd8f-44ad-b781-bab37962fc7c
-ms.openlocfilehash: 537593399db7deb775929cd742a749ce47890db6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ba29e86f62c8d56b0d300d1841a70f434087dd84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100024"
 ---
-# <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>Instrukcje: Dołączanie ShortCut Menu do węzła TreeView
+# <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>Instrukcje: dołączanie menu ShortCut do węzła TreeView
 Formularze Windows <xref:System.Windows.Forms.TreeView> kontrolka Wyświetla hierarchię węzłów, podobnie jak pliki i foldery, wyświetlana w okienku po lewej stronie Eksploratora Windows. Ustawiając <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> właściwości, można zapewnić kontekstową operacje użytkownika po ich prawym przyciskiem myszy <xref:System.Windows.Forms.TreeView> kontroli. Kojarząc <xref:System.Windows.Forms.ContextMenuStrip> składnika za pomocą poszczególnych <xref:System.Windows.Forms.TreeNode> elementy, można dodać niestandardowe poziom funkcjonalności menu skrótów do Twojej <xref:System.Windows.Forms.TreeView> kontrolki.  
   
 ### <a name="to-associate-a-shortcut-menu-with-a-treenode-programmatically"></a>Aby programowo kojarzenie menu skrótów za pomocą elementu TreeNode  
@@ -37,5 +37,6 @@ Formularze Windows <xref:System.Windows.Forms.TreeView> kontrolka Wyświetla hie
  [!code-vb[System.Windows.Forms.TreeNodeContextMenuStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
-- [TreeView, kontrolka](treeview-control-windows-forms.md)
+- [TreeView — Formant](treeview-control-windows-forms.md)

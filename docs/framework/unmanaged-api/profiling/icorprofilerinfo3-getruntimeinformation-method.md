@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da116de6bde01ea7fd17f7ab27605501ae723f30
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a13e3e525c7f019e7dc49111b88ac374345830af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164934"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation — Metoda
 Zawiera informacje o wersji dotyczące wspólne środowisko uruchomieniowe języka (wspólnego CLR), która jest profilowana.  
@@ -84,6 +84,7 @@ HRESULT GetRuntimeInformation(
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+
+- [ICorProfilerInfo3 — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

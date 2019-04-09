@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11fc4bf6feb2a90c0b54c4410ed807c5b7e3eb5b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fba970de6e5882d3cbe9be17b5b49be5a3e81aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171655"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual Method
 Zapisuje w pamięci do przestrzeni adresowej procesu docelowego.  
@@ -49,5 +49,6 @@ HRESULT WriteVirtual(
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ICorDebugMutableDataTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: Działanie
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170212"
 ---
 # <a name="activity"></a>Działanie
 W tym temacie opisano ślady działania w modelu śledzenia usług Windows Communication Foundation (WCF). Działania to przetwarzania jednostek, które pomagają użytkownikowi zawęzić zakres awarii. Błędy w ramach tego samego działania są bezpośrednio powiązane. Na przykład kończy się niepowodzeniem, ponieważ odszyfrowywania wiadomości nie powiodło się. Śledzenie operacji i błędu odszyfrowywania wiadomości pojawiają się w tym samym działaniu, przedstawiający bezpośrednia korelacja między błąd odszyfrowywania i Błąd żądania.  
@@ -98,6 +98,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 -   Działania reprezentują działań, niekoniecznie obiektów. Działanie powinno być interpretowane jako "to się dzieje po. . . (emisji śledzenia istotnych wystąpił)."  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

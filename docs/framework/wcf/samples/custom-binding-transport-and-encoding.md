@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 09941ce5fcf33380cbf3455866e63918edd2ea20
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7ec407209a94f96700773884aa3645b313c6c6ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132226"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Transport i kodowanie powiązań niestandardowych
 Powiązanie niestandardowe jest definiowany przez uporządkowaną listą elementy powiązania dyskretnych. Niniejszy przykład pokazuje, jak skonfigurować powiązania niestandardowego z różnymi transport i kodowanie elementów wiadomości.  
@@ -85,4 +85,3 @@ client.Close()
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
-  

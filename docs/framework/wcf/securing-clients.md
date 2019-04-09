@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135788"
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa jakie tryb zabezpieczeń do użycia i określa, czy klient musi podać poświadczenia. Zabezpieczanie klienta, w związku z tym, proces jest prosty: metadane uzyskane z usługi (jeśli jest publikowany) oraz tworzyć klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia usługi bezpiecznego zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
@@ -145,6 +145,7 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.ClientBase%601>
 - <xref:System.ServiceModel.Description.ClientCredentials>

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie ikon aplikacji do paska zadań za pomocą składnika NotifyIcon formularzy Windows'
+title: 'Instrukcje: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146448"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Instrukcje: Dodawanie ikon aplikacji do paska zadań za pomocą składnika NotifyIcon formularzy Windows
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Instrukcje: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.NotifyIcon> składnik Wyświetla pojedynczą ikonę w obszarze stanu powiadomień paska zadań. Aby wyświetlić wiele ikony w obszarze stanu, konieczne jest posiadanie wielu <xref:System.Windows.Forms.NotifyIcon> składników w formularzu. Aby ustawić ikony wyświetlanej dla formantu, użyj <xref:System.Windows.Forms.NotifyIcon.Icon%2A> właściwości. Można także napisać kod <xref:System.Windows.Forms.NotifyIcon.DoubleClick> programu obsługi zdarzeń, tak że coś się stanie, gdy użytkownik kliknie dwukrotnie ikonę. Na przykład można wprowadzić okno dialogowe, są wyświetlane dla użytkownika skonfigurować proces w tle reprezentowany przez ikonę.  
   
 > [!NOTE]
@@ -72,8 +72,9 @@ Formularze Windows <xref:System.Windows.Forms.NotifyIcon> składnik Wyświetla p
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Instrukcje: Kojarzenie Menu skrótów za pomocą składnika NotifyIcon formularzy Windows](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy systemu Windows](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon, składnik](notifyicon-component-windows-forms.md)
 - [NotifyIcon, składnik — omówienie](notifyicon-component-overview-windows-forms.md)

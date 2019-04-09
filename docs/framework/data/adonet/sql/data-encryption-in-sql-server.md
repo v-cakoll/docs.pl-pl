@@ -2,12 +2,12 @@
 title: Szyfrowanie danych w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 4b421d2cb5a44ee164a73ea1367a79d81fb37c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102170"
 ---
 # <a name="data-encryption-in-sql-server"></a>Szyfrowanie danych w programie SQL Server
 Program SQL Server udostępnia funkcje do szyfrowania i odszyfrowywania danych za pomocą certyfikatu, klucza asymetrycznego lub klucza symetrycznego. Zarządza wszystkie wymienione w magazynie certyfikatu wewnętrznego. Magazyn używa hierarchii szyfrowania, który zabezpiecza certyfikatów i kluczy na jednym poziomie z użyciem warstwy nad nim w hierarchii. Ten obszar funkcji programu SQL Server, nosi nazwę wpisu tajnego magazynu.  
@@ -30,6 +30,7 @@ Program SQL Server udostępnia funkcje do szyfrowania i odszyfrowywania danych z
 |[Szyfrowanie hierarchii](/sql/relational-databases/security/encryption/encryption-hierarchy)|Omówienie szyfrowania w programie SQL Server. Ten temat zawiera łącza do dodatkowych artykułów.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

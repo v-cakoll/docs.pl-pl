@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: af087aa2107927d79a7a47080d9fff43244ef4cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5816cb6a765a7cdf49aca9ac50461a4e50e6df14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122190"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Instrukcje: Dodawanie, modyfikowanie i usuwanie jednostek (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotekom klienckim możesz można utworzyć, aktualizacji i usunąć dane jednostki w usłudze danych, wykonując czynności równoważne na obiektach w <xref:System.Data.Services.Client.DataServiceContext>. Aby uzyskać więcej informacji, zobacz [aktualizacja usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
@@ -44,6 +44,7 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotek
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderauto)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Instrukcje: Dołączanie istniejącej jednostki do obiektu DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)
 - [Instrukcje: Definiowanie relacji jednostek](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)

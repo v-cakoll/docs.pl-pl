@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Wyrównywanie formantu z krawędziami formularzy w czasie projektowania'
+title: 'Instrukcje: wyrównywanie kontrolki z krawędziami formularzy w czasie projektowania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: b81cb839664499d69710d81b7b0c8a479966d569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140898"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Instrukcje: Wyrównywanie formantu z krawędziami formularzy w czasie projektowania
+# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Instrukcje: wyrównywanie kontrolki z krawędziami formularzy w czasie projektowania
 Ułatwia kontrolki wyrównane do krawędzi formularzy, ustawiając <xref:System.Windows.Forms.Control.Dock%2A>. Ta właściwość wskazuje, której formant znajduje się w formularzu. <xref:System.Windows.Forms.Control.Dock%2A> Właściwość można ustawić następujące wartości:  
   
 |Ustawienie|Wpływ na Twoją kontrolą|  
@@ -42,13 +42,14 @@ Ułatwia kontrolki wyrównane do krawędzi formularzy, ustawiając <xref:System.
 4.  Formant teraz zostanie zadokowany w sposób określony w ustawieniu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
-- [Instrukcje: Wyrównywanie formantu z krawędziami formularzy](how-to-align-a-control-to-the-edges-of-forms.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Instrukcje: Zakotwiczenia formantów na formularzach Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md)
+- [Instrukcje: wyrównywanie kontrolki z krawędziami formularzy](how-to-align-a-control-to-the-edges-of-forms.md)
+- [Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows](how-to-anchor-controls-on-windows-forms.md)
+- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Opracowywanie formantów formularzy systemu Windows w czasie projektowania](developing-windows-forms-controls-at-design-time.md)

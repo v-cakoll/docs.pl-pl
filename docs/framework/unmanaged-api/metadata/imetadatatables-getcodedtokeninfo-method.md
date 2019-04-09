@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a9eb51643271fd27a6d4795fc1729766b44b239
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 153aa7d6b8c35129638de3d47ffa6aff72f550c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130705"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo — Metoda
 Pobiera wskaźnik do tablicy tokenów skojarzone z indeksem określony wiersz.  
@@ -61,5 +61,6 @@ HRESULT GetCodedTokenInfo (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+
+- [IMetaDataTables — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

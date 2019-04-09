@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Użyj przestrzeni nazw XML w powiązaniu danych'
+title: 'Instrukcje: Używanie przestrzeni nazw XML w powiązaniu danych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML [WPF], namespaces
 - data binding [WPF], XML namespaces
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
-ms.openlocfilehash: 190bf22544bd17cb215870728333211795040294
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 38bf6e8f88b0325193d49148cd6c33031f7b0a6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149997"
 ---
-# <a name="how-to-use-xml-namespaces-in-data-binding"></a>Instrukcje: Użyj przestrzeni nazw XML w powiązaniu danych
+# <a name="how-to-use-xml-namespaces-in-data-binding"></a>Instrukcje: Używanie przestrzeni nazw XML w powiązaniu danych
 ## <a name="example"></a>Przykład  
  W tym przykładzie pokazano, jak obsługiwać przestrzenie nazw określony w swojej [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] źródło wiążące.  
   
@@ -30,6 +30,7 @@ ms.locfileid: "57377335"
  W tym konkretnym przykładzie [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane pochodzą z usługi sieci web, ale <xref:System.Windows.Data.XmlNamespaceMapping> element współpracuje również z wbudowanego [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] lub [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] osadzonego pliku danych.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiązywanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+
+- [Wiązanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132577"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfiguracyjnym zapewnia elastyczność związanych z udostępnianiem punktu końcowego i danych zachowanie usługi na miejscu wdrożenia, a nie w czasie projektowania. W tym temacie opisano dostępne metody podstawowej.  
@@ -263,6 +263,7 @@ Aby uzyskać więcej informacji na temat konfigurowania usług i klientów, zoba
  Jeśli kolekcja zachowanie podrzędnych zawiera zachowania, które znajduje się już w zbiorze zachowanie nadrzędnym, zachowanie podrzędnego zastępuje element nadrzędny. Tak, jeśli próba zawierała kolekcji nadrzędnej zachowanie `<serviceMetadata httpGetEnabled="False" />` i zachowanie kolekcji podrzędnej `<serviceMetadata httpGetEnabled="True" />`zachowanie podrzędnych przesłonić zachowanie nadrzędnego w kolekcji zachowanie i httpGetEnabled będzie "true".  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)
 - [Konfigurowanie usług WCF](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)

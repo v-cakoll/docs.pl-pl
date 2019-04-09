@@ -1,18 +1,18 @@
 ---
 title: Przewodnik po przykładzie C# - C# przewodnik
 description: Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.
-ms.date: 08/10/2016
-ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152064"
 ---
 # <a name="a-tour-of-the-c-language"></a>Przewodnik po przykładzie C# języka
 
-C# (Wymowa: "Zobacz Sharp") to proste, nowoczesnych, zorientowane obiektowo i bezpieczny typowo język programowania. C#korzenie jego rodziny C języków, będzie znane w programowaniu w języku C, C++, Java i JavaScript.
+C# (Wymowa: "Zobacz Sharp") to proste, nowoczesnych, zorientowane obiektowo i bezpieczny typowo język programowania. C#korzenie jego rodziny C języków, będzie znane w programowaniu w języku C, C++, Java i JavaScript. Ten przewodnik zawiera omówienie głównych składników języka. Jeśli chcesz poznać język za pomocą interaktywnych przykłady, Wypróbuj nasz [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) samouczków.
 
 C# to język obiektowy, ale C# dalsze obejmuje obsługę ***zorientowanego na*** programowania. Projektowania oprogramowania współczesnych coraz bardziej opiera się na składniki oprogramowania w postaci pakietów niezależna i samoopisujące funkcji. Kluczem do takich składników jest, czy stanowią one model programowania za pomocą właściwości, metod i zdarzeń; mają atrybuty, które zapewniają deklaracyjne informacje o składniku; i obejmują one we własnej dokumentacji. C#udostępnia konstrukcji języka, aby bezpośrednio obsługują te pojęcia, dzięki czemu C# bardzo języka naturalnego, w której do tworzenia i używania składników oprogramowania.
 
@@ -42,7 +42,6 @@ Hello, World
 
 > [!IMPORTANT]
 > `csc` Polecenie kompiluje dla pełnej struktury i mogą nie być dostępne na wszystkich platformach.
-
 
 Program "Hello, World" rozpoczyna się od `using` dyrektywę, który odwołuje się do `System` przestrzeni nazw. Przestrzenie nazw zawierają hierarchiczny sposób organizowania programów C# i biblioteki. Przestrzenie nazw zawierają typy i inne przestrzenie nazw — na przykład `System` przestrzeń nazw zawiera wiele typów, takie jak `Console` klasy, do którego odwołuje się program i wiele innych przestrzeniach nazw, takich jak `IO` i `Collections`. A `using` dyrektywę, który odwołuje się do danej przestrzeni nazw umożliwia niekwalifikowanej korzystanie z typów, które są elementami członkowskimi tej przestrzeni nazw. Z powodu `using` dyrektywy, można użyć programu `Console.WriteLine` jako skrót dla `System.Console.WriteLine`.
 

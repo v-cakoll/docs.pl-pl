@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms'
+title: 'Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 5713bc9fa02e6122cc42348160dbe9315e023bc4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141638"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows
 *Klucz dostępu* jest podkreślony znak w tekście menu, element menu lub etykieta kontrolki, takiej jak przycisk. Przy użyciu klucza dostępu użytkownik może "przycisk", naciskając klawisz ALT w połączeniu z kluczem dostępu do wstępnie zdefiniowanych. Na przykład, jeśli przycisk uruchamia procedurę do Drukowanie formularza i dlatego jego `Text` właściwość jest ustawiona na "Print","Dodawanie handlowe" i ", zanim litery"P"powoduje, że litery"P"podkreślić w tekst przycisku w czasie wykonywania. Użytkownik może uruchamiać polecenie skojarzone z przyciskiem, naciskając klawisze ALT + P. Nie może mieć klucza dostępu dla formantu, który nie może otrzymać ostrości.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Aby utworzyć klucz dostępu dla formantu  
@@ -53,7 +53,8 @@ ms.locfileid: "57708005"
     >  Aby dołączyć handlowe "i" podpis bez tworzenia klucza dostępu, obejmują dwa takie znaki (& &). Pojedynczy znak jest wyświetlana w podpisie, a żadne znaki nie są podkreślone.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Button>
-- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](how-to-respond-to-windows-forms-button-clicks.md)
-- [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Instrukcje: odpowiadanie na kliknięcia przycisków formularzy systemu Windows](how-to-respond-to-windows-forms-button-clicks.md)
+- [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

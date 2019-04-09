@@ -1,5 +1,5 @@
 ---
-title: 'Optymalizacja wydajności: Wykorzystanie sprzętu'
+title: 'Optymalizacja wydajności: Wykorzystanie możliwości sprzętu'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], performance
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163179"
 ---
-# <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optymalizacja wydajności: Wykorzystanie sprzętu
+# <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optymalizacja wydajności: Wykorzystanie możliwości sprzętu
 Wewnętrznej architekturze programu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma renderowania dwa potoki, sprzętu i oprogramowania. Ten temat zawiera informacje o tych potoków renderowania ułatwiające podejmowanie decyzji dotyczących optymalizacji wydajności aplikacji.  
   
 ## <a name="hardware-rendering-pipeline"></a>Sprzętowy potok renderowania  
@@ -55,6 +55,7 @@ Wewnętrznej architekturze programu [!INCLUDE[TLA2#tla_winclient](../../../../in
  Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderowanie warstw, zobacz [warstwy renderowania grafiki](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
 - [Planowanie wydajności aplikacji](planning-for-application-performance.md)
 - [Układ i projekt](optimizing-performance-layout-and-design.md)

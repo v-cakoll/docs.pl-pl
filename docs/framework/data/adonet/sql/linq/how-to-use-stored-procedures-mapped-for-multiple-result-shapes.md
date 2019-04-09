@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Używanie procedur składowanych zmapowanych do wielu kształtów wyników'
+title: 'Instrukcje: Używanie procedur składowanych zamapowanych na wiele kształtów wyników'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 6ea318e89cf91dcbf16747117b8000dfa3f9571d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164674"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Instrukcje: Używanie procedur składowanych zmapowanych do wielu kształtów wyników
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Instrukcje: Używanie procedur składowanych zamapowanych na wiele kształtów wyników
 Podczas procedury składowanej może zwrócić wielu kształtów wyników, zwracany typ nie silnie typizowane do projekcji pojedynczego kształtu. Mimo że [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wygenerować wszystkich typów projekcji możliwe, nie wiedzieć, kolejność, w której zostanie zwrócony.  
   
  Natomiast tego scenariusza za pomocą procedur składowanych, które tworzą wielu kształtów wyników po kolei. Aby uzyskać więcej informacji, zobacz [jak: Używanie procedur składowanych zmapowanych do sekwencyjnych kształtów wyników](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
@@ -44,4 +44,5 @@ else if(@shape = 2)
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury składowane](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

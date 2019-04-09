@@ -2,12 +2,12 @@
 title: <message> z <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: 88149fd1df7679a51cc9cad449d020f29c1709eb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4d9b46b6c148f9280f6504b9bccdf644ab451c00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102677"
 ---
 # <a name="message-of-wshttpbinding"></a>\<komunikat > z \<wsHttpBinding >
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -81,9 +81,10 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<wsHttpBinding >]
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Definiuje ustawienia zabezpieczeń dla [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Definiuje ustawienia zabezpieczeń dla [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Message%2A>
@@ -91,5 +92,5 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<wsHttpBinding >]
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

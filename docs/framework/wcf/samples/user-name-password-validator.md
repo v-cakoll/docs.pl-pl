@@ -2,12 +2,12 @@
 title: Moduł weryfikacji nazwy użytkownika i hasła
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: df2340393544b0eaac8f2c6d4eae55846a604e40
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162753"
 ---
 # <a name="user-name-password-validator"></a>Moduł weryfikacji nazwy użytkownika i hasła
 Ten przykład demonstruje sposób implementacji niestandardowego modułu weryfikacji UserNamePassword. Jest to przydatne w przypadkach, gdy żadna z wbudowanych tryby weryfikacji UserNamePassword jest odpowiednia dla wymagań aplikacji; na przykład, gdy pary nazwy użytkownika/hasła są przechowywane w niektórych magazynu zewnętrznego, takie jak bazy danych. Niniejszy przykład pokazuje usługi, która ma niestandardowy moduł sprawdzania poprawności, który sprawdza, czy są dostępne dwie pary określonej nazwy użytkownika i hasła. Klient używa pary nazwa użytkownika i hasło do uwierzytelniania w usłudze.
@@ -320,4 +320,3 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
 1.  Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa. Spowoduje to usunięcie certyfikatu serwera z magazynu certyfikatów.  
-  

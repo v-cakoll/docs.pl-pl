@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 22cb673f09faf7b0eabcfa5b3f6700d33242d84b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122697"
 ---
 # <a name="common-web-application-architectures"></a>Typowe architektury aplikacji internetowych
 
@@ -48,7 +48,7 @@ Za pomocą architektury warstwowej aplikacji może wymusić ograniczenia, które
 
 Warstwy (i hermetyzacji) stał się znacznie łatwiejsze do zastąpienia funkcji w obrębie aplikacji. Na przykład aplikacja początkowo użyć własną bazę danych programu SQL Server dla trwałości, ale później można wybrać do użycia strategii opartej na chmurze trwałości lub przy użyciu jednej za interfejs API sieci web. Jeśli aplikacja ma prawidłowo hermetyzowane implementacji trwałości w obrębie warstwy logiczne, tej konkretnej warstwy programu SQL Server może zostać zastąpiona nową wdrażanie tego samego interfejsu publicznego.
 
-Oprócz możliwości wymienić implementacji w odpowiedzi na przyszłe zmiany w wymaganiach warstw aplikacji może również ułatwić wymienić implementacje dla celów testowych. Zamiast pisać testy, które działają względem rzeczywiste dane warstwy lub warstwy interfejsu użytkownika aplikacji, można zastąpić te warstwy w czasie testu z fałszywego implementacji, które zapewniają znanych odpowiedzi na żądania. To zwykle sprawia, że testy znacznie łatwiejsze do zapisu i znacznie szybciej wykonywania w porównaniu do uruchamiania testów ponownie infrastruktury rzeczywistych aplikacji.
+Oprócz możliwości wymienić implementacji w odpowiedzi na przyszłe zmiany w wymaganiach warstw aplikacji może również ułatwić wymienić implementacje dla celów testowych. Zamiast pisać testy, które działają względem rzeczywiste dane warstwy lub warstwy interfejsu użytkownika aplikacji, można zastąpić te warstwy w czasie testu z fałszywego implementacji, które zapewniają znanych odpowiedzi na żądania. To zwykle sprawia, że testy znacznie łatwiejsze do zapisu i szybciej, aby uruchomić w porównaniu do uruchamiania testów względem infrastruktury rzeczywistych aplikacji.
 
 Logiczne warstw jest typową techniką dla poprawy organizacji kodu w aplikacjach dla przedsiębiorstw oprogramowania, a istnieje kilka sposobów, w których kodu mogą być organizowane w warstwy.
 

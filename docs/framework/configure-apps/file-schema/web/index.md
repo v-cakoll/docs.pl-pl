@@ -9,12 +9,12 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 4bde008661e78fc85c428fa5100f81483936b460
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 1f0241b65c915dd5703ceea97dd5b07f88832003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113064"
 ---
 # <a name="web-settings-schema"></a>Schemat ustawień sieci Web
 Ustawienia sieci Web Określ procesora CPU i poziom wykonywania ustawień platformy ASP.NET, które są stosowane do całego procesu zachowanie zarządzanych przez platformę ASP.NET, hostowanie warstwy. Ustawienia te różnią się od ustawienia Typ domeny aplikacji, które są określone w pliku Web.config aplikacji ASP.NET.  
@@ -37,4 +37,5 @@ Ustawienia sieci Web Określ procesora CPU i poziom wykonywania ustawień platfo
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Określa procesor CPU i poziom wykonywania ustawień platformy ASP.NET, które są stosowane do całego procesu zachowanie zarządzanych przez platformę ASP.NET, hostowanie warstwy.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

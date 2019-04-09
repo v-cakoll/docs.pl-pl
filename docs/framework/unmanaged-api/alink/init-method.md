@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd29a84f6b3338203ddee7b13b58c9548e3240c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 60602462376543fe934bb3c58bc4988fa8ab34bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119369"
 ---
 # <a name="init-method"></a>Init — Metoda
 Przygotowuje obiektów Implementowanie [ialink — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) do użycia.  
@@ -49,6 +49,7 @@ HRESULT Init(
  Wymaga alink.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink — interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

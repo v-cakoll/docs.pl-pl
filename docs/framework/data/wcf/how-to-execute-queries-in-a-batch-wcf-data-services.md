@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: 3a11a96c197cd6905d8e80fac5c869a9c5c374e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a917659092890c95dfd65ede358d9c4b5a0e62cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117913"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Instrukcje: Wykonywanie zapytań w partii (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta, można wykonać więcej niż jednego zapytania względem usługi danych w jednej partii. Aby uzyskać więcej informacji, zobacz [przetwarzanie wsadowe operacji](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).  
@@ -26,4 +26,5 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibliotek
  [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

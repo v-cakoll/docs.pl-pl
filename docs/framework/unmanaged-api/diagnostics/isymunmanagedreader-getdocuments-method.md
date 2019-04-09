@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 629f9a62364729984a7eec86090876c3eaebb881
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: efcf5b6673fbdc37fad99d082f91ab3077abbea9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57464558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130601"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments — Metoda
 Zwraca tablicę wszystkich dokumentów, które są zdefiniowane w magazynie symboli.  
@@ -54,4 +54,5 @@ HRESULT GetDocuments (
  **Nagłówek:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymUnmanagedReader, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+
+- [ISymUnmanagedReader — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

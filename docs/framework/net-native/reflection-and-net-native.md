@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105857"
 ---
 # <a name="reflection-and-net-native"></a>Odbicie i architektura .NET Native
 W .NET Framework zarządzania obsługuje programowanie metaprogramowanie przez interfejs API odbicia. Odbicie umożliwia sprawdzanie obiektów w aplikacji, wywoływanie metod na obiektach odnajdywanych za pomocą inspekcji, generowanie nowych typów w czasie wykonywania i obsługuje wiele scenariuszy kod dynamicznych. Obsługuje ona również serializacji i deserializacji, co pozwala wartości pól obiektu może być utrwalona i później ją przywrócono. Te wszystkie scenariusze wymagają kompilatora .NET Framework just-in-time (JIT) można wygenerować kodu natywnego, w oparciu o dostępne metadane.  
@@ -34,5 +34,6 @@ W .NET Framework zarządzania obsługuje programowanie metaprogramowanie przez i
 -   [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kompilowanie aplikacji z architekturą .NET Native](../../../docs/framework/net-native/index.md)
 - [Architektura .NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md)

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Generowanie modelu i mapowania plików za pomocą EdmGen.exe'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 49890eb8bdb9f956cc36b3adde2f11db1e1e07bc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 72f4f84fc8651f3117eae637eb75300801e5000f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125334"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Instrukcje: Generowanie modelu i mapowania plików za pomocą EdmGen.exe
 W tym temacie przedstawiono sposób użycia narzędzia Generator EDM (EdmGen.exe), aby wygenerować następujących plików, w oparciu o bazę danych School:  
@@ -54,8 +54,9 @@ W tym temacie przedstawiono sposób użycia narzędzia Generator EDM (EdmGen.exe
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Modelowanie i mapowanie](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
 - [Instrukcje: Ręczne konfigurowanie projektu programu Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [Instrukcje: Wstępnie wygenerować widoków, aby poprawić wydajność zapytań](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
-- [Narzędzia do modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Narzędzia ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Instrukcje: Walidacja modelu i mapowania plików za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

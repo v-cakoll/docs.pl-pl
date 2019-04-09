@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132213"
 ---
 # <a name="wpf-brushes-overview"></a>Przegląd Pędzle WPF
 Wszystko, co jest widoczne na ekranie jest widoczny, ponieważ został on malowane przez pędzla. Na przykład jest używany pędzel opisujący tło przycisku, tekst pierwszego planu i wypełnienie kształtu. W tym temacie przedstawiono koncepcję malowanie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzle oraz przykłady. Pędzle umożliwia malowanie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] obiektów ze wszystkim z proste, pełne kolory do złożonych zestawów wzorców i obrazy.  
@@ -161,13 +161,14 @@ Prostokąt malowane przy użyciu VisualBrush
  Aby uzyskać więcej informacji o tym, dlaczego <xref:System.Windows.Media.VisualBrush> obiekty nie mogą być zablokowane, zobacz <xref:System.Windows.Media.VisualBrush> typ strony.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
-- [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)
+- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
+- [Przegląd Obiekty Freezable](../advanced/freezable-objects-overview.md)
 - [Przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973)
-- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Tematy z instrukcjami](brushes-how-to-topics.md)
+- [ImageBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [— Tematy porad](brushes-how-to-topics.md)
 - [Inne zalecenia dotyczące wydajności](../advanced/optimizing-performance-other-recommendations.md)

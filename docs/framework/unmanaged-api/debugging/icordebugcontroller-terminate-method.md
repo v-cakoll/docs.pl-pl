@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65a374f942697ee670507987c4a97a7977970b69
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c4c8dd8795fc3699176490ea0bb9b2e999038afb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124881"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate — Metoda
 Kończy proces o określony kod zakończenia.  
@@ -58,4 +58,3 @@ HRESULT Terminate (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-

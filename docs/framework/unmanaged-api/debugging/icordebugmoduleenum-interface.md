@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleEnum — Interfejs
+title: ICorDebugModuleEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf3d72b2439250fd8fbdc1bf1dc9ca28352c9ad
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 26efb3e43642b6d1fd10b084c2b321609c89d89b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146513"
 ---
-# <a name="icordebugmoduleenum-interface"></a>ICorDebugModuleEnum — Interfejs
+# <a name="icordebugmoduleenum-interface"></a>ICorDebugModuleEnum, interfejs
 
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugModule.  
   
@@ -48,4 +48,5 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugModule.
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: a35f4543543aa9023fd43de1757975c7ada87da9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148957"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne
 W tym temacie omówiono wdrażanie i wywoływanie operacji usługi asynchronicznego.  
@@ -193,5 +193,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
  Jeśli chcesz otrzymywać obiekt komunikatu jako `Result` właściwości i mają zwracanych wartości, jak używać właściwości dla tego obiektu **/messageContract** opcja polecenia. Spowoduje to wygenerowanie sygnaturę, która zwraca komunikat odpowiedzi jako `Result` właściwość <xref:System.EventArgs> obiektu. Wszystkie wewnętrzne wartości zwracane są następnie właściwości obiektu komunikat odpowiedzi.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 861f4c18f4c5151dc7215d300775928b88f018aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090631"
 ---
 # <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE — Wyliczenie
 Wskazuje typ klauzuli wyjątek, który po prostu wprowadzony kod lub po lewej stronie.  
@@ -56,4 +56,5 @@ typedef enum {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [Profilowanie — Wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

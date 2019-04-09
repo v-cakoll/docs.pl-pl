@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodaj odwołania do bibliotek typów'
+title: 'Instrukcje: Dodawanie odwołań do bibliotek typów'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12096739e66a47fadd89eb27e30ba3de43c7da3
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.openlocfilehash: dab83be5250cd68348c860c4aff7991ec7655648
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172045"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a>Instrukcje: Dodaj odwołania do bibliotek typów
+# <a name="how-to-add-references-to-type-libraries"></a>Instrukcje: Dodawanie odwołań do bibliotek typów
 Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane, gdy użytkownik dodaje odnośnik do biblioteki typów. Jeśli podstawowy zestaw międzyoperacyjny jest dostępny, Visual Studio korzysta z istniejącego zestawu przed wygenerowaniem nowego zestawu międzyoperacyjnego.  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Aby dodać odwołanie do biblioteki typów w programie Visual Studio  
@@ -45,9 +45,10 @@ Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane, g
 2.  Użyj [/link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [/Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) — opcja kompilatora z nazwą zestawu międzyoperacyjnego do osadzenia informacji o typie dla modelu COM, typy w swoje pliki wykonywalne.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
-- [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
+- [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)
 - [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
 - [Przewodnik: Osadzanie typów z zarządzanych zestawów w programie Visual Studio (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [/ Link (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/ Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [/link (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

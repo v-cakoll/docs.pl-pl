@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 4b94bfd92cf586088316b03222e0bbe5c1728bc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138648"
 ---
 # <a name="message-security-with-a-windows-client"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows
 W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF) i serwer zabezpieczony przez trybu zabezpieczenia wiadomości. Klient i usługa są uwierzytelniane przy użyciu poświadczeń Windows.  
@@ -26,7 +26,7 @@ W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF
 |Integralność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
 |Poufność|Tak, za pomocą kontekstu zabezpieczeń udostępnionego|  
 |Transport|NET.TCP|  
-|Powiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
+|Wiązanie|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Usługa  
  Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
@@ -117,5 +117,6 @@ W tym scenariuszu pokazano klienta usługi Windows Communication Foundation (WCF
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

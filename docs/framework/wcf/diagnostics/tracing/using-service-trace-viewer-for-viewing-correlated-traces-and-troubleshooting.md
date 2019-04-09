@@ -2,12 +2,12 @@
 title: Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160670"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 W tym temacie opisano format danych śledzenia, jak wyświetlać i metod, które umożliwiają rozwiązywanie problemów z aplikacji przeglądarki danych śledzenia usługi.  
@@ -169,8 +169,7 @@ Na poniższej ilustracji przedstawiono działania klienta WCF, wyświetlane prze
  Na poniższej ilustracji przedstawiono widok wykresu działań usługi WCF:   
 
  ![Zrzut ekranu z przeglądarki danych śledzenia przedstawiający listę działań usługi WCF](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  Poniższy zrzut ekranu przedstawia działania dla klienta i usługi i prezentuje działanie Przetwórz operację dodawania akcji między procesami (kolor pomarańczowy). Strzałki komunikatów żądań i odpowiedzi wysyłane i odbierane przez klienta i usługi są ze sobą powiązane. Ślady działania procesu są rozdzielane między procesami na wykresie, ale widoczne jako część tego samego działania w prawym górnym rogu panelu. W tym panelu widać ślady klienta dla wysłanych komunikatów, następuje śladów usługi odebranych i przetworzonych komunikatów.  
   
  Poniższych ilustracjach przedstawiono widok wykresu zarówno działania klienta i usługi WCF  
@@ -189,8 +188,7 @@ Korelowanie błąd usługi i klienta
   
   Na poniższej ilustracji przedstawiono, jak wybrać czerwony threshold lub Yellow threshold działania Znajdź główny problem.   
  ![Zrzut ekranu przedstawiający czerwony threshold lub Yellow threshold działań do lokalizowania głównego problemu.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  W górnym prawym panelu można sprawdzić ślady działania, które wybrano po lewej stronie. Następnie można badać ślady czerwony threshold lub Yellow Threshold w panelu i zobacz, jak są skorelowane. Na poprzednim wykresie widzimy zapisy ostrzeżeń, zarówno dla klienta i usługi, w tym samym działaniu działania procesu.  
   
  Jeśli ślady te nie zawierają główną przyczynę tego błędu, możesz użyć wykresu przez dwukrotne kliknięcie wybrane działanie w panelu po lewej stronie (tutaj procesu akcji). Następnie jest wyświetlany wykres z powiązanych działań. Powstałą powiązanych działań (klikając znaki "+") można znaleźć pierwszego emitowany śledzenia na czerwono lub powiązana aktywność na żółto. Zachowaj rozszerzania działania, które miały tuż przed czerwony threshold lub Yellow threshold ślad zainteresowaniach, aplikację po przekazaniu powiązanych działań lub przepływów wiadomości między punktami końcowymi, dopóki śledzenie głównej przyczyny problemu.  
@@ -207,6 +205,7 @@ Rozwijanie działania śledzenia głównej przyczyny problemu
 Zacząć Rozwiązywanie problemów, możesz wybrać czerwony threshold lub Yellow threshold komunikat śledzenia i dwukrotnie kliknij go, aby śledzić głównej przyczyny problemu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

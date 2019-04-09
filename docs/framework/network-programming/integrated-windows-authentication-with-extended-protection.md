@@ -1,15 +1,15 @@
 ---
-title: Windows zintegrowane uwierzytelnianie przy użyciu mechanizmu rozszerzonej ochrony
+title: Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 71e4359686ea2a6b1ae3e8ec840bf25af644a369
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146825"
 ---
-# <a name="integrated-windows-authentication-with-extended-protection"></a>Windows zintegrowane uwierzytelnianie przy użyciu mechanizmu rozszerzonej ochrony
+# <a name="integrated-windows-authentication-with-extended-protection"></a>Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną
 Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, i pokrewne klasy w <xref:System.Net> i pokrewnych przestrzeniach nazw. Dodano obsługę ochrony rozszerzonej zwiększyć poziom bezpieczeństwa.  
   
  Te zmiany mogą mieć wpływ na aplikacje, które używają tych klas do żądań sieci web i otrzymywać odpowiedzi, w których jest stosowane zintegrowane uwierzytelnianie Windows. Ta zmiana może także wpłynąć na serwerach sieci web i aplikacji klienckich, które są skonfigurowane do korzystania ze zintegrowanego uwierzytelniania Windows.  
@@ -128,7 +128,7 @@ Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytel
   
 3.  Klient określa powiązania w poprawnym kanale lub może nawiązać połączenie bez określenia powiązania kanału, ponieważ zasady ochrony rozszerzonej na serwerze jest skonfigurowany przy użyciu <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> żądania jest zwracana do aplikacji w celu przetworzenia. Nie wyboru nazwa usługi jest realizowane automatycznie. Aplikacja może wybrać do wykonania własnej usługi nazwa weryfikacji za pomocą <xref:System.Net.HttpListenerRequest.ServiceName%2A> właściwości, ale w poniższych sytuacjach jest nadmiarowe.  
   
- Jeśli aplikacja sprawia, że jego własnej wywołania interfejsu SSPI, aby przeprowadzać uwierzytelnianie oparte na obiekty BLOB przekazane i z powrotem w treści żądania HTTP i chce obsługiwać powiązania kanału, musi pobrać wiązania kanałów oczekiwanych z zewnętrznym bezpiecznego kanału, za pomocą <xref:System.Net.HttpListener> aby można było przekazać go do natywnego Win32 [działanie funkcji AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) funkcji. Aby to zrobić, należy użyć <xref:System.Net.HttpListenerRequest.TransportContext%2A> właściwości i wywołania <xref:System.Net.TransportContext.GetChannelBinding%2A> metodę, która pobierze CBT. Obsługiwane są tylko powiązania punktu końcowego. Jeśli niczego poza <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> jest określony, <xref:System.NotSupportedException> zostanie zgłoszony. Jeśli system operacyjny obsługuje wiązania kanałów <xref:System.Net.TransportContext.GetChannelBinding%2A> metoda zwróci <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> <xref:System.Runtime.InteropServices.SafeHandle> zawijania wskaźnik do powiązania odpowiedni do przekazania do kanału [działanie funkcji AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) — funkcja jako pvBuffer członka struktury SecBuffer przekazanej `pInput` parametru. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> Właściwość zawiera długość w bajtach, powiązania kanału. Jeśli system operacyjny nie obsługuje powiązań kanałów, funkcja zwróci `null`.  
+ Jeśli aplikacja sprawia, że jego własnej wywołania interfejsu SSPI, aby przeprowadzać uwierzytelnianie oparte na obiekty BLOB przekazane i z powrotem w treści żądania HTTP i chce obsługiwać powiązania kanału, musi pobrać wiązania kanałów oczekiwanych z zewnętrznym bezpiecznego kanału, za pomocą <xref:System.Net.HttpListener> aby można było przekazać go do natywnego Win32 [działanie funkcji AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) funkcji. Aby to zrobić, należy użyć <xref:System.Net.HttpListenerRequest.TransportContext%2A> właściwości i wywołania <xref:System.Net.TransportContext.GetChannelBinding%2A> metodę, która pobierze CBT. Obsługiwane są tylko powiązania punktu końcowego. Jeśli niczego poza <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> jest określony, <xref:System.NotSupportedException> zostanie zgłoszony. Jeśli system operacyjny obsługuje wiązania kanałów <xref:System.Net.TransportContext.GetChannelBinding%2A> metoda zwróci <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> zawijania wskaźnik do powiązania odpowiedni do przekazania do kanału [działanie funkcji AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) pełnią pvBuffer element członkowski struktury SecBuffer przekazanej `pInput` parametru. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> Właściwość zawiera długość w bajtach, powiązania kanału. Jeśli system operacyjny nie obsługuje powiązań kanałów, funkcja zwróci `null`.  
   
  Inny scenariusz możliwe jest ochrona rozszerzona na potrzeby prefiksy HTTP://, gdy serwery proxy nie są używane. W takim przypadku ustawić <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> do <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> z <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> równa <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> lub <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, i <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> równa <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected> wartość <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> umieszcza <xref:System.Net.HttpListener> w trybie chroniony częściowo podczas <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> odnosi się do w pełni zaostrzony tryb.  
   
@@ -149,5 +149,6 @@ Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytel
  Te funkcje ochrony rozszerzonej mogą również przez aplikacje serwera do uwierzytelniania przy użyciu innych typów żądań i użycie zaufanych serwerów proxy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

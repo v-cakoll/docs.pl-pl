@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ff8e2767f8bba618539ecd12c5034ae67d24d0a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bcd200b7fa431f193dd202c3c2a690aa22ec8e32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135190"
 ---
 # <a name="isymunmanagedreader2getmethodbyversionpreremap-method"></a>ISymUnmanagedReader2::GetMethodByVersionPreRemap — Metoda
 Pobiera metodę czytnika symboli, biorąc pod uwagę token metody oraz numer wersji edit-and-continue. Numery wersji są liczone od 1 i jest zwiększana za każdym razem, gdy metoda zmienia się w wyniku operacji Edytuj i Kontynuuj.  
@@ -53,4 +53,5 @@ HRESULT GetMethodByVersionPreRemap(
  **Nagłówek:** CorSym.idl. CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymUnmanagedReader2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+
+- [ISymUnmanagedReader2 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

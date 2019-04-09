@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie tła panelu formularzy Windows przy użyciu narzędzia Projektant'
+title: 'Instrukcje: ustawianie tła panelu formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - background colors [Windows Forms], Windows Forms Panel controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: 73b09b9240f417dbe80546e89f2fdfb1e4e4a483
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e66d8c81114a4550f0473f75a8101e79e8db2c76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103717"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Instrukcje: Ustawianie tła panelu formularzy Windows przy użyciu narzędzia Projektant
+# <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Instrukcje: ustawianie tła panelu formularzy systemu Windows przy użyciu narzędzia Projektant
 Formularze Windows <xref:System.Windows.Forms.Panel> formant może wyświetlić kolor tła i obraz tła. <xref:System.Windows.Forms.Control.BackColor%2A> Właściwość ustawia kolor tła kontrolki, które są zawarte w panelu, takich jak etykiety i przycisków radiowych. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie ustawiono właściwości <xref:System.Windows.Forms.Control.BackColor%2A> wypełni wszystkie panelu wyboru. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość jest ustawiona, obraz, który pojawi się za zaporą formantów, które są zawarte w panelu.  
   
  Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą formularza, który zawiera <xref:System.Windows.Forms.Panel> kontroli. Aby dowiedzieć się, jak skonfigurować taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -37,8 +37,9 @@ Formularze Windows <xref:System.Windows.Forms.Panel> formant może wyświetlić 
 6.  W **Otwórz** oknie dialogowym Wybierz plik który chcesz wyświetlić.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Panel, kontrolka](panel-control-windows-forms.md)
 - [Panel, kontrolka — omówienie](panel-control-overview-windows-forms.md)
-- [Instrukcje: Grupowanie formantów z formantem panelu formularzy Windows przy użyciu narzędzia Projektant](group-controls-with-wf-panel-control-using-the-designer.md)
+- [Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant](group-controls-with-wf-panel-control-using-the-designer.md)

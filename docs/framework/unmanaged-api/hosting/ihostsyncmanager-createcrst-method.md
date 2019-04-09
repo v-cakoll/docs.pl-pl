@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a44e85d0f697b8388b45373340e1691892ea499
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8b63b283a28ed27a70698c45bdc87d63fef0daf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117952"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>IHostSyncManager::CreateCrst — Metoda
 Tworzy obiekt sekcję krytyczną synchronizacji.  
@@ -64,9 +64,10 @@ HRESULT CreateCrst (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [IHostCrst, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
-- [IHostSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [IHostSemaphore, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
+
+- [ICLRSyncManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostCrst — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)
+- [IHostSyncManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [IHostSemaphore — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
 - [Muteksy](../../../../docs/standard/threading/mutexes.md)
-- [Semaphore i SemaphoreSlim](../../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+- [Semafor i klasa SemaphoreSlim](../../../../docs/standard/threading/semaphore-and-semaphoreslim.md)

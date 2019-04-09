@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj obiekt na ścieżce (animacja double)'
+title: 'Instrukcje: Animowanie obiektu na ścieżce (animacja double)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (double animation)
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
-ms.openlocfilehash: 1838b2492e7ea8a33139fdb5682362998d84a98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101448"
 ---
-# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Instrukcje: Animuj obiekt na ścieżce (animacja double)
+# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Instrukcje: Animowanie obiektu na ścieżce (animacja double)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> klasy, aby przenieść obiekt na ścieżce definicją <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Przykład  
@@ -35,5 +35,6 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.D
  Innym sposobem, aby przenieść obiekt przy użyciu ścieżki geometrycznej jest użycie <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> obiektu. Aby uzyskać przykład, zobacz [animowanie obiektu na ścieżce (animacja Matrix)](how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
-- [Animacja ścieżki — tematy z instrukcjami](path-animation-how-to-topics.md)
+
+- [Przegląd Animacja](animation-overview.md)
+- [Animacja ścieżki Tematy Pomocy](path-animation-how-to-topics.md)

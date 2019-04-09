@@ -4,21 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: e82a9596778a3c71aca6bdb8efcb9b3aa227cadb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166897"
 ---
 # <a name="bitmap-effects-overview"></a>Przegląd Efekty mapy bitowej
 Efekty mapy bitowej umożliwia projektantom i deweloperom stosowanie efektów wizualnych do renderowania zawartości Windows Presentation Foundation (WPF). Na przykład efektów mapy bitowej pozwalają łatwo zastosować <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> efekt lub efekt rozmycie obrazu lub przycisku.  
   
 > [!IMPORTANT]
 >  W [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] lub nowszym, <xref:System.Windows.Media.Effects.BitmapEffect> klasa jest przestarzała. Jeśli spróbujesz użyć <xref:System.Windows.Media.Effects.BitmapEffect> klasy, wystąpi wyjątek przestarzały. Nieprzestarzała alternatywa do <xref:System.Windows.Media.Effects.BitmapEffect> klasa jest <xref:System.Windows.Media.Effects.Effect> klasy. W większości sytuacji <xref:System.Windows.Media.Effects.Effect> klasy jest znacznie szybsze.  
-  
-  
-  
+
 <a name="wpf_effects"></a>   
 ## <a name="wpf-bitmap-effects"></a>Efekty mapy bitowej WPF  
  Efekty mapy bitowej (<xref:System.Windows.Media.Effects.BitmapEffect> obiektu) są pikseli proste operacje przetwarzania. Efekt mapy bitowej przyjmuje <xref:System.Windows.Media.Imaging.BitmapSource> jako dane wejściowe i tworzy nowy <xref:System.Windows.Media.Imaging.BitmapSource> po zastosowaniu efektu, takich jak rozmycie lub Usuń w tle. Każdy efekt mapy bitowej udostępnia właściwości, które można kontrolować filtrowania właściwości, takie jak <xref:System.Windows.Media.Effects.BlurBitmapEffect.Radius%2A> z <xref:System.Windows.Media.Effects.BlurBitmapEffect>.  
@@ -61,11 +59,12 @@ Efekty mapy bitowej umożliwia projektantom i deweloperom stosowanie efektów wi
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia również niezarządzane interfejsy do tworzenia niestandardowych efektów, które mogą być używane w zarządzanych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji. Aby uzyskać dodatkowe materiały źródłowe do tworzenia efektów niestandardowej mapy bitowej, zobacz [niezarządzanych efekt mapy bitowej WPF](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh) dokumentacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Effects.BitmapEffectGroup>
 - <xref:System.Windows.Media.Effects.BitmapEffectInput>
 - <xref:System.Windows.Media.Effects.BitmapEffectCollection>
 - [Efekt mapy bitowej niezarządzanych WPF](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
-- [Obrazowanie — przegląd](imaging-overview.md)
+- [Przegląd Obrazowanie](imaging-overview.md)
 - [Zabezpieczenia](../security-wpf.md)
-- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)

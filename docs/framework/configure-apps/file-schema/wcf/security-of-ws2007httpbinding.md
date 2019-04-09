@@ -2,12 +2,12 @@
 title: <security> z <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: 8d7df6f50c389e7b7a7766a18ee722159a6b1835
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bac8b9c4af812e924296008fa81227d181b30c0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170849"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<Zabezpieczenia > z \<ws2007HttpBinding >
 Reprezentuje ustawienia zabezpieczeń używane dla [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elementu.  
@@ -72,6 +72,7 @@ Reprezentuje ustawienia zabezpieczeń używane dla [ \<ws2007HttpBinding >](../.
  Ten element jest przeznaczona dla współdziałanie z usługami, które implementują WS-* specyfikacji. Zabezpieczenia transportu dla tego powiązania jest Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP lub HTTPS.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.WSHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
@@ -80,5 +81,5 @@ Reprezentuje ustawienia zabezpieczeń używane dla [ \<ws2007HttpBinding >](../.
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

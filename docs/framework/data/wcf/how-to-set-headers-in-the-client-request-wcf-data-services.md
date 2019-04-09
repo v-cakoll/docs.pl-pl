@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 8cc84dfac4492b6d4182048b61b96e463f914a63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d821ca499e0b0e9151a724de5149f35bb815861
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143263"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Instrukcje: Ustawianie nagłówków w żądaniu klienta (WCF Data Services)
 Kiedy używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienckiej dostęp do usługi danych, która obsługuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], Biblioteka klienta automatycznie ustawia wymagane nagłówki HTTP w komunikatach żądań wysyłanych do usługi danych. Jednak biblioteka klienta nie wiadomo, do ustawiania nagłówków wiadomości, które są wymagane w niektórych przypadkach, np. gdy usługa danych wymaga uwierzytelniania opartego na oświadczeniach lub pliki cookie. Aby uzyskać więcej informacji, zobacz [zabezpieczania usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). W takich przypadkach należy ręcznie ustawić nagłówki wiadomości w komunikacie żądania, przed ich wysłaniem. W przykładzie w tym temacie pokazano sposób obsługi <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> zdarzenie, aby dodać nowy nagłówek komunikatu żądania, przed wysłaniem ich do usługi danych.  
@@ -35,5 +35,6 @@ Kiedy używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibli
  [!code-vb[Astoria Northwind Client#OnSendingRequest](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onsendingrequest)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

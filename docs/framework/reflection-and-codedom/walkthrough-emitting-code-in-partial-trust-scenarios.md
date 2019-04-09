@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Emitowanie kodu w scenariuszach częściowej relacji zaufania'
+title: 'Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0e9e4aaef8e5f9ece88f56350065b2b688ba2a93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101565"
 ---
-# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowej relacji zaufania
+# <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych
 Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają specjalnych uprawnień w kodzie częściowo zaufanym. Ponadto emisji odbicia posiada funkcję, anonimowo obsługiwane metody dynamiczne, który jest przeznaczony do użycia z częściowej relacji zaufania, jak również przezroczyste dla zabezpieczeń zestawów.  
   
 > [!NOTE]
@@ -212,5 +212,6 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
 -   Jeśli tworzysz ten przykład kodu w programie Visual Studio, należy zmienić nazwę klasy, aby uwzględnić przestrzeń nazw, jeśli przekazujesz go do <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> metody. Domyślnie przestrzeń nazw jest nazwą projektu. Na przykład jeśli projekt to "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Problemy związane z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

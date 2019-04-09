@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a78df94fdc4190a43c80b0a8e3457f164e38eb00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e233fe78f6b2c721114f0307a8ca414625a0087e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160423"
 ---
 # <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol::GetAddress Method
 Pobiera adres pole statyczne.  
@@ -41,5 +41,6 @@ HRESULT GetAddress(
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ICorDebugStaticFieldSymbol, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

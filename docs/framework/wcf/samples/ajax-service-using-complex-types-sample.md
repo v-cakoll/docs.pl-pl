@@ -2,12 +2,12 @@
 title: Usługa AJAX korzystająca z typów złożonych — przykład
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 17c760c8276799fed7e7a8366c17ef9f5cf7081c
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 54d8c90f8317b69195401eda64e8a482aaf8460a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128508"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Usługa AJAX korzystająca z typów złożonych — przykład
 W tym przykładzie pokazano, jak używać usług Windows Communication Foundation (WCF) do tworzenia usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX), który tworzy wystąpienia typów złożonych i wysyła je między usługą i klienta jako JavaScript Object Notation (JSON). Usługa AJAX dostęp przy użyciu kodu JavaScript w kliencie przeglądarki sieci Web. W tym przykładzie opiera się na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki.  
@@ -67,4 +67,5 @@ function onSuccess(mathResult){
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

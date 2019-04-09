@@ -7,17 +7,16 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117763"
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
 <a name="introduction"></a> W tym temacie opisano sposób pracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności i opisuje pierwszeństwa, które cechy właściwości systemu zastosowania do skutecznego wartości właściwości.  
-    
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](dependency-properties-overview.md). Aby skorzystać z przykładów w tym temacie, należy również mieć świadomość [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i wiedzieć, jak napisać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -127,8 +126,9 @@ ms.locfileid: "57367943"
  <xref:System.Windows.DependencyObject.ClearValue%2A> Metoda zapewnia wskazane oznacza, że wyczyszczenie wszelkich lokalnie stosowane wartości z właściwości zależności, który jest ustawiony na element. Jednak podczas wywoływania <xref:System.Windows.DependencyObject.ClearValue%2A> nie jest gwarancją to nową, efektywną wartość domyślną występującej w metadanych w trakcie rejestracji właściwości. Wszystkie innych uczestników pierwszeństwo wartości są nadal aktywne. Tylko lokalnie ustawiony wartość została usunięta z sekwencji pierwszeństwo. Na przykład, jeśli wywołasz <xref:System.Windows.DependencyObject.ClearValue%2A> we właściwości, w których ta właściwość jest również ustawiona przez style motyw, a następnie wartość motyw jest stosowany jako nową wartość, a nie domyślnej na podstawie metadanych. Jeśli chcesz podjęcia wszyscy uczestnicy wartość właściwości poza procesem, a następnie ustaw wartość domyślną zarejestrowanych metadanych można uzyskać, wartość domyślna ostatecznie Sondując metadane zależności właściwości, a następnie użyć wartość domyślną, aby lokalnie Ustaw właściwość z wywołaniem <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
-- [Wywołania zwrotne i weryfikacja właściwości zależności](dependency-property-callbacks-and-validation.md)
+- [Zależność wartości wywołania zwrotnego i walidacji](dependency-property-callbacks-and-validation.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Popraw wydajność TreeView'
+title: 'Instrukcje: Poprawianie wydajności kontrolki TreeView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
-ms.openlocfilehash: d04d5997e6f02a4227704b668fdf19324ea20f26
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de1b46da2a7c6c3db0c0c19cdbb654fcf2fbbd6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153442"
 ---
-# <a name="how-to-improve-the-performance-of-a-treeview"></a>Instrukcje: Popraw wydajność TreeView
+# <a name="how-to-improve-the-performance-of-a-treeview"></a>Instrukcje: Poprawianie wydajności kontrolki TreeView
 Jeśli <xref:System.Windows.Controls.TreeView> zawiera wiele pozycji, czas potrzebny do załadowania może spowodować znaczne opóźnienie w interfejsie użytkownika. Możesz poprawić czas ładowania, ustawiając `VirtualizingStackPanel.IsVirtualizing` dołączonych właściwości `true`.  Interfejs użytkownika może być również wolno reagować, gdy użytkownik przewinie <xref:System.Windows.Controls.TreeView> przy użyciu kółka myszy lub przeciąganie uchwytu pasek przewijania. Można zwiększyć wydajność <xref:System.Windows.Controls.TreeView> po użytkownik przewija widok, ustawiając `VirtualizingStackPanel.VirtualizationMode` dołączonych właściwości <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Przykład  
@@ -31,4 +31,5 @@ Poniższy przykład tworzy <xref:System.Windows.Controls.TreeView> określająca
  [!code-vb[RecycleItemContainerShippets#TreeViewData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#treeviewdata)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki](../advanced/optimizing-performance-controls.md)
+
+- [Formanty](../advanced/optimizing-performance-controls.md)

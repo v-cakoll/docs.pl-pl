@@ -2,12 +2,12 @@
 title: Korelacja komunikatów
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8db7793064cb94b21feee73353b9ab5e40290fb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157819"
 ---
 # <a name="message-correlation"></a>Korelacja komunikatów
 Niniejszy przykład pokazuje, jak aplikacja usługi kolejkowania komunikatów (MSMQ) można wysłać wiadomości usługi MSMQ do usługi Windows Communication Foundation (WCF) i jak można skorelować wiadomości między nadawcą i odbiorcą aplikacji w przypadku żądań/odpowiedzi. W tym przykładzie użyto powiązania msmqIntegrationBinding. Usługa jest w tym przypadku aplikacji konsoli Self-Hosted aby możliwe było zaobserwować, że usługa, która odbiera wiadomości w kolejce. k  
@@ -313,5 +313,6 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Usługa kolejkowania komunikatów](https://go.microsoft.com/fwlink/?LinkId=94968)

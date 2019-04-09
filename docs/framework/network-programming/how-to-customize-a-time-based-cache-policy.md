@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostosowywanie zasad pamięci podręcznej na podstawie czasu'
+title: 'Instrukcje: dostosowywanie zasad pamięci podręcznej na podstawie czasu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - customizing time-based cache policies
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
-ms.openlocfilehash: 9d1eef073588f45e70170fcf46766b53f99bed8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4a35882d99a87ca5bf22fb386a87158e3c2d664
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154573"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a>Instrukcje: Dostosowywanie zasad pamięci podręcznej na podstawie czasu
+# <a name="how-to-customize-a-time-based-cache-policy"></a>Instrukcje: dostosowywanie zasad pamięci podręcznej na podstawie czasu
 Podczas tworzenia zasad pamięci podręcznej na podstawie czasu, można dostosować zachowanie buforowania, określając wartości maksymalny wiek, minimalna świeżość, maksymalna nieaktualność lub Data synchronizacji pamięci podręcznej. <xref:System.Net.Cache.HttpRequestCachePolicy> Obiekt zawiera kilka konstruktorów, które pozwalają na określenie prawidłowe kombinacje tych wartości.  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Aby utworzyć zasady na podstawie czasu pamięci podręcznej, który używa Data synchronizacji pamięci podręcznej  
@@ -115,6 +115,7 @@ Level:Default MaxAge:36000 MinFresh:18000
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)
 - [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)

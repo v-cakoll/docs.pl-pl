@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Lokalizuj aplikację'
+title: 'Instrukcje: Lokalizowanie aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171577"
 ---
-# <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizuj aplikację
+# <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizowanie aplikacji
 W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu locbaml — narzędzie.  
   
 > [!NOTE]
@@ -68,7 +68,7 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 1.  Skompilować HelloApp, aby utworzyć [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
   
-     **msbuild helloapp.csproj**  
+     **MSBUILD helloapp.csproj**  
   
 2.  Nowo utworzony głównym zestawem aplikacji, HelloApp.exe, jest tworzony w następującym folderze:  
   
@@ -210,5 +210,6 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
  Teraz powinien mieć podstawową wiedzę na temat sposobu użycia locbaml — narzędzie.  Powinien móc plik, który zawiera UID. Za pomocą locbaml — narzędzie, można przeanalizować pliku można wyodrębnić możliwych do zlokalizowania zawartości, a po zawartość jest tłumaczona, powinno być możliwe wygenerowanie. resources.dll zawierający scala tłumaczonej zawartości. W tym temacie nie ma możliwości szczegóły każdego zdarzenia, ale masz teraz wiedzy koniecznych do używania locbaml — do lokalizowania aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Globalizacja dla WPF](globalization-for-wpf.md)
-- [Przegląd używania automatycznego układu](use-automatic-layout-overview.md)
+- [Przegląd Użyj automatycznego układu](use-automatic-layout-overview.md)

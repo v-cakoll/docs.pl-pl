@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: 33f7971a95b8573168da11d2bd2abc80fa74370e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b87e75bd4866a191e84465e44d53850e6e2e9723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169926"
 ---
 # <a name="as-c-reference"></a>as (odwołanie w C#)
 Możesz użyć `as` operator pod kątem niektórych typów konwersje między typami zgodne odwołanie lub [typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md). Poniższy kod przedstawia przykład.  
@@ -47,9 +47,10 @@ expression is type ? (type)expression : (type)null
 Aby uzyskać więcej informacji, zobacz [jako operator](~/_csharplang/spec/expressions.md#the-as-operator) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
  
 ## <a name="see-also"></a>Zobacz także
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+
+- [Odwołanie w C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
 - [is](../../../csharp/language-reference/keywords/is.md)
-- [?: operator](../../../csharp/language-reference/operators/conditional-operator.md)
+- [?: Operator](../../../csharp/language-reference/operators/conditional-operator.md)
 - [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)

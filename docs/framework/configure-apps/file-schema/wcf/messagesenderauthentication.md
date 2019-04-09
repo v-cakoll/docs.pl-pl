@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: 69d85c9d9da6fe605c7cbeda16e801d32eb30d49
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b8643a5321bbab692ebb704101c664105b4ab55c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162195"
 ---
 # <a name="messagesenderauthentication"></a>\<messageSenderAuthentication>
 Określa ustawienia uwierzytelniania dla elementów równorzędnych certyfikat używany przez nadawcy wiadomości.  
@@ -48,12 +48,13 @@ Określa ustawienia uwierzytelniania dla elementów równorzędnych certyfikat u
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<elementu równorzędnego >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Określa bieżące poświadczenia dla węzła równorzędnego.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Określa bieżące poświadczenia dla węzła równorzędnego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element musi być skonfigurowany, jeśli wybrano opcję uwierzytelniania wiadomości. Dla kanałów danych wyjściowych, każdy komunikat jest podpisany przy użyciu certyfikatu dostarczonego przez [ \<certyfikatu >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Wszystkie komunikaty zanim dostarczane do aplikacji, są porównywane z poświadczeniami komunikatu przy użyciu modułu sprawdzania poprawności określonego przez `customCertificateValidatorType` atrybutu tego elementu. Moduł weryfikacji można zaakceptować lub odrzucić poświadczeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>

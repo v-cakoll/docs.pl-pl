@@ -1,18 +1,18 @@
 ---
-title: Znajdowanie wartości minimalnej w sekwencji numerycznej
+title: Odnajdywanie wartości minimalnej w sekwencji numerycznej
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: f92558798267760eb6cfd1bfc6365451cdcc1c62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136724"
 ---
-# <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Znajdowanie wartości minimalnej w sekwencji numerycznej
+# <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Odnajdywanie wartości minimalnej w sekwencji numerycznej
 Użyj <xref:System.Linq.Enumerable.Min%2A> operator, aby zwrócić wartość minimalna z sekwencji wartości liczbowych.  
   
 ## <a name="example"></a>Przykład  
@@ -72,5 +72,6 @@ Użyj <xref:System.Linq.Enumerable.Min%2A> operator, aby zwrócić wartość min
  `Konbu`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zapytania zagregowane](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
 - [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

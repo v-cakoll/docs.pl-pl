@@ -13,12 +13,12 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: fc6d6857e912ba14fca382eb49373655004534d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115313"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>Pędzle i wypełnione kształty w GDI+
 Kształt zamknięty, takich jak prostokąta lub elipsy, składa się z konturem i wewnętrzne. Konspekt jest rysowany przy użyciu pióra i wewnętrznych jest wypełniany pędzla. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dostarcza kilka klas, pędzla do wypełniania wnętrza kształty zamknięte: <xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, i <xref:System.Drawing.Drawing2D.PathGradientBrush>. Wszystkie te klasy dziedziczy <xref:System.Drawing.Brush> klasy. Na poniższej ilustracji pokazuje prostokąt wypełnione pędzla i elipsy wypełnione przy użyciu kreskowania pędzla.  
@@ -77,10 +77,11 @@ Kształt zamknięty, takich jak prostokąta lub elipsy, składa się z konturem 
  ![Wypełniony kształt](./media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)
-- [Instrukcje: Rysuj wypełniony prostokąt w formularzu Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [Instrukcje: Rysuj wypełnioną elipsę w formularzu Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [Instrukcje: Rysowanie wypełnionego prostokąta w formularzu systemu Windows](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [Instrukcje: Rysowanie wypełnionej elipsy w formularzu systemu Windows](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

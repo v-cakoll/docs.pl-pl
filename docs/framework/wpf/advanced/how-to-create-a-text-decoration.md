@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Utwórz dekorację tekstu'
+title: 'Instrukcje: Tworzenie dekoracji tekstu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: 22ff91770786e39e019de307167007548396ab33
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133838"
 ---
-# <a name="how-to-create-a-text-decoration"></a>Instrukcje: Utwórz dekorację tekstu
+# <a name="how-to-create-a-text-decoration"></a>Instrukcje: Tworzenie dekoracji tekstu
 A <xref:System.Windows.TextDecoration> obiekt jest ornamentacji visual, można dodać do tekstu. Istnieją cztery typy dekoracje tekstu: podkreślenie, linii bazowej, przekreślenia i nadkreślenia. Poniższy przykład przedstawia lokalizacje dekoracje tekstu względem tekstu.  
   
  ![Diagram przedstawiający typów dekoracji tekstu](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
@@ -62,6 +62,7 @@ A <xref:System.Windows.TextDecoration> obiekt jest ornamentacji visual, można d
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.TextDecoration>
 - <xref:System.Windows.Documents.Hyperlink>
 - [Określanie, czy hiperlink jest podkreślony](how-to-specify-whether-a-hyperlink-is-underlined.md)

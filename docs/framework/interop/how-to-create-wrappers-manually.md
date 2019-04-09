@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 62d11c5f098887bf26ab71c0d8d072972437210d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 2d6959ac8b2315d928ab2ac362bb3b2c4081d46e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117108"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Instrukcje: Ręczne tworzenie otok
 Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym kodzie źródłowym, najlepszym miejscem do rozpoczęcia jest istniejący plik Języka definicji interfejsu (IDL) lub biblioteka typów. Jeśli nie posiadasz pliku IDL ani nie możesz wygenerować pliku biblioteki typów, możesz zasymulować typy modelu COM przez utworzenie deklaracji zarządzanych i wyeksportowanie zestawu wynikowego do biblioteki typów.  
@@ -37,7 +37,7 @@ Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym k
 ## <a name="example"></a>Przykład  
  W poniższym kodzie pokazano przykład interfejsu `ISATest` i klasy `SATest` napisane w języku IDL oraz odpowiadające typy w kodzie źródłowym języka C#.  
   
- **IDL lub typu pliku biblioteki**  
+ **Plik IDL lub plik biblioteki typów**  
   
 ```  
  [  
@@ -100,9 +100,10 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [Typy danych COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [Instrukcje: Edytowanie zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
-- [Biblioteki typów na zestaw konwersja — podsumowanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Podsumowanie informacji o konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tlbimp.exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)

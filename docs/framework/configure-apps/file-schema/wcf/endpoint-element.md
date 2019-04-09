@@ -2,12 +2,12 @@
 title: <endpoint> — element
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163413"
 ---
 # <a name="endpoint-element"></a>\<punkt końcowy > element
 Określa powiązanie, kontrakt i właściwości adresu punktu końcowego usługi, który jest używany do udostępnienia usług.  
@@ -60,7 +60,7 @@ Określa powiązanie, kontrakt i właściwości adresu punktu końcowego usługi
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Kolekcję nagłówków adresowych.|  
-|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Tożsamość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiana wiadomości z nim.|  
+|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Tożsamość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiana wiadomości z nim.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -85,8 +85,9 @@ Określa powiązanie, kontrakt i właściwości adresu punktu końcowego usługi
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [Punkty końcowe: Adresy, powiązania i kontrakty](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Punkty końcowe: adresy, wiązania i kontrakty](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Instrukcje: Tworzenie punktu końcowego usługi w konfiguracji](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

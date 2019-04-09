@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], DatePicker
 - DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
-ms.openlocfilehash: a135188b2c573a578aa5b6be4910e6d02471aee1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 555bf31b27ba233ffa54438077984b02b5e3084a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161344"
 ---
 # <a name="datepicker"></a>DatePicker
 <xref:System.Windows.Controls.DatePicker> Kontroli umożliwia użytkownikowi wybranie daty, wpisując ją do pola tekstowego lub za pomocą listy rozwijanej <xref:System.Windows.Controls.Calendar> kontroli.  
@@ -25,5 +25,6 @@ DatePicker Control
  Użytkownicy mogą wpisać wartość typu date bezpośrednio do pola tekstowego, który ustawia <xref:System.Windows.Controls.DatePicker.Text%2A> właściwości. Jeśli <xref:System.Windows.Controls.DatePicker> nie można przekonwertować ciągu wprowadzone na prawidłową datę <xref:System.Windows.Controls.DatePicker.DateValidationError> zdarzenia zostaną podniesione. Domyślnie powoduje to, że wyjątek, ale program obsługi zdarzeń dla <xref:System.Windows.Controls.DatePicker.DateValidationError> można ustawić <xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A> właściwość `false` i zapobiec wyjątkowi z są zgłaszane.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki](index.md)
+
+- [Formanty](index.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)

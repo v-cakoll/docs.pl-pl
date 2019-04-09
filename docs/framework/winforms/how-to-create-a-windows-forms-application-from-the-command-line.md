@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 34c1843873e2f6a9a4ad78ed860a0115e0f02e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102430"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Instrukcje: Tworzenie aplikacji Windows Forms z wiersza polecenia
 W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby utworzyć i uruchomić aplikację Windows Forms z wiersza polecenia. Brak kompleksową obsługę tych procedur w programie Visual Studio.  Zobacz też [instruktażu: Kontrolki hostingu Windows formularzy na platformie WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -114,8 +114,9 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby
 -   Aby skompilować ten kod, postępuj zgodnie z instrukcjami procedury postępowania, które opisują sposób skompilować i uruchomić aplikację.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [Zmienianie wyglądu formularzy Windows Forms](changing-the-appearance-of-windows-forms.md)
+- [Zmienianie wyglądu formularzy systemu Windows](changing-the-appearance-of-windows-forms.md)
 - [Rozszerzanie aplikacji Windows Forms](./advanced/index.md)
-- [Wprowadzenie do formularzy Windows Forms](getting-started-with-windows-forms.md)
+- [Wprowadzenie do formularzy systemu Windows](getting-started-with-windows-forms.md)

@@ -7,18 +7,16 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 7a9f4c2c8c9ff6c315b9d7189d5e859a902c3e4d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170368"
 ---
 # <a name="dependency-property-metadata"></a>Metadane zależności właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] System właściwość zawiera metadane systemu, który wykracza poza jakie mogą być zgłaszane o właściwości przy użyciu odbicia lub ogólne raportowania [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Metadane dla właściwości zależności można przypisać również jednoznacznie przez klasę, która definiuje właściwości zależności, można zmienić, gdy właściwość zależności jest dodawany do innej klasy i mogą być szczególnie zastąpione przez wszystkie klasy pochodne, które dziedziczą Właściwości zależności z Definiowanie klasy bazowej.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](dependency-properties-overview.md). Aby można było wykonać instrukcje opisane w przykładach w tym temacie, należy również mieć świadomość [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i wiedzieć, jak napisać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
@@ -92,9 +90,10 @@ ms.locfileid: "57352936"
  Możesz wywołać <xref:System.Windows.DependencyProperty.AddOwner%2A> dla właściwości zależności, która jest zdefiniowana jako dołączoną właściwość przez klasę właściciela. Ogólnie rzecz biorąc przyczyną takiego postępowania jest do udostępnienia wcześniej dołączona właściwość jako właściwość niedołączonych zależności. Następnie udostępni <xref:System.Windows.DependencyProperty.AddOwner%2A> zwracają wartość jako `public static readonly` pola do wykorzystania jako identyfikator właściwości zależności, a następnie zostaną zdefiniowane właściwości "otoki", tak aby właściwość pojawia się w tabeli składowych i obsługuje niedołączonych właściwości Użycie w klasie.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.PropertyMetadata>
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Metadane właściwości struktury](framework-property-metadata.md)
+- [Metadane właściwości szablonu](framework-property-metadata.md)

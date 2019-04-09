@@ -2,12 +2,12 @@
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: f8615637a0fa6d0fff594ef1970711ac408f02f3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1e5ecc2b937aa0cdb159a6cbd1222fe6d4af79fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159851"
 ---
 # <a name="compositeduplex"></a>\<compositeDuplex>
 Definiuje element powiązania, który jest używany, gdy klient musi ujawniać punkt końcowy usługi by wysłać wiadomości do klienta.  
@@ -54,6 +54,7 @@ Definiuje element powiązania, który jest używany, gdy klient musi ujawniać p
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

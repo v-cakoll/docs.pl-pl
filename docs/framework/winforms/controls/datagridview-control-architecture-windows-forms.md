@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 81ac17c9f78baa71d005883c9dd928e398b10a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130263"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView — Architektura formantu (Formularze systemu Windows)
 <xref:System.Windows.Forms.DataGridView> Kontroli oraz ich powiązanymi klasami, które są przeznaczone do elastyczny i rozszerzalny system do wyświetlania i edytowania danych tabelarycznych. Te klasy są zawarte w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw, dlatego są nazywane z prefiksem "DataGridView".  
@@ -137,6 +137,7 @@ ms.locfileid: "58842346"
  Po włączeniu <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> właściwości specjalne wiersz awanie nowych wierszy jest wyświetlany jako ostatni wiersz. Ten wiersz jest częścią <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji, ale ma specjalne funkcje, które mogą wymagać Twojej uwagi. Aby uzyskać więcej informacji, zobacz [używanie wiersza dla nowych rekordów w formancie DataGridView formularzy Windows](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [DataGridView, kontrolka — omówienie](datagridview-control-overview-windows-forms.md)
-- [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](customizing-the-windows-forms-datagridview-control.md)
-- [Używanie wiersza dla nowych rekordów w kontrolce DataGridView formularzy Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [Dostosowywanie formantu DataGridView formularzy systemu Windows](customizing-the-windows-forms-datagridview-control.md)
+- [Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

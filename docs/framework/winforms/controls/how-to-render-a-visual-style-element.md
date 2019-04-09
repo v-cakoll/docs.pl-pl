@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Renderowanie elementu stylu wizualnego'
+title: 'Instrukcje: renderowanie elementu stylu wizualnego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 33c73bf8faa9dfafe5f4889875887dc3aef5985c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099836"
 ---
-# <a name="how-to-render-a-visual-style-element"></a>Instrukcje: Renderowanie elementu stylu wizualnego
+# <a name="how-to-render-a-visual-style-element"></a>Instrukcje: renderowanie elementu stylu wizualnego
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Przestrzeń nazw udostępnia <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> obiekty reprezentujące użytkownika Windows interfejsu (UI) elementy objęte stylów wizualnych. W tym temacie przedstawiono sposób użycia <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> klasy do renderowania <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> reprezentujący **Wyloguj** i **Shut Down** przyciski, menu Start.  
   
 ### <a name="to-render-a-visual-style-element"></a>Renderowanie elementu stylu wizualnego  
@@ -44,4 +44,5 @@ ms.locfileid: "57714115"
 -   Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, i <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Renderowanie kontrolek przy użyciu stylów wizualnych](rendering-controls-with-visual-styles.md)
+
+- [Renderowanie formantów przy użyciu stylów wizualnych](rendering-controls-with-visual-styles.md)

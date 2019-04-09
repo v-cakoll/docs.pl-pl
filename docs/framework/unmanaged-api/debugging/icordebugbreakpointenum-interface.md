@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBreakpointEnum — Interfejs
+title: ICorDebugBreakpointEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpointEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b5268eb4240f7c3ff254f4d3d9a13ab494530a1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7fd42f13f699b0b79fd69311186f2b2ca0c9998a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149074"
 ---
-# <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum — Interfejs
+# <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum, interfejs
 
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugBreakpoint.  
   
@@ -48,4 +48,5 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugBreakpoint.
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

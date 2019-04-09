@@ -10,21 +10,19 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123801"
 ---
 # <a name="packaging-fonts-with-applications"></a>Pakowanie czcionek z aplikacjami
 Ten temat zawiera omówienie sposobów z czcionkami pakietu przy użyciu usługi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
   
 > [!NOTE]
 >  Podobnie jak w przypadku większości typów oprogramowania, pliki czcionek są licencjonowane, a nie sprzedawana. Licencje, określające sposób użytkowania czcionki różnią się w dostawcy dostawcy, ale ogólnie większość licencji, w tym dotyczących czcionek [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] dostarcza z aplikacjami i [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], nie zezwalają na czcionki, aby być osadzony w aplikacji lub w inny sposób Ponowna dystrybucja. W związku z tym jak Deweloper, który jest odpowiedzialny za zapewnienie, że masz prawa wymaganą licencję dla dowolnego czcionki, którą można osadzić w aplikacji lub w inny sposób Ponowna dystrybucja.  
-  
 
-  
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Wprowadzenie do pakowanie czcionek  
  Można łatwo spakować czcionki jako zasoby w ramach Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, aby wyświetlić tekst interfejsu użytkownika i innych rodzajów tekst na podstawie zawartości. Czcionki może być niezależnie od lub osadzonego w ramach plików zestawu aplikacji. Można również utworzyć w bibliotece tylko do zasobów czcionki mogą odwoływać się do aplikacji.  
@@ -173,9 +171,10 @@ Ten temat zawiera omówienie sposobów z czcionkami pakietu przy użyciu usługi
 -   W przypadkach, w przypadku nieprawidłowego odwołania, aplikacja powróci przy użyciu dostępnej czcionki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
 - [Typografia firmy Microsoft: Łączy, wiadomości i kontakty](https://docs.microsoft.com/typography/)
 - [Specyfikacja OpenType](https://www.microsoft.com/typography/otspec/)
-- [Funkcje czcionki OpenType](opentype-font-features.md)
+- [OpenType funkcje czcionki](opentype-font-features.md)
 - [Przykład pakietu czcionek OpenType](sample-opentype-font-pack.md)

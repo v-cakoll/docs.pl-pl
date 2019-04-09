@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08d27eb834c1a9a3a5d163bb2d3054f599ae1669
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7024140ed9b870b5db38dba7e9b13321dd37386a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157589"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK — Struktura
 Zawiera informacje, które jest używane do łączenia kodu natywnego.  
@@ -55,6 +55,7 @@ typedef struct
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Struktury metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [CorNativeLinkType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
-- [CorNativeLinkFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)
+
+- [Metadane — Struktury](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [CorNativeLinkType — Wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
+- [CorNativeLinkFlags — Wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)

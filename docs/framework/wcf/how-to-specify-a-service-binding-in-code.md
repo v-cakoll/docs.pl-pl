@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Określanie wiązań usługi w kodzie'
+title: 'Instrukcje: Określanie powiązań usługi w kodzie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: f39b9d7bfdc1a5d8bf33c20f047738be1e41f226
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162361"
 ---
-# <a name="how-to-specify-a-service-binding-in-code"></a>Instrukcje: Określanie wiązań usługi w kodzie
+# <a name="how-to-specify-a-service-binding-in-code"></a>Instrukcje: Określanie powiązań usługi w kodzie
 W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkulator, usługa jest wdrażana w `CalculatorService` klasy, a następnie jej punkt końcowy jest zdefiniowana w kodzie, w której jest określony, że należy używać usługa programu <xref:System.ServiceModel.BasicHttpBinding> klasy.  
   
  Jest zwykle najlepszym rozwiązaniem jest, aby określić powiązanie i informacje o adresie deklaratywnie w konfiguracji, a nie obowiązkowo w kodzie. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie sporządzana. Ogólnie rzecz biorąc zachowanie wiązania i adresowanie z kodu pozwala na zmianę bez konieczności ponownego kompilowania lub ponownego wdrażania aplikacji.  
@@ -49,5 +49,6 @@ W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkula
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

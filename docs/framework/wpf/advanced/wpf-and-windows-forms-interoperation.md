@@ -8,20 +8,19 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: e6fe459ab00622860cd10e4e119e943e588f06b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2e3390c3e387e75168958f946472a5a24a4bd440
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129275"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Współdziałanie WPF i Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] przedstawić dwie różne architektury służące do tworzenia interfejsów aplikacji. <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Przestrzeń nazw zawiera klasy, które umożliwiają typowych scenariuszy współdziałanie. Są dwa klucza klasy, które implementują funkcje współdziałanie <xref:System.Windows.Forms.Integration.WindowsFormsHost> i <xref:System.Windows.Forms.Integration.ElementHost>. W tym temacie opisano, jakie współdziałanie scenariusze są obsługiwane i scenariuszy, do których nie są obsługiwane.  
   
 > [!NOTE]
 >  Jest szczególną uwagę na *formant hybrydowy* scenariusza. Formant hybrydowy zawiera formant z jednej technologii zagnieżdżona w kontrolki z poziomu innej technologii. Jest to również nazywane *zagnieżdżone współdziałanie*. A *formant hybrydowy wielopoziomowej* ma więcej niż jeden poziom hybrydowego kontrolować zagnieżdżania. Na przykład wielopoziomowej, zagnieżdżonej współdziałanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolkę zawierającą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formant, który zawiera inny [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli. Formanty wielopoziomowej hybrydowe nie są obsługiwane.  
-  
-  
+
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
 ## <a name="hosting-windows-forms-controls-in-wpf"></a>Kontrolek hostingu Windows Forms w WPF  
  Obsługiwane są następujące scenariusze współdziałanie podczas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formant obsługuje formant programu Windows Forms:  
@@ -118,9 +117,10 @@ ms.locfileid: "57352955"
 |Funkcja przeciągania i upuszczania|Wszystkie operacje przeciągania i upuszczania pracować w zwykły sposób. Dotyczy to również operacji między [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.|Nie dotyczy.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Przewodnik: Hosting kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: hostowanie kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)

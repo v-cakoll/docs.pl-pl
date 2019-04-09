@@ -1,5 +1,5 @@
 ---
-title: Sieć Web i uprawnienia gniazd
+title: Internet i uprawnienia gniazd
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Networking
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: b4395d26114425556f0457f03667d0f95f786ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ad06107155408b2aca854a8251c21a24c6577a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166858"
 ---
-# <a name="web-and-socket-permissions"></a>Sieć Web i uprawnienia gniazd
+# <a name="web-and-socket-permissions"></a>Internet i uprawnienia gniazd
 Zabezpieczenia internetowe dla aplikacji za pomocą <xref:System.Net> przestrzeni nazw są dostarczane przez <xref:System.Net.WebPermission> i <xref:System.Net.SocketPermission> klasy. **WebPermission** klasy kontrolki aplikacji bezpośrednio do dane żądania z identyfikatora URI lub do obsługi identyfikatora URI z Internetem. **SocketPermission** klasy aplikacji w prawo, aby użyć kontrolki <xref:System.Net.Sockets.Socket> akceptować dane na port lokalny lub skontaktuj się z urządzeniami zdalnymi przy użyciu protokołu transportowego poziomu innego adresu, oparte na hoście, a numer portu i protokół Transport gniazda.  
   
  Klasa uprawnień, których używasz, zależy od danego typu aplikacji. Aplikacje, które używają <xref:System.Net.WebRequest> i jego elementy podrzędne należy używać **WebPermission** klasy, aby zarządzać uprawnieniami. Skorzystaj z aplikacji, które używają dostęp na poziomie gniazd **SocketPermission** klasy, aby zarządzać uprawnieniami.  
@@ -34,5 +34,6 @@ Zabezpieczenia internetowe dla aplikacji za pomocą <xref:System.Net> przestrzen
  Dla **WebPermission** wystąpień, Zaakceptuj oznacza, że aplikację można wyeksportować identyfikatora URI w wartości clientauthtrustmode **WebPermission** na świecie; Łączenie oznacza, że aplikacja może uzyskiwać dostęp do tego identyfikatora URI (czy jest zdalny czy lokalny).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczenia](../../../docs/standard/security/index.md)
 - [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)

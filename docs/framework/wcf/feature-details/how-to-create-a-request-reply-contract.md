@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Tworzenie kontraktu „żądanie-odpowiedź”'
+title: 'Instrukcje: tworzenie kontraktu „żądanie-odpowiedź”'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 085514e09eb13676d5c939724071e89535d443f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9954be556df13193c290a55616ad83ef07e0af7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141079"
 ---
-# <a name="how-to-create-a-request-reply-contract"></a>Instrukcje: Tworzenie kontraktu „żądanie-odpowiedź”
+# <a name="how-to-create-a-request-reply-contract"></a>Instrukcje: tworzenie kontraktu „żądanie-odpowiedź”
 Kontraktu "żądanie-odpowiedź" Określa metodę, która zwraca odpowiedź. Odpowiedź musi być wysyłane i skorelowane żądanie zgodnie z warunkami niniejszej Umowy. Nawet jeśli metoda nie zwraca żadnej odpowiedzi (`void` w języku C# lub `Sub` w języku Visual Basic), infrastruktury, tworzy i wysyła pustego komunikatu do obiektu wywołującego. Aby uniemożliwić wysyłanie odpowiedzi pusty komunikat, należy użyć kontraktu jednokierunkowego dla tej operacji.  
   
 ### <a name="to-create-a-request-reply-contract"></a>Tworzenie kontraktu "żądanie-odpowiedź"  
@@ -45,9 +45,10 @@ public interface ICalculator
   
 -   Aby uzyskać więcej informacji na temat sposobu określania kontrakty operacji, zobacz <xref:System.ServiceModel.OperationContractAttribute> klasy i <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwości.  
   
--   Stosowanie <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> atrybuty powoduje automatyczne generowanie definicje kontraktu usługi w dokumencie usługi sieci Web Services Description Language (WSDL), po wdrożeniu usługi. Dokument zostanie pobrana przez dołączenie `?wsdl` HTTP podstawowy adres usługi. Na przykład:`http://microsoft/CalculatorService?wsdl`  
+-   Stosowanie <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> atrybuty powoduje automatyczne generowanie definicje kontraktu usługi w dokumencie usługi sieci Web Services Description Language (WSDL), po wdrożeniu usługi. Dokument zostanie pobrana przez dołączenie `?wsdl` HTTP podstawowy adres usługi. Na przykład `http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.OperationContractAttribute>
 - [Projektowanie kontraktów usług](../../../../docs/framework/wcf/designing-service-contracts.md)
-- [Instrukcje: Tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Instrukcje: tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

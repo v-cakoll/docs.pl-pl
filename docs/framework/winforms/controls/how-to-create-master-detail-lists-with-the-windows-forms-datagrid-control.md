@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 8f247fb3e61abe46b3bb9c74a3b984310d2b99b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094986"
 ---
-# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Instrukcje: Tworzenie list wzorzec/szczegół za pomocą kontrolki DataGrid formularzy Windows Forms
+# <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Instrukcje: tworzenie list wzorzec/szczegół za pomocą kontrolki DataGrid formularzy systemu Windows
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -71,6 +71,7 @@ ms.locfileid: "57715467"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
 - [DataGrid, kontrolka — omówienie](datagrid-control-overview-windows-forms.md)
-- [Instrukcje: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

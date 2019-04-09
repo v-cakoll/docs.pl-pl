@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2958fe31ff0065cfb028eaddf8bbb02f3618f9d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f14822a58f3982d6f9fee1328c10b960657c056f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098471"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 — Metoda
 Inicjuje importowania typów. Wywołaj tę metodę ma się zacząć importowanie typów z każdym zakresem importowane za pośrednictwem [importfile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
@@ -65,6 +65,7 @@ HRESULT ImportTypes2(
  Wymaga alink.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink2 — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink — interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

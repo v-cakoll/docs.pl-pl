@@ -2,12 +2,12 @@
 title: Rozszerzalność syndykacji
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
-ms.openlocfilehash: eaa3c3644dc6ad6a749a24051064b04bfa43e284
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170810"
 ---
 # <a name="syndication-extensibility"></a>Rozszerzalność syndykacji
 Syndykacja interfejs API umożliwiający niezależny od formatu model programowania, który umożliwia syndykowany zawartość do zapisania podczas transmisji w różnych formatach. Abstrakcyjny model danych zawiera następujące klasy:  
@@ -45,5 +45,6 @@ Syndykacja interfejs API umożliwiający niezależny od formatu model programowa
 -   Zastąp <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> w klasie MyExtensionFeed w celu utworzenia wystąpienia MyExtensionItem zamiast domyślnego <xref:System.ServiceModel.Syndication.SyndicationItem>. Szereg metod są zdefiniowane w <xref:System.ServiceModel.Syndication.SyndicationFeed> i <xref:System.ServiceModel.Syndication.SyndicationItem> , można utworzyć <xref:System.ServiceModel.Syndication.SyndicationLink>, <xref:System.ServiceModel.Syndication.SyndicationCategory>, i <xref:System.ServiceModel.Syndication.SyndicationPerson> obiektów (na przykład <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>, <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>, i <xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson>). Wszystkie z nich może zostać zastąpiona w celu utworzenie klasy pochodnej niestandardowej.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie syndykacji WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Architektura syndykacji](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)

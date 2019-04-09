@@ -5,12 +5,12 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: ad945cfe476441a92e8af9527b08e66f3e6e52c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f75c7fe701c4a2fab1f993517828b38e5a26e2bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138089"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Instrukcje: Mapowanie hierarchii dziedziczenia
 Aby zaimplementować mapowanie dziedziczenia w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], należy określić atrybuty i właściwości atrybutów w klasie głównego hierarchii dziedziczenia zgodnie z opisem w poniższych krokach. Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do mapowanie hierarchii dziedziczenia. Zobacz [jak: Skonfigurować dziedziczenie za pomocą Projektanta obiektów relacyjnych](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
@@ -51,5 +51,6 @@ Aby zaimplementować mapowanie dziedziczenia w [!INCLUDE[vbteclinq](../../../../
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Obsługa dziedziczenia](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
 - [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

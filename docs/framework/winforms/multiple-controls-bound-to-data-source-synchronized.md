@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Upewnij się, wiele formantów powiązanych z tym samym źródłem danych pozostają zsynchronizowane'
+title: 'Instrukcje: Zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170342"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Instrukcje: Upewnij się, wiele formantów powiązanych z tym samym źródłem danych pozostają zsynchronizowane
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Instrukcje: Zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych
 Często pracując przy użyciu powiązania danych w formularzach Windows Forms, wielu formantów są powiązane z tego samego źródła danych. W niektórych przypadkach może być konieczne wykonać dodatkowe czynności, aby upewnić się, że powiązanych właściwości kontrolek pozostają zsynchronizowane ze sobą i źródła danych. Te kroki są niezbędne w dwóch sytuacjach:  
   
 -   Jeśli źródło danych nie zawiera implementacji <xref:System.ComponentModel.IBindingList>i w związku z tym generowania <xref:System.ComponentModel.IBindingList.ListChanged> zdarzeń typu <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
@@ -41,7 +41,8 @@ Często pracując przy użyciu powiązania danych w formularzach Windows Forms, 
 -   Formularz z <xref:System.Windows.Forms.Form.Load> obsługi zdarzenia i wywołania `InitializeControlsAndDataSource` metody w przykładzie z formularza <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)
+
+- [Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows](change-notification-in-windows-forms-data-binding.md)
 - [Interfejsy dotyczące wiązania danych](interfaces-related-to-data-binding.md)
-- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)
+- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)

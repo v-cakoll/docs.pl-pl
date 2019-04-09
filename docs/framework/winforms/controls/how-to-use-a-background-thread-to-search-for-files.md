@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie wątku w tle do wyszukiwania plików'
+title: 'Instrukcje: użycie wątku w tle do wyszukiwania plików'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157793"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Instrukcje: Użycie wątku w tle do wyszukiwania plików
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Instrukcje: użycie wątku w tle do wyszukiwania plików
 <xref:System.ComponentModel.BackgroundWorker> Składnika zastępuje i dodaje funkcjonalność do <xref:System.Threading> przestrzeni nazw; jednakże <xref:System.Threading> przestrzeń nazw została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [BackgroundWorker, składnik — omówienie](backgroundworker-component-overview.md).  
   
  Windows Forms używa modelu apartamentem jednowątkowym (przedziale STA), ponieważ Windows Forms jest oparta na natywny Win32 dla systemu windows, które są z natury typu apartment. Modelu STA. oznacza okna można tworzyć na żadnym z wątków, ale go nie ma możliwości przełączenia wątków po utworzeniu i wszystkie wywołania funkcji do niego musi wystąpić w jego tworzenia wątku. Poza formularzy Windows klas w programie .NET Framework przy użyciu wolnego modelu wątkowości. Aby dowiedzieć się, jak wątkowości w programie .NET Framework, zobacz [wątki](../../../standard/threading/index.md).  
@@ -763,6 +763,7 @@ namespace SampleUsage
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
-- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — przegląd](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125661"
 ---
 # <a name="custom-rendering-ink"></a>Niestandardowy atrament renderowania
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Właściwości pociągnięcia umożliwia określenie wyglądu pociągnięcia, takie jak rozmiar, kolor i kształt, ale mogą zaistnieć sytuacje, które chcesz dostosować wygląd poza to, co <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Zezwalaj. Można dostosować wygląd pisma odręcznego za renderowaniem w wygląd Aerograf, paint ropa naftowa i innych skutków. Windows Presentation Foundation (WPF) pozwala na niestandardowe renderowanie pisma odręcznego poprzez implementację niestandardową <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i <xref:System.Windows.Ink.Stroke> obiektu.  
@@ -29,7 +29,7 @@ ms.locfileid: "57362633"
   
 -   [Implementowanie niestandardowego InkCanvas](#ImplementingACustomInkCanvas)  
   
--   [Podsumowanie](#Conclusion)  
+-   [Wniosek](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architektura  
@@ -92,4 +92,5 @@ ms.locfileid: "57362633"
  Można dostosować wygląd pisma odręcznego wyprowadzanie własne <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, i <xref:System.Windows.Controls.InkCanvas> klasy. Razem te klasy upewnij się, że wygląd obiektu stroke zgodne po użytkownik wprowadzi obrysu i po ich zebraniu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zaawansowana obsługa pisma odręcznego](advanced-ink-handling.md)
+
+- [Zaawansowana obsługa atramentu](advanced-ink-handling.md)

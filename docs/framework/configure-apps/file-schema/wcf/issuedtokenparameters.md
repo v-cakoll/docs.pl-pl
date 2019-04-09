@@ -2,12 +2,12 @@
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 6b40bd6edd27f4c3b4b530387417311e1f93a921
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6bdf56e3d2084dec8d44e1c4d3f0c1e50b711b92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153143"
 ---
 # <a name="issuedtokenparameters"></a>\<issuedTokenParameters >
 Określa parametry dla tokenu zabezpieczenia, wydane w federacyjnym scenariuszu zabezpieczenia.  
@@ -60,7 +60,7 @@ Określa parametry dla tokenu zabezpieczenia, wydane w federacyjnym scenariuszu 
 |-------------|-----------------|  
 |[\<additionalRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/additionalrequestparameters-element.md)|Kolekcja elementów konfiguracji, które określają dodatkowe parametry żądania.|  
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Określa kolekcję wymaganych typów oświadczeń.<br /><br /> W federacyjnym scenariuszu usługi stanu wymagania dotyczące poświadczeń przychodzących. Na przykład poświadczenia przychodzących musi mieć określone typy oświadczeń. Każdy element w tej kolekcji Określa typy wymaganych i opcjonalnych oświadczeń, oczekiwano w federacyjnym poświadczeniu.|  
-|[\<Wystawca >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|Element konfiguracji, który określa punkt końcowy, który wystawia bieżącego tokenu.|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer-of-issuedtokenparameters.md)|Element konfiguracji, który określa punkt końcowy, który wystawia bieżącego tokenu.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata-of-issuedtokenparameters.md)|Element konfiguracji, który określa adres punktu końcowego metadanych wystawcy tokenów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -68,9 +68,10 @@ Określa parametry dla tokenu zabezpieczenia, wydane w federacyjnym scenariuszu 
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Określa opcje zabezpieczeń dla niestandardowego powiązania.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>
@@ -79,9 +80,9 @@ Określa parametry dla tokenu zabezpieczenia, wydane w federacyjnym scenariuszu 
 - [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Zabezpieczenia powiązania niestandardowego](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Zabezpieczenia wiązania niestandardowego](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
 - [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Możliwości zabezpieczeń wiązań niestandardowych](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

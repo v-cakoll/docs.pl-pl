@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154417"
 ---
 # <a name="controls"></a>Formanty
 <a name="introduction"></a>
@@ -95,16 +95,16 @@ ms.locfileid: "57363153"
   
 -   <xref:System.Windows.Controls.HeaderedItemsControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, i <xref:System.Windows.Controls.ToolBar>.  
 
-  
  Aby uzyskać więcej informacji na temat tych klas bazowych, zobacz [Model zawartości WPF](wpf-content-model.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
 - [Kontrolki według kategorii](controls-by-category.md)
-- [Biblioteka kontrolek](control-library.md)
-- [Szablonowanie danych — omówienie](../data/data-templating-overview.md)
-- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Biblioteka formantów](control-library.md)
+- [Przegląd Szablonowanie danych](../data/data-templating-overview.md)
+- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
 - [Dane wejściowe](../advanced/input-wpf.md)
 - [Włączanie polecenia](../advanced/how-to-enable-a-command.md)
-- [Przewodnik: Tworzenie niestandardowego przycisku animowanego](walkthroughs-create-a-custom-animated-button.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+- [Przewodniki: Tworzenie niestandardowego przycisku animowanego](walkthroughs-create-a-custom-animated-button.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)

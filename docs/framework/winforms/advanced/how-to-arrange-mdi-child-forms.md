@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Aranżowanie formularzy podrzędnych MDI'
+title: 'Instrukcje: Rozmieszczanie formularzy podrzędnych MDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160111"
 ---
-# <a name="how-to-arrange-mdi-child-forms"></a>Instrukcje: Aranżowanie formularzy podrzędnych MDI
+# <a name="how-to-arrange-mdi-child-forms"></a>Instrukcje: Rozmieszczanie formularzy podrzędnych MDI
 Aplikacje mają często poleceń menu Akcje, takie jak kafelków, Cascade i rozmieszczanie, które sterowania układem Otwórz formularzy podrzędnych MDI. Możesz użyć <xref:System.Windows.Forms.Form.LayoutMdi%2A> metody przy użyciu jednego z <xref:System.Windows.Forms.MdiLayout> wartości wyliczenia, aby zmienić kolejność formularze podrzędne MDI nadrzędnego formularza.  
   
  <xref:System.Windows.Forms.MdiLayout> Wartości wyliczenia wyświetlanie formularzy podrzędnych jako kaskadowych jako sąsiadująco w poziomie lub pionie, lub ikony formularza podrzędnego rozmieszczone wzdłuż dolnej części formularza MDI. Te wartości mogą być taki sam skutek jak poleceń programu Windows **kaskadowo windows**, **Pokaż okna sąsiadująco**, **Pokaż okna skumulowany**, i **wyświetlanie pulpitu** , odpowiednio.  
@@ -48,8 +48,9 @@ Aplikacje mają często poleceń menu Akcje, takie jak kafelków, Cascade i rozm
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Aplikacje interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md)
 - [Instrukcje: Tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md)
 - [Instrukcje: Tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md)
-- [Instrukcje: Określanie elementu podrzędnego Active MDI](how-to-determine-the-active-mdi-child.md)
+- [Instrukcje: Określanie elementu podrzędnego MDI Active](how-to-determine-the-active-mdi-child.md)
 - [Instrukcje: Wysyłanie danych do Active MDI Child](how-to-send-data-to-the-active-mdi-child.md)

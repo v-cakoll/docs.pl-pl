@@ -2,12 +2,12 @@
 title: Konfiguracja przykładu kopiowania zbiorczego
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 42a0316351603575d33041c2a0fc783d9726f14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6244afff348edbde46fdfda7481910aca2b25939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117277"
 ---
 # <a name="bulk-copy-example-setup"></a>Konfiguracja przykładu kopiowania zbiorczego
 <xref:System.Data.SqlClient.SqlBulkCopy> Klasa może być używana w celu zapisania danych tylko do tabel programu SQL Server. Przykłady kodu, przedstawione w tym temacie Użyj przykładowej bazy danych programu SQL Server **AdventureWorks**. Aby uniknąć, zmieniając istniejące tabele przykłady kodu zapisu danych do tabel, które należy najpierw utworzyć.  
@@ -82,5 +82,6 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

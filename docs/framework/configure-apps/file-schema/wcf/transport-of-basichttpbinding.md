@@ -2,12 +2,12 @@
 title: <transport> z <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 3d305c90233e4af7dde2a0b80e79e2adbe85c356
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170641"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<transport > z \<basicHttpBinding >
 Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu HTTP.  
@@ -80,7 +80,7 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje użycie protokołu SSL z zabezpieczeń transportu dla wiązania podstawowe. Domyślnie podstawowe powiązanie obsługuje komunikację HTTP.  
@@ -118,6 +118,7 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
@@ -125,5 +126,5 @@ Definiuje właściwości sterujące parametrami uwierzytelniania dla protokołu 
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

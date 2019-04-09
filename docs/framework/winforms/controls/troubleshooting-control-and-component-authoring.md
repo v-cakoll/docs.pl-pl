@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168067"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Rozwiązywanie problemów związanych z formantami oraz autoryzacją elementów
 Ten temat zawiera następujące typowe problemy, które występują podczas tworzenia składników i formantów. Aby uzyskać więcej informacji, zobacz [Programowanie przy użyciu składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -108,9 +108,10 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
  Kiedy używasz <xref:System.Drawing.ToolboxBitmapAttribute> zostać skojarzona ikona za pomocą składnika niestandardowego, mapa bitowa nie ma w przyborniku dla składników wygenerowany automatycznie. Aby wyświetlić mapę bitową, należy ponownie załadować formantu za pomocą **wybierz elementy przybornika** okno dialogowe. Aby uzyskać więcej informacji, zobacz [jak: Dostarczanie mapy bitowej przybornika dla formantu](how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md)
-- [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+
+- [Opracowywanie formantów formularzy systemu Windows w czasie projektowania](developing-windows-forms-controls-at-design-time.md)
+- [Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Instrukcje: testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Przewodnik: debugowanie niestandardowych kontrolek formularzy systemu Windows w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 - [Tworzenie składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [Rozwiązywanie problemów podczas projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

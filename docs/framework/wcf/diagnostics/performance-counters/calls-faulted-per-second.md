@@ -2,12 +2,12 @@
 title: Wywołania zwracające błędy na sekundę
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: dd35e4096ab4e2740c638903975af085b01a1fbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b7569b6a00757fbb863b90b25b44815a349ab07
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115521"
 ---
 # <a name="calls-faulted-per-second"></a>Wywołania zwracające błędy na sekundę
 Nazwa komputera: Wywołania zwracające błędy na sekundę  
@@ -22,4 +22,5 @@ Nazwa komputera: Wywołania zwracające błędy na sekundę
  W aplikacjach Windows Communication Foundation (WCF) metody usługi komunikują się przy użyciu protokołu SOAP wiadomości błędu informacje o błędzie przetwarzania. Błędy protokołu SOAP są typy komunikatów, które są zawarte w metadanych dla operacji usługowej i z tego względu utworzyć kontrakt błędu, w której klienci mogą używać się ich wykonanie, bardziej niezawodne lub interaktywne. Ponieważ błędach SOAP są wyrażone klientom w postaci XML, są one bardzo międzyoperacyjnych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Określanie i obsługa błędów w kontraktach i usługach](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

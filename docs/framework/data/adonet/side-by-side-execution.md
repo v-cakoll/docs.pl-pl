@@ -1,15 +1,15 @@
 ---
-title: Wykonanie Side-by-Side w ADO.NET
+title: Wykonywanie równoczesne w ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136763"
 ---
-# <a name="side-by-side-execution-in-adonet"></a>Wykonanie Side-by-Side w ADO.NET
+# <a name="side-by-side-execution-in-adonet"></a>Wykonywanie równoczesne w ADO.NET
 Wykonywanie Side-by-side w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] jest możliwość wykonywania aplikacji na komputerze, który ma wiele wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zainstalowany, wyłącznie przy użyciu wersji, dla którego aplikacja została skompilowana. Aby uzyskać szczegółowe informacje o konfigurowaniu side-by-side wykonywania, zobacz [Side-by-Side Execution](../../../../docs/framework/deployment/side-by-side-execution.md).  
   
  Aplikacja skompilowana przy użyciu jednej wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] można uruchamiać na inną wersję [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Jednak zaleca się że kompilujesz wersję aplikacji dla każdej zainstalowanej wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]i uruchomić je oddzielnie. W dowolnym scenariuszu, należy pamiętać o zmianach w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] między wersjami, które mogą wpływać na zgodność z nowszymi wersjami lub zgodności z poprzednimi wersjami aplikacji.  
@@ -65,6 +65,7 @@ SET NOCOUNT OFF;
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Przenoszenie elementu ToolStrip z ToolStripContainer na formularz'
+title: 'Instrukcje: przenoszenie elementu ToolStrip z ToolStripContainer na formularz'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 96fe863cee296ec292bf7010494af587d43fd8b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 100e744e6e49fbf214488e9bbb796b5b6fb9591a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142366"
 ---
-# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Instrukcje: Przenoszenie elementu ToolStrip z ToolStripContainer na formularz
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>Instrukcje: przenoszenie elementu ToolStrip z ToolStripContainer na formularz
 Użyj poniższej procedury, aby przenieść <xref:System.Windows.Forms.ToolStrip> poza <xref:System.Windows.Forms.ToolStripContainer> w formularzu.  
   
 > [!NOTE]
@@ -31,6 +31,7 @@ Użyj poniższej procedury, aby przenieść <xref:System.Windows.Forms.ToolStrip
 5.  Ustaw <xref:System.Windows.Forms.ToolStrip.Dock%2A> właściwość <xref:System.Windows.Forms.ToolStrip> do **górnej**.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)

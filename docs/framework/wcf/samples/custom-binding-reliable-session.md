@@ -2,12 +2,12 @@
 title: Sesja niezawodna powiązania niestandardowego
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: d970f4a84f51755db16d84d22178c343624de03f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d419a5793abd6c89b4cddb3b5d3c3359361d5b5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172422"
 ---
 # <a name="custom-binding-reliable-session"></a>Sesja niezawodna powiązania niestandardowego
 Powiązanie niestandardowe jest definiowany przez uporządkowaną listą elementy powiązania dyskretnych. Niniejszy przykład pokazuje, jak skonfigurować powiązania niestandardowego z różnymi transportu i komunikatu kodowanie elementów, szczególnie Włączanie niezawodnej sesji.  
@@ -122,4 +122,3 @@ Press <ENTER> to terminate client.
     ... />  
     <compositeDuplex clientBaseAddress="http://client_machine_name:8000/myClient/" />  
     ```  
-  

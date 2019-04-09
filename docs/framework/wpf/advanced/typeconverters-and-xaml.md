@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164993"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters i XAML
 W tym temacie przedstawiono celem typ Konwersja ciągu jako ogólna funkcja języka XAML. W .NET Framework <xref:System.ComponentModel.TypeConverter> klasy służy określonego celu, jako część wdrożenia na klasę niestandardową zarządzanego, który może służyć jako wartość właściwości użycie atrybutu XAML. Jeśli piszesz klasę niestandardową i chcesz, aby wystąpienia klasy może być używany jako wartości można ustawić atrybutu XAML, może być konieczne zastosowanie <xref:System.ComponentModel.TypeConverterAttribute> do klasy, należy napisać niestandardowy <xref:System.ComponentModel.TypeConverter> lub klasę.  
-  
 
-  
 ## <a name="type-conversion-concepts"></a>Pojęcia dotyczące konwersji typu  
   
 ### <a name="xaml-and-string-values"></a>Wartości parametrów i XAML  
@@ -110,7 +108,8 @@ W tym temacie przedstawiono celem typ Konwersja ciągu jako ogólna funkcja jęz
  Możesz także podać konwertera typów, na podstawie poszczególnych właściwości. Zamiast stosowania [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> do definicji klasy, zastosuj ją do definicji właściwości (głównej definicji nie `get` / `set` implementacji znajdujący się w nim). Typ właściwości musi być zgodna typ, który jest przetwarzany przez usługi konwertera typu niestandardowego. Z tym atrybutem zastosowania XAMLprocessor, obsługując wartości tej właściwości, można przetwarzać ciągów wejściowych i zwrócić wystąpienia obiektu. Dla właściwości typu konwertera techniką jest szczególnie przydatne, gdy użytkownik wybierze korzystanie z platformy Microsoft .NET Framework lub niektóre inne biblioteki, w której nie można kontrolować definicji klasy i nie można zastosować typ właściwości <xref:System.ComponentModel.TypeConverterAttribute> istnieje.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ComponentModel.TypeConverter>
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Szczegóły składni XAML](xaml-syntax-in-detail.md)

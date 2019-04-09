@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 38166addf95679083932a4369d19b75421a64665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092906"
 ---
 # <a name="row-states-and-row-versions"></a>Stany wiersza i wersje wiersza
 ADO.NET zarządza wierszy w tabelach przy użyciu stany wiersza i wersje. Stan wiersz wskazuje stan wiersza; wersje wiersza Obsługa wartości przechowywane w wierszu, zgodnie z jego modyfikacji, tym bieżące, oryginalne i wartości domyślne. Na przykład, po dokonaniu modyfikacji z kolumną w wierszu wiersza będzie mają stan wiersza `Modified`, i dwie wersje wierszy: `Current`, zawierającą bieżące wartości wiersza i `Original`, zawierającą wartości wiersza przed kolumny zmodyfikowane.  
@@ -95,7 +95,8 @@ foreach (DataRow delRow in delRows)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+
+- [Operowanie na danych w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Elementy DataAdapter i DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Elementy DataAdapter i DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Kodowanie komunikatu
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: d797b810af5df5fc1acf31e0ab6338689da9f55c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fb0d4a994eaf1497841691eb76261329a48599d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168756"
 ---
 # <a name="message-encoding"></a>Kodowanie komunikatu
 Kodowanie jest procesem przekształcania zestawu znaków Unicode do sekwencji bajtów. Dekodowanie jest procesu. Windows Communication Foundation (WCF) obejmuje trzy typy kodowania dla protokołu SOAP wiadomości: Tekst pliku binarnego i mechanizmu optymalizacji transmisji wiadomości (MTOM).  
@@ -19,6 +19,7 @@ Kodowanie jest procesem przekształcania zestawu znaków Unicode do sekwencji ba
  `textMessageEncoding` Sekcji konfiguracji określa koder tekstu, używany do tworzenia opartych na tekst wiadomości na łączu. Komunikaty generowane przez ten koder nadają się dla protokołu WS-* na podstawie międzyoperacyjności. Klient usługi sieci Web lub usługa sieci Web zazwyczaj może zrozumieć tekstowych XML. Jednak przesyłania dużych bloków danych binarnych jako tekst jest najmniej efektywną metodę kodowania wiadomości XML  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)

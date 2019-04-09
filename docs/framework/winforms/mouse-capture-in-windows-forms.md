@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-ms.openlocfilehash: afb58df99ea30f5e7e6ab5b9156af195d273c44d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30432c6978f60cc9ad47d5df5dafc7aa45229f3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151648"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Przechwytywanie myszy w formularzach systemu Windows
 *Przechwytywanie myszy* odwołuje się do polecenia myszy wszystkich danych wejściowych podczas kontrolki. Po przechwyceniu myszy kontrolkę odbiera wejście myszy czy kursor znajduje się w jego granicach.  
@@ -22,4 +22,5 @@ ms.locfileid: "57712711"
  Tylko okna pierwszoplanowego możliwość przechwytywania myszą. Gdy próbuje oknem tła do przechwytywania myszą, okno odbiera wiadomości tylko w przypadku zdarzenia myszy, które występują, gdy wskaźnik myszy znajduje się w obrębie widoczne części okna. Ponadto nawet wtedy, gdy przechwyceniu myszy okna pierwszoplanowego użytkownik może nadal kliknąć innego okna, wprowadzić ją na pierwszym planie. Po przechwyceniu myszy klawiszy skrótów nie działa.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)

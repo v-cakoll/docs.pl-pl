@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: f2a45cf48c1d0cc097cea956d22fed2079e657a8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096242"
 ---
 # <a name="geometries-how-to-topics"></a>Geometrie Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia <xref:System.Windows.Media.Geometry> obiektów w aplikacji.  
@@ -34,7 +34,8 @@ Tematy w tej sekcji przedstawiają sposoby użycia <xref:System.Windows.Media.Ge
  [Zaokrąglanie rogów elementu RectangleGeometry](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafika i multimedia](index.md)

@@ -2,12 +2,12 @@
 title: Z wyjątkiem (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
-ms.openlocfilehash: 1e7ab2c29b6418e86fc1b6f0ed2aad92a18ee7e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 32c8c418056231e98696eb8f4e9cb372d6c5740c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089461"
 ---
 # <a name="except-entity-sql"></a>Z wyjątkiem (jednostka SQL)
 Zwraca kolekcję wszystkie unikatowe wartości w wyrażeniu zapytania do lewego operandu EXCEPT, które nie są również zwracany z wyrażenia zapytania po prawej stronie operandu EXCEPT. Wszystkie wyrażenia musi być tego samego typu lub wspólnej podstawowej lub pochodny typ jako `expression`.  
@@ -33,7 +33,7 @@ expression EXCEPT expression
 |Najwyższy|INTERSECT|  
 ||UNION<br /><br /> UNION ALL|  
 ||EXCEPT|  
-|Najniższy|EXISTS<br /><br /> NAKŁADA SIĘ NA<br /><br /> SPŁASZCZANIE<br /><br /> SET|  
+|Najniższy|EXISTS<br /><br /> OVERLAPS<br /><br /> FLATTEN<br /><br /> SET|  
   
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa operatora EXCEPT zwrócić kolekcję wszystkie unikatowe wartości z dwóch wyrażeń zapytania. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
@@ -45,4 +45,5 @@ expression EXCEPT expression
  [!code-csharp[DP EntityServices Concepts 2#EXCEPT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#except)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

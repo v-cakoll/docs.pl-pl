@@ -2,12 +2,12 @@
 title: Uczestnicy stanów trwałych
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115898"
 ---
 # <a name="persistence-participants"></a>Uczestnicy stanów trwałych
 Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwolone przez aplikację hosta. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, którego można użyć do utworzenia uczestnika stanów trwałych. Uczestnika stanów trwałych pochodzi z jednej z tych klas, implementuje metody zainteresowań, a następnie dodaje wystąpienie klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może poszukaj takie rozszerzenia przepływu pracy po przechowywanie wystąpienia przepływu pracy i wywoływać właściwe metody na uczestnicy stanów trwałych we właściwym czasie.  
@@ -61,4 +61,5 @@ Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz 
 -   [Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Rozszerzalność magazynu](store-extensibility.md)

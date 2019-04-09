@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48c9f5ed-76bf-4228-ab10-5217bbb295a3
-ms.openlocfilehash: 64d8454a9eacca81e93677c2b63dc5afdcc27d64
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 3bd7934cef03df391c1871b8499f911a023d7d3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097593"
 ---
 # <a name="query-expression-syntax-examples-projection--linq-to-dataset"></a>Przykłady składni wyrażeń zapytania: Projekcja (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Select%2A> i <xref:System.Linq.Enumerable.SelectMany%2A> metod do wykonywania zapytań <xref:System.Data.DataSet> przy użyciu składni wyrażeń zapytania.  
@@ -61,6 +61,7 @@ Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerabl
  [!code-vb[DP LINQ to DataSet Examples#SelectManyFromAssignment](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectmanyfromassignment)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Ładowanie danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Omówienie operatorów standardowej kwerendy (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

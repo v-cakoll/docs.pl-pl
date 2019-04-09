@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b49031b0001ddba01a888806206360c1cbdbacb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087810"
 ---
 # <a name="programming-wcf-security"></a>Programowanie zabezpieczeń WCF
 W tym temacie opisano podstawowe zadania programowania, służące do tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF). W tym temacie omówiono uwierzytelniania, poufności i integralności, nazywane zbiorczo *transferu zabezpieczeń*. W tym temacie nie omówiono autoryzacji (kontrola dostępu do zasobów lub usług); Aby uzyskać informacje dotyczące autoryzacji, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -102,5 +102,6 @@ W tym temacie opisano podstawowe zadania programowania, służące do tworzenia 
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

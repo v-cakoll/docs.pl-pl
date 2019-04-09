@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132044"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identyfikowanie funkcji w bibliotekach DLL
 Tożsamość funkcji DLL składa się z następujących elementów:  
@@ -46,6 +46,7 @@ Tożsamość funkcji DLL składa się z następujących elementów:
  Aby uzyskać pełną dokumentację interfejsu API Windows zobacz zestaw SDK platformy. Aby uzyskać przykłady pokazujące, jak utworzyć. Na podstawie NET deklaracje do użycia z platformą wywołania, zobacz [Marshaling danych za pomocą wywołania platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [Określanie punktu wejścia](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [Tworzenie klasy utrzymującej funkcje DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
